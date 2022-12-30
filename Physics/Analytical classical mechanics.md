@@ -22,7 +22,7 @@ $$S[q(t)]=\int_{t_1}^{t_2}\Lagr(q,\dot{q},t)\,dt$$
 	
 - To achieve this, the particle obeys the Euler-Lagrange equations at all times:
 $$\frac{d}{dt}\pd{\Lagr}{\dot{q}_i}=\pd{\Lagr}{q_i}$$
-	- $q_i$ is a generalised coordinate
+	- $q_i$ is a _generalised coordinate_
 		- $x,y,z$ in Cartesian, $r, \theta, \phi$ for polar
 >[!quote]
 The Lagrangian formalism seems to ascribe to a particle a tremendous amount of foresight: it managaes to calculate ahead of time the action for every possible path linking the endpoints, and takes one with least action.
