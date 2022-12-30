@@ -1,0 +1,12 @@
+{
+  "enabledCssSnippets": [
+    "larger_eq",
+    "larger_block_eq",
+    "center_table"
+  ],
+  "textFontFamily": "Inter",
+  "interfaceFontFamily": "Inter",
+  "baseFontSize": 16,
+  "accentColor": "",
+  "cssTheme": "Things"
+}
