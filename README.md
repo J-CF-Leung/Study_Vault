@@ -1,1 +1,3 @@
-Enjoy my not-very-good notes lol
+To whoever I shared this to:
+
+Enjoy lol I don't think my notes are THAT good
