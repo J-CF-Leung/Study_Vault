@@ -132,14 +132,14 @@ $$\hat{\Ham}_\text{elec}=\hat{T}_e+\hat{V}(\bm{Q},\bm{q})$$
 	- $\bm{Q}$: positions of nuclei, _fixed when considering the wave function of electrons_
 	- $\bm{q}$: positions of the electrons
 
-- The electronic Schrodinger equation:
+- The electronic Schrödinger equation:
 $$\hat{\Ham}_\text{elec}\psi_\text{elec}(\bm{Q},\bm{q})=E_\text{elec}(\bm{Q})\psi_\text{elec}(\bm{Q},\bm{q})$$
 	- Energy: function of positions of nuclei
 
 - For nuclear motion, the electronic equation must be solved many times to obtain $E_\text{elec}$ as a function of $Q$, which is then used as the potential in the nuclear Hamiltonian
 - The nuclear Hamiltonian:
 $$\hat{\Ham}_\text{nuc}=\hat{T}_N+E_\text{elec}(\bm{Q})$$
-- The nuclear wave function is then calculated by solving the nuclear Schrodinger equation:
+- The nuclear wave function is then calculated by solving the nuclear Schrödinger equation:
 $$\hat{\Ham}_\text{nuc}\psi_\text{nuc}(\bm{Q})=E\psi_\text{nuc}(\bm{Q})$$
 	- $E$: total energy
 
@@ -155,8 +155,25 @@ $$\Psi_\text{molecule}=\psi_\text{elec}\psi_\text{nuc}$$
 - Consider the $H_2^+$ ion, where nuclei are constrained to move along the $z-$axis
 - Position of electron is $z$, position of nucleus $i$ is $Z_i$
 - The _complete Hamiltonian_ is:
-$$\hat{\Ham}=-\frac{\hbar^2}{2m_e}\pd{^2}{z^2}-\sum_{i=1}^2\frac{\hbar^2}{2m_i}\pd{^2}{Z_i^2}+V(z,Z_1,Z_2)$$
-- The time-independent 
+$$\hat{\Ham}=-\frac{\hbar^2}{2m_e}\pd{^2}{z^2}-\sum_{i=1}^2\frac{\hbar^2}{2m_i}\pd{^2}{Z_i^2}+V(z,Z_1,Z_2)=\hat{T}_e+\hat{T}_N+\hat{V}$$
+- The approximation _assumes a solution of the form_:
+$$\Psi(z,Z_1,Z_2)=\psi(z,Z_1,Z_2)\,\psi_N(Z_1,Z_2)$$
+- Substituting this into the time-independent Schrödinger equation:
+$$\displaylines{\hat{H}\psi\psi_N=\psi_N\hat{T}_e\psi+\psi\hat{T}_N\psi_N+\hat{V}\psi\psi_N+W=E\psi\psi_N \\ W=-\sum_{i=1}^2\frac{\hbar^2}{2m_i}\left(2\pd{\psi}{Z_i}\pd{\psi_N}{Z_i}+\pd{^2\psi}{Z_i^2}\Psi_N\right)}$$
+- Since $m_i>>m_e$, $W$, also known as the _non-adiabatic term_, is _ignored_
+- Ignoring $W$ and rearranging:
+$$\psi\hat{T}_N\psi_N+\left(\hat{T}_e\psi+\hat{V}\psi\right)\psi_N=E\psi\psi_N$$
+- The term in parentheses constitutes the left-hand side of the _electronic Schrödinger equation_:
+$$\hat{T}_e\psi+\hat{V}\psi=E_e(Z_1,Z_2)\psi$$
+- Solving this gives the _electronic wave function_ and eigenvalue of _the electron's contribution to energy_
+	- Includes both _electron kinetic energy_ and _electron-nucleus interactions_
+- The function $E_e(Z_1,Z_2)$ gives the _molecular potential energy curve_
+
+- Finding the function then substituting back into the equation and cancelling $\psi$:
+$$\hat{T}_N\psi_N+E_e\psi_N=E\psi_N$$
+- This eigenvalue $E$ is the _total energy of the molecule_ given by the approximation
+
+- For actual molecules, the momentum operators use $\nabla$
 
 ## The hydrogen atom
 - [[Time-independent Hamiltonians in 3 dimensions#The hydrogen atom|Detailed derivations]]
