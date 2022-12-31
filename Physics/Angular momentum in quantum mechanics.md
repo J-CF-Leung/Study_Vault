@@ -55,6 +55,8 @@ $$\hat{L}_z=-i\hbar\pd{}{\phi}$$
 
 - For spherical harmonics, $l$ _only takes on integer values_
 
+![[Angular momentum eigenstates.png]]
+
 ## Spin angular momentum
 - In quantum mechanics, there is a fundamental difference between _orbital_ and _spin_ angular momentum, where the latter is an _intrinsic property of the particle_
 

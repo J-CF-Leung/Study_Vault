@@ -74,14 +74,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chemistry/Molecular quantum mechanics.md",
+                "file": "Mathematics/Special functions and orthogonal relations.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -282,17 +282,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "86bbe26a529a72ad",
+  "active": "fa810a3102999cea",
   "lastOpenFiles": [
+    "Physics/Angular momentum in quantum mechanics.md",
+    "Chemistry/Molecular quantum mechanics.md",
+    "Mathematics/Special functions and orthogonal relations.md",
     "Chemistry/Molecular spectroscopy.md",
     "Mathematics/Elementary Analysis.md",
     "README.md",
     "Mathematics/Vectors and matrices.md",
     "Physics/Analytical classical mechanics.md",
     "Physics/Waves.md",
-    "Physics/Symmtries, transformations and generators in mechanics.md",
-    "Physics/Relativity.md",
-    "Physics/Fundamentals and the matrix-based formulation of quantum mechanics.md",
-    "Physics/Crystal structure.md"
+    "Physics/Symmtries, transformations and generators in mechanics.md"
   ]
 }

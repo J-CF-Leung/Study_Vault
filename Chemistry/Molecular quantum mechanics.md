@@ -6,6 +6,14 @@
 
 ## Models of bonding
 
+### Electrons: Particle in a box
+- Used to model conjugated $\pi$ systems
+- For a box of length $a$ from $x=0$ to $x=a$, the wave functions are:
+$$\psi_n=A\sin\frac{n\pi x}{a}$$
+- The corresponding energies are:
+$$E_n=\frac{n^2\hbar^2\pi^2}{2ma^2}$$
+- Details: [[Time-independent Hamiltonians in 1 dimension#Particle in a box|Particle in a box]]
+
 ### Nuclei: The quantum harmonic oscillator
 - Details: [[Quantum Harmonic Oscillator]]
 - Potential:
@@ -27,9 +35,10 @@ $$E_n=(n+\frac{1}{2})\hbar\omega$$
 - Energy becomes very large (but not infinite) at $r=0$
 - A better approximation is the Morse potential:
 $$V_M(r)=D_e\left(1-e^{-\beta(r-r_e)}\right)^2$$
-- $D_e$ is the dissociation energy
-- The force constant at equilibrium is $k=2\beta^2D_e$
-	- Found by expanding the potential
+- $D_e$ is the dissociation energy (controls well _depth_)
+- $\beta$ controls well _width_ (higher $\beta$ leads to narrower well)
+- The _harmonic force constant_ at equilibrium is $k=2\beta^2D_e$
+	- Found by Taylor expanding the potential
 - $D_0$: energy required to dissociate a molecule originally at the ground state
 
 - The bound energy levels for the Morse potential:
@@ -40,36 +49,27 @@ $$\chi_e=\frac{\hbar\beta^2}{2m\omega}=\frac{\hbar\omega}{4D_e}$$
 - Molecules fit this model for small $n$
 - Anharmonic term _becomes larger for higher energy levels_ 
 	- Bigger deviation from harmonic energy levels
-- Spacing between levels decreases for higher energy levels
+- _Spacing between levels decreases_ for higher energy levels
 
 - There is a _finite_ number of vibrational levels/bound states
 	- At some point, the calculated energy levels decrease with increasing $n$, further levels have no physical meaning
 	- Number of levels depends on $D_e$
-- The maximum level is given by $n_\text{max}=1/(2\chi_e)-1/2$
-- Maximum energy is $\hbar\omega/(4\chi_e)$
+- The _maximum level_ is given by $n_\text{max}=1/(2\chi_e)-1/2$
+- Maximum energy from the well's bottom is $\hbar\omega/(4\chi_e)$
 
-### Electrons: Particle in a box
-- Used to model conjugated $\pi$ systems
-- For a box of length $a$ from $x=0$ to $x=a$, the wave functions are:
-$$\psi_n=A\sin\frac{n\pi x}{a}$$
-- The corresponding energies are:
-$$E_n=\frac{n^2\hbar^2\pi^2}{2ma^2}$$
-- Details: [[Time-independent Hamiltonians in 1 dimension#Particle in a box|Particle in a box]]
-
+![[Morse energy levels.png]]
 
 ## Angular momentum
 - Details: [[Angular momentum in quantum mechanics]]
 - The eigenvalues of $\hat{L}^2$ and $\hat{L}_z$ are:
 $$\displaylines{\hat{L}^2\ket{JM}=\hbar^2J(J+1)\ket{JM} \hspace{1cm}\hat{L}_z\ket{JM}=\hbar M\ket{JM} \\ J=0,1,2\dots \hspace{1cm} M=-J,-J+1,\dots,J-1,J}$$
-- $J$: orbital quantum number
-- $M$: magnetic quantum number
+- $J$: _orbital_ quantum number
+- $M$: _magnetic_ quantum number
 
 - The value of $L^2$ is _always_ larger than the maximum value of $L_z$ as $J(J+1)>J^2$
 - Remember that when $L^2$ and $L_z$ are determinate, $L_x$ and $L_y$ are _always indeterminate_
 
 - As for the eigenfunctions, they are the [[Special functions and orthogonal relations#Spherical harmonics|spherical harmonics]]
-
-- The first few spherical harmonics:
 
 ## The Rigid Rotor
 - Consider a diatomic molecule, where nuclei have mass $m_1$ and $m_2$, with bond length $R$
@@ -84,7 +84,7 @@ $$\hat{\Ham}=\frac{\hat{L}^2}{2I}=\frac{\hat{L}^2}{2\mu R^2}$$
 - The eigenvalues are proportional to eigenvalues of $\hat{L}^2$
 $$E_n=\frac{\hbar^2}{2I}J(J+1)$$
 - Define the _rotational constant_ $B=\hbar^2/2I$
-- As the energy eigenfunctions are independent of $m$, $J_z$ has a $2J+1$ fold degeneracy
+- As the energy eigenfunctions are independent of $m$, $J_z$ has a $2J+1$ fold _degeneracy_
 
 ## Rotation and vibration
 - Molecules both rotate and vibrate
@@ -104,13 +104,14 @@ $$\Ham\Psi=[E_{vib}+BJ(J+1)]\Psi$$
 	- Typically 1000 times smaller
 
 ## Spectroscopy
-- Bohr condition: for a transition between two states $\psi_m$ and $\psi_n$ facilitated by a photon, its frequency $\nu_{mn}$ must equal $|E_n-E_m|/h$
+- Bohr condition: for a transition between two states $\psi_m$ and $\psi_n$ facilitated by a photon, its _frequency $\nu_{mn}$ must equal_ $|E_n-E_m|/h$
 - Fermi's Golden Rule: Under an electric field, the rate of induced absorption and emission:
 $$B_{mn}=\frac{2\pi}{4\pi\epsilon_0(3\hbar^2)}|\braket{\psi_m|\hat{\mu}|\psi_n}|^2$$
 - Spontaneous emission: a molecule in an excited state $\psi_m$ may undergo a spontaneous transition to lower energy state $\psi_n$ with rate
 $$A_{mn}=\frac{8\pi h\nu_{mn}^3}{c^3}B_{mn}$$
 
-- The selection rules: if a transition is forbidden or allowed (if $B_{mn}=0$)
+- The _selection rules_: if a transition is forbidden or allowed (if $B_{mn}=0$)
+	- Details: [[Molecular spectroscopy]]
 	- Harmonic oscillator: transitions _only allowed between neighbouring levels_ ($v=\pm 1$)
 		- $\hat{\mu}\propto\hat{x}$, can be expressed using ladder operators
 	- Rotational transitions: $\Delta J=\pm 1$, $\Delta E=2BJ(J+1)$
