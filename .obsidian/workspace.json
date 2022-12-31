@@ -74,7 +74,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Chemistry/Molecular quantum mechanics.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "README.md"
+                    "file": "Chemistry/Molecular quantum mechanics.md"
                   }
                 }
               }
@@ -114,7 +114,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "README.md",
+                    "file": "Chemistry/Molecular quantum mechanics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -212,7 +212,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Chemistry/Molecular quantum mechanics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -229,7 +229,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Chemistry/Molecular quantum mechanics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -252,7 +252,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Chemistry/Molecular quantum mechanics.md"
               }
             }
           },
@@ -282,17 +282,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "bdee2333112a0d60",
+  "active": "86bbe26a529a72ad",
   "lastOpenFiles": [
+    "Chemistry/Molecular spectroscopy.md",
+    "Mathematics/Elementary Analysis.md",
+    "README.md",
+    "Mathematics/Vectors and matrices.md",
     "Physics/Analytical classical mechanics.md",
     "Physics/Waves.md",
     "Physics/Symmtries, transformations and generators in mechanics.md",
     "Physics/Relativity.md",
     "Physics/Fundamentals and the matrix-based formulation of quantum mechanics.md",
-    "Physics/Crystal structure.md",
-    "Mathematics/Einstein notation.md",
-    "CHaOS Experiment Ideas.md",
-    "Quotes.md",
-    "Preamble.md"
+    "Physics/Crystal structure.md"
   ]
 }

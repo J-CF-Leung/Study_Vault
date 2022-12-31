@@ -156,7 +156,7 @@ $$\Psi_\text{molecule}=\psi_\text{elec}\psi_\text{nuc}$$
 - Position of electron is $z$, position of nucleus $i$ is $Z_i$
 - The _complete Hamiltonian_ is:
 $$\hat{\Ham}=-\frac{\hbar^2}{2m_e}\pd{^2}{z^2}-\sum_{i=1}^2\frac{\hbar^2}{2m_i}\pd{^2}{Z_i^2}+V(z,Z_1,Z_2)$$
-
+- The time-independent 
 
 ## The hydrogen atom
 - [[Time-independent Hamiltonians in 3 dimensions#The hydrogen atom|Detailed derivations]]
