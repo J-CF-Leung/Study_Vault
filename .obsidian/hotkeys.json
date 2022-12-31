@@ -1,13 +1,5 @@
 {
-  "obsidian-git:commit": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "C"
-    }
-  ],
+  "obsidian-git:commit": [],
   "obsidian-git:push2": [
     {
       "modifiers": [
@@ -15,6 +7,15 @@
         "Shift"
       ],
       "key": "P"
+    }
+  ],
+  "obsidian-git:commit-specified-message": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "C"
     }
   ]
 }

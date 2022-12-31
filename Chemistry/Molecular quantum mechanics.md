@@ -173,7 +173,7 @@ $$\hat{T}_e\psi+\hat{V}\psi=E_e(Z_1,Z_2)\psi$$
 $$\hat{T}_N\psi_N+E_e\psi_N=E\psi_N$$
 - This eigenvalue $E$ is the _total energy of the molecule_ given by the approximation
 
-- For actual molecules, the momentum operators use $\nabla$
+- For 3-dimensional motion, the linear momentum operators use $\nabla$
 
 ## The hydrogen atom
 - [[Time-independent Hamiltonians in 3 dimensions#The hydrogen atom|Detailed derivations]]
