@@ -26,7 +26,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Topics in Classical Mechanics.md",
+                "file": "Physics/Electromagnetism.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f4ba485e98887cae",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Physics/Topics in Electromagnetism.md",
                 "mode": "source",
                 "source": false
               }
@@ -81,7 +93,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -98,7 +110,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/Molecular quantum mechanics.md"
+                    "file": "Physics/Electromagnetism.md"
                   }
                 }
               }
@@ -114,7 +126,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/Molecular quantum mechanics.md",
+                    "file": "Physics/Electromagnetism.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -137,7 +149,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.7559514535391095,
+                      "scale": 0.7559514535391094,
                       "close": true
                     }
                   }
@@ -212,7 +224,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/Molecular quantum mechanics.md",
+                "file": "Physics/Electromagnetism.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -229,7 +241,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/Molecular quantum mechanics.md",
+                "file": "Physics/Electromagnetism.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -252,7 +264,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/Molecular quantum mechanics.md"
+                "file": "Physics/Electromagnetism.md"
               }
             }
           },
@@ -282,17 +294,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fa810a3102999cea",
+  "active": "3bd733e7c50cea7f",
   "lastOpenFiles": [
-    "Physics/Angular momentum in quantum mechanics.md",
+    "Physics/Topics in Electromagnetism.md",
+    "Physics/Poisson and Laplace's equations.md",
+    "Physics/Electromagnetism.md",
+    "Physics/The multipole expansion.md",
+    "Physics/Topics in Classical Mechanics.md",
     "Chemistry/Molecular quantum mechanics.md",
+    "Physics/Angular momentum in quantum mechanics.md",
     "Mathematics/Special functions and orthogonal relations.md",
     "Chemistry/Molecular spectroscopy.md",
-    "Mathematics/Elementary Analysis.md",
-    "README.md",
-    "Mathematics/Vectors and matrices.md",
-    "Physics/Analytical classical mechanics.md",
-    "Physics/Waves.md",
-    "Physics/Symmtries, transformations and generators in mechanics.md"
+    "Mathematics/Elementary Analysis.md"
   ]
 }

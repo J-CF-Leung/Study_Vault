@@ -1,5 +1,8 @@
 #IB_Natsci
 
+- The following notes is adapted from Part IB Lectures given by Prof. Oleg Brandt
+- Other topics: [[Topics in Electromagnetism]]
+
 ## Vector calculus theorems
 - [[Vector calculus in 3-dimensions]]
 
@@ -9,7 +12,7 @@ $$\oint_{\partial S}d\bm{l}\cdot \bm{A}(\bm{r})=\int_S d\bm{S}\cdot \left[\nabla
 $$\oint_{S=\partial V}d\bm{S}\cdot\bm{E}(\bm{r})=\int_VdV\,\nabla\cdot\bm{E}(\bm{r})$$
 
 
-## Spoilers: Maxwell's equations
+## Preview: Maxwell's equations
 ### Variables
 - Vector fields:
 	- Electric field $\bm{E}$
@@ -32,7 +35,7 @@ $$\pd{\rho}{t}+\nabla\cdot\bm{J}=0$$
 
 ### In matter
 - These forms are _independent of material_
-$$\begin{aligned}\nabla\cdot\bm{D}&=\rho_{free} \\ \nabla\times\bm{H} &= \mu_0\bm{J}_{free}+\pd{\bm{D}}{t}\end{aligned}$$
+$$\begin{aligned}\nabla\cdot\bm{D}&=\rho_{free} \\ \nabla\times\bm{H} &= \bm{J}_{free}+\pd{\bm{D}}{t}\end{aligned}$$
 
 
 ## Electrostatics
@@ -52,19 +55,19 @@ $$\bm{E}(\bm{r})=\frac{1}{4\pi\epsilon_0}\frac{q}{r^2}\bm{\hat{r}}$$
 	 - The work is oone _against_ the force $\bm{F}$
 - The electrostatic potential difference:
 $$dV=-d\bm{r}\cdot\bm{E}(\bm{r})$$
-- The potential difference $V$ between 2 points is the work required per unit charge to move an infinitesimally small unit charge between the 2 points
+- The potential difference $V$ between 2 points is the _work required per unit charge_ to move an _infinitesimally small unit charge_ between the 2 points
 - The point of zero potential is chosen arbitrarily, often infinity
 - The potential difference from $A$ to $B$:
-$$V_{BA}=-\int_B^Ad\bm{r}\cdot\bm{E}(\bm{r})$$
+$$V_{BA}=-\int_A^Bd\bm{r}\cdot\bm{E}(\bm{r})$$
 - The electrostatic potential $V(\bm{r})$ is a scalar field
 
-- $V(\bm{r})$ is a path-independent field (only the end-points matter) _for an electrostatic system_
+- $V(\bm{r})$ is a _path-independent_ field (only the end-points matter) _for an electrostatic system_
 	- Consider moving a charge from $A$, to $B$, then back to $A$
 
-- From the definition of the gradient and $V$:
+- From the definitions of the gradient and $V$:
 $$\bm{E}(\bm{r})=-\nabla V(\bm{r})$$
 - The physical interpretation of $V$:
-	- The electric field $\bm{E}$ points in the direction where $V$ decreases most rapidly
+	- The electric field $\bm{E}$ points in the direction where $V$ _decreases most rapidly_
 	- $|\nabla V(\bm{r})|$ is the maximum rate of change
 
 - $V$ is defined to within a spatially constant offset, as only $\bm{E}$ is physically observable
@@ -79,7 +82,7 @@ $$\pd{E_i}{x_j}=\pd{E_j}{x_i}$$
 - This can be expressed using the curl, and Stokes' theorem:
 $$\nabla\times\bm{E}=0$$
 ### Monopoles
-- A monopole is defined as a single point charge $q$
+- A monopole is defined as a _single point charge_ $q$
 - Using the definition of $V$, its electrostatic potential is:
 $$V(\bm{r})=\frac{1}{4\pi\epsilon_0}\frac{q}{r}$$
 - Its electric field can be rederived from the potential
@@ -88,14 +91,14 @@ $$V(\bm{r})=\frac{1}{4\pi\epsilon_0}\frac{q}{r}$$
 - A charge can be regarded as a "source" of field lines
 
 ### Dipoles
-- A dipole is defined as two point charges $+q$ and $-q$ placed at a short distance $a$
+- A dipole is defined as two point charges $+q$ and $-q$ placed at a _short distance_ $a$ apart
 	- No overall net charge
-	- Direction of the dipole is from $-q$ to $+q$
+	- _Direction_ of the dipole is from $-q$ to $+q$
 
 - Due to the separation, $\bm{E\neq0}$
 - Using the superposition principle for potentials, for $r>>a$:
  $$V(r,\theta)=\frac{1}{4\pi\epsilon_0}\frac{qa\cos\theta}{r^2}$$
-	- Falls off quicker than the monopole 
+	- Falls off _quicker than the monopole_ 
 - Define the _dipole moment_ $p\equiv qa$:
 $$V(\bm{r})=\frac{1}{4\pi\epsilon_0}\frac{\bm{p\cdot r}}{r^3}=\frac{1}{4\pi\epsilon_0}\frac{\bm{p\cdot\hat{r}}}{r^2}$$
 - The electric field is:
@@ -106,16 +109,16 @@ $$V(\bm{r})=\frac{1}{4\pi\epsilon_0}\frac{\bm{p\cdot r}}{r^3}=\frac{1}{4\pi\epsi
 	- At $\theta=\pi/2$, the field is azimuthal
 
 #### A dipole in a uniform electric field
-- The force on a dipole in a uniform field:
-	- The charges experience the same force in opposite directions
+- The _force and couple_ on a dipole in a uniform field:
+	- The charges experience the _same force in opposite directions_
 	- The dipole actually experiences a _couple_:
 	$$\bm{G=p\times E}$$
 	- The couple is zero when the dipole is aligned with the field
 	- Equilibrium is alignment
 
-- The potential energy of a dipole in a uniform field:
+- The _potential energy_ of a dipole in a uniform field:
 	- No work needs to be done for displacement
-	- Consider work done to increase the angle by $d\theta$
+	- Consider work done to _increase the angle_ by $d\theta$
 	- Taking $\theta=\pi/2$ as the reference:
 	$$U=-\bm{p\cdot E}$$
 	- Negative when dipole is more aligned
@@ -131,11 +134,11 @@ $$V(\bm{r})=\frac{1}{4\pi\epsilon_0}\frac{\bm{p\cdot r}}{r^3}=\frac{1}{4\pi\epsi
 		 - For a constant dipole moment, $F=\nabla[\bm{p\cdot E}]$
 		- It can be written as $F=-\nabla U$
 		- $U$ is _rotational_ potential energy
-	- For a fixed, rigid (i.e. non-induced) dipole, the dipole will move to a position where it is aligned with the field, and $|\nabla\bm{E}|$ is largest
+	- For a _fixed, rigid_ (i.e. non-induced) dipole, the dipole will move to a position where it is aligned with the field
 	- This calculation assumes the dipole _will not rotate_
 
 ### The multipole expansion
-- Expand the potential of any charge distribution 
+- _Expand_ the potential of any charge distribution 
 - Monopole - net charge, $V \propto 1/r$
 - Dipole: No net charge, net dipole moment, $V\propto 1/r^2$
 - Quadrupole: 2 dipoles pointing in opposite directions, $V\propto 1/r^3$
@@ -149,49 +152,53 @@ $$\bm{p}=\int\,dV\bm{r}\,\rho(\bm{r})$$
 
 - Any potential can be expeanded with a linear combination of terms
 
-- More mathematical details: [[The multipole expansion]]
+- More mathematical details: [[Topics in Electromagnetism#Multipole expansion|Multipole expansion]]
 
 ### Electric flux and Gauss' Law for electrostatics
 - Quantify "field line density" using the concept of _electric flux_:
 $$\int_S d\bm{S}\cdot\bm{E}(\bm{r})$$
-- Charge conservation and continuity: consider a _current density_ $\bm{J}$ through a closed surface
+	- Not exactly a "measurable" quantity
+
+- _Charge conservation and continuity_: consider a _current density_ $\bm{J}$ through a closed surface
 $$I=\oint_Sd\bm{S}\cdot\bm{J}=-\pd{}{t}\int\,dV\,\rho=\int_V\,dV \,\nabla\cdot\bm{J}$$
-- Continuity equation:
+- _Continuity_ equation:
 $$\pd{\rho}{t}+\nabla\cdot\bm{J}=0$$
 
-- Consider the flux through a closed surface enclosing a single charge:
+- Consider the flux through a closed surface enclosing a _single_ charge:
 $$\int_Sd\bm{S}\cdot\bm{E}(\bm{r})=\frac{q}{\epsilon_0}$$
-- Does not matter where the charge is within the surface
-- Shape can be arbitrary
+- _Does not matter where_ the charge is within the surface
+- Shape can be _arbitrary_
 
-- Assume a continuous charge distribution, and use superposition:
-- The integral form of the Gauss Law for Electrostatics:
+- Assume a continuous charge distribution, and use superposition
+- The integral form of the _Gauss Law for Electrostatics_:
 $$\oint_{S=\partial V}d\bm{S}\cdot\bm{E}(\bm{r})=\frac{1}{\epsilon_0} \int_VdV\,\rho(\bm{r})$$
 - The differential form:
 $$\nabla\cdot\bm{E}=\frac{\rho}{\epsilon_0}$$
 
-- The electric displacement/electric flux density:
+- The electric _displacement_/electric flux density:
 $$\bm{D}(\bm{r})=\epsilon_0\bm{E}(\bm{r})$$
 $$\oint_{S=\partial V}d\bm{S}\cdot\bm{D}(\bm{r})=\int_VdV\,\rho(\bm{r})$$
 $$\nabla\cdot\bm{D}=\rho$$
 
 ### Applying Gauss's Law to charge distributions
-- An infinite, uniform sheet of charge: draw a Gaussian pillbox
+- An _infinite, uniform sheet_ of charge: draw a _Gaussian pillbox_
 $$\bm{E}=\frac{\sigma}{2\epsilon_0}\bm{\hat{n}}$$
 	- Infinite size leads to symmetry and a normal electric field
 	- Capacitor: 2 parallel sheets of opposite sign, $\bm{E}=\sigma/\epsilon_0\bm{\hat{n}}$
 
-- An infinite, uniform line of charge: draw a Gaussian cylinder
+- An _infinite, uniform line_ of charge: draw a _Gaussian cylinder_
 $$\bm{E}=\frac{\lambda}{2\pi\epsilon_0r}\bm{\hat{r}}$$
 	- Potential between points at distances $r$ and $r_0$: $V=\lambda/(2\pi\epsilon_0)\ln(r/r_0)$
+	- Coaxial cable: two cylinders
 
 ### Laplace's and Poisson's equations
 - Consider the field at a point, expressed using the potential
 - Poisson's equation:
 $$-\nabla\cdot\bm{E}=\nabla\cdot(\nabla V)=\nabla^2V=-\frac{\rho}{\epsilon_0}$$
 - Laplace operator: measure of curvature (relates curvature to charge density)
-- Special case: charge-free region
-- Laplace's equation
+
+- Special case: _charge-free_ region
+- Here, one gets Laplace's equation:
 $$\nabla^2V=0$$
 - [[Poisson and Laplace's equations|How to solve the damn things]]
 
@@ -210,7 +217,7 @@ $$U_N=\sum_{j=1}^N\sum_{i<j}\frac{1}{4\pi\epsilon_0}\frac{q_jq_i}{r_{ij}}$$
 
 - Modifying the sum:
 $$U_N=\frac{1}{2}\sum_{j=1}^Nq_j\sum_{i\neq j}\frac{1}{4\pi\epsilon_0}\frac{q_i}{r_{ij}}=\frac{1}{2} \sum_{j=1}^Nq_jV_j$$
-	- $V_j$: potential of all charges except $q_j$
+	- $V_j$: potential of all charges _except $q_j$_
 
 - For a continuous distribution of charge: $q_i\rightarrow \rho \,d^3\bm{r}$
 $$U=\frac{1}{2}\int d^3\bm{r}\,\rho(\bm{r})\,V(\bm{r})$$
@@ -346,12 +353,12 @@ $$\bm{D}=\epsilon\epsilon_0\bm{E}$$
 - The electric field $\bm{E}$ is more "fundamental", and is an actual measurable quantity
 
 #### Situations involving dielectrics
-- Constant potential between a collection of equipotential surfaces:
-	- $\bm{E}$ is determined and fixed
+- _Constant potential_ between a collection of equipotential surfaces:
+	- _$\bm{E}$ is determined_ and fixed
 	- $\bm{D}$ gives free charge on the surfaces
 	- Free charge is dependent on $\epsilon$ as potential is maintained
-- Constant free charge between a collection of equipotential surfaces
-	- $\bm{D}$ is determined and fixed
+- _Constant free charge_ between a collection of equipotential surfaces
+	- _$\bm{D}$ is determined_ and fixed
 	- $\bm{E}$ and $V$ depend on $\epsilon$ as a dielectric is introduced, to maintain free charge
 
 ### Inhomogeneous dielectrics and boundary conditions
@@ -375,7 +382,7 @@ $$\bm{E}_{||1}=\bm{E}_{||2}$$
 $$\frac{\cot\theta_2}{\cot\theta_1}=\frac{\epsilon_1}{\epsilon_2}$$
 - The magnitudes of $\bm{P}$ and $\bm{E}$ of a dielectric body in an external field is heavily dependent on shape
 
-- Dielectric phere in a uniform field:
+- Dielectric sphere in a uniform field:
 	- Uniform electric field in sphere
 	- Sphere is polarised and acts as a dipole
 	- From solving Laplace's equation and applying the appropriate boundary conditions:
@@ -386,8 +393,12 @@ $$\bm{E}_\text{in}=\frac{3}{\epsilon+2}\bm{E}_0$$
 $$U=\frac{1}{2}\int d^3\bm{r}\,\rho(\bm{r})V(\bm{r})$$
 - Following a similar derivation as above:
 $$U=\frac{1}{2}\int\,d^3\bm{r}\,\bm{D}(\bm{r})\cdot\bm{E}(\bm{r})$$
-- Interpretation: bringing in free charge, which induces bound charge
+- Interpretation: bringing in free charge, which _induces bound charge_
 	- Work done in inducing bound charges accounted for in $V$
+- This is only suitable for _LINEAR dielectrics_
+
+- From the approach of bringing in bits of free charge, a change in energy is:
+$$dU=\int(\Delta \bm{D})\cdot\bm{E}\;d^3\bm{r}$$
 
 ## Magnetostatics
 - Just as charges give rise to electric fields, moving charge gives rise to magnetic fields

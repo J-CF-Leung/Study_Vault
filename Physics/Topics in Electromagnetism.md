@@ -1,5 +1,5 @@
 
-### Multipole expansion
+## Multipole expansion
 - Purpose: approximate the potential of a charge distribution, with each term having a different dependence on $r$
 ![[Multipole expansion terms.png]]
 - Exact potential is given by:
@@ -21,3 +21,7 @@ V_{dip}(\bm{r})&=\frac{1}{4\pi\epsilon_0}\frac{1}{r^2}\int r'\cos\alpha\;\rho(\b
 $$
 - $\bm{p}$ is the dipole moment of the charge configuration, defined by:
 $$\bm{p}\equiv\int \bm{r'} \rho(\bm{r'})\, d\tau'=\sum_iq_i\bm{r'_i}$$
+
+## Discontinuities in field and potential
+- Discontinuities in field: surface layer of charge
+- Discontinuities in potential: surface layer of dipoles

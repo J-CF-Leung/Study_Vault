@@ -58,6 +58,8 @@ $$G(\bm{r},\bm{r'})=\frac{1}{4\pi|\bm{r}-\bm{r'}|}$$
 - The dipole can be replaced by a spherical equipotential surface
 - Electric field _polarizes_ the sphere into an induced dipole
 
+### The other uniqueness theorem in electrostatics
+
 ## Method of images
 - Uniqueness theorem: as long as boundary conditions are specified, the electric field is _uniquely determined_, and the charge distribution making the field does not affect the solution
 
