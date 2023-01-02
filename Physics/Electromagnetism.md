@@ -426,7 +426,7 @@ $$d\bm{B}=\frac{\mu_0I}{4\pi r^2}d\bm{l}\wedge\bm{\hat{r}}$$
 - There are _no point sources_ (magnetic monopoles)
 
 - The total magnetic field:
-$$\bm{B}=\frac{\mu_0}{4\pi}\int d\bm{l}\wedge\bm{r}\,\frac{I}{r^3}$$
+$$\bm{B}=\frac{\mu_0}{4\pi}\int d\bm{l}\wedge\bm{\hat{r}}\,\frac{I}{r^2}$$
 - The force between two current elements, with displacement $\bm{r}$ from $d\bm{l}_1$ to $d\bm{l}_2$:
 $$d\bm{F}_2=\frac{\mu_0}{4\pi}I_1I_2\,d\bm{l}_2\wedge(d\bm{l}_1 \wedge\frac{\bm{\hat{r}}}{r^2})$$
 - Maximum when aligned
@@ -452,7 +452,7 @@ $$\bm{m}=I\int_S d\bm{S}$$
 - The couple it experiences is:
 $$\bm{G}=\bm{m}\wedge\bm{B}$$
 
-- By considering work done to rotate the dipole by $d\theta$, where $\theta$ is relative to $\bm{B}$:
+- By considering _work done to rotate the dipole_ by $d\theta$, where $\theta$ is relative to $\bm{B}$:
 $$U=-\bm{m}\cdot\bm{B}$$
 	- Minimum when aligned with the field
 	- For a macroscopic current loop, the energy becomes $-I\Phi$
@@ -463,7 +463,7 @@ $$U=-\bm{m}\cdot\bm{B}$$
 $$\bm{F}=m_j\pd{B_j}{x_i}\bm{e}_i$$
 - For a _uniform dipole moment_:
 $$\bm{F}(\bm{r})=\nabla[\bm{m}\cdot\bm{B}(\bm{r})]$$
-- The dipole tends to move to a position where it can be aligned with the field
+- A _fixed_ dipole tends to move to a position where it can be _aligned with the field_
 
 ### The magnetic scalar potential
 - Define a _magnetic field strength_ $\bm{H}(\bm{r})$:
@@ -475,7 +475,7 @@ $$\displaylines{\bm{H}(\bm{r})=-\nabla\phi_m(\bm{r}) \\ \bm{B}(\bm{r})=-\mu_0\na
 - The curl is zero _except where there are currents_
 - A scalar potential _can be defined for regions far away from currents_
 
-- Physical meaning of $\phi_m$: unrelated to work, simply the shape of a landscape to generate $\bm{B}$
+- Physical meaning of $\phi_m$: _unrelated to work_, simply the shape of a landscape to generate $\bm{B}$
 
 #### Magnetic scalar potential of a current loop
 - The solid angle $d\Omega$ is defined by an element of surface area $d\bm{S}$ on a sphere of radius $r$:
@@ -514,12 +514,12 @@ $$\phi_m=-\frac{I\phi}{2\pi}$$
 	- The potential is _multi-valued_, and _potential difference cannot describe energy_
 
 #### Two parallel infinite wires
-- The force per unit length between two infnite, parallel wires with separation $a$:
+- The _force per unit length_ between two infnite, parallel wires with separation $a$:
 $$F=\frac{\mu_0I_1I_2}{2\pi a}$$
 	- Attractive if the currents flow in the same direction
 
 - The potential:
-	- If the currents are in opposite directions, there is a discontinuity along the line joining the wires
+	- If the currents are in opposite directions, there is a _discontinuity_ along the line joining the wires
 	- Same diection: discontinuity only occurs along a closed path enclosing a current
 
 #### The solenoid
@@ -546,7 +546,7 @@ $$\bm{\nabla\cdot A}=0$$
 
 - From Ampere's Law, the Poisson's equation for the magnetic vector potential:
 $$-\nabla^2\bm{A}=\mu_0\bm{J}$$
-- By comparing with the electrostatic case:
+- By _comparing with the electrostatic_ case:
 $$\bm{A}(\bm{r})=\frac{\mu_0}{4\pi}\int \frac{\bm{J}(\bm{r'})}{|\bm{r-r'}|}\,d^3\bm{r'}$$
 
 - $\bm{A}$ analagous to $V$, $\rho$ analagous to $\bm{J}$
@@ -621,7 +621,7 @@ $$\oint \bm{H}\cdot d\bm{l}=I_\text{free}$$
 
 #### Magnetic permeability in materials
 - To calculate forces, $\bm{B}$ is needed, and $\bm{M}$ is required for that
-- For most materials, in the small-field limit, $\bm{M}$ is linearly proportional to $\bm{H}$:
+- For _most materials, in the small-field limit_, $\bm{M}$ is linearly proportional to $\bm{H}$:
 $$\bm{M}=\chi_m\bm{H}$$
 - $\chi_m$ is the _magnetic permeability_
 - The magnetic field is then given by:

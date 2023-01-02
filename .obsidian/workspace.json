@@ -62,7 +62,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chemistry/Molecular quantum mechanics.md",
+                "file": "Chemistry/Molecular spectroscopy.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,14 +86,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/Special functions and orthogonal relations.md",
+                "file": "Quotes.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -110,7 +110,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/Electromagnetism.md"
+                    "file": "Chemistry/Molecular spectroscopy.md"
                   }
                 }
               }
@@ -126,7 +126,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/Electromagnetism.md",
+                    "file": "Chemistry/Molecular spectroscopy.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -224,7 +224,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Electromagnetism.md",
+                "file": "Chemistry/Molecular spectroscopy.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -241,7 +241,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Electromagnetism.md",
+                "file": "Chemistry/Molecular spectroscopy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -264,7 +264,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Electromagnetism.md"
+                "file": "Chemistry/Molecular spectroscopy.md"
               }
             }
           },
@@ -294,17 +294,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3bd733e7c50cea7f",
+  "active": "fa810a3102999cea",
   "lastOpenFiles": [
+    "Chemistry/Molecular quantum mechanics.md",
+    "Physics/Optics.md",
+    "Physics/Experimental methods and data analysis.md",
+    "Physics/Electromagnetism.md",
+    "Quotes.md",
+    "Mathematics/Special functions and orthogonal relations.md",
     "Physics/Topics in Electromagnetism.md",
     "Physics/Poisson and Laplace's equations.md",
-    "Physics/Electromagnetism.md",
     "Physics/The multipole expansion.md",
-    "Physics/Topics in Classical Mechanics.md",
-    "Chemistry/Molecular quantum mechanics.md",
-    "Physics/Angular momentum in quantum mechanics.md",
-    "Mathematics/Special functions and orthogonal relations.md",
-    "Chemistry/Molecular spectroscopy.md",
-    "Mathematics/Elementary Analysis.md"
+    "Physics/Topics in Classical Mechanics.md"
   ]
 }

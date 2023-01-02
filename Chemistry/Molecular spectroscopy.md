@@ -1,7 +1,11 @@
 #IB_Natsci 
+
+- Spectroscopy: _Determining structures using the interaction of electromagnetic radiation with matter_
+
 ## Physical principles and approximations
 
 ### Quantisation of energy levels
+- Contributions to the energy of a molecule are: 
 
 ### The Born-Oppenheimer approximation
 
