@@ -2,4 +2,5 @@ Email: cfl35@cam.ac.uk
 
 Enjoy lol I don't think my notes are THAT good
 
-To render all the new $\LaTeX$ commands, install the MathJax Extended plugin and place preamble.sty in the vault
+For the full experience, view in Obsidian (plugins included in .obsidian folder)
+Plugins are required to render backlinks and original $\LaTeX$ commands

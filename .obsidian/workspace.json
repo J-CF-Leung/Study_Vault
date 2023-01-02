@@ -62,7 +62,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chemistry/Molecular spectroscopy.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/Molecular spectroscopy.md"
+                    "file": "README.md"
                   }
                 }
               }
@@ -126,7 +126,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/Molecular spectroscopy.md",
+                    "file": "README.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -224,7 +224,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/Molecular spectroscopy.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -241,7 +241,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/Molecular spectroscopy.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -264,7 +264,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/Molecular spectroscopy.md"
+                "file": "README.md"
               }
             }
           },
@@ -296,9 +296,9 @@
   },
   "active": "fa810a3102999cea",
   "lastOpenFiles": [
+    "Chemistry/Molecular spectroscopy.md",
     "Chemistry/Energy level spacings.png",
     "Physics/Waves.md",
-    "Chemistry/Molecular spectroscopy.md",
     "Physics/Experimental methods and data analysis.md",
     "Misc or Personal/Quotes.md",
     "Misc or Personal/CHaOS Experiment Ideas.md",
