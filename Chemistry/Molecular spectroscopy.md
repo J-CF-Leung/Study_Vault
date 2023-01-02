@@ -14,8 +14,13 @@
 - The _energy level spacing_ for the different contributions are _on very different scales_
 - With the [[Molecular quantum mechanics#The Born-Oppenheimer approximation|Born-Oppenheimer approximation]], the different contributions can be regarded as _independent of each other_
 - Thus, the energy level _transitions are also independent_:
-$$\displaylines{\Delta E_\text{tot}=\Delta E_\text{elec}+\Delta E_\text{vib}+\Delta E_\text{rot}}$$
+$$\displaylines{\Delta E_\text{tot}=\Delta E_\text{elec}+\Delta E_\text{vib}+\Delta E_\text{rot} \\ \Delta E_\text{elec}>>\Delta E_\text{vib} >> \Delta E_\text{rot}}$$
+![[Energy level spacings.png]]
 
+- Vibrational transitions are _always accompanied by_ rotational transitions
+- Similarly, electronic transitions are _always accompanied by_ vibrational and rotational transitions
+- Corresponding sections of the EM spectrum for transitions:
+![[Wavelengths for transitions.png]]
 
 ## Qualitative summary of spectroscopy
 
