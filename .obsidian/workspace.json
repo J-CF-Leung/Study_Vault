@@ -62,7 +62,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chemistry/Molecular spectroscopy.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/Molecular spectroscopy.md"
+                    "file": "README.md"
                   }
                 }
               }
@@ -126,7 +126,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/Molecular spectroscopy.md",
+                    "file": "README.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -224,7 +224,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/Molecular spectroscopy.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -241,7 +241,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/Molecular spectroscopy.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -264,7 +264,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/Molecular spectroscopy.md"
+                "file": "README.md"
               }
             }
           },
@@ -296,6 +296,7 @@
   },
   "active": "fa810a3102999cea",
   "lastOpenFiles": [
+    "Chemistry/Molecular spectroscopy.md",
     "Chemistry/Molecular quantum mechanics.md",
     "Physics/Optics.md",
     "Physics/Experimental methods and data analysis.md",
@@ -304,7 +305,6 @@
     "Mathematics/Special functions and orthogonal relations.md",
     "Physics/Topics in Electromagnetism.md",
     "Physics/Poisson and Laplace's equations.md",
-    "Physics/The multipole expansion.md",
-    "Physics/Topics in Classical Mechanics.md"
+    "Physics/The multipole expansion.md"
   ]
 }

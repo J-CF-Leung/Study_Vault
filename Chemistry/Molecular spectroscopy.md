@@ -4,10 +4,17 @@
 
 ## Physical principles and approximations
 
-### Quantisation of energy levels
 - Contributions to the energy of a molecule are: 
+	- Translation (_ignored_ as light does not significantly affect motion)
+	- Vibration
+	- Rotation
+	- Electronic
 
-### The Born-Oppenheimer approximation
+- These energies are _quantised_
+- The _energy level spacing_ for the different contributions are _on very different scales_
+- With the [[Molecular quantum mechanics#The Born-Oppenheimer approximation|Born-Oppenheimer approximation]], the different contributions can be regarded as _independent of each other_
+- Thus, the energy level _transitions are also independent_:
+$$\displaylines{\Delta E_\text{tot}=\Delta E_\text{elec}+\Delta E_\text{vib}}$$
 
 
 ## Qualitative summary of spectroscopy
