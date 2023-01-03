@@ -1,8 +1,8 @@
 ## The time-independent Schrödinger equation
 - Applicable for problems with a time-independent Hamiltonian
-- The [[Fundamentals and the matrix-based formulation of quantum mechanics#Time-independent Hamiltonians and stationary states|time-independent Schrödinger equation]] solves for the eigenkets of the Hamiltonian:
+- The [[Fundamentals of quantum mechanics#Time-independent Hamiltonians and stationary states|time-independent Schrödinger equation]] solves for the eigenkets of the Hamiltonian:
 $$\Ham\ket{E}=E\ket{E}$$
-- The resultant [[Fundamentals and the matrix-based formulation of quantum mechanics#The time-evolution operator|time-evolution operator]] and wave function become:
+- The resultant [[Fundamentals of quantum mechanics#The time-evolution operator|time-evolution operator]] and wave function become:
 $$\teo = \sum_n\ket{E_n}\bra{E_n}\exp(-iE_nt/\hbar)=\int\ket{E}\bra{E}\exp(-iEt/\hbar)\,dE$$
 $$\ket{\Psi(t)} =\sum_n\ket{E_n}\braket{E_n|\Psi_0}\exp(-iE_nt/\hbar) =\int \ket{E}\braket{E|\Psi_0}\exp(-iEt/\hbar)\,dE$$
 

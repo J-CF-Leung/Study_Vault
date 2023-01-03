@@ -62,7 +62,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Chemistry/Molecular spectroscopy.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "README.md"
+                    "file": "Chemistry/Molecular spectroscopy.md"
                   }
                 }
               }
@@ -126,7 +126,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "README.md",
+                    "file": "Chemistry/Molecular spectroscopy.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -149,7 +149,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.7559514535391094,
+                      "scale": 0.7559514535391091,
                       "close": true
                     }
                   }
@@ -187,7 +187,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "operators",
+                "query": "boltzmann",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -224,7 +224,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Chemistry/Molecular spectroscopy.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -241,7 +241,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Chemistry/Molecular spectroscopy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -264,7 +264,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Chemistry/Molecular spectroscopy.md"
               }
             }
           },
@@ -296,15 +296,15 @@
   },
   "active": "fa810a3102999cea",
   "lastOpenFiles": [
-    "Chemistry/Molecular spectroscopy.md",
-    "Chemistry/Energy level spacings.png",
-    "Physics/Waves.md",
-    "Physics/Experimental methods and data analysis.md",
-    "Misc or Personal/Quotes.md",
-    "Misc or Personal/CHaOS Experiment Ideas.md",
-    "README.md",
     "Chemistry/Molecular quantum mechanics.md",
+    "Chemistry/Molecular spectroscopy.md",
+    "Physics/Electromagnetism.md",
     "Physics/Optics.md",
-    "Physics/Electromagnetism.md"
+    "Chemistry/Symmetry in molecules.md",
+    "Physics/Fundamentals of quantum mechanics.md",
+    "Physics/The operators of quantum mechanics.md",
+    "Physics/Symmtries, transformations and generators in mechanics.md",
+    "Physics/Rotational mechanics.md",
+    "Physics/Topics in Quantum Mechanics.md"
   ]
 }

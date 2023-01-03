@@ -1,4 +1,4 @@
-- Solving the [[Fundamentals and the matrix-based formulation of quantum mechanics#Time-independent Hamiltonians and stationary states|time-independent Schrödinger equation]] with a 3-dimensional Hamiltonian
+- Solving the [[Fundamentals of quantum mechanics#Time-independent Hamiltonians and stationary states|time-independent Schrödinger equation]] with a 3-dimensional Hamiltonian
 
 ## The 3D time-independent Hamiltonian
 - In 3 dimensions, the Hamiltonian bcomes:

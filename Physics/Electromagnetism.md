@@ -330,6 +330,7 @@ $$-\int_\mathcal{V}\nabla\cdot\bm{P}\,d^3\bm{r}=\int_{S= \partial\mathcal{V}}\bm
 	- The interior bound charge is equal and opposite to the surface bound charge
 
 - [[Dielectric and magnetic materials|Applications in materials science]]
+
 #### Gauss' Law in dielectrics
 - The total charge density is $\rho_f+\rho_b=\epsilon_0\nabla\cdot \bm{E}$
 - Define the _electric displacement_ $\bm{D}$:
@@ -360,6 +361,13 @@ $$\bm{D}=\epsilon\epsilon_0\bm{E}$$
 - _Constant free charge_ between a collection of equipotential surfaces
 	- _$\bm{D}$ is determined_ and fixed
 	- $\bm{E}$ and $V$ depend on $\epsilon$ as a dielectric is introduced, to maintain free charge
+
+#### Molecular origins of dielectrics
+- Atoms and molecules have an inherent _polarisability_ $\alpha$
+	- For linear, isotropic dielectrics, it is a _scalar_
+	- In general, it is a _tensor_
+- The _induced dipole_ $\bm{p}$ from an electric field $\bm{E}$ is:
+$$\bm{p}=\alpha\bm{E}$$
 
 ### Inhomogeneous dielectrics and boundary conditions
 - Inhomogeneous dielectric: $\epsilon$ varies with position

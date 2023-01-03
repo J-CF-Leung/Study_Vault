@@ -47,7 +47,7 @@ $$\braket{p|\hat{X}|p'}=i\hbar\frac{d}{dp}\delta(p-p')$$
 - The two operators $\hat{X}$ and $\hat{P}$ do not commute:
 $$[\hat{X},\hat{P}]=i\hbar$$
 
-- Using this, the [[Fundamentals and the matrix-based formulation of quantum mechanics#Uncertainty|uncertainty relation]] for these two variables is:
+- Using this, the [[Fundamentals of quantum mechanics#Uncertainty|uncertainty relation]] for these two variables is:
 $$\Delta X\Delta P\geq \frac{\hbar}{2}$$
 ## Converting between bases
 

@@ -1,6 +1,6 @@
 #IB_Natsci 
 
-- Only considering [[Fundamentals and the matrix-based formulation of quantum mechanics#Time-independent Hamiltonians and stationary states|time-independent wave functions and Hamiltonians]]
+- Only considering [[Fundamentals of quantum mechanics#Time-independent Hamiltonians and stationary states|time-independent wave functions and Hamiltonians]]
 - Considering position-space wave functions
 
 
@@ -103,9 +103,9 @@ $$\Ham\Psi=[E_{vib}+BJ(J+1)]\Psi$$
 - $B$ is often _much smaller_ compared to vibrational energy spacing ($\approx\hbar\omega$)
 	- Typically 1000 times smaller
 
-## Spectroscopy
+## Spectroscopic principles
 - Bohr condition: for a transition between two states $\psi_m$ and $\psi_n$ facilitated by a photon, its _frequency $\nu_{mn}$ must equal_ $|E_n-E_m|/h$
-- Fermi's Golden Rule: Under an electric field, the rate of induced absorption and emission:
+- Fermi's Golden Rule: Under an electric field, the rate of induced absorption and emission-
 $$B_{mn}=\frac{2\pi}{4\pi\epsilon_0(3\hbar^2)}|\braket{\psi_m|\hat{\mu}|\psi_n}|^2$$
 - Spontaneous emission: a molecule in an excited state $\psi_m$ may undergo a spontaneous transition to lower energy state $\psi_n$ with rate
 $$A_{mn}=\frac{8\pi h\nu_{mn}^3}{c^3}B_{mn}$$
