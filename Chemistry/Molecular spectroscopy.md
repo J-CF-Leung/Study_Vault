@@ -1,9 +1,6 @@
 #IB_Natsci 
 
 - Spectroscopy: _Determining structures using the interaction of electromagnetic radiation with matter_
-- Notation: quantities in _wavenumbers_ with units of $\text{cm}^{-1}$ are denoted with a tilde ~
-
-- $\tilde{c}$ is the speed of light in $\text{cm s}^{-1}$
 
 ## Physical principles and approximations
 
@@ -56,7 +53,10 @@ $$\displaylines{\Delta E_\text{tot}=\Delta E_\text{elec}+\Delta E_\text{vib}+\De
 - For these molecules, _Raman spectroscopy_ is needed
 
 - In Raman spectroscopy, photons of _any energy_ are absorbed by the molecule
-- The molecule is promoted to a _virtual state_ before it re-emits the photon, dropping back into another state
+- The oscillating electric field _induces a dipole_ in the molecule
+- The molecule is promoted to a _virtual state_ 
+	- The energy of this state does not necessarily match an energy level
+- A photon is then re-emitted
 - This is analagous to the classical phenomenon of _scattering_
 
 - The _majority_ of photons emerge with the _same energy as before_, meaning the "collision" is _elastic_, this is known as _Rayleigh scattering_: $M+h\nu\rightarrow M+h\nu$
@@ -80,7 +80,17 @@ $$\alpha=\alpha_0+\beta\sin2\pi\nu_mt$$
 $$\mu=\alpha_0E_0\sin2\pi\nu t+\frac{1}{2}\beta E_0\left\{\cos2\pi(\nu-\nu_m)t-\cos2\pi(\nu+\nu_m)t\right\}$$
 - If $\beta=0$ (i.e. invariant polarisability), _Raman spectroscopy is impossible_
 
-## Microwave rotational spectroscopy
+### NOTATION
+- Quantities in _wavenumbers_ with units of $\text{cm}^{-1}$ are denoted with a tilde ~
+- $\tilde{c}$ is the speed of light in $\text{cm s}^{-1}$
+
+- Branches of emission lines:
+| $\Delta J$        | $-2$ | $-1$ | $0$ | $+1$ | $+2$ |
+| ----------------- | ---- | ---- | --- | ---- | ---- |
+| Naming convention | O    | P    | Q   | R    | S     |
+
+
+## Rotational microwave spectroscopy
 - Applicable to molecules with a _permanent dipole moment_
 
 ### Rotating molecules
@@ -126,9 +136,11 @@ $$\Delta J=\pm1$$
 - The difference in wavenumber from energy level $J$ to $J+1$ is:
 $$\Delta\mathcal{E}=\mathcal{E}_{J+1}-\mathcal{E}_J=2\tilde{B}J(J+1)$$
 - This gives _equally spaced transitions_ of $2\tilde{B},4\tilde{B},6\tilde{B},...$
+![[Rotational transitions.png|450]]
 
 - The _intensity_ of a peak depends on the _population_ of the originating energy level
 - Practically, emission (both spontaneous and stimulated) must be taken into account
+![[N2O rotational spectrum.png]]
 
 ### Linear polyatomic molecules
 - For linear polyatomic molecules, transitions are _also spaced by $2\tilde{B}$_
@@ -138,7 +150,18 @@ $$I=m_Ar_{AB}^2+m_Cr_{BC}^2-\frac{(m_Ar_{AB}-m_Cr_{BC})^2}{m_A+m_B+m_C}$$
 - Assuming _bond length does not change_, this changes $\tilde{B}$
 - Therefore, both bond lengths can be found
 
-## Raman rotational spectroscopy
+## Rotational Raman spectroscopy
+- For rotational Raman spectroscopy to work, _polarisability must change during rotation_
+- The selection rule in rotational Raman spectroscopy is:
+$$\Delta J=0,\pm2$$
+- The change in rotational energy for $|\Delta J|=2$ is therefore given by:
+$$\mathcal{E}_\text{upper}-\mathcal{E}_\text{lower}=\tilde{B}(4J+6)$$
+- _Stokes lines_, where the molecule gains energy, are at $\tilde{\nu}_\text{incident}-\tilde{B}(4J+6)$
+- _Anti-Stokes lines_, where the molecule loses energy, are at $\tilde{\nu}_\text{incident}+\tilde{B}(4J+6)$
+![[Raman lines.png]]
+- $\Delta J$ is defined by convention to be $J(\text{upper})-J(\text{lower})$
+- Therefore, all Raman lines _are in the S branch_
+![[N2 Raman.png]]
 
 ## Vibrational potentials and selection rules
 
