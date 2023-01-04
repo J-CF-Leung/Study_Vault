@@ -7,7 +7,7 @@ $$V(x)=\frac{1}{2}m\omega^2x^2$$
 $$\ddot{x}=-\omega^2x$$
 - Solution for $x(t)$:
 $$x=A\cos(\omega t+\phi)$$
-	- $A$ and $\phi$ depend on initial conditions
+	- $A$ and $\phi$ _depend on initial conditions_
 
 - Simplest example: mass $m$ on spring obeying Hooke's law with spring constant $k$
 	- Equation of motion $m\ddot{x}=-kx$
@@ -19,9 +19,9 @@ $$\displaylines{m\ddot{x}=F(t)-b\dot{x}-kx \\ F(t)=m\ddot{x}+b\dot{x}+kx}$$
 $$\omega_0=\sqrt{\frac{k}{m}}$$
 $$\gamma=\frac{b}{m}$$
 $$\ddot{x}+\gamma\dot{x}+\omega_0^2x=\frac{F(t)}{m}$$
-- The dimensionless quality factor:
+- The dimensionless _quality factor_ $Q$:
 $$Q=\frac{\omega_0}{\gamma}$$
-- Represent oscillating quantities using phasors, taking the physical quantity as the real part
+- Represent oscillating quantities using _phasors_, taking the _physical quantity as the real part_
 $$x=\mathbb{R}[x_0\exp i(\omega t+\phi)]$$
 - $A$ and $\phi$ depend on boundary conditions
 - Velocity is $\pi/2$ ahead, acceleration is $\pi$ ahead
@@ -40,11 +40,12 @@ $$p=-\frac{\gamma}{2}\pm i\omega_f$$
  $$x=e^{-\gamma t/2}\left[A\exp(i\omega_f t)+A^*\exp(-i\omega_f t)\right]$$
 	-  $A$ is complex, encodes initial amplitude and phase
 $$\omega_f=\omega_0\sqrt{1-\frac{1}{4Q^2}}$$
-- For larger $Q$, $\omega_f\approx \omega_0$
-- Still oscillates for many cycles
+- For _larger $Q$_, $\omega_f\approx \omega_0$
+- _Still oscillates_ for many cycles
 - Time constant $\tau$ of amplitude: $2/\gamma=2Q/\omega_0$
-- Energy $U$ decays twice as fast with time constant $1/\gamma=Q/\omega_0$
-- $Q$ is the number of radians elapsed when a lightly damped oscillation has its energy decrease to $1/e$ of the initial value
+- _Energy $U$ decays twice as fast_ with time constant $1/\gamma=Q/\omega_0$
+- $Q$ is the _number of radians elapsed_ when a lightly damped oscillation has its energy _decrease to $1/e$ of the initial value_
+	- $=$ number of radians for _amplitude_ to decrease to $1/\sqrt{e}$ of original value
 
 #### Critical damping
 - $Q=0.5$, $\omega_0=\gamma/2$
