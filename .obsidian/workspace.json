@@ -33,19 +33,7 @@
             }
           },
           {
-            "id": "999872d7e84c6828",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Physics/IB Physics/Oscillations.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fa810a3102999cea",
+            "id": "9d81ece30fcfcc63",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -69,7 +57,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -86,7 +74,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/IB Physics/Electromagnetism.md"
+                    "file": "Physics/IB Physics/Waves.md"
                   }
                 }
               }
@@ -102,7 +90,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/IB Physics/Electromagnetism.md",
+                    "file": "Physics/IB Physics/Waves.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -200,7 +188,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/IB Physics/Electromagnetism.md",
+                "file": "Physics/IB Physics/Waves.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -217,7 +205,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/IB Physics/Electromagnetism.md",
+                "file": "Physics/IB Physics/Waves.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -240,7 +228,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/IB Physics/Electromagnetism.md"
+                "file": "Physics/IB Physics/Waves.md"
               }
             }
           },
@@ -270,17 +258,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3bd733e7c50cea7f",
+  "active": "bdee2333112a0d60",
   "lastOpenFiles": [
+    "Physics/Quantum Mechanics/Untitled.md",
     "Physics/IB Physics/Waves.md",
+    "Physics/IB Physics/Electromagnetism.md",
     "Physics/IB Physics/Oscillations.md",
     "Physics/IB Physics/Experimental methods and data analysis.md",
     "Physics/Images/System with feedback.png",
     "Physics/Images/Op-amp circuit systems approach.png",
     "Chemistry/IB Chemistry/Molecular spectroscopy.md",
-    "Physics/Path integrals in quantum mechanics.md",
-    "Physics/Quantum Harmonic Oscillator.md",
-    "Mathematics/IB Natsci Maths/Vectors and matrices.md",
-    "Mathematics/Wtf are tensors.md"
+    "Physics/Quantum Mechanics/Path integrals in quantum mechanics.md",
+    "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md"
   ]
 }

@@ -175,8 +175,9 @@ $$\ddot{\theta}+\frac{g}{L}\theta\left(1-\frac{\theta^2}{6}\right)=0$$
 - Typical symmetric, anharmonic potential
 $$V(x)=\frac{kx^2}{2}\left(1+\frac{\alpha}{2}x^2\right)$$
 $$\ddot{x}+(1+\alpha x^2)\omega_0^2x=0$$
-	- Positive $\alpha$: "Hard" potential, spring stiffens with extension
+	- Positive $\alpha$: "Hard" potential, spring _stiffens with extension_
 
+- Solution: Add harmonics with _higher frequencies_
 - Small anharmonicity ($|\alpha|<<1$):
 $$x(t)=A(\cos\omega_ft+\epsilon\cos{3\omega_ft}\,+\,...)$$
 	- For small $|\alpha|$, $\omega_f\approx \omega_0$, $\epsilon <<1$
@@ -187,7 +188,7 @@ $$\omega_f\approx\omega_0\left(1+\frac{3}{8}\alpha A^2\right)$$
 $$\epsilon\approx\frac{1}{32}\alpha A^2$$
 
 - As expected, anharmonic correction increases with $A$
-- Period becomes amplitude-dependent
+- Period _becomes amplitude-dependent_
 	- Soft potential: longer period as amplitude increases
 
 - For asymmetric potentials, the expansion would include even harmonics
@@ -203,10 +204,10 @@ $$\displaylines{F(t)=F_1\cos(\omega_1t+\alpha_1)+F_2\cos(\omega_2t+\alpha_2) \\ 
 - If $\omega_1=\omega_2$, the amplitude depends on the _relative phase_:
 $$A^2=A_1^2+A_2^2+2A_1A_2\cos(\alpha_2-\alpha_1)$$
 - For $F_1=F_2$:
-	- In-phase leads to double amplitude and quadruple power
+	- In-phase leads to _double amplitude and quadruple power_
 	- Anti-phase leads to no response
 
-- In practice, the relative phase is likely to drift over time and average to zero
+- In practice, the relative phase is likely to _drift over time and average to zero_
 - In that case, the forces are _incoherent_
 - For coherency, the forces will need to come from a _common source_
 
