@@ -3,9 +3,9 @@
 ## The wave equation
 - Waves transport energy and information without _bulk_ translation of the medium
 
-- The non-dispersive wave equation:
+- The _non-dispersive_ wave equation:
 $$\pd{^2\psi}{t^2}=v^2\nabla^2\psi$$
-	- Non-dispersive: $v$ does not depend on frequency
+	- Non-dispersive: $v$ _does not depend on frequency_
 
 - The one-dimensional version:
 $$\pd{^2\psi}{t^2}=v^2\pd{^2\psi}{x^2}$$
@@ -48,13 +48,13 @@ $$\psi(r,t)\approx\frac{f(r\pm vt)}{\sqrt{r}}$$
 - Long distance requirement: $r>>\lambda$
 
 ## Polarisation
-- For a transverse wave travelling in the $x$ direction, the displacement could be along $y$ or $z$
-- The waves in the two directions are independent but have the same speed:
+- For a _transverse wave_ travelling in the $x$ direction, the displacement could be along $y$ or $z$
+- The waves in the two directions are _independent but have the same speed_:
 $$v^2\pd{^2\psi_i}{x^2}=\pd{^2\psi_i}{t^2}\hspace{0.25cm},\hspace{0.25cm}i=y,z $$
 
 - The waves must be _coherent_ for the overall wave to be polarised
-- Partial polarisation can occur when two incoherent waves are added
-- Unpolarised: two orthogonal, incoherent oscillations with equal magnitude
+- _Partial polarisation_ can occur when two incoherent waves are added
+- _Unpolarised_: two orthogonal, _incoherent oscillations_ with equal magnitude
 
 - The displacements can be written as:
 $$\begin{aligned}\psi_y&=A_y\cos(kx-\omega t) \\ \psi_z &= A_z\cos(kx-\omega t+\phi)\end{aligned}$$
@@ -63,23 +63,23 @@ $$\begin{aligned}\psi_y&=A_y\cos(kx-\omega t) \\ \psi_z &= A_z\cos(kx-\omega t+\
 
 ### Linear polarisation
 - $\phi=n\pi$
-- The field vector oscillates along a straight line
+- The field vector oscillates _along a straight line_
 - Amplitude $A=\sqrt{A_y^2+A_z^2}$
 
 ### Circular polarisation
 - Equal in magnitude
 - $\phi=(m+1/2)\pi$
-- Convention: Looking towards the wave source
+- Convention: Looking _towards the wave source_
 	- Right-circular: clockwise motion of field vector as $z$ increases![[Polarisation conventions.png]]
 
 ### Elliptical polarisation
 - Most general
-- Not necessarily equal in amplitude, $0\leq \phi \leq 2\pi$
-- Reduction to special cases
+- _Not necessarily equal_ in amplitude, $0\leq \phi \leq 2\pi$
+- Reduction to _special cases_
 	- Circular: $A_y=A_z, \phi=(m+1/2)\pi$, s
-		- Sum of equal amplitude, coherent, orthogonal linearly polarised waves with $\pi/2$ phase
+		- Sum of equal amplitude, coherent, _orthogonal linearly polarised_ waves with $\pi/2$ phase
 	- Linear: $A_y=A_z$, $\phi=n\pi$ 
-		- Sum of equal amplitude, coherent, left and right-handed circularly polarised waves
+		- Sum of equal amplitude, coherent, _left and right-handed circularly polarised_ waves
 
 - Two amplitudes and one angle needed to specify elliptical polarisation
 

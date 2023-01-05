@@ -809,6 +809,15 @@ $$M=k\sqrt{L_1L_2}$$
 - Consider a _doubly wound_ solenoid (wound by 2 _separate_ wires with _different currents and loop density_)
 	- For this system, $k=1$
 
+#### The Neumann formula
+- The flux in coil 2 due to coil 1 can be written using the [[#The magnetic vector potential|magnetic vector potential]]:
+$$\Phi_{21}=\iint_\text{loop 2} \bm{B}_1\cdot d\bm{S}_2=\iint_\text{loop 2}\left(\nabla\wedge\bm{A}_1\right)\cdot d\bm{S}_2$$
+- Using Stokes' Theorem and expressing $\bm{A}$ in terms of the current in coil 1:
+$$\Phi_{21}=\oint_2 \bm{A}_1\cdot d\bm{l}_2=\oint_2\left(\oint_1 \frac{\mu_0I_1}{4\pi}\frac{d\bm{l}_1}{|\bm{r}_2-\bm{r}_1|}\right)\cdot d\bm{l}_2$$
+- From this, the _Neumann formula_ can be obtained:
+$$M_{21}\equiv\frac{\Phi_{21}}{I_1}=\frac{\mu_0}{4\pi}\oint_2\oint_1 \frac{d\bm{l}_1\cdot d\bm{l}_2}{|\bm{r}_2-\bm{r}_1|}$$
+- It can clearly be seen that this formula is _symmetric_, hence $M_{21}=M_{12}$
+
 ### Transformers
 - Consider two coils with number of turns $N_1$ and $N_2$ _coupled by a core of ferromagnetic material_
 - Ideality:
