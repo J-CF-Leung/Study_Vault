@@ -45,6 +45,30 @@
             }
           },
           {
+            "id": "72af1b3cab40709f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ac0aa9e553cf2558",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "24d2eed9c1427852",
             "type": "leaf",
             "state": {
@@ -57,7 +81,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -74,7 +98,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/IB Physics/Electromagnetism.md"
+                    "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md"
                   }
                 }
               }
@@ -90,7 +114,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/IB Physics/Electromagnetism.md",
+                    "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -113,7 +137,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.9020357635304832,
+                      "scale": 0.9020357635304831,
                       "close": true
                     }
                   }
@@ -188,7 +212,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/IB Physics/Electromagnetism.md",
+                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -205,7 +229,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/IB Physics/Electromagnetism.md",
+                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -228,7 +252,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/IB Physics/Electromagnetism.md"
+                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md"
               }
             }
           },
@@ -258,17 +282,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "1240bf5783d867d9",
+  "active": "ac0aa9e553cf2558",
   "lastOpenFiles": [
+    "Physics/IB Physics/Electromagnetism.md",
+    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+    "Physics/Quantum Mechanics/Time-independent Hamiltonians in 3 dimensions.md",
+    "Physics/Quantum Mechanics/Time-independent Hamiltonians in 1 dimension.md",
+    "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
     "Physics/IB Physics/Waves.md",
     "Physics/Thermodynamics.md",
     "Physics/Quantum Mechanics/Untitled.md",
-    "Physics/IB Physics/Electromagnetism.md",
-    "Physics/IB Physics/Oscillations.md",
-    "Physics/IB Physics/Experimental methods and data analysis.md",
-    "Physics/Images/System with feedback.png",
-    "Physics/Images/Op-amp circuit systems approach.png",
-    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
-    "Physics/Quantum Mechanics/Path integrals in quantum mechanics.md"
+    "Physics/IB Physics/Oscillations.md"
   ]
 }

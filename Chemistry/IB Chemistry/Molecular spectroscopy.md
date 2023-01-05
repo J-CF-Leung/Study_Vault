@@ -38,15 +38,20 @@ $$\displaylines{\Delta E_\text{tot}=\Delta E_\text{elec}+\Delta E_\text{vib}+\De
 	- _Stimulated emission_: $M^*+h\nu\rightarrow M+2h\nu$
 
 - All of these require an _oscillating dipole_ with a _frequency corresponding to the interacting photon_
+- This leads to the _gross selection rules_ for each type of spectroscopy, specifying _what molecules_ can generate that type of spectrum
+- Then, there are _specific selection rules_ detailing _which transitions_ are allowed
 
 ### Pure rotational spectra
 - A _pure_ rotational spectrum is one generated only from microwave radiation 
 - To generate an _oscillating electric field_ while rotating, the molecule must possess a _permanent dipole moment_
 	- The component along one direction will oscillate
-- This requires _a difference in electronegativity_ between atoms plus symmetry requirements
+- _Gross selection rule_:  There must be a _permanent dipole moment_
+	- Caused by an _electronegativity difference_, plus the right type of _symmetry_
 
 ### Vibrational spectra
-- This also requires a _difference in electronegativities_ as _internuclear distance oscillates_ to bring about a change in dipole moment
+- As _internuclear distance oscillates_, a _change in dipole moment_ can be caused
+- _Gross selection rule_: At _equilibrium_, there must be a _non-zero rate of change in dipole moment_:
+$$\pd{\mu}{q}\Bigg|_\text{eq}\neq0$$
 
 ### Raman spectroscopy
 - Many molecules _cannot generate the required oscillating dipole_ (such as homonuclear diatomics)
@@ -69,7 +74,11 @@ $$M^*+h\nu\rightarrow M+h\nu'\hspace{0.3cm}, \hspace{0.3cm}\nu'>\nu$$
 
 - In order for inelastic scattering to occur, the molecule's _polarisability_ must change during vibration or rotation
 
+- _Gross selection rule_: The molecule's _polarisability_ must have a _non-zero rate of change_ at _equilibrium_
+$$\pd{\alpha}{q}\Bigg|_\text{eq}\neq0$$
+
 #### Mathematical description
+- This is a mostly _classical description_, which is not wholly accurate
 - From the [[Electromagnetism#Molecular origins of dielectrics|definition of polarisability]], the dipole moment $\bm{\mu}$ of a molecule given an electric field $\bm{E}$ is:
 $$\bm{\mu}=\alpha\bm{E}$$
 - Given an _oscillating electric field_ $E=E_0\sin2\pi\nu t$, the dipole also oscillates:
@@ -158,12 +167,47 @@ $$\Delta J=0,\pm2$$
 $$\mathcal{E}_\text{upper}-\mathcal{E}_\text{lower}=\tilde{B}(4J+6)$$
 - _Stokes lines_, where the molecule gains energy, are at $\tilde{\nu}_\text{incident}-\tilde{B}(4J+6)$
 - _Anti-Stokes lines_, where the molecule loses energy, are at $\tilde{\nu}_\text{incident}+\tilde{B}(4J+6)$
-![[Raman lines.png]]
+![[Raman lines.png|600]]
 - $\Delta J$ is defined by convention to be $J(\text{upper})-J(\text{lower})$
 - Therefore, all Raman lines _are in the S branch_
-![[N2 Raman.png]]
-
+![[N2 Raman.png|600]]
 ## Vibrational potentials and selection rules
+![[Internuclear potential.png|500]]
+- General behaviour of a diatomic:
+	- If stretched or compressed, there is a _restoring force_
+	- The more _compressed_ the molecule is, the _stronger the repulsion_
+	- As the molecule is _stretched_ more and more, the molecule _dissociates_ with $V(r)\to0$
+### The harmonic oscillator
+- Form of potential:
+$$V(x)=\frac{1}{2}kx^2$$
+
+- More details: [[Molecular quantum mechanics#Nuclei: The quantum harmonic oscillator|The quantum harmonic oscillator]]
+- The _intrinsic frequency of oscillation_ is given by:
+$$\displaylines{\omega=\sqrt{\frac{k}{\mu}}\\ \tilde{\omega}=\frac{1}{2\pi\tilde{c}}\sqrt{\frac{k}{\mu}}}$$
+- The energy levels are given by:
+$$\displaylines{E_\nu=\left(\nu+\frac{1}{2}\right)\hbar\omega \\ \mathcal{E}_\nu=\left(\nu+\frac{1}{2}\right)\tilde{\omega}}$$
+- As before, the molecule can only give a _vibrational spectrum_ if it has a _change in dipole moment_
+- There is a _specific selection rule_ for the harmonic oscillator, derived from Fermi's Golden Rule:
+$$\Delta\nu=\pm1$$
+- Therefore, _all allowed vibrations are at_ $\tilde{\omega}$
+- The absorption spectrum should have a _single line_
+
+### Anharmonic oscillator: the Morse potential
+- Form of potential:
+$$V_M(x)=D_e\left[1-\exp(-\beta x)\right]^2$$
+- More details: [[Molecular quantum mechanics#Nuclei: The Morse oscillator|The Morse Oscillator]]
+- $D_e$ determines well _depth_, $\beta$ determines well _steepness_
+
+- Taylor expanding the potential for _small displacements_, it can be approximated as _quadratic_:
+$$\displaylines{V_x\approx D_e\beta^2x^2=\frac{1}{2}kx^2 \\k_M=2D_3\beta^2}$$
+- Then, one can define the _frequency of small oscillations_:
+$$\omega=\sqrt{\frac{k_M}{\mu}}$$
+
+- The energy levels for this potential are:
+$$\displaylines{E_\nu=\left(\nu+\frac{1}{2}\right)\hbar\omega-\left( \nu+\frac{1}{2}\right)^2\hbar\omega\chi_e \\ \mathcal{E}_\nu=\left(\nu+\frac{1}{2}\right)\tilde{\omega}-\left(\nu+\frac{1}{2}\right)^2\tilde{\omega}\chi_e}$$
+- $\chi_e$ is the _anharmonicity constant_:
+$$\chi_e=\frac{\hbar\beta^2}{2\mu\omega}$$
+
 
 ## Vibrational spectroscopy for diatomics
 

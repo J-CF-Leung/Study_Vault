@@ -15,7 +15,7 @@ $$E_n=\frac{n^2\hbar^2\pi^2}{2ma^2}$$
 - Details: [[Time-independent Hamiltonians in 1 dimension#Particle in a box|Particle in a box]]
 
 ### Nuclei: The quantum harmonic oscillator
-- Details: [[Quantum Harmonic Oscillator]]
+- Mathematical details and derivation: [[Quantum Harmonic Oscillator]]
 - Potential:
 $$V(r)=\frac{1}{2}m\omega^2r^2=\frac{1}{2}kr^2$$
 - General solution in terms of [[Special functions and orthogonal relations#Hermite polynomials|Hermite polynomials]] $H_n$:
@@ -25,6 +25,10 @@ $$\psi_n(q)=\frac{1}{\sqrt{2^nn!}}\left(\frac{m\omega}{\pi\hbar} \right)^{1/4}H_
 
 - Energy levels:
 $$E_n=(n+\frac{1}{2})\hbar\omega$$
+- There is a _non-zero probability_ that the particle is in the _classically-forbidden region_
+- The _lowest energy level_ is given by $E_0=\hbar\omega/2$, this is the _zero-point energy_
+	- Consequence of the _uncertainty principle_
+
 
 ### Nuclei: The Morse oscillator
 >[!quote]
@@ -40,6 +44,8 @@ $$V_M(r)=D_e\left(1-e^{-\beta(r-r_e)}\right)^2$$
 - The _harmonic force constant_ at equilibrium is $k=2\beta^2D_e$
 	- Found by Taylor expanding the potential
 - $D_0$: energy required to dissociate a molecule originally at the ground state
+
+- The potential was obtained _empirically_, and only an _approximation_
 
 - The bound energy levels for the Morse potential:
 $$E_n=\left(n+\frac{1}{2}\right)\hbar\omega- \left(n+\frac{1}{2}\right)^2 \hbar\omega\chi_e$$
