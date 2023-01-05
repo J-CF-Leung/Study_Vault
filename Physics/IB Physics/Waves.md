@@ -11,7 +11,7 @@ $$\pd{^2\psi}{t^2}=v^2\nabla^2\psi$$
 $$\pd{^2\psi}{t^2}=v^2\pd{^2\psi}{x^2}$$
 	- Example: Transverse string wave
 
-- The wave equation is linear, hence the superposition principle applies
+- The wave equation is _linear_, hence the _superposition principle_ applies
 - Due to the nature of wave motion:
 $$\psi(x,t)=\psi(x\pm vt,0)=f(x\pm vt)$$
 - Any function of the form $f(x\pm vt)$ obeys the wave equation
@@ -35,13 +35,13 @@ $$\psi(\bm{r},t)=\Re\left(Ae^{i(\bm{k\cdot r}-\omega t)}\right)$$
 - Satisfies wave equation
 
 ### Spherical wave
-- For a wave propagating _with spherical symmetry_, using the Laplacian for spherical coordinates:
+- For a wave propagating with _spherical symmetry_, using the Laplacian for spherical coordinates:
 $$\psi(r,t)=\frac{f(r\pm vt)}{r}$$
 - $1/r$ dependence for amplitude gives $1/r^2$ dependence for power, conserving energy
 
 ### Cylindrical wave
-- Wave propagating with cylindrical symmetry
-- EXACT solution: involves cylindrical Bessel functions
+- Wave propagating with _cylindrical symmetry_
+- EXACT solution: involves _cylindrical Bessel functions_
 
 - For long distances, using the energy conservation argument, one can guess the solution:
 $$\psi(r,t)\approx\frac{f(r\pm vt)}{\sqrt{r}}$$
@@ -70,6 +70,7 @@ $$\begin{aligned}\psi_y&=A_y\cos(kx-\omega t) \\ \psi_z &= A_z\cos(kx-\omega t+\
 - Equal in magnitude
 - $\phi=(m+1/2)\pi$
 - Convention: Looking _towards the wave source_
+	- Using the right-hand-rule: finger points _TOWARDS source_
 	- Right-circular: clockwise motion of field vector as $z$ increases![[Polarisation conventions.png]]
 
 ### Elliptical polarisation
@@ -95,10 +96,10 @@ $$\ket{\Psi_\text{left}}=\begin{pmatrix}A \\ -Ai \end{pmatrix} \hspace{2cm} \ket
 $$\ket{\Psi}=\begin{pmatrix} A \\ B\,\exp(i\phi)\end{pmatrix}$$
 
 ## Impedance and power
-- Impedance for any system is defined as a ratio of a driving force to a flow or velocity
+- Impedance for any system is defined as a _ratio of a driving force to a flow or velocity_
 - For a transverse wave, the velocity response is the _transverse response_ $\dot{\psi}$
 
-- The power input is the transverse force $F$ times the transverse velocity $\dot{\psi}$
+- The power input is the _transverse force_ $F$ times the _transverse velocity_ $\dot{\psi}$
 - Like the case in [[Oscillations#Power|oscillations]], the power is:
 $$\braket{P}=\frac{1}{2}\Re[F\dot{\psi}^*]=\frac{1}{2}\Re[Z]|\dot{\psi}|^2$$
 - For real $Z$ and $u=-i\omega A_0\exp[i(kx-\omega t)]$:
@@ -111,7 +112,7 @@ $$Z=\frac{-T\,\partial\psi/\partial x}{\partial\psi/\partial t}$$
 
 - For a waveform $\psi=f(x-vt)$:
 $$Z=\frac{T}{v}=\sqrt{T\rho}=\rho v$$
-	- Becomes negative for a waveform travelling in the $-x$ direction
+	- Becomes _negative_ for a waveform travelling _in the $-x$ direction_
 
 ### Energy flow per unit length
 - By looking at a short length of string, the _kinetic energy per unit length_ is:
@@ -124,18 +125,19 @@ $$U=\frac{1}{2}T\left(\pd{\psi}{x}\right)^2$$
 $$\braket{P}=\braket{K+U}v=\frac{1}{2}Z\omega^2A_0^2$$
 
 ## Boundaries: reflection and transmission
-- There can be discontinuities during wave travel, such as a sudden change in density (hence, change in impedance)
+- There can be _discontinuities_ during wave travel, such as a _sudden change in density_ (hence, change in impedance)
 
 - Boundary conditions:
 	- Displacement $\psi$ _must be continuous_
 	- Transverse force $T(\partial\Psi/\partial x)$ _must be continuous_
-		- Avoid infinite acceleration of infinitesimal mass element
-	- Constant frequency $\omega$
+		- _Avoid infinite acceleration_ of infinitesimal mass element
+	- _Constant frequency_ $\omega$
 - Wavenumber $k$ will be discontinuous
 
-### Reflection and transmission coefficients
+- Goal: _STEADY-STATE_ response of the wave on both sides of a boundary
 
-- Assume a semi-infinite [[#The wave equation|harmonic wave]] on each side of the boundary, look for the steady-state response
+### Reflection and transmission coefficients
+- Assume a semi-infinite [[#The wave equation|harmonic wave]] on each side of the boundary, look for the _steady-state response_
 - More convenient to write the wave as $A\exp[i(\omega t-kx)]$
 
 - Let there be 2 regimes, with impedances $Z_1$ and $Z_2$ respectively
@@ -149,25 +151,25 @@ $$\displaylines{\tau\equiv\frac{A_2}{A_1}=\frac{2Z_1}{Z_1+Z_2} \\ r\equiv \frac{
 - As impedances can be complex, there can be arbitrary phase differences
 
 ### Reflection and transmission of energy
-- For real impedance, as the power transmitted is proportional to $Z\omega^2A^2$, the Power Reflection and Transmission coefficients are:
+- For real impedance, as the power transmitted is _proportional to $Z\omega^2A^2$_, the Power Reflection and Transmission coefficients are:
 $$R\equiv\frac{Z_1B_1^2}{Z_1A_1^2}=r^2=\left(\frac{Z_1-Z_2}{Z_1+Z_2}\right)^2$$
 $$T\equiv \frac{Z_2A_2^2}{Z_1A_1^2}=\frac{4Z_1Z_2}{(Z_1+Z_2)^2}$$
 - Due to energy conservation, the following _always applies_:
 $$R+T=1$$
-- If any impedance is complex, replace $Z$ with $\Re(Z)$ and $A$ with $|A|$ in the above, making $R$:
+- If any _impedance is complex_, replace $Z$ with $\Re(Z)$ and $A$ with $|A|$ in the above, making $R$:
 $$R=\left|\frac{Z_1-Z_2}{Z_1+Z_2}\right|^2$$
 
 ### Impedance matching
-- Let there be two infinite substrates with impedances $Z_1$ and $Z_3$, with a layer of length $l$ inbetween that has impedance $Z_2$
-- If $l$ is equal to a quarter of the wavelength in $Z_2$, the reflection coefficient from the $Z_1-Z_2$ interface becomes:
+- Let there be two _infinite substrates_ with impedances $Z_1$ and $Z_3$, with a _layer_ of length $l$ inbetween that has impedance $Z_2$
+- If $l$ is equal to a _quarter of the wavelength_ in $Z_2$, the reflection coefficient from the $Z_1-Z_2$ interface becomes:
 $$r=\frac{Z_1-Z_{eff}}{Z_1+Z_{eff}}\hspace{0.5cm},\hspace{0.5cm} Z_{eff}=\frac{Z_2^2}{Z_3}$$
-- If $Z_2^2=Z_1Z_3$, the waves reflected at the first and second interfaces are out of phase
+- If $Z_2^2=Z_1Z_3$, the waves reflected at the first and second interfaces are _out of phase_
 
 
 ## Longitudinal waves
-- Longitudinal: displacement is parallel to propagation direction
+- Longitudinal: displacement is _parallel to propagation direction_
 - Displacement: compression and rarefraction
-	- Centre of compression/rarefraction: zero displacement
+	- _Centre_ of compression/rarefraction: _zero displacement_
 - Polarisation not defined
 
 ### Sound in a gas
@@ -194,17 +196,17 @@ $$v=\sqrt{\frac{\gamma p}{\rho}}=\sqrt{\frac{\gamma RT}{M}}$$
 	- $M$: molar mass $m/n$
 
 - The RMS speed of molecules is slightly larger than $v$
-- Propagation of sound _does not require net movement of molecules_, only bulk movement
+- Propagation of sound _does not require net movement_ of molecules, only _bulk movement_
 
 #### Impedance
 - If $a$ is a harmonic wave of the form:
 $$a=a_0\exp[i(\omega t-kx)]$$
 - The pressure wave, according to the above, is:
 $$\Psi_p=i\gamma pka$$
-- Pressure leads displacement by $\pi/2$
+- Pressure _leads displacement_ by $\pi/2$
 - The characteristic impedance is:
 $$Z=\frac{S\Psi_p}{\dot{a}}=S\sqrt{\gamma p\rho}$$
-- The impedance per unit area, or _acoustic impedance_ $\Lagr$ is:
+- The impedance _per unit area_, or _acoustic impedance_ $\Lagr$ is:
 $$\Lagr=\sqrt{\gamma p\rho}=\frac{\gamma p}{v}$$
 #### Power
 - Let the amplitude of the pressure be $A_0=i\gamma pka_0$
@@ -220,7 +222,7 @@ $$\Psi_p=-K\pd{a}{x}$$
 - From this, the speed of a longitudinal wave is:
 $$v=\sqrt{\frac{K}{\rho}}$$
 - There are also transverse waves that _shear_ the medium, known as _shear waves_
-- Shear waves are typically slower than longitudinal waves
+- Shear waves are typically _slower_ than longitudinal waves
 
 - For gases and liquids, although $\Psi_p$ is isotropic, compression and rarefraction only takes place in _the direction of wave passage_
 - The relevant compression is described by:
@@ -230,19 +232,19 @@ $$dp=-B\frac{dV}{V}$$
 - Hence, the speed of sound in a _liquid_ is:
 $$v_l=\sqrt{\frac{B}{\rho}}$$
 
-- For bulk solids, transverse waves are ignored
+- For _bulk solids_, transverse waves are ignored
 	- For thin bars, consider the _Poisson's ratio_
 - The longitudinal stress is given by _Young's modulus_ $Y$:
 $$\tau=Y\pd{a}{x}$$
 - Hence, the speed of sound in a solid is given by 
 $$v_s=\sqrt{\frac{Y}{\rho}}$$
 
-- Acoustic impedance is much larger in a solid than a gas
-- An open air-solid interface is essentially a pressure node, or displacement antinode
+- Acoustic impedance is much _larger in a solid_ than a gas
+- An _open air-solid interface_ is essentially a pressure node, or displacement antinode
 
 ## Standing waves
-- A standing wave is confined within a region of space
-- A superposition of forward and backward waves
+- A standing wave is _confined_ within a region of space
+- A _superposition_ of forward and backward waves
 
 ### One dimension
 - For boundary conditions $\Psi(0,t)=\Psi(b,t)=0$:

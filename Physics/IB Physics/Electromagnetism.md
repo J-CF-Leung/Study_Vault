@@ -38,7 +38,7 @@ $$\pd{\rho}{t}+\nabla\cdot\bm{J}=0$$
 $$\begin{aligned}\nabla\cdot\bm{D}&=\rho_{free} \\ \nabla\times\bm{H} &= \bm{J}_{free}+\pd{\bm{D}}{t}\end{aligned}$$
 
 
-## Electrostatics
+## Electrostatics in vacuum
 ### The electrostatic force and field
 - _Coulomb's law_ between 2 point charges
  $$\bm{F}=\frac{1}{4\pi\epsilon_0}\frac{q_1q_2}{r^2}\bm{\hat{r}}$$
@@ -282,7 +282,7 @@ $$F\,dx=\pd{U_s}{x}\,dx+\pd{U_d}{x}\,dx$$
 	- Force is proportional to $1/x^2$, still proportional to plate area
 
 
-### Homogeneous Dielectrics
+## Electrostatics in homogeneous dielectric materials
 - Previously: free space and conductors
 - Dielectrics: insulating materials
 	- No free charge in the material itself, only _bound charges_
@@ -320,8 +320,8 @@ $$\epsilon=1+\chi$$
 $$C=\frac{Q_f}{V}=\frac{\epsilon_0\epsilon A}{d}$$
 
 - Consider a non-uniform external field
-- $\bm{P}$ is also non-uniform, and not all bound charges in the interior are cancelled out
-- Consider microscopic volumes put together, one gets a volume bound charge density:
+- $\bm{P}$ is also non-uniform, and _not all bound charges in the interior are cancelled out_
+- Consider microscopic volumes put together, one gets a volume _bound charge density_:
 $$\rho=-\nabla\cdot\bm{P}$$
 	- Analagous to free charge being a source of the electric field
 
@@ -574,7 +574,7 @@ $$V=IR$$
 $$\bm{J}=\sigma\bm{E}$$
 - $\sigma$ is the _conductivity_, equal to $1/\rho$, where $\rho$ is the _resistivity_
 
-### Magnetostatic fields in homogeneous magnetic materials
+## Magnetostatics in homogeneous magnetic materials
 - Magnetically polarisable materials change how magnetic field lines behave
 - Types: _diamagnetic_, _paramagnetic_, _ferromagnetic_
 - Properties stem from _magnetic dipole moments of atoms and molecules_
@@ -602,13 +602,13 @@ $$\bm{J}_m=\nabla\wedge\bm{M}$$
 - Analagous to [[#Homogeneous Dielectrics|electrostatic case]]
 - Current can be said to be _fictitious_ as it only serves to model atomic dipole moments
 
-- Uniform magnetisation leads to zero bound current as currents around loops sum to zero
+- _Uniform magnetisation leads to zero bound current_ as currents around loops sum to zero
 
 #### Surface magnetisation currents
-- For a uniform $\bm{M}$, some magnetisation currents must reside on the surface
+- For a uniform $\bm{M}$, some magnetisation currents must _reside on the surface_
 
 - Consider a block with uniform magnetisation
-- All currents cancel out inside
+- All currents _cancel out inside_
 - On the surface, there is a charge density $\sigma$ flowing
 - The current can be described by the _surface current density_ $\bm{K}_m$
 $$I=\int \bm{K}_m\cdot d\bm{l}$$
@@ -671,11 +671,20 @@ $$\bm{H}_{1||}=\bm{H}_{2||}$$
 	- Small-field approximation for $\bm{M}$ _no longer applies
 	- From the definition of $\bm{H}$, it _is opposite to $\bm{B}$ inside the magnet_
 	- Field lines at cylindrical surface will curve due to edge effects
+![[Fields in a bar magnet.png]]
+
+### Deceptive parallels
+- $\bm{D}$ is not _exactly_ analagous to $\bm{E}$ but with a factor $\epsilon\epsilon_0$
+- Similarly, $\bm{H}$ is not exactly analagous to $\bm{B}$ with a factor $\mu\mu_0$
+- As seen above, _they have different boundary conditions_
+- To fully determine a field, _both the divergence and curl are needed_:
+$$\displaylines{\nabla\cdot\bm{D}=\rho_f \hspace{1cm} \nabla\wedge\bm{D}=\nabla\wedge\bm{P} \\ \nabla\cdot\bm{H}=-\nabla\cdot\bm{M} \hspace{1cm} \nabla\wedge\bm{H}=\bm{J}_f}$$
+- As $\bm{P}$ and $\bm{M}$ depend on material, the divergence and curl _must be non-zero at boundaries_
 
 ### Comparing behaviour of electric and magnetic fields
 - Fundamental quantities in electrostatics and magnetostatics:
-	- $\bm{E}$ gives force on a test charge
-	- $\bm{B}$ gives force on a test current
+	- $\bm{E}$ gives force on a _test charge_
+	- $\bm{B}$ gives force on a _test current_
 
 - $\bm{H}=\bm{B}/(\mu_0\mu)$ and $\bm{D}=\epsilon\epsilon_0\bm{E}$ are _derived quantities_ for magnetic materials and dielectrics
 	- Free charges are the source of $\bm{D}$
@@ -828,6 +837,7 @@ $$M_{21}\equiv\frac{\Phi_{21}}{I_1}=\frac{\mu_0}{4\pi}\oint_2\oint_1 \frac{d\bm{
 $$\frac{V_1}{V_2}=\frac{N_1}{N_2}$$
 - Consider a circuit with 2 voltage sources $V_1$ and $V_2$, with currents $I_1$ and $I_2$, the relationship between impedances can be shown to be:
 $$Z_1=\frac{j\omega L_1Z_2(N_1/N_2)^2}{j\omega L_1+Z_2(N_1/N_2)^2}\approx Z_2\left(\frac{N_1}{N_2}\right)^2$$
+- Circuit containing transformer: _clearly define_ current directions, _assume a sign convention for how flues add/subtract_ based on how 2 currents flow _relative to each other_
 
 ### Energy flow in circuits
 - Consider a circuit with resistance $R$, inductance $L$, and capacitor $C$
@@ -844,7 +854,7 @@ $$\omega_0=\frac{1}{\sqrt{LC}}$$
 
 - $\omega>\omega_0$: $1/\omega C<\omega L$, circuit _looks more like an inductor_ as the capacitor does not store as much energy
 
-- Many electrical systems can be modelled as an $LRC$ circuit
+- Many electrical systems can be _modelled as an $LRC$ circuit_
 
 
 ### Magnetic energy
