@@ -45,12 +45,15 @@ $$V_M(r)=D_e\left(1-e^{-\beta(r-r_e)}\right)^2$$
 	- Found by Taylor expanding the potential
 - $D_0$: energy required to dissociate a molecule originally at the ground state
 
+- The _asymmetry_ of the potential means _average bond length increases_ with increasing $\nu$
+
 - The potential was obtained _empirically_, and only an _approximation_
 
 - The bound energy levels for the Morse potential:
 $$E_n=\left(n+\frac{1}{2}\right)\hbar\omega- \left(n+\frac{1}{2}\right)^2 \hbar\omega\chi_e$$
 - $\chi_e$ is the _anharmonicity constant_
 $$\chi_e=\frac{\hbar\beta^2}{2m\omega}=\frac{\hbar\omega}{4D_e}$$
+- Dimensionless, typically $<<1$
 
 - Molecules fit this model for small $n$
 - Anharmonic term _becomes larger for higher energy levels_ 
@@ -61,7 +64,7 @@ $$\chi_e=\frac{\hbar\beta^2}{2m\omega}=\frac{\hbar\omega}{4D_e}$$
 	- At some point, the calculated energy levels decrease with increasing $n$, further levels have no physical meaning
 	- Number of levels depends on $D_e$
 - The _maximum level_ is given by $n_\text{max}=1/(2\chi_e)-1/2$
-- Maximum energy from the well's bottom is $\hbar\omega/(4\chi_e)$
+- The _maximum energy_ is simply $E(\nu_\text{max})=D_e$
 
 ![[Morse energy levels.png]]
 

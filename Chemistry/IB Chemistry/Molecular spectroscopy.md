@@ -207,9 +207,37 @@ $$\omega=\sqrt{\frac{k_M}{\mu}}$$
 $$\displaylines{E_\nu=\left(\nu+\frac{1}{2}\right)\hbar\omega-\left( \nu+\frac{1}{2}\right)^2\hbar\omega\chi_e \\ \mathcal{E}_\nu=\left(\nu+\frac{1}{2}\right)\tilde{\omega}-\left(\nu+\frac{1}{2}\right)^2\tilde{\omega}\chi_e}$$
 - $\chi_e$ is the _anharmonicity constant_:
 $$\chi_e=\frac{\hbar\beta^2}{2\mu\omega}$$
+- The constant is _dimensionless_ and small, typically $<<1$
 
+- Due to the negative term, energy level spacing _decreases_ with increasing $\nu$
+- There is a _maximum energy level_ at:
+$$\nu_\text{max}=\frac{1}{2\chi_e}-\frac{1}{2}$$
+- The corresponding energy is $D_e$
 
-## Vibrational spectroscopy for diatomics
+- Due to the _zero-point energy_, the actual dissociation energy is $D_0=D_e-E_0$
+
+- The population distribution _still follows the Boltzmann distribution_
+- For typical molecules, $(E-E_0)>>kT$, hence _only the ground state is significantly populated at room temperature_
+
+- The _specific selection rule is less restrictive_
+- _All transitions are allowed_
+![[Morse transitions.png]]
+
+- The appearance of the spectrum is:
+![[Morse vib spectrum.png]]
+- The lines are _approximately equally spaced_ since $\chi_e$ is small
+- Typical spacing: $100-1000\text{cm}^{-1}$
+
+- Vibrational spectrum of carbon monoxide:
+![[C=O vib spectrum.png]]
+
+- The hot band is _hidden under the fundamental_
+- At _room temperature_, up to the 2nd overtone can be seen
+
+- _Additional structure_ can be seen in the form of small peaks with spacing of $\approx10\text{cm}^{-1}$
+- This is due to _change in rotational energy level_
+
+## Spectroscopy for the vibrating rotor
 
 ## Vibration modes in polyatomic molecules
 
