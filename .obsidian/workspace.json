@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/IB Natsci Maths/Vectors and matrices.md",
+                "file": "Mathematics/IB Natsci Maths/Vector calculus in 3-dimensions.md",
                 "mode": "source",
                 "source": false
               }
@@ -80,8 +80,7 @@
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -98,7 +97,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md"
+                    "file": "Mathematics/IB Natsci Maths/Vector calculus in 3-dimensions.md"
                   }
                 }
               }
@@ -114,7 +113,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+                    "file": "Mathematics/IB Natsci Maths/Vector calculus in 3-dimensions.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -212,7 +211,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+                "file": "Mathematics/IB Natsci Maths/Vector calculus in 3-dimensions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -229,7 +228,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+                "file": "Mathematics/IB Natsci Maths/Vector calculus in 3-dimensions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -252,7 +251,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md"
+                "file": "Mathematics/IB Natsci Maths/Vector calculus in 3-dimensions.md"
               }
             }
           },
@@ -282,17 +281,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ac0aa9e553cf2558",
+  "active": "d78b3635a0523f25",
   "lastOpenFiles": [
-    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
-    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+    "Mathematics/IB Natsci Maths/Vectors and matrices.md",
     "Physics/IB Physics/Electromagnetism.md",
+    "Misc or Personal/Quotes.md",
+    "Mathematics/IB Natsci Maths/Ordinary differential equations.md",
+    "Mathematics/IB Natsci Maths/Second order linear ODEs and Green's Functions.md",
+    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Physics/Quantum Mechanics/Time-independent Hamiltonians in 3 dimensions.md",
     "Physics/Quantum Mechanics/Time-independent Hamiltonians in 1 dimension.md",
-    "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
-    "Physics/IB Physics/Waves.md",
-    "Physics/Thermodynamics.md",
-    "Physics/Quantum Mechanics/Untitled.md",
-    "Physics/IB Physics/Oscillations.md"
+    "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md"
   ]
 }

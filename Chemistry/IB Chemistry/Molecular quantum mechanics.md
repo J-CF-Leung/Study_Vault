@@ -95,6 +95,12 @@ $$E_n=\frac{\hbar^2}{2I}J(J+1)$$
 - Define the _rotational constant_ $B=\hbar^2/2I$
 - As the energy eigenfunctions are independent of $m$, $J_z$ has a $2J+1$ fold _degeneracy_
 
+### Centrifugal distortion
+- The atoms in the rotor actually experience a _centrifugal force_
+- The _restoring force_ obeys Hooke's Law with force constant $k_f$
+- Because of this, there is an _extra term_ in the rotational energy, proportional to $J^2(J+1)^2$
+	- Atkins, Friedman p. 274-375
+
 ## Rotation and vibration
 - Molecules both rotate and vibrate
 - Vibration has the variable $r-r_e$
@@ -102,7 +108,7 @@ $$E_n=\frac{\hbar^2}{2I}J(J+1)$$
 - Rotation has variables $\theta$ and $\phi$
 	- Example: rigid rotor
 
-- Assume vibration and rotation are independent
+- Assume vibration and rotation are independent (A form of the _Born-Oppenheimer approximation_)
 	- Good approximation for low energy levels
 - The Hamiltonian can be written as $\Ham=\Ham_{vib}+\Ham_{rot}$
 - As the two Hamiltonians have different degrees of freedom, the _wave function is separable_ into $\psi_{vib}$ and $\psi_{rot}$
@@ -111,6 +117,10 @@ $$E_n=\frac{\hbar^2}{2I}J(J+1)$$
 $$\Ham\Psi=[E_{vib}+BJ(J+1)]\Psi$$
 - $B$ is often _much smaller_ compared to vibrational energy spacing ($\approx\hbar\omega$)
 	- Typically 1000 times smaller
+
+- $B$ can become _dependent on vibrational energy level_ (deviation from BO approximation)
+- As vibrational energy level increases, _bond length increases_
+- As a result, since $B\propto 1/I$, $B$ _decreases_
 
 ## Spectroscopic principles
 - Bohr condition: for a transition between two states $\psi_m$ and $\psi_n$ facilitated by a photon, its _frequency $\nu_{mn}$ must equal_ $|E_n-E_m|/h$

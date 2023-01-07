@@ -228,7 +228,7 @@ $$U=\frac{1}{2}\int d^3\bm{r}\,\rho(\bm{r})\,V(\bm{r})$$
 $$U=\frac{1}{2}\frac{Q^2}{C}=\frac{1}{2}QV=\frac{1}{2}CV^2$$
 
 #### Energy stored in the electric field
-- Energy can be considered to be stored in the field itself
+- Energy can be considered to be stored _in the field itself_
 
 - By considering a parallel plate capacitor, with area $A$ and distance $d$:
 $$U=\frac{1}{2}QV=\frac{1}{2}\epsilon_0|\bm{E}|^2\,(Ad)$$
@@ -877,9 +877,9 @@ $$U=\frac{1}{2}\int\,d^3\bm{r}\,\bm{J\cdot A}$$
 - For _magnetostatic_ problems:
 $$U=\frac{1}{2}\int\,d^3\bm{r}\,\bm{A}\cdot(\nabla\wedge\bm{H})=\frac{1}{2}\left[\int d^3\bm{r}\,\bm{H}\cdot\bm{B}-\oint d\bm{S}\cdot(\bm{A\wedge\bm{H}})\right]$$
 - Similar to electrostatic energy, by taking the integration surface at infinity:
-$$U=\frac{1}{2}\int d^3\bm{r}\,\bm{H}(\bm{r})\cdot B(\bm{r})$$
+$$U=\frac{1}{2}\int d^3\bm{r}\,\bm{H}(\bm{r})\cdot \bm{B}(\bm{r})$$
 - The integrand is the _magnetic field energy density_
-- This should be compared to the expression for electric field energy density
+- This can be compared to the expression for electric field energy density
 
 ## Maxwell's equations
 - With the Maxwell's equations we have now, _conservation of charge is only satisfied in the steady state_
@@ -922,7 +922,7 @@ $$c=\frac{1}{\sqrt{\mu_0\epsilon_0}}=299,792,458 \text{ m s}^{-1}$$
 ### Plane wave in isotropic medium along the z-direction
 - Let the plane wave be propagating along $z$:
 $$\pd{\psi(\bm{r},t)}{x}=\pd{\psi(\bm{r},t)}{y}=0$$
-- _By considering the curls_, one can see that _longitudinal components are static_
+- _By considering the curls_, one can see that _longitudinal components of the fields are static_
 - Hence, EM waves are _transverse waves_
 
 - The _polarisation_ of the wave is defined by the electric field
@@ -971,7 +971,7 @@ $$E_x=cB_y$$
 $$\bm{k\cdot x}-\omega t$$
 - The fields themselves:
 $$\displaylines{\bm{E}=\bm{E}_0\exp[i(\bm{k\cdot x}-\omega t)] \\ \bm{H}=\bm{H}_0\exp[i(\bm{k\cdot x}-\omega t)]}$$
-- It can be shown that:
+- Two _very useful relations_ can be derived for fields of this form:
 $$\displaylines{\nabla\cdot\bm{E}=i\bm{k\cdot E} \\ \nabla\wedge\bm{E}=i\bm{k\wedge E}}$$
 - The Maxwell's equations become:
 $$\displaylines{\bm{k\cdot E}_0=0 \\ \bm{k\cdot H}_0=0 \\ \bm{k\wedge E}_0=\omega\mu_0\bm{H}_0 \\ \bm{k}\wedge\bm{H}_0=-\omega\epsilon_0\bm{E}_0}$$
@@ -995,7 +995,7 @@ $$\bm{E}(\bm{x},t)=\iiiint d^3\bm{k}\,d\omega\,\bm{A}_s(\bm{k},\omega)\, \exp[i(
 $$\int d^3\bm{r}\,\rho\,\bm{E}\cdot\bm{v}=\int\,d^3\bm{r}\,\bm{E}\cdot\bm{J}$$
 - Hence, the _work done on charges per unit volume, per unit time_ is $\bm{E}\cdot\bm{J}$
 
-- By _considering the volume integral of_ $\nabla\cdot(\bm{E\cdot H})$, and _Maxwell's equations_:
+- By _considering the volume integral of_ $\nabla\cdot(\bm{E\wedge H})$, and _Maxwell's equations_:
 $$-\oint d\bm{S}\cdot(\bm{E\wedge H})=\int_V\,d^3\bm{r}\left(\pd{}{t}\left[\frac{\mu_0}{2}\bm{H\cdot H}\right]+\pd{}{t}\left[\frac{\epsilon_0}{2}\bm{E\cdot E}\right]+\bm{E\cdot J}\right)$$
 - The right hand side is _the rate at which energy is flowing into the volume_
 
@@ -1003,6 +1003,20 @@ $$-\oint d\bm{S}\cdot(\bm{E\wedge H})=\int_V\,d^3\bm{r}\left(\pd{}{t}\left[\frac
 $$\bm{N}=\bm{E\wedge H}$$
 - The magnitude of $\bm{N}$ represents _power flow per unit area_
 - Direction of $\bm{N}$ is _direction of energy flow_
+
+#### Examples of energy flow
+- Charging capacitor:
+	- $\bm{E}$ points _perpendicular_ to the plates
+	- $\bm{B}$ _circulates_ around the plates
+	- Energy flows into the system _from the edges_, with $\bm{N}$ _parallel_ to the plates
+- Resistive wire:
+	- From Ohm's Law, $\bm{E}$ points _along_ the wire
+	- $\bm{B}$ _circulates_ around the wire
+	- Energy flows into the wire _perpendicular to flow direction_
+
+>[!quote]
+>"Intuitively screwy, but true!"
+>-Richard Feynman
 
 ### Pressure and momentum for plane waves
 - Using [[Relativity|Einstein's energy-momentum relation]], and the fact that _photons are massless_:
@@ -1021,7 +1035,7 @@ $$\bm{R}=\frac{\bm{N}}{c}$$
 $$\displaylines{V=V_0\cos(\omega t-\phi) \\ I=I_0\cos\omega t}$$
 - By expanding the cosines, the _time-averaged power_, or _real power_ becomes:
 $$P_r=\frac{1}{2}V_0I_0\cos\phi$$
-	- Measures average rate of power dissipation
+	- Measures average rate of _power dissipation_
 - There is also an extra term which oscillates as $\sin2\omega t$ and averages to 0, with _peak value_:
 $$P_i=\frac{1}{2}V_0I_0\sin\phi$$
 	- Measures maximum rate at which power sloshes into and out of the component
@@ -1029,7 +1043,7 @@ $$P_i=\frac{1}{2}V_0I_0\sin\phi$$
 
 - By replacing the cosines with _complex exponentials_, the _complex power_ is:
 $$P=\frac{1}{2}IV^*$$
-- $P_r$ and $P_i$ are the _real and imaginary parts_ respectively
+- $P_r$ and $P_i$ are the _real and imaginary parts_ of this quantity respectively
 
 - _Power flow_ can be represented by a vector in the complex plane
 - When two components are connected, the complex power flow is _the combined sum in the complex plane_ for the two components, _regardless of how they are connected_

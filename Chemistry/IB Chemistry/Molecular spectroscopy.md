@@ -220,7 +220,7 @@ $$\nu_\text{max}=\frac{1}{2\chi_e}-\frac{1}{2}$$
 - For typical molecules, $(E-E_0)>>kT$, hence _only the ground state is significantly populated at room temperature_
 
 - The _specific selection rule is less restrictive_
-- _All transitions are allowed_
+- _All transitions are allowed_, as the asymmetric potential means the transition dipole moment, given by the Golden Rule, is _not completely cancelled out_
 ![[Morse transitions.png]]
 
 - The appearance of the spectrum is:
@@ -237,7 +237,64 @@ $$\nu_\text{max}=\frac{1}{2\chi_e}-\frac{1}{2}$$
 - _Additional structure_ can be seen in the form of small peaks with spacing of $\approx10\text{cm}^{-1}$
 - This is due to _change in rotational energy level_
 
-## Spectroscopy for the vibrating rotor
+## Vibrational spectroscopy for diatomics
+
+### Vibrating rotor
+- At _every vibrating energy level_, the molecule can have _many different rotational energies_
+- However, the rotational constant is _not exactly the same for all vibrational states_
+
+- As the _total energy_ gets higher, the _Born-Oppenheimer approximation starts to break down_
+	- Independent from centrifugal distortion
+- Since $\tilde{B}\propto 1/r^2$, and bond length increases with $\nu$, $\tilde{B}$ _decreases with $\nu$_
+- The approximate relationship is:
+$$\tilde{B}_\nu=\tilde{B}_e-\tilde{\alpha}\left(\nu+\frac{1}{2}\right)$$
+- Here, $\tilde{B}_e$ is the rotational constant _at equilibrium_
+- From this, the _equilibrium bond length_ can be found
+
+### Spectrum
+- In an IR spectrum of a _diatomic_, there is a _simultaneous change_ of both vibrational and rotational energy:
+$$\Delta\nu=\pm1,\pm2,\pm3,...\hspace{1cm}\Delta J=\pm1$$
+- Convention: 
+	- _Rotational_ energy level in _lower vibrational state_: $J''$
+	- _Rotational_ energy level in _upper vibrational state_: $J'$
+
+- Transitions with $\Delta J=+1$ is denoted the _R branch_
+	- _Higher_ wavenumber than pure vibrational transition
+- Transitions with $\Delta J=-1$ is denoted the _P branch_
+	- _Lower_ wavenumber than pure vibrational transition
+- Transition lines are numbered by $J''$ (in the _lower vibrational energy level_)
+	- Hence, _there is no_ $P_0$
+
+- For _diatomics_, _only the P and R branches_ are seen
+
+- For _any transition in the fundamental band_:
+$$\begin{aligned}\mathcal{E}_\text{upper}-\mathcal{E}_\text{lower}&= \left[\frac{3}{2}\tilde{\omega}-\frac{9}{4}\tilde{\omega}\chi_e+\tilde{B}_1J'(J'+1)\right]-\left[\frac{1}{2}\tilde{\omega}-\frac{1}{4}\tilde{\omega}\chi_e+\tilde{B}_0J''(J''+1)\right] \\ &=\tilde{\omega}-2\tilde{\omega}\chi_e+\tilde{B}_1J'(J'+1)-\tilde{B}_0J''(J''+1) \\ &=\tilde{\omega}_0+\tilde{B}_1J'(J'+1)-\tilde{B}_0J''(J''+1)\end{aligned}$$
+
+- For the purposes of simplifying the expressions, _assume_ $\tilde{B}_1\approx\tilde{B}_0\approx\tilde{B}$
+- For the _R branch_, where $J'=J''+1$:
+$$\begin{aligned}\tilde{R}_{J''}&=\tilde{\omega}_0+(\tilde{B}_1-\tilde{B}_0)J''^2+(3\tilde{B}_1-\tilde{B}_0)J''+2\tilde{B}_1 \\ &\approx\tilde{\omega}_0+2\tilde{B}(J''+1)\end{aligned}$$
+- For the _P branch_, where $J'=J''-1$:
+$$\begin{aligned}\tilde{P}_{J''}&=\tilde{\omega}_0+(\tilde{B}_1-\tilde{B}_0)J''^2-(\tilde{B}_1+\tilde{B}_0)J'' \\ &\approx \tilde{\omega}_0-2\tilde{B}J''\end{aligned}$$
+- Hence, adjacent lines are _approximately $2\tilde{B}$ apart_
+![[Vibrational fine structure.png]]
+
+- The effect of $\tilde{B}_1<\tilde{B}_0$ can be seen for higher values of $J''$ as the _quadratic term becomes more significant_
+	- As the term is positive, _all lines are shifted towards a lower frequency_
+- In the _P branch_, the absorption lines become _more widely spaced_ as $J''$ increases
+- In the _R branch_, the absorption lines become _more compressed_ as $J''$ increases
+![[Carbon monoxide fundamental.png]]
+### Finding the rotational constants
+- To find $\tilde{B}_1$, consider _two transitions that share the same lower state_ $J$
+- The energy difference between these two transitions is:
+$$\tilde{R}_J-\tilde{P}_J=\mathcal{E}_1(J+1)-\mathcal{E}_1(J-1)=2\tilde{B}_1(2J+1)$$
+- Hence, the plot of $\tilde{R}_J-\tilde{P}_J$  as a variable of $J$ is a _straight line_ with slot $4\tilde{B}_1$
+
+- Similarly, to find $\tilde{B}_0$, consider _two transitions that share the same upper state_ $J$
+- The energy difference is:
+$$\tilde{R}_{J-1}-\tilde{P}_{J+1}=\mathcal{E}_0(J+1)-\mathcal{E}_0(J-1)=2\tilde{B}_0(2J+1)$$
+- Once again, plot $\tilde{R}_{J-1}-\tilde{P}_{J+1}$ as a variable of $J$
+
+- Using these values, $\tilde{\alpha}$, $\tilde{B}_e$ and the equilibrium bond length can be found
 
 ## Vibration modes in polyatomic molecules
 
