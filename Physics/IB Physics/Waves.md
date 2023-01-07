@@ -412,7 +412,7 @@ $$v_p=\frac{\omega}{k_x}=\omega\left(\frac{\omega^2}{v^2}+\frac{n^2\pi^2}{b^2}\r
 ### Cut-off frequency and evanescent waves
 - For a given mode, there is a _cutoff frequency_ $\omega_c$:
 $$\omega_c=\frac{n\pi v}{b}$$
-- Below this frequency, $k_x^2<0$ and a propagating wave is not possible
+- Below this frequency, $k_x^2<0$ and a propagating wave is _not possible_
 - By choosing a frequency between $\omega_c(n=1)$ and $\omega_c(n=2)$, the wave can be _single-moded_
 
 - For $\omega<\omega_c$, the wave becomes _evanescent_:

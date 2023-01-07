@@ -312,7 +312,7 @@ $$\sigma=\bm{P\cdot\hat{n}}$$
 - The total charge on a capacitor plate can be written as:
 $$Q=\epsilon_0(1+\chi)|\bm{E}|A$$
 	- Two contributions: original without dielectric, and extra to offset bound charge
-	- $\chi=$ electrical susceptibility, property of the material that gives surface polarisation
+	- $\chi=$ _electrical susceptibility, property of the material_ that gives surface polarisation
 
 - Define the _relative permittivity_ $\epsilon$:
 $$\epsilon=1+\chi$$
@@ -331,11 +331,13 @@ $$-\int_\mathcal{V}\nabla\cdot\bm{P}\,d^3\bm{r}=\int_{S= \partial\mathcal{V}}\bm
 
 - [[Dielectric and magnetic materials|Applications in materials science]]
 
-#### Gauss' Law in dielectrics
+#### The electric displacement and Gauss' Law for dielectrics
 - The total charge density is $\rho_f+\rho_b=\epsilon_0\nabla\cdot \bm{E}$
 - Define the _electric displacement_ $\bm{D}$:
 $$\bm{D}\equiv\epsilon_0\bm{E}+\bm{P}$$
 	- Also known as _electric flux density_
+- From this, for linear dielectrics, one can also write the _polarisation_ $\bm{P}$ as:
+$$\bm{P}=\epsilon_0\chi_e\bm{E}$$
 - Gauss' Law for dielectrics:
 $$\nabla\cdot\bm{D}=\rho_f$$
 - For linear dielectrics, using the definition of relative permittivity:
@@ -998,6 +1000,7 @@ $$\int d^3\bm{r}\,\rho\,\bm{E}\cdot\bm{v}=\int\,d^3\bm{r}\,\bm{E}\cdot\bm{J}$$
 - By _considering the volume integral of_ $\nabla\cdot(\bm{E\wedge H})$, and _Maxwell's equations_:
 $$-\oint d\bm{S}\cdot(\bm{E\wedge H})=\int_V\,d^3\bm{r}\left(\pd{}{t}\left[\frac{\mu_0}{2}\bm{H\cdot H}\right]+\pd{}{t}\left[\frac{\epsilon_0}{2}\bm{E\cdot E}\right]+\bm{E\cdot J}\right)$$
 - The right hand side is _the rate at which energy is flowing into the volume_
+	- Terms in $\partial/\partial t$: _Energy density_
 
 - The integrand on the left hand side is the _Poynting vector_:
 $$\bm{N}=\bm{E\wedge H}$$
@@ -1054,7 +1057,7 @@ $$P=\frac{1}{2}IV^*$$
 $$P_r=\frac{1}{2}\Re\left[\bm{E}(\bm{r})\wedge\bm{H}(\bm{r})\right]$$
 - The _maximum rate at which energy sloshes_ backwards and forwards is:
 $$P_i=\frac{1}{2}\Im\left[\bm{E}(\bm{r})\wedge\bm{H}^*(\bm{r})\right]$$
-- For _plane waves_, since the fields are in phase, _power is always real_
+- For _plane waves_, since the fields are in phase, _power is always real_, with energy only flowing in _one direction_
 
 ### Reflection and transmission at interfaces
 - Consider a plane wave with wavevector $\bm{k}$, incident on a _plane dielectric boundary_
@@ -1065,21 +1068,21 @@ $$P_i=\frac{1}{2}\Im\left[\bm{E}(\bm{r})\wedge\bm{H}^*(\bm{r})\right]$$
 
 - By using the [[#Inhomogeneous dielectrics and boundary conditions|boundary conditions]] of the electric field, which _must be true for all $x$ and $t$_:
 $$\displaylines{\omega_i=\omega_r=\omega_t \\ k_i\sin\theta_i=k_r\sin\theta_r=k_t\sin\theta_t}$$
-	- The waves must be _phase-matched_
+	- This condition is known as _phase matching_
 
-- The magnitude of the wavevector _depends on the refractive index_ of the two media
+- The magnitude of the wavevector _depends on the refractive index_ of the two media:
+$$k=\frac{n\omega}{c}$$
 - From this, the _law of reflection_, as well as _Snell's Law_ are derived:
 $$\displaylines{\theta_i=\theta_r \\ \frac{\sin\theta_t}{\sin\theta_i}=\frac{n_2}{n_1}}$$
-### Fresnel's relations
+#### Fresnel's relations
 - There are separate relations depending on if the wave is _polarised parallel or normal to the plane of incidence_
 - The _reflection and transmission coefficients_ can be derived from _using boundary conditions for the $\bm{E}$ and $\bm{H}$ fields_:
 $$\displaylines{r_{||}=\frac{\tan(\theta_i-\theta_t)} {\tan(\theta_i+\theta_t)} \hspace{1.5cm} t_{||}=\frac{2\cos\theta_i}{(n_2/n_1)\cos\theta_i+\cos\theta_t} \\ r_\perp=-\frac{\sin(\theta_i-\theta_t)}{\sin(\theta_i+\theta_t)} \hspace{1.5cm} t_\perp=\frac{2\cos\theta_i}{\cos\theta_i+(n_2/n_1)\cos\theta_t}}$$
 
 
-- Reflection coefficients _can take negative values_
-- The _power reflection and transmission_ coefficients are _proportional_ to the amplitude coefficients _squared_ 
-	- Need to scale by refractive index due to difference in wave velocity
+- These coefficients _can take negative values_
 
+#### Special angles
 - There is also an angle at which $r_{//}=0$, called the _Brewster's angle_ $\theta_B$:
 $$\tan\theta_B=\frac{n_2}{n_1}$$
 	- In other words, $\theta_i+\theta_t=\pi/2$
@@ -1090,6 +1093,19 @@ $$\sin\theta_c=\frac{n_2}{n_1}$$
 - This is _total internal reflection_
 - At this angle, $\theta_t=\pi/2$
 - There is an _evanescent wave_ in the transmission medium, so _no power is transmitted_
+	- The wave amplitude _decays perpendicular_ to the interface and _propagates along_ the interface
+
+#### Reflection and transmission of power
+- The _power reflection and transmission_ coefficients are _proportional_ to the _modulus squared_ of the _amplitude_ coefficients
+	- Need to scale by refractive index due to _difference in wave velocity_
+
+- The _power reflection and transmission coefficients_ are defined as:
+$$R\equiv\left|\frac{\braket{\bm{N}_r}\cdot\bm{\hat{n}}}{\braket{\bm{N}_i}\cdot\bm{\hat{n}}}\right|\hspace{1cm}T\equiv\left|\frac{\braket{\bm{N}_t}\cdot\bm{\hat{n}}}{\braket{\bm{N}_i}\cdot\bm{\hat{n}}}\right|$$
+- Here, $\braket{\bm{N}}\cdot\bm{\hat{n}}$ represents _time-averaged power transmitted normal to the interface_
+- For a _plane wave_, this is:
+$$\braket{\bm{N}}=\frac{1}{2}\Re{(\bm{E}\wedge\bm{H}^*)}=\frac{1}{2Z}|\bm{E}|^2\bm{\hat{k}}$$
+- From this, for _both polarisations_, the coefficients for power can be written as:
+$$R=|r|^2 \hspace{1cm} T=\frac{n_2\cos\theta_t}{n_1\cos\theta_i}|t|^2$$
 
 ### Waves in plasmas
 - Plasmas: _conduction currents are present_, density of atoms is _low_
@@ -1102,7 +1118,7 @@ $$\sin\theta_c=\frac{n_2}{n_1}$$
 $$\bm{r}=\frac{e}{m_e\omega^2}\bm{E}_0\exp[i(kz-\omega t)]$$
 - Amplitude _proportional to_ $1/m$ and $1/\omega^2$
 
-- The oscillation gives rise to a _dipole moment_, causing a _polarisation_:
+- The movement of electron clouds gives rise to a _dipole moment_, causing a _polarisation_:
 $$\bm{P}=N\bm{p}=-\frac{Ne^2}{m_e\omega^2}\bm{E}$$
 - Hence, the _relative permittivity in plasma_ can be written as:
 $$\epsilon=1-\frac{\omega_p^2}{\omega^2}$$
@@ -1110,18 +1126,20 @@ $$\epsilon=1-\frac{\omega_p^2}{\omega^2}$$
 $$\omega_p=\frac{Ne^2}{\epsilon_0m_e}$$
 
 #### Below plasma frequency
-- Below $\omega_p$, _refractive index is imaginary_
-- A non-propagating, _evanescent wave_ will occur in the transmitted medium:
+- Below $\omega_p$, _refractive index_ (and by extension, $k$) is _imaginary_
+- A _non-propagating, evanescent wave_ will occur in the transmitted medium:
 $$\bm{E}=\bm{E}_0\exp\left[-k_0z\left|1-\frac{\omega_p^2}{\omega^2}\right|^{1/2}\right]\exp(-i\omega t)$$
 - Since the refractive index is imaginary, $\bm{E}$ and $\bm{H}$ are _$\pi/2$ out of phase_
 - The _time-averaged Poynting vector_ is zero
 - There is no net transfer of energy, only "sloshing" of energy
 	- Stored in the motion of electrons
+- Waves with $\omega<\omega_p$ incident upon plasma will be _reflected_ 
+	- Example: reflection from ionosphere
 
 #### Above plasma frequency
 - The wave is _dispersive_
 - The [[Waves#Group velocity|dispersion relation]] is:
-$$\omega=\frac{ck}{\sqrt{1-\omega_p^2/\omega^2}}$$
+$$\displaylines{\omega=\frac{ck}{\sqrt{1-\omega_p^2/\omega^2}} \\ \omega^2=c^2k^2+\omega_p^2}$$
 - Phase velocity _can be larger than $c$_
 - Group velocity _approaches $c$_ as $\omega$ goes to infinity
 - $v_\phi v_g=c^2$
@@ -1150,13 +1168,17 @@ $$\displaylines{\delta\equiv\sqrt{\frac{2}{\sigma\omega\mu_0\mu}} \\ \bm{E}=\bm{
 
 #### Skin effect of wires
 - Consider a wire carrying a current $I$ oscillating at frequency $\omega$
-- As power flows _along_ the wire, the _Poynting vector_ also has a large _component_ along it
-- For a metal with finite conductivity, the _electric field is also along the wire_
-- From also calculating $\bm{H}$, there is also a _component of the Poynting vector pointing towards the surface_
+- For a metal with finite conductivity, the electric field is _along the wire_
+- From calculating $\bm{H}$, there is a _component of the Poynting vector pointing towards the surface_
 
 - For a wire where radius $>>\delta$, _more current flows on the outside_
 	- Decays with depth $\delta$ as current goes into the wire
+	- Both the _current and $\bm{B}$ decay away from the surface_ 
 - As frequency increases, the current is _more confined_ and resistance _increases_
+
+- One can calculate $J(z,t)$ and $I(t)$ for wires with radius $a>>\delta$
+- From this, one can evaluate _power dissipated_ and _effective resistance_ $R=P/\braket{I^2}$ per unit length
+- The power is dissipated as if there is a _thin shell of uniform current_ with thickness $\delta$
 
 ## Guided waves
 - Due to the skin effect, wires _become lossy at high frequencies_
@@ -1183,7 +1205,7 @@ $$\displaylines{V=V_0\exp[i(kz-\omega t)] \\ I=I_0\exp[i(kz-\omega t)]}$$
 $$Z\equiv\frac{V}{I}=\frac{\omega L}{k}=\sqrt{\frac{L}{C}}$$
 
 - $V$ and $I$ are _locked in phase_
-- Characteristic impedance if either $V$ or $I$ travel in the opposite drection is $-Z$
+- Characteristic impedance if either $V$ or $I$ travel in the _opposite drection_ is $-Z$
 
 - Wires and transmission lines should be thought of as _transmitting electromagnetic energy_ instead of just conducting current
 
@@ -1232,6 +1254,7 @@ $$U=\int_a^b\,dz\left(\frac{1}{2}LI^2+\frac{1}{2}CV^2\right)$$
 
 - The rate of change of stored energy can be found to be:
 $$\frac{dU}{dt}=[IV]_b-[IV]_a$$
+- Rate at which energy flows _at a point_ is simply $IV$
 
 - Considering a _load $R$ at the other end_ of a transmission line from a voltage source
 - The source _carries energy away from the source towards the load_
@@ -1278,8 +1301,9 @@ $$\frac{Z_\text{in}}{Z}=\frac{Z_t\cos ka+iZ\sin ka}{Z\cos ka+iZ_t\sin ka}$$
 - Transmission lines support _transverse_ EM waves at high frequencies
 - At very high frequencies, the _skin effect_ causes significant losses
 - _Waveguides_ are often hollow tubes or _optical fibres_
-	- Transmission lines are waveguides, but $V$ and $I$ still have some physical meaning
-	- For waveguides, $\bm{E}$ and $\bm{H}$ need to be considered
+	- Transmission lines are waveguides, but $V$ and $I$ still have some physical meaning _on the surfaces_
+	- For waveguides, $\bm{E}$ and $\bm{H}$ _around the conductors_ are considered
+- Principle: _Two conductors_, waves are _reflected_ between them while propagating
 
 - Consider 2 plane, $y-$polarised waves with wavevectors at angles $\pm\theta$ to the $z-$axis
 $$\bm{k}_1=k(\bm{\hat{x}}\sin\theta+\bm{\hat{z}}\cos\theta) \hspace{1.5cm} \bm{k}_2=k(-\bm{\hat{x}}\sin\theta+\bm{\hat{z}}\cos\theta)$$
