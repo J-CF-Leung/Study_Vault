@@ -102,13 +102,34 @@ $$\sigma(\sigma-1)+\sigma s_0+t_0=0$$
 #### Frobenius' method
 - If $\sigma_1-\sigma_2\notin \mathbb{Z}$, we can find _both_ linearly independent solutions
 - If $\sigma_1-\sigma_2\in\mathbb{Z}$:
-	- If $\sigma_1=\sigma_2$, we can always only find one solution with the given ansatz
-	- If they differ by an integer, it fails (in general) to give both solutions, with some exceptions
+	- If $\sigma_1=\sigma_2$, we can always _only find one solution_ with the given ansatz
+	- If they differ by an _integer_, it _fails (in general) to give both solutions_, with some exceptions
 
-- Method: substitute power series into ODE, find recursion relations
+- Method: substitute power series into ODE
+	- Separate sums based on power of $z$
+	- Different values of $n$ may yield indicial equation or recursion relation
 
 #### Example: Bessel's equation
+- _Bessel's equation_ of order $\nu$ is:
+$$y''+\frac{1}{z}y'+\left(1-\frac{\nu^2}{z^2}\right)y=0$$
+- In this case, the relevant functions are:
+$$s(z)=1 \hspace{1cm} t(z)=z^2-\nu^2$$
+- Substituting the power series into the equation:
+$$\displaylines{\sum_{n=0}^\infty \left[(\sigma+n)(\sigma+n-1)+(\sigma+n)-\nu^2\right]a_nz^n+\sum_{n=0}^\infty a_nz^{n+2}=0 \\ \sum_{n=0}^\infty\left[(\sigma+n)^2-\nu^2\right]a_nz^n+\sum_{n=2}^\infty a_{n-2}z^n=0}$$
+- For $n=0$, $n=1$, and $n\geq2$:
+$$\displaylines{\sigma^2-\nu^2=0 \\ ((\sigma+1)^2-\nu^2)a_1=0 \\ ((\sigma+n)^2-\nu^2)a_n+a_{n-2}=0}$$
+- From these equations, both the _indicial equation_ and _recurrence relation_ are found:
+$$\displaylines{\sigma=\pm\nu \\ (1\pm2\nu)a_1=0 \\ n(n\pm2\nu)a_n=-a_{n-2} \text{ for }n\geq2}$$
+- Using the recurrence relation to find the _radius of convergence_, one finds that the solutions are _convergent everywhere_
+- If $\sigma=+\nu$, the recurrence relations _always_ work fine
 
+- When $\nu\notin\mathbb{Z}$, the recurrence relations work fine, and _two linearly independent_ solutions are found
+- When $2\nu=2m+1$, $m\in\mathbb{N}$, since $\sigma_1$ and $\sigma_2$ differ by an _odd_ integer, it works
+- When $2\nu=1$, $a_1$ _must be zero_
+- When $\nu=0$, then $\sigma_1=\sigma_2$ and there is _only one solution_
+- When $\nu=m\in\mathbb{N}$, _only one solution_ can be found with $\sigma=+\nu$, otherwise $a_{2m}$ would be _infinite_
 
 ### Irregular singular points
 - If an equation has _irregular singular points_, the solutions will probably also show singular behaviour
+
+## Method of Variation of Parameters
