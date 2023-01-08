@@ -1205,7 +1205,7 @@ $$\displaylines{V=V_0\exp[i(kz-\omega t)] \\ I=I_0\exp[i(kz-\omega t)]}$$
 $$Z\equiv\frac{V}{I}=\frac{\omega L}{k}=\sqrt{\frac{L}{C}}$$
 
 - $V$ and $I$ are _locked in phase_
-- Characteristic impedance if either $V$ or $I$ travel in the _opposite drection_ is $-Z$
+- If either $V$ or $I$ are travelling in the _opposite_ direction, $Z$ _BECOMES NEGATIVE_
 
 - Wires and transmission lines should be thought of as _transmitting electromagnetic energy_ instead of just conducting current
 

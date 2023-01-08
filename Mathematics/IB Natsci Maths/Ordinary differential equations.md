@@ -129,6 +129,8 @@ $$\displaylines{\sigma=\pm\nu \\ (1\pm2\nu)a_1=0 \\ n(n\pm2\nu)a_n=-a_{n-2} \tex
 - When $\nu=0$, then $\sigma_1=\sigma_2$ and there is _only one solution_
 - When $\nu=m\in\mathbb{N}$, _only one solution_ can be found with $\sigma=+\nu$, otherwise $a_{2m}$ would be _infinite_
 
+#### Non-power series solutions for Bessel's equation
+
 ### Irregular singular points
 - If an equation has _irregular singular points_, the solutions will probably also show singular behaviour
 

@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Incomplete sections.md",
+                "file": "Mathematics/IB Natsci Maths/Ordinary differential equations.md",
                 "mode": "source",
                 "source": false
               }
@@ -38,7 +38,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/IB Physics/Waves.md",
+                "file": "Physics/IB Physics/Optics.md",
                 "mode": "source",
                 "source": false
               }
@@ -50,7 +50,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+                "file": "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
                 "mode": "source",
                 "source": false
               }
@@ -80,7 +80,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -97,7 +98,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Incomplete sections.md"
+                    "file": "Physics/IB Physics/Optics.md"
                   }
                 }
               }
@@ -113,7 +114,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Incomplete sections.md",
+                    "file": "Physics/IB Physics/Optics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -211,7 +212,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Incomplete sections.md",
+                "file": "Physics/IB Physics/Optics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -228,7 +229,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Incomplete sections.md",
+                "file": "Physics/IB Physics/Optics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -251,7 +252,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Incomplete sections.md"
+                "file": "Physics/IB Physics/Optics.md"
               }
             }
           },
@@ -281,17 +282,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d78b3635a0523f25",
+  "active": "9d81ece30fcfcc63",
   "lastOpenFiles": [
+    "Physics/IB Physics/Waves.md",
+    "Physics/IB Physics/Electromagnetism.md",
+    "Mathematics/IB Natsci Maths/Ordinary differential equations.md",
+    "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
+    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+    "Misc or Personal/Quotes.md",
+    "Incomplete sections.md",
     "Preamble.md",
     "README.md",
-    "Mathematics/IB Natsci Maths/Ordinary differential equations.md",
-    "Mathematics/IB Natsci Maths/Elementary Analysis.md",
-    "Incomplete sections.md",
-    "Mathematics/IB Natsci Maths/Partial differential equations.md",
-    "Mathematics/IB Natsci Maths/Second order linear ODEs and Green's Functions.md",
-    "Mathematics/IB Natsci Maths/Vector calculus in 3-dimensions.md",
-    "Physics/IB Physics/Electromagnetism.md",
-    "Physics/IB Physics/Waves.md"
+    "Mathematics/IB Natsci Maths/Elementary Analysis.md"
   ]
 }
