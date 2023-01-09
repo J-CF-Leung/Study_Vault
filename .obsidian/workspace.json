@@ -45,6 +45,14 @@
             }
           },
           {
+            "id": "77417abd7c8c24a7",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
             "id": "72af1b3cab40709f",
             "type": "leaf",
             "state": {
@@ -81,7 +89,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 5
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -98,7 +106,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/IB Physics/Optics.md"
+                    "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md"
                   }
                 }
               }
@@ -114,7 +122,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/IB Physics/Optics.md",
+                    "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -212,7 +220,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/IB Physics/Optics.md",
+                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -229,7 +237,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/IB Physics/Optics.md",
+                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -252,7 +260,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/IB Physics/Optics.md"
+                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md"
               }
             }
           },
@@ -282,17 +290,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "9d81ece30fcfcc63",
+  "active": "ac0aa9e553cf2558",
   "lastOpenFiles": [
-    "Physics/IB Physics/Waves.md",
-    "Physics/IB Physics/Electromagnetism.md",
-    "Mathematics/IB Natsci Maths/Ordinary differential equations.md",
     "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
+    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+    "Physics/IB Physics/Electromagnetism.md",
+    "Physics/IB Physics/Optics.md",
+    "Physics/IB Physics/Waves.md",
+    "Mathematics/IB Natsci Maths/Ordinary differential equations.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Misc or Personal/Quotes.md",
     "Incomplete sections.md",
-    "Preamble.md",
-    "README.md",
-    "Mathematics/IB Natsci Maths/Elementary Analysis.md"
+    "Preamble.md"
   ]
 }

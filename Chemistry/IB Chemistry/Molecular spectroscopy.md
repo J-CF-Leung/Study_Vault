@@ -297,6 +297,61 @@ $$\tilde{R}_{J-1}-\tilde{P}_{J+1}=\mathcal{E}_0(J+1)-\mathcal{E}_0(J-1)=2\tilde{
 - Using these values, $\tilde{\alpha}$, $\tilde{B}_e$ and the equilibrium bond length can be found
 
 ## Vibration modes in polyatomic molecules
+- _Diatomics_ only have _one vibrational mode_
+- For _polyatomic_ molecules, there are multiple characteristic _normal modes_, where _all_ atoms in a molecule move _synchronously_ with a different relationships between displacements
+- All molecular vibration can be _broken down_ into the normal modes
 
+- On the whole, a molecule with _N atoms_ has $3N$ _degrees of freedom_
+- The _overall translation_ of the _centre of mass_ takes up 3 D.O.F.
+- A _linear_ molecule only has 2 _rotational_ D.O.F.
+- A _non-linear_ molecule has 3 _rotational_ D.O.F.
+
+- Hence, a _linear_ molecule has $3N-5$ _vibrational modes_
+- A _non-linear_ molecule has $3N-6$ _vibrational modes_
+- Examples:
+	- Diatomics: 1 vibrational mode
+	- Bent triatomics ($H_2O$, $SO_2$): 3 vibrational modes
+	- $CO_2$: 4 vibrational modes (2 stretches, 2 _degenerate_ bends)
+
+- Convention: _Symmetric_ vibrations labelled _first_, with _decreasing frequency_, followed by _antisymmetric_
+
+- For _ACYCLIC_ molecules, since there are $N-1$ bonds, there will be $N-1$ _stretches_, and the rest will be _bends_
+- Example: Acetylene
+![[C2H2 vibes.png]]
+
+### Gross selection rules
+- _Not all vibrational modes will appear in an IR or Raman spectrum_
+
+#### IR spectra
+- For _IR spectra_, as mentioned above, the _gross selection rule_ is:
+$$\frac{d\mu}{dx}\Bigg|_{x=0}\neq0$$
+- Example: _symmetric stretch_ in a _mirror symmetric_ molecule (e.g. $CO_2$) is _IR-inactive_
+- However, the _antisymmetric stretch_ and _symmetric bends_ are _IR-active_
+
+#### Raman spectra
+- For _Raman spectra_, the _gross selection rule_ is:
+$$\frac{d\alpha}{dx}\Bigg|_{x=0}\neq0$$
+- Polarisability is _positively correlated to bond length_
+- _Shorter bonds are harder to polarise_
+
+- Example: _symmetric stretch_ in $CO_2$ is _Raman active_
+- For the _antisymmetric stretch_ and _symmetric bend_, it is _equally polarisable in both directions_, hence at _equilibrium_, $d\alpha/dx=0$ and it is _Raman inactive_
+
+#### The rule of mutual exclusion
+- For many molecules (e.g. $NO_2$), vibrational modes _can be both IR and Raman active_
+
+- However, for molecules with a _centre of inversion_, it _cannot be both IR and Raman active at the same time_
+![[Mutual exclusion.png]]
+
+#### Some actual spectra
+- Simpler example: $SO_2$
+![[SO2 IR.png]]
+
+- Note: There are typically _more peaks than IR-active modes_
+- There are _combination and difference bands_
+- As mentioned before, there are also _overtones and hot bands_
+![[Complicated spectrum.png]]
+
+#### Perpendicular and parallel vibrations
 ## Electronic spectroscopy
 

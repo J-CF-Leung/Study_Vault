@@ -264,7 +264,7 @@ The infinite energy of a point charge is a recurring source of embarrassment for
 ### Virtual work in electrostatics
 - Write down the energy as a function of a displacement of something in the system
 	- Account for work done by an external mechanical system
-	- Account for energy dissipated or supplied by external circuit components
+	- Account for energy dissipated or supplied by _external circuit components_
 - Work done on a system to change a distance from $x$ to $x+dx$ is:
 $$F\,dx=\pd{U_s}{x}\,dx+\pd{U_d}{x}\,dx$$
 	- $U_s$: energy stored in system
