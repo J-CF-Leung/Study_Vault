@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/IB Natsci Maths/Ordinary differential equations.md",
+                "file": "Mathematics/IB Natsci Maths/Second order linear ODEs and Green's Functions.md",
                 "mode": "source",
                 "source": false
               }
@@ -79,9 +79,17 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "06127a81e1427884",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -98,7 +106,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md"
+                    "file": "Physics/IB Physics/Optics.md"
                   }
                 }
               }
@@ -114,7 +122,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+                    "file": "Physics/IB Physics/Optics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -137,7 +145,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.3028939797015343,
+                      "scale": 0.9020357635304832,
                       "close": true
                     }
                   }
@@ -212,7 +220,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+                "file": "Physics/IB Physics/Optics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -229,7 +237,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+                "file": "Physics/IB Physics/Optics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -252,7 +260,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md"
+                "file": "Physics/IB Physics/Optics.md"
               }
             }
           },
@@ -282,17 +290,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ac0aa9e553cf2558",
+  "active": "1240bf5783d867d9",
   "lastOpenFiles": [
-    "Physics/IB Physics/Experimental methods and data analysis.md",
-    "Chemistry/IB Chemistry/Symmetry in molecules.md",
-    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Chemistry/IB Chemistry/Molecular spectroscopy.md",
-    "Chemistry/Images/Wavelengths for transitions.png",
-    "Chemistry/Chemical potential and chemical reactions.md",
-    "Chemistry/IA Inorganic chemistry-periodicity and the elements.md",
-    "Chemistry/IA Inorganic chemistry-structure and bonding.md",
-    "Chemistry/IA Spectroscopy- NMR and IR.md",
-    "Materials Science/Strengthening mechanisms in metals.md"
+    "Physics/IB Physics/Experimental methods and data analysis.md",
+    "Mathematics/IB Natsci Maths/Second order linear ODEs and Green's Functions.md",
+    "Physics/IB Physics/Electromagnetism.md",
+    "Misc or Personal/Quotes.md",
+    "Mathematics/IB Natsci Maths/Vectors and matrices.md",
+    "Mathematics/IB Natsci Maths/Partial differential equations.md",
+    "Physics/IB Physics/Optics.md",
+    "Mathematics/IB Natsci Maths/Ordinary differential equations.md",
+    "Chemistry/IB Chemistry/Symmetry in molecules.md"
   ]
 }

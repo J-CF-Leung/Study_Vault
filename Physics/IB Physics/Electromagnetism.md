@@ -1096,6 +1096,7 @@ $$\sin\theta_c=\frac{n_2}{n_1}$$
 - At this angle, $\theta_t=\pi/2$
 - There is an _evanescent wave_ in the transmission medium, so _no power is transmitted_
 	- The wave amplitude _decays perpendicular_ to the interface and _propagates along_ the interface
+![[Fresnel graph.png]]
 
 ### Reflection and transmission of power
 - The _power reflection and transmission_ coefficients are _proportional_ to the _modulus squared_ of the _amplitude_ coefficients

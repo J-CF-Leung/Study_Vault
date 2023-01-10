@@ -343,7 +343,7 @@ $$\frac{d\alpha}{dx}\Bigg|_{x=0}\neq0$$
 - However, for molecules with a _centre of inversion_, it _cannot be both IR and Raman active at the same time_
 ![[Mutual exclusion.png]]
 
-### Some actual spectra
+## Some actual spectra
 - Simpler example: $SO_2$
 ![[SO2 IR.png]]
 
@@ -352,6 +352,25 @@ $$\frac{d\alpha}{dx}\Bigg|_{x=0}\neq0$$
 - As mentioned before, there are also _overtones and hot bands_
 ![[Complicated spectrum.png]]
 
-### Perpendicular and parallel vibrations
+## Perpendicular and parallel vibrations
+- Previously, the selection rules for a rigid rotor were $\Delta\nu=\pm1,\pm2,\dots$ and $\Delta J=\pm1$
+- However, these _only hold for vibrations parallel to the axis_
+
+- There are bends _perpendicular to the axis_ and are _degenerate_
+- The degenerate modes _combine_ to produce _circular motion_
+- The extra rotation makes it so that the new selection rules are:
+$$\Delta\nu=\pm1,\pm2,\pm3,\dots\hspace{1cm}\Delta J=0, \pm1$$
+- The $J=0$ transitions give rise to the _Q branch_
+- From the same process as before, the frequency of the _fundamental_ is:
+$$\mathcal{E}_\text{upper}-\mathcal{E}_\text{lower}=\tilde{\omega}_0 +(\tilde{B}_1-\tilde{B}_0)J(J+1)$$
+- If $\tilde{B}_1\neq\tilde{B}_0$, this means the Q branch is _spread out_
+
+- If there is no Q branch in _ANY vibrational mode_, the molecule _must be linear_
+![[Parallel or perp vibrations.png]]
+
+- For _bending modes_, the moment of inertia _decreases with degree of bending_
+- Hence, $\tilde{B}_1>\tilde{B}_0$, and the _Q branch is spread out on the high frequency side_
+- The _P and R branches_ also undergo the _opposite_ of the distortion seen for stretches
+
 # Electronic spectroscopy
 

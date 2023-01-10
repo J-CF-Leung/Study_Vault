@@ -46,15 +46,17 @@ $$Z=\frac{Z_0}{n} \hspace{1.5cm} Z_0=\sqrt{\frac{\mu_0}{\epsilon_0}}$$
 - The source produces a _spherical wave_, with the strength _at an aperture element_ some distance $s$ away being:
 $$\psi_1(\bm{r})=\frac{a_S\exp(iks)}{s}$$
 - In general, the aperture _can change amplitude and phase_, it can be characterised by an _aperture function_ $h(x,y)$
-- The secondary waves produce a disturbance at point $P$, distance $r$ away
+- The wave emitted _from aperture element $d\Sigma$_ is therefore written as $Ah(x,y)\psi_1d\Sigma$
+- The _secondary waves produce a disturbance_ at point $P$, distance $r$ away:
+$$d\psi_P=AKh(x,y)\psi_1\frac{\exp(ikr)}{r}d\Sigma$$
 
 - Each element of the aperture _can be considered to be a source of secondary wavelets_
 - The _prefactor_ $A$ and _inclination factor_ derived by Kirchoff (see proof in Lipson):
 $$\displaylines{A=-\frac{i}{\lambda} \\ K=\frac{\cos\theta_S+\cos\theta_P}{2}}$$
 	- Angles relative to aperture normal
-	- $K$ often approximated as 1
+	- $K$ _often approximated_ as 1 (The _paraxial_ approximation)
 
-- To find the total amplitude at $P$, sum over all aperture elements:
+- To find the total amplitude at $P$, _sum over all aperture elements_:
 $$\psi_P=\iint_\Sigma -\frac{i}{\lambda}\,h(x,y)\,K(\theta_S,\theta_P)\frac{a_S\exp[ik(s+r)]}{sr}\,dx\,dy$$
 	- $s$ and $r$ are also functions of $x$ and $y$
 
@@ -65,11 +67,11 @@ $$\psi_P=\iint_\Sigma -\frac{i}{\lambda}\,h(x,y)\,K(\theta_S,\theta_P)\frac{a_S\
 - The aperture is illuminated with a _plane wave at normal incidence_
 
 - The phase of each wavelet is _proportional to_ $kr$
-- Epanding $r$ in terms of the position of $P(x_0,y_0)$, and position $(x,y)$ in the aperture, $r$ can vary both _linearly and quadratically_ with $x,y$
+- _Expanding_ $r$ in terms of the position of $P(x_0,y_0)$, and position $(x,y)$ in the aperture, $r$ can vary both _linearly and quadratically_ with $x,y$
 
 - The _condition for Fraunhofer diffraction_ is that phase _varies linearly_ with $x$ and $y$
 - This condition can be expressed as:
-$$\frac{k(x^2+y^2)}{R}<<\pi$$
+$$\frac{k(x^2+y^2)}{2R}<<\pi$$
 - For an aperture of _maximum extent_ $D$, the condition is:
 $$R>>\frac{D^2}{\lambda}$$
 

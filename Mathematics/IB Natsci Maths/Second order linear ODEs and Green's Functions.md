@@ -135,7 +135,7 @@ $$\lim_{\epsilon\to 0} \left[\pd{G}{x}\right]_{\zeta-\epsilon}^{\zeta+\epsilon}=
 
 ## Building a Green's function
 - From the definition of $G$, it _obeys the homogeneous ODE for $x\neq\zeta$_
-- The solutions to the homogeneous ODE are $y_1(x)$ and $y_2(x)$
+- The solutions to the _homogeneous_ ODE are $y_1(x)$ and $y_2(x)$
 - Due to the jump, it should be separated into 2 regions:
 $$G(x,\zeta)= \begin{cases} \alpha_-(\zeta)\,y_1(x) +\beta_-(\zeta)\, y_2(x) &a\leq x\leq \zeta \\ \alpha_+(\zeta)\,y_1(x) +\beta_+(\zeta)\, y_2(x) &\zeta\leq x\leq b\end{cases}$$
 

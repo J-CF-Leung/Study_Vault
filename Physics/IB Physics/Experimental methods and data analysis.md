@@ -251,6 +251,14 @@ $$\displaylines{f=x\pm y\hspace{1cm} \sigma_f^2=\sigma_x^2+\sigma_y^2 \\ f=x^n \
 
 # Digital sampling
 
+## Fourier transforms
+
+## The Nyquist criterion and aliasing
+
+## Quantisation
+
+
+
 # Strategies to eliminate unwanted influences
 
 # Probability distributions
