@@ -267,8 +267,8 @@ $$\displaylines{f(t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty g(\omega)e^{i\om
 >For a _band-limited_ function, one needs to sample at a _minimum_ rate of _twice the highest frequency component_ present in the signal
 >If the sampling is _noiseless_, then the signal can be recovered _perfectly_
 
-- If the signal's maximum frequency is _too high_, then 
-
+- If the signal's maximum frequency is _too high_, then _aliasing_ occurs:
+![[Aliasing.png]]
 
 
 ## Quantisation
