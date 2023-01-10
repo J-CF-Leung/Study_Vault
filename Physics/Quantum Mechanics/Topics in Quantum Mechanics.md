@@ -1,4 +1,4 @@
-## The Variational Principle
+# The Variational Principle
 >[!info] The Variational Principle
 Let there be an arbitrary Hamiltonian $\Ham$, with ground state energy $E_0$. For _any_ wave function $\wv$:
 $$\braket{\Psi|\Ham|\Psi}\geq E_0$$

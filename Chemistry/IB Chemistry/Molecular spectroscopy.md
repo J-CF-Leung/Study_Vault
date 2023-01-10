@@ -2,7 +2,7 @@
 
 - Spectroscopy: _Determining structures using the interaction of electromagnetic radiation with matter_
 
-## Physical principles and approximations
+# Physical principles and approximations
 
 - Contributions to the energy of a molecule are: 
 	- Translation (_ignored_ as light does not significantly affect motion)
@@ -24,13 +24,13 @@ $$\displaylines{\Delta E_\text{tot}=\Delta E_\text{elec}+\Delta E_\text{vib}+\De
 - Corresponding sections of the EM spectrum for transitions:
 ![[Wavelengths for transitions.png]]
 
-## Summary of spectroscopy
+# Summary of spectroscopy
 
-### Low-resolution infrared spectroscopy
+## Low-resolution infrared spectroscopy
 - Details from IA: [[IA Spectroscopy- NMR and IR#IR spectroscopy]]
 - Broadly able to tell _what bonds are present_ via peaks found in particular ranges of wavenumber
 
-### Origin of spectra
+## Origin of spectra
 - A spectrum arises from the _absorption or emission of photons_, changing the molecular energy level
 - This can occur in three ways:
 	- _Absorption_: $M+h\nu\rightarrow M^*$
@@ -41,19 +41,19 @@ $$\displaylines{\Delta E_\text{tot}=\Delta E_\text{elec}+\Delta E_\text{vib}+\De
 - This leads to the _gross selection rules_ for each type of spectroscopy, specifying _what molecules_ can generate that type of spectrum
 - Then, there are _specific selection rules_ detailing _which transitions_ are allowed
 
-### Pure rotational spectra
+## Pure rotational spectra
 - A _pure_ rotational spectrum is one generated only from microwave radiation 
 - To generate an _oscillating electric field_ while rotating, the molecule must possess a _permanent dipole moment_
 	- The component along one direction will oscillate
 - _Gross selection rule_:  There must be a _permanent dipole moment_
 	- Caused by an _electronegativity difference_, plus the right type of _symmetry_
 
-### Vibrational spectra
+## Vibrational spectra
 - As _internuclear distance oscillates_, a _change in dipole moment_ can be caused
 - _Gross selection rule_: At _equilibrium_, there must be a _non-zero rate of change in dipole moment_:
 $$\pd{\mu}{q}\Bigg|_\text{eq}\neq0$$
 
-### Raman spectroscopy
+## Raman spectroscopy
 - Many molecules _cannot generate the required oscillating dipole_ (such as homonuclear diatomics)
 - For these molecules, _Raman spectroscopy_ is needed
 
@@ -77,7 +77,7 @@ $$M^*+h\nu\rightarrow M+h\nu'\hspace{0.3cm}, \hspace{0.3cm}\nu'>\nu$$
 - _Gross selection rule_: The molecule's _polarisability_ must have a _non-zero rate of change_ at _equilibrium_
 $$\pd{\alpha}{q}\Bigg|_\text{eq}\neq0$$
 
-#### Mathematical description
+### Mathematical description
 - This is a mostly _classical description_, which is not wholly accurate
 - From the [[Electromagnetism#Molecular origins of dielectrics|definition of polarisability]], the dipole moment $\bm{\mu}$ of a molecule given an electric field $\bm{E}$ is:
 $$\bm{\mu}=\alpha\bm{E}$$
@@ -89,7 +89,7 @@ $$\alpha=\alpha_0+\beta\sin2\pi\nu_mt$$
 $$\mu=\alpha_0E_0\sin2\pi\nu t+\frac{1}{2}\beta E_0\left\{\cos2\pi(\nu-\nu_m)t-\cos2\pi(\nu+\nu_m)t\right\}$$
 - If $\beta=0$ (i.e. invariant polarisability), _Raman spectroscopy is impossible_
 
-### NOTATION
+## NOTATION
 - Quantities in _wavenumbers_ with units of $\text{cm}^{-1}$ are denoted with a tilde ~
 - $\tilde{c}$ is the speed of light in $\text{cm s}^{-1}$
 
@@ -99,10 +99,10 @@ $$\mu=\alpha_0E_0\sin2\pi\nu t+\frac{1}{2}\beta E_0\left\{\cos2\pi(\nu-\nu_m)t-\
 | Naming convention | O    | P    | Q   | R    | S     |
 
 
-## Rotational microwave spectroscopy
+# Rotational microwave spectroscopy
 - Applicable to molecules with a _permanent dipole moment_
 
-### Rotating molecules
+## Rotating molecules
 - A molecule moving in 3-dimensions has _three principal axes_
 - Thus, angular momentum can be decomposed into 3 components, $x$,$y$, and $z$
 - The components are given by the equations:
@@ -113,7 +113,7 @@ $$L_i=I_i\omega_i$$
 - A _spherical top_ molecule has $I_x=I_y=I_z$
 - For a _linear_ molecule, $I_x=I_y$, $I_z=0$
 
-### The rigid rotor
+## The rigid rotor
 - _Diatomic molecules_ can be modelled by a [[Molecular quantum mechanics#The Rigid Rotor|rigid rotor]]
 - Let the masses be $m_1$ and $m_2$, and be separated by distance $r$
 - The moment of inertia is:
@@ -127,19 +127,19 @@ $$\tilde{B}=\frac{h}{8\pi^2\tilde{c}I}$$
 - The energy in wave-numbers:
 $$\mathcal{E}_J=\tilde{B}J(J+1)$$
 
-### Degeneracy of energy levels
+## Degeneracy of energy levels
 - $J$ specifies $L^2$
 - Angular momentum can take different orientations
 - Each energy level has a $(2J+1)-$fold degneracy as the _magnetic quantum number_ $M_J$ can take integer values from $-J$ to $J$
 - $M_J$ specifies $L_z$
 
-### Populations of energy levels
+## Populations of energy levels
 - From the _Boltzmann distribution_, with the _degeneracy_, the _population_ of each rotational energy level _relative to ground level_ is:
 $$N_J\propto(2J+1)\exp\left(-\frac{h\tilde{c}\tilde{B}J(J+1)}{kT}\right)$$
 - From this, there is an energy level with _maximum population_:
 $$J_\text{max}\approx \sqrt{\frac{kT}{2h\tilde{c}\tilde{B}}}-\frac{1}{2}$$
 
-### Transitions between energy levels
+## Transitions between energy levels
 - From [[Molecular quantum mechanics#Spectroscopic principles|Fermi's Golden Rule]], not only do the molecules need to have a _permanent dipole moment_, there is also a restriction on $\Delta J$:
 $$\Delta J=\pm1$$
 - The difference in wavenumber from energy level $J$ to $J+1$ is:
@@ -151,7 +151,7 @@ $$\Delta\mathcal{E}=\mathcal{E}_{J+1}-\mathcal{E}_J=2\tilde{B}J(J+1)$$
 - Practically, emission (both spontaneous and stimulated) must be taken into account
 ![[N2O rotational spectrum.png]]
 
-### Linear polyatomic molecules
+## Linear polyatomic molecules
 - For linear polyatomic molecules, transitions are _also spaced by $2\tilde{B}$_
 - However, given a molecule $A-B-C$, the moment of inertia is:
 $$I=m_Ar_{AB}^2+m_Cr_{BC}^2-\frac{(m_Ar_{AB}-m_Cr_{BC})^2}{m_A+m_B+m_C}$$
@@ -159,7 +159,7 @@ $$I=m_Ar_{AB}^2+m_Cr_{BC}^2-\frac{(m_Ar_{AB}-m_Cr_{BC})^2}{m_A+m_B+m_C}$$
 - Assuming _bond length does not change_, this changes $\tilde{B}$
 - Therefore, both bond lengths can be found
 
-## Rotational Raman spectroscopy
+# Rotational Raman spectroscopy
 - For rotational Raman spectroscopy to work, _polarisability must change during rotation_
 - The selection rule in rotational Raman spectroscopy is:
 $$\Delta J=0,\pm2$$
@@ -171,13 +171,13 @@ $$\mathcal{E}_\text{upper}-\mathcal{E}_\text{lower}=\tilde{B}(4J+6)$$
 - $\Delta J$ is defined by convention to be $J(\text{upper})-J(\text{lower})$
 - Therefore, all Raman lines _are in the S branch_
 ![[N2 Raman.png|600]]
-## Vibrational potentials and selection rules
+# Vibrational potentials and selection rules
 ![[Internuclear potential.png|500]]
 - General behaviour of a diatomic:
 	- If stretched or compressed, there is a _restoring force_
 	- The more _compressed_ the molecule is, the _stronger the repulsion_
 	- As the molecule is _stretched_ more and more, the molecule _dissociates_ with $V(r)\to0$
-### The harmonic oscillator
+## The harmonic oscillator
 - Form of potential:
 $$V(x)=\frac{1}{2}kx^2$$
 
@@ -192,7 +192,7 @@ $$\Delta\nu=\pm1$$
 - Therefore, _all allowed vibrations are at_ $\tilde{\omega}$
 - The absorption spectrum should have a _single line_
 
-### Anharmonic oscillator: the Morse potential
+## Anharmonic oscillator: the Morse potential
 - Form of potential:
 $$V_M(x)=D_e\left[1-\exp(-\beta x)\right]^2$$
 - More details: [[Molecular quantum mechanics#Nuclei: The Morse oscillator|The Morse Oscillator]]
@@ -237,9 +237,9 @@ $$\nu_\text{max}=\frac{1}{2\chi_e}-\frac{1}{2}$$
 - _Additional structure_ can be seen in the form of small peaks with spacing of $\approx10\text{cm}^{-1}$
 - This is due to _change in rotational energy level_
 
-## Vibrational spectroscopy for diatomics
+# Vibrational spectroscopy for diatomics
 
-### Vibrating rotor
+## Vibrating rotor
 - At _every vibrating energy level_, the molecule can have _many different rotational energies_
 - However, the rotational constant is _not exactly the same for all vibrational states_
 
@@ -251,7 +251,7 @@ $$\tilde{B}_\nu=\tilde{B}_e-\tilde{\alpha}\left(\nu+\frac{1}{2}\right)$$
 - Here, $\tilde{B}_e$ is the rotational constant _at equilibrium_
 - From this, the _equilibrium bond length_ can be found
 
-### Spectrum
+## Spectrum
 - In an IR spectrum of a _diatomic_, there is a _simultaneous change_ of both vibrational and rotational energy:
 $$\Delta\nu=\pm1,\pm2,\pm3,...\hspace{1cm}\Delta J=\pm1$$
 - Convention: 
@@ -283,7 +283,7 @@ $$\begin{aligned}\tilde{P}_{J''}&=\tilde{\omega}_0+(\tilde{B}_1-\tilde{B}_0)J''^
 - In the _P branch_, the absorption lines become _more widely spaced_ as $J''$ increases
 - In the _R branch_, the absorption lines become _more compressed_ as $J''$ increases
 ![[Carbon monoxide fundamental.png]]
-### Finding the rotational constants
+## Finding the rotational constants
 - To find $\tilde{B}_1$, consider _two transitions that share the same lower state_ $J$
 - The energy difference between these two transitions is:
 $$\tilde{R}_J-\tilde{P}_J=\mathcal{E}_1(J+1)-\mathcal{E}_1(J-1)=2\tilde{B}_1(2J+1)$$
@@ -296,7 +296,7 @@ $$\tilde{R}_{J-1}-\tilde{P}_{J+1}=\mathcal{E}_0(J+1)-\mathcal{E}_0(J-1)=2\tilde{
 
 - Using these values, $\tilde{\alpha}$, $\tilde{B}_e$ and the equilibrium bond length can be found
 
-## Vibration modes in polyatomic molecules
+# Vibration modes in polyatomic molecules
 - _Diatomics_ only have _one vibrational mode_
 - For _polyatomic_ molecules, there are multiple characteristic _normal modes_, where _all_ atoms in a molecule move _synchronously_ with a different relationships between displacements
 - All molecular vibration can be _broken down_ into the normal modes
@@ -319,16 +319,16 @@ $$\tilde{R}_{J-1}-\tilde{P}_{J+1}=\mathcal{E}_0(J+1)-\mathcal{E}_0(J-1)=2\tilde{
 - Example: Acetylene
 ![[C2H2 vibes.png]]
 
-### Gross selection rules
+## Gross selection rules
 - _Not all vibrational modes will appear in an IR or Raman spectrum_
 
-#### IR spectra
+### IR spectra
 - For _IR spectra_, as mentioned above, the _gross selection rule_ is:
 $$\frac{d\mu}{dx}\Bigg|_{x=0}\neq0$$
 - Example: _symmetric stretch_ in a _mirror symmetric_ molecule (e.g. $CO_2$) is _IR-inactive_
 - However, the _antisymmetric stretch_ and _symmetric bends_ are _IR-active_
 
-#### Raman spectra
+### Raman spectra
 - For _Raman spectra_, the _gross selection rule_ is:
 $$\frac{d\alpha}{dx}\Bigg|_{x=0}\neq0$$
 - Polarisability is _positively correlated to bond length_
@@ -337,13 +337,13 @@ $$\frac{d\alpha}{dx}\Bigg|_{x=0}\neq0$$
 - Example: _symmetric stretch_ in $CO_2$ is _Raman active_
 - For the _antisymmetric stretch_ and _symmetric bend_, it is _equally polarisable in both directions_, hence at _equilibrium_, $d\alpha/dx=0$ and it is _Raman inactive_
 
-#### The rule of mutual exclusion
+### The rule of mutual exclusion
 - For many molecules (e.g. $NO_2$), vibrational modes _can be both IR and Raman active_
 
 - However, for molecules with a _centre of inversion_, it _cannot be both IR and Raman active at the same time_
 ![[Mutual exclusion.png]]
 
-#### Some actual spectra
+### Some actual spectra
 - Simpler example: $SO_2$
 ![[SO2 IR.png]]
 
@@ -352,6 +352,6 @@ $$\frac{d\alpha}{dx}\Bigg|_{x=0}\neq0$$
 - As mentioned before, there are also _overtones and hot bands_
 ![[Complicated spectrum.png]]
 
-#### Perpendicular and parallel vibrations
-## Electronic spectroscopy
+### Perpendicular and parallel vibrations
+# Electronic spectroscopy
 

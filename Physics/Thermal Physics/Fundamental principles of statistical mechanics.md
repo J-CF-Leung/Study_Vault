@@ -6,14 +6,14 @@
 >-David L. Goodstein
 
 
-## The classical statistics of particles
+# The classical statistics of particles
 - For a macroscopic body with a very large number of degrees of freedom, solving for the motion of all of its particles becomes impossible
 - A state where all degrees of freedom have a specified value is a _microstate_
 - Instead, _statistical laws_ emerge, which adequately describe the behaviour of the system at a whole, and are only applicable to large systems
 - Assume all particles obey classical mechanics
 - Given a system with $s$ degrees of freedom, a certain state can be denoted by a _phase point_ $(q_1,q_2,...,q_s,p_1,p_2,...,p_s)$ in a $2s-$dimensional [[Analytical classical mechanics#Phase space|phase space]] 
 
-### The statistical distribution function
+## The statistical distribution function
 - Inside a closed system with many particles, consider a subsystem of some particles that freely interacts with the rest
 - _Ergodic hypothesis_ - After a sufficiently long time $T$, the subsystem will have been in every possible state, i.e. its phase points will have covered all of the subsystem's phase space
 - Let $\Delta t$ be the amount of time it spent in the phase volume $\Delta p \Delta q$, the probability the subsystem is in that volume is $w=\Delta t/T$
@@ -23,7 +23,7 @@ $$dw = \rho(q_1...q_s,p_1...p_s)\,dq\,dp$$
 $$\int \rho(p,q)\,dp\,dq=1$$
 - The statistical distribution _does not depend on the initial conditions_ of the system, as after a sufficiently long time, it has been through every point in phase space, any of which can be the initial state
 
-### Average values
+## Average values
 - The statistical distribution allows us to evaluate the distribution and mean of any variable $f(p,q)$ related to the system as a whole, with the mean being:
 $$\overline{f}=\left<f\right>=\int f(p,q)\,\rho(p,q)\,dp\,dq$$
 - With the definition of $dw$, it can be seen that this is identical to time averaging
@@ -33,9 +33,9 @@ $$\overline{f}=\left<f\right>=\int f(p,q)\,\rho(p,q)\,dp\,dq$$
 - The time it takes for a perturbed system to equilibriate is the _relaxation time_
 - The study of how a system equilibriates is _kinetics_, i.e. **not statistical mechanics**
 
-### Statistical independence and fluctuations
+## Statistical independence and fluctuations
 
-#### Statistical independence of multiple subsystems
+### Statistical independence of multiple subsystems
 - Consider the interaction of a subsystem with its surroundings
 	- It interacts via particles on the surface
 	- The proportion of the subsystem that interacts with the rest decreases with size
@@ -48,7 +48,7 @@ $$\displaylines{\rho_{12}\,dp^{(12)}\,dq^{(12)} = \rho_1\,dp^{(1)}\,dq^{(1)} \rh
 - Can hold for any number of small subsystems
 - Given a physical quantity $f$, the product of the subsystem means is:
 $$\overline{f_1f_2}=\bar{f_1}\bar{f_2}$$
-#### Fluctuations
+### Fluctuations
 - Over time, a macroscopic quantity $f$ will fluctuate around the mean $\bar{f}$
 - As it varies in both directions, $\mean{\Delta f}=\mean{f-\bar{f}}=0$
 - Instead, the _root-mean-square fluctuation_ $\sqrt{\mean{(\Delta f)^2}}$ is used
@@ -63,7 +63,7 @@ $$\mean{(\Delta f)^2} = \mean{\left(\sum\Delta f_i\right)^2}=\sum \mean{(\Delta 
 - For a large enough system, the value of $f$ is always close to $\bar{f}$
 
 
-### Phase space flow and Liouville's theorem
+## Phase space flow and Liouville's theorem
 >[!INFO] Liouville's Theorem
 For a small, closed region of phase space, its shape will change over time, but the total volume will not
 In other words, the distribution function along a phase space trajectory is constant in time
@@ -74,7 +74,7 @@ In other words, the distribution function along a phase space trajectory is cons
 $$\pd{\rho}{t}=-\PB{\rho}{\Ham}$$
 - Liouville's theorem is valid for any _quasi-closed_ system
 
-### The equal probabilities postulate
+## The equal probabilities postulate
 - One assumption of statistical thermodynamics is that all microstates are equally likely
 - It relies on:
 	- The fact that the systems under discussion are in equilibrium
@@ -97,7 +97,7 @@ $$\pd{\rho}{t}=-\PB{\rho}{\Ham}$$
 	$$\sum_bP(a\rightarrow b)(w_b-w_a)=0$$
 	- The only non-trivial solution is that $w_b=w_a$ for all $a$ and $b$
 
-### Importance of energy in statistical mechanics
+## Importance of energy in statistical mechanics
 - From Liouville's theorem, it is clear that $\rho(q,p)$ is a _constant of motion_ for a quasi-closed subsystem
 - For two quasi-closed subsystems, $\rho_{12}=\rho_1\rho_2$
 - It follows that $\ln{\rho}$ is an _additive constant of motion_ ($\ln{\rho_{12}}=\ln{\rho_1}+\ln{\rho_2}$)
@@ -111,12 +111,12 @@ $$\ln{\rho}=\alpha+\beta E(q,p)$$
 >[!info] A fundamental principle of statistical mechanics
 >The statistical properties of a system can be derived from only the energy (or Hamiltonian)
 
-### The microcanonical ensemble
+## The microcanonical ensemble
 - The simplest statistical distribution is where $\rho$ is constant for $E=E_0$, and zero everywhere else
 - The resulting distribution, known as the _microcanonical ensemble_:
 $$\rho=\text{const}\cdot\delta(E-E_0)$$
 
-### Large systems
+## Large systems
 - Relaxation time increases with the size of the system
 - For a large system, small parts of it may attain equilibrium by themselves before the system as a whole
 - Each small part can be described by a dsitribution function $\rho$ with their own parameters $(\alpha,\beta,\bm{\gamma},\bm{\delta})$
@@ -124,11 +124,11 @@ $$\rho=\text{const}\cdot\delta(E-E_0)$$
 	- For a slow chemical reaction, the molecules may reach thermal equilibrium long before chemical equilibrium
 - A macrostate describes the mean values of physical quantities, determining a particular partial equilibrium
 
-## The quantum statistics of particles
+# The quantum statistics of particles
 - Assume all particles obey quantum mechanics
 - Integrating Schrödinger's equation for every particle is impossible
 
-### The practical non-existence of stationary states
+## The practical non-existence of stationary states
 - For macroscopic bodies, the energy eigenvalue spectrum is infinite, and extremely dense
 - For a given finite range, the number of energy levels increases exponentially with particle number
 - The energy of a system is always "broadened" due to interactions with surroundings, with interaction energy >> gap between levels
@@ -137,7 +137,7 @@ $$\rho=\text{const}\cdot\delta(E-E_0)$$
 	- Uncertainties: $|\Delta E-\Delta E'| \geq \hbar/\Delta t$
 	- For an uncertainty smaller than the energy level gap, and extremely long $\Delta t$ is needed
 
-### The statistical matrix
+## The statistical matrix
 - To describe an ensemble of particles in a range of states, one must use the [[Density matrix|density matrix]]
 - It allows one to calculate means and probabilities of measuring a certain value
 - In statistical mechanics, the density matrix of the energy representation, also known as the _statistical matrix_, is used

@@ -7,8 +7,8 @@
 >
 >-David Morin
 
-## Lagrangian mechanics
-### Principle of stationary action 
+# Lagrangian mechanics
+## Principle of stationary action 
 - Let a particle have a trajectory $q(t)$ linking $q(t_1)$ and $q(t_2)$
 - The action of a particle's trajectory $S[q(t)]$:
 $$S[q(t)]=\int_{t_1}^{t_2}\Lagr(q,\dot{q},t)\,dt$$
@@ -34,7 +34,7 @@ _Our esteem for the particle will sink further_ when we learn the path integral 
 - For velocity dependent forces, $\Lagr$ takes a different form that reproduces the correct equations of motion
 - Euler-Lagrange equations are not coordinate-dependent
 - Example: Coriolis $(2m\dot{r}\dot{\theta})$, Euler $(mr\ddot{\theta})$ , and centrifugal forces $(mr\dot{\theta}^2)$ arise from polar E-L equations
-### Generalised momentum and force conjugates
+## Generalised momentum and force conjugates
 - Canonical momentum conjugate $p_i$:
 $$p_i=\pd{\Lagr}{\dot{q}_i}$$
 - Canonical force conjugate $F_i$:
@@ -42,12 +42,12 @@ $$F_i=\pd{\Lagr}{q_i}$$
 - Polar coordinates: 
 	- $p_\theta=mr^2\dot{\theta}$, angular moentum
 	- $F_\theta=$ torque
-### Cyclic coordinates and conservation of momentum
+## Cyclic coordinates and conservation of momentum
 - If $\Lagr=\Lagr(\dot{q}_i)$,  $F_i=\dot{p}_i=0$
 	- Example: If $V=V(r)$, $p_\theta$ is conserved
 	- Example: If $V=V(aq_1-bq_2)$, $bp_1+ap_2$ is conserved
 - $q_i$ is known as a cyclic coordinate
-#### The two-body problem
+### The two-body problem
 $$\Lagr=\frac{1}{2}m_1|\dot{\bm{r}}_1|^2+ \frac{1}{2}m_2 |\dot{\bm{r}}_2|^2 -V(\bm{r}_2-\bm{r}_1)$$
 - Transformation of coordinates: $\bm{r=r_2-r_1}$, $r_{CM}=(m_1\bm{r}_1+m_2\bm{r}_2)/(m_1+m_2)$
 $$\Lagr=\frac{1}{2}(m_1+m_2)|\dot{\bm{r}}_{CM}|^2+\frac{1}{2}\frac{m_1m_2}{m_1+m_2}|\dot{\bm{r}}|^2-V(\bm{r})$$
@@ -58,8 +58,8 @@ $$\Lagr=\frac{1}{2}(m_1+m_2)|\dot{\bm{r}}_{CM}|^2+\frac{1}{2}\frac{m_1m_2}{m_1+m
 - Shifting the system by a constant displacement $\bm{r}_0$ does not change motion
 
 
-## Hamiltonian formulation
-### Hamiltonian as a Legendre transform
+# Hamiltonian formulation
+## Hamiltonian as a Legendre transform
 - In the Lagrangian formulation, $p_i=\partial\Lagr/\partial \dot{q}_i$
 - In the Hamiltonian formulation, $\dot{q}$ becomes the derived quantity from $p$:
 $$\dot{q}_i=\pd{\Ham}{p_i}$$
@@ -69,7 +69,7 @@ $$\Ham=\sum_i\left(\pd{\Lagr}{\dot{q}_i}\dot{q}_i\right)-\Lagr=\sum_i \dot{q}_ip
 $$\begin{aligned}\dot{q}_i&=\pd{\Ham}{p_i} \\[8pt] \dot{p}_i&=-\pd{\Ham}{q_i} \\[8pt] \frac{d\Ham}{dt}&=-\pd{\Lagr}{t}\end{aligned}$$
 - Cyclic coordinates still exist in the Hamiltonian formulation, with $\dot{p_i}=0$ if $\Ham$ does not depend on $q_i$
 
-### Phase space
+## Phase space
 - In the Lagrangian formalism, a system's state is described by a point in n-dimensional configuration space, with a definite velocity
 - In the Hamiltonian formalism, a system is described by a single point in 2n-dimensional phase space
 - The velocity of a point moving through phase space:
@@ -82,7 +82,7 @@ $$\nabla\cdot\bm{v}_{phase}=\sum_i\left(\pd{\dot{q}_i}{q_i}+\pd{\dot{p}_i}{p_i}\
 	- Phase space: 2-dimensional
 	$$\frac{x^2}{2E/k}+\frac{p^2}{2mE}=1$$
 	- The fluid rotates about the origin in fixed ellipses
-### Liouville's Theorem
+## Liouville's Theorem
 >[!INFO] Liouville's Theorem
 For a small, closed region of phase space, its shape will change over time, but the total volume will not
 In other words, the distribution function along a phase space trajectory is constant in time
@@ -106,7 +106,7 @@ dp_i \rightarrow d\bar{p}_i=dp_i-\pd{\Ham}{q_i}dt}$$
 	- Example: distributions in [[Fundamental principles of statistical mechanics|statistical mechanics]]
 
 
-## Comparison between formulations of mechanics
+# Comparison between formulations of mechanics
 | Newtonian                                                                                           | Lagrangian                                                              | Hamiltonian                                                             |
 | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 | Vectorial description, trajectory determined "step-by-step" through time                            | Scalar-based/variational description, trajectory determined all at once | Variational description                                                 |
@@ -114,7 +114,7 @@ dp_i \rightarrow d\bar{p}_i=dp_i-\pd{\Ham}{q_i}dt}$$
 | State represented by a point moving with definite velocity in $n-$dimensional _configuration space_ | Same as Newtonian mechanics                                             | State described by a point in $2n-$dimensional phase space              |
 | $n$ coordinates evolve according to $n$ second-order equations                                      | Same as Newtonian mechanics                                             | $2n$ coordinates and momenta obey $2n$ first-order equations            |
 |                                                                                                     |  For a given $\Lagr$, several trajectories can pass through a given point in configuration space depending on $\dot{q}$   | For a given $\Ham$, only one trajectory passes through a given point in phase space |
-## Poisson brackets
+# Poisson brackets
 - Poisson brackets (PBs) are another way to express relations in classical mechanics
 $$\PB{\omega}{\lambda}=\sum_i\left(\pd{\omega}{q_i}\pd{\lambda}{p_i}-\pd{\omega}{p_i}\pd{\lambda}{q_i}\right)$$
 - The rate of change of a dynamical variable $\omega(x,p,t)$ is simply expressed with PBs:
@@ -132,7 +132,7 @@ $$\PB{\omega}{\PB{\lambda}{\sigma}}+\PB{\sigma}{\PB{\omega}{\lambda}}+\PB{\lambd
 - Taking derivatives with Poisson brackets:
 $$\PB{\omega}{q_i}=-\pd{\omega}{p_i}\;\;\;\;\PB{\omega}{p_i}=\pd{\omega}{q_i}$$
 
-## More about the action
+# More about the action
 - Consider the actual path of a particle $q(t)$, changed by $\delta q(t)$, where only the endpoint is varied:
 $$\delta q(t_1)=0 \;\;,\;\; \delta q(t_2)=\delta q$$
 - Then, consider the change in action, as the actual path is followed until $t_2$:
@@ -144,4 +144,4 @@ $$\pd{S}{q_i}=p_i$$
 $$\displaylines{\frac{dS}{dt}=\Lagr \\ \frac{dS}{dt}=\pd{S}{t}+\sum_i \pd{S}{q_i}\dot{q}_i=\pd{S}{t}+\sum_ip_i\dot{q}_i}$$
 - Using the definition for the Hamiltonian, one gets:
 $$\pd{S}{t}=-\Ham$$
-## Electromagnetism
+# Electromagnetism

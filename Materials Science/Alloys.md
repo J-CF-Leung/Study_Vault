@@ -1,4 +1,4 @@
-## Fe-C system
+# Fe-C system
 - Actual equilibrium phases include graphite which is slow to form
 - Quasi-equilibrium phases usually considered (Cementite instead of graphite)
 - Principal phases:
@@ -21,7 +21,7 @@
 	- Can be tempered/annealed to form precipitates of cementite
 	- Precipitates impede dislocation motion and make the material stronger
 
-## Al-Cu system
+# Al-Cu system
 - $\ce{Al-Cu}$ alloys are common in aerospace applications
 ![[Al-Cu phase diagram.png|500]]
 - Eutectic on $\ce{Al-}$rich side

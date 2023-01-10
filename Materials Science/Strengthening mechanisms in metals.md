@@ -1,5 +1,5 @@
-## Raising yield stress
-### Work hardening
+# Raising yield stress
+## Work hardening
 - Dislocation intersections
 	- Dislocations can combine and form sessile segments 
 	   ([[Plastic deformation#Dislocation interactions]])
@@ -12,7 +12,7 @@
 	- Created jogs can be sessile, creating further barriers to slip
 	- Already plastically deformed metals have much higher dislocation density, raising $\sigma_Y$ significantly
 - Both dislocation intersections and combinations contribute to work hardening
-### Grain size
+## Grain size
 - Grain boundaries are obstacles for dislocation movement
 - Dislocations will accumulate at grain boundaries and increase stress
 	- At some point, the neighbouring grain initiates slip due to the stress
@@ -20,7 +20,7 @@
 - With small grains, fewer dislocations can pile up, required yield stress becomes higher
 - Hall-Petch relationship:
 $$\sigma_Y=\sigma_0+\frac{k}{\sqrt{d}}$$
-### Solution strengthening
+## Solution strengthening
 - Point defects in a solution: vacancies, substitutional defects, interstitial defects
 - Substitutional solute atoms:
 	- Stress field is always spherically symmetric, with no shear stress component
@@ -47,7 +47,7 @@ $$\sigma_Y=\sigma_0+\frac{k}{\sqrt{d}}$$
 		- At an intermediate temperature, atoms and dislocation speeds are similar
 			- Carbon can recombine with dislocations that have just escaped the Cottrell atmosphere
 			- Repeated pinning and escaping creates serrations in stress-strain curve (Portevin-Le Chatelier Effect)
-### Precipitate strengthening
+## Precipitate strengthening
 - Small precipitates are often coherent with the matrix and can be sheared/cut by dislocation motion
 	- Precipitates are often harder to pass through, providing a strengthening effect
 	- $\Delta\tau\propto\sqrt{r}$
@@ -75,8 +75,8 @@ Under-aged | Even higher peak yield strength, stress for continued deformation c
 Over-aged | Low yield strength, rapid work hardening | Bowing is dominant, process leaves dislocation debris to inhibit futher dislocation movement
 Peak aged | High yield stress, high work hardening rate | Precipitates have a range of sizes
 
-## Other mechanisms
-### Partial dislocations
+# Other mechanisms
+## Partial dislocations
 - In fcc metals, a perfect dislocation goes from an A/B/C position to another A/B/C
 	- Burgers vector $\bm{b_1}$ is of the type $a/2<110>$
 	- Alternative path: B->C->B through 2 partial dislocations $\bm{b_2}$ and $\bm{b_3}$
@@ -91,7 +91,7 @@ Peak aged | High yield stress, high work hardening rate | Precipitates have a ra
 		- Partials have both edge and screw dislocation components
 		- They must recombine before cross slipping
 		- Low stacking fault energy->large fault region->more work hardening before cross slipping
-### Order hardening
+## Order hardening
 - Ordered structures have a higher strength than disordered solid solutions
 - Burgers vectors in a typical structure may not equate to lattice vectors
 	- Example: $\beta-$brass

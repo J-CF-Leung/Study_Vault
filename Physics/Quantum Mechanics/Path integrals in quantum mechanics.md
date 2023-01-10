@@ -1,4 +1,4 @@
-## The propagator
+# The propagator
 - Consider a position-space wave function at time $t$, evolved from $\ket{\Psi(t_0)}$:
 $$\begin{aligned}\Psi(x,t)=\braket{x|\Psi(t)}&=\sum_n\braket{x|E_n}\exp\left(-\frac{iE_n(t-t_0)}{\hbar}\right)\braket{E_n|\Psi(t_0)}\\ &= \int \sum_n\braket{x|E_n}\left(-\frac{iE_n(t-t_0)}{\hbar}\right)\braket{E_n|x'}\braket{x'|\Psi(t_0)}\,dx' \\
 &=\int K(x,t,x',t_0)\Psi(x',t_0)\,dx'\end{aligned}$$
@@ -6,7 +6,7 @@ $$\begin{aligned}\Psi(x,t)=\braket{x|\Psi(t)}&=\sum_n\braket{x|E_n}\exp\left(-\f
 - It dictates the time-evolution of a position-space wave function given an initial state
 - The propagator is also equal to the matrix elements of the time-evolution operator in the position basis:
 $$K(x,t,x',t_0)=\sum_n\braket{x|E_n}\exp\left(-\frac{iE_n(t-t_0)}{\hbar}\right)\braket{E_n|x'}=\braket{x|\teo(t,t_0)|x'}$$
-### The propagator as a transition amplitude
+## The propagator as a transition amplitude
 - It can also be thought of as a _[[Fundamentals of quantum mechanics#Transition amplitude|transition amplitude]]_ from the position eigenstate $\ket{x'}$ at time $t_0$ to the eigenstate $\ket{x}$ at time $t$:
 $$K(x,t,x',t_0)=\sum_n\bra{x}\exp\left(-i\frac{E_nt}{\hbar}\right)\ket{E_n}\bra{E_n}\exp\left(i\frac{E_nt_0}{\hbar}\right)\ket{x'}=\braket{x,t|x',t_0}$$
 	- where both base kets are interpreted as in the [[Fundamentals of quantum mechanics#The Schrödinger and Heisenberg pictures|Heisenberg picture]]
@@ -18,7 +18,7 @@ $$\braket{x'',t''|x,t}=\int\braket{x'',t''|x',t'}\braket{x',t'|x,t}\;dx'$$
 $$\begin{aligned} \braket{x_N,t_N|x_1,t_1}&=\int dx_{N-1}\int dx_{N-2}\,...\int dx_2 \braket{x_N,t_N|x_{N-1},t_{N-1}} \\ &\;\;\;\;\; \times \braket{x_{N-1},t_{N-1}|x_{N-2},t_{N-2}}\, ...\braket{x_2,t_2|x_1,t_1}\end{aligned}$$
 - This is known as _path integration_, as every possible point in space in every infinitesimal time interval (aka. every possible path) is considered
 
-## Feynman's formulation
+# Feynman's formulation
 >[!info] Motivation
 >In classical mechanics, only one path, the one with least action, is involved in a particle's motion. However, in quantum mechanics, all possible paths, even the most non-classical, can play a role. Yet, in the $\hbar \rightarrow 0$ limit, classical mechanics must somehow be reproduced.
 
@@ -34,13 +34,13 @@ $$\begin{aligned}\braket{x_N,t_N|x_1,t_1}&=\lim_{N\to\infty}\left(\frac{m}{2\pi 
 - This infinite-dimensional integral is known as _Feynman's path integral_, and can be written as:
 $$\braket{x_N,t_N|x_1,t_1}=\int_{x_1}^{x_N}\mathcal{D}[x(t)]\exp{\left(i\int_{t_1}^{t_N}\frac{\Lagr(x,\dot{x})}{\hbar}\,dt\right)}$$
 - The quantity $iS/\hbar$ can be understood as the "phase" of a particular path, with every possible path giving an equal contribution, but with a different phase
-### Reproducing the Schrödinger equation
+## Reproducing the Schrödinger equation
 - Consider the Schrödinger equation over a very small time interval $\epsilon$:
 $$\ket{\Psi(\epsilon)}-\ket{\Psi(0)}=-\frac{i\epsilon}{\hbar}\Ham\ket{\Psi(0)}$$
 - Project the equation over the $x$ basis, then express $\Psi(x,\epsilon)$ using the propagator
-### The classical limit
+## The classical limit
 - Consider summing up two paths with different actions, which interfere with each other
 - As $\hbar\to 0$, or (equivalently) as $S>>\hbar$, the difference in action required for 2 paths to destructively interfere gets smaller
 - Eventually, all paths except the classical path destructively interfere with each other
 
-## The free particle, with path integrals
+# The free particle, with path integrals

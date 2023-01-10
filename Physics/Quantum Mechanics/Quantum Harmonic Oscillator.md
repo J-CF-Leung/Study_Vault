@@ -1,9 +1,9 @@
-## The quantum harmonic oscillator in 1 dimension
+# The quantum harmonic oscillator in 1 dimension
 - The Hamiltonian:
 $$\hat{\Ham}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\hat{x}^2$$
 - System always vibrates at $\omega$, an energy eigenstate gives an indication of "average" amplitude and momentum
 
-### Frobenius method
+## Frobenius method
 - What to solve: The time-independent Schrodinger equation in the coordinate basis
 $$-\frac{\hbar^2}{2m}\frac{d^2}{dx^2}\psi+\frac{1}{2}m\omega^2x^2\psi=E\psi$$
 - Consider the dimensionless variables:
@@ -18,7 +18,7 @@ $$\psi_n(x)=\left(\frac{m\omega}{2^{2n}\pi\hbar(n!)^2}\right)^{1/4} H_n(\xi)\exp
 - $H_n$ are the _Hermite polynomials_, defined [[Special functions and orthogonal relations#Hermite polynomials|here]]
 
 
-### Ladder operators
+## Ladder operators
 - Looking at the eigenvalue equation:
 $$\left(\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\hat{x}^2\right)\ket{E} =E\ket{E}$$
 - Introduce the _ladder operators_:
@@ -51,11 +51,11 @@ $$\displaylines{\hat{a}_+\ket{E_n}=\sqrt{(n+1)}\ket{E_{n+1}} \\\hat{a}_-\ket{E_n
 - Combining these, one gets the general wave functions to be:
 $$\braket{x|E_n}=\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}\frac{1}{\sqrt{n!}}(\hat{a}_+)^n\exp\left(-\frac{m\omega}{2\hbar}x^2\right)$$
 
-### General features of the eigenfunctions
+## General features of the eigenfunctions
 - The energy levels are quantised, but the gap is negligible compared to the energy of a clasically oscillating object
 - At high energy levels, the behaviour of the particle becomes more classical
 - There is a zero-point energy reflecting the uncertainty principle
 
-#### Average values
+### Average values
 
-#### Uncertainty
+### Uncertainty

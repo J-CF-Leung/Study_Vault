@@ -1,5 +1,5 @@
-## Mathematical description of lattices
-### Lattice vectors
+# Mathematical description of lattices
+## Lattice vectors
 - Ideal crystal: infinite repitition of groups of atoms
 - Basis/motif: repeated group of atoms
 - Lattice vectors: If the lattice looks the same from 2 points $\bm{r}$ and $\bm{r'}$ , they satisfy:
@@ -7,7 +7,7 @@ $$\bm{r'-r}=u_1\bm{a_1}+u_2\bm{a_2}+u_3\bm{a_3}$$
 	- where $\bm{a_1,a_2,a_3}$ are lattice vectors and $u_1,u_2,u_3$ are arbitrary integers
 	- $\bm{r}$ and $\bm{r'}$: lattice points
 
-### Lattice types ($\text{\textcolor{red}{Update when you get to group theory}}$)
+## Lattice types ($\text{\textcolor{red}{Update when you get to group theory}}$)
 - Primitive lattice: any 2 points from which the lattice looks the same always satisfies the above
 	- Defines primitive translation vectors $\bm{a_i}$, where the smallest repeating unit has volume $\bm{a_1\cdot a_2\times a_3}$
 	- Crystal axes can be (not always) defined by $\bm{a_1,a_2.a_3}$

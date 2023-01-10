@@ -1,40 +1,40 @@
-## Main group covalent bonds and structures
+# Main group covalent bonds and structures
 - Features of bonding and structure are inextricably linked to [[IA Inorganic chemistry-periodicity and the elements|periodic properties]]
-### Homonuclear bond strengths
+## Homonuclear bond strengths
 - More electronegative elements form stronger homonuclear bonds with lower energy orbitals
 - Down a group: orbitals get more diffuse, bond strength decreases
 - Across a period: increase in single and multiple bond energies as $Z_{eff}$ increases
 	- Group 15-17: $\ce{N-N, O-O, F-F}$ single bonds are unusually weak
 	- Shorter bonds result in increased electron-electron repulsion
 	- $\pi$-bonding becomes preferred for period 2, but becomes weaker for other periods as $\sigma$ bonds become stronger
-### Structure of p-block elements
-#### Group 14
+## Structure of p-block elements
+### Group 14
 - Carbon forms graphite, containing layers of hexagonal sheets with conjugation of p-orbitals giving rise to semiconductivity
 	- Graphite has staggered (AB) structure
 	- Weak van der Waals interactions lets sheets slip over each other
 - Carbon also forms a $\sigma$-bonded diamond structure
 - Group 14 elements in later periods initially adopt a diamond structure before distorting to a metal close-packed arrangement
-#### Group 15
+### Group 15
 - Nitrogen prefers triple bonds due to weak $\sigma$-bonding
 - Phosphorus narrowly favours single bonds
 	- White phosphorus: $\ce{P_4}$, polymerises into red phosphors
 	- Black phosphorus is composed of hexagonal sheets, a structure adopted by other group 15 elements
-#### Group 16
+### Group 16
 - Oxygen prefers double bonds
 - Sulfur has many allotropes, but the most stable form is a polymeric helical structure also adopted by other group 16 elements
-#### Group 17
+### Group 17
 - All elements in group 17 form $\ce{X_2}$ molecules
 - $\ce{F2}$ and $\ce{Cl2}$ are gases due to compact orbitals leading to weak van der Waals forces, with $\ce{Br2}$ being a liquid and $\ce{I2}$ being a solid
 ![[p-block structures.png|300]]
 	- Down the group, 1 bond between the "units" becomes lone pairs
 	- Giant continuous structure->sheets->helices->individual molecules
 
-### d-block homoatomic bonds
+## d-block homoatomic bonds
 - Homoatomic bonds between d-block elements get stronger down a group
 - In period 3, the d-orbital is more core-like, while 4d and 5d are more valence-like
 - Bond energies depend on a balance between availability of the d-orbital and number of electrons
 	- Maximised at group 6 ($\ce{Cr, Mo, W}$)
-### Heteroatomic bonds
+## Heteroatomic bonds
 - Comparison: p-block elements bonded to specific atom
 - Specifics of bond energy depend on 2 main factors:
 	- Differences in electronegativity (Strength of ionic contribution)
@@ -57,7 +57,7 @@
 	$$r_{AB}=r_A+r_B-9\Delta\chi$$
 		- All radii are in picometers (pm)
 
-### Structures: the isoelectronic principle
+## Structures: the isoelectronic principle
 - Species that are (valence) isoelectronic are isostructural
 - Examples:
 	- $\ce{KSi}$, effectively $\ce{K+Si-}$, $\ce{Si-}$: $s^2p^3$, forms black phosphorus structure (sheets)
@@ -71,7 +71,7 @@
 		- Becomes diamond form at high temperature
 	- Many $\ce{B-N}$ analogues of carbon compounds exist (e.g. $\ce{B3N3H6}$, borazine)
 
-### Molecular shapes: VSEPR
+## Molecular shapes: VSEPR
 - Structures follow 4 rules:
 	1. The most favourable arrangement for a given number of electron pairs is the one which minimises repulsion (lowest electrostatic energy)
 	2. Non-bonding electron pairs repel more than bonding ones
@@ -111,7 +111,7 @@ Number of electron pairs | Common arrangement (Example) | Alternative (Example)
 	- d-orbitals are too high in energy for p-block elements to use in bonding
 	- Axial bonds can be thought of as electron-deficient 3c-4e bonds
 
-### Ionic lattices
+## Ionic lattices
 - Composed of elements from opposite ends of periodic table
 - Bonding involves little covalency, and is non-directional
 - Overview of common $\ce{AB}$ structures:
@@ -148,7 +148,7 @@ Number of electron pairs | Common arrangement (Example) | Alternative (Example)
 	- Lattices can be stable with respect to elements, but not other potential lattices
 		- Example: $\ce{WF2}$ disproportionates into $\ce{W}$ and $\ce{WF5}$
 			- The latter 2 have high lattice energies
-### Metallic bonding
+## Metallic bonding
 - As orbitals of many atoms combine, separation between the resulting orbitals decreases, resulting in a continuous band
 - Valence band: filled, conduction band: unfilled, filled level: Fermi level
 - Electrical conductivity: easy to decouple electrons from valence to conduction band

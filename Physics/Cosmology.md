@@ -3,13 +3,13 @@ Viewed on a sufficiently large scale, the properties of the universe are the sam
 - Homogeneity: The Universe looks the same at every point
 - Isotropy: The Universe looks the same in all directions
 
-## Particles and radiation
-### Particles
+# Particles and radiation
+## Particles
 - Baryons (particles formed from 3 quarks): make up ordinary matter along with electrons, typically non-relativistic
 - Photons
 - Neutrinos: effectively massless, moving relativistically 
 - Dark matter: WIMPs?
-### Electromagnetic radiation
+## Electromagnetic radiation
 - Energy density due to blackbody radiation:
 $$\epsilon(f)\,df = \frac{8\pi h}{c^3}\frac{f^3\,df}{\exp(hf/k_BT)-1}$$
 	- Peak: $\approx 2.8k_BT$
@@ -28,7 +28,7 @@ $$\epsilon(f)\,df = \frac{8\pi h}{c^3}\frac{f^3\,df}{\exp(hf/k_BT)-1}$$
 - Radio waves: Spin-flip of electrons in hydrogen atoms gives rise to 21cm emission line
 
 
-## Expansion of the universe
+# Expansion of the universe
 - The universe is expanding
 - Hubble's Law:
 $$\bm{v}=H_0\bm{r}$$
@@ -40,4 +40,4 @@ $$\bm{v}=H_0\bm{r}$$
 $$z=\frac{\lambda_{obs}-\lambda_{em}}{\lambda_{em}}$$
 	- Close objects, non-relativistic: $z=v/c$
 	- Close objects (ignoring propagation time), relativistic: $1+z=\sqrt{(1+v/c)/(1-v/c)}$
-### Friedmann equation
+## Friedmann equation

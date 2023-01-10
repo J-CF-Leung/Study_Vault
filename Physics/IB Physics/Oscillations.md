@@ -1,6 +1,6 @@
 #IB_Natsci 
 
-## The simple harmonic oscillator
+# The simple harmonic oscillator
 - Applies for a quadratic potential:
 $$V(x)=\frac{1}{2}m\omega^2x^2$$
 - General equation of motion:
@@ -13,7 +13,7 @@ $$x=A\cos(\omega t+\phi)$$
 	- Equation of motion $m\ddot{x}=-kx$
 	- $\omega^2=k/m$
 
-## The driven and damped harmonic oscillator
+# The driven and damped harmonic oscillator
 $$\displaylines{m\ddot{x}=F(t)-b\dot{x}-kx \\ F(t)=m\ddot{x}+b\dot{x}+kx}$$
 - Define the parameters $\omega_0$ and $\gamma$:
 $$\omega_0=\sqrt{\frac{k}{m}}$$
@@ -26,7 +26,7 @@ $$x=\mathbb{R}[x_0\exp i(\omega t+\phi)]$$
 - $A$ and $\phi$ depend on boundary conditions
 - Velocity is $\pi/2$ ahead, acceleration is $\pi$ ahead
 
-### Free damped oscillations
+## Free damped oscillations
 $$\ddot{x}+\gamma\dot{x}+\omega_0^2x=0$$
 $$x=A\exp(pt)$$
 $$p=-\frac{\gamma}{2}\left(1+\pm\sqrt{1-4Q^2}\right)$$
@@ -35,7 +35,7 @@ $$p=-\frac{\gamma}{2}\left(1+\pm\sqrt{1-4Q^2}\right)$$
 	- Critical damping: $\gamma=2\omega_0$,  $Q=0.5$
 	- Heavy damping: $\gamma>2\omega_0$,  $Q<0.5$
 
-#### Light damping
+### Light damping
 $$p=-\frac{\gamma}{2}\pm i\omega_f$$
  $$x=e^{-\gamma t/2}\left[A\exp(i\omega_f t)+A^*\exp(-i\omega_f t)\right]$$
 	-  $A$ is complex, encodes initial amplitude and phase
@@ -47,30 +47,30 @@ $$\omega_f=\omega_0\sqrt{1-\frac{1}{4Q^2}}$$
 - $Q$ is the _number of radians elapsed_ when a lightly damped oscillation has its energy _decrease to $1/e$ of the initial value_
 	- $=$ number of radians for _amplitude_ to decrease to $1/\sqrt{e}$ of original value
 
-#### Critical damping
+### Critical damping
 - $Q=0.5$, $\omega_0=\gamma/2$
 $$x(t)=(C_1+C_2t)\exp(-\omega_0 t)$$
 - _Most rapid_ approach to equilibrium _without overshooting_
 
 
-#### Heavy damping
+### Heavy damping
 $$\mu_{1,2}=\frac{1}{2}\left(\gamma \pm\sqrt{\gamma^2-4\omega_0^2}\right)$$
 $$x(t)=C_1\exp(i\mu_1t)+C_2\exp(i\mu_2t)$$
 - No oscillations, slowly approaches equilibrium without overshooting
 
 
-### Driven and damped oscillations
+## Driven and damped oscillations
 $$F(t)=m\ddot{x}+b\dot{x}+kx$$
 - Any force can be represented as a sum of sinusoidal components
 - Therefore, assume a sinusoidal force, one can find the _steady-state response_:
 $$F=\Re\left[F_0\exp(i\omega t)\right]\hspace{1.5cm}x(t)=\Re\left[x_0\exp(i\omega t)\right]$$
 $$x_0=\frac{F_0}{m}\frac{1}{(\omega_0^2-\omega^2)+i\gamma\omega}$$
 
-#### The response function
+### The response function
 - Define the _response function_ $R(\omega)=x_0/F_0$, its magnitude and argument are:
 $$|R(\omega)|=\frac{1}{m\sqrt{(\omega_0^2-\omega^2)^2+\gamma^2\omega^2}}$$
 $$\text{arg}(R)=\arctan\left[-\frac{\gamma\omega}{(\omega_0^2-\omega^2)}\right]$$
-#### Frequency regimes
+### Frequency regimes
 - Low frequency: response is _almost in phase_, motion _controlled by spring constant_
 	- $|R|\approx 1/k$
 	- $\text{arg}(R)\approx 0$
@@ -82,19 +82,19 @@ $$\text{arg}(R)=\arctan\left[-\frac{\gamma\omega}{(\omega_0^2-\omega^2)}\right]$
 	- $|R|\approx Q/(m\omega_0^2)$
 	- $\text{arg}(R)\approx\pi/2$
 
-#### Velocity response
+### Velocity response
 - Define the _velocity response function_ as:
 $$\frac{v_0}{F_0}=\frac{i\omega x_0}{F_0}=\frac{1}{m[(\omega_0^2-\omega^2)/(i\omega)+\gamma]}$$
 - The velocity resonance occurs for maximum $|v_0|$, at $\omega_0=\omega$, and $|v_0|=F_0/(\gamma m)$
 $$\text{arg}(v_0/F_0)=\arctan\left[\frac{\omega_0^2-\omega^2}{\gamma\omega}\right]$$
-#### Acceleration response
+### Acceleration response
 - Acceleration response is defined as:
 $$\frac{a_0}{F_0}=-\frac{1}{m[(\omega_0^2-\omega^2)/\omega^2+i\gamma/\omega]}$$
 - The acceleration resonance occurs at:
 $$\omega_{acc}=\omega_0\left(1-\frac{1}{2Q^2}\right)^{-1/2}$$
 - Acceleration resonance frequency is slightly above $\omega_0$
 
-#### Power
+### Power
 - The power is $P=Fv$
 - Multiplying the real parts of both, one gets:
 $$P=\Re(F_0e^{i\omega t})\Re(v_0e^{i\omega t})=\frac{1}{2} \Re[F_0v_0e^{2i\omega t}+F_0v_0^*]$$
@@ -115,14 +115,14 @@ $$\Delta\omega=\omega_+-\omega_-=\gamma$$
  $$Q=\frac{\omega_0}{\Delta\omega}$$
 	 - The better the oscillation, the _narrower the peak_
 
-#### The transient response
+### The transient response
 - The motion of the _oscillator without driving force_ is the _complementary function_
 	- Determined by _2 parameters depending on initial conditions_
 - The motion due to the driving force is the _particular integral_
 
 - The _general solution_ to the equation of motion for the _driven and damped_ harmonic oscillator is a _linear combination_ of the complementary function and particular integral
 
-## LCR circuits
+# LCR circuits
 - Given a circuit with supplied voltage $V(t)$, resistance $R$, capacitance $C$, inductance $L$:
 $$V(t)=\frac{1}{C}q+R\dot{q}+L\ddot{q}$$
 - One gets:
@@ -144,7 +144,7 @@ $$\frac{|I|}{|V|}=\frac{1}{\sqrt{(\omega L-\frac{1}{\omega C})^2+R^2}}$$
 $$Z=i\omega L+\frac{1}{i\omega C}+R=Z_L+Z_C+Z_R$$
 - The power dissipated is given as:
 $$\braket{P}=\frac{1}{2}\Re[V_0I_0^*]=\frac{1}{2}|I_0|^2\Re(Z)=\frac{1}{2}R|I_0|^2$$
-### Mechanical impedance
+## Mechanical impedance
 - Impedance can also be defined for a mechanical system:
 $$Z_{mech}=\frac{F_0}{v_0}$$
 - For the mechanical system given above:
@@ -152,7 +152,7 @@ $$Z=m\left[\frac{\omega_0^2-\omega^2}{i\omega}+\gamma\right]$$
 - The mean power dissipated becomes:
 $$\braket{P}=\frac{1}{2}|v_0|^2\Re(Z)=\frac{1}{2}b|v_0|^2$$
 
-## Atoms as oscillators
+# Atoms as oscillators
 - An _electron cloud_ with Bohr radius $a$ can be driven by an _oscillating electric field_ $E_0\exp(i\omega t)$
 - The nucleus displaced by $x$ feels a _linear restoring force_ 
 	- Charge $\propto x^3$, force is inverse-square
@@ -165,7 +165,7 @@ $$\omega_0^2=\frac{k}{m}=\frac{e^2}{4\pi\epsilon_0m_ea^3}$$
 - Since mean energy $W \propto x_0^2$, the oscillation energy decays exponentially
 - The usual quality factor of an atom $\approx 10^6$
 
-## Anharmonic oscillations
+# Anharmonic oscillations
 - Many potentials are _non-quadratic_
 - Equations become non-linear, superposition is not possible
 
@@ -194,13 +194,13 @@ $$\epsilon\approx\frac{1}{32}\alpha A^2$$
 - For asymmetric potentials, the expansion would include even harmonics
 
 
-## Linear system with multiple frequencies
+# Linear system with multiple frequencies
 - The equation of motion is linear, therefore the responses can be added _as if the individual forces acted separately_
 $$F(t)=F_1(t)+F_2(t)\iff x(t)=x_1(t)+x_2(t)$$
 $$\displaylines{F(t)=F_1\cos(\omega_1t+\alpha_1)+F_2\cos(\omega_2t+\alpha_2) \\ x(t)=A_1\cos(\omega_1t+\alpha_1+\phi)+A_2\cos(\omega_2t+\alpha_2+\phi)}$$
 	- $A_i=F_i|R|$, $\phi=\text{arg}(R)$
 
-### Coherence
+## Coherence
 - If $\omega_1=\omega_2$, the amplitude depends on the _relative phase_:
 $$A^2=A_1^2+A_2^2+2A_1A_2\cos(\alpha_2-\alpha_1)$$
 - For $F_1=F_2$:
@@ -211,7 +211,7 @@ $$A^2=A_1^2+A_2^2+2A_1A_2\cos(\alpha_2-\alpha_1)$$
 - In that case, the forces are _incoherent_
 - For coherency, the forces will need to come from a _common source_
 
-### Different driving frequencies
+## Different driving frequencies
 - If $\omega_1\neq\omega_2$, the response shows _beating_
 	- Does not necessarily have to be the same amplitude
 
@@ -219,7 +219,7 @@ $$A^2=A_1^2+A_2^2+2A_1A_2\cos(\alpha_2-\alpha_1)$$
 $$x(t)=A'\cos\left(\frac{\omega_1+\omega_2}{2}\,t+\phi'_f\right)\cos\left (\frac{\omega_1-\omega_2}{2}\,t+\phi'_s\right)$$
 - There is a fast oscillation at $(\omega_1+\omega_2)/2$, modulated by an envelope of $(\omega_1-\omega_2)/2$
 
-## Superposition
+# Superposition
 - The equation of motion for the driven and damped harmonic oscillator is _linear_
 - If a force is the _sum of different driving forces_ with different frequencies, the solution is _a linear combination of individual responses at each frequency_ 
 

@@ -1,4 +1,4 @@
-### Displacive and reconstructive transformations
+## Displacive and reconstructive transformations
 - Displacive transformations: diffusionless
 	- Example: movement of $\ce{Ti^{4+}}$ in $\ce{BaTiO3}$, or formation of martensite
 - Reconstructive transformations: structure of the two phases are dissimilar
@@ -7,8 +7,8 @@
 	- Thermally activated, metastable states possible
 	- Require nucleation and growth (described below)
 
-## Formation and growth
-### Kinetics: diffusion
+# Formation and growth
+## Kinetics: diffusion
 - Types:
 	- Interstitial- from one interstitial site to another (typically fast, e.g. $\ce{C}$ in $\ce{Fe}$)
 	- Substitutional- from one site to a vacancy
@@ -23,7 +23,7 @@ $$\pd{C}{t}=D\nabla^2C$$
 $$x\approx \sqrt{Dt}$$
 - Temperature dependence of diffusivity:
 $$D=D_0\exp(-\frac{Q}{RT})$$
-### The thermodynamics of nucleation
+## The thermodynamics of nucleation
 - The driving force: Gibbs Free Energy
 	- The Gibbs Free energy of the transformation is $\Delta G=\Delta H-T\Delta S$
 	- At equilibrium temperature $T_e$, $\Delta G=0$, therefore $\Delta H=T_e\Delta S$
@@ -57,7 +57,7 @@ $$D=D_0\exp(-\frac{Q}{RT})$$
 	- As $T$ is lowered, $\Delta G_V$ increases, rate increases
 	- As $T$ is lowered further, diffusion slows and rate drops
 
-### Growth of a new phase
+## Growth of a new phase
 - There is an activation energy barrier for both forward and backward jumps, the driving force gives rise to an asymmetry in energies (forward is more favourable)
 - Sketch of growth rate:
 ![[Phase growth rate.png|250]]
@@ -83,9 +83,9 @@ $$D=D_0\exp(-\frac{Q}{RT})$$
 - Diffusionless (displacive) transformations
 	- Example: formation of body-centred tetragonal phase in an fcc structure, causes internal strains
 
-## Phase diagrams
+# Phase diagrams
 - At constant pressure and temperature, the most stable phase has the lowest Gibbs Free Energy (Definition: [[Thermodynamics]])
-### Phase boundaries
+## Phase boundaries
 - The Clausius-Clapeyron equation:
 	- Differential of Gibbs Free Energy: $dG=VdP-TdS$
 	- For two phases $\alpha$ and $\beta$, $G_\alpha=G_\beta$ at the phase boundary
@@ -97,7 +97,7 @@ $$D=D_0\exp(-\frac{Q}{RT})$$
 - $\Delta S$: calculation at constant pressure
 $$S(T_2)-S(T_1)=\int_{T_1}^{T_2} \frac{C_P\,dT}{T}+\sum_i\frac{\Delta H_i}{T_i}$$
 	- Summing continuous variation with temperature and phase transitions
-## Melting
+# Melting
 - Freezing: nucleation barrier, liquid can be supercooled
 - Melting: no nucleation barrier
 - Actual melting process:
@@ -116,8 +116,8 @@ $$S(T_2)-S(T_1)=\int_{T_1}^{T_2} \frac{C_P\,dT}{T}+\sum_i\frac{\Delta H_i}{T_i}$
 	- Prevention of surface melting: coating the crystal in a solid matrix
 	- Limit of stability is the onset of liquid nucleation in the interior
 	- Nucleation is kinetic, so faster heating (e.g. laser) can superheat the interior to create a metastable solid above $T_m$
-## Example: Ice
-### Structure
+# Example: Ice
+## Structure
 - Most common structure in ambient conditions: ice $I_h$
 	- Orientations of water molecules are related via ice rules:
 		- Oxygens are covalently bonded to 2 hydrogens, and hydrogen bonded to another 2
@@ -127,7 +127,7 @@ $$S(T_2)-S(T_1)=\int_{T_1}^{T_2} \frac{C_P\,dT}{T}+\sum_i\frac{\Delta H_i}{T_i}$
 	- At high pressures, $H-$bond length $\approx$ covalent bond length
 		- Distinction between molecules is blurred
 	- High density can be achieved while keeping 4-fold coordination with 2 interpenetrating networks
-### Properties
+## Properties
 - Ice is brittle all the way up to melting point
 - Hydrogen disorder disrupts long-range order
 - Dislocation movement will cause molecules to violate ice rules

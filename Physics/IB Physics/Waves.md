@@ -1,6 +1,6 @@
 #IB_Natsci
 
-## The wave equation
+# The wave equation
 - Waves transport energy and information without _bulk_ translation of the medium
 
 - The _non-dispersive_ wave equation:
@@ -22,8 +22,8 @@ $$\Psi(x,t)=\Re[A\exp{i(kx-\omega t)}]$$
 	- $k=\omega/v=2\pi/\lambda$: wavenumber
 	- Phase: $kx-\omega t$
 
-## Waves with different types of symmetry
-### Plane wave
+# Waves with different types of symmetry
+## Plane wave
 - Let there be a plane defined by $\bm{\hat{n}\cdot r}=d$ 
 - Define a wave vector $\bm{k}=k\bm{\hat{n}}$, $\bm{k\cdot r}$ is constant along the plane
 
@@ -34,12 +34,12 @@ $$\psi(\bm{r},t)=\Re\left(Ae^{i(\bm{k\cdot r}-\omega t)}\right)$$
 - $\nabla\psi=-i\bm{k}\psi$
 - Satisfies wave equation
 
-### Spherical wave
+## Spherical wave
 - For a wave propagating with _spherical symmetry_, using the Laplacian for spherical coordinates:
 $$\psi(r,t)=\frac{f(r\pm vt)}{r}$$
 - $1/r$ dependence for amplitude gives $1/r^2$ dependence for power, conserving energy
 
-### Cylindrical wave
+## Cylindrical wave
 - Wave propagating with _cylindrical symmetry_
 - EXACT solution: involves _cylindrical Bessel functions_
 
@@ -47,7 +47,7 @@ $$\psi(r,t)=\frac{f(r\pm vt)}{r}$$
 $$\psi(r,t)\approx\frac{f(r\pm vt)}{\sqrt{r}}$$
 - Long distance requirement: $r>>\lambda$
 
-## Polarisation
+# Polarisation
 - For a _transverse wave_ travelling in the $x$ direction, the displacement could be along $y$ or $z$
 - The waves in the two directions are _independent but have the same speed_:
 $$v^2\pd{^2\psi_i}{x^2}=\pd{^2\psi_i}{t^2}\hspace{0.25cm},\hspace{0.25cm}i=y,z $$
@@ -61,19 +61,19 @@ $$\begin{aligned}\psi_y&=A_y\cos(kx-\omega t) \\ \psi_z &= A_z\cos(kx-\omega t+\
 
 - Value of $\phi$ determines polarisation state
 
-### Linear polarisation
+## Linear polarisation
 - $\phi=n\pi$
 - The field vector oscillates _along a straight line_
 - Amplitude $A=\sqrt{A_y^2+A_z^2}$
 
-### Circular polarisation
+## Circular polarisation
 - Equal in magnitude
 - $\phi=(m+1/2)\pi$
 - Convention: Looking _towards the wave source_
 	- Using the right-hand-rule: finger points _TOWARDS source_
 	- Right-circular: clockwise motion of field vector as $z$ increases![[Polarisation conventions.png]]
 
-### Elliptical polarisation
+## Elliptical polarisation
 - Most general
 - _Not necessarily equal_ in amplitude, $0\leq \phi \leq 2\pi$
 - Reduction to _special cases_
@@ -84,7 +84,7 @@ $$\begin{aligned}\psi_y&=A_y\cos(kx-\omega t) \\ \psi_z &= A_z\cos(kx-\omega t+\
 
 - Two amplitudes and one angle needed to specify elliptical polarisation
 
-### Vector representation
+## Vector representation
 - _Jones vector_ representation for completely polarised light
 - $\exp[i(kz-\omega t)]$ is dropped
 - Opposite sign convention if $\omega t-kz$ is used as phase
@@ -95,7 +95,7 @@ $$\ket{\Psi_\text{left}}=\begin{pmatrix}A \\ -Ai \end{pmatrix} \hspace{2cm} \ket
 - Elliptical polarisation:
 $$\ket{\Psi}=\begin{pmatrix} A \\ B\,\exp(i\phi)\end{pmatrix}$$
 
-## Impedance and power
+# Impedance and power
 - Impedance for any system is defined as a _ratio of a driving force to a flow or velocity_
 - For a transverse wave, the velocity response is the _transverse response_ $\dot{\psi}$
 
@@ -105,7 +105,7 @@ $$\braket{P}=\frac{1}{2}\Re[F\dot{\psi}^*]=\frac{1}{2}\Re[Z]|\dot{\psi}|^2$$
 - For real $Z$ and $u=-i\omega A_0\exp[i(kx-\omega t)]$:
 $$\braket{P}=\frac{1}{2}Z\omega^2A_0^2$$
 
-### String wave
+## String wave
 - For a string wave:
 $$Z=\frac{-T\,\partial\psi/\partial x}{\partial\psi/\partial t}$$
 	- Driving force: _transverse tension_
@@ -114,7 +114,7 @@ $$Z=\frac{-T\,\partial\psi/\partial x}{\partial\psi/\partial t}$$
 $$Z=\frac{T}{v}=\sqrt{T\rho}=\rho v$$
 	- Becomes _negative_ for a waveform travelling _in the $-x$ direction_
 
-### Energy flow per unit length
+## Energy flow per unit length
 - By looking at a short length of string, the _kinetic energy per unit length_ is:
 $$K=\frac{1}{2}\rho\left(\pd{\psi}{t}\right)^2$$
 - The _potential energy per unit length_ is:
@@ -124,7 +124,7 @@ $$U=\frac{1}{2}T\left(\pd{\psi}{x}\right)^2$$
 - The power is energy per unit length times wave speed, hence:
 $$\braket{P}=\braket{K+U}v=\frac{1}{2}Z\omega^2A_0^2$$
 
-## Boundaries: reflection and transmission
+# Boundaries: reflection and transmission
 - There can be _discontinuities_ during wave travel, such as a _sudden change in density_ (hence, change in impedance)
 
 - Boundary conditions:
@@ -136,7 +136,7 @@ $$\braket{P}=\braket{K+U}v=\frac{1}{2}Z\omega^2A_0^2$$
 
 - Goal: _STEADY-STATE_ response of the wave on both sides of a boundary
 
-### Reflection and transmission coefficients
+## Reflection and transmission coefficients
 - Assume a semi-infinite [[#The wave equation|harmonic wave]] on each side of the boundary, look for the _steady-state response_
 - More convenient to write the wave as $A\exp[i(\omega t-kx)]$
 
@@ -150,7 +150,7 @@ $$\displaylines{\tau\equiv\frac{A_2}{A_1}=\frac{2Z_1}{Z_1+Z_2} \\ r\equiv \frac{
 
 - As impedances can be complex, there can be arbitrary phase differences
 
-### Reflection and transmission of energy
+## Reflection and transmission of energy
 - For real impedance, as the power transmitted is _proportional to $Z\omega^2A^2$_, the Power Reflection and Transmission coefficients are:
 $$R\equiv\frac{Z_1B_1^2}{Z_1A_1^2}=r^2=\left(\frac{Z_1-Z_2}{Z_1+Z_2}\right)^2$$
 $$T\equiv \frac{Z_2A_2^2}{Z_1A_1^2}=\frac{4Z_1Z_2}{(Z_1+Z_2)^2}$$
@@ -159,20 +159,20 @@ $$R+T=1$$
 - If any _impedance is complex_, replace $Z$ with $\Re(Z)$ and $A$ with $|A|$ in the above, making $R$:
 $$R=\left|\frac{Z_1-Z_2}{Z_1+Z_2}\right|^2$$
 
-### Impedance matching
+## Impedance matching
 - Let there be two _infinite substrates_ with impedances $Z_1$ and $Z_3$, with a _layer_ of length $l$ inbetween that has impedance $Z_2$
 - If $l$ is equal to a _quarter of the wavelength_ in $Z_2$, the reflection coefficient from the $Z_1-Z_2$ interface becomes:
 $$r=\frac{Z_1-Z_{eff}}{Z_1+Z_{eff}}\hspace{0.5cm},\hspace{0.5cm} Z_{eff}=\frac{Z_2^2}{Z_3}$$
 - If $Z_2^2=Z_1Z_3$, the waves reflected at the first and second interfaces are _out of phase_
 
 
-## Longitudinal waves
+# Longitudinal waves
 - Longitudinal: displacement is _parallel to propagation direction_
 - Displacement: compression and rarefraction
 	- _Centre_ of compression/rarefraction: _zero displacement_
 - Polarisation not defined
 
-### Sound in a gas
+## Sound in a gas
 - Pressure and displacement are $\pi/2$ out of phase
 - Maximum/minimum pressure at zero displacement
 
@@ -198,7 +198,7 @@ $$v=\sqrt{\frac{\gamma p}{\rho}}=\sqrt{\frac{\gamma RT}{M}}$$
 - The RMS speed of molecules is slightly larger than $v$
 - Propagation of sound _does not require net movement_ of molecules, only _bulk movement_
 
-#### Impedance
+### Impedance
 - If $a$ is a harmonic wave of the form:
 $$a=a_0\exp[i(\omega t-kx)]$$
 - The pressure wave, according to the above, is:
@@ -208,14 +208,14 @@ $$\Psi_p=i\gamma pka$$
 $$Z=\frac{S\Psi_p}{\dot{a}}=S\sqrt{\gamma p\rho}$$
 - The impedance _per unit area_, or _acoustic impedance_ $\Lagr$ is:
 $$\Lagr=\sqrt{\gamma p\rho}=\frac{\gamma p}{v}$$
-#### Power
+### Power
 - Let the amplitude of the pressure be $A_0=i\gamma pka_0$
 - The mean power per unit area, or _intensity_, is:
 $$I=\frac{1}{2}\Re[\Psi_p\dot{a}^*]=\frac{|A|^2}{2\Lagr}=\frac{A_\text{rms}^2}{\Lagr}=\frac{1}{2}\Lagr\omega^2|a_0|^2$$
 - The Decibel scale is defined to be:
 $$\text{dBA level}=10\log_{10}\left(\frac{I}{I_\text{ref}}\right)= 10\log_{10}\left(\frac{p_\text{rms}^2}{p_\text{ref}^2}\right)= 20\log_{10}\left(\frac{p_\text{rms}}{p_\text{ref}}\right) $$
 
-### Sound in liquids and solids
+## Sound in liquids and solids
 - In liquids and solids, the _general relationship_ between pressure and displacement is:
 $$\Psi_p=-K\pd{a}{x}$$
 - Here, $K$ is the relevant _elastic modulus_ of the medium
@@ -242,24 +242,24 @@ $$v_s=\sqrt{\frac{Y}{\rho}}$$
 - Acoustic impedance is much _larger in a solid_ than a gas
 - An _open air-solid interface_ is essentially a pressure node, or displacement antinode
 
-## Standing waves
+# Standing waves
 - A standing wave is _confined_ within a region of space
 - A _superposition_ of forward and backward waves
 
-### One dimension
+## One dimension
 - For boundary conditions $\Psi(0,t)=\Psi(b,t)=0$:
 $$\Psi=A[\cos(\omega t-kx)-\cos(\omega t+kx)]=2A\sin(\omega t)\sin(kx)$$
 - The boundary conditions are satisfied for quantised wavenumbers $k$:
 $$k=\frac{n\pi}{b}$$
 
-### Two and three dimensions
+## Two and three dimensions
 - For a 3D box of dimensions $(a,b,c)$, where $\Psi$ has to be zero at the boundary
 - To satisfy the [[#The wave equation|wave equation]] and the boundary conditions:
 $$\Psi=A\sin(k_xx)\sin(k_yy)\sin(k_zz)\cos(\omega t)=A\sin(\bm{k\cdot r})\cos(\omega t)$$
 $$\bm{k}=\left(\frac{l\pi}{a},\frac{m\pi}{b},\frac{n\pi}{c}\right)$$
 
 
-## Damped waves
+# Damped waves
 - There may be a transverse damping force proportional to transverse speed
 $$\pd{^2\psi}{t^2}=v^2\pd{^2\psi}{x^2}-\frac{\beta}{\rho}\pd{\psi}{t}$$
 $$\pd{^2\Psi}{t^2}+\Gamma\pd{\psi}{t}=v^2\pd{^2\Psi}{x^2}$$
@@ -268,7 +268,7 @@ $$\omega^2-i\Gamma\omega=v^2k^2$$
 - Therefore, _$k$ must be complex_, giving exponential and oscillating parts of $\Psi$
 - Spltting $k$ into $k_r-ik_i$:
 $$k_r^2-k_i^2=\frac{\omega^2}{v^2} \hspace{1cm} 2k_rk_i=\frac{\Gamma\omega}{v^2}$$
-### Light damping
+## Light damping
 - Condition: $\Gamma<<\omega$
 $$k_r\approx\frac{\omega}{v}\hspace{1.5cm} k_i\approx\frac{\Gamma}{2v}$$
 - The wave becomes a _decaying travelling wave_:
@@ -283,7 +283,7 @@ $$Z(\omega)=\frac{-T\partial\psi/\partial x}{\partial\psi/\partial t}=\frac{T}{\
 $$r(\omega)=\frac{Z_0-Z}{Z_0+Z}\approx\frac{i\Gamma}{4\omega}$$
 - Small $r$ with phase $\pi/2$, meaning most power is transmitted
 
-### Heavy damping
+## Heavy damping
 - Condition: $\Gamma>>\omega$
 $$k'=k_r\approx k_i\approx \pm\sqrt{\frac{\Gamma\omega}{2v^2}}$$
 - $k$ has equal real and imaginary parts
@@ -295,7 +295,7 @@ $$Z(\omega)=\sqrt{T\rho}(1-i)\sqrt{\frac{\Gamma}{2\omega}}$$
 $$r(\omega)\approx -1$$
 - The wave is almost completely reflected in anti-phase
 
-### Phase speed
+## Phase speed
 - The phase of the propagating wave is $(\omega t-k_rx)$, therefore the phase speed is:
 $$v_\phi=\frac{\omega}{k_r}$$
 - By expressing $\omega$ in terms of $k_r$:
@@ -305,7 +305,7 @@ $$v_\phi=v\left(1+\frac{\Gamma^2}{4v^2k_r^2}\right)^{-1/2}$$
 - Phase speed increases as frequency increases
 	- Approaches $v$ in high frequency limit
 
-## Group velocity
+# Group velocity
 - Dispersion: wave speed _depends on wavelength_
 - Different components of a wave group will have _different speeds_
 - The wave group will _disperse_
@@ -315,7 +315,7 @@ $$v_\text{phase}=\frac{\omega}{k}$$
 
 - The _group velocity_ $v_g$ is how fast a "bump" in a wave group travels
 
-### Narrow spread in frequencies
+## Narrow spread in frequencies
 - Loose derivation: the "bump" occurs when the phase of all components is the same
 	- This occurs when:
 	$$\left[\frac{d}{d\omega}(\omega t-kx+\phi)\right]_{\omega_0}=0$$
@@ -338,7 +338,7 @@ $$v_\text{phase}=\frac{\omega}{k}$$
 - The _spread of wave-numbers_ is inversely proportional to the _spread in position_:
 $$\Delta k\Delta x\approx 1$$
 
-### Large spread in frequencies
+## Large spread in frequencies
 - A broad-band signal can be thought of as a _superposition of narrow-band signals_
 - Each narrow-band signal will move with _different group velocities_
 - The second-order term in the Taylor expansion of $\omega(k)$ is _no longer negligible_
@@ -351,7 +351,7 @@ $$v_{g1}=\pd{\omega}{k}\Bigg|_{k_0-\Delta k} \hspace{1cm} v_{g2}=\pd{\omega}{k}\
 $$\Delta x\approx \Delta x_0+(v_{g2}-v_{g1})t\approx \Delta x_0 +2|\beta| (\Delta k) t\approx \Delta x_0+2|\beta|\frac{t}{\Delta x_0}$$
 $$\beta\equiv \pd{^2\omega}{k^2}\Bigg|_{k_0}$$
 
-### Example: water waves
+## Example: water waves
 - In _deep water_, water has the dispersion relation:
 $$\omega^2=gk+\frac{\sigma k^3}{\rho}$$
 - Here, $\sigma$ is the surface tension
@@ -375,10 +375,10 @@ $$\omega^2=gk+\frac{\sigma k^3}{\rho}$$
 	- For _very shallow water_, the wave becomes approximately non-dispersive
 	- As $h$ decreases when the wave approaches the shore, amplitude increases to _conserve water_
 
-## Guided waves
+# Guided waves
 - Confining travelling waves to transmit energy or information
 
-### The wave
+## The wave
 - Consider a non-dispersive wave on a two-dimensional membrane:
 $$\nabla^2\psi=\pd{^2\psi}{x^2}+\pd{^2\psi}{y^2}=\frac{1}{v^2}\pd{^2\psi}{t^2}$$
 - The general solution is:
@@ -392,7 +392,7 @@ $$k_y=\frac{n\pi}{b}$$
 - To determine the dispersion relation of the resulting wave, substitute this back into the wave equation:
 $$\omega^2=v^2\left(k_x^2+\frac{n^2\pi^2}{b^2}\right)$$
 
-### The properties
+## The properties
 - The _group velocity_ is:
 $$v_g=\frac{v^2}{\omega}\sqrt{\frac{\omega^2}{v^2}-\frac{n^2\pi^2}{b^2}}=\frac{v^2}{v_{\phi x}}=v\cos\theta$$
 - The angle $\theta$ of the wavefronts is defined as:
@@ -409,7 +409,7 @@ $$v_p=\frac{\omega}{k_x}=\omega\left(\frac{\omega^2}{v^2}+\frac{n^2\pi^2}{b^2}\r
 - As $k_x\to0$, $v_p\to\infty$ and $v_g\to 0$, which _does not violate relativity as information travels at $v_g$_
 - As $k_x\to\infty$, $v_p$ and $v_g$ both tend towards $v$ as behaviour approaches an unguided wave
 
-### Cut-off frequency and evanescent waves
+## Cut-off frequency and evanescent waves
 - For a given mode, there is a _cutoff frequency_ $\omega_c$:
 $$\omega_c=\frac{n\pi v}{b}$$
 - Below this frequency, $k_x^2<0$ and a propagating wave is _not possible_

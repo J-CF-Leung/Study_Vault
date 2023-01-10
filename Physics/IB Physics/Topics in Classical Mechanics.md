@@ -1,4 +1,4 @@
-## Newtonian dynamics
+# Newtonian dynamics
 - Newtonian mechanics is _non-relativistic_, i.e. $v<<c$
 - It is _classical_, i.e. $Et>>\hbar$
 
@@ -12,7 +12,7 @@
 - 3rd Law: If one body exerts a force on a second body, the second body exerts an _equal and opposite_ force on the first
 - 2nd Law: Force is rate of change of _momentum_
 $$\bm{F}=\frac{d\bm{p}}{dt}$$
-### Simple harmonic motion
+## Simple harmonic motion
 - Force is _proportional to_, and _opposite_ displacement
 $$F=m\ddot{x}=-kx$$
 - General solution:
@@ -22,12 +22,12 @@ $$x=\Re\{Ce^{i\omega t}\}=A\cos(\omega t)+B\sin(\omega t)$$
 $$\frac{1}{2}m\dot{x}^2+\frac{1}{2}kx^2=E=\text{const.}$$
 - The energy is also known as the _Hamiltonian_
 
-### Energy
+## Energy
 - If energy is conserved, one can always _derive the equations of motion_
 - Works as $\dot{x}$ is _generally non-zero_
 - _Work-energy theorem_: work done on particle = change in kinetic energy
 
-### Many-particle systems
+## Many-particle systems
 - Let there be $N$ particles, the $i$th particle of mass $m_i$ is at position $\bm{r}_i$ with velocity $\bm{v}_i$
 - It is acted on by external force $\bm{F}_{i0}$ and internal forces $\bm{F}_{ij}$ from particles $j$
 - Let the _total mass_ be $M=\sum m_i$
@@ -40,7 +40,7 @@ $$\bm{R}\equiv\frac{1}{M}\sum_im_i\bm{r}_i$$
 	- Total external torque $\bm{G}_0$
 	- Kinetic, potential, and total energies $T$, $U$. $E$
 
-#### Momenta
+### Momenta
 - The external force and torque affect _total_ momentum and angular momentum:
 $$\bm{F}_0=\frac{d\bm{P}}{dt} \hspace{1.5cm} \bm{G}_0=\frac{d\bm{J}}{dt}$$
 	- Can be derived by considering all external and internal forces + Newton's 3rd Law
@@ -49,11 +49,11 @@ $$\bm{F}_0=\frac{d\bm{P}}{dt} \hspace{1.5cm} \bm{G}_0=\frac{d\bm{J}}{dt}$$
 - The _intrinsic angular momentum_ is $\bm{J}'$, the angular momentum in the ZMF
 	- Property of system, independent of origin
 
-#### Kinetic and potential energy
+### Kinetic and potential energy
 - The _change in KE_ of a system can be written, using the work-energy theorem, as:
 $$dT=\sum_i\bm{F}_i\cdot d\bm{r}_i+\sum_i\sum_{j<i}\bm{F}_{ij}\cdot$$
 
-### Constant translation of frame of reference
+## Constant translation of frame of reference
 - Let the origin be displaced by _constant_ $\bm{a}$ from the CM, thus $\bm{r}=\bm{r}'+\bm{a}$
 - Since the displacement is constant, _linear momenta are unaffected_
 - As for the angular momenta:
@@ -61,7 +61,7 @@ $$\bm{J}=\bm{J}'+\sum_i\bm{a}\wedge\bm{p}_i=\bm{J}'+\bm{a}\wedge\bm{P}$$
 - In general, $\bm{J}$ depends on $\bm{P}$ ($\bm{J}=\bm{J}'$ in the ZMF)
 - Taking the time derivative:
 $$\bm{G}=\bm{G}'+\bm{a}\wedge\bm{F}$$
-### Galilean transformation
+## Galilean transformation
 - Let $\bm{r}=\bm{r}'+\bm{V}t$, with $t=t'$
 - Momenta:
 $$\bm{p}=\bm{p}'+m\bm{V}\hspace{1.5cm}\bm{P}=\bm{P}'+m\bm{V}$$
@@ -77,7 +77,7 @@ $$T=T_\text{CM}+\frac{1}{2}MV^2$$
 	- $T_\text{CM}$ is the kinetic energy measured in the ZMF
 	- KE of _linear motion of CM_ + KE of the whole system rotating about CM
 
-### Motion in polar coordinate system
+## Motion in polar coordinate system
 - [[Vector calculus in 3-dimensions#Definition of curvilinear coordinates|Curvilinear coordinates]]
 - Care has to be taken since _unit vectors are dependent on position_
 
@@ -93,7 +93,7 @@ $$\bm{\ddot{r}}=(\ddot{\rho}-\rho\dot{\phi}^2)\hat{\bm{e}}_\rho+(2\dot{\rho}\dot
 $$2\dot{\rho}\dot{\phi}+\rho\ddot{\phi}=\frac{1}{\rho}\frac{d}{dt}\left(\frac{1}{2}\rho^2\dot{\phi}\right)$$
 	- The term in the brackets is _angular momentum per unit mass_
 
-### Non-inertial frame
+## Non-inertial frame
 - Let there be an _inertial frame_ $S_0$, where a particle experiences a force $\bm{F}$
 	- The force should be _generated from known physical causes_
 - Suppose in moving frame $S$, $\bm{r}=\bm{r}_0-\bm{R}(t)$
@@ -102,7 +102,7 @@ $$2\dot{\rho}\dot{\phi}+\rho\ddot{\phi}=\frac{1}{\rho}\frac{d}{dt}\left(\frac{1}
 $$m\ddot{\bm{r}}=\bm{F}-m\ddot{\bm{R}}$$
 - The term $-m\ddot{\bm{R}}$ is a _fictitious force_
 
-#### Rotating frame
+### Rotating frame
 - Let an observer rotate with _constant angular velocity_ $\bm{\omega}$
 - Given _any_ vector $\bm{A}$, the rates of change in _inertial_ frame $S_0$ and _rotating_ frame $S$ are related by:
 $$\left[\frac{d\bm{A}}{dt}\right]_{S_0}=\left[\frac{d\bm{A}}{dt}\right]_S+\bm{\omega}\wedge\bm{A}$$
@@ -125,7 +125,7 @@ $$F_\text{centrifugal}=m\omega^2(\bm{r}-(\bm{r}\cdot\hat{\bm{\omega}})\hat{\bm{\
 - The Coriolis force is _perpendiular to both the rotation axis and velocity_
 - Effects of the Coriolis force are _taken into account by angular momentum conservation_
 
-## Orbits
+# Orbits
 
 - Consider a particle moving in a _central force field_:
 $$\displaylines{U=U(r) \\ \bm{F}=-\nabla U=-\pd{U}{r}\hat{\bm{r}}}$$
@@ -139,7 +139,7 @@ $$E=U(r)+\frac{1}{2}m(\dot{r}^2+r^2\dot{\phi}^2)=\frac{1}{2} m\dot{r}^2+U(r)+\fr
 $$U_\text{eff}(r)=U(r)+\frac{J^2}{2mr^2}$$
 - This includes a _centrifugal term_ which decreases with $r$
 
-### Power law force
+## Power law force
 - Consider a force of the form:
 $$F=-Ar^n$$
 - The effective potential is:
@@ -164,7 +164,7 @@ $$\displaylines{\epsilon=r-r_0 \\ m\ddot{\epsilon}+\omega_p^2\epsilon=0 \\ \omeg
 $$\omega_p=\sqrt{n+3}\,\dot{\phi}=\sqrt{n+3}\omega_c$$
 ![[Orbit cases.png]]
 
-### Elliptical orbits and Kepler's Laws
+## Elliptical orbits and Kepler's Laws
 - Let there be an _attractive force_ obeying the _inverse square law_:
 $$\bm{F}=-\frac{A}{r^2}\hat{\bm{r}}$$
 - For _gravity_, $A=GMm$
@@ -204,7 +204,7 @@ $$\frac{1}{2}r^2\dot{\phi}=\frac{J}{2m}=\text{constant}$$
 $$\displaylines{T=\frac{2\pi r_0^2m}{J(1-e^2)^{3/2}}=2\pi\sqrt{\frac{ma^3}{A}} \\ T^2=\frac{4\pi^2m}{A}a^3}$$
 
 
-#### An alternative derivation
+### An alternative derivation
 - The vectors $\bm{J}=mr^2\dot{\phi}\hat{z}$, $\dot{\bm{v}}=-A/(mr^2)\hat{\bm{r}}$ and $\dot{\bm{e}}_r=\dot{\phi}\bm{e}_\phi$ are _mutually perpendicular_:
 $$\bm{J}\wedge\dot{\bm{v}}=-A\dot{\bm{e}}_r$$
 - Since $\bm{J}$ is a constant, the equation can be _integrated_:
@@ -213,7 +213,7 @@ $$\bm{J}\wedge\bm{v}+A(\hat{\bm{e}}_r+\bm{e})=0$$
 
 - Taking a _dot product with $\bm{r}$ on both sides_:
 $$\displaylines{-\frac{J^2}{m}+A(r+\bm{e}\cdot\bm{r})=0 \\ r(1+\bm{e}\cdot\bm{e}_r)=r(1+e\cos\phi)=\frac{J^2}{mA}=r_0}$$
-#### Energy
+### Energy
 - By taking the scalar product of $A\bm{e}=-(\bm{J}\wedge\bm{v}+A\bm{e}_r)$ _with itself_, one obtains:
 $$\displaylines{A^2(e^2-1)=J^2\left(v^2-\frac{2A}{mr}\right)=\frac{2EJ^2}{m}=2AEr_0}$$
 - From this, the energy is found to be:

@@ -3,7 +3,7 @@
 - Order: power of highest derivative
 - Linearity: to the first degree in all independent variables and derivatives
 
-## Linear second-order PDEs
+# Linear second-order PDEs
 - The most general form of a linear second-order PDE with two variables is:
 $$\displaylines{L\psi(x,y)=g(x,y) \\ L\psi\equiv a(x,y)\pd{^2\psi}{x^2}+b(x,y)\pd{^2\psi}{x\partial y} +c(x,y)\pd{^2\psi}{y^2}+d(x,y) \pd{\psi}{x}+e(x,y)\pd{\psi}{y}+f(x,y)\psi}$$
 - If $g=0$, the equation is _homogeneous_
@@ -18,7 +18,7 @@ $$L(\alpha\psi+\beta\phi)=\alpha L\psi+\beta L\psi$$
 	- If the equation is homogeneous, and both $\phi$ and $\psi$ are solutions, $\alpha\psi+\beta\phi$ is a solution
 	- If a _particular integral_ $\psi_p$ satisfies the inhomogeneous equation, and the _complementary solution_ $\psi_c$ satisfies the homogeneous one, $\alpha\psi_c+\psi_p$ satsfies the inhomogeneous equation
 
-### Example
+## Example
 - [[Fundamentals of quantum mechanics#The Schrödinger wave equation|The Schrödinger wave equation]]
 
 - The wave equation:
@@ -54,7 +54,7 @@ $$\pd{^2y}{t^2}=v^2\nabla^2y$$
 
 - _Boundary conditions_ are _ALWAYS_ necessary to solve the problem (or even determine the functional form)
 
-### Boundary conditions
+## Boundary conditions
 - Dirichlet conditions: _specifying the value at the boundary_
 $$\theta=g(\bm{r})$$
 - Neumann conditions: _specifying the derivative_
@@ -63,14 +63,14 @@ $$\pd{\theta}{n}\equiv \hat{\bm{n}}\cdot(\nabla\theta)=h(\bm{r})$$
 $$\alpha(\bm{r})\pd{\theta}{n}+\beta(\bm{r})\theta=d(\bm{r})$$
 
 
-### Separation of variables
+## Separation of variables
 - Sometimes, solutions to PDEs can be written in _separable form_
 $$f(x,y)=X(x)Y(y)$$
 - Separability _is dependent on coordinate system_
 	- $1/\sqrt{x^2+y^2+z^2}$ is not separable in Cartesian but separable in polar
 
 
-#### Example: 1-dimensional wave equation
+### Example: 1-dimensional wave equation
 - Let the solution be:
 $$y(x,t)=X(x)T(t)$$
 - Substituting this into the equation, then _dividing through by $\psi$_:
@@ -109,7 +109,7 @@ $$\displaylines{d(x)=y(x,t=0)=\sum_n \mathcal{A}_n\sin\frac{n\pi x}{L} \\v(x)=\p
  \mathcal{B}_n\sin\frac{n\pi x}{L}}$$
  - Use the _trig orthogonality relations_ to express $d(x)$ and $v(x)$ as [[Fourier series and transforms|Fourier series]], and find $\mathcal{A}_n$ and $\mathcal{B}_n$
 
-#### Example: Poisson's equation
+### Example: Poisson's equation
 - Solving:
 $$\nabla^2\Theta=f$$
 - Separate:
@@ -118,7 +118,7 @@ $$\Theta=X(x)Y(y)$$
 $$\frac{X''}{X}=-\frac{Y''}{Y}-\frac{f}{XY}$$
 - General solution: find a _particular solution_ $\theta_s$, then add the _complementary solutions_
 
-#### The general recipe
+### The general recipe
 1. In the case of an inhomogeneous equation, use the principle of superposition to seek a particular solution to reduce the equation to one that is homogeneous. 
 2. Seek separable solutions to the homogeneous equation. 
 3. In the case of inhomogeneous boundary conditions seek a separable solution to reduce the boundary conditions to ones that are homogeneous. 
@@ -126,7 +126,7 @@ $$\frac{X''}{X}=-\frac{Y''}{Y}-\frac{f}{XY}$$
 5. Using the principle of superposition, seek a solution that is a sum of eigenfunctions. 
 6. Determine unknown constants using the boundary conditions.
 
-#### Using Fourier transforms
+### Using Fourier transforms
 - Applicable for problems with an infinite domain, and normalisable solution
 - Apply a [[Fourier series and transforms#Properties of Fourier transforms|Fourier transform]] to both sides to convert a _spatial derivative to multiplication by $k$_
 - Solve for the Fourier transform

@@ -1,8 +1,8 @@
-## Mechanism of fracture
+# Mechanism of fracture
 - Greatly influenced by plasticity of material
 - Ductile fracture (of plastically deformed material) gives uneven fracture surface
 - Plasticity depends on temperature (metals tend to be brittle at room temp.)
-### Brittle fracture
+## Brittle fracture
 - Estimation using idealised Lennard-Jones potential: overestimates strength at $0.04E$
 - Real materials: contains flaws and cracks
 - Upon loading, lines of force bend around the crack
@@ -23,7 +23,7 @@ $$\sigma_*=\sqrt{\frac{2\gamma E}{\pi c}}$$
 	- Fracture energy stays the same
 - Elongation of cracks: corrosive environments, cyclic loading
 
-### Ductile fracture
+## Ductile fracture
 - Tip of the crack is a stress concentration point
 - In ductile materials, a zone of plasticity forms at the tip as dislocations pile up
 	- Increases radius of curvature (blunting)
@@ -33,17 +33,17 @@ $$\sigma_*=\sqrt{\frac{2\gamma E}{\pi c}}$$
 	- $G \geq 2(\gamma+\gamma_p)$
 	- $\gamma_p>>\gamma$
 
-## Fracture in engineering materials
+# Fracture in engineering materials
 - Composites tend to be tougher as fibres have to pull out for failure
 - Pipes: hoop stress is twice axial stress--> bursting is longitudinal
-### Fracture toughness
+## Fracture toughness
 - Critical strain energy release rate $G_c$ is a material constant
 - Determination of $G$ is difficult
 - Fracture toughness: $K_c=\sqrt{G_cE}$
 - Fracture: combinations of $\sigma$ and $c$ (depends on geometry) equals $K_c$
 - $K_c$ can be determined by non-destructive methods
 
-### Ductile-brittle transition
+## Ductile-brittle transition
 - Heating leads to increased plasticity and toughness
 - High strain rate and reducing temperature both lower toughness
 - Materials testing: high strain rate (high impact pendulums)

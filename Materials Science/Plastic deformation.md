@@ -1,11 +1,11 @@
-## Dislocations and plastic deformation
+# Dislocations and plastic deformation
 - Initial "block slip" model of plastic deformation: $\tau_{crit}=Gb/(2\pi h)$, overestimate
 - Actual estimation: movement of dislocations (line defects)
 - Vectors describing dislocations:
 	- Line vector $\bm{l}$: separation between unslipped and slipped plane
 	- Burgers vector $\bm{b}$: magnitude and direction of lattice displacement
 		- Make a closed loop (orientation: right hand rule with $\bm{l}$) around dislocation core, $\bm{b}$ links the start and end points when the loop is applied in a perfect crystal
-### Dislocation types
+## Dislocation types
 - Edge dislocations
 	- Extra terminating plane of atoms
 	- $\bm{l \perp b}$
@@ -14,7 +14,7 @@
 	- $\bm{l} \parallel \bm{b}$
 - Real dislocations: can be combinations of edge and screw dislocations\
 	- Example: dislocation loop: $\bm{l}$ forms a loop, constant $\bm{b}$
-### Dislocation motion
+## Dislocation motion
 - Dislocations move by small relative shifts of atoms
 	- After passage, original crystal structure is restored
 - Movement under application of stress $\bm{\tau}$:
@@ -32,7 +32,7 @@ $$\tau_P\approx 3G\exp(-\frac{2\pi w}{b})$$
 	- $w$: width of dislocation, typically around $|\bm{b}|/4$
 - Force per unit length to move a dislocation $F/L=\tau|\bm{b}|$
 - Strain energy per unit length for a screw dislocation $\Lambda=Gb^2/2$
-### Slip in real crystals
+## Slip in real crystals
 - For a crystal to be restored after dislocation passage, $\bm{b}$=lattice vector
 	- Along close-packed directions, required stress is much lower
 	- Dislocation width is higher for close-packed planes
@@ -53,7 +53,7 @@ $$\tau_R=\frac{F}{A}\cos{\phi}\cos{\lambda}=\sigma_Y\cos{\phi}\cos{\lambda}$$
 - As slip continues, direction of stress relative to slip direction changes\
 	- New tensile direction = old tensile direction + $n$$[\text{slip direction}]$
 	- Continues until two slip systems start to operate
-### Deformation of metals
+## Deformation of metals
 - hcp metals: Only one slip system operates
 	- Schmid factor will decrease overall, can either monotonically decrease or initially increase
 	- Stress required to continue plastic deformation will increase overall
@@ -70,7 +70,7 @@ $$\tau_R=\frac{F}{A}\cos{\phi}\cos{\lambda}=\sigma_Y\cos{\phi}\cos{\lambda}$$
 	- Continuous work hardening
 	- Much higher yield stress than single crystals as all grains must initiate multiple slip at the same time
 
-### Dislocation interactions
+## Dislocation interactions
 - Each dislocation generates tensile, compressive, and shear stress fields
 - Dislocations with opposite signs attract each other to minimise strain energy
 - Dislocation interactions: intersection or combination
@@ -102,7 +102,7 @@ $$\tau_R=\frac{F}{A}\cos{\phi}\cos{\lambda}=\sigma_Y\cos{\phi}\cos{\lambda}$$
 		- If dislocation movement is impeded, stress required for deformation increases until the dislocation glides on a new plane (cross slip)
 		- Once past the obstruction, the dislocation can double cross slip back to the original plane
 
-### Deformation without dislocations: cooperative shear
+## Deformation without dislocations: cooperative shear
 - Alternative deformation mechanism
 - Deformation twinning: structure remains the same, with different orientation
 	- Structures on either side of twin boundary are mirror images

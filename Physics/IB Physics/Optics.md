@@ -1,5 +1,5 @@
 #IB_Natsci 
-## Electromagnetic waves
+# Electromagnetic waves
 - From [[Electromagnetism#Maxwell's equations|Maxwell's equations]], it can be shown that in a _current and charge free region_, the $\bm{E}$ and $\bm{B}$ fields _satisfy the [[Waves#The wave equation|wave equation]]_:
 $$\nabla^2\bm{E}=(\mu\mu_0)(\epsilon\epsilon_0)\pd{^2\bm{E}}{t^2}=\frac{1}{c^2}\pd{^2\bm{E}}{t^2}$$
 - The speed of light in vacuum is _exactly_:
@@ -20,13 +20,13 @@ $$\frac{|\bm{E}_0|}{\bm{B}_0}=\frac{\omega}{|\bm{k}|}=c=\frac{c_0}{n}$$
 $$Z=\frac{|\bm{E}|}{|\bm{H}|}=c\mu=\sqrt{\frac{\mu\mu_0}{\epsilon\epsilon_0 }}=Z_0\sqrt{\frac{\mu}{\epsilon}}$$
 - For $\mu\approx 1$:
 $$Z=\frac{Z_0}{n} \hspace{1.5cm} Z_0=\sqrt{\frac{\mu_0}{\epsilon_0}}$$
-## Approximations of physical optics
+# Approximations of physical optics
 - Most accurate - Quantum Electrodynamics (QED) - nope
 - Maxwell's Equations: accurate for situations where light has intensity _much higher than the energy of individual protons_
 - Physical optics/scalar wave theory: ignores polarisation, using _Huygen's Principle to model wave propagation_
 - Ray optics: _very small $\lambda$_, wave properties can be ignored
 
-### Huygens' Principle
+## Huygens' Principle
 >[!info] Huygens' Principle
 >Each point on a wavefront acts as a source of secondary wavelets which propagate, overlap, and interfere to carry the wavefront forward
 
@@ -36,9 +36,9 @@ $$Z=\frac{Z_0}{n} \hspace{1.5cm} Z_0=\sqrt{\frac{\mu_0}{\epsilon_0}}$$
 	- Huygens: $K=1$ forwards, 0 backwards
 	- Fresnel: $(1+\cos\theta)/2$
 
-## Diffraction
+# Diffraction
 
-### The Fresnel-Kirchoff Diffraction integral
+## The Fresnel-Kirchoff Diffraction integral
 - Let there be a source of _monochromatic_ waves $S$ placed behind an _aperture_ $\Sigma$
 
 - The illumination must be _spatially coherent_, with a _well-defined phase relationship_ between different parts of the wave
@@ -60,7 +60,7 @@ $$\psi_P=\iint_\Sigma -\frac{i}{\lambda}\,h(x,y)\,K(\theta_S,\theta_P)\frac{a_S\
 
 - Often breaks down for points very close to aperture
 
-### Fraunhofer diffraction
+## Fraunhofer diffraction
 - Consider the _source to be infinite_
 - The aperture is illuminated with a _plane wave at normal incidence_
 
@@ -87,9 +87,9 @@ $$\psi_P\propto \int h(y)\,\exp(-iqy)\,dy$$
 - Hence, $\psi_P$ is the _[[Fourier series and transforms#Fourier transforms|Fourier transform]] of the aperture function_
 - $y$ and $q$ are the _reciprocal coordinates_ which play the roles of $x$ and $k$
 
-### Examples of 1D Fraunhofer diffraction
+## Examples of 1D Fraunhofer diffraction
 
-#### Young's double slits
+### Young's double slits
 - Slits are _modelled by Delta functions_
 - Spacing between slits is $D$
 - Consider the aperture function:
@@ -99,7 +99,7 @@ $$h(y)=\delta\left(y+\frac{D}{2}\right)+\delta\left(y-\frac{D}{2}\right)$$
 $$I_P(q)=I_0\cos^2\left(\frac{qD}{2}\right)=I_0\cos^2\left(\frac{kD\sin\theta}{2}\right)$$
 - This can also be derived using a _phasor diagram_
 
-#### N slits
+### N slits
 - The aperture function for $N$ narrow slits is:
 $$h(y)=\sum_{m=0}^{N-1}\delta(y-mD)$$
 - Hence:
@@ -116,12 +116,12 @@ $$k\sin\theta=q=2m\pi/D\equiv mG$$
 - A _comb_ with spacing $D$ in x-space is _transformed_ into a comb with spacing $G$ _in q-space
 	- Fourier transform tends to the comb function as $N$ approaches infinity
 
-#### Single wide aperture
+### Single wide aperture
 - The aperture function of an aperture with witdth $a$ is:
 $$h(y)=\begin{cases}1 &|y|<a/2 \\ 0 &|y|>a/2\end{cases}$$
 - The diffracted intensity is:
 $$I_p(q)=I_0a^2\sinc^2\left(\frac{qa}{2}\right)$$
-#### Series of wide apertures
+### Series of wide apertures
 - _Convolution_ in linear space becomes _multiplication_ in Fourier space
 - A series of wide apertures is a _convolution of one aperture with a series of Dirac deltas_
 - Hence, for $N$ wide slits all with width $a$:
@@ -130,7 +130,7 @@ $$I_P(q)=I_0\left(\frac{\sin(NqD/2)}{\sin(qD/2)}\right)^2\sinc^2\left(\frac{qa}{
 - The diffraction pattern is _modulated_ by a diffraction envelope
 - For $D=na$, this leads to _missing orders_ due to the envelope
 
-#### Complex aperture function
+### Complex aperture function
 - Consider a triangular wedge of material with small angle $\alpha$ and refractive index $n$
 - It introduces a _phase shift_ proportional to position along the wedge
 - By placing in front of the aperture, $h(y)$ is _multiplied_ by $\exp(ik(n-1)\alpha y)$
@@ -138,7 +138,7 @@ $$I_P(q)=I_0\left(\frac{\sin(NqD/2)}{\sin(qD/2)}\right)^2\sinc^2\left(\frac{qa}{
 - _Multiplying by exponential_ in $x$-space is a _translation_ in $q$-space
 - The pattern is _shifted_ by an angle $(n-1)\alpha$
 
-### Spectra
+## Spectra
 - _Spectral lines_ emerge from electrons transitioning in energy levels
 - An excited state in an atom has a _finite lifetime_ $\tau_L$
 - From the energy-time uncertainty principle, this gives a _spectral line width_
@@ -146,7 +146,7 @@ $$I_P(q)=I_0\left(\frac{\sin(NqD/2)}{\sin(qD/2)}\right)^2\sinc^2\left(\frac{qa}{
 $$\displaylines{E(t)=E_0\exp(-\gamma t)\cos\omega_0t \\ I(\omega)\propto \frac{1}{(\omega-\omega_0)^2+\gamma^2}}$$
 - At half-maximum, $\delta\omega=\gamma\approx1/\tau_L$
 
-#### Collision/pressure broadening
+### Collision/pressure broadening
 - Collisions _shortens the lifetime_ of excited states
 - The mean time between collisions in a gas is $\tau_c\approx1/(n\Sigma u)$
 	- $n$: Number density
@@ -156,17 +156,17 @@ $$\displaylines{E(t)=E_0\exp(-\gamma t)\cos\omega_0t \\ I(\omega)\propto \frac{1
 $$\Delta\omega\approx n\Sigma u$$
 - The peak is a _Lorentzian_
 
-#### Doppler/thermal broadening
+### Doppler/thermal broadening
 - If an atom is in motion, it causes a _Doppler shift_ in the observed frequency:
 $$\omega=\omega_0\sqrt{\frac{1+u_x/c}{1-u_x/c}}\approx\omega_0\left(1+\frac{u_x}{c}\right)$$
 - From the Boltzmann distribution, the distribution of frequencies is _Gaussian_:
 $$\displaylines{I(\omega)\propto\exp\left(-\frac{mc^2(\omega-\omega_0)^2 }{2\omega_0^2k_BT}\right)=\exp\left(-\frac{(\omega-\omega_0)^2}{2\sigma_\omega^2}\right) \\ \sigma_\omega=\omega_0\sqrt{\frac{k_BT}{mc^2}}}$$
-#### Spectrometers
+### Spectrometers
 - Light is incident onto a grating of spacing $D$, with angle $\theta_1$, and exits at $\theta_2$
 - The diffraction angle satisfies:
 $$D(\sin\theta_2-\sin\theta_1)=m\lambda$$
 
-#### Resolution
+### Resolution
 - Spectrometer resolution will eventually become _limited by the properties of the grating_
 - For a grating of finite width, the peaks will also have a finite width
 - If light with two wavelengths $\lambda$ and $\lambda+\delta\lambda$ is incident on a slit, the _Rayleigh criterion_ requires that the _maximum of the latter peak falls on the minimum of the former_
@@ -174,7 +174,7 @@ $$D(\sin\theta_2-\sin\theta_1)=m\lambda$$
 $$\frac{\lambda}{\delta\lambda}\approx mN$$
 - Here, $m$ is the _order_ and $N$ is the _number of slits_
 
-### 2D Fraunhofer diffraction
+## 2D Fraunhofer diffraction
 - For a 2-dimensional aperture, the conditions of Fraunhofer diffraction give:
 $$\psi_P\propto\iint_\Sigma \psi_\Sigma \,h(x,y)\,\exp\left(ik\frac{x_0x+y_0y}{R}\right)\,dx\,dy$$
 - The position on the screen can be specified by 2 small angles:
@@ -186,7 +186,7 @@ $$\psi_P\propto\iint_\Sigma h(x,y)\,\exp[-i(px+qy)]\,dx\,dy$$
 
 - Example: For a _rectangular aperture with sides $a$ and $b$_:
 $$\psi_P\propto ab\,\sinc\left(\frac{qa}{2}\right)\,\sinc\left( \frac{qb}{2}\right)$$
-#### The circular aperture
+### The circular aperture
 - Let there be a circular aperture with diameter $d$
 - The amplitude can be written as a function of $\rho$, the _radial distance_, or angle $\theta$
 - Since the integral is not separable, the amplitude is written as:
@@ -199,14 +199,14 @@ $$\psi_P\propto \frac{\psi_0d^2}{2}\frac{J_1(kd\sin\theta/2)}{kd\sin\theta/2}$$
 - In geometrical optics, the _approximation_ is that a finite lens can produce a point image
 - In fact, the _angular radius_ of the image is $1.22\lambda/d$
 
-### Babinet's Principle
+## Babinet's Principle
 - Consider two _complementary apertures_ $a$ and $b$
 - $a$ is an _opaque_ object with a _transparent hole_ $A$, with $b$ being _opaque_ and having the _shape of the hole_
 - It can be shown by splitting the latter integral:
 $$\displaylines{\psi_a\propto\iint_A\exp[-i(px+qy)]\,dx\,dy \\ \psi_b\propto\iint_\text{all space}\exp[-i(px+qy)]\,dx\,dy-\psi_a=\delta(p,q)-\psi_a}$$
 - Central spike in $\psi_b$ is from the _undiffracted beam_
 
-### Fresnel diffraction
+## Fresnel diffraction
 - For Fresnel diffraction, one cannot neglect the _quadratic terms_ as distance to the screen is of a similar, or smaller order than $D^2/\lambda$
 - To (massively) simplify the calculation, examine the diffracted intensity _on the axis_
 - To find intensity at off-axis locations, _change the source of origin_
@@ -222,7 +222,7 @@ $$\psi_P\propto\iint_\Sigma \frac{h(x,y)K(x,y)\exp\left(ik\frac{x^2+y^2}{2R}\rig
 2. Variations of distance _in the aperture_ are negligible compared to $\lambda$
 - Final Fresnel diffraction integral:
 $$\psi_P(0,0)\propto\iint_\Sigma h(x,y)\exp\left(ik\frac{x^2+y^2}{2R}\right)\,dx\,dy$$
-#### Rectangular aperture and the Fresnel integrals
+### Rectangular aperture and the Fresnel integrals
 - Let there be a rectangular aperture where $x_1<x<x_2$ and $y_1<y<y_2$
 - Since the aperture function is separable, the integral can be written as:
 $$\psi_P\propto\int_{x_1}^{x_2}\exp\left(\frac{ikx^2}{2R}\right)\,dx \int_{y_1}^{y_2}\exp\left(\frac{iky^2}{2R}\right)\,dy$$
@@ -233,7 +233,7 @@ $$C(w)=\int_0^w\cos\left(\frac{\pi u^2}{2}\right)\,du\hspace{1.5cm} S(w)=\int_0^
 
 - The Fresnel integrals can be represented _graphically_ with the _Cornu spiral_
 
-#### The Cornu/Euler spiral
+### The Cornu/Euler spiral
 - The spiral is a locus of points _in the complex plane_ defined by $C(w)+iS(w)$
 - The _arc length_ between points $w_1$ and $w_2$ is equal to $w_2-w_1$
 - The _curvature_ is $\pi w$
@@ -241,7 +241,7 @@ $$C(w)=\int_0^w\cos\left(\frac{\pi u^2}{2}\right)\,du\hspace{1.5cm} S(w)=\int_0^
 - The curve is _odd_
 - The curve spirals in towards the point $(C(\infty),S(\infty))=(0.5,0.5)$
 ![[Euler spiral.png]]
-#### Diffraction from straight edge(s)
+### Diffraction from straight edge(s)
 - Let there be a _slit_ extending from $y=y_1$ to $y_2$
 - The relevant diffraction integral becomes:
 $$\psi_P\propto\int_{w_1}^{w_2}\exp\left(\frac{i\pi u^2}{2}\right)\,du=[C(w_2)-C(w_1)]+i[S(w_2)-S(w_1)]$$
@@ -260,7 +260,7 @@ $$\psi_P\propto\int_{w_1}^{w_2}\exp\left(\frac{i\pi u^2}{2}\right)\,du=[C(w_2)-C
 - For _large $\Delta w$_ (small $R$ or large $d$), the diffraction pattern approaches _two single-edge patterns_ 
 - For _intermediate_ $\Delta w$, there may be an _on-axis minimum_ with 2 maxima on the side
 
-#### The circular aperture: on-axis
+### The circular aperture: on-axis
 - _Retain the obliquity factor_ and define $s=\rho^2=x^2+y^2$
 - The _on-axis_ diffraction integral is:
 $$\psi_P\propto\int_{s=0}^{s=r_a^2}\frac{K}{\sqrt{a^2+s}\sqrt{b^2+s}} \,\exp\left(\frac{i\pi s}{\lambda R}\right)\pi\,ds$$
@@ -283,12 +283,12 @@ $$\displaylines{(n-1)\pi<\phi(\rho)<n\pi \\ \sqrt{(n-1)\lambda R}<\rho<\sqrt{n\l
 - Approximations break down _for large apertures_
 	- "Spiralling in" of the phasor diagram, the obliquity factor, and higher order terms means _outer zones are wider than predicted_
 
-#### Circular obstruction
+### Circular obstruction
 - Consider an _on-axis circular obstruction_, with small radius $r_a$
 - The spanning vector is _from the centre_ of the circles, to a point with phase $\phi_a=\pi r_a^2/(\lambda R)$
 - Provided $\phi_a$ is not too large, _there will be a bright spot on the axis_, known as _Poisson's spot_
 
-#### The circular aperture: off-axis
+### The circular aperture: off-axis
 - The zones are _centred on the line between source and observation line_
 - Fixing those 2 points, _the aperture shifts sideways to obstruct zones_
 - This means as observation point _moves off-axis, intensity oscillates_
@@ -298,7 +298,7 @@ $$\displaylines{(n-1)\pi<\phi(\rho)<n\pi \\ \sqrt{(n-1)\lambda R}<\rho<\sqrt{n\l
 - For larger apertures, as _zone widths decrease_, fringe spacing gets smaller
 - A _long way off-axis_, intensity falls rapidly as there is a large number of narrow zones
 
-#### The Fresnel zone plate
+### The Fresnel zone plate
 - A zone plate _blocks out alternate Fresnel half-period zones_
 - Let the edges of the $n$th zone on the plate be $\rho_n$
 - For $N$ open zones in the plate, the net amplitude on axis is $\approx2N\psi_u$
@@ -310,7 +310,7 @@ $$f=R=\frac{\rho_1^2}{\lambda}=\frac{\rho_n^2}{\lambda}$$
 - When $R'=f/(2m+1)$, each open area admits _an odd number of zones_, hence $\psi_{P'}\approx 2N\psi_u$
 	- Reduces for increasing $m$ due to obliquity factor, but still remain as _maxima_
 
-## Interferometry
+# Interferometry
 - Consider two waves interfering:
 $$\Psi=\Re\left\{\psi_1\exp(-i\omega_1t)+\psi_2\exp(-i\omega_2t)\right\}$$
 - Most detectors respond to _intensity_
@@ -326,15 +326,15 @@ $$\braket{I}\propto\frac{1}{2}\braket{a_1^2}+\frac{1}{2}\braket{a_2^2} +\braket{
 - Interfering waves can be derived from _different spatial points of a wavefront_ (spatial coherence)
 - They can also be derived from _dividing amplitude_ (e.g. By reflection and transmission)
 
-### The Michelson interferometer
+## The Michelson interferometer
 ![[Michelson.png]]
 - The _beam-splitter_ spits then recombines the beam
 - Interference depends on _path difference_
 - Intensity can be recorded _as a function of mirror position_
 - Mechanical vibration can _smear_ the fringes
 
-### Fourier transform spectrometry
+## Fourier transform spectrometry
 
-### Thin film spectrometry
+## Thin film spectrometry
 
-### Fabry-Perot interferometer
+## Fabry-Perot interferometer

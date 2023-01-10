@@ -1,11 +1,10 @@
-## Poisson and Laplace's equations
-### Electrostatics
+## Electrostatics
 - Using [[Electromagnetism#Electric flux and Gauss' Law for electrostatics|Gauss' Law]] and the definition of electric potential $\bm{E}=-\nabla V$, one gets Poisson's equation:
 
 $$\nabla^2V=-\frac{\rho}{\epsilon_0}$$
 - Laplace's equation is a special case of Poisson's equation, for a charge-free region:
 $$\nabla^2V=0$$
-### Newtonian gravity
+## Newtonian gravity
 - The _gravitational field_ $\bm{g}$ satisfies:
 $$\displaylines{\bm{g}=-\frac{GM}{r^2}\hat{r} \\ \nabla\cdot\bm{g}=-4\pi G\rho \\ \nabla\wedge\bm{g}=0}$$
 - Therefore, the field can be written as a gradient of the _gravitational potential_:
@@ -14,7 +13,7 @@ $$\bm{g}=-\nabla\varphi_g$$
 $$\nabla^2\varphi_g=4\pi G\rho$$
 
 
-## Green's functions
+# Green's functions
 - The solution to Poisson's equation can be written as:
 $$V(\bm{r})=\frac{1}{\epsilon_0}\int G(\bm{r},\bm{r'}) \rho(\bm{r'})d^3\bm{r'}$$
 - The Green's function for the Poisson equation is the solution of:
@@ -31,7 +30,7 @@ $$G(\bm{r},\bm{r'})=\frac{1}{4\pi|\bm{r}-\bm{r'}|}$$
 
 - The overall solution weighs all the Green's functions with $\rho(\bm{r'})$
 
-## Boundary conditions and uniqueness
+# Boundary conditions and uniqueness
 - Necessary conditions for uniqueness in 1D:
 	- Potential at each end of an interval OR
 	- Potential and its derivative at one end OR
@@ -51,16 +50,16 @@ $$G(\bm{r},\bm{r'})=\frac{1}{4\pi|\bm{r}-\bm{r'}|}$$
 
 - For Poisson's equation, the solution that satisfies the boundary conditions is unique
 
-### Example: Conducting sphere in a uniform field
+## Example: Conducting sphere in a uniform field
 - Place a dipole in a uniform field
 - There is a spherical equipotential surface around the dipole
 
 - The dipole can be replaced by a spherical equipotential surface
 - Electric field _polarizes_ the sphere into an induced dipole
 
-### The other uniqueness theorem in electrostatics
+## The other uniqueness theorem in electrostatics
 
-## Method of images
+# Method of images
 - Uniqueness theorem: as long as boundary conditions are specified, the electric field is _uniquely determined_, and the charge distribution making the field does not affect the solution
 
 - Consider a dipole:
@@ -69,13 +68,13 @@ $$G(\bm{r},\bm{r'})=\frac{1}{4\pi|\bm{r}-\bm{r'}|}$$
 
 - Replacing conducting planes with other charges is the _method of images_
 
-### Charge next to conducting plane
+## Charge next to conducting plane
 - The conducting plane is an equipotential
 - To recreate the boundary condition, place an opposite charge the same distance away on the other side
 
 - Result: induced charges on the conducting plane, strengthening the field between the charge and the field
 
-### Two line charges
+## Two line charges
 - Consider two lines with opposite charge, where the distances to each are $r_1$ and $r_2$
 - From the superposition principle, the potential from these two line charges is:
 $$V(\bm{r})=\frac{\lambda}{2\pi\epsilon_0}\ln{\frac{r_2}{r_1}}$$

@@ -1,4 +1,4 @@
-## Structure of solid ionic conducting materials
+# Structure of solid ionic conducting materials
 - Charge carriers: defects
 	- Pairs of vacancies in anion and cation sites (Shottky defect)
 	- Ion moves from site to interstice, leaving a vacancy behind (Frenkel defect)
@@ -22,7 +22,7 @@ $$\frac{\sigma}{D}=\frac{nq^2}{kT}$$
 - For small electric field where $\exp(qV/kT)\approx 1$:
 $$\ln\sigma\approx\ln\sigma_0-(\frac{Q}{k})\frac{1}{T}$$
 
-### Example of solid ionic conductor: Yttrium stabilised zicronia (YSZ)
+## Example of solid ionic conductor: Yttrium stabilised zicronia (YSZ)
 - Zicronia $\ce{ZrO2}$ has a fluorite structure: fcc with anions in all tetrahedral interstices
 - Doped with yttria $\ce{Y2O3}$, replacing $\ce{Zr^{4+}}$ with $\ce{Y^{3+}}$ 
 - Oxygen vacancies are created to maintain charge neutrality, becoming charge carriers

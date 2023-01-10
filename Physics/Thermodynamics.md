@@ -11,7 +11,7 @@
 >
 >path-dependent infinitesimal change denoted by $\delta$
 
-## Fundamentals
+# Fundamentals
 For a system with an enormous number of particles, and thus, degrees of freedom, there is an immeasurable number of *microstates*
 
 For thermodynamics to work, 2 fundamental suppositions must be made:
@@ -24,7 +24,7 @@ For thermodynamics to work, 2 fundamental suppositions must be made:
 - Macrostates are described by thermodynamic variables such as $U, N, V, S, T, p, \mu$
 - Macrostates with energy more or less equally shared among particles become way more likely
 
-### Energy and entropy
+## Energy and entropy
 - The entropy of a system is defined as:
 $$S=k_B\ln\Omega$$
 	-$k_B=$ Boltzmann's constant
@@ -43,7 +43,7 @@ $$T=\left(\pd{U}{S}\right)_{N, V}\hspace{25pt}P=-\left(\pd{U}{V}\right)_{N, S}\h
 	- $T, p, \mu$ are intensive variables, which do not scale with system size
 - This changes the expression to:
 $$dU=T\,dS-P\,dV+\mu\,dN$$
-### Thermal equilibrium and temperature
+## Thermal equilibrium and temperature
 - When two bodies are in thermal equilibrium, they must have the same temperature
 - Zeroth law: if $A$  is in thermal equilibrium with $B$ and $C$, $B$ and $C$ are in thermal equilibrium with each other
 	- i.e. The thermodynamic concept of temperature "makes sense"
@@ -55,7 +55,7 @@ $$dU=T\,dS-P\,dV+\mu\,dN$$
 	- Maximum entropy: $\delta S_1+\delta S_2=0$
 	- Using above definition of temperature, $T_1=T_2$
 
-### The first law
+## The first law
 $$dU = \dbar Q + \dbar W$$
 	- $Q=$ heat transferred from a source outside the system
 	- $W=$ work done on the system
@@ -63,14 +63,14 @@ $$dU = \dbar Q + \dbar W$$
 - For equilibrium changes and fixed $N$, $dU=T\,dS+\dbar W$
 - Work: mechanical ($-p\,dV$), electrical, spring, magnetic
 
-### The second and third laws
+## The second and third laws
 - Second law: Entropy never decreases
 	- As time goes on, the number of microstates available to a system never decreases
 	- At equilibrium, maximum entropy is reached
 - Third law: At absolute zero, the entropy of any body is zero
 	- A body cannot be brought to absolute zero by any finite series of operations
 
-## Thermodynamic potentials
+# Thermodynamic potentials
 - The descriptors of a system come in pairs of intensive and extensive variables
 	- $T$ and $S$, $p$ and $V$ for a system with a fixed $N$ 
 - For energy, $S$ and $V$ are the _proper independent variables_, as an expression for $U(S,V)$ is all the necessary information to derive all other quantities ($T$, $p$) 
@@ -78,27 +78,27 @@ $$dU = \dbar Q + \dbar W$$
 	- One variable from $S$ or $T$, another from $p$ or $V$
 	- Formulas derived from Legendre transforms
 - For a system at equilibrium with fixed $N$, two non-conjugate variables are sufficient to determine the state of the system
-### Enthalpy/heat function
+## Enthalpy/heat function
 - Enthalpy $H$ (or $W$ if you use $R$ for work like Goodstein)
 $$\begin{aligned} H(S,P)&=U+PV \\ dH &= T\,dS+V\,dP \end{aligned}$$
 - For equilibrium changes at constant pressure, $dH)_P = \dbar Q$
 
-### Helmholtz Free Energy
+## Helmholtz Free Energy
 - Helmholtz Free Energy $F$ (or $A$):
 $$\begin{aligned}F(T,V) &= U-TS \\ dF &= -S\,dT-P\,dV\end{aligned}$$
 - For equilibrium changes at constant temperature, $dF)_T = \dbar W$
 	- Analagous to $dU)_S = \dbar W$
-### Gibbs Free Energy
+## Gibbs Free Energy
 - Gibbs Free Energy $G$ (or $\Phi$):
 $$\begin{aligned}G(P,T)&=F+PV=H-TS \\ dG &= -S\,dT+V\,dP \end{aligned}$$
 
-### Maxwell's relations
+## Maxwell's relations
 - Due to the symmetry of mixed derivatives, using the definitions of the potentials:
 $$\begin{aligned}\left(\pd{P}{T}\right)_V&=\left(\pd{S}{V}\right)_T \\ \left(\pd{T}{V}\right)_S&=-\left(\pd{P}{S}\right)_V \\ \left(\pd{V}{S}\right)_P&=\left(\pd{T}{P}\right)_S \\ \left(\pd{S}{P}\right)_T&=-\left(\pd{V}{T}\right)_P    \end{aligned}$$
 - Holds for any system
 - Demonstrates that two non-conjugate variables can determine the behaviour of a system
 
-## Changing number of particles and the chemical potential
+# Changing number of particles and the chemical potential
 - Differentials with $dN$:
 	$$\begin{aligned}dU&=T\,dS-P\,dV+\mu\,dN \\ 
 dH &= T\,dS+V\,dP+\mu \,dN \\ dF &= -S\,dT-P\,dV +\mu\,dN \\
@@ -122,17 +122,17 @@ $$G(P,T,N)=\mu N$$
 	- To keep $S$ and $V$ constant while adding a particle, $U$ may have to decrease
 	- For strong repulsions, $U$ may increase
 
-### The Landau potential
+## The Landau potential
 - With the new pair of conjugate variables, new thermodynamic potentials are available
 - The _Landau potential_ is defined as:
 $$\displaylines{\Omega(T,V,\mu)=F-\mu N=-PV \\ d\Omega=-S\,dT-P\,dV-N\,d\mu}$$
 - With this, differentials of the potentials are related by:
 $$(\dbar\Omega)_{T,V,\mu}=(\dbar U)_{S,V,N}=(\dbar F)_{T,V,N}=(\dbar G)_{T,P,N}=(\dbar H)_{S,P,N}$$
 
-## Variational principles
+# Variational principles
 
-## Magnetic variables
+# Magnetic variables
 
 
 
-## Gases
+# Gases

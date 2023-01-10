@@ -2,7 +2,7 @@
 >"Experimental and theoretical physics attract rather different personality types, with different temperaments and abilities. Sociologists should find here a ripe field for a fruitful study."
 >-Anthony Zee, 徐一鴻
 
-## The process of experimental physics
+# The process of experimental physics
 ![[Experimental methods flowchart.png]]
 - Goals: _Minimise junk_ and effects _from the transducer_
 
@@ -11,7 +11,7 @@
 - A common method is to convert the original effect into _electrical signals_
 - In almost all cases, the measurement tool used to measure signals is the _oscilloscope_
 
-## Measurement circuits and oscilloscopes
+# Measurement circuits and oscilloscopes
 - The transducer becomes a _voltage source_ in an electrical circuit
 - _Thevenin's theorem_ states that _any linear electrical circuit_ can be replaced by an _equivalent circuit_, consisting of a _voltage source in series with an impedance_
 - Let the corresponding _perfect voltage source_ be $V_1$
@@ -24,8 +24,8 @@
 - From this, the p.d. detected by the oscilloscope is:
 $$V_\text{in}=V_1\frac{Z_\text{in}}{Z_\text{in}+Z_\text{out}}$$
 - For accurate measurements:
-	- $Z_\text{in}$ must be high
-	- $Z_\text{out}$ must be low
+	- $Z_\text{in}$ must be _high_
+	- $Z_\text{out}$ must be _low_
 
 - In real oscilloscopes, $Z_\text{in}$ _has a capacitive component_
 - This leads to _lower voltage measurement for high frequencies_
@@ -36,7 +36,7 @@ $$V_\text{in}=V_1\frac{Z_\text{in}}{Z_\text{in}+Z_\text{out}}$$
 - For _current measurements_, a _low_ $Z_\text{in}$ is desired
 - To _transfer maximum power_ to another system, the _impedances should match_
 
-## Operational amplifiers
+# Operational amplifiers
 ![[Op-amp.png]]
 - This is what happens when you eat the silica gel packets
 
@@ -47,7 +47,7 @@ $$V_\text{out}=A(V_+-V_-)$$
 
 - When connected in a circuit with other components, the gain of the _entire circuit_ is known as the _closed-loop gain_
 
-### Ideality, negative feedback, and the golden rules
+## Ideality, negative feedback, and the golden rules
 - An ideal voltage amplifier has the following properties:
 $$A=\infty \hspace{1cm}Z_\text{in}\equiv\pd{V_\text{in}}{i_\text{in}}=\infty \hspace{1cm} Z_\text{out}\equiv\pd{V_\text{out}}{i_\text{out}}=0$$
 - Real op-amps: $A>>10^5$
@@ -65,7 +65,7 @@ $$A=\infty \hspace{1cm}Z_\text{in}\equiv\pd{V_\text{in}}{i_\text{in}}=\infty \hs
 	- Negative feedback is required for this to be true
 	- Due to large $A$, $V_+-V_-$ is usually negligible
 
-#### The inverting voltage amplifier
+### The inverting voltage amplifier
 ![[Inverting voltage amplifier.png]]
 - From applying _Kirchoff's rules_ plus the _Golden Rules_, the overall _closed-loop gain_ is:
 $$G\equiv\frac{V_\text{out}}{V_\text{in}}=-\frac{R_2}{R_1}$$
@@ -73,19 +73,19 @@ $$G\equiv\frac{V_\text{out}}{V_\text{in}}=-\frac{R_2}{R_1}$$
 - The negative feedback applies for _all frequencies_
 - This value of gain is true as long as _$V_\text{out}$ does not exceed the limit set by the power supply_
 
-#### The non-inverting voltage amplifier
+### The non-inverting voltage amplifier
 ![[Non-inverting amplifier.png]]
 - The _closed-loop gain_ is:
 $$G\equiv\frac{V_\text{out}}{V_\text{in}}=1+\frac{R_2}{R_1}$$
 - The circuit can also be understood as a _potential divider_
 
-#### More on amplifiers
+### More on amplifiers
 - The external components _do not have to be resistors_
 - Adding _inductors and capacitors_ introduces _frequency dependence_
 - Potential circuits include _integrators_, _differentiators_, and _filters_
 ![[Filter circuit with op-amp.png]]
 
-### Non-ideal performance
+## Non-ideal performance
 - Typical op-amps:
 	- $10^4\lesssim A\lesssim10^6$, function of frequency
 	- High but non-infnite $Z_\text{in}$
@@ -93,12 +93,12 @@ $$G\equiv\frac{V_\text{out}}{V_\text{in}}=1+\frac{R_2}{R_1}$$
 	- Finite _slew rate_, $dV_\text{out}/dt$
 
 - _Bias current_: the op-amp draws a small current $(10^{-12}-10^{-7})\text{A}$
-	- Sets a _limit on external resistance_ as there is a voltage _drop at the input pins_
+	- Sets a _limit on external resistance_ as there is a voltage _drop near the input pins_
 	- There must be a path allowing the bias currents to _flow to ground_
 
 - _Offset voltage_: Output voltage _independent of_ $(V_+-V_-)$, causing a _differential offset_ of $10^{-3}-10^{-2}\text{V}$, must be balanced with an _external potentiometer_
 
-#### Revisiting the non-inverting amplifier
+### Revisiting the non-inverting amplifier
 - What a non-inverting amplifier actually looks like:
 ![[Non-ideal non-inverting amplifier.png]]
 
@@ -124,13 +124,13 @@ $$Z_\text{out}\approx\frac{R_\text{out}}{A}\left(1+\frac{R_2}{R_1}\right) \hspac
 $$V_\text{out}=V_\text{in} \hspace{1cm} Z_\text{in}=Ar_\text{in} \hspace{1cm} Z_\text{out}=\frac{R_\text{out}}{A}$$
 - This is very useful for connecting circuits
 
-#### Revisiting the inverting amplifier
+### Revisiting the inverting amplifier
 - Taking the same limits as before, the characteristics of the circuit are:
 $$\frac{V_\text{out}}{V_\text{in}}=-\frac{R_2}{R_1} \hspace{1cm} Z_\text{out}=\frac{R_\text{out}}{A}f\left(\frac{R_2}{R_1}\right) \hspace{1cm} Z_\text{in}=R_1+f\left(\frac{R_1}{A},\frac{R_2}{A},\frac{r_\text{in}}{A}\right)$$
 - Here, $Z_\text{in}$ becomes _dependent on external components_
 - For high $Z_\text{in}$, it is better to use a _non-inverting amplifier_
 
-### Frequency-dependent behaviour
+## Frequency-dependent behaviour
 - Overall, the gain of the circuit is _frequency dependent_
 - For _high frequencies_, due to capacitive components in $R$, _a phase shift is introduced_
 - At a phase shift of $\pi$, _feedback becomes positive_, causing saturation and oscillation
@@ -142,7 +142,7 @@ $$\frac{V_\text{out}}{V_\text{in}}=-\frac{R_2}{R_1} \hspace{1cm} Z_\text{out}=\f
 - _Decoupling capacitors_ are also connected between the op-amp and the power supply
 - They _stop spontaneous oscillations_
 
-## Feedback in systems
+# Feedback in systems
 - In general, systems with feedback built in can be represented as:
 ![[System with feedback.png]]
 - The input and output are related by:
@@ -162,7 +162,7 @@ $$G\approx-\frac{1}{\beta}$$
 	- Examples: Biological buffers, stellar burning
 - Hence, $|A\beta|>>1$ will be advantageous, especially for signal measurement
 
-### Negative feedback
+## Negative feedback
 - In general, negative feedback _stanilises a system against perturbations_
 - For a perturbation to the output $\delta$, after one cycle, the increase in output is $\delta/(1-A\beta)$
 
@@ -171,7 +171,7 @@ $$Z_\text{in}=r_\text{in}(1+|A\beta|)\hspace{1cm} Z_\text{out}=R_\text{out}/(1+|
 - This is desirable for accurate measurement
 - Does not apply for the inverting amplifier
 
-### Positive feedback
+## Positive feedback
 - Positive feedback often causes _saturation or oscillation_
 - If $\beta$ is _frequency dependent_, $A\beta$ can be $\approx 1$ for _only a specific frequency_
 - This generates _spontaneous oscillations_ at that frequency
@@ -180,3 +180,79 @@ $$Z_\text{in}=r_\text{in}(1+|A\beta|)\hspace{1cm} Z_\text{out}=R_\text{out}/(1+|
 - This acts as both an _oscillator_ and a _filter_ at $\omega_0$
 	- Other components may be fed back but _not reinforced_ as much as $\omega_0$
 
+# Errors
+- Errors are _always_ given alongside experimental results
+- _Random error_ is _unbiased_
+	- a.k.a. _average_ error is 0
+	- Found by _combining multiple measurements_
+- _Systematic errors_ are _constant in time_
+	- No amount of repeated measurements can eliminate it
+	- Function of _experimental design_
+	- Making measurements using _different methods_ can give some idea
+
+- Measurement instruments (e.g. _rulers_) are always _quantised_
+- Becomes significant when _magnitude of error is similar to quantisation interval_
+
+- Special case: _electrical resistors_
+- The _tolerance_ gives the _full range_ in which resistance can lie
+
+- General case: there is a _Gaussian distribution in error_
+- The quoted value is the _standard deviation_
+
+## Statistical treatment for a single variable
+- Let there be $N$ _measurements made in the same way_ for some quantity $x$
+- The result of measurement $i$ is $x_i$
+- The _best estimate_ of the true value is the _mean_:
+$$\bar{x}=\frac{1}{N}\sum_ix_i$$
+- The _variance_ is used to characterise the _spread_ of $x_i$
+$$\displaylines{\text{Var}(x)=\frac{1}{N}\sum_i(x_i-\bar{x})^2}\equiv\overline{(x-\bar{x})^2}\equiv\braket{(x-\Braket{x})^2}$$
+- The square root of the variance is the _standard deviation_:
+$$\sigma_x=\sqrt{\frac{1}{N}\sum_i(x_i-\bar{x})^2}$$
+- However, to estimate the random error in a _single datum_, the expression is:
+$$\sigma=\sqrt{\frac{1}{N-1}\sum_i(x_i-\bar{x})^2}$$
+
+- Each measurement is _inependent_, hence the _variances can simply be added_
+- The _uncertainty of the mean_ is:
+$$\sigma_m=\frac{\sigma}{\sqrt{N}}$$
+#### Covariance and independent variables
+- Let there be two variables $y$ and $z$, which _both have a mean of 0_
+- The _covariance_ between them is defined as:
+$$\text{CoVar}(y,z)=\overline{(y-\bar{y})(z-\bar{z})}=\overline{yz}-\bar{y}\bar{z}$$
+
+- The variance of the _sum_ is:
+$$\text{Var}(y+z)=\overline{(y-\bar{y}+z-\bar{z})^2}=\overline{(y+z)^2}=\overline{y^2}+\overline{z^2}+2\overline{yz}$$
+- If they are _independent of each other_, $\overline{yz}=\bar{y}\bar{z}=0$
+- Hence, _the variances add_
+
+- Therefore, _the variances of independent measurements just add_
+
+## Combination of random errors
+- Consider a _multi-variable function_ $f(x,y,\dots)$
+- Given _standard deviation of each variable_ $\sigma_x,\sigma_y,\dots$
+- Assuming _all errors are Gaussian_, $f$ will _also have a Gaussian spread_, with $\sigma_f$:
+$$\sigma_f^2=\left(\pd{f}{x}\right)^2\sigma_x^2+\left(\pd{f}{y}\right)^2\sigma_y^2+\dots$$
+- Special cases:
+$$\displaylines{f=x\pm y\hspace{1cm} \sigma_f^2=\sigma_x^2+\sigma_y^2 \\ f=x^n \hspace{1cm} \frac{\sigma_f}{f}=n\frac{\sigma_x}{x} \\ f=xy \hspace{1cm} \left(\frac{\sigma_f}{f}\right)^2=\left(\frac{\sigma_x}{x}\right)^2+\left(\frac{\sigma_y}{y}\right)^2}$$
+## Reducing systematic errors
+- Always _calibrate_ instruments
+
+- Measuring voltages: _Reverse connections to voltmeter_ to find systematic error
+
+- Try _different methods_ to find the same quantity
+
+- Impedance measurements: using a _null method_ that uses balance, such as a _bridge_
+	- Advantage: Bridge _does not need to be linear or well-calibrated_
+
+- Keep track of _changes with time_
+
+- Use _differential measurements_ and compare with _standards_
+
+- Keep _selection biases and effects_ in mind
+
+# Digital sampling
+
+# Strategies to eliminate unwanted influences
+
+# Probability distributions
+
+# Inference

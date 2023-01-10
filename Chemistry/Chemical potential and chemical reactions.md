@@ -1,4 +1,4 @@
-## Chemical potential
+# Chemical potential
 - The chemical potential $\mu$ is defined by the differential relation for change in internal energy:
 $$dU=TdS-pdV+\mu dN$$
 - For more than one type of particle, the relation becomes:
@@ -9,4 +9,4 @@ $$\mu=\left(\pd{U}{N}\right)_{S,V}=\left(\pd{F}{N}\right)_{T,V}=\left(\pd{G}{N}\
 	- Analagous to role of temperature in energy exchange
 - Gibbs energy per particle
 
-## Chemical reactions
+# Chemical reactions

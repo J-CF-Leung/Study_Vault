@@ -1,4 +1,4 @@
-## Stress and strain
+# Stress and strain
 - Tensile load: force normal to surface
 	- Tensile/compressive stress $\sigma=F/A_0$
 	- Tensile/compressive strain $\epsilon=\delta l/l_0$
@@ -17,8 +17,8 @@
 	-  Elongation in $z-$direction: $\epsilon_x=\epsilon_y=-\nu\epsilon_z$
 	- Typical values: $0.2-0.5$
 
-## Elastic behaviour
-### Moduli of materials
+# Elastic behaviour
+## Moduli of materials
 - Young's modulus $E$:
 $$\sigma=E\epsilon$$
 - Shear modulus $G$:
@@ -41,7 +41,7 @@ $$U_{LJ}=U_{min}[\left(\frac{r_0}{r}\right)^{12}-2\left(\frac{r_0}{r}\right)^6]$
 	- $\epsilon_T=\alpha\Delta T$
 	- $\alpha$: coefficient of thermal expansion
 
-### Beam deformation
+## Beam deformation
 - Bending of a beam: one side in tension, other side in compression
 - Neutral axis: mid-height, undeformed, length $l$
 - Radius of curvature: $R=l/\theta$, curvature $\kappa=1/R$

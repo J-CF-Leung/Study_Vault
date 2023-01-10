@@ -1,4 +1,4 @@
-## Elastic behaviour
+# Elastic behaviour
 - Most manmade solids: linear, time-independent response to stress
 	- $\sigma=E\epsilon$
 - Biomaterials: Time dependent, more like liquids, shows viscoelastic behaviour
@@ -17,13 +17,13 @@ $$\dot{\epsilon}=\dot{\epsilon_d}+\dot{\epsilon_s}=\frac{\sigma}{\eta}+\frac{\si
 - High frequencies: linear solid model
 	- Spring + dashpot combination, and pure spring in parallel
 
-## Material selection
+# Material selection
 - Choosing a material to maximise/minimise a characteristic (e.g. mass, yield stress)
 - Equate free variable using 2 expressions, find merit index to maximise/minimise
 - Straight lines on Ashby diagrams
 
-## Biopolymers
-### Rubber
+# Biopolymers
+## Rubber
 - Natural rubber: monomers of cis-isoprene (5 carbon atoms)
 - Chain is coiled up, predicted by random walk model with Kuhn length
 - trans-isoprene will prefer a more linear arrangement, leading to crystalline regions
@@ -32,7 +32,7 @@ $$\dot{\epsilon}=\dot{\epsilon_d}+\dot{\epsilon_s}=\frac{\sigma}{\eta}+\frac{\si
 	- Uncoiling is thermally activated, and chains cannot flow past their neighbours
 	- Increasing elasticity: vulcanisation, creating sulphur cross links
 	- Uncoiling: decrease in entropy
-### Proteins
+## Proteins
 - Formed from condensation polymerisation of amino acids
 - Protein rubbers:
 	- Coiled protein with cross links
@@ -54,7 +54,7 @@ $$\dot{\epsilon}=\dot{\epsilon_d}+\dot{\epsilon_s}=\frac{\sigma}{\eta}+\frac{\si
 	- Fibrils can pack together into bunches in tendons
 - Skin: stiff collagen fibres in an elastin matrix
 	- Collagen fibres are short and somewhat aligned, to make skin anisotropic
-## Energy storage
+# Energy storage
 - In linear elastic materials, energy density=$E\epsilon^2/2$
 - Biomaterials: non-linear stress-strain curves
 	- Skin: stiffer when stretched, energy density$\leq E\epsilon^2/2$
@@ -68,8 +68,8 @@ $$\dot{\epsilon}=\dot{\epsilon_d}+\dot{\epsilon_s}=\frac{\sigma}{\eta}+\frac{\si
 - Coefficient of restitution=fraction of energy input returned elastically
 	- Repeated loading and unloading: high coefficient of restitution (e.g. insect wings)
 	- Viscid spider silk: low coefficient of restitution
-## Polysaccharides
-### Wood
+# Polysaccharides
+## Wood
 - Anisotropy: strongest in vertical direction, much less strong in radial direction, weak tangentially
 - Cell arrangement: most cells ($90-95\%$) are elongated and vertical, the rest are radial
 - Softwood vs hardwood:
@@ -93,24 +93,24 @@ $$\dot{\epsilon}=\dot{\epsilon_d}+\dot{\epsilon_s}=\frac{\sigma}{\eta}+\frac{\si
 	- Trees pre-stress outer layers to withstand bending
 - Water weakens wood by disrupting hydrogen bonding
 - Wood has high touhness as fibres have to pull out, and layers have to separate
-### Chitin
+## Chitin
 - Collagen and chitin are the main tension-bearing matertials in animals
 - Chitin is also found in plants, fungi, and exoskeletons of insects and crustaceans
 - Chitin is a chain of a glucose amide derivative
 - Often mixed with proteins and arranged in layers to increase stiffness
 - Similarly stiff as biominerals but with energetic cost
-## Biominerals
+# Biominerals
 - Examples: bone, shell, lenses, compasses, pathological minerals
 - Strong and hard, with a lower energetic cost
 - Generally brittle
 - Component of tough composite materials
-### Non-structural minerals
+## Non-structural minerals
 - Magnetotacticity: magnetic ferrous minerals in bacteria
 	- Size, shape and orientation controlled by protein growth templates
 	- Each crystal has a single domain
 	- Helps bacteria orient themselves
 - Calcite: assists with balance in inner ear
-### Structural mineral: calcium carbonate
+## Structural mineral: calcium carbonate
 - $\ce{CaCO3}$ based shells are often substituted with up to  $30\,mol\%\,\ce{Mg}$
 	- Achieved via ion transport
 - Phases of $\ce{CaCO3}$: calcite, aragonite, and an amorphous phase
@@ -129,8 +129,8 @@ $$\dot{\epsilon}=\dot{\epsilon_d}+\dot{\epsilon_s}=\frac{\sigma}{\eta}+\frac{\si
 		- When a crack forms, it is deflected along the weak organic layers
 		- New surface area requires substantial energy
 
-## Biomedical materials
-### Bone
+# Biomedical materials
+## Bone
 - Composite of collagen and hydroxyapatite (HA) $\ce{Ca10(PO4)6(OH)2}$
 - Cortical bone has a hierarchal structure
 	- Collagen molecule -> fibrils wrapped around HA crystals -> fibres -> lamellae -> osteons
@@ -139,7 +139,7 @@ $$\dot{\epsilon}=\dot{\epsilon_d}+\dot{\epsilon_s}=\frac{\sigma}{\eta}+\frac{\si
 	- Tubes (osteons) are bundled into a load-bearing structure
 - Cortical bone has high tensile strength and stiffness, comparable to wood
 - Bone has specialist cells that make and dissolve the structure according to mechanical requirements
-### Hip joint replacements
+## Hip joint replacements
 - A stem replaces the upper part of the femur
 	- Ceramics are too brittle, a biocompatible, inert metal ($\ce{Ti}$) is chosen
 	- Titanium is sintered to match the typical stiffness of bone
@@ -150,12 +150,12 @@ $$\dot{\epsilon}=\dot{\epsilon_d}+\dot{\epsilon_s}=\frac{\sigma}{\eta}+\frac{\si
 	- Typical material for coating: hydroxyapatite
 	- Mismatch in thermal expansion coeffcients can make the coating flake off
 	- Titanium is alloyed to match thermal expansion of HA
-### Arteries
+## Arteries
 - Arterial wall: collagen and elastin
 - Material has to have a J-shaped curve to avoid aneurysms (local swelling)
 	- Swelling caused by 2 co-existing stable radii
 
-## Phase transformations
+# Phase transformations
 - Significance: cytosol (intracellular fluid) can undergo transformations
 	- Dehydration and freezing can cause formation of fatal crystals
 - Water-sugar systems have a eutectic phase diagram ([[Microstructure and phases of mixtures]])
@@ -167,12 +167,12 @@ $$\dot{\epsilon}=\dot{\epsilon_d}+\dot{\epsilon_s}=\frac{\sigma}{\eta}+\frac{\si
 	- Glass transition has no obvious volume change
 - Cell metabolism heavily relies on cytosol composition
 - Crystal formation can cause ruptures
-### Dehydration
+## Dehydration
 - Dehydration causes formation of sharp mineral crystals, and changes ionic ratios
 - Dehydration can be avoided with a higher concentration of heavy sugars in cytosol
 	- Makes glass transition more likely
 	- Example: resurrection plants
-### Freezing
+## Freezing
 - Ice formation increases salt concentration in the cytosol, causing osmotic swelling
 - Strategy 1: avoiding ice formation
 	- Preventing heterogeneous nucleation makes it possible to supercool water

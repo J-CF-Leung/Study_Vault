@@ -1,4 +1,4 @@
-## Properties at high pressure
+# Properties at high pressure
 - High pressure leads to high packing densities and changes in bonding
 - In molecular solids. bond lengths may become similar to intermolecular distance
 	- Loss of molecular identity can lead to polymer formation (Example: nitrogen, $\ce{CO2}$)
@@ -13,7 +13,7 @@
 	- Diamond becomes more thermodynamically stable at high pressures
 - Example: hexagonal to cubic $\ce{BN}$
 	- Cubic structure similar to diamond
-## Creep
+# Creep
 - Time-dependent permanent deformation at stresses well below yield stress
 - For alloys and ceramics, occurs at homologous temperature ($T/T_m$)$>0.4$
 - Three phases: 
@@ -25,7 +25,7 @@ $$\frac{d\epsilon}{dt}\equiv \dot{\epsilon}=A\sigma^n$$
 	- $A$ depends on temperature
 - Dislocation/power-law creep: high stress, $3<n<10$, involves dislocation motion
 - Diffusion/linear creep: low stress, $n\approx 1$, involves diffusion
-### Dislocation creep
+## Dislocation creep
 - Below $\sigma_Y$, dislocations encounter obstacles such as precipitates and sessile segments
 - Dislocation creep occurs when dislocations start migrating onto other slip planes
 - Migration occurs via a diffusive process called climb
@@ -37,7 +37,7 @@ $$\frac{d\epsilon}{dt}\equiv \dot{\epsilon}=A\sigma^n$$
 - Temperature dependence of dislocation creep is derived from diffusivity:
 $$\dot{\epsilon}=A'D_0\sigma^n\exp(-\frac{Q}{RT})=A''\sigma^n\exp(-\frac{Q}{RT})$$
 	- $A'$ and $A''$ are temperature-independent
-### Diffusion creep
+## Diffusion creep
 - When under stress, atomic diffusion direction is biased, and grains elongate
 - At higher temperatures, Nabarro-Herring creep occurs
 	- Diffusion within bulk of the lattice is dominant
@@ -47,7 +47,7 @@ $$\dot{\epsilon}=A'D_0\sigma^n\exp(-\frac{Q}{RT})=A''\sigma^n\exp(-\frac{Q}{RT})
 $$\dot{\epsilon}=B\frac{D\sigma}{d^2}=\frac{B'\sigma}{d^2}\exp(-\frac{Q}{RT})$$
 - Summary of deformation mechanisms:
 ![[Deformation mechanisms.png|450]]
-### Creep resistance
+## Creep resistance
 - Minimisation of creep rate:
 	- High melting point to reduce homologous temperature
 	- Minimal dislocation motion
@@ -55,7 +55,7 @@ $$\dot{\epsilon}=B\frac{D\sigma}{d^2}=\frac{B'\sigma}{d^2}\exp(-\frac{Q}{RT})$$
 	- Coherent, stable, small precipitates to increase yield strength
 	- Large grains
 	- Pinned grain boundaries with controlled orientation to prevent sliding
-## Jet engines
+# Jet engines
 - Efficiency of a [[Thermodynamics|thermodynamic heat engine]] is higher with higher temperatures
 	- Carnot cycle: $W/Q_{in}=1-T_c/T_H$
 	- Brayton cycle for jet engines: $W/Q_in=1-T_1/T_2$
@@ -66,7 +66,7 @@ $$\dot{\epsilon}=B\frac{D\sigma}{d^2}=\frac{B'\sigma}{d^2}\exp(-\frac{Q}{RT})$$
 	- Long lifetime
 - Requirements: strength, creeo resistance, toughness, oxidation resistance
 - Blades kept cool using internal channels that pass cold air
-### Turbine blade superalloy
+## Turbine blade superalloy
 - Requirements:
 	- No polymorphism (no phase changes in temperature range)
 	- Low diffusivity (ccp is lowest, followed by hcp and bcc)
@@ -90,7 +90,7 @@ $$\dot{\epsilon}=B\frac{D\sigma}{d^2}=\frac{B'\sigma}{d^2}\exp(-\frac{Q}{RT})$$
 	- A dislocation entering $\gamma'$ creates an anti-phase boundary and encounters resistance
 	- First dislocation line has arc shapes due to drags
 	- Second dislocation line restores favourable arrangement and is smooth
-### Thermal barrier coating
+## Thermal barrier coating
 - Blades protected from high temperatures by cold air and thermal barrier coatings
 - Coatings need to have low thermal conductivity, high $T_m$ and adequate strength
 - Main component: Yittria-stabilised zicronia ($\ce{Y2O3}-\ce{ZrO2}$)
@@ -99,14 +99,14 @@ $$\dot{\epsilon}=B\frac{D\sigma}{d^2}=\frac{B'\sigma}{d^2}\exp(-\frac{Q}{RT})$$
 - Oxygen can diffuse through YSZ ([[Solid ionic conductors|ionic conduction]])
 	- Layer of $\ce{Al2O3}$ is added to block oxygen
 - Zicronia layer is grown with a columnar structure to allow it to expand instead of crack
-## Radiation
+# Radiation
 - Irradiation of materials changes physical, chemical, and mechanical properties
 - Common environment for irradiation: nuclear reactor
 	- Fuel rods: typically $\ce{UO2}$, absorbs neutrons to undergo fission
 	- Cladding (austenitic steel/zicronium alloy) protects fuel from water corrosion and brittle fracture
 	- Control rods absorb neutrons to control chain reaction
 	- Coolant removes heat from fission to produce steam
-### Displacement cascade
+## Displacement cascade
 1. An energetic particle such as a fast neutron strikes an atom in the lattice
 2. Transfer of energy displaces the atom, making it a primary knock-on atom (PKA)
 3. PKA moves through lattice to make further knock-on atoms
@@ -125,7 +125,7 @@ $$\dot{\epsilon}=B\frac{D\sigma}{d^2}=\frac{B'\sigma}{d^2}\exp(-\frac{Q}{RT})$$
 	- Dissolution of precipitates
 	- Change in morphology
 	- Appearance of non-equilibrium phases
-### Effects of displacement cascade on lattice
+## Effects of displacement cascade on lattice
 - Vacancies and interstitials are too far apart to recombine
 	- Interstitial atoms are more mobile and disappear at dislocations and grain boundaries
 	- There is an esxcess of vacancies

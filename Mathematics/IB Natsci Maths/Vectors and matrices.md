@@ -12,12 +12,12 @@
 >_Italics_ $v_i$: components of vector or matrix
 >CM $\text{text v}$: vector or matrix within a particular basis
 
-## Linear vector spaces
+# Linear vector spaces
 - A _linear vector space_ $\mathbb{V}$ is a collection of objects $\bm{u},\dots\bm{v},\dots$ called _vectors_
 - The vector space is defined over a _field_ of scalars, which are _real_ $\mathbb{R}$ or _complex_ $\mathbb{C}$
 - For vectors in $\mathbb{V}$, there must be rules for vector sums and scalar multiplication
 
-### The axioms
+## The axioms
 - Closure for addition AND scalar multiplication: $\bm{v}+\bm{w}\in\mathbb{V}, a\bm{v}\in\mathbb{V} \text{ for } a\in\mathbb{C}$
 - Addition is commutative: $\bm{u}+\bm{v}=\bm{v}+\bm{u}$
 - Addition is associative: $(\bm{a}+\bm{b})+\bm{c}=\bm{a}+(\bm{b}+\bm{c})$
@@ -27,12 +27,12 @@
 - There exists a null vector $\bm{0}$ such that $\bm{v+0}=\bm{v}$  $\forall v\in\mathbb{V}$
 - There exists an inverse vector $-\bm{v}$ such that $\bm{v}+(-\bm{v})=0$  $\forall \bm{v}\in\mathbb{V}$
 
-### Corollaries and remarks
+## Corollaries and remarks
 - The existence of inverse vectors _implies the existence of subtraction_
 - Vector multiplication is not defined in general
 - A basic example of a vector space is _n-tuples_, where vector addition and scalar multiplication are done _component-wise_
 
-### Span and linear independence
+## Span and linear independence
 - Let the set $S=\{\bm{u}_1,\bm{u}_2,\dots \bm{u}_n\}$ be a subset of vectors in $\mathbb{V}$ 
 - A _linear combination_ of $S$ is a vector of the form:
 $$a_1\bm{u}_1+a_2\bm{u}_2+\dots+a_n\bm{u}_n=a_i\bm{u}_i$$
@@ -50,7 +50,7 @@ $$a_i\bm{u}_i=0 \iff a_i=0$$
 - If an additional vector is added to a spanning set, it remains a spanning set
 - If a vector is removed from a linearly independent set, it will remain linearly independent
 
-### Basis vectors
+## Basis vectors
 - If $\mathbb{V}$ is an $n-$dimensional vector space, then _any_ set of $n$ linearly independent vectors $\{\bm{u}_1,\dots\bm{u}_n\}$ is a _basis set_ for $\mathbb{V}$
 
 - For _all_ $\bm{v} \in\mathbb{V}$, there exists scalars $v_i$ such that:
@@ -63,7 +63,7 @@ $$\bm{v}=v_i\bm{u}_i$$
 
 - Infinite dimensional vectors exist
 
-#### Examples
+### Examples
 - 3-dimensional Euclidean space $\mathbb{E}^3$, where the scalars are real
 	- Not the same as physical space $\mathbb{R}^3$, which is not necessarily Euclidean
 
@@ -75,7 +75,7 @@ $$\bm{v}=v_i\bm{u}_i$$
 - $2\times2$ real matrices: 4-dimensional
 - $2\times2$ real symmetric matrices: 3-dimensional
 
-## Linear operators
+# Linear operators
 - A _linear operator_ acts on a vector space $\mathbb{V}$ to produce another element of $\mathbb{V}$
 
 - Linearity means that for scalars $\alpha$ and $\beta$:
@@ -101,7 +101,7 @@ $$\displaylines{(A+B)_{ij}=A_{ij}+B_{ij} \\ (AB)_{ij}=A_{ik}B_{kj}}$$
 
 - Since matrix multiplication is _not commutative_, $\mathcal{AB}\neq\mathcal{BA}$
 
-### Transformation matrices
+## Transformation matrices
 - Let $\{\bm{u}_i\}$ and $\{\bm{u}_i'\}$ be two sets of basis vectors in an $n$-dimensional $\mathbb{V}$
 - One can express the latter basis in terms of the former via a matrix $\text{A}$:
 $$\bm{u}_j'=\bm{u}_iA_{ij}$$
@@ -129,7 +129,7 @@ $$\text{v}=\begin{pmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{pmatrix} \hspace{1.5
 $$\displaylines{\text{v}=\text{Av'} \iff \text{v'}=\text{A}^{-1}\text{v} 
  \\ \text{u'}=\text{uA}}$$
 
-### Special properties of matrices
+## Special properties of matrices
 - Properties of _real_ matrices:
 	- Symmetry: equal to transpose
  $$\text{A}^T=\text{A} \iff A_{ij}=A_{ji}$$
@@ -137,7 +137,7 @@ $$\displaylines{\text{v}=\text{Av'} \iff \text{v'}=\text{A}^{-1}\text{v}
  $$\text{A}^T=-\text{A} \iff A_{ij}=-A_{ji}$$
 	- Orthogonal:
 $$\text{A}^T=\text{A}^{-1} \iff \text{A}^T\text{A}=I$$
-#### The Hermitian conjugate
+### The Hermitian conjugate
 - The _Hermitian conjugate_ of a matrix is defined as _the complex conjugate of the transpose_:
 $$\displaylines{A^\dagger = (A^T)^*=(A^*)^T \\ (A^\dagger)_{ij}=(A^*)_{ji}}$$
 - For a _column matrix_, its Hermitian conjugate is a _row matrix_
@@ -148,7 +148,7 @@ $$(\text{AB})^\dagger=\text{B}^\dagger \text{A}^\dagger$$
 - This result _extends to arbitrary products of vectors and matrices_
 - The Hermitian conjugate of a scalar is the complex conjugate
 
-#### Properties of complex matrices
+### Properties of complex matrices
 - Positive definiteness: an $n\times n$ square matrix $\text{A}$ is said to be _positive-definite_ if _for all column matrices_ $\text{v}$ of length $n$:
 $$\text{v}^\dagger\text{Av}\geq 0,\text{ with equality iff v}=0$$
 	- If equality is possible for non-zero $\text{v}$, $\text{A}$ is _positive_ instead of positive definite
@@ -164,9 +164,9 @@ $$\text{A}^\dagger\text{A}=\text{AA}^\dagger$$
 
 - All _Hermitian, anti-Hermitian, and unitary matrices are normal_
 
-## Scalar product/inner product
+# Scalar product/inner product
 
-### Definition
+## Definition
 - Defined on an $n$-dimensional vector space $\mathbb{V}$ over $\mathbb{C}$
 - The scalar product is _denoted_ $\bm{u\cdot v}\in\mathbb{C}$
 
@@ -190,7 +190,7 @@ $$\bm{u}\cdot\bm{v}=\braket{u|v}$$
 	- Sum up elements: $\braket{\text{A}|\text{B}}=A_{ij}^*B_{ij}$
 	- Fulfills all properties
 
-### Inequalities
+## Inequalities
 - The Schwarz inequality:
 $$|\braket{\bm{u}|\bm{v}}|\leq |\bm{u}||\bm{v}|$$
 	- Equality holds when $\bm{u}=\lambda\bm{v}$
@@ -198,7 +198,7 @@ $$|\braket{\bm{u}|\bm{v}}|\leq |\bm{u}||\bm{v}|$$
 - The triangle inequality:
 $$|\bm{u}+\bm{v}|\leq |\bm{u}|+|\bm{v}|$$
 
-### Scalar product in terms of components, and the metric
+## Scalar product in terms of components, and the metric
 - Suppose there is a scalar product defined in a vector space with basis vectors $\{\bm{u}_i\}$
 - Define the complex numbers $G_{ij}$:
 $$G_{ij}=\bm{u}_i\cdot\bm{u}_j$$
@@ -214,9 +214,9 @@ $$G_{ij}=(G_{ji})^*$$
 - A _metric is positive-definite_:
 $$\text{v}^\dagger\text{Gv}\geq 0\text{, equality iff }\bm{v}=0$$
 
-## Eigenvectors, eigenvalues, and diagonalisation
+# Eigenvectors, eigenvalues, and diagonalisation
 
-### Definitions of eigenvectors and eigenvalues
+## Definitions of eigenvectors and eigenvalues
 - Suppose $\text{M}$ is a square $n\times n$ matrix, then if there is a column vector $\text{x}$ such that:
 $$\text{Mx}=\lambda\text{x}$$
 - $\text{x}$ is a _eigenvector_ of the matrix, and $\lambda$ is an _eigenvalue_
@@ -230,7 +230,7 @@ $$\det(\text{M}-\lambda\text{I})=0$$
 - From the fundamental theorem of algebra, $\text{M}$ has $n$ eigenvalues (counting repeated roots)
 	- Eigenvalues and eigenvectors _are not necessarily real_ (example: rotation matrix)
 
-### Eigenvalues and diagonalisation
+## Eigenvalues and diagonalisation
 - If the $n$ eigenvalues are _distinct_, there are $n$ _linearly independent eigenvectors_
 - If they are not distinct, then repeated eigenvalues are said to be _degenerate_
 
@@ -250,8 +250,8 @@ $$\displaylines{\text{X}^{-1}\text{MX}=\Lambda \\ \Lambda = \pmatrix{ \lambda_1 
 - i.e. $\text{X}$ _diagonalises_ $\text{M}$, as long as $\det(\text{X})\neq0$, which means the columns (hence, the eigenvectors), are linearly independent
 - In other words, _an $n\times n$ matrix is diagonalisable iff it has $n$ linearly independent eigenvectors_
 
-### Eigenvectors and eigenvalues of special matrices
-#### Hermitian matrices
+## Eigenvectors and eigenvalues of special matrices
+### Hermitian matrices
 - The eigenvalues of a Hermitian matrix _are all real_
 - The eigenvectors of a Hermitian matrix _with distinct eigenvalues_ are _orthogonal_
 - Proof: Let there be distinct eigenvectors, apply the matrix then subtract them
@@ -261,7 +261,7 @@ $$\displaylines{\text{X}^{-1}\text{MX}=\Lambda \\ \Lambda = \pmatrix{ \lambda_1 
 - Whether or not eigenvalues are degenerate, an $n\times n$ Hermitian matrix _has $n$ linearly independent eigenvectors_
 - It is also _always possible_ to find $n$ eigenvectors that are _orthonormal_
 
-#### Other matrices
+### Other matrices
 - The eigenvalues of _anti-Hermitian_ matrices are _purely imaginary_
 - The eigenvalues of _unitary_ matrices are _of unit modulus_
 
@@ -272,7 +272,7 @@ $$\displaylines{\text{X}^{-1}\text{MX}=\Lambda \\ \Lambda = \pmatrix{ \lambda_1 
 - It is _always possible_ to construct an _orthonormal basis_ with the Gram-Schmidt procedure
 - Therefore, _even if eigenvalues are degenerate_, it is possible to find $n$ _mutually orthogonal eigenvectors_ that form a basis for an $n$-dimensional vector space
 
-### Diagonalisation via unitary matrices
+## Diagonalisation via unitary matrices
 - From the above results, _any Hermitian matrix_ $\text{H}$ can be diagonalised with a matrix $\text{X}$, where the _columns are the eigenvectors_ of $\text{H}$
 - If all these eigenvectors are _orthonormal_, it can be proven that $\text{X}$ _must be unitary_
 
@@ -286,9 +286,9 @@ $$\displaylines{\text{X}^{-1}\text{MX}=\Lambda \\ \Lambda = \pmatrix{ \lambda_1 
 - For _normal_ matrices, since there are _always $n$ linearly independent eigenvectors_, they are _always diagonalisable regardless of degeneracy_
 	- Hence, _anti-Hermitian_ and _unitary_ matrices are _always diagonalisable_
 
-## Change of basis
+# Change of basis
 
-### Change of basis for the metric
+## Change of basis for the metric
 - Vector components can be [[#Transformation matrices|transformed between bases]] $\{\bm{u}_i\}$ and $\{\bm{u}_i'\}$ 
 - The components of an arbitrary vector $\bm{v}$ transform as:
 $$\text{v}=\text{Av}'$$
@@ -303,7 +303,7 @@ $$\text{G}'=\text{A}^\dagger\text{GA}$$
 	- Always true since _$\text{G}$_ _is Hermitian_
 - Since $\text{G}$ is _positive-definite_, it can be shown that _the eigenvalues are all strictly positive_, $\text{G}$ _can be diagonalised 
 
-### Orthonormal bases
+## Orthonormal bases
 - Once the metric is _diagonalised_, the new basis vectors $\{\bm{u}_i'\}$ are _the eigenvectors of $\text{G}$_
 - Since $\text{G}$ is Hermitian, this new basis set _is orthogonal_, therefore:
 $$\bm{u}_i'\cdot \bm{u}_j'=G_{ij}'=\Lambda_{ij}=\lambda_i\delta_{ij}$$
@@ -318,7 +318,7 @@ $$\bm{v}\cdot\bm{w}=\text{v}^\dagger\text{Gw}=\text{v}^\dagger\text{Iw}=\text{v}
 - If the vectors are orthogonal, this just becomes 0
 
 
-### Transform between orthonormal bases
+## Transform between orthonormal bases
 - Given an orthonormal basis $\{\bm{e}_i\}$, tranform to a new orthonormal basis $\{\bm{e}_i'\}$
 - Let the transformation matrix be:
 $$\bm{e}_i'=\bm{e}_kU_{ki}$$
@@ -329,7 +329,7 @@ $$\text{U}^\dagger \text{U}=\text{I}$$
 - Hence, $\text{U}$ is _unitary
 	- Real vector space: orthogonal
 
-### More on diagonalisation
+## More on diagonalisation
 - Many operations are easier when done in diagonalised matrices
 - Using the properties:
 $$\det(\text{AB})=\det(\text{A})\det(\text{B}) \hspace{1.5cm} \text{tr}(\text{AB})=\text{tr}(\text{A})\text{tr}(\text{B})$$
@@ -338,7 +338,7 @@ $$\text{X}^\dagger\text{MX}=\Lambda \hspace{1cm} \text{or} \hspace{1cm} \text{M}
 - Useful relations:
 $$\displaylines{\text{M}^n=\text{X}^\dagger\Lambda^n\text{X} \\ \det(\text{M})=\prod_i\lambda_i \\ \text{tr}(\text{M})=\sum_i\lambda_i}$$
 
-## Forms
+# Forms
 - A _form_ is a map $\mathcal{F}(\text{x})$ where:
 $$\mathcal{F}(\text{x})=\text{x}^\dagger\text{Ax}=x_i^*A_{ij}x_j$$
 - $\text{A}$ is the _coefficient matrix_ of the form
@@ -351,7 +351,7 @@ $$\mathcal{F}(\text{x})=\text{x}^\dagger\text{Ax}=x_i^*A_{ij}x_j$$
 $$\mathcal{F}(\text{x})=\text{x}^T\text{Sx}=x_iS_{ij}x_j$$
 - This is known as a _quadratic form_
 
-### Principal axes
+## Principal axes
 - The coefficient matrix $\text{H}$ of a Hermitian form can be written as:
 $$\text{H}=\text{U}^\dagger\Lambda\text{U}$$
 - By transforming $\text{x}$:
@@ -361,7 +361,7 @@ $$\mathcal{F}(\text{x})=\sum_i\lambda_i|x'_i|^2$$
 - The form _has no off-diagonal terms_
 - The orthonormal basis vectors are known as the _principal axes_
 
-### Quadrics and conics
+## Quadrics and conics
 - A _quadric surface_ is an $n$-dimensional hypersurface defined by the _zeros of a real quadratic polynomial_
 - For any general quadric:
 $$x_iA_{ij}x_j+b_ix_i+c\equiv\text{x}^T\text{Ax}+\text{b}^T\text{x}+c=0$$
@@ -374,7 +374,7 @@ $$\text{x}'^T\Lambda\text{x}'+\text{b}'^T\text{x}'+c=0$$
 - By translating $\text{x'}$ by $-\Lambda^{-1}\text{b'}/2$:
 $$\text{x}'^T\Lambda\text{x}'=k$$
 
-#### Conic sections
+### Conic sections
 - For $n=2$:
 $$\text{x}'=\pmatrix{1 \\ 2} \hspace{1.5cm} \Lambda=\pmatrix{\lambda_1 & 0 \\ 0 & \lambda_2}$$
 
@@ -382,7 +382,7 @@ $$\text{x}'=\pmatrix{1 \\ 2} \hspace{1.5cm} \Lambda=\pmatrix{\lambda_1 & 0 \\ 0 
 $$\lambda_1\text{x}'^2+\lambda_2\text{y}'^2=k$$
 
 
-### Rayleigh-Ritz method
+## Rayleigh-Ritz method
 - In an orthonormal basis, let $\text{x}$ be a point on the surface $\text{x}^T\text{Sx}=k$
 - The _relative distance_ from the origin, independent of $k$, is:
 $$(\text{relative distance})^2=\frac{\text{x}^T\text{x}}{\text{x}^T \text{Sx}}$$

@@ -1,5 +1,5 @@
 #IB_Natsci 
-## Fourier series
+# Fourier series
 - Let $f(x)$ be a function with period $\Lagr$ 
 - Fourier's theorem states that it can be expressed as:
 $$f(x)=\frac{a_0}{2}+\sum_{n=1}a_n\cos\left(\frac{2n\pi x}{\Lagr}\right)+\sum_{n=1}b_n\sin\left(\frac{2n\pi x}{\Lagr}\right)$$
@@ -10,7 +10,7 @@ $$b_n=\frac{2}{\Lagr}\int_{x_0}^{x_0+\Lagr} f(x)\sin\left(\frac{2\pi nx}{\Lagr}\
 - If $f$ is an even function, $b_n=0$
 - If $f$ is an odd function, $a_n=0$
 
-### Fourier exponential series
+## Fourier exponential series
 - $f(x)$ can also be written as:
 $$f(x)=\sum_{n=-\infty}^\infty C_n\exp(2i\pi nx/\Lagr)$$
 - Where the coefficients are:
@@ -23,7 +23,7 @@ $$\displaylines{C_n=\frac{a_n-ib_n}{2}\hspace{1cm} C_{-n}=\frac{a_n+ib_n}{2} \\ 
 - If $f(x)$ is even, $C_n=C_{-n}$
 - If $f(x)$ is odd, $C_n=C_{-n}$
 
-## Fourier transforms
+# Fourier transforms
 >[!quote]
 >"We add things that wiggle up and down to make things that don't wiggle up and down"
 >
@@ -43,7 +43,7 @@ $$\tilde{f}(k)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty e^{-ikx}f(x)\,dx$$
 >
 >-Dr. S. J. Cowley, 2022
 
-### Properties of Fourier transforms
+## Properties of Fourier transforms
 - Unlike the series, if $f$ is real, the Fourier transform is not necessarily real
 
 - If $f$ is real and even, the Fourier transform is real
@@ -51,7 +51,7 @@ $$\tilde{f}(k)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty e^{-ikx}f(x)\,dx$$
 
 - The converses of these statements are true
 
-### Examples of Fourier transforms
+## Examples of Fourier transforms
 - $f(x)=\exp(-b|x|)$ for $b>0$
 $$\mathcal{F}[e^{-b|x|}]=\tilde{f}(k)=\frac{1}{\sqrt{2\pi}}\frac{2b}{k^2+b^2}$$
 	- One sided decaying exponential: complex Fourier transform
@@ -82,14 +82,14 @@ $$\sqrt{2\pi}\,\tilde{g}(k)=\frac{2\sin k}{k}$$
 $$\displaylines{f(x)=\sum_{n=-\infty}^\infty \delta(x-nx_0) \\ \tilde{f}(k)=\frac{k_0}{\sqrt{2\pi}}\sum_{n=-\infty}^\infty\delta(k-nk_0)=\frac{\sqrt{2\pi}}{x_0}\sum_{n=-\infty}^\infty\delta(k-n\frac{2\pi}{x_0})}$$
 
 
-### The Fourier inversion theorem
+## The Fourier inversion theorem
 - The inverse transform: from the Fourier transform to the function
 $$\displaylines{\mathcal{F}(f)\equiv\tilde{f}(k)=\frac{1}{\sqrt{2\pi}} \int_{-\infty}^\infty f(x)e^{-ikx}\,dx}$$
 $$\mathcal{I}(\tilde{f})\equiv f(x)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \tilde{f}(k)\,e^{ikx}\,dk$$
 - Derivation: substitute definition of $\tilde{f}$ into the integral, use definition of Delta function
 - Interpretation: adding up waves with the Fourier tansform as the "weighing function"
 
-### Properties of Fourier transforms
+## Properties of Fourier transforms
 - Linearity:
 $$\mathcal{F}[\alpha f(x)+\beta g(x)]=\alpha\mathcal{F}[f(x)]+\beta\mathcal{F}[g(x)]$$
 - Rescaling: let $g(x)=f(\alpha x)$
@@ -126,7 +126,7 @@ $$i\frac{d\tilde{f}}{dk}=\mathcal{F}[xf(x)]$$
 
 - Multiplication in $x(\text{or }k)\leftrightarrow$ differentiation in $k(\text{or }x)$   
 
-### Relation to Fourier series
+## Relation to Fourier series
 - Consider the [[#Fourier exponential series]]:
 $$f(x)=\sum_{n=-\infty}^\infty C_n\exp(2i\pi nx/\Lagr)$$
 - Where the coefficients are:
@@ -143,16 +143,16 @@ $$\tilde{f}(k_n)=\frac{\Lagr C_n}{\sqrt{2\pi}}$$
 - As $\Delta k$ becomes infinitesimal:
 $$\tilde{f}(k)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty f(x)\exp(-ixk)\,dx$$
 $$f(x)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \tilde{f}(k)\exp(ikx)\,dk$$
-## The convolution theorem
+# The convolution theorem
 
-### Convolutions
+## Convolutions
 - The _convolution_ $f*g$ of $f(x)$ and $g(x)$ is defined as:
 $$(f*g)(x)=\int_{-\infty}^\infty f(y)\,g(x-y)\,dy$$
 - Expresses the overlap of $f$ and $g$ as the latter is shifted over the former
 
 - Symmetry: $f*g=g*f$
 
-#### In statistics
+### In statistics
 - Consider a random variable $x$, with a _probability distribution_ $f(x)$
 	- In the limit of small $\delta x$, probability of $x$ lying in $x_0<x<x_0+\delta x$ is $f(x_0)\delta x$
 - Let there be an _independent_ random variable $y$ with distribution $g(y)$
@@ -171,7 +171,7 @@ $$h=f*g$$
 		- Convolving individual responses with the point spread
 	- The [[Electromagnetism#The electrostatic potential|electrostatic potential]] of a charge distribution convolves $\rho(r')$ with $1/|r-r'|$
 
-### The convolution theorem
+## The convolution theorem
 - The Fourier transform of $f*g$ is given by:
 $$\mathcal{F}[f*g]=\sqrt{2\pi}\mathcal{F}[f]\mathcal{F}[g]$$
 
@@ -186,7 +186,7 @@ $$\mathcal{F}[fg]=\frac{1}{\sqrt{2\pi}}\mathcal{F}[f]*\mathcal{F}[g]$$
 
 - Deconvolution in normal space: division in Fourier space
 
-## Correlations
+# Correlations
 - The _correlation_ $f\otimes g$ of $f(x)$ and $g(x)$ is:
 $$h(x)=f\otimes g=\int_{-\infty}^\infty [f(y)]^*g(x+y)\,dy$$
 - Correlation quantifies the relationship between two oscillatory functions
@@ -202,7 +202,7 @@ $$\tilde{h}(k)=\sqrt{2\pi}[\tilde{f}(k)]^*\tilde{g}(k)$$
 - Autoconvolution: $f*f=\sqrt{2\pi}\tilde{f}^2$
 - Autocorrelation: $f\otimes f=\sqrt{2\pi}|\tilde{f}|^2$
 
-## Parseval's theorem
+# Parseval's theorem
 - Apply the inverse transform to the Wiener-Kinchin theorem
 $$\int_{-\infty}^\infty[f(x)]^*g(x)\,dx=\int_{-\infty}^\infty [\tilde{f}(k)]^*\tilde{g}(k)\,dk$$
 
@@ -211,7 +211,7 @@ $$\int_{-\infty}^\infty |f(x)|^2\,dx=\int_{-\infty}^\infty |\tilde{f}(k)|^2\,dk$
 
 - The Fourier transform is a [[Vectors and matrices|unitary transformation]] that preserves the inner product
 
-## Power spectra
+# Power spectra
 - The _power spectrum_ is defined as:
 $$\Phi(k)=|\tilde{f}(k)|^2$$
 - Quantifies _spectral content_ of $f(x)$
@@ -226,7 +226,7 @@ $$\Phi(k)=|\tilde{f}(k)|^2$$
 
 - Less ideal signals: peaks + white noise
 
-## Solving ODEs with Fourier Transforms
+# Solving ODEs with Fourier Transforms
 - Suppose $\psi$ satisfies:
 $$\frac{d^2\psi}{dx^2}-a^2\psi=-f(x)$$
 - Let it satisfy the two boundary conditions:

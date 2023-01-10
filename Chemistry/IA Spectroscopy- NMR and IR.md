@@ -1,5 +1,5 @@
-## C-13 NMR
-### Chemical shifts
+# C-13 NMR
+## Chemical shifts
 - Scale: 0-200 ppm
 Chemical shift/ppm | Carbon environment 
 ------------ | -----------
@@ -8,13 +8,13 @@ Chemical shift/ppm | Carbon environment
 100-150 | sp$^2$
 150-200 | sp$^2$ with very electron withdrawing groups
 - When proton decoupled, quaternary carbons (C with no protons attached) have particularly weak signal
-#### Specific environments
+### Specific environments
 Ketone: $\delta\approx 206$ ppm
 End of double bond conjugated with ketone: $\delta\approx 140$ ppm
 Aldehyde: $\delta\approx 195$ ppm
 Acid derivatives: $\delta\approx 160-170$ ppm
 
-### Coupling
+## Coupling
 - Signal spltting is seen when there is an atom with non-zero spin is nearby
 	- Total number of signal lines$=2nI+1$ ($n=$number of equivaent nuclei, $I$=nuclear spin)
 	- For C-13 NMR, only coupling to atoms with spin=1/2 is seen due to rapid interconversion of atoms with spin>1/2
@@ -32,10 +32,10 @@ Acid derivatives: $\delta\approx 160-170$ ppm
 - Spectrum can be proton coupled for more information, but with significant noise
 - APT NMR: signals attached to even number of protons is on one side, signals attached to odd numbers are on the other
 
-## Proton NMR
+# Proton NMR
 - Area under peaks proportional to number of protons
 - Intensities of split signals may be affected by roofing
-### Chemical shifts of protons connected to carbon
+## Chemical shifts of protons connected to carbon
 - Scale: 0-14ppm
 Environment (underlined proton) | Chemical shift/ppm
 ------- | -----------
@@ -62,13 +62,13 @@ Terminal $\ce{-C\underline{H}_3}$ | 1-1.5
 - Shift of aldehyde proton > shift of formate ester proton
 - Aromatic rings and terminal alkynes: higher/lower than expected due to ring currents generating magnetic field
 
-### Signals of protons connected to O and N
+## Signals of protons connected to O and N
 - Hydrogen bonding leads to large range of chemical shifts
 - Leads to very broad signal
 - A $\ce{D2O}$ shake leads to $\ce{H-D}$ exchange, removes signal
 - No coupling is seen due to rapid swapping, except when solvent is extremely dry
       
-### Coupling
+## Coupling
 - Coupling can be seen over 3-4 bonds 
 	- As it is a through-bond effect, the bond angle significantly affects $J$
  Coupling environment | Coupling constant 
@@ -87,7 +87,7 @@ Over 3 freely rotating bonds (vicinal) | $^3J_{Ha-Hb}\approx 7$Hz
 
 
 
-## IR spectroscopy
+# IR spectroscopy
 - Wavenumber of absorbed IR wave is correlated to bond oscillation angular frequency
 - Oscillation of more complex molecules can be broken down into normal modes with different frequencies
 IR wavenumber region | Bond 
@@ -98,7 +98,7 @@ IR wavenumber region | Bond
 2500-4000 cm$^{-1}$ | X-H single bonds
 - Strength of absorption depends on dipole moment of molecule
 	- Non-dipoles are too weak for IR, and require Raman spectroscopy
-### X-H region
+## X-H region
 Group | Wavenumber | Note
 ------ | -------- | --------
 Tetrahedral $\ce{C-H}$ | 2900-3000 cm$^{-1}$ | Sharp
@@ -111,12 +111,12 @@ Trigonal $\ce{C-H}$ | 3000-3200 cm$^{-1}$ | Sharp
  $\ce{O-H}$, no H-bonding | 3500-3600 cm$^{-1}$ | Sharp
  $\ce{RCOO-H}$ | 2500-3500 cm$^{-1}$ | Very broad 
 
-### Triple bond region
+## Triple bond region
 Group | Wavenumber | Note
 ---- | ------- | -----
  $\ce{RC#N}$ | 2250 cm$^{-1}$ | Strong
  $\ce{C#C}$ | 2100-2250cm$^{-1}$ | Weak
-### Double bond region
+## Double bond region
 Group | Wavenumber | Note
 ----- | -------- | -----
  $\ce{C=C}$ | 1635-1690cm$^{-1}$ | Weak
@@ -125,7 +125,7 @@ Group | Wavenumber | Note
  $\ce{-NO2}$ antisymmetric | 1530cm$^{-1}$ | Sharp
  
 
-### Carbonyls
+## Carbonyls
 - Starting reference: Ketone, 1715cm$^{-1}$
 - Increase: electron-withdrawing groups (density towards $\ce{C=O}$ bond)
 - Decrease: electron-donating groups

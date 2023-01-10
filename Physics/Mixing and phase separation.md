@@ -1,4 +1,4 @@
-## Thermodynamics of mixing
+# Thermodynamics of mixing
 - Mixing of two elements $A$ and $B$ in a lattice
 - Quantity to minimise: [[Thermodynamics|Free Energy]] $F$
 - Free energy change in mixing:
@@ -23,7 +23,7 @@
 - Spinodal decomposition: at central range, $\partial^2F/\partial\Psi^2<0$, phase separation occurs spontaneously
 ![[Binodal and spinodal.png|250]]
 
-### Flory-Huggins model
+## Flory-Huggins model
 - Flory-Huggins model: Behaviour of polymer in a solvent
 - Segments of a polymer are adjacent to each other, reducing its entropy by a factor of $N$
 $$\Delta S_{FH}=-k_BM\left[\frac{\Phi}{N}\ln\Phi+(1-\Phi)\ln(1-\Phi)\right]$$

@@ -4,9 +4,9 @@
 - Considering position-space wave functions
 
 
-## Models of bonding
+# Models of bonding
 
-### Electrons: Particle in a box
+## Electrons: Particle in a box
 - Used to model conjugated $\pi$ systems
 - For a box of length $a$ from $x=0$ to $x=a$, the wave functions are:
 $$\psi_n=A\sin\frac{n\pi x}{a}$$
@@ -14,7 +14,7 @@ $$\psi_n=A\sin\frac{n\pi x}{a}$$
 $$E_n=\frac{n^2\hbar^2\pi^2}{2ma^2}$$
 - Details: [[Time-independent Hamiltonians in 1 dimension#Particle in a box|Particle in a box]]
 
-### Nuclei: The quantum harmonic oscillator
+## Nuclei: The quantum harmonic oscillator
 - Mathematical details and derivation: [[Quantum Harmonic Oscillator]]
 - Potential:
 $$V(r)=\frac{1}{2}m\omega^2r^2=\frac{1}{2}kr^2$$
@@ -30,7 +30,7 @@ $$E_n=(n+\frac{1}{2})\hbar\omega$$
 	- Consequence of the _uncertainty principle_
 
 
-### Nuclei: The Morse oscillator
+## Nuclei: The Morse oscillator
 >[!quote]
 >"Oh this is a good page. It's a great equation, it should give you a fizz"
 >"I'm excited by the Morse potential, and by the end of the lecture series you should be too"
@@ -68,7 +68,7 @@ $$\chi_e=\frac{\hbar\beta^2}{2m\omega}=\frac{\hbar\omega}{4D_e}$$
 
 ![[Morse energy levels.png]]
 
-## Angular momentum
+# Angular momentum
 - Details: [[Angular momentum in quantum mechanics]]
 - The eigenvalues of $\hat{L}^2$ and $\hat{L}_z$ are:
 $$\displaylines{\hat{L}^2\ket{JM}=\hbar^2J(J+1)\ket{JM} \hspace{1cm}\hat{L}_z\ket{JM}=\hbar M\ket{JM} \\ J=0,1,2\dots \hspace{1cm} M=-J,-J+1,\dots,J-1,J}$$
@@ -80,7 +80,7 @@ $$\displaylines{\hat{L}^2\ket{JM}=\hbar^2J(J+1)\ket{JM} \hspace{1cm}\hat{L}_z\ke
 
 - As for the eigenfunctions, they are the [[Special functions and orthogonal relations#Spherical harmonics|spherical harmonics]]
 
-## The Rigid Rotor
+# The Rigid Rotor
 - Consider a diatomic molecule, where nuclei have mass $m_1$ and $m_2$, with bond length $R$
 - It freely rotates around its centre of mass
 - There is no potential
@@ -95,13 +95,13 @@ $$E_n=\frac{\hbar^2}{2I}J(J+1)$$
 - Define the _rotational constant_ $B=\hbar^2/2I$
 - As the energy eigenfunctions are independent of $m$, $J_z$ has a $2J+1$ fold _degeneracy_
 
-### Centrifugal distortion
+## Centrifugal distortion
 - The atoms in the rotor actually experience a _centrifugal force_
 - The _restoring force_ obeys Hooke's Law with force constant $k_f$
 - Because of this, there is an _extra term_ in the rotational energy, proportional to $J^2(J+1)^2$
 	- Atkins, Friedman p. 274-375
 
-## Rotation and vibration
+# Rotation and vibration
 - Molecules both rotate and vibrate
 - Vibration has the variable $r-r_e$
 	- Example: harmonic oscillator, Morse potential
@@ -122,7 +122,7 @@ $$\Ham\Psi=[E_{vib}+BJ(J+1)]\Psi$$
 - As vibrational energy level increases, _bond length increases_
 - As a result, since $B\propto 1/I$, $B$ _decreases_
 
-## Spectroscopic principles
+# Spectroscopic principles
 - Bohr condition: for a transition between two states $\psi_m$ and $\psi_n$ facilitated by a photon, its _frequency $\nu_{mn}$ must equal_ $|E_n-E_m|/h$
 - Fermi's Golden Rule: Under an electric field, the rate of induced absorption and emission-
 $$B_{mn}=\frac{2\pi}{4\pi\epsilon_0(3\hbar^2)}|\braket{\psi_m|\hat{\mu}|\psi_n}|^2$$
@@ -137,7 +137,7 @@ $$A_{mn}=\frac{8\pi h\nu_{mn}^3}{c^3}B_{mn}$$
 	- Morse oscillator: non-neighbouring transitions are _much weaker_
 
 
-## The Born-Oppenheimer approximation
+# The Born-Oppenheimer approximation
 >[!quote]
 >It is an unfortunate fact that, having arrived in sight of the promised land, we are forced to make an approximation at the outset.
 >-Peter Atkins
@@ -171,7 +171,7 @@ $$\hat{\Ham}_\text{nuc}\psi_\text{nuc}(\bm{Q})=E\psi_\text{nuc}(\bm{Q})$$
 - The total wave function of the system:
 $$\Psi_\text{molecule}=\psi_\text{elec}\psi_\text{nuc}$$
 
-### Precise formulation and example
+## Precise formulation and example
 - Consider the $H_2^+$ ion, where nuclei are constrained to move along the $z-$axis
 - Position of electron is $z$, position of nucleus $i$ is $Z_i$
 - The _complete Hamiltonian_ is:
@@ -195,7 +195,7 @@ $$\hat{T}_N\psi_N+E_e\psi_N=E\psi_N$$
 
 - For 3-dimensional motion, the linear momentum operators use $\nabla$
 
-## The hydrogen atom
+# The hydrogen atom
 - [[Time-independent Hamiltonians in 3 dimensions#The hydrogen atom|Detailed derivations]]
 - The Hamiltonian for a hydrogen-like atom is:
 $$\begin{aligned}\hat{\Ham}&=-\frac{\hbar^2}{2m_e}\nabla^2-\frac{Ze^2}{4\pi\epsilon_0r} \\ &=-\frac{\hbar^2}{2m_e}\frac{1}{r^2} \pd{}{r}\left(r^2\pd{}{r}\right) + \frac{\hat{L}^2}{2m_er^2} -\frac{Ze^2}{4\pi\epsilon_0r} \end{aligned}$$
@@ -229,13 +229,13 @@ $$-\frac{1}{2r^2}\pd{}{r}\left(r^2\pd{R}{r}\right)+\frac{l(l+1)}{2r^2}R-\frac{ZR
 $$\psi_{nlm}=R_{nl}(r)\,Y_{lm}(\theta,\phi)$$
 - Energy determined by $n$, angular part (spherical harmonic) determined by $l$ and $m$
 
-### Higher atomic numbers
+## Higher atomic numbers
 - By defining $\rho\equiv Zr$, one can modify the radial equation:
 $$-\frac{1}{2\rho^2}\pd{}{\rho}\left(\rho^2\pd{R}{\rho}\right)+\frac{l(l+1)}{2\rho^2}R-\frac{R}{\rho}=\frac{E}{Z^2}R$$
 - The radial wavefunctions as a function of $\rho$ are _the same for any hydrogen-like atom_
 - Energy scales with $Z^2$
 
-### The orbitals
+## The orbitals
 - The energy of an atomic orbital is (written in Hartrees):
 $$E_{n}=-\frac{Z^2}{2n^2}$$
 - Energy levels get closer together as $n$ increases
@@ -260,14 +260,14 @@ $$\psi_{nlm}=\sqrt{\left(\frac{2}{n}\right)^3\frac{(n-l+1)!}{2n(n+l)!}}\exp(-\rh
 	- $m=2$: $d_{x^2-y^2}$ and $d_{xy}$
 
 
-### Nodal structure
+## Nodal structure
 - Lowest energy function has no nodes
 - Node increases by one as energy level increases
 - Total number of nodes: $n-1$
 	- Total number of radial nodes: $n-l-1$
 	- Total number of angular nodes: $l$
 
-### Radial probability density
+## Radial probability density
 - The radial probability density $P_nl(r)$ is:
 	$$P_{nl}(r)=r^2R_{nl}^2$$
 	- Consider the probability of finding an electron in a spherical shell between $r$ and $r+dr$
@@ -277,7 +277,7 @@ $$\psi_{nlm}=\sqrt{\left(\frac{2}{n}\right)^3\frac{(n-l+1)!}{2n(n+l)!}}\exp(-\rh
 $$\braket{r}=\int_0^\infty rP_{nl}\,dr=\int_0^\infty r^3R_{nl}^2\,dr$$
 - This is different from the _most likely value_ of $r$, given by $\partial P_{nl}/\partial r=0$
 
-## Many-electron atoms
+# Many-electron atoms
 >[!quote]
 >"So that was the hydrogen atom, no approximations made there, now you must be feeling confident to tackle the rest of chemistry...well let's go in baby steps"
 >-Prof. Stuart Althorpe, 2022
@@ -290,7 +290,7 @@ $$\hat{\Ham}=-\frac{\hbar^2}{2m_e}\nabla_1^2-\frac{\hbar^2}{2m_e}\nabla_2^2-\fra
 
 - _Unseparable_ into $\psi_1$ and $\psi_2$ due to $r_{12}$ term
 
-### Central field approximation
+## Central field approximation
 - _Approximate_ the Hamiltonian as $\Ham_1$ and $\Ham_2$, where:
 $$\hat{\Ham}_i=-\frac{\hbar^2}{2m_e}\nabla_i^2+V(r)$$
 - $V(r)$ is a _spherical average_ of repulsion from the other electron
@@ -305,7 +305,7 @@ $$\hat{\Ham}_i=-\frac{\hbar^2}{2m_e}\nabla_i^2+V(r)$$
 4. Repeat steps 2 and 3 with the new functions to get better approximations
 5. Iterate until self-consistent
 
-### Energies of the electrons
+## Energies of the electrons
 - Energy will now also depend on $l$
 	- Expectation value of potential is given by:
  $$\braket{V}_{nl}=\int\hat{V}(r)P_{nl}(r)\,dr$$
@@ -322,14 +322,14 @@ $$E_{nl}=-\frac{Z_\text{eff}^2}{2n^2}$$
 	- Purely empirical
 	- $Z_\text{eff}=Z-s_{nl}$, where the latter term is a _screening constant_
 
-### Ionisation energy
+## Ionisation energy
 - Energy needed to remove one electron from an atom to form an ion
 - General increase across a period due to lowering orbital energies
 - Increase interrupted when electrons fill a new shell
 - Ionisation energy decreases down a group
 - Details: [[IA Inorganic chemistry-periodicity and the elements#Ionisation energy|IA inorganic chemistry-Ionisation energy]]
 
-## Spin
+# Spin
 - Detailed quantum mechanics of spin: [[Angular momentum in quantum mechanics]]
 - No classical analogue
 - Like orbital angular momentum, described by two quantum numbers:
@@ -352,7 +352,7 @@ $$\displaylines{\hat{S}^2\ket{sm_s}=\hbar^2s(s+1)\ket{sm_s} \hspace{1cm}\hat{S}_
 - The state with $m_s=1/2$ is written as $\alpha\equiv\ket{\alpha}\equiv\ket{\frac{1}{2}\frac{1}{2}}\equiv\sigma_{1/2}$
 - The state with $m_s=-1/2$ is written as $\beta\equiv\ket{\beta}\equiv\ket{\frac{1}{2}-\frac{1}{2}}\equiv\sigma_{-1/2}$
 
-### Generic wave function for electron
+## Generic wave function for electron
 - With the addition of spin, electrons can now be described by the _spin-orbital_:
 $$\ket{nlm_lm_s}=R_{nl}(r)Y_{l,m_l}(\theta,\phi)\sigma_{m_s}$$
 	- Technically described by 5 quantum numbers with $s$, but it is always $1/2$ for an electron
@@ -363,7 +363,7 @@ $$\displaylines{\hat{\Ham}\ket{nlm_lm_s}=E_{nl}\ket{nlm_lm_s} \\
 \hat{L}_z\ket{nlm_lm_s}=\hbar m\ket{nlm_lm_s} \\
 \hat{S}^2\ket{nlm_lm_s}=\hbar^2s(s+1)\ket{nlm_lm_s} \\
 \hat{S}_z\ket{nlm_lm_s}=\hbar m_s\ket{nlm_lm_s}}$$
-### Two spins
+## Two spins
 - Rigorous discussion: [[Angular momentum in quantum mechanics#Singlet and triplet states|addition of angular momentum]]
 - Consider two electrons
 - The possible states are: $\alpha_1\alpha_2$, $\alpha_1\beta_2$, $\beta_1\alpha_2$, $\beta_1\beta_2$
@@ -384,7 +384,7 @@ $$\displaylines{\hat{\Ham}\ket{nlm_lm_s}=E_{nl}\ket{nlm_lm_s} \\
 
 - In general, more useful to consider the _total_ spin and $m_s$ of a system to construct allowed states (by the Pauli Principle below)
 
-## Pauli Principle
+# Pauli Principle
 - The quantum mechanics of identical particles: [[Multiple particles in quantum mechanics]]
 - For 2 identical particles, the collective wavefunction is denoted $\Psi_{12}=\psi_1\psi_2$
 - In quantum mechanics, 2 electrons are _indistinguishable_ (labelling is impossible)
@@ -408,7 +408,7 @@ $$\psi_\pm=\frac{1}{\sqrt{2}}[\psi_a(1)\psi_b(2)\pm\psi_a(2)\psi_b(1)]$$
 	- The acceptable wave function is:
 	$$\psi_{tot}=\psi_+\sigma_s=\frac{1}{2}\Big[\psi_a(1)\psi_b(2)+\psi_a(2)\psi_b(1)\Big]\Big[\alpha_1\beta_2-\beta_1\alpha_2\Big]$$
 
-### Fermi holes
+## Fermi holes
 - Consider two electrons with collective _spatial_ wave function $\psi(\bm{r}_1, \bm{r}_2)$
 - Consider the case when $\bm{r}_1=\bm{r}_2$
 	- Same spin(triplet): $|\psi|^2=0$
@@ -418,14 +418,14 @@ $$\psi_\pm=\frac{1}{\sqrt{2}}[\psi_a(1)\psi_b(2)\pm\psi_a(2)\psi_b(1)]$$
 - Repulsion potential is inversely proportional to $r_{12}$
 - Average repulsion energy is _substantially less for electrons of triplet states_
 
-## The Helium atom
+# The Helium atom
 - The $1s^2$ configuration can only accommodate a singlet state
 
 - Consider the $1s2s$ configuration, there are two possible states (including spin):
 $$\Psi_+=\psi_+\sigma_s=\frac{1}{\sqrt{2}}\Big[\psi_{1s}(1)\psi_{2s}(2)+\psi_{1s}(2)\psi_{2s}(1)\Big]\sigma_s$$
 $$\Psi_-=\psi_-\sigma_t=\frac{1}{\sqrt{2}}\Big[\psi_{1s}(1)\psi_{2s}(2)-\psi_{1s}(2)\psi_{2s}(1)\Big]\sigma_t$$
 
-### Coulomb and exchange integrals
+## Coulomb and exchange integrals
 - The average electron repulsion is found by:
 $$\braket{\frac{1}{r_{12}}}_\pm=\braket{\Psi_\pm|\frac{1}{r_{12}}|\Psi_\pm}=\braket{\psi_\pm|\frac{1}{r_{12}}|\psi_\pm}$$
 - Expanding the average electron repulsion:
@@ -435,7 +435,7 @@ $$\displaylines{\braket{\frac{1}{r_{12}}}_\pm=J\pm K \\ J=\int\int \psi_{1s}(1)\
 
 - The 3 triplet states have a _lower energy_ than the singlet state due to the Fermi hole
 
-## More on multi-electron atoms
+# More on multi-electron atoms
 
 - Notation: _lower-case_ for single electrons, _upper-case_ for total
 
@@ -447,7 +447,7 @@ $$\displaylines{\braket{\frac{1}{r_{12}}}_\pm=J\pm K \\ J=\int\int \psi_{1s}(1)\
 	- Inaccuracy from the _mean-field approximation_
 - The remaining 1% is the _electron correlation_, from _direct Coulombic interactions_
 
-### Electron correlation
+## Electron correlation
 - In the central field approximation, electrons still have a _well-defined_ orbital angular momentum and $l$, with the _angular parts still being spherical harmonics_
 
 - In a real atom, the electrons _exert mutual torques_ on each other, and _exchange orbital angular momentum_, resulting in individual angular momentum _not being well defined_
@@ -464,7 +464,7 @@ $$\displaylines{\braket{\frac{1}{r_{12}}}_\pm=J\pm K \\ J=\int\int \psi_{1s}(1)\
 $$\ket{\Psi}=\ket{LSJM_J}$$
 - Energy _does not depend on $M_J$_, and levels are $2J+1$-fold degenerate
 
-### Terminology and notation for states of electrons
+## Terminology and notation for states of electrons
 - _Configuration_: _which orbital shells_ contain electrons
 - _Term_: Values of _total orbital and spin angular momentum_ $L$ and $S$
 - _Level_: All three _total angular momentum quantum numbers_, $L$, $S$, and $J$
@@ -476,7 +476,7 @@ $$\ket{\Psi}=\ket{LSJM_J}$$
 
 
 
-### Hund's rules
+## Hund's rules
 - Used to determine which energy level $E_{LSJ}$ is the lowest
 - Only applies to the _ground configuration_
 
@@ -494,7 +494,7 @@ $$\ket{\Psi}=\ket{LSJM_J}$$
 
 - Technique: draw out grid of orbitals with $M_S$ on one axis, $M_L$ on the other, fill by applying the rules in order
 
-#### Examples: carbon, nitrogen, oxygen
+### Examples: carbon, nitrogen, oxygen
 - Example 1: ground state of carbon $(1s^22s^22p^2)$
 	- Ignore closed shells
 	- First rule: find maximum possible $S$
@@ -521,13 +521,13 @@ $$\ket{\Psi}=\ket{LSJM_J}$$
 	- Third rule: $J$ can only be $3/2$
 	- Lowest energy level is $\,^4S_{3/2}$
 
-#### Anomalous ionisation energies
+### Anomalous ionisation energies
 - Hund's Rules _also apply to ground states of ions_
 - Consider _decrease in number of Fermi holes_ when ionising
 - Causes an energy penalty when ionising atoms with half or fully filled orbitals
 
 
-## The Variational Principle
+# The Variational Principle
 - Origin and detail: [[Topics in Quantum Mechanics#The Variational Principle]]
 >[!info] The Variational Principle
 >Let there be an arbitrary Hamiltonian $\Ham$, with ground state energy $E_0$. For _any_ normalised wave function $\wv$:
@@ -540,9 +540,9 @@ $$\tilde{E}=\braket{\Psi|\Ham|\Psi}\geq E_0$$
 - $\tilde{\psi}$ and $\tilde{E}$ can be _parametrised_ in terms of some parameter $\alpha$
 - The best estimate would have a value of $\alpha$ that _minimises_ $\tilde{E}$
 
-### Applying it to known systems
+## Applying it to known systems
 
-#### Particle in a box
+### Particle in a box
 - Guess: satisfies $\psi(x=0)=\psi(x=a)=0$
 - Trial wave function:
 $$\tilde{\psi}(x)=x(a-x)$$
@@ -551,7 +551,7 @@ $$\tilde{\psi}(x)=x(a-x)$$
 $$\tilde{E}=\frac{10\hbar^2}{2ma^2}>\frac{\hbar^2\pi^2}{2ma^2}$$
 	- Estimate within $1\%$
 
-#### Harmonic oscillator
+### Harmonic oscillator
 - Guess: $\tilde{\psi}=\exp(-\alpha x^2/2)$
 - After normalising and applying the Hamiltonian:
 $$\tilde{E}=\frac{\hbar^2\alpha}{4m}+\frac{k}{4\alpha}$$
@@ -561,10 +561,10 @@ $$\tilde{E}=\frac{\hbar^2\alpha}{4m}+\frac{k}{4\alpha}$$
 - First term in $\tilde{E}$: kinetic, a large $\alpha$ gives a narrow spread in $x$ and large spread in $p$
 - Second term in $\tilde{E}$: potential, a small $\alpha$ gives a wide spread in $x$ and high potential
 
-### Linear combination of atomic orbitals
+## Linear combination of atomic orbitals
 - [[#The Born-Oppenheimer approximation]]: clamp the nuclei
 
-#### The technique for homoatomics
+### The technique for homoatomics
 - Consider the simplest diatomic: $H_2^+$
 - Let the trial wave function be a _linear combination of $1s$ orbitals_ of the two atoms
 $$\tilde{\psi}=c_as_a+c_bs_b$$
@@ -594,7 +594,7 @@ $$\displaylines{\tilde{E}=\alpha+\beta \longrightarrow c_a=c_b=\frac{1}{\sqrt{2}
 - As $\beta<0$, the combination where the orbitals combine _in-phase_ gives _lower energy_
 	- This is the _bonding orbital_
 
-#### Heteroatomics
+### Heteroatomics
 - Consider Lithium Hydride $\ce{LiH}$, consisting of the $2s$ and $1s$ orbitals, labelled $s_a$ and $s_b$
 - Hence, the two $\alpha$ will be different:
 $$\alpha_a = \int s_a\hat{\Ham}s_a d\tau \hspace{1cm} \alpha_b = \int s_b\hat{\Ham}s_b d\tau$$
@@ -613,7 +613,7 @@ $$\tilde{E}=\frac{1}{2}(\alpha_a+\alpha_b)+\frac{1}{2}\sqrt{(\alpha_a-\alpha_b)^
 - For lithium hydride, the bond is better modelled using an _sp hybrid orbital_
 - From the same method as above, it can be shown that $c_{2s}=c_{2p}$
 
-#### Non-zero overlap integral
+### Non-zero overlap integral
 - For the $H_2^+$ ion, for a non-zero overlap integral, from solving for $\tilde{E}$:
 $$(\alpha-\tilde{E})^2=(\beta-\tilde{E}S)^2$$
 - Setting energies _relative to $\alpha$_, and since $S>0$, by solving for $\tilde{E}$, it can be shown that _the strength of the bonding is reduced, while the strength of the antibonding is increased_

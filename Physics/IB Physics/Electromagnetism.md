@@ -12,8 +12,8 @@ $$\oint_{\partial S}d\bm{l}\cdot \bm{A}(\bm{r})=\int_S d\bm{S}\cdot \left[\nabla
 $$\oint_{S=\partial V}d\bm{S}\cdot\bm{E}(\bm{r})=\int_VdV\,\nabla\cdot\bm{E}(\bm{r})$$
 
 
-## Preview: Maxwell's equations
-### Variables
+# Preview: Maxwell's equations
+## Variables
 - Vector fields:
 	- Electric field $\bm{E}$
 	- Magnetic flux density $\bm{B}$
@@ -24,7 +24,7 @@ $$\oint_{S=\partial V}d\bm{S}\cdot\bm{E}(\bm{r})=\int_VdV\,\nabla\cdot\bm{E}(\bm
 	- Charge density $\rho$
 
 
-### In a vacuum
+## In a vacuum
 - Differential forms given, integral forms obtained using the Divergence/Stokes Theorems
 $$\begin{aligned}\nabla\cdot\bm{E}&=\frac{\rho}{\epsilon_0} \\ \nabla\times\bm{E}&=-\pd{\bm{B}}{t} \\ \nabla\cdot\bm{B}&=0 \\ \nabla\times\bm{B}&=\mu_0\bm{J}+\mu_0\epsilon_0\pd{\bm{E}}{t} \end{aligned}$$
 - Lorentz force law:
@@ -33,13 +33,13 @@ $$\bm{F}=q(\bm{E}+\bm{v}\cdot\bm{B})$$
 $$\pd{\rho}{t}+\nabla\cdot\bm{J}=0$$
 
 
-### In matter
+## In matter
 - These forms are _independent of material_
 $$\begin{aligned}\nabla\cdot\bm{D}&=\rho_{free} \\ \nabla\times\bm{H} &= \bm{J}_{free}+\pd{\bm{D}}{t}\end{aligned}$$
 
 
-## Electrostatics in vacuum
-### The electrostatic force and field
+# Electrostatics in vacuum
+## The electrostatic force and field
 - _Coulomb's law_ between 2 point charges
  $$\bm{F}=\frac{1}{4\pi\epsilon_0}\frac{q_1q_2}{r^2}\bm{\hat{r}}$$
 - Define a vector field $\bm{E}$ caused by some charge, which causea a force $\bm{F}$ on an infinitesimally small test charge $q$:
@@ -49,7 +49,7 @@ $$\bm{E}(\bm{r})=\frac{1}{4\pi\epsilon_0}\frac{q}{r^2}\bm{\hat{r}}$$
 
 - The superposition principle: electric fields from several charged particles are (vectorially) additive — electrostatics is linear (in a vacuum)
 
-### The electrostatic potential
+## The electrostatic potential
 - The work done to move a charge from $\bm{r}$ to $\bm{r+}d\bm{r}$:
  $$dW=-d\bm{r}\cdot\bm{F}(\bm{r})$$
 	 - The work is oone _against_ the force $\bm{F}$
@@ -75,13 +75,13 @@ $$\bm{E}(\bm{r})=-\nabla V(\bm{r})$$
 
 - Often simpler to find add potentials using superposition, then use grad to find $\bm{E}$
 
-### The spatial derivatives of an electrostatic field
+## The spatial derivatives of an electrostatic field
 - Use the fact that the p.d. around a loop is zero
 - Consider moving a charge through a loop in a plane, in an _electrostatic system_:
 $$\pd{E_i}{x_j}=\pd{E_j}{x_i}$$
 - This can be expressed using the curl, and Stokes' theorem:
 $$\nabla\times\bm{E}=0$$
-### Monopoles
+## Monopoles
 - A monopole is defined as a _single point charge_ $q$
 - Using the definition of $V$, its electrostatic potential is:
 $$V(\bm{r})=\frac{1}{4\pi\epsilon_0}\frac{q}{r}$$
@@ -90,7 +90,7 @@ $$V(\bm{r})=\frac{1}{4\pi\epsilon_0}\frac{q}{r}$$
 
 - A charge can be regarded as a "source" of field lines
 
-### Dipoles
+## Dipoles
 - A dipole is defined as two point charges $+q$ and $-q$ placed at a _short distance_ $a$ apart
 	- No overall net charge
 	- _Direction_ of the dipole is from $-q$ to $+q$
@@ -108,7 +108,7 @@ $$V(\bm{r})=\frac{1}{4\pi\epsilon_0}\frac{\bm{p\cdot r}}{r^3}=\frac{1}{4\pi\epsi
 	- At $\theta=0$, the field is radial
 	- At $\theta=\pi/2$, the field is azimuthal
 
-#### A dipole in a uniform electric field
+### A dipole in a uniform electric field
 - The _force and couple_ on a dipole in a uniform field:
 	- The charges experience the _same force in opposite directions_
 	- The dipole actually experiences a _couple_:
@@ -125,7 +125,7 @@ $$V(\bm{r})=\frac{1}{4\pi\epsilon_0}\frac{\bm{p\cdot r}}{r^3}=\frac{1}{4\pi\epsi
 	- Stable equilibrium when $\theta=0$, unstable equilibrium when $\theta=\pi$
 
 
-#### A dipole in a non-uniform electric field
+### A dipole in a non-uniform electric field
  - The force on the dipole:
 	 - The electric field at the positive charge can be written as:
 	 $$\bm{E^+}=\bm{E^-}+\bm{a\cdot}(\nabla \bm{E})$$
@@ -137,7 +137,7 @@ $$V(\bm{r})=\frac{1}{4\pi\epsilon_0}\frac{\bm{p\cdot r}}{r^3}=\frac{1}{4\pi\epsi
 	- For a _fixed, rigid_ (i.e. non-induced) dipole, the dipole will move to a position where it is aligned with the field
 	- This calculation assumes the dipole _will not rotate_
 
-### The multipole expansion
+## The multipole expansion
 - _Expand_ the potential of any charge distribution 
 - Monopole - net charge, $V \propto 1/r$
 - Dipole: No net charge, net dipole moment, $V\propto 1/r^2$
@@ -154,7 +154,7 @@ $$\bm{p}=\int\,dV\bm{r}\,\rho(\bm{r})$$
 
 - More mathematical details: [[Topics in Electromagnetism#Multipole expansion|Multipole expansion]]
 
-### Electric flux and Gauss' Law for electrostatics
+## Electric flux and Gauss' Law for electrostatics
 - Quantify "field line density" using the concept of _electric flux_:
 $$\int_S d\bm{S}\cdot\bm{E}(\bm{r})$$
 	- Not exactly a "measurable" quantity
@@ -180,7 +180,7 @@ $$\bm{D}(\bm{r})=\epsilon_0\bm{E}(\bm{r})$$
 $$\oint_{S=\partial V}d\bm{S}\cdot\bm{D}(\bm{r})=\int_VdV\,\rho(\bm{r})$$
 $$\nabla\cdot\bm{D}=\rho$$
 
-### Applying Gauss's Law to charge distributions
+## Applying Gauss's Law to charge distributions
 - An _infinite, uniform sheet_ of charge: draw a _Gaussian pillbox_
 $$\bm{E}=\frac{\sigma}{2\epsilon_0}\bm{\hat{n}}$$
 	- Infinite size leads to symmetry and a normal electric field
@@ -191,7 +191,7 @@ $$\bm{E}=\frac{\lambda}{2\pi\epsilon_0r}\bm{\hat{r}}$$
 	- Potential between points at distances $r$ and $r_0$: $V=\lambda/(2\pi\epsilon_0)\ln(r/r_0)$
 	- Coaxial cable: two cylinders
 
-### Laplace's and Poisson's equations
+## Laplace's and Poisson's equations
 - Consider the field at a point, expressed using the potential
 - Poisson's equation:
 $$-\nabla\cdot\bm{E}=\nabla\cdot(\nabla V)=\nabla^2V=-\frac{\rho}{\epsilon_0}$$
@@ -203,14 +203,14 @@ $$\nabla^2V=0$$
 - [[Poisson and Laplace's equations|How to solve the damn things]]
 
 
-### Capacitance
+## Capacitance
 - Consider two conducting surfaces with potential difference $V$, holding opposite amounts of charge $Q$, the capacitance $C$ is:
 $$C=\frac{Q}{V}$$
 - Reference point can be anywhere on the two surfaces
 
-### Electrostatic energy
+## Electrostatic energy
 
-#### Assembly of charges
+### Assembly of charges
 - Assemble a system of point charges $q_i$ from infinity
 - Adding up the energy from assembling each individual charge:
 $$U_N=\sum_{j=1}^N\sum_{i<j}\frac{1}{4\pi\epsilon_0}\frac{q_jq_i}{r_{ij}}$$
@@ -223,11 +223,11 @@ $$U_N=\frac{1}{2}\sum_{j=1}^Nq_j\sum_{i\neq j}\frac{1}{4\pi\epsilon_0}\frac{q_i}
 $$U=\frac{1}{2}\int d^3\bm{r}\,\rho(\bm{r})\,V(\bm{r})$$
 	- $V(\bm{r})$ still does not involve the infinitesimal charge element at $\bm{r}$
 
-#### Energy in a capacitor
+### Energy in a capacitor
 - Sum over $N$ infinitesimal charges $dQ$ so $Q=NdQ$:
 $$U=\frac{1}{2}\frac{Q^2}{C}=\frac{1}{2}QV=\frac{1}{2}CV^2$$
 
-#### Energy stored in the electric field
+### Energy stored in the electric field
 - Energy can be considered to be stored _in the field itself_
 
 - By considering a parallel plate capacitor, with area $A$ and distance $d$:
@@ -244,7 +244,7 @@ $$U=\int d^3\bm{r}\,\bm{D}(\bm{r})\cdot\bm{E}(\bm{r})$$
 $$U=\frac{1}{2}\epsilon_0\left[\int d^3\bm{r}\,|\bm{E}(\bm{r})|^2+\int d\bm{S}\cdot[V(\bm{r})\bm{E}(\bm{r})]\right]$$
 - The integral must be taken _at infinity_ for the second term to vanish
 
-#### Some nuance
+### Some nuance
 - When dealing with point charges, $\sum \frac{1}{2}qV$ is the energy required to _assemble_ the charges
 	- Here, $V$ does not include the potential of the charge itself (since it blows up)
 - When dealing with a continuous distribution, $\frac{1}{2}\int \rho V  \,d^3\bm{r}$ is the energy of the _entire system_
@@ -261,7 +261,7 @@ $$U=\frac{1}{2}\epsilon_0\left[\int d^3\bm{r}\,|\bm{E}(\bm{r})|^2+\int d\bm{S}\c
 The infinite energy of a point charge is a recurring source of embarrassment for electromagnetic theory, afflicting the quantum version as well as the classical.
 >-David J. Griffiths
 
-### Virtual work in electrostatics
+## Virtual work in electrostatics
 - Write down the energy as a function of a displacement of something in the system
 	- Account for work done by an external mechanical system
 	- Account for energy dissipated or supplied by _external circuit components_
@@ -282,12 +282,13 @@ $$F\,dx=\pd{U_s}{x}\,dx+\pd{U_d}{x}\,dx$$
 	- Force is proportional to $1/x^2$, still proportional to plate area
 
 
-## Electrostatics in homogeneous dielectric materials
+# Electrostatics in dielectric materials
 - Previously: free space and conductors
 - Dielectrics: insulating materials
 	- No free charge in the material itself, only _bound charges_
 	- Overall neutral
 
+## Physical origins
 - When an external electric field is applied, positive and negative _bound charges separate_, and a dipole moment is induced
 - For uniform $\bm{E}_0$ and a homogeneous material, charge only appears on external surfaces
 	- Charges inside are _cancelled out_ (they don't move to the surface!)
@@ -296,16 +297,24 @@ $$F\,dx=\pd{U_s}{x}\,dx+\pd{U_d}{x}\,dx$$
 	- Non-linear behaviour emerges for high $\bm{E}_0$
 - _Isotropic materials_: magnitude of induced dipole moment is independent of orientation of $\bm{E}_0$ relative to the material
 
+- Atoms and molecules have an inherent _polarisability_ $\alpha$
+	- For linear, isotropic dielectrics, it is a _scalar_
+	- In general, it is a _tensor_
+- The _induced dipole_ $\bm{p}$ from an electric field $\bm{E}$ is:
+$$\bm{p}=\alpha\bm{E}$$
+
+## Polarisation and bound charge density
 - _Polarisation_ $\bm{P}$: dipole moment _per unit volume_
 	$$\bm{P}=\frac{d\bm{p}}{dV}$$
 	- Independent of material size and shape
 
+### Surface charges
 - Consider an infinitesimal cubic volume of polarised dielectric material
 - When putting microscopic volumes together in a _uniform_ $\bm{E}_0$, _surface charges cancel_
-- Surface bound charge density:
+- _Surface_ bound charge density:
 $$\sigma=\bm{P\cdot\hat{n}}$$
 
-- Putting a linear dielectric in a capacitor
+- Putting a linear dielectric in a _capacitor_
 	- _Constant potential_: as bound charges are induced, _free charge increases_ to maintain the electric field
 	- _Constant free charge_: due to induced charges, total charge decreases and _potential decreases_
 
@@ -318,7 +327,7 @@ $$Q=\epsilon_0(1+\chi)|\bm{E}|A$$
 $$\epsilon=1+\chi$$
 - Then, the capacitance becomes:
 $$C=\frac{Q_f}{V}=\frac{\epsilon_0\epsilon A}{d}$$
-
+### Volume charges
 - Consider a non-uniform external field
 - $\bm{P}$ is also non-uniform, and _not all bound charges in the interior are cancelled out_
 - Consider microscopic volumes put together, one gets a volume _bound charge density_:
@@ -327,11 +336,11 @@ $$\rho=-\nabla\cdot\bm{P}$$
 
 - Integrating $\rho$ over the volume of the dielectric and applying the divergence theorem:
 $$-\int_\mathcal{V}\nabla\cdot\bm{P}\,d^3\bm{r}=\int_{S= \partial\mathcal{V}}\bm{P}\cdot d\bm{S}$$
-	- The interior bound charge is equal and opposite to the surface bound charge
+	- The _interior bound charge is equal and opposite to the surface bound charge_
 
 - [[Dielectric and magnetic materials|Applications in materials science]]
 
-#### The electric displacement and Gauss' Law for dielectrics
+## The electric displacement and Gauss' Law for dielectrics
 - The total charge density is $\rho_f+\rho_b=\epsilon_0\nabla\cdot \bm{E}$
 - Define the _electric displacement_ $\bm{D}$:
 $$\bm{D}\equiv\epsilon_0\bm{E}+\bm{P}$$
@@ -346,7 +355,7 @@ $$\bm{D}=\epsilon\epsilon_0\bm{E}$$
 	- Total charge density reduced due to bound charge
 - This form of Gauss' Law is independent of material properties
 
-#### Remarks about dielectrics
+### Remarks about dielectrics
 - The induction of a dipole is an _approximation_
 - A charge distribution is described by a _hierarchy of terms_
 - The dipole is the lowest order term
@@ -355,7 +364,7 @@ $$\bm{D}=\epsilon\epsilon_0\bm{E}$$
 
 - The electric field $\bm{E}$ is more "fundamental", and is an actual measurable quantity
 
-#### Situations involving dielectrics
+### Situations involving dielectrics
 - _Constant potential_ between a collection of equipotential surfaces:
 	- _$\bm{E}$ is determined_ and fixed
 	- $\bm{D}$ gives free charge on the surfaces
@@ -364,14 +373,7 @@ $$\bm{D}=\epsilon\epsilon_0\bm{E}$$
 	- _$\bm{D}$ is determined_ and fixed
 	- $\bm{E}$ and $V$ depend on $\epsilon$ as a dielectric is introduced, to maintain free charge
 
-#### Molecular origins of dielectrics
-- Atoms and molecules have an inherent _polarisability_ $\alpha$
-	- For linear, isotropic dielectrics, it is a _scalar_
-	- In general, it is a _tensor_
-- The _induced dipole_ $\bm{p}$ from an electric field $\bm{E}$ is:
-$$\bm{p}=\alpha\bm{E}$$
-
-### Inhomogeneous dielectrics and boundary conditions
+## Inhomogeneous dielectrics and boundary conditions
 - Inhomogeneous dielectric: $\epsilon$ varies with position
 - Consider a flat boundary where $\epsilon$ has a _discontinuity, with no free charge_
 
@@ -392,13 +394,13 @@ $$\bm{E}_{||1}=\bm{E}_{||2}$$
 $$\frac{\cot\theta_2}{\cot\theta_1}=\frac{\epsilon_1}{\epsilon_2}$$
 - The magnitudes of $\bm{P}$ and $\bm{E}$ of a dielectric body in an external field is heavily dependent on shape
 
-- Dielectric sphere in a uniform field:
+- Example: Dielectric sphere in a uniform field:
 	- Uniform electric field in sphere
 	- Sphere is polarised and acts as a dipole
 	- From solving Laplace's equation and applying the appropriate boundary conditions:
 $$\bm{E}_\text{in}=\frac{3}{\epsilon+2}\bm{E}_0$$
 
-### Energy density in dielectrics
+## Energy density in dielectrics
 - The same formula for energy from $\rho$ and $V$ applies:
 $$U=\frac{1}{2}\int d^3\bm{r}\,\rho(\bm{r})V(\bm{r})$$
 - Following a similar derivation as above:
@@ -410,7 +412,7 @@ $$U=\frac{1}{2}\int\,d^3\bm{r}\,\bm{D}(\bm{r})\cdot\bm{E}(\bm{r})$$
 - From the approach of bringing in bits of free charge, a change in energy is:
 $$dU=\int(\Delta \bm{D})\cdot\bm{E}\;d^3\bm{r}$$
 
-## Magnetostatics
+# Magnetostatics
 - Just as charges give rise to electric fields, moving charge gives rise to magnetic fields
 
 - Electrostatics: static charges
@@ -419,7 +421,7 @@ $$dU=\int(\Delta \bm{D})\cdot\bm{E}\;d^3\bm{r}$$
 - For time-invariant systems, electric and magnetic fields are separate
 	- No need to deal with [[Relativity]]
 
-### The Lorentz Force and the Biot-Savart Law
+## The Lorentz Force and the Biot-Savart Law
 - Let there be a test current element $d\bm{l}$, with its direction defining the current flow
 - The _magnetic field_ $\bm{B}$ is defined through the force exerted on the test current:
 $$d\bm{F}=Id\bm{l}\wedge\bm{B}$$
@@ -442,7 +444,7 @@ $$d\bm{F}_2=\frac{\mu_0}{4\pi}I_1I_2\,d\bm{l}_2\wedge(d\bm{l}_1 \wedge\frac{\bm{
 - Maximum when aligned
 - Attractive if current flow is in the same direction
 
-### Gauss' Law for magnetic fields
+## Gauss' Law for magnetic fields
 - Like the electric flux, the magnetic flux is given by:
 $$\Phi_B=\int_S d\bm{S}\cdot\bm{B}(\bm{r})$$
 - This gives the magnetic field $\bm{B}$ another name: the _magnetic flux density_
@@ -450,11 +452,11 @@ $$\Phi_B=\int_S d\bm{S}\cdot\bm{B}(\bm{r})$$
 $$\displaylines{\oint_S d\bm{S}\cdot \bm{B}=0\\ \nabla\cdot\bm{B}=0}$$
 - This is _Gauss' Law for the magnetic field_
 
-### Magnetic dipoles
+## Magnetic dipoles
 - No monopoles: smallest unit is a dipole
 - Dipole: infinitesimally small current loop
 
-#### Uniform magnetic field
+### Uniform magnetic field
 - Consider an infinitesimal current loop in a uniform magnetic field
 - The current loop experienced a couple of forces to produce a torque
 - For a large current loop with area elements $d\bm{S}$, the _magnetic dipole moment_ is:
@@ -468,14 +470,14 @@ $$U=-\bm{m}\cdot\bm{B}$$
 	- For a macroscopic current loop, the energy becomes $-I\Phi$
 
 
-#### Non-uniform magnetic field
+### Non-uniform magnetic field
 - By considering infinitesimal current loops in the field:
 $$\bm{F}=m_j\pd{B_j}{x_i}\bm{e}_i$$
 - For a _uniform dipole moment_:
 $$\bm{F}(\bm{r})=\nabla[\bm{m}\cdot\bm{B}(\bm{r})]$$
 - A _fixed_ dipole tends to move to a position where it can be _aligned with the field_
 
-### The magnetic scalar potential
+## The magnetic scalar potential
 - Define a _magnetic field strength_ $\bm{H}(\bm{r})$:
 $$\bm{B}(\bm{r})=\mu_0\bm{H}(\bm{r})$$
 - We would like to describe it in terms of a _magnetic scalar potential_ $\phi_m(\bm{r})$:
@@ -487,7 +489,7 @@ $$\displaylines{\bm{H}(\bm{r})=-\nabla\phi_m(\bm{r}) \\ \bm{B}(\bm{r})=-\mu_0\na
 
 - Physical meaning of $\phi_m$: _unrelated to work_, simply the shape of a landscape to generate $\bm{B}$
 
-#### Magnetic scalar potential of a current loop
+### Magnetic scalar potential of a current loop
 - The solid angle $d\Omega$ is defined by an element of surface area $d\bm{S}$ on a sphere of radius $r$:
 $$d\Omega=\frac{|d\bm{S}|}{r^2}$$
 - If the centre is not at the centre of the sphere, or the surface is not spherical:
@@ -502,7 +504,7 @@ $$\phi_m(r,\theta)=\frac{|d\bm{m}|\cos\theta}{4\pi r^2}$$
 - Hence, the magnetic scalar potential at some point is _proportional to the solid angle $\Omega$subtended by the loop when viewed from the observation point_
 $$\phi_m=\frac{I\Omega}{4\pi}$$
 
-### Ampere's Law
+## Ampere's Law
 - Consider a current loop with current $I$
 - Integration path: from one side to the loop, to infinity, circle back to the other side
 - $\Omega$ along the path: $2\pi$, $0$, $-2\pi$
@@ -514,8 +516,8 @@ $$I=\int d\bm{S}\cdot\bm{J}$$
 - Using Stokes' Theorem and the definition of magnetic field strength:
 $$\nabla\wedge\bm{H}=\bm{J}$$
 
-### Applying Ampere's Law
-#### The infinite wire
+## Applying Ampere's Law
+### The infinite wire
 - The magnetic field from an infinite wire with current $I$:
 $$\bm{B}=\frac{\mu_0I}{2\pi r}\hat{\phi}$$
 - By expressing the [[Vector calculus in 3-dimensions#Gradient in orthogonal curvilinear coordinates|gradient in cylindrical coordinates]], one can find the scalar potential:
@@ -523,7 +525,7 @@ $$\phi_m=-\frac{I\phi}{2\pi}$$
 	- The field points _downhill_
 	- The potential is _multi-valued_, and _potential difference cannot describe energy_
 
-#### Two parallel infinite wires
+### Two parallel infinite wires
 - The _force per unit length_ between two infnite, parallel wires with separation $a$:
 $$F=\frac{\mu_0I_1I_2}{2\pi a}$$
 	- Attractive if the currents flow in the same direction
@@ -532,13 +534,13 @@ $$F=\frac{\mu_0I_1I_2}{2\pi a}$$
 	- If the currents are in opposite directions, there is a _discontinuity_ along the line joining the wires
 	- Same diection: discontinuity only occurs along a closed path enclosing a current
 
-#### The solenoid
+### The solenoid
 - A long solenoid with $n$ turns per unit length:
 	- Consider a loop enclosing a section of the current, extending to infinity
 	- Field outside the solenoid is zero
 	$$B=\mu_0 nI$$
 
-### The magnetic vector potential
+## The magnetic vector potential
 - Define a magnetic vector potential $\bm{A}$:
 $$\bm{B=\nabla\wedge A}$$
 - Automatically fulfills Gauss' Law
@@ -566,7 +568,7 @@ $$\bm{A}(\bm{r})=\frac{\mu_0}{4\pi}\int \frac{\bm{J}(\bm{r'})}{|\bm{r-r'}|}\,d^3
 	- Moving charge is the source of the magnetic field
 	- When changing the observer, the fields also change
 
-### Current resistivity and conductivity
+## Current resistivity and conductivity
 - Consider a volume of material with surface area $S$, length $l$ and a potential difference of $V$
 - The current follows Ohm's Law:
 $$V=IR$$
@@ -576,7 +578,7 @@ $$V=IR$$
 $$\bm{J}=\sigma\bm{E}$$
 - $\sigma$ is the _conductivity_, equal to $1/\rho$, where $\rho$ is the _resistivity_
 
-## Magnetostatics in homogeneous magnetic materials
+# Magnetostatics in homogeneous magnetic materials
 - Magnetically polarisable materials change how magnetic field lines behave
 - Types: _diamagnetic_, _paramagnetic_, _ferromagnetic_
 - Properties stem from _magnetic dipole moments of atoms and molecules_
@@ -586,7 +588,7 @@ $$\bm{J}=\sigma\bm{E}$$
 - Paramagnetic materials: _permanent dipoles align with external magnetic field_
 - Ferromagnetic materials: _effect of alignment is enhanced_
 
-#### Volume magnetisation currents
+### Volume magnetisation currents
 - Magnetisation currents create small dipole moments
 - Randomly aligned dipoles produce no net circulating current, and no net dipole moment
 - Aligned dipoles produce net circulating current and dipole moment
@@ -606,7 +608,7 @@ $$\bm{J}_m=\nabla\wedge\bm{M}$$
 
 - _Uniform magnetisation leads to zero bound current_ as currents around loops sum to zero
 
-#### Surface magnetisation currents
+### Surface magnetisation currents
 - For a uniform $\bm{M}$, some magnetisation currents must _reside on the surface_
 
 - Consider a block with uniform magnetisation
@@ -616,7 +618,7 @@ $$\bm{J}_m=\nabla\wedge\bm{M}$$
 $$I=\int \bm{K}_m\cdot d\bm{l}$$
 - By considering one surface of the block, the surface current density is:
 $$\bm{K}_m=\bm{M}\wedge\bm{\hat{n}}$$
-#### Ampere's Law in magnetic materials
+### Ampere's Law in magnetic materials
 - Total current = flow of free charge + magnetisation current
 - Magnetisation current _will also produce a force on some test current_
 - Modify Ampere's Law accordingly:
@@ -629,7 +631,7 @@ $$\nabla\wedge\bm{H}=\bm{J}_\text{free}$$
 $$\oint \bm{H}\cdot d\bm{l}=I_\text{free}$$
 - This form is independent of material properties
 
-#### Magnetic permeability in materials
+### Magnetic permeability in materials
 - To calculate forces, $\bm{B}$ is needed, and $\bm{M}$ is required for that
 - For _most materials, in the small-field limit_, $\bm{M}$ is linearly proportional to $\bm{H}$:
 $$\bm{M}=\chi_m\bm{H}$$
@@ -652,7 +654,7 @@ $$\bm{B}=\mu_0(1+\chi_m)\bm{H}\equiv\mu_0\mu\bm{H}$$
 - Like the case of dielectrics, susceptibility can be a _tensor_ for anisotropic materials
 	- $\bm{B}$ does not need to be parallel to $\bm{H}$
 
-### Inhomogeneous magnetic materials and boundary conditions
+## Inhomogeneous magnetic materials and boundary conditions
 - Consider a flat boundary with a discontinuity in $\mu$, with _no free current_
 
 - The perpendicular component of $\bm{B}$: use _Gauss' Law for the magnetic field_
@@ -675,7 +677,7 @@ $$\bm{H}_{1||}=\bm{H}_{2||}$$
 	- Field lines at cylindrical surface will curve due to edge effects
 ![[Fields in a bar magnet.png]]
 
-### Deceptive parallels
+## Deceptive parallels
 - $\bm{D}$ is not _exactly_ analagous to $\bm{E}$ but with a factor $\epsilon\epsilon_0$
 - Similarly, $\bm{H}$ is not exactly analagous to $\bm{B}$ with a factor $\mu\mu_0$
 - As seen above, _they have different boundary conditions_
@@ -683,7 +685,7 @@ $$\bm{H}_{1||}=\bm{H}_{2||}$$
 $$\displaylines{\nabla\cdot\bm{D}=\rho_f \hspace{1cm} \nabla\wedge\bm{D}=\nabla\wedge\bm{P} \\ \nabla\cdot\bm{H}=-\nabla\cdot\bm{M} \hspace{1cm} \nabla\wedge\bm{H}=\bm{J}_f}$$
 - As $\bm{P}$ and $\bm{M}$ depend on material, the divergence and curl _must be non-zero at boundaries_
 
-### Comparing behaviour of electric and magnetic fields
+## Comparing behaviour of electric and magnetic fields
 - Fundamental quantities in electrostatics and magnetostatics:
 	- $\bm{E}$ gives force on a _test charge_
 	- $\bm{B}$ gives force on a _test current_
@@ -699,7 +701,7 @@ $$\displaylines{\nabla\cdot\bm{D}=\rho_f \hspace{1cm} \nabla\wedge\bm{D}=\nabla\
 
 ![[Boundary conditions.png|250px]]
 
-### Electromagnets
+## Electromagnets
 - Consider a _coil of wire_ wrapped around a _toroidal core_ of magnetisable material
 - Assume $N$ turns with current $I$ around a _continuous_ toroidal core
 - Core: high permeability $\mu$
@@ -720,13 +722,13 @@ $$\displaylines{H_\text{gap}=\frac{\mu NI}{2\pi r+(\mu-1)l} \\ B_\text{gap}\appr
 - Approximation works _for high $\mu$_
 - Since $\bm{B}$ is conserved across the loop, $H_\text{gap}>>H_\text{in}$
 
-## Electromagnetic induction
+# Electromagnetic induction
 - What happens when fields change with time
 - _Not quasi-static changes_
 - In electrostatics: static charge gives rise to electric fields
 - In magnetostatics: moving charge gives rise to magnetic fields
 
-### Faraday's Law
+## Faraday's Law
 - Empirical findings: 
 	- Changing magnetic flux gives an electromotive force (EMF)
 	- EMF magnitude proportional to rate of flux change
@@ -748,7 +750,7 @@ $$\oint d\bm{l}\cdot\bm{E}(\bm{r})=-\frac{d}{dt}\int_S d\bm{S}\cdot \bm{B}(\bm{r
 $$\nabla\wedge\bm{E}=-\pd{\bm{B}}{t}$$
 - When magnetic field is time-independent, the curl vanishes as in the electrostatic case
 
-### EMF from the Lorentz Force
+## EMF from the Lorentz Force
 - An _alternative perspective_ on electromagnetic induction
 - Consider the _"work done"_ on a moving charge in a _static magnetic field_
 	- From the frame of the charge, it experiences an "electric field" $\bm{E}=\bm{v\wedge B}$
@@ -760,7 +762,7 @@ $$\mathcal{E}=-\frac{d}{dt}\int_\text{loop}\bm{S}\cdot\bm{B}=-\frac{d\Phi}{dt}$$
 
 - Faraday's Law _DOES NOT CARE_ if the field is static and the circuit is changing, or vice versa
 
-### Self-inductance
+## Self-inductance
 - The flux _linked back into_ a circuit as a consequence of the current in the same circuit
 - Change in current --> change in $\bm{B}$ --> change in flux --> voltage
 - Heavily dependent on geometry
@@ -775,7 +777,7 @@ $$\frac{L}{l}=\mu_0n^2S$$
 
 - For most circuits, _flux within the wires_ is insignificant as _penetration depth_ is very low for higher frequencies
 
-### Inductors and capacitors in circuits
+## Inductors and capacitors in circuits
 - Consider an _open loop of wire_ with a small gap
 	- Electric field is _zero inside the wire_, so it does not contribute to the line integral
 $$V_\text{gap}=-\int_\text{gap} d\bm{l}\cdot\bm{E}=+\frac{d\Phi}{dt}=L\frac{dI}{dt}$$
@@ -793,7 +795,7 @@ $$U_C=\frac{1}{2}CV^2\hspace{1cm}U_L=\frac{1}{2}LI^2$$
 
 - Energy storing or dissipating components in physics can be _modelled as equivalent circuits_
 
-### Mutual inductance
+## Mutual inductance
 - Consider two coils next to each other
 - Current $I_1$ in coil 1 produces a flux that links to loop 2, and vice versa
 - The _mutual inductance_ $M_{21}$ is defined as:
@@ -820,7 +822,7 @@ $$M=k\sqrt{L_1L_2}$$
 - Consider a _doubly wound_ solenoid (wound by 2 _separate_ wires with _different currents and loop density_)
 	- For this system, $k=1$
 
-#### The Neumann formula
+### The Neumann formula
 - The flux in coil 2 due to coil 1 can be written using the [[#The magnetic vector potential|magnetic vector potential]]:
 $$\Phi_{21}=\iint_\text{loop 2} \bm{B}_1\cdot d\bm{S}_2=\iint_\text{loop 2}\left(\nabla\wedge\bm{A}_1\right)\cdot d\bm{S}_2$$
 - Using Stokes' Theorem and expressing $\bm{A}$ in terms of the current in coil 1:
@@ -829,7 +831,7 @@ $$\Phi_{21}=\oint_2 \bm{A}_1\cdot d\bm{l}_2=\oint_2\left(\oint_1 \frac{\mu_0I_1}
 $$M_{21}\equiv\frac{\Phi_{21}}{I_1}=\frac{\mu_0}{4\pi}\oint_2\oint_1 \frac{d\bm{l}_1\cdot d\bm{l}_2}{|\bm{r}_2-\bm{r}_1|}$$
 - It can clearly be seen that this formula is _symmetric_, hence $M_{21}=M_{12}$
 
-### Transformers
+## Transformers
 - Consider two coils with number of turns $N_1$ and $N_2$ _coupled by a core of ferromagnetic material_
 - Ideality:
 	- All flux is _perfectly captured_ by both coils, $k=1$
@@ -841,7 +843,7 @@ $$\frac{V_1}{V_2}=\frac{N_1}{N_2}$$
 $$Z_1=\frac{j\omega L_1Z_2(N_1/N_2)^2}{j\omega L_1+Z_2(N_1/N_2)^2}\approx Z_2\left(\frac{N_1}{N_2}\right)^2$$
 - Circuit containing transformer: _clearly define_ current directions, _assume a sign convention for how flues add/subtract_ based on how 2 currents flow _relative to each other_
 
-### Energy flow in circuits
+## Energy flow in circuits
 - Consider a circuit with resistance $R$, inductance $L$, and capacitor $C$
 - With current $I=I_0\cos(\omega t)$, the powers are:
 $$P_R(t)=I_0^2R\cos^2\omega t \hspace{1cm} P_L(t)=-\frac{1}{2}I_0^2\omega L\sin2\omega t \hspace{1cm} P_C(t)=\frac{1}{2}I_0^2\frac{1}{\omega C}\sin2\omega t$$
@@ -859,7 +861,7 @@ $$\omega_0=\frac{1}{\sqrt{LC}}$$
 - Many electrical systems can be _modelled as an $LRC$ circuit_
 
 
-### Magnetic energy
+## Magnetic energy
 - [[#Electrostatic energy]]: energy _stored in the field_ as _charges are assembled_
 - Magnetostatic energy: energy _stored in the field_ as _current loops are assembled_
 
@@ -883,7 +885,7 @@ $$U=\frac{1}{2}\int d^3\bm{r}\,\bm{H}(\bm{r})\cdot \bm{B}(\bm{r})$$
 - The integrand is the _magnetic field energy density_
 - This can be compared to the expression for electric field energy density
 
-## Maxwell's equations
+# Maxwell's equations
 - With the Maxwell's equations we have now, _conservation of charge is only satisfied in the steady state_
 	- Substitute $\nabla\wedge\bm{H}=\bm{J}$ into the continuity equation
 
@@ -904,9 +906,9 @@ $$\displaylines{\nabla\cdot\bm{D}=\rho \\ \nabla\wedge E=-\pd{\bm{B}}{t} \\ \nab
 >-David J. Griffiths
 
 
-## Electromagnetic waves
+# Electromagnetic waves
 
-### In free space
+## In free space
 - In free space, Maxwell's equations are:
 $$\displaylines{\nabla\cdot\bm{E}=0 \\ \nabla\wedge E=-\mu_0\pd{\bm{H}}{t} \\ \nabla\cdot\bm{H}=0 \\ \nabla\wedge H=\epsilon_0\pd{\bm{E}}{t}}$$
 
@@ -921,7 +923,7 @@ $$\nabla^2\bm{E}=(\nabla^2 E_x ,\nabla^2 E_y,\nabla^2E_z)$$
 $$c=\frac{1}{\sqrt{\mu_0\epsilon_0}}=299,792,458 \text{ m s}^{-1}$$
 - The speed is _the same for all observers_, leading to Einstein's [[Relativity|special theory of relativity]]
 
-### Plane wave in isotropic medium along the z-direction
+## Plane wave in isotropic medium along the z-direction
 - Let the plane wave be propagating along $z$:
 $$\pd{\psi(\bm{r},t)}{x}=\pd{\psi(\bm{r},t)}{y}=0$$
 - _By considering the curls_, one can see that _longitudinal components of the fields are static_
@@ -968,7 +970,7 @@ $$E_x=cB_y$$
 
 - $\bm{E}$, $\bm{H}$, and the propagation direction _always form a right-handed coordinate system_
 
-### General plane waves
+## General plane waves
 - The phase of the field components is, in general (for position vector $\bm{x}$):
 $$\bm{k\cdot x}-\omega t$$
 - The fields themselves:
@@ -989,7 +991,7 @@ $$\bm{E}(\bm{x},t)=\iiiint d^3\bm{k}\,d\omega\,\bm{A}_s(\bm{k},\omega)\, \exp[i(
 - $\bm{A}_s$ is known as the _spectral function_
 - The spectral function is the 3-dimensional [[Fourier series and transforms|Fourier transform]] of the field
 
-### Energy flow in electromagnetic waves
+## Energy flow in electromagnetic waves
 - Work done on a charge is calculated by the [[Electromagnetism#The Lorentz Force and the Biot-Savart Law|Lorentz force]]
 - As force from the $\bm{B}$ field $\perp \bm{v}$, the _magnetic force does no work_
 
@@ -1007,7 +1009,7 @@ $$\bm{N}=\bm{E\wedge H}$$
 - The magnitude of $\bm{N}$ represents _power flow per unit area_
 - Direction of $\bm{N}$ is _direction of energy flow_
 
-#### Examples of energy flow
+### Examples of energy flow
 - Charging capacitor:
 	- $\bm{E}$ points _perpendicular_ to the plates
 	- $\bm{B}$ _circulates_ around the plates
@@ -1021,7 +1023,7 @@ $$\bm{N}=\bm{E\wedge H}$$
 >"Intuitively screwy, but true!"
 >-Richard Feynman
 
-### Pressure and momentum for plane waves
+## Pressure and momentum for plane waves
 - Using [[Relativity|Einstein's energy-momentum relation]], and the fact that _photons are massless_:
 $$E=|\bm{p}|c$$
 - The _energy per unit volume_ $U$ is related to _radiation momentum density_ $\bm{g}$ by:
@@ -1032,8 +1034,8 @@ $$\bm{g}=\frac{\bm{N}}{c^2}$$
 $$\bm{R}=\frac{\bm{N}}{c}$$
 - If the light is _reflected_, the _pressure doubles_
 
-### Complex power in electrical components and waves
-#### Electrical components
+## Complex power in electrical components and waves
+### Electrical components
 - Consider some electrical component with voltage and current:
 $$\displaylines{V=V_0\cos(\omega t-\phi) \\ I=I_0\cos\omega t}$$
 - By expanding the cosines, the _time-averaged power_, or _real power_ becomes:
@@ -1051,7 +1053,7 @@ $$P=\frac{1}{2}IV^*$$
 - _Power flow_ can be represented by a vector in the complex plane
 - When two components are connected, the complex power flow is _the combined sum in the complex plane_ for the two components, _regardless of how they are connected_
 
-#### Waves
+### Waves
 - The Poynting vector gives _instantaneous power flow per unit area_ at a given point
 - If $\bm{E}$ and $\bm{H}$ are _complex_, the _time-averaged power_ is:
 $$P_r=\frac{1}{2}\Re\left[\bm{E}(\bm{r})\wedge\bm{H}(\bm{r})\right]$$
@@ -1059,7 +1061,7 @@ $$P_r=\frac{1}{2}\Re\left[\bm{E}(\bm{r})\wedge\bm{H}(\bm{r})\right]$$
 $$P_i=\frac{1}{2}\Im\left[\bm{E}(\bm{r})\wedge\bm{H}^*(\bm{r})\right]$$
 - For _plane waves_, since the fields are in phase, _power is always real_, with energy only flowing in _one direction_
 
-### Reflection and transmission at interfaces
+## Reflection and transmission at interfaces
 - Consider a plane wave with wavevector $\bm{k}$, incident on a _plane dielectric boundary_
 - Refractive indices in _incident and transmitted regions_ are $n_1$ and $n_2$ respectively
 - A _transmitted_ wave, $\bm{k}_t$ and _reflected_ wave $\bm{k}_r$ are produced
@@ -1074,7 +1076,7 @@ $$\displaylines{\omega_i=\omega_r=\omega_t \\ k_i\sin\theta_i=k_r\sin\theta_r=k_
 $$k=\frac{n\omega}{c}$$
 - From this, the _law of reflection_, as well as _Snell's Law_ are derived:
 $$\displaylines{\theta_i=\theta_r \\ \frac{\sin\theta_t}{\sin\theta_i}=\frac{n_2}{n_1}}$$
-#### Fresnel's relations
+### Fresnel's relations
 - There are separate relations depending on if the wave is _polarised parallel or normal to the plane of incidence_
 - The _reflection and transmission coefficients_ can be derived from _using boundary conditions for the $\bm{E}$ and $\bm{H}$ fields_:
 $$\displaylines{r_{||}=\frac{\tan(\theta_i-\theta_t)} {\tan(\theta_i+\theta_t)} \hspace{1.5cm} t_{||}=\frac{2\cos\theta_i}{(n_2/n_1)\cos\theta_i+\cos\theta_t} \\ r_\perp=-\frac{\sin(\theta_i-\theta_t)}{\sin(\theta_i+\theta_t)} \hspace{1.5cm} t_\perp=\frac{2\cos\theta_i}{\cos\theta_i+(n_2/n_1)\cos\theta_t}}$$
@@ -1082,7 +1084,7 @@ $$\displaylines{r_{||}=\frac{\tan(\theta_i-\theta_t)} {\tan(\theta_i+\theta_t)} 
 
 - These coefficients _can take negative values_
 
-#### Special angles
+### Special angles
 - There is also an angle at which $r_{//}=0$, called the _Brewster's angle_ $\theta_B$:
 $$\tan\theta_B=\frac{n_2}{n_1}$$
 	- In other words, $\theta_i+\theta_t=\pi/2$
@@ -1095,7 +1097,7 @@ $$\sin\theta_c=\frac{n_2}{n_1}$$
 - There is an _evanescent wave_ in the transmission medium, so _no power is transmitted_
 	- The wave amplitude _decays perpendicular_ to the interface and _propagates along_ the interface
 
-#### Reflection and transmission of power
+### Reflection and transmission of power
 - The _power reflection and transmission_ coefficients are _proportional_ to the _modulus squared_ of the _amplitude_ coefficients
 	- Need to scale by refractive index due to _difference in wave velocity_
 
@@ -1107,7 +1109,7 @@ $$\braket{\bm{N}}=\frac{1}{2}\Re{(\bm{E}\wedge\bm{H}^*)}=\frac{1}{2Z}|\bm{E}|^2\
 - From this, for _both polarisations_, the coefficients for power can be written as:
 $$R=|r|^2 \hspace{1cm} T=\frac{n_2\cos\theta_t}{n_1\cos\theta_i}|t|^2$$
 
-### Waves in plasmas
+## Waves in plasmas
 - Plasmas: _conduction currents are present_, density of atoms is _low_
 	- Electrons move coherently, power is _undamped_
 - Approximation: the _ions are stationary_ as they are much bigger than electrons
@@ -1125,7 +1127,7 @@ $$\epsilon=1-\frac{\omega_p^2}{\omega^2}$$
 - The _plasma frequency_ $\omega_p$ is:
 $$\omega_p=\frac{Ne^2}{\epsilon_0m_e}$$
 
-#### Below plasma frequency
+### Below plasma frequency
 - Below $\omega_p$, _refractive index_ (and by extension, $k$) is _imaginary_
 - A _non-propagating, evanescent wave_ will occur in the transmitted medium:
 $$\bm{E}=\bm{E}_0\exp\left[-k_0z\left|1-\frac{\omega_p^2}{\omega^2}\right|^{1/2}\right]\exp(-i\omega t)$$
@@ -1136,7 +1138,7 @@ $$\bm{E}=\bm{E}_0\exp\left[-k_0z\left|1-\frac{\omega_p^2}{\omega^2}\right|^{1/2}
 - Waves with $\omega<\omega_p$ incident upon plasma will be _reflected_ 
 	- Example: reflection from ionosphere
 
-#### Above plasma frequency
+### Above plasma frequency
 - The wave is _dispersive_
 - The [[Waves#Group velocity|dispersion relation]] is:
 $$\displaylines{\omega=\frac{ck}{\sqrt{1-\omega_p^2/\omega^2}} \\ \omega^2=c^2k^2+\omega_p^2}$$
@@ -1144,7 +1146,7 @@ $$\displaylines{\omega=\frac{ck}{\sqrt{1-\omega_p^2/\omega^2}} \\ \omega^2=c^2k^
 - Group velocity _approaches $c$_ as $\omega$ goes to infinity
 - $v_\phi v_g=c^2$
 
-### Waves in conducting media
+## Waves in conducting media
 - Conductors: density of electrons and nuclei is _high_, _scattering is significant_
 	- Power is dissipated
 - Relevant relations:
@@ -1166,7 +1168,7 @@ $$\displaylines{\delta\equiv\sqrt{\frac{2}{\sigma\omega\mu_0\mu}} \\ \bm{E}=\bm{
 - The Poynting vector can be _instantaneously_ positive _or negative_
 - On _average_, energy travels forwards as it is dissipated
 
-#### Skin effect of wires
+### Skin effect of wires
 - Consider a wire carrying a current $I$ oscillating at frequency $\omega$
 - For a metal with finite conductivity, the electric field is _along the wire_
 - From calculating $\bm{H}$, there is a _component of the Poynting vector pointing towards the surface_
@@ -1180,15 +1182,15 @@ $$\displaylines{\delta\equiv\sqrt{\frac{2}{\sigma\omega\mu_0\mu}} \\ \bm{E}=\bm{
 - From this, one can evaluate _power dissipated_ and _effective resistance_ $R=P/\braket{I^2}$ per unit length
 - The power is dissipated as if there is a _thin shell of uniform current_ with thickness $\delta$
 
-## Guided waves
+# Guided waves
 - Due to the skin effect, wires _become lossy at high frequencies_
 - If the dimension of the object $d$ is _comparable to or larger than_ $\lambda$, voltage and current _cannot be assumed to be constant_ along the wire
 	- $\lambda>>d$: classical circuits
 	- $\lambda\approx d$: transmission lines
 	- $\lambda<<d$: waveguides
 
-### Transmission lines
-#### Parallel wires
+## Transmission lines
+### Parallel wires
 - Two parallel wires along the $z-$direction
 - The two currents travel in _opposite directions_, with the same magnitude $I(z)$
 - There is a voltage $V(z)$ between the wires
@@ -1224,7 +1226,7 @@ $$C=\frac{\pi\epsilon_0}{\ln(2D/a)} \hspace{1.5cm} L=\frac{\mu_0}{\pi}\ln(2D/a)$
 
 - If the wires are _incompletely embedded_ in the dielectric, the wave _is not transverse_
 
-#### Coaxial cylinders
+### Coaxial cylinders
 - Consider coaxial cylinders with a medium of permittivity $\epsilon$ in between
 - Inner and outer radii of the dielectric are $a$ and $b$
 
@@ -1236,7 +1238,7 @@ $$C=\frac{2\pi\epsilon\epsilon_0}{\ln(b/a)} \hspace{1.5cm} L=\frac{\mu_0}{2\pi}\
 
 - If it is only partially filled with dielectric, the wave cannot be transverse
 
-#### Strip transmission line
+### Strip transmission line
 - Consider two flat strips of metal 'sandwiching' a substrate of thickness $d$
 - One acts as a _ground plane_, the other is a _conducting strip with length $a$_
 
@@ -1247,7 +1249,7 @@ $$C=\frac{\epsilon\epsilon_0a}{d} \hspace{1.5cm} L=\frac{\mu_0d}{a}$$
 
 - Approximation that the wave is transverse _only holds for low frequencies_
 
-#### Power flow in transmission lines
+### Power flow in transmission lines
 - The energy stored in a transmission line from $z=a$ to $z=b$ is:
 $$U=\int_a^b\,dz\left(\frac{1}{2}LI^2+\frac{1}{2}CV^2\right)$$
 - This is energy stored _in the fields_, with inductance and capacitance _distributed across the system_
@@ -1262,7 +1264,7 @@ $$\frac{dU}{dt}=[IV]_b-[IV]_a$$
 - If $R=Z$, _all power is absorbed_ as $dU/dt=0$, and all power is absorbed
 - If $R\neq Z$, _some power must be reflected_ as $dU/dt\neq0$
 
-#### Reflection on transmission lines
+### Reflection on transmission lines
 - Let there be a terminal load with impedance $Z_t$, from its definition:
 $$\frac{V_t}{I_t}=Z_t$$
 - The forward and backwards travelling waves are:
@@ -1273,7 +1275,7 @@ $$V_t=V_i+V_r \hspace{1.5cm} I_t=I_i+I_r$$
 $$r\equiv\frac{V_2}{V_1}=\frac{Z_t-Z}{Z_t+Z} \hspace{1.5cm} t\equiv\frac{V_t}{V_1}=1+r=\frac{2Z_t}{Z_t+Z}$$
 
 
-#### Input impedances on transmission lines
+### Input impedances on transmission lines
 - Consider the length of the line to be $a$
 - Assume the _input impedance_ to be $Z$, matched with the transmission line
 - The input and reflected voltages and currents are:
@@ -1295,7 +1297,7 @@ $$\frac{Z_\text{in}}{Z}=\frac{Z_t\cos ka+iZ\sin ka}{Z\cos ka+iZ_t\sin ka}$$
 - For a _quarter-wavelength line_, $ka=\pi/2$, and $Z_\text{in}=Z^2/Z_t$
 	- Used to match impadances
 
-### Waveguides
+## Waveguides
 - More discussion: [[Waves#Guided waves]]
 
 - Transmission lines support _transverse_ EM waves at high frequencies
@@ -1331,7 +1333,7 @@ $$k_\text{eff}^2=k^2-\frac{m^2\pi^2}{a^2}$$
 - The modes are formed when _the spacing of the plates is larger than free-space $\lambda$_
 - There is a _critical wavelength_, which wavelengths in the waveguide must be _under_
 $$\lambda_c=2a$$
-#### Rectangular waveguides
+### Rectangular waveguides
 - As the field is $y-$polarised, the guide can be _completely closed_ by placing plates in _planes of constant $y$_ so there is no parallel field
 - Since $H_y=0$, let any 2 plates be placed at $y=0$ and $y=b$
 - As the waveguide is closed, there can be _no voltage difference_ between plates
@@ -1340,7 +1342,7 @@ $$\lambda_c=2a$$
 - _Electric field is always transverse_, while the $\bm{H}$ field has _both $x$ and $z$ components
 	- $\bm{H}$ field _circulates_, giving rise to _currents in the plates_
 
-#### The general rectangular case
+### The general rectangular case
 - $\bm{E}$ can vary with _both $x$ and $y$
 - The general solution for the $\text{TE}_{mn}$ is:
 $$\displaylines{E_x=A_0k_y\cos(k_xx)\sin(k_yy)\cos(k_zz-\omega t) \\ E_y=-A_0k_x\sin(k_xx)\cos(k_yy)\cos(k_zz-\omega t) \\ E_z=0 \\ \bm{k}=\left(\frac{m\pi}{a},\frac{n\pi}{b},k_g\right)}$$

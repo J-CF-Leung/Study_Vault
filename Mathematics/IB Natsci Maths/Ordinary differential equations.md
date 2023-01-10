@@ -1,6 +1,6 @@
 #IB_Natsci 
 
-## Classification
+# Classification
 - The _general first-order_ ordinary differential equation is:
 $$y'+p(x)y=f(x)$$
 - This can be solved using an _integrating factor_:
@@ -15,7 +15,7 @@ $$\displaylines{Ly(x)=g(x) \\ Ly(x)=a(x)y''+b(x)y'+c(x)y}$$
 - One can recover the equation in _standard form_:
 $$y''+p(x)y'+q(x)y=f(x)$$
 
-## Homogeneous linear second order ODEs and the Wronskian
+# Homogeneous linear second order ODEs and the Wronskian
 - Given two solutions $y_1(x)$ and $y_2(x)$ to the equation _in standard form_
 - Let their _linear combination_ be
 $$y(x)=\alpha y_1(x)+\beta y_2(x)$$
@@ -41,7 +41,7 @@ $$y_2(x)=y_1(x)\int^x\frac{W(\eta)}{y_1^2(\eta)}\,d\eta=y_1(x)\int^x\frac{\kappa
 - From this, _the integral gives the general solution_
 
 
-## Series solutions
+# Series solutions
 - Generalise the homogeneous ODE to _complex function_ $y$ of _complex variable_ $z$:
 $$y''(z)+p(z)y'(z)+q(z)y(z)=0$$
 - If $p(z)$ and $q(z)$ _are both analytic_ at a point $z=z_0$, then it is an _ordinary point_ of the ODE
@@ -50,7 +50,7 @@ $$y''(z)+p(z)y'(z)+q(z)y(z)=0$$
 - A singular point $z=z_0$ is _regular if both_ $(z-z_0)p(z)$ and $(z-z_0)^2q(z)$ are _analytic_ at $z_0$
 	- Example: Legendre's equation has _regular singular_ points at $z=\pm1$
 
-### Solution at ordinary points
+## Solution at ordinary points
 - If $z=z_0$ is ordinary point, then $y(z)$ is anaytic at that point
 - Let there be a non-zero radius of convergence $R$
 - Inside the region of convergence, there are _two linearly independent solutions_ of the form:
@@ -79,7 +79,7 @@ $$a_{r+2}=-\frac{1}{(r+1)(r+2)}\sum_{m=0}^r\Big( (m+1)p_{r-m}a_{m+1}+q_{r-m}a_m\
 
 - This is the _general solution_, but _simpler forms can often be obtained by not using the standard form_, and only substituting the power series
 
-### Solution at regular singular points
+## Solution at regular singular points
 - Let $z=z_0$ be a _regular singular point_
 - Without loss of generality, let $z_0=0$
 - Define:
@@ -88,7 +88,7 @@ $$p(z)=\frac{1}{z}s(z)\hspace{1.5cm}q(z)=\frac{1}{z^2}t(z)$$
 $$z^2y''+zs(z)y'+t(z)y=0$$
 - Since $s$ and $t$ are finite, define $s(z=0)\equiv s_0$ and $t(z=0)\equiv t_0$
 
-#### Indicial equation
+### Indicial equation
 - If $z=0$ is a regular singular point, _Fuchs's theorem_ states that there is always _at least one solution_ to the equation with the form:
 $$y(z)=z^\sigma\sum_{n=0}^\infty a_nz^n \hspace{1cm}\text{ with }a_0\neq0 \hspace{0.1cm}\text{ and } \sigma\in\mathbb{C}$$
 - There may be one or two solutions of this form
@@ -99,7 +99,7 @@ $$\sum_{n=0}^\infty\Big((\sigma+n)(\sigma+n-1)+(\sigma+n)s(z)+t(z)\Big)a_nz^n=0$
 $$\sigma(\sigma-1)+\sigma s_0+t_0=0$$
 - The roots $\sigma_1$, $\sigma_2$ are the _indices_ of the regular singular point
 
-#### Frobenius' method
+### Frobenius' method
 - If $\sigma_1-\sigma_2\notin \mathbb{Z}$, we can find _both_ linearly independent solutions
 - If $\sigma_1-\sigma_2\in\mathbb{Z}$:
 	- If $\sigma_1=\sigma_2$, we can always _only find one solution_ with the given ansatz
@@ -109,7 +109,7 @@ $$\sigma(\sigma-1)+\sigma s_0+t_0=0$$
 	- Separate sums based on power of $z$
 	- Different values of $n$ may yield indicial equation or recursion relation
 
-#### Example: Bessel's equation
+### Example: Bessel's equation
 - _Bessel's equation_ of order $\nu$ is:
 $$y''+\frac{1}{z}y'+\left(1-\frac{\nu^2}{z^2}\right)y=0$$
 - In this case, the relevant functions are:
@@ -129,9 +129,9 @@ $$\displaylines{\sigma=\pm\nu \\ (1\pm2\nu)a_1=0 \\ n(n\pm2\nu)a_n=-a_{n-2} \tex
 - When $\nu=0$, then $\sigma_1=\sigma_2$ and there is _only one solution_
 - When $\nu=m\in\mathbb{N}$, _only one solution_ can be found with $\sigma=+\nu$, otherwise $a_{2m}$ would be _infinite_
 
-#### Non-power series solutions for Bessel's equation
+### Non-power series solutions for Bessel's equation
 
-### Irregular singular points
+## Irregular singular points
 - If an equation has _irregular singular points_, the solutions will probably also show singular behaviour
 
-## Method of Variation of Parameters
+# Method of Variation of Parameters

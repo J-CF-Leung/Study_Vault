@@ -1,11 +1,11 @@
-## Basic characteristics of fluid flow
+# Basic characteristics of fluid flow
 - Fluid: continuous medium
 	- Any 'infinitely' small volume element still contains a large number of molecules
 - Mathematical quantities:
 	- Flow velocity $\bm{v}(x,y,z,t)$
 	- Pressure $p(x,y,z,t)$
 	- Density $\rho(x,y,z,t)$
-### Continuity
+## Continuity
 - $\bm{j}=\rho\bm{v}$: mass flux density
 - Decrease in mass of fluid inside specified volume:
 $$-\int\pd{\rho}{t}\, dV$$

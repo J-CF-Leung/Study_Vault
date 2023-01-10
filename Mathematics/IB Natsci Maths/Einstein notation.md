@@ -1,6 +1,6 @@
 #IB_Natsci 
 
-## The suffix notation
+# The suffix notation
 - The _free suffices_ (typically $i,j,k$) range over the number of basis vectors
 - Equality of vectors implies equality of components:
 $$\begin{aligned}\bm{a}&=\bm{b} \\ a_i&=b_i\end{aligned}$$
@@ -24,7 +24,7 @@ $$C=AB \iff C_{ij}=A_{ik}B_{kj}$$
 $$\text{Tr}(A)=A_{ii}$$
 - The determinant of a $3\times 3$ matrix $A$:
 $$\text{det} \,A=\epsilon_{ijk}A_{1i}A_{2j}A_{3k}$$
-### The Kronecker Delta
+## The Kronecker Delta
 - The Kronecker Delta $\delta_{ij}$ is a matrix with indices $i,j=1,2,3$
 - The matrix element equals 1 for $i=j$, and 0 otherwise
 - Properties:
@@ -39,7 +39,7 @@ $$\bm{e_i\cdot e_j}=\delta_{ij}$$
 	- Contracting $a_{ij}$ makes it $a_ii$
 	- Equivalent to multiplying by $\delta_{ij}$
 
-### The Levi-Civita tensor
+## The Levi-Civita tensor
 - The tensor can have values $0$, $1$, and $-1$
 - The tensor is completely _anti-symmetric_
 - The value depends on the ordering of its indices
@@ -51,7 +51,7 @@ $$\epsilon_{ijk}=\epsilon_{jki}=\epsilon_{kij}$$
 - For a symmetric tensor $s$ where $s_{ij}=s_{ji}$:
 $$\epsilon_{ijk}s_{ij}=\epsilon_{ijk}s_{ji}=-\epsilon_{jik}s_{ji}=-\epsilon_{ijk}s_{ij}=0$$
 
-### The vector product
+## The vector product
 - The vector productcan be written as:
 $$(a\wedge b)_i=\epsilon_{ijk}\,a_j\,b_k$$
 - Equivalently:
@@ -62,7 +62,7 @@ $$a\wedge b=\epsilon_{ijk}\,\bm{e}_i\,a_j\,b_k=
      b_{1} & b_{2} & b_{3} 
 \end{vmatrix}
 $$
-### Product of two Levi-Civita tensors
+## Product of two Levi-Civita tensors
 $$\epsilon_{ijk}\epsilon_{lmn} = 
 \begin{vmatrix}
      \delta_{il} & \delta_{im} & \delta_{in}\\ 
@@ -77,7 +77,7 @@ $$\epsilon_{ijk}\epsilon_{ljk}=2\delta_{il}$$
 - Contracting the contraction of the contraction:
 $$\epsilon_{ijk}\epsilon_{ijk}=6$$
 
-### Triple products
+## Triple products
 - The scalar triple product:
 $$\bm{a\cdot(b\wedge c)}=a_i(b\wedge c)_i=\epsilon_{ijk}\,a_i\,b_j\,c_k$$
 - The vector triple product: use the product of two Levi-Civita tensors

@@ -1,4 +1,4 @@
-### Observing microstructure
+## Observing microstructure
 - Reflected light microscopy
 	- Sample needs to be mounted, ground, polsihed, then etched
 	- Grain boundaries appear dark
@@ -8,12 +8,12 @@
 - Scanning electron microscopy for conducting materials
 - Atomic force microscopy to measure height of sample
 
-## The thermodynamics of mixtures
+# The thermodynamics of mixtures
 - Definition of thermodynamic functions: [[Thermodynamics]]
 - Gibbs Free Energy $G$ tends to a minimum at equilibrium
 - When 2 phases have the same $G$, they are in equilibrium
 
-### Gibbs Free Energy of mixing 2 components
+## Gibbs Free Energy of mixing 2 components
 - Enthalpy of mixing $\Delta H=X_AX_B\Psi$
 	- $X$: composition, $X_B=1-X_A$
 	- $\Psi$: interaction parameter $\propto (2E_{AB}-E_{AA}-E_{BB})$
@@ -35,8 +35,8 @@
 	- Composition A: separate into phases B and C given by tangent
 	- Proportion of phases: lever rule, proportion of C$=(X_A-X_B)/(X_C-X_B)$
 
-## Phase diagrams of mixtures
-### The eutectic system
+# Phase diagrams of mixtures
+## The eutectic system
 - Eutectic: incomplete solubility of components in both solid and liquid
 ![[Eutectic phase diagram.png|400]]
 - Transformation at eutectic point: $L\rightarrow \alpha+\beta$, with temperature lower than either melting point
@@ -54,12 +54,12 @@
 	- Coring occurs
 - Small perturbations in solid-liquid interface during solidification causes dendrites to form, maximizing area where solute is expelled
 
-### Other transformations
+## Other transformations
 - Eutectoid: similar to eutectic, but all phases involved are solid
 - Peritectic: $\alpha+L\rightarrow\beta$
 ![[Peritectic transformation.png]]
 
-### Control of microstructure by processing
+## Control of microstructure by processing
 - Cooling: surfaces cool a lot quicker than centres
 	- Regions that cool faster experience larger driving force for nucleation, leading to small nuclei
 - Casting of metal:
