@@ -52,33 +52,36 @@ $$\tilde{f}(k)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty e^{-ikx}f(x)\,dx$$
 - The converses of these statements are true
 
 ## Examples of Fourier transforms
-- $f(x)=\exp(-b|x|)$ for $b>0$
+- Any _pure cosine_:
+$$\mathcal{F}[A\cos(\omega_0t)]=\frac{1}{\sqrt{2\pi}}\frac{A}{2}[\delta(\omega+\omega_0)+\delta(\omega-\omega_0)]$$
+
+- A _decaying exponential_ $f(x)=\exp(-b|x|)$ for $b>0$
 $$\mathcal{F}[e^{-b|x|}]=\tilde{f}(k)=\frac{1}{\sqrt{2\pi}}\frac{2b}{k^2+b^2}$$
 	- One sided decaying exponential: complex Fourier transform
 
-- A Gaussian
+- A _Gaussian_
 $$\mathcal{F}\left[\frac{1}{\sqrt{2\pi\epsilon^2}}\exp\left(-\frac{x^2}{2\epsilon^2}\right)\right]=\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}\epsilon^2k^2\right)$$
 	- The Fourier transform of a Gaussian is a Gaussian
 	- For a narrow Gaussian, the Fourier transform will be wide, and vice versa
 
 - The [[Second order linear ODEs and Green's Functions#The Dirac Delta function ❤|Dirac Delta function]]
 $$\mathcal{F}[\delta(x-a)]=\frac{1}{\sqrt{2\pi}}e^{ika}$$
-	- The Fourier transform of $\delta(x)$ is $1/\sqrt{2\pi}$, consistent with the limit of the narrow Gaussian
+	- The Fourier transform of $\delta(x)$ is $1/\sqrt{2\pi}$, _consistent with the limit_ of the narrow Gaussian
 
 - The Heaviside step function
 $$\mathcal{F}[H(x-a)]=\frac{1}{\sqrt{2\pi}}\left[\frac{e^{-ikx}}{ik}\right]_a^{\infty}$$
 	- The trick:
 $$\mathcal{F}[H(x-a)\exp[\epsilon(x-a)]]=\frac{1}{\sqrt{2\pi}}\frac{e^{-ika}}{\epsilon+ik}$$
 	- Taking the limit $\epsilon\to 0$:
-$$\mathcal{F}[H(x-a)]=\frac{\mathcal{F}[\delta(x-a)]}{ik}$$
+$$\mathcal{F}[H(x-a)]=\frac{1}{\sqrt{2\pi}}\frac{e^{-ika}}{ik}=\frac{\mathcal{F}[\delta(x-a)]}{ik}$$
 
 
-- The top hat function 
+- The _top hat function_ 
 $$g(x)=\begin{cases}c &a<x<b \\ 0 &\text{otherwise}\end{cases}$$
 $$\sqrt{2\pi}\,\tilde{g}(k)=\frac{ic}{k}(e^{-ikb}-e^{-ika})$$
 	- For $a=-1$, $b=1$, $c=1$:
 $$\sqrt{2\pi}\,\tilde{g}(k)=\frac{2\sin k}{k}$$
-- The comb function:
+- The _comb function_
 $$\displaylines{f(x)=\sum_{n=-\infty}^\infty \delta(x-nx_0) \\ \tilde{f}(k)=\frac{k_0}{\sqrt{2\pi}}\sum_{n=-\infty}^\infty\delta(k-nk_0)=\frac{\sqrt{2\pi}}{x_0}\sum_{n=-\infty}^\infty\delta(k-n\frac{2\pi}{x_0})}$$
 
 

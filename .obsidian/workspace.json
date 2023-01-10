@@ -79,17 +79,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "06127a81e1427884",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -106,7 +98,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/IB Physics/Optics.md"
+                    "file": "Physics/IB Physics/Experimental methods and data analysis.md"
                   }
                 }
               }
@@ -122,7 +114,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/IB Physics/Optics.md",
+                    "file": "Physics/IB Physics/Experimental methods and data analysis.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -145,7 +137,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.9020357635304832,
+                      "scale": 0.9020357635304831,
                       "close": true
                     }
                   }
@@ -220,7 +212,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/IB Physics/Optics.md",
+                "file": "Physics/IB Physics/Experimental methods and data analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -237,7 +229,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/IB Physics/Optics.md",
+                "file": "Physics/IB Physics/Experimental methods and data analysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -260,7 +252,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/IB Physics/Optics.md"
+                "file": "Physics/IB Physics/Experimental methods and data analysis.md"
               }
             }
           },
@@ -290,17 +282,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "1240bf5783d867d9",
+  "active": "77417abd7c8c24a7",
   "lastOpenFiles": [
-    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+    "Mathematics/IB Natsci Maths/Fourier series and transforms.md",
+    "Physics/IB Physics/Optics.md",
     "Physics/IB Physics/Experimental methods and data analysis.md",
+    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
     "Mathematics/IB Natsci Maths/Second order linear ODEs and Green's Functions.md",
     "Physics/IB Physics/Electromagnetism.md",
     "Misc or Personal/Quotes.md",
     "Mathematics/IB Natsci Maths/Vectors and matrices.md",
     "Mathematics/IB Natsci Maths/Partial differential equations.md",
-    "Physics/IB Physics/Optics.md",
-    "Mathematics/IB Natsci Maths/Ordinary differential equations.md",
-    "Chemistry/IB Chemistry/Symmetry in molecules.md"
+    "Mathematics/IB Natsci Maths/Ordinary differential equations.md"
   ]
 }

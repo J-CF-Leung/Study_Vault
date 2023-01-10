@@ -250,10 +250,26 @@ $$\displaylines{f=x\pm y\hspace{1cm} \sigma_f^2=\sigma_x^2+\sigma_y^2 \\ f=x^n \
 - Keep _selection biases and effects_ in mind
 
 # Digital sampling
+- Transducers often output _continuous_ signals
+- However, due to many difficulties such as maintaining precision or information volume, the data is _sampled digitally_ into a _finite list of values_
+
+- _Instantaneous_ values are taken at _regular intervals_
+- Variables include _interval, accuracy, and sampling duration_
 
 ## Fourier transforms
+- Much more detail: [[Fourier series and transforms]]
+- For an _aperiodic_ function $f(t)$, the _amplitudes and phases of constituent signals_ is given by the _Fourier transform_ $g(\omega)$:
+$$\displaylines{f(t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty g(\omega)e^{i\omega t}\,d\omega \\ g(\omega)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty f(t)e^{-i\omega t}\,dt}$$
+
 
 ## The Nyquist criterion and aliasing
+>[!Nyquist's Theorem]
+>For a _band-limited_ function, one needs to sample at a _minimum_ rate of _twice the highest frequency component_ present in the signal
+>If the sampling is _noiseless_, then the signal can be recovered _perfectly_
+
+- If the signal's maximum frequency is _too high_, then 
+
+
 
 ## Quantisation
 

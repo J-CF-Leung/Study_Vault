@@ -78,7 +78,7 @@ $$R>>\frac{D^2}{\lambda}$$
 - Then, the wave amplitude at $P$ is given by the _Fraunhofer integral_:
 $$\psi_P\propto\iint_\Sigma \psi_\Sigma \,h(x,y)\,\exp\left[-ik\left(\frac{x_0x+y_0y}{R}\right)\right]\,dx\,dy$$
 - If illuminated with a _plane wave_, $\psi_\Sigma$ remains constant
-	- Often satisfied by using a lens to make a parallel beam
+	- Often satisfied by using a lens to make a _parallel beam_
 
 - For a _1-dimensional aperture_, the integral becomes:
 $$\psi_P\propto \int_\Sigma h(y)\exp\left(-ik\frac{y_0y}{R}\right)\,dy$$
@@ -210,10 +210,12 @@ $$\displaylines{\psi_a\propto\iint_A\exp[-i(px+qy)]\,dx\,dy \\ \psi_b\propto\iin
 
 ## Fresnel diffraction
 - For Fresnel diffraction, one cannot neglect the _quadratic terms_ as distance to the screen is of a similar, or smaller order than $D^2/\lambda$
+
 - To (massively) simplify the calculation, examine the diffracted intensity _on the axis_
 - To find intensity at off-axis locations, _change the source of origin_
-- Let the perpendicular distance from _diffraction source to aperture_ be $a$
-- Let the perpendicular distance from _aperture to screen_ be $b$
+
+- Let the _perpendicular_ distance from _diffraction source to aperture_ be $a$
+- Let the _perpendicular_ distance from _aperture to screen_ be $b$
 - Define $R$:
 $$\frac{1}{R}=\frac{1}{a}+\frac{1}{b}$$
 - Let the distances from the point _on-aperture to the source and screen_ be $r_1$ and $r_2$
@@ -222,7 +224,7 @@ $$\psi_P\propto\iint_\Sigma \frac{h(x,y)K(x,y)\exp\left(ik\frac{x^2+y^2}{2R}\rig
 - Assumptions:
 1. Small diffraction angle, hence $K(\theta)=1$
 2. Variations of distance _in the aperture_ are negligible compared to $\lambda$
-- Final Fresnel diffraction integral:
+- _Final_ Fresnel diffraction integral:
 $$\psi_P(0,0)\propto\iint_\Sigma h(x,y)\exp\left(ik\frac{x^2+y^2}{2R}\right)\,dx\,dy$$
 ### Rectangular aperture and the Fresnel integrals
 - Let there be a rectangular aperture where $x_1<x<x_2$ and $y_1<y<y_2$
