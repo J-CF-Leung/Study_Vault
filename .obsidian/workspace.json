@@ -36,6 +36,14 @@
             "id": "9d81ece30fcfcc63",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "7b08e1302e981b59",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
                 "file": "README.md",
@@ -81,7 +89,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -282,17 +290,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "9d81ece30fcfcc63",
+  "active": "7b08e1302e981b59",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "README.md",
+    "Incomplete sections.md",
     "Physics/IB Physics/Optics.md",
     "Physics/IB Physics/Experimental methods and data analysis.md",
     "Mathematics/IB Natsci Maths/Fourier series and transforms.md",
     "David Morin's Limericks.md",
     "Chemistry/IB Chemistry/Molecular spectroscopy.md",
     "Mathematics/IB Natsci Maths/Second order linear ODEs and Green's Functions.md",
-    "Physics/IB Physics/Electromagnetism.md",
-    "Misc or Personal/Quotes.md",
-    "Mathematics/IB Natsci Maths/Vectors and matrices.md",
-    "Mathematics/IB Natsci Maths/Partial differential equations.md"
+    "Physics/IB Physics/Electromagnetism.md"
   ]
 }
