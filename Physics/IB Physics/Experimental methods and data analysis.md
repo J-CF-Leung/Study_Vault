@@ -256,6 +256,8 @@ $$\displaylines{f=x\pm y\hspace{1cm} \sigma_f^2=\sigma_x^2+\sigma_y^2 \\ f=x^n \
 - _Instantaneous_ values are taken at _regular intervals_
 - Variables include _interval, accuracy, and sampling duration_
 
+- To _digitise_ a signal, one first needs to _sample_ the signal, then _quantise_ it
+
 ## Fourier transforms
 - Much more detail: [[Fourier series and transforms]]
 - For an _aperiodic_ function $f(t)$, the _amplitudes and phases of constituent signals_ is given by the _Fourier transform_ $g(\omega)$:
@@ -265,6 +267,8 @@ $$\displaylines{f(t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty g(\omega)e^{i\om
 $$(f*g)(x)=\int_{-\infty}^\infty f(y)g(x-y)\,dy$$
 - The relation between _convolutions and multiplications_ in $x-$space and $k-$space are:
 $$\displaylines{\mathcal{F}[(f*g)(x)]=\sqrt{2\pi}\mathcal{F}[f]\mathcal{F}[g] \\ \mathcal{F}[f(x)g(x)]=\frac{1}{\sqrt{2\pi}}\mathcal{F}[f]*\mathcal{F}[g]}$$
+
+- For experiments, the common convention is to use _frequency_ $\nu=\omega/2\pi$ 
 
 ## The Nyquist criterion and aliasing
 >[!Nyquist's Theorem]
@@ -278,13 +282,47 @@ $$\displaylines{\mathcal{F}[(f*g)(x)]=\sqrt{2\pi}\mathcal{F}[f]\mathcal{F}[g] \\
 - If the _true frequency_ is $f$ and the _sampling frequency_ is $f_s$, then the _aliased signal_ may be detected at $|kf_s\pm f|$
 	- Minus sign: real sinusoidal wave contains components at both $f$ and $-f$
 - Therefore, the maximum frequency $f$ must be smaller than $f_s-f$, hence $f_s>2f$
-- 
+
+## Signal processing
+- The sampled signal $s(t)$ can be understood as a _product_ of the _original signal_ $x(t)$ and a _Dirac comb_ $c(t)$, with spacing $T$
+- Then, in _frequency space_, the sampled signal $\tilde{S}(\nu)$ will be a _convolution_ of $\tilde{X}(\nu)$, and another _comb function_ $C(\nu)$, with spacing $1/T$
+$$s(t)=x(t)c(t) \iff \tilde{S}(\nu)=\frac{1}{\sqrt{2\pi}}\tilde{X}(\nu)*C(\nu)$$
+- This creates _convolution images_ of the original signal:
+![[Signal processing 1.png]]
+- Nyquist's criterion corresponds to the fact that _the convolution images must not overlap_
+
+- To recover the original signal, the convolution image can be _multiplied with a top hat_, then _inverse Fourier transformed_ 
+- This corresponds to _convolving_ $s(t)$ _with a $\sinc$ function_ to get the original function
+
+- However, if a signal is over a range of frequencies that _does not include $0 \text{Hz}$_, but still has a finite _bandwidth_ $B$, then the convolution images do not overlap as long as $f_s>2B$
+- To sample a bit slower, one can _shift the signal down to a lower frequency band_
 
 ## Quantisation
+- For all values, one should hopefully have a _quantisation level close to the actual value_
+- If the signal is _noisy_, there is no point sampling so finely
 
+- If there are $2^N$ quantising bins, it is known as _N-bit sampling_
+- If one _oversamples_ with a frequency _several times above Nyquist rate_, this allows _averaging_ to _reduce noise_
 
+## Sampling duration
+- The Nyquist criterion requires _two samples per cycle_ for the _highest frequency_
+- Therefore, _long period variations_ require a _long sampling time_
+
+- The _spectral resolution_ $\Delta f$ is _equals_ $1/T_\text{max}$
 
 # Strategies to eliminate unwanted influences
+
+## Summary
+- _Filtering_ to remove _noise_
+- _Differential measurement_ to get rid of a _systematic error_
+- _Shielding_ for _electromagnetic fields_ or _heat_
+- _Eliminate at source_
+
+## Filtering
+- If the noise and the signal have _non-overlapping spectra_, it is very easy to filter via a _step function_ (or an approximation to one)
+
+- The more complicated case is if the noise is _wide-spectrum_:
+![[Phase sensitive detection.png]]
 
 # Probability distributions
 
