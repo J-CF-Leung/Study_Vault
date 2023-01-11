@@ -261,15 +261,24 @@ $$\displaylines{f=x\pm y\hspace{1cm} \sigma_f^2=\sigma_x^2+\sigma_y^2 \\ f=x^n \
 - For an _aperiodic_ function $f(t)$, the _amplitudes and phases of constituent signals_ is given by the _Fourier transform_ $g(\omega)$:
 $$\displaylines{f(t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty g(\omega)e^{i\omega t}\,d\omega \\ g(\omega)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty f(t)e^{-i\omega t}\,dt}$$
 
+- The _convolution_ of two functions $f$ and $g$ is: 
+$$(f*g)(x)=\int_{-\infty}^\infty f(y)g(x-y)\,dy$$
+- The relation between _convolutions and multiplications_ in $x-$space and $k-$space are:
+$$\displaylines{\mathcal{F}[(f*g)(x)]=\sqrt{2\pi}\mathcal{F}[f]\mathcal{F}[g] \\ \mathcal{F}[f(x)g(x)]=\frac{1}{\sqrt{2\pi}}\mathcal{F}[f]*\mathcal{F}[g]}$$
 
 ## The Nyquist criterion and aliasing
 >[!Nyquist's Theorem]
 >For a _band-limited_ function, one needs to sample at a _minimum_ rate of _twice the highest frequency component_ present in the signal
 >If the sampling is _noiseless_, then the signal can be recovered _perfectly_
 
+![[Fourier transform.ipynb]]
 - If the signal's maximum frequency is _too high_, then _aliasing_ occurs:
 ![[Aliasing.png]]
 
+- If the _true frequency_ is $f$ and the _sampling frequency_ is $f_s$, then the _aliased signal_ may be detected at $|kf_s\pm f|$
+	- Minus sign: real sinusoidal wave contains components at both $f$ and $-f$
+- Therefore, the maximum frequency $f$ must be smaller than $f_s-f$, hence $f_s>2f$
+- 
 
 ## Quantisation
 

@@ -151,7 +151,7 @@ $$f(x)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \tilde{f}(k)\exp(ikx)\,dk$$
 ## Convolutions
 - The _convolution_ $f*g$ of $f(x)$ and $g(x)$ is defined as:
 $$(f*g)(x)=\int_{-\infty}^\infty f(y)\,g(x-y)\,dy$$
-- Expresses the overlap of $f$ and $g$ as the latter is shifted over the former
+- Expresses the _overlap_ of $f$ and $g$ as the _latter is shifted_ over the former by some amount $x$
 
 - Symmetry: $f*g=g*f$
 
@@ -204,6 +204,8 @@ $$\tilde{h}(k)=\sqrt{2\pi}[\tilde{f}(k)]^*\tilde{g}(k)$$
 
 - Autoconvolution: $f*f=\sqrt{2\pi}\tilde{f}^2$
 - Autocorrelation: $f\otimes f=\sqrt{2\pi}|\tilde{f}|^2$
+
+![[Convolution and correlation.png]]
 
 # Parseval's theorem
 - Apply the inverse transform to the Wiener-Kinchin theorem
