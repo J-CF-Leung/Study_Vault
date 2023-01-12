@@ -65,12 +65,14 @@ $$\psi_P=\iint_\Sigma -\frac{i}{\lambda}\,h(x,y)\,K(\theta_S,\theta_P)\frac{a_S\
 ## Fraunhofer diffraction
 - Consider the _source to be infinite_
 - The aperture is illuminated with a _plane wave at normal incidence_
-
 - The geometry of the setup:
 ![[Fraunhofer setup.png]]
+
+- Consider _small angles_, where $K\approx1$
+
 - The phase of each wavelet is _proportional to_ $kr$
-- _Expanding_ $r$ in terms of the position of $P(x_0,y_0)$, and position $(x,y)$ in the aperture, $r$ can vary both _linearly and quadratically_ with $x,y$:
-$$r\approx R-\frac{x_0x+y_0y}{R}+\frac{x^2+y^2}{2R}$$
+- _Expanding_ $r$, it is found that it can vary both _linearly and quadratically_ with $x,y$:
+$$\displaylines{r^2=L^2+(x-x_0)^2+(y-y_0)^2 \\r\approx R-\frac{x_0x+y_0y}{R}+\frac{x^2+y^2}{2R}}$$
 
 - The _condition for Fraunhofer diffraction_ is that phase _varies linearly_ with $x$ and $y$
 - This condition can be expressed as:
@@ -136,14 +138,14 @@ $$I_P(q)=I_0\left(\frac{\sin(NqD/2)}{\sin(qD/2)}\right)^2\sinc^2\left(\frac{qa}{
 - For $D=na$, this leads to _missing orders_ due to the envelope
 
 ### Complex aperture function
-- Consider a triangular wedge of material with small angle $\alpha$ and refractive index $n$
+- Consider a triangular _wedge_ of material with small angle $\alpha$ and refractive index $n$
 - It introduces a _phase shift_ proportional to position along the wedge
 - By placing in front of the aperture, $h(y)$ is _multiplied_ by $\exp(ik(n-1)\alpha y)$
 
 - _Multiplying by exponential_ in $x$-space is a _translation_ in $q$-space
 - The pattern is _shifted_ by an angle $(n-1)\alpha$
 
-## Spectra
+## Spectra and line widths
 - _Spectral lines_ emerge from electrons transitioning in energy levels
 - An excited state in an atom has a _finite lifetime_ $\tau_L$
 - From the energy-time uncertainty principle, this gives a _spectral line width_
@@ -217,11 +219,11 @@ $$\displaylines{\psi_a\propto\iint_A\exp[-i(px+qy)]\,dx\,dy \\ \psi_b\propto\iin
 - To (massively) simplify the calculation, examine the diffracted intensity _on the axis_
 - To find intensity at off-axis locations, _change the source of origin_
 
-- Let the _perpendicular_ distance from _diffraction source to aperture_ be $a$
-- Let the _perpendicular_ distance from _aperture to screen_ be $b$
+![[Fresnel diffraction geometry.png]]
+
 - Define $R$:
 $$\frac{1}{R}=\frac{1}{a}+\frac{1}{b}$$
-- Let the distances from the point _on-aperture to the source and screen_ be $r_1$ and $r_2$
+- _Approximate_ $r_1+r_2$ via binomial expansion
 - The _general_ Fresnel diffraction integral is:
 $$\psi_P\propto\iint_\Sigma \frac{h(x,y)K(x,y)\exp\left(ik\frac{x^2+y^2}{2R}\right)}{r_1r_2}\,dx\,dy$$
 - Assumptions:
@@ -249,6 +251,8 @@ $$C(w)=\int_0^w\cos\left(\frac{\pi u^2}{2}\right)\,du\hspace{1.5cm} S(w)=\int_0^
 - The curve spirals in towards the point $(C(\infty),S(\infty))=(0.5,0.5)$
 ![[Euler spiral.png]]
 ### Diffraction from straight edge(s)
+
+#### On-axis
 - Let there be a _slit_ extending from $y=y_1$ to $y_2$
 - The relevant diffraction integral becomes:
 $$\psi_P\propto\int_{w_1}^{w_2}\exp\left(\frac{i\pi u^2}{2}\right)\,du=[C(w_2)-C(w_1)]+i[S(w_2)-S(w_1)]$$
@@ -257,17 +261,27 @@ $$\psi_P\propto\int_{w_1}^{w_2}\exp\left(\frac{i\pi u^2}{2}\right)\,du=[C(w_2)-C
 
 - If the obstructing edge was _from $0$ to $\infty$_, the amplitude _at the centre of the screen_ is represented by vector $(0.5,0.5)$, _from the origin to the centre of the first "half"_
 	- On-axis: _Half_ the amplitude compared to unobstructed wave
-![[Fresnel straight edge.png]]
 
+
+#### Off-axis
 - For _off-axis_ points on the screen, the _origin must be moved to maintain the form of the diffraction integral_
 - Move the _position of the aperture_ instead
+![[Fresnel off axis.png]]
+- Example: in _geometrical shadow_, integral is _from $x_a$ to $\infty$_
 
+![[Fresnel straight edge.png]]
+- Maximum: $x_d$, with $\psi\approx1.22\psi_P$
+
+
+### Finite length aperture
 - For an aperture of _finite length_, the amplitude at some point along the screen is represented by a _spanning vector between points of arc length $\Delta w$ apart_
+![[Fresnel limited aperture.png]]
 - For _small $\Delta w$_ there will be a _central maximum_, and the amplitude _decreases monotonically_ away from the centre
 - For _large $\Delta w$_ (small $R$ or large $d$), the diffraction pattern approaches _two single-edge patterns_ 
 - For _intermediate_ $\Delta w$, there may be an _on-axis minimum_ with 2 maxima on the side
-
+![[Fresnel diffraction patterns.png]]
 ### The circular aperture: on-axis
+- Start from the _most general form_
 - _Retain the obliquity factor_ and define $s=\rho^2=x^2+y^2$
 - The _on-axis_ diffraction integral is:
 $$\psi_P\propto\int_{s=0}^{s=r_a^2}\frac{K}{\sqrt{a^2+s}\sqrt{b^2+s}} \,\exp\left(\frac{i\pi s}{\lambda R}\right)\pi\,ds$$
@@ -313,7 +327,7 @@ $$\displaylines{(n-1)\pi<\phi(\rho)<n\pi \\ \sqrt{(n-1)\lambda R}<\rho<\sqrt{n\l
 $$f=R=\frac{\rho_1^2}{\lambda}=\frac{\rho_n^2}{\lambda}$$
 
 - Moving the observation point _along the axis towards the zone plate_, the zones _become smaller_
-- When the new distance $R'=f/(2m)$, the open areas _allow an even number of zones_, meaning $\psi_{P'}\approx0$
+- When the new distance $R'=f/(2m)$, each open area _allows an even number of zones_, meaning $\psi_{P'}\approx0$
 - When $R'=f/(2m+1)$, each open area admits _an odd number of zones_, hence $\psi_{P'}\approx 2N\psi_u$
 	- Reduces for increasing $m$ due to obliquity factor, but still remain as _maxima_
 
@@ -327,15 +341,15 @@ $$\psi_1=a_1\exp(i\phi_1)\hspace{1.5cm}\psi_2=a_2\exp(i\phi_2)$$
 - Retaining the slowest oscillating term:
 $$\braket{I}\propto\frac{1}{2}\braket{a_1^2}+\frac{1}{2}\braket{a_2^2} +\braket{a_1a_2}\Re\left\{\exp[i(\phi_1-\phi_2-(\omega_1-\omega_2)t)]\right\}$$
 - To get good detection, $(\omega_1-\omega_2)\tau<<1$, where $\tau$ is the response timescale
-- The sources must be _coherent_, meaning $\phi_1-\phi_2$ must be constant
-- Coherency usually achieved using lasers
+- The sources must be _coherent_, meaning $\phi_1-\phi_2$ must be constant, and the waves must come from _the same source_
+- Coherency usually achieved using _lasers_
 
 - Interfering waves can be derived from _different spatial points of a wavefront_ (spatial coherence)
 - They can also be derived from _dividing amplitude_ (e.g. By reflection and transmission)
 
 ## The Michelson interferometer
 ![[Michelson.png]]
-- The _beam-splitter_ spits then recombines the beam
+- The _beam-splitter_ splits then recombines the beam
 - Interference depends on _path difference_
 - Intensity can be recorded _as a function of mirror position_
 - Mechanical vibration can _smear_ the fringes
