@@ -66,8 +66,11 @@ $$\psi_P=\iint_\Sigma -\frac{i}{\lambda}\,h(x,y)\,K(\theta_S,\theta_P)\frac{a_S\
 - Consider the _source to be infinite_
 - The aperture is illuminated with a _plane wave at normal incidence_
 
+- The geometry of the setup:
+![[Fraunhofer setup.png]]
 - The phase of each wavelet is _proportional to_ $kr$
-- _Expanding_ $r$ in terms of the position of $P(x_0,y_0)$, and position $(x,y)$ in the aperture, $r$ can vary both _linearly and quadratically_ with $x,y$
+- _Expanding_ $r$ in terms of the position of $P(x_0,y_0)$, and position $(x,y)$ in the aperture, $r$ can vary both _linearly and quadratically_ with $x,y$:
+$$r\approx R-\frac{x_0x+y_0y}{R}+\frac{x^2+y^2}{2R}$$
 
 - The _condition for Fraunhofer diffraction_ is that phase _varies linearly_ with $x$ and $y$
 - This condition can be expressed as:

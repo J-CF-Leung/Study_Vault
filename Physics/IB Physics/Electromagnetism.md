@@ -1056,7 +1056,7 @@ $$P=\frac{1}{2}IV^*$$
 ### Waves
 - The Poynting vector gives _instantaneous power flow per unit area_ at a given point
 - If $\bm{E}$ and $\bm{H}$ are _complex_, the _time-averaged power_ is:
-$$P_r=\frac{1}{2}\Re\left[\bm{E}(\bm{r})\wedge\bm{H}(\bm{r})\right]$$
+$$P_r=\frac{1}{2}\Re\left[\bm{E}(\bm{r})\wedge\bm{H}^*(\bm{r})\right]$$
 - The _maximum rate at which energy sloshes_ backwards and forwards is:
 $$P_i=\frac{1}{2}\Im\left[\bm{E}(\bm{r})\wedge\bm{H}^*(\bm{r})\right]$$
 - For _plane waves_, since the fields are in phase, _power is always real_, with energy only flowing in _one direction_

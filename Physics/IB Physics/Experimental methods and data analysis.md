@@ -318,11 +318,12 @@ $$s(t)=x(t)c(t) \iff \tilde{S}(\nu)=\frac{1}{\sqrt{2\pi}}\tilde{X}(\nu)*C(\nu)$$
 - _Shielding_ for _electromagnetic fields_ or _heat_
 - _Eliminate at source_
 
-## Filtering
+## Filtering and phase-sensitive detection
 - If the noise and the signal have _non-overlapping spectra_, it is very easy to filter via a _step function_ (or an approximation to one)
 
 - The more complicated case is if the noise is _wide-spectrum_:
 ![[Phase sensitive detection.png]]
+- This sort of filtering is known as _phase-sensitive detection_
 
 # Probability distributions
 

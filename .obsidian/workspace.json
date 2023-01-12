@@ -38,7 +38,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/IB Physics/Experimental methods and data analysis.md",
+                "file": "Physics/IB Physics/Optics.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/IB Physics/Experimental methods and data analysis.md"
+                    "file": "Physics/IB Physics/Optics.md"
                   }
                 }
               }
@@ -102,7 +102,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/IB Physics/Experimental methods and data analysis.md",
+                    "file": "Physics/IB Physics/Optics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -200,7 +200,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/IB Physics/Experimental methods and data analysis.md",
+                "file": "Physics/IB Physics/Optics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -217,7 +217,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/IB Physics/Experimental methods and data analysis.md",
+                "file": "Physics/IB Physics/Optics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -240,7 +240,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/IB Physics/Experimental methods and data analysis.md"
+                "file": "Physics/IB Physics/Optics.md"
               }
             }
           },
@@ -272,15 +272,15 @@
   },
   "active": "77417abd7c8c24a7",
   "lastOpenFiles": [
+    "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
+    "Physics/IB Physics/Electromagnetism.md",
+    "Preamble.md",
+    "Physics/IB Physics/Experimental methods and data analysis.md",
     "David Morin's Limericks 1.md",
     "David Morin's Limericks.md",
-    "Physics/IB Physics/Electromagnetism.md",
     "README.md",
     "conflict-files-obsidian-git.md",
     "Incomplete sections.md",
-    "Physics/IB Physics/Optics.md",
-    "Physics/IB Physics/Experimental methods and data analysis.md",
-    "Mathematics/IB Natsci Maths/Fourier series and transforms.md",
-    "Chemistry/IB Chemistry/Molecular spectroscopy.md"
+    "Physics/IB Physics/Optics.md"
   ]
 }
