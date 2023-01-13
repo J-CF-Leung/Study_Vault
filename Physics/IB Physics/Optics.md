@@ -371,6 +371,26 @@ $$I(x)=I_0\left(1+\Re\left[e^{ikx}\right]\right)$$
 
 ## Fourier transform spectrometry
 
+### Two-wavelength case
+- If the incident light in the interferometer is _not monochromatic_, then fringes for each wavelength _will not be seen_
+- Instead, the result is _the sum of intensities_ (NOT amplitudes) _at different wavelengths_
+- Therefore, as $x$ varies, it changes _fringe contrast_
+
+### Broadband light
+- With a _broad range_ of frequencies present, there is usually a _blurred, coloured_ pattern
+
+- Let the _incident intensity_ be characterised by the function $2S(k)$
+	- Intensity for range $k_0<k<k_0+dk$ is $2S(k_0)dk$
+- Let the function be _defined for_ $k<0$ such that $S(-k)=S^*(k)$
+
+- Thus, the intensity as a function of path difference is:
+$$ \begin{aligned}I(x)&=2\int_0^\infty S(k)\left(1+\Re{\left[e^{ikx}\right]}\right)\,dk=\int_{-\infty}^\infty S(k)\left(1+e^{ikx}\right)\,dk \\ &=I_1+\int_{-\infty}^\infty S(k)e^{ikx}\,dk\end{aligned}$$
+- Here, $I_1$ is the _incident intensity_
+
+- The second term is proportional to the _inverse Fourier transform_ of $S(k)$
+- Hence, the _intensity of the source can be found using a Fourier transform_:
+$$S(k)\propto\int_{-\infty}^\infty\left[I(x)-I_1\right]e^{-ikx}\,dx$$
+
 ## Thin film spectrometry
 
 ## Fabry-Perot interferometer
