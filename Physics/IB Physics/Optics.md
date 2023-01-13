@@ -340,7 +340,9 @@ $$\psi_1=a_1\exp(i\phi_1)\hspace{1.5cm}\psi_2=a_2\exp(i\phi_2)$$
 - The detector often _cannot detect quickly oscillating signals_
 - Retaining the slowest oscillating term:
 $$\braket{I}\propto\frac{1}{2}\braket{a_1^2}+\frac{1}{2}\braket{a_2^2} +\braket{a_1a_2}\Re\left\{\exp[i(\phi_1-\phi_2-(\omega_1-\omega_2)t)]\right\}$$
-- To get good detection, $(\omega_1-\omega_2)\tau<<1$, where $\tau$ is the response timescale
+- To get good detection, $(\omega_1-\omega_2)\tau<<1$, where $\tau$ is the _response timescale_
+- For most cases, $\omega_1=\omega_2$ to a very good degree of approximation
+
 - The sources must be _coherent_, meaning $\phi_1-\phi_2$ must be constant, and the waves must come from _the same source_
 - Coherency usually achieved using _lasers_
 
@@ -351,8 +353,21 @@ $$\braket{I}\propto\frac{1}{2}\braket{a_1^2}+\frac{1}{2}\braket{a_2^2} +\braket{
 ![[Michelson.png]]
 - The _beam-splitter_ splits then recombines the beam
 - Interference depends on _path difference_
-- Intensity can be recorded _as a function of mirror position_
 - Mechanical vibration can _smear_ the fringes
+
+- Simplest form: the beams are _focused onto a photodiode_, intensity is recorded _as a function of mirror position_ to retrieve the interference pattern
+
+- _Without the lens_, _circular fringes_ can be seen on a plane (see Lipson)
+
+- One can also use an _extended light source_
+- Beams originating from different parts of the source have a _differential delay_ to produce _fringes_ while still holding the mirrors fixed
+
+- With $\omega_1=\omega_2$, the intensity _averaged over response time_ is:
+$$\mean{I}=\frac{1}{2}\mean{a_1^2}+\frac{1}{2}\mean{a_2^2}+\mean{a_1a_2\Re{\left[e^{i\delta}\right]}}$$
+- Here, $\delta=(\phi_1-\phi_2)=kx$ is the _phase difference_ between the two beams, where $x$ is the _path difference_
+- If the beams have equal intensities $I=I_0/2$:
+$$I(x)=I_0\left(1+\Re\left[e^{ikx}\right]\right)$$
+- $x$ is a _function of positions of the mirrors and beamsplitter_
 
 ## Fourier transform spectrometry
 
