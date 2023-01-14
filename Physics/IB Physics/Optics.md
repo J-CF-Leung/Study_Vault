@@ -352,7 +352,7 @@ $$\braket{I}\propto\frac{1}{2}\braket{a_1^2}+\frac{1}{2}\braket{a_2^2} +\braket{
 ## The Michelson interferometer
 ![[Michelson.png]]
 - The _beam-splitter_ splits then recombines the beam
-- Interference depends on _path difference_
+- Interference depends on _path difference_, which is _2 times the difference in distance between mirror and beamsplitter_
 - Mechanical vibration can _smear_ the fringes
 
 - Simplest form: the beams are _focused onto a photodiode_, intensity is recorded _as a function of mirror position_ to retrieve the interference pattern
@@ -390,6 +390,28 @@ $$ \begin{aligned}I(x)&=2\int_0^\infty S(k)\left(1+\Re{\left[e^{ikx}\right]}\rig
 - The second term is proportional to the _inverse Fourier transform_ of $S(k)$
 - Hence, the _intensity of the source can be found using a Fourier transform_:
 $$S(k)\propto\int_{-\infty}^\infty\left[I(x)-I_1\right]e^{-ikx}\,dx$$
+- This is the principle of _Fourier Transform Spectroscopy_, which gives very high _spectral resolution_ but at the cost of many _sequential measurements_
+
+### Two wavelengths revisited
+- Let the spectrum have _two closely-spaced wavelengths_, $k_0\pm\Delta k$
+- Using the previous _double-sided convention_, $S(k)$ is _two pairs_ of closely-spaced delta functions _around_ $\pm k_0$
+$$S(k)=[\delta(k-k_0)+\delta(k+k_0)]*[\delta(k+\Delta k)+\delta(k-\Delta k)]$$
+- Thus, the intensity pattern will contain a _product_:
+$$I(x)=I_1[1+\cos(k_0x)\cos(\Delta kx)]$$
+![[Two wavelengths interfering.png]]
+
+- The _high-frequency_ $\cos(k_0x)$ represents the _fringes_
+- The _low-frequency_ $\cos(\Delta kx)$ _modulate the amplitude_
+
+- The _fringe contrast_ or _visibility_ is defined as the _ratio_ of the _local_ amplitude to _mean intensity_:
+$$\text{Visibility}=\frac{I_\text{max}-I_\text{min}}{I_\text{max}+I_\text{min}}$$
+- At the _first zero_ of the envelope, the _fringe contrast goes to zero_, and this can be used to find $\Delta k$
+- The _spectral resolution_ depends on the _range of $x$_ and whether or not _a full envelope can be seen_, hence $\Delta k$ measured
+
+- It can be shown that for a _maximum separation_ of points on a wavefront, $w$, the resolution is:
+$$\frac{\Delta\lambda}{\lambda}=\frac{\lambda}{w}$$
+- Analagous to the [[#Resolution|resolution for a diffraction grating]], which also depends on _maximum separation between points on the wavefront_
+
 
 ## Thin film spectrometry
 
