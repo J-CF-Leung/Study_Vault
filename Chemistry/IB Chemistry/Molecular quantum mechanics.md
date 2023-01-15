@@ -42,6 +42,7 @@ $$V_M(r)=D_e\left(1-e^{-\beta(r-r_e)}\right)^2$$
 - $\beta$ controls well _width_ (higher $\beta$ leads to narrower well)
 - The _harmonic force constant_ at equilibrium is $k=2\beta^2D_e$
 	- Found by Taylor expanding the potential
+- This gives another _vibration angular frequency_ $\omega=\sqrt{k/m}$
 - $D_0$: energy required to dissociate a molecule originally at the ground state
 
 - The _asymmetry_ of the potential means _average bond length increases_ with increasing $\nu$
@@ -98,7 +99,7 @@ $$E_n=\frac{\hbar^2}{2I}J(J+1)$$
 - The atoms in the rotor actually experience a _centrifugal force_
 - The _restoring force_ obeys Hooke's Law with force constant $k_f$
 - Because of this, there is an _extra term_ in the rotational energy, proportional to $J^2(J+1)^2$
-	- Atkins, Friedman p. 274-375
+	- Atkins, Friedman p. 274-275
 
 # Rotation and vibration
 - Molecules both rotate and vibrate
@@ -332,12 +333,12 @@ $$E_{nl}=-\frac{Z_\text{eff}^2}{2n^2}$$
 - Detailed quantum mechanics of spin: [[Angular momentum in quantum mechanics]]
 - No classical analogue
 - Like orbital angular momentum, described by two quantum numbers:
-	- $l\rightarrow s$ : magnitude of angular momentum
-	- $m_l \rightarrow m_s$: magnitude along $z$ component
+	- $l\rightarrow s$ : _magnitude_ of angular momentum
+	- $m_l \rightarrow m_s$: magnitude _along $z$ component_
 - Operators obey the same eigenvalue equations:
 $$\displaylines{\hat{S}^2\ket{sm_s}=\hbar^2s(s+1)\ket{sm_s} \hspace{1cm}\hat{S}_z\ket{sm_s}=\hbar m_s\ket{sm_s} \\ s=0,\frac{1}{2},1,\frac{3}{2}\dots \hspace{1cm} m_s=-s,-s+1,\dots,s-1,s}$$
 
-- No boundary conditions, can take half odd-integer values unlike orbital $\hat{\bm{J}}$
+- No boundary conditions, _can take half odd-integer values_ unlike orbital $\hat{\bm{J}}$
 - $s$ has a fixed value for fundamental particles
 	- Half-integer: fermions (e.g. electrons)
 	- Integer: bosons
@@ -410,15 +411,16 @@ $$\psi_\pm=\frac{1}{\sqrt{2}}[\psi_a(1)\psi_b(2)\pm\psi_a(2)\psi_b(1)]$$
 ## Fermi holes
 - Consider two electrons with collective _spatial_ wave function $\psi(\bm{r}_1, \bm{r}_2)$
 - Consider the case when $\bm{r}_1=\bm{r}_2$
-	- Same spin(triplet): $|\psi|^2=0$
-	- Opposite spin: $|\psi|^2>0$
+	- Same spin (triplet): $|\psi|^2=0$
+	- Opposite spin (singlet): $|\psi|^2>0$
 
 - Due to the continuity of $\psi$, for small $r_{12}$ _it is much more likely to find two electrons in a singlet state_, this is the _Fermi hole_
 - Repulsion potential is inversely proportional to $r_{12}$
 - Average repulsion energy is _substantially less for electrons of triplet states_
 
 # The Helium atom
-- The $1s^2$ configuration can only accommodate a singlet state
+- The $1s^2$ configuration can _only accommodate a singlet state_
+	- Position wave function is _symmetric_
 
 - Consider the $1s2s$ configuration, there are two possible states (including spin):
 $$\Psi_+=\psi_+\sigma_s=\frac{1}{\sqrt{2}}\Big[\psi_{1s}(1)\psi_{2s}(2)+\psi_{1s}(2)\psi_{2s}(1)\Big]\sigma_s$$
@@ -428,7 +430,7 @@ $$\Psi_-=\psi_-\sigma_t=\frac{1}{\sqrt{2}}\Big[\psi_{1s}(1)\psi_{2s}(2)-\psi_{1s
 - The average electron repulsion is found by:
 $$\braket{\frac{1}{r_{12}}}_\pm=\braket{\Psi_\pm|\frac{1}{r_{12}}|\Psi_\pm}=\braket{\psi_\pm|\frac{1}{r_{12}}|\psi_\pm}$$
 - Expanding the average electron repulsion:
-$$\displaylines{\braket{\frac{1}{r_{12}}}_\pm=J\pm K \\ J=\int\int \psi_{1s}(1)\psi_{2s}(2)\frac{1}{r_{12}}\psi_{1s}(1)\psi_{2s}(2)\,d^3\bm{r}_1\bm{r}_2=\int\int |\psi_{1s}(1)|^2|\psi_{2s}(2)|^2\frac{1}{r_{12}}\,d^3\bm{r}_1\,d^3\bm{r}_2 \\ K=\int\int \psi_{1s}(1)\psi_{2s}(2)\frac{1}{r_{12}}\psi_{1s}(2)\psi_{2s}(1)\,d^3\bm{r}_1\,d^3\bm{r}_2 }$$
+$$\displaylines{\braket{\frac{1}{r_{12}}}_\pm=J\pm K \\ J=\int\int \psi_{1s}(1)\psi_{2s}(2)\frac{1}{r_{12}}\psi_{1s}(1)\psi_{2s}(2)\,d^3\bm{r}_1d^3\bm{r}_2=\int\int |\psi_{1s}(1)|^2|\psi_{2s}(2)|^2\frac{1}{r_{12}}\,d^3\bm{r}_1\,d^3\bm{r}_2 \\ K=\int\int \psi_{1s}(1)\psi_{2s}(2)\frac{1}{r_{12}}\psi_{1s}(2)\psi_{2s}(1)\,d^3\bm{r}_1\,d^3\bm{r}_2 }$$
 - $J$ is the _Coulomb integral_, quantifying the classical electron repulsion
 - $K$ is the _exchange integral_, resulting from the particles being indistinguishable, it can be understood as an "overlap density" of $\psi_{1s}\psi_{2s}$
 
@@ -436,7 +438,7 @@ $$\displaylines{\braket{\frac{1}{r_{12}}}_\pm=J\pm K \\ J=\int\int \psi_{1s}(1)\
 
 # More on multi-electron atoms
 
-- Notation: _lower-case_ for single electrons, _upper-case_ for total
+- Notation for quantum numbers: _lower-case_ for single electrons, _upper-case_ for total
 
 - The _Hartree-Fock_ method to construct a wave function for a multi-electron atom:
 	1. Make the SCF approximation to give the spatial $\psi$
@@ -473,7 +475,7 @@ $$\ket{\Psi}=\ket{LSJM_J}$$
 - The term symbol:
 ![[Term symbol.png|300px]]
 
-
+- $L$: Total angular momentum, _not necessarily subshell of outermost electron_
 
 ## Hund's rules
 - Used to determine which energy level $E_{LSJ}$ is the lowest
@@ -489,7 +491,7 @@ $$\ket{\Psi}=\ket{LSJM_J}$$
 - Hund's _Third Rule_: 
 	- For a shell that is _less than half-full_, take the _lowest $J$_
 	- For a shell that is _more than half-full_, take the _maximum_ $J$
-	- Origin: spin-orbit coupling in  _relativistic quantum mechanics_
+	- Origin: spin-orbit coupling in _relativistic quantum mechanics_
 
 - Technique: draw out grid of orbitals with $M_S$ on one axis, $M_L$ on the other, fill by applying the rules in order
 
