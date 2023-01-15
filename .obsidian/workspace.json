@@ -50,7 +50,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+                "file": "Physics/IB Physics/Experimental methods and data analysis.md",
                 "mode": "source",
                 "source": false
               }
@@ -81,7 +81,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -98,7 +98,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md"
+                    "file": "Physics/IB Physics/Electromagnetism.md"
                   }
                 }
               }
@@ -114,7 +114,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+                    "file": "Physics/IB Physics/Electromagnetism.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -212,7 +212,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+                "file": "Physics/IB Physics/Electromagnetism.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -229,7 +229,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+                "file": "Physics/IB Physics/Electromagnetism.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -252,7 +252,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md"
+                "file": "Physics/IB Physics/Electromagnetism.md"
               }
             }
           },
@@ -282,17 +282,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ac0aa9e553cf2558",
+  "active": "3bd733e7c50cea7f",
   "lastOpenFiles": [
-    "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
+    "Physics/IB Physics/Experimental methods and data analysis.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+    "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
     "Physics/IB Physics/Electromagnetism.md",
     "README.md",
     "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
     "Mathematics/IB Natsci Maths/Ordinary differential equations.md",
     "Physics/IB Physics/Optics.md",
     "Mathematics/IB Natsci Maths/Fourier series and transforms.md",
-    "Mathematics/IB Natsci Maths/Elementary Analysis.md",
-    "Mathematics/IB Natsci Maths/Einstein notation.md"
+    "Mathematics/IB Natsci Maths/Elementary Analysis.md"
   ]
 }
