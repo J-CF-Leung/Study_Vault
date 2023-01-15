@@ -963,6 +963,7 @@ $$Z_0\equiv\sqrt{\frac{\mu_0}{\epsilon_0}}=377\,\Omega$$
 
 - In a linear, isotropic, homogeneous, non-conducting medium, the impedance is:
 $$Z=\sqrt{\frac{\mu}{\epsilon}}Z_0$$
+- Therefore, the _higher the refractive index_, the _lower the impedance_
 
 - The relationship between the _magnitudes of the $\bm{E}$ and $\bm{B}$ fields_:
 $$E_x=cB_y$$

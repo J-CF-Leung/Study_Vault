@@ -139,9 +139,12 @@ $$N_J\propto(2J+1)\exp\left(-\frac{h\tilde{c}\tilde{B}J(J+1)}{kT}\right)$$
 - From this, there is an energy level with _maximum population_:
 $$J_\text{max}\approx \sqrt{\frac{kT}{2h\tilde{c}\tilde{B}}}-\frac{1}{2}$$
 
-## Transitions between energy levels
+## Transitions between energy levels and selection rule
 - From [[Molecular quantum mechanics#Spectroscopic principles|Fermi's Golden Rule]], not only do the molecules need to have a _permanent dipole moment_, there is also a restriction on $\Delta J$:
 $$\Delta J=\pm1$$
+
+- _Intuitive_ explanation: The _photon carries angular momentum_ of $\hbar$, therefore the molecule _gains or loses_ angular momentum when absorbing/emitting it
+
 - The difference in wavenumber from energy level $J$ to $J+1$ is:
 $$\Delta\mathcal{E}=\mathcal{E}_{J+1}-\mathcal{E}_J=2\tilde{B}J(J+1)$$
 - This gives _equally spaced transitions_ of $2\tilde{B},4\tilde{B},6\tilde{B},...$
@@ -163,6 +166,9 @@ $$I=m_Ar_{AB}^2+m_Cr_{BC}^2-\frac{(m_Ar_{AB}-m_Cr_{BC})^2}{m_A+m_B+m_C}$$
 - For rotational Raman spectroscopy to work, _polarisability must change during rotation_
 - The selection rule in rotational Raman spectroscopy is:
 $$\Delta J=0,\pm2$$
+
+- _Intuitive_ explanation: The photon can pass through _without changing spin_, which gives _elastic_ scattering; or it can _change spin direction_, which changes molecule angular momentum by 2 units
+
 - The change in rotational energy for $|\Delta J|=2$ is therefore given by:
 $$\mathcal{E}_\text{upper}-\mathcal{E}_\text{lower}=\tilde{B}(4J+6)$$
 - _Stokes lines_, where the molecule gains energy, are at $\tilde{\nu}_\text{incident}-\tilde{B}(4J+6)$
@@ -374,3 +380,73 @@ $$\mathcal{E}_\text{upper}-\mathcal{E}_\text{lower}=\tilde{\omega}_0 +(\tilde{B}
 
 # Electronic spectroscopy
 
+## Electronic energy levels
+- Once an electron _changes state_, the _bond order_ is likely to change
+- Promoting an electron _can change energies of all other electrons_
+- This leads to a _different potential energy curve_
+- These energy levels _may not be described by the original molecular orbitals_
+
+- Each potential energy curve has _different parameters_ $r_e, \tilde{\omega}, \chi_e, D_0, D_e$
+- They are denoted with _double prime_ $''$ for the _lower_ energy level and _single prime_ $'$ for the _upper_
+- The _electronic excitation energy_ $T_e$ is measured _between the bottoms of the two curves_
+
+![[Electronic energy levels.png]]
+
+- The _Born-Oppenheimer approximation_ means the _electronic, vibrational and rotational energies are independent_
+
+- Transitions are often _from the vibrational ground state_
+- Depending on _temperature_, there may be transitions from $\nu''=1$ or $\nu''=2$ in the _UV-VIS spectrum_
+- The vibrational wave functions in each electronic level _differ enough for $\Delta\nu$ to take any value_
+- Each $\Delta\nu$ can _differ in intensity_
+- However, there can be restrictions
+
+### The transition dipole moment and Franck-Condon Factor
+- According to [[Molecular quantum mechanics#Spectroscopic principles|Fermi's Golden Rule]], the intensity is proportional to the _transition dipole moment_:
+$$B_{mn}\propto|\braket{\psi''|\hat{\mu}|\psi'}|^2$$
+- From the _Born-Oppenheimer approximation_, the wave functions are _separable_:
+$$\psi''=\psi''_E\psi''_V \hspace{1cm} \psi'=\psi_E''\psi_V''$$
+- The _electronic wave functions_ $\psi_E$ are all from the _same electronic Hamiltonian_, and are _orthonormal_
+- The _nuclear wave functions_ $\psi_V$ are all from _different nuclear Hamiltonians_ 
+
+- The _dipole is also separable_:
+$$\hat{\mu}=\hat{\mu}_E+\hat{\mu}_V$$
+- Each _dipole operator_ $\hat{\mu}_i$ _only acts on respective electronic or vibrational coordinates_
+- Expanding the inner product, one gets:
+$$B_{mn}\propto |\braket{\psi_E''|\hat{\mu}_E|\psi_E'}|^2|\braket{\psi_V''|\psi_V
+}|^2$$
+- The former factor is the _electronic transition dipole moment_, which _must be non-zero_ for there to be a transition
+- The latter factor is the _Franck-Condon Factor_
+- This can be used to _estimate transition intensity_
+
+## The Franck-Condon Principle, transitions and progressions
+- The _Franck-Condon Principle_ asserts that the transition _occurs without appreciable change in geometry or bond length_
+- This means the transition is _vertical_ in the energy diagram
+- The _Franck-Condon Factor_ can be thought of as the _overlap between 2 vibrational wave functions_
+
+- A _progression_ is a series of transitions _originating from the same $\nu''$_
+
+- There are 3 cases for transitions:
+	- Bond order _decrease_, or $r_e'>r_e''$
+	- Bond order is _unchanged_, or $r_e'\approx r_e''$
+	- Bond order _increase_, or $r_e'<r_e''$
+
+- Only considering the _$\nu''=0$ progression:_
+![[Electronic transitions.png]]
+
+- If _bond order decreases_, there is a _weak $\nu'=0$ transition_, with _greatest overlap when_ $\nu''>>0$
+- If _bond order is unchanged_,  the $\nu'=0$ transition is the _strongest_
+- If _bond order increases_, it is similar to the $r_e'>r_e''$ case but there are _fewer strong transitions_ since the energy rise is _less steep_
+
+- If _sufficient vibrational fine structure_ is known for each progression, the _vibrational parameters_ can be obtained
+
+### Example: Iodine ($I_2$)
+![[Iodine UV-VIS.png]]
+- Since there are _very extensive progressions_, it can be seen that _equilibrium bond length $r_e$ has changed significantly_
+- The _presence of $\nu''=1$ and $\nu''=2$_ suggests that the _vibrational spacing for the ground electronic state is comparable to $kT$_
+
+- From inspecting the _molecular orbital diagram_, it can be seen that an _antibonding electron_ is promoted from $4\pi_g^*$ to $9\sigma_u^*$, indicating _weakening of the bond_
+![[I2 MO.png]]
+
+- All of this agrees with _actual data_
+	- $X$ is the _ground state_, $B$ is an _excited state_
+![[I2 energy level data.png]]

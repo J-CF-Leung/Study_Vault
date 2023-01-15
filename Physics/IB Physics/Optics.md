@@ -392,7 +392,7 @@ $$ \begin{aligned}I(x)&=2\int_0^\infty S(k)\left(1+\Re{\left[e^{ikx}\right]}\rig
 $$S(k)\propto\int_{-\infty}^\infty\left[I(x)-I_1\right]e^{-ikx}\,dx$$
 - This is the principle of _Fourier Transform Spectroscopy_, which gives very high _spectral resolution_ but at the cost of many _sequential measurements_
 
-### Two wavelengths revisited
+### Two wavelengths revisited, and spectral resolution
 - Let the spectrum have _two closely-spaced wavelengths_, $k_0\pm\Delta k$
 - Using the previous _double-sided convention_, $S(k)$ is _two pairs_ of closely-spaced delta functions _around_ $\pm k_0$
 $$S(k)=[\delta(k-k_0)+\delta(k+k_0)]*[\delta(k+\Delta k)+\delta(k-\Delta k)]$$
@@ -414,5 +414,87 @@ $$\frac{\Delta\lambda}{\lambda}=\frac{\lambda}{w}$$
 
 
 ## Thin film spectrometry
+- When light is incident on a _thin film_ of material, _interference_ occurs between the waves _reflected in the top and bottom surfaces_:
+![[Thin film interference.png]]
+- Using [[Electromagnetism#Reflection and transmission at interfaces|Snell's Law]], the _optical path difference_ is:
+$$n(AB+BC)-AD=2nd\cos\theta$$
+- Reflection in upper boundary: _High to low impedance_
+- Reflection in lower boundary: _Low to high impedance_
+- Therefore, the latter beam has a _phase change of $\pi$_
+
+- _Assuming_ the two beams have _equal intensity_, the intensity is:
+$$\displaylines{I(\delta)=I_0(1+e^{i\delta})\\ \delta=2ndk\cos\theta+\pi}$$
+- Therefore, there are _minima and maxima_ as a function of $\theta$ or $nd$
+
+- _Maximum reflection_ is given when $\delta=2m\pi$, or:
+$$nd\cos\theta=\frac{(2m+1)}{4}\pi$$
+
+### Fringes of equal inclination VS equal thickness
+- When illuminating a _uniform film_ with an _extended light source_, then focusing the pattern _using a lens_, one can see _circular fringes_
+- Each fringe represents _constant values of $\theta$_, and are _fringes of equal inclination_
+- When the source is _close to normal incidence_, they are known as _Haidinger fringes_
+
+- When illuminating a _non-uniform film_ at _near-normal incidence_, one can see _fringes of equal thickness_
+- Each fringe has a thickness that causes _maximum reflection for a certain wavelength_
+- For near-normal incidence, they satisfy:
+$$2nd=\left(m+\frac{1}{2}\right)\lambda$$
+![[Thin film interference fringes.png]]
+
+
+## Newton's rings
+- When there is an _air gap_ between a _spherical_ and a _plane_ surface, _fringes of equal thickness_ are formed
+![[Newton's rings.png]]
+
+- The path difference is given by _twice the air gap_ $d$, given by $r^2\approx2Rd$
+- Taking into account the _reflection_, the optical path difference is:
+$$\delta=2kd+\pi=\frac{kr^2}{R}+\pi$$
+
+- Therefore, the _dark_ fringes are seen at:
+$$r_\text{dark}=\sqrt{m\lambda R}$$
 
 ## Fabry-Perot interferometer
+- If there is a film where the _reflection coefficient of both sides is high_, then there is interference with _multiple beams_
+- An example is the _Fabry-Perot etalon_, which gives _sharp fringes_ and _high resolution_
+![[Fabry-Perot etalon.png]]
+- The optical path _in the glass_ is the _same for each beam_
+- There are _two reflections_ between each sucessive beam
+- Assume _real reflection and transmission coefficients_
+
+- Hence, the optical path difference is:
+$$\delta=2d\cos\theta$$
+- The total _amplitude and intensity_ are:
+$$\displaylines{A=T(1+e^{i\delta}+2e^{2i\delta}+\dots)=\frac{T}{1-Re^{i\delta}} \\|A|^2=\frac{T^2}{1+R^2-2R\cos\delta}=\frac{T^2}{(1-R)^2}\left(\frac{1}{1+[4R/(1-R)^2]\sin^2(\delta/2)}\right)}$$
+![[Fabry-Perot transmission function.png]]
+- There are _maxima_ at $\delta=2m\pi$
+- Usually, the etalon _produces circular fringes_, and it is used at _normal incidence_
+- At these maxima:
+$$\frac{I_\text{max}}{I_0}=\frac{T^2}{(1-R)^2}$$
+- For broadband light, _each wavelength component produces its own set of peaks_
+
+### Resolution on the Fabry-Perot interferometer
+- The _sharpness_ of the peak is characterised by the _half power width_ $\delta_{1/2}$:
+$$\frac{4R}{(1-R)^2}\sin^2(\delta_{1/2}/2)=1$$
+- Since the width is typically _small_, the half-width is:
+$$\delta_{1/2}=\frac{1-R}{\sqrt{R}}$$
+
+- The _finesse_ of the interferometer is the _ratio of peak separation_ (in $\delta$) to _full half-width_:
+$$\mathcal{F}=\frac{2\pi}{2\delta_{1/2}}=\frac{\pi\sqrt{R}}{1-R}$$
+- The _higher the reflection coefficient_, the _greater the finesse_ and greater the quality
+
+- Two wavelengths are _resolved_ if they are _separated by the half-width_ $2\delta_{1/2}$
+	- This is known as the _Sparrow criterion_
+- By writing $\delta$ as a function of $\lambda$ then setting $\Delta\delta=2\delta_{1/2}$:
+$$\frac{\lambda}{\Delta\lambda}=\frac{2\pi d\cos\theta}{\lambda\delta_{1/2}}=\frac{m\pi}{\delta_{1/2}}=m\mathcal{F}$$
+### The free spectral range
+- In Fabry-Perot spectroscopy, a _single order_ is usually separated out and further analysed for _fine structure_
+	- Example: Emission lines
+- For a _high wavelength difference_, the $m^\text{th}$ order can _overlap_ with the $(m+1)^\text{th}$ order of another wavelength
+- The difference $\Delta\lambda$ at which this occurs is the _free spectral range_
+
+- At _normal incidence_, $2d=m\lambda$
+- Differentiating and setting $dm=1$, one gets:
+$$(\Delta\lambda)_\text{fsr}=\frac{\lambda}{m}$$
+
+- The number of _resolution elements_ in the free spectral range is:
+$$\frac{(\Delta\lambda)_\text{fsr}}{(\Delta\lambda)_\text{res}}=\mathcal{F}$$
+![[Fabry-Perot resolutions.png]]
