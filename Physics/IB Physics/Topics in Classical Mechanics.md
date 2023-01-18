@@ -155,6 +155,8 @@ $$\frac{dU_\text{eff}}{dr}\Bigg|_{r=r_0}=0$$
 | $-3<n<-1$        | Stable             | Can be bound or unbound              | $U_\text{eff}\to0$      | $U_\text{eff}\to\infty$ |
 | $n\leq -3$       | Unstable           | Goes to either $r=0$ or $r\to\infty$ | $U_\text{eff}\to0$      | $U_\text{eff}\to-\infty$                        |
 
+![[Power law force effective potentials.png]]
+
 - Consider _small perturbations_ from the crcular orbit
 - By _Taylor expanding_ the potential and using the definition of $r_0$:
 $$U_\text{eff}\approx U_0+\frac{1}{2}\frac{dU^2}{dr}\Bigg|_{r=r_0}(r-r_0)^2=U_0+\frac{(n+3)J^2}{mr_0^4}(r-r_0)^2$$
