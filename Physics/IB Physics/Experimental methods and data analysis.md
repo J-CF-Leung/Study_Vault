@@ -318,12 +318,54 @@ $$s(t)=x(t)c(t) \iff \tilde{S}(\nu)=\frac{1}{\sqrt{2\pi}}\tilde{X}(\nu)*C(\nu)$$
 - _Shielding_ for _electromagnetic fields_ or _heat_
 - _Eliminate at source_
 
-## Filtering and phase-sensitive detection
+## Noise
 - If the noise and the signal have _non-overlapping spectra_, it is very easy to filter via a _step function_ (or an approximation to one)
 
 - The more complicated case is if the noise is _wide-spectrum_:
-![[Phase sensitive detection.png]]
+![[Physics/Images/Phase sensitive detection.png]]
 - This sort of filtering is known as _phase-sensitive detection_
+- This requires a filter with _small $\Delta\nu$_, ideally _similar to intrinsic width of the signal_
+
+- Typically in experiments, one can _encode_ a measurement with a _given frequency_, transmit then using a _frequency-specific filter_
+
+- To choose the encoding frequency, one must consider the behaviour of the noise:
+	- At _low frequencies_, noise is often _inversely proportional to $f$_
+	- At _high frequencies_, noise is often _white_ (not frequency dependent)
+		- Examples: [[#Shot noise]], [[#Johnson/Thermal noise]]
+- Hence, _DC signals are often heavily affected by noise_
+
+- Example: Noise in LIGO
+![[LIGO noise.png]]
+
+## Phase-sensitive detection
+![[Phase sensitive detection 1.png]]
+- Original: Small _DC voltage_ $V_s$ is transmitted _from transducer to amplifier_, very susceptible to noise
+- Let the ampliier have _open-loop gain_ $G$
+
+- Circuit _with phase-sensitive detection_:
+- _Modulators multiply their input_ with a _periodic signal_, with angular frequency at $\omega_r$ determined by the _reference oscillator_
+- Let the _phase difference_ from 1 to 2 be $\phi$
+- The _reference oscillator_ makes the _modulators_ produce _periodic_ signals with frequency $\omega_r$
+
+- The _first modulator_ uses a _sine wave_ to modulate the original signal:
+$$V_1=V_sG\sin(\omega_rt+\phi)$$
+- The _second modulator_ multiplies $V_1$ with a _square wave_
+
+- After the _cycle average_, the detected signal is:
+$$\begin{align}\mean{V_\text{out}}&=\frac{G}{T}\left[\int_0^{\pi/\omega_r}V_s\sin(\omega_rt+\phi)\,dt+\int_{\pi/\omega_r}^{2\pi/\omega_r}-V_s\sin(\omega_rt+\phi)\,dt\right] \\ &=\frac{2V_s}{\pi}G\cos\phi\end{align}$$
+- The $\cos\phi$ term is the "phase-sensitivity"
+- By _shifting the phase_ by $\pi/2$, one can solve the equations for $V_s$ and $\phi$
+	- The shifted signal is the _quadrature component_
+
+- Any noise added _after the first modulator_ will be _randomised_ by the second, and _average to zero_
+	- Also works for _constant systematic offsets_
+- For this to work, the two modulator waveforms must have _identical frequencies and fixed phase difference_
+	- Achieved using reference oscillator
+
+- There may be noise added _before first modulation_ (or, _off-carrier noise_) at a frequency _close to $\omega_r$_, (i.e. $\omega_r+\Delta\omega$)
+- The output _oscillates at_ $\Delta\omega$, therefore the _time-average_ must be done _for a longer time_
+	- Therefore, the system can be said to have an _effective bandwidth_
+- Therefore the _reference oscillator_ must be _phase-stable_ for the considered time-scale
 
 # Probability distributions
 - Let there be a _probability distribution_ $P(x)$
