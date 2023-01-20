@@ -81,7 +81,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -98,7 +98,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/IB Physics/Experimental methods and data analysis.md"
+                    "file": "Physics/IB Physics/Topics in Classical Mechanics.md"
                   }
                 }
               }
@@ -114,7 +114,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/IB Physics/Experimental methods and data analysis.md",
+                    "file": "Physics/IB Physics/Topics in Classical Mechanics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -212,7 +212,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/IB Physics/Experimental methods and data analysis.md",
+                "file": "Physics/IB Physics/Topics in Classical Mechanics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -229,7 +229,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/IB Physics/Experimental methods and data analysis.md",
+                "file": "Physics/IB Physics/Topics in Classical Mechanics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -252,7 +252,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/IB Physics/Experimental methods and data analysis.md"
+                "file": "Physics/IB Physics/Topics in Classical Mechanics.md"
               }
             }
           },
@@ -282,17 +282,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ac0aa9e553cf2558",
+  "active": "77417abd7c8c24a7",
   "lastOpenFiles": [
+    "Misc or Personal/Quotes.md",
     "Physics/IB Physics/Topics in Classical Mechanics.md",
+    "Physics/IB Physics/Experimental methods and data analysis.md",
     "Physics/IB Physics/Introductory quantum mechanics.md",
     "Physics/IB Physics/Optics.md",
     "Mathematics/IB Natsci Maths/Second order linear ODEs and Green's Functions.md",
     "Incomplete sections.md",
     "README.md",
     "Physics/Analytical classical mechanics.md",
-    "Physics/IB Physics/Experimental methods and data analysis.md",
-    "Physics/IB Physics/Electromagnetism.md",
-    "Chemistry/IB Chemistry/Molecular quantum mechanics.md"
+    "Physics/IB Physics/Electromagnetism.md"
   ]
 }

@@ -222,10 +222,82 @@ $$\displaylines{A^2(e^2-1)=J^2\left(v^2-\frac{2A}{mr}\right)=\frac{2EJ^2}{m}=2AE
 $$E=-\frac{A}{2a}$$
 - Energy is _independent of eccentricity_
 
+- The _time-averaged energies_ are:
+$$\mean{T}=-\mean{E}=-\frac{1}{2}\mean{U}$$
 
-
+### A summary
+- Orbit:
+$$r=\frac{r_0}{1+e\cos\phi}$$
+- Characteristic distances:
+$$\displaylines{r_\text{min}=\frac{r_0}{1+e}\hspace{1cm}r_\text{max}=\frac{r_0}{1+e} \\ a=\frac{r_0}{1-e^2} \hspace{1cm} b=\frac{r_0}{\sqrt{1-e^2}}}$$
 - From all of this, it can be seen that _the semi-major axis determines energy and period_:
 $$E=-\frac{A}{2a} \hspace{1cm} T=\frac{2\pi}{\omega} \hspace{1cm} \omega^2=\frac{A}{ma^3}$$
 
 - The semi-latus rectum determines _angular momentum_:
 $$J^2=Amr_0$$
+## Non-elliptical orbits
+- From above, eccentricity can be expressed in terms of _energy and angular momentum_:
+$$e^2=1+\frac{2EJ^2}{mA^2}$$
+| Eccentricity | Orbit      | Energy              |
+| ------------ | ---------- | ------------------- |
+| $e=0$        | Circular   | $-mA^2/(2J^2)$ |
+| $0<e<1$      | Elliptical | Negative            |
+| $e=1$        | Parabola   | $0$                 |
+| $e>1$        | Hyperbola  | Positive            |
+
+### Parabolic orbit
+- The _focal length_ of the parabola is $r_0/2$, equal to $r_\text{min}$
+	- Like the ellipse, the _focus_ is at the origin
+- Equation with the attracting body as origin:
+$$y^2=4f(f-x)$$
+
+### Hyperbolic orbit
+- If $e>1$, energy is positive and $a$ is _negative_
+![[Hyperbolic orbit.png]]
+- The _impact parameter_ $b$ and the _speed at infinity_ $v_\infty$ determine angular momentum:
+$$J=mbv_\infty \hspace{1cm} E=\frac{1}{2}mv_\infty^2$$
+- The _asymptotes_ are given with $\phi_\infty$:
+$$\displaylines{\cos\phi_\infty=-1/e \hspace{1cm} \tan^2\phi_\infty=e^2-1=\frac{m^2v_\infty^4b^2}{A^2} \\ \cot(\chi/2)=|\tan\phi_\infty|=\frac{mv_\infty^2b^2}{A}}$$
+
+- $\chi$ is the _angle of deflection_ $2\phi_\infty-\pi$
+
+- With the attractive body at the origin, the equation in Cartesian coordinates are:
+$$\displaylines{\frac{(x-x_c)^2}{X^2}-\frac{y^2}{Y^2}=1 \\ X=\frac{r_0}{e^2-1} \hspace{1cm}Y=\frac{r_0}{\sqrt{e^2-1}} \hspace{1cm} x_c=eX}$$
+
+- The _distance of closest approach_ is:
+$$x_c-X=|a|(e-1)$$
+- The equation for the _asymptotes_ is:
+$$y=\pm\frac{Y}{X}x=\pm\sqrt{e^2-1}x$$
+### Repulsive potential/Rutherford scattering
+- The _repulsive force_ is $F=B/r^2$
+- The angular momentum and orbit are:
+	- The solution for $r$ is the _negative branch_ of the conic section
+$$J^2=BMr_0 \hspace{1cm} r=\frac{r_0}{e\cos\phi-1}$$
+- The _angle of deflection_ $\chi$ is now defined to be _negative_
+- The angle of the asymptote is:
+$$\cot(\chi/2)=|\tan\phi_\infty|=\frac{mv_\infty b}{B}$$
+- The _impact parameter_ can be found by looking at the _change in momentum along one asymptotic direction_
+	- Here, $\theta$ is _instantaneous angular position_ starting from asymptote
+$$\begin{align}\Delta p&=mv_\infty(\cos\chi-1)=\int F_d\,dt=-\int\frac{B}{r^2}\cos\theta\,dt \\ &=-\int\frac{B}{r^2}\cos\theta\frac{d\theta}{\dot{\theta}}=-\int\frac{mB}{J}\cos\theta\,d\theta\end{align}$$
+
+### Hohmann Transfer
+![[Hohmann Transfer.png]]
+- The _Hohmann transfer_ is a _half-elliptical trajectory_ connecting _2 circular orbits_
+- In a circular orbit:
+$$T=-E=-\frac{1}{2}U$$
+- The _initial conditions_ are:
+$$E_1=-\frac{GMm}{2a_1}\hspace{1cm} v_1=\sqrt{\frac{GM}{a_1}}$$
+- The energy of the _transfer orbit_ is:
+$$E=-\frac{GMm}{a_1+a_2}$$
+- From _energy conservation_, the $\Delta v$ required to go into the orbit is:
+$$\Delta v=\sqrt{\frac{2GMa_2}{a_1(a_1+a_2)}}-\sqrt{\frac{GM}{a_1}}$$
+- To enter the _larger circular orbit_, a _further velocity change_ is required
+
+- The Hohmann transfer is _the most fuel-efficient orbit_
+	- Exception: Gravitational slingshot
+
+### Gravitational slingshot
+- Using a _large object_ to _increase kinetic energy_ or _change direction_
+	- The _loss of kinetic energy_ of the large object is _negligible_
+- Best understood using a _frame transformation_
+![[Gravitational slingshot.png]]
