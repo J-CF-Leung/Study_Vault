@@ -9,18 +9,6 @@
         "dimension": 69.82044198895028,
         "children": [
           {
-            "id": "d78b3635a0523f25",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mathematics/IB Natsci Maths/Second order linear ODEs and Green's Functions.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "77417abd7c8c24a7",
             "type": "leaf",
             "state": {
@@ -39,6 +27,30 @@
               "type": "markdown",
               "state": {
                 "file": "Physics/IB Physics/Introductory quantum mechanics.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6192d655fff483ee",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mathematics/IB Natsci Maths/Sturm-Liouville Theory.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8f638cab855e79dd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
                 "mode": "source",
                 "source": false
               }
@@ -81,7 +93,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -98,7 +110,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/IB Physics/Topics in Classical Mechanics.md"
+                    "file": "Mathematics/IB Natsci Maths/Sturm-Liouville Theory.md"
                   }
                 }
               }
@@ -114,7 +126,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/IB Physics/Topics in Classical Mechanics.md",
+                    "file": "Mathematics/IB Natsci Maths/Sturm-Liouville Theory.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -212,7 +224,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/IB Physics/Topics in Classical Mechanics.md",
+                "file": "Mathematics/IB Natsci Maths/Sturm-Liouville Theory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -229,7 +241,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/IB Physics/Topics in Classical Mechanics.md",
+                "file": "Mathematics/IB Natsci Maths/Sturm-Liouville Theory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -252,7 +264,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/IB Physics/Topics in Classical Mechanics.md"
+                "file": "Mathematics/IB Natsci Maths/Sturm-Liouville Theory.md"
               }
             }
           },
@@ -282,17 +294,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "77417abd7c8c24a7",
+  "active": "6192d655fff483ee",
   "lastOpenFiles": [
-    "Misc or Personal/Quotes.md",
-    "Physics/IB Physics/Topics in Classical Mechanics.md",
-    "Physics/IB Physics/Experimental methods and data analysis.md",
+    "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
+    "Mathematics/IB Natsci Maths/Vectors and matrices.md",
     "Physics/IB Physics/Introductory quantum mechanics.md",
+    "Mathematics/IB Natsci Maths/Sturm-Liouville Theory.md",
+    "Physics/IB Physics/Topics in Classical Mechanics.md",
+    "Misc or Personal/Quotes.md",
+    "Physics/IB Physics/Experimental methods and data analysis.md",
     "Physics/IB Physics/Optics.md",
     "Mathematics/IB Natsci Maths/Second order linear ODEs and Green's Functions.md",
-    "Incomplete sections.md",
-    "README.md",
-    "Physics/Analytical classical mechanics.md",
-    "Physics/IB Physics/Electromagnetism.md"
+    "Incomplete sections.md"
   ]
 }

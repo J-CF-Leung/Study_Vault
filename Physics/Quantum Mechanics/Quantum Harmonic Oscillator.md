@@ -1,17 +1,20 @@
-# The quantum harmonic oscillator in 1 dimension
+# In 1 dimension
 - The Hamiltonian:
 $$\hat{\Ham}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\hat{x}^2$$
 - System always vibrates at $\omega$, an energy eigenstate gives an indication of "average" amplitude and momentum
 
-## Frobenius method
+## Power series method
 - What to solve: The time-independent Schrodinger equation in the coordinate basis
 $$-\frac{\hbar^2}{2m}\frac{d^2}{dx^2}\psi+\frac{1}{2}m\omega^2x^2\psi=E\psi$$
 - Consider the dimensionless variables:
 $$\displaylines{\xi=\sqrt{\frac{m\omega}{\hbar}}x \\ K=\frac{2E}{\hbar\omega}}$$
 - The Schrodinger equation becomes:
 $$\frac{d^2\psi}{d\xi^2}=(\xi^2-K)\psi$$
+- In the limit of _large $\xi$_, the solution tends to $\psi\approx\exp(-\xi^2/2)$
 
-- Using the Frobenius method, one gets that only certain values of $K$ satisfies the equation:
+- Then, let $\psi$ be:
+$$\displaylines{\psi=h(\xi)\exp(-\xi^2/2) \\ h(\xi)=\sum_{n=0}^\infty a_n\xi^n}$$
+- Using a power series, one gets that only certain values of $K$ makes the function _square-integrable_:
 $$K=2n+1\rightarrow E=\left(n+\frac{1}{2}\right)\hbar\omega$$
 - Continuing the process, one can find the wave functions to be:
 $$\psi_n(x)=\left(\frac{m\omega}{2^{2n}\pi\hbar(n!)^2}\right)^{1/4} H_n(\xi)\exp\left(-\frac{m\omega}{2\hbar}x^2\right)$$
