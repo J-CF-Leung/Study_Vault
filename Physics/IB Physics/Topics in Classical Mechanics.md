@@ -258,6 +258,7 @@ $$y^2=4f(f-x)$$
 $$J=mbv_\infty \hspace{1cm} E=\frac{1}{2}mv_\infty^2$$
 - The _asymptotes_ are given with $\phi_\infty$:
 $$\displaylines{\cos\phi_\infty=-1/e \hspace{1cm} \tan^2\phi_\infty=e^2-1=\frac{m^2v_\infty^4b^2}{A^2} \\ \cot(\chi/2)=|\tan\phi_\infty|=\frac{mv_\infty^2b^2}{A}}$$
+- Since it is a hyperbola, $\pi/2<\phi_\infty<\pi$
 
 - $\chi$ is the _angle of deflection_ $2\phi_\infty-\pi$
 

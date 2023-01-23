@@ -36,7 +36,7 @@ $$||u||^2=\braket{u|u}=\int_\alpha^\beta|u(x)|^2\,dx$$
 - For _any operator_ $\Lagr$, the _adjoint_ of the operator, $\Lagr^\dagger$, is defined by:
 $$\begin{aligned}\braket{u|\Lagr v}=\int_\alpha^\beta u\left(\Lagr v\right)\,dx&=\int_\alpha^\beta\left(\Lagr^\dagger u^* \right)v\,dx+\text{boundary terms} \\ &=\braket{\Lagr^\dagger u|v} +\text{boundary terms}\end{aligned}$$
 	- Second equality obtained by multiple _integrations by parts_
-
+''
 - If an operator is _self-adjoint_, or Hermitian:
 $$\braket{u|\Lagr v}=\braket{\Lagr u|v}$$
 - They are _analagous to Hermitian operators_
