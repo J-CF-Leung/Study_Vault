@@ -92,8 +92,8 @@ I’ll stick to just two;
 It’s CM’s and fixed points for me.
 
 ## The guessing game
-What L was, he just couldn’t tell. 
-And p? He was clueless as well. 
+What $L$ was, he just couldn’t tell. 
+And $p$? He was clueless as well. 
 But despite his distress, 
 He wrote down the right guess 
 For their quotient: the lever-arm’s $l$.

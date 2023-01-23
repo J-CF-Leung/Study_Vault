@@ -50,7 +50,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
+                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
                 "mode": "source",
                 "source": false
               }
@@ -148,7 +148,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.9020357635304831,
+                      "scale": 0.3028939797015341,
                       "close": true
                     }
                   }
@@ -295,15 +295,15 @@
   },
   "active": "77417abd7c8c24a7",
   "lastOpenFiles": [
-    "Physics/IB Physics/Introductory quantum mechanics.md",
+    "Misc or Personal/Quotes.md",
+    "Physics/IB Physics/Topics in Classical Mechanics.md",
+    "Chemistry/IB Chemistry/Symmetry in molecules.md",
+    "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
     "Incomplete sections.md",
+    "David Morin's Limericks.md",
+    "Physics/IB Physics/Introductory quantum mechanics.md",
     "Physics/Quantum Mechanics/Untitled.md",
     "Physics/Quantum Mechanics/Topics in Quantum Mechanics.md",
-    "Physics/Quantum Mechanics/Time-independent Hamiltonians in 3 dimensions.md",
-    "Physics/Quantum Mechanics/Time-independent Hamiltonians in 1 dimension.md",
-    "Physics/Quantum Mechanics/The operators of quantum mechanics.md",
-    "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
-    "Physics/Quantum Mechanics/Polymer physics with path integrals.md",
-    "Physics/Quantum Mechanics/Multiple particles in quantum mechanics.md"
+    "Physics/Quantum Mechanics/Time-independent Hamiltonians in 3 dimensions.md"
   ]
 }

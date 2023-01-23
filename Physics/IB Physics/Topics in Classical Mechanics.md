@@ -295,10 +295,71 @@ $$\Delta v=\sqrt{\frac{2GMa_2}{a_1(a_1+a_2)}}-\sqrt{\frac{GM}{a_1}}$$
 - To enter the _larger circular orbit_, a _further velocity change_ is required
 
 - The Hohmann transfer is _the most fuel-efficient orbit_
-	- Exception: Gravitational slingshot
+	- Exception: Gravitational slingshot, or _bi-elliptic transfer_ in some cases
 
 ### Gravitational slingshot
 - Using a _large object_ to _increase kinetic energy_ or _change direction_
 	- The _loss of kinetic energy_ of the large object is _negligible_
 - Best understood using a _frame transformation_
 ![[Gravitational slingshot.png]]
+- Consider the case of a slingshot _along the original direction_:
+	- Let the ship's original velocity be $v$, and Jupiter's speed be $V$
+	- The final velocity of the ship is $2V-v$
+- Only viable for a _small impact parameter_
+	- Jupiter's gravity is _dominant_ in this region
+
+## The two-body problem
+- Let there be 2 masses $M_1$ and $M_2$, of _comparable size_
+- Let their positions be $\bm{r}_1$ and $\bm{r}_2$
+
+- The _reduced mass_ $\mu$ is defined as:
+$$\displaylines{\frac{1}{\mu}=\frac{1}{M_1}+\frac{1}{M_2} \\ \mu=\frac{M_1M_2}{M_1+M_2}}$$
+
+- The centre of mass must _stay in place relative to the masses_
+- The two masses and the COM form a _straight line_
+- The masses _orbit around the COM_
+
+- Let the coordinate $\bm{r}\equiv\bm{r}_1-\bm{r}_2$
+
+- It can be shown that the _kinetic energy in the COM frame_ is:
+$$T=\frac{1}{2}\mu|\dot{\bm{r}}|^2$$
+- The _angular momentum_ in the frame is:
+$$\bm{J}=\mu\bm{r}\wedge\dot{\bm{r}}$$
+- The _equation of motion_ for $\bm{r}$ is:
+$$\ddot{\bm{r}}=\frac{1}{\mu}\bm{F}_{12}=\frac{M_1}{\mu}\ddot{\bm{r}}_1$$
+- Hence, the two-body problem with _no external forces_ is _equivalent to a one-body problem_
+
+## The three-body problem
+- Example: Sun, Earth, Moon
+- Real, stable cases are often _co-planar_
+
+- General behaviour: 
+	- With arbitrary initial conditions, the bodies often start to spin to conserve $\bm{J}$
+	- The bodies attract, speed up and interact strongly
+	- A _close binary_ is formed, releasing energy
+	- The final body may _reach escape velocity_
+
+## Gravitational potential and tidal forces
+- The _zero is arbitrary_, but often chosen to be _infinity_
+- Hence, the potential for a _point mass_ $M$ is:
+$$\phi_g(\bm{r})=-\frac{GM}{R}$$
+- The _gravitational field_ $\bm{g}$ is the _negative gradient_:
+$$\bm{g}=-\nabla\phi_g$$
+- For a _point mass_:
+$$\bm{g}=-\frac{GM}{R^2}\hat{\bm{e}}_r$$
+- The gravitational _tidal field_ $\bm{R}$ is a _difference in gravitational field between points_ offset by some displacement $\bm{a}$
+$$\bm{T}(\bm{a})=(\bm{a}\cdot\nabla)\bm{g}$$
+- Since the field varies as $1/r^2$, the tidal field varies as $1/r^3$
+
+- If $\bm{a}=a\bm{e}_r$, it can be shown either from _binomial expansion_ or differentiation that:
+$$\displaylines{\bm{T}(a\hat{\bm{e}}_r)=\frac{2aGM}{R^3}\hat{\bm{e}}_r \\ \bm{T}(\hat{\bm{e}}_r)=\frac{2GM}{R^3}\hat{\bm{e}}_r}$$
+
+- If $\bm{a}=a\hat{\bm{e}}_\theta$, this brings a small _change in angle_ $a/R$, hence it can be shown that:
+$$\bm{T}(\hat{\bm{e}}_\theta)=-\frac{GM}{R^3}\hat{\bm{e}}_\theta$$
+- Hence, an object in the field of a point mass experiences a _radial stretching_ and a _compression in a plane_ perpendicular to the radial vector
+
+- In the case where the object is _co-rotating_ with the orbit, there is contribution from the _centrifugal force_
+- The _sideways tidal force is cancelled out_
+- The sum gives a _radial stretch_ of $3GM/R^3$ _per unit length_, and a _compression perpendicular to the rotating plane_ of $-GM/R^3$ per unit length
+
+### The tides on Earth
