@@ -1,4 +1,4 @@
-Insert good/inspirational/silly quote here
+>[!Quote]
 
 # The birth of quantum mechanics
 
@@ -10,7 +10,7 @@ Insert good/inspirational/silly quote here
 
 - The energy needed to _release_ an electron is the _work function_ $W$
 - After escaping the metal, there is still some _kinetic energy_
-
+![[Photoelectric effect potential.png|400]]
 - One can apply an _external voltage_ to either _accelerate or decelerate_ the electrons
 - At some voltage $-V_0$, known as the _stopping voltage_, the _photocurrent vanishes_
 
@@ -73,7 +73,7 @@ $$\displaylines{p=h/\lambda \\\bm{p}=\hbar\bm{k}}$$
 - According to classical electromagnetism, if _charged particles accelerate_, they _emit radiation and lose energy_
 - Hence, if an electron is _orbiting around a nucleus_, they _must lose energy and the atom collapses_
 
-- Bohr proposed that the electron can exist in _discrete, stable orbits_
+- Bohr proposed that the electron can exist in _discrete, stable orbits_, corresponding to the _normal modes_ of the electron as a wave
 - In order for an orbit with radius $r_n$ to be stable, it must satisfy:
 $$2\pi r_n=n\lambda_n=nh/p_n$$
 - Any mode not satisfying this will _destructively interfere_
@@ -84,7 +84,95 @@ $$L_n=n\hbar$$
 $$E_n=-\frac{e^2}{8\pi\epsilon_0 r_n}=-\frac{m_ee^4}{8\epsilon_0^2h^2}\frac{1}{n^2}=-\frac{hcR}{n^2}$$
 - Here, $R$ is the _Rydberg constant_:
 $$R\equiv\frac{m_ee^4}{8\epsilon_0^2h^3c}$$
+- The _velocity_ of the electron in the _first orbit_ can be written as $\alpha c$, where $\alpha$ is the _fine structure constant $\approx 1/137$_
 
 - Therefore, the _atomic emission lines_ are discrete
 - The emission line representing a transition from level $n$ to $m$:
 $$\Delta E=hcR\left(\frac{1}{n^2}-\frac{1}{m^2}\right)$$
+## Electron diffraction
+- Let there be an _array_ of scatterers (e.g. atoms in a lattice)
+- Let there be incident _particles or waves_, and scattering intensity can be recorded as a function of _angle to the normal of the plane_ $\theta$
+
+- If there are incoming _particles_, there is no "interference" or collision between the particles, with _no maxima and minima_ in the intensity pattern
+
+- If there is an incoming _wave_, an _interference pattern_ can be seen
+
+- If the distance between the atoms is $d$, the _condition for constructive interference_ is given by _Bragg's law_:
+$$d\sin\theta=n\lambda$$
+- This allows $d$ to be measured, often using _X-rays_
+
+- The _Davisson and Germer experiment_ confirmed that the same behaviour is seen from _electron beams_, accelerated by some voltage $V$
+	- It was done on the $[111]$ plane of _nickel_
+- The results _match Bragg's law with de Broglie's hypothesis_, using previously derived lattice spacing, with maximums seen at:
+$$\sin\theta=\frac{h}{d\sqrt{2meV}}$$
+
+## Conclusions
+- In a _macroscopic scale_:
+	- Physical objects (e.g. electrons) behave classically, as particles
+	- Electromagnetic _radiation_ carries a _continuous spectrum_ of energy
+
+- In a _microscopic scale_:
+	- Physical objects show _wave behaviour_
+	- Energy and momentum carried by waves is _quantised_
+
+# Wavefunctions
+(Insert quote from Castelnovo here)
+
+## The double-slit experiment
+![[Double slit experinent.png]]
+- Let $S_1$ be a _coherent source of photons_
+
+- For _high intensity of light_, the results are consistent with classical optics, with an _interference pattern_
+
+- For a stream of _classical particles_, the distribution would just have a _central maximum_
+
+- When the experiment is done with a _low intensity electron beam_, where electrons go through the slit _one at a time_
+- Plotting the _frequency of detection_ as a function of position after a long time, the _distribution matches the interference pattern_
+- No matter how low the intensity or measurement time, the same behaviour can be seen
+
+- This seems to imply that the behaviour of a particle can be described using a function that _interferes like a wave_
+- The function itself is a _probability amplitude_, which behaves like a wave
+- Its _modulus squared_/intensity gives the _probability density_
+
+- The _deterministic_ description given by classical mechanics gives way to a _probabalistic_ description given by quantum mechanics
+- The _wave function itself is deterministic_ (if the system is left alone) but _still only describes probabilities_ for measurement
+
+## Forms of the wave function
+### Plane waves
+- The most simple form of a wave function is the _plane wave_
+$$\psi(x,t)=A\exp[i(kx-\omega t)]$$
+- The wave function has _amplitude and phase_, but _probability must be real_
+
+- The probability of finding the particle in position range $x$ to $x+dx$ at time $t$ is:
+$$P(x,t)\,dx=|\psi(x,t)|^2\,dx$$
+- Since this is a _probability density_, it must be _normalised_:
+$$\int |\psi|^2\,dx=1$$
+
+- If the range of space in which the particle can be found is _finite_, then the normalisation condition holds
+- If not, one finds that there is _equal probability density everywhere for a plane wave_
+
+- For a _non-relativistic particle_:
+$$E=\frac{p^2}{2m}=\frac{\hbar^2 k^2}{2m}=\hbar\omega$$
+- This gives the _dispersion relation_ for a quantum mechanical particle:
+$$\omega=\frac{\hbar k^2}{2m}$$
+- The _phase and group velocities_ are:
+$$\displaylines{v_p=\frac{\omega}{k}=\frac{\hbar k}{2m} \\ v_g=\frac{d\omega}{dk}=\frac{\hbar k}{m}=v_\text{classical}}$$
+
+- Plane waves are _useful for situations like the double slit experiment_, since it has _equal intensity everywhere_
+
+### Wave packets
+- In cases describing _individual particles_, one may need a _wave packet_:
+$$\psi(x,t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty g(k)\exp[i(kx-\omega t)]\,dk$$
+- Here, $\omega$ is _still a function of $k$_
+
+- At $t=0$, $g(k)$ is simply the _Fourier transform_ of $\psi(x)$
+- Inverting the Fourier transform:
+$$g(k)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \psi(x)\exp[-ikx]\,dx$$
+- $g(k)$ is the _momentum wave function_
+- It describes the _probability amplitude of measuring the momentum of a particle_
+
+### Gaussian wave packet
+- For a Gaussian wave packet, the _momentum wave function_ is:
+$$g(k)=\left(\frac{\alpha^2}{\pi}\right)^{1/4}\exp\left[-\alpha^2\frac{(k-k_0)^2}{2}\right]$$
+- The corresponding _position wave function_ is:
+$$\psi(x)=\left(\frac{1}{\pi a^2}\right)^{1/4}\exp(ik_0x)\exp\left[-\frac{x^2}{2a^2}\right]$$
