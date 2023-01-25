@@ -1,4 +1,4 @@
-#IB_Natsci 
+
 - Typical independent variables: $x,y,z,t$
 - Order: power of highest derivative
 - Linearity: to the first degree in all independent variables and derivatives

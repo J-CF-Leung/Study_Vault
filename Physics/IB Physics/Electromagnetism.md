@@ -1,4 +1,4 @@
-#IB_Natsci
+
 
 - The following notes is adapted from Part IB Lectures given by Prof. Oleg Brandt
 - Other topics: [[Topics in Electromagnetism]]

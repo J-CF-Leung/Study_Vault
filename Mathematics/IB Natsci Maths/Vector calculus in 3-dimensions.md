@@ -1,4 +1,4 @@
-#IB_Natsci 
+
 
 [[Einstein notation]] will be used in this note unless specified
 

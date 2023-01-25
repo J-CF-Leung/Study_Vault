@@ -1,4 +1,4 @@
-#IB_Natsci 
+ 
 # Fourier series
 - Let $f(x)$ be a function with period $\Lagr$ 
 - Fourier's theorem states that it can be expressed as:

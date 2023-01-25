@@ -1,4 +1,4 @@
-#IB_Natsci
+
 
 # The wave equation
 - Waves transport energy and information without _bulk_ translation of the medium

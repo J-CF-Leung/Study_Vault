@@ -1,4 +1,3 @@
-#IB_Natsci 
 
 # The suffix notation
 - The _free suffices_ (typically $i,j,k$) range over the number of basis vectors

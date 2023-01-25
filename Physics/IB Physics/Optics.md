@@ -1,4 +1,4 @@
-#IB_Natsci 
+
 # Electromagnetic waves
 - From [[Electromagnetism#Maxwell's equations|Maxwell's equations]], it can be shown that in a _current and charge free region_, the $\bm{E}$ and $\bm{B}$ fields _satisfy the [[Waves#The wave equation|wave equation]]_:
 $$\nabla^2\bm{E}=(\mu\mu_0)(\epsilon\epsilon_0)\pd{^2\bm{E}}{t^2}=\frac{1}{c^2}\pd{^2\bm{E}}{t^2}$$

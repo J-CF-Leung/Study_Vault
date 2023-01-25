@@ -365,17 +365,18 @@ $$\bm{T}(\hat{\bm{e}}_\theta)=-\frac{GM}{R^3}\hat{\bm{e}}_\theta$$
 ### The tides on Earth
 
 
-## Rigid body dynamics
+
+# Rigid body dynamics
 - Definition of a rigid body: A _multi-particle_ system where _all inter-particle distances are fixed_ (i.e. No deformation)
 - The _location of all particles_ can be described by 6 coordinates:
 	- Position of the _centre of mass_
 	- 3 _Euler angles_, which give the _attitude_ w.r.t. Cartesian axes
 
-### Angular momentum and the inertia tensor
+## Angular momentum and the inertia tensor
 - The _velocity_ is determined by the _velocity of the CM_ and the _angular velocity_ $\bm{\omega}$
 - The _dynamics_ of the body is determined by its mass and the _inertia tensor_, relating _angular momentum_ $\bm{J}$ and $\bm{\omega}$
 
-- The inertia tensor is a _generalisation of the moment of inertia_
+- The inertia tensor is a _generalisation of the moment of inertia_, an _intrinsic property_ of the body
 - For a simply body spinning with a _fixed high-symmetry axis_, it becomes the moment of inertia $I$, with $J=I\omega$ and $T=I\omega^2/2$
 
 - The _centre of mass_ moves like a _particle_ of mass $M$ under the resultant external force $\bm{F}_0$
@@ -396,10 +397,10 @@ $$T=\frac{1}{2}\bm{J}\cdot\bm{\omega}$$
 
 - As something rotates around a _fixed axis_, $\bm{J}$ can _precess_, meaning a _couple is needed to maintain the motion_
 	- Couple is perpendicular to $\bm{J}$ and does _no work_
-	- The same couple can be derived by
+	- The same couple can be derived by _switching to a rotating frame_
 - If the axis is _not about the centre of mass_, another _centripetal force_ is required
 
-### The principal axes
+## The principal axes and the inertia ellipsoid
 - The moment of inertia tensor has _3 eigenvalues and eigenvectors_
 - The eigenvalues $(I_1,I_2,I_3)$ are the _moments of inertia_
 - The eigenvectors $(\bm{e}_1,\bm{e}_2,\bm{e}_3)$ are the _principal axes_
@@ -416,3 +417,26 @@ $$T=\frac{1}{2}(I_1\omega_1^2+I_2\omega_2^2+I_3\omega_3^2)$$
 $$\nabla_\omega T=\left(\pd{T}{\omega_1},\pd{T}{\omega_2},\pd{T}{\omega_3}\right)=\bm{J}$$
 - Therefore, $\bm{J}$ is _perpendicular to the surface of constant $T$_
 
+## Types of bodies, theorems and examples
+- Rotational bodies come in _three types_:
+	- Spherical tops: $I_1=I_2=I_3=I$
+		- Inertia tensor is _the identity matrix scaled by $I$_
+		- The body is _isotropic_, with arbitrary axis choice as long as they are orthogonal
+	- Symmetrical tops: $I_1=I_2\neq I_3$
+		- A _lens or disc_ shape is _oblate_
+		- A _cigar_ shape is _prolate_
+		- The $\bm{e}_3$ axis is _unique_, with the other 2 axes _arbitrary_ as long as they are _orthogonal_ to $\bm{e}_3$ and each other
+	- Asymmetrical top: all 3 $I_i$ are different
+
+- From looking at the sums, _no $I_i$ can be larger than the sum of the other two_
+
+- Special case: the _lamina_, with $z=0$ and $I_1+I_2=I_3$, known as the _perpendicular axis theorem_
+
+- For an axis _not about the centre of mass_, but is displacement $\bm{a}$ away and _parallel to a principal axis_:
+$$I_a=\sum m(\bm{r}+\bm{a})\cdot(\bm{r}+\bm{a})=I_0+Ma^2$$
+- Where $I_0$ is _about the centre of mass_, otherwise there is an extra term
+- This is the _parallel axis theorem_
+
+- Moment of inertia of _sphere_: $2Ma^2/5$
+- _Thin rod_, around centre of mass: $Ml^2/12$
+- _Rod_ with radius $a$: $I_1=I_2=Ma^2/4+Ml^2/12$

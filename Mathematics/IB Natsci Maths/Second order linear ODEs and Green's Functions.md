@@ -1,4 +1,4 @@
-#IB_Natsci 
+
 # The Dirac Delta function ❤
 >[!quote]
 >"This shouldn't work, but amazingly it does, it's basically alchemy"

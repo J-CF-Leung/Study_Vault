@@ -1,4 +1,3 @@
-#IB_Natsci 
 
 - Only considering [[Fundamentals of quantum mechanics#Time-independent Hamiltonians and stationary states|time-independent wave functions and Hamiltonians]]
 - Considering position-space wave functions

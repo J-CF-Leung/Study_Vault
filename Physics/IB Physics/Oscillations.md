@@ -1,4 +1,4 @@
-#IB_Natsci 
+
 
 # The simple harmonic oscillator
 - Applies for a quadratic potential:

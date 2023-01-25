@@ -1,4 +1,4 @@
-#IB_Natsci 
+
 >[!quote]
 >"We decided that vectors and matrices was as dry as the Sahara. This is about as dry as the moon."
 >-Dr. S. J. Cowley, 2022
