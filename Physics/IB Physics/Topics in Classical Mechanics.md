@@ -363,7 +363,11 @@ $$\bm{T}(\hat{\bm{e}}_\theta)=-\frac{GM}{R^3}\hat{\bm{e}}_\theta$$
 - The sum gives a _radial stretch_ of $3GM/R^3$ _per unit length_, and a _compression perpendicular to the rotating plane_ of $-GM/R^3$ per unit length
 
 ### The tides on Earth
-
+![[Earth tides.png]]
+- The Earth _rotates relative to the tidal bulge_, which is oriented _towards the moon_
+- This gives a _tidal acceleration_ $2GM_Mz/r^3$ at $A$ and $-GM_Mz/r^3$ at $B$
+- This gives a _potential difference_ $3GM_Mz/r^3$, equivalent to $gh$, where $h$ is the _height of the tides_
+- Complications: Geography, the Sun
 
 
 # Rigid body dynamics

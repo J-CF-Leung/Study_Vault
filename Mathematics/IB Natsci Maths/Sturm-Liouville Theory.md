@@ -32,7 +32,7 @@ $$||u||^2=\braket{u|u}=\int_\alpha^\beta|u(x)|^2\,dx$$
 
 - Functions $u$ and $v$ are _orthogonal_ if $\braket{u|v}=0$
 
-## Adjoint and self-adjoint operators
+## Adjointness and Sturm-Liouville operators
 - For _any operator_ $\Lagr$, the _adjoint_ of the operator, $\Lagr^\dagger$, is defined by:
 $$\begin{aligned}\braket{u|\Lagr v}=\int_\alpha^\beta u\left(\Lagr v\right)\,dx&=\int_\alpha^\beta\left(\Lagr^\dagger u^* \right)v\,dx+\text{boundary terms} \\ &=\braket{\Lagr^\dagger u|v} +\text{boundary terms}\end{aligned}$$
 	- Second equality obtained by multiple _integrations by parts_
@@ -90,3 +90,44 @@ $$\lambda||u||_w^2=\lambda\braket{u|u}_w=\braket{u|\lambda u}_w=\braket{u|\tilde
 $$\displaylines{\lambda_1\braket{u_2|u_1}_w=\braket{u_2|\lambda_1u_1}_w=\braket{u_2|\tilde{\Lagr}u_1}_w}=\braket{\lambda_2u_2|u_1}_w=\lambda_2^*\braket{u_2|u_1}_w$$
 - Since the _eigenvalues are real_, and $\lambda_1\neq\lambda_2$, the _eigenfunctions must be orthogonal_
 
+- Examples: 
+	- _Trigonometric functions_ for $\Lagr=-d^2/dx^2$
+	- _Legendre polynomials_ for: $$\Lagr=-\frac{d}{dx}\left[(1-x^2)\frac{d}{dx}\right]$$
+
+## Eigenfunction expansions
+- The eigenfunctions of a self-adjoint operator are always _complete_
+- This means _any function can be expressed as a linear combination of the eigenfunctions_
+- Example: Any periodic function can be expressed as a _Fourier series_
+
+- Let $\{y_n\}$ be the set of _orthonormal eigenfunctions_, which satisfies the _boundary conditions_ and are of the operator $\Lagr$, self-adjoint w.r.t. weight $w(x)$
+- Any function satisfying the boundary conditions can be written as:
+$$f(x)=\sum_{n=1}^\infty a_ny_n(x) \hspace{1cm} a_n=\braket{y_n|f}_w$$
+- By _expanding the two expressions_, it can be found that for this to be true:
+$$\sum_{n=1}^\infty y_n(x)y_n^*(x')=\frac{1}{w(x')}\delta(x-x')$$
+- The set $\{y_n\}$ is _complete iff this is satisfied_
+
+## Solutions to differential equations
+- Let there be an equation of the form:
+$$\Lagr y(x)=f(x)$$
+- With _homogeneous boundary conditions_
+- For some _forcing function_ $f(x)$
+
+- If $\Lagr$ is _in Sturm-Liouville form_ and has a _complete orthonormal set of eigenfunctions_ $\{y_n\}$ and eigenvalues $\lambda_n$
+- The _formal solution is of the form_:
+$$y(x)=\int_\alpha^\beta G(x,x')f(x')\,dx'$$
+- Here, $G$ is the [[Second order linear ODEs and Green's Functions|Green's Function]]:
+$$\Lagr_xG(x,x')=\delta(x-x')$$
+- $\Lagr_x$ means the _operator acts with respect to $x$_
+
+- Let the Green's Function be:
+$$G(x,x')=\sum_{n=1}^\infty \frac{1}{\lambda_n} y_n(x)y_n^*(x')$$
+- This satisfies the _boundary conditions_ and the _definition_
+	- Use the _completeness relation_ and _eigenvalue equation_
+	- It also shows that $G(x,x')=G^*(x',x)$
+- The solution can then be written as:
+$$y(x)=\sum_{n=1}^\infty y_n\frac{1}{\lambda_n}\int_{\alpha}^\beta y_n^*(x')f(x')\,dx'=\sum_{n=1}^\infty y_n(x)\frac{\braket{y_n|f}}{\lambda_n}$$
+
+- If there is a _zero eigenvalue_, then $G(x,x')$ _cannot exist_
+- If there is an eigenvalue $\lambda_1$ _very small compared to others_, and the inner product is not too small:
+$$y(x)\approx \frac{1}{\lambda_1}y_1(x)\braket{y_1|f}$$
+- This causes a _resonant response_
