@@ -386,7 +386,7 @@ $$\bm{J}=\sum \bm{r}\wedge\bm{p}=\sum \bm{r}\wedge m(\bm{\omega}\wedge\bm{r})=\s
 - Therefore, $\bm{J}$ is _not necessarily parallel_ to $\bm{\omega}$
 - The inertia tensor is a _rank 2 tensor_
 - This is a _tensor relationship_:
-$$\displaylines{\bm{J}=\underline{\underline{I}}\bm{\omega} \\\bm{J}_i=I_{ij}\omega_j}$$
+$$\displaylines{\bm{J}=\dunderline{I}\bm{\omega} \\\bm{J}_i=I_{ij}\omega_j}$$
 - In _matrix notation_, the relationship is:
 $$\begin{pmatrix} J_x \\ J_y \\ J_z \end{pmatrix}=\begin{pmatrix} \sum m(y^2+z^2) & -\sum mxy & -\sum mxz \\ -\sum mxy & \sum m(x^2+z^2) & -\sum myz \\ -\sum mxz & -\sum myz & \sum m(x^2+y^2) \end{pmatrix} \begin{pmatrix} \omega_x \\ \omega_y \\ \omega_z \end{pmatrix}$$
 - The matrix is _real and symmetric_, hence can be _diagonalised_
