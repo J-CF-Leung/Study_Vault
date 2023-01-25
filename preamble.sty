@@ -9,3 +9,4 @@
 \newcommand{\dbar}{d\hspace{-0.04em}\bar{}\hspace{0.1em}}
 \newcommand{\mean}[1]{\left<#1\right>}
 \DeclareMathOperator{\sinc}{sinc}
+\newcommand{\dunderline}[1]{\underline{\underline{#1}}}

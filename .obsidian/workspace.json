@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/IB Physics/Topics in Classical Mechanics.md",
+                "file": "Preamble.md",
                 "mode": "source",
                 "source": false
               }
@@ -92,8 +92,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -110,7 +109,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/IB Physics/Introductory quantum mechanics.md"
+                    "file": "Preamble.md"
                   }
                 }
               }
@@ -126,7 +125,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/IB Physics/Introductory quantum mechanics.md",
+                    "file": "Preamble.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -224,7 +223,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/IB Physics/Introductory quantum mechanics.md",
+                "file": "Preamble.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -241,7 +240,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/IB Physics/Introductory quantum mechanics.md",
+                "file": "Preamble.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -264,7 +263,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/IB Physics/Introductory quantum mechanics.md"
+                "file": "Preamble.md"
               }
             }
           },
@@ -294,17 +293,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b051414ffb9d558d",
+  "active": "77417abd7c8c24a7",
   "lastOpenFiles": [
+    "Incomplete sections.md",
     "Physics/IB Physics/Topics in Classical Mechanics.md",
-    "Physics/Analytical classical mechanics.md",
     "Physics/IB Physics/Introductory quantum mechanics.md",
+    "Physics/Analytical classical mechanics.md",
     "Mathematics/IB Natsci Maths/Sturm-Liouville Theory.md",
     "Mathematics/IB Natsci Maths/Vectors and matrices.md",
     "Physics/IB Physics/Experimental methods and data analysis.md",
     "Misc or Personal/Quotes.md",
     "Chemistry/IB Chemistry/Symmetry in molecules.md",
-    "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
-    "Incomplete sections.md"
+    "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md"
   ]
 }

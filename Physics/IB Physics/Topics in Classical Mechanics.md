@@ -363,3 +363,56 @@ $$\bm{T}(\hat{\bm{e}}_\theta)=-\frac{GM}{R^3}\hat{\bm{e}}_\theta$$
 - The sum gives a _radial stretch_ of $3GM/R^3$ _per unit length_, and a _compression perpendicular to the rotating plane_ of $-GM/R^3$ per unit length
 
 ### The tides on Earth
+
+
+## Rigid body dynamics
+- Definition of a rigid body: A _multi-particle_ system where _all inter-particle distances are fixed_ (i.e. No deformation)
+- The _location of all particles_ can be described by 6 coordinates:
+	- Position of the _centre of mass_
+	- 3 _Euler angles_, which give the _attitude_ w.r.t. Cartesian axes
+
+### Angular momentum and the inertia tensor
+- The _velocity_ is determined by the _velocity of the CM_ and the _angular velocity_ $\bm{\omega}$
+- The _dynamics_ of the body is determined by its mass and the _inertia tensor_, relating _angular momentum_ $\bm{J}$ and $\bm{\omega}$
+
+- The inertia tensor is a _generalisation of the moment of inertia_
+- For a simply body spinning with a _fixed high-symmetry axis_, it becomes the moment of inertia $I$, with $J=I\omega$ and $T=I\omega^2/2$
+
+- The _centre of mass_ moves like a _particle_ of mass $M$ under the resultant external force $\bm{F}_0$
+- Same is true for _total angular momentum_:
+$$M\bm{\ddot{R}}=\bm{F}_0 \hspace{1cm}\bm{\dot{J}}=\bm{G}_0$$
+- The angular momentum is:
+$$\bm{J}=\sum \bm{r}\wedge\bm{p}=\sum \bm{r}\wedge m(\bm{\omega}\wedge\bm{r})=\sum mr^2\omega-\sum m\bm{r}(\bm{\omega}\cdot\bm{r})$$
+- Therefore, $\bm{J}$ is _not necessarily parallel_ to $\bm{\omega}$
+- The inertia tensor is a _rank 2 tensor_
+- This is a _tensor relationship_:
+$$\displaylines{\bm{J}=\underline{\underline{I}}\bm{\omega} \\\bm{J}_i=I_{ij}\omega_j}$$
+- In _matrix notation_, the relationship is:
+$$\begin{pmatrix} J_x \\ J_y \\ J_z \end{pmatrix}=\begin{pmatrix} \sum m(y^2+z^2) & -\sum mxy & -\sum mxz \\ -\sum mxy & \sum m(x^2+z^2) & -\sum myz \\ -\sum mxz & -\sum myz & \sum m(x^2+y^2) \end{pmatrix} \begin{pmatrix} \omega_x \\ \omega_y \\ \omega_z \end{pmatrix}$$
+- The matrix is _real and symmetric_, hence can be _diagonalised_
+- The _kinetic energy_ can be written as:
+$$T=\frac{1}{2}\bm{J}\cdot\bm{\omega}$$
+
+
+- As something rotates around a _fixed axis_, $\bm{J}$ can _precess_, meaning a _couple is needed to maintain the motion_
+	- Couple is perpendicular to $\bm{J}$ and does _no work_
+	- The same couple can be derived by
+- If the axis is _not about the centre of mass_, another _centripetal force_ is required
+
+### The principal axes
+- The moment of inertia tensor has _3 eigenvalues and eigenvectors_
+- The eigenvalues $(I_1,I_2,I_3)$ are the _moments of inertia_
+- The eigenvectors $(\bm{e}_1,\bm{e}_2,\bm{e}_3)$ are the _principal axes_
+	- They must be _mutually perpendicular_
+
+- By splitting $\bm{\omega}$ into _components along the principal axes_:
+$$T=\frac{1}{2}(I_1\omega_1^2+I_2\omega_2^2+I_3\omega_3^2)$$
+
+- In $\omega-$space, _surfaces of constant energy_ give the _inertia ellipsoid_
+- The axes have length $\propto 1/\sqrt{I_i}$
+- Hence, the _smallest $I$_ gives the _longest axis_
+
+- Here, the _gradient_ on the ellipsoid is:
+$$\nabla_\omega T=\left(\pd{T}{\omega_1},\pd{T}{\omega_2},\pd{T}{\omega_3}\right)=\bm{J}$$
+- Therefore, $\bm{J}$ is _perpendicular to the surface of constant $T$_
+
