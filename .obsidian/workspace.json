@@ -50,7 +50,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
+                "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
                 "mode": "source",
                 "source": false
               }
@@ -91,9 +91,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "2dbba4e817f2c67b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Physics/Analytical classical mechanics.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 7
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -110,7 +122,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/IB Physics/Introductory quantum mechanics.md"
+                    "file": "Physics/Analytical classical mechanics.md"
                   }
                 }
               }
@@ -126,7 +138,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/IB Physics/Introductory quantum mechanics.md",
+                    "file": "Physics/Analytical classical mechanics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -187,8 +199,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
-                "matchingCase": false,
+                "query": "dimensions]",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -224,7 +236,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/IB Physics/Introductory quantum mechanics.md",
+                "file": "Physics/Analytical classical mechanics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -241,7 +253,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/IB Physics/Introductory quantum mechanics.md",
+                "file": "Physics/Analytical classical mechanics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -264,7 +276,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/IB Physics/Introductory quantum mechanics.md"
+                "file": "Physics/Analytical classical mechanics.md"
               }
             }
           },
@@ -294,17 +306,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b051414ffb9d558d",
+  "active": "bdee2333112a0d60",
   "lastOpenFiles": [
-    "Mathematics/IB Natsci Maths/Sturm-Liouville Theory.md",
-    "Physics/IB Physics/Topics in Classical Mechanics.md",
-    "Physics/IB Physics/Introductory quantum mechanics.md",
+    "Physics/Quantum Mechanics/Time-independent quantum mechanics.md",
+    "Physics/Quantum Mechanics/Time-independent Hamiltonians in 3 dimensions.md",
     "Incomplete sections.md",
-    "Mathematics/Special functions and orthogonal relations.md",
-    "Physics/IB Physics/Experimental methods and data analysis.md",
-    "Mathematics/IB Natsci Maths/Vector calculus in 3-dimensions.md",
-    "Physics/IB Physics/Waves.md",
+    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Chemistry/IB Chemistry/Symmetry in molecules.md",
-    "Mathematics/IB Natsci Maths/Second order linear ODEs and Green's Functions.md"
+    "Mathematics/IB Natsci Maths/Sturm-Liouville Theory.md",
+    "Physics/IB Physics/Introductory quantum mechanics.md",
+    "Physics/IB Physics/Topics in Classical Mechanics.md",
+    "Mathematics/Special functions and orthogonal relations.md",
+    "Physics/IB Physics/Experimental methods and data analysis.md"
   ]
 }

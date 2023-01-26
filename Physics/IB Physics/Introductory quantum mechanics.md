@@ -145,7 +145,7 @@ $$\psi(x,t)=A\exp[i(kx-\omega t)]$$
 
 - The probability of finding the particle in position range $x$ to $x+dx$ at time $t$ is:
 $$P(x,t)\,dx=|\psi(x,t)|^2\,dx$$
-- Since this is a _probability density_, it must be _normalised_:
+- Since this is a _probability density_, it must be _normalised at all times_:
 $$\int |\psi|^2\,dx=1$$
 
 - If the range of space in which the particle can be found is _finite_, then the normalisation condition holds
@@ -165,14 +165,72 @@ $$\displaylines{v_p=\frac{\omega}{k}=\frac{\hbar k}{2m} \\ v_g=\frac{d\omega}{dk
 $$\psi(x,t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty g(k)\exp[i(kx-\omega t)]\,dk$$
 - Here, $\omega$ is _still a function of $k$_
 
-- At $t=0$, $g(k)$ is simply the _Fourier transform_ of $\psi(x)$
+- At $t=0$, $g(k)$ is simply the _[[Fourier series and transforms#Fourier transforms|Fourier transform]]_ of $\psi(x)$
 - Inverting the Fourier transform:
 $$g(k)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \psi(x)\exp[-ikx]\,dx$$
 - $g(k)$ is the _momentum wave function_
-- It describes the _probability amplitude of measuring the momentum of a particle_
+- It describes the _probability amplitude of measuring the momentum (or wavenumber) of a particle_
+- The probability of finding a particle with wavenumber in the range $k$ to $k+dk$ is:
+$$P(k,t)\,dk=|g(k,t)|^2\,dk$$
 
 ### Gaussian wave packet
 - For a Gaussian wave packet, the _momentum wave function_ is:
-$$g(k)=\left(\frac{\alpha^2}{\pi}\right)^{1/4}\exp\left[-\alpha^2\frac{(k-k_0)^2}{2}\right]$$
+$$g(k)=\left(\frac{a^2}{\pi}\right)^{1/4}\exp\left[-a^2\frac{(k-k_0)^2}{2}\right]$$
 - The corresponding _position wave function_ is:
 $$\psi(x)=\left(\frac{1}{\pi a^2}\right)^{1/4}\exp(ik_0x)\exp\left[-\frac{x^2}{2a^2}\right]$$
+- It is _already normalised_ due to Parseval's theorem
+
+- It is a _plane wave carrier_ with wavenumber $k_0$, _modulated by a Gaussian envelope_
+
+## Expectation values and the uncertainty relation
+- The _expectation value_ of a position given the wavefunction is:
+$$\mean{x}=\int x|\Psi(x,t)|^2\,dx$$
+- The _variance_ in a quantity is:
+$$(\Delta x)^2=\mean{x^2}-\mean{x}^2$$
+- For the _Gaussian packet_ at $t=0$:
+$$\mean{x}=0 \hspace{1cm} \mean{x^2}=\frac{a^2}{2} \hspace{1cm} \Delta x=\frac{a}{\sqrt{2}}$$
+- Using the momentum wave function:
+$$\mean{k}=k_0 \hspace{1cm} \mean{k^2}=\frac{1}{2a^2}+k_0^2 \hspace{1cm} \Delta k=\frac{1}{\sqrt{2}a}=\frac{1}{2\Delta x}$$
+- This gives the _uncertainty relation_:
+$$\Delta x\Delta p=\frac{\hbar}{2}$$
+- _Heisenberg's uncertainty principle_ states:
+$$\Delta x\Delta p\geq \frac{\hbar}{2}$$
+- The Gaussian wave packet is a wavefunction of _minimum uncertainty_
+
+## Time evolution
+- Recall the _assembly of a wave packet from plane waves_ in time:
+$$\psi(x,t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty g(k)\,\exp[i(kx-\omega t)]\,dk$$
+- Here, $\omega$ _is a function of $k$_
+
+- For a _narrow wave packet centred at $k_0$_, the frequency can be approximated by:
+$$\displaylines{k\approx k_0+\delta k \\ \omega(k)\approx\omega(k_0)+\frac{d\omega}{dk}\Bigg|_{k=k_0}\delta k+\dots=\omega_0+v_g\delta k+\dots}$$
+- Then, one can write $\psi(x,t)$ as:
+$$\begin{aligned}\psi(x,t)&\approx \exp[i(k_0x-\omega t)]\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty g(k)\exp[i(\delta kx-\delta\omega t)]\,d(\delta k) \\ &=\exp[ik_0(x-v_pt)]f(x-v_gt)\end{aligned}$$
+- The _phase velocity_ characterises the travel of the _carrier wave's phase front_
+- The _group velocity_ characterises the travel of the _envelope_
+
+- If there is a _non-zero quadratic term_, then the envelope _changes shape and disperses_
+
+### Time evolution and dispersion of the Gaussian wave packet
+- The Gaussian wave packet _with dispersion_:
+$$\displaylines{\psi(x,t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \left(\frac{a^2}{\pi}\right)^{1/4}\exp\left(-a^2\frac{(k-k_0)^2}{2}\right)\exp[i(kx-\omega t)]\,dk \\ \omega(k)\approx \omega_0+\frac{d\omega}{dk}\Bigg|_{k_0}(\delta k)+\frac{1}{2}\frac{d^2\omega}{dk^2}\Bigg|_{k_0}(\delta k)^2}$$
+- With _great pain_, one obtains:
+$$\psi(x,t)=\left(\frac{a^2}{\pi}\right)^{1/4}\frac{1}{(\frac{a^2}{2}+\frac{i\hbar t}{2m})^{1/2}}\,\exp[i(k_0x-\omega_0 t)]\exp\left\{-\frac{(x-\hbar k_0t/m)^2}{4(\frac{a^2}{2}+\frac{i\hbar t}{2m})}\right\}$$
+- The _centre of the wave packet propagates at the classical speed_
+- Spread
+- Uncertainty
+
+## The momentum representation
+- Recalling the expression for a generic wave packet:
+$$\Psi(x,t)=\frac{1}{\sqrt{2\pi}}\int g(k)\,\exp[i(kx-\omega t)]\,dk$$
+- _Absorbing the time exponential into $g$_, and using _de Broglie's relation_:
+$$\Psi(x,t)=\frac{1}{\sqrt{2\pi\hbar}}\int g\left(\frac{p}{\hbar},t\right) \exp\left(\frac{ipx}{\hbar}\right)\,dp$$
+- Defining:
+$$\Phi(p,t)=\frac{1}{\sqrt{\hbar}}g(p/\hbar)\exp(-i\omega t)$$
+- This is the _momentum representation of the wavefunction_
+- Therefore:
+$$\displaylines{\Psi(x,t)=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^\infty \Phi(p,t)\exp(ipx/\hbar)\,dp \\ \Phi(p,t)=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^\infty \Psi(x,t)\exp(-ipx/\hbar)\,dp}$$
+- The _probability of observing a particle in the position range_ $x$ to $x+dx$:
+$$P(x,t)\,dx=|\Psi(x,t)|^2\,dx$$
+- The _probability of observing a particle with momentum in the range_ $p$ to $p+dp$:
+$$P(p,t)dp=|\Phi(p,t)|^2\,dp$$

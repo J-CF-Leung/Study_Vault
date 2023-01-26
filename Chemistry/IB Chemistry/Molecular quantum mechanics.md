@@ -10,7 +10,7 @@
 $$\psi_n=A\sin\frac{n\pi x}{a}$$
 - The corresponding energies are:
 $$E_n=\frac{n^2\hbar^2\pi^2}{2ma^2}$$
-- Details: [[Time-independent Hamiltonians in 1 dimension#Particle in a box|Particle in a box]]
+- Details: [[Time-independent quantum mechanics#Particle in a box|Particle in a box]]
 
 ## Nuclei: The quantum harmonic oscillator
 - Mathematical details and derivation: [[Quantum Harmonic Oscillator]]
