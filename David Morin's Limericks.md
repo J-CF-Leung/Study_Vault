@@ -98,6 +98,13 @@ But despite his distress,
 He wrote down the right guess 
 For their quotient: the lever-arm’s $l$.
 
+## Angular momentum and velocity
+Consider the vector of $\bm{L}$,
+And that of $\bm{\omega}$ as well.
+The erroneous claim
+That they must aim the same
+Is a view that you've got to dispel!
+
 ## Parity
 When studying vectors in school, 
 You’ll use your right hand as a tool. 

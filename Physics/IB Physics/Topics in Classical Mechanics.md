@@ -444,3 +444,61 @@ $$I_a=\sum m(\bm{r}+\bm{a})\cdot(\bm{r}+\bm{a})=I_0+Ma^2$$
 - Moment of inertia of _sphere_: $2Ma^2/5$
 - _Thin rod_, around centre of mass: $Ml^2/12$
 - _Rod_ with radius $a$: $I_1=I_2=Ma^2/4+Ml^2/12$
+
+## Free precession
+- Suppose the body is _isolated_:
+$$\bm{F}=\bm{G}=\bm{0}$$
+- The _angular momentum is constant_
+- If $\bm{J}$ and $\bm{\omega}$ are both _along a principal axis_, then it simply continues spinning in the same way
+
+- If they do not lie along a principal axis, _the direction of $\omega$ varies in both space and w.r.t. the body_, known as _precession_
+- The _magnitude can also change_
+
+### Euler's equations
+- Consider the relationship of rates of change between inertial and [[#Rotating frame|rotating frames]]:
+$$\left[\frac{d\bm{J}}{dt}\right]_{S_0}=\left[\frac{d\bm{J}}{dt}\right]_{S}+\omega\wedge\bm{J}$$
+- Let there be a torque $\bm{G}$
+- For $\bm{J}_S$, take _components of $\bm{J}$ and $\bm{\omega}$ along the principal axes_
+- Then, one gets _Euler's equations_:
+$$\displaylines{G_1=I_1\dot{\omega}_1+(I_3-I_2)\omega_2\omega_3 \\ G_2=I_2\dot{\omega}_2+(I_1-I_3)\omega_3\omega_1 \\ G_3=I_3\dot{\omega}_3+(I_2-I_1)\omega_1\omega_2}$$
+- One can consider this being from the _re-orientation of different components of angular momentum w.r.t. the principal axes_
+
+### Free precession of the symmetric top
+- Definition: $I_1=I_2\neq I_3$
+- From Euler's equations, $\dot{\omega_3}=0$
+
+- Define the _body frequency_ $\Omega_b$:
+$$\Omega_b\equiv \frac{I_1-I_3}{I_1}\omega_3$$
+- From Euler's equations, one gets _coupled ODEs_ for $\omega_1$ and $\omega_2$, which leads to:
+$$\ddot{\omega}_i+\Omega_b^2\omega_i=0 \hspace{1cm} \text{for i} =1,2$$
+- Hence _in the body frame_, $\bm{\omega}$ _precesses around the $3-$axis with the body frequency_
+- $\bm{J}$ is _not parallel to $\bm{\omega}$_ but _still precesses_
+
+- The _relative signs_ of $\omega_3$ and $\Omega_b$ depends on whether the inertia ellipsoid is _prolate or oblate_ (i.e. $I_1>I_3$ or $I_1<I_3$)
+
+- To find the angle between $\bm{J}$ and $\bm{\omega}$, _consider the inertial space frame_
+- $\bm{J}$ is _fixed_, and $\bm{\omega}$ is _precessing around it at space frequency_ $\Omega_s$
+
+- Choose a _time where $\omega_1=0$_
+- _Project_ $\bm{\omega}$ into one of the axes:
+$$\omega_p=|\bm{\omega}|\sin\theta_s=\frac{|\bm{\omega}\wedge\bm{J}|}{|\bm{J}|}$$
+- Here, $\dot{\bm{\omega}}$ is _in the $1-$direction_
+- From projecting the precession onto the plane normal to $\bm{J}$, the _rate of precession_ is:
+$$\Omega_s=\frac{\dot{\omega}_1}{\omega_p}=\frac{J}{I_1}$$
+
+- There is a _space cone_ from the precession of $\bm{\omega}$ around $\bm{J}$ with angle $\theta_s$
+- There is a _body cone_ from the precession of $\bm{\omega}$ around the $3-$ axis with angle $\theta_b$
+
+#### Poinsot's construction
+- For a _prolate ellipsoid_:
+![[Poisot's construction.png]]
+- For the _oblate ellipsoid_, the _space cone is "inside" the body cone_
+
+- From the _conservations of angular momentum and energy_, the _component of $\bm{\omega}$ along $\bm{J}$ is constant_
+- Hence, there is an _invariable plane_
+
+- Since $\bm{J}$ is perpendicular to the inertia ellipsoid, _the ellipsoid must be tangential to the invariable plane_
+- Since instantaneous motion is _perpendicular to $OP$_, the ellipsoid must _roll on the invariable plane_
+
+- From the condition of _no slipping_:
+$$\Omega_b\sin\theta_b=\Omega_s\sin\theta_s$$

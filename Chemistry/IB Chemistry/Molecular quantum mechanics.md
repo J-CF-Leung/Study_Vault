@@ -195,7 +195,7 @@ $$\hat{T}_N\psi_N+E_e\psi_N=E\psi_N$$
 - For 3-dimensional motion, the linear momentum operators use $\nabla$
 
 # The hydrogen atom
-- [[Time-independent Hamiltonians in 3 dimensions#The hydrogen atom|Detailed derivations]]
+- [[Time-independent quantum mechanics#The hydrogen atom|Detailed derivation]]
 - The Hamiltonian for a hydrogen-like atom is:
 $$\begin{aligned}\hat{\Ham}&=-\frac{\hbar^2}{2m_e}\nabla^2-\frac{Ze^2}{4\pi\epsilon_0r} \\ &=-\frac{\hbar^2}{2m_e}\frac{1}{r^2} \pd{}{r}\left(r^2\pd{}{r}\right) + \frac{\hat{L}^2}{2m_er^2} -\frac{Ze^2}{4\pi\epsilon_0r} \end{aligned}$$
 - Here we introduce _atomic units_:

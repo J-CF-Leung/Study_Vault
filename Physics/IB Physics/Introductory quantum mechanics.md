@@ -115,7 +115,7 @@ $$\sin\theta=\frac{h}{d\sqrt{2meV}}$$
 	- Physical objects show _wave behaviour_
 	- Energy and momentum carried by waves is _quantised_
 
-# Wavefunctions
+# Wavefunctions in free space
 (Insert quote from Castelnovo here)
 
 ## The double-slit experiment
@@ -151,9 +151,9 @@ $$\int |\psi|^2\,dx=1$$
 - If the range of space in which the particle can be found is _finite_, then the normalisation condition holds
 - If not, one finds that there is _equal probability density everywhere for a plane wave_
 
-- For a _non-relativistic particle_:
+- For a _non-relativistic particle_ with no surrounding potential:
 $$E=\frac{p^2}{2m}=\frac{\hbar^2 k^2}{2m}=\hbar\omega$$
-- This gives the _dispersion relation_ for a quantum mechanical particle:
+- This gives the _dispersion relation_ for a free quantum mechanical particle:
 $$\omega=\frac{\hbar k^2}{2m}$$
 - The _phase and group velocities_ are:
 $$\displaylines{v_p=\frac{\omega}{k}=\frac{\hbar k}{2m} \\ v_g=\frac{d\omega}{dk}=\frac{\hbar k}{m}=v_\text{classical}}$$
@@ -168,10 +168,7 @@ $$\psi(x,t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty g(k)\exp[i(kx-\omega t)]\
 - At $t=0$, $g(k)$ is simply the _[[Fourier series and transforms#Fourier transforms|Fourier transform]]_ of $\psi(x)$
 - Inverting the Fourier transform:
 $$g(k)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \psi(x)\exp[-ikx]\,dx$$
-- $g(k)$ is the _momentum wave function_
-- It describes the _probability amplitude of measuring the momentum (or wavenumber) of a particle_
-- The probability of finding a particle with wavenumber in the range $k$ to $k+dk$ is:
-$$P(k,t)\,dk=|g(k,t)|^2\,dk$$
+- $g(k)$ can be interpreted as the [[#The momentum representation|momentum wavefunction]]
 
 ### Gaussian wave packet
 - For a Gaussian wave packet, the _momentum wave function_ is:
@@ -212,13 +209,20 @@ $$\begin{aligned}\psi(x,t)&\approx \exp[i(k_0x-\omega t)]\frac{1}{\sqrt{2\pi}}\i
 - If there is a _non-zero quadratic term_, then the envelope _changes shape and disperses_
 
 ### Time evolution and dispersion of the Gaussian wave packet
+- The _dispersion relation in free space_:
+$$\begin{aligned}\omega=\frac{\hbar k^2}{2m}&=\omega(k_0)+\frac{d\omega}{dk}\Bigg|_{k_0}\delta k+\frac{1}{2}\frac{d^2\omega}{dk^2}\Bigg|_{k_0}(\delta k)^2 \\&=\omega_0+\frac{\hbar k_0}{m}\delta k+\frac{\hbar}{2m}(\delta k)^2\end{aligned}$$
+
 - The Gaussian wave packet _with dispersion_:
-$$\displaylines{\psi(x,t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \left(\frac{a^2}{\pi}\right)^{1/4}\exp\left(-a^2\frac{(k-k_0)^2}{2}\right)\exp[i(kx-\omega t)]\,dk \\ \omega(k)\approx \omega_0+\frac{d\omega}{dk}\Bigg|_{k_0}(\delta k)+\frac{1}{2}\frac{d^2\omega}{dk^2}\Bigg|_{k_0}(\delta k)^2}$$
+$$\displaylines{\psi(x,0)=\left(\frac{1}{\pi a^2}\right)^{1/4} \exp(ik_0x)\exp\left[-\frac{x^2}{2a^2}\right]\\g(k)=\left(\frac{1}{\pi a^2}\right)^{1/4}\exp\left[-\frac{a^2(k-k_0)^2}{2}\right]\\\psi(x,t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty g(k)\exp[i(kx-\omega t)]\,dk}$$
 - With _great pain_, one obtains:
-$$\psi(x,t)=\left(\frac{a^2}{\pi}\right)^{1/4}\frac{1}{(\frac{a^2}{2}+\frac{i\hbar t}{2m})^{1/2}}\,\exp[i(k_0x-\omega_0 t)]\exp\left\{-\frac{(x-\hbar k_0t/m)^2}{4(\frac{a^2}{2}+\frac{i\hbar t}{2m})}\right\}$$
-- The _centre of the wave packet propagates at the classical speed_
-- Spread
-- Uncertainty
+$$\psi(x,t)=\left(\frac{a^2}{4\pi}\right)^{1/4}\frac{1}{[a^2/2+i\hbar t/(2m)]^{1/2}}\,\exp[i(k_0x-\omega_0 t)]\exp\left\{-\frac{(x-\hbar k_0t/m)^2}{4[a^2/2+i\hbar t/(2m)]}\right\}$$
+- The _probability density_ is:
+$$|\Psi(x,t)|^2=\frac{1}{\pi^{1/2}[a^2+\hbar^2t^2/(m^2a^2)]^{1/2}}\exp\left\{-\frac{(x-\hbar k_0t/m)^2}{a^2+\hbar^2t^2/(m^2a^2)}\right\}$$
+
+- The _centre of the wave packet propagate:s at the classical speed_ $v_g=p_0/m=\hbar k_0/m$
+- The packet _spreads with time_:
+$$(\Delta x)^2=\frac{a^2}{2}\left(1+\frac{\hbar^2 t^2}{m^2a^4}\right)$$
+- This can be understood as combining _uncertainties for position and velocity in quadrature_, and using the _uncertainty principle_
 
 ## The momentum representation
 - Recalling the expression for a generic wave packet:
