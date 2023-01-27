@@ -238,3 +238,87 @@ $$\displaylines{\Psi(x,t)=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^\infty \Phi(p
 $$P(x,t)\,dx=|\Psi(x,t)|^2\,dx$$
 - The _probability of observing a particle with momentum in the range_ $p$ to $p+dp$:
 $$P(p,t)dp=|\Phi(p,t)|^2\,dp$$
+
+- From _Parseval's Theorem_, if $\Psi$ is normalised, $\Phi$ is also normalised
+
+# The Schrödinger Equation ❤
+
+## Free particle in one dimension
+- Consider a _wave packet representing a free particle_
+$$\displaylines{\Psi(x,t)=\frac{1}{\sqrt{2\pi}}\int g(k)\,\exp[i(kx-\omega t)]\,dk\\E=\hbar\omega=\frac{p^2}{2m} \hspace{1cm} p=\hbar k \hspace{1cm} \omega=\frac{\hbar k^2}{2m}}$$
+- Consider the _partial derivatives of the wave function_:
+$$\displaylines{\pd{\Psi}{t}=-i\omega\Psi \\ \pd{^2\Psi}{x^2}=-k^2\Psi}$$
+- Using the dispersion relation:
+$$-\frac{\hbar^2}{2m}\pd{^2\Psi}{x^2}=i\hbar\pd{\Psi}{t}$$
+- This is the _Schrödinger Equation for a free particle in one dimension_
+
+## General Schrödinger equation in one dimension
+- Consider the derivatives for a _plane wave_:
+$$\displaylines{\Psi(x,t)=A\exp[i(kx-\omega t)] \\ i\hbar\pd{\Psi}{t}=\hbar\omega\Psi=E\Psi \\ -i\hbar \pd{\Psi}{x}=\hbar k\Psi=p\Psi \\ -\frac{\hbar^2}{2m}\pd{^2\Psi}{x^2}=\frac{p^2}{2m}\Psi}$$
+- These 3 operations can be considered _operators_:
+$$\displaylines{\hat{E}\equiv i\hbar\pd{}{t} \\ \hat{p}=\frac{\hbar}{i}\pd{}{x} \\ \frac{\hat{p}^2}{2m}=-\frac{\hbar^2}{2m}\pd{^2}{x^2}}$$
+- These operators "represent" _total energy_, _momentum_, and _kinetic energy_
+
+- Adding the contribution of potential energy:
+$$i\hbar\pd{\Psi}{t}=-\frac{\hbar^2}{2m}\pd{^2\Psi}{x^2}+V(x,t)\Psi(x,t)$$
+- This is the _general time-dependent Schrödinger Equation in one dimension_
+
+\- The right hand side can be written in terms of the _Hamiltonian_:
+$$i\hbar\pd{\Psi}{t}=\hat{\Ham}\Psi$$
+- In this case, the Hamiltonian operator is:
+$$\hat{\Ham}=\frac{\hat{p}^2}{2m}+\hat{V}$$
+- Similar definition to the Hamiltonian in [[Topics in Classical Mechanics]]
+
+- All of these operators are _linear_
+
+## Time-independent Schrödinger Equation
+- Take a _time-independent potential_:
+$$V=V(x)$$
+- The wave function becomes _separable_:
+$$\Psi(x,t)=T(t)\psi(x)$$
+- Substituting into the 1D Schrödinger Equation and dividing through by $\Psi$:
+$$\frac{i\hbar}{T}\frac{dT}{dt}=\frac{1}{\psi}\left[-\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}+V(x)\psi(x)\right]=E$$
+- From this, the 2 equations are:
+$$\displaylines{T(t)=A\exp\left(-\frac{iEt}{\hbar}\right) \\ \Ham\psi=-\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}+V(x)\psi(x)=E\psi(x)}$$
+- The second equation is the _Time-independent Schrödinger Equation_
+- Therefore, the wave function is:
+$$\Psi(x,t)=\psi(x)\exp\left(-\frac{iEt}{\hbar}\right)$$
+- The _normalisation factor is absorbed_:
+$$\displaylines{|\Psi(x,t)|^2=|\psi(x)|^2 \\ \int|\psi(x)|^2\,dx=1}$$
+- Therefore, if $V$ is time-independent, then the solution $\Psi=T\psi$ is _stationary_, since the probability density is also time-independent
+
+## The Probability Current
+- The normalisation condition is over _all space_:
+$$\int_{-\infty}^\infty |\Psi(x)|^2\,dx=1 \hspace{1cm}\forall t$$
+- Consider the probability of finding a particle within some _limited volume_ $V$:
+$$\int_V \Psi^*\Psi\,dx=\int_V P\,dx$$
+- Consider its _time-dependence_, with a factor to make things easier, and taking the _complex conjugate of the Schrödinger Equation_:
+$$i\hbar\pd{}{t}\int_V \Psi^*\Psi\,dx=-\frac{\hbar^2}{2m}\int_V\left[\psi^*\pd{^2\Psi}{x^2}-\pd{^2\Psi^*}{x^2}\Psi\right]\,dx$$
+- Then:
+$$\begin{aligned}i\hbar\pd{}{t}\int_V \Psi^*\Psi\,dx&=-\frac{\hbar^2}{2m}\int_V\pd{}{x}\left[\Psi^*\pd{\Psi}{x}-\Psi\pd{\Psi^*}{x}\right]\,dx \\ &=-\frac{\hbar^2}{2m}\oint_{S_V}\left[\Psi^*\pd{\Psi}{x}-\Psi\pd{\Psi^*}{x}\right]\cdot d\bm{x}\end{aligned}$$
+- Where the 1D version of the _divergence theorem_ is used for the second equality
+- The latter integral is effectively _the sum of a flow at the end-points_ in 1D
+
+- This allows the quantity in the brackets to be interpreted as a _probability current_ $\bm{J}$:
+$$J(x,t)=\frac{\hbar}{2mi}\left[\Psi^*\pd{\Psi}{x}-\Psi\pd{\Psi^*}{x}\right]$$
+- This leads to _continuity_:
+$$\pd{P}{t}+\pd{J}{x}=0$$
+- This continuity is _analagous to the travel of a particle through space_
+
+# Piecewise-constant potentials
+- Assumptions
+	- Calculating _stationary states_, where $E$ is constant
+	- Time-independent Schrödinger Equation
+
+## Constant potential
+- Let there be a _constant potential_ $V_0$
+- The time-independent Schrödinger Equation is:
+$$-\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}=(E-V_0)\psi$$
+- Analagous to $T=E-V$ in classical mechanics
+
+- The _general solution_ is:
+$$\displaylines{\psi(x)=A\exp(\pm ikx) \\ k=\sqrt{\frac{2m(E-V_0)}{\hbar^2}}}$$
+- In the _classically possible_ regime, where $E>V_0$, $k$ is _real_
+- In the _classically forbidden_ regime, where $E<V_0$, $k$ is _purely imaginary_, $k=i\kappa$
+
+- Since the wave function should be normalisable and _not go to infinity_, the classically forbidden solution _exponentially decays_

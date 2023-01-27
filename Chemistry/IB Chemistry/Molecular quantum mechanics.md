@@ -110,7 +110,8 @@ $$E_n=\frac{\hbar^2}{2I}J(J+1)$$
 - Assume vibration and rotation are independent (A form of the _Born-Oppenheimer approximation_)
 	- Good approximation for low energy levels
 - The Hamiltonian can be written as $\Ham=\Ham_{vib}+\Ham_{rot}$
-- As the two Hamiltonians have different degrees of freedom, the _wave function is separable_ into $\psi_{vib}$ and $\psi_{rot}$
+- As the two Hamiltonians have different degrees of freedom, the _wave function is separable_ into $\psi_{vib}$ and $\psi_{rot}$:
+$$\psi=\psi_\text{vib}\psi_\text{rot}$$
 
 - The overall time-independent Schrodinger equation becomes:
 $$\Ham\Psi=[E_{vib}+BJ(J+1)]\Psi$$
@@ -235,7 +236,7 @@ $$-\frac{1}{2\rho^2}\pd{}{\rho}\left(\rho^2\pd{R}{\rho}\right)+\frac{l(l+1)}{2\r
 - Energy scales with $Z^2$
 
 ## The orbitals
-- The energy of an atomic orbital is (written in Hartrees):
+- The energy of an atomic orbital is (written _in Hartrees_):
 $$E_{n}=-\frac{Z^2}{2n^2}$$
 - Energy levels get closer together as $n$ increases
 
@@ -269,7 +270,7 @@ $$\psi_{nlm}=\sqrt{\left(\frac{2}{n}\right)^3\frac{(n-l+1)!}{2n(n+l)!}}\exp(-\rh
 ## Radial probability density
 - The radial probability density $P_nl(r)$ is:
 	$$P_{nl}(r)=r^2R_{nl}^2$$
-	- Consider the probability of finding an electron in a spherical shell between $r$ and $r+dr$
+	- Consider the _probability of finding an electron in a spherical shell_ between $r$ and $r+dr$
 	- Spherical harmonics are irrelevant as they are normalised
 
 - The _expectation value_ of $r$ is given by:
@@ -309,8 +310,8 @@ $$\hat{\Ham}_i=-\frac{\hbar^2}{2m_e}\nabla_i^2+V(r)$$
 	- Expectation value of potential is given by:
  $$\braket{V}_{nl}=\int\hat{V}(r)P_{nl}(r)\,dr$$
 	- The potential behaves like $-Z/r$ near the nucleus but $1/r$ far outside
-	- Orbitals with lower $l$ (e.g. $s$) has a density peak near the nucleus
-	- Hence, orbitals with lower $l$ have a lower energy
+	- Orbitals with lower $l$ (e.g. $s$) has a density _peak near the nucleus_
+	- Hence, orbitals with lower $l$ have a _lower energy_
 	- Lower $l$: _penetrate_ into the nucleus
 	- Higher $l$: nuclear charge is _screened_
 - As the potential only depends on $r$, the angular part is _still a spherical harmonic_
@@ -593,6 +594,7 @@ $$\displaylines{\begin{vmatrix} \alpha-\tilde{E} & \beta \\ \beta & \alpha-\tild
 $$\displaylines{\tilde{E}=\alpha+\beta \longrightarrow c_a=c_b=\frac{1}{\sqrt{2}} \\ \tilde{E}=\alpha-\beta \longrightarrow c_a=-c_b=\frac{1}{\sqrt{2}}}$$
 - As $\beta<0$, the combination where the orbitals combine _in-phase_ gives _lower energy_
 	- This is the _bonding orbital_
+![[H2 MOs.png]]
 
 ### Heteroatomics
 - Consider Lithium Hydride $\ce{LiH}$, consisting of the $2s$ and $1s$ orbitals, labelled $s_a$ and $s_b$
@@ -610,11 +612,11 @@ $$\tilde{E}=\frac{1}{2}(\alpha_a+\alpha_b)+\frac{1}{2}\sqrt{(\alpha_a-\alpha_b)^
 - $\beta=0$: no interaction, energies are $\alpha_a$ and $\alpha_b$
 - For a _fixed $\beta$_, the bonding orbital is _most stabilised when $\alpha_a=\alpha_b$_
 
-- For lithium hydride, the bond is better modelled using an _sp hybrid orbital_
+- For lithium hydride, the bond is better modelled using an _sp hybrid orbitaIn 2003, the mantra was worked into the theme Navras by Juno Rl_
 - From the same method as above, it can be shown that $c_{2s}=c_{2p}$
 
 ### Non-zero overlap integral
 - For the $H_2^+$ ion, for a non-zero overlap integral, from solving for $\tilde{E}$:
 $$(\alpha-\tilde{E})^2=(\beta-\tilde{E}S)^2$$
 - Setting energies _relative to $\alpha$_, and since $S>0$, by solving for $\tilde{E}$, it can be shown that _the strength of the bonding is reduced, while the strength of the antibonding is increased_
-
+![[With overlap integral.png]]
