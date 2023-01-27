@@ -200,7 +200,7 @@ $$h(x)=f\otimes g=\int_{-\infty}^\infty [f(y)]^*g(x+y)\,dy$$
 
 - The Fourier transform of a correlation:
 $$\tilde{h}(k)=\sqrt{2\pi}[\tilde{f}(k)]^*\tilde{g}(k)$$
-- Result: the Wiener-Kinchin theorem
+- Result: the _Wiener-Kinchin theorem_
 
 - Autoconvolution: $f*f=\sqrt{2\pi}\tilde{f}^2$
 - Autocorrelation: $f\otimes f=\sqrt{2\pi}|\tilde{f}|^2$
@@ -208,7 +208,7 @@ $$\tilde{h}(k)=\sqrt{2\pi}[\tilde{f}(k)]^*\tilde{g}(k)$$
 ![[Convolution and correlation.png]]
 
 # Parseval's theorem
-- Apply the inverse transform to the Wiener-Kinchin theorem
+- Apply the inverse transform to the Wiener-Kinchin theorem, set $x=0$, and relabelling, one gets _Parseval's theorem_:
 $$\int_{-\infty}^\infty[f(x)]^*g(x)\,dx=\int_{-\infty}^\infty [\tilde{f}(k)]^*\tilde{g}(k)\,dk$$
 
 - Special case of $g=f$:

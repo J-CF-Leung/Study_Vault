@@ -33,12 +33,12 @@
             }
           },
           {
-            "id": "6192d655fff483ee",
+            "id": "9b07594bcbc6a508",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/IB Natsci Maths/Sturm-Liouville Theory.md",
+                "file": "Mathematics/IB Natsci Maths/Calculus of variations.md",
                 "mode": "source",
                 "source": false
               }
@@ -67,20 +67,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "8d8553dd7ee71002",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Materials Science/Alloys.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -97,7 +86,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/IB Physics/Topics in Classical Mechanics.md"
+                    "file": "Mathematics/IB Natsci Maths/Calculus of variations.md"
                   }
                 }
               }
@@ -113,7 +102,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/IB Physics/Topics in Classical Mechanics.md",
+                    "file": "Mathematics/IB Natsci Maths/Calculus of variations.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -136,7 +125,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.3028939797015341,
+                      "scale": 0.9020357635304826,
                       "close": true
                     }
                   }
@@ -154,8 +143,7 @@
                   }
                 }
               }
-            ],
-            "currentTab": 1
+            ]
           }
         ],
         "direction": "horizontal"
@@ -224,7 +212,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/IB Physics/Topics in Classical Mechanics.md",
+                "file": "Mathematics/IB Natsci Maths/Calculus of variations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -241,7 +229,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/IB Physics/Topics in Classical Mechanics.md",
+                "file": "Mathematics/IB Natsci Maths/Calculus of variations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -264,7 +252,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/IB Physics/Topics in Classical Mechanics.md"
+                "file": "Mathematics/IB Natsci Maths/Calculus of variations.md"
               }
             }
           },
@@ -294,17 +282,17 @@
       "templates:Insert template": false
     }
   },
-  "active": "77417abd7c8c24a7",
+  "active": "9b07594bcbc6a508",
   "lastOpenFiles": [
+    "Mathematics/IB Natsci Maths/Fourier series and transforms.md",
     "Mathematics/IB Natsci Maths/Sturm-Liouville Theory.md",
+    "Mathematics/IB Natsci Maths/Second order linear ODEs and Green's Functions.md",
+    "Physics/IB Physics/Introductory quantum mechanics.md",
     "Physics/IB Physics/Topics in Classical Mechanics.md",
     "Misc or Personal/Quotes.md",
-    "David Morin's Limericks.md",
     "Materials Science/Alloys.md",
     "Misc or Personal/To read.md",
-    "Physics/IB Physics/Introductory quantum mechanics.md",
-    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
-    "Incomplete sections.md",
-    "Misc or Personal/Untitled.md"
+    "David Morin's Limericks.md",
+    "Chemistry/IB Chemistry/Molecular quantum mechanics.md"
   ]
 }

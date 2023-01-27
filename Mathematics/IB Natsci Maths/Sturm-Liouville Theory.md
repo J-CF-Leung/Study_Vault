@@ -100,7 +100,7 @@ $$\displaylines{\lambda_1\braket{u_2|u_1}_w=\braket{u_2|\lambda_1u_1}_w=\braket{
 - Example: Any periodic function can be expressed as a _Fourier series_
 
 - Let $\{y_n\}$ be the set of _orthonormal eigenfunctions_, which satisfies the _boundary conditions_ and are of the operator $\Lagr$, self-adjoint w.r.t. weight $w(x)$
-- Any function satisfying the boundary conditions can be written as:
+- _Any function satisfying the boundary conditions_ can be written as:
 $$f(x)=\sum_{n=1}^\infty a_ny_n(x) \hspace{1cm} a_n=\braket{y_n|f}_w$$
 - By _expanding the two expressions_, it can be found that for this to be true:
 $$\sum_{n=1}^\infty y_n(x)y_n^*(x')=\frac{1}{w(x')}\delta(x-x')$$
@@ -130,4 +130,24 @@ $$y(x)=\sum_{n=1}^\infty y_n\frac{1}{\lambda_n}\int_{\alpha}^\beta y_n^*(x')f(x'
 - If there is a _zero eigenvalue_, then $G(x,x')$ _cannot exist_
 - If there is an eigenvalue $\lambda_1$ _very small compared to others_, and the inner product is not too small:
 $$y(x)\approx \frac{1}{\lambda_1}y_1(x)\braket{y_1|f}$$
-- This causes a _resonant response_
+- This characterises a _resonant response_
+
+## Approximating a function by eigenfunction expansion
+- For _numerical methods_, a function will have to be _approximated with a truncated eigenfunction expansion_:
+$$f(x)\approx\sum_{n=1}^N a_ny_n(x)$$
+- It is _no longer obvious_ that $a_n$ takes _the same values as in the infinite series_
+
+- The _error_ of the approximation is defined by:
+$$\Sigma_N(a_1,a_2,\dots,a_N)=\left|\left|f(x)-\sum_{n=1}^N a_ny_n(x)\right|\right|_w^2$$
+- Since $\{y_n\}$ is an _orthonormal set_, the error is:
+$$\Sigma_N=||f||_w^2-\sum_{n=1}^N\left( a_n^*\braket{y_n|f}_w+a_n\braket{y_n|f}_w^*\right)+\sum_{n=1}^N a_n^*a_n$$
+- To find the minimum, _differentiate w.r.t. $a_k$ and $a_k^*$ as independent variables_
+- Then, one finds that it is minimised when:
+$$a_k=\braket{y_k|f}_w$$
+- From this, the _minimum error_ becomes:
+$$\Sigma_N=||f||_w^2-\sum_{n=1}^N |a_n|^2$$
+- Since error _must be larger than zero_, one can obtain _Bessel's inequality_:
+$$||f||_w^2\geq \sum_{n=1}^N |a_n|^2$$
+- For $N\to\infty$, this becomes an _equality_:
+$$||f||_w^2=\sum_{n=1}^\infty |a_n|^2$$
+- This is a _generalisation_ of [[Fourier series and transforms#Parseval's theorem|Parseval's Theorem]]
