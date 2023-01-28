@@ -45,7 +45,7 @@
             }
           },
           {
-            "id": "8f638cab855e79dd",
+            "id": "bbf5cadb14f13838",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -282,17 +282,17 @@
       "templates:Insert template": false
     }
   },
-  "active": "8f638cab855e79dd",
+  "active": "bbf5cadb14f13838",
   "lastOpenFiles": [
-    "Physics/IB Physics/Topics in Classical Mechanics.md",
     "Physics/IB Physics/Introductory quantum mechanics.md",
+    "Mathematics/IB Natsci Maths/Calculus of variations.md",
+    "Misc or Personal/2023-01-28.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+    "Physics/IB Physics/Topics in Classical Mechanics.md",
     "Physics/Analytical classical mechanics.md",
     "Mathematics/IB Natsci Maths/Second order linear ODEs and Green's Functions.md",
     "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
-    "Mathematics/IB Natsci Maths/Calculus of variations.md",
     "Mathematics/IB Natsci Maths/Fourier series and transforms.md",
-    "Mathematics/IB Natsci Maths/Sturm-Liouville Theory.md",
-    "Misc or Personal/Quotes.md"
+    "Mathematics/IB Natsci Maths/Sturm-Liouville Theory.md"
   ]
 }
