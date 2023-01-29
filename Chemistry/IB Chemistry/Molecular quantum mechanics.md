@@ -458,7 +458,7 @@ $$\displaylines{\braket{\frac{1}{r_{12}}}_\pm=J\pm K \\ J=\int\int \psi_{1s}(1)\
 - _Spin-orbit coupling_ relates $M_L$ and $M_S$, making them less well-defined
 
 - More useful to consider _total angular momentum_ $J$ and $M_J$
-- The quantum number $J$ can take values $L+S$, $L+S-1,\dots$, down to $|L-S|$
+- The quantum number $J$ _can take values_ $L+S$, $L+S-1,\dots$, down to $|L-S|$
 	- When $S\leq L$, there are $2S+1$ possible values of $J$
 
 - Therefore, the multi-electron wave function is defined by 4 quantum numbers:

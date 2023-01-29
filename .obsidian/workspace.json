@@ -50,7 +50,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md"
+                    "file": "Chemistry/IB Chemistry/Symmetry in molecules.md"
                   }
                 }
               }
@@ -102,7 +102,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+                    "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -212,7 +212,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -229,7 +229,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -252,7 +252,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md"
+                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md"
               }
             }
           },
@@ -284,15 +284,15 @@
   },
   "active": "bbf5cadb14f13838",
   "lastOpenFiles": [
+    "Chemistry/IB Chemistry/Molecular orbitals.md",
+    "Chemistry/IB Chemistry/Symmetry in molecules.md",
+    "Mathematics/IB Natsci Maths/Group Theory.md",
+    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Physics/IB Physics/Introductory quantum mechanics.md",
     "Mathematics/IB Natsci Maths/Calculus of variations.md",
     "Misc or Personal/2023-01-28.md",
-    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Physics/IB Physics/Topics in Classical Mechanics.md",
     "Physics/Analytical classical mechanics.md",
-    "Mathematics/IB Natsci Maths/Second order linear ODEs and Green's Functions.md",
-    "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
-    "Mathematics/IB Natsci Maths/Fourier series and transforms.md",
-    "Mathematics/IB Natsci Maths/Sturm-Liouville Theory.md"
+    "Mathematics/IB Natsci Maths/Second order linear ODEs and Green's Functions.md"
   ]
 }
