@@ -69,7 +69,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -86,7 +86,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Symmetry in molecules.md"
+                    "file": "Mathematics/IB Natsci Maths/Calculus of variations.md"
                   }
                 }
               }
@@ -102,7 +102,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
+                    "file": "Mathematics/IB Natsci Maths/Calculus of variations.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -138,6 +138,18 @@
                   "type": "markdown",
                   "state": {
                     "file": "Misc or Personal/To read.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "d58f3fafe18a3733",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Misc or Personal/Things to do in the Afmaelisdagr.md",
                     "mode": "source",
                     "source": false
                   }
@@ -212,7 +224,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
+                "file": "Mathematics/IB Natsci Maths/Calculus of variations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -229,7 +241,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
+                "file": "Mathematics/IB Natsci Maths/Calculus of variations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -252,7 +264,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md"
+                "file": "Mathematics/IB Natsci Maths/Calculus of variations.md"
               }
             }
           },
@@ -282,17 +294,17 @@
       "templates:Insert template": false
     }
   },
-  "active": "bbf5cadb14f13838",
+  "active": "9b07594bcbc6a508",
   "lastOpenFiles": [
-    "Chemistry/IB Chemistry/Molecular orbitals.md",
-    "Chemistry/IB Chemistry/Symmetry in molecules.md",
-    "Mathematics/IB Natsci Maths/Group Theory.md",
-    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
-    "Physics/IB Physics/Introductory quantum mechanics.md",
+    "Mathematics/IB Natsci Maths/Sturm-Liouville Theory.md",
     "Mathematics/IB Natsci Maths/Calculus of variations.md",
-    "Misc or Personal/2023-01-28.md",
-    "Physics/IB Physics/Topics in Classical Mechanics.md",
+    "Misc or Personal/Quotes.md",
     "Physics/Analytical classical mechanics.md",
-    "Mathematics/IB Natsci Maths/Second order linear ODEs and Green's Functions.md"
+    "Misc or Personal/Things to do in the Afmaelisdagr.md",
+    "Misc or Personal/To read.md",
+    "Physics/IB Physics/Topics in Classical Mechanics.md",
+    "Chemistry/IB Chemistry/Symmetry in molecules.md",
+    "Chemistry/IB Chemistry/Molecular orbitals.md",
+    "Mathematics/IB Natsci Maths/Group Theory.md"
   ]
 }

@@ -15,6 +15,8 @@ $$S[q(t)]=\int_{t_1}^{t_2}\Lagr(q,\dot{q},t)\,dt$$
 	- $\Lagr=$ Lagrangian
 	- $S$: depends on every point in trajectory, functional
 - Principle of stationary action: the particle takes a path with stationary/minimum action
+- The action is a _functional_, requiring the use of [[Calculus of variations]]
+
 - Consider a particle travelling along a path with minimum action $q(t)$:
 	- Let a neighbouring path have path $q(t)+\delta q(t)$, with $\delta q(t_1)=\delta q(t_2)=0$
 	- The change in action, $\delta S$ must be 0 if the action is to be minimum:

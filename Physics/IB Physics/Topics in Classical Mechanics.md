@@ -502,3 +502,87 @@ $$\Omega_s=\frac{\dot{\omega}_1}{\omega_p}=\frac{J}{I_1}$$
 
 - From the condition of _no slipping_:
 $$\Omega_b\sin\theta_b=\Omega_s\sin\theta_s$$
+### Free precession of triaxial bodies
+- Three _different_ moments of inertia: $I_1<I_2<I_3$
+- _Angular momentum and kinetic energy are conserved_
+
+- Spinning around the $1-$/$3-$axis: $\omega$ cannot change at constant $\bm{J}$ _without decreasing/increasing energy_, therefore it is _stable_
+- Spinning around the $2-$axis: _Unstable_
+
+
+## The Major Axis Theorem for non-rigid bodies
+- Real objects are _not perfectly rigid_
+- During _free precession_, the _centrifugal forces_ change as $\bm{\omega}$ changes, and the object _deforms_, and _loses energy_
+
+- $\bm{J}$ moves w.r.t. principal axes, but $|\bm{J}|^2$ must be _constant_
+- Therefore, the _energy ellipsoid shrinks_
+- At _minimum energy_, $\bm{J}$ must be _aligned with largest_ $I$ (the _major axis_)
+
+## Lagrange's Approach and Euler Angles
+- Characterise the motion of a _symmetric top_ with the _Euler angles_
+- $\theta$ and $\phi$ are the spherical polar coordinates _of the $3-$axis_
+- $\chi$ is the _angle of rotation_
+![[Euler Angles.png]]
+
+- Symmetric top: $I_1=I_2\neq I_3$
+- The _angular velocity_ in terms of the Euler angles:
+$$\bm{\omega}=\dot{\phi}\hat{\bm{e}}_z+\dot{\theta}\hat{\bm{e}}_1+\dot{\chi}\hat{\bm{e}}_3$$
+- Let the $1-$axis be _instantaneously horizontal_
+- The $z-$axis is in the $2-3$ plane
+
+- The angular velocity and momentum are:
+$$\displaylines{\bm{\omega}=(\dot{\theta},\dot{\phi}\sin\theta,\dot{\chi}+\dot{\phi}\cos\theta) \\ \bm{J}=(I_1\dot{\theta},I_1\dot{\phi}\sin\theta,I_3(\dot{\chi}+\dot{\phi}\cos\theta))}$$
+- Take $I_1$ w.r.t. the _stationary point_
+- If present, the _gravitational couple is in the $1-$direction_
+
+### Free precession revisited
+- The _stationary point_ is the _centre of mass_
+
+### Forced precession - the gyroscope
+- The _stationary point_ is the _support_, which is $h$ away from the CM
+- The _gravitational couple_ is along the $1-$direction
+
+- Hence, $J_z$ and $J_3$ are still _constants of motion_
+
+- From this, the _energy_ is:
+$$E=\frac{1}{2}I_1\dot{\theta}^2+\frac{(J_z-J_3\cos\theta)^2}{2I_1\sin^2\theta}+mgh\cos\theta+\frac{J_3^2}{2I_3}$$
+- Hence, there is an _effective potential_ $U_\text{eff}(\theta)$
+
+![[Gyroscope effective potential.png]]
+- There is an _allowed region_ where $T>0$
+- Let $U_0$ be the minimum
+- Therefore, $\theta$ _moves between_ $\theta_1$ and $\theta_2$
+	- Exception: "Sleeping top", where $J_z=J_3$, with the axis _vertical_
+
+- When $\theta$ is at the minimum and $E=U_0$, the axis _steadily precesses_, while $\dot{\chi}$ is also constant
+
+- If $E>U_0$, then the motion of $\theta$ can be treated as _harmonic motion_
+- The top _nutates_, meaning $\dot{\chi}$ and $\dot{\phi}$ also oscillate
+![[Nutation.png]]
+
+#### The steady case
+- Condition: $dU_\text{eff}/d\theta=0$
+$$(I_1\cos\theta)\dot{\phi}^2-J_3\dot{\phi}+mgh=0$$
+- This gives:
+$$\dot{\phi}=\frac{J_3\pm\sqrt{J_3^2-4I_1mgh\cos\theta}}{2I_1\cos\theta}$$
+
+- If $\cos\theta>0$, the physical solution exists if $J_3^2>4I_1mgh\cos\theta$, i.e. the top _must be spinning fast enough for steady precession_
+- In the _gyroscopic limit_, $J_3^2>>mghI_1$
+
+- At the gyroscopic limit, the _two possible precession frequencies_ $\dot{\phi}$
+- _Slow precession_, $\dot{\phi}^2$ is neglected:
+$$\dot{\phi}\approx\frac{mgh}{I_3}$$
+- _Fast precession_, $mgh$ couple term is neglected:
+$$\dot{\phi}\approx\frac{J_3}{I_1\cos\theta}=\Omega_s$$
+	- Since the couple is negligible, it approaches _free precession_, hence $\dot{\phi}\approx \Omega_s$
+
+- For a _horizontal gyroscope_, $\cos\theta=0$, and _only slow precession is seen_
+
+#### Nutation of a horizontal gyroscope
+- Nutation where $\cos\theta<<1$, in the _gyroscopic limit_
+- Let $\theta=\pi/2+\epsilon$
+$$U_\text{eff}(\theta)=\text{const.}+\epsilon\left(\frac{J_3J_z}{I_1}-mgh\right)+\epsilon^2\left(\frac{J_3^2}{2I_1}+\frac{J_z^2}{2I_1}\right)$$
+- The _linear term vanishes_ at $\theta_0$
+- At the _gyroscopic limit_, one finds that:
+$$I_1\ddot{\epsilon}+\frac{J_3^2}{I_1}\epsilon\approx0$$
+- Hence, $\epsilon$ _oscillates at the space frequency_ $\Omega_s$
