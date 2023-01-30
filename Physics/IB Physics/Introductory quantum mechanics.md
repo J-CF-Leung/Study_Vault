@@ -300,15 +300,26 @@ $$\begin{aligned}i\hbar\pd{}{t}\int_V \Psi^*\Psi\,dx&=-\frac{\hbar^2}{2m}\int_V\
 - The latter integral is effectively _the sum of a flow at the end-points_ in 1D
 
 - This allows the quantity in the brackets to be interpreted as a _probability current_ $\bm{J}$:
-$$J(x,t)=\frac{\hbar}{2mi}\left[\Psi^*\pd{\Psi}{x}-\Psi\pd{\Psi^*}{x}\right]$$
+$$\begin{aligned}J(x,t)&=\frac{\hbar}{2mi}\left[\Psi^*\pd{\Psi}{x}-\Psi\pd{\Psi^*}{x}\right] \\ &=\Re\left[\Psi^*\frac{\hbar}{mi}\pd{\Psi}{x}\right]\end{aligned}$$
 - This leads to _continuity_:
 $$\pd{P}{t}+\pd{J}{x}=0$$
 - This continuity is _analagous to the travel of a particle through space_
 
+- For a _travelling plane wave_:
+$$\displaylines{\psi=A\exp[i(kx-\omega t)] \\ J=\frac{\hbar k}{2m}|A|^2}$$
+- If $k$ is _imaginary_ (i.e. an evanescent wave), $J=0$
+
 # Piecewise-constant potentials
+
+## Assumptions and boundary conditions
 - Assumptions
 	- Calculating _stationary states_, where $E$ is constant
 	- Time-independent Schrödinger Equation
+
+- _Physicality_: $\psi(x)$ is _finite everywhere_
+- For a _finite potential_, inspection of the Schrödinger Equation yields that:
+	- $\psi(x)$ is _continuous everywhere_
+	- $d\psi/dx$ is _continuous everywhere_
 
 ## Constant potential
 - Let there be a _constant potential_ $V_0$
@@ -319,6 +330,46 @@ $$-\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}=(E-V_0)\psi$$
 - The _general solution_ is:
 $$\displaylines{\psi(x)=A\exp(\pm ikx) \\ k=\sqrt{\frac{2m(E-V_0)}{\hbar^2}}}$$
 - In the _classically possible_ regime, where $E>V_0$, $k$ is _real_
-- In the _classically forbidden_ regime, where $E<V_0$, $k$ is _purely imaginary_, $k=i\kappa$
+- Combining this with $T(t)$, the positive solution yields a wave travelling to the _right_
 
-- Since the wave function should be normalisable and _not go to infinity_, the classically forbidden solution _exponentially decays_
+- In the _classically forbidden_ regime, where $E<V_0$, $k$ is _purely imaginary_, $k=i\kappa$
+- For the sake of physicality, the classically forbidden solution _exponentially decays_:
+$$\displaylines{\psi(x)=A\exp(-\kappa x) \\ \kappa=\sqrt{\frac{2m(V_0-E)}{\hbar^2}}}$$
+
+## Single step potential
+- Let there be 2 regions:
+	- In region $I$, there is _zero potential_
+	- In region $II$, $V=V_0$
+- Let there be an _incident wave_ coming from the negative $x$ direction
+- Defining two wavenumbers:
+$$k_1=\frac{\sqrt{2mE}}{\hbar}\hspace{1cm} k_2=\frac{\sqrt{2m(E-V_0)}}{\hbar}$$
+
+- In region $I$:
+$$\Psi_1(x,t)=A\exp[i(k_1x-\omega t)]+rA\exp[-i(k_1x+\omega t)]$$
+- In region $II$:
+$$\Psi_2(x,t)=tA\exp[i(k_2x-\omega t)]$$
+- Applying the _boundary conditions for continuity_:
+$$r=\frac{k_1-k_2}{k_1+k_2} \hspace{1cm} t=\frac{2k_1}{k_1+k_2}$$
+- [[#The Probability Current]] in each region, for each travelling direction:
+$$\displaylines{J_1^+=\frac{\hbar k_1}{m}|A|^2 \\ J_1^-=|rA|^2\frac{\hbar k_1}{m}=|A|^2\left|\frac{k_1-k_2}{k_1+k_2}\right|^2\frac{\hbar k_1}{m} \\ J_2^+=|tA|^2\frac{\hbar k_2}{m}=|A|^2\left|\frac{2k_1}{k_1+k_2}\right|^2\frac{\hbar k_2}{m}}$$
+- It can be checked that it is _conserved across the boundary_, $J_1^+-J_1^-=J_2^+$
+- Only _valid for travelling wave_, or $k_2\in\mathbb{R}$
+- If $E<V_0$, $J_2^+=0$
+
+- The _reflection and transmission coefficients_ are:
+$$R=\frac{J_1^-}{J_1^+}=|r|^2 \hspace{1cm} T=\frac{J_2^+}{J_1^+}=|t|^2\frac{k_2}{k_1}$$
+### Upward step
+
+### Downward step
+
+### Tunnelling via uncertainty
+- The [[#Expectation values and the uncertainty relation|Uncertainty Principle]] states:
+$$\Delta p_x\geq \frac{\hbar}{2\Delta x}$$
+- This gives an _uncertainty in energy_:
+$$\Delta E\geq \frac{\hbar^2}{8m(\Delta x)^2}$$
+- If $0<E<V_0$ and $\Delta E>V_0-E$, there is a _probability that the particle has energy higher than $V_0$_
+- From this, one gets:
+$$\Delta x\leq \frac{1}{2}\sqrt{\frac{\hbar^2}{2m(V_0-E)}}=\frac{1}{2\kappa_2}$$
+- This corresponds to the _penetration depth_
+
+## Potential barrier

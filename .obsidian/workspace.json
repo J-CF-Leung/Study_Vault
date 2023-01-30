@@ -69,7 +69,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -86,7 +86,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Mathematics/IB Natsci Maths/Calculus of variations.md"
+                    "file": "Physics/IB Physics/Introductory quantum mechanics.md"
                   }
                 }
               }
@@ -102,7 +102,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Mathematics/IB Natsci Maths/Calculus of variations.md",
+                    "file": "Physics/IB Physics/Introductory quantum mechanics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -149,13 +149,14 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "Misc or Personal/Things to do in the Afmaelisdagr.md",
+                    "file": "Misc or Personal/Things to do in the Afmaelisdagr 2023.md",
                     "mode": "source",
                     "source": false
                   }
                 }
               }
-            ]
+            ],
+            "currentTab": 2
           }
         ],
         "direction": "horizontal"
@@ -224,7 +225,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/IB Natsci Maths/Calculus of variations.md",
+                "file": "Physics/IB Physics/Introductory quantum mechanics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -241,7 +242,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mathematics/IB Natsci Maths/Calculus of variations.md",
+                "file": "Physics/IB Physics/Introductory quantum mechanics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -264,7 +265,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematics/IB Natsci Maths/Calculus of variations.md"
+                "file": "Physics/IB Physics/Introductory quantum mechanics.md"
               }
             }
           },
@@ -294,17 +295,17 @@
       "templates:Insert template": false
     }
   },
-  "active": "9b07594bcbc6a508",
+  "active": "b051414ffb9d558d",
   "lastOpenFiles": [
-    "Mathematics/IB Natsci Maths/Sturm-Liouville Theory.md",
-    "Mathematics/IB Natsci Maths/Calculus of variations.md",
+    "Misc or Personal/Things to do in the Afmaelisdagr 2023.md",
+    "Physics/IB Physics/Introductory quantum mechanics.md",
     "Misc or Personal/Quotes.md",
+    "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
+    "Mathematics/IB Natsci Maths/Calculus of variations.md",
+    "Mathematics/IB Natsci Maths/Sturm-Liouville Theory.md",
     "Physics/Analytical classical mechanics.md",
-    "Misc or Personal/Things to do in the Afmaelisdagr.md",
     "Misc or Personal/To read.md",
     "Physics/IB Physics/Topics in Classical Mechanics.md",
-    "Chemistry/IB Chemistry/Symmetry in molecules.md",
-    "Chemistry/IB Chemistry/Molecular orbitals.md",
-    "Mathematics/IB Natsci Maths/Group Theory.md"
+    "Chemistry/IB Chemistry/Symmetry in molecules.md"
   ]
 }
