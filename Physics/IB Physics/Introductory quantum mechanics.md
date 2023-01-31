@@ -378,18 +378,39 @@ $$\displaylines{J_1^+=\frac{\hbar k_1}{m}|A|^2 \\ J_1^-=|rA|^2\frac{\hbar k_1}{m
 - The _reflection and transmission coefficients_ are:
 $$\displaylines{R=\frac{J_1^-}{J_1^+}=|r|^2 \hspace{1cm} T=\frac{J_2^+}{J_1^+}=|t|^2\frac{k_2}{k_1}\\ R+T=1}$$
 ### Downward step
+- If $V_0<0$, then $k_2>k_1$, indicating an _increase in kinetic energy and momentum_
 - For this case:
 	- $r<0$ and real, meaning there is a _$\pi$ phase shift upon reflection_
 	- $t>0$ and real, so the _transmitted wave is in phase with incident wave_
+- The reflection is _relatively small_
+- _Classically_, reflection _would not occur_ due to lack of confinement
 
 ### Upward step: Sufficient energy
+- If $V_0>0$, then $k_2<k_1$, indicating a _decrease in kinetic energy and momentum_
+- $r,t>0$ and real, indicating both reflected and transmitted waves are _in phase with incident wave_
+
+- As with the downward step, _reflection is relatively small_ since the particle is _not classically confined_
+
+### Upward step: Classically forbidden
+- If $0<E<V_0$, then $k_2$ becomes _imaginary_ and the wave is _evanescent_
+- The _transmitted_ wave function is:
+$$\psi_2(x,t)=\frac{2k_1}{k_1+i\kappa _2}\exp(-\kappa_2x)$$
+- It is _non-zero_ but still _exponentially decays_
+- While the wavefunction decays with _characteristic length_ $1/\kappa_2$, the _probability density_ has characteristic length $1/(2\kappa_2)$
+- This _violates classical mechanics_ as the particle is found in a region where $V>E$
+
+- In this case, $R=1$ and $T=0$ since there is _no probability flow into the barrier_
+
+- If $V_0\to\infty$, $r$ _approaches_ $-1$ and $t$ approaches 0
+- The _reflected wave becomes sinusoidal_
 
 ### Tunnelling via uncertainty
+- _Tunnelling into a classically forbidden region_ can be understood with a more "hand-wavy" argument
 - The [[#Expectation values and the uncertainty relation|Uncertainty Principle]] states:
 $$\Delta p_x\geq \frac{\hbar}{2\Delta x}$$
 - This gives an _uncertainty in energy_:
 $$\Delta E\geq \frac{\hbar^2}{8m(\Delta x)^2}$$
-- If $0<E<V_0$ and $\Delta E>V_0-E$, there is a _probability that the particle has energy higher than $V_0$_
+- If $0<E<V_0$ and $\Delta E>V_0-E$, there is a _probability that the particle has a measured energy higher than $V_0$_
 - From this, one gets:
 $$\Delta x\leq \frac{1}{2}\sqrt{\frac{\hbar^2}{2m(V_0-E)}}=\frac{1}{2\kappa_2}$$
 - This corresponds to the _penetration depth_
