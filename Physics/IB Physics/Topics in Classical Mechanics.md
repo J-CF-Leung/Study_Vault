@@ -467,15 +467,19 @@ $$\displaylines{G_1=I_1\dot{\omega}_1+(I_3-I_2)\omega_2\omega_3 \\ G_2=I_2\dot{\
 - Definition: $I_1=I_2\neq I_3$
 - From Euler's equations, $\dot{\omega_3}=0$
 
+#### The body frame
 - Define the _body frequency_ $\Omega_b$:
 $$\Omega_b\equiv \frac{I_1-I_3}{I_1}\omega_3$$
 - From Euler's equations, one gets _coupled ODEs_ for $\omega_1$ and $\omega_2$, which leads to:
 $$\ddot{\omega}_i+\Omega_b^2\omega_i=0 \hspace{1cm} \text{for i} =1,2$$
-- Hence _in the body frame_, $\bm{\omega}$ _precesses around the $3-$axis with the body frequency_
-- $\bm{J}$ is _not parallel to $\bm{\omega}$_ but _still precesses_
+- Hence _in the body frame_, $\bm{\omega}$ _precesses around the $3-$axis with the body frequency_:
+$$\bm{\omega}=(\omega_{10}\cos(\Omega_bt+\phi_0),\omega_{20}\cos(\Omega_bt+\phi_0),\omega_{30})$$
+- $\bm{J}$ is _not parallel to $\bm{\omega}$_ but _still precesses around the $3-$axis_
 
 - The _relative signs_ of $\omega_3$ and $\Omega_b$ depends on whether the inertia ellipsoid is _prolate or oblate_ (i.e. $I_1>I_3$ or $I_1<I_3$)
+- The _surface traced out_ by $\bm{\omega}$ is the _body cone_, with the line being the _polhode_
 
+#### The space frame
 - To find the angle between $\bm{J}$ and $\bm{\omega}$, _consider the inertial space frame_
 - $\bm{J}$ is _fixed_, and $\bm{\omega}$ is _precessing around it at space frequency_ $\Omega_s$
 
@@ -502,12 +506,18 @@ $$\Omega_s=\frac{\dot{\omega}_1}{\omega_p}=\frac{J}{I_1}$$
 
 - From the condition of _no slipping_:
 $$\Omega_b\sin\theta_b=\Omega_s\sin\theta_s$$
+
+- Does _not only apply to symmetrical tops_
+
 ### Free precession of triaxial bodies
 - Three _different_ moments of inertia: $I_1<I_2<I_3$
 - _Angular momentum and kinetic energy are conserved_
 
+- Consider the body _initially steadily spinning around an axis, then there being a perturbation_
+- Use Euler's equationsm and ignore 2nd order terms
+
 - Spinning around the $1-$/$3-$axis: $\omega$ cannot change at constant $\bm{J}$ _without decreasing/increasing energy_, therefore it is _stable_
-- Spinning around the $2-$axis: _Unstable_
+- Spinning around the $2-$axis: _Unstable_, the polhode will make large excursions around the body
 
 
 ## The Major Axis Theorem for non-rigid bodies
@@ -585,4 +595,4 @@ $$U_\text{eff}(\theta)=\text{const.}+\epsilon\left(\frac{J_3J_z}{I_1}-mgh\right)
 - The _linear term vanishes_ at $\theta_0$
 - At the _gyroscopic limit_, one finds that:
 $$I_1\ddot{\epsilon}+\frac{J_3^2}{I_1}\epsilon\approx0$$
-- Hence, $\epsilon$ _oscillates at the space frequency_ $\Omega_s$
+- Hence, $\epsilon$ _oscillates at the space frequency_ $\Omega_s`$
