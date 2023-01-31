@@ -68,7 +68,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -85,7 +86,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/IB Physics/Topics in Classical Mechanics.md"
+                    "file": "Physics/IB Physics/Introductory quantum mechanics.md"
                   }
                 }
               }
@@ -101,7 +102,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/IB Physics/Topics in Classical Mechanics.md",
+                    "file": "Physics/IB Physics/Introductory quantum mechanics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -224,7 +225,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/IB Physics/Topics in Classical Mechanics.md",
+                "file": "Physics/IB Physics/Introductory quantum mechanics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -241,7 +242,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/IB Physics/Topics in Classical Mechanics.md",
+                "file": "Physics/IB Physics/Introductory quantum mechanics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -264,7 +265,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/IB Physics/Topics in Classical Mechanics.md"
+                "file": "Physics/IB Physics/Introductory quantum mechanics.md"
               }
             }
           },
@@ -294,17 +295,17 @@
       "templates:Insert template": false
     }
   },
-  "active": "77417abd7c8c24a7",
+  "active": "b051414ffb9d558d",
   "lastOpenFiles": [
+    "Physics/IB Physics/Waves.md",
     "Physics/IB Physics/Introductory quantum mechanics.md",
-    "Chemistry/IB Chemistry/Symmetry in molecules.md",
-    "Misc or Personal/Things to do in the Afmaelisdagr 2023.md",
     "Physics/IB Physics/Topics in Classical Mechanics.md",
+    "Misc or Personal/Things to do in the Afmaelisdagr 2023.md",
+    "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Misc or Personal/Quotes.md",
     "Physics/IB Physics/Experimental methods and data analysis.md",
     "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
     "Mathematics/IB Natsci Maths/Calculus of variations.md",
-    "Mathematics/IB Natsci Maths/Sturm-Liouville Theory.md",
-    "Physics/Analytical classical mechanics.md"
+    "Mathematics/IB Natsci Maths/Sturm-Liouville Theory.md"
   ]
 }

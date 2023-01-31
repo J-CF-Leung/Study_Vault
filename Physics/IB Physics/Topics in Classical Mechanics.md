@@ -514,7 +514,7 @@ $$\Omega_b\sin\theta_b=\Omega_s\sin\theta_s$$
 - _Angular momentum and kinetic energy are conserved_
 
 - Consider the body _initially steadily spinning around an axis, then there being a perturbation_
-- Use Euler's equationsm and ignore 2nd order terms
+- Use Euler's equations and ignore 2nd order terms
 
 - Spinning around the $1-$/$3-$axis: $\omega$ cannot change at constant $\bm{J}$ _without decreasing/increasing energy_, therefore it is _stable_
 - Spinning around the $2-$axis: _Unstable_, the polhode will make large excursions around the body

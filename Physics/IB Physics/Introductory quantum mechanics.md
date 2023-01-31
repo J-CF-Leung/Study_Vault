@@ -287,11 +287,22 @@ $$\Psi(x,t)=\psi(x)\exp\left(-\frac{iEt}{\hbar}\right)$$
 $$\displaylines{|\Psi(x,t)|^2=|\psi(x)|^2 \\ \int|\psi(x)|^2\,dx=1}$$
 - Therefore, if $V$ is time-independent, then the solution $\Psi=T\psi$ is _stationary_, since the probability density is also time-independent
 
+## In three dimensions
+- The full Hamiltonian becomes:
+$$\hat{\Ham}=\frac{1}{2m}(\hat{p}_x^2+\hat{p}_y^2+\hat{p}_z^2)+\hat{V}=-\frac{\hbar^2}{2m}\nabla^2+\hat{V}$$
+- The _time-dependent Schrödinger Equation remains the same_:
+$$\Ham\Psi=i\hbar\pd{\Psi}{t}$$
+- The time-dependent part of the wavefunction remains the same
+- The time-independent equation becomes:
+$$-\frac{\hbar^2}{2m}\nabla^2\psi+V(\bm{r})\psi(\bm{r})=E\psi(\bm{r})$$
+
 ## The Probability Current
 - The normalisation condition is over _all space_:
 $$\int_{-\infty}^\infty |\Psi(x)|^2\,dx=1 \hspace{1cm}\forall t$$
 - Consider the probability of finding a particle within some _limited volume_ $V$:
 $$\int_V \Psi^*\Psi\,dx=\int_V P\,dx$$
+
+### Proof in 1 dimension
 - Consider its _time-dependence_, with a factor to make things easier, and taking the _complex conjugate of the Schrödinger Equation_:
 $$i\hbar\pd{}{t}\int_V \Psi^*\Psi\,dx=-\frac{\hbar^2}{2m}\int_V\left[\psi^*\pd{^2\Psi}{x^2}-\pd{^2\Psi^*}{x^2}\Psi\right]\,dx$$
 - Then:
@@ -306,10 +317,18 @@ $$\pd{P}{t}+\pd{J}{x}=0$$
 - This continuity is _analagous to the travel of a particle through space_
 
 - For a _travelling plane wave_:
-$$\displaylines{\psi=A\exp[i(kx-\omega t)] \\ J=\frac{\hbar k}{2m}|A|^2}$$
+$$\displaylines{\psi=A\exp[i(kx-\omega t)] \\ J=\frac{\hbar k}{m}|A|^2}$$
+- Here, $\hbar k/m$ is the _classical speed_
+
 - If $k$ is _imaginary_ (i.e. an evanescent wave), $J=0$
 
+### In three dimensions
+- Following a similar proof, the probability current is:
+$$\bm{J}(\bm{r},t)=\frac{\hbar}{2mi}\left[\Psi^*\nabla\Psi-\Psi\nabla\Psi^*\right]=\Re\left[\Psi^*\frac{\hbar}{mi}\nabla\Psi\right]$$
+- Similarly, continuity becomes:
+$$\pd{}{t}|\Psi|^2+\nabla\cdot\bm{J}=0$$
 # Piecewise-constant potentials
+- The wave function (or at least the probability current) behaves similarly to [[Waves#Boundaries: reflection and transmission|classical waves]]
 
 ## Assumptions and boundary conditions
 - Assumptions
@@ -330,7 +349,7 @@ $$-\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}=(E-V_0)\psi$$
 - The _general solution_ is:
 $$\displaylines{\psi(x)=A\exp(\pm ikx) \\ k=\sqrt{\frac{2m(E-V_0)}{\hbar^2}}}$$
 - In the _classically possible_ regime, where $E>V_0$, $k$ is _real_
-- Combining this with $T(t)$, the positive solution yields a wave travelling to the _right_
+- Combining this with $T(t)$, the _positive_ solution yields a wave with phase $(kx-\omega t)$, hence travelling to the _right_
 
 - In the _classically forbidden_ regime, where $E<V_0$, $k$ is _purely imaginary_, $k=i\kappa$
 - For the sake of physicality, the classically forbidden solution _exponentially decays_:
@@ -357,10 +376,13 @@ $$\displaylines{J_1^+=\frac{\hbar k_1}{m}|A|^2 \\ J_1^-=|rA|^2\frac{\hbar k_1}{m
 - If $E<V_0$, $J_2^+=0$
 
 - The _reflection and transmission coefficients_ are:
-$$R=\frac{J_1^-}{J_1^+}=|r|^2 \hspace{1cm} T=\frac{J_2^+}{J_1^+}=|t|^2\frac{k_2}{k_1}$$
-### Upward step
-
+$$\displaylines{R=\frac{J_1^-}{J_1^+}=|r|^2 \hspace{1cm} T=\frac{J_2^+}{J_1^+}=|t|^2\frac{k_2}{k_1}\\ R+T=1}$$
 ### Downward step
+- For this case:
+	- $r<0$ and real, meaning there is a _$\pi$ phase shift upon reflection_
+	- $t>0$ and real, so the _transmitted wave is in phase with incident wave_
+
+### Upward step: Sufficient energy
 
 ### Tunnelling via uncertainty
 - The [[#Expectation values and the uncertainty relation|Uncertainty Principle]] states:
