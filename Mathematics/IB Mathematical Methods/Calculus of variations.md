@@ -1,4 +1,5 @@
-## Functionals
+# Functionals and extremisation
+## Definition of functionals
 - Consider an _integral involving some function_ $y(x)$:
 $$G=\int_{\alpha}^\beta \left[y'(x)^2-y(x)^2\right]\,dx$$
 - This integral is _independent of $x$_
@@ -40,6 +41,23 @@ $$\frac{df}{dx}=\pd{f}{x}+\pd{f}{y}y'+\pd{f}{y'}y''$$
 
 - If the function $f$ is not _explicitly dependent on $x$_, i.e. $\partial f/\partial x=0$, the E-L equation can be _reduced to a first order DE_
 $$\displaylines{\pd{f}{x}=0 \\ y'\pd{f}{y'}-f=\text{const.}}$$
+
+## Multiple functions as input
+- Let a functional take _multiple functions and their derivatives as input_:
+$$G[y_i]=\int_\alpha^\beta f(y_1,y_1',\dots,y_2,y_2'\dots y_i,y_i'\dots)\,dx$$
+- Then, to _minimise_ $G$ with appropriate _boundary conditions_, _each function follows the E-L equation_:
+$$\frac{d}{dx}\left(\pd{f}{y_i'}\right)=\pd{f}{y_i}$$
+
+# Applications
+## Geodesics
+- Write $|d\bm{r}|$ as a _function of infinitesimal change in coordinates_
+- _Relate the coordinates_ using derivatives between each other
+
+- Euclidean space:
+$$s=\int |d\bm{r}|=\int \sqrt{dx^2+dy^2}=\int \sqrt{1+y'^2}\,dx$$
+
+
+
 ## Application to Sturm-Liouville theory
 - The calculus of variations is not limited to considering functionals themselves, but also _functions of functionals_, such as _ratios_
 
@@ -52,3 +70,18 @@ $$\displaylines{\frac{\delta F}{\delta y}=2\Lagr y \\ \frac{\delta G}{\delta y}=
 - Consider the _ratio_:
 $$\Lambda[y]=\frac{F[y]}{G[y]}$$
 - Considering the _first-order variation_ of $\Lambda$:
+$$\delta \Lambda=\frac{F+\delta F}{G+\delta G}-\frac{F}{G}=\frac{1}{G}\left[\delta F-\frac{F}{G}\delta G\right]$$
+- Therefore, the _functional derivative_ is:
+$$\frac{\delta\Lambda}{\delta y}=\frac{2}{G}\left[\Lagr y-\Lambda wy\right]$$
+- So, when $\Lambda$ is _extremised_, with value $\lambda$:
+$$\Lagr y=\lambda wy$$
+- This is simply the _Sturm-Liouville eigenvalue problem_
+- Therefore, $\Lambda[y]$ is _extremised by the eigenfunctions of $\tilde{\Lagr}=w^{-1}\Lagr$_, with the _eigenvalues being the extremum value_
+
+## Fermat's Principle
+
+## Hamilton's Principle
+
+# Constrained minimisation
+
+# The Rayleigh-Ritz method

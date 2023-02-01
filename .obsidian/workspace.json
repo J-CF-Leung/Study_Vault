@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
+                "file": "Physics/Analytical classical mechanics.md",
                 "mode": "source",
                 "source": false
               }
@@ -38,7 +38,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/IB Natsci Maths/Sturm-Liouville Theory.md",
+                "file": "Mathematics/IB Mathematical Methods/Calculus of variations.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,7 +68,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -85,7 +86,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md"
+                    "file": "Physics/IB Physics/Introductory quantum mechanics.md"
                   }
                 }
               }
@@ -101,7 +102,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
+                    "file": "Physics/IB Physics/Introductory quantum mechanics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -124,7 +125,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.9020357635304826,
+                      "scale": 0.5227056554590352,
                       "close": true
                     }
                   }
@@ -174,8 +175,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "constant of motion",
-                "matchingCase": true,
+                "query": "cases",
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -211,7 +212,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
+                "file": "Physics/IB Physics/Introductory quantum mechanics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -228,7 +229,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
+                "file": "Physics/IB Physics/Introductory quantum mechanics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -251,7 +252,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md"
+                "file": "Physics/IB Physics/Introductory quantum mechanics.md"
               }
             }
           },
@@ -281,17 +282,17 @@
       "templates:Insert template": false
     }
   },
-  "active": "77417abd7c8c24a7",
+  "active": "b051414ffb9d558d",
   "lastOpenFiles": [
-    "Mathematics/IB Natsci Maths/Vectors and matrices.md",
+    "Mathematics/IB Mathematical Methods/Fourier series and transforms.md",
+    "Physics/IB Physics/Introductory quantum mechanics.md",
     "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
+    "Mathematics/IB Mathematical Methods/Calculus of variations.md",
+    "Mathematics/IB Mathematical Methods/Sturm-Liouville Theory.md",
     "Physics/Analytical classical mechanics.md",
-    "Physics/Quantum Mechanics/Density matrix.md",
-    "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
-    "Misc or Personal/Quotes.md",
-    "Physics/Symmetries, transformations and generators in mechanics.md",
-    "Mathematics/IB Natsci Maths/Calculus of variations.md",
-    "Physics/IB Physics/Topics in Classical Mechanics.md",
-    "Physics/Quantum Mechanics/Path integrals in quantum mechanics.md"
+    "Mathematics/IB Mathematical Methods/Second order linear ODEs and Green's Functions.md",
+    "Mathematics/IB Mathematical Methods/Group Theory.md",
+    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+    "Mathematics/IB Mathematical Methods/Vectors and matrices.md"
   ]
 }

@@ -327,8 +327,9 @@ $$\displaylines{\psi=A\exp[i(kx-\omega t)] \\ J=\frac{\hbar k}{m}|A|^2}$$
 $$\bm{J}(\bm{r},t)=\frac{\hbar}{2mi}\left[\Psi^*\nabla\Psi-\Psi\nabla\Psi^*\right]=\Re\left[\Psi^*\frac{\hbar}{mi}\nabla\Psi\right]$$
 - Similarly, continuity becomes:
 $$\pd{}{t}|\Psi|^2+\nabla\cdot\bm{J}=0$$
-# Piecewise-constant potentials
+# Unbounded particles in piecewise-constant potentials
 - The wave function (or at least the probability current) behaves similarly to [[Waves#Boundaries: reflection and transmission|classical waves]]
+- It is _not normalisable_ into a single particle, and should be interpreted as a _beam_
 
 ## Assumptions and boundary conditions
 - Assumptions
@@ -416,3 +417,54 @@ $$\Delta x\leq \frac{1}{2}\sqrt{\frac{\hbar^2}{2m(V_0-E)}}=\frac{1}{2\kappa_2}$$
 - This corresponds to the _penetration depth_
 
 ## Potential barrier
+- The potential $V(x)$ is:
+$$V(x)=\begin{cases}0 & x<0 \\ V_0 &0<x<a \\ 0 &x>a \end{cases}$$
+- For regions 1 and 3, where $x<0$ or $x>a$:
+$$\displaylines{\psi=A\exp(\pm ik_1x) \\ k_1=\frac{\sqrt{2mE}}{\hbar}}$$
+- For region 2, in the barrier:
+$$\displaylines{\psi=A\exp(\pm ik_2x) \\ k_2=\frac{\sqrt{2m(E-V_0)}}{\hbar}}$$
+- For a wave _incoming from the left_, the wave-functions are:
+$$\begin{aligned}\Psi_1 &= A\left[\exp(ik_1x)+r\exp(-ik_1x)\right]\exp(-i\omega t) \\ \Psi_2 &= A[\alpha \exp(ik_2x)+\beta \exp(-ik_2x)]\exp(-i\omega t) \\ \Psi_3&= A[t\exp(ik_1x)]\exp(-i\omega t)\end{aligned}$$
+- With _great pain_, applying the _boundary conditions_:
+$$\displaylines{t=\left[\frac{2k_1k_2}{2k_1k_2\cos(k_2a)-i\left(k_1^2+k_2^2\right)\sin(k_2a)}\right]\exp(-ik_1a) \\ r=\frac{(k_1^2-k_2^2)\sin(k_2a)}{2ik_1k_2\cos(k_2a)+(k_1^2+k_2^2)\sin(k_2a)}}$$
+- As one expects, $R+T=1$
+
+### The potential well
+- In this case, the potential follows the definition above with $V_0<0$
+- Therefore, $k_2>k_1$
+
+### High barrier and tunnelling
+
+### Low barrier
+
+### Approximation of classical behaviour
+
+# Bound particles
+- _Classically_, a particle is _bound_ if its energy is _smaller than the maximum potential over a finite region of space that contains the particle_
+- Quantum mechanically, if a particle is _unbound_, there is a _continuum of states_ with energy $E$ within some range
+- If the particle is _bound_, they can only have a _discrete spectrum_ of energies $E$
+
+## The infinite square well
+- Consider the potential:
+$$V(x)=\begin{cases}V_0 &|x|<a/2 \\ +\infty &|x|>a/2\end{cases}$$
+- In this case, the particle is _always bound_
+- The potential is _symmetric_ in this coordinate system, meaning the _wave function will have a similar symmetry_ (i.e. The function is _even or odd_)
+
+- The _continuity_ of $\psi$ _still holds_
+- $\psi'$ can be _discontinuous_ since from the Schrödinger Equation, $\psi''$ is _infinite_ at the boundary of the well
+- Due to the potential, $\psi(x)=0$ for $|x|>a/2$
+- From continuity of $\psi$:
+$$\psi(\pm a/2)=0$$
+- _Within the well_, the Schrödinger equation gives:
+$$\frac{d^2\psi}{dx^2}+\frac{2m(E-V_0)}{\hbar^2}\psi=0$$
+
+- If $E<V_0$, then the wave function contains _real exponentials_
+- From the _boundary conditions_, the wave function _cannot exist_
+
+- If $E=V_0$, this gives a _linear_ wave function
+- From the _boundary conditions_, this wave function _cannot exist_
+- Classically, this corresponds to the _stationary particle_
+- Quantum mechanically, this violates the _uncertainty principle_
+
+- If $E>V_0$, applying the _boundary conditions_ and _normalising_:
+$$\psi_n(x)=\begin{cases} \sqrt{\frac{2}{a}}\cos(k_nx) &\text{for $n$ odd} \\ \end{cases}$$
