@@ -595,4 +595,4 @@ $$U_\text{eff}(\theta)=\text{const.}+\epsilon\left(\frac{J_3J_z}{I_1}-mgh\right)
 - The _linear term vanishes_ at $\theta_0$
 - At the _gyroscopic limit_, one finds that:
 $$I_1\ddot{\epsilon}+\frac{J_3^2}{I_1}\epsilon\approx0$$
-- Hence, $\epsilon$ _oscillates at the space frequency_ $\Omega_s`$
+- Hence, $\epsilon$ _oscillates at the space frequency_ $\Omega_s$

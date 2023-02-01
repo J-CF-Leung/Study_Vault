@@ -60,7 +60,7 @@ $$\displaylines{\tilde{\Lagr}=p\frac{d^2}{dx^2}+r\frac{d}{dx}+s=-\frac{d}{dx}\le
 - Multiplying the operator by $w(x)$, subject to the constraints mentioned above:
 $$w\tilde{\Lagr}=-\frac{d}{dx}\left(aw\frac{d}{dx}\right)+(aw'-bw)\frac{d}{dx}-wc$$
 - _Choose_ $w(x)$ such that $aw'=bw$
-$$w(x)=C\exp\left[\int^x \frac{b(x')}{a(x')}\,dx'\right]=$$
+$$w(x)=C\exp\left[\int^x \frac{b(x')}{a(x')}\,dx'\right]=C\exp\left[\int^x\frac{1}{p(x')}\left(r(x')-\frac{dp(x')}{dx'}\right)\,dx'\right]$$
 - This gives an operator _in Sturm-Liouville form_:
 $$\displaylines{\Lagr=w\tilde{\Lagr}=-\frac{d}{dx}\left(aw\frac{d}{dx}\right)-wc=-\frac{d}{dx}\left(\rho\frac{d}{dx}\right)+\sigma \\ \rho=aw \\ \sigma=-wc }$$
 - Then, with the appropriate _boundary conditions_ being satisfied, $\Lagr=w\tilde{\Lagr}$ is _self-adjoint_:

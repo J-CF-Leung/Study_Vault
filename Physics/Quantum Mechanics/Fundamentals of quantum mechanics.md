@@ -74,32 +74,32 @@ $$\sigma_A^2\sigma_B^2 \geq \left(\frac{1}{2}\left<\{\hat{A},\hat{B}\}\right>-ab
 ## The time-evolution operator
 - Let the state ket at time $t$ be:
 $$\ket{\Psi(t)}=\teo(t-t_0)\ket{\Psi(t_0)}$$
-	- $\teo$ is the time-evolution operator, also known as the propagator
+	- $\teo$ is the _time-evolution operator_, also known as the _propagator_
 - The time-evolution operator must fulfill the following properties:
 	- Composition: $\teo(t_2-t_0)=\teo(t_2-t_1)\teo(t_1-t_0)$
 	- [[Vectors and matrices|Unitarity]]/probability conservation: $\braket{\Psi|\Psi}=\braket{\Psi_0|\Psi_0}=1$ -> $\teo^\dagger\teo=1$
-- Considering the infinitesimal time-evolution operator $\teo(t_0+dt,t_0)$:
+- Considering the _infinitesimal_ time-evolution operator $\teo(t_0+dt,t_0)$:
 	- It satisfies the limit $\lim_{dt\to 0}\teo(t_0+dt,t_0)=1$
 - These properties are satisfied by $\teo(t_0+dt,t_0)=1-i\Omega dt$
-	- $\Omega$ has to be a Hermitian operator to satisfy unitarity
-	- With the Planck-Einstein equation $E=\hbar\omega$, and the fact that the Hamiltonian is the generator of time-evolution, $\Omega$ is related to the Hamiltonian by: $\Omega=\Ham/\hbar$
-	- Minus sign allows approximation to classical limit
+	- $\Omega$ has to be a _Hermitian operator_ to satisfy unitarity
+	- With the Planck-Einstein equation $E=\hbar\omega$, and the fact that the _Hamiltonian is the generator of time-evolution_, $\Omega$ is related to the Hamiltonian by: $\Omega=\Ham/\hbar$
+	- Minus sign allows _approximation to classical limit_
 - With this, the infinitesimal time evolution operator is:
 $$\teo(t_0+dt,t_0)=1-\frac{i\Ham}{\hbar}dt$$
 - Using the composition property and writing this as a differential equation:
 $$i\hbar\pd{\teo}{t}=\Ham\teo$$
-	- This is the Schrödinger equation for the time-evolution operator
+	- This is the _Schrödinger equation for the time-evolution operator_
 ## Interpreting time evolution
-- The time-evolution operator is a unitary operator, which can be understood as a rotation operator in Hilbert space
-- This is necessary for the norm of the state ket to remain constant
-- As a result, all inner products between state bras and kets $\braket{\beta|\alpha}$ also remain constant (this also gives rise to the different [[#The Schrödinger and Heisenberg pictures|pictures of quantum mechanics]])
+- The time-evolution operator is a _unitary operator_, which can be understood as a _rotation operator in Hilbert space_
+- This is necessary for the _norm of the state ket to remain constant_
+- As a result, _all inner products between state bras and kets $\braket{\beta|\alpha}$ also remain constant_(this also gives rise to the different [[#The Schrödinger and Heisenberg pictures|pictures of quantum mechanics]])
 - For the time evolution of the wave function itself, multiply by the initial state ket on both sides:
 $$i\hbar\frac{\partial}{\partial t}\ket{\Psi}=\Ham\wv$$
 
 ## The Schrödinger wave equation
-- The Schrödinger wave equation is the Schrödinger equation for the wave function, but projected onto the position basis:
+- The Schrödinger wave equation is the _Schrödinger equation for the wave function_, but projected onto the position basis:
 $$\begin{aligned}i\hbar\frac{\partial}{\partial t}\Psi(x,t)&= \braket{x|\Ham|\Psi} \\ &=-\frac{\hbar^2}{2m}\nabla^2\Psi +V\Psi\end{aligned}$$
-- The second equality only applies when the Hamiltonian is in the form $T+V$
+- The second equality only applies when the _Hamiltonian is in the form $T+V$_
 
 - The Schrödinger wave equation is a _dispersive wave equation_
 	- [[Waves|Wave equations]]
@@ -177,8 +177,8 @@ $$\begin{aligned} \braket{x_1,x_2...x_N|\Psi}&=\Psi(x_1,x_2...x_N) \\
 \braket{x_1,x_2...x_N|X_i|\Psi}&=x_i\Psi(x_1,x_2...x_N) \\
 \braket{x_1,x_2...x_N|P_i|\Psi}&=\frac{\hbar}{i}\pd{}{x_i}\Psi(x_1,x_2...x_N)
 \end{aligned}$$
-- For non-Cartesian coordinate systems, it is easier to use mathematical identities to construct quantum operators, for example:
-$$\begin{aligned} \Omega&=\frac{P_x^2+P_y^2+P_z^2}{2m}+X^2+Y^2+Z^2\\ &\equiv -\frac{\hbar^2}{2m}\nabla^2+R^2 \\ &\equiv -\frac{\hbar^2}{2m}\left[\frac{1}{r^2}\pd{}{r}\left(r^2\pd{}{r}\right)+\frac{1}{r^2\sin\theta}\pd{}{\theta}\left(\sin\theta\pd{}{\theta}\right)+\frac{1}{r^2\sin^2\theta}\pd{^2}{\phi^2}\right]\end{aligned}$$
+- For _non-Cartesian coordinate systems_, it is easier to use mathematical identities to construct quantum operators, for example:
+$$\begin{aligned} \Omega&=\frac{P_x^2+P_y^2+P_z^2}{2m}+X^2+Y^2+Z^2\\ &\equiv -\frac{\hbar^2}{2m}\nabla^2+R^2 \\ &\equiv -\frac{\hbar^2}{2m}\left[\frac{1}{r^2}\pd{}{r}\left(r^2\pd{}{r}\right)+\frac{1}{r^2\sin\theta}\pd{}{\theta}\left(\sin\theta\pd{}{\theta}\right)+\frac{1}{r^2\sin^2\theta}\pd{^2}{\phi^2}\right]+r^2\end{aligned}$$
 
 # Ehrenfest's theorem and the correspondence principle
 - 
