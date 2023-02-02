@@ -360,6 +360,7 @@ $$\displaylines{\psi(x)=A\exp(-\kappa x) \\ \kappa=\sqrt{\frac{2m(V_0-E)}{\hbar^
 - Let there be 2 regions:
 	- In region $I$, there is _zero potential_
 	- In region $II$, $V=V_0$
+![[Potential step.png]]
 - Let there be an _incident wave_ coming from the negative $x$ direction
 - Defining two wavenumbers:
 $$k_1=\frac{\sqrt{2mE}}{\hbar}\hspace{1cm} k_2=\frac{\sqrt{2m(E-V_0)}}{\hbar}$$
@@ -385,12 +386,16 @@ $$\displaylines{R=\frac{J_1^-}{J_1^+}=|r|^2 \hspace{1cm} T=\frac{J_2^+}{J_1^+}=|
 	- $t>0$ and real, so the _transmitted wave is in phase with incident wave_
 - The reflection is _relatively small_
 - _Classically_, reflection _would not occur_ due to lack of confinement
+![[Downward step.png]]
+	- Left: Blue- $|\Psi|^2$, Green- $\Re(\Psi)$, Red- $\Im(\Psi)$
+	- Right: Blue - Incident flux, Green - Transmitted flux, Red - Reflected flux
 
 ### Upward step: Sufficient energy
 - If $V_0>0$, then $k_2<k_1$, indicating a _decrease in kinetic energy and momentum_
 - $r,t>0$ and real, indicating both reflected and transmitted waves are _in phase with incident wave_
 
 - As with the downward step, _reflection is relatively small_ since the particle is _not classically confined_
+![[High energy upward.png]]
 
 ### Upward step: Classically forbidden
 - If $0<E<V_0$, then $k_2$ becomes _imaginary_ and the wave is _evanescent_
@@ -402,8 +407,11 @@ $$\psi_2(x,t)=\frac{2k_1}{k_1+i\kappa _2}\exp(-\kappa_2x)$$
 
 - In this case, $R=1$ and $T=0$ since there is _no probability flow into the barrier_
 
+![[Low energy upward.png]]
+
 - If $V_0\to\infty$, $r$ _approaches_ $-1$ and $t$ approaches 0
 - The _reflected wave becomes sinusoidal_
+![[Upward limiting case.png]]
 
 ### Tunnelling via uncertainty
 - _Tunnelling into a classically forbidden region_ can be understood with a more "hand-wavy" argument
@@ -416,9 +424,12 @@ $$\Delta E\geq \frac{\hbar^2}{8m(\Delta x)^2}$$
 $$\Delta x\leq \frac{1}{2}\sqrt{\frac{\hbar^2}{2m(V_0-E)}}=\frac{1}{2\kappa_2}$$
 - This corresponds to the _penetration depth_
 
+
+
 ## Potential barrier
 - The potential $V(x)$ is:
 $$V(x)=\begin{cases}0 & x<0 \\ V_0 &0<x<a \\ 0 &x>a \end{cases}$$
+![[Potential barrier.png]]
 - For regions 1 and 3, where $x<0$ or $x>a$:
 $$\displaylines{\psi=A\exp(\pm ik_1x) \\ k_1=\frac{\sqrt{2mE}}{\hbar}}$$
 - For region 2, in the barrier:

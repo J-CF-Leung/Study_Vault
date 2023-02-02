@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Analytical classical mechanics.md",
+                "file": "Physics/IB Physics/Topics in Classical Mechanics.md",
                 "mode": "source",
                 "source": false
               }
@@ -38,7 +38,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Calculus of variations.md",
+                "file": "Mathematics/IB Mathematical Methods/Sturm-Liouville Theory.md",
                 "mode": "source",
                 "source": false
               }
@@ -284,15 +284,15 @@
   },
   "active": "b051414ffb9d558d",
   "lastOpenFiles": [
-    "Mathematics/IB Mathematical Methods/Fourier series and transforms.md",
-    "Physics/IB Physics/Introductory quantum mechanics.md",
-    "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
-    "Mathematics/IB Mathematical Methods/Calculus of variations.md",
     "Mathematics/IB Mathematical Methods/Sturm-Liouville Theory.md",
+    "Physics/IB Physics/Topics in Classical Mechanics.md",
+    "Mathematics/IB Mathematical Methods/Calculus of variations.md",
     "Physics/Analytical classical mechanics.md",
+    "Physics/IB Physics/Introductory quantum mechanics.md",
+    "Mathematics/IB Mathematical Methods/Fourier series and transforms.md",
+    "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
     "Mathematics/IB Mathematical Methods/Second order linear ODEs and Green's Functions.md",
     "Mathematics/IB Mathematical Methods/Group Theory.md",
-    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
-    "Mathematics/IB Mathematical Methods/Vectors and matrices.md"
+    "Chemistry/IB Chemistry/Molecular quantum mechanics.md"
   ]
 }
