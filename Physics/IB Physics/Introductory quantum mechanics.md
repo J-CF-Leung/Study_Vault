@@ -443,12 +443,30 @@ $$\displaylines{t=\left[\frac{2k_1k_2}{2k_1k_2\cos(k_2a)-i\left(k_1^2+k_2^2\righ
 ### The potential well
 - In this case, the potential follows the definition above with $V_0<0$
 - Therefore, $k_2>k_1$
-
-### High barrier and tunnelling
+- The probability density of finding the particle is _lower in the well_
+	- Classically, the particle is _spending less time in the well_
+![[Potential well scattering.png]]
 
 ### Low barrier
+- As $k_2<k_1$, the particle travels _slower at the barrier_
+![[Low potential barrier.png]]
+### High barrier and tunnelling
+- If the barrier is higher than the actual energy, the probability density _decays exponentially inside the barrier_
+- However, on the other side of the barrier, _a wave with very small amplitude is still transmitted_
+- This is a _purely quantum phenomenon_ 
+![[High potential barrier tunneling.png]]
+- $k_2$ becomes imaginary, and one can define:
+$$\kappa_2=\frac{\sqrt{2m(V_0-E)}}{\hbar}$$
+- For a _thick barrier_, such that $\sinh(\kappa_2a)\approx\cosh(\kappa_2a)\approx\exp(\kappa_2a)$:
+$$T\approx\frac{16k_1^2\kappa_2^2}{k_1^2+\kappa_2^2}\exp(-\kappa_2a)$$
+- Transmission _falls exponentially with $a$_
 
-### Approximation of classical behaviour
+### Resonances and analogies to classical behaviour
+![[Barrier R and T.png]]
+- For _small energies_, it approaches classical behaviour as _most of the wave is reflected_
+	- $T$ falls approximately exponentially with increasing $V_0$
+- For $k_2a=n\pi$, _quantum resonances_ occur with $T=1$
+	- One can imagine it as _the two reflected waves destructively interfering_
 
 # Bound particles
 - _Classically_, a particle is _bound_ if its energy is _smaller than the maximum potential over a finite region of space that contains the particle_
@@ -459,7 +477,7 @@ $$\displaylines{t=\left[\frac{2k_1k_2}{2k_1k_2\cos(k_2a)-i\left(k_1^2+k_2^2\righ
 - Consider the potential:
 $$V(x)=\begin{cases}V_0 &|x|<a/2 \\ +\infty &|x|>a/2\end{cases}$$
 - In this case, the particle is _always bound_
-- The potential is _symmetric_ in this coordinate system, meaning the _wave function will have a similar symmetry_ (i.e. The function is _even or odd_)
+- The potential is _symmetric_ in this coordinate system, meaning $|\Psi|^2$ _must also be symmetric_ (i.e. $\psi$ is _even or odd_)
 
 - The _continuity_ of $\psi$ _still holds_
 - $\psi'$ can be _discontinuous_ since from the Schrödinger Equation, $\psi''$ is _infinite_ at the boundary of the well
@@ -469,6 +487,7 @@ $$\psi(\pm a/2)=0$$
 - _Within the well_, the Schrödinger equation gives:
 $$\frac{d^2\psi}{dx^2}+\frac{2m(E-V_0)}{\hbar^2}\psi=0$$
 
+### Energy less than or equal to minimum potential
 - If $E<V_0$, then the wave function contains _real exponentials_
 - From the _boundary conditions_, the wave function _cannot exist_
 
@@ -477,5 +496,47 @@ $$\frac{d^2\psi}{dx^2}+\frac{2m(E-V_0)}{\hbar^2}\psi=0$$
 - Classically, this corresponds to the _stationary particle_
 - Quantum mechanically, this violates the _uncertainty principle_
 
+### Energy above the bottom of the well
 - If $E>V_0$, applying the _boundary conditions_ and _normalising_:
-$$\psi_n(x)=\begin{cases} \sqrt{\frac{2}{a}}\cos(k_nx) &\text{for $n$ odd} \\ \end{cases}$$
+$$\psi_n(x)=\begin{cases} \sqrt{\frac{2}{a}}\cos(k_nx) &\text{for $n$ odd} \\ \sqrt{\frac{2}{a}}\sin(k_nx) &\text{for $n$ even}\end{cases}$$
+- The boundary conditions also require:
+$$k_n=\frac{n\pi}{a}$$
+- This gives _discrete energy levels_:
+$$E_n-V_0=\frac{(\hbar n\pi)^2}{2ma^2}$$
+- The _lowest energy level is above $V_0$_, meaning there is some _zero point energy_, and the particle _cannot be stationary_
+- Generally, if a particle is _confined_, the energy _must be discrete_ to satisfy boundary conditions
+
+![[Particle in a box.png]]
+- Taking the _inner product_ of the wave functions, one finds that they are _orthogonal_:
+$$\int \psi_m^*\psi_n\,dx=\delta_{mn}$$
+
+## The finite square well
+- Consider a _finite square potential_:
+$$V(x)=\begin{cases}-V_0 &|x|<a/2 \\ 0 &|x|>a/2\end{cases}$$
+- For $E>0$, this has been explored as a special case of the [[#Potential barrier]]
+- For $E<-V_0$, it is obvious that _no solution is possible_
+
+- For $-V_0<E<0$, there is a _finite spectrum of solutions_
+- Let $E=-E_0$
+
+- The wave function is:
+$$\psi(x)=\begin{cases}A\sin(kx)+B\cos(kx) &\text{for }|x|<a/2 \\ C\exp(\kappa x)+D\exp(-\kappa x)&\text{for }|x|>a/2\end{cases}$$
+- The wave-numbers are:
+$$k=\frac{\sqrt{2m(V_0-E_0)}}{\hbar} \hspace{1cm} \kappa=\frac{\sqrt{2mE_0}}{\hbar}$$
+- For the wave-function to be _normalisable_:
+$$\psi(x)=\begin{cases}C\exp(\kappa x)&\text{for }x<-a/2 \\A\sin(kx)+B\cos(kx) &\text{for }|x|<a/2 \\ D\exp(-\kappa x)&\text{for }x>a/2\end{cases}$$
+- At this point, it is useful to _define the parameters_:
+$$X=\frac{ka}{2} \hspace{1cm} Y=\frac{\kappa a}{2}$$
+- By _matching boundary conditions_, and using the fact that the wave function _must be even or odd_, one can find _two branches of solutions_:
+$$\displaylines{\text{Even solution} \hspace{1cm} A=0 \hspace{0.75cm} C=D \hspace{0.75cm} X\tan (X)=Y \\ \text{Odd solution} \hspace{1cm} B=0 \hspace{0.75cm} C=-D \hspace{0.75cm} -X\cot (X)=Y}$$
+- From the _definitions_ of the wave-numbers, one finds:
+$$X^2+Y^2=\frac{mV_0a^2}{2\hbar^2}$$
+- This forms a _circle in $X-Y$ space_, which is _set by the parameters of the system_
+- Therefore, $X$ and $Y$, and therefore the energy, can be found _graphically_:
+![[Finite well solutions'.png]]
+- The _number of solutions in each branch depends on $V_0$ and $a$_
+- The _even branch_ will always have _at least one_ solution _no matter how shallow the well is_
+- The _odd branch may not always have a solution_ for a shallow well 
+
+- The energies are:
+$$E_n=-\frac{\hbar^2\kappa^2}{2m}=-\frac{2\hbar^2Y_n^2}{ma^2}=-\frac{Y_n^2V_0}{X_n^2+Y_n^2}$$

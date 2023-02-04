@@ -391,7 +391,7 @@ $$\bm{J}=\sum \bm{r}\wedge\bm{p}=\sum \bm{r}\wedge m(\bm{\omega}\wedge\bm{r})=\s
 - Therefore, $\bm{J}$ is _not necessarily parallel_ to $\bm{\omega}$
 - The inertia tensor is a _rank 2 tensor_
 - This is a _tensor relationship_:
-$$\displaylines{\bm{J}=\dunderline{I}\bm{\omega} \\\bm{J}_i=I_{ij}\omega_j}$$
+$$\displaylines{\bm{J}=\dunderline{I}\bm{\omega} \\\bm{J}_i=I_{ij}\omega_j \\ I_{ij}=\sum_\alpha m_\alpha[r_\alpha^2\delta_{ij}-(\bm{r_\alpha})_i(\bm{r}_\alpha)_j]}$$
 - In _matrix notation_, the relationship is:
 $$\begin{pmatrix} J_x \\ J_y \\ J_z \end{pmatrix}=\begin{pmatrix} \sum m(y^2+z^2) & -\sum mxy & -\sum mxz \\ -\sum mxy & \sum m(x^2+z^2) & -\sum myz \\ -\sum mxz & -\sum myz & \sum m(x^2+y^2) \end{pmatrix} \begin{pmatrix} \omega_x \\ \omega_y \\ \omega_z \end{pmatrix}$$
 - The matrix is _real and symmetric_, hence can be _diagonalised_
@@ -446,6 +446,9 @@ $$I_a=\sum m(\bm{r}+\bm{a})\cdot(\bm{r}+\bm{a})=I_0+Ma^2$$
 - _Rod_ with radius $a$: $I_1=I_2=Ma^2/4+Ml^2/12$
 
 ## Free precession
+>[!quote]
+>“To those who study the progress of exact science, the common spinning-top is a symbol of the labours and the perplexities of men.”
+>-James Clerk Maxwell
 - Suppose the body is _isolated_:
 $$\bm{F}=\bm{G}=\bm{0}$$
 - The _angular momentum is constant_
@@ -473,7 +476,7 @@ $$\Omega_b\equiv \frac{I_1-I_3}{I_1}\omega_3$$
 - From Euler's equations, one gets _coupled ODEs_ for $\omega_1$ and $\omega_2$, which leads to:
 $$\ddot{\omega}_i+\Omega_b^2\omega_i=0 \hspace{1cm} \text{for i} =1,2$$
 - Hence _in the body frame_, $\bm{\omega}$ _precesses around the $3-$axis with the body frequency_:
-$$\bm{\omega}=(\omega_{10}\cos(\Omega_bt+\phi_0),\omega_{20}\cos(\Omega_bt+\phi_0),\omega_{30})$$
+$$\bm{\omega}=(\omega_{0}\cos(\Omega_bt+\phi_0),\omega_{0}\sin(\Omega_bt+\phi_0),\omega_{3})$$
 - $\bm{J}$ is _not parallel to $\bm{\omega}$_ but _still precesses around the $3-$axis_
 
 - The _relative signs_ of $\omega_3$ and $\Omega_b$ depends on whether the inertia ellipsoid is _prolate or oblate_ (i.e. $I_1>I_3$ or $I_1<I_3$)
@@ -481,17 +484,12 @@ $$\bm{\omega}=(\omega_{10}\cos(\Omega_bt+\phi_0),\omega_{20}\cos(\Omega_bt+\phi_
 
 #### The space frame
 - To find the angle between $\bm{J}$ and $\bm{\omega}$, _consider the inertial space frame_
-- $\bm{J}$ is _fixed_, and $\bm{\omega}$ is _precessing around it at space frequency_ $\Omega_s$
-
-- Choose a _time where $\omega_1=0$_
-- _Project_ $\bm{\omega}$ into one of the axes:
-$$\omega_p=|\bm{\omega}|\sin\theta_s=\frac{|\bm{\omega}\wedge\bm{J}|}{|\bm{J}|}$$
-- Here, $\dot{\bm{\omega}}$ is _in the $1-$direction_
-- From projecting the precession onto the plane normal to $\bm{J}$, the _rate of precession_ is:
-$$\Omega_s=\frac{\dot{\omega}_1}{\omega_p}=\frac{J}{I_1}$$
-
-- There is a _space cone_ from the precession of $\bm{\omega}$ around $\bm{J}$ with angle $\theta_s$
-- There is a _body cone_ from the precession of $\bm{\omega}$ around the $3-$ axis with angle $\theta_b$
+- Considering $\bm{J}$ and $\bm{\omega}$, one can find:
+$$\bm{\omega}=\frac{J}{I_1}\hat{\bm{J}}+\Omega_b\hat{\bm{e}}_3$$
+- The rate of change of $\hat{\bm{e}}_3$ is:
+$$\frac{d\hat{\bm{e}}_3}{dt}=\bm{\omega}\wedge\hat{\bm{e}}_3=\frac{J}{I_1}(\hat{\bm{J}}\wedge\hat{\bm{e}}_3)$$
+- Therefore, $\bm{\omega}$ and $\hat{\bm{e}}_3$ _precess around $\bm{J}$_ with _space frequency_ $\Omega_s$:
+$$\Omega_s=\frac{J}{I_1}$$
 
 #### Poinsot's construction
 - For a _prolate ellipsoid_:
@@ -518,6 +516,7 @@ $$\Omega_b\sin\theta_b=\Omega_s\sin\theta_s$$
 
 - Spinning around the $1-$/$3-$axis: $\omega$ cannot change at constant $\bm{J}$ _without decreasing/increasing energy_, therefore it is _stable_
 - Spinning around the $2-$axis: _Unstable_, the polhode will make large excursions around the body
+- This is the famous _tennis racket theorem_
 
 
 ## The Major Axis Theorem for non-rigid bodies
@@ -596,3 +595,67 @@ $$U_\text{eff}(\theta)=\text{const.}+\epsilon\left(\frac{J_3J_z}{I_1}-mgh\right)
 - At the _gyroscopic limit_, one finds that:
 $$I_1\ddot{\epsilon}+\frac{J_3^2}{I_1}\epsilon\approx0$$
 - Hence, $\epsilon$ _oscillates at the space frequency_ $\Omega_s$
+
+# Oscillations
+>[!quote]
+>“Physics is that subset of human experience which can be reduced to coupled harmonic oscillators”
+>-Michael Peskin
+- One may be interested in _small displacements_ of a system _from equilibrium_
+- If the variables $\{q_i\}$ are _perturbed_ from equilibrium values $q_\text{eq}$, the _approximate linear equations of motion are_:
+$$\ddot{\bm{q}}=\pd{F}{\bm{q}}\Bigg|_{q_\text{eq}}\cdot\delta \bm{q}+\pd{F}{\dot{\bm{q}}}\Bigg|_{q_\text{eq}}\cdot\delta\dot{\bm{q}}$$
+	- Where $F$ is some _arbitrary function dependent on the system_
+
+- For particles in a _potential well_ $U(x)$, from _energy conservation_, the _equation of motion_ is:
+$$m\ddot{x}+\frac{dU}{dx}=0$$
+- Consider _equilibrium_ at $x_0$ where $dU/dx=0$
+- Defining a _small displacement_ $\epsilon$ such that $x=x_0+\epsilon$:
+$$U(x)=U_0+\frac{1}{2}\frac{d^2U}{dx^2}\Bigg|_{x_0}\epsilon^2+\dots$$
+- For _small displacements_, the quadratic term _dominates_
+- Defining $d^2U/dx^2$ at $x_0$ as $U_0''$, the equation of motion becomes:
+$$\displaylines{\ddot{\epsilon}+\omega^2\epsilon=0 \\ \epsilon^2=\frac{U_0''}{m}}$$
+## Normal modes
+- A _simple harmonic oscillator_ involving _any number_ of particles will have _normal modes_ characteristic of the system
+- In a _normal mode_, every element of the system _oscillates at a single frequency_
+
+- A _general free oscillation_ can always be expressed in terms of a _linear combination of normal modes_
+	- Amplitude and phase dtermined by _boundary conditions_
+	- Each normal mode _evolves on its own_, and can be _recombined to find the general solution at any time_
+
+- If there are $N$ _degrees of freedom_ in the system, then there will be $N$ normal modes
+
+### The two-mass system
+![[Two-mass SHM.png]]
+- The two masses, and the three springs are _identical_
+- Equations of motion:
+$$\displaylines{m\ddot{x}_1=-kx_1+k(x_2-x_1) \\ m\ddot{x}_2=-k(x_2-x_1)-kx_2}$$
+	- Can be derived both from Newton's equations or the Euler-Lagrange equations
+- In _matrix notation_:
+$$\begin{pmatrix}m\ddot{x}_1 \\ m\ddot{x}_2\end{pmatrix}=-\begin{pmatrix}2k & -k \\ -k & 2k\end{pmatrix}\begin{pmatrix}x_1 \\ x_2\end{pmatrix}$$
+- To find the _frequency of the normal mode_, use the _trial function_:
+$$\begin{pmatrix}x_1 \\ x_2\end{pmatrix}=\begin{pmatrix}X_1\\ X_2\end{pmatrix} \exp(i\omega t)$$
+- From this:
+$$\begin{pmatrix}2k-m\omega^2 & -k \\ -k & 2k-m\omega^2\end{pmatrix}\begin{pmatrix}X_1\\ X_2\end{pmatrix}= \begin{pmatrix}0 \\ 0\end{pmatrix}$$
+- To find _non-trivial solutions_, set the _determinant to zero_, and one finds:
+$$\omega_1^2=3k/m \hspace{1cm} \omega_2^2=k/m$$
+- The _amplitudes_ $(X_1,X_2)$ for each $\omega$ gives the _normal modes_
+- One finds that:
+$$\displaylines{ \omega^2=\frac{3k}{m}\longrightarrow\begin{pmatrix}X_1 \\ X_2\end{pmatrix}\propto \begin{pmatrix}1 \\ -1\end{pmatrix} \\ \omega^2=\frac{k}{m}\longrightarrow\begin{pmatrix}X_1 \\ X_2\end{pmatrix}\propto \begin{pmatrix}1 \\ 1\end{pmatrix}}$$
+- The _decoupled_ equations of motion are:
+$$\displaylines{m(\ddot{x}_1-\ddot{x}_2)=-3k(x_1-x_2) \\ m(\ddot{x}_1+\ddot{x}_2)=-k(x_1+x_2)}$$
+- The _normal coordinates_ of the system are:
+$$\displaylines{q_1=x_1-x_2 \\ q_2=x_1+x_2}$$
+- $q_1$ is the _symmetric mode_, since $X_2=-X_1$, and it has a higher frequency
+	- The _middle spring_ is stretched/compressed by _double the length of the other springs_
+- $q_2$ is the _antisymmetric mode_, with the lower frequency
+	- The _middle spring is not stretched_
+
+### A general system
+- Suppose a state is described by $N$ _generalised coordinates_ $\{q_i\}$
+- The _kinetic energy_ of the system is:
+$$T=\frac{1}{2}\sum_k m_k|\dot{r}_k|^2$$
+- Here, $\bm{r}=\bm{r}(\{q_i\})$ are the _positions of the masses_ in the system
+	- The generalised coordinates are _not necessarily position_, and can be angles
+- Near equilibrium, a linear Taylor expansion can be made:
+$$\dot{\bm{r}}=\sum_i\dot{q}_i\pd{\bm{r}}{q_i}\Bigg|_{q_\text{eq}}$$
+- The kinetic energy can then be written as:
+$$T=\frac{1}{2}\sum_{ij}M_{ij}\dot{q}_i\dot{q}_j$$
