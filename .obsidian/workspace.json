@@ -50,7 +50,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -86,7 +86,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/IB Physics/Introductory quantum mechanics.md"
+                    "file": "Chemistry/IB Chemistry/Symmetry in molecules.md"
                   }
                 }
               }
@@ -102,7 +102,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/IB Physics/Introductory quantum mechanics.md",
+                    "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -212,7 +212,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/IB Physics/Introductory quantum mechanics.md",
+                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -229,7 +229,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/IB Physics/Introductory quantum mechanics.md",
+                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -252,7 +252,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/IB Physics/Introductory quantum mechanics.md"
+                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md"
               }
             }
           },
@@ -282,8 +282,9 @@
       "templates:Insert template": false
     }
   },
-  "active": "b051414ffb9d558d",
+  "active": "bbf5cadb14f13838",
   "lastOpenFiles": [
+    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Physics/IB Physics/Topics in Classical Mechanics.md",
     "Physics/IB Physics/Introductory quantum mechanics.md",
     "Mathematics/IB Mathematical Methods/Calculus of variations.md",
@@ -292,7 +293,6 @@
     "Physics/Analytical classical mechanics.md",
     "Mathematics/IB Mathematical Methods/Fourier series and transforms.md",
     "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
-    "Mathematics/IB Mathematical Methods/Second order linear ODEs and Green's Functions.md",
-    "Mathematics/IB Mathematical Methods/Group Theory.md"
+    "Mathematics/IB Mathematical Methods/Second order linear ODEs and Green's Functions.md"
   ]
 }

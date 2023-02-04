@@ -55,13 +55,21 @@
 - If the mirror plane _contains the principal axis_, it is described as _vertical_, denoted $\sigma_v$
 - If the mirror plane is _perpendicular to the principal axis_, it is described as _horizontal_, denoted $\sigma_h$
 - If there are multiple mirror planes, they can also be described using _Cartesian coordinates_
+	- Example: Ethene has no principal axis, so the planes are $\sigma^{xy},\sigma^{xz},\sigma^{yz}$
 
 #### Sets of mirror planes
-- In benzene, 
+- In benzene, the _vertical_ mirror planes are classified into 2 _sets_
+- The 3 planes _passing through the atoms_ are denoted $\sigma_v$
+- The 3 planes _bisecting the angles between $C_2$ axes_ are named _dihedral_ and denoted $\sigma_d$
 
 ### Centre of symmetry $i$
+- The operation is to _invert_ the molecule through a _centre of symmetry_
+- _Every point_ is moved _through the centre_ in a straight line, then continue _in the same direction for the same distance_, until they reach an _equivalent point_
+- Example: Ethene
 
 ### $n-$fold axis of improper rotation $S_n$
+- The _improper rotation_ involves a _rotation by $2\pi/n$ radians_, followed by _reflection in a mirror plane perpendicular to the rotation axis_
+- _Neither_ the rotation or reflection _have to be a symmetry operation by themselves_
 
 ### More on proper and improper rotations
 
