@@ -267,7 +267,7 @@ $$i\hbar\pd{\Psi}{t}=-\frac{\hbar^2}{2m}\pd{^2\Psi}{x^2}+V(x,t)\Psi(x,t)$$
 $$i\hbar\pd{\Psi}{t}=\hat{\Ham}\Psi$$
 - In this case, the Hamiltonian operator is:
 $$\hat{\Ham}=\frac{\hat{p}^2}{2m}+\hat{V}$$
-- Similar definition to the Hamiltonian in [[Topics in Classical Mechanics]]
+- Similar definition to the Hamiltonian in [[Newtonian dynamics and non-inertial frames]]
 
 - All of these operators are _linear_
 

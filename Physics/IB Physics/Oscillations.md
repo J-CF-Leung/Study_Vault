@@ -235,3 +235,113 @@ $$R'(t)=\frac{1}{\sqrt{2\pi}}\mathcal{F}^{-1}[R(\omega)]$$
 - Any force can be written as a _convolution_ of some function $F(t')$ with $\delta(t-t')$
 - From this, the response _can also be written as a convolution_:
 $$x(t)=\int F(t')R'(t-t')\,dt'$$
+# Oscillations via normal modes
+>[!quote]
+>“Physics is that subset of human experience which can be reduced to coupled harmonic oscillators”
+>-Michael Peskin
+- One may be interested in _small displacements_ of a system _from equilibrium_
+- If the variables $\{q_i\}$ are _perturbed_ from equilibrium values $q_\text{eq}$, the _approximate linear equations of motion are_:
+$$\ddot{\bm{q}}=\pd{F}{\bm{q}}\Bigg|_{q_\text{eq}}\cdot\delta \bm{q}+\pd{F}{\dot{\bm{q}}}\Bigg|_{q_\text{eq}}\cdot\delta\dot{\bm{q}}$$
+	- Where $F$ is some _arbitrary function dependent on the system_
+
+- For particles in a _potential well_ $U(x)$, from _energy conservation_, the _equation of motion_ is:
+$$m\ddot{x}+\frac{dU}{dx}=0$$
+- Consider _equilibrium_ at $x_0$ where $dU/dx=0$
+- Defining a _small displacement_ $\epsilon$ such that $x=x_0+\epsilon$:
+$$U(x)=U_0+\frac{1}{2}\frac{d^2U}{dx^2}\Bigg|_{x_0}\epsilon^2+\dots$$
+- For _small displacements_, the quadratic term _dominates_
+- Defining $d^2U/dx^2$ at $x_0$ as $U_0''$, the equation of motion becomes:
+$$\displaylines{\ddot{\epsilon}+\omega^2\epsilon=0 \\ \epsilon^2=\frac{U_0''}{m}}$$
+## Normal modes
+- A _simple harmonic oscillator_ involving _any number_ of particles will have _normal modes_ characteristic of the system
+- In a _normal mode_, every element of the system _oscillates at a single frequency_
+
+- A _general free oscillation_ can always be expressed in terms of a _linear combination of normal modes_
+	- Amplitude and phase dtermined by _boundary conditions_
+	- Each normal mode _evolves on its own_, and can be _recombined to find the general solution at any time_
+
+- If there are $N$ _degrees of freedom_ in the system, then there will be $N$ normal modes
+
+## The two-mass system
+![[Two-mass SHM.png]]
+- The two masses, and the three springs are _identical_
+- Equations of motion:
+$$\displaylines{m\ddot{x}_1=-kx_1+k(x_2-x_1) \\ m\ddot{x}_2=-k(x_2-x_1)-kx_2}$$
+	- Can be derived both from Newton's equations or the Euler-Lagrange equations
+- In _matrix notation_:
+$$\begin{pmatrix}m\ddot{x}_1 \\ m\ddot{x}_2\end{pmatrix}=-\begin{pmatrix}2k & -k \\ -k & 2k\end{pmatrix}\begin{pmatrix}x_1 \\ x_2\end{pmatrix}$$
+- To find the _frequency of the normal mode_, use the _trial function_:
+$$\begin{pmatrix}x_1 \\ x_2\end{pmatrix}=\begin{pmatrix}X_1\\ X_2\end{pmatrix} \exp(i\omega t)$$
+- From this:
+$$\begin{pmatrix}2k-m\omega^2 & -k \\ -k & 2k-m\omega^2\end{pmatrix}\begin{pmatrix}X_1\\ X_2\end{pmatrix}= \begin{pmatrix}0 \\ 0\end{pmatrix}$$
+- To find _non-trivial solutions_, set the _determinant to zero_, and one finds:
+$$\omega_1^2=3k/m \hspace{1cm} \omega_2^2=k/m$$
+- The _amplitudes_ $(X_1,X_2)$ for each $\omega$ gives the _normal modes_
+- One finds that:
+$$\displaylines{ \omega^2=\frac{3k}{m}\longrightarrow\begin{pmatrix}X_1 \\ X_2\end{pmatrix}\propto \begin{pmatrix}1 \\ -1\end{pmatrix} \\ \omega^2=\frac{k}{m}\longrightarrow\begin{pmatrix}X_1 \\ X_2\end{pmatrix}\propto \begin{pmatrix}1 \\ 1\end{pmatrix}}$$
+- The _decoupled_ equations of motion are:
+$$\displaylines{m(\ddot{x}_1-\ddot{x}_2)=-3k(x_1-x_2) \\ m(\ddot{x}_1+\ddot{x}_2)=-k(x_1+x_2)}$$
+- The _normal coordinates_ of the system are:
+$$\displaylines{q_1=x_1-x_2 \\ q_2=x_1+x_2}$$
+- $q_1$ is the _symmetric mode_, since $X_2=-X_1$, and it has a higher frequency
+	- The _middle spring_ is stretched/compressed by _double the length of the other springs_
+- $q_2$ is the _antisymmetric mode_, with the lower frequency
+	- The _middle spring is not stretched_
+
+## A general system
+- Suppose a state is described by $N$ _generalised coordinates_ $\{q_i\}$
+- The _kinetic energy_ of the system is:
+$$T=\frac{1}{2}\sum_k m_k|\dot{r}_k|^2$$
+- Here, $\bm{r}=\bm{r}(\{q_i\})$ are the _Cartesian coordinates of the masses_ in the system
+	- The generalised coordinates are _not necessarily position_, and can be angles
+- Near equilibrium, a linear Taylor expansion can be made:
+$$\dot{\bm{r}}=\sum_i\dot{q}_i\pd{\bm{r}}{q_i}\Bigg|_{q_\text{eq}}$$
+- The kinetic energy can then be written as:
+$$T=\frac{1}{2}\sum_{ij}M_{ij}\dot{q}_i\dot{q}_j=\frac{1}{2}\dot{\underline{\bm{q}}}^T\cdot\dunderline{M}\cdot\dot{\bm{\underline{q}}}$$
+- $\dunderline{M}$ is the _mass matrix_, and is constant:
+$$M_{ij}\equiv\sum_k m_k\pd{r_k}{q_i}\Bigg|_{q_\text{eq}}\pd{r_k}{q_j}\Bigg|_{q_\text{eq}}$$
+- Similarly, the _potential energy_ near equilibrium can be written as:
+$$U\approx U_0+\frac{1}{2}\sum_{ij}q_iq_j\pd{^2U}{q_i\partial q_j}\Bigg|_{\text{eq}}=U_0+\frac{1}{2}\sum_{ij}K_{ij}q_iq_j$$
+- $\dunderline{K}$ is the _spring constant matrix_:
+$$K_{ij}=\pd{^2U}{q_i\partial q_j}$$
+- From _energy conservation_, the _equations of motion_ are:
+$$\dunderline{M}\cdot\ddot{\bm{\underline{q}}}+\dunderline{K}\cdot\bm{\underline{q}}=0$$
+- This can also be derived from the _Euler-Lagrange equations_
+- The two matrices are _symmetric by definition_
+
+### Example: the symmetric triatomic
+#### 1 dimension
+![[Oscillating triatomic.png]]
+- The coordinates considered are $(x_1,x_2,x_3)$
+- The mass and spring constant matrices can be shown to be:
+$$\dunderline{M}=\begin{pmatrix}m &0&0\\0&M&0\\0&0&m\end{pmatrix} \hspace{1cm}\dunderline{K}=\begin{pmatrix}k&-k&0\\-k&2k&k\\0&-k&k\end{pmatrix}$$
+- The normal modes are solved by:
+$$(\dunderline{K}-\omega^2\dunderline{M})\cdot\underline{\bm{X}}=0$$
+- The normal modes and their corresponding frequencies are:
+$$\displaylines{\omega^2=0\longrightarrow \underline{X}=\begin{pmatrix}1 \\ 1 \\ 1\end{pmatrix}\\ \omega^2=\frac{k}{m}\longrightarrow \underline{X}=\begin{pmatrix}1 \\ 0 \\ -1\end{pmatrix} \\ \omega^2=\frac{k(M+2m)}{Mm}\longrightarrow \underline{X}=\begin{pmatrix}1 \\ -2m/M \\ 1\end{pmatrix}}$$
+- The $\omega=0$ mode is simplya _translation_
+	- Results from the _symmetry_ of the Lagrangian w.r.t. translation
+
+### A molecule in 3 dimensions
+- Let there be $N$ atoms
+- It has $3N$ degrees of freedom, therefore _$3N$ normal modes_
+- There are always 3 translations
+- For _linear_ molecules, there are 2 rotational modes
+- For other molecules, there are 3
+- Therefore, _non-linear molecules have $3N-6$ vibrational modes_
+- _Linear molecules have $3N-5$ vibrational modes_
+- Excruciating detail: [[Oscillations in molecules]]
+
+## The "orthogonality" of normal modes
+- The equation for normal modes is:
+$$(\dunderline{K}-\omega^2\dunderline{M})\cdot\underline{Q}=0$$
+- The matrices are _symmetric_, therefore $\omega^2$ _must be real_
+- To make it an _eigenvalue equation_:
+$$(\dunderline{M}^{-1}\dunderline{K}-\omega^2\dunderline{I})\cdot\underline{Q}=0$$
+- 
+
+## More remarks on normal modes
+- Since the frequencies are _real_, the system must be inherently _stable_
+	- _No real exponentials_
+- _Zero frequency_ modes can exist, and correspond to _translation or rotation_
+- Frequencies can be _degenerate_, usually due to _symmetry_

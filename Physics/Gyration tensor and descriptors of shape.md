@@ -3,7 +3,7 @@
 $$S_{mn}=\frac{1}{N}\sum_{i=1}^Nr_m^{(i)}r_n^{(i)}=\frac{\int\rho(\bm{r})r_mr_nd\bm{r}}{\int\rho(\bm{r})\,d\bm{r}}$$
 	- $\rho(\bm{r})$ is number density
 - All coordinates are measured relative to the centre of mass
-- In the case where all masses are identical, it is a scaled version of the [[Rotational mechanics|tensor of inertia]]
+- In the case where all masses are identical, it is a scaled version of the [[Rigid body dynamics|tensor of inertia]]
 - Like the tensor of inertia, it can be diagonalised
 	- As it is symmetric (real Hermitian), orthonormal eigenvectors (principal directions) can always be found
 	- The diagonal elements are the principal moments
