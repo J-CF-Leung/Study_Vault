@@ -85,7 +85,7 @@ $$\bm{F}=\bm{G}=\bm{0}$$
 - The _magnitude can also change_
 
 ### Euler's equations
-- Consider the relationship of rates of change between inertial and [[#Rotating frame|rotating frames]]:
+- Consider the relationship of rates of change between inertial and [[Newtonian dynamics and non-inertial frames#Rotating frame|rotating frames]]:
 $$\left[\frac{d\bm{J}}{dt}\right]_{S_0}=\left[\frac{d\bm{J}}{dt}\right]_{S}+\omega\wedge\bm{J}$$
 - Let there be a torque $\bm{G}$
 - For $\bm{J}_S$, take _components of $\bm{J}$ and $\bm{\omega}$ along the principal axes_
@@ -134,7 +134,7 @@ $$\Omega_b\sin\theta_b=\Omega_s\sin\theta_s$$
 
 - Does _not only apply to symmetrical tops_
 
-### Free precession of triaxial bodies
+### Free precession of triaxial bodies: stability
 - Three _different_ moments of inertia: $I_1<I_2<I_3$
 - _Angular momentum and kinetic energy are conserved_
 
@@ -144,6 +144,8 @@ $$\Omega_b\sin\theta_b=\Omega_s\sin\theta_s$$
 - Spinning around the $1-$/$3-$axis: $\omega$ cannot change at constant $\bm{J}$ _without decreasing/increasing energy_, therefore it is _stable_
 - Spinning around the $2-$axis: _Unstable_, the polhode will make large excursions around the body
 - This is the famous _tennis racket theorem_
+
+### Free precession of triaxial bodies
 
 
 ## The Major Axis Theorem for non-rigid bodies

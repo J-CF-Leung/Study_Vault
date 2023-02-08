@@ -88,3 +88,4 @@ $$V(\bm{r})=\frac{\lambda}{2\pi\epsilon_0}\ln\frac{a}{b}$$
 
 
 - When considering two cylinders of radius $a$, replace them with line charges with various distances satisfying the conditions above
+

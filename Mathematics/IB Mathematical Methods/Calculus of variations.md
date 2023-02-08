@@ -53,12 +53,13 @@ $$\frac{d}{dx}\left(\pd{f}{y_i'}\right)=\pd{f}{y_i}$$
 - Write $|d\bm{r}|$ as a _function of infinitesimal change in coordinates_
 - _Relate the coordinates_ using derivatives between each other
 
-- Euclidean space:
+- _Euclidean_ space:
 $$s=\int |d\bm{r}|=\int \sqrt{dx^2+dy^2}=\int \sqrt{1+y'^2}\,dx$$
+- On a _unit sphere_:
+$$s=\int |d\bm{r}|=$$
 
 
-
-## Application to Sturm-Liouville theory
+## Sturm-Liouville theory
 - The calculus of variations is not limited to considering functionals themselves, but also _functions of functionals_, such as _ratios_
 
 - Consider functionals containing a [[Sturm-Liouville Theory#Adjointness and Sturm-Liouville operators|Sturm-Liouville operator]] $\Lagr$, with the [[Sturm-Liouville Theory#Weight functions and converting to Sturm-Liouville form|weight function]] $w$:
@@ -82,6 +83,74 @@ $$\Lagr y=\lambda wy$$
 
 ## Hamilton's Principle
 
-# Constrained minimisation
+# Constrained variation
+## Lagrange multipliers
+- From Taylor's theorem, a change in $f(\bm{x})$ can be written as:
+$$\delta f=f(\bm{x}+\delta\bm{x})-f(x)=\nabla f\cdot\delta\bm{x}+\dots$$
+- For small $\delta\bm{x}$:
+$$df=\nabla f\cdot\delta\bm{x}$$
+- Consider the _contours_ of $f$, where it has _constant value_ 
+- Let there be some _path_ satisfying $p(\bm{x})=0$, _not reaching the extremum of $f$_
+
+- At a _local extremum of $f$_, _any arbitrary displacement $d\bm{l}$ does not change $f$_:
+$$\nabla f\cdot d\bm{l}=0 \hspace{0.6cm}\forall d\bm{l}\hspace{0.6cm}\text{ at the extremum}$$
+- If one were to find the extremum of $f$ _along the path_, there is a _restriction_:
+$$dp=\nabla p\cdot d\bm{l}=0$$
+- At the highest point _on the path_, all $d\bm{l}$ that are orthogonal to $\nabla p$ must _also be orthogonal to $\nabla f$_
+- Hence, $\nabla p$ and $\nabla f$ must be _parallel or anti-parallel_
+- Defining the _Lagrange multiplier_ $\lambda$, this becomes:
+$$\displaylines{\nabla f-\lambda\nabla p=0 \\ p(\bm{x})=0}$$
+- This becomes an _unconstrained extremisation_ of the function $\phi$:
+$$\displaylines{\phi(\bm{x},\lambda)=f(\bm{x})-\lambda p(\bm{x}) \\ \nabla\phi=0}$$
+
+- If the function $f$ has $N$ variables $\{\xi\}$, subject to $k<N$ constraints $p_i(\{\xi\})$, then $k$ _Lagrange multipliers will be required_:
+$$\phi(\{\xi\};\lambda_1,\lambda_2,\dots\lambda_k)=f(\{\xi\})-\sum_{i=1}^k \lambda_ip_i(\{\xi\})$$
+## Generalisation to functionals
+- To generalise to functionals, one can consider an _infinite number of variables_
+- The problem is to extremise $G[y]$ while there is the constraint $P[y]=0$
+- Then, the function to _extremise without constraint_ is:
+$$\Phi_\lambda[y]=G[y]-\lambda P[y]$$
+- To extremise, assuming _boundary terms are zero_, one can use the Euler-Lagrange equation:
+$$\displaylines{\frac{\delta G}{\delta y}-\lambda \frac{\delta P}{\delta y}=0 \\ P[y]=0}$$
+- Therefore, one would have to _solve the Euler-Lagrange equations for both $G$ and $P$_
+
+### Example: Sturm-Liouville...again
+- Another formulation of the Sturm-Lioville problem is to consider the _extremisation of $F[y]$_:
+$$F[y]=\int_\alpha^\beta y\Lagr y\,dx=\int_\alpha^\beta \left\{\rho(x)(y')^2+\sigma(x)y^2\right\}\,dx$$
+- This is subject to the _contraint_ that $y$ is of unit norm w.r.t. weight function $w$, or:
+$$G[y]=\int_\alpha^\beta w(x)y^2\,dx=1$$
+- This requires the _unconstrained extremisation_ of:
+$$\Phi_\lambda[y]=F[y]-\lambda(G[y]-1)=(F[y]-\lambda G[y])+\lambda$$
+- Using results [[#Application to Sturm-Liouville theory|above]], this gives:
+$$2\Lagr y-2\lambda wy=0$$
+- This gives an _eigenvalue problem_, same result as _maximising the ratio $\Lambda=F/G$_
 
 # The Rayleigh-Ritz method
+- Consider the _Sturm-Liouville problem_ of finding the eigenvalues $\lambda$
+- $\lambda$ is an _extremal value of $\Lambda=F/G$_
+- If $\rho>0$ and $\sigma\geq0$, then $\Lambda\geq0$
+	- $w(x)$ is defined to be positive
+- Therefore, _one of the extremal eigenvalue_ $\lambda_0$ is an _absolute minimum_:
+$$\lambda_0=\Lambda[y_0]\geq0$$
+- $y_0$ is the _eigenfunction_ corresponding to $\lambda_0$
+- Assuming no degeneracy:
+$$\Lambda[y]\geq\lambda_0$$
+	- Equality holds iff $y=y_0$
+	 - Proof: Expand $y$ _in terms of the eigenfunctions_
+
+- This means one can find an _upper bound_ for $\lambda_0$
+- Make an _educated guess for the eigenfunction_ $y_\text{trial}$, then:
+$$\Lambda[y_\text{trial}]\geq\lambda_0$$
+- Equality only holds _iff the trial function is exactly right_
+- Since $\Lambda$ is _stationary at that point_, in most cases, it will be _close to the actual value_
+
+- One can choose $y_\text{trial}$ to depend on _one or more parameters_ $\{a_1,a_2,\dots\}$
+- The inequality _holds for all values of the parameters_
+- Hence, the bound can be _refined by minimising $\Lambda$_ w.r.t. the parameters:
+$$\lambda_0\leq \min_{\{a_i\}}\Lambda(\{a_i\})$$
+
+- Application: the [[Topics in Quantum Mechanics#The Variational Principle|Variational Principle in Quantum Mechanics]]
+
+- The _next-lowest eigenvalue_ $\lambda_1$ can be estimated using a _trial function orthogonal to $y_0$_
+	- Proof: similar for lowest eigenvalue but $y_0$ is not included in the expansion due to _orthgonality_
+	- Example: if $y_0$ is _even_, then the trial function for $y_1$ should be _odd_

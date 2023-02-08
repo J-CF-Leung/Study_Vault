@@ -509,6 +509,10 @@ $$E_n-V_0=\frac{(\hbar n\pi)^2}{2ma^2}$$
 ![[Particle in a box.png]]
 - Taking the _inner product_ of the wave functions, one finds that they are _orthogonal_:
 $$\int \psi_m^*\psi_n\,dx=\delta_{mn}$$
+- Unlike the classical case, the _probability distribution is not uniform_
+
+- The _number of nodes increases with $n$_
+- Nodes are associated with _quick change in $\psi$_, which raises $\psi''$
 
 ## The finite square well
 - Consider a _finite square potential_:
@@ -533,10 +537,87 @@ $$\displaylines{\text{Even solution} \hspace{1cm} A=0 \hspace{0.75cm} C=D \hspac
 $$X^2+Y^2=\frac{mV_0a^2}{2\hbar^2}$$
 - This forms a _circle in $X-Y$ space_, which is _set by the parameters of the system_
 - Therefore, $X$ and $Y$, and therefore the energy, can be found _graphically_:
-![[Finite well solutions'.png]]
+![[Finite well solutions.png]]
+- The energies are:
+$$E_n=-\frac{\hbar^2\kappa^2}{2m}=-\frac{2\hbar^2Y_n^2}{ma^2}=-\frac{Y_n^2V_0}{X_n^2+Y_n^2}$$
+### Comments on solutions
 - The _number of solutions in each branch depends on $V_0$ and $a$_
 - The _even branch_ will always have _at least one_ solution _no matter how shallow the well is_
 - The _odd branch may not always have a solution_ for a shallow well 
 
-- The energies are:
-$$E_n=-\frac{\hbar^2\kappa^2}{2m}=-\frac{2\hbar^2Y_n^2}{ma^2}=-\frac{Y_n^2V_0}{X_n^2+Y_n^2}$$
+- The _overall_ spectrum of this potential has both a _continuous_ (scattering) and _discrete_ (bound) part
+- Like the infinite well, _probability distribution is not uniform_
+- There is a _non-zero probability_ of finding a particle _in the classically forbidden region_
+
+- As the potential well _gets deeper_, the solutions and energies _approach those of the infinite well_
+
+## The 1D quantum harmonic oscillator
+- When studying a particle _close to the ground state_, it is _near the bottom of a potential well_
+- The potential can be _approximated as harmonic_
+
+- Classcally, the particle _oscillates_ with classical frequency $\omega$
+- The potential can be written as:
+$$V(x)=\frac{1}{2}m\omega^2x^2$$
+- The time-independent Schrödinger equation is then:
+$$\frac{d^2\psi}{dx^2}+\left[\frac{2mE}{\hbar^2}-\frac{m^2\omega^2x^2}{\hbar^2}\right]\psi=0$$
+### Solving the damn thing
+- First step is to convert to _dimensionless variables_:
+$$q=\sqrt{\frac{m\omega}{\hbar}}x\hspace{1cm} \epsilon=\frac{2E}{\hbar\omega}$$
+- The equation then becomes:
+$$\frac{d^2\psi}{dq^2}+(\epsilon-q^2)\psi=0$$
+- The next step is to look at _limiting behaviour_, where $q^2>>\epsilon$:
+$$\displaylines{\frac{d^2\psi}{dq^2}-q^2\psi\approx 0 \\ \psi\approx A\exp\left(-\frac{q^2}{2}\right)}$$
+- Then, one can _propose an exact solution_:
+$$\psi=H(q)\exp\left(-\frac{q^2}{2}\right)$$
+- One will find that $H(q)$ satisfies _Hermite's equation_:
+$$\frac{d^2H}{dq^2}-2q\frac{dH}{dq}+(\epsilon-1)H(q)=0$$
+- Propose a _power series solution_
+- From the normalisability of the wave function, $H(q)$ _must eventually terminate_, therefore $\epsilon$ can only take _discrete values_
+- $H_n(q)$ are the [[Special functions and orthogonal relations#Hermite polynomials|Hermite polynomials]], given by the _Rodrigues formula_:
+$$H_n(q)=(-1)^n\exp\left(q^2\right)\frac{d^n}{dq^n}\exp\left(-q^2\right)$$
+- Here, $n=(\epsilon-1)/2$. therefore the energies are given by:
+$$E_n=\left(n+\frac{1}{2}\right)\hbar\omega$$
+
+- Since the Hermite polynomials are _orthogonal_, the normalising constants can be found
+- Collecting these results, the wave functions can be written as:
+$$\psi_n(x)=\frac{1}{\sqrt{\pi^{1/2}2^n(n!)}}H_n\left[\sqrt{\frac{m\omega}{\hbar}}x\right]\exp\left(-\frac{m\omega}{2\hbar}x^2\right)$$
+- From the properties of the Hermite polynomials, the states are _alternatively even or odd_
+
+### Properties
+- From the uncertainty principle, there is _zero-point energy_ $\hbar\omega/2$
+- The energy spectrum is _discrete_
+- All energy levels are _equally spaced_, with spacing $\hbar\omega$
+
+- There is _finite probability_ of finding the particle _in the classically forbidden region_
+- This probability _decreases as $n$ increases_
+- Therefore, at _high energies_, the particle is _more confined and acts classically_
+
+
+## Parity of states
+- One can define a _parity operator_, which _reflects_ a wave function:
+$$\hat{P}\psi(x)=\psi(-x)$$
+- Example: for the _simple harmonic oscillator_, the states are _alternatively even or odd_
+$$\displaylines{\hat{P}\psi_n=(-1)^n\psi_n \\ n=0,1,2,\dots}$$
+- _Ground states are often even_, as the number of nodes is _minimised_
+
+- In this case, $\psi_n$ is an _eigenstate_ of $\hat{P}$, with eigenvalue $\pm1$
+- Hence, $\psi_n$ is a _simultaneous eigenstate_ of $\hat{P}$ and $\hat{H}$, or in other words, the two operators _commute_
+- For this to be true, _the potential must be even_:
+$$V(x)=V(-x)\iff |\psi(x)|^2=|\psi(-x)|^2$$
+- For a _symmetric potential_, the wave function must be _even or odd_
+
+- For the _infinite square well_, _odd orders_ give _even parities_, and vice versa
+
+## The Correspondence Principle
+- The principle states that _at high quantum numbers, quantum mechanics predicts the same results as classical mechanics_
+
+- Consider the _even-parity solutions of the infinite square well_:
+$$\psi_n\propto\left[\exp\left(-\frac{in\pi x}{a}\right)+\exp\left(\frac{in\pi x}{a}\right)\right]$$
+- One can evaluate the [[#The momentum representation|momentum representation]] of the wave-function as a _convolution_:
+$$\phi_n(p)\propto\left[\delta\left(\frac{p}{\hbar}-\frac{n\pi}{a}\right)+\delta\left(\frac{p}{\hbar}+\frac{n\pi}{a}\right)\right]\otimes \sinc\left(\frac{pa}{2\hbar}\right)$$
+- This gives _two sinc-shaped spikes_ at $p=\pm n\hbar\pi/a$
+- There is an _equal chance_ of detecting the particle in _both directions_
+- The _width_ of the spikes is _independent of $n$_
+- Hence, as $n$ increases, the _uncertainty of $p$ decreases_
+- So, it gets _more likely to detect the momentum at the particle at the classical momentum_ $p_n\approx\sqrt{2mE_n}$
+

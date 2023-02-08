@@ -38,7 +38,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Sturm-Liouville Theory.md",
+                "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
                 "mode": "source",
                 "source": false
               }
@@ -67,8 +67,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "cb9ad6f4a659eb1b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mathematics/Special functions and orthogonal relations.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -85,7 +98,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/IB Physics/Elasticity.md"
+                    "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md"
                   }
                 }
               }
@@ -101,7 +114,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/IB Physics/Elasticity.md",
+                    "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -124,7 +137,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.5227056554590352,
+                      "scale": 0.9020357635304823,
                       "close": true
                     }
                   }
@@ -211,7 +224,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/IB Physics/Elasticity.md",
+                "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -228,7 +241,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/IB Physics/Elasticity.md",
+                "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -251,7 +264,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/IB Physics/Elasticity.md"
+                "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md"
               }
             }
           },
@@ -281,17 +294,17 @@
       "templates:Insert template": false
     }
   },
-  "active": "8c0e30efc10524b1",
+  "active": "9b07594bcbc6a508",
   "lastOpenFiles": [
-    "Physics/IB Physics/Oscillations.md",
-    "Chemistry/IB Chemistry/Oscillations in molecules.md",
-    "Physics/IB Physics/Newtonian dynamics and non-inertial frames.md",
-    "Physics/IB Physics/Orbits.md",
-    "Physics/IB Physics/Rigid body dynamics.md",
+    "Mathematics/IB Mathematical Methods/Calculus of variations.md",
+    "Physics/Quantum Mechanics/Topics in Quantum Mechanics.md",
     "Physics/IB Physics/Introductory quantum mechanics.md",
-    "Chemistry/IB Chemistry/Symmetry in molecules.md",
+    "Physics/IB Physics/Elasticity.md",
+    "Mathematics/Special functions and orthogonal relations.md",
     "Misc or Personal/Quotes.md",
-    "Mathematics/IB Mathematical Methods/Sturm-Liouville Theory.md",
-    "Mathematics/IB Mathematical Methods/Calculus of variations.md"
+    "Physics/Images/Finite well solutions.png",
+    "Physics/IB Physics/Rigid body dynamics.md",
+    "Physics/IB Physics/Newtonian dynamics and non-inertial frames.md",
+    "Mathematics/IB Mathematical Methods/Sturm-Liouville Theory.md"
   ]
 }
