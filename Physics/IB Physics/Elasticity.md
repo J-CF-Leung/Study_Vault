@@ -73,12 +73,12 @@ $$\begin{pmatrix}\tau_{xx} & \tau_{xy} & \tau_{xz} \\ \tau_{yx} & \tau_{yy}& \ta
 
 ## Formal definition of strain
 ![[Strains.png]]
-- Consider the local distortion of a medium from $\bm{x}=(x,y,z)$ to $\bm{x}+\bm{X}(\bm{x})=(x+X,y+Y,z+Z)$
+- Consider the _local distortion_ of a medium from $\bm{x}=(x,y,z)$ to $\bm{x}+\bm{X}(\bm{x})=(x+X,y+Y,z+Z)$
 - The derivatives of $\bm{X}$ contain information about the _strain_
 
 - The _normal strains_ are:
 $$e_{ii}=\pd{X_i}{x_i}$$
-- The _shear angle_ in the $i-j$ plane is defined as _half of the strain_ $e_{ij}$:
+- The  _off-diagonal strain_ $e_{ij}$ is defined as _half of the shear angle_:
 $$e_{ij}=e_{ji}=\frac{1}{2}\left(\pd{X_i}{x_j}+\pd{X_j}{x_i}\right)$$
 - An _antisymmetric_ addition of the partial derivatives is simply a component of $\nabla\wedge \bm{X}$, hence it is a _rotation_
 - Therefore, the _strain tensor_ is _symmetric_:
@@ -105,3 +105,26 @@ $$Ee_{xx}=\tau_{xx}-\sigma\tau_{yy}-\sigma\tau_{zz}$$
 $$G(2e_{xy})=\tau_{xy}$$
 - Lamé's first constant can also be written as:
 $$\lambda=B-\frac{2}{3}G$$
+## Energy stored in elastic strain
+- Cosider a volume $(\Delta x, \Delta y, \Delta z)$
+- Consider the _net distortion along the_ $x-$face, $\Delta x(e_{xx},e_{yx},e_{zx})$
+- The _force_ along this face is $\Delta y \Delta z(\tau_{xx},\tau_{yx},\tau_{zx})$
+- As the force is _proportional to displacement_, adding up _forces in all faces_:
+$$U=\frac{1}{2}\Delta V(\tau_{xx}e_{xx}+\tau_{yy}e_{yy}+\tau_{zz}e_{zz}+2\tau_{xy}e_{xy}+2\tau_{xz}e_{xz}+2\tau_{yz}e_{yz})$$
+- In terms of the _principal axes_:
+$$U=\frac{1}{2}\Delta V(\tau_1 e_1+\tau_2e_2+\tau_3e_3)$$
+- The elastic energy _per unit volume_ in a linear elastic medium can then be written as:
+$$\begin{aligned}U(\dunderline{\bm{e}})&=\frac{1}{2}\left[\left(B-\frac{2}{3}G\right)(e_1+e_2+e_3)^2+2G\left(e_1^2+e_2^2+e_3^2\right)\right] \\ &=\frac{1}{2}\left[\lambda\text{Tr}(\dunderline{\bm{e}})+2G\text{Tr}(\dunderline{\bm{e}}^2)\right] \end{aligned}$$
+## Beam bending
+![[Beam bending.png]]
+- Consider an _initially straight_ beam subject to a _bending moment_
+- Consider only _longitudinal strains_
+- There will be a _neutral axis_ which has no change in length
+
+- At a distancd $y$ from the neutral axis, the strain $e_{xx}=y/R$
+- Then the total _couple_ at across the cross-section $S$ is:
+$$B=\int y\left(\frac{Ey}{R}\right)dS$$
+- The _second moment of area_ of a shape is:
+$$I=\int y^2\,dS$$
+- Then, the _bending moment_ can be written as:
+$$B=\frac{EI}{R}$$
