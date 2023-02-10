@@ -1,3 +1,7 @@
+>[!quote]
+>“To those who study the progress of exact science, the common spinning-top is a symbol of the labours and the perplexities of men.”
+>-James Clerk Maxwell
+
 - Definition of a rigid body: A _multi-particle_ system where _all inter-particle distances are fixed_ (i.e. No deformation)
 - The _location of all particles_ can be described by 6 coordinates:
 	- Position of the _centre of mass_
@@ -73,9 +77,6 @@ $$I_a=\sum m(\bm{r}+\bm{a})\cdot(\bm{r}+\bm{a})=I_0+Ma^2$$
 - _Rod_ with radius $a$: $I_1=I_2=Ma^2/4+Ml^2/12$
 
 ## Free precession
->[!quote]
->“To those who study the progress of exact science, the common spinning-top is a symbol of the labours and the perplexities of men.”
->-James Clerk Maxwell
 - Suppose the body is _isolated_:
 $$\bm{F}=\bm{G}=\bm{0}$$
 - The _angular momentum is constant_
@@ -111,9 +112,9 @@ $$\bm{\omega}=(\omega_{0}\cos(\Omega_bt+\phi_0),\omega_{0}\sin(\Omega_bt+\phi_0)
 
 #### The space frame
 - To find the angle between $\bm{J}$ and $\bm{\omega}$, _consider the inertial space frame_
-- Considering $\bm{J}$ and $\bm{\omega}$, one can find:
+- Writing out $\bm{J}$ and $\bm{\omega}$ _w.r.t. the principal axes_, one can find:
 $$\bm{\omega}=\frac{J}{I_1}\hat{\bm{J}}+\Omega_b\hat{\bm{e}}_3$$
-- The rate of change of $\hat{\bm{e}}_3$ is:
+- The rate of change of $\hat{\bm{e}}_3$ (_fixed relative to body_) is:
 $$\frac{d\hat{\bm{e}}_3}{dt}=\bm{\omega}\wedge\hat{\bm{e}}_3=\frac{J}{I_1}(\hat{\bm{J}}\wedge\hat{\bm{e}}_3)$$
 - Therefore, $\bm{\omega}$ and $\hat{\bm{e}}_3$ _precess around $\bm{J}$_ with _space frequency_ $\Omega_s$:
 $$\Omega_s=\frac{J}{I_1}$$
@@ -158,8 +159,10 @@ $$\Omega_b\sin\theta_b=\Omega_s\sin\theta_s$$
 
 ## Lagrange's Approach and Euler Angles
 - Characterise the motion of a _symmetric top_ with the _Euler angles_
+- _Euler's theorem_ states that _any arbitrary rotation can be decomposed_, into _3 successive rotations about 3 different axes_
+
 - $\theta$ and $\phi$ are the spherical polar coordinates _of the $3-$axis_
-- $\chi$ is the _angle of rotation_
+- $\chi$ is the _angle of rotation_, measured _w.r.t. the moving $z-3$ plane_
 ![[Euler Angles.png]]
 
 - Symmetric top: $I_1=I_2\neq I_3$
@@ -168,19 +171,30 @@ $$\bm{\omega}=\dot{\phi}\hat{\bm{e}}_z+\dot{\theta}\hat{\bm{e}}_1+\dot{\chi}\hat
 - Let the $1-$axis be _instantaneously horizontal_
 - The $z-$axis is in the $2-3$ plane
 
-- The angular velocity and momentum are:
+- The angular velocity and momentum _w.r.t. the body frame_ are:
 $$\displaylines{\bm{\omega}=(\dot{\theta},\dot{\phi}\sin\theta,\dot{\chi}+\dot{\phi}\cos\theta) \\ \bm{J}=(I_1\dot{\theta},I_1\dot{\phi}\sin\theta,I_3(\dot{\chi}+\dot{\phi}\cos\theta))}$$
 - Take $I_1$ w.r.t. the _stationary point_
 - If present, the _gravitational couple is in the $1-$direction_
 
+### Understanding the components
+
+### The constants of motion
+- From Euler's equations and various conservations, there are three _constants of motion_: $$\displaylines{J_3=I_3(\dot{\chi}+\dot{\phi}\cos\theta) \\ J_z=J_3\cos\theta+J_2\sin\theta=J_3\cos\theta+I_1\dot{\phi}\sin^2\theta \\ E=T+U}$$
+- Therefore, one can express the rate of change of 2 of the Euler angles:
+$$\displaylines{\dot{\phi}=\frac{J_z-J_3\cos\theta}{I_1\sin^2\theta} \\ \dot{\chi}=\frac{J_3}{I_3}-\dot{\phi}\cos\theta=\frac{J_3}{I_3}+\frac{J_3\cos^2\theta-J_z\cos\theta}{I_1\sin^2\theta}}$$
+
 ### Free precession revisited
 - The _stationary point_ is the _centre of mass_
+- Take $\bm{J}$ as along the $z-$axis
+- In this case, $J_3=J\cos\theta$, hence:
+$$\displaylines{\dot{\phi}=\frac{J}{I_1}=\Omega_s \\ \dot{\chi}=\frac{I_1-I_3}{I_1}\omega_3=\Omega_b}$$
+- This gives the _two frequencies of precession as rates of change of the Euler angles_
 
 ### Forced precession - the gyroscope
 - The _stationary point_ is the _support_, which is $h$ away from the CM
 - The _gravitational couple_ is along the $1-$direction
 
-- Hence, $J_z$ and $J_3$ are still _constants of motion_
+- Hence, $E$, $J_z$ and $J_3$ are still _constants of motion_
 
 - From this, the _energy_ is:
 $$E=\frac{1}{2}I_1\dot{\theta}^2+\frac{(J_z-J_3\cos\theta)^2}{2I_1\sin^2\theta}+mgh\cos\theta+\frac{J_3^2}{2I_3}$$

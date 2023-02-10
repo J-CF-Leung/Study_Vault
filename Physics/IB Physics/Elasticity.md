@@ -1,5 +1,11 @@
+>[!quote]
+>"ceiiinosssttuv"
+>"Ut tensio, sic vis"
+>-Robert Hooke
+
 - In the _elastic region_ of a body, any _deformation is reversible_
 - Opposite: _plastic region_
+	- [[Plastic deformation]]
 
 ## Young's modulus and Poisson's ratio
 - For _small elastic displacements_ of a body with original length $l$ and cross-sectional area $A$ obeying _Hooke's law_, the force $F$ required for deformation $\delta l$ is:
@@ -25,6 +31,7 @@ $$\frac{F}{A}=E\frac{\delta l}{l}$$
 - A stress $(\tau_1,0,0)$ produces strains such that $E(e_1,e_2,e_3)=\tau_1(1,-\sigma,-\sigma)$
 - Adding the strains and compressions for a _general stress pattern_:
 $$\displaylines{Ee_1=+\tau_1-\sigma\tau_2-\sigma\tau_3 \\ Ee_2=-\sigma\tau_1+\tau_2-\sigma\tau_3 \\Ee_3=-\sigma\tau_1-\sigma\tau_2+\tau_3}$$
+- These are the _constitutive relations_ of the body
 
 ## Bulk modulus
 - Consider an isotropic medium with _pressure_ $P$:
@@ -80,3 +87,21 @@ $$\dunderline{\bm{e}}=\begin{pmatrix}e_{xx} & e_{xy} & e_{xz} \\ e_{yx} & e_{yy}
 $$\delta\bm{X}=\dunderline{\bm{e}}\cdot\delta\bm{x}$$
 - Since this tensor is symmetric, it can also be _diagonalised_
 - If the medium is _isotropic_, the axes are the _same ones that diagonalise stress_
+
+## Relating stress and strain, and Lamé's constants
+- By using the _constitutive relations_, one can express $\tau_1$ as:
+$$\tau_1=\frac{E}{(1+\sigma)(1-2\sigma)}[(1-\sigma)e_1+\sigma e_2+\sigma e_3]$$
+- One can define _Lamé's first constant_ as:
+$$\lambda\equiv \frac{E\sigma}{(1+\sigma)(1-2\sigma)}$$
+- Hence:
+$$\tau_1=\lambda(e_1+e_@+e_3)+2Ge_1$$
+- There is part of the stress _proportional to strain_, and an additional _isotropic pressure_
+- So, one can write:
+$$\dunderline{\bm{\tau}}=\lambda\text{Tr}(\dunderline{\bm{e}})\dunderline{\bm{I}}+2G\dunderline{\bm{e}}$$
+
+- In axes that are _not principal but still orthogonal_, the _normal components_ are related by:
+$$Ee_{xx}=\tau_{xx}-\sigma\tau_{yy}-\sigma\tau_{zz}$$
+- The off-diagonal _shear strains_ are related to the shear stresses by:
+$$G(2e_{xy})=\tau_{xy}$$
+- Lamé's first constant can also be written as:
+$$\lambda=B-\frac{2}{3}G$$

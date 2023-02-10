@@ -1,6 +1,14 @@
 >[!Quote]
+>"There is no general consensus as to what the fundamental principles of quantum physics are, how it should be taught, or what it really means"
+>-David J. Griffiths
+>
+>"If you are not confused by quantum physics then you haven't really understood it."
+>-Niels Bohr
+>
+>"I think I can safely say that nobody understand quantum mechanics"
+>-Richard Feynman
 
-# The birth of quantum mechanics
+# All is not well with classical physics
 
 ## The photoelectric effect
 ![[Photoelectric effect.png]]
@@ -115,8 +123,7 @@ $$\sin\theta=\frac{h}{d\sqrt{2meV}}$$
 	- Physical objects show _wave behaviour_
 	- Energy and momentum carried by waves is _quantised_
 
-# Wavefunctions in free space
-(Insert quote from Castelnovo here)
+# Wave mechanics in free space
 
 ## The double-slit experiment
 ![[Double slit experinent.png]]
@@ -621,3 +628,105 @@ $$\phi_n(p)\propto\left[\delta\left(\frac{p}{\hbar}-\frac{n\pi}{a}\right)+\delta
 - Hence, as $n$ increases, the _uncertainty of $p$ decreases_
 - So, it gets _more likely to detect the momentum at the particle at the classical momentum_ $p_n\approx\sqrt{2mE_n}$
 
+## Vibrational heat capacity of diatomic gases
+- A diatomic gas with atomic masses $m_1$ and $m_2$ _close to equilibrium_ can be described as a _1-dimensional harmonic oscillator_:
+$$\omega=\sqrt{\frac{\alpha}{\mu}}\hspace{1cm} \mu=\frac{m_1m_2}{m_1+m_2}$$
+- One can use a _semi-classical approximation_, and _assume_ a collection of harmonic oscillators _at a constant temperature_ would follow the classically-derived [[Thermal physics|Boltzmann distribution]]:
+$$P_n\propto \exp\left(-\frac{E_n}{k_BT}\right)\equiv\exp(-\beta E_n) \hspace{1cm} E_n=\left(n+\frac{1}{2}\right)k_BT$$
+- _Normalising_, one gets:
+$$\mean{E}=\frac{\sum_n E_n \exp(-\beta E_n)}{\sum_n\exp(-\beta E_n)}=\frac{1}{2}\hbar\omega+\frac{\sum_n n\hbar\omega\exp(-n\beta\hbar\omega)}{\sum_n \exp(-\beta\hbar\omega)}$$
+- Define the [[Thermal physics|partition function]]:
+$$Z=\sum_{n=0}^\infty \exp(-n\beta\hbar\omega)=\frac{1}{1-\exp(-\beta\hbar\omega)}$$
+- By differentiating w.r.t. $\beta$:
+$$\pd{Z}{\beta}=\sum_{n=0}^\infty n\hbar\omega \exp(-n\beta\hbar\omega)=\frac{\hbar\omega\exp(-\beta\hbar\omega)}{\left[1-\exp(-\beta\hbar\omega)\right]^2} $$
+- From this, the _average energy_ is:
+$$\mean{E}=\frac{1}{2}\hbar\omega+\frac{\hbar\omega}{\exp(\beta\hbar\omega)-1}\approx\frac{\hbar\omega}{\exp(\hbar\omega/k_BT)-1}$$
+- From this, the _vibrational heat capacity of $N$ molecules_ is:
+$$C_\text{vib}=N\pd{\mean{E}}{T}=Nk_B\left(\frac{\hbar\omega}{k_BT}\right)^2\frac{\exp(\hbar\omega/k_BT)}{\left[\exp(\hbar\omega/k_BT)-1\right]^2}$$
+![[QM Heat capacity.png]]
+- At _high temperatures_ where $k_BT>>\hbar\omega$, the [[#The Correspondence Principle|Correspondence Principle]] manifests, and:
+$$C_\text{vib}\approx \frac{1}{2}Nk_BT$$
+- For _low temperatures_, it is _much smaller than the classical value_
+- One can define a _characteristic temperature_ $\Theta_\text{vib}$, where:
+$$\Theta_\text{vib}=\frac{\hbar}{k_B}$$
+- This is often _very high_, as the _vibrational modes are hard to excite_
+- The _rotational heat capacity_ is often _much easier to measure_
+
+- Experimental evidence:
+![[Low temp heat capacities.png]]
+
+# Operator formalism
+>[!quote]
+>"The chances of this being boring are high"
+>-Prof. Castelnovo
+
+## Vector spaces
+- [[#The Schrödinger Equation ❤|The Schrödinger Equation]] can be put in terms of _operators_
+- The _time-independent equation_ can be interpreted as an _eigenvalue equation_:
+$$\hat{\Ham}\psi=E\psi$$
+- The mathematics of vector spaces: [[Vectors and matrices]]
+- Vector spaces in quantum mechanics are defined _on the field of complex numbers_ $\mathbb{C}$
+- These vectors include _actual vectors, or matrices_
+- _Generic vectors_ are denoted with _kets_:
+$$\ket{\alpha}$$
+
+- Operators _map vectors onto one another_:
+$$\hat{A}\ket{a}=\ket{b}$$
+- If there is a set of basis vectors $\{b_n\}$, then it is _complete_ if _any_ vector $\ket{a}$ in a space $\mathbb{V}$ can be expressed as a _unique linear combination_ of these vectors:
+$$\ket{a}=\sum_n a_n\ket{b_n}$$
+- $a_n\in\mathbb{C}$ are the _expansion coefficients_, which can be said to be a _projection_ of $\ket{a}$ onto the basis vector $\ket{b_n}$
+
+- The _maximum number of basis vectors_ is the _dimension_ of the space
+
+- Operators _may not necessarily map a vector onto another vector in the same space_, but operators in quantum mechanics are _closed_
+
+### Inner products
+- Vector spaces used in quantum mechanics are _inner product spaces_
+- The inner product involves a vector and its _dual_
+- The _dual_ is in the _dual space_ $\mathbb{V}^*$ of the original vector space $\mathbb{V}$
+- The _dual_ of a ket is known as the _bra_ and denoted $\bra{a}$
+- It is also known as the _adjoint_ of the ket
+	- For matrices and column vectors, it is the _transpose conjugate_
+
+- The inner product outputs a _scalar_:
+$$\braket{a|b}=c\in\mathbb{C}$$
+- The inner product is _skew-symmetric_
+$$\braket{a|b}^*=\braket{b|a}$$
+
+- The _norm_ of a vector is defined as:
+$$|\ket{\alpha}|^2=\braket{\alpha|\alpha}$$
+
+### Orthonormal bases
+- An _orthonormal basis_ is a set of basis vector $\{\ket{b_n}\}$ such that:
+$$\braket{b_n|b_m}=\delta_{nm}$$
+- If $\ket{a}$ is _expanded_ in terms of an orthonormal basis:
+$$\braket{b_m|a}=\sum_n a_n\braket{b_m|b_n}=a_m$$
+- Thus, a vector can be written as:
+$$\ket{a}=\sum_n \ket{b_n}\braket{b_n|a}=\hat{I}\ket{a}$$
+- Here, $\hat{I}$ is the _identity operator_
+- So, for a basis set to be _complete_, it must satisfy the _completeness relation_:
+$$\sum_n\ket{b_n}\bra{b_n}=\hat{I}$$
+### Hilbert spaces
+- The relevant vector space for quantum mechanics is _the Hilbert space of square-integrable functions_
+- Consider there to be a _range_ of $x$, with a _regular interval of sampling points_ $(x_1,x_2,\dots,x_N)$
+- If one _samples a function_ $f(x)$ at these points, one ends up with a _vector_ $\ket{f}$
+- This _components_ of the vector will be the _values_ at these sampling points:
+$$\ket{f}\equiv\begin{bmatrix}f(x_1) \\ f(x_2) \\\vdots \\ f(x_N)\end{bmatrix}$$
+- The _basis_ for this can be denoted $\{\ket{x_i}\}$, and just consist of a 1 at the $i$th place with 0's in all other places 
+- The _value_ of the function at a specific point can be thought of as a _projection_:
+$$f(x)=\braket{x|f}$$
+
+- For any range, there is an _uncountably infinite number of points_
+- This requires _infinite dimensions_
+
+- The _inner product is redefined_, with each term _weighted_ in order to keep it finite:
+$$\braket{f|g}=\sum_i f^*(x_i)g(x_i) \,\Delta x=\int f^*(x)g(x)\,dx$$
+- Thus, one can define a _physical Hilbert space_, consisting of _square-integrable functions_:
+$$\braket{f|f}=\int |f(x)|^2\,dx<\infty$$
+- One also includes the _generalised function_ of $\exp(ikx)$ in this space
+
+- The _orthonormality condition_ becomes:
+$$\braket{x|x'}=\delta(x-x')$$
+- The _completeness relation_ then becomes:
+$$\int \ket{x'}\bra{x'}\,dx'=I$$
+### Functions as bases

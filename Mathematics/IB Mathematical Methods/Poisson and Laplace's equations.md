@@ -1,3 +1,11 @@
+- Poisson's Equation is:
+$$\nabla^2\Psi=\rho(\bm{x})$$
+- $\rho(\bm{x})$ is known as the _source term_
+- The source term is often _zero in most regions of space_
+- Laplace's Equation is a _special case_ of Poisson's Equation:
+$$\nabla^2\Psi=0$$
+# Physical origins
+
 ## Electrostatics
 - Using [[Electromagnetism#Electric flux and Gauss' Law for electrostatics|Gauss' Law]] and the definition of electric potential $\bm{E}=-\nabla V$, one gets Poisson's equation:
 
@@ -14,13 +22,15 @@ $$\nabla^2\varphi_g=4\pi G\rho$$
 
 
 # Green's functions
+- A general discussion: [[Second order linear ODEs and Green's Functions]]
 - The solution to Poisson's equation can be written as:
 $$V(\bm{r})=\frac{1}{\epsilon_0}\int G(\bm{r},\bm{r'}) \rho(\bm{r'})d^3\bm{r'}$$
-- The Green's function for the Poisson equation is the solution of:
+- The _Green's function_ for the Poisson equation is the solution of:
 $$\nabla^2G(\bm{r}-\bm{r'})=-\delta(\bm{r}-\bm{r'})$$
 	- Poisson's equation can be regained by applying the Laplace operator on both sides
 	- The Green's function should satisfy homogeneous boundary conditions
-- [[Second order linear ODEs and Green's Functions]]
+
+
 
 - For free space, using the superposition principle:
 $$V(\bm{r})=\frac{1}{4\pi\epsilon_0}\int\frac{\rho(\bm{r'})}{|\bm{r}-\bm{r'}|}\,d^3\bm{r'}$$
@@ -59,7 +69,7 @@ $$G(\bm{r},\bm{r'})=\frac{1}{4\pi|\bm{r}-\bm{r'}|}$$
 
 ## The other uniqueness theorem in electrostatics
 
-# Method of images
+# Methods of images
 - Uniqueness theorem: as long as boundary conditions are specified, the electric field is _uniquely determined_, and the charge distribution making the field does not affect the solution
 
 - Consider a dipole:

@@ -74,14 +74,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/Special functions and orthogonal relations.md",
+                "file": "Mathematics/IB Mathematical Methods/Special functions and orthogonal relations.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -98,7 +97,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md"
+                    "file": "Physics/IB Physics/Elasticity.md"
                   }
                 }
               }
@@ -114,7 +113,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
+                    "file": "Physics/IB Physics/Elasticity.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -137,7 +136,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.9020357635304823,
+                      "scale": 0.9020357635304835,
                       "close": true
                     }
                   }
@@ -224,7 +223,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
+                "file": "Physics/IB Physics/Elasticity.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -241,7 +240,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
+                "file": "Physics/IB Physics/Elasticity.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -264,7 +263,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md"
+                "file": "Physics/IB Physics/Elasticity.md"
               }
             }
           },
@@ -294,17 +293,17 @@
       "templates:Insert template": false
     }
   },
-  "active": "9b07594bcbc6a508",
+  "active": "8c0e30efc10524b1",
   "lastOpenFiles": [
-    "Mathematics/IB Mathematical Methods/Calculus of variations.md",
-    "Physics/Quantum Mechanics/Topics in Quantum Mechanics.md",
-    "Physics/IB Physics/Introductory quantum mechanics.md",
-    "Physics/IB Physics/Elasticity.md",
-    "Mathematics/Special functions and orthogonal relations.md",
-    "Misc or Personal/Quotes.md",
-    "Physics/Images/Finite well solutions.png",
     "Physics/IB Physics/Rigid body dynamics.md",
-    "Physics/IB Physics/Newtonian dynamics and non-inertial frames.md",
-    "Mathematics/IB Mathematical Methods/Sturm-Liouville Theory.md"
+    "Physics/IB Physics/Elasticity.md",
+    "Physics/IB Physics/Introductory quantum mechanics.md",
+    "Mathematics/IB Mathematical Methods/Vectors and matrices.md",
+    "Misc or Personal/Quotes.md",
+    "Physics/IB Physics/Thermal physics.md",
+    "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
+    "Mathematics/IB Mathematical Methods/Sturm-Liouville Theory.md",
+    "Mathematics/Cartesian tensors.md",
+    "Materials Science/Microstructure and phases of mixtures.md"
   ]
 }
