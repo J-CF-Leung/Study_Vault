@@ -559,6 +559,9 @@ $$E_n=-\frac{\hbar^2\kappa^2}{2m}=-\frac{2\hbar^2Y_n^2}{ma^2}=-\frac{Y_n^2V_0}{X
 - As the potential well _gets deeper_, the solutions and energies _approach those of the infinite well_
 
 ## The 1D quantum harmonic oscillator
+>[!quote]
+>"In this section I will put the harmonic oscillator in its place—on a pedestal."
+>-R. Shankar
 - When studying a particle _close to the ground state_, it is _near the bottom of a potential well_
 - The potential can be _approximated as harmonic_
 
@@ -730,3 +733,12 @@ $$\braket{x|x'}=\delta(x-x')$$
 - The _completeness relation_ then becomes:
 $$\int \ket{x'}\bra{x'}\,dx'=I$$
 ### Functions as bases
+
+## Operators
+- Consider _operators_ acting on _generic vectors_, mapping it onto another vector _in the same vector space_
+$$\hat{O}\ket{a}=\ket{b}\hspace{1cm} \ket{a},\ket{b}\in\mathbb{V}$$
+- Let the basis in this space be $\{\ket{u_m}\}$
+- Expand the above expression:
+$$\displaylines{\hat{O}\ket{a}=\sum_{n,m} \ket{u_n}\braket{u_n|\hat{O}|u_m}\braket{u_m|a}=\sum_{n,m}O_{nm}\ket{u_n}\braket{u_m|a} \\ \hat{O}\equiv\sum_{n,m}O_{nm}\ket{u_n}\bra{u_m}}$$
+- $O_{nm}=\braket{u_n|\hat{O}|u_m}$ are known as the _matrix elements_ of $\hat{O}$ in this particular basis
+

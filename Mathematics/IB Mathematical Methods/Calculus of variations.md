@@ -51,13 +51,19 @@ $$\frac{d}{dx}\left(\pd{f}{y_i'}\right)=\pd{f}{y_i}$$
 # Applications
 ## Geodesics
 - Write $|d\bm{r}|$ as a _function of infinitesimal change in coordinates_
-- _Relate the coordinates_ using derivatives between each other
+- Use one coordinate as the _explicit variable_, with the others being the _input functions_
 
 - _Euclidean_ space:
 $$s=\int |d\bm{r}|=\int \sqrt{dx^2+dy^2}=\int \sqrt{1+y'^2}\,dx$$
-- On a _unit sphere_:
-$$s=\int |d\bm{r}|=$$
+- From using the Euler-Lagrange equations, the geodesic is a _straight line_:
+$$y''=0\longrightarrow y=A+Bx$$
 
+- On a _unit sphere_:
+$$s=\int |d\bm{r}|=\int \sqrt{(d\theta)^2+\sin^2\theta(d\phi)^2}=\int\sqrt{1+\sin^2\theta(\phi')^2}\,dx$$
+- One gets the geodesic as:
+$$\cot\theta=a\cos(\phi-\phi_0)$$
+- $a$ and $\phi_0$ depend on _end-points_
+- This is a _great circle_, where the centre _coincides with the centre of the sphere_
 
 ## Sturm-Liouville theory
 - The calculus of variations is not limited to considering functionals themselves, but also _functions of functionals_, such as _ratios_
@@ -80,8 +86,28 @@ $$\Lagr y=\lambda wy$$
 - Therefore, $\Lambda[y]$ is _extremised by the eigenfunctions of $\tilde{\Lagr}=w^{-1}\Lagr$_, with the _eigenvalues being the extremum value_
 
 ## Fermat's Principle
+- Fermat's Principle in [[Optics|optics]] states that the _path taken by a light ray_ between two points, in a material of _variable refractive index_ $\mu(\bm{r})$ will always be the path that _minimises the optical path length_ $P$
+$$P=\int\mu(\bm{r})\,dl$$
+- Using $x$ as the explicit variable, $P$ can be written as:
+$$P[y,z]=\int\mu(y,z;x)\sqrt{1+(y')^2+(z')^2}\,dx$$
+- The condition for a stationary path length is then:
+$$\frac{\delta P}{\delta y(x)}=0 \hspace{1cm} \frac{\delta P}{\delta z(x)}=0$$
+- For a _constant_ $\mu$, the condition is simply $y''=z''=0$ which is a _straight line_
+- For a _variable_ $\mu$, the Euler-Lagrange equations lead to the condition:
+$$\frac{\mu}{\sqrt{1+(y')^2}}=\mu\sin\theta=c$$
 
 ## Hamilton's Principle
+- Let there be $n$ particles, so there are $3n-$degrees of freedom in general
+- The degrees of freedom are characterised using _generalised coordinates_ $\{q_i\}$
+- It has _kinetic energy_ $T$ and _potential energy_ $V$
+- The _Lagrangian_ is defined as:
+$$\Lagr=T-V$$
+- The _action_ of a certain path is defined by:
+$$S[\{q_i\}]=\int \Lagr(\{q_i(t)\},\{\dot{q}_i(t)\},\dots;t)\,dt$$
+- _Hamilton's Principle_ states that motion alweays takes the _path of extremised action_
+- The _Euler-Lagrange equation_ is then:
+$$\frac{d}{dt}\left(\pd{\Lagr}{\dot{q}_i}\right)-\pd{\Lagr}{q_i}=0$$
+- This leads to [[Analytical classical mechanics]]
 
 # Constrained variation
 ## Lagrange multipliers

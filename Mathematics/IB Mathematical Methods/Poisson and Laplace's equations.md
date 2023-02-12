@@ -40,7 +40,7 @@ $$\bm{u}=\nabla\phi$$
 $$\nabla^2\phi=0$$
 - This is known as _potential flow_
 
-# Separation of variables
+# Separation of variables for Laplace's equation
 - In _Cartesian_ coordinates, the Laplacian is:
 $$\nabla^2=\pd{^2}{x^2}+\pd{^2}{y^2}+\pd{^2}{z^2}$$
 - _Separation of variables_ in Cartesian coordinates means the solution is written in the form:

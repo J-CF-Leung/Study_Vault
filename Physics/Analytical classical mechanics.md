@@ -84,12 +84,12 @@ $$\pd{\Lagr}{s}=\frac{d}{dt}\left(\sum_i\bm{p}_i\cdot\bm{n} \right)=0$$
 - Conserved quantity: $\hat{\bm{n}}\cdot \bm{L}$
 - $\hat{\bm{n}}$: arbitrary axis, therefore $\bm{L}$ is conserved
 ### Homogeneity of time
-- Time-translation invariance
+- _Time-translation_ invariance
 - Moving the system in time does not affect its evolution
-- Lagrangian cannot explicitly depend on time
+- Lagrangian _cannot explicitly depend on time_
 - Total change in value of Lagrangian:
 $$\frac{d\Lagr}{dt}=\frac{d}{dt}\left(\sum_i\pd{\Lagr}{\dot{q}_i}\dot{q}_i\right)+\pd{\Lagr}{t}$$
-- Introduce the Hamiltonian:
+- Introduce the _Hamiltonian_:
 $$\Ham=\sum_i\left(\pd{\Lagr}{\dot{q}_i}\dot{q}_i\right)-\Lagr$$
 $$\frac{d\Ham}{dt}=-\pd{\Lagr}{t}$$
 - The Hamiltonian only changes when the Lagrangian depends explicitly on time

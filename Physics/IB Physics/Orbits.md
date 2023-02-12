@@ -1,4 +1,3 @@
-
 - Consider a particle moving in a _central force field_:
 $$\displaylines{U=U(r) \\ \bm{F}=-\nabla U=-\pd{U}{r}\hat{\bm{r}}}$$
 - Due to the lack of a torque:

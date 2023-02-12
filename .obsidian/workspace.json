@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/IB Physics/Elasticity.md",
+                "file": "Physics/IB Physics/Orbits.md",
                 "mode": "source",
                 "source": false
               }
@@ -38,7 +38,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
+                "file": "Physics/Analytical classical mechanics.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md"
+                    "file": "Physics/Analytical classical mechanics.md"
                   }
                 }
               }
@@ -114,7 +114,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
+                    "file": "Physics/Analytical classical mechanics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -224,7 +224,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
+                "file": "Physics/Analytical classical mechanics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -241,7 +241,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
+                "file": "Physics/Analytical classical mechanics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -264,7 +264,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md"
+                "file": "Physics/Analytical classical mechanics.md"
               }
             }
           },
@@ -296,15 +296,15 @@
   },
   "active": "9b07594bcbc6a508",
   "lastOpenFiles": [
+    "Mathematics/IB Mathematical Methods/Calculus of variations.md",
     "Mathematics/IB Mathematical Methods/Partial differential equations.md",
+    "Physics/IB Physics/Orbits.md",
+    "Physics/IB Physics/Elasticity.md",
+    "Physics/IB Physics/Introductory quantum mechanics.md",
     "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
     "Materials Science/Extreme conditions.md",
-    "Physics/IB Physics/Elasticity.md",
     "Misc or Personal/Quotes.md",
     "Physics/IB Physics/Rigid body dynamics.md",
-    "Physics/IB Physics/Introductory quantum mechanics.md",
-    "Mathematics/IB Mathematical Methods/Vectors and matrices.md",
-    "Physics/IB Physics/Thermal physics.md",
-    "Mathematics/IB Mathematical Methods/Sturm-Liouville Theory.md"
+    "Mathematics/IB Mathematical Methods/Vectors and matrices.md"
   ]
 }
