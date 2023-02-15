@@ -45,6 +45,12 @@ $$H'(x)=\delta(x)$$
 $$\int_{-\infty}^\infty \delta'(x-\xi)f(x)\,dx =\left[\delta(x-\xi)f(\xi)\right]_{-\infty}^\infty-\int_{-\infty}^\infty \delta(x-\xi) f'(x)\,dx =-f'(\xi)$$
 - The derivative of the Delta function is an _odd function_
 
+## Higher dimension Delta functions
+- A Delta function in $n$ dimensions is equivalent to:
+$$\delta^n(\bm{x}-\bm{x}')=\delta(x_1-x_1')\delta(x_2-x_2')\dots\delta(x_n-x_n')$$
+- Consequently, the action on functions is:
+$$\int \delta^n(\bm{x}-\bm{x}')f(\bm{x}-\bm{x}')\,d^n\bm{r}=f(\bm{x}')$$
+
 # Second order linear ODEs
 - Second order linear ODEs are of the form:
 $$y''+p(x)y'+q(x)y=f(x)$$

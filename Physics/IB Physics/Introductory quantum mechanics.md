@@ -671,44 +671,81 @@ $$\hat{\Ham}\psi=E\psi$$
 - Vector spaces in quantum mechanics are defined _on the field of complex numbers_ $\mathbb{C}$
 - These vectors include _actual vectors, or matrices_
 - _Generic vectors_ are denoted with _kets_:
-$$\ket{\alpha}$$
+$$\ket{V},\ket{W},\dots$$
 
-- Operators _map vectors onto one another_:
-$$\hat{A}\ket{a}=\ket{b}$$
+- _Operators map vectors onto one another_:
+$$\hat{A}\ket{V}=\ket{W}$$
+
+### Bases
 - If there is a set of basis vectors $\{b_n\}$, then it is _complete_ if _any_ vector $\ket{a}$ in a space $\mathbb{V}$ can be expressed as a _unique linear combination_ of these vectors:
-$$\ket{a}=\sum_n a_n\ket{b_n}$$
+$$\ket{V}=\sum_n a_n\ket{i}$$
 - $a_n\in\mathbb{C}$ are the _expansion coefficients_, which can be said to be a _projection_ of $\ket{a}$ onto the basis vector $\ket{b_n}$
 
 - The _maximum number of basis vectors_ is the _dimension_ of the space
 
-- Operators _may not necessarily map a vector onto another vector in the same space_, but operators in quantum mechanics are _closed_
-
-### Inner products
+### Dual spaces and inner products
 - Vector spaces used in quantum mechanics are _inner product spaces_
 - The inner product involves a vector and its _dual_
+
 - The _dual_ is in the _dual space_ $\mathbb{V}^*$ of the original vector space $\mathbb{V}$
-- The _dual_ of a ket is known as the _bra_ and denoted $\bra{a}$
+- The _dual_ of a ket is known as the _bra_ and denoted $\bra{V}$
 - It is also known as the _adjoint_ of the ket
 	- For matrices and column vectors, it is the _transpose conjugate_
 
 - The inner product outputs a _scalar_:
-$$\braket{a|b}=c\in\mathbb{C}$$
+$$\braket{V|W}=c\in\mathbb{C}$$
 - The inner product is _skew-symmetric_
-$$\braket{a|b}^*=\braket{b|a}$$
+$$\braket{V|W}^*=\braket{W|V}$$
 
 - The _norm_ of a vector is defined as:
-$$|\ket{\alpha}|^2=\braket{\alpha|\alpha}$$
+$$|\ket{V}|^2=\braket{V|V}$$
 
 ### Orthonormal bases
-- An _orthonormal basis_ is a set of basis vector $\{\ket{b_n}\}$ such that:
-$$\braket{b_n|b_m}=\delta_{nm}$$
-- If $\ket{a}$ is _expanded_ in terms of an orthonormal basis:
-$$\braket{b_m|a}=\sum_n a_n\braket{b_m|b_n}=a_m$$
+- An _orthonormal basis_ is a set of basis vector $\{\ket{i}\}$ such that:
+$$\braket{i|j}=\delta_{ij}$$
+- If $\ket{V}$ is _expanded_ in terms of an orthonormal basis:
+$$\braket{j|V}=\sum_i a_i\braket{j|i}=a_j$$
 - Thus, a vector can be written as:
-$$\ket{a}=\sum_n \ket{b_n}\braket{b_n|a}=\hat{I}\ket{a}$$
-- Here, $\hat{I}$ is the _identity operator_
-- So, for a basis set to be _complete_, it must satisfy the _completeness relation_:
-$$\sum_n\ket{b_n}\bra{b_n}=\hat{I}$$
+$$\ket{a}=\sum_i \ket{i}\braket{i|a}$$
+- So, for a basis set to be _complete_, it must satisfy the [[#Identity and projection operators|completeness relation]]
+
+
+## Operators
+- Consider _operators_ acting on _generic vectors_, mapping it onto another vector _in the same vector space_
+$$\hat{O}\ket{V}=\ket{W}\hspace{1cm} \ket{V},\ket{W}\in\mathbb{V}$$
+- Only consider _linear operators_:
+$$\displaylines{\hat{O}\alpha\ket{V}=\alpha\hat{O}\ket{V} \\ \hat{O}[\alpha\ket{V}+\beta\ket{W}]=\alpha\hat{O}\ket{V}+\beta\hat{O}\ket{W}}$$
+
+### Identity and projection operators
+- The _identity operator_ leaves the vector alone:
+$$I\ket{a}=\ket{a}$$
+- If the basis set in this space is $\{\ket{u_m}\}$, then this can be written as:
+$$\ket{a}=\sum_m \ket{u_m}\braket{u_m|a}=\sum_m\mathbb{P}_m\ket{a}$$
+- Here, $\mathbb{P}_m$ is the _projection operator_ along direction $\ket{u_m}$
+- It gives the _component_ of $\ket{a}$ along $\ket{u_m}$, multiplied by $\ket{u_m}$
+- The above equation also leads to the identity:
+$$\sum_m\mathbb{P}_m=\sum_m\ket{u_m}\bra{u_m}=\hat{I}$$
+- This is known as the _completeness relation_, and must be satisfied for a basis to be _complete_
+
+### Matrix elements
+- Expanding $\hat{O}\ket{V}$ using the completeness relation:
+$$\displaylines{\hat{O}\ket{V}=\sum_{i,j} \ket{i}\braket{i|\hat{O}|j}\braket{j|V}=\sum_{i,j}O_{ij}\ket{i}\braket{j|V} \\ \hat{O}\equiv\sum_{i,j}O_{ij}\ket{i}\bra{j}}$$
+- $O_{nm}=\braket{u_n|\hat{O}|u_m}$ are known as the _matrix elements_ of $\hat{O}$ in this particular basis
+
+#### CLEAN UP PROGRESS MARKER
+
+### Products and commutators
+- The _product_ of two operators acting on $\ket{a}$ is equivalent to each acting in turn:
+$$\hat{A}(\hat{B}\ket{a})=(\hat{A}\hat{B})\ket{a}$$
+- By using the _completeness relation_, its matrix elements are:
+$$\begin{aligned}(\hat{A}\hat{B})_{ij}= \braket{u_i|\hat{A}\hat{B}|u_j}=\sum_k \end{aligned}$$
+
+- In _general_, operators _do not commute_:
+$$\hat{A}\hat{B}\neq\hat{B}\hat{A}$$
+- How _badly_ two operators commute is measured by the _commutator_:
+$$[\hat{A},\hat{B}]=\hat{A}\hat{B}-\hat{B}\hat{A}$$
+- If the commutator is _zero_, then the operators _commute_
+
 ### Hilbert spaces
 - The relevant vector space for quantum mechanics is _the Hilbert space of square-integrable functions_
 - Consider there to be a _range_ of $x$, with a _regular interval of sampling points_ $(x_1,x_2,\dots,x_N)$
@@ -732,13 +769,4 @@ $$\braket{f|f}=\int |f(x)|^2\,dx<\infty$$
 $$\braket{x|x'}=\delta(x-x')$$
 - The _completeness relation_ then becomes:
 $$\int \ket{x'}\bra{x'}\,dx'=I$$
-### Functions as bases
-
-## Operators
-- Consider _operators_ acting on _generic vectors_, mapping it onto another vector _in the same vector space_
-$$\hat{O}\ket{a}=\ket{b}\hspace{1cm} \ket{a},\ket{b}\in\mathbb{V}$$
-- Let the basis in this space be $\{\ket{u_m}\}$
-- Expand the above expression:
-$$\displaylines{\hat{O}\ket{a}=\sum_{n,m} \ket{u_n}\braket{u_n|\hat{O}|u_m}\braket{u_m|a}=\sum_{n,m}O_{nm}\ket{u_n}\braket{u_m|a} \\ \hat{O}\equiv\sum_{n,m}O_{nm}\ket{u_n}\bra{u_m}}$$
-- $O_{nm}=\braket{u_n|\hat{O}|u_m}$ are known as the _matrix elements_ of $\hat{O}$ in this particular basis
 

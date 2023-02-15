@@ -3,6 +3,7 @@
 >"Ut tensio, sic vis"
 >-Robert Hooke
 
+# Fundamental equations
 - In the _elastic region_ of a body, any _deformation is reversible_
 - Opposite: _plastic region_
 	- [[Plastic deformation]]
@@ -105,6 +106,9 @@ $$Ee_{xx}=\tau_{xx}-\sigma\tau_{yy}-\sigma\tau_{zz}$$
 $$G(2e_{xy})=\tau_{xy}$$
 - Lamé's first constant can also be written as:
 $$\lambda=B-\frac{2}{3}G$$
+
+# Material behaviour
+
 ## Energy stored in elastic strain
 - Cosider a volume $(\Delta x, \Delta y, \Delta z)$
 - Consider the _net distortion along the_ $x-$face, $\Delta x(e_{xx},e_{yx},e_{zx})$
@@ -128,3 +132,14 @@ $$B=\int y\left(\frac{Ey}{R}\right)dS$$
 $$I=\int y^2\,dS$$
 - Then, the _bending moment_ can be written as:
 $$B=\frac{EI}{R}$$
+# Dynamics
+- Consider a _volume element_ $(\delta x,\delta y, \delta z)$
+- Considering _all faces_, the _net force in the $x-$direction_ is:
+$$F_x=\Delta V \left(\pd{\tau_{xx}}{x}+\pd{\tau_{xy}}{y}+\pd{\tau_{xz}}{z}\right)$$
+- Therefore, the _equation of motion_ is:
+$$\displaylines{\rho\pd{^2X_i}{t^2}=\sum_j \pd{\tau_{ij}}{x_j} \\ \rho\pd{^2\bm{X}}{t^2}=\nabla\cdot\dunderline{\bm{\tau}}}$$
+- Using the [[#Relating stress and strain, and Lamé's constants|relation between stress and strain]]:
+$$\rho\pd{^2\bm{X}}{t^2}=\nabla\cdot\dunderline{\bm{\tau}}=\left(B+\frac{1}{3}G\right)\nabla(\nabla\cdot\bm{X})+G\nabla^2\bm{X}$$
+## Elastic waves
+- Substitute a _normal mode solution_:
+$$\bm{X}=(X_0,Y_0,Z_0)\exp[i(\omega t-kx)]$$

@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/IB Physics/Orbits.md",
+                "file": "Physics/IB Physics/Fluid mechanics.md",
                 "mode": "source",
                 "source": false
               }
@@ -38,7 +38,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Analytical classical mechanics.md",
+                "file": "Mathematics/IB Mathematical Methods/Second order linear ODEs and Green's Functions.md",
                 "mode": "source",
                 "source": false
               }
@@ -50,7 +50,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
+                "file": "Physics/IB Physics/Oscillations.md",
                 "mode": "source",
                 "source": false
               }
@@ -63,18 +63,6 @@
               "type": "markdown",
               "state": {
                 "file": "Misc or Personal/Quotes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cb9ad6f4a659eb1b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mathematics/IB Mathematical Methods/Special functions and orthogonal relations.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +86,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/Analytical classical mechanics.md"
+                    "file": "Mathematics/IB Mathematical Methods/Second order linear ODEs and Green's Functions.md"
                   }
                 }
               }
@@ -114,7 +102,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/Analytical classical mechanics.md",
+                    "file": "Mathematics/IB Mathematical Methods/Second order linear ODEs and Green's Functions.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -224,7 +212,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Analytical classical mechanics.md",
+                "file": "Mathematics/IB Mathematical Methods/Second order linear ODEs and Green's Functions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -241,7 +229,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Analytical classical mechanics.md",
+                "file": "Mathematics/IB Mathematical Methods/Second order linear ODEs and Green's Functions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -264,7 +252,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Analytical classical mechanics.md"
+                "file": "Mathematics/IB Mathematical Methods/Second order linear ODEs and Green's Functions.md"
               }
             }
           },
@@ -296,15 +284,15 @@
   },
   "active": "9b07594bcbc6a508",
   "lastOpenFiles": [
-    "Mathematics/IB Mathematical Methods/Calculus of variations.md",
-    "Mathematics/IB Mathematical Methods/Partial differential equations.md",
-    "Physics/IB Physics/Orbits.md",
+    "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
+    "Misc or Personal/Quotes.md",
+    "Physics/IB Physics/Fluid mechanics.md",
+    "Physics/IB Physics/Oscillations.md",
     "Physics/IB Physics/Elasticity.md",
     "Physics/IB Physics/Introductory quantum mechanics.md",
-    "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
-    "Materials Science/Extreme conditions.md",
-    "Misc or Personal/Quotes.md",
     "Physics/IB Physics/Rigid body dynamics.md",
-    "Mathematics/IB Mathematical Methods/Vectors and matrices.md"
+    "Physics/IB Physics/Thermal physics.md",
+    "Physics/IB Physics/Statistical mechanics.md",
+    "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md"
   ]
 }

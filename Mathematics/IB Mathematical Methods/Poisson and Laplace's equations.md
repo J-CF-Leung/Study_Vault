@@ -59,8 +59,8 @@ $$\nabla^2=\frac{1}{r}\pd{}{r}\left(r\pd{}{r}\right)+\frac{1}{r^2}\pd{^2}{\phi^2
 $$\displaylines{\Phi''=-\lambda\Phi \\ r\frac{d}{dr}\left(r\frac{dR}{dr}\right)=\lambda R}$$
 - The solution for $\Phi$ is:
 $$\Phi(\phi)=\begin{cases}A+B\phi &\lambda=0 \\ A\cos\left(\sqrt{\lambda}\phi\right)+B\sin\left(\sqrt{\lambda}\phi\right)&\lambda\neq0\end{cases}$$
-- For _physical systems_, $\Phi$ is only a _potential_ and is _not necessarilt periodic_
-- However, $\Phi'$ is the measurable quantity and  _must be periodic_
+- For _physical systems_, $\Phi$ is only a _potential_ and is _not necessarily periodic_
+- However, $\Phi'$ is the measurable quantity and _must be periodic_
 - Hence:
 $$\displaylines{\lambda=n^2 \hspace{0.5cm},\hspace{0.5cm}n\in\mathbb{Z} \\ \Phi(\phi)=\begin{cases}A+B\phi &n=0 \\ A\cos\left(n\phi\right)+B\sin\left(n\phi\right)&n\neq0\end{cases}}$$
 - From this, the solution for $R(r)$ is:
@@ -70,59 +70,67 @@ $$R(r)=\begin{cases}C+D\ln r &n=0 \\ Cr^n+D^{-n} & n\neq0\end{cases}$$
 $$\psi(r,\phi)=A_0+B_0\phi+C_0\ln r+\sum_{n=1}^\infty \left(A_nr^n+B_nr^{-n}\right)\cos(n\phi)+\sum_{n=1}^\infty \left(C_nr^n+D_nr^{-n}\right)\sin(n\phi)$$
 - One can also _relabel_ the sums:
 $$\psi=A_0+B_0\phi+C_0\ln r+\sum_{\substack{n=-\infty \\ n\neq0}}^\infty r^n\left(A_n\cos(n\phi)+B_n\sin(n\phi)\right)$$
+- The _boundary conditions_ can be used to find the coefficients
+	- The basis functions are _orthogonal_
 
 ## Spherical polar coordinates with cylindrical symmetry
 - Cylindrical symmetry: the solution _has no $\theta$-dependence_
+- The Laplacian in this system, considering the cylindrical symmetry, is:
+$$\nabla^2=\frac{1}{r^2}\pd{}{r}\left(r^2\pd{}{r}\right)+\frac{1}{r^2\sin\theta}\pd{}{\theta}\left(\sin\theta\pd{}{\theta}\right)$$
+- Let the solution be $\psi=R(r)\Theta(\theta)$
+- Separate the equation with _separation constant_ $\lambda$
 
+- For the angular equation, let $u\equiv\cos\theta$
+- One finds that it obeys:
+$$\frac{d}{du}\left((1-u^2)\frac{d\Theta}{du}\right)+\lambda\Theta=0$$
+- This is simply _Legendre's equation_
+- For _well-behaved solutions_ at $\theta=0$ or $\pi$, it is required that $\lambda=l(l+1)$
+- The resulting angular functions are the [[Special functions and orthogonal relations#Legendre polynomials|Legendre polynomials]] $P_l(u)$
 
-
-# Green's functions
-- A general discussion: [[Second order linear ODEs and Green's Functions]]
-- The solution to Poisson's equation can be written as:
-$$V(\bm{r})=\frac{1}{\epsilon_0}\int G(\bm{r},\bm{r'}) \rho(\bm{r'})d^3\bm{r'}$$
-- The _Green's function_ for the Poisson equation is the solution of:
-$$\nabla^2G(\bm{r}-\bm{r'})=-\delta(\bm{r}-\bm{r'})$$
-	- Poisson's equation can be regained by applying the Laplace operator on both sides
-	- The Green's function should satisfy homogeneous boundary conditions
-
-
-
-- For free space, using the superposition principle:
-$$V(\bm{r})=\frac{1}{4\pi\epsilon_0}\int\frac{\rho(\bm{r'})}{|\bm{r}-\bm{r'}|}\,d^3\bm{r'}$$
-- From this, the Green's function is:
-$$G(\bm{r},\bm{r'})=\frac{1}{4\pi|\bm{r}-\bm{r'}|}$$
-	- Satisfies boundary conditions (goes to zero at infinity)
-
-- The overall solution weighs all the Green's functions with $\rho(\bm{r'})$
+- By substituting $\lambda=l(l+1)$ into the radial equation, one gets:
+$$R(r)=A_lr^l+\frac{B_l}{r^{l+1}}$$
+- From this, the _full solution_ is:
+$$\psi(r,\theta)=\sum_{l=0}^\infty \left(A_lr^l+\frac{B_l}{r^{l+1}}\right)P_l(\cos\theta)$$
+## Spherical polar coordinates (general)
+- The _angular parts_ require _spherical harmonics_, which depend on two parameters $l$ and $m$
+- The _radial part_ remains the same
 
 # Boundary conditions and uniqueness
-- Necessary conditions for uniqueness in 1D:
-	- Potential at each end of an interval OR
-	- Potential and its derivative at one end OR
-	- potential at one end, derivative at the other
+- Let the boundary surface be $S$
 
 - _Dirichlet_ boundary conditions: specify the value over a boundary
+$$\Psi(\bm{x})\Big|_S=f(\bm{x})$$
 - _Neumann_ boundary conditions: normal derivative is specified over the boundary
+$$\pd{\Psi}{\hat{\bm{n}}}\Bigg|_S=\hat{\bm{n}}\cdot\nabla\Psi=f(\bm{x})$$
 - _Cauchy/mixed_ boundary conditions: the value or normal derivative is specified over the boundary
 
-- Conditions for a solution to Poisson's equations: 
+- _Conditions_ for determining a solution to Poisson's equations: 
 	- _Either_ Dirichlet or Neumann boundary conditions are specified (A part of the surface can be at infinity)
 	- Overdetermined if both are specified
-	- For Neumann, it is undetermined to within an additive constant ($\bm{E}$ unchanged)
 
-- Unbounded system: solution tends to zero at infinity
-- Conductor: potential must be constant over the surface
+- Examples:
+	- Unbounded system: solution _tends to zero at infinity_
+	- Conductor in electrostatics: potential must be _constant over the surface_
 
-- For Poisson's equation, the solution that satisfies the boundary conditions is unique
+- It can be proven that if a solution _satisfies Dirichlet boundary conditions_, it must be _unique_
+	- Let there be _two soloutions_, $\Psi_1$ and $\Psi_2$, with $\Psi\equiv\Psi_1-\Psi_2$
+	- It can be shown that $\nabla\Psi=0$ everywhere, hence $\Psi=0$ everywhere since it must be 0 at the boundary
+- For _Neumann_ boundary conditions, it is _unique up to an additive constant_
 
 ## Example: Conducting sphere in a uniform field
 - Place a dipole in a uniform field
-- There is a spherical equipotential surface around the dipole
+- There is a _spherical equipotential surface_ around the dipole
 
-- The dipole can be replaced by a spherical equipotential surface
+- The dipole can be _replaced by a spherical conductive shell_
 - Electric field _polarizes_ the sphere into an induced dipole
 
 ## The other uniqueness theorem in electrostatics
+
+# Green's functions
+- A general discussion: [[Second order linear ODEs and Green's Functions]]
+- Let a problem have _Dirichlet boundary conditions_
+- Let the _Green's function_ satisfy:
+$$\displaylines{\nabla_r^2G(\bm{x}-\bm{x}')=\delta^3(\bm{x}-\bm{x}') \\ G\big|_S=0}$$
 
 # Methods of images
 - Uniqueness theorem: as long as boundary conditions are specified, the electric field is _uniquely determined_, and the charge distribution making the field does not affect the solution
