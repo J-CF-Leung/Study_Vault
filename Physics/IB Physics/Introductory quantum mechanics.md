@@ -660,8 +660,8 @@ $$\Theta_\text{vib}=\frac{\hbar}{k_B}$$
 
 # Operator formalism
 >[!quote]
->"The chances of this being boring are high"
->-Prof. Castelnovo
+>"There exists, if I am not mistaken, an entire world which is the totality of mathematical truths, to which we have access only with our mind, just as a world of physical reality exists, the one like the other independent of ourselves, both of divine creation."
+>-Charles Hermite
 
 ## Vector spaces
 - [[#The Schrödinger Equation ❤|The Schrödinger Equation]] can be put in terms of _operators_
@@ -676,6 +676,9 @@ $$\ket{V},\ket{W},\dots$$
 - _Operators map vectors onto one another_:
 $$\hat{A}\ket{V}=\ket{W}$$
 
+- Notation: _scalars and operators acting on kets_ can be denoted by:
+$$\displaylines{\alpha\ket{V}\equiv\ket{\alpha V} \\ \hat{A}\ket{V}=\ket{\hat{A}V}}$$
+
 ### Bases
 - If there is a set of basis vectors $\{b_n\}$, then it is _complete_ if _any_ vector $\ket{a}$ in a space $\mathbb{V}$ can be expressed as a _unique linear combination_ of these vectors:
 $$\ket{V}=\sum_n a_n\ket{i}$$
@@ -683,7 +686,7 @@ $$\ket{V}=\sum_n a_n\ket{i}$$
 
 - The _maximum number of basis vectors_ is the _dimension_ of the space
 
-### Dual spaces and inner products
+### Dual spaces, adjoints and inner products
 - Vector spaces used in quantum mechanics are _inner product spaces_
 - The inner product involves a vector and its _dual_
 
@@ -691,6 +694,9 @@ $$\ket{V}=\sum_n a_n\ket{i}$$
 - The _dual_ of a ket is known as the _bra_ and denoted $\bra{V}$
 - It is also known as the _adjoint_ of the ket
 	- For matrices and column vectors, it is the _transpose conjugate_
+
+- The _dual of a vector multiplied by a scalar_ is:
+$$\displaylines{\alpha\ket{V}=\ket{\alpha V} \\ \bra{\alpha V}=\bra{V}\alpha^*}$$
 
 - The inner product outputs a _scalar_:
 $$\braket{V|W}=c\in\mathbb{C}$$
@@ -732,13 +738,11 @@ $$\sum_m\mathbb{P}_m=\sum_m\ket{u_m}\bra{u_m}=\hat{I}$$
 $$\displaylines{\hat{O}\ket{V}=\sum_{i,j} \ket{i}\braket{i|\hat{O}|j}\braket{j|V}=\sum_{i,j}O_{ij}\ket{i}\braket{j|V} \\ \hat{O}\equiv\sum_{i,j}O_{ij}\ket{i}\bra{j}}$$
 - $O_{nm}=\braket{u_n|\hat{O}|u_m}$ are known as the _matrix elements_ of $\hat{O}$ in this particular basis
 
-#### CLEAN UP PROGRESS MARKER
-
 ### Products and commutators
 - The _product_ of two operators acting on $\ket{a}$ is equivalent to each acting in turn:
-$$\hat{A}(\hat{B}\ket{a})=(\hat{A}\hat{B})\ket{a}$$
+$$\hat{A}(\hat{B}\ket{V})=(\hat{A}\hat{B})\ket{V}$$
 - By using the _completeness relation_, its matrix elements are:
-$$\begin{aligned}(\hat{A}\hat{B})_{ij}= \braket{u_i|\hat{A}\hat{B}|u_j}=\sum_k \end{aligned}$$
+$$\begin{aligned}(\hat{A}\hat{B})_{ij}&= \braket{i|\hat{A}\hat{B}|j}=\sum_k \braket{i|\hat{A}|k}\braket{k|\hat{B}|j} \\ &=\sum_k A_{ik}B_{kj} \end{aligned}$$
 
 - In _general_, operators _do not commute_:
 $$\hat{A}\hat{B}\neq\hat{B}\hat{A}$$
@@ -746,7 +750,38 @@ $$\hat{A}\hat{B}\neq\hat{B}\hat{A}$$
 $$[\hat{A},\hat{B}]=\hat{A}\hat{B}-\hat{B}\hat{A}$$
 - If the commutator is _zero_, then the operators _commute_
 
-### Hilbert spaces
+### Adjoints of operators and Hermiticity
+- Given a ket $\ket{\hat{A}V}=\hat{A}\ket{V}$, its _adjoint_/dual is:
+$$\bra{\hat{A}V}=\bra{V}\hat{A}^\dagger$$
+- This _defines_ the _adjoint_ of the operator
+- In terms of the inner product:
+$$\braket{V|\hat{A}W}=\braket{\hat{A}^\dagger V|W}$$
+- The _matrix elements_ of the adjoint are:
+$$(\hat{A}^\dagger)_{ij}=\braket{i|\hat{A}^\dagger|j}=\braket{j|\hat{A}|i}^*=(\hat{A})_{ji}^*$$
+- Therefore, the adjoint can be understood as the _transpose conjugate_
+
+- From the nature of the product of operators, it can be proven that:
+$$(\hat{A}\hat{B})^\dagger=\hat{B}^\dagger\hat{A}^\dagger$$
+### Hermitian, anti-Hermitian, and unitary operators
+- An operator is _Hermitian_ if:
+$$\displaylines{\hat{A}^\dagger=\hat{A} \\ \braket{\hat{A}V|W}=\braket{V|\hat{A}W}}$$
+- An operator is _anti-Hermitian_ if:
+$$\displaylines{\hat{A}^\dagger=-\hat{A} \\ \braket{\hat{A}V|W}=-\braket{V|\hat{A}W}}$$
+- Just as a scalar can be split into pure and imaginary parts, _operators can be split into Hermitian and anti-Hermitian parts_:
+$$\hat{A}=\frac{\hat{A}+\hat{A}^\dagger}{2}+\frac{\hat{A}-\hat{A}^\dagger}{2}$$
+- An operator is _unitary_ if:
+$$\displaylines{\hat{U}\hat{U}^\dagger=\hat{I} \\ \hat{U}^\dagger=\hat{U}^{-1}}$$
+
+- A unitary operator _preserves the inner product_:
+$$\displaylines{\ket{V'_1}=\hat{U}\ket{V_1}\hspace{1cm}\ket{V'_2}=\hat{U}\ket{V_2} \\ \braket{V_1'|V_2'}=\braket{V_1|V_2}}$$
+- It is _analagous to a rotation in $\mathbb{R}^n$_
+	- In real space, it is _orthogonal_
+
+- If one treats the _columns or rows_ of an $n\times n$ unitary matrix as $n$ vectors, they are _orthonormal_
+	- They correspond to a _basis_ which [[Vectors and matrices#Diagonalisation via unitary matrices|diagonalises a Hermitian matrix]]
+- 
+
+## Hilbert spaces
 - The relevant vector space for quantum mechanics is _the Hilbert space of square-integrable functions_
 - Consider there to be a _range_ of $x$, with a _regular interval of sampling points_ $(x_1,x_2,\dots,x_N)$
 - If one _samples a function_ $f(x)$ at these points, one ends up with a _vector_ $\ket{f}$
