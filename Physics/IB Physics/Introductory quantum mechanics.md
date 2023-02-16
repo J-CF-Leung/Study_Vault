@@ -715,6 +715,16 @@ $$\braket{j|V}=\sum_i a_i\braket{j|i}=a_j$$
 $$\ket{a}=\sum_i \ket{i}\braket{i|a}$$
 - So, for a basis set to be _complete_, it must satisfy the [[#Identity and projection operators|completeness relation]]
 
+### Subspaces
+- If in a vector space $\mathbb{V}$ contains a set of vectors _that form a vector space amongst themselves_. that set of vectors is called a _subspace_
+- A subspace $i$ of dimensionality $n$ is denoted $\mathbb{V}_i^n$
+- Example: In $\mathbb{R}^3$, all vectors _orthogonal_ to one vector forms a subspace $\mathbb{R}_i^2$
+
+- Given two subspaces $\mathbb{V}_i^{n_i}$ and $\mathbb{V}_j^{n_j}$, their _sum_ is denoted:
+$$\mathbb{V}_i^{n_i}\oplus\mathbb{V}_i^{n_i}=\mathbb{V}_k^{n_k}$$
+- This consists of _all elements in each respective subspace, plus all possible linear combinations_
+- Example:, all vectors along $x$, and all vectors along $y$:
+$$\mathbb{R}_x^1+\mathbb{R}_y^1=\mathbb{R}_{xy}^2$$
 
 ## Operators
 - Consider _operators_ acting on _generic vectors_, mapping it onto another vector _in the same vector space_
@@ -779,7 +789,21 @@ $$\displaylines{\ket{V'_1}=\hat{U}\ket{V_1}\hspace{1cm}\ket{V'_2}=\hat{U}\ket{V_
 
 - If one treats the _columns or rows_ of an $n\times n$ unitary matrix as $n$ vectors, they are _orthonormal_
 	- They correspond to a _basis_ which [[Vectors and matrices#Diagonalisation via unitary matrices|diagonalises a Hermitian matrix]]
-- 
+
+### Active and passive transformations
+- Suppose _all vectors $\ket{V}$ in a space are subject to a transformation_:
+$$\ket{V}\longrightarrow \hat{U}\ket{V}$$
+- This is known as an _active transformation_
+
+- Under this transformation, the _matrix elements_ of any operator $\hat{A}$ are:
+$$\braket{V'|\hat{A}|V}\longrightarrow \braket{\hat{U}V'|\hat{A}|\hat{U}V}=\braket{V'|\hat{U}^\dagger\hat{A}\hat{U}|V}$$
+- The _same change_ to the inner products if the _vectors were unchanged_, and the _operator was transformed_:
+$$\hat{A}\longrightarrow\hat{U}^\dagger\hat{A}\hat{U}$$
+- This is known as a _passive transformation_, as the vectors are unchanged
+
+## Eigenvectors and eigenvalues
+
+#### CLEAN UP MARKER 
 
 ## Hilbert spaces
 - The relevant vector space for quantum mechanics is _the Hilbert space of square-integrable functions_
