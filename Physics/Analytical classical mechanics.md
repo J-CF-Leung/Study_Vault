@@ -17,7 +17,7 @@ $$S[q(t)]=\int_{t_1}^{t_2}\Lagr(q,\dot{q},t)\,dt$$
 - Principle of stationary action: the particle takes a path with stationary/minimum action
 - The action is a _functional_, requiring the use of [[Calculus of variations]]
 
-- Consider a particle travelling along a path with minimum action $q(t)$:
+- Consider a particle travelling along a path with _minimum action_ $q(t)$:
 	- Let a neighbouring path have path $q(t)+\delta q(t)$, with $\delta q(t_1)=\delta q(t_2)=0$
 	- The change in action, $\delta S$ must be 0 if the action is to be minimum:
 	$$\delta S=\left[\pd{\Lagr}{\dot{q}}\delta q\right]^{t_2}_{t_1} + \int^{t_2}_{t_1}\left(\pd{\Lagr}{q}-\frac{d}{dt}\pd{\Lagr}{\dot{q}}\right)\,dt=0$$
@@ -55,9 +55,15 @@ $$\Lagr=\frac{1}{2}m_1|\dot{\bm{r}}_1|^2+ \frac{1}{2}m_2 |\dot{\bm{r}}_2|^2 -V(\
 $$\Lagr=\frac{1}{2}(m_1+m_2)|\dot{\bm{r}}_{CM}|^2+\frac{1}{2}\frac{m_1m_2}{m_1+m_2}|\dot{\bm{r}}|^2-V(\bm{r})$$
 
 - $\bm{r}_{CM}$ is cyclic (3 coordinates)
-	- Centre of mass moves with constant momentum $p_{CM}=(m_1+m_2)\dot{\bm{r}}_{CM}$
+	- _Centre of mass moves with constant momentum_ $p_{CM}=(m_1+m_2)\dot{\bm{r}}_{CM}$
 - Fictitious particle with reduced mass $\mu=m_1m_2/(m_1+m_2)$ moves under potential $V$
 - Shifting the system by a constant displacement $\bm{r}_0$ does not change motion
+
+## Holonomic constraints
+- In many system, there is a _constraint_ on the movement of a body
+- This _reduces the number of degrees of freedom by one_
+
+- This can also occur since there is a _conserved quantity_
 
 # Symmetries and Noether's Theorem
 - A symmetry is an operation that does not change the functional form of the Lagrangian or Hamiltonian
@@ -96,6 +102,12 @@ $$\frac{d\Ham}{dt}=-\pd{\Lagr}{t}$$
 - When $\Lagr=T-V$, $\Ham=T+V=E$
 - Energy is conserved when Lagrangian does not depend explicitly on time
 	- Example: Magnetic field that varies with time
+
+### In equations of motion
+- If there is a _conserved quantity_, it _cannot be substituted into the Lagrangian_
+- The Euler-Lagrange Equations are _derived while assuming all variables are independent_
+
+- Instead, conserved quantities such as $J$ _can only be substituted into equations of motion_
 
 # Hamiltonian formulation
 ## Hamiltonian as a Legendre transform

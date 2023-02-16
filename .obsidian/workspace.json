@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/IB Physics/Elasticity.md",
+                "file": "Physics/IB Physics/Oscillations.md",
                 "mode": "source",
                 "source": false
               }
@@ -45,18 +45,6 @@
             }
           },
           {
-            "id": "b051414ffb9d558d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mathematics/IB Mathematical Methods/Second order linear ODEs and Green's Functions.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "9b07594bcbc6a508",
             "type": "leaf",
             "state": {
@@ -80,8 +68,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -98,7 +85,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/IB Physics/Introductory quantum mechanics.md"
+                    "file": "Physics/IB Physics/Oscillations.md"
                   }
                 }
               }
@@ -114,7 +101,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/IB Physics/Introductory quantum mechanics.md",
+                    "file": "Physics/IB Physics/Oscillations.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -224,7 +211,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/IB Physics/Introductory quantum mechanics.md",
+                "file": "Physics/IB Physics/Oscillations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -241,7 +228,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/IB Physics/Introductory quantum mechanics.md",
+                "file": "Physics/IB Physics/Oscillations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -264,7 +251,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/IB Physics/Introductory quantum mechanics.md"
+                "file": "Physics/IB Physics/Oscillations.md"
               }
             }
           },
@@ -294,17 +281,17 @@
       "templates:Insert template": false
     }
   },
-  "active": "e10c9d6fa3b3fbbc",
+  "active": "8c0e30efc10524b1",
   "lastOpenFiles": [
-    "Mathematics/IB Mathematical Methods/Vectors and matrices.md",
-    "Physics/IB Physics/Introductory quantum mechanics.md",
     "Physics/IB Physics/Elasticity.md",
+    "Physics/IB Physics/Introductory quantum mechanics.md",
+    "Mathematics/IB Mathematical Methods/Vectors and matrices.md",
+    "Mathematics/IB Mathematical Methods/Second order linear ODEs and Green's Functions.md",
+    "Misc or Personal/Quotes.md",
+    "Physics/Analytical classical mechanics.md",
     "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Mathematics/IB Mathematical Methods/Vector calculus in 3-dimensions.md",
-    "Mathematics/IB Mathematical Methods/Second order linear ODEs and Green's Functions.md",
     "Physics/Geometric viewpoint.md",
-    "Physics/IB Physics/Oscillations.md",
-    "Physics/Quantum Mechanics/The operators of quantum mechanics.md",
-    "Physics/IB Physics/Fluid mechanics.md"
+    "Physics/IB Physics/Oscillations.md"
   ]
 }

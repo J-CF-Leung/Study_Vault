@@ -235,7 +235,7 @@ $$R'(t)=\frac{1}{\sqrt{2\pi}}\mathcal{F}^{-1}[R(\omega)]$$
 - Any force can be written as a _convolution_ of some function $F(t')$ with $\delta(t-t')$
 - From this, the response _can also be written as a convolution_:
 $$x(t)=\int F(t')R'(t-t')\,dt'$$
-# Oscillations via normal modes
+# General small oscillations
 >[!quote]
 >“Physics is that subset of human experience which can be reduced to coupled harmonic oscillators”
 >-Michael Peskin
@@ -304,10 +304,33 @@ $$M_{ij}\equiv\sum_k m_k\pd{r_k}{q_i}\Bigg|_{q_\text{eq}}\pd{r_k}{q_j}\Bigg|_{q_
 $$U\approx U_0+\frac{1}{2}\sum_{ij}q_iq_j\pd{^2U}{q_i\partial q_j}\Bigg|_{\text{eq}}=U_0+\frac{1}{2}\sum_{ij}K_{ij}q_iq_j$$
 - $\dunderline{K}$ is the _spring constant matrix_:
 $$K_{ij}=\pd{^2U}{q_i\partial q_j}$$
-- From _energy conservation_, the _equations of motion_ are:
-$$\dunderline{M}\cdot\ddot{\bm{\underline{q}}}+\dunderline{K}\cdot\bm{\underline{q}}=0$$
-- This can also be derived from the _Euler-Lagrange equations_
+
 - The two matrices are _symmetric by definition_
+
+### Characteristic frequencies and normal modes
+- The Lagrangian of the system is:
+$$\Lagr=\frac{1}{2}\sum_{i,j}M_{ij}\dot{q}_i\dot{q}_j-\frac{1}{2}\sum_{i,j}K_{ij}q_iq_j$$
+- By considering the _Euler-Lagrange equations_, and using the symmetries of the matrices:
+$$\sum_i \left(M_{ij}\ddot{q}_i+K_{ij}q_i\right)=0$$
+- Substituting $q\propto\exp(i\omega t)$, this only has a solution if:
+$$\det(\dunderline{K}-\omega^2\dunderline{M})=0$$
+- This _resembles an eigenvalue equation_
+- The frequencies $\omega$ are the _characteristic frequencies_
+- From the nature of the equation, _there are as many normal modes as there are degrees of freedom_
+
+- The _normal modes_ $\underline{\bm{Q}}$ in terms of the original coordinates:
+$$\displaylines{(\dunderline{\bm{K}}-\omega^2\dunderline{\bm{M}})\cdot\underline{\bm{Q}}=0 \\ \ddot{\bm{Q}}_i+\omega_\alpha^2\bm{Q}_i=0}$$
+- The Lagrangian can then be re-written as:
+$$\Lagr=\frac{1}{2}\sum_\alpha m_\alpha\left(\dot{Q}_\alpha^2-\omega_\alpha^2Q_\alpha^2\right)=\frac{1}{2}\sum_\alpha\left(\dot{Q}_\alpha'^2-\omega_\alpha^2Q_\alpha'^2\right)$$
+- Here, $Q_\alpha'$ are "normalised" _orthogonal_ modes:
+$$\displaylines{\underline{\bm{Q}}_\alpha'=\dunderline{\sqrt{\bm{M}}}\cdot\underline{\bm{Q}}_j \\ \underline{\bm{Q}}^T_i\cdot\dunderline{\bm{M}}\cdot\underline{\bm{Q}}_j=\underline{\bm{Q}}'_i\cdot\underline{\bm{Q}}_j'\propto\delta_{ij}}$$
+
+### More remarks on normal modes
+- Since the frequencies are _real_, the system must be inherently _stable_
+	- _No real exponentials_
+- _Zero frequency_ modes can exist, and correspond to _translation or rotation_
+- Frequencies can be _degenerate_, usually due to _symmetry_
+	- In this case, the _choices of normal modes are not unique_
 
 ### Example: the symmetric triatomic
 #### 1 dimension
@@ -332,16 +355,3 @@ $$\displaylines{\omega^2=0\longrightarrow \underline{X}=\begin{pmatrix}1 \\ 1 \\
 - _Linear molecules have $3N-5$ vibrational modes_
 - Excruciating detail: [[Oscillations in molecules]]
 
-## The "orthogonality" of normal modes
-- The equation for normal modes is:
-$$(\dunderline{K}-\omega^2\dunderline{M})\cdot\underline{Q}=0$$
-- The matrices are _symmetric_, therefore $\omega^2$ _must be real_
-- To make it an _eigenvalue equation_:
-$$(\dunderline{M}^{-1}\dunderline{K}-\omega^2\dunderline{I})\cdot\underline{Q}=0$$
-- 
-
-## More remarks on normal modes
-- Since the frequencies are _real_, the system must be inherently _stable_
-	- _No real exponentials_
-- _Zero frequency_ modes can exist, and correspond to _translation or rotation_
-- Frequencies can be _degenerate_, usually due to _symmetry_
