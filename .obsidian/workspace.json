@@ -38,7 +38,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Vectors and matrices.md",
+                "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,7 +68,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -85,7 +86,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/IB Physics/Oscillations.md"
+                    "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md"
                   }
                 }
               }
@@ -101,7 +102,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/IB Physics/Oscillations.md",
+                    "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -124,7 +125,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.30289397970153437,
+                      "scale": 0.9020357635304835,
                       "close": true
                     }
                   }
@@ -211,7 +212,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/IB Physics/Oscillations.md",
+                "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -228,7 +229,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/IB Physics/Oscillations.md",
+                "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -251,7 +252,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/IB Physics/Oscillations.md"
+                "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md"
               }
             }
           },
@@ -281,17 +282,17 @@
       "templates:Insert template": false
     }
   },
-  "active": "8c0e30efc10524b1",
+  "active": "ec56ade163e94221",
   "lastOpenFiles": [
+    "Mathematics/IB Mathematical Methods/Dirac Delta Function.md",
+    "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
+    "Mathematics/IB Mathematical Methods/Second order linear ODEs and Green's Functions.md",
+    "Mathematics/IB Mathematical Methods/Sturm-Liouville Theory.md",
+    "Mathematics/IB Mathematical Methods/Vectors and matrices.md",
+    "Physics/IB Physics/Oscillations.md",
     "Physics/IB Physics/Elasticity.md",
     "Physics/IB Physics/Introductory quantum mechanics.md",
-    "Mathematics/IB Mathematical Methods/Vectors and matrices.md",
-    "Mathematics/IB Mathematical Methods/Second order linear ODEs and Green's Functions.md",
     "Misc or Personal/Quotes.md",
-    "Physics/Analytical classical mechanics.md",
-    "Chemistry/IB Chemistry/Symmetry in molecules.md",
-    "Mathematics/IB Mathematical Methods/Vector calculus in 3-dimensions.md",
-    "Physics/Geometric viewpoint.md",
-    "Physics/IB Physics/Oscillations.md"
+    "Physics/Analytical classical mechanics.md"
   ]
 }

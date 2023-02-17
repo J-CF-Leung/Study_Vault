@@ -128,10 +128,32 @@ $$\pd{\Psi}{\hat{\bm{n}}}\Bigg|_S=\hat{\bm{n}}\cdot\nabla\Psi=f(\bm{x})$$
 
 # Green's functions
 - A general discussion: [[Second order linear ODEs and Green's Functions]]
-- Let a problem have _Dirichlet boundary conditions_
-- Let the _Green's function_ satisfy:
-$$\displaylines{\nabla_r^2G(\bm{x}-\bm{x}')=\delta^3(\bm{x}-\bm{x}') \\ G\big|_S=0}$$
+- Relies on [[Dirac Delta Function#Higher dimension Delta functions|higher dimensional Delta Functions]]
+- Let the _Green's function_ satisfy, for $\bm{r}$ in the volume $V$:
+$$\nabla_x^2G(\bm{x},\bm{x}')=\delta^3(\bm{x}-\bm{x}') $$
+- If the above equation _is satisfied for all space_, then $G(\bm{x},\bm{x}'')$ is known as the _fundamental solution_
 
+- The Green's function _must also satisfy the boundary conditions_
+- _Dirichlet_ boundary conditions:
+$$G(\bm{x},\bm{x}')\big|_S=0$$
+- _Neumann_ boundary conditions:
+$$\pd{G}{n}\Bigg|_S=\frac{1}{A}\to0$$
+- $A=\oint dS$ is the _surface area_, which can _tend to infinity_
+
+## Fundamental solution in 3D
+- One requires that $G\to0$ as $|\bm{r}|\to\infty$
+- From the [[Dirac Delta Function#Higher dimension Delta functions|definition of the 3-dimensional Delta Function]]:
+$$\nabla_x^2G(\bm{x},\bm{x}')=\delta^3(\bm{x}-\bm{x}')=\frac{1}{4\pi}\nabla_x\cdot\left(\frac{\bm{x}-\bm{x}'}{|\bm{x}-\bm{x}'|^3}\right)$$
+- From this, it can be deduced that:
+$$G(\bm{x},\bm{x'})=-\frac{1}{4\pi}\frac{1}{|\bm{x}-\bm{x}'|}$$
+- Therefore, from the _uniqueness theorem_, the solution to Poisson's equation is:
+$$\displaylines{\nabla^2\Phi=\rho(\bm{x}) \\ \Phi(\bm{x})=\int -\frac{1}{4\pi}\frac{\rho(\bm{x})}{|\bm{x}-\bm{x}'|}\,d^3\bm{x}}$$
+
+## Fundamental solution in 2D
+- One requires that $G$ vanishes _on some circle around_ $\bm{x}'$, or $|\nabla G|\to0$ as $|\bm{r}|\to\infty$
+- With a similar proof to 3D:
+$$G(\bm{x},\bm{x}')=\frac{1}{2\pi}\ln|\bm{x}-\bm{x'}|+\text{const.}$$
+ 
 # Methods of images
 - Uniqueness theorem: as long as boundary conditions are specified, the electric field is _uniquely determined_, and the charge distribution making the field does not affect the solution
 
