@@ -38,7 +38,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
+                "file": "Mathematics/IB Mathematical Methods/Calculus of variations.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,7 +68,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -85,7 +86,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/IB Physics/Fluid mechanics.md"
+                    "file": "Mathematics/IB Mathematical Methods/Calculus of variations.md"
                   }
                 }
               }
@@ -101,7 +102,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/IB Physics/Fluid mechanics.md",
+                    "file": "Mathematics/IB Mathematical Methods/Calculus of variations.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -211,7 +212,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/IB Physics/Fluid mechanics.md",
+                "file": "Mathematics/IB Mathematical Methods/Calculus of variations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -228,7 +229,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/IB Physics/Fluid mechanics.md",
+                "file": "Mathematics/IB Mathematical Methods/Calculus of variations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -251,7 +252,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/IB Physics/Fluid mechanics.md"
+                "file": "Mathematics/IB Mathematical Methods/Calculus of variations.md"
               }
             }
           },
@@ -281,16 +282,16 @@
       "templates:Insert template": false
     }
   },
-  "active": "8c0e30efc10524b1",
+  "active": "ec56ade163e94221",
   "lastOpenFiles": [
-    "Misc or Personal/Quotes.md",
-    "Physics/IB Physics/Fluid mechanics.md",
-    "Physics/IB Physics/Oscillations.md",
-    "Physics/IB Physics/Introductory quantum mechanics.md",
+    "Mathematics/IB Mathematical Methods/Sturm-Liouville Theory.md",
     "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
+    "Physics/IB Physics/Introductory quantum mechanics.md",
+    "Physics/IB Physics/Fluid mechanics.md",
+    "Misc or Personal/Quotes.md",
+    "Physics/IB Physics/Oscillations.md",
     "Mathematics/IB Mathematical Methods/Dirac Delta Function.md",
     "Mathematics/IB Mathematical Methods/Second order linear ODEs and Green's Functions.md",
-    "Mathematics/IB Mathematical Methods/Sturm-Liouville Theory.md",
     "Mathematics/IB Mathematical Methods/Vectors and matrices.md",
     "Physics/IB Physics/Elasticity.md"
   ]

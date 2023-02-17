@@ -154,22 +154,54 @@ $$\displaylines{\nabla^2\Phi=\rho(\bm{x}) \\ \Phi(\bm{x})=\int -\frac{1}{4\pi}\f
 - With a similar proof to 3D:
 $$G(\bm{x},\bm{x}')=\frac{1}{2\pi}\ln|\bm{x}-\bm{x'}|+\text{const.}$$
  
-# Methods of images
-- Uniqueness theorem: as long as boundary conditions are specified, the electric field is _uniquely determined_, and the charge distribution making the field does not affect the solution
+# Method of images
+- Uniqueness theorem: If a solution _satisfies the boundary conditions_, it must be the _only solution_
+- Trick: Add an _image source_ to satisfy the boundary conditions
 
+## Examples: half-spaces and quarter planes
+
+### 3D half-space with Dirichlet boundary conditions
+- Consider a _half-space_ in $\mathbb{R}^3$ with a boundary at $z=0$, and consider $x>0$
+- The Green's Function must satisfy:
+$$\displaylines{\nabla^2G=\delta^3(\bm{x}-\bm{x}') \\ G(z=0)=0 \\ G(|\bm{r}|\to\infty)=0}$$
+- Trick: _remove boundary_ and _add an image source_ at:
+$$\bm{x''}=(x',y',-z')$$
+- The Green's function then satisfies:
+$$\displaylines{\nabla_x^2G=\delta^3(\bm{x}-x')-\delta^3(\bm{x}-\bm{x}'')\\G=-\frac{1}{4\pi}\left(\frac{1}{|\bm{x}-\bm{x'}|}-\frac{1}{|\bm{x}-\bm{x}''|}\right)}$$
+- This scales as $1/r^2$, like a _dipole_
+
+### 3D half-space with Neumann boundary conditions
+- The Green's function must satisfy:
+$$\displaylines{\nabla^2G=\delta^3(\bm{x}-\bm{x}') \\ \pd{G}{z}(z=0)=0 \\ G(|\bm{r}|\to\infty)=0}$$
+- In this case, the Green's Function is:
+$$G(\bm{x},\bm{x}')=\frac{1}{4\pi}\left(\frac{1}{|\bm{x}-\bm{x'}|}+\frac{1}{|\bm{x}-\bm{x}''|}\right)$$
+
+### 2D quarter-plane with Dirichlet boundary conditions
+- The Green's function must satisfy:
+$$\displaylines{\nabla^2G=\delta^3(\bm{x}-\bm{x}_0) \\ G(x=0)=G(y=0)=0 \\ G(|\bm{r}|\to\infty)=0}$$
+- To satisfy all boundary conditions, _three images_ are required:
+$$\displaylines{\bm{x}_1=(-x_0,y_0) \hspace{1cm} \bm{x}_2=(x_0,-y_0) \hspace{1cm} \bm{x}_3=(-x_0,-y_0) \\ G(\bm{x},\bm{x}_0)=\frac{1}{2\pi}\ln\frac{|\bm{x}-\bm{x}_0||\bm{x}-\bm{x}_3|}{|\bm{x}-\bm{x}_1||\bm{x}-\bm{x}_2|}}$$
+- The _constant is zero from boundary conditions_
+
+### Image in a sphere
+
+### Image in a circle
+
+
+## In electrostatics
 - Consider a dipole:
 	- Halfway between the charges, there is a plane of zero potential
 	- If the plane is replaced with a conducting plane and one charge is removed, _the potential does not change_
 
 - Replacing conducting planes with other charges is the _method of images_
 
-## Charge next to conducting plane
+### Charge next to conducting plane
 - The conducting plane is an equipotential
 - To recreate the boundary condition, place an opposite charge the same distance away on the other side
 
 - Result: induced charges on the conducting plane, strengthening the field between the charge and the field
 
-## Two line charges
+### Two line charges
 - Consider two lines with opposite charge, where the distances to each are $r_1$ and $r_2$
 - From the superposition principle, the potential from these two line charges is:
 $$V(\bm{r})=\frac{\lambda}{2\pi\epsilon_0}\ln{\frac{r_2}{r_1}}$$
