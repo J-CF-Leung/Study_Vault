@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/IB Physics/Oscillations.md",
+                "file": "Physics/IB Physics/Fluid mechanics.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,8 +68,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -86,7 +85,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md"
+                    "file": "Physics/IB Physics/Fluid mechanics.md"
                   }
                 }
               }
@@ -102,7 +101,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
+                    "file": "Physics/IB Physics/Fluid mechanics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -212,7 +211,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
+                "file": "Physics/IB Physics/Fluid mechanics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -229,7 +228,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
+                "file": "Physics/IB Physics/Fluid mechanics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -252,7 +251,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md"
+                "file": "Physics/IB Physics/Fluid mechanics.md"
               }
             }
           },
@@ -282,17 +281,17 @@
       "templates:Insert template": false
     }
   },
-  "active": "ec56ade163e94221",
+  "active": "8c0e30efc10524b1",
   "lastOpenFiles": [
-    "Mathematics/IB Mathematical Methods/Dirac Delta Function.md",
+    "Misc or Personal/Quotes.md",
+    "Physics/IB Physics/Fluid mechanics.md",
+    "Physics/IB Physics/Oscillations.md",
+    "Physics/IB Physics/Introductory quantum mechanics.md",
     "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
+    "Mathematics/IB Mathematical Methods/Dirac Delta Function.md",
     "Mathematics/IB Mathematical Methods/Second order linear ODEs and Green's Functions.md",
     "Mathematics/IB Mathematical Methods/Sturm-Liouville Theory.md",
     "Mathematics/IB Mathematical Methods/Vectors and matrices.md",
-    "Physics/IB Physics/Oscillations.md",
-    "Physics/IB Physics/Elasticity.md",
-    "Physics/IB Physics/Introductory quantum mechanics.md",
-    "Misc or Personal/Quotes.md",
-    "Physics/Analytical classical mechanics.md"
+    "Physics/IB Physics/Elasticity.md"
   ]
 }

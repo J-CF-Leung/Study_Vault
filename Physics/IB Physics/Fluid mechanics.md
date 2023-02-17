@@ -40,6 +40,23 @@ $$\eta=G t_s$$
 - For _Newtonian_ fluids, the only stresses are _isotropic_:
 $$\tau_1=\tau_2=\tau_3=-P$$
 
+## Following the fluid
+- Often, one is looking at a _steady flow_, where the _velocity_ of the fluid is _constant at a point fixed in space_:
+$$\pd{\bm{u}}{t}=0$$
+- One can _visualise_ the motion of the fluid with _streamlines_, which are _aligned with the velocity_ of the fluid at any point:
+$$\displaylines{\frac{d\bm{x}_s}{ds}\wedge\bm{u}(s)=0 \\ \frac{dx_s}{u_x}=\frac{dy_s}{u_y}=\frac{dz_s}{u_z}}$$
+- Streamlines are _analagous to electric or magnetic field lines_
+
+- One can also use a _particle path_, which _follows a fluid element_
+- A _streakline_ connects _points that go through a particular point in space at all times_
+
+- For a _steady flow_, all three of these lines _coincide_
+- Quantities of interest (such as density and temperature) _are also constant at the particular point_
+
+- It is obvious that if one _follows a fluid element_, $\bm{u}$ and other quantities _must change_
+- A _rate of change following the fluid_ is the _convective derivative_:
+$$\frac{D}{Dt}\equiv\pd{}{t}+\frac{dx_i}{dt}\pd{}{x_i}\equiv\pd{}{t}+\bm{u}\cdot\nabla$$
+
 ## Continuity
 - $\bm{j}=\rho\bm{v}$: mass flux density
 - Decrease in mass of fluid inside specified volume:
@@ -50,3 +67,10 @@ $$\oint \bm{j}\cdot \,d\bm{S}=\oint \nabla\cdot(\rho\bm{v})\,dV$$
 $$\pd{\rho}{t}+\nabla\cdot(\rho\bm{v})=0$$
 - If the flow is _incompressible_:
 $$\nabla\cdot\bm{v}=0$$
+
+## Euler's equation
+- Calculate the _acceleration of the fluid_, 
+
+
+- Account for the presence of gravity, with a _force per unit volume_:
+$$\rho \bm{g}=-\rho\nabla\phi_g$$
