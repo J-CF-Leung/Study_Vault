@@ -674,10 +674,10 @@ $$\hat{\Ham}\psi=E\psi$$
 $$\ket{V},\ket{W},\dots$$
 
 - _Operators map vectors onto one another_:
-$$\hat{A}\ket{V}=\ket{W}$$
+$$\hat{\Omega}\ket{V}=\ket{W}$$
 
 - Notation: _scalars and operators acting on kets_ can be denoted by:
-$$\displaylines{\alpha\ket{V}\equiv\ket{\alpha V} \\ \hat{A}\ket{V}=\ket{\hat{A}V}}$$
+$$\displaylines{\alpha\ket{V}\equiv\ket{\alpha V} \\ \hat{\Omega}\ket{V}=\ket{\hat{\Omega}V}}$$
 
 ### Bases
 - If there is a set of basis vectors $\{b_n\}$, then it is _complete_ if _any_ vector $\ket{a}$ in a space $\mathbb{V}$ can be expressed as a _unique linear combination_ of these vectors:
@@ -750,35 +750,35 @@ $$\displaylines{\hat{O}\ket{V}=\sum_{i,j} \ket{i}\braket{i|\hat{O}|j}\braket{j|V
 
 ### Products and commutators
 - The _product_ of two operators acting on $\ket{a}$ is equivalent to each acting in turn:
-$$\hat{A}(\hat{B}\ket{V})=(\hat{A}\hat{B})\ket{V}$$
+$$\hat{\Omega}(\hat{\Lambda}\ket{V})=(\hat{\Omega}\hat{\Lambda})\ket{V}$$
 - By using the _completeness relation_, its matrix elements are:
-$$\begin{aligned}(\hat{A}\hat{B})_{ij}&= \braket{i|\hat{A}\hat{B}|j}=\sum_k \braket{i|\hat{A}|k}\braket{k|\hat{B}|j} \\ &=\sum_k A_{ik}B_{kj} \end{aligned}$$
+$$\begin{aligned}(\hat{\Omega}\hat{\Lambda})_{ij}&= \braket{i|\hat{\Omega}\hat{\Lambda}|j}=\sum_k \braket{i|\hat{\Omega}|k}\braket{k|\hat{\Lambda}|j} \\ &=\sum_k A_{ik}B_{kj} \end{aligned}$$
 
 - In _general_, operators _do not commute_:
-$$\hat{A}\hat{B}\neq\hat{B}\hat{A}$$
+$$\hat{\Omega}\hat{\Lambda}\neq\hat{\Lambda}\hat{\Omega}$$
 - How _badly_ two operators commute is measured by the _commutator_:
-$$[\hat{A},\hat{B}]=\hat{A}\hat{B}-\hat{B}\hat{A}$$
+$$[\hat{\Omega},\hat{\Lambda}]=\hat{\Omega}\hat{\Lambda}-\hat{\Lambda}\hat{\Omega}$$
 - If the commutator is _zero_, then the operators _commute_
 
 ### Adjoints of operators and Hermiticity
-- Given a ket $\ket{\hat{A}V}=\hat{A}\ket{V}$, its _adjoint_/dual is:
-$$\bra{\hat{A}V}=\bra{V}\hat{A}^\dagger$$
+- Given a ket $\ket{\hat{\Omega}V}=\hat{\Omega}\ket{V}$, its _adjoint_/dual is:
+$$\bra{\hat{\Omega}V}=\bra{V}\hat{\Omega}^\dagger$$
 - This _defines_ the _adjoint_ of the operator
 - In terms of the inner product:
-$$\braket{V|\hat{A}W}=\braket{\hat{A}^\dagger V|W}$$
+$$\braket{V|\hat{\Omega}W}=\braket{\hat{\Omega}^\dagger V|W}$$
 - The _matrix elements_ of the adjoint are:
-$$(\hat{A}^\dagger)_{ij}=\braket{i|\hat{A}^\dagger|j}=\braket{j|\hat{A}|i}^*=(\hat{A})_{ji}^*$$
+$$(\hat{\Omega}^\dagger)_{ij}=\braket{i|\hat{\Omega}^\dagger|j}=\braket{j|\hat{\Omega}|i}^*=(\hat{\Omega})_{ji}^*$$
 - Therefore, the adjoint can be understood as the _transpose conjugate_
 
 - From the nature of the product of operators, it can be proven that:
-$$(\hat{A}\hat{B})^\dagger=\hat{B}^\dagger\hat{A}^\dagger$$
+$$(\hat{\Omega}\hat{\Lambda})^\dagger=\hat{\Lambda}^\dagger\hat{\Omega}^\dagger$$
 ### Hermitian, anti-Hermitian, and unitary operators
 - An operator is _Hermitian_ if:
-$$\displaylines{\hat{A}^\dagger=\hat{A} \\ \braket{\hat{A}V|W}=\braket{V|\hat{A}W}}$$
+$$\displaylines{\hat{\Omega}^\dagger=\hat{\Omega} \\ \braket{\hat{\Omega}V|W}=\braket{V|\hat{\Omega}W}}$$
 - An operator is _anti-Hermitian_ if:
-$$\displaylines{\hat{A}^\dagger=-\hat{A} \\ \braket{\hat{A}V|W}=-\braket{V|\hat{A}W}}$$
+$$\displaylines{\hat{\Omega}^\dagger=-\hat{\Omega} \\ \braket{\hat{\Omega}V|W}=-\braket{V|\hat{\Omega}W}}$$
 - Just as a scalar can be split into pure and imaginary parts, _operators can be split into Hermitian and anti-Hermitian parts_:
-$$\hat{A}=\frac{\hat{A}+\hat{A}^\dagger}{2}+\frac{\hat{A}-\hat{A}^\dagger}{2}$$
+$$\hat{\Omega}=\frac{\hat{\Omega}+\hat{\Omega}^\dagger}{2}+\frac{\hat{\Omega}-\hat{\Omega}^\dagger}{2}$$
 - An operator is _unitary_ if:
 $$\displaylines{\hat{U}\hat{U}^\dagger=\hat{I} \\ \hat{U}^\dagger=\hat{U}^{-1}}$$
 
@@ -795,15 +795,52 @@ $$\displaylines{\ket{V'_1}=\hat{U}\ket{V_1}\hspace{1cm}\ket{V'_2}=\hat{U}\ket{V_
 $$\ket{V}\longrightarrow \hat{U}\ket{V}$$
 - This is known as an _active transformation_
 
-- Under this transformation, the _matrix elements_ of any operator $\hat{A}$ are:
-$$\braket{V'|\hat{A}|V}\longrightarrow \braket{\hat{U}V'|\hat{A}|\hat{U}V}=\braket{V'|\hat{U}^\dagger\hat{A}\hat{U}|V}$$
+- Under this transformation, the _matrix elements_ of any operator $\hat{\Omega}$ are:
+$$\braket{V'|\hat{\Omega}|V}\longrightarrow \braket{\hat{U}V'|\hat{\Omega}|\hat{U}V}=\braket{V'|\hat{U}^\dagger\hat{\Omega}\hat{U}|V}$$
 - The _same change_ to the inner products if the _vectors were unchanged_, and the _operator was transformed_:
-$$\hat{A}\longrightarrow\hat{U}^\dagger\hat{A}\hat{U}$$
+$$\hat{\Omega}\longrightarrow\hat{U}^\dagger\hat{\Omega}\hat{U}$$
 - This is known as a _passive transformation_, as the vectors are unchanged
 
-## Eigenvectors and eigenvalues
+- From their properties, in both cases, _traces and determinants remain unchanged_
 
-#### CLEAN UP MARKER 
+## Eigenvectors and eigenvalues
+- For every operator, there are a _set of vectors, called eigenvectors_, where the operator's action is only _rescaling_, with the scale factor called an _eigenvalue_:
+$$\hat{\Omega}\ket{V}=\omega\ket{V}$$
+- The eigenvectors are _determined up to a multiplicative constant_, and are often _normalised_
+- They are often _labelled according to eigenvalue_ $\ket{\omega_i}$
+
+- The eigenvalues are determined using the _characteristic equation_:
+$$\det(\hat{\Omega}-\omega \hat{I})=0$$
+- From the fundamental theorem of algebra, an $n\times n$ matrix _must have $n$ eigenvectors_
+- Eigenvalues can be _degenerate_, and are _not necessarily real_
+
+- If there are $n$ _degenerate eigenvalues_, the corresponding _eigenvectors form an $n$-dimensional subspace_
+
+### Hermitian and unitary matrices
+- It can be proven that _the eigenvalues of Hermitian operators are real_
+- A Hermitian operator's _eigenvectors form an orthonormal basis_
+- In this basis, the _matrix elements are the eigenvalues_ (i.e. the matrix is _diagonalised_)
+
+- As for _unitary operators_, the eigenvectors are _complex numbers of unit modulus_
+- The eigenvectors of a unitary operator are also _mutually orthogonal_
+
+- For every Hermitian operator $\hat{\Omega}$, there _is a unitary matrix $\hat{U}$ such that $\hat{U}^\dagger\hat{\Omega}\hat{U}$ is diagonal_
+	- The _rows of $\hat{U}$ are the orthonormal eigenvectors_
+
+- Due to the _invariance of determinants and traces under unitary transformations_:
+$$\displaylines{\det(\hat{\Omega})=\prod_{i=1}^n\omega_i \\ \text{Tr}(\hat{\Omega})=\sum_{i=1}^n\omega_i}$$
+
+### Simultaneous diagonalisation
+- If $\hat{\Omega}$ and $\hat{\Lambda}$ are _two commuting Hermitian operators_, there exists _a basis of common eigenvectors that diagonalises both_
+	- Can be proven for both non-degenerate and degenerate cases
+
+- If $\hat{\Lambda}$ is _not degenerate within any subspace_, then the _eigenbasis is unique_
+	- The eigenvectors can be _given a unique label $\ket{\omega,\lambda}$ based on the eigenvalues_
+
+- If $\hat{\Lambda}$ is _degenerate within any subspace of $\hat{\Omega}$_, then it is necessary to use _more operators_
+
+- In _general_, if there is a set of $n$ operators $\{\hat{\Omega},\hat{\Lambda},\hat{\Gamma},\dots\}$ that _commute with each other_, one can _always find a unique common eigenbasis_ $\ket{\omega,\lambda,\gamma,\dots}$
+- This is assumed to be _true if $n$ is infinite_
 
 ## Hilbert spaces
 - The relevant vector space for quantum mechanics is _the Hilbert space of square-integrable functions_
@@ -829,3 +866,6 @@ $$\braket{x|x'}=\delta(x-x')$$
 - The _completeness relation_ then becomes:
 $$\int \ket{x'}\bra{x'}\,dx'=I$$
 
+# Operators in quantum mechanics
+
+## The Simple Harmonic Oscillator... again
