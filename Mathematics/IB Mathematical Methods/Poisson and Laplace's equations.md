@@ -158,6 +158,11 @@ $$G(\bm{x},\bm{x}')=\frac{1}{2\pi}\ln|\bm{x}-\bm{x'}|+\text{const.}$$
 - Uniqueness theorem: If a solution _satisfies the boundary conditions_, it must be the _only solution_
 - Trick: Add an _image source_ to satisfy the boundary conditions
 
+- _Dirichlet_ conditions: A source with _opposite sign_ (i.e. a _sink_)
+	- Example: Conductor, wall of _constant temperature_
+- _Neumann_ conditions: A source with _same sign_
+	- Example: _Insulating_ wall
+
 ## Examples: half-spaces and quarter planes
 
 ### 3D half-space with Dirichlet boundary conditions
@@ -184,9 +189,16 @@ $$\displaylines{\bm{x}_1=(-x_0,y_0) \hspace{1cm} \bm{x}_2=(x_0,-y_0) \hspace{1cm
 - The _constant is zero from boundary conditions_
 
 ### Image in a sphere
+- Solving for potential _inside a sphere_, for range $r<a$
+- Dirichlet boundary conditions for a _sphere_:
+$$\begin{aligned}\nabla^2G=\delta^3(\bm{x}-\bm{x}') \hspace{1cm}\text{for}\hspace{0.5cm}r<a \\ G=0\hspace{1cm}\text{for} \hspace{0.5cm}r=a\end{aligned}$$
 
-### Image in a circle
-
+- This is satisfied by placing the _image point_ at:
+$$\bm{x}''=\frac{a^2}{r'^2}\bm{x}'$$
+- The _strength_ that works is $-a/r'$
+- Hence, the Green's function is:
+$$G=-\frac{1}{4\pi}\left(\frac{1}{|\bm{x}-\bm{x}'|}-\frac{a}{r'}\frac{1}{|\bm{x}-\bm{x}''|}\right)$$
+- This also works for finding potential _outside the sphere_
 
 ## In electrostatics
 - Consider a dipole:
@@ -216,3 +228,17 @@ $$V(\bm{r})=\frac{\lambda}{2\pi\epsilon_0}\ln\frac{a}{b}$$
 
 - When considering two cylinders of radius $a$, replace them with line charges with various distances satisfying the conditions above
 
+# Integral solution to Poisson's equation
+- Green's Functions can be used to find the solution for _any arbitrary source distribution_, not just point sources
+- For this, one needs _Green's identity_:
+$$\int_V(\Phi\nabla^2\Psi-\Psi\nabla^2\Phi)\,dV=\oint_S(\Phi\nabla\Psi-\Psi\nabla\Phi)\cdot\,d\bm{S}\equiv\oint_S\left(\Phi\pd{\Psi}{n}-\Psi\pd{\Phi}{n}\right)\,dS$$
+- For any _smooth_ functions $\Phi$ and $\Psi$, in any closed volume $V$ with surface $S$
+
+- 2-dimensional version:
+$$\int_S(\Phi\nabla^2\Psi-\Psi\nabla^2\Phi)\,dA=\oint_C\left(\Phi\pd{\Psi}{n}-\Psi\pd{\Phi}{n}\right)\,dl$$
+## Dirichlet boundary conditions
+- Let $\Phi$ satisfy Poisson's equation for source term $\rho(\bm{x})$ with boundary condition:
+$$\begin{aligned}\nabla^2\Phi=\rho(\bm{x}) \hspace{1cm}\text{for }\bm{x} \text{ in }V\\ \Phi(\bm{x})=f(\bm{x})\hspace{1cm}\text{for }\bm{x} \text{ on }S\end{aligned}$$
+
+
+## Neumann boundary conditions

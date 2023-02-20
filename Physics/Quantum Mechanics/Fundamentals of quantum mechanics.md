@@ -1,5 +1,9 @@
 
 # Notation
+- Generic vectors are denoted with _kets_ $\ket{V}$
+- Operators have capital letters and hats $\hat{\Omega}$
+- The _eigenvalues_ are denoted with the small version of the letter for the operator:
+$$\hat{\Omega}\ket{\omega}=\omega\ket{\omega}$$
 
 # The Wave function and the fundamental postulates 
 - __Postulate 1:__ In quantum mechanics, the state of a system is represented by the wave function, a state vector in [[Vectors and matrices|complex vector space]]

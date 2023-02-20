@@ -94,6 +94,7 @@ $$Av\left(\rho\phi+\frac{1}{2}\rho v^2+u\right)$$
 $$A\rho v=\text{const.}$$
 - Hence, one obtains _Bernoulli's equation_:
 $$\frac{u+P}{\rho}+\frac{1}{2}v^2+\phi=\text{const.}$$
+
 - This is simply a manifestation of _conservation of energy_, with each term representing a different contribution
 
 ### Incompressible flow
@@ -108,6 +109,7 @@ $$\displaylines{(\nabla\wedge\bm{u})\wedge\bm{u}=-\nabla H \\ H=P+\rho\phi_g+\fr
 - By dotting with $\bm{u}$ on both sides:
 $$(\bm{u}\cdot\nabla)H=0$$
 - This is _Bernoulli's equation for incompressible flow_, stating that $H$ is _constant along a streamline_
+- If the flow is _steady and irrotational_, then it is _constant everywhere_
 
 ## Approximations
 - _Incompressible flow_ is defined as:
@@ -116,8 +118,9 @@ $$\nabla\cdot\bm{v}=0$$
 
 - _Irrotational flow_ is defined as:
 $$\bm{\omega}\equiv\nabla\wedge\bm{v}=0$$
-- The _vorticity_ $\bm{\omega}$ is often _generated at boundaries_
+- The _vorticity_ $\bm{\omega}$ is often generated at the _boundary layer_
 - The _bulk_ of a fluid is often irrotational
+- The curve _tangent to $\bm{\omega}$_ is known as the _vortex line_
 
 - If a fluid is _irrotational_, then the velocity can be written using a _scalar potential_:
 $$\bm{v}=\nabla\Phi$$
@@ -125,6 +128,59 @@ $$\bm{v}=\nabla\Phi$$
 - If a fluid is _both incompressible AND irrotational_, then the flow _satisfies Laplace's Equation_
 $$\nabla^2\Psi=0$$
 ## The Circulation theorem
+- The _circulation_ $K$ around a loop $\Gamma$ is defined as:
+$$K=\oint_\Gamma\bm{u}\cdot\,d\bm{l}$$
+- Using Stokes' Theorem:
+$$K=\int\bm{\omega}\cdot\,d\bm{S}$$
+- By _applying the convective derivative to both sides_, and using _Euler's equation_:
+$$\frac{DK}{Dt}=\oint \nabla\left(-\frac{P}{\rho}-\phi_g+\frac{1}{2}u^2\right)\cdot d\bm{l}=0$$
+- Hence, _vortex lines are conserved_, and _moves with the fluid_
+	- For an _ideal fluid_
+
+## Potential flow of an irrotational fluid
+- Often applies to _bulk fluid_
+- Solving for velocity $\bm{u}=\nabla\Phi$ is equivalent to solving [[Poisson and Laplace's equations|Laplace's equation]]:
+$$\nabla^2\Phi=0$$
+- A _source or sink_ of fluid is _analagous to an electric charge_
+
+- Example: A source next to a _rigid plate_
+	- _Boundary condition_: No flow _normal_ to the plate
+	- Place an _image source_
+	- Radial velocity _decreases with distance from source_
+	- Applying Bernoulli, there is a _pressure deficit_, which _attracts the plate to the source_
+- Consequence: _two sources attract, a source and a sink repel_
 
 
-## Potential flow
+- Example: Potential flow _past a sphere_ of radius $a$
+![[Sphere potential flow.png]]
+	- Boundary condition: $u_r(r=a)=0$
+	- At _large distances_, $\Phi=V_0z=V_0r\cos\theta$
+	- From solving Laplace's Equation:
+	$$\Phi=V_0\cos\theta\left(r+\frac{a^3}{2r^2}\right)$$
+	- From applying _Bernoulli's theorem_, the _pressure on the sphere_ is:
+	$$P(\theta)=P_0+\frac{1}{2}\rho V_0^2-\frac{9}{8}V_0^2\sin^2\theta$$
+	- There is _no net force_ (implies _no drag_)
+	- At $\theta=0$ and $\theta=\pi$, there are _equal and opposite high pressures_
+	- For a _high enough speed_, $P(\theta=\pi/2)<0$, causing _cavitation_, forming _bubbles_
+- _Real flow_:
+	- The fluid _cannot freely slip past surface_
+	- There is a _boundary shear layer_, causing a _drag force_
+
+- Example: flow _past a cylinder_ of radius $a$
+	- There is a _similar solution to the sphere_ by solving Laplace's solution:
+	$$\Phi=V_0\cos\theta\left(r+\frac{a^2}{r}\right)$$
+	- A _separate solution_ for irrotational flow is the _vortex_:
+	$$\bm{u}=\frac{\kappa}{2\pi r}\hat{\bm{e}}_\theta$$
+	- Any _circulation_ around a loop _not containing the cylinder_ is _zero_
+	- Hence, _everywhere in the fluid_, the flow is _irrotational_
+	- The vortex is said to have _strength_ $\kappa$
+	- This leads to a _multi-valued potential_ $\kappa\theta/(2\pi)$
+	- Let the cylinder _rotate_ at $\omega=\kappa/(2\pi a^2)$ to _match boundary conditions_
+	- _Add the two potentials together_:
+	$$\Phi=V_0\cos\theta\left(r+\frac{a^2}{r}\right)+\frac{\kappa\theta}{2\pi}$$
+	![[Cylinder potential flow.png]]
+	- Using Bernoulli's equation, one finds an _asymmetrical term_ in pressure
+	- This gives a _net vertical force per unit length_:
+	$$F_\text{vertical}=\rho V_0\kappa$$
+	- This is the _Magnus force_, which can be written as:
+	$$\bm{F}_\text{Magnus}=\rho\bm{V}_0\wedge\bm{\kappa}$$

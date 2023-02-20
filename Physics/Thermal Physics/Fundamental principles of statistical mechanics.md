@@ -105,7 +105,7 @@ $$\pd{\rho}{t}=-\PB{\rho}{\Ham}$$
 	$$\ln{\rho}=\alpha+\beta E(q,p)+\bm{\gamma}\cdot\bm{P}(p)+\bm{\delta}\cdot\bm{L}(q,p)$$
 	- $\alpha$ is for normalisation
 	- $\beta,\bm{\gamma},\bm{\delta}$ determined from values of $E,\bm{P},\bm{L}$ 
-- One can transform into a coordinate system where the total $\bm{P}$ and $\bm{L}$ of the system is zero
+- One can _transform_ into a coordinate system where the total $\bm{P}$ and $\bm{L}$ of the system is zero
 - Therefore, $\ln{\rho}$ becomes:
 $$\ln{\rho}=\alpha+\beta E(q,p)$$
 >[!info] A fundamental principle of statistical mechanics
@@ -125,7 +125,7 @@ $$\rho=\text{const}\cdot\delta(E-E_0)$$
 - A macrostate describes the mean values of physical quantities, determining a particular partial equilibrium
 
 # The quantum statistics of particles
-- Assume all particles obey quantum mechanics
+- Assume all particles _obey quantum mechanics_
 - Integrating Schrödinger's equation for every particle is impossible
 
 ## The practical non-existence of stationary states

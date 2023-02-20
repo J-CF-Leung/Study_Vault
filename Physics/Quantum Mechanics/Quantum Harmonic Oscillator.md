@@ -1,7 +1,10 @@
+>[!quote]
+>"In this section I will put the harmonic oscillator in its place—on a pedestal."
+>-R. Shankar
 # In 1 dimension
 - The Hamiltonian:
 $$\hat{\Ham}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\hat{x}^2$$
-- System always vibrates at $\omega$, an energy eigenstate gives an indication of "average" amplitude and momentum
+- System always vibrates at $\omega$, an energy eigenstate gives an _indication of "average" amplitude and momentum_
 
 ## Power series method
 - What to solve: The time-independent Schrodinger equation in the coordinate basis
@@ -27,7 +30,7 @@ $$\left(\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\hat{x}^2\right)\ket{E} =E\ket{
 - Introduce the _ladder operators_:
 $$\hat{a}_+\equiv\sqrt{\frac{1}{2m\omega\hbar}}(m\omega \hat{x}-i\hat{p})$$
 $$\hat{a}_-\equiv\sqrt{\frac{1}{2m\omega\hbar}}(m\omega \hat{x}+i\hat{p})$$
-	- Hermitian conjugates of each other
+	- Hermitian _conjugates of each other_
 
 - Using the commutation relation of $[\hat{x},\hat{p}]$:
 $$[\hat{a}_-,\hat{a}_+]=1$$
@@ -35,7 +38,7 @@ $$[\hat{a}_-,\hat{a}_+]=1$$
 $$\hat{\Ham}=\hbar\omega\left(\hat{a}_\pm\hat{a}_\mp\pm\frac{1}{2}\right)$$
 - Given one eigenstate of the Hamiltonian, these operators can produce more, with different energies:
 $$\displaylines{\hat{\Ham}\ket{E}=E\ket{E} \\ \hat{\Ham}(\hat{a}_+\ket{E})=(E+\hbar\omega)\ket{E} \\ \hat{\Ham}(\hat{a}_-\ket{E})=(E-\hbar\omega)\ket{E}}$$
-- As the minimum of the potential energy is zero, energy cannot be lowered infinitely
+- As the minimum of the potential energy is zero, energy _cannot be lowered infinitely_
 - Therefore, there must be a _ground state_ $\ket{E_0}$ where:
 $$\hat{a}_-\ket{E_0}=\ket{0}$$
 
@@ -55,10 +58,14 @@ $$\displaylines{\hat{a}_+\ket{E_n}=\sqrt{(n+1)}\ket{E_{n+1}} \\\hat{a}_-\ket{E_n
 $$\braket{x|E_n}=\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}\frac{1}{\sqrt{n!}}(\hat{a}_+)^n\exp\left(-\frac{m\omega}{2\hbar}x^2\right)$$
 
 ## General features of the eigenfunctions
-- The energy levels are quantised, but the gap is negligible compared to the energy of a clasically oscillating object
-- At high energy levels, the behaviour of the particle becomes more classical
-- There is a zero-point energy reflecting the uncertainty principle
+- The energy levels are _quantised_, but the gap is negligible compared to the energy of a clasically oscillating object
+- At high energy levels, the behaviour of the particle _becomes more classical_
+- There is a _zero-point energy_ reflecting the _uncertainty principle_
 
-### Average values
-
-### Uncertainty
+### Average values and uncertainty
+- The position and momentum operators can be written _in terms of the ladder operators_:
+$$\displaylines{\hat{x}= \\ \hat{p}=}$$
+- Since the energy eigenstates are _orthogonal_, one can easily derive:
+$$\displaylines{\mean{x}=0 \hspace{1cm} \mean{p}=0 \\ \mean{x^2}=\frac{\hbar}{m\omega}\left(n+\frac{1}{2}\right)\hspace{1cm}\mean{p^2}=m\hbar\omega\left(n+\frac{1}{2}\right)}$$
+- From this, the _uncertainty relation_ can be derived:
+$$\Delta x \Delta p=\left(n+\frac{1}{2}\right)\hbar$$

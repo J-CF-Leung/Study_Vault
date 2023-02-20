@@ -2,7 +2,8 @@
   "enabledCssSnippets": [
     "larger_eq",
     "larger_block_eq",
-    "center_table"
+    "center_table",
+    "center_image"
   ],
   "textFontFamily": "Inter",
   "interfaceFontFamily": "Inter",
