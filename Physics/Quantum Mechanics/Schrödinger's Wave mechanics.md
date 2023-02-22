@@ -1,4 +1,3 @@
-
 ## The double-slit experiment
 ![[Double slit experinent.png]]
 - Let $S_1$ be a _coherent source of photons_
@@ -105,19 +104,3 @@ $$|\Psi(x,t)|^2=\frac{1}{\pi^{1/2}[a^2+\hbar^2t^2/(m^2a^2)]^{1/2}}\exp\left\{-\f
 $$(\Delta x)^2=\frac{a^2}{2}\left(1+\frac{\hbar^2 t^2}{m^2a^4}\right)$$
 - This can be understood as combining _uncertainties for position and velocity in quadrature_, and using the _uncertainty principle_
 
-## The momentum representation
-- Recalling the expression for a generic wave packet:
-$$\Psi(x,t)=\frac{1}{\sqrt{2\pi}}\int g(k)\,\exp[i(kx-\omega t)]\,dk$$
-- _Absorbing the time exponential into $g$_, and using _de Broglie's relation_:
-$$\Psi(x,t)=\frac{1}{\sqrt{2\pi\hbar}}\int g\left(\frac{p}{\hbar},t\right) \exp\left(\frac{ipx}{\hbar}\right)\,dp$$
-- Defining:
-$$\Phi(p,t)=\frac{1}{\sqrt{\hbar}}g(p/\hbar)\exp(-i\omega t)$$
-- This is the _momentum representation of the wavefunction_
-- Therefore:
-$$\displaylines{\Psi(x,t)=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^\infty \Phi(p,t)\exp(ipx/\hbar)\,dp \\ \Phi(p,t)=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^\infty \Psi(x,t)\exp(-ipx/\hbar)\,dp}$$
-- The _probability of observing a particle in the position range_ $x$ to $x+dx$:
-$$P(x,t)\,dx=|\Psi(x,t)|^2\,dx$$
-- The _probability of observing a particle with momentum in the range_ $p$ to $p+dp$:
-$$P(p,t)dp=|\Phi(p,t)|^2\,dp$$
-
-- From _Parseval's Theorem_, if $\Psi$ is normalised, $\Phi$ is also normalised

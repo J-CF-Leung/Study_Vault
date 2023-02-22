@@ -20,7 +20,7 @@ $$\ket{\Psi(t)} =\sum_n\ket{E_n}\braket{E_n|\Psi_0}\exp(-iE_nt/\hbar) =\int \ket
 
 
 # The free particle
-- Detailed discussion: [[Wave mechanics in free space]]
+- From an older perspective: [[Schrödinger's Wave mechanics]]
 - The Hamiltonian and time-independent Schrödinger equation for a free particle is:
 $$\Ham=\frac{P^2}{2m}$$
 $$\Ham\ket{E} = \frac{P^2}{2m}\ket{E}=E\ket{E}$$
@@ -70,7 +70,7 @@ $$\displaylines{\braket{X}=\frac{p_0t}{m}=\frac{\braket{P}t}{m} \\ \Delta X(t)=\
 - The mean momentum is constant, with $\braket{P}=p_0$ and $\Delta P=\hbar/(\sqrt{2}\Delta)$
 	- A small spread in position indicates a large spread in momentum
 
-- The wave packet spreads, but maintains its group velocity
+- The wave packet disperses, but maintains its group velocity
 
 # Unbound states in piecewise-constant potentials
 
@@ -286,6 +286,7 @@ $$E_n=-\frac{\hbar^2\kappa^2}{2m}=-\frac{2\hbar^2Y_n^2}{ma^2}=-\frac{Y_n^2V_0}{X
 - As the potential well _gets deeper_, the solutions and energies _approach those of the infinite well_
 
 ## The 1D quantum harmonic oscillator
+- So good it needs [[Quantum Harmonic Oscillator|its own note!]]
 
 ## The Correspondence Principle
 - The principle states that _at high quantum numbers, quantum mechanics predicts the same results as classical mechanics_

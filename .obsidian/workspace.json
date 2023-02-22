@@ -14,6 +14,18 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b24e864a671074bf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Physics/Quantum Mechanics/1D time-independent quantum mechanics.md",
                 "mode": "source",
                 "source": false
@@ -44,7 +56,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -257,17 +270,17 @@
       "templates:Insert template": false
     }
   },
-  "active": "8c0e30efc10524b1",
+  "active": "b24e864a671074bf",
   "lastOpenFiles": [
+    "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
+    "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
+    "Physics/Quantum Mechanics/1D time-independent quantum mechanics.md",
+    "Physics/Quantum Mechanics/The failure of classical mechanics.md",
     "Physics/Quantum Mechanics/Quantum statistical mechanics.md",
     "Physics/IB Physics/Introductory quantum mechanics.md",
-    "Physics/Quantum Mechanics/1D time-independent quantum mechanics.md",
     "Physics/Quantum Mechanics/3D time-independent quantum mechanics.md",
-    "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
     "Physics/Quantum Mechanics/Operators, observables and uncertainties.md",
-    "Physics/Quantum Mechanics/Wave mechanics in free space.md",
     "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
-    "Physics/IB Physics/Experimental methods and data analysis.md",
-    "Physics/Quantum Mechanics/The failure of classical mechanics.md"
+    "Physics/IB Physics/Experimental methods and data analysis.md"
   ]
 }
