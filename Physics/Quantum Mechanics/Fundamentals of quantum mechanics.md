@@ -1,3 +1,12 @@
+>[!Quote]
+>"There is no general consensus as to what the fundamental principles of quantum physics are, how it should be taught, or what it really means"
+>-David J. Griffiths
+>
+>"If you are not confused by quantum physics then you haven't really understood it."
+>-Niels Bohr
+>
+>"I think I can safely say that nobody understand quantum mechanics"
+>-Richard Feynman
 
 # Notation
 - Generic vectors are denoted with _kets_ $\ket{V}$
@@ -7,7 +16,7 @@ $$\hat{\Omega}\ket{\omega}=\omega\ket{\omega}$$
 
 # The Wave function and the fundamental postulates 
 - __Postulate 1:__ In quantum mechanics, the state of a system is represented by the wave function, a state vector in [[Vectors and matrices in physics|complex vector space]]
-- __Postulate 2:__ The independent variables $x$ and $p$ of the Hamiltonian formulation are represented by the Hermitian operators $\hat{X}$ and $\hat{P}$ ([[The operators of quantum mechanics#The position and momentum operators|definition]]), with classical variables $\omega(x,p)$ _represented by operator_ $\hat{\Omega}(\hat{X},\hat{P})$ 
+- __Postulate 2:__ The independent variables $x$ and $p$ of the Hamiltonian formulation are represented by the Hermitian operators $\hat{X}$ and $\hat{P}$ ([[Operators, observables and uncertainties#The position and momentum operators|definition]]), with classical variables $\omega(x,p)$ _represented by operator_ $\hat{\Omega}(\hat{X},\hat{P})$ 
 - __Postulate 3:__ Measurement of a variable corresponding to $\hat{\Omega}$ _always yields one of the eigenvalues $\omega$ with probability (density) $|\braket{\omega|\Psi}|^2$_, with the _subsequent state represented by normalised eigenvector_ $\ket{\omega}$. Values other than the eigenvalues are impossible.
 	- In terms of projection operator $\mathcal{P}_\omega=\ket{\omega}\bra{\omega}$, $P(\Omega=\omega) \propto \braket{\Psi|\mathcal{P}_\omega\Psi} = \braket{\Psi\mathcal{P}_\omega|\mathcal{P}_\omega\Psi}$
 - __Postulate 4:__ The state ket $\wv$ obeys [[#Time-evolution The Schrödinger equation|the Schrödinger equation]]
@@ -54,7 +63,7 @@ $$\hat{\Omega}\ket{\omega}=\omega\ket{\omega}$$
 $$\Psi(x,t)=\braket{x|\Psi(t)}\;\;\;\;\Phi(p,t)=\braket{p|\Psi(t)}$$
 	- Classical: particles are described by a finite number of definite variables
 	- Quantum: particles are described in terms of probabilities for an often infinite range of values
-- As the eigenkets of any [[The operators of quantum mechanics|operator representing an observable]] span the entire vector space, any wave function can be written in terms of eigenstates:
+- As the eigenkets of any [[Operators, observables and uncertainties|operator representing an observable]] span the entire vector space, any wave function can be written in terms of eigenstates:
 $$\begin{aligned}\wv&=\sum_n\ket{q_n}\braket{q_n|\Psi}=\sum_nc_n\ket{q_n} \\ &= \int \ket{q_n}\braket{q_n|\Psi}\,dq = \int c(q)\, \ket{q} \,dq \end{aligned}$$
 - Discrete spectrum: $P(Q=q_n)=|c_n|^2=|\braket{q_n|\Psi}|^2$
 - Continuous spectrum: $P(q<Q<q+dq)=|c(q)|^2\,dq=|\braket{q|\Psi}|^2\,dq$
@@ -73,6 +82,7 @@ $$\sigma_A^2\sigma_B^2\geq\left(\frac{1}{2i}\left<[\hat{A},\hat{B}]\right>\right
 		- $|\braket{f|g}|^2 = Re(\braket{f|g})^2+Im(\braket{f|g})^2$ 
 - Strict uncertainty principle:
 $$\sigma_A^2\sigma_B^2 \geq \left(\frac{1}{2}\left<\{\hat{A},\hat{B}\}\right>-ab\right)^2+\left(\frac{1}{2i}\left<[\hat{A},\hat{B}]\right>\right)^2$$
+- Detailed discussion: [[Operators, observables and uncertainties]]
 
 # Time-evolution: The Schrödinger equation
 ## The time-evolution operator
@@ -126,7 +136,7 @@ $$|\braket{q|E_n(t)}|^2=|\braket{q|E_n}\exp(-iE_nt/\hbar)|^2=|\braket{q|E_n}|^2$
 $$\Ham\ket{E_n}=E_n\ket{E_n}$$
 - Projected onto the $x$ basis with $\Ham=T+V$:
 $$-\frac{\hbar^2}{2m}\nabla^2\psi_n(x)+V\psi_n(x)=E_n\psi_n(x)$$
-- Solving this thing: [[Time-independent quantum mechanics]]
+- Solving this thing: [[1D time-independent quantum mechanics]]
 
 ## Time-dependent Hamiltonians: various methods
 
@@ -222,5 +232,11 @@ $$\begin{aligned}\pd{P}{t}&=\pd{}{t}[\Psi^*(x,t)\Psi(x,t)] \\
 - Here, $\bm{J}$ is the _probability current density_
 - This is the continuity equation for the probability of finding a particle
 	- For an ensemble of $N$ particles, $N\bm{J}\cdot d\bm{S}$ particles per unit time flow past an area $d\bm{S}$
+
+- For a _travelling plane wave_:
+$$\displaylines{\psi=A\exp[i(kx-\omega t)] \\ J=\frac{\hbar k}{m}|A|^2}$$
+- Here, $\hbar k/m$ is the _classical speed_
+
+- If $k$ is _imaginary_ (i.e. an evanescent wave), $J=0$
 
 # The classical limit

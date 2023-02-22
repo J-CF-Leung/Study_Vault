@@ -14,19 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Cartesian tensors.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e10c9d6fa3b3fbbc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Physics/Quantum Mechanics/The operators of quantum mechanics.md",
+                "file": "Physics/Quantum Mechanics/1D time-independent quantum mechanics.md",
                 "mode": "source",
                 "source": false
               }
@@ -56,8 +44,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -74,7 +61,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/Quantum Mechanics/The operators of quantum mechanics.md"
+                    "file": "Physics/Quantum Mechanics/1D time-independent quantum mechanics.md"
                   }
                 }
               }
@@ -90,7 +77,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/Quantum Mechanics/The operators of quantum mechanics.md",
+                    "file": "Physics/Quantum Mechanics/1D time-independent quantum mechanics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -163,7 +150,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "probability current",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -200,7 +187,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Quantum Mechanics/The operators of quantum mechanics.md",
+                "file": "Physics/Quantum Mechanics/1D time-independent quantum mechanics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -217,7 +204,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Quantum Mechanics/The operators of quantum mechanics.md",
+                "file": "Physics/Quantum Mechanics/1D time-independent quantum mechanics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -240,7 +227,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Quantum Mechanics/The operators of quantum mechanics.md"
+                "file": "Physics/Quantum Mechanics/1D time-independent quantum mechanics.md"
               }
             }
           },
@@ -270,17 +257,17 @@
       "templates:Insert template": false
     }
   },
-  "active": "e10c9d6fa3b3fbbc",
+  "active": "8c0e30efc10524b1",
   "lastOpenFiles": [
-    "Physics/Vectors and matrices in physics.md",
+    "Physics/Quantum Mechanics/Quantum statistical mechanics.md",
+    "Physics/IB Physics/Introductory quantum mechanics.md",
+    "Physics/Quantum Mechanics/1D time-independent quantum mechanics.md",
+    "Physics/Quantum Mechanics/3D time-independent quantum mechanics.md",
+    "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
+    "Physics/Quantum Mechanics/Operators, observables and uncertainties.md",
+    "Physics/Quantum Mechanics/Wave mechanics in free space.md",
     "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
-    "Physics/Quantum Mechanics/The operators of quantum mechanics.md",
-    "Physics/Analytical classical mechanics.md",
-    "Physics/Quantum Mechanics/Path integrals in quantum mechanics.md",
-    "Physics/Quantum Mechanics/Density matrix.md",
-    "Mathematics/IB Mathematical Methods/Cartesian tensors.md",
-    "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
-    "Physics/IB Physics/Fluid mechanics.md",
-    "Misc or Personal/Quotes.md"
+    "Physics/IB Physics/Experimental methods and data analysis.md",
+    "Physics/Quantum Mechanics/The failure of classical mechanics.md"
   ]
 }

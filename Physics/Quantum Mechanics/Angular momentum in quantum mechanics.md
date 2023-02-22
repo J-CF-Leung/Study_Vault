@@ -1,5 +1,5 @@
 ## Orbital angular momentum
-- [[The operators of quantum mechanics#The angular momentum operators|Definition of angular momentum operators]]
+- [[Operators, observables and uncertainties#The angular momentum operators|Definition of angular momentum operators]]
 - The eigenvalue problem for $\bm{\hat{L}}^2$ and one component ($\hat{L}_z$), can be solved simultaneously
 
 - Let there be a simultaneous eigenbasis $\ket{\lambda\mu}$

@@ -43,17 +43,14 @@ $$\braket{p|\hat{X}|p'}=i\hbar\frac{d}{dp}\delta(p-p')$$
 | $\braket{x \vert\hat{Q}\vert x'}$ | $x\delta(x-x')$       | $-i\hbar\delta'(x-x')$ |
 | $\braket{p\vert\hat{Q}\vert p'}$  | $i\hbar\delta'(p-p')$ | $p\delta(p-p')$        |
 
-- Due to this symmetry, the position and momentum operators are known as conjugates
+- Due to this symmetry, the position and momentum operators are known as _conjugates_
 - The two operators $\hat{X}$ and $\hat{P}$ do not commute:
 $$[\hat{X},\hat{P}]=i\hbar$$
 
-- Using this, the [[Fundamentals of quantum mechanics#Uncertainty|uncertainty relation]] for these two variables is:
-$$\Delta X\Delta P\geq \frac{\hbar}{2}$$
+# Uncertainty
+
 # Useful commutation relations
 - Check Galitski & Galitski
-
-
-# Converting between bases
 
 
 # Operators in three dimensions
