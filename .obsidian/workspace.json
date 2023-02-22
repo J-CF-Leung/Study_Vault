@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/IB Physics/Fluid mechanics.md",
+                "file": "Mathematics/IB Mathematical Methods/Cartesian tensors.md",
                 "mode": "source",
                 "source": false
               }
@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Quantum Mechanics/Density matrix.md",
+                "file": "Physics/Quantum Mechanics/The operators of quantum mechanics.md",
                 "mode": "source",
                 "source": false
               }
@@ -74,7 +74,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/Quantum Mechanics/Density matrix.md"
+                    "file": "Physics/Quantum Mechanics/The operators of quantum mechanics.md"
                   }
                 }
               }
@@ -90,7 +90,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/Quantum Mechanics/Density matrix.md",
+                    "file": "Physics/Quantum Mechanics/The operators of quantum mechanics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -113,7 +113,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.9020357635304835,
+                      "scale": 0.9020357635304832,
                       "close": true
                     }
                   }
@@ -200,7 +200,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Quantum Mechanics/Density matrix.md",
+                "file": "Physics/Quantum Mechanics/The operators of quantum mechanics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -217,7 +217,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Quantum Mechanics/Density matrix.md",
+                "file": "Physics/Quantum Mechanics/The operators of quantum mechanics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -240,7 +240,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Quantum Mechanics/Density matrix.md"
+                "file": "Physics/Quantum Mechanics/The operators of quantum mechanics.md"
               }
             }
           },
@@ -273,14 +273,14 @@
   "active": "e10c9d6fa3b3fbbc",
   "lastOpenFiles": [
     "Physics/Vectors and matrices in physics.md",
-    "Physics/Quantum Mechanics/Density matrix.md",
-    "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
-    "Physics/IB Physics/Introductory quantum mechanics.md",
-    "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md",
     "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
+    "Physics/Quantum Mechanics/The operators of quantum mechanics.md",
     "Physics/Analytical classical mechanics.md",
+    "Physics/Quantum Mechanics/Path integrals in quantum mechanics.md",
+    "Physics/Quantum Mechanics/Density matrix.md",
+    "Mathematics/IB Mathematical Methods/Cartesian tensors.md",
     "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
-    "Mathematics/IB Mathematical Methods/Partial differential equations.md",
-    "Mathematics/IB Mathematical Methods/Calculus of variations.md"
+    "Physics/IB Physics/Fluid mechanics.md",
+    "Misc or Personal/Quotes.md"
   ]
 }

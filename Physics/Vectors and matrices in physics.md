@@ -4,10 +4,11 @@
 >-Charles Hermite
 
 ## Vector spaces
-- [[#The Schrödinger Equation ❤|The Schrödinger Equation]] can be put in terms of _operators_
-- The _time-independent equation_ can be interpreted as an _eigenvalue equation_:
+- Motivation: Quantum mechanics
+	- [[#The Schrödinger Equation ❤|The Schrödinger Equation]] can be put in terms of _operators_
+	- The _time-independent equation_ can be interpreted as an _eigenvalue equation_:
 $$\hat{\Ham}\psi=E\psi$$
-- The mathematics of vector spaces: [[Vectors and matrices]]
+- The oure mathematics of vector spaces: [[Vectors and matrices]]
 - Vector spaces in quantum mechanics are defined _on the field of complex numbers_ $\mathbb{C}$
 - These vectors include _actual vectors, or matrices_
 - _Generic vectors_ are denoted with _kets_:

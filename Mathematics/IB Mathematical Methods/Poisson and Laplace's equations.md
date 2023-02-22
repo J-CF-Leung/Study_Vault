@@ -238,7 +238,30 @@ $$\int_V(\Phi\nabla^2\Psi-\Psi\nabla^2\Phi)\,dV=\oint_S(\Phi\nabla\Psi-\Psi\nabl
 $$\int_S(\Phi\nabla^2\Psi-\Psi\nabla^2\Phi)\,dA=\oint_C\left(\Phi\pd{\Psi}{n}-\Psi\pd{\Phi}{n}\right)\,dl$$
 ## Dirichlet boundary conditions
 - Let $\Phi$ satisfy Poisson's equation for source term $\rho(\bm{x})$ with boundary condition:
-$$\begin{aligned}\nabla^2\Phi=\rho(\bm{x}) \hspace{1cm}\text{for }\bm{x} \text{ in }V\\ \Phi(\bm{x})=f(\bm{x})\hspace{1cm}\text{for }\bm{x} \text{ on }S\end{aligned}$$
+$$\begin{aligned}\nabla^2\Phi&=\rho(\bm{x}) \hspace{1cm}\text{for }\bm{x} \text{ in }V\\ \Phi(\bm{x})&=f(\bm{x})\hspace{1cm}\text{for }\bm{x} \text{ on }S\end{aligned}$$
+- Using Green's identity with $\Psi=G$, satisfying Dirichlet boundary conditions:
+$$\begin{matrix}\nabla^2G=\delta^3(\bm{x}-\bm{x}') &\text{for }\bm{x} \text{ in }V\\ G(\bm{x})=0 &\text{for }\bm{x} \text{ on }S\end{matrix}$$
+- Using Green's identity and rearranging, one gets:
+$$\Phi(\bm{x})=\int_V \rho(\bm{x'})G(\bm{x},\bm{x'})\,dV'+\oint f(\bm{x'})\pd{G}{n'}\,dS'$$
+- This can also be used for _Laplace's equation_ for $\rho=0$
 
+#### All space
+- For a solution to exist, the integrals must _converge_
+- The source term _must equal to zero_ for some $r>R$
+- For the case of $G|\nabla\Phi|\cdot\hat{\bm{n}}$, it _converges if_ $G\propto r^{-1}$ and $|\nabla\Phi|\propto r^{-2}$, or _quicker_
+- Hence:
+$$\Phi(\bm{x})=\int_{\mathbb{R}^3}-\frac{\rho(\bm{x'})}{|\bm{x}-\bm{x}'|}\,dV'$$
+- Example: _Superposition_ in electrostatics
 
 ## Neumann boundary conditions
+- Let $\Phi$ satisfy Poisson's equation for source term $\rho(\bm{x})$ with boundary condition:
+$$\begin{aligned}\nabla^2\Phi&=\rho(\bm{x}) \hspace{1cm}\text{for }\bm{x} \text{ in }V\\ \pd{\Phi}{n}&=g(\bm{x})\hspace{1cm}\text{for }\bm{x} \text{ on }S\end{aligned}$$
+- Using Green's identity with $\Psi=G$, satisfying Neumann boundary conditions:
+$$\begin{matrix}\nabla^2G=\delta^3(\bm{x}-\bm{x}') &\text{for }\bm{x} \text{ in }V\\ \pd{G}{n}=\frac{1}{A} &\text{for }\bm{x} \text{ on }S\end{matrix}$$
+- Using Green's identity and rearranging:
+$$\Phi(\bm{x})=\int_V \rho(\bm{x'})G(\bm{x},\bm{x}')\,dV'+\frac{1}{A}\oint \Phi(\bm{x'})\,dS'-\oint_S g(\bm{r}')G(\bm{x},\bm{x'})\,dS'$$
+- For Neumann boundary conditions, $\Phi$ is determined _up to a constant_
+- The middle term in the above expression is the _mean_ of $\Phi$ on $S$, denoted $\bar{\Phi}$
+- The solution _with a mean of zero_ is unique:
+$$\varphi(\bm{x})\equiv\Phi-\bar{\Phi}=\int_V \rho(\bm{x'})G(\bm{x},\bm{x}')\,dV'-\oint_S g(\bm{r}')G(\bm{x},\bm{x'})\,dS'$$
+- As with the Dirichlet case, for _unbounded space_, the integrals _must converge_

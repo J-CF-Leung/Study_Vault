@@ -15,7 +15,7 @@ $$F=\rho gA\Delta z = \rho gV$$
 # Basic characteristics of Newtonian fluid flow
 >[!quote]
 >"The flow of dry water."
->-Richard Feynman
+>-Feynman Lectures, Volume 2, Lecture 40
 
 - Fluid: _continuous_ medium
 	- Any 'infinitely' small volume element still contains a _large number of molecules_
@@ -127,6 +127,7 @@ $$\bm{v}=\nabla\Phi$$
 
 - If a fluid is _both incompressible AND irrotational_, then the flow _satisfies Laplace's Equation_
 $$\nabla^2\Psi=0$$
+
 ## The Circulation theorem
 - The _circulation_ $K$ around a loop $\Gamma$ is defined as:
 $$K=\oint_\Gamma\bm{u}\cdot\,d\bm{l}$$
@@ -184,3 +185,47 @@ $$\nabla^2\Phi=0$$
 	$$F_\text{vertical}=\rho V_0\kappa$$
 	- This is the _Magnus force_, which can be written as:
 	$$\bm{F}_\text{Magnus}=\rho\bm{V}_0\wedge\bm{\kappa}$$
+
+## Vortex lines and rings
+
+### Lines
+- Create circulation in a _bulk fluid_ without additional elements (such as a cylinder)
+- If $\bm{v}=\kappa/(2\pi r)\hat{\bm{r}}_\theta$ like above, there will be a _singularity_ at $r=0$
+
+- Instead, the fluid can form a _Helmholtz vortex_
+- It is said to have a _core_ of radius $r_c$, with vorticity $\bm{\Omega}=\nabla\wedge\bm{u}$
+- The velocities are:
+$$\displaylines{\kappa=\pi r_c^2\Omega\\\bm{u}=\begin{cases}\frac{\kappa r}{2\pi r_c^2}\hat{\bm{e}}_\theta & r<r_c \\ \frac{\kappa}{2\pi r} \hat{\bm{e}}_\theta&r>r_c\end{cases}}$$
+- The solid core has _angular speed_ $\Omega/2$
+- Analagous to _uniform current in a wire_
+
+- [[#The Circulation theorem]] states that vortex lines are _conserved and move with the fluid_
+
+- From this, two _vortex lines of opposite sign_ will _move in the same direction_, perpendicular to the line between them
+	- In a frame where the vortices are _at rest_, there are two _equal and opposite Magnus forces_, one from _surrounding fluid flow_ and the other from the _vortex_
+- Two vortex lines of the _same sign_ will circle around each other
+
+### Rings
+- It is also possible to make a _vortex ring_
+- A ring of _radius_ $a$ with _core size_ $r_c$ has a _drift velocity_:
+$$u_D=\frac{\kappa}{4\pi a}\ln\left(\frac{a}{r_c}\right)$$
+
+# Viscous fluids
+>[!quote]
+>"The flow of wet water."
+>-Feynman Lectures, Volume 2, Lecture 41
+- A sudden _shear_ $e_{xy}$ produces a stress $\tau_{xy}=2Ge_{xy}$ which _decays_
+- To _maintain_ the stress, the fluid must be _continually sheared_
+- The _proportionality constant_ is known as the _viscosity_ $\eta$:
+$$\tau_{xy}=2\eta\frac{de_{xy}}{dt}$$
+
+- Consider _steady shear flow_ between two _flat plates_ at $y=0$ and $y=d$
+- The upper plate moves at speed $V$
+- By equilibrium of a fluid element, the _velocity gradient must be constant_:
+$$\tau_{xy}=\eta\pd{v_x}{y}=\eta\frac{V}{d}$$
+
+- By considering the _variation of stresses across a volume element_:
+$$\frac{F_i}{\delta V}=\sum_j\pd{\tau_{ij}}{x_j}=\eta\sum_j\left(\pd{^2 v_i}{x_j\partial x_j}+\pd{^2v_j}{x_i\partial x_j}\right)$$
+- Therefore, for an _incompressible fluid_, where $\nabla\cdot\bm{v}=0$
+$$\rho\frac{D\bm{v}}{Dt}=-\nabla P+\rho\bm{g}+\eta\nabla^2\bm{v}$$
+- This is the _Navier-Stokes equation_

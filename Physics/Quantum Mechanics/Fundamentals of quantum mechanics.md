@@ -6,25 +6,25 @@
 $$\hat{\Omega}\ket{\omega}=\omega\ket{\omega}$$
 
 # The Wave function and the fundamental postulates 
-- __Postulate 1:__ In quantum mechanics, the state of a system is represented by the wave function, a state vector in [[Vectors and matrices|complex vector space]]
-- __Postulate 2:__ The independent variables $x$ and $p$ of the Hamiltonian formulation are represented by the Hermitian operators $\hat{X}$ and $\hat{P}$ ([[The operators of quantum mechanics#The position and momentum operators|definition]]), with classical variables $\omega(x,p)$ represented by operator $\hat{\Omega}(\hat{X},\hat{P})$ 
-- __Postulate 3:__ Measurement of a variable corresponding to $\hat{\Omega}$ always yields one of the eigenvalues $\omega$ with probability (density) $|\braket{\omega|\Psi}|^2$, with the subsequent state represented by normalised eigenvector $\ket{\omega}$. Values other than the eigenvalues are impossible.
+- __Postulate 1:__ In quantum mechanics, the state of a system is represented by the wave function, a state vector in [[Vectors and matrices in physics|complex vector space]]
+- __Postulate 2:__ The independent variables $x$ and $p$ of the Hamiltonian formulation are represented by the Hermitian operators $\hat{X}$ and $\hat{P}$ ([[The operators of quantum mechanics#The position and momentum operators|definition]]), with classical variables $\omega(x,p)$ _represented by operator_ $\hat{\Omega}(\hat{X},\hat{P})$ 
+- __Postulate 3:__ Measurement of a variable corresponding to $\hat{\Omega}$ _always yields one of the eigenvalues $\omega$ with probability (density) $|\braket{\omega|\Psi}|^2$_, with the _subsequent state represented by normalised eigenvector_ $\ket{\omega}$. Values other than the eigenvalues are impossible.
 	- In terms of projection operator $\mathcal{P}_\omega=\ket{\omega}\bra{\omega}$, $P(\Omega=\omega) \propto \braket{\Psi|\mathcal{P}_\omega\Psi} = \braket{\Psi\mathcal{P}_\omega|\mathcal{P}_\omega\Psi}$
 - __Postulate 4:__ The state ket $\wv$ obeys [[#Time-evolution The Schrödinger equation|the Schrödinger equation]]
 
 ## Normalisation
-- Each physical state is more precisely described as a "ray" in the complex vector space
+- Each physical state is more precisely described as a _"ray" in the complex vector space_
 	- Just normalised vectors do not form a complete vector space
-- If $\wv$ is a proper vector, it is normalised ($\braket{\Psi|\Psi}$ = 1) to normalise the probability distribution
-- There is freedom to multiply the ket by $exp(i\theta)$ to make certain components real
-- $\wv$ could be an improper vector, which can only be normalised to a Delta function
+- If $\wv$ is a _proper vector_, it is normalised ($\braket{\Psi|\Psi}$ = 1) to _normalise the probability distribution_
+- There is _freedom to multiply_ the ket by $exp(i\theta)$ to make certain components real
+- $\wv$ could be an _improper vector_, which can only be _normalised to a Delta function_
 	- Example: Continuous wave
 
 ## Measurement
-- Measurement can be defined as interaction with a classical object
+- Measurement can be defined as _interaction with a classical object_
 - The conversion from a classical quantity to a quantum mechanical operator can be ambiguous ($\hat{X}\hat{P}\neq \hat{P}\hat{X}$)
 	- For 2 operators, a Hermitian, symmetric sum can be used: $(\hat{X}\hat{P}+\hat{P}\hat{X})/2$
-- If the operator $\hat{\Omega}$ is degenerate, the projection operator becomes $\ket{\omega_1}\bra{\omega_1}+\ket{\omega_2}\bra{\omega_2}$, and the subsequent state is some linear combination of the eigenkets
+- If the operator $\hat{\Omega}$ is _degenerate_, the projection operator becomes $\ket{\omega_1}\bra{\omega_1}+\ket{\omega_2}\bra{\omega_2}$, and the subsequent state is some _linear combination of the eigenkets_
 - If the eigenvalue spectrum is continuous, $|\braket{\omega|\Psi}|^2$ becomes a probability density
 	- If the wave function is improper, it is only a relative probability density
 - A quantum variable does not necessarily have a classical counterpart
@@ -62,12 +62,12 @@ $$\begin{aligned}\wv&=\sum_n\ket{q_n}\braket{q_n|\Psi}=\sum_nc_n\ket{q_n} \\ &= 
 $$\sum_n|c_n|^2=\int |c(q)|^2\,dq=1$$
 - As for the expectation value, expanding $\braket{\Psi|\hat{Q}\Psi}$ gives:
 $$\braket{\Psi|\hat{Q}\Psi}=\sum_nq_n|c_n|^2=\int q\,|c(q)|^2\;dq$$
-- To convert to another base, use the completeness relation:
+- To convert to another base, use the _completeness relation_:
 $$I=\int\ket{q}\bra{q}\,dq$$
 $$\Phi(p,t)=\braket{p|\Psi}=\int\braket{p|x}\braket{x|\Psi}dx=\frac{1}{\sqrt{2\pi\hbar}}\exp(-ipx/\hbar)$$
 ## Uncertainty
 - Variance $\sigma^2 = \left<(\hat{A}-a)^2\right>$ 
-- The generalised uncertainty principle:
+- The _generalised uncertainty principle_:
 $$\sigma_A^2\sigma_B^2\geq\left(\frac{1}{2i}\left<[\hat{A},\hat{B}]\right>\right)^2$$
 	- Proof: Cauchy-Schwarz inequality with $\ket{(\hat{A}-a)\Psi}$ and $\ket{(\hat{B}-b)\Psi}$
 		- $|\braket{f|g}|^2 = Re(\braket{f|g})^2+Im(\braket{f|g})^2$ 
@@ -109,22 +109,24 @@ $$\begin{aligned}i\hbar\frac{\partial}{\partial t}\Psi(x,t)&= \braket{x|\Ham|\Ps
 	- [[Waves|Wave equations]]
 
 # How to actually solve the Schrödinger equation
+
 ## Time-independent Hamiltonians and stationary states
-- For a time-independent Hamiltonian, the Schrödinger equation for the time-evolution operator is solved by:
+- For a _time-independent Hamiltonian_, the Schrödinger equation for the time-evolution operator is solved by:
 $$\teo = \exp\left(-\frac{i\Ham t}{\hbar}\right)$$
-- One can express this in terms of the Hamiltonian's eigenkets and eigenvalues:
+- One can express this in terms of the _Hamiltonian's eigenkets and eigenvalues_:
 $$\teo=\sum_n\ket{E_n}\bra{E_n}\exp\left(-\frac{iE_nt}{\hbar}\right)$$
-	- If there is degeneracy, an extra label $\alpha$ should be added to the eigenkets and summed over
-	- The sum can be replaced by an integral for an continuous spectrum
+	- If there is _degeneracy_, an extra label $\alpha$ should be added to the eigenkets and summed over
+	- The sum can be replaced by an _integral for an continuous spectrum_
 	- The matrix elements of $\teo$ in the $x$-basis gives the [[Path integrals in quantum mechanics|propagator]]
 - Thus, the state ket becomes:
 $$\ket{\Psi(t)} = \teo\ket{\Psi(0)}=\sum_n\braket{E_n|\Psi(0)}\exp\left(-\frac{iE_nt}{\hbar}\right)\ket{E_n}=\sum_nc_{E,n}\exp\left(-\frac{iE_nt}{\hbar}\right)\ket{E_n}$$
-- The normal modes of the equation, $\ket{E_n(t)}=\exp(-iE_nt/\hbar)\ket{E_n}$, are known as stationary states, as the probability distribution for _any_ variable remains constant:
+- The _normal modes_ of the equation, $\ket{E_n(t)}=\exp(-iE_nt/\hbar)\ket{E_n}$, are known as _stationary states_, as the _probability distribution for any variable remains constant_:
 $$|\braket{q|E_n(t)}|^2=|\braket{q|E_n}\exp(-iE_nt/\hbar)|^2=|\braket{q|E_n}|^2$$
-- The eigenvalue equation for the energy eigenkets is also known as the time-independent  Schrödinger equation:
+- The eigenvalue equation for the energy eigenkets is also known as the _time-independent  Schrödinger equation_:
 $$\Ham\ket{E_n}=E_n\ket{E_n}$$
 - Projected onto the $x$ basis with $\Ham=T+V$:
 $$-\frac{\hbar^2}{2m}\nabla^2\psi_n(x)+V\psi_n(x)=E_n\psi_n(x)$$
+- Solving this thing: [[Time-independent quantum mechanics]]
 
 ## Time-dependent Hamiltonians: various methods
 
@@ -135,7 +137,8 @@ $$\braket{b|\teo(t,0)|a}$$
 - This quantity is particularly useful in defining the [[Path integrals in quantum mechanics|path integral formulation]]
 
 # The Schrödinger and Heisenberg pictures
-- So far, we have been working with the _Schrödinger picture_, where the state kets evolve with time, with the operators remaining constant
+- So far, we have been working with the _Schrödinger picture_, where the _state kets evolve with time, with the operators remaining constant_
+
 - Consider the time-evolution of inner product $\braket{\beta|\Omega|\alpha}$:
 $$\braket{\beta|\Omega|\alpha} \rightarrow \braket{\teo\beta|\Omega|\alpha}=\braket{\beta|\teo^\dagger\Omega\teo|\alpha}$$
 - This can be interpreted as the state ket remains unchanged, with the operator representing the observable evolving with time
@@ -184,8 +187,31 @@ $$\begin{aligned} \braket{x_1,x_2...x_N|\Psi}&=\Psi(x_1,x_2...x_N) \\
 - For _non-Cartesian coordinate systems_, it is easier to use mathematical identities to construct quantum operators, for example:
 $$\begin{aligned} \Omega&=\frac{P_x^2+P_y^2+P_z^2}{2m}+X^2+Y^2+Z^2\\ &\equiv -\frac{\hbar^2}{2m}\nabla^2+R^2 \\ &\equiv -\frac{\hbar^2}{2m}\left[\frac{1}{r^2}\pd{}{r}\left(r^2\pd{}{r}\right)+\frac{1}{r^2\sin\theta}\pd{}{\theta}\left(\sin\theta\pd{}{\theta}\right)+\frac{1}{r^2\sin^2\theta}\pd{^2}{\phi^2}\right]+r^2\end{aligned}$$
 
-# Ehrenfest's theorem and the correspondence principle
-- 
+# Time evolution of expectation values
+- Due to the probabilistic nature of quantum mechanics, one _cannot define a time derivative of an observable quantity_
+- However, one can talk about the _time evolution of the expectation value_
+
+## Ehrenfest's Theorem
+- By applying the time derivative to $\mean{A}=\braket{\psi|\hat{A}|\psi}$:
+$$\frac{d}{dt}\mean{A}=\mean{\pd{A}{t}}+\frac{1}{i\hbar}\mean{[\hat{A},\hat{H}]}$$
+- This is _analagous_ to the time evolution of a quantity using [[Analytical classical mechanics#Poisson brackets|Poisson brackets]]
+
+- It is also most apparent with respect to the [[#The Heisenberg equation of motion|Heisenberg picture]], where it is the time-averaged version of the _Heisenberg equation of motion_
+
+- Assuming $\hat{A}$ does not explicitly depend on time:
+	- If $\hat{A}$ commutes with $\hat{H}$ (they _share eigenstates_), then $\mean{A}$ is a _constant of motion_
+	- If the system is in an _energy eigenstate_, then _expectation values of all observables are independent in time_
+
+- Let there be a time-independent Hamiltonian, such that the wave function is:
+$$\wv=\sum_nc_n\exp\left(-\frac{iE_nt}{\hbar}\right)\ket{E_n} \hspace{0.5cm}\text{ where } c_n=\braket{E_n|\Psi(0)}$$
+- From this, the time evolution can be written as:
+$$\mean{A}=\sum_{m,n}c_m^*c_n\exp\left(-\frac{i(E_n-E_m)t}{\hbar}\right)A_{mn}$$
+- Here, $A_{mn}$ is the _matrix element of $\hat{A}$ in the energy eigenbasis_:
+$$A_{mn}\equiv\braket{E_m|\hat{A}|E_n}$$
+
+## Important cases
+
+## Energy-time uncertainty principle
 
 # Probability flow
 - The total probability of finding a particle anywhere in the universe is conserved:
