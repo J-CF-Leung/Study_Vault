@@ -21,12 +21,12 @@
             }
           },
           {
-            "id": "b24e864a671074bf",
+            "id": "8187f9f9597a2dc5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Quantum Mechanics/1D time-independent quantum mechanics.md",
+                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
                 "mode": "source",
                 "source": false
               }
@@ -74,7 +74,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/Quantum Mechanics/1D time-independent quantum mechanics.md"
+                    "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md"
                   }
                 }
               }
@@ -90,7 +90,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/Quantum Mechanics/1D time-independent quantum mechanics.md",
+                    "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -200,7 +200,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Quantum Mechanics/1D time-independent quantum mechanics.md",
+                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -217,7 +217,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Quantum Mechanics/1D time-independent quantum mechanics.md",
+                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -240,7 +240,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Quantum Mechanics/1D time-independent quantum mechanics.md"
+                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md"
               }
             }
           },
@@ -270,17 +270,17 @@
       "templates:Insert template": false
     }
   },
-  "active": "b24e864a671074bf",
+  "active": "8187f9f9597a2dc5",
   "lastOpenFiles": [
+    "Physics/IB Physics/Statistical mechanics.md",
+    "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md",
+    "Physics/Thermal Physics/Elements of classical thermodynamics.md",
+    "Physics/Thermal Physics/Statistical thermodynamics.md",
+    "Physics/Quantum Mechanics/1D time-independent quantum mechanics.md",
     "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
     "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
-    "Physics/Quantum Mechanics/1D time-independent quantum mechanics.md",
     "Physics/Quantum Mechanics/The failure of classical mechanics.md",
     "Physics/Quantum Mechanics/Quantum statistical mechanics.md",
-    "Physics/IB Physics/Introductory quantum mechanics.md",
-    "Physics/Quantum Mechanics/3D time-independent quantum mechanics.md",
-    "Physics/Quantum Mechanics/Operators, observables and uncertainties.md",
-    "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
-    "Physics/IB Physics/Experimental methods and data analysis.md"
+    "Physics/IB Physics/Introductory quantum mechanics.md"
   ]
 }
