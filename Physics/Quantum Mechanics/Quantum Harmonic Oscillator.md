@@ -52,7 +52,7 @@ $$\hat{a}_+\hat{a}_-=n$$
 
 - From applying $\hat{a}_\pm$ to $\ket{E_n}$, one gets a ket _proportional_ to $\ket{E_{n\pm 1}}$
 - By examining $\braket{E_{n\pm1}|E_{n\pm1}}$, the proportionality constants are found to be:
-$$\displaylines{\hat{a}_+\ket{E_n}=\sqrt{(n+1)}\ket{E_{n+1}} \\\hat{a}_-\ket{E_n}=\sqrt{n}\ket{E_{n-1}}}$$
+$$\displaylines{\hat{a}_+\ket{E_n}=\sqrt{n+1}\ket{E_{n+1}} \\\hat{a}_-\ket{E_n}=\sqrt{n}\ket{E_{n-1}}}$$
 
 - Combining these, one gets the general wave functions to be:
 $$\braket{x|E_n}=\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}\frac{1}{\sqrt{n!}}(\hat{a}_+)^n\exp\left(-\frac{m\omega}{2\hbar}x^2\right)$$
@@ -64,7 +64,7 @@ $$\braket{x|E_n}=\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}\frac{1}{\sqrt{n!}}(
 
 ### Average values and uncertainty
 - The position and momentum operators can be written _in terms of the ladder operators_:
-$$\displaylines{\hat{x}= \\ \hat{p}=}$$
+$$\displaylines{\hat{x}= \sqrt{\frac{\hbar}{2m\omega}}(\hat{a}_++\hat{a}_-)\\ \hat{p}=\sqrt{\frac{m\hbar\omega}{2}}(\hat{a}_+-\hat{a}_-)}$$
 - Since the energy eigenstates are _orthogonal_, one can easily derive:
 $$\displaylines{\mean{x}=0 \hspace{1cm} \mean{p}=0 \\ \mean{x^2}=\frac{\hbar}{m\omega}\left(n+\frac{1}{2}\right)\hspace{1cm}\mean{p^2}=m\hbar\omega\left(n+\frac{1}{2}\right)}$$
 - From this, the _uncertainty relation_ can be derived:

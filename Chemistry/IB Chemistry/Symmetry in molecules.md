@@ -124,27 +124,40 @@ $$R_2=S^{-1}R_1S$$
 
 ## Identification
 - Flow chart:
+![[Point groups flow chart.png]]
 
 ## Character Tables
 - _Character tables_ list all of the symmetry elements in a group
 - The elements are _grouped into classes_
 - It also lists all of the _irreducible representations_ (see below) for the group, as well as the _Cartesian functions_ that transform as the representation
 
+- Example: $C_{2v}$
+![[C2v table.png]]
+
+- Example: $D_{3h}$
+![[D3h character table.png]]
+
 # Representations
 - The point group of a molecule takes the _atoms_ into consideration
 - However, the _symmetry operations can change the orientations of electron orbitals_
+	- They can remain unchanged, i.e. they are _symmetric_ w.r.t. the operation
+	- They can be reversed, i.e. _antisymmetric_ w.r.t. the operation
+	- Or they can be _moved_
 
 - The _ways in which orbitals_ (characterised by functions) _transform_ are listed as _representations_ of a group
+
+- Example: _Atomic orbitals_ of _oxygen in water_
+	- Group, $C_{2v}$, with operations $E$, $C_2^z$, $\sigma^{xz}$, $\sigma^{yz}$
+	- $2s$ is _totally symmetric_ with respect to these operations, transforming like $A_1$
+	- Following this, $p_x$, $p_y$, $p_z$ transform like $B_1$, $B_2$, and $A_1$ respectively
 
 ## Names of representations
 
 ## One-Dimensional representations
 
-## Characters and reducible representations
+## Two-Dimensional representations
 
 ## Symmetry orbitals
-
-## Two-Dimensional representations
 
 ## Reducing representations
 

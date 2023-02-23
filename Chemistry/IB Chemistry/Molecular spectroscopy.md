@@ -439,7 +439,7 @@ $$B_{mn}\propto |\braket{\psi_E''|\hat{\mu}_E|\psi_E'}|^2|\braket{\psi_V''|\psi_
 
 - If _sufficient vibrational fine structure_ is known for each progression, the _vibrational parameters_ can be obtained
 
-### Example: Iodine ($I_2$)
+### Example: Diatomic iodine
 ![[Iodine UV-VIS.png]]
 - Since there are _very extensive progressions_, it can be seen that _equilibrium bond length $r_e$ has changed significantly_
 - The _presence of $\nu''=1$ and $\nu''=2$_ suggests that the _vibrational spacing for the ground electronic state is comparable to $kT$_

@@ -353,5 +353,5 @@ $$\displaylines{\omega^2=0\longrightarrow \underline{X}=\begin{pmatrix}1 \\ 1 \\
 - For other molecules, there are 3
 - Therefore, _non-linear molecules have $3N-6$ vibrational modes_
 - _Linear molecules have $3N-5$ vibrational modes_
-- Excruciating detail: [[Oscillations in molecules]]
+- Excruciating detail: [[Normal modes in molecules]]
 
