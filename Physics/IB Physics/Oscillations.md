@@ -344,6 +344,7 @@ $$(\dunderline{K}-\omega^2\dunderline{M})\cdot\underline{\bm{X}}=0$$
 $$\displaylines{\omega^2=0\longrightarrow \underline{X}=\begin{pmatrix}1 \\ 1 \\ 1\end{pmatrix}\\ \omega^2=\frac{k}{m}\longrightarrow \underline{X}=\begin{pmatrix}1 \\ 0 \\ -1\end{pmatrix} \\ \omega^2=\frac{k(M+2m)}{Mm}\longrightarrow \underline{X}=\begin{pmatrix}1 \\ -2m/M \\ 1\end{pmatrix}}$$
 - The $\omega=0$ mode is simplya _translation_
 	- Results from the _symmetry_ of the Lagrangian w.r.t. translation
+	- Needs to also be taken into account for the motion of the system
 
 ### A molecule in 3 dimensions
 - Let there be $N$ atoms

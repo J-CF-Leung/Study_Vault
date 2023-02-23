@@ -167,6 +167,8 @@ $$\det(\hat{\Omega}-\omega \hat{I})=0$$
 
 - For every Hermitian operator $\hat{\Omega}$, there _is a unitary matrix $\hat{U}$ such that $\hat{U}^\dagger\hat{\Omega}\hat{U}$ is diagonal_
 	- The _rows of $\hat{U}$ are the orthonormal eigenvectors_
+- If a matrix can be diagonalised, then it can always be written as:
+$$\hat{\Omega}=\sum_i\omega_i\ket{\omega_i}\bra{\omega_i}$$
 
 - Due to the _invariance of determinants and traces under unitary transformations_:
 $$\displaylines{\det(\hat{\Omega})=\prod_{i=1}^n\omega_i \\ \text{Tr}(\hat{\Omega})=\sum_{i=1}^n\omega_i}$$
@@ -184,8 +186,21 @@ $$\displaylines{\det(\hat{\Omega})=\prod_{i=1}^n\omega_i \\ \text{Tr}(\hat{\Omeg
 - This is assumed to be _true if $n$ is infinite_
 
 ## Functions of operators
-- The function of an operator can be formally defined via a _power series_:
+- The exponential of an operator can be defined using a _power series_:
+$$\exp(\hat{\Omega})=\hat{I}+\hat{\Omega}+\frac{1}{2!}\hat{\Omega}^2+\frac{1}{3!}\hat{\Omega}^2+\dots$$
+- By expanding the operator in terms of eigenvectors and eigenvalues:
+$$\exp(\hat{\Omega})=\sum_i e^{\omega_i}\ket{\omega_i}\bra{\omega_i}$$
+- In general, _any function $F$ that can be expanded in terms of a power series_ can be written as:
+$$F(\hat{\Omega})=\sum_iF(\omega_i)\ket{\omega_i}\bra{\omega_i}$$
+- This means the _eigenvalues of the resulting operator_ are $F(\omega_i)$, and the _eigenvectors remain unchanged_
 
+### Commutation relations involving functions
+- One can prove _by induction_ that if:
+$$[\hat{A},\hat{B}]=c\in\mathbb{C}$$
+- Then:
+$$\displaylines{[\hat{A},\hat{B}^l]=cl\hat{B}^{l-1}=c\pd{\hat{B}^l}{\hat{B}} \\ [\hat{B},\hat{A}^l]=-cl\hat{A}^{l-1}=-c\pd{\hat{A}^l}{\hat{A}}}$$
+- This can be extended to _functions of the operators_:
+$$[\hat{A},F(\hat{A},\hat{B})]=c\pd{F(\hat{A},\hat{B})}{\hat{B}}$$
 
 ## Hilbert spaces
 - The relevant vector space for quantum mechanics is _the Hilbert space of square-integrable functions_

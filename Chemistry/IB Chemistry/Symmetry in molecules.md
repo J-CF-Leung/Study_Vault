@@ -142,24 +142,52 @@ $$R_2=S^{-1}R_1S$$
 - However, the _symmetry operations can change the orientations of electron orbitals_
 	- They can remain unchanged, i.e. they are _symmetric_ w.r.t. the operation
 	- They can be reversed, i.e. _antisymmetric_ w.r.t. the operation
-	- Or they can be _moved_
+	- Or they can be _moved_, transforming into _orbitals on other atoms_
 
 - The _ways in which orbitals_ (characterised by functions) _transform_ are listed as _representations_ of a group
 
-- Example: _Atomic orbitals_ of _oxygen in water_
+- Example for finding a representation: _atomic orbitals_ of _oxygen in water_
 	- Group, $C_{2v}$, with operations $E$, $C_2^z$, $\sigma^{xz}$, $\sigma^{yz}$
 	- $2s$ is _totally symmetric_ with respect to these operations, transforming like $A_1$
 	- Following this, $p_x$, $p_y$, $p_z$ transform like $B_1$, $B_2$, and $A_1$ respectively
 
-## Names of representations
+- If an orbital _transforms as a Cartesian function_ (e.g. $x$, $y^2$, $xz$), then its representation _can be read from the character table_
+	- A factor of $\exp(-r)$ is _directionless_ and _can be ignored_ when finding representation
+	- Example: $p_x$ on the oxygen atom of water transforms as $x$, and therefore is represented by $B_1$
 
-## One-Dimensional representations
+## Characters
+- On most molecules, orbitals _not on the central atom_ will be _moved_ by some of the symmetry operations
+- In this case, using _a whole set of orbitals as a basis_, one can represent the action of the operation via a _representation matrix_
+	- The _dimension_ of the representation is equal to _the number of orbitals_
 
-## Two-Dimensional representations
+- Example: The _hydrogen orbitals in water_, $s_A$ and $s_B$:
+	- The action of $C_2^z$ - 
+	$$\displaylines{C_2^zs_A=s_B \hspace{1cm} C_2^zs_B=s_A \\ \begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}\begin{pmatrix}s_A \\ s_B\end{pmatrix}=\begin{pmatrix}s_B \\ s_A\end{pmatrix}}$$
+	- The matrix on the LHS is te _representation matrix_ for $C_2^z$
+
+- The _trace_ of a representation matrix is known as the _character_ of the operation
+	- The character of the _identity_ operation is equal to the _dimension_ of the representation
+
+- The characters can be found _without writing out the representation matrix_:
+	- _Add_ $1$ for _each orbital symmetric w.r.t. the operation_
+	- _Subtract_ $1$ for each orbital _antisymmetric_ w.r.t. the operation
+	- Add $0$ for each orbital _moved_ by the operation
+
+## Reducible representations
+- A _multi-dimensional_ representation may simply be a _direct sum_
+- In this case, the representation is said to be _reducible_
+
+- Example: Hydrogen orbitals in water
+	- The characters are $(2,0,2,0)$
+	- Inspecting the chracter table, this is equivalent to $A_1\oplus B_1$
+
+## Two-Dimensional irreducible representations
 
 ## Symmetry orbitals
 
-## Reducing representations
+## Reduction formula
+
+## Names of irreducible representations
 
 
 # Direct products

@@ -6,7 +6,7 @@
       {
         "id": "5d77db823a569b93",
         "type": "tabs",
-        "dimension": 69.01840490797547,
+        "dimension": 64.23529411764706,
         "children": [
           {
             "id": "8c0e30efc10524b1",
@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
+                "file": "Physics/IB Physics/Oscillations.md",
                 "mode": "source",
                 "source": false
               }
@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                "file": "Physics/Quantum Mechanics/Density matrix.md",
                 "mode": "source",
                 "source": false
               }
@@ -56,13 +56,12 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "a6c4709e929bd0bb",
         "type": "split",
-        "dimension": 30.981595092024538,
+        "dimension": 35.76470588235294,
         "children": [
           {
             "id": "3773db76a4512ef8",
@@ -74,7 +73,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Symmetry in molecules.md"
+                    "file": "Physics/IB Physics/Oscillations.md"
                   }
                 }
               }
@@ -90,7 +89,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
+                    "file": "Physics/IB Physics/Oscillations.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -185,7 +184,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 274.5
+    "width": 303.5
   },
   "right": {
     "id": "407fe9c7a71f5feb",
@@ -201,7 +200,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
+                "file": "Physics/IB Physics/Oscillations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -218,7 +217,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
+                "file": "Physics/IB Physics/Oscillations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -241,7 +240,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md"
+                "file": "Physics/IB Physics/Oscillations.md"
               }
             }
           },
@@ -271,14 +270,20 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "2b67d3f03f08d4a9",
+  "active": "8c0e30efc10524b1",
   "lastOpenFiles": [
+    "Physics/Vectors and matrices in physics.md",
+    "Chemistry/IB Chemistry/Symmetry in molecules.md",
+    "Physics/Quantum Mechanics/Density matrix.md",
+    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+    "Physics/Geometric interpretations of physics.md",
+    "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
+    "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
+    "Misc or Personal/Quotes.md",
     "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
     "Physics/Analytical classical mechanics.md",
-    "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Chemistry/IB Chemistry/Molecular spectroscopy.md",
     "Chemistry/IB Chemistry/Normal modes in molecules.md",
-    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Misc or Personal/To read.md",
     "Physics/IB Physics/Statistical mechanics.md",
     "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md",

@@ -209,7 +209,7 @@ $$\frac{d}{dt}\mean{A}=\mean{\pd{A}{t}}+\frac{1}{i\hbar}\mean{[\hat{A},\hat{H}]}
 - It is also most apparent with respect to the [[#The Heisenberg equation of motion|Heisenberg picture]], where it is the time-averaged version of the _Heisenberg equation of motion_
 
 - Assuming $\hat{A}$ does not explicitly depend on time:
-	- If $\hat{A}$ commutes with $\hat{H}$ (they _share eigenstates_), then $\mean{A}$ is a _constant of motion_
+	- If $\hat{A}$ commutes with $\hat{H}$ (they _share eigenstates_), then $\mean{A}$ is _always a constant of motion_
 	- If the system is in an _energy eigenstate_, then _expectation values of all observables are independent in time_
 
 - Let there be a time-independent Hamiltonian, such that the wave function is:
