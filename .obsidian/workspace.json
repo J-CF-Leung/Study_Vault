@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/IB Physics/Oscillations.md",
+                "file": "Mathematics/IB Mathematical Methods/Cartesian tensors.md",
                 "mode": "source",
                 "source": false
               }
@@ -73,7 +73,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/IB Physics/Oscillations.md"
+                    "file": "Mathematics/IB Mathematical Methods/Cartesian tensors.md"
                   }
                 }
               }
@@ -89,7 +89,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/IB Physics/Oscillations.md",
+                    "file": "Mathematics/IB Mathematical Methods/Cartesian tensors.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -163,7 +163,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "probability current",
+                "query": "correspondence",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -200,7 +200,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/IB Physics/Oscillations.md",
+                "file": "Mathematics/IB Mathematical Methods/Cartesian tensors.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -217,7 +217,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/IB Physics/Oscillations.md",
+                "file": "Mathematics/IB Mathematical Methods/Cartesian tensors.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -240,7 +240,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/IB Physics/Oscillations.md"
+                "file": "Mathematics/IB Mathematical Methods/Cartesian tensors.md"
               }
             }
           },
@@ -272,12 +272,22 @@
   },
   "active": "8c0e30efc10524b1",
   "lastOpenFiles": [
+    "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
+    "Mathematics/IB Mathematical Methods/Vectors and matrices.md",
+    "Physics/Quantum Mechanics/1D time-independent quantum mechanics.md",
+    "Physics/Quantum Mechanics/Operators, observables and uncertainties.md",
+    "Physics/Quantum Mechanics/Multiple particles in quantum mechanics.md",
     "Physics/Vectors and matrices in physics.md",
+    "Mathematics/IB Mathematical Methods/Cartesian tensors.md",
+    "Tentative.png",
+    "Physics/IB Physics/Rigid body dynamics.md",
+    "Physics/IB Physics/Fluid mechanics.md",
+    "Physics/Images/Boundary layer.png",
+    "Physics/IB Physics/Oscillations.md",
     "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Physics/Quantum Mechanics/Density matrix.md",
     "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Physics/Geometric interpretations of physics.md",
-    "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
     "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
     "Misc or Personal/Quotes.md",
     "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",

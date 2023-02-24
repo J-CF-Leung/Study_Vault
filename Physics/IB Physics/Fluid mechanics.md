@@ -229,3 +229,29 @@ $$\frac{F_i}{\delta V}=\sum_j\pd{\tau_{ij}}{x_j}=\eta\sum_j\left(\pd{^2 v_i}{x_j
 - Therefore, for an _incompressible fluid_, where $\nabla\cdot\bm{v}=0$
 $$\rho\frac{D\bm{v}}{Dt}=-\nabla P+\rho\bm{g}+\eta\nabla^2\bm{v}$$
 - This is the _Navier-Stokes equation_
+
+- Example: _Poiseuille flow_
+	- The boundary condition is _zero velocity at a boundary_
+	- Draining plate: Uniform pressure, viscous force _balances_ gravity
+	- Pipe: Pressure gradient _balances_ viscous force
+	- The flow profile is _parabolic_
+
+## Microscopic processes
+- Viscosity and thermal conductivity are determined by _collisional processes_
+- Let there be some quantity $Q$ (thermal conductivity or viscosity)
+- The molecules move at $v_T$ with _mean free path_ $\lambda_c$
+- This leads to a _diffusion equation_ w.r.t. the fluid element:
+$$\frac{1}{3}\lambda_cv_T\nabla^2Q=\frac{DQ}{Dt}$$
+	- Factor of $1/3$: 3 degrees of freedom
+- Thus, the _kinematic viscosity_ is defined as:
+$$\nu\equiv\frac{\eta}{\rho}=\frac{1}{3}\lambda_cv_T$$
+
+## Boundary layers
+- Boundary condition for _surface of solid body_: No slip
+- There must be a _boundary layer_ with a _velocity gradient_
+- This region must have some _vorticity_
+![[Boundary layer.png]]
+- This can lead to _vortex shedding_
+
+## Reynolds number
+- Let there be some

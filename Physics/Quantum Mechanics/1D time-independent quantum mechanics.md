@@ -301,6 +301,8 @@ $$\phi_n(p)\propto\left[\delta\left(\frac{p}{\hbar}-\frac{n\pi}{a}\right)+\delta
 - Hence, as $n$ increases, the _uncertainty of $p$ decreases_
 - So, it gets _more likely to detect the momentum at the particle at the classical momentum_ $p_n\approx\sqrt{2mE_n}$
 
+- In terms of Ehrenfest's Theoem: [[Fundamentals of quantum mechanics#Expectation values and the classical limit|The classical limit]]
+
 # Other potentials
 
 ## The Delta Function potential

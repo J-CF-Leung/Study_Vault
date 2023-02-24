@@ -50,7 +50,10 @@ $$[\hat{X},\hat{P}]=i\hbar$$
 # Uncertainty
 
 # Useful commutation relations
-- Check Galitski & Galitski
+- Using the [[Vectors and matrices in physics#Commutation relations involving functions|commutation relations involving functions]]:
+$$\displaylines{[\hat{x},\hat{p}^l]=i\hbar l\hat{p}^{l-1}=i\hbar\pd{\hat{p}^l}{\hat{p}} \\ [\hat{x},F(\hat{x},\hat{p})]=i\hbar\pd{F}{\hat{p}} \\ [\hat{p},F(\hat{x},\hat{p})]=-i\hbar\pd{F}{\hat{x}}}$$
+- Example:
+$$[\hat{x},\hat{p}\hat{x}\hat{p}]=i\hbar(\hat{x}\hat{p}+\hat{p}\hat{x})$$
 
 
 # Operators in three dimensions

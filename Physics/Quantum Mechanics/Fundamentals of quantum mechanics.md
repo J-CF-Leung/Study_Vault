@@ -91,7 +91,7 @@ $$\ket{\Psi(t)}=\teo(t-t_0)\ket{\Psi(t_0)}$$
 	- $\teo$ is the _time-evolution operator_, also known as the _propagator_
 - The time-evolution operator must fulfill the following properties:
 	- Composition: $\teo(t_2-t_0)=\teo(t_2-t_1)\teo(t_1-t_0)$
-	- [[Vectors and matrices|Unitarity]]/probability conservation: $\braket{\Psi|\Psi}=\braket{\Psi_0|\Psi_0}=1$ -> $\teo^\dagger\teo=1$
+	- [[Vectors and matrices in physics#Hermitian and unitary matrices|Unitarity]]/probability conservation: $\braket{\Psi|\Psi}=\braket{\Psi_0|\Psi_0}=1$ -> $\teo^\dagger\teo=1$
 - Considering the _infinitesimal_ time-evolution operator $\teo(t_0+dt,t_0)$:
 	- It satisfies the limit $\lim_{dt\to 0}\teo(t_0+dt,t_0)=1$
 - These properties are satisfied by $\teo(t_0+dt,t_0)=1-i\Omega dt$
@@ -132,6 +132,8 @@ $$\teo=\sum_n\ket{E_n}\bra{E_n}\exp\left(-\frac{iE_nt}{\hbar}\right)$$
 $$\ket{\Psi(t)} = \teo\ket{\Psi(0)}=\sum_n\braket{E_n|\Psi(0)}\exp\left(-\frac{iE_nt}{\hbar}\right)\ket{E_n}=\sum_nc_{E,n}\exp\left(-\frac{iE_nt}{\hbar}\right)\ket{E_n}$$
 - The _normal modes_ of the equation, $\ket{E_n(t)}=\exp(-iE_nt/\hbar)\ket{E_n}$, are known as _stationary states_, as the _probability distribution for any variable remains constant_:
 $$|\braket{q|E_n(t)}|^2=|\braket{q|E_n}\exp(-iE_nt/\hbar)|^2=|\braket{q|E_n}|^2$$
+- Each eigenstate _evolves on its own_, and the wave function _remains a linear combination with the same coefficients_
+
 - The eigenvalue equation for the energy eigenkets is also known as the _time-independent  Schrödinger equation_:
 $$\Ham\ket{E_n}=E_n\ket{E_n}$$
 - Projected onto the $x$ basis with $\Ham=T+V$:
@@ -197,13 +199,13 @@ $$\begin{aligned} \braket{x_1,x_2...x_N|\Psi}&=\Psi(x_1,x_2...x_N) \\
 - For _non-Cartesian coordinate systems_, it is easier to use mathematical identities to construct quantum operators, for example:
 $$\begin{aligned} \Omega&=\frac{P_x^2+P_y^2+P_z^2}{2m}+X^2+Y^2+Z^2\\ &\equiv -\frac{\hbar^2}{2m}\nabla^2+R^2 \\ &\equiv -\frac{\hbar^2}{2m}\left[\frac{1}{r^2}\pd{}{r}\left(r^2\pd{}{r}\right)+\frac{1}{r^2\sin\theta}\pd{}{\theta}\left(\sin\theta\pd{}{\theta}\right)+\frac{1}{r^2\sin^2\theta}\pd{^2}{\phi^2}\right]+r^2\end{aligned}$$
 
-# Time evolution of expectation values
+# Expectation values and the classical limit
 - Due to the probabilistic nature of quantum mechanics, one _cannot define a time derivative of an observable quantity_
 - However, one can talk about the _time evolution of the expectation value_
 
 ## Ehrenfest's Theorem
 - By applying the time derivative to $\mean{A}=\braket{\psi|\hat{A}|\psi}$:
-$$\frac{d}{dt}\mean{A}=\mean{\pd{A}{t}}+\frac{1}{i\hbar}\mean{[\hat{A},\hat{H}]}$$
+$$\frac{d}{dt}\mean{A}=\mean{\pd{A}{t}}+\frac{1}{i\hbar}\mean{[\hat{A},\hat{\Ham}]}$$
 - This is _analagous_ to the time evolution of a quantity using [[Analytical classical mechanics#Poisson brackets|Poisson brackets]]
 
 - It is also most apparent with respect to the [[#The Heisenberg equation of motion|Heisenberg picture]], where it is the time-averaged version of the _Heisenberg equation of motion_
@@ -220,8 +222,26 @@ $$\mean{A}=\sum_{m,n}c_m^*c_n\exp\left(-\frac{i(E_n-E_m)t}{\hbar}\right)A_{mn}$$
 $$A_{mn}\equiv\braket{E_m|\hat{A}|E_n}$$
 
 ## Important cases
+- Using the [[Operators, observables and uncertainties#Useful commutation relations|commutation relations involving functions]]:
+$$\displaylines{\frac{d\mean{x}}{dt}=\frac{1}{i\hbar}\mean{[\hat{x},\hat{\Ham}]}=\frac{\mean{p}}{m} \\ \frac{d\mean{p}}{dt}=-\mean{\pd{V}{x}}}$$
+- These are a _direct analogues of the classical case_
+- There is an important distinction to make:
+$$\mean{F(\hat{x})}\neq F(\mean{x})$$
+- The equality _holds approximately for small uncertainties relative to mean_
+
+- So, when the _uncertaintiers are small relative to the scale of the system_, then the behaviour of the system _approaches the classical case_
+- This is another manifestation of the _correspondence principle_
 
 ## Energy-time uncertainty principle
+- Let there be some _arbitrary physical quantity_ $Q$
+- From Ehrenfest's Theorem:
+$$\frac{d\mean{Q}}{dt}=\frac{1}{i\hbar}\mean{[\hat{Q},\hat{H}]}$$
+- From the [[#Uncertainty|generalised uncertainty principle]]:
+$$\displaylines{\Delta E\Delta t\geq\frac{\hbar}{2} \\ \Delta t\equiv \frac{\Delta Q}{d\mean{Q}/dt}}$$
+- $\Delta t$ is _the time taken for expectation value to change by the size of the uncertainty_
+
+- If $\Delta E$ is _small_, then it takes _a long time for physical quantities to change_
+- If it is a _stationary state_, then _no expectation values will change_
 
 # Probability flow
 - The total probability of finding a particle anywhere in the universe is conserved:
@@ -239,4 +259,3 @@ $$\displaylines{\psi=A\exp[i(kx-\omega t)] \\ J=\frac{\hbar k}{m}|A|^2}$$
 
 - If $k$ is _imaginary_ (i.e. an evanescent wave), $J=0$
 
-# The classical limit
