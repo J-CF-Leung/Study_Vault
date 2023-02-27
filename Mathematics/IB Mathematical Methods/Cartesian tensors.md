@@ -121,3 +121,47 @@ $$\displaylines{S_{i_1\dots i_{k-1}i_ki_{k+1}\dots i_{l-1}i_li_{l+1}\dots i_m}=T
 - If $\text{A}$ and $\text{B}$ are second-rank tensors, then the _matrix product_ $C_{ij}=A_{ij}B_{jk}$ is another second-rank tensor since $(2+2)-2=2$
 - The _cross product_ $(\bm{u}\wedge\bm{v})_i=\epsilon_{ijk}u_jv_k$ is a _pseudo-vector_, since the Levi-Civita symbol is a _pseudo-tensor_
 	- Can be thought of as _two outer products with two contractions_
+
+### Symmetric and antisymmetric tensors
+- A tensor is _symmetric_ w.r.t. indices $\alpha$ and $\beta$ if:
+$$T_{\dots\alpha\dots\beta\dots}=T_{\dots\beta\dots\alpha\dots}$$
+- The tensor is _antisymmetric_ w.r.t. indices $\alpha$ and $\beta$ if:
+$$T_{\dots\alpha\dots\beta\dots}=-T_{\dots\beta\dots\alpha\dots}$$
+- Symmetry or antisymmetry is _invariant under changes in coordinate system_
+	- Prof: Write out the transformation law
+
+- If $S_{ijk\dots}$ is _symmetric_ w.r.t. $i,j$ and $A_{pqr\dots}$ is _antisymmetric_ w.r.t. $p,q$, then the _contraction_:
+$$S_{ijk\dots}A_{ijr\dots}=0$$
+	- Proof: Swap indices in this contraction
+
+- The _Kronecker delta_ is _symmetric w.r.t. all indices_
+- The _Levi-Civita tensor_ is _antisymmetric w.r.t. all indices_
+- Many tensors representing _physical quantities_, such as _conductivity_ and _inertia_, are symmetric
+
+## Second-order tensors
+- Second-order tensors only have _one pair of indices_
+- Therefore, they can simply be referred to as _symmetric_ or _antisymmetric_:
+$$\displaylines{\text{S}^T=\text{S} \\ \text{A}^T=-\text{A}}$$
+- Any _antisymmetric_ tensor must have _zeroes for diagonal entries_
+
+### Decomposition
+- _Any_ second-order tensor can be _uniquely decomposed into the sum of a symmetric and antisymmetric tensor_:
+$$\displaylines{T_{ij}=S_{ij}+A_{ij} \\ S_{ij}=\frac{T_{ij}+T_{ji}}{2} \hspace{1cm} A_{ij}=\frac{T_{ij}-T_{ji}}{2}}$$
+
+- _Antisymmetric_ tensors _only have three independent components_, and are _equivalent to axial vectors_:
+$$A_{ij}=-\epsilon_{ijk}\omega_k=\begin{pmatrix}0 & \omega_3 & -\omega_2 \\ -\omega_3 & 0 & \omega_1 \\ \omega_2 & -\omega_1 & 0\end{pmatrix}$$
+- Here, $\bm{\omega}$ is known as the _dual vector_
+- Since $\epsilon$ is a _pseudo-tensor_, then $\bm{\omega}$ must be an _axial vector_, with components:
+$$\omega_k=-\frac{1}{2}\epsilon_{klm}A_{lm}$$
+
+- As for _symmetric_ tensors, they can be _uniquely decomposed_ in terms of a _tracless tensor_ $\tilde{\text{S}}$ and a _scalar multiple_ of the identity $\text{I}$:
+$$\text{S}=\tilde{\text{S}}+\frac{1}{3}\text{tr}(\text{S})\text{I}$$
+
+### Diagonalisation
+- Any _symmetric_ second-rank tensor $\text{S}$ must also be _Hermitian_
+- Therefore, it must be _diagonalisable_, with _real eigenvalues and orthonormal eigenvectors_
+	- Proof: [[Vectors and matrices#Diagonalisation via unitary matrices]]
+
+- Consider a transformation from basis $\bm{e}_i$ to $\bm{e}_i'$, with the transformation matrix:
+$$L_{ij}=\bm{e}_i\cdot\bm{e}_j$$
+$$\left(\begin{array}{c|c|c}\lambda_1\bm{e}_1' & \lambda_2\bm{e}_2' & \lambda_3\bm{e}_3'\end{array}\right)$$

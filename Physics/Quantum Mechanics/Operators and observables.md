@@ -1,4 +1,4 @@
-# Operators and observables
+
 - Operators describe _observable quantities_ in quantum mechanics
 	- Examples include position, momentum, and spin
 - As they act on wave functions represented by ket vectors, they are represented by matrices, with different matrix elements for different bases
@@ -7,7 +7,7 @@
 $$\left<Q\right>=\braket{\Psi|\hat{Q}\Psi}$$
 - As the outcome of a measurement must be real, the operator $\hat{Q}$ must be Hermitian
 
-## Eigenkets of operators
+# Eigenstates
 - For all observables, the corresponding operator has a set of determinate states, or _eigenstates_, represented by eigenkets $\ket{\Psi_q}$:
 $$\hat{Q}\ket{\Psi_q}=q\ket{\Psi_q}$$
 	- Measuring $Q$ for this state always gives $q$, with a standard deviation of 0
@@ -46,8 +46,6 @@ $$\braket{p|\hat{X}|p'}=i\hbar\frac{d}{dp}\delta(p-p')$$
 - Due to this symmetry, the position and momentum operators are known as _conjugates_
 - The two operators $\hat{X}$ and $\hat{P}$ do not commute:
 $$[\hat{X},\hat{P}]=i\hbar$$
-
-# Uncertainty
 
 # Useful commutation relations
 - Using the [[Vectors and matrices in physics#Commutation relations involving functions|commutation relations involving functions]]:

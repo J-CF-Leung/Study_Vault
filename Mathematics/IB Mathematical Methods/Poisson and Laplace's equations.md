@@ -114,6 +114,7 @@ $$\pd{\Psi}{\hat{\bm{n}}}\Bigg|_S=\hat{\bm{n}}\cdot\nabla\Psi=f(\bm{x})$$
 
 - It can be proven that if a solution _satisfies Dirichlet boundary conditions_, it must be _unique_
 	- Let there be _two soloutions_, $\Psi_1$ and $\Psi_2$, with $\Psi\equiv\Psi_1-\Psi_2$
+	- Consider $\nabla\cdot(\Psi\nabla\Psi)$, and use the divergence theorem
 	- It can be shown that $\nabla\Psi=0$ everywhere, hence $\Psi=0$ everywhere since it must be 0 at the boundary
 - For _Neumann_ boundary conditions, it is _unique up to an additive constant_
 
@@ -199,6 +200,14 @@ $$\bm{x}''=\frac{a^2}{r'^2}\bm{x}'$$
 - Hence, the Green's function is:
 $$G=-\frac{1}{4\pi}\left(\frac{1}{|\bm{x}-\bm{x}'|}-\frac{a}{r'}\frac{1}{|\bm{x}-\bm{x}''|}\right)$$
 - This also works for finding potential _outside the sphere_
+
+### Image in a disc
+- Similar to the spherical case but in 2D
+- In this case, the _image point_ is still at:
+$$\bm{x}''=\frac{a^2}{x'^2}\bm{x}'$$
+- However, the _strength_ is now $-1$
+- Thus, the Green's Function, ensuring $G(r=a)=0$:
+$$G=\frac{1}{2\pi}\ln\frac{|\bm{x}-\bm{x}'|}{|\bm{x}-\bm{x}''|}-\frac{1}{2\pi}\ln\frac{r'}{a}$$
 
 ## In electrostatics
 - Consider a dipole:

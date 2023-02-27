@@ -16,7 +16,7 @@ $$\hat{\Omega}\ket{\omega}=\omega\ket{\omega}$$
 
 # The Wave function and the fundamental postulates 
 - __Postulate 1:__ In quantum mechanics, the state of a system is represented by the wave function, a state vector in [[Vectors and matrices in physics|complex vector space]]
-- __Postulate 2:__ The independent variables $x$ and $p$ of the Hamiltonian formulation are represented by the Hermitian operators $\hat{X}$ and $\hat{P}$ ([[Operators, observables and uncertainties#The position and momentum operators|definition]]), with classical variables $\omega(x,p)$ _represented by operator_ $\hat{\Omega}(\hat{X},\hat{P})$ 
+- __Postulate 2:__ The independent variables $x$ and $p$ of the Hamiltonian formulation are represented by the Hermitian operators $\hat{X}$ and $\hat{P}$ ([[Operators and observables#The position and momentum operators|definition]]), with classical variables $\omega(x,p)$ _represented by operator_ $\hat{\Omega}(\hat{X},\hat{P})$ 
 - __Postulate 3:__ Measurement of a variable corresponding to $\hat{\Omega}$ _always yields one of the eigenvalues $\omega$ with probability (density) $|\braket{\omega|\Psi}|^2$_, with the _subsequent state represented by normalised eigenvector_ $\ket{\omega}$. Values other than the eigenvalues are impossible.
 	- In terms of projection operator $\mathcal{P}_\omega=\ket{\omega}\bra{\omega}$, $P(\Omega=\omega) \propto \braket{\Psi|\mathcal{P}_\omega\Psi} = \braket{\Psi\mathcal{P}_\omega|\mathcal{P}_\omega\Psi}$
 - __Postulate 4:__ The state ket $\wv$ obeys [[#Time-evolution The Schrödinger equation|the Schrödinger equation]]
@@ -63,7 +63,7 @@ $$\hat{\Omega}\ket{\omega}=\omega\ket{\omega}$$
 $$\Psi(x,t)=\braket{x|\Psi(t)}\;\;\;\;\Phi(p,t)=\braket{p|\Psi(t)}$$
 	- Classical: particles are described by a finite number of definite variables
 	- Quantum: particles are described in terms of probabilities for an often infinite range of values
-- As the eigenkets of any [[Operators, observables and uncertainties|operator representing an observable]] span the entire vector space, any wave function can be written in terms of eigenstates:
+- As the eigenkets of any [[Operators and observables|operator representing an observable]] span the entire vector space, any wave function can be written in terms of eigenstates:
 $$\begin{aligned}\wv&=\sum_n\ket{q_n}\braket{q_n|\Psi}=\sum_nc_n\ket{q_n} \\ &= \int \ket{q_n}\braket{q_n|\Psi}\,dq = \int c(q)\, \ket{q} \,dq \end{aligned}$$
 - Discrete spectrum: $P(Q=q_n)=|c_n|^2=|\braket{q_n|\Psi}|^2$
 - Continuous spectrum: $P(q<Q<q+dq)=|c(q)|^2\,dq=|\braket{q|\Psi}|^2\,dq$
@@ -75,6 +75,11 @@ $$\braket{\Psi|\hat{Q}\Psi}=\sum_nq_n|c_n|^2=\int q\,|c(q)|^2\;dq$$
 $$I=\int\ket{q}\bra{q}\,dq$$
 $$\Phi(p,t)=\braket{p|\Psi}=\int\braket{p|x}\braket{x|\Psi}dx=\frac{1}{\sqrt{2\pi\hbar}}\exp(-ipx/\hbar)$$
 ## Uncertainty
+- As the measured values of observables is now _probabilistic_, the distributions will come with some _variance_
+- There are certain _conjugate variables_ where one _cannot get precise values of both_, and the _product of variances_ have some _minimum value_
+- This is the _Heisenberg's uncertainty principle_, at first applied to _position and momentum_:
+$$\sigma_x\sigma_p\geq \frac{\hbar}{2}$$
+
 - Variance $\sigma^2 = \left<(\hat{A}-a)^2\right>$ 
 - The _generalised uncertainty principle_:
 $$\sigma_A^2\sigma_B^2\geq\left(\frac{1}{2i}\left<[\hat{A},\hat{B}]\right>\right)^2$$
@@ -82,7 +87,6 @@ $$\sigma_A^2\sigma_B^2\geq\left(\frac{1}{2i}\left<[\hat{A},\hat{B}]\right>\right
 		- $|\braket{f|g}|^2 = Re(\braket{f|g})^2+Im(\braket{f|g})^2$ 
 - Strict uncertainty principle:
 $$\sigma_A^2\sigma_B^2 \geq \left(\frac{1}{2}\left<\{\hat{A},\hat{B}\}\right>-ab\right)^2+\left(\frac{1}{2i}\left<[\hat{A},\hat{B}]\right>\right)^2$$
-- Detailed discussion: [[Operators, observables and uncertainties]]
 
 # Time-evolution: The Schrödinger equation
 ## The time-evolution operator
@@ -156,27 +160,27 @@ $$\braket{\beta|\Omega|\alpha} \rightarrow \braket{\teo\beta|\Omega|\alpha}=\bra
 - This can be interpreted as the state ket remains unchanged, with the operator representing the observable evolving with time
 - This is known as the _Heisenberg picture_
 - It applies not only to time-evolution, but to _any unitary transformation_, such as translation
-- It is a "closer" approach to classical mechanics, which has no state vectors, and observables that vary with time
+- It is a "closer" approach to classical mechanics, which has no state vectors, and _observables that vary with time_
 ## State kets and observables in the Heisenberg picture
 - The Heisenberg picture observable $A^{(H)}$ is defined by:
 $$A^{(H)}(t)=\teo^\dagger(t) A^{(S)}\teo(t)$$
 	- The Heisenberg and Schrödinger pictures coincide at $t=0$
-- State kets in the Heisenberg picture are frozen:
+- _State kets_ in the Heisenberg picture are _frozen_:
 $$\ket{\Psi,t_0=0,t}_H=\ket{\Psi,t_0=0}$$
 	- In the Schrödinger picture, $\ket{\Psi,t_0=0,t}_S=\teo(t)\ket{\Psi,t_0}$
-- The expectation value is the same across both pictures
+- The _expectation value is the same across both pictures_
 $${}_{S}\braket{\Psi(t)|A^{(S)}|\Psi(t)}_S=\braket{\Psi(t_0)|A^{(H)}|\Psi(t_0)}$$
 ## The Heisenberg equation of motion
 - Expressing the Heisenberg operator in terms of the Schrödinger operator, then taking the total time derivative, one gets the _Heisenberg equation of motion_:
 $$\frac{dA^{(H)}}{dt}=\frac{1}{i\hbar}[A^{(H)},\Ham^{(H)}]+\pd{A^{(H)}}{t}$$
-- The Heisenberg Hamiltonian $\Ham^{(H)}$ is defined the same as other $(H)$ operators
-- For a time-independent Hamiltonian, $[\Ham,\teo]$ commute, and $\Ham^{(S)}=\Ham^{(H)}$
-- This echoes the equation for rate of change of variables in classical mechanics:
+- The _Heisenberg Hamiltonian_ $\Ham^{(H)}$ is defined the same as other $(H)$ operators
+- For a _time-independent Hamiltonian, $[\Ham,\teo]$ commute, and $\Ham^{(S)}=\Ham^{(H)}$_
+- This echoes the equation for _rate of change of variables in classical mechanics_:
 $$\frac{dA}{dt}=\PB{A}{\Ham}+\pd{A}{t}$$
 	- where $\{,\}$ is the [[Analytical classical mechanics|Poisson bracket]]
 - This further establishes that the commutator is a "quantum version" of the PB
 ## Base kets in the Heisenberg picture
-- In the Schrödinger picture, the operators and base kets are stationary
+- In the _Schrödinger_ picture, the _operators and base kets are stationary_
 - At $t=0$, the two pictures coincide:
 $$A^{(H)}(0)\,\ket{a'} = a'\ket{a'}$$
 - Operating on both sides with $\teo^\dagger$, the time-evolution for $\ket{a'}_H$ is found:
@@ -186,7 +190,7 @@ $$\teo^\dagger A^{(H)}(0)\,\teo(\teo^\dagger\ket{a'})=A^{(H)}(t)\,(\teo^\dagger\
 - $\teo^{(H)}=\teo^\dagger\teo^{(S)}\teo$ can be recovered by expanding the former in terms of $\ket{a',t}_H$
 - Expansion coefficients remain the same:
 $$c_{a'}(t)={}_{H}\braket{a',t|\alpha}=\braket{a'|\alpha,t}_S=\braket{a'(t=0)|\teo|\alpha(t=0)}$$
-- Transition amplitudes between two eigenstates are also the same within the two pictures, with the same reasoning as above
+- _Transition amplitudes_ between two eigenstates are also the same within the two pictures, with the same reasoning as above
 
 # Multiple degrees of freedom
 - In quantum theory, there exist $N$ mutually commuting operators $X_1,...,X_N$, with a simultaneous orthonormal eigenbasis where:
@@ -222,7 +226,7 @@ $$\mean{A}=\sum_{m,n}c_m^*c_n\exp\left(-\frac{i(E_n-E_m)t}{\hbar}\right)A_{mn}$$
 $$A_{mn}\equiv\braket{E_m|\hat{A}|E_n}$$
 
 ## Important cases
-- Using the [[Operators, observables and uncertainties#Useful commutation relations|commutation relations involving functions]]:
+- Using the [[Operators and observables#Useful commutation relations|commutation relations involving functions]]:
 $$\displaylines{\frac{d\mean{x}}{dt}=\frac{1}{i\hbar}\mean{[\hat{x},\hat{\Ham}]}=\frac{\mean{p}}{m} \\ \frac{d\mean{p}}{dt}=-\mean{\pd{V}{x}}}$$
 - These are a _direct analogues of the classical case_
 - There is an important distinction to make:
@@ -237,7 +241,7 @@ $$\mean{F(\hat{x})}\neq F(\mean{x})$$
 - From Ehrenfest's Theorem:
 $$\frac{d\mean{Q}}{dt}=\frac{1}{i\hbar}\mean{[\hat{Q},\hat{H}]}$$
 - From the [[#Uncertainty|generalised uncertainty principle]]:
-$$\displaylines{\Delta E\Delta t\geq\frac{\hbar}{2} \\ \Delta t\equiv \frac{\Delta Q}{d\mean{Q}/dt}}$$
+$$\displaylines{\Delta E\Delta t\geq\frac{\hbar}{2} \\ \Delta t\equiv \frac{\Delta Q}{|d\mean{Q}/dt|}}$$
 - $\Delta t$ is _the time taken for expectation value to change by the size of the uncertainty_
 
 - If $\Delta E$ is _small_, then it takes _a long time for physical quantities to change_

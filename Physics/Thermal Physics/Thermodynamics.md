@@ -11,15 +11,21 @@
 >
 >path-dependent infinitesimal change denoted by $\delta$
 
+>[!quote]
+>"Thermodynamics is the only physical theory of universal content  
+which, within the framework of the applicability of its basic concepts, I  
+am convinced will never be overthrown."
+>-Albert Einstein
+
 # Fundamentals
 For a system with an enormous number of particles, and thus, degrees of freedom, there is an immeasurable number of *microstates*
 
 For thermodynamics to work, 2 fundamental suppositions must be made:
-1. After a sufficiently long time, the initial conditions become irrelevant as particles redistribute energy and momentum until equilibrium is reached
+1. After a sufficiently long time, the _initial conditions become irrelevant_ as particles redistribute energy and momentum until equilibrium is reached
 2. For a system in equilibrium, all possible microstates are equally likely 
 	-[[Fundamental principles of statistical mechanics#The equal probabilities postulate]]
 
-- A *macrostate* is defined by the bulk properties of the system, and incorporates many microstates 
+- A *macrostate* is defined by the _bulk properties_ of the system, and incorporates many microstates 
 		- The probability of a particular microstate, given a macrostate is governed by the [[Fundamental principles of statistical mechanics#The statistical distribution function|statistical distribution function]]
 - Macrostates are described by thermodynamic variables such as $U, N, V, S, T, p, \mu$
 - Macrostates with energy more or less equally shared among particles become way more likely
