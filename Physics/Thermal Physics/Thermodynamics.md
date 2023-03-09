@@ -18,27 +18,63 @@ am convinced will never be overthrown."
 >-Albert Einstein
 
 # Fundamentals
-For a system with an enormous number of particles, and thus, degrees of freedom, there is an immeasurable number of *microstates*
+- [[Fundamental principles of statistical mechanics]]
 
-For thermodynamics to work, 2 fundamental suppositions must be made:
+- For a system with an enormous number of particles, and thus, degrees of freedom, there is an immeasurable number of _microstates_
+	- The number is denoted $\Omega$
+- In _classical mechanics_, this _specifies position and velocity of every constituent particle_
+- In _quantum mechanics_, it is the _multi-particle wave function_
+
+- For thermodynamics to work, 2 fundamental suppositions must be made:
 1. After a sufficiently long time, the _initial conditions become irrelevant_ as particles redistribute energy and momentum until equilibrium is reached
-2. For a system in equilibrium, all possible microstates are equally likely 
-	-[[Fundamental principles of statistical mechanics#The equal probabilities postulate]]
+2. For a system _in equilibrium_, all possible microstates are equally likely 
+	- [[Fundamental principles of statistical mechanics#The equal probabilities postulate]]
 
-- A *macrostate* is defined by the _bulk properties_ of the system, and incorporates many microstates 
+- A *macrostate* is defined by the _bulk properties_ of the system, and _incorporates many microstates_
 		- The probability of a particular microstate, given a macrostate is governed by the [[Fundamental principles of statistical mechanics#The statistical distribution function|statistical distribution function]]
-- Macrostates are described by thermodynamic variables such as $U, N, V, S, T, p, \mu$
-- Macrostates with energy more or less equally shared among particles become way more likely
+- Macrostates are described by _thermodynamic variables_ such as $U, N, V, S, T, p, \mu$
+- Macrostates with energy more or less _equally shared_ among particles become way more likely
 
-## Energy and entropy
-- The entropy of a system is defined as:
-$$S=k_B\ln\Omega$$
-	-$k_B=$ Boltzmann's constant
-	- $\Omega=$ Number of microstates
-- At equilibrium, entropy can be expressed as a function of 3 variables:
+- Microstates can evolve _reversibly and deterministically with time_
+- As time goes on, a macrostate _irreversibly tends to its mean_, which defines _statistical equilibrium_
+	- This will later be characterised by the state variable of _entropy_
+
+## Temperature and the zeroth law
+- When two bodies are in _thermal equilibrium_, they must have the _same temperature_
+- _Zeroth law_: if $A$  is in thermal equilibrium with $B$ and $C$, $B$ and $C$ are in thermal equilibrium with each other
+	- i.e. The thermodynamic concept of temperature _"makes sense"_
+- To understand definition of temperature, let there be 2 bodies in _thermal contact_ with small fluctuations
+	- Can exchange $U$, but $N$ and $V$ remain fixed
+	- Total microstates = $\Omega_1\Omega_2$
+- The _most probable macrostate_ has a _maximum number of microstates_
+- One can write:
+$$\frac{d}{dU_1}(\Omega_1\Omega_2)=0$$
+- From energy conservation $dU_1=-dU_2$:
+$$\displaylines{\frac{1}{\Omega_1}\frac{d\Omega_1}{dU_1}-\frac{1}{\Omega_2}\frac{d\Omega_2}{dU_2}=0 \\\frac{d(\ln\Omega)}{dU}=\frac{1}{k_BT}}$$
+- This quantity is _the same across two objects_. and $T$ is defined as the _temperature_
+- Temperature scales can often be _arbitrary_
+
+- This also defines another _state variable_: _Entropy_
+	$$S=k_B\ln\Omega$$
+	- $k_B=$ Boltzmann's constant
+- A state of _maximum number of microstates_ has _maximum entropy_
+
+## The ideal gas equation of state
+- _Boyles' Law_ states that at _constant temperature_, $pV$ is a _constant_
+- _Charles' Law_ states that at _constant pressure_, $V/T$ is a _constant_
+- This leads to a _reference-independent, absolute temperature scale_
+- At _zero temperature_, $pV=0$
+
+- Combining the previous gas laws, one gets the _ideal gas law_:
+$$pV=nRT=NkT$$
+	- $n$, $N$: Number of molecules (in moles or pure number)
+	- $R$, $k$: _universal_ constants
+
+## The state variables
+- At equilibrium, _entropy can be expressed as a function_ of 3 variables:
 $$S=S(U,N,V)$$
 	- $U=$ internal energy, $N=$ number of particles, $V=$ volume
-	- $S, U, N, V$ are extensive variables, as they scale with system size
+	- $S, U, N, V$ are _extensive variables, as they scale with system size_
 - The function can be inverted:
 $$U=U(S, V, N)$$
 - For infinitesimal changes in the system, the differential of internal energy is:
@@ -46,25 +82,15 @@ $$dU=\left(\pd{U}{S}\right)_{N, V}dS+\left(\pd{U}{V}\right)_{N, S}dV + \left(\pd
 - This expression defines 3 thermodynamic quantities:
 $$T=\left(\pd{U}{S}\right)_{N, V}\hspace{25pt}P=-\left(\pd{U}{V}\right)_{N, S}\hspace{25pt}\mu=\left(\pd{U}{N}\right)_{S, V}$$
 	- $T=$ temperature, $p=$ pressure, $\mu=$ chemical potential 
-	- $T, p, \mu$ are intensive variables, which do not scale with system size
+	- $T, p, \mu$ are _intensive variables, which do not scale with system size_
 - This changes the expression to:
 $$dU=T\,dS-P\,dV+\mu\,dN$$
-## Thermal equilibrium and temperature
-- When two bodies are in thermal equilibrium, they must have the same temperature
-- Zeroth law: if $A$  is in thermal equilibrium with $B$ and $C$, $B$ and $C$ are in thermal equilibrium with each other
-	- i.e. The thermodynamic concept of temperature "makes sense"
-- To understand definition of temperature, let there be 2 bodies in thermal contact with small fluctuations
-	- Can exchange $U$, but $N$ and $V$ remain fixed
-	- Total microstates = $\Omega_1\Omega_2$, total entropy = $S_1+S_2$
-	- The most probable macrostate maximises $S$
-	- Energy conservation: $\delta U_1+\delta U_2=0$
-	- Maximum entropy: $\delta S_1+\delta S_2=0$
-	- Using above definition of temperature, $T_1=T_2$
+- The intensive variables give rise to concepts of _thermal, mechanical, and chemical equilibrium_
 
 ## The first law
 $$dU = \dbar Q + \dbar W$$
-	- $Q=$ heat transferred from a source outside the system
-	- $W=$ work done on the system
+	- $Q=$ _heat transferred_ from a source _outside the system_
+	- $W=$ _work done_ on the system
 - When there is an external pressure $p$ upon the system, with no change in $N$, $\dbar W=-p\,dV$ 
 - For equilibrium changes and fixed $N$, $dU=T\,dS+\dbar W$
 - Work: mechanical ($-p\,dV$), electrical, spring, magnetic

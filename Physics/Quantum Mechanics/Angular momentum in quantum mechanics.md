@@ -1,14 +1,14 @@
 ## Orbital angular momentum
 - [[Operators and observables#The angular momentum operators|Definition of angular momentum operators]]
-- The eigenvalue problem for $\bm{\hat{L}}^2$ and one component ($\hat{L}_z$), can be solved simultaneously
+- The operators $\bm{\hat{L}}^2$ and $\hat{L}_z$ _commute_
+- Hence, their eigenvalue problems can be solved _simultaneously_
 
 - Let there be a simultaneous eigenbasis $\ket{\lambda\mu}$
 - This eigenvalue problem can be expressed as:
 $$L^2\ket{\lambda\mu}=\lambda\ket{\lambda\mu} \hspace{1.5cm}L_z \ket{\lambda\mu}=\mu \ket{\lambda\mu}$$
 
-
 ### Ladder operators
-- Like the [[Quantum Harmonic Oscillator|quantum harmonic oscillator]] problem, finding eigenfunctions of angular momentum also involves ladder operators
+- Like the [[Quantum Harmonic Oscillator|quantum harmonic oscillator]] problem, finding eigenfunctions of angular momentum also involves _ladder operators_
 - The ladder operators for angular momentum are defined as:
 $$\hat{L}_\pm=L_x\pm iL_y$$
 - The ladder operators satisfy the commutation relations:
@@ -17,7 +17,7 @@ $$[\hat{L_z},\hat{L}_\pm]=\pm\hbar\hat{L}_\pm \hspace{2cm} [\hat{L}^2,\hat{L}_\p
 - Combining the two ladder operators also yields the following relation:
 $$\hat{L}^2=\hat{L}_\pm\hat{L}_\mp+\hat{L}_z^2\mp\hbar\hat{L}_z$$
 
-- If $\ket{\lambda\mu}$ is an eigenket of $\hat{L_z}$ and $\hat{L}^2$, then $\hat{L}_\pm\ket{\lambda\mu}$ is also an eigenket:
+- If $\ket{\lambda\mu}$ is an eigenket of $\hat{L_z}$ and $\hat{L}^2$, then $\hat{L}_\pm\ket{\lambda\mu}$ is _also an eigenket_:
 $$\hat{L}^2(\hat{L}_\pm\ket{\lambda\mu})=\hat{L}_\pm(\hat{L}^2\ket{\lambda\mu})=\lambda(\hat{L}_\pm\ket{\lambda\mu})$$
 $$\hat{L}_z(\hat{L}_\pm\ket{\lambda\mu})=(\mu\pm\hbar)(\hat{L}_\pm\ket{\lambda\mu})$$
 - Hence, the ladder operators _raise or lower the eigenvalue of $\hat{L}_z$ by $\hbar$ while not affecting the eigenvalue of $\hat{L}^2$_
@@ -25,19 +25,27 @@ $$\hat{L}_z(\hat{L}_\pm\ket{\lambda\mu})=(\mu\pm\hbar)(\hat{L}_\pm\ket{\lambda\m
 - Since $\braket{\hat{L}_z^2}\leq \braket{\hat{L}^2}$, there must be a "top rung" and "bottom rung" where:
 $$\displaylines{\hat{L}_+\ket{\lambda\mu_t}=\ket{0} \hspace{1cm} \hat{L}_z\ket{\lambda\mu_t}=\hbar l\ket{\lambda\mu_t} \hspace{1cm} \hat{L}^2\ket{\lambda\mu_t}=\lambda\ket{\lambda\mu_t} \\ 
 \hat{L}_-\ket{\lambda\mu_b}=\ket{0} \hspace{1cm} \hat{L}_z\ket{\lambda\mu_b}=\hbar \bar{l}\ket{\lambda\mu_b} \hspace{1cm} \hat{L}^2\ket{\lambda\mu_b}=\lambda\ket{\lambda\mu_b}}$$
-	- Here, $l$ and $\bar{l}$ are numbers indicating the magnitude of the maximum and minimum $L_z$
+	- Here, $l$ and $\bar{l}$ are numbers indicating the _magnitude of the maximum and minimum_ $L_z$
 
 - Using the above relations, one gets $\bar{l}=-l$
 
-- Hence, for a given value of $l$, angular momenta can take values of $m\hbar$, where $m$  has $2l+1$ values, going from $-l$ to $l$ in integer steps
-- As $-l$ has to go to $l$ in integer steps, it can only be an integer or half-integer, hence:
-$$\displaylines{\hat{L}^2\ket{lm_l}=\hbar^2l(l+1)\ket{lm_l} \hspace{1cm}\hat{L}_z\ket{lm_l}=\hbar m_l\ket{lm_l} \\ l=0, 1/2, 1, 3/2\dots \hspace{1cm} m_l=-l,-l+1,\dots,l-1,l}$$
+- Hence, for a given value of $l$, angular momenta can take values of $m\hbar$, where $m$  has $2l+1$ values, going from $-l$ to $l$ _in integer steps_
+- As $-l$ has to go to $l$ in integer steps, it can _only be an integer or half-integer_
+- From finding the [[#Eigenfunctions of orbital angular momentum|eigenfunctions]], one finds that the orbital angular momentum only allows _integer values_, hence:
+$$\displaylines{\hat{L}^2\ket{lm_l}=\hbar^2l(l+1)\ket{lm_l} \hspace{1cm}\hat{L}_z\ket{lm_l}=\hbar m_l\ket{lm_l} \\ l=0, 1, 2,\dots \hspace{1cm} m_l=-l,-l+1,\dots,l-1,l}$$
+- A _measurement of magnitude_ will yield:
+$$|\bm{L}|=\hbar\sqrt{l(l+1)}$$
 
 ### Remarks
 - The value of $L^2$ is _always_ larger than the maximum value of $L_z$ as $l(l+1)>l^2$
 - Remember that when $L^2$ and $L_z$ are determinate, $L_x$ and $L_y$ are _always indeterminate_
 - After deriving these results, one can also find the effect of the ladder operators:
 $$\hat{L}_\pm\ket{lm_l}=\sqrt{l(l+1)-m_l(m_l\pm1)}\ket{l(m_l\pm1)}$$
+- The values of angular momentum can be pictured as so:
+![[Angular momentum eigenstates.png]]
+- The _uncertainty relation_ for the other two components of $\bm{L}$:
+$$\Delta L_x\Delta L_y\geq \frac{\hbar}{2}|\mean{L_z}|$$
+- Special case where all three components are known: $L^2=L_x=L_y=L_z=0$
 
 ### The operators in spherical coordinates
 - Before finding the eigenfunctions, it is helpful to rewrite the operators in spherical coordinates
@@ -54,8 +62,6 @@ $$\hat{L}_z=-i\hbar\pd{}{\phi}$$
 - By inspecting the DEs resulting from applying $\hat{L}^2$ and $\hat{L}_z$, one can see that the eigenfunctions are the [[Special functions and orthogonal relations#Spherical harmonics|spherical harmonics]] $Y^m_l$
 
 - For spherical harmonics, $l$ _only takes on integer values_
-
-![[Angular momentum eigenstates.png]]
 
 ## Spin angular momentum
 - In quantum mechanics, there is a fundamental difference between _orbital_ and _spin_ angular momentum, where the latter is an _intrinsic property of the particle_

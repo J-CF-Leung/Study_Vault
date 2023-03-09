@@ -120,18 +120,34 @@ $$U=\frac{1}{2}\Delta V(\tau_1 e_1+\tau_2e_2+\tau_3e_3)$$
 - The elastic energy _per unit volume_ in a linear elastic medium can then be written as:
 $$\begin{aligned}U(\dunderline{\bm{e}})&=\frac{1}{2}\left[\left(B-\frac{2}{3}G\right)(e_1+e_2+e_3)^2+2G\left(e_1^2+e_2^2+e_3^2\right)\right] \\ &=\frac{1}{2}\left[\lambda\text{Tr}(\dunderline{\bm{e}})+2G\text{Tr}(\dunderline{\bm{e}}^2)\right] \end{aligned}$$
 ## Beam bending
-![[Beam bending.png]]
-- Consider an _initially straight_ beam subject to a _bending moment_
-- Consider only _longitudinal strains_
-- There will be a _neutral axis_ which has no change in length
+![[Beam bending parameters.png]]
 
-- At a distancd $y$ from the neutral axis, the strain $e_{xx}=y/R$
-- Then the total _couple_ at across the cross-section $S$ is:
-$$B=\int y\left(\frac{Ey}{R}\right)dS$$
-- The _second moment of area_ of a shape is:
-$$I=\int y^2\,dS$$
-- Then, the _bending moment_ can be written as:
-$$B=\frac{EI}{R}$$
+- Let there be some _load per unit length_ $W(x)$, causing some overall _displacement_ $\eta(x)$ in the beam
+- At some width across the beam, there is a _neutral plane_, where there is _no compression or tension_
+- Then there is some _radius of curvature_ $\mathcal{R}=dx/d\theta$
+- The _longitudinal strain_ can then be written as:
+$$e_{xx}=\frac{z}{\mathcal{R}}\approx z\frac{d^2\eta}{dx^2}$$
+
+- There is a _total bending moment_ $M(x)$ that can be written as:
+$$M(x)=-EI\frac{d^2\eta}{dx^2}$$
+- This is a moment _from the bending itself, not from external forces_
+
+- At the same time, there is a _shear force_ $S$ in the beam to _maintain equilibrium_
+- Also taking the _external load_ $W$ into account:
+$$S=\frac{dM}{dx}\hspace{1cm} W=-\frac{dS}{dx}$$
+- This can then be combined into:
+$$W=EI\frac{d^4\eta}{dx^4}$$
+
+- To solve for the deflection $\eta(x)$, one needs the proper _boundary conditions_:
+	- The shear force _must vanish at the edge of the rod_, where $\eta'''=0$
+	- _Free end_: there is _no force or couple_, hence $\eta''=\eta'''=0$
+	- _Cantilever_: Force and coupled used to _maintain_ $\eta$ and $\eta'$ (usually at $0$)
+	- _Hinge_: Force without couple, hence $\eta'\neq0$ but $\eta''=0$
+
+### Reciprocity
+
+## Buckling
+
 # Dynamics
 - Consider a _volume element_ $(\delta x,\delta y, \delta z)$
 - Considering _all faces_, the _net force in the $x-$direction_ is:

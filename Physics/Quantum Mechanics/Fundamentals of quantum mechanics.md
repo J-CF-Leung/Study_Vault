@@ -193,15 +193,6 @@ $$c_{a'}(t)={}_{H}\braket{a',t|\alpha}=\braket{a'|\alpha,t}_S=\braket{a'(t=0)|\t
 - _Transition amplitudes_ between two eigenstates are also the same within the two pictures, with the same reasoning as above
 
 # Multiple degrees of freedom
-- In quantum theory, there exist $N$ mutually commuting operators $X_1,...,X_N$, with a simultaneous orthonormal eigenbasis where:
-$$\braket{x_1,x_2,...,x_N|x_1',x_2',...,x_N'}=\delta(x_1-x_1')\,\delta(x_2-x_2')...\delta(x_n-x_n')$$
-- Other definitions involving the wave function have the following correspondence:
-$$\begin{aligned} \braket{x_1,x_2...x_N|\Psi}&=\Psi(x_1,x_2...x_N) \\
-\braket{x_1,x_2...x_N|X_i|\Psi}&=x_i\Psi(x_1,x_2...x_N) \\
-\braket{x_1,x_2...x_N|P_i|\Psi}&=\frac{\hbar}{i}\pd{}{x_i}\Psi(x_1,x_2...x_N)
-\end{aligned}$$
-- For _non-Cartesian coordinate systems_, it is easier to use mathematical identities to construct quantum operators, for example:
-$$\begin{aligned} \Omega&=\frac{P_x^2+P_y^2+P_z^2}{2m}+X^2+Y^2+Z^2\\ &\equiv -\frac{\hbar^2}{2m}\nabla^2+R^2 \\ &\equiv -\frac{\hbar^2}{2m}\left[\frac{1}{r^2}\pd{}{r}\left(r^2\pd{}{r}\right)+\frac{1}{r^2\sin\theta}\pd{}{\theta}\left(\sin\theta\pd{}{\theta}\right)+\frac{1}{r^2\sin^2\theta}\pd{^2}{\phi^2}\right]+r^2\end{aligned}$$
 
 # Expectation values and the classical limit
 - Due to the probabilistic nature of quantum mechanics, one _cannot define a time derivative of an observable quantity_

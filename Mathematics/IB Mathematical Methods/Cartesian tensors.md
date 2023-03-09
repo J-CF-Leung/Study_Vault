@@ -23,6 +23,8 @@ $$\bm{v}=v_i'\bm{e}_i$$
 $$v_i'=v_j\bm{e}_j\cdot\bm{e}_i'=L_{ij}v_j$$
 - Here, $\text{L}$ is the _transformation matrix_, with components:
 $$L_{ij}=\bm{e}_i'\cdot\bm{e}_j$$
+- The _row_ $i$ of the matrix contain the _components_ of $\bm{e}_i'$ in $\bm{e}_j$
+
 - Let $v$ and $v'$ be the _column vectors_, representing _the same abstract vector_:
 $$v'=\text{L}v$$
 - The basis vectors can be written as:
@@ -128,7 +130,7 @@ $$T_{\dots\alpha\dots\beta\dots}=T_{\dots\beta\dots\alpha\dots}$$
 - The tensor is _antisymmetric_ w.r.t. indices $\alpha$ and $\beta$ if:
 $$T_{\dots\alpha\dots\beta\dots}=-T_{\dots\beta\dots\alpha\dots}$$
 - Symmetry or antisymmetry is _invariant under changes in coordinate system_
-	- Prof: Write out the transformation law
+	- Proof: Write out the transformation law
 
 - If $S_{ijk\dots}$ is _symmetric_ w.r.t. $i,j$ and $A_{pqr\dots}$ is _antisymmetric_ w.r.t. $p,q$, then the _contraction_:
 $$S_{ijk\dots}A_{ijr\dots}=0$$
@@ -158,10 +160,83 @@ $$\omega_k=-\frac{1}{2}\epsilon_{klm}A_{lm}$$
 $$\text{S}=\tilde{\text{S}}+\frac{1}{3}\text{tr}(\text{S})\text{I}$$
 
 ### Diagonalisation
-- Any _symmetric_ second-rank tensor $\text{S}$ must also be _Hermitian_
+- Suppose there is a _symmetric_ second-rank tensor $\text{S}_{ij}$
+- The matrix of _components_ w.r.t. $\bm{e}_i$ must then be _Hermitian_
 - Therefore, it must be _diagonalisable_, with _real eigenvalues and orthonormal eigenvectors_
 	- Proof: [[Vectors and matrices#Diagonalisation via unitary matrices]]
 
 - Consider a transformation from basis $\bm{e}_i$ to $\bm{e}_i'$, with the transformation matrix:
-$$L_{ij}=\bm{e}_i\cdot\bm{e}_j$$
-$$\left(\begin{array}{c|c|c}\lambda_1\bm{e}_1' & \lambda_2\bm{e}_2' & \lambda_3\bm{e}_3'\end{array}\right)$$
+$$L_{ij}=\bm{e}_i'\cdot\bm{e}_j$$
+$$\displaylines{\text{SL}^T=\left(\begin{array}{c|c|c}\lambda_1\bm{e}_1' & \lambda_2\bm{e}_2' & \lambda_3\bm{e}_3'\end{array}\right) \\ \text{S}'=\text{LSL}^T= \left(\begin{array}{c}\bm{e}_1' \\ \hline \bm{e}_2' \\ \hline\bm{e}_3'\end{array}\right)\left(\begin{array}{c|c|c}\lambda_1\bm{e}_1' & \lambda_2\bm{e}_2' & \lambda_3\bm{e}_3'\end{array}\right)=\begin{pmatrix}\lambda_1 &0&0\\0&\lambda_2&0\\0&0&\lambda_3\end{pmatrix}}$$
+- The diagonal entries are known as the _principal values_ of the tensor
+- The eigenvectors are known as the _principal axes_
+- Example: Principal moments of inertia
+
+## Isotropic tensors
+- An _invariant_ tensor or pseudo-tensor is one which _has the same components in all frames_:
+$$T_{ijk\dots}=T'_{ijk\dots}$$
+- Both _invariant tensors_ or _pseudo-tensors_ are classified as _isotropic tensors_
+
+- All _scalars_ are _isotropic_
+- There are _no_ non-zero _isotropic vectors_ or _axial vectors_
+
+- Any _scalar multiple_ of $\delta_{ij}$ is the _most general second-order isotropic tensor_
+
+- Any _scalar multiple_ of $\epsilon_{ijk}$ is the _most general third-order isotropic tensor_
+
+- The _most general fourth-order isotropic tensor_ is:
+	$$\lambda\delta_{ij}\delta_{kl}+\mu\delta_{ik}\delta_{jl}+\nu\delta_{il}\delta_{jk}$$- where $\lambda,\mu,\nu$ are _scalars_
+
+- Isotropic tensors _do not have a preferred direction_
+- An isotropic tensor is _not necessarily uniform_
+
+### Applying to integrals
+
+#### Vector integral over sphere
+- Let there be a _vector_, which calculates a _centre of mass_ for a _spherically symmetric density_:
+$$\bm{X}=\int_{r\leq a}\bm{x}\rho(r)\,dV \hspace{1cm} X_i=\int_{r\leq a} x_i\rho(r)\,dV$$
+- Let there be some _rotation matrix_ $\text{R}$ such that $x_i'=R_{ij}x_j$
+- Using the _orthogonality_ of the rotation tensor, one can prove that $X_i=X_i'$
+- Since there are _no non-zero isotropic vectors_, $\bm{X}=0$
+
+#### Second-order tensor integral over sphere
+- Let there be a _second-order tensor_, such that:
+$$K_{ij}=\int_{r\leq a}x_ix_j\rho(r)\,dV$$
+- From a similar argument, the tensor _must be isotropic_:
+$$K_{ij}=\lambda \delta_{ij}$$
+- Here, $\lambda$ must be $1/3$ of the _trace_
+- Hence:
+$$K_{ij}=\left(\int_{r\leq a}\frac{1}{3}r^2\rho(r)\,dV\right)\delta_{ij}$$
+
+## Tensor fields
+- A _tensor field_ is a tensor that _depends on position_ $\bm{x}$
+
+- A _scalar field_ is a _zeroth order tensor field_
+	- Example: _Temperature_
+- A _vector field_ is a _first order tensor field_
+	- Example: _Electric field_
+
+- A _second order tensor field_ includes _conductivity tensor_
+- A _third order tensor field_ includes _piezo-electric strain tensor_
+- A _fourth order tensor field_ includes _stiffness_
+
+### Differential operators
+- The _differential operator_ $\nabla$ is a _first-order tensor operator_, with _components_ $\partial_i=\partial/\partial x_i$
+
+- The _gradient of a scalar field_, $\nabla \Phi$ is a _first-order tensor field_
+- The _gradient of a vector field_, $\nabla\bm{E}$ is a _second-order tensor field_, with components:
+$$(\nabla \bm{E})_{ij}=\nabla_iE_j$$
+- Following this logic, the _gradient of a second-order tensor field_ would be a _third-order tensor field_
+
+- The _divergence of a vector field_ $\nabla\cdot\bm{E}$ is a _zeroth-order scalar field_:
+	$$\nabla\cdot\bm{E}=\partial
+	_iE_i$$
+	- The _contraction_ of an _outer product_ of two vectors
+
+- The _curl of a vector field_ $\nabla\wedge\bm{E}$ is a _axial-vector field_:
+	$$(\nabla\wedge\bm{E})_i=\epsilon_{ijk}\partial_jE_k$$
+	- The _double contraction_ of a _fifth order tensor_
+
+- The _Laplacian of a scalar field_ would be a _scalar field_
+	- _Double contraction_ of a _fourth-order tensor_
+

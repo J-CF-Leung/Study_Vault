@@ -14,19 +14,29 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Cartesian tensors.md",
+                "file": "Physics/IB Physics/Elasticity.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "8187f9f9597a2dc5",
+            "id": "d7defc30df689b89",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.1.16"
+              }
+            }
+          },
+          {
+            "id": "c9e74b0da2958ad0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Quantum Mechanics/3D time-independent quantum mechanics.md",
+                "file": "Mathematics/IB Mathematical Methods/Cartesian tensors.md",
                 "mode": "source",
                 "source": false
               }
@@ -56,8 +66,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -74,7 +83,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/Quantum Mechanics/3D time-independent quantum mechanics.md"
+                    "file": "Physics/IB Physics/Elasticity.md"
                   }
                 }
               }
@@ -90,7 +99,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/Quantum Mechanics/3D time-independent quantum mechanics.md",
+                    "file": "Physics/IB Physics/Elasticity.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -113,7 +122,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.9020357635304832,
+                      "scale": 0.9020357635304831,
                       "close": true
                     }
                   }
@@ -200,7 +209,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Quantum Mechanics/3D time-independent quantum mechanics.md",
+                "file": "Physics/IB Physics/Elasticity.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -217,7 +226,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Quantum Mechanics/3D time-independent quantum mechanics.md",
+                "file": "Physics/IB Physics/Elasticity.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -240,7 +249,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Quantum Mechanics/3D time-independent quantum mechanics.md"
+                "file": "Physics/IB Physics/Elasticity.md"
               }
             }
           },
@@ -270,35 +279,36 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "8187f9f9597a2dc5",
+  "active": "8c0e30efc10524b1",
   "lastOpenFiles": [
+    "Physics/IB Physics/Waves.md",
+    "Physics/IB Physics/Rigid body dynamics.md",
+    "Physics/IB Physics/Oscillations.md",
+    "Physics/IB Physics/Orbits.md",
+    "Physics/IB Physics/Optics.md",
+    "Physics/IB Physics/Newtonian dynamics and non-inertial frames.md",
+    "Physics/IB Physics/Fluid mechanics.md",
+    "Physics/IB Physics/Experimental methods and data analysis.md",
+    "Physics/IB Physics/Electromagnetism.md",
+    "Physics/Thermal Physics/Thermodynamics.md",
+    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
-    "Physics/Quantum Mechanics/Operators and observables.md",
-    "Physics/Quantum Mechanics/Density matrix.md",
     "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
     "Mathematics/IB Mathematical Methods/Cartesian tensors.md",
-    "Physics/Thermal Physics/Thermodynamics.md",
+    "Mathematics/IB Mathematical Methods/Contour integration.md",
+    "Mathematics/IB Mathematical Methods/Elementary Analysis.md",
     "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md",
+    "Physics/IB Physics/Elasticity.md",
+    "Physics/Quantum Mechanics/3D time-independent quantum mechanics.md",
+    "Physics/Images/Beam bending parameters.png",
     "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
+    "Physics/Quantum Mechanics/Operators and observables.md",
+    "Physics/Quantum Mechanics/Density matrix.md",
     "Mathematics/IB Mathematical Methods/Vectors and matrices.md",
     "Physics/Quantum Mechanics/1D time-independent quantum mechanics.md",
     "Physics/Quantum Mechanics/Multiple particles in quantum mechanics.md",
     "Physics/Vectors and matrices in physics.md",
     "Tentative.png",
-    "Physics/IB Physics/Rigid body dynamics.md",
-    "Physics/IB Physics/Fluid mechanics.md",
-    "Physics/Images/Boundary layer.png",
-    "Physics/IB Physics/Oscillations.md",
-    "Chemistry/IB Chemistry/Symmetry in molecules.md",
-    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
-    "Physics/Geometric interpretations of physics.md",
-    "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
-    "Misc or Personal/Quotes.md",
-    "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
-    "Physics/Analytical classical mechanics.md",
-    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
-    "Chemistry/IB Chemistry/Normal modes in molecules.md",
-    "Misc or Personal/To read.md",
-    "Physics/IB Physics/Statistical mechanics.md"
+    "Physics/Images/Boundary layer.png"
   ]
 }
