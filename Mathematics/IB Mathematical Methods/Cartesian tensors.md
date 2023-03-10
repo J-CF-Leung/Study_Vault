@@ -183,6 +183,7 @@ $$T_{ijk\dots}=T'_{ijk\dots}$$
 - Any _scalar multiple_ of $\delta_{ij}$ is the _most general second-order isotropic tensor_
 
 - Any _scalar multiple_ of $\epsilon_{ijk}$ is the _most general third-order isotropic tensor_
+	- Technically a _pseudo-tensor_
 
 - The _most general fourth-order isotropic tensor_ is:
 	$$\lambda\delta_{ij}\delta_{kl}+\mu\delta_{ik}\delta_{jl}+\nu\delta_{il}\delta_{jk}$$- where $\lambda,\mu,\nu$ are _scalars_

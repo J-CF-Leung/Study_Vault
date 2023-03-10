@@ -14,19 +14,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/IB Physics/Elasticity.md",
+                "file": "Physics/Thermal Physics/Thermodynamics.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "d7defc30df689b89",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.1.16"
               }
             }
           },
@@ -83,7 +73,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/IB Physics/Elasticity.md"
+                    "file": "Physics/Thermal Physics/Thermodynamics.md"
                   }
                 }
               }
@@ -99,7 +89,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/IB Physics/Elasticity.md",
+                    "file": "Physics/Thermal Physics/Thermodynamics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -209,7 +199,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/IB Physics/Elasticity.md",
+                "file": "Physics/Thermal Physics/Thermodynamics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -226,7 +216,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/IB Physics/Elasticity.md",
+                "file": "Physics/Thermal Physics/Thermodynamics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -249,7 +239,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/IB Physics/Elasticity.md"
+                "file": "Physics/Thermal Physics/Thermodynamics.md"
               }
             }
           },
@@ -281,6 +271,15 @@
   },
   "active": "8c0e30efc10524b1",
   "lastOpenFiles": [
+    "Physics/Quantum Mechanics/3D time-independent quantum mechanics.md",
+    "Physics/Quantum Mechanics/Multiple particles in quantum mechanics.md",
+    "Physics/Thermal Physics/Statistical thermodynamics.md",
+    "Physics/Thermal Physics/Phase transitions.md",
+    "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md",
+    "Physics/Thermal Physics/Thermodynamics.md",
+    "Mathematics/IB Mathematical Methods/Contour integration.md",
+    "Mathematics/IB Mathematical Methods/Cartesian tensors.md",
+    "Physics/IB Physics/Elasticity.md",
     "Physics/IB Physics/Waves.md",
     "Physics/IB Physics/Rigid body dynamics.md",
     "Physics/IB Physics/Oscillations.md",
@@ -290,24 +289,15 @@
     "Physics/IB Physics/Fluid mechanics.md",
     "Physics/IB Physics/Experimental methods and data analysis.md",
     "Physics/IB Physics/Electromagnetism.md",
-    "Physics/Thermal Physics/Thermodynamics.md",
     "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
     "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
-    "Mathematics/IB Mathematical Methods/Cartesian tensors.md",
-    "Mathematics/IB Mathematical Methods/Contour integration.md",
     "Mathematics/IB Mathematical Methods/Elementary Analysis.md",
-    "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md",
-    "Physics/IB Physics/Elasticity.md",
-    "Physics/Quantum Mechanics/3D time-independent quantum mechanics.md",
     "Physics/Images/Beam bending parameters.png",
     "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
     "Physics/Quantum Mechanics/Operators and observables.md",
     "Physics/Quantum Mechanics/Density matrix.md",
     "Mathematics/IB Mathematical Methods/Vectors and matrices.md",
-    "Physics/Quantum Mechanics/1D time-independent quantum mechanics.md",
-    "Physics/Quantum Mechanics/Multiple particles in quantum mechanics.md",
-    "Physics/Vectors and matrices in physics.md",
     "Tentative.png",
     "Physics/Images/Boundary layer.png"
   ]

@@ -102,8 +102,14 @@ $$dU = \dbar Q + \dbar W$$
 - Third law: At absolute zero, the entropy of any body is zero
 	- A body cannot be brought to absolute zero by any finite series of operations
 
+# Engines and entropy
+>[!quote]
+>"Reflections on the Motive Power of Fire and on Machines Fitted to Develop that Power"
+>-Sadi Carnot
+
+
 # Thermodynamic potentials
-- The descriptors of a system come in pairs of intensive and extensive variables
+- The descriptors of a system come in _pairs of intensive and extensive variables_
 	- $T$ and $S$, $p$ and $V$ for a system with a fixed $N$ 
 - For energy, $S$ and $V$ are the _proper independent variables_, as an expression for $U(S,V)$ is all the necessary information to derive all other quantities ($T$, $p$) 
 - Other thermodynamic potentials defined as functions of another pair of proper independent variables
