@@ -126,8 +126,9 @@ $$\nabla\wedge(\nabla\wedge\bm{F})=\nabla(\nabla\cdot\bm{F})-\nabla^2\bm{F}$$
 $$\nabla^2(r^n)\equiv\nabla\cdot(\nabla r^n)=\nabla\cdot(nr^{n-2}\bm{x_i})=n(n+1)r^{n-2}$$
 	- Use $\nabla \cdot\bm{r}=\bm{r}/r$
 
+# The fundamental theorems
 
-# Divergence Theorem
+## Divergence Theorem
 - Let $\mathcal{S}$ be a "nice" surface enclosing a volume $\mathcal{V}$ in $\mathbb{R}^3$ with the normal vector $\bm{\hat{n}}$
 	- "Nice": Continuous, non-self-intersecting
 	- $d\bm{S}$: vector surface element pointing along $\bm{\hat{n}}$
@@ -141,19 +142,19 @@ $$\iiint_\mathcal{V}\nabla\cdot\bm{u}\,dV=\iint_{\mathcal{S}(\mathcal{V})}\bm{u}
 - Setting $\bm{u}=\nabla\wedge\bm{v}$, one gets:
 $$0=\iiint_\mathcal{V}\nabla\cdot(\nabla\wedge\bm{v})\,dV=\iint_{\mathcal{S}(\mathcal{V})}(\nabla\wedge\bm{v})\cdot d\bm{S}$$
 
-## Generalisation for a scalar field
+### Generalisation for a scalar field
 - For a scalar field $\psi$ with continuous first-order partial derivatives in $\mathcal{V}$:
 $$\iiint_{\mathcal{V}}\nabla\psi\,dV=\iint_{\mathcal{S}(\mathcal{V})}\psi\,d\bm{S} $$
 - Proof: set $\bm{u}$ in original Divergence Theorem to $\bm{a}\cdot(\nabla\psi)$, where $\bm{a}$ is an arbitrary constant vector
 - Set $\bm{a}$ to $\bm{e}_i$ to obtain:
 $$\iiint_\mathcal{V}\,\pd{\psi}{x_i}\,dV=\iint_\mathcal{S}\psi,n_i\,dS$$
 
-## Generalisation for a vector potential
+### Generalisation for a vector potential
 - For a vector potential $\bm{A}$ with continuous first-order partial derivatives in $\mathcal{V}$
 $$\iiint_{\mathcal{V}} \nabla\wedge\bm{A}\,dV=\iint_{\mathcal{S}(\mathcal{V})} \bm{\hat{n}}\wedge\bm{A}\,dS$$
 - Proof: set $\bm{u}=\bm{a}\wedge\bm{A}$ in the original divergence theorem, where $\bm{a}$ is an arbitrary constant vector
 
-## Interpretation
+### Interpretation
 - Applying the divergence theorem to an infinitesimal volume at $\bm{r_0}$:
 $$\nabla\cdot\bm{u}=\lim_{|\mathcal{V}|\to0} \frac{1}{|\mathcal{V}|} \iint \bm{u}\cdot d\bm{S} $$
 - The divergence is the _outward_ flux per unit volume
@@ -161,7 +162,7 @@ $$\nabla\cdot\bm{u}=\lim_{|\mathcal{V}|\to0} \frac{1}{|\mathcal{V}|} \iint \bm{u
 - Positive: source
 - Negative: sink
 
-# Stokes' Theorem
+## Stokes' Theorem
 - Let $\mathcal{S}$ be a 'nice' open surface bounding a 'nice' closed curve $\mathcal{C}$, and $\bm{u}$ be a 'nice' vector field
 $$\iint_\mathcal{S}(\nabla\wedge\bm{u})\cdot d\bm{S}=\oint_{\mathcal{C}} \bm{u}\cdot d\bm{l}$$
 - Direction of $d\bm{l}$: defined by right hand rule
@@ -171,7 +172,7 @@ $$\iint_\mathcal{S}(\nabla\wedge\bm{u})\cdot d\bm{S}=\oint_{\mathcal{C}} \bm{u}\
 - In two dimensions, reduces to Green's Theorem in the plane:
 $$\iint_\mathcal{A} \left(\pd{u_y}{x}-\pd{u_x}{y}\right)\,dx\,dy=\int_C u_x\,dx+u_y\,dy$$
 
-## Interpretation
+### Interpretation
 - Let there be a surface $\mathcal{S}$ with normal vector $\bm{\hat{n}}$, bounding the curve $\mathcal{C}$
 - Applying Stokes' Theorem to an infinitesimal surface:
 $$\bm{\hat{n}}\cdot(\nabla\wedge\bm{u})=\lim_{|\mathcal{S}|\to0} \frac{1}{|\mathcal{S}|}\oint\bm{u}\cdot d\bm{r}$$
@@ -179,7 +180,7 @@ $$\bm{\hat{n}}\cdot(\nabla\wedge\bm{u})=\lim_{|\mathcal{S}|\to0} \frac{1}{|\math
 
 - For a velocity field $\bm{v=\omega\wedge r}$, $\nabla\wedge\bm{v}=2\bm{\omega}$
 
-# Gradient theorem
+## Gradient theorem
 - Let $\phi$ be a vector field without singlarities, and $\mathcal{C}$ be an open path from $A$ to $B$, consider the integral:
 $$\int_\mathcal{C}\nabla\phi\cdot d\bm{r}$$
 - This integral is _independent_ of the path
@@ -191,6 +192,17 @@ $$\int_{\mathcal{C}}\nabla\phi\cdot d\bm{r}=\phi(B)-\phi(A)$$
 
 
 - Notation: $q_i$ for generalised coordinates, $x_i$ for Cartesian coordinates
+
+## Digression in 2 dimensions: Green's theorem
+- Consider two functions: $p(x,y)$ and $q(x,y)$
+- Consider a _simply connected region_ $R$ with some boundary $C$, taken _counterclockwise_
+- In this region, the functions must satisfy _Green's theorem_:
+$$\oint_C (P\,dx+Q\,dy)=\iint_R \left(\pd{Q}{x}-\pd{P}y{}\right)\,dx\,dy$$
+- Proof: Split the integral on the RHS into two and integrate accordingly
+
+- It is also useful for _multiply connected regions_, where the line integral is _taken over all distinct boundaries_
+
+- This can be considered as _special cases_ of _Stokes theorem_ and the _Divergence Theorem_
 
 # Definition of curvilinear coordinates
 - To describe positions in space, define 3 sets of surfaces, each parametrised by a single variable
