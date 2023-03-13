@@ -17,7 +17,13 @@ which, within the framework of the applicability of its basic concepts, I
 am convinced will never be overthrown."
 >-Albert Einstein
 
-# Fundamentals
+>[!quote]
+>"The development of ideas in thermodynamics has a formal elegance which is exceedingly satisfying aesthetically"
+>"It has not perhaps quite the rigour of a perfect mathematical proof, but it approaches nearer that ideal than almost any other branch of natural science."
+>"For this reason alone it may be regarded as an important part of the education of a scientist."
+>-Sir A. B. Pippard
+
+# Statistical basis
 - [[Fundamental principles of statistical mechanics]]
 
 - For a system with an enormous number of particles, and thus, degrees of freedom, there is an immeasurable number of _microstates_
@@ -39,7 +45,7 @@ am convinced will never be overthrown."
 - As time goes on, a macrostate _irreversibly tends to its mean_, which defines _statistical equilibrium_
 	- This will later be characterised by the state variable of _entropy_
 
-## Temperature and the zeroth law
+# Temperature and the zeroth law
 - When two bodies are in _thermal equilibrium_, they must have the _same temperature_
 - _Zeroth law_: if $A$  is in thermal equilibrium with $B$ and $C$, $B$ and $C$ are in thermal equilibrium with each other
 	- i.e. The thermodynamic concept of temperature _"makes sense"_
@@ -114,29 +120,30 @@ $$dU = \dbar Q + \dbar W$$
 - For energy, $S$ and $V$ are the _proper independent variables_, as an expression for $U(S,V)$ is all the necessary information to derive all other quantities ($T$, $p$) 
 - Other thermodynamic potentials defined as functions of another pair of proper independent variables
 	- One variable from $S$ or $T$, another from $p$ or $V$
-	- Formulas derived from Legendre transforms
-- For a system at equilibrium with fixed $N$, two non-conjugate variables are sufficient to determine the state of the system
+	- Formulas derived from _Legendre transforms_
+- For a system _at equilibrium_ with fixed $N$, _two non-conjugate variables_ are sufficient to determine the state of the system
 ## Enthalpy/heat function
 - Enthalpy $H$ (or $W$ if you use $R$ for work like Goodstein)
 $$\begin{aligned} H(S,P)&=U+PV \\ dH &= T\,dS+V\,dP \end{aligned}$$
-- For equilibrium changes at constant pressure, $dH)_P = \dbar Q$
+- For equilibrium changes at _constant pressure_, $dH)_P = \dbar Q$
 
 ## Helmholtz Free Energy
 - Helmholtz Free Energy $F$ (or $A$):
 $$\begin{aligned}F(T,V) &= U-TS \\ dF &= -S\,dT-P\,dV\end{aligned}$$
-- For equilibrium changes at constant temperature, $dF)_T = \dbar W$
+- For equilibrium changes at _constant temperature_, $dF)_T = \dbar W$
 	- Analagous to $dU)_S = \dbar W$
+
 ## Gibbs Free Energy
 - Gibbs Free Energy $G$ (or $\Phi$):
 $$\begin{aligned}G(P,T)&=F+PV=H-TS \\ dG &= -S\,dT+V\,dP \end{aligned}$$
 
 ## Maxwell's relations
-- Due to the symmetry of mixed derivatives, using the definitions of the potentials:
+- Due to the _symmetry of mixed derivatives_, using the definitions of the potentials:
 $$\begin{aligned}\left(\pd{P}{T}\right)_V&=\left(\pd{S}{V}\right)_T \\ \left(\pd{T}{V}\right)_S&=-\left(\pd{P}{S}\right)_V \\ \left(\pd{V}{S}\right)_P&=\left(\pd{T}{P}\right)_S \\ \left(\pd{S}{P}\right)_T&=-\left(\pd{V}{T}\right)_P    \end{aligned}$$
-- Holds for any system
+- Holds for _any system_
 - Demonstrates that two non-conjugate variables can determine the behaviour of a system
 
-# Changing number of particles and the chemical potential
+# Number of particles and the chemical potential
 - Differentials with $dN$:
 	$$\begin{aligned}dU&=T\,dS-P\,dV+\mu\,dN \\ 
 dH &= T\,dS+V\,dP+\mu \,dN \\ dF &= -S\,dT-P\,dV +\mu\,dN \\
@@ -148,7 +155,7 @@ $$\mu = \left(\pd{U}{N}\right)_{S, V} = \left(\pd{H}{N}\right)_{S, P} = \left(\p
 $$\mu\,\dbar N = (\dbar U)_{S,V} = (\dbar H)_{S,P} = (\dbar F)_{T,V} = (\dbar \Phi)_{T,P}$$
 - Last 3 equalities applicable to any change (not necessarily $N$)
 
-- Chemical potential is an intensive variable like $P$ and $T$
+- Chemical potential is an _intensive variable_ like $P$ and $T$
 - Consider a system with one type of particle, scaled up by $\lambda$, and $d(\lambda U)$, one gets:
 $$U=TS-PV+\mu N$$
 - By considering the differential, $\mu$ is shown to be a function of $P$ and $T$:
@@ -156,9 +163,10 @@ $$U=TS-PV+\mu N$$
  - The same Legendre transforms apply, allowing $\mu$ to be redefined:
 $$G(P,T,N)=\mu N$$
 
-- The chemical potential is not necessarily positive
-	- To keep $S$ and $V$ constant while adding a particle, $U$ may have to decrease
+- The chemical potential is _not necessarily positive_
+	- To _keep $S$ and $V$ constant_ while adding a particle, $U$ may have to decrease
 	- For strong repulsions, $U$ may increase
+- One now needs _three non-conjugate variables_ in order to completely determine a system
 
 ## The Landau potential
 - With the new pair of conjugate variables, new thermodynamic potentials are available
@@ -168,9 +176,9 @@ $$\displaylines{\Omega(T,V,\mu)=F-\mu N=-PV \\ d\Omega=-S\,dT-P\,dV-N\,d\mu}$$
 $$(\dbar\Omega)_{T,V,\mu}=(\dbar U)_{S,V,N}=(\dbar F)_{T,V,N}=(\dbar G)_{T,P,N}=(\dbar H)_{S,P,N}$$
 
 # Variational principles
+- There is often some _constraint_ in the processes occuring in a system
+	- e.g. constant $T$, constant $p$
+- Then, one may want to know the _maximum amount of work_ that can be extracted, i.e. the _free energy_
 
-# Magnetic variables
+# Non-gaseous systems
 
-
-
-# Gases

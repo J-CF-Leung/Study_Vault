@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Vector calculus in 3-dimensions.md",
+                "file": "Mathematics/IB Mathematical Methods/Transform methods.md",
                 "mode": "source",
                 "source": false
               }
@@ -73,7 +73,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Mathematics/IB Mathematical Methods/Vector calculus in 3-dimensions.md"
+                    "file": "Mathematics/IB Mathematical Methods/Transform methods.md"
                   }
                 }
               }
@@ -89,7 +89,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Mathematics/IB Mathematical Methods/Vector calculus in 3-dimensions.md",
+                    "file": "Mathematics/IB Mathematical Methods/Transform methods.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -199,7 +199,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Vector calculus in 3-dimensions.md",
+                "file": "Mathematics/IB Mathematical Methods/Transform methods.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -216,7 +216,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Vector calculus in 3-dimensions.md",
+                "file": "Mathematics/IB Mathematical Methods/Transform methods.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -239,7 +239,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Vector calculus in 3-dimensions.md"
+                "file": "Mathematics/IB Mathematical Methods/Transform methods.md"
               }
             }
           },
@@ -271,11 +271,11 @@
   },
   "active": "8c0e30efc10524b1",
   "lastOpenFiles": [
+    "Mathematics/IB Mathematical Methods/Vector calculus in 3-dimensions.md",
     "Physics/Thermal Physics/Thermodynamics.md",
     "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Misc or Personal/What to do.canvas",
     "Mathematics/IB Mathematical Methods/Transform methods.md",
-    "Mathematics/IB Mathematical Methods/Vector calculus in 3-dimensions.md",
     "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
     "Mathematics/IB Mathematical Methods/Partial differential equations.md",
     "Mathematics/IB Mathematical Methods/Ordinary differential equations.md",
