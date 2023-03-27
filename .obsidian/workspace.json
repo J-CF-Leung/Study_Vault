@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Transform methods.md",
+                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
                 "mode": "source",
                 "source": false
               }
@@ -73,7 +73,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Mathematics/IB Mathematical Methods/Transform methods.md"
+                    "file": "Chemistry/IB Chemistry/Symmetry in molecules.md"
                   }
                 }
               }
@@ -89,7 +89,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Mathematics/IB Mathematical Methods/Transform methods.md",
+                    "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -199,7 +199,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Transform methods.md",
+                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -216,7 +216,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Transform methods.md",
+                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -239,7 +239,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Transform methods.md"
+                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md"
               }
             }
           },
@@ -271,11 +271,17 @@
   },
   "active": "8c0e30efc10524b1",
   "lastOpenFiles": [
+    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+    "Chemistry/IB Chemistry/Molecular orbitals.md",
+    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+    "Mathematics/IB Mathematical Methods/Sturm-Liouville Theory.md",
+    "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
+    "Mathematics/IB Mathematical Methods/Transform methods.md",
     "Mathematics/IB Mathematical Methods/Vector calculus in 3-dimensions.md",
     "Physics/Thermal Physics/Thermodynamics.md",
     "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Misc or Personal/What to do.canvas",
-    "Mathematics/IB Mathematical Methods/Transform methods.md",
     "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
     "Mathematics/IB Mathematical Methods/Partial differential equations.md",
     "Mathematics/IB Mathematical Methods/Ordinary differential equations.md",
@@ -284,7 +290,6 @@
     "Mathematics/IB Mathematical Methods/Contour integration.md",
     "Mathematics/IB Mathematical Methods/Cartesian tensors.md",
     "Physics/Analytical classical mechanics.md",
-    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Physics/IB Physics/Elasticity.md",
     "Physics/IB Physics/Oscillations.md",
     "Physics/IB Physics/Optics.md",
@@ -293,11 +298,6 @@
     "Physics/Quantum Mechanics/3D time-independent quantum mechanics.md",
     "Physics/Quantum Mechanics/Multiple particles in quantum mechanics.md",
     "Physics/Thermal Physics/Statistical thermodynamics.md",
-    "Physics/Thermal Physics/Phase transitions.md",
-    "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md",
-    "Physics/IB Physics/Waves.md",
-    "Physics/IB Physics/Rigid body dynamics.md",
-    "Physics/IB Physics/Orbits.md",
     "Physics/Images/Beam bending parameters.png",
     "Tentative.png",
     "Physics/Images/Boundary layer.png"

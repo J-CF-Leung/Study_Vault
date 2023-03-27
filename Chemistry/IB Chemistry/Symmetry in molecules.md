@@ -142,9 +142,10 @@ $$R_2=S^{-1}R_1S$$
 - However, the _symmetry operations can change the orientations of electron orbitals_
 	- They can remain unchanged, i.e. they are _symmetric_ w.r.t. the operation
 	- They can be reversed, i.e. _antisymmetric_ w.r.t. the operation
-	- Or they can be _moved_, transforming into _orbitals on other atoms_
+	- Or they can be moved. _transforming_ into orbitals on other atoms
 
 - The _ways in which orbitals_ (characterised by functions) _transform_ are listed as _representations_ of a group
+- A representation is denoted $\Gamma$
 
 - Example for finding a representation: _atomic orbitals_ of _oxygen in water_
 	- Group, $C_{2v}$, with operations $E$, $C_2^z$, $\sigma^{xz}$, $\sigma^{yz}$
@@ -153,20 +154,24 @@ $$R_2=S^{-1}R_1S$$
 
 - If an orbital _transforms as a Cartesian function_ (e.g. $x$, $y^2$, $xz$), then its representation _can be read from the character table_
 	- A factor of $\exp(-r)$ is _directionless_ and _can be ignored_ when finding representation
+	- Needs to have the _origin on the "central" atom_
 	- Example: $p_x$ on the oxygen atom of water transforms as $x$, and therefore is represented by $B_1$
+	- For _multi-dimensional_ representations (see below), it transforms as a _set_ of functions
 
-## Characters
+## Representation matrices and characters
 - On most molecules, orbitals _not on the central atom_ will be _moved_ by some of the symmetry operations
-- In this case, using _a whole set of orbitals as a basis_, one can represent the action of the operation via a _representation matrix_
-	- The _dimension_ of the representation is equal to _the number of orbitals_
+- In this case, using _multiple orbitals as a basis_, one can represent the action of the operation via a _representation matrix_
+	- The _dimension_ of the representation is equal to _the number of basis orbitals_
 
 - Example: The _hydrogen orbitals in water_, $s_A$ and $s_B$:
 	- The action of $C_2^z$ - 
 	$$\displaylines{C_2^zs_A=s_B \hspace{1cm} C_2^zs_B=s_A \\ \begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}\begin{pmatrix}s_A \\ s_B\end{pmatrix}=\begin{pmatrix}s_B \\ s_A\end{pmatrix}}$$
-	- The matrix on the LHS is te _representation matrix_ for $C_2^z$
+	- The matrix on the LHS is the _representation matrix_ for $C_2^z$
 
 - The _trace_ of a representation matrix is known as the _character_ of the operation
-	- The character of the _identity_ operation is equal to the _dimension_ of the representation
+	- The _character of the identity_ operation is equal to the _dimension_ of the representation
+
+- If there is an operation $R$, then the character is _denoted_ $\chi(R)$
 
 - The characters can be found _without writing out the representation matrix_:
 	- _Add_ $1$ for _each orbital symmetric w.r.t. the operation_
@@ -176,19 +181,51 @@ $$R_2=S^{-1}R_1S$$
 ## Reducible representations
 - A _multi-dimensional_ representation may simply be a _direct sum_
 - In this case, the representation is said to be _reducible_
+- If not, they are termed _irreducible_
+	- All _one-dimensional_ representations are irreducible
+	- _Multi-dimensional_ ones can also be irreducible
 
-- Example: Hydrogen orbitals in water
+- A _one-dimensional_ irreducible representation can be said to _transform like a single Cartesian function_
+- As for a _multi-dimensional_ irreducible representation, it _transforms like a set of functions_
+	- Example: $E'$ in the $D_{3h}$ group transforms like functions $(x,y)$
+	- In this case, one needs a _basis set of orbitals_ transforming like these functions
+
+- Example: Two hydrogen orbitals in water $(C_{2v})$
 	- The characters are $(2,0,2,0)$
 	- Inspecting the chracter table, this is equivalent to $A_1\oplus B_1$
 
-## Two-Dimensional irreducible representations
+- Example: Three $2s$ Fluorine orbitals in $\text{BF}_3$
+	- The characters are $(3,0,1,3,0,1)$
+	- This is equivalent to $A_1'\oplus E'$
+	- A one-dimensional, plus a two-dimensional irreducible representation
 
-## Symmetry orbitals
+### Reduction formula
+- Let the $k-$th _irreducible representation_ be $\Gamma^{(k)}$
+- Then, the reducible representation can be represented as:
+$$\Gamma=\sum_k a_k\Gamma^{(k)}$$
+- The coefficients $a_k$ can be found by the _reduction formula_:
+$$a_k=\frac{1}{n_R(\Gamma^{(k)})}\sum_R\left[\chi^{(k)}(R)\right]^*\chi(R)$$
+- $n_R$ is the _total number of operations_ in the group
+- $\chi^{(k)}$ is the character _of the irreducible representation_
+- $\chi$ is the character _of the reducible representation_
 
-## Reduction formula
+## Nomenclature of irreducible representations
+- _Dimension_ (character of _identity_ operation) determines _letter_
+	- 1-dimensional: $A$, $B$
+	- 2-dimensional: $E$
+	- 3-dimensional: $T$
 
-## Names of irreducible representations
+- _Rotation about principal axis_ further determines the _letter_ for _1-dimensional_ IRs
+	- _Symmetric_: $A$
+	- _Anti-symmetric_: $B$
 
+- _Inversion_ about centre of symmetry determines a _subscript_
+	- _Even_: $g$
+	- _Odd_: $u$
+
+- _Reflection_ across the $\sigma_h$ plane (perpendicular to principal axis):
+	- Symmetric: _prime_ $(\text{'})$
+	- Anti-symmetric: _double-prime_ $(\text{''})$
 
 # Direct products
 

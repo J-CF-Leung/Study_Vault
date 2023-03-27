@@ -60,4 +60,4 @@ $$-\frac{dA_\text{sys}}{T}=dS_\text{sys}-\frac{dU}{T}=dS_\text{univ}$$
 
 # Kinetics
 
-# Boltzmann distribution
+# The Boltzmann distribution
