@@ -16,7 +16,7 @@ $$\hat{\Omega}\ket{\omega}=\omega\ket{\omega}$$
 
 # The Wave function and the fundamental postulates 
 - __Postulate 1:__ In quantum mechanics, the state of a system is represented by the wave function, a state vector in [[Vectors and matrices in physics|complex vector space]]
-- __Postulate 2:__ The independent variables $x$ and $p$ of the Hamiltonian formulation are represented by the Hermitian operators $\hat{X}$ and $\hat{P}$ ([[Operators and observables#The position and momentum operators|definition]]), with classical variables $\omega(x,p)$ _represented by operator_ $\hat{\Omega}(\hat{X},\hat{P})$ 
+- __Postulate 2:__ The independent variables $x$ and $p$ of the Hamiltonian formulation are represented by the Hermitian operators $\hat{X}$ and $\hat{P}$ ([[Operators, observables and uncertainty#The position and momentum operators|definition]]), with classical variables $\omega(x,p)$ _represented by operator_ $\hat{\Omega}(\hat{X},\hat{P})$ 
 - __Postulate 3:__ Measurement of a variable corresponding to $\hat{\Omega}$ _always yields one of the eigenvalues $\omega$ with probability (density) $|\braket{\omega|\Psi}|^2$_, with the _subsequent state represented by normalised eigenvector_ $\ket{\omega}$. Values other than the eigenvalues are impossible.
 	- In terms of projection operator $\mathcal{P}_\omega=\ket{\omega}\bra{\omega}$, $P(\Omega=\omega) \propto \braket{\Psi|\mathcal{P}_\omega\Psi} = \braket{\Psi\mathcal{P}_\omega|\mathcal{P}_\omega\Psi}$
 - __Postulate 4:__ The state ket $\wv$ obeys [[#Time-evolution The Schrödinger equation|the Schrödinger equation]]
@@ -25,7 +25,7 @@ $$\hat{\Omega}\ket{\omega}=\omega\ket{\omega}$$
 - Each physical state is more precisely described as a _"ray" in the complex vector space_
 	- Just normalised vectors do not form a complete vector space
 - If $\wv$ is a _proper vector_, it is normalised ($\braket{\Psi|\Psi}$ = 1) to _normalise the probability distribution_
-- There is _freedom to multiply_ the ket by $exp(i\theta)$ to make certain components real
+- There is _freedom to multiply_ the ket by a _phase factor_ $exp(i\theta)$ to make certain components real
 - $\wv$ could be an _improper vector_, which can only be _normalised to a Delta function_
 	- Example: Continuous wave
 
@@ -40,34 +40,36 @@ $$\hat{\Omega}\ket{\omega}=\omega\ket{\omega}$$
 	- Example: spin
 - To test quantum theory, one must use a _quantum ensemble_ of particles in pre-determined, definite states as wave functions collapse after measurement
 
-## Compatible and incompatible observables
-- For only one given variable $\omega$, one can produce a state with a definite value of $\omega$ by performing a measurement and collapsing the wave function
+## Compatibility and uncertainty
+- For only one given variable $\omega$, one can _produce a state with a definite value_ of $\omega$ by performing a measurement and collapsing the wave function
 	- The state is not definite if $\Omega$ is degenerate
-- Consider two variables $\omega$ and $\lambda$, measured one after the other
+- Consider two variables $\omega$ and $\lambda$, _measured one after the other_
 	- In general, the final state will not always have a definite value for both
 	- There will be a definite value of both if the eigenkets of $\Omega$ are also eigenkets of $\Lambda$
 	- For the above to be true, a necessary condition is $[\Omega,\Lambda]=0$
 - Compatibility:
-	- If two operators commute, a complete set of simultaneous eigenkets exist, and the observables are _compatible_
+	- If two operators _commute_, a complete set of simultaneous eigenkets exist, and the observables are _compatible_
 	- If they can never commute, they are _incompatible_ (example: $x$ and $p$)
-	- Some pairs of observables have an incomplete set of simultaneous eigenkets
+
+- If two observables are _incompatible_, since _no simultaneous eigenkets exist_, this introduces some _uncertainty_ when trying to measure the two variables
+- _Position_ and _momentum_ are one such conjugate pair, hence _the classical notion of a path does not exist in quantum mechanics_
 
 ### Measuring compatible observables
 - If neither operator is degenerate, only one measurement collapses the wave function into a definite state, with $P(\omega,\lambda)=P(\lambda,\omega)$
 - If one of the operators is degenerate, $P(\omega,\lambda)=P(\lambda,\omega)$, but the wave functions after the measurements depends on measurement order
 - If both operators are degenerate, a third compatible must be found to "nail down" the wave function
-	- In general, a complete set of commuting observables exists
+	- In general, a _complete set of commuting observables_ exists
 
 ## The wave function in different bases
-- $\wv$ itself only exists in Hilbert space, other spaces representing observable quantities are auxiliary finite-dimensional manifolds on which to project $\wv$
+- $\wv$ itself _only exists in Hilbert space_, other spaces representing observable quantities are auxiliary finite-dimensional manifolds on which to _project_ $\wv$
 $$\Psi(x,t)=\braket{x|\Psi(t)}\;\;\;\;\Phi(p,t)=\braket{p|\Psi(t)}$$
-	- Classical: particles are described by a finite number of definite variables
-	- Quantum: particles are described in terms of probabilities for an often infinite range of values
-- As the eigenkets of any [[Operators and observables|operator representing an observable]] span the entire vector space, any wave function can be written in terms of eigenstates:
+
+- As the eigenkets of any [[Operators, observables and uncertainty|operator representing an observable]] span the entire vector space, any wave function can be written _in terms of eigenstates_:
 $$\begin{aligned}\wv&=\sum_n\ket{q_n}\braket{q_n|\Psi}=\sum_nc_n\ket{q_n} \\ &= \int \ket{q_n}\braket{q_n|\Psi}\,dq = \int c(q)\, \ket{q} \,dq \end{aligned}$$
 - Discrete spectrum: $P(Q=q_n)=|c_n|^2=|\braket{q_n|\Psi}|^2$
 - Continuous spectrum: $P(q<Q<q+dq)=|c(q)|^2\,dq=|\braket{q|\Psi}|^2\,dq$
-- As the wave function is normalised, the coefficients sum/integrate to one
+
+- As the wave function is _normalised_, the coefficients sum/integrate to one
 $$\sum_n|c_n|^2=\int |c(q)|^2\,dq=1$$
 - As for the expectation value, expanding $\braket{\Psi|\hat{Q}\Psi}$ gives:
 $$\braket{\Psi|\hat{Q}\Psi}=\sum_nq_n|c_n|^2=\int q\,|c(q)|^2\;dq$$
@@ -76,17 +78,18 @@ $$I=\int\ket{q}\bra{q}\,dq$$
 $$\Phi(p,t)=\braket{p|\Psi}=\int\braket{p|x}\braket{x|\Psi}dx=\frac{1}{\sqrt{2\pi\hbar}}\exp(-ipx/\hbar)$$
 ## Uncertainty
 - As the measured values of observables is now _probabilistic_, the distributions will come with some _variance_
-- There are certain _conjugate variables_ where one _cannot get precise values of both_, and the _product of variances_ have some _minimum value_
+- There are certain _incompatible/conjugate variables_ where the operators _do not commute_
+
+- Since _no simultaneous eigenstate exists_, one _cannot get precise values of both variables_, and the _product of variances_ have some _minimum, non-zero value_
 - This is the _Heisenberg's uncertainty principle_, at first applied to _position and momentum_:
 $$\sigma_x\sigma_p\geq \frac{\hbar}{2}$$
+- This can often be used to _estimate ground state energies_ by setting _minimum uncertainty_, then _minimise energy_
 
 - Variance $\sigma^2 = \left<(\hat{A}-a)^2\right>$ 
 - The _generalised uncertainty principle_:
 $$\sigma_A^2\sigma_B^2\geq\left(\frac{1}{2i}\left<[\hat{A},\hat{B}]\right>\right)^2$$
 	- Proof: Cauchy-Schwarz inequality with $\ket{(\hat{A}-a)\Psi}$ and $\ket{(\hat{B}-b)\Psi}$
 		- $|\braket{f|g}|^2 = Re(\braket{f|g})^2+Im(\braket{f|g})^2$ 
-- Strict uncertainty principle:
-$$\sigma_A^2\sigma_B^2 \geq \left(\frac{1}{2}\left<\{\hat{A},\hat{B}\}\right>-ab\right)^2+\left(\frac{1}{2i}\left<[\hat{A},\hat{B}]\right>\right)^2$$
 
 # Time-evolution: The Schrödinger equation
 ## The time-evolution operator
@@ -192,8 +195,6 @@ $$\teo^\dagger A^{(H)}(0)\,\teo(\teo^\dagger\ket{a'})=A^{(H)}(t)\,(\teo^\dagger\
 $$c_{a'}(t)={}_{H}\braket{a',t|\alpha}=\braket{a'|\alpha,t}_S=\braket{a'(t=0)|\teo|\alpha(t=0)}$$
 - _Transition amplitudes_ between two eigenstates are also the same within the two pictures, with the same reasoning as above
 
-# Multiple degrees of freedom
-
 # Expectation values and the classical limit
 - Due to the probabilistic nature of quantum mechanics, one _cannot define a time derivative of an observable quantity_
 - However, one can talk about the _time evolution of the expectation value_
@@ -217,7 +218,7 @@ $$\mean{A}=\sum_{m,n}c_m^*c_n\exp\left(-\frac{i(E_n-E_m)t}{\hbar}\right)A_{mn}$$
 $$A_{mn}\equiv\braket{E_m|\hat{A}|E_n}$$
 
 ## Important cases
-- Using the [[Operators and observables#Useful commutation relations|commutation relations involving functions]]:
+- Using the [[Operators, observables and uncertainty#Useful commutation relations|commutation relations involving functions]]:
 $$\displaylines{\frac{d\mean{x}}{dt}=\frac{1}{i\hbar}\mean{[\hat{x},\hat{\Ham}]}=\frac{\mean{p}}{m} \\ \frac{d\mean{p}}{dt}=-\mean{\pd{V}{x}}}$$
 - These are a _direct analogues of the classical case_
 - There is an important distinction to make:

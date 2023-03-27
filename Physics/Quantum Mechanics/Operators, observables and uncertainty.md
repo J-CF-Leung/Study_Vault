@@ -1,32 +1,30 @@
-
-- Operators describe _observable quantities_ in quantum mechanics
+- _Hermitian operators_ describe _observable quantities_ in quantum mechanics
 	- Examples include position, momentum, and spin
-- As they act on wave functions represented by ket vectors, they are represented by matrices, with different matrix elements for different bases
+- As they act on wave functions represented by ket vectors, they _can be represented by matrices_, with different matrix elements for different bases
 	- The matrix can either be in finite or infinite dimensions
 - The expectation value of an observable quantity for a given wave function $\wv$ is represented by:
 $$\left<Q\right>=\braket{\Psi|\hat{Q}\Psi}$$
-- As the outcome of a measurement must be real, the operator $\hat{Q}$ must be Hermitian
+- As the outcome of a measurement must be real, the operator $\hat{Q}$ _must be Hermitian_
 
-# Eigenstates
-- For all observables, the corresponding operator has a set of determinate states, or _eigenstates_, represented by eigenkets $\ket{\Psi_q}$:
+- For all observables, the corresponding operator has a _set of determinate states_, or _eigenstates_, represented by eigenkets $\ket{\Psi_q}$:
 $$\hat{Q}\ket{\Psi_q}=q\ket{\Psi_q}$$
-	- Measuring $Q$ for this state always gives $q$, with a standard deviation of 0
+	- Measuring $Q$ for this state _always gives_ $q$, with a standard deviation of 0
 	- $q$ is an eigenvalue of $\hat{Q}$
 	- Example: time-independent Schrödinger equation $\hat{\Ham}\wv=E\wv$
-- Due to the operator's Hermiticity, in the eigenbasis formed by these kets, the matrix is always diagonal, with elements
+- Due to the operator's _Hermiticity_, in the _eigenbasis_ formed by these kets, the matrix is always _diagonal_, with elements
 $$\braket{q|\hat{Q}|q'} = q\,\delta_{qq'}=q\,\delta(q-q')$$
 
-- As all operators for observables are Hermitian, the eigenkets are orthogonal and span the entire complex vector space:
+- As all operators for observables are Hermitian, the eigenkets are _orthogonal and span the entire complex vector space_:
 $$\sum_n\ket{q_n}\bra{q_n}=\int\ket{q}\bra{q}\;dq=1$$
 - If the eigenvalue spectrum of an operator are discrete, the eigenkets are normalised by:
 $$\braket{m|n}=\delta_{mn}$$
-- If the eigenvalue spectrum is continuous, they can only be normalised via the Dirac Delta Function:
+- If the eigenvalue spectrum is continuous, they can only be normalised via the _Dirac Delta Function_:
 $$\braket{x|y}=\delta(x-y)$$
 
 # The position and momentum operators
 - For all operators, the matrix elements in their eigenbasis is trivial:
 $$\braket{x|\hat{X}|x'}=x\,\delta(x-x') \;\;\;\; \braket{p|\hat{P}|p'}=p\,\delta(p-p')$$
-- The "origin" of the momentum operator is the Hermitian version of the differential operator in the position basis:
+- The "origin" of the momentum operator is the _Hermitian version of the differential operator_ in the position basis:
 $$\braket{x|\hat{P}|x'} = -i\hbar\frac{d}{dx}\delta(x-x')$$
 	- The differential operator $D_{xx'}=\delta'(x-x')$ is an odd function
 	- Momentum is also the [[Analytical classical mechanics#Symmetries and Noether's Theorem|generator]] of translations
@@ -52,17 +50,44 @@ $$[\hat{X},\hat{P}]=i\hbar$$
 $$\displaylines{[\hat{x},\hat{p}^l]=i\hbar l\hat{p}^{l-1}=i\hbar\pd{\hat{p}^l}{\hat{p}} \\ [\hat{x},F(\hat{x},\hat{p})]=i\hbar\pd{F}{\hat{p}} \\ [\hat{p},F(\hat{x},\hat{p})]=-i\hbar\pd{F}{\hat{x}}}$$
 - Example:
 $$[\hat{x},\hat{p}\hat{x}\hat{p}]=i\hbar(\hat{x}\hat{p}+\hat{p}\hat{x})$$
+# Uncertainty
+- Consider the _commutator for a pair of observables_
+- If they _commute_, then there is a _set of simultaneous eigenstates_
+- If they _do not_, then no simultaneous eigenstate exists, and there _cannot be definite values for both observables_
+	- They are said to be _incompatible_
 
+- Example: Position and momentum, hence a particle _never has a definite path_
+
+## The uncertainty relation
+- Consider the _variances_ for two incompatible observables, $A$ and $B$
+$$\sigma_A^2=\mean{\hat{A}^2}-\mean{\hat{A}}^2$$
+- Due to this uncertainty, their _product_ will have a _non-zero minimum value_
+- This is given by the _generalised uncertainty principle_:
+	$$\sigma_A^2\sigma_B^2\geq\left(\frac{1}{2i}\left<[\hat{A},\hat{B}]\right>\right)^2$$
+	-Proof: Cauchy-Schwarz inequality with $\ket{(\hat{A}-a)\Psi}$ and $\ket{(\hat{B}-b)\Psi}$
+	$|\braket{f|g}|^2 = Re(\braket{f|g})^2+Im(\braket{f|g})^2$ 
+
+- If applied to position and momentum:
+$$\sigma_x\sigma_p\geq\frac{\hbar}{2}$$
+
+## The minimum uncertainty wave packet
+- From the proof of the inequality, for a packet with _minimal uncertainty in position and momentum_, it must satisfy:
+$$\left(\hat{P}-\mean{\hat{P}}\right)\ket{\Psi}=i|c|\left(\hat{X}-\mean{\hat{X}}\right)\wv$$
+- Defining:
+$$\displaylines{\Delta=\hbar/|c| \\ \mean{\hat{X}}=a \hspace{1cm}\mean{\hat{P}}=p_0}$$
+- Thus, the _minimum-uncertainty wave packet_ in position space is:
+$$\psi(x)=A\exp\left[\frac{ip_0}{\hbar}(x-a)\right]\exp\left[-\frac{(x-a)^2}{2\Delta^2}\right]$$
+- This is a _Gaussian packet_
 
 # Operators in three dimensions
 - In the position basis in three dimensions, the momentum operator becomes:
 $$\braket{x_i|\bm{\hat{P}}|x_i'}=-i\hbar\pd{}{x_i}$$
-- The canonical commutation relations become:
+- The _canonical commutation relations_ become:
 $$\displaylines{ [\hat{x}_i,\hat{x}_j]=[\hat{p}_i,\hat{p}_j]=0 \\ [\hat{x}_i,\hat{p}_j]=-[\hat{p}_i,\hat{x}_j]=i\hbar\delta_{ij}}$$
 ## The orbital angular momentum operators
 - Appearances and eigenfunctions: [[Angular momentum in quantum mechanics]]
 
-- The angular momentum operators have formulas similar to their classical counterparts:
+- The angular momentum operators have formulas _similar to their classical counterparts_:
 $$\hat{L}_k=\epsilon_{ijk}\hat{x}_i\hat{p}_j=-i\hbar\epsilon_{ijk}x_i\pd{}{x_j}$$
 - The commutation relations are:
 $$[\hat{L}_i,\hat{L}_j]=i\hbar\epsilon_{ijk}\hat{L}_k$$

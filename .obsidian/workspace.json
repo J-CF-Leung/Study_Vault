@@ -9,24 +9,12 @@
         "dimension": 64.23529411764706,
         "children": [
           {
-            "id": "8c0e30efc10524b1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "c9e74b0da2958ad0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Thermal Physics/Thermodynamics.md",
+                "file": "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
                 "mode": "source",
                 "source": false
               }
@@ -73,7 +61,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Symmetry in molecules.md"
+                    "file": "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md"
                   }
                 }
               }
@@ -89,7 +77,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
+                    "file": "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -199,7 +187,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
+                "file": "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -216,7 +204,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
+                "file": "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -239,7 +227,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md"
+                "file": "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md"
               }
             }
           },
@@ -269,35 +257,45 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "8c0e30efc10524b1",
+  "active": "c9e74b0da2958ad0",
   "lastOpenFiles": [
+    "Physics/Quantum Mechanics/Operators, observables and uncertainty.md",
+    "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
+    "Physics/Vectors and matrices in physics.md",
+    "Physics/Quantum Mechanics/The failure of classical mechanics.md",
+    "Physics/Quantum Mechanics/Path integrals in quantum mechanics.md",
+    "Physics/Quantum Mechanics/Density matrix.md",
+    "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
+    "Physics/Quantum Mechanics/Quantum statistical mechanics.md",
+    "Physics/Quantum Mechanics/Topics in Quantum Mechanics.md",
+    "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
+    "Physics/Quantum Mechanics/3D time-independent quantum mechanics.md",
+    "Physics/Quantum Mechanics/Multiple particles in quantum mechanics.md",
+    "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
+    "Chemistry/IB Chemistry/Symmetry in molecules.md",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2022.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2021.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2020.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2019.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2018.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2017.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2016.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2015.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2014.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2013.pdf",
     "Chemistry/IB Chemistry/Molecular spectroscopy.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Chemistry/IB Chemistry/Molecular orbitals.md",
     "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Mathematics/IB Mathematical Methods/Sturm-Liouville Theory.md",
-    "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
     "Mathematics/IB Mathematical Methods/Transform methods.md",
     "Mathematics/IB Mathematical Methods/Vector calculus in 3-dimensions.md",
     "Physics/Thermal Physics/Thermodynamics.md",
-    "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Misc or Personal/What to do.canvas",
     "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
     "Mathematics/IB Mathematical Methods/Partial differential equations.md",
     "Mathematics/IB Mathematical Methods/Ordinary differential equations.md",
     "Mathematics/IB Mathematical Methods/Fourier series and transforms.md",
-    "Mathematics/IB Mathematical Methods/Calculus of variations.md",
-    "Mathematics/IB Mathematical Methods/Contour integration.md",
-    "Mathematics/IB Mathematical Methods/Cartesian tensors.md",
-    "Physics/Analytical classical mechanics.md",
-    "Physics/IB Physics/Elasticity.md",
-    "Physics/IB Physics/Oscillations.md",
-    "Physics/IB Physics/Optics.md",
-    "Physics/IB Physics/Fluid mechanics.md",
-    "Physics/IB Physics/Experimental methods and data analysis.md",
-    "Physics/Quantum Mechanics/3D time-independent quantum mechanics.md",
-    "Physics/Quantum Mechanics/Multiple particles in quantum mechanics.md",
-    "Physics/Thermal Physics/Statistical thermodynamics.md",
     "Physics/Images/Beam bending parameters.png",
     "Tentative.png",
     "Physics/Images/Boundary layer.png"

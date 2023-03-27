@@ -1,5 +1,5 @@
 ## Orbital angular momentum
-- [[Operators and observables#The angular momentum operators|Definition of angular momentum operators]]
+- [[Operators, observables and uncertainty#The angular momentum operators|Definition of angular momentum operators]]
 - The operators $\bm{\hat{L}}^2$ and $\hat{L}_z$ _commute_
 - Hence, their eigenvalue problems can be solved _simultaneously_
 
