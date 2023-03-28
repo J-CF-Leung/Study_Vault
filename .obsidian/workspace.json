@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
+                "file": "Mathematics/IB Mathematical Methods/Contour integration.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,7 +49,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Symmetry in molecules.md"
+                    "file": "Mathematics/IB Mathematical Methods/Contour integration.md"
                   }
                 }
               }
@@ -65,7 +65,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
+                    "file": "Mathematics/IB Mathematical Methods/Contour integration.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -175,7 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
+                "file": "Mathematics/IB Mathematical Methods/Contour integration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,7 +192,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
+                "file": "Mathematics/IB Mathematical Methods/Contour integration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -215,7 +215,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md"
+                "file": "Mathematics/IB Mathematical Methods/Contour integration.md"
               }
             }
           },
@@ -247,7 +247,19 @@
   },
   "active": "9b07594bcbc6a508",
   "lastOpenFiles": [
-    "Past Papers/Past Tripos papers-20230327/IB_A_1996.pdf",
+    "Mathematics/IB Mathematical Methods/Elementary Analysis.md",
+    "Mathematics/IB Mathematical Methods/Contour integration.md",
+    "Chemistry/IB Chemistry/Symmetry in molecules.md",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2022.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2021.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2020.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2019.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2018.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2017.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2016.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2015.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2014.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2013.pdf",
     "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
     "Physics/Quantum Mechanics/Operators, observables and uncertainty.md",
     "Physics/Vectors and matrices in physics.md",
@@ -261,17 +273,6 @@
     "Physics/Quantum Mechanics/3D time-independent quantum mechanics.md",
     "Physics/Quantum Mechanics/Multiple particles in quantum mechanics.md",
     "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
-    "Chemistry/IB Chemistry/Symmetry in molecules.md",
-    "Past Papers/Past Tripos papers-20230327/IB_A_2022.pdf",
-    "Past Papers/Past Tripos papers-20230327/IB_A_2021.pdf",
-    "Past Papers/Past Tripos papers-20230327/IB_A_2020.pdf",
-    "Past Papers/Past Tripos papers-20230327/IB_A_2019.pdf",
-    "Past Papers/Past Tripos papers-20230327/IB_A_2018.pdf",
-    "Past Papers/Past Tripos papers-20230327/IB_A_2017.pdf",
-    "Past Papers/Past Tripos papers-20230327/IB_A_2016.pdf",
-    "Past Papers/Past Tripos papers-20230327/IB_A_2015.pdf",
-    "Past Papers/Past Tripos papers-20230327/IB_A_2014.pdf",
-    "Past Papers/Past Tripos papers-20230327/IB_A_2013.pdf",
     "Chemistry/IB Chemistry/Molecular spectroscopy.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Chemistry/IB Chemistry/Molecular orbitals.md",
@@ -283,7 +284,6 @@
     "Misc or Personal/What to do.canvas",
     "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
     "Mathematics/IB Mathematical Methods/Partial differential equations.md",
-    "Mathematics/IB Mathematical Methods/Ordinary differential equations.md",
     "Physics/Images/Beam bending parameters.png",
     "Tentative.png",
     "Physics/Images/Boundary layer.png"

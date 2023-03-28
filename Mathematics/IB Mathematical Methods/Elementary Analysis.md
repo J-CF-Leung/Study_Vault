@@ -208,7 +208,7 @@ $$f(z)=\sum_{n=-N}^\infty a_n(z-z_0)^n=\sum_{n=-N}^\infty b_{n+N}(z-z_0)^n$$
 $$f(z)=\sum_{n=-\infty}^\infty a_n(z-z_0)^n$$
 - The series converges for all $z$ _within the annulus_
 
-- If $\alpha=0$, the function is analytic _within the disk_ (perhaps except the point $z_0$ itself)
+- If $\alpha=0$, the function is analytic _within the disk_ (perhaps except the point $z_0$ itself, which may be a _single isolated singularity_)
 - For $\alpha=0$, there are 3 possibilities:
 	- If the _first non-zero term_ has $n\geq 0$, then the function is _analytic_ at $z=z_0$, and the Laurent series is _equivalent to the Taylor series_
 	- If the _first non-zero term_ has $n=-N<0$, then $f(z)$ has a _pole of order $N$_ at $z=z_0$

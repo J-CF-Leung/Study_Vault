@@ -228,6 +228,7 @@ $$a_k=\frac{1}{n_R(\Gamma^{(k)})}\sum_R\left[\chi^{(k)}(R)\right]^*\chi(R)$$
 	- Anti-symmetric: _double-prime_ $(\text{''})$
 
 # Direct products
+- Given which representations two functions may transform as, one may want to know how the _product_ of those functions transform
 
 ## 1D Irreducible representations
 
