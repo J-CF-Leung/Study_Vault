@@ -10,7 +10,7 @@
 $$\psi_n=A\sin\frac{n\pi x}{a}$$
 - The corresponding energies are:
 $$E_n=\frac{n^2\hbar^2\pi^2}{2ma^2}$$
-- Details: [[1D time-independent quantum mechanics#Particle in a box|Particle in a box]]
+- Details: [[1D time-independent Hamiltonians#Particle in a box|Particle in a box]]
 
 ## Nuclei: The quantum harmonic oscillator
 - Mathematical details and derivation: [[Quantum Harmonic Oscillator]]
@@ -196,7 +196,7 @@ $$\hat{T}_N\psi_N+E_e\psi_N=E\psi_N$$
 - For 3-dimensional motion, the linear momentum operators use $\nabla$
 
 # The hydrogen atom
-- [[1D time-independent quantum mechanics#The hydrogen atom|Detailed derivation]]
+- [[1D time-independent Hamiltonians#The hydrogen atom|Detailed derivation]]
 - The Hamiltonian for a hydrogen-like atom is:
 $$\begin{aligned}\hat{\Ham}&=-\frac{\hbar^2}{2m_e}\nabla^2-\frac{Ze^2}{4\pi\epsilon_0r} \\ &=-\frac{\hbar^2}{2m_e}\frac{1}{r^2} \pd{}{r}\left(r^2\pd{}{r}\right) + \frac{\hat{L}^2}{2m_er^2} -\frac{Ze^2}{4\pi\epsilon_0r} \end{aligned}$$
 - Here we introduce _atomic units_:
@@ -243,7 +243,7 @@ $$E_{n}=-\frac{Z^2}{2n^2}$$
 - The radial wave function can be described using the [[Special functions and orthogonal relations#Associated Laguerre polynomials|associated Laguerre polynomials]]
 - The entire normalised wave function is:
 $$\psi_{nlm}=\sqrt{\left(\frac{2}{n}\right)^3\frac{(n-l+1)!}{2n(n+l)!}}\exp(-\rho/n)\left(\frac{2\rho}{n}\right)^l\left[L^{2l+1}_{n-l-1}(2\rho/n)\right]Y^m_l(\theta,\phi)$$
-- The wave functions are mutully orthogonal
+- The wave functions are mutually orthogonal
 
 - When $m\neq0$, the solutions are complex
 - To make real orbitals, use a _linear combination_ of $+m$ and $-m$ 

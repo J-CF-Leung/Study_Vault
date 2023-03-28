@@ -60,6 +60,8 @@ $$\braket{x|E_n}=\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}\frac{1}{\sqrt{n!}}(
 ## General features of the eigenfunctions
 - The energy levels are _quantised_, but the gap is negligible compared to the energy of a clasically oscillating object
 - At high energy levels, the behaviour of the particle _becomes more classical_
+- _Number of nodes_ increases with energy
+	- Nodes are associated with quick changes and high $\psi''$
 - There is a _zero-point energy_ reflecting the _uncertainty principle_
 
 ### Average values and uncertainty

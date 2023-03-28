@@ -89,4 +89,43 @@ $$\begin{aligned}f(z)&=\sum_{n=-\infty}^\infty a_n(z-z_0)^n \\ &=\dots\frac{a_{-
 - The coefficient $a_{-1}$ is called the _residue_ of the pole
 
 - The residue for a _simple pole_:
-$$\Res_{z = z_0}$$
+$$\res{z=z_0}\,f(z)\equiv a_{-1}=\lim_{z\to z_0}\left\{(z-z_0)f(z)\right\}$$
+- The residue for a _pole of order $N$_:
+$$\res{z=z_0}\,f(z)\equiv a_{-1}=\lim_{z\to z_0}\left\{\frac{1}{(N-1)!}\frac{d^{N-1}}{dz^{N-1}}\left[(z-z_0)^Nf(z)\right]\right\}$$
+## Calculus of residues
+- Consider the _contour integral anticlockwise around a pole_ at $z=z_0$
+- Condition: _simple closed curve_ in a _simply-connected domain_
+
+- Consider _each term of the Laurent series separately_
+- For $n\geq0$, from [[#Cauchy's theorem]], it must _vanish_
+- For $n\leq-1$, _shrink_ the contour to a _circle of radius_ $\epsilon$ around the pole, and substitute $z=z_0+\epsilon\exp(i\theta)$
+
+- From this, the integral _vanishes for_ $n\leq-2$
+- This leaves the $a_{-1}$ term, hence:
+$$\oint_C f(z)\,dz=2\pi ia_{-1}=2\pi i\,\res{z=z_0}f(z)$$
+
+- This leads to the _residue theorem_, which states that if a function $f(z)$ is _analytic_ in a _simply-connected domain_ $R$ except for a _finite number of poles_ $z=z_1,z_2,\dots,z_n$, and $C$ is a _simple closed curve_ encircling them in an _anticlockwise direction_:
+$$\frac{1}{2\pi i}\oint_C f(z)\,dz=\sum_{k=1}^n \res{z=z_k}\,f(z)$$
+- Proof: Split the contour into separate regions
+
+## Cauchy's formula
+- If $f(z)$ is _analytic_ in a region $R$ containing $z_0$, then _Cauchy's formula_ states:
+$$f(z_0)=\frac{1}{2\pi i}\oint_C\frac{f(z)}{z-z_0}\,dz$$
+- Here, $C$ has to be a _simple closed curve_ in $R$ encircling $z_0$ _anticlockwise_
+- Proof: Residue theorem
+
+- If $f(z)$ is known on $C$, then from this formula, it can be _known throughout the interior_
+
+- From the Cauchy-Riemann equations, the _real and imaginary parts satisfy Laplace's Equation_
+- Hence, this is _equivalent to the uniqueness theorem for Laplace's equation with Dirichlet boundary conditions_
+- The formula above is _equivalent_ to the [[Poisson and Laplace's equations#Integral solution to Poisson's equation|integral solution to Poisson's equation]] in 2D, with _zero source term_ and Green's function $\ln|\bm{r}-\bm{r'}|/(2\pi)$
+
+- If Cauchy's formula is differentiated $n$ times w.r.t. $z_0$:
+$$f^{(n)}(z_0)=\frac{n!}{2\pi i}\oint_C\frac{f(z)}{(z-z_0)^{n+1}}\,dz$$
+- Hence at any point where $f$ is _analytic_, it is _infinitely differentiable_, and _all its derivatives exist_
+
+## The point at infinity and stereographic projection
+
+## Examples of applications
+
+# Multi-valued functions and branch cuts

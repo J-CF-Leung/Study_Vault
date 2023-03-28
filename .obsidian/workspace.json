@@ -9,24 +9,12 @@
         "dimension": 64.23529411764706,
         "children": [
           {
-            "id": "9b07594bcbc6a508",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mathematics/IB Mathematical Methods/Contour integration.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "b5f6df8198487832",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Misc or Personal/Quotes.md",
+                "file": "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,7 +37,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Mathematics/IB Mathematical Methods/Contour integration.md"
+                    "file": "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md"
                   }
                 }
               }
@@ -65,7 +53,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Mathematics/IB Mathematical Methods/Contour integration.md",
+                    "file": "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -138,7 +126,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Green's theorem",
+                "query": "node",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -175,7 +163,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Contour integration.md",
+                "file": "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,7 +180,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Contour integration.md",
+                "file": "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -215,7 +203,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Contour integration.md"
+                "file": "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md"
               }
             }
           },
@@ -245,10 +233,24 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "9b07594bcbc6a508",
+  "active": "bdee2333112a0d60",
   "lastOpenFiles": [
-    "Mathematics/IB Mathematical Methods/Elementary Analysis.md",
+    "Physics/Images/Hydrogen radial distribution function.png",
+    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+    "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
+    "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
+    "Physics/Quantum Mechanics/Operators, uncertainties and symmetries.md",
+    "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
+    "Physics/Quantum Mechanics/Density matrix.md",
+    "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
+    "Physics/Vectors and matrices in physics.md",
+    "Physics/Quantum Mechanics/Path integrals in quantum mechanics.md",
+    "Physics/Quantum Mechanics/1D time-independent Hamiltonians.md",
     "Mathematics/IB Mathematical Methods/Contour integration.md",
+    "Mathematics/IB Mathematical Methods/Dirac Delta Function.md",
+    "Mathematics/IB Mathematical Methods/Transform methods.md",
+    "Preamble.md",
+    "Mathematics/IB Mathematical Methods/Elementary Analysis.md",
     "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Past Papers/Past Tripos papers-20230327/IB_A_2022.pdf",
     "Past Papers/Past Tripos papers-20230327/IB_A_2021.pdf",
@@ -260,30 +262,16 @@
     "Past Papers/Past Tripos papers-20230327/IB_A_2015.pdf",
     "Past Papers/Past Tripos papers-20230327/IB_A_2014.pdf",
     "Past Papers/Past Tripos papers-20230327/IB_A_2013.pdf",
-    "Physics/Quantum Mechanics/Fundamentals of quantum mechanics.md",
-    "Physics/Quantum Mechanics/Operators, observables and uncertainty.md",
-    "Physics/Vectors and matrices in physics.md",
     "Physics/Quantum Mechanics/The failure of classical mechanics.md",
-    "Physics/Quantum Mechanics/Path integrals in quantum mechanics.md",
-    "Physics/Quantum Mechanics/Density matrix.md",
-    "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
     "Physics/Quantum Mechanics/Quantum statistical mechanics.md",
     "Physics/Quantum Mechanics/Topics in Quantum Mechanics.md",
     "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
-    "Physics/Quantum Mechanics/3D time-independent quantum mechanics.md",
     "Physics/Quantum Mechanics/Multiple particles in quantum mechanics.md",
-    "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
     "Chemistry/IB Chemistry/Molecular spectroscopy.md",
-    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Chemistry/IB Chemistry/Molecular orbitals.md",
     "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Mathematics/IB Mathematical Methods/Sturm-Liouville Theory.md",
-    "Mathematics/IB Mathematical Methods/Transform methods.md",
-    "Mathematics/IB Mathematical Methods/Vector calculus in 3-dimensions.md",
-    "Physics/Thermal Physics/Thermodynamics.md",
     "Misc or Personal/What to do.canvas",
-    "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
-    "Mathematics/IB Mathematical Methods/Partial differential equations.md",
     "Physics/Images/Beam bending parameters.png",
     "Tentative.png",
     "Physics/Images/Boundary layer.png"

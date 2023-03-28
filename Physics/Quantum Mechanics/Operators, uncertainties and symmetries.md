@@ -21,7 +21,7 @@ $$\braket{m|n}=\delta_{mn}$$
 - If the eigenvalue spectrum is continuous, they can only be normalised via the _Dirac Delta Function_:
 $$\braket{x|y}=\delta(x-y)$$
 
-# The position and momentum operators
+# 1D position and momentum operators
 - For all operators, the matrix elements in their eigenbasis is trivial:
 $$\braket{x|\hat{X}|x'}=x\,\delta(x-x') \;\;\;\; \braket{p|\hat{P}|p'}=p\,\delta(p-p')$$
 - The "origin" of the momentum operator is the _Hermitian version of the differential operator_ in the position basis:
@@ -78,6 +78,8 @@ $$\displaylines{\Delta=\hbar/|c| \\ \mean{\hat{X}}=a \hspace{1cm}\mean{\hat{P}}=
 - Thus, the _minimum-uncertainty wave packet_ in position space is:
 $$\psi(x)=A\exp\left[\frac{ip_0}{\hbar}(x-a)\right]\exp\left[-\frac{(x-a)^2}{2\Delta^2}\right]$$
 - This is a _Gaussian packet_
+
+# Parity operator
 
 # Operators in three dimensions
 - In the position basis in three dimensions, the momentum operator becomes:

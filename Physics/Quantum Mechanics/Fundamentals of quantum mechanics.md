@@ -16,7 +16,7 @@ $$\hat{\Omega}\ket{\omega}=\omega\ket{\omega}$$
 
 # The Wave function and the fundamental postulates 
 - __Postulate 1:__ In quantum mechanics, the state of a system is represented by the wave function, a state vector in [[Vectors and matrices in physics|complex vector space]]
-- __Postulate 2:__ The independent variables $x$ and $p$ of the Hamiltonian formulation are represented by the Hermitian operators $\hat{X}$ and $\hat{P}$ ([[Operators, observables and uncertainty#The position and momentum operators|definition]]), with classical variables $\omega(x,p)$ _represented by operator_ $\hat{\Omega}(\hat{X},\hat{P})$ 
+- __Postulate 2:__ The independent variables $x$ and $p$ of the Hamiltonian formulation are represented by the Hermitian operators $\hat{X}$ and $\hat{P}$ ([[Operators, uncertainties and symmetries#The position and momentum operators|definition]]), with classical variables $\omega(x,p)$ _represented by operator_ $\hat{\Omega}(\hat{X},\hat{P})$ 
 - __Postulate 3:__ Measurement of a variable corresponding to $\hat{\Omega}$ _always yields one of the eigenvalues $\omega$ with probability (density) $|\braket{\omega|\Psi}|^2$_, with the _subsequent state represented by normalised eigenvector_ $\ket{\omega}$. Values other than the eigenvalues are impossible.
 	- In terms of projection operator $\mathcal{P}_\omega=\ket{\omega}\bra{\omega}$, $P(\Omega=\omega) \propto \braket{\Psi|\mathcal{P}_\omega\Psi} = \braket{\Psi\mathcal{P}_\omega|\mathcal{P}_\omega\Psi}$
 - __Postulate 4:__ The state ket $\wv$ obeys [[#Time-evolution The Schrödinger equation|the Schrödinger equation]]
@@ -64,7 +64,7 @@ $$\hat{\Omega}\ket{\omega}=\omega\ket{\omega}$$
 - $\wv$ itself _only exists in Hilbert space_, other spaces representing observable quantities are auxiliary finite-dimensional manifolds on which to _project_ $\wv$
 $$\Psi(x,t)=\braket{x|\Psi(t)}\;\;\;\;\Phi(p,t)=\braket{p|\Psi(t)}$$
 
-- As the eigenkets of any [[Operators, observables and uncertainty|operator representing an observable]] span the entire vector space, any wave function can be written _in terms of eigenstates_:
+- As the eigenkets of any [[Operators, uncertainties and symmetries|operator representing an observable]] span the entire vector space, any wave function can be written _in terms of eigenstates_:
 $$\begin{aligned}\wv&=\sum_n\ket{q_n}\braket{q_n|\Psi}=\sum_nc_n\ket{q_n} \\ &= \int \ket{q_n}\braket{q_n|\Psi}\,dq = \int c(q)\, \ket{q} \,dq \end{aligned}$$
 - Discrete spectrum: $P(Q=q_n)=|c_n|^2=|\braket{q_n|\Psi}|^2$
 - Continuous spectrum: $P(q<Q<q+dq)=|c(q)|^2\,dq=|\braket{q|\Psi}|^2\,dq$
@@ -145,7 +145,7 @@ $$|\braket{q|E_n(t)}|^2=|\braket{q|E_n}\exp(-iE_nt/\hbar)|^2=|\braket{q|E_n}|^2$
 $$\Ham\ket{E_n}=E_n\ket{E_n}$$
 - Projected onto the $x$ basis with $\Ham=T+V$:
 $$-\frac{\hbar^2}{2m}\nabla^2\psi_n(x)+V\psi_n(x)=E_n\psi_n(x)$$
-- Solving this thing: [[1D time-independent quantum mechanics]]
+- Solving this thing: [[1D time-independent Hamiltonians]]
 
 ## Time-dependent Hamiltonians: various methods
 
@@ -154,6 +154,24 @@ $$-\frac{\hbar^2}{2m}\nabla^2\psi_n(x)+V\psi_n(x)=E_n\psi_n(x)$$
 $$\braket{b|\teo(t,0)|a}$$
 - This describes the probability amplitude of the system "transitioning" from eigenstate $\ket{a}$ at $t=0$ to eigenstate $\ket{b}$ at time $t$
 - This quantity is particularly useful in defining the [[Path integrals in quantum mechanics|path integral formulation]]
+
+# Probability flow
+- The total probability of finding a particle anywhere in the universe is conserved:
+$$\braket{\Psi(0)|\Psi(0)}=\braket{\Psi(t)|\Psi(t)}=\int_\text{all space}\braket{\Psi(t)|\bm{r}}\braket{\bm{r}|\Psi(t)}\,d^3\bm{r}=\int_\text{all space}P(\bm{r},t)\,d^3\bm{r}$$
+- Consider the time derivative of $P(\bm{r},t)$, and using the [[Fundamentals of quantum mechanics#The Schrödinger wave equation|Schrödinger wave equation]]:
+$$\begin{aligned}\pd{P}{t}&=\pd{}{t}[\Psi^*(x,t)\Psi(x,t)] \\
+&= \frac{i\hbar}{2m}\left[\Psi^*\nabla^2\Psi-\Psi\nabla^2\Psi^*\right] \\ &=  \frac{i\hbar}{2m} \nabla\cdot\left[\Psi^*\nabla\Psi-\Psi\nabla\Psi^*\right] \\\pd{P}{t}&=-\nabla\cdot\bm{J}\end{aligned}$$
+- Here, $\bm{J}$ is the _probability current density_
+- This is the continuity equation for the probability of finding a particle
+	- For an ensemble of $N$ particles, $N\bm{J}\cdot d\bm{S}$ particles per unit time flow past an area $d\bm{S}$
+
+- For a _travelling plane wave_:
+$$\displaylines{\psi=A\exp[i(kx-\omega t)] \\ J=\frac{\hbar k}{m}|A|^2}$$
+- Here, $\hbar k/m$ is the _classical speed_
+
+- If $k$ is _imaginary_ (i.e. an evanescent wave), $J=0$
+
+
 
 # The Schrödinger and Heisenberg pictures
 - So far, we have been working with the _Schrödinger picture_, where the _state kets evolve with time, with the operators remaining constant_
@@ -218,7 +236,7 @@ $$\mean{A}=\sum_{m,n}c_m^*c_n\exp\left(-\frac{i(E_n-E_m)t}{\hbar}\right)A_{mn}$$
 $$A_{mn}\equiv\braket{E_m|\hat{A}|E_n}$$
 
 ## Important cases
-- Using the [[Operators, observables and uncertainty#Useful commutation relations|commutation relations involving functions]]:
+- Using the [[Operators, uncertainties and symmetries#Useful commutation relations|commutation relations involving functions]]:
 $$\displaylines{\frac{d\mean{x}}{dt}=\frac{1}{i\hbar}\mean{[\hat{x},\hat{\Ham}]}=\frac{\mean{p}}{m} \\ \frac{d\mean{p}}{dt}=-\mean{\pd{V}{x}}}$$
 - These are a _direct analogues of the classical case_
 - There is an important distinction to make:
@@ -239,19 +257,36 @@ $$\displaylines{\Delta E\Delta t\geq\frac{\hbar}{2} \\ \Delta t\equiv \frac{\Del
 - If $\Delta E$ is _small_, then it takes _a long time for physical quantities to change_
 - If it is a _stationary state_, then _no expectation values will change_
 
-# Probability flow
-- The total probability of finding a particle anywhere in the universe is conserved:
-$$\braket{\Psi(0)|\Psi(0)}=\braket{\Psi(t)|\Psi(t)}=\int_\text{all space}\braket{\Psi(t)|\bm{r}}\braket{\bm{r}|\Psi(t)}\,d^3\bm{r}=\int_\text{all space}P(\bm{r},t)\,d^3\bm{r}$$
-- Consider the time derivative of $P(\bm{r},t)$, and using the [[Fundamentals of quantum mechanics#The Schrödinger wave equation|Schrödinger wave equation]]:
-$$\begin{aligned}\pd{P}{t}&=\pd{}{t}[\Psi^*(x,t)\Psi(x,t)] \\
-&= \frac{i\hbar}{2m}\left[\Psi^*\nabla^2\Psi-\Psi\nabla^2\Psi^*\right] \\ &=  \frac{i\hbar}{2m} \nabla\cdot\left[\Psi^*\nabla\Psi-\Psi\nabla\Psi^*\right] \\\pd{P}{t}&=-\nabla\cdot\bm{J}\end{aligned}$$
-- Here, $\bm{J}$ is the _probability current density_
-- This is the continuity equation for the probability of finding a particle
-	- For an ensemble of $N$ particles, $N\bm{J}\cdot d\bm{S}$ particles per unit time flow past an area $d\bm{S}$
+# Multiple degrees of freedom
+- Much of the discussion above was dedicated to one degree of freedom, i.e. _one particle in one dimension_
 
-- For a _travelling plane wave_:
-$$\displaylines{\psi=A\exp[i(kx-\omega t)] \\ J=\frac{\hbar k}{m}|A|^2}$$
-- Here, $\hbar k/m$ is the _classical speed_
+## Two particles in one dimension
+- Consider two particles described _classically_ by $(x_1,p_1)$ and $(x_2,p_2)$
+- When quantising the system, establish operators $X_1$, $X_2$, $P_1$, $P_2$ such that they obey the _canonical commutation relations_:
+$$\displaylines{[\hat{X}_i,\hat{P}_j]=i\hbar\delta_{ij}\hspace{1cm}\text{ for }i,j=1,2 \\ [\hat{X}_i,\hat{X}_j]=[\hat{P}_i,\hat{P}_j]=0}$$
+- In this case, the coordinate basis must be a _simultaneous eigenbasis_ for $x_1$ and $x_2$, normalised using a _two-dimensional Dirac Delta_:
+$$\displaylines{\hat{X}_1\ket{x_1x_2}=x_1\ket{x_1x_2} \\ \hat{X}_2\ket{x_1x_2}=x_2\ket{x_1x_2} \\ \braket{x_1'x_2'|x_1x_2}=\delta(x_1-x_1')\delta(x_2-x_2')}$$
+- In the coordinate basis:
+$$\displaylines{\wv\xrightarrow{x\text{ basis}}\braket{x_1x_2|\Psi}=\Psi(x_1,x_2) \\ \hat{X}_i\xrightarrow{x\text{ basis}} x_i \\ \hat{P}_i\xrightarrow{x\text{ basis}} -i\hbar\pd{}{x_i}}$$
+- In general, the _probability density_ that particle 1 is near $x_1$ and particle 2 is near $x_2$ is:
+$$P(x_1,x_2)=|\braket{x_1x_2|\Psi}|^2$$
+- The wave function would then be normalised as:
+$$\braket{\Psi|\Psi}=\int |\braket{x_1x_2|\Psi}|^2\,dx_1\,dx_2=1$$
 
-- If $k$ is _imaginary_ (i.e. an evanescent wave), $J=0$
+- Aside from this coordinate basis, one can also define a _momentum basis_ with simultaneous eigenkets $\ket{p_1p_2}$
+- In _general_, one can define simultaneous eigenkets $\ket{\omega_1\omega_2}$ for _any two commuting operators_ $\Omega_1(X_1,P_1)$ and $\Omega_2(X_2,P_2)$
+	- Any function of $X_1,P_1$ must commute with any function of $X_2,P_2$
 
+### The two-particle Hilbert space
+
+### Time-evolution of two particles
+
+#### Separable Hamiltonians
+
+#### Two interacting particles
+
+## More particles
+
+## 3 dimensions
+
+## Identical particles

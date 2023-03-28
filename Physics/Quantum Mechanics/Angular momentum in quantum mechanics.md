@@ -1,5 +1,5 @@
 ## Orbital angular momentum
-- [[Operators, observables and uncertainty#The angular momentum operators|Definition of angular momentum operators]]
+- [[Operators, uncertainties and symmetries#The angular momentum operators|Definition of angular momentum operators]]
 - The operators $\bm{\hat{L}}^2$ and $\hat{L}_z$ _commute_
 - Hence, their eigenvalue problems can be solved _simultaneously_
 
@@ -40,7 +40,7 @@ $$|\bm{L}|=\hbar\sqrt{l(l+1)}$$
 - The value of $L^2$ is _always_ larger than the maximum value of $L_z$ as $l(l+1)>l^2$
 - Remember that when $L^2$ and $L_z$ are determinate, $L_x$ and $L_y$ are _always indeterminate_
 - After deriving these results, one can also find the effect of the ladder operators:
-$$\hat{L}_\pm\ket{lm_l}=\sqrt{l(l+1)-m_l(m_l\pm1)}\ket{l(m_l\pm1)}$$
+$$\hat{L}_\pm\ket{lm_l}=\hbar\sqrt{l(l+1)-m_l(m_l\pm1)}\ket{l(m_l\pm1)}$$
 - The values of angular momentum can be pictured as so:
 ![[Angular momentum eigenstates.png]]
 - The _uncertainty relation_ for the other two components of $\bm{L}$:

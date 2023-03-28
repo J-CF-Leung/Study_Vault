@@ -56,12 +56,12 @@ $$\braket{j|V}=\sum_i a_i\braket{j|i}=a_j$$
 $$\ket{a}=\sum_i \ket{i}\braket{i|a}$$
 - So, for a basis set to be _complete_, it must satisfy the [[#Identity and projection operators|completeness relation]]
 
-### Subspaces
+### Subspaces and direct sums
 - If in a vector space $\mathbb{V}$ contains a set of vectors _that form a vector space amongst themselves_. that set of vectors is called a _subspace_
 - A subspace $i$ of dimensionality $n$ is denoted $\mathbb{V}_i^n$
 - Example: In $\mathbb{R}^3$, all vectors _orthogonal_ to one vector forms a subspace $\mathbb{R}_i^2$
 
-- Given two subspaces $\mathbb{V}_i^{n_i}$ and $\mathbb{V}_j^{n_j}$, their _sum_ is denoted:
+- Given two subspaces $\mathbb{V}_i^{n_i}$ and $\mathbb{V}_j^{n_j}$, their _direct sum_ is denoted:
 $$\mathbb{V}_i^{n_i}\oplus\mathbb{V}_i^{n_i}=\mathbb{V}_k^{n_k}$$
 - This consists of _all elements in each respective subspace, plus all possible linear combinations_
 - Example:, all vectors along $x$, and all vectors along $y$:
