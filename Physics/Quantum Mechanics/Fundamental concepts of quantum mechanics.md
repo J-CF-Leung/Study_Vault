@@ -137,6 +137,14 @@ $$\displaylines{\wv\xrightarrow{x\text{ basis}}\braket{x_1x_2\dots x_N|\Psi}=\Ps
 - The probability that one finds the particle in range $(x_1,x_2,\dots,x_N)$ and $(x_1+dx_1,x_2+dx_2,\dots,x_N+dx_N)$ is:
 $$|\Psi(x_1,x_2,\dots,x_N)|^2\,dx_1dx_2\dots dx_N$$
 
+- One can also perform _changes of variable_ once the operator is written down
+
+- Example: the _3-dimensional harmonic oscillator_
+$$\hat{\Ham}=\frac{\hat{P}_x^2+\hat{P}_y^2+\hat{P}_z^2}{2m}+\frac{1}{2} m\omega^2(\hat{X}^2+\hat{Y}^2+\hat{Z}^2)$$
+- In the coordinate basis, this is written as:
+$$\begin{aligned}\hat{\Ham}&\xrightarrow{x\text{ basis}}-\frac{\hbar^2}{2m}\left(\pd{^2}{x^2}+\pd{^2}{y^2}+\pd{^2}{z^2}\right)+\frac{1}{2}m\omega^2(x^2+y^2+z^2) \\ &\equiv-\frac{\hbar^2}{2m}\nabla^2+\frac{1}{2}m\omega^2r^2 \\ &\equiv-\frac{\hbar^2}{2m}\left(\frac{1}{r^2}\pd{}{r}\left(r^2\pd{}{r}\right) + \frac{1}{r^2\sin\theta}\pd{}{\theta}\left(\sin\theta\pd{}{\theta} \right) + \frac{1}{r^2\sin^2\theta}\pd{^2}{\phi^2}\right)+\frac{1}{2}m\omega^2r^2 \end{aligned}$$
+- There is _not necessarily a procedure for quantisation from non-Cartesian coordinates_
+
 # Time-evolution: The Schrödinger equation
 ## The time-evolution operator
 - Let the state ket at time $t$ be:
