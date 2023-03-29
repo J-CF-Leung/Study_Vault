@@ -9,7 +9,7 @@
 - Atomic force microscopy to measure height of sample
 
 # The thermodynamics of mixtures
-- Definition of thermodynamic functions: [[Thermodynamics]]
+- Definition of thermodynamic functions: [[Classical Thermodynamics]]
 - Gibbs Free Energy $G$ tends to a minimum at equilibrium
 - When 2 phases have the same $G$, they are in equilibrium
 

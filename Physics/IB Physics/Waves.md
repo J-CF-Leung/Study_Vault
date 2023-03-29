@@ -176,7 +176,7 @@ $$r=\frac{Z_1-Z_{eff}}{Z_1+Z_{eff}}\hspace{0.5cm},\hspace{0.5cm} Z_{eff}=\frac{Z
 - Pressure and displacement are $\pi/2$ out of phase
 - Maximum/minimum pressure at zero displacement
 
-- [[Thermodynamics#Gases|Thermodynamics of a gas]]
+- [[Classical Thermodynamics#Gases|Thermodynamics of a gas]]
 - The compression/rarefraction of an ideal gas: an adiabatic process, which satisfies:
 $$pV^\gamma=\text{const.}$$
 - Let the _original position_ of the gas be $x$, and the _displacement_ be $a(x,t)$

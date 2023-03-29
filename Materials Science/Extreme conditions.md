@@ -56,7 +56,7 @@ $$\dot{\epsilon}=B\frac{D\sigma}{d^2}=\frac{B'\sigma}{d^2}\exp(-\frac{Q}{RT})$$
 	- Large grains
 	- Pinned grain boundaries with controlled orientation to prevent sliding
 # Jet engines
-- Efficiency of a [[Thermodynamics|thermodynamic heat engine]] is higher with higher temperatures
+- Efficiency of a [[Classical Thermodynamics|thermodynamic heat engine]] is higher with higher temperatures
 	- Carnot cycle: $W/Q_{in}=1-T_c/T_H$
 	- Brayton cycle for jet engines: $W/Q_in=1-T_1/T_2$
 		- Start and end temperatures for adiabatic compression of air

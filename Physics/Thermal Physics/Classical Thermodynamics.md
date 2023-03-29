@@ -18,12 +18,30 @@ am convinced will never be overthrown."
 >-Albert Einstein
 
 >[!quote]
+>“Thermodynamics is a funny subject. The first time you go through it, you  
+don’t understand it at all. The second time you go through it, you think  
+you understand it, except for one or two small points. The third time you  
+go through it, you know you don’t understand it, but by that time you are  
+used to it, so it doesn’t bother you any more.”
+>-Arnold Sommerfeld
+
+>[!quote]
 >"The development of ideas in thermodynamics has a formal elegance which is exceedingly satisfying aesthetically"
 >"It has not perhaps quite the rigour of a perfect mathematical proof, but it approaches nearer that ideal than almost any other branch of natural science."
 >"For this reason alone it may be regarded as an important part of the education of a scientist."
 >-Sir A. B. Pippard
 
-# Statistical basis
+- Classical thermodynamics is a _phenomenological_ study of the properties of matter
+- It is a result of _observations_ and _generalisation_
+- It makes _no attempt to explain the laws themselves_
+- There are _four_ (phenomenological) laws which govern _all systems_
+
+- The _simplest_ thermodynamic systems are _homogeneous fluids and gases_
+	- A _deformation_ without change in volume _leaves thermal properties unchanged_
+
+- _Justifying_ all of the laws given below is the job of [[Statistical thermodynamics]]
+
+# Brief statistical justifications
 - [[Fundamental principles of statistical mechanics]]
 
 - For a system with an enormous number of particles, and thus, degrees of freedom, there is an immeasurable number of _microstates_
@@ -37,7 +55,7 @@ am convinced will never be overthrown."
 	- [[Fundamental principles of statistical mechanics#The equal probabilities postulate]]
 
 - A *macrostate* is defined by the _bulk properties_ of the system, and _incorporates many microstates_
-		- The probability of a particular microstate, given a macrostate is governed by the [[Fundamental principles of statistical mechanics#The statistical distribution function|statistical distribution function]]
+		- The probability of a particular microstate, _given a macrostate_ is governed by the [[Fundamental principles of statistical mechanics#The statistical distribution function|statistical distribution function]]
 - Macrostates are described by _thermodynamic variables_ such as $U, N, V, S, T, p, \mu$
 - Macrostates with energy more or less _equally shared_ among particles become way more likely
 
@@ -45,36 +63,83 @@ am convinced will never be overthrown."
 - As time goes on, a macrostate _irreversibly tends to its mean_, which defines _statistical equilibrium_
 	- This will later be characterised by the state variable of _entropy_
 
-# Temperature and the zeroth law
-- When two bodies are in _thermal equilibrium_, they must have the _same temperature_
-- _Zeroth law_: if $A$  is in thermal equilibrium with $B$ and $C$, $B$ and $C$ are in thermal equilibrium with each other
-	- i.e. The thermodynamic concept of temperature _"makes sense"_
-- To understand definition of temperature, let there be 2 bodies in _thermal contact_ with small fluctuations
-	- Can exchange $U$, but $N$ and $V$ remain fixed
-	- Total microstates = $\Omega_1\Omega_2$
-- The _most probable macrostate_ has a _maximum number of microstates_
-- One can write:
-$$\frac{d}{dU_1}(\Omega_1\Omega_2)=0$$
-- From energy conservation $dU_1=-dU_2$:
-$$\displaylines{\frac{1}{\Omega_1}\frac{d\Omega_1}{dU_1}-\frac{1}{\Omega_2}\frac{d\Omega_2}{dU_2}=0 \\\frac{d(\ln\Omega)}{dU}=\frac{1}{k_BT}}$$
-- This quantity is _the same across two objects_. and $T$ is defined as the _temperature_
-- Temperature scales can often be _arbitrary_
+# The Zeroth and First Laws
 
-- This also defines another _state variable_: _Entropy_
-	$$S=k_B\ln\Omega$$
-	- $k_B=$ Boltzmann's constant
-- A state of _maximum number of microstates_ has _maximum entropy_
+## Containers and equilibrium
+- When discussing the behaviour of _contained physical systems_, one needs to specify the nature of the _container_
+- In most cases, a container _does not allow exchange of particles with the outside_
+
+- If the substance within is _completely unaffected by any outside influence_, then the walls are _adiabatic_, and the substance is _isolated_, or _insulated_
+- If the wall is not adiabatic, then it is _diathermal_
+- Two systems _separated by a diathermal wall_ are said to be in _thermal contact_, and are able to _exchange energy_
+- If an _isolated system_ is left alone for long enough, it is said to have reached _equilibrium_
+
+- Types of equilibria: mostly _analagous to mechanical systems_
+	- _Stable_: bottom of a well, resistant to perturbations, pure gas at rest
+	- _Unstable_: top of a hill, _no thermodynamic analogues_
+	- _Neutral_: flat, unchanged after perturbation
+	- _Metastable_
+	- 
+	- 
+	- : stable w.r.t. small displacements, unstable w.r.t. large ones, examples include supercooled vapour
+- The equilibrium is _macroscopic_, ignoring _fluctuations_ which occur over a _very short period of time_
+- It is also _dynamic_, as there are still _microscopic changes_, but _macroscopic measurements  yield a constant result_
+- The process _leading to equilibrium_ is known as _thermalisation_
+
+## Temperature, the zeroth law, and equations of state
+- _Without electric or magnetic fields_, for a _given mass in equilibrium_, the _properties_ of a gas are observed to be _fully determined_ by the _volume_ $V$ and _pressure_ $p$
+- In other words, _any physical quantity_ can be expressed as some _function_ of $p$ and $V$
+
+- Let there be _two fluids independently in equilibrium_, with _state variables_ $(p_1,V_1),(p_2,V_2)$
+	- They can take _arbitrary values_
+- If they are placed in _thermal contact_, after some time, they will be _in equilibrium with each other_
+- This is termed _thermal equilibrium_
+- In thermal equilibrium, _three of the variables can be chosen arbitrarily_
+- In mathematical terms, when the two bodies are in thermal equilibrium:
+$$F(p_1,V_1,p_2,V_2)=0$$
+- The _form_ of $F$ will depend on the _specific type of fluid_
+
+- At this point, one requires the _zeroth law of thermodynamics_:
+>[!Zeroth Law of Thermodynamics]
+>Consider three bodies, $A$. $B$, and $C$
+>If $A$ is in thermal equilibrium with $B$, and if $A$ is separately in thermal equilibrium with $C$, then $B$ and $C$ will also be in thermal equilibrium with each other
+- From this, one can derive the fact that if two bodies are in _thermal equilibrium_, there exists two functions $A$ and $B$ such that:
+$$\theta_A(p_1,V_1)=\theta_B(p_2,V_2)$$
+- Proof:
+	- Let the three (arbitrary) bodies $A,B,C$ be described by variables $(p_1,V_1,),(p_2,V_2),(p_3,V_3)$
+	- The constraint for the thermal equilibrium of $A$ and $C$ can be written, then _inverted_
+	- The same can be done for $B$ and $C$:
+	$$\displaylines{F_{AC}(p_1,V_1,p_3,V_3)=0 \hspace{1cm} V_3=f_{AC}(p_1,V_1,p_3) \\ F_{BC}(p_2,V_2,p_3,V_3)=0 \hspace{1cm} V_3=f_{BC}(p_2,V_2,p_3)}$$
+	- This implies the constraint for the equilibrium of $A$ and $B$ can be written in _two different ways_:
+	$$\displaylines{f_{AC}(p_1,V_1,p_3)=f_{BC}(p_2,V_2,p_3) \\ F_{AB}(p_1,V_1,p_2,V_2)=0}$$
+	- The latter _does not depend on $p_3$_, hence it must appear in the upper expression in a way where it can be _cancelled on both sides_
+	- After the cancellation, one obtains:
+	$$\theta_A(p_1,V_1)=\theta_B(p_2,V_2)$$
+
+- The value $\theta$ is known as the _temperature_ of the system
+- At this point, it is worth noting that this definition is _empirical_, with a value depending on a choice of _thermometric body_ (Body $C$ in this case, e.g. mercury thermometer)
+
+- The _equation of state_ for a type of fluid is an equation in the form:
+$$\theta=f(p,V)$$
+- For a _given value_ of $\theta$, one can use this relationship to plot a curve on a _$p-V$ diagram_, known as an _isotherm_
 
 ## The ideal gas equation of state
-- _Boyles' Law_ states that at _constant temperature_, $pV$ is a _constant_
-- _Charles' Law_ states that at _constant pressure_, $V/T$ is a _constant_
-- This leads to a _reference-independent, absolute temperature scale_
+- A series of observations on the _ideal gas_:
+	- _Boyles' Law_ states that at _constant temperature_, $pV$ is a _constant_
+	- _Charles' Law_ states that at _constant pressure_, $V/T$ is a _constant_
+- This leads to a _reference-independent, absolute temperature scale_, where temperature is commonly labelled $T$
 - At _zero temperature_, $pV=0$
+
+- _Avogadro's Law_ then states that for _equal volumes_ of gas at _the same pressure and temperature_ must contain _equal numbers of molecules_
 
 - Combining the previous gas laws, one gets the _ideal gas law_:
 $$pV=nRT=NkT$$
 	- $n$, $N$: Number of molecules (in moles or pure number)
 	- $R$, $k$: _universal_ constants
+
+- This is the _equation of state_ for an ideal gas
+
+- Historical note: an actual absolute/thermodynamic temperature scale first came from [[#Engines and entropy|consideration of the Carnot engine]]
 
 ## The state variables
 - At equilibrium, _entropy can be expressed as a function_ of 3 variables:

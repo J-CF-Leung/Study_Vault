@@ -84,7 +84,7 @@ $$D=D_0\exp(-\frac{Q}{RT})$$
 	- Example: formation of body-centred tetragonal phase in an fcc structure, causes internal strains
 
 # Phase diagrams
-- At constant pressure and temperature, the most stable phase has the lowest Gibbs Free Energy (Definition: [[Thermodynamics]])
+- At constant pressure and temperature, the most stable phase has the lowest Gibbs Free Energy (Definition: [[Classical Thermodynamics]])
 ## Phase boundaries
 - The Clausius-Clapeyron equation:
 	- Differential of Gibbs Free Energy: $dG=VdP-TdS$

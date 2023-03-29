@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
+                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,7 +37,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md"
+                    "file": "Physics/Thermal Physics/Classical Thermodynamics.md"
                   }
                 }
               }
@@ -53,7 +53,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
+                    "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -163,7 +163,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
+                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -180,7 +180,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
+                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -203,7 +203,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md"
+                "file": "Physics/Thermal Physics/Classical Thermodynamics.md"
               }
             }
           },
@@ -235,8 +235,12 @@
   },
   "active": "b5f6df8198487832",
   "lastOpenFiles": [
-    "Mathematics/IB Mathematical Methods/Vector calculus in 3-dimensions.md",
+    "Physics/Thermal Physics/Statistical thermodynamics.md",
+    "Physics/Thermal Physics/Classical Thermodynamics.md",
+    "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md",
+    "Physics/Thermal Physics/Phase transitions.md",
     "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
+    "Mathematics/IB Mathematical Methods/Vector calculus in 3-dimensions.md",
     "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
     "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
     "Physics/Quantum Mechanics/1D time-independent Hamiltonians.md",
@@ -268,10 +272,6 @@
     "Physics/Quantum Mechanics/Quantum statistical mechanics.md",
     "Physics/Quantum Mechanics/Topics in Quantum Mechanics.md",
     "Physics/Quantum Mechanics/Multiple particles in quantum mechanics.md",
-    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
-    "Chemistry/IB Chemistry/Molecular orbitals.md",
-    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
-    "Mathematics/IB Mathematical Methods/Sturm-Liouville Theory.md",
     "Misc or Personal/What to do.canvas",
     "Physics/Images/Beam bending parameters.png",
     "Tentative.png",

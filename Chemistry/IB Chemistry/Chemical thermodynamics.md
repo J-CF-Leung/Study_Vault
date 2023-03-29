@@ -1,4 +1,4 @@
-- Rigorous discussion w/ _derivations_: [[Thermodynamics]]
+- Rigorous discussion w/ _derivations_: [[Classical Thermodynamics]]
 
 # State variables and reversibility
 

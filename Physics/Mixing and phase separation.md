@@ -1,6 +1,6 @@
 # Thermodynamics of mixing
 - Mixing of two elements $A$ and $B$ in a lattice
-- Quantity to minimise: [[Thermodynamics|Free Energy]] $F$
+- Quantity to minimise: [[Classical Thermodynamics|Free Energy]] $F$
 - Free energy change in mixing:
 	- Entropy change of mixing
 	$$\Delta S=-k_BM\left[\Phi\ln\Phi+(1-\Phi)\ln(1-\Phi)\right]$$
