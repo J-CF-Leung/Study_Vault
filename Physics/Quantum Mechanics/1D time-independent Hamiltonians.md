@@ -1,6 +1,6 @@
-- The [[Fundamentals of quantum mechanics#Time-independent Hamiltonians and stationary states|time-independent Schrödinger equation]] solves for the eigenkets of the Hamiltonian:
+- The [[Fundamental concepts of quantum mechanics#Time-independent Hamiltonians and stationary states|time-independent Schrödinger equation]] solves for the eigenkets of the Hamiltonian:
 $$\Ham\ket{E}=E\ket{E}$$
-- The resultant [[Fundamentals of quantum mechanics#The time-evolution operator|time-evolution operator]] and wave function become:
+- The resultant [[Fundamental concepts of quantum mechanics#The time-evolution operator|time-evolution operator]] and wave function become:
 $$\teo = \sum_n\ket{E_n}\bra{E_n}\exp(-iE_nt/\hbar)=\int\ket{E}\bra{E}\exp(-iEt/\hbar)\,dE$$
 $$\ket{\Psi(t)} =\sum_n\ket{E_n}\braket{E_n|\Psi_0}\exp(-iE_nt/\hbar) =\int \ket{E}\braket{E|\Psi_0}\exp(-iEt/\hbar)\,dE$$
 
@@ -301,7 +301,7 @@ $$\phi_n(p)\propto\left[\delta\left(\frac{p}{\hbar}-\frac{n\pi}{a}\right)+\delta
 - Hence, as $n$ increases, the _uncertainty of $p$ decreases_
 - So, it gets _more likely to detect the momentum at the particle at the classical momentum_ $p_n\approx\sqrt{2mE_n}$
 
-- In terms of Ehrenfest's Theoem: [[Fundamentals of quantum mechanics#Expectation values and the classical limit|The classical limit]]
+- In terms of Ehrenfest's Theoem: [[Fundamental concepts of quantum mechanics#Expectation values and the classical limit|The classical limit]]
 
 # Other potentials
 

@@ -21,7 +21,7 @@ $$\int_0^\infty r^2|R|^2\,dr=1\hspace{1.5cm}\int_0^\pi\int_0^{2\pi}|Y|^2\sin\the
 
 ### The angular equation
 - $Y$ can be further separated into functions of $\theta$ and $\phi$, with separation constant $m$
-- As $\hat{\Ham}$, $\hat{L}^2$ and $\hat{L}_z$ commute, the problem can be rewritten as constructing simultaneous eigenfunctions of three operators:
+- As $\hat{\Ham}$, $\hat{L}^2$ and $\hat{L}_z$ commute, the problem can be rewritten as constructing _simultaneous eigenfunctions_ of three operators:
 $$\hat{\Ham}\psi=E\psi \hspace{1cm} \hat{L}^2\psi=\hbar^2l(l+1)\psi \hspace{1cm} \hat{L}_z\psi=\hbar m\psi$$
 
 - The solutions to the angular equation are the [[Special functions and orthogonal relations#Spherical harmonics|spherical harmonics]]:
@@ -34,7 +34,7 @@ $$P_l^m(x)\equiv (-1)^m\left(1-x^2\right)^{m/2}\left(\frac{d}{dx}\right)^mP_l(x)
 $$P_l(x)\equiv\frac{1}{2^ll!}\left(\frac{d}{dx}\right)^l\left(x^2-1\right)^l$$
 - These are also the eigenfunctions of [[Angular momentum in quantum mechanics|angular momentum]]
 
-### The radial equation
+### Radial equation and the radial distribution function
 - To solve the equation, change variables:
 $$u(r)\equiv rR(r)$$
 - The normalisation condition becomes:

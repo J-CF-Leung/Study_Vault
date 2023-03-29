@@ -21,16 +21,18 @@ $$\braket{m|n}=\delta_{mn}$$
 - If the eigenvalue spectrum is continuous, they can only be normalised via the _Dirac Delta Function_:
 $$\braket{x|y}=\delta(x-y)$$
 
-# 1D position and momentum operators
+# 1D operators
+
+## Position and momentum
 - For all operators, the matrix elements in their eigenbasis is trivial:
 $$\braket{x|\hat{X}|x'}=x\,\delta(x-x') \;\;\;\; \braket{p|\hat{P}|p'}=p\,\delta(p-p')$$
 - The "origin" of the momentum operator is the _Hermitian version of the differential operator_ in the position basis:
 $$\braket{x|\hat{P}|x'} = -i\hbar\frac{d}{dx}\delta(x-x')$$
 	- The differential operator $D_{xx'}=\delta'(x-x')$ is an odd function
 	- Momentum is also the [[Analytical classical mechanics#Symmetries and Noether's Theorem|generator]] of translations
-- The eigenfunction of $\hat{P}$ in the position basis $\braket{x|p}$ can be solved by dotting $\hat{P}\ket{p}$ by $\bra{x}$ then using the completeness relation:
+- The _eigenfunction_ of $\hat{P}$ in the position basis $\braket{x|p}$ can be solved by dotting $\hat{P}\ket{p}$ by $\bra{x}$ then using the completeness relation:
 $$\braket{x|\hat{P}|p}=\int \braket{x|\hat{P}|x'}\braket{x'|p}\;dx'=p\braket{x|p}$$
-$$p(x)=\braket{x|p}=\frac{1}{\sqrt{2\pi\hbar}}\;\exp(ipx/\hbar)$$
+$$\braket{x|p}=\frac{1}{\sqrt{2\pi\hbar}}\;\exp(ipx/\hbar)$$
 	- The factor of $1/\sqrt{2\pi\hbar}$ ensures that $\braket{p|p'}=\delta(p-p')$, as it should in an orthonormal basis
 	- This is the [[Fourier series and transforms#Fourier transforms|Fourier transform]] of a Delta function (wave function with definite momentum)
 - Using this, the matrix elements of $\hat{X}$ in the momentum basis can also be found:
@@ -44,6 +46,8 @@ $$\braket{p|\hat{X}|p'}=i\hbar\frac{d}{dp}\delta(p-p')$$
 - Due to this symmetry, the position and momentum operators are known as _conjugates_
 - The two operators $\hat{X}$ and $\hat{P}$ do not commute:
 $$[\hat{X},\hat{P}]=i\hbar$$
+## Energies and the Hamiltonian
+
 
 # Useful commutation relations
 - Using the [[Vectors and matrices in physics#Commutation relations involving functions|commutation relations involving functions]]:
@@ -82,10 +86,22 @@ $$\psi(x)=A\exp\left[\frac{ip_0}{\hbar}(x-a)\right]\exp\left[-\frac{(x-a)^2}{2\D
 # Parity operator
 
 # Operators in three dimensions
+
+## Position and momentum
 - In the position basis in three dimensions, the momentum operator becomes:
-$$\braket{x_i|\bm{\hat{P}}|x_i'}=-i\hbar\pd{}{x_i}$$
+$$\hat{\bm{P}}\xrightarrow{x\text{ basis}}-i\hbar\pd{}{x_i}\bm{e}_i$$
+- This can also be written as:
+$$\hat{\bm{P}}\xrightarrow{x\text{ basis}}-i\hbar\nabla$$
+
 - The _canonical commutation relations_ become:
 $$\displaylines{ [\hat{x}_i,\hat{x}_j]=[\hat{p}_i,\hat{p}_j]=0 \\ [\hat{x}_i,\hat{p}_j]=-[\hat{p}_i,\hat{x}_j]=i\hbar\delta_{ij}}$$
+- The _eigenfunction_ of the 3-dimensional momentum operator in the _position basis_ is:
+$$\braket{\bm{x}|\bm{p}}=\braket{xyz|p_xp_yp_z}=\frac{1}{(2\pi\hbar)^{3/2}}\exp\left(\frac{i}{\hbar}\bm{p}\cdot\bm{x}\right)$$
+- This can be _separated into three one-dimensional eigenfunctions_
+
+### In spherical coordinates
+
+
 ## The orbital angular momentum operators
 - Appearances and eigenfunctions: [[Angular momentum in quantum mechanics]]
 
@@ -105,5 +121,7 @@ $$\hat{L}_z=-i\hbar\pd{}{\phi}$$
 
 - The $\hat{L}^2$ operator can also be written in terms of spherical coordinates:
 $$\hat{L}^2=-\hbar^2\left[\frac{1}{\sin\theta}\pd{}{\theta} \left(\sin\theta\pd{}{\theta}\right) +\frac{1}{\sin^2\theta}\pd{^2}{\phi^2}\right]$$
+
+
 ## Spin
 - The spin operators follow the same commutation relations:

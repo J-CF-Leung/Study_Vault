@@ -90,4 +90,6 @@ $$s=0,\frac{1}{2},1,\frac{3}{2}\dots \hspace{1cm} m_s=-s,-s+1,\dots,s-1,s$$
 - The addition of the $z$ component is straight-forward:
 $$$$
 
-### General addition of angular momentum
+### General addition of spin
+
+# Total angular momentum

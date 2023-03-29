@@ -1,5 +1,5 @@
 ## The density matrix
-- To test theories in quantum mechanics, one needs a _quantum ensemble_ of $N$ systems to make [[Fundamentals of quantum mechanics#Measurement|measurements]] on
+- To test theories in quantum mechanics, one needs a _quantum ensemble_ of $N$ systems to make [[Fundamental concepts of quantum mechanics#Measurement|measurements]] on
 - It is difficult to make ensembles pure, i.e. all in one state $\wv$
 - There may be a _mixed_ ensemble of $k$ different states, represented by kets $\ket{i}$, each with _occupancy number_ $n_i$
 - The density operator/matrix is defined as:
@@ -20,6 +20,6 @@ $$\displaylines{\rho^\dagger=\rho \\ \text{Tr}(\rho) =1 \\ \text{Tr}(\rho^2)\leq
 $$\displaylines{\rho^2=\rho \\ \text{Tr}(\rho^2)=1}$$
 
 - The density matrix is used in _statistical mechanics_ as the [[Fundamental principles of statistical mechanics#The statistical matrix|statistical matrix]]
-- As the individual state kets making up $\rho$ still follow the [[Fundamentals of quantum mechanics#Time-evolution The Schrödinger equation|Schrödinger equation]], the time evolution of the density matrix follows the _von Neumann equation_:
+- As the individual state kets making up $\rho$ still follow the [[Fundamental concepts of quantum mechanics#Time-evolution The Schrödinger equation|Schrödinger equation]], the time evolution of the density matrix follows the _von Neumann equation_:
 $$i\hbar\pd{\rho}{t}=-[\rho,\Ham]$$
 - This is analagous to the classical [[Analytical classical mechanics#Liouville's Theorem|Liouville's equation]]$$\pd{\rho_{clas}}{t}=-\PB{\rho}{\Ham}$$
