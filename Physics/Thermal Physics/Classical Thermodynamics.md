@@ -57,11 +57,14 @@ used to it, so it doesn’t bother you any more.”
 - A *macrostate* is defined by the _bulk properties_ of the system, and _incorporates many microstates_
 		- The probability of a particular microstate, _given a macrostate_ is governed by the [[Fundamental principles of statistical mechanics#The statistical distribution function|statistical distribution function]]
 - Macrostates are described by _thermodynamic variables_ such as $U, N, V, S, T, p, \mu$
-- Macrostates with energy more or less _equally shared_ among particles become way more likely
+- Macrostates with energy more or less _equally shared_ among particles become way more likely (way _more available mcirostates_)
+	- Consequence of equal probabilities
 
-- Microstates can evolve _reversibly and deterministically with time_
-- As time goes on, a macrostate _irreversibly tends to its mean_, which defines _statistical equilibrium_
+- _Microstates_ can evolve _reversibly and deterministically with time_
+- As time goes on, a _macrostate irreversibly tends to its mean_, which defines _statistical equilibrium_
 	- This will later be characterised by the state variable of _entropy_
+- The _final_ macrostate will tend to be one with _the most number of microstates_
+	- Consequence of equal probabilities (the system spends the most time in the macrostate)
 
 # The Zeroth and First Laws
 

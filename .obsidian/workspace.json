@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
+                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,7 +37,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/Thermal Physics/Classical Thermodynamics.md"
+                    "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md"
                   }
                 }
               }
@@ -53,7 +53,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
+                    "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -76,7 +76,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.9020357635304831,
+                      "scale": 0.10170856483600273,
                       "close": true
                     }
                   }
@@ -163,7 +163,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
+                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -180,7 +180,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
+                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -203,7 +203,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Thermal Physics/Classical Thermodynamics.md"
+                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md"
               }
             }
           },
@@ -235,10 +235,13 @@
   },
   "active": "b5f6df8198487832",
   "lastOpenFiles": [
-    "Physics/Thermal Physics/Statistical thermodynamics.md",
+    "Chemistry/IB Chemistry/Molecular orbitals.md",
+    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Physics/Thermal Physics/Classical Thermodynamics.md",
-    "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md",
     "Physics/Thermal Physics/Phase transitions.md",
+    "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md",
+    "Physics/Thermal Physics/Statistical thermodynamics.md",
     "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
     "Mathematics/IB Mathematical Methods/Vector calculus in 3-dimensions.md",
     "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
@@ -248,7 +251,6 @@
     "Physics/Quantum Mechanics/Operators, uncertainties and symmetries.md",
     "Physics/Vectors and matrices in physics.md",
     "Physics/Images/Hydrogen radial distribution function.png",
-    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
     "Physics/Quantum Mechanics/Density matrix.md",
     "Physics/Quantum Mechanics/Path integrals in quantum mechanics.md",
@@ -270,8 +272,6 @@
     "Past Papers/Past Tripos papers-20230327/IB_A_2013.pdf",
     "Physics/Quantum Mechanics/The failure of classical mechanics.md",
     "Physics/Quantum Mechanics/Quantum statistical mechanics.md",
-    "Physics/Quantum Mechanics/Topics in Quantum Mechanics.md",
-    "Physics/Quantum Mechanics/Multiple particles in quantum mechanics.md",
     "Misc or Personal/What to do.canvas",
     "Physics/Images/Beam bending parameters.png",
     "Tentative.png",

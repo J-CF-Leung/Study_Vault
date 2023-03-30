@@ -47,8 +47,46 @@ $$\displaylines{A=U-TS \\ dA=dU-T\,dS-S\,dT=-p\,dV-S\,dT}$$
 $$-\frac{dA_\text{sys}}{T}=dS_\text{sys}-\frac{dU}{T}=dS_\text{univ}$$
 - From this, for a _spontaneous process at constant volume and temperature_, $A$ _decreases_
 
-# Statistics and the partition function
+# Statistics and the Boltzmann distribution
+- Detail: [[Statistical thermodynamics]]
 
+## Microstates and macrostates
+- For a system with an enormous number of particles, and thus, degrees of freedom, there is an immeasurable number of _microstates_
+	- The number of microstates is denoted $\Omega$
+
+- A *macrostate* is defined by the _bulk properties_ of the system, and _incorporates many microstates_
+- Macrostates are described by _thermodynamic variables_ such as $U, N, V, S, T, p, \mu$
+- For a macrostate with a particular $U$, there is a _very large number of microstates_ with different _distributions_ of energy among particles
+- _Macrostates_ with energy more or less _equally shared_ among particles become way more likely (have _more microstates_)
+	- Consequence of the equal probabilities postulate
+
+- For thermodynamics to work, 2 fundamental suppositions must be made:
+1. After a sufficiently long time, the _initial conditions become irrelevant_ as particles redistribute energy and momentum until equilibrium is reached
+2. For a system _in equilibrium_, all possible microstates are equally likely 
+
+- _Microstates_ can evolve _reversibly and deterministically with time_
+- As time goes on, a _macrostate irreversibly tends to its mean_, which defines _statistical equilibrium_
+- The _final_ macrostate will tend to be one with _the most number of microstates_
+	- Consequence of the equal probabilities postulate, as the system _spends much more time_ in that macrostate
+
+## Entropy
+- The Boltzmann definition of entropy is:
+$$S=k_B\ln\Omega$$
+- Here, $\Omega$ is the _number of microstates_
+
+- If two sub-systems $A,B$ have $\Omega_A$ and $\Omega_B$ microstates respectively, then $\Omega_\text{tot}=\Omega_A\Omega_B$
+- Then, the entropy is _additive_: $S=S_A+S_B$
+
+- Consider a system going from an _initial macrostate_ with $\Omega_\text{i}$ to a _final macrostate_ with $\Omega_\text{f}$
+- The _ratio of probabilities_ for finding the system in the corresponding microstates is:
+$$\begin{aligned}\frac{P_f}{P_i}=\frac{\Omega_f}{\Omega_i} =\exp(-\Delta S/k)\end{aligned}$$
+- For $\sim1$ moles of gas, this would be the order of $\exp(-N_A)$
+
+## The Boltzmann distribution
+- In chemistry, one usually considers a system _in thermal equilibrium with surroundings_
+- This can be considered a small system _able to exchange energy with a much larger reservoir at constant temperature_
+
+# The partition function
 
 # Internal energy and heat capacity
 
@@ -60,4 +98,3 @@ $$-\frac{dA_\text{sys}}{T}=dS_\text{sys}-\frac{dU}{T}=dS_\text{univ}$$
 
 # Kinetics
 
-# The Boltzmann distribution

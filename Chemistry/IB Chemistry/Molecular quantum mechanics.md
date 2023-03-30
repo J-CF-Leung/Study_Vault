@@ -385,7 +385,7 @@ $$\displaylines{\hat{\Ham}\ket{nlm_lm_s}=E_{nl}\ket{nlm_lm_s} \\
 - In general, more useful to consider the _total_ spin and $m_s$ of a system to construct allowed states (by the Pauli Principle below)
 
 # Pauli Principle
-- The quantum mechanics of identical particles: [[Multiple particles in quantum mechanics]]
+- [[Fundamental concepts of quantum mechanics#Identical particles|The quantum mechanics of identical particles]]
 - For 2 identical particles, the collective wavefunction is denoted $\Psi_{12}=\psi_1\psi_2$
 - In quantum mechanics, 2 electrons are _indistinguishable_ (labelling is impossible)
 
