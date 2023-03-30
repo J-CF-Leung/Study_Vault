@@ -1,5 +1,11 @@
-## Orbital angular momentum
 - [[Operators, uncertainties and symmetries#The angular momentum operators|Definition of angular momentum operators]]
+- Particles have _two kinds_ of angular momentum: _orbital_ $\bm{L}$ and _spin_ $\bm{S}$
+- The _total_ angular momentum is $\bm{J}\equiv\bm{L}+\bm{S}$
+
+- All of these operators must obey the _commutation relations_:
+$$$$
+
+## Orbital angular momentum
 - The operators $\bm{\hat{L}}^2$ and $\hat{L}_z$ _commute_
 - Hence, their eigenvalue problems can be solved _simultaneously_
 
@@ -48,18 +54,20 @@ $$\Delta L_x\Delta L_y\geq \frac{\hbar}{2}|\mean{L_z}|$$
 - Special case where all three components are known: $L^2=L_x=L_y=L_z=0$
 
 ### The operators in spherical coordinates
-- Before finding the eigenfunctions, it is helpful to rewrite the operators in spherical coordinates
-- The total angular momentum vector operator:
-$$\hat{\bm{L}}=-i\hbar\left( \hat{\phi}\pd{}{\theta}-\hat{\theta} \frac{1}{\sin\theta}\pd{}{\phi}\right)$$
+- Before finding the eigenfunctions, it is helpful to rewrite the operators in _spherical coordinates_
+- The total angular momentum vector operator $\hat{\bm{L}}\rightarrow-i\hbar\bm{r}\wedge\nabla$:
+$$\hat{\bm{L}}\xrightarrow{\theta,\phi\text{ basis}}-i\hbar\left( \hat{\phi}\pd{}{\theta}-\hat{\theta} \frac{1}{\sin\theta}\pd{}{\phi}\right)$$
 - The ladder operators:
-$$\hat{L}_\pm=\pm\hbar\exp(\pm i\phi)\left(\pd{}{\theta}\pm i\cot\theta\pd{}{\phi}\right)$$
+$$\hat{L}_\pm\xrightarrow{\theta,\phi\text{ basis}}\hbar\exp(\pm i\phi)\left(\pm\pd{}{\theta}+ i\cot\theta\pd{}{\phi}\right)$$
 - Square of total angular momentum:
-$$\hat{L}^2=-\hbar^2\left[\frac{1}{\sin\theta}\pd{}{\theta} \left(\sin\theta\pd{}{\theta}\right) +\frac{1}{\sin^2\theta}\pd{^2}{\phi^2}\right]$$
+$$\hat{L}^2\xrightarrow{\theta,\phi\text{ basis}}-\hbar^2\left[\frac{1}{\sin\theta}\pd{}{\theta} \left(\sin\theta\pd{}{\theta}\right) +\frac{1}{\sin^2\theta}\pd{^2}{\phi^2}\right]$$
 - Angular momentum along $z-$direction:
-$$\hat{L}_z=-i\hbar\pd{}{\phi}$$
+$$\hat{L}_z\xrightarrow{\theta,\phi\text{ basis}}-i\hbar\pd{}{\phi}$$
 
 ### Eigenfunctions of orbital angular momentum
 - By inspecting the DEs resulting from applying $\hat{L}^2$ and $\hat{L}_z$, one can see that the eigenfunctions are the [[Special functions and orthogonal relations#Spherical harmonics|spherical harmonics]] $Y^m_l$
+- Or, one can use the operators in spherical coordinates to find some general features
+
 
 - For spherical harmonics, $l$ _only takes on integer values_
 

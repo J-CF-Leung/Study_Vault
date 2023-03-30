@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "5d77db823a569b93",
+        "id": "7720cfc61fde3e9c",
         "type": "tabs",
         "dimension": 64.23529411764706,
         "children": [
           {
-            "id": "b5f6df8198487832",
+            "id": "075060d114a2f41c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                "file": "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,7 +37,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md"
+                    "file": "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md"
                   }
                 }
               }
@@ -53,7 +53,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                    "file": "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -76,7 +76,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.10170856483600273,
+                      "scale": 0.5227056554590351,
                       "close": true
                     }
                   }
@@ -163,7 +163,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                "file": "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -180,7 +180,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                "file": "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -203,7 +203,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md"
+                "file": "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md"
               }
             }
           },
@@ -233,33 +233,35 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b5f6df8198487832",
+  "active": "075060d114a2f41c",
   "lastOpenFiles": [
+    "Physics/Quantum Mechanics/Operators, uncertainties and symmetries.md",
+    "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
+    "Physics/Vectors and matrices in physics.md",
+    "Mathematics/IB Mathematical Methods/Dirac Delta Function.md",
+    "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
+    "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
+    "Physics/Quantum Mechanics/1D time-independent Hamiltonians.md",
+    "Mathematics/Special functions and orthogonal relations.md",
+    "Physics/Quantum Mechanics/Path integrals in quantum mechanics.md",
+    "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
+    "Physics/Quantum Mechanics/Quantum statistical mechanics.md",
+    "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
+    "Physics/Quantum Mechanics/The failure of classical mechanics.md",
+    "Physics/Quantum Mechanics/Topics in Quantum Mechanics.md",
+    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Chemistry/IB Chemistry/Molecular orbitals.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
-    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Physics/Thermal Physics/Classical Thermodynamics.md",
     "Physics/Thermal Physics/Phase transitions.md",
     "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md",
     "Physics/Thermal Physics/Statistical thermodynamics.md",
-    "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
     "Mathematics/IB Mathematical Methods/Vector calculus in 3-dimensions.md",
-    "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
-    "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
-    "Physics/Quantum Mechanics/1D time-independent Hamiltonians.md",
-    "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
-    "Physics/Quantum Mechanics/Operators, uncertainties and symmetries.md",
-    "Physics/Vectors and matrices in physics.md",
     "Physics/Images/Hydrogen radial distribution function.png",
-    "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
     "Physics/Quantum Mechanics/Density matrix.md",
-    "Physics/Quantum Mechanics/Path integrals in quantum mechanics.md",
     "Mathematics/IB Mathematical Methods/Contour integration.md",
-    "Mathematics/IB Mathematical Methods/Dirac Delta Function.md",
     "Mathematics/IB Mathematical Methods/Transform methods.md",
     "Preamble.md",
-    "Mathematics/IB Mathematical Methods/Elementary Analysis.md",
-    "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Past Papers/Past Tripos papers-20230327/IB_A_2022.pdf",
     "Past Papers/Past Tripos papers-20230327/IB_A_2021.pdf",
     "Past Papers/Past Tripos papers-20230327/IB_A_2020.pdf",
@@ -270,8 +272,6 @@
     "Past Papers/Past Tripos papers-20230327/IB_A_2015.pdf",
     "Past Papers/Past Tripos papers-20230327/IB_A_2014.pdf",
     "Past Papers/Past Tripos papers-20230327/IB_A_2013.pdf",
-    "Physics/Quantum Mechanics/The failure of classical mechanics.md",
-    "Physics/Quantum Mechanics/Quantum statistical mechanics.md",
     "Misc or Personal/What to do.canvas",
     "Physics/Images/Beam bending parameters.png",
     "Tentative.png",

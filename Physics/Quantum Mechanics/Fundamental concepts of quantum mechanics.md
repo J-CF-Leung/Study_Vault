@@ -14,21 +14,22 @@
 - The _eigenvalues_ are denoted with the small version of the letter for the operator:
 $$\hat{\Omega}\ket{\omega}=\omega\ket{\omega}$$
 
-# The Wave function and the fundamental postulates 
+# The fundamental postulates 
 - After many experiments proving the [[The failure of classical mechanics|inadequacy of classical mechanics]], many attempts were made to create a quantum theory
 - Eventually, a set of _postulates_ were agreed upon
-- These postulates assume _one degree of freedom_, for _non-relativistic particles_
+- These postulates assume _non-relativistic particles_
 
-- __Postulate 1:__ In quantum mechanics, the state of a system is represented by the wave function, a state vector in [[Vectors and matrices in physics|complex vector space]]
+- __Postulate 1:__ In quantum mechanics, the state of a system is represented by the wave function, a state vector $\wv$ in [[Vectors and matrices in physics|complex vector space]]
 
-- __Postulate 2:__ The independent variables $x$ and $p$ of the Hamiltonian formulation are represented by the Hermitian operators $\hat{X}$ and $\hat{P}$ ([[Operators, uncertainties and symmetries#Position and momentum|definition]]), with classical variables $\omega(x,p)$ _represented by operator_ $\hat{\Omega}(\hat{X},\hat{P})$ 
-	- In the position eigenbasis, $\braket{x|\hat{X}|x'}=x\delta(x-x')$ and $\braket{x|\hat{P}|x'}=i\hbar\delta'(x-x')$
-	- They obey the _canonical commutation relation_ $[\hat{X},\hat{P}]=i\hbar\hat{I}$
+- __Postulate 2:__ All _observables_ $\omega$ in quantum mechanics are represented by an _operator_ $\hat{\Omega}$ 
 
 - __Postulate 3:__ Measurement of a variable corresponding to $\hat{\Omega}$ _always yields one of the eigenvalues $\omega$ with probability (density) $|\braket{\omega|\Psi}|^2$_, with the _subsequent state represented by normalised eigenvector_ $\ket{\omega}$. Values other than the eigenvalues are impossible.
 	- In terms of [[Vectors and matrices in physics#Identity and projection operators|projection operator]] $\mathcal{P}_\omega=\ket{\omega}\bra{\omega}$, $P(\Omega=\omega) \propto \braket{\Psi|\mathcal{P}_\omega\Psi} = \braket{\Psi\mathcal{P}_\omega|\mathcal{P}_\omega\Psi}$
+	- An important _consequence_ of this postulate is that $\hat{\Omega}$ is always _Hermitian_
 
-- __Postulate 4:__ The state ket $\wv$ obeys [[#Time-evolution The Schrödinger equation|the Schrödinger equation]]
+- __Postulate 4:__ The state ket $\wv$ evolves in time according to [[#Time-evolution The Schrödinger equation|the Schrödinger equation]]
+
+# The wave function
 
 ## Normalisation
 - Each physical state is more precisely described as a _"ray" in the complex vector space_
@@ -36,41 +37,97 @@ $$\hat{\Omega}\ket{\omega}=\omega\ket{\omega}$$
 - If $\wv$ is a _proper vector_, it is normalised ($\braket{\Psi|\Psi}$ = 1) to _normalise the probability distribution_
 - There is _freedom to multiply_ the ket by a _phase factor_ $exp(i\theta)$ to make certain components real
 - $\wv$ could be an _improper vector_, which can only be _normalised to a Delta function_
-	- Example: Continuous wave
+	- Example: Continuous _wave train/beam_
 
 ## Superposition
-- The state vector $\wv$ is an element of a vector space
+- The state vector $\wv$ is an _element of a vector space_
 - Hence if $\wv$ and $\ket{\Psi'}$ both represent _possible states_, then all _linear combinations_ $\alpha\wv+\beta\ket{\Psi'}$ are _also possible states_
 - When making measurements, the mixed state will (loosely speaking) _sometimes_ resemble $\wv$, and at other times resemble $\ket{\Psi'}$
+
+
+## The wave function in different bases
+- $\wv$ itself _only exists in Hilbert space_
+- However, it can be _projected_ onto different bases, with the _components_ encoding information about the state
+- The bases considered are those of _Hermitian operators_, representing _observables_
+- These are _complete, orthonormal eigenbases_
+
+### Position and momentum
+- The most important ones are _position_ $\hat{X}$ and _momentum_ $\hat{P}$
+- The latter is derived from the [[Vectors and matrices in physics#The k basis|k basis]]:
+$$\displaylines{\hat{P}=\hbar\hat{K} \\ \hat{P}f(x)=-i\hbar\frac{df}{dx} \\ \braket{x|p}=\frac{1}{\sqrt{2\pi}}\exp(ipx/\hbar)}$$
+- Position and momentum are the most commonly considered variables to describe particles:
+$$\Psi(x,t)=\braket{x|\Psi(t)}\;\;\;\;\Phi(p,t)=\braket{p|\Psi(t)}$$
+- $\Psi(x,t)$ is commonly referred to as the _position-space wave function_
+- $\Phi(p,t)$ is commonly referred to as the _momentum-space wave function_
+
+### Spectral decomposition
+- As the eigenkets of any Hermitian operator _span the entire vector space_, any wave function can be written _in terms of eigenstates_, in a _spectral decomposition_:
+$$\begin{aligned}\wv&=\sum_n\ket{q_n}\braket{q_n|\Psi}=\sum_nc_n\ket{q_n} \\ &= \int \ket{q_n}\braket{q_n|\Psi}\,dq = \int c(q)\, \ket{q} \,dq \end{aligned}$$
+
+- The _information encoded by the components of the wave function_ is a _probability (density) for measurement_
+	- See postulate 3
+- Discrete spectrum: $P(Q=q_n)=|c_n|^2=|\braket{q_n|\Psi}|^2$
+- Continuous spectrum: $P(q<Q<q+dq)=|c(q)|^2\,dq=|\braket{q|\Psi}|^2\,dq$
+
+- As the wave function is _normalised_, the coefficients sum/integrate to one
+$$\sum_n|c_n|^2=\int |c(q)|^2\,dq=1$$
+### Converting between bases
+- To convert to another basis, use the _completeness relation_:
+$$I=\int\ket{q}\bra{q}\,dq$$
+- Example: from position to momentum
+$$\Phi(p,t)=\braket{p|\Psi}=\int\braket{p|x}\braket{x|\Psi}dx=\frac{1}{\sqrt{2\pi\hbar}}\int\exp(-ipx/\hbar)\Psi(x)\,dx$$
+# Observables, operators and measurements
 
 ## Measurement and state vector collapse
 - In _classical_ mechanics, _ideal measurements_ will _leave the object intact_
 - In _quantum_ mechanics, _ideal measurements_ will _always cause a collapse of the wave function_
 - A quantum measurement can be defined as _interaction with a classical object_
 
-- Given an operator $\hat{\Omega}$ representing physical quantity $\omega$, the wave vector can be written as:
-$$\wv=\sum_\omega\ket{\omega}\braket{\omega|\Psi}=\sum_\omega \hat{\mathcal{P}}_\omega\ket{\Psi}$$
+- Given an operator $\hat{\Omega}$ representing physical quantity $\omega$, the _spectral decomposition_ of the wave function is:
+$$\wv=\sum_i\ket{\omega_i}\braket{\omega_i|\Psi}=\sum_i \hat{\mathcal{P}}_i\ket{\Psi}$$
 - If the result of the measurement was $\omega$, the wave function _collapses_ into:
-$$\wv\xrightarrow{\Omega\text{ measured, }\omega \text{ obtained}} \frac{\hat{\mathcal{P}}_\omega\wv}{\braket{\hat{\mathcal{P}}_\omega\Psi|\hat{\mathcal{P}}_\omega\Psi}^{1/2}}=\ket{\omega}$$
-- The _only case_ where the wave function is _unaffected_ is if it is _already in the eigenstate_ $\ket{\omega}$
+$$\wv\xrightarrow{\Omega\text{ measured, }\omega_i \text{ obtained}} \frac{\hat{\mathcal{P}}_i\wv}{\braket{\hat{\mathcal{P}}_i\Psi|\hat{\mathcal{P}}_i\Psi}^{1/2}}=\ket{\omega_i}$$
+- The _only case_ where the wave function is _unaffected_ is if it is _already in the eigenstate_ $\ket{\omega_i}$
 - The equality sign is _only applicable if the eigenvalue has no degeneracy_
 
-- If degeneracy exists, $\hat{\mathcal{P}}_\omega$ is a _sum of outer products of the eigenbasis_
-- The wave function is then _collapsed into an eigenspace_ $\mathbb{V}_\omega$
-	- It will be some _linear combination_ of the degenerate eigenvectors
-	- If the initial state is _unknown_, the coefficients of that linear combination are also unknown
+- Any _subsequent measurement of $\omega$_ will continue to yield $\omega_i$ with probability of 1
 
 - To test quantum theory, one must use a _quantum ensemble_ of particles in pre-determined, definite states as _wave functions collapse after measurement_
 
-### Complications
-- The _conversion_ from a classical quantity to a quantum mechanical operator can be ambiguous ($\hat{X}\hat{P}\neq \hat{P}\hat{X}$)
-	- For 2 operators, a Hermitian, symmetric sum can be used: $(\hat{X}\hat{P}+\hat{P}\hat{X})/2$
-- If the eigenvalue spectrum is continuous, $|\braket{\omega|\Psi}|^2$ becomes a _probability density_
-	- If the wave function is improper, it is only a relative probability density
-- A quantum variable _does not necessarily have a classical counterpart_
-	- Example: spin
+### Probabilities, expectation values and uncertainties
+- Assume a _normalised_ wave function
+- According to postulate 3, the _probability_ that a measurement of $\omega$ leads to $\omega_i$ is:
+$$P(\omega_i)=|\braket{\omega_i|\Psi}|^2$$
+- If the eigenvalue spectrum is _discrete_, this is the _probability_
 
-## Compatibility and uncertainty
+- If the eigenvalue spectrum is _continuous_, this is the _probability density_
+- The probability that the measured value $\omega_m$ lies in the _range_ from $\omega$ to $\omega+d\omega$ is:
+$$P(\omega<\omega_m<\omega+d\omega)=|\braket{\omega|\Psi}|^2\,d\omega$$
+
+- If the wave function is an _improper vector_, this is only a _relative_ probability
+	- Example: _Reflection_ and _transmission_ amplitudes for a _particle beam_
+
+- Given this, the _expectation value_ of a measurement is then:
+$$\mean{\Omega}=\sum_iP(\omega_i)\omega_i=\sum_i\braket{\Psi|\omega_i}\omega_i\braket{\omega_i|\Psi}=\braket{\Psi|\hat{\Omega}|\Psi}$$
+- The proof is analagous for _continuous spectra_
+
+- This is an average over an _ensemble_ of particles all with wave function $\wv$
+- If $\wv=\ket{\omega_i}$, then $\mean{\Omega}=\omega_i$
+- The _eigenvalues and eigenvectors do not necessarily need to be known_, only the _matrix elements_ of $\hat{\Omega}$ in a particular basis, as well as $\Psi$ in that basis
+
+- With this, the _variance_ of measuring $\omega$ over an ensemble is then:
+$$\sigma_\omega^2=\mean{(\Omega-\mean{\Omega})^2}=\mean{\Omega^2}-\mean{\Omega}^2$$
+
+### Degeneracy of eigenvalues
+- If each eigenvalue $\omega$ has _degeneracy_ $g_i$, the spectral decomposition is:
+$$\wv=\sum_i\sum_{n=1}^{g_i}c_{in}\ket{\omega_i^{(n)}}$$
+- $\hat{\mathcal{P}}_i$ is then a _sum of outer products of the eigenbasis_:
+$$\hat{\mathcal{P}}_i=\sum_{n=1}^{g_i}\ket{\omega_i^{(n)}}\bra{\omega_i^{(n)}}$$
+- The wave function is then _collapsed into an eigenspace_ $\mathbb{V}_\omega$
+$$\wv\xrightarrow{\Omega\text{ measured, }\omega \text{ obtained}} \frac{1}{\sqrt{\sum_n|c_{i n}|^2}}\sum_{n=1}^{g_i} c_{i n}\ket{\omega_i^{(n)}}$$
+- If the initial state is _unknown_, the coefficients of this linear combination are also unknown
+
+### Compatibility of multiple measurements
 - For only one given variable $\omega$, one can _produce a state with a definite value_ of $\omega$ by performing a measurement and collapsing the wave function
 	- The state is not definite if $\Omega$ is degenerate
 - Consider two variables $\omega$ and $\lambda$, _measured one after the other_
@@ -83,30 +140,28 @@ $$\wv\xrightarrow{\Omega\text{ measured, }\omega \text{ obtained}} \frac{\hat{\m
 
 - If two observables are _incompatible_, since _no simultaneous eigenkets exist_, this introduces some _uncertainty_ when trying to measure the two variables
 - _Position_ and _momentum_ are one such conjugate pair, hence _the classical notion of a path does not exist in quantum mechanics_
+- This uncertainty in measurements of conjugate variables can be _quantified_ with the [[#Uncertainty principles|generalised uncertainty principle]]
 
 ### Measuring compatible observables
-- If neither operator is degenerate, only one measurement collapses the wave function into a definite state, with $P(\omega,\lambda)=P(\lambda,\omega)$
-- If one of the operators is degenerate, $P(\omega,\lambda)=P(\lambda,\omega)$, but the wave functions after the measurements depends on measurement order
+- If _neither_ operator is degenerate, only _one measurement_ collapses the wave function into a definite state, with $P(\omega,\lambda)=P(\lambda,\omega)$
+- If _one_ of the operators is degenerate, $P(\omega,\lambda)=P(\lambda,\omega)$, but the wave functions after the measurements _depends on measurement order_
 - If both operators are degenerate, a third compatible must be found to "nail down" the wave function
 	- In general, a _complete set of commuting observables_ exists
 
-## The wave function in different bases
-- $\wv$ itself _only exists in Hilbert space_, other spaces representing observable quantities are auxiliary manifolds on which to _project_ $\wv$
-$$\Psi(x,t)=\braket{x|\Psi(t)}\;\;\;\;\Phi(p,t)=\braket{p|\Psi(t)}$$
+## Constructing an operator
+- Let there be a _classical dynamical variable_ $\omega(x,p)$, a _function_ of the _position_, and _conjugate momentum_ in the [[Analytical classical mechanics#Hamiltonian formulation|Hamiltonian formulation]]
+- Then, its _quantum analogue_ is an operator $\hat{\Omega}(\hat{X},\hat{P})$
+	- [[#Position and momentum]]
+	- [[Vectors and matrices in physics#Functions of operators|Functions of operators]]
 
-- As the eigenkets of any [[Operators, uncertainties and symmetries|operator representing an observable]] span the entire vector space, any wave function can be written _in terms of eigenstates_:
-$$\begin{aligned}\wv&=\sum_n\ket{q_n}\braket{q_n|\Psi}=\sum_nc_n\ket{q_n} \\ &= \int \ket{q_n}\braket{q_n|\Psi}\,dq = \int c(q)\, \ket{q} \,dq \end{aligned}$$
-- Discrete spectrum: $P(Q=q_n)=|c_n|^2=|\braket{q_n|\Psi}|^2$
-- Continuous spectrum: $P(q<Q<q+dq)=|c(q)|^2\,dq=|\braket{q|\Psi}|^2\,dq$
+- Sometimes, there may be _ambiguities_ involving products such as $xp$
+- In these cases, one can use a _symmetrised sum_ $(\hat{X}\hat{P}+\hat{P}\hat{X})/2$
 
-- As the wave function is _normalised_, the coefficients sum/integrate to one
-$$\sum_n|c_n|^2=\int |c(q)|^2\,dq=1$$
-- As for the expectation value, expanding $\braket{\Psi|\hat{Q}\Psi}$ gives:
-$$\braket{\Psi|\hat{Q}\Psi}=\sum_nq_n|c_n|^2=\int q\,|c(q)|^2\;dq$$
-- To convert to another base, use the _completeness relation_:
-$$I=\int\ket{q}\bra{q}\,dq$$
-$$\Phi(p,t)=\braket{p|\Psi}=\int\braket{p|x}\braket{x|\Psi}dx=\frac{1}{\sqrt{2\pi\hbar}}\int\exp(-ipx/\hbar)\Psi(x)\,dx$$
-## Uncertainty
+- Sometimes, there _may be no classical analogue_
+- Example: Spin
+- In that case, some intuition may be used to determine commutation relations and other properties
+
+## Uncertainty principles
 - As the measured values of observables is now _probabilistic_, the distributions will come with some _variance_
 - There are certain _incompatible/conjugate variables_ where the operators _do not commute_
 
@@ -121,8 +176,18 @@ $$\sigma_A^2\sigma_B^2\geq\left(\frac{1}{2i}\left<[\hat{A},\hat{B}]\right>\right
 	- Proof: Cauchy-Schwarz inequality with $\ket{(\hat{A}-a)\Psi}$ and $\ket{(\hat{B}-b)\Psi}$
 		- $|\braket{f|g}|^2 = Re(\braket{f|g})^2+Im(\braket{f|g})^2$ 
 
-## Generalising to more dimensions
-- If one is considering a system with $N>1$ _degrees of freedom_, then [[#The Wave function and the fundamental postulates|Postulate 2]] is modified in the following manner:
+### The minimum uncertainty wave packet
+- From the proof of the inequality, for a packet with _minimal uncertainty in position and momentum_, it must satisfy:
+$$\left(\hat{P}-\mean{\hat{P}}\right)\ket{\Psi}=i|c|\left(\hat{X}-\mean{\hat{X}}\right)\wv$$
+- Defining:
+$$\displaylines{\Delta=\hbar/|c| \\ \mean{\hat{X}}=a \hspace{1cm}\mean{\hat{P}}=p_0}$$
+- Thus, the _minimum-uncertainty wave packet_ in position space is:
+$$\psi(x)=A\exp\left[\frac{ip_0}{\hbar}(x-a)\right]\exp\left[-\frac{(x-a)^2}{2\Delta^2}\right]$$
+- This is a _Gaussian packet_
+- Example occurence: the _ground state_ of the [[Quantum Harmonic Oscillator]]
+
+# Generalising to more dimensions
+- Consider a system with $N>1$ _degrees of freedom_
 
 - Corresponding to $N$ Cartesian coordinates $x_1,x_2\dots x_N$ describing the _classical_ system, there exist $N$ _mutually commuting position operators_ $\hat{X}_1,\dots,\hat{X}_N$
 - There exists a _simultaneous eigenbasis_ $\ket{x_1x_2\dots x_N}$ in a [[Vectors and matrices in physics#Direct product spaces|direct product space]]
@@ -145,7 +210,14 @@ $$\hat{\Ham}=\frac{\hat{P}_x^2+\hat{P}_y^2+\hat{P}_z^2}{2m}+\frac{1}{2} m\omega^
 $$\begin{aligned}\hat{\Ham}&\xrightarrow{x\text{ basis}}-\frac{\hbar^2}{2m}\left(\pd{^2}{x^2}+\pd{^2}{y^2}+\pd{^2}{z^2}\right)+\frac{1}{2}m\omega^2(x^2+y^2+z^2) \\ &\equiv-\frac{\hbar^2}{2m}\nabla^2+\frac{1}{2}m\omega^2r^2 \\ &\equiv-\frac{\hbar^2}{2m}\left(\frac{1}{r^2}\pd{}{r}\left(r^2\pd{}{r}\right) + \frac{1}{r^2\sin\theta}\pd{}{\theta}\left(\sin\theta\pd{}{\theta} \right) + \frac{1}{r^2\sin^2\theta}\pd{^2}{\phi^2}\right)+\frac{1}{2}m\omega^2r^2 \end{aligned}$$
 - There is _not necessarily a procedure for quantisation from non-Cartesian coordinates_
 
+# Useful commutation relations
+- Using the [[Vectors and matrices in physics#Commutation relations involving functions|commutation relations involving functions]]:
+$$\displaylines{[\hat{x},\hat{p}^l]=i\hbar l\hat{p}^{l-1}=i\hbar\pd{\hat{p}^l}{\hat{p}} \\ [\hat{x},F(\hat{x},\hat{p})]=i\hbar\pd{F}{\hat{p}} \\ [\hat{p},F(\hat{x},\hat{p})]=-i\hbar\pd{F}{\hat{x}}}$$
+- Example:
+$$[\hat{x},\hat{p}\hat{x}\hat{p}]=i\hbar(\hat{x}\hat{p}+\hat{p}\hat{x})$$
+
 # Time-evolution: The Schrödinger equation
+
 ## The time-evolution operator
 - Let the state ket at time $t$ be:
 $$\ket{\Psi(t)}=\teo(t-t_0)\ket{\Psi(t_0)}$$

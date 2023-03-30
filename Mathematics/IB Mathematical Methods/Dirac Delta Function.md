@@ -3,7 +3,7 @@
 >-Dr. S.J. Cowley, 2022
 - The definition of the Delta function:
 $$\int_{-\infty}^\infty \delta(x-a)f(x)\,dx=f(a)$$
-	- Continuous version of the Kronecker Delta
+	- _Continuous_ version of the Kronecker Delta
 - Technically it is not a function, and should only be used as a linear operator according to the equation above
 	- But that's just to satisfy mathematicians
 
@@ -39,9 +39,17 @@ $$H(x)=\int_{-\infty}^x\delta(x')\,dx' $$
 $$H'(x)=\delta(x)$$
 
 ## Derivative of the Delta function
-- By using integral by parts:
-$$\int_{-\infty}^\infty \delta'(x-\xi)f(x)\,dx =\left[\delta(x-\xi)f(\xi)\right]_{-\infty}^\infty-\int_{-\infty}^\infty \delta(x-\xi) f'(x)\,dx =-f'(\xi)$$
+- Consider the _derivative_ of $\delta(x-x')$ w.r.t. the _first_ argument $x$:
+$$\delta'(x-x')\equiv\frac{d}{dx}\delta(x-x')$$
+
+- Find its action _under an integral_:
+$$\int_{-\infty}^\infty \delta'(x-x')f(x')\,dx' =\frac{d}{dx}\int_\infty^\infty \delta(x-x')f(x')\,dx'=\frac{df}{dx}$$
 - The derivative of the Delta function is an _odd function_
+- It can also be written as:
+$$\delta'(x-x')=\delta(x-x')\frac{d}{dx'}$$
+- It is understood that _both sides are integrated over_ $x'$, and the differential operator _acts on all functions in the integrand_
+- The _higher derivatives_ can then be written as:
+$$\frac{d^n\delta(x-x')}{dx^n}=\delta(x-x')\frac{d^n}{dx'^n}$$
 
 ## Higher dimension Delta functions
 - A Delta function in $n$ dimensions is equivalent to:
