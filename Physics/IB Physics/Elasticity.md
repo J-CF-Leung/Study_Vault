@@ -131,6 +131,8 @@ $$e_{xx}=\frac{z}{\mathcal{R}}\approx z\frac{d^2\eta}{dx^2}$$
 - There is a _total bending moment_ $M(x)$ that can be written as:
 $$M(x)=-EI\frac{d^2\eta}{dx^2}$$
 - This is a moment _from the bending itself, not from external forces_
+- Here, $I$ is the _second moment of area_, given by:
+$$I=\int z^2\,dy\,dz$$
 
 - At the same time, there is a _shear force_ $S$ in the beam to _maintain equilibrium_
 - Also taking the _external load_ $W$ into account:
@@ -145,6 +147,19 @@ $$W=EI\frac{d^4\eta}{dx^4}$$
 	- _Hinge_: Force without couple, hence $\eta'\neq0$ but $\eta''=0$
 
 ### Reciprocity
+![[Beam bending reciprocity.png]]
+- Consider two situations:
+	- A _load_ $F$ applied at $P$, causing a _deflection_ at $Q$, $y_{QP}$
+	- A _load_ $F$ applied at $Q$, causing a _deflection_ at $P$, $y_{PQ}$
+
+- Assume _linearity_, and that the deflections are _additive_ from different loads
+- Consider _work done_ when applying $F$ at $Q$ first, then $P$:
+$$W_{QP}=F\left(\frac{1}{2}y_{PP}+\frac{1}{2}y_{QQ}+y_{QP}\right)$$
+- Then, consider applying at $P$ first, then $Q$:
+$$W_{QP}=F\left(\frac{1}{2}y_{PP}+\frac{1}{2}y_{QQ}+y_{PQ}\right)$$
+
+- Hence:
+$$y_{QP}=y_{PQ}$$
 
 ## Buckling
 
