@@ -12,9 +12,11 @@
             "id": "075060d114a2f41c",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Past Papers/IB Physics/2011-12_Part_IB_Physics_B_Paper_1.pdf"
+                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -24,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/IB Physics/Electromagnetism.md",
+                "file": "Physics/IB Physics/Rigid body dynamics.md",
                 "mode": "source",
                 "source": false
               }
@@ -42,8 +44,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -60,7 +61,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/Thermal Physics/Statistical thermodynamics.md"
+                    "file": "Physics/Thermal Physics/Classical Thermodynamics.md"
                   }
                 }
               }
@@ -76,7 +77,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/Thermal Physics/Statistical thermodynamics.md",
+                    "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -186,7 +187,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Thermal Physics/Statistical thermodynamics.md",
+                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,7 +204,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Thermal Physics/Statistical thermodynamics.md",
+                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -226,7 +227,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Thermal Physics/Statistical thermodynamics.md"
+                "file": "Physics/Thermal Physics/Classical Thermodynamics.md"
               }
             }
           },
@@ -256,23 +257,26 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "74f9c9e2a989472f",
+  "active": "075060d114a2f41c",
   "lastOpenFiles": [
+    "Past Papers/Past Tripos papers-20230327/IB_A_2012.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2022.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_1997.pdf",
     "Past Papers/IB Physics/2011-12_Part_IB_Physics_B_Paper_1.pdf",
+    "Physics/IB Physics/Rigid body dynamics.md",
+    "Physics/IB Physics/Orbits.md",
+    "Physics/IB Physics/Oscillations.md",
     "Physics/IB Physics/Electromagnetism.md",
+    "Physics/Thermal Physics/Statistical thermodynamics.md",
     "Past Papers/IB Physics/2012-13_Part_IB_Physics_B_paper_1.pdf",
     "Past Papers/IB Physics/2011-12_Part_IB_Physics_A_Paper_1.pdf",
     "Chemistry/IB Chemistry/Chemical thermodynamics.md",
-    "Physics/Thermal Physics/Statistical thermodynamics.md",
     "Physics/IB Physics/Elasticity.md",
     "Past Papers/IB Physics/2012-13_Part_IB_Physics_B_paper_2.pdf",
     "Past Papers/IB Physics/2013-14_Part_IB_Physics_B_Paper_1.pdf",
     "Past Papers/IB Physics/2013-14_Part_IB_Physics_B_Paper_2.pdf",
     "Past Papers/IB Physics/2014-15_Part_IB_Physics_B_Paper_1.pdf",
     "Past Papers/IB Physics/2014-15_Part_IB_Physics_B_Paper_2.pdf",
-    "Past Papers/IB Physics/2015-16_Part_IB_Physics_B_Paper_1.pdf",
-    "Past Papers/IB Physics/2015-16_Part_IB_Physics_B_Paper_2.pdf",
-    "Physics/IB Physics/Orbits.md",
     "Physics/Images/Beam bending reciprocity.png",
     "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
     "Physics/Quantum Mechanics/Operators, uncertainties and symmetries.md",
@@ -292,8 +296,6 @@
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Physics/Thermal Physics/Classical Thermodynamics.md",
     "Physics/Thermal Physics/Phase transitions.md",
-    "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md",
-    "Mathematics/IB Mathematical Methods/Vector calculus in 3-dimensions.md",
     "Physics/Images/Hydrogen radial distribution function.png",
     "Misc or Personal/What to do.canvas",
     "Physics/Images/Beam bending parameters.png",

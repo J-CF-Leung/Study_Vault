@@ -311,7 +311,8 @@ $$K_{ij}=\pd{^2U}{q_i\partial q_j}$$
 - The Lagrangian of the system is:
 $$\Lagr=\frac{1}{2}\sum_{i,j}M_{ij}\dot{q}_i\dot{q}_j-\frac{1}{2}\sum_{i,j}K_{ij}q_iq_j$$
 - By considering the _Euler-Lagrange equations_, and using the symmetries of the matrices:
-$$\sum_i \left(M_{ij}\ddot{q}_i+K_{ij}q_i\right)=0$$
+$$\sum_j \left(M_{ij}\ddot{q}_j+K_{ij}q_j\right)=0$$
+	- Take the _total derivative_ of the Lagrangian first
 - Substituting $q\propto\exp(i\omega t)$, this only has a solution if:
 $$\det(\dunderline{K}-\omega^2\dunderline{M})=0$$
 - This _resembles an eigenvalue equation_

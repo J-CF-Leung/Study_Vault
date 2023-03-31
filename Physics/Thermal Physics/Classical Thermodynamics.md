@@ -66,7 +66,7 @@ used to it, so it doesn’t bother you any more.”
 - The _final_ macrostate will tend to be one with _the most number of microstates_
 	- Consequence of equal probabilities (the system spends the most time in the macrostate)
 
-# The Zeroth and First Laws
+# The zeroth law and equations of state
 
 ## Containers and equilibrium
 - When discussing the behaviour of _contained physical systems_, one needs to specify the nature of the _container_
@@ -126,6 +126,8 @@ $$\theta_A(p_1,V_1)=\theta_B(p_2,V_2)$$
 $$\theta=f(p,V)$$
 - For a _given value_ of $\theta$, one can use this relationship to plot a curve on a _$p-V$ diagram_, known as an _isotherm_
 
+- For systems more complex than fluids (e.g. solids), _more variables_ will be needed to write the equation of state
+
 ## The ideal gas equation of state
 - A series of observations on the _ideal gas_:
 	- _Boyles' Law_ states that at _constant temperature_, $pV$ is a _constant_
@@ -143,6 +145,82 @@ $$pV=nRT=NkT$$
 - This is the _equation of state_ for an ideal gas
 
 - Historical note: an actual absolute/thermodynamic temperature scale first came from [[#Engines and entropy|consideration of the Carnot engine]]
+
+# The first law, internal energy, and heat
+- The _molecular origin_ of internal energy will be ignored in a phenomenological study
+
+## Work, heat, and the first law
+- From experiments (mostly performed by Joule), it was found that _performing work on a system changes its stored energy_
+	- Rotating a paddle in water contained in an _adiabatic vessel_
+- It was also found that _the manner in which work is performed_ does not matter
+
+- If the _heat_ transferred to a system, then _stored energy also increases_
+- Heat _accounts for energy not supplied by work_
+- An _adiabatic system_ will _not allow transfer of heat_ into the system
+
+- This led to the _First Law of Thermodynamics_:
+>[!First Law of Thermodynamics]
+>Energy is conserved, and both heat and work are forms of energy
+>Put mathematically: $$\Delta U=Q+W$$
+- $U$ is the _internal energy_ of the system
+- $Q$ is the _heat supplied_ to the system
+- $W$ is the _work done on_ the system
+
+## Functions of state and the differential form
+- From observations, energy is a _function of state_:
+$$U=U(P,V)\hspace{0.2cm}\text{ or }\hspace{0.2cm} U=U(P,T)\hspace{0.2cm} \text{ or }\hspace{0.2cm}U=U(V,T)$$
+- It may have an _additive constant_, but it is still a _function of state variables_
+- The _manner_ in which work or heat is delivered, or the _current state_ of the system _does not matter_, as long as the _same amount_ of work/heat is supplied, the _change in energy_ $\Delta U$ does not change
+
+- Because of this, $Q$ and $W$ are _not functions of state_
+- They are more adequately described as _processes_
+
+- Because of this, the _differential form_ of the first law is written as:
+$$dU=\dbar Q+\dbar W$$
+- The symbol $\dbar$ indicates that $Q$ and $W$ are _path-dependent_, instead of state dependent
+
+## Heat and temperature
+- If two bodies with _different temperatures_ are placed in _thermal contact_:
+	- Their _individual energies_ will change without any work done
+	- The _heat supplied_ by one body is equal to the _heat gained_ by the other
+	- The _total energy_ stays the same
+	- The body with the _higher temperature_ supplies energy to the other
+
+- Then, it is concluded that _heat transfer arises from differences in temperature_
+- This links temperature to the concept of "hotness"
+
+- It can also be concluded that _a body supplied with heat will always rise in temperature_
+- So, one can define the _heat capacity_:
+$$C=\frac{\dbar Q}{dT}$$
+- Heat capacity _depends on the manner in which heat is supplied_
+- So, depending on the process, for a _given temperature rise_, the amount of heat needed can vary
+
+- The common variants of heat capacity are _under constant volume_ and _under constant pressure_:
+$$C_V=\left(\pd{Q}{T}\right)_V\hspace{1cm}C_p=\left(\pd{Q}{T}\right)_V$$
+
+- For reasons seen later, it is useful to define the _adiabatic index_ $\gamma$ as a _ratio of heat capacities_:
+$$\gamma=\frac{C_p}{C_V}$$
+
+## Forms of work
+- Depending on the system, work can _be done in different ways_
+
+### Gases
+
+
+
+# Reversibility and quasi-static changes
+
+# Entropy and the second law
+
+# State variables
+
+# Thermodynamic systems
+
+# Variational principles
+
+# Phase equilibrium and transitions
+
+# OLD
 
 ## The state variables
 - At equilibrium, _entropy can be expressed as a function_ of 3 variables:
