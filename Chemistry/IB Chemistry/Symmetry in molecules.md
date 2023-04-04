@@ -158,6 +158,8 @@ $$R_2=S^{-1}R_1S$$
 	- Example: $p_x$ on the oxygen atom of water transforms as $x$, and therefore is represented by $B_1$
 	- For _multi-dimensional_ representations (see below), it transforms as a _set_ of functions
 
+- For all groups, there is a _totally symmetric irreducible representation_, for which _all of the characters are $+1$_, it is denoted $\Gamma^\text{tot. sym}$
+
 ## Representation matrices and characters
 - On most molecules, orbitals _not on the central atom_ will be _moved_ by some of the symmetry operations
 - In this case, using _multiple orbitals as a basis_, one can represent the action of the operation via a _representation matrix_
@@ -230,11 +232,65 @@ $$a_k=\frac{1}{n_R(\Gamma^{(k)})}\sum_R\left[\chi^{(k)}(R)\right]^*\chi(R)$$
 # Direct products
 - Given which representations two functions may transform as, one may want to know how the _product_ of those functions transform
 
-## 1D Irreducible representations
+- Mathematically, the representation is given by the [[Group Theory|direct product]]
+- The _characters_ multiply directly, operation by operation
 
-## 2D irreducible representations
+- Example: $B_1\otimes B_2$ for $C_{2v}$ gives $A_2$
+
+- The direct product is _commutative and associative_
+- _Any number_ of direct products can be done successively and in any order
+
+- _Scalars_ will _only transform as the totally symmetric IR_ $\Gamma^\text{tot. sym}$, _except for zero_
+	- Zero _can also transform as any other representation_
+
+## 1D Irreducible representations
+- For 1D IRs, the characters _must be $\pm1$_
+- Hence, a direct product between 2 1D IRs will _always give a 1D IR_
+
+- Since all characters of the _totally symmetric IR_ $\Gamma^\text{tot. sym}$ are $+1$, _multiplying an IR with it leaves it unchanged_:
+$$\Gamma^{(i)}\otimes\Gamma^\text{tot. sym}=\Gamma^{(i)}$$
+- From similar logic, _multiplying a 1D IR with itself gives the totally symmetric IR_:
+$$\Gamma^{(i)}\otimes \Gamma^{(i)}=\Gamma^\text{tot. sym}$$
+
+## Higher dimensional irreducible representations
+- Higher dimensional IRs have _character under the identity_ $>1$
+- The first property from above _still holds_:
+$$\Gamma^{(i)}\otimes\Gamma^\text{tot. sym}=\Gamma^{(i)}$$
+
+- However, _multiplying an IR with itself_ will give a _reducible representation_, which will _always contain the totally symmetric IR_
+- Example: $E\otimes E$ for $C_{3v}$:
+$$E\otimes E=E+A_1+A_2$$
 
 # Vanishing integrals
+- Consider the integral of a particular function $\psi$ (_not necessarily a wave function_):
+$$\int_\text{all space} \psi\,d\tau$$
+- If the function was _odd_ in whatever way, it would be _zero_
+- However, _even functions_ can also give _zero_
 
-## Overlap integrals and MOs
+- If the integral gives a _non-zero scalar_, this means it _transforms as ONLY the totally symmetric IR_
 
+- Hence, if the _representation_ of $\psi$ _does NOT contain the totally symmetric IR_, then _it must integrate to zero_
+
+## Overlap integrals
+- When doing [[Molecular quantum mechanics#Linear combination of atomic orbitals|LCAO calculations]], one often encounters the _overlap integral_:
+$$S_{ij}=\int \psi_i^*\psi_j\,d\tau$$
+- The _integrand_ transforms as $\Gamma^{(i)}\otimes \Gamma^{(j)}$
+
+- From the properties established above:
+- The _overlap integral_ $S_{ij}$ is _only non-zero iff_ $\psi_i$ and $\psi_j$ _transform as the same irreducible IRs_
+- Put more simply, _only wave functions with the same symmetry have non-zero overlap_
+
+## Matrix elements
+- Consider the matrix element of an operator $\hat{Q}$ w.r.t. wave functions $\psi_i$ and $\psi_j$:
+$$Q_{ij}=\int \psi_i^*\hat{Q}\psi_j\,d\tau$$
+- The integrand transforms as a _triple direct product_, with the IRs of the _operator_ and the _two wave functions_
+
+### Hamiltonian
+- In the LCAO method, when calculating the _energy of an MO_ formed from AOs $s_A$ and $s_B$, one needs _two parameters_:
+$$\displaylines{\alpha=\int s_A\hat{\Ham}s_A\,d\tau=\int s_B\hat{\Ham}s_B\,d\tau \\ \beta=\int s_A\hat{\Ham}s_B\,d\tau}$$
+- [[Molecular orbitals]]
+
+- The Hamiltonian represents _energy_, which _cannot be changed by symmetry operations_
+- Hence, $\hat{\Ham}$ is represented by the _totally symmetric IR_
+
+- Therefore, _orbitals can only form MOs when they transform as the same IR_

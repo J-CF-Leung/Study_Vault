@@ -27,3 +27,8 @@
 ## Square planar complexes
 
 # Linear molecules
+
+# Hückel Approximations
+
+# Rings and chains
+

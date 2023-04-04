@@ -1,6 +1,6 @@
 
 - Only considering [[Fundamental concepts of quantum mechanics#Time-independent Hamiltonians and stationary states|time-independent wave functions and Hamiltonians]]
-- Considering position-space wave functions
+- Considering _position-space_ wave functions
 
 # Models of bonding
 
@@ -143,23 +143,23 @@ $$A_{mn}=\frac{8\pi h\nu_{mn}^3}{c^3}B_{mn}$$
 >-Peter Atkins
 - Nuclei are much heavier than electrons
 - The approximation: _the motion of nuclei can be ignored
-	- When the nuclei move, the electrons respond almost instantaneously
+	- When the nuclei move, the electrons respond _almost instantaneously_
 - Split the Hamiltonian into nuclear and electronic wavefunctions
-- Very reliable for lower energy states
+- Very reliable for _lower energy states_
 
-- First step: the clamped-nucleus electronic Hamiltonian:
+- First step: the _clamped-nucleus electronic Hamiltonian_:
 $$\hat{\Ham}_\text{elec}=\hat{T}_e+\hat{V}(\bm{Q},\bm{q})$$
 	- $\bm{Q}$: positions of nuclei, _fixed when considering the wave function of electrons_
 	- $\bm{q}$: positions of the electrons
 
-- The electronic Schrödinger equation:
+- The _electronic Schrödinger equation_:
 $$\hat{\Ham}_\text{elec}\psi_\text{elec}(\bm{Q},\bm{q})=E_\text{elec}(\bm{Q})\psi_\text{elec}(\bm{Q},\bm{q})$$
-	- Energy: function of positions of nuclei
+	- Energy: _function_ of positions of nuclei
 
-- For nuclear motion, the electronic equation must be solved many times to obtain $E_\text{elec}$ as a function of $Q$, which is then used as the potential in the nuclear Hamiltonian
+- For nuclear motion, the electronic equation must be solved many times to obtain $E_\text{elec}$ _as a function of $Q$, which is then used as the potential_ in the nuclear Hamiltonian
 - The nuclear Hamiltonian:
 $$\hat{\Ham}_\text{nuc}=\hat{T}_N+E_\text{elec}(\bm{Q})$$
-- The nuclear wave function is then calculated by solving the nuclear Schrödinger equation:
+- The _nuclear wave function is then calculated_ by solving the nuclear Schrödinger equation:
 $$\hat{\Ham}_\text{nuc}\psi_\text{nuc}(\bm{Q})=E\psi_\text{nuc}(\bm{Q})$$
 	- $E$: total energy
 
@@ -196,7 +196,7 @@ $$\hat{T}_N\psi_N+E_e\psi_N=E\psi_N$$
 - For 3-dimensional motion, the linear momentum operators use $\nabla$
 
 # The hydrogen atom
-- [[1D time-independent Hamiltonians#The hydrogen atom|Detailed derivation]]
+- [[3D time-independent Hamiltonians#The hydrogen-like atom|Detailed derivation]]
 - The Hamiltonian for a hydrogen-like atom is:
 $$\begin{aligned}\hat{\Ham}&=-\frac{\hbar^2}{2m_e}\nabla^2-\frac{Ze^2}{4\pi\epsilon_0r} \\ &=-\frac{\hbar^2}{2m_e}\frac{1}{r^2} \pd{}{r}\left(r^2\pd{}{r}\right) + \frac{\hat{L}^2}{2m_er^2} -\frac{Ze^2}{4\pi\epsilon_0r} \end{aligned}$$
 - Here we introduce _atomic units_:
@@ -261,11 +261,11 @@ $$\psi_{nlm}=\sqrt{\left(\frac{2}{n}\right)^3\frac{(n-l+1)!}{2n(n+l)!}}\exp(-\rh
 
 
 ## Nodal structure
-- Lowest energy function has no nodes
-- Node increases by one as energy level increases
+- _Lowest energy_ function has _no nodes_
+- _Number of nodes increases_ by one as energy level increases
 - Total number of nodes: $n-1$
-	- Total number of radial nodes: $n-l-1$
-	- Total number of angular nodes: $l$
+	- Total number of _radial nodes_: $n-l-1$
+	- Total number of _angular nodes_: $l$
 
 ## Radial probability density
 - The radial probability density $P_nl(r)$ is:
@@ -368,7 +368,7 @@ $$\displaylines{\hat{\Ham}\ket{nlm_lm_s}=E_{nl}\ket{nlm_lm_s} \\
 - Consider two electrons
 - The possible states are: $\alpha_1\alpha_2$, $\alpha_1\beta_2$, $\beta_1\alpha_2$, $\beta_1\beta_2$
 
-- The two spins are independent of each other
+- The two spins are _independent of each other_
 - When measuring the total $\hat{S}_z$, the corresponding eigenvalues are $\hbar, 0, 0, -\hbar$
 - The four possibilities are split into 2 sets, one with $s=0$ and one with $s=1$
 

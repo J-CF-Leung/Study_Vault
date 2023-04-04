@@ -12,11 +12,9 @@
             "id": "075060d114a2f41c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
-                "mode": "source",
-                "source": false
+                "file": "Past Papers/Past Tripos papers-20230327/IB_A_2012.pdf"
               }
             }
           },
@@ -26,7 +24,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/IB Physics/Rigid body dynamics.md",
+                "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
                 "mode": "source",
                 "source": false
               }
@@ -44,7 +42,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -61,7 +60,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/Thermal Physics/Classical Thermodynamics.md"
+                    "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md"
                   }
                 }
               }
@@ -77,7 +76,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
+                    "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -187,7 +186,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
+                "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -204,7 +203,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
+                "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -227,7 +226,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Thermal Physics/Classical Thermodynamics.md"
+                "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md"
               }
             }
           },
@@ -257,28 +256,33 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "075060d114a2f41c",
+  "active": "66a07016cf0e9c21",
   "lastOpenFiles": [
-    "Past Papers/Past Tripos papers-20230327/IB_A_2012.pdf",
-    "Past Papers/Past Tripos papers-20230327/IB_A_2022.pdf",
-    "Past Papers/Past Tripos papers-20230327/IB_A_1997.pdf",
-    "Past Papers/IB Physics/2011-12_Part_IB_Physics_B_Paper_1.pdf",
     "Physics/IB Physics/Rigid body dynamics.md",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2012.pdf",
+    "Past Papers/IB Physics/2011-12_Part_IB_Physics_B_Paper_2.pdf",
+    "Past Papers/IB Physics/2011-12_Part_IB_Physics_B_Paper_1.pdf",
+    "Past Papers/IB Physics/2011-12_Part_IB_Physics_A_Paper_1.pdf",
+    "Past Papers/IB Physics/2011-12_Part_IB_Physics_A_Paper_2.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2022.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2015.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2014.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2013.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2011.pdf",
+    "Chemistry/IB Chemistry/Symmetry in molecules.md",
+    "Chemistry/IB Chemistry/Molecular orbitals.md",
+    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+    "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
+    "Chemistry/IB Chemistry/Vibrational normal modes in molecules.md",
+    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+    "Physics/Thermal Physics/Classical Thermodynamics.md",
     "Physics/IB Physics/Orbits.md",
     "Physics/IB Physics/Oscillations.md",
     "Physics/IB Physics/Electromagnetism.md",
     "Physics/Thermal Physics/Statistical thermodynamics.md",
-    "Past Papers/IB Physics/2012-13_Part_IB_Physics_B_paper_1.pdf",
-    "Past Papers/IB Physics/2011-12_Part_IB_Physics_A_Paper_1.pdf",
-    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Physics/IB Physics/Elasticity.md",
-    "Past Papers/IB Physics/2012-13_Part_IB_Physics_B_paper_2.pdf",
-    "Past Papers/IB Physics/2013-14_Part_IB_Physics_B_Paper_1.pdf",
-    "Past Papers/IB Physics/2013-14_Part_IB_Physics_B_Paper_2.pdf",
-    "Past Papers/IB Physics/2014-15_Part_IB_Physics_B_Paper_1.pdf",
-    "Past Papers/IB Physics/2014-15_Part_IB_Physics_B_Paper_2.pdf",
     "Physics/Images/Beam bending reciprocity.png",
-    "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
     "Physics/Quantum Mechanics/Operators, uncertainties and symmetries.md",
     "Physics/Vectors and matrices in physics.md",
     "Mathematics/IB Mathematical Methods/Dirac Delta Function.md",
@@ -290,12 +294,6 @@
     "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
     "Physics/Quantum Mechanics/Quantum statistical mechanics.md",
     "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
-    "Physics/Quantum Mechanics/The failure of classical mechanics.md",
-    "Physics/Quantum Mechanics/Topics in Quantum Mechanics.md",
-    "Chemistry/IB Chemistry/Molecular orbitals.md",
-    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
-    "Physics/Thermal Physics/Classical Thermodynamics.md",
-    "Physics/Thermal Physics/Phase transitions.md",
     "Physics/Images/Hydrogen radial distribution function.png",
     "Misc or Personal/What to do.canvas",
     "Physics/Images/Beam bending parameters.png",
