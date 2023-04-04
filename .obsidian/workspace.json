@@ -24,7 +24,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
                 "mode": "source",
                 "source": false
               }
@@ -60,7 +60,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md"
+                    "file": "Chemistry/IB Chemistry/Symmetry in molecules.md"
                   }
                 }
               }
@@ -76,7 +76,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+                    "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -186,7 +186,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,7 +203,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -226,7 +226,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md"
+                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md"
               }
             }
           },
@@ -258,8 +258,22 @@
   },
   "active": "66a07016cf0e9c21",
   "lastOpenFiles": [
-    "Physics/IB Physics/Rigid body dynamics.md",
     "Past Papers/Past Tripos papers-20230327/IB_A_2012.pdf",
+    "Chemistry/Images/Water mirror planes.png",
+    "Chemistry/Images/Water O representations.jpg",
+    "Chemistry/IB Chemistry/Symmetry in molecules.md",
+    "Chemistry/Images/Benzene C6 classes.jpg",
+    "Chemistry/Images/Benzene C6 class.jpg",
+    "Chemistry/Images/Reflection inverse.jpg",
+    "Chemistry/Images/Ethane S6.jpg",
+    "Chemistry/Images/BF3 S3.jpg",
+    "Chemistry/Images/Ethene inversion.jpg",
+    "Chemistry/Images/Benzene mirror planes.jpg",
+    "Chemistry/Images/BF3 mirror planes.jpg",
+    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+    "Physics/Thermal Physics/Statistical thermodynamics.md",
+    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+    "Physics/IB Physics/Rigid body dynamics.md",
     "Past Papers/IB Physics/2011-12_Part_IB_Physics_B_Paper_2.pdf",
     "Past Papers/IB Physics/2011-12_Part_IB_Physics_B_Paper_1.pdf",
     "Past Papers/IB Physics/2011-12_Part_IB_Physics_A_Paper_1.pdf",
@@ -269,20 +283,15 @@
     "Past Papers/Past Tripos papers-20230327/IB_A_2014.pdf",
     "Past Papers/Past Tripos papers-20230327/IB_A_2013.pdf",
     "Past Papers/Past Tripos papers-20230327/IB_A_2011.pdf",
-    "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Chemistry/IB Chemistry/Molecular orbitals.md",
-    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
     "Chemistry/IB Chemistry/Vibrational normal modes in molecules.md",
     "Chemistry/IB Chemistry/Chemical thermodynamics.md",
-    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
     "Physics/Thermal Physics/Classical Thermodynamics.md",
     "Physics/IB Physics/Orbits.md",
     "Physics/IB Physics/Oscillations.md",
     "Physics/IB Physics/Electromagnetism.md",
-    "Physics/Thermal Physics/Statistical thermodynamics.md",
     "Physics/IB Physics/Elasticity.md",
-    "Physics/Images/Beam bending reciprocity.png",
     "Physics/Quantum Mechanics/Operators, uncertainties and symmetries.md",
     "Physics/Vectors and matrices in physics.md",
     "Mathematics/IB Mathematical Methods/Dirac Delta Function.md",
@@ -294,10 +303,6 @@
     "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
     "Physics/Quantum Mechanics/Quantum statistical mechanics.md",
     "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
-    "Physics/Images/Hydrogen radial distribution function.png",
-    "Misc or Personal/What to do.canvas",
-    "Physics/Images/Beam bending parameters.png",
-    "Tentative.png",
-    "Physics/Images/Boundary layer.png"
+    "Misc or Personal/What to do.canvas"
   ]
 }

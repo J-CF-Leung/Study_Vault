@@ -208,9 +208,11 @@ $$\begin{aligned}\hat{\Ham}&=-\frac{\hbar^2}{2m_e}\nabla^2-\frac{Ze^2}{4\pi\epsi
 | Energy           | E_h     | Hartree       | $e^2/(4\pi\epsilon_0a_0)$        |
 | Angular momentum | $\hbar$ |               |                                  |
 
-- Rewriting in atomic units,  the Hamiltonian becomes:
+- Normalise according to atomic units:
+$$r\to r/a_0 \hspace{1cm} \hat{L}\to\hat{L}/\hbar \hspace{1cm} \hat{\Ham}\to\hat{\Ham}/E_h$$
+- The Hamiltonian becomes:
 $$\hat{\Ham}_\text{at}=\frac{\hat{\Ham}}{E_h}=-\frac{1}{2r^2}\pd{}{r}\left(r^2\pd{}{r}\right)+\frac{\hat{L}^2}{2r^2}-\frac{Z}{r}$$
-	- All obtained values are in atomic units
+	- All obtained values are in _atomic units_
 
 - From this, one can see that the wave function is separable:
 $$\psi=R(r)Y(\theta,\phi)$$
