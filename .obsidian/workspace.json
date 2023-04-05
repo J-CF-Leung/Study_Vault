@@ -12,11 +12,9 @@
             "id": "66a07016cf0e9c21",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
-                "mode": "source",
-                "source": false
+                "file": "Past Papers/IB Physics/2011-12_Part_IB_Physics_A_Paper_1.pdf"
               }
             }
           },
@@ -26,7 +24,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
+                "file": "Physics/IB Physics/Experimental methods and data analysis.md",
                 "mode": "source",
                 "source": false
               }
@@ -44,7 +42,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -61,7 +60,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Symmetry in molecules.md"
+                    "file": "Physics/IB Physics/Experimental methods and data analysis.md"
                   }
                 }
               }
@@ -77,7 +76,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
+                    "file": "Physics/IB Physics/Experimental methods and data analysis.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -187,7 +186,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
+                "file": "Physics/IB Physics/Experimental methods and data analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -204,7 +203,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
+                "file": "Physics/IB Physics/Experimental methods and data analysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -227,7 +226,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md"
+                "file": "Physics/IB Physics/Experimental methods and data analysis.md"
               }
             }
           },
@@ -257,12 +256,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "66a07016cf0e9c21",
+  "active": "8c6b6917de9593cb",
   "lastOpenFiles": [
+    "Past Papers/IB Physics/2011-12_Part_IB_Physics_A_Paper_1.pdf",
+    "Past Papers/IB Physics/2011-12_Part_IB_Physics_A_Paper_2.pdf",
+    "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_1.pdf",
+    "Physics/IB Physics/Experimental methods and data analysis.md",
+    "Past Papers/IB Physics/2012-13_Part_IB_Physics_A_paper_1.pdf",
+    "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Chemistry/IB Chemistry/Vibrational normal modes in molecules.md",
     "Chemistry/IB Chemistry/Molecular spectroscopy.md",
     "Chemistry/IB Chemistry/Descriptions of bonding.md",
-    "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Chemistry/Images/BF3 SO.png",
     "Chemistry/Images/BF3 example SOs.png",
@@ -279,13 +283,9 @@
     "Physics/IB Physics/Rigid body dynamics.md",
     "Past Papers/IB Physics/2011-12_Part_IB_Physics_B_Paper_2.pdf",
     "Past Papers/IB Physics/2011-12_Part_IB_Physics_B_Paper_1.pdf",
-    "Past Papers/IB Physics/2011-12_Part_IB_Physics_A_Paper_1.pdf",
-    "Past Papers/IB Physics/2011-12_Part_IB_Physics_A_Paper_2.pdf",
     "Past Papers/Past Tripos papers-20230327/IB_A_2022.pdf",
     "Past Papers/Past Tripos papers-20230327/IB_A_2015.pdf",
     "Past Papers/Past Tripos papers-20230327/IB_A_2014.pdf",
-    "Past Papers/Past Tripos papers-20230327/IB_A_2013.pdf",
-    "Past Papers/Past Tripos papers-20230327/IB_A_2011.pdf",
     "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
     "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Physics/Thermal Physics/Classical Thermodynamics.md",
@@ -303,7 +303,6 @@
     "Physics/Quantum Mechanics/Path integrals in quantum mechanics.md",
     "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
     "Physics/Quantum Mechanics/Quantum statistical mechanics.md",
-    "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
     "Misc or Personal/What to do.canvas"
   ]
 }

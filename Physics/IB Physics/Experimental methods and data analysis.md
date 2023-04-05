@@ -137,7 +137,8 @@ $$\frac{V_\text{out}}{V_\text{in}}=-\frac{R_2}{R_1} \hspace{1cm} Z_\text{out}=\f
 
 - Practically, _all signals have some high frequency components_
 - Therefore, op-amps are designed to _lower gain at high frequencies_
-- Typically, after some threshold, $A\propto 1/f$
+- Typically, after some threshold: 
+$$A\propto 1/f$$
 
 - _Decoupling capacitors_ are also connected between the op-amp and the power supply
 - They _stop spontaneous oscillations_
@@ -203,13 +204,13 @@ $$Z_\text{in}=r_\text{in}(1+|A\beta|)\hspace{1cm} Z_\text{out}=R_\text{out}/(1+|
 - Let there be $N$ _measurements made in the same way_ for some quantity $x$
 - The result of measurement $i$ is $x_i$
 - The _best estimate_ of the true value is the _mean_:
-$$\bar{x}=\frac{1}{N}\sum_ix_i$$
+$$\mean{x}=\frac{1}{N}\sum_ix_i$$
 - The _variance_ is used to characterise the _spread_ of $x_i$
-$$\displaylines{\text{Var}(x)=\frac{1}{N}\sum_i(x_i-\bar{x})^2}\equiv\overline{(x-\bar{x})^2}\equiv\braket{(x-\Braket{x})^2}$$
+$$\displaylines{\text{Var}(x)=\frac{1}{N}\sum_i(x_i-\mean{x})^2}\equiv\mean{(x-\mean{x})^2}\equiv\braket{(x-\Braket{x})^2}$$
 - The square root of the variance is the _standard deviation_:
-$$\sigma_x=\sqrt{\frac{1}{N}\sum_i(x_i-\bar{x})^2}$$
+$$\sigma_x=\sqrt{\frac{1}{N}\sum_i(x_i-\mean{x})^2}$$
 - However, to estimate the random error in a _single datum_, the expression is:
-$$\sigma=\sqrt{\frac{1}{N-1}\sum_i(x_i-\bar{x})^2}$$
+$$\sigma=\sqrt{\frac{1}{N-1}\sum_i(x_i-\mean{x})^2}$$
 
 - Each measurement is _inependent_, hence the _variances can simply be added_
 - The _uncertainty of the mean_ is:
@@ -217,11 +218,11 @@ $$\sigma_m=\frac{\sigma}{\sqrt{N}}$$
 #### Covariance and independent variables
 - Let there be two variables $y$ and $z$, which _both have a mean of 0_
 - The _covariance_ between them is defined as:
-$$\text{CoVar}(y,z)=\overline{(y-\bar{y})(z-\bar{z})}=\overline{yz}-\bar{y}\bar{z}$$
+$$\text{CoVar}(y,z)=\mean{(y-\mean{y})(z-\mean{z})}=\mean{yz}-\mean{y}\mean{z}$$
 
 - The variance of the _sum_ is:
-$$\text{Var}(y+z)=\overline{(y-\bar{y}+z-\bar{z})^2}=\overline{(y+z)^2}=\overline{y^2}+\overline{z^2}+2\overline{yz}$$
-- If they are _independent of each other_, $\overline{yz}=\bar{y}\bar{z}=0$
+$$\text{Var}(y+z)=\mean{(y-\mean{y}+z-\mean{z})^2}=\mean{(y+z)^2}=\mean{y^2}+\mean{z^2}+2\mean{yz}$$
+- If they are _independent of each other_, $\mean{yz}=\mean{y}\mean{z}=0$
 - Hence, _the variances add_
 
 - Therefore, _the variances of independent measurements just add_
@@ -453,4 +454,116 @@ $$\text{Prob}(x|\mu,\sigma)=\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left[-\left(\frac{
 	- The power from Johnson noise is given by:
 	$$\mean{V^2}/R=4kT\Delta\nu$$
 
-# Bayesian Inference
+# Inference
+
+- Given some _hypothesis_ of how data behaves, plus the _data points_, one must be able to _infer_ if the hypothesised model is a _good fit_
+
+## The likelihood function
+- Let the _observable_ in question be $X$, it is measured $n$ times to yield _data set_ $\{x_i\}$
+- Let there be a _theoretical model_, which states for some interval $[x,x+dx]$, the _probability that $X$ is in the range_, given some _parameters_ $\bm{a}$, is given by $p(x|\bm{a})\,dx$
+
+- Then, assuming _all $n$ measurements are independent_, the _probability_ of measuring $\{x_i\}$ within intervals $[x_i+dx_i]$ _given values of parameters_ $\bm{a}$ is:
+$$p(x_1|\bm{a})\,dx_1\times p(x_2|\bm{a})\,dx_2 \times\dots p(x_n|\bm{a})\,dx_n=\prod_{i=1}^n p(x_i|\bm{a})\,dx_i$$
+- Define the _likelihood function_:
+$$L(\bm{x}|\bm{a})=\prod_{i=1}^np(x_i|\bm{a})$$
+
+- If $f$ is a _good model of the data_, the _likelihood_ will end up high
+- Hence, to find good values of $\bm{a}$, one needs to _maximise_ $L$
+
+## Bayesian considerations
+- Technically, $L(\bm{x}|\bm{a})$ is the likelihood that $\bm{x}$ is the data measured _given fixed values_ of $\bm{a}$
+- Usually, one wishes to find the _values of $\bm{a}$ given fixed data points $\bm{x}$_ 
+
+- From Bayes' Theorem, they are related by:
+$$\text{Prob}(\bm{a}|\bm{x})=\text{Prob}(\bm{x}|\bm{a})\times\frac{\text{Prob}(\bm{a})}{\text{Prob}(\bm{x})}$$
+- $\text{Prob}(\bm{x})$ is simply a normalising factor
+
+- $\text{Prob}(\bm{a})$ is the _prior probability_, while $\text{Prob}(\bm{a}|\bm{x})$ is the _posterior probability_
+
+- Normally, there is an _assumption_ that the _prior is constant over some range of $\bm{a}$_
+	- If the _magnitude) of $\bm{a}$ is _completely unknown_, one would use a prior _constant in log space_, or $p(a)\propto 1/a$
+- Given this, the two likelihoods are _proportional_, and one would still want to _maximise_ $L(\bm{x}|\bm{a})$
+
+## Flat priors, Gaussian errors
+- Let there be _data values_ $\{y_i\}$
+- For each value, there is a _corresponding independent variable_ $\{x_i\}$, controlled by the experimenter, assumed to have _no error_
+- There is also a corresponding _error_ $\sigma_i$
+- There is also a _theoretical value_ $f(x_i|\bm{a})$
+
+- _Assume_ the errors are _Gaussian_
+	- Could be an _intrinsic property_ of the system
+	- Could be controlled by _many variables_, in which case the [[#The Gaussian distribution|Central Limit Theorem]] states the total error will be Gaussian
+
+- Under these conditions (Flat prior, Gaussian error):
+$$p(y_i|\bm{a})=\frac{1}{\sqrt{2\pi\sigma_i^2}}\exp\left(-\frac{[y_i-f(x_i|\bm{a})]^2}{2\sigma_i^2}\right)$$
+- In this case, $L$ will be a _product of Gaussians_, so it is easier to _maximise_ $\ln L$:
+$$\ln L=-\frac{1}{2}\sum_i\left[\frac{y_i-f(x_i|a)}{\sigma_i}\right]^2-\frac{1}{2}\sum_i\ln(2\pi\sigma_i^2)$$
+
+- Define $\chi^2$, which must be _minimised_ to maximise $L$:
+$$\displaylines{\chi^2\equiv\sum_i\left[\frac{y_i-f(x_i|a)}{\sigma_i}\right]^2 \\ \pd{\chi^2}{a_j}=0}$$
+
+- The square means the _sign of deviation_ from theoretical value is _unimportant_
+- Also, _comparitively larger_ deviations will contribute a lot to $\chi^2$
+- The deviations are _weighted_ inversely to the _expected deviation_
+
+## Straight line fitting
+- Often, the theoretical model is of a _straight line_:
+$$y_i=\hat{m}x_i+\hat{c}$$
+- The hats indicate _best estimates_ for gradient and intercept
+
+### Constant error
+- Assume _all errors_ are equal to $\sigma$, then:
+$$\displaylines{\chi^2=\frac{1}{\sigma^2}\sum_i\left[y_i-(\hat{m}x_i+\hat{c})\right]^2 \\ \pd{\chi^2}{m}=\pd{\chi^2}{c}=0}$$
+- By dividing the derivatives by $N$, the _number of data_, then solving, one obtains:
+$$\displaylines{\hat{m}=\frac{\mean{xy}-\mean{x}\mean{y}}{\mean{x^2}-\mean{x}^2}\equiv\frac{\text{CoVar}(x,y)}{\text{Var}(x)} \\ \hat{c}=\frac{\mean{x^2}\mean{y}-\mean{x}\mean{xy}}{\mean{x^2}-\mean{x}^2}\equiv\mean{y}-\hat{m}\mean{x}}$$
+- The best fit line is said to go through the _centre of gravity_ of points
+
+- From [[#Combination of random errors|Error propagation]], the errors in these quantities are given by:
+$$\displaylines{\sigma_m^2=\sum_i\left(\pd{\hat{m}}{y_i}\right)^2\sigma^2 \\ \hat{\sigma}^2=\frac{1}{N-2}\sum_i[y_i-(\hat{m}x_i+\hat{c})]^2}$$
+- $\hat{\sigma}^2$ quantifies the _deviation of data from the best-fit model_
+- The $N-2$ is the _number of degrees of freedom_ in the model, as there are two parameters
+
+- Using the above expressions:
+$$\displaylines{\sigma_m^2=\frac{\hat{\sigma}^2}{N\left(\mean{x^2}-\mean{x}^2\right)} \\ \sigma_c^2=\frac{\hat{\sigma}^2\mean{x^2}}{N\left(\mean{x^2}-\mean{x}^2\right)}}$$
+
+### Varying error
+- If the errors $\{\sigma_i\}$ are _not identical_:
+$$\chi^2=\sum_i\left[\frac{y_i-\hat{m}x_i-\hat{c}}{\sigma_i}\right]^2$$
+- This implies _the same equations as before_, but with _differently weighted means_:
+$$\mean{y}=\left(\sum_i\frac{1}{\sigma_i^2}\right)^{-1}\sum_i\frac{y_i}{\sigma_i^2}$$
+- This means _data with larger deviation are weighted less_
+
+- All of the formulas above _still apply_, but with modified means
+- _Except_, the standard deviation $\hat{\sigma}^2$ is now:
+$$\hat{\sigma}^2=\frac{1}{N-2}\left(\sum_i\frac{1}{\sigma_i^2}\right)^{-1} \sum_i\left(\frac{y_i-\hat{m}x_i-\hat{c}}{\sigma_i}\right)^2$$
+
+## Hypothesis testing
+- Given the _best estimate_ of the parameters for the hypothesised model, one must check the _match_ between the data and the model
+
+### The chi-squared test
+- Like the $\chi^2-$optimisation, this _assumes_:
+	- Error is _Gaussian_
+	- _Flat prior_
+	- _Independent measurements_
+
+- If $f(x_i|\bm{a})$ _exactly models_ the data, the _deviation should approximately match the errors_, hence:
+$$\chi^2\approx N_\text{data}$$
+- If $\chi^2>>N_\text{data}$, then the model is _likely to be wrong_
+- If $\chi^2<<N_\text{data}$, then the _estimates for $\sigma$ may be too large_
+
+- Gievn that $y_i$ has _Gaussian fluctuations_, then it can be proved that $\chi^2$ _fluctuates according to the $\chi^2-$distribution_:
+$$p\left(\chi^2|n\right)=\frac{1}{2^{n/2}\Gamma(n/2)}\chi^{n/2}\exp(-\chi^2/2)$$
+- Here, $n$ is the _number of degrees of freedom_ in the model, equal to the _number of data points minus the number of parameters_:
+$$n=N_\text{data}-N_a$$
+
+- The _probability_ $\alpha$ that the $\chi^2$ observed is _larger than some value_ $\chi_0^2$ is:
+$$\alpha\left(\chi_0^2\right)=\int_{\chi_0^2}^\infty p\left(\chi^2|n\right)\,d(\chi^2)$$
+- This is known as the _confidence level_
+- If the $\chi^2$ observed gives a value of $\alpha$ _above some threshold_, then that theory is _likely to be correct_
+\sum_i\frac{1}{\sigma_i^2}\right)^{-1}
+### Non-parametric tests
+- If the _underlying probability distribution_ is unknown, then one needs _non-parametric statistics_
+
+- One may need tests for:
+	- _Randomness_ and _independence_ of the measurements
+	- Whether or not two variables _have the same probability distribution_
