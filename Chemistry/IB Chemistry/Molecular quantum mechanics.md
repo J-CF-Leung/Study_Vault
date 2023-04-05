@@ -564,7 +564,7 @@ $$\tilde{E}=\frac{\hbar^2\alpha}{4m}+\frac{k}{4\alpha}$$
 - First term in $\tilde{E}$: kinetic, a large $\alpha$ gives a narrow spread in $x$ and large spread in $p$
 - Second term in $\tilde{E}$: potential, a small $\alpha$ gives a wide spread in $x$ and high potential
 
-## Linear combination of atomic orbitals
+## Linear combination of atomic orbitals for diatomics
 - [[#The Born-Oppenheimer approximation]]: clamp the nuclei
 
 ### The technique for homoatomics
@@ -614,7 +614,7 @@ $$\tilde{E}=\frac{1}{2}(\alpha_a+\alpha_b)+\frac{1}{2}\sqrt{(\alpha_a-\alpha_b)^
 - $\beta=0$: no interaction, energies are $\alpha_a$ and $\alpha_b$
 - For a _fixed $\beta$_, the bonding orbital is _most stabilised when $\alpha_a=\alpha_b$_
 
-- For lithium hydride, the bond is better modelled using an _sp hybrid orbitaIn 2003, the mantra was worked into the theme Navras by Juno Rl_
+- For lithium hydride, the bond is better modelled using an _sp hybrid orbital_
 - From the same method as above, it can be shown that $c_{2s}=c_{2p}$
 
 ### Non-zero overlap integral

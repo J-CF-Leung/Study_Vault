@@ -9,17 +9,19 @@
         "dimension": 64.23529411764706,
         "children": [
           {
-            "id": "075060d114a2f41c",
+            "id": "66a07016cf0e9c21",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Past Papers/Past Tripos papers-20230327/IB_A_2012.pdf"
+                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
           {
-            "id": "66a07016cf0e9c21",
+            "id": "8c6b6917de9593cb",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -42,8 +44,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -258,21 +259,23 @@
   },
   "active": "66a07016cf0e9c21",
   "lastOpenFiles": [
-    "Past Papers/Past Tripos papers-20230327/IB_A_2012.pdf",
-    "Chemistry/Images/Water mirror planes.png",
-    "Chemistry/Images/Water O representations.jpg",
-    "Chemistry/IB Chemistry/Symmetry in molecules.md",
-    "Chemistry/Images/Benzene C6 classes.jpg",
-    "Chemistry/Images/Benzene C6 class.jpg",
-    "Chemistry/Images/Reflection inverse.jpg",
-    "Chemistry/Images/Ethane S6.jpg",
-    "Chemistry/Images/BF3 S3.jpg",
-    "Chemistry/Images/Ethene inversion.jpg",
-    "Chemistry/Images/Benzene mirror planes.jpg",
-    "Chemistry/Images/BF3 mirror planes.jpg",
+    "Chemistry/IB Chemistry/Vibrational normal modes in molecules.md",
     "Chemistry/IB Chemistry/Molecular spectroscopy.md",
-    "Physics/Thermal Physics/Statistical thermodynamics.md",
+    "Chemistry/IB Chemistry/Descriptions of bonding.md",
+    "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+    "Chemistry/Images/BF3 SO.png",
+    "Chemistry/Images/BF3 example SOs.png",
+    "Chemistry/Images/BF3 local coords.png",
+    "Chemistry/Images/BF3 universal coords.png",
+    "Chemistry/Images/BH3 MO diagram.png",
+    "Chemistry/Images/BH3 SO overlap.png",
+    "Chemistry/Images/BH3 hydrogen SOs.png",
+    "Chemistry/Images/BH3 hydrogen orbitals.png",
+    "Chemistry/Images/Oh character table.png",
+    "Chemistry/Images/D3h character table 1.png",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2012.pdf",
+    "Physics/Thermal Physics/Statistical thermodynamics.md",
     "Physics/IB Physics/Rigid body dynamics.md",
     "Past Papers/IB Physics/2011-12_Part_IB_Physics_B_Paper_2.pdf",
     "Past Papers/IB Physics/2011-12_Part_IB_Physics_B_Paper_1.pdf",
@@ -283,9 +286,7 @@
     "Past Papers/Past Tripos papers-20230327/IB_A_2014.pdf",
     "Past Papers/Past Tripos papers-20230327/IB_A_2013.pdf",
     "Past Papers/Past Tripos papers-20230327/IB_A_2011.pdf",
-    "Chemistry/IB Chemistry/Molecular orbitals.md",
     "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
-    "Chemistry/IB Chemistry/Vibrational normal modes in molecules.md",
     "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Physics/Thermal Physics/Classical Thermodynamics.md",
     "Physics/IB Physics/Orbits.md",

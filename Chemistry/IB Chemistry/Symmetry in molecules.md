@@ -43,6 +43,7 @@
 - Example: Benzene has the $C_6$ axis, along with six other two-fold axes
 	- The 3 two-fold axes _bisecting atoms_ are denoted $C_2$
 	- The 3 two-fold axes _bisecting bonds_ are denoted $C_2'$
+![[Benzene C2.png]]
 
 - If the molecule has a _single_ axis of symmetry with a _higher order_, then it is the _principal axis_
 - Example: $BF_3$ has 3 $C_2$ axes and one $C_3$ axis, hence the latter is the principal axis
@@ -147,7 +148,10 @@ $$R_2=S^{-1}R_1S$$
 ![[C2v table.png]]
 
 - Example: $D_{3h}$
-![[D3h character table.png]]
+![[Chemistry/Images/D3h character table.png]]
+
+- Example: _Octahedral_ group $O_h$
+![[Oh character table.png]]
 
 # Representations
 - The point group of a molecule takes the _atoms_ into consideration
@@ -242,6 +246,8 @@ $$a_k=\frac{1}{n_R(\Gamma^{(k)})}\sum_R\left[\chi^{(k)}(R)\right]^*\chi(R)$$
 	- Symmetric: _prime_ $(\text{'})$
 	- Anti-symmetric: _double-prime_ $(\text{''})$
 
+# Infinite groups
+
 # Direct products
 - Given which representations two functions may transform as, one may want to know how the _product_ of those functions transform
 
@@ -301,9 +307,15 @@ $$Q_{ij}=\int \psi_i^*\hat{Q}\psi_j\,d\tau$$
 ### Hamiltonian
 - In the LCAO method, when calculating the _energy of an MO_ formed from AOs $s_A$ and $s_B$, one needs _two parameters_:
 $$\displaylines{\alpha=\int s_A\hat{\Ham}s_A\,d\tau=\int s_B\hat{\Ham}s_B\,d\tau \\ \beta=\int s_A\hat{\Ham}s_B\,d\tau}$$
-- [[Molecular orbitals]]
+- [[Descriptions of bonding]]
 
 - The Hamiltonian represents _energy_, which _cannot be changed by symmetry operations_
 - Hence, $\hat{\Ham}$ is represented by the _totally symmetric IR_
 
 - Therefore, _orbitals can only form MOs when they transform as the same IR_
+
+# Application to molecular properties
+
+## Dipole moments
+
+## Chirality
