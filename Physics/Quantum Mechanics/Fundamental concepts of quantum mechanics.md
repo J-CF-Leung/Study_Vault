@@ -161,6 +161,8 @@ $$\wv\xrightarrow{\Omega\text{ measured, }\omega \text{ obtained}} \frac{1}{\sqr
 - Example: Spin
 - In that case, some intuition may be used to determine commutation relations and other properties
 
+### The Hamiltonian
+
 ## Uncertainty principles
 - As the measured values of observables is now _probabilistic_, the distributions will come with some _variance_
 - There are certain _incompatible/conjugate variables_ where the operators _do not commute_
@@ -236,7 +238,7 @@ $$\teo(t_0+dt,t_0)=1-\frac{i\Ham}{\hbar}dt$$
 - Using the composition property and writing this as a differential equation:
 $$i\hbar\pd{\teo}{t}=\Ham\teo$$
 	- This is the _Schrödinger equation for the time-evolution operator_
-- [[Operators, uncertainties and symmetries#Energies and the Hamiltonian|How to construct the Hamiltonian]]
+
 
 ## Interpreting time evolution
 - The time-evolution operator is a _unitary operator_, which can be understood as a _rotation operator in Hilbert space_
@@ -364,7 +366,7 @@ $$\mean{A}=\sum_{m,n}c_m^*c_n\exp\left(-\frac{i(E_n-E_m)t}{\hbar}\right)A_{mn}$$
 $$A_{mn}\equiv\braket{E_m|\hat{A}|E_n}$$
 
 ## Important cases
-- Using the [[Operators, uncertainties and symmetries#Useful commutation relations|commutation relations involving functions]]:
+- Using the [[#Useful commutation relations|commutation relations involving functions]]:
 $$\displaylines{\frac{d\mean{x}}{dt}=\frac{1}{i\hbar}\mean{[\hat{x},\hat{\Ham}]}=\frac{\mean{p}}{m} \\ \frac{d\mean{p}}{dt}=-\mean{\pd{V}{x}}}$$
 - These are a _direct analogues of the classical case_
 - There is an important distinction to make:

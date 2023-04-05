@@ -1,4 +1,4 @@
-- [[Operators, uncertainties and symmetries#The angular momentum operators|Definition of angular momentum operators]]
+
 - Particles have _two kinds_ of angular momentum: _orbital_ $\bm{L}$ and _spin_ $\bm{S}$
 - The _total_ angular momentum is $\bm{J}\equiv\bm{L}+\bm{S}$
 
