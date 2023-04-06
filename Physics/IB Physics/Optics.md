@@ -77,7 +77,7 @@ $$\displaylines{r^2=L^2+(x-x_0)^2+(y-y_0)^2 \\r\approx R-\frac{x_0x+y_0y}{R}+\fr
 - The _condition for Fraunhofer diffraction_ is that phase _varies linearly_ with $x$ and $y$
 - This condition can be expressed as:
 $$\frac{k(x^2+y^2)}{2R}<<\pi$$
-- For an aperture of _maximum extent_ $D$, the condition is:
+- For an aperture of _maximum extent_ $D$, the _condition for Fraunhofer diffraction_ is:
 $$R>>\frac{D^2}{\lambda}$$
 
 - Then, the wave amplitude at $P$ is given by the _Fraunhofer integral_:
@@ -485,6 +485,8 @@ $$\mathcal{F}=\frac{2\pi}{2\delta_{1/2}}=\frac{\pi\sqrt{R}}{1-R}$$
 	- This is known as the _Sparrow criterion_
 - By writing $\delta$ as a function of $\lambda$ then setting $\Delta\delta=2\delta_{1/2}$:
 $$\frac{\lambda}{\Delta\lambda}=\frac{2\pi d\cos\theta}{\lambda\delta_{1/2}}=\frac{m\pi}{\delta_{1/2}}=m\mathcal{F}$$
+- Hence, the _resolution is proportional to finesse_
+
 ### The free spectral range
 - In Fabry-Perot spectroscopy, a _single order_ is usually separated out and further analysed for _fine structure_
 	- Example: Emission lines

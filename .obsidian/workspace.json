@@ -6,7 +6,7 @@
       {
         "id": "7720cfc61fde3e9c",
         "type": "tabs",
-        "dimension": 67.70833333333334,
+        "dimension": 67.70833333333333,
         "children": [
           {
             "id": "74f9c9e2a989472f",
@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/IB Physics/Experimental methods and data analysis.md",
+                "file": "Physics/IB Physics/Waves.md",
                 "mode": "source",
                 "source": false
               }
@@ -26,7 +26,7 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Past Papers/IB Physics/2011-12_Part_IB_Physics_A_Paper_1.pdf"
+                "file": "Past Papers/IB Physics/2011-12_Part_IB_Physics_A_Paper_2.pdf"
               }
             }
           }
@@ -35,7 +35,7 @@
       {
         "id": "a6c4709e929bd0bb",
         "type": "split",
-        "dimension": 32.29166666666667,
+        "dimension": 32.291666666666664,
         "children": [
           {
             "id": "3773db76a4512ef8",
@@ -47,7 +47,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/IB Physics/Experimental methods and data analysis.md"
+                    "file": "Physics/IB Physics/Waves.md"
                   }
                 }
               }
@@ -63,7 +63,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/IB Physics/Experimental methods and data analysis.md",
+                    "file": "Physics/IB Physics/Waves.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -173,7 +173,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/IB Physics/Experimental methods and data analysis.md",
+                "file": "Physics/IB Physics/Waves.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,7 +190,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/IB Physics/Experimental methods and data analysis.md",
+                "file": "Physics/IB Physics/Waves.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -213,7 +213,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/IB Physics/Experimental methods and data analysis.md"
+                "file": "Physics/IB Physics/Waves.md"
               }
             }
           },
@@ -245,11 +245,13 @@
   },
   "active": "74f9c9e2a989472f",
   "lastOpenFiles": [
-    "Past Papers/IB Physics/2011-12_Part_IB_Physics_A_Paper_1.pdf",
-    "Physics/IB Physics/Experimental methods and data analysis.md",
-    "Physics/IB Physics/Optics.md",
-    "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
     "Past Papers/IB Physics/2011-12_Part_IB_Physics_A_Paper_2.pdf",
+    "Physics/IB Physics/Waves.md",
+    "Physics/IB Physics/Optics.md",
+    "Physics/IB Physics/Electromagnetism.md",
+    "Physics/IB Physics/Experimental methods and data analysis.md",
+    "Past Papers/IB Physics/2011-12_Part_IB_Physics_A_Paper_1.pdf",
+    "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
     "Past Papers/IB Physics/2013-14_Part_IB_Physics_B_Paper_1.pdf",
     "Physics/Vectors and matrices in physics.md",
     "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
@@ -282,14 +284,12 @@
     "Physics/Thermal Physics/Classical Thermodynamics.md",
     "Physics/IB Physics/Orbits.md",
     "Physics/IB Physics/Oscillations.md",
-    "Physics/IB Physics/Electromagnetism.md",
     "Physics/IB Physics/Elasticity.md",
     "Physics/Quantum Mechanics/Operators, uncertainties and symmetries.md",
     "Mathematics/IB Mathematical Methods/Dirac Delta Function.md",
     "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
     "Physics/Quantum Mechanics/1D time-independent Hamiltonians.md",
     "Mathematics/Special functions and orthogonal relations.md",
-    "Physics/Quantum Mechanics/Path integrals in quantum mechanics.md",
     "Misc or Personal/What to do.canvas"
   ]
 }

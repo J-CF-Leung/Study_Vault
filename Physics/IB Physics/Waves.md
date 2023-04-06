@@ -87,7 +87,7 @@ $$\begin{aligned}\psi_y&=A_y\cos(kx-\omega t) \\ \psi_z &= A_z\cos(kx-\omega t+\
 ## Vector representation
 - _Jones vector_ representation for completely polarised light
 - $\exp[i(kz-\omega t)]$ is dropped
-- Opposite sign convention if $\omega t-kz$ is used as phase
+- _Opposite sign convention_ if $\omega t-kz$ is used as phase
 - Linear polarisation:
 $$\ket{\Psi_\text{lin}}=\begin{pmatrix} A \\ B \end{pmatrix}$$
 - Circular polarisation, left and right:
@@ -127,11 +127,13 @@ $$\braket{P}=\braket{K+U}v=\frac{1}{2}Z\omega^2A_0^2$$
 # Boundaries: reflection and transmission
 - There can be _discontinuities_ during wave travel, such as a _sudden change in density_ (hence, change in impedance)
 
-- Boundary conditions:
+- Boundary conditions (for mechanical waves):
 	- Displacement $\psi$ _must be continuous_
 	- Transverse force $T(\partial\Psi/\partial x)$ _must be continuous_
 		- _Avoid infinite acceleration_ of infinitesimal mass element
 	- _Constant frequency_ $\omega$
+- For electromagnetic waves, one needs to use _Maxwell's equations' boundary conditions_
+	- Interfaces for EM waves: [[Electromagnetism#Reflection and transmission at interfaces]]
 - Wavenumber $k$ will be discontinuous
 
 - Goal: _STEADY-STATE_ response of the wave on both sides of a boundary
@@ -141,7 +143,10 @@ $$\braket{P}=\braket{K+U}v=\frac{1}{2}Z\omega^2A_0^2$$
 - More convenient to write the wave as $A\exp[i(\omega t-kx)]$
 
 - Let there be 2 regimes, with impedances $Z_1$ and $Z_2$ respectively
-- Let there be an incident wave with amplitude $A_1$, reflected wave with amplitude $B_2$, and transmitted wave with amplitude $A_2$, the reflection and transmission are:
+- Let there be an incident wave with amplitude $A_1$, reflected wave with amplitude $B_1$, and transmitted wave with amplitude $A_2$:
+$$\displaylines{\psi_i=A_1\Re\{\exp[i(\omega t-k_ix)]\}\hspace{1cm} \psi_r=B_1\Re\{\exp[i(\omega t+k_ix)]\} \\ \psi_t=A_2\Re\{\exp[i(\omega t-k_tx)]\}}$$
+
+- Applying the _boundary conditions_, the reflection and transmission are:
 $$\displaylines{\tau\equiv\frac{A_2}{A_1}=\frac{2Z_1}{Z_1+Z_2} \\ r\equiv \frac{B_1}{A_1}=\frac{Z_1-Z_2}{Z_1+Z_2}}$$
 - Limiting cases:
 	- $Z_2=\infty$: fixed end, $\tau=0$, no transmission, $r=-1$, pure anti-phase reflection
@@ -164,6 +169,14 @@ $$R=\left|\frac{Z_1-Z_2}{Z_1+Z_2}\right|^2$$
 - If $l$ is equal to a _quarter of the wavelength_ in $Z_2$, the reflection coefficient from the $Z_1-Z_2$ interface becomes:
 $$r=\frac{Z_1-Z_{eff}}{Z_1+Z_{eff}}\hspace{0.5cm},\hspace{0.5cm} Z_{eff}=\frac{Z_2^2}{Z_3}$$
 - If $Z_2^2=Z_1Z_3$, the waves reflected at the first and second interfaces are _out of phase_
+
+## Standing wave ratio
+- The wave function in the _incident string_ is:
+$$\psi_i+\psi_r=A_1\Re\{\exp[i(\omega t-kx)]\}+B_1\Re\{\exp[i(\omega t+kx)]\}$$
+- This can be rewritten as a _superposition_ of a travelling wave and a standing wave:
+$$\psi_i+\psi_r=(A_1-B_1)\cos(\omega t-kx)+2B_1\cos(\omega t)\cos(kx)$$
+- The _standing wave ratio_ is given by the ratio of _maximum and minimum amplitudes_:
+$$\text{SWR}=\frac{A_1+B_1}{A_1-B_1}=\frac{1+r}{1-r}$$
 
 
 # Longitudinal waves
@@ -188,7 +201,7 @@ $$\frac{\Delta V}{V}=\pd{a}{x}$$
 $$-\pd{\Psi_p}{x}=\rho\pd{^2a}{t^2}$$
 - By _differentiating the adiabatic equation_, with $dp=\Psi_p$ one gets:
 $$\Psi_p=-\gamma p\pd{a}{x}$$
-- Physical interpretation: compression and rarefrac
+- Physical interpretation: compression and rarefraction
 $$\pd{^2a}{x^2}=\frac{\rho}{\gamma p}\pd{^2a}{t^2}$$
 - As the speed is independent of frequency, one sees that sound waves are _dispersionless_
 - The wave speed $v$ is given by:
