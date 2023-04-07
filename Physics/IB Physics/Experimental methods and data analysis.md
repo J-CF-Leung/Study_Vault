@@ -289,7 +289,7 @@ $$\displaylines{\mathcal{F}[(f*g)(x)]=\sqrt{2\pi}\mathcal{F}[f]\mathcal{F}[g] \\
 - Then, in _frequency space_, the sampled signal $\tilde{S}(\nu)$ will be a _convolution_ of $\tilde{X}(\nu)$, and another _comb function_ $C(\nu)$, with spacing $1/T$
 $$s(t)=x(t)c(t) \iff \tilde{S}(\nu)=\frac{1}{\sqrt{2\pi}}\tilde{X}(\nu)*C(\nu)$$
 - This creates _convolution images_ of the original signal:
-![[Signal processing 1.png]]
+![[Signal processing.png]]
 - Nyquist's criterion corresponds to the fact that _the convolution images must not overlap_
 
 - To recover the original signal, the convolution image can be _multiplied with a top hat_, then _inverse Fourier transformed_ 

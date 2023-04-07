@@ -19,12 +19,60 @@
             }
           },
           {
-            "id": "85f8446b4ddfbce0",
+            "id": "ccd70014f316fc28",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "313b748dafdfd837",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4caaf76b39bcf991",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "359ffec4ca7e4dfb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Physics/IB Physics/Elasticity.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cf32ec15a31c997f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Physics/IB Physics/Rigid body dynamics.md",
                 "mode": "source",
                 "source": false
               }
@@ -87,7 +135,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.30289397970153387,
+                      "scale": 0.356086848115316,
                       "close": true
                     }
                   }
@@ -244,10 +292,28 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "85f8446b4ddfbce0",
+  "active": "ccd70014f316fc28",
   "lastOpenFiles": [
-    "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
+    "Isotherms and adiabats.png",
+    "Isotherms and adiabats.png",
+    "Physics/Images/Two paths.png",
+    "Physics/Images/Carnot corollary proof.png",
+    "Physics/Images/Carnot proof.png",
+    "Physics/Images/Carnot.png",
+    "Physics/Images/Carnot.png",
     "Past Papers/IB Physics/2012-13_Part_IB_Physics_A_paper_1.pdf",
+    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+    "Physics/IB Physics/Rigid body dynamics.md",
+    "Physics/Thermal Physics/Classical Thermodynamics.md",
+    "Physics/Images/Cycle types.png",
+    "Physics/Images/Cycle types.png",
+    "Physics/Images/Carnot schematic.png",
+    "Note 7 Apr 2023(2).png",
+    "Physics/Thermal Physics/Statistical thermodynamics.md",
+    "Physics/Quantum Mechanics/Topics in Quantum Mechanics.md",
+    "Physics/IB Physics/Elasticity.md",
+    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+    "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
     "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
     "Physics/IB Physics/Experimental methods and data analysis.md",
     "Physics/IB Physics/Waves.md",
@@ -267,30 +333,13 @@
     "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
     "Physics/Vectors and matrices in physics.md",
     "Operators, uncertainties and symmetries.md",
-    "Physics/Thermal Physics/Statistical thermodynamics.md",
     "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Chemistry/IB Chemistry/Vibrational normal modes in molecules.md",
-    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
     "Chemistry/IB Chemistry/Descriptions of bonding.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
-    "Chemistry/Images/BF3 SO.png",
-    "Chemistry/Images/BF3 example SOs.png",
-    "Chemistry/Images/BF3 local coords.png",
-    "Chemistry/Images/BF3 universal coords.png",
-    "Chemistry/Images/BH3 MO diagram.png",
-    "Chemistry/Images/BH3 SO overlap.png",
-    "Chemistry/Images/BH3 hydrogen SOs.png",
-    "Chemistry/Images/BH3 hydrogen orbitals.png",
-    "Chemistry/Images/Oh character table.png",
-    "Chemistry/Images/D3h character table 1.png",
-    "Physics/IB Physics/Rigid body dynamics.md",
-    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
-    "Physics/Thermal Physics/Classical Thermodynamics.md",
     "Physics/IB Physics/Orbits.md",
     "Physics/IB Physics/Oscillations.md",
-    "Physics/IB Physics/Elasticity.md",
     "Physics/Quantum Mechanics/Operators, uncertainties and symmetries.md",
-    "Mathematics/IB Mathematical Methods/Dirac Delta Function.md",
     "Misc or Personal/What to do.canvas"
   ]
 }
