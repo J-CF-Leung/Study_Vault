@@ -12,11 +12,9 @@
             "id": "74f9c9e2a989472f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Physics/IB Physics/Waves.md",
-                "mode": "source",
-                "source": false
+                "file": "Past Papers/IB Physics/2012-13_Part_IB_Physics_A_paper_1.pdf"
               }
             }
           },
@@ -24,13 +22,16 @@
             "id": "85f8446b4ddfbce0",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Past Papers/IB Physics/2011-12_Part_IB_Physics_A_Paper_2.pdf"
+                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -47,7 +48,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/IB Physics/Waves.md"
+                    "file": "Physics/Thermal Physics/Classical Thermodynamics.md"
                   }
                 }
               }
@@ -63,7 +64,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/IB Physics/Waves.md",
+                    "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -136,7 +137,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "node",
+                "query": "carrier",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -173,7 +174,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/IB Physics/Waves.md",
+                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,7 +191,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/IB Physics/Waves.md",
+                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -213,7 +214,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/IB Physics/Waves.md"
+                "file": "Physics/Thermal Physics/Classical Thermodynamics.md"
               }
             }
           },
@@ -243,27 +244,30 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "74f9c9e2a989472f",
+  "active": "85f8446b4ddfbce0",
   "lastOpenFiles": [
-    "Past Papers/IB Physics/2011-12_Part_IB_Physics_A_Paper_2.pdf",
-    "Physics/IB Physics/Waves.md",
-    "Physics/IB Physics/Optics.md",
-    "Physics/IB Physics/Electromagnetism.md",
-    "Physics/IB Physics/Experimental methods and data analysis.md",
-    "Past Papers/IB Physics/2011-12_Part_IB_Physics_A_Paper_1.pdf",
-    "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
-    "Past Papers/IB Physics/2013-14_Part_IB_Physics_B_Paper_1.pdf",
-    "Physics/Vectors and matrices in physics.md",
     "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
+    "Past Papers/IB Physics/2012-13_Part_IB_Physics_A_paper_1.pdf",
+    "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
+    "Physics/IB Physics/Experimental methods and data analysis.md",
+    "Physics/IB Physics/Waves.md",
+    "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
+    "Physics/Quantum Mechanics/1D time-independent Hamiltonians.md",
+    "Past Papers/IB Physics/2020-21_Part_IB_Physics_B_Paper_2.pdf",
+    "Past Papers/IB Physics/2011-12_Part_IB_Physics_A_Paper_2.pdf",
+    "Past Papers/IB Physics/2011-12_Part_IB_Physics_B_Paper_2.pdf",
+    "Physics/IB Physics/Electromagnetism.md",
+    "Past Papers/IB Physics/2021-22_Part_IB_Physics_A_Paper_2.pdf",
+    "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_1.pdf",
+    "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_2.pdf",
+    "Past Papers/IB Physics/2018-19_Part_IB_Physics_B_Paper_1.pdf",
+    "Past Papers/IB Physics/2021-22_Part_IB_Physics_A_Paper_1.pdf",
+    "Past Papers/IB Physics/2020-21_Part_IB_Physics_B_Paper_1.pdf",
+    "Physics/IB Physics/Optics.md",
+    "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
+    "Physics/Vectors and matrices in physics.md",
     "Operators, uncertainties and symmetries.md",
     "Physics/Thermal Physics/Statistical thermodynamics.md",
-    "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_2.pdf",
-    "Past Papers/IB Physics/2012-13_Part_IB_Physics_B_paper_2.pdf",
-    "Past Papers/IB Physics/2012-13_Part_IB_Physics_B_paper_1.pdf",
-    "Past Papers/IB Physics/2012-13_Part_IB_Physics_A_paper_1.pdf",
-    "Past Papers/IB Physics/2011-12_Part_IB_Physics_B_Paper_2.pdf",
-    "Past Papers/IB Physics/2011-12_Part_IB_Physics_B_Paper_1.pdf",
-    "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_1.pdf",
     "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Chemistry/IB Chemistry/Vibrational normal modes in molecules.md",
     "Chemistry/IB Chemistry/Molecular spectroscopy.md",
@@ -287,9 +291,6 @@
     "Physics/IB Physics/Elasticity.md",
     "Physics/Quantum Mechanics/Operators, uncertainties and symmetries.md",
     "Mathematics/IB Mathematical Methods/Dirac Delta Function.md",
-    "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
-    "Physics/Quantum Mechanics/1D time-independent Hamiltonians.md",
-    "Mathematics/Special functions and orthogonal relations.md",
     "Misc or Personal/What to do.canvas"
   ]
 }

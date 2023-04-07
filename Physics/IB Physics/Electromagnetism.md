@@ -1123,11 +1123,11 @@ $$\bm{r}=\frac{e}{m_e\omega^2}\bm{E}_0\exp[i(kz-\omega t)]$$
 - Amplitude _proportional to_ $1/m$ and $1/\omega^2$
 
 - The movement of electron clouds gives rise to a _dipole moment_, causing a _polarisation_:
-$$\bm{P}=N\bm{p}=-\frac{Ne^2}{m_e\omega^2}\bm{E}$$
+$$\bm{P}=N\bm{p}=-\frac{Ne^2}{m_e\omega^2}\bm{E}=\epsilon_0\chi \bm{E}$$
 - Hence, the _relative permittivity in plasma_ can be written as:
 $$\epsilon=1-\frac{\omega_p^2}{\omega^2}$$
 - The _plasma frequency_ $\omega_p$ is:
-$$\omega_p=\frac{Ne^2}{\epsilon_0m_e}$$
+$$\omega_p^2=\frac{Ne^2}{\epsilon_0m_e}$$
 
 ### Below plasma frequency
 - Below $\omega_p$, _refractive index_ (and by extension, $k$) is _imaginary_

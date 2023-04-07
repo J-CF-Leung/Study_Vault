@@ -323,10 +323,10 @@ $$v_\phi=v\left(1+\frac{\Gamma^2}{4v^2k_r^2}\right)^{-1/2}$$
 - Different components of a wave group will have _different speeds_
 - The wave group will _disperse_
 
-- The _phase velocity_ is how fast a _particular point_ in the wave travels
+- The _phase velocity_ is how fast a _particular point_ in _a wave of particular frequency_ travels
 $$v_\text{phase}=\frac{\omega}{k}$$
 
-- The _group velocity_ $v_g$ is how fast a "bump" in a wave group travels
+- The _group velocity_ $v_g$ is how fast a "bump" _in a wave group_, or the _envelope_, travels
 
 ## Narrow spread in frequencies
 - Loose derivation: the "bump" occurs when the phase of all components is the same
@@ -344,7 +344,7 @@ $$v_\text{phase}=\frac{\omega}{k}$$
 	$$\Psi(x,t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty\phi(k)\exp[i(kx-\omega t)]\,dk$$
 	- By changing variables from $k$ to $s=k-k_0$, one gets:
  $$\Psi(x,t)\approx\exp[-i(\omega_0-k_0\omega_0')t]\,\Psi(x-\omega_0't,\,0)$$
-	- So, one gets that the _carrier wave_ travels at speed $v_g=\omega_0'$
+	- So, one gets that the _wave envelope_ travels at speed $v_g=\omega_0'$
 
 - When $v_\text{phase}\neq v_g$, the wave crests will _move relative to the envelope_
 - The group velocity is the velocity for _propagation of information_

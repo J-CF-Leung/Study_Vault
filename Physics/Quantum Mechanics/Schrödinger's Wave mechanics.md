@@ -100,6 +100,10 @@ $$\psi(x,t)=\left(\frac{a^2}{4\pi}\right)^{1/4}\frac{1}{[a^2/2+i\hbar t/(2m)]^{1
 $$|\Psi(x,t)|^2=\frac{1}{\pi^{1/2}[a^2+\hbar^2t^2/(m^2a^2)]^{1/2}}\exp\left\{-\frac{(x-\hbar k_0t/m)^2}{a^2+\hbar^2t^2/(m^2a^2)}\right\}$$
 
 - The _centre of the wave packet propagates at the classical speed_ $v_g=p_0/m=\hbar k_0/m$
+- This corresponds to the _group velocity_ of the wave packet
+
+- Meanwhile, the _phase velocity_ $v_p=\omega/k=\hbar k_0/(2m)$ is the _speed of the carrier wave front_
+
 - The packet _spreads with time_:
 $$(\Delta x)^2=\frac{a^2}{2}\left(1+\frac{\hbar^2 t^2}{m^2a^4}\right)$$
 - This can be understood as combining _uncertainties for position and velocity in quadrature_, and using the _uncertainty principle_
