@@ -102,7 +102,7 @@ used to it, so it doesn’t bother you any more.”
 
 - Intensive and extensive variables come in _conjugate pairs_, coming from the _mathematical description of energy_ ([[#State variables|here]])
 
-## Temperature, the zeroth law, and equations of state
+## Empirical temperature, the zeroth law, and equations of state
 - _Without electric or magnetic fields_, for a _given mass in equilibrium_, the _properties_ of a gas are observed to be _fully determined_ by the _volume_ $V$ and _pressure_ $p$
 - In other words, _any physical quantity_ can be expressed as some _function_ of $p$ and $V$
 
@@ -292,6 +292,13 @@ $$\dbar W=\gamma\,dA$$
 - The _irreversibility_ of a process is alluded to in the _Second Law of Thermodynamics_
 
 ## Multiple formulations
+- Over the years, there have been _many equivalent statements_ of the Second Law
+- Ultimately, they all lead to the establishment of the _function of state_ known as _Entropy_
+
+- The formulations of Clausius and Kelvin lead to _Carnot's Theorem_, which then leads to the _Clausius inequality_, establishing that for any _reversible change_, $\dbar Q=T\,dS$, where $T$ is a function of _empirical temperature_, and $S$ is a _function of state_
+- This can all also be proven _purely from Carathéodory's statement_
+
+### Clausius and Kelvin
 - There are two _formulations_, given by Clausius and Kelvin, based on _empirical observations_
 >[!info] Clausius' statement
 >It is impossible to devise an engine which, working in a cycle, shall produce no effect other than the transfer of heat from a colder to a hotter body
@@ -301,20 +308,26 @@ $$\dbar W=\gamma\,dA$$
 >It is impossible to devise an engine which, working in a cycle, shall produce no effect other than the extraction of heat from a reservoir, and the performance of an equal amount of mechanical work
 - In other words, _one cannot build an engine that does not produce waste heat_
 
+### Carathéodory
 - There is also a more _mathematical_ statement given by Carathéodory:
 >[!info] Carathéodory's statement
 >Adiabatic surfaces exist.
->In other words, in the neighbourhood of any equilibrium state of a system, there are states which are inaccessible by an adiabatic process
-- This asserts that for _any system_, there is a _family of surfaces_ that can be reached by adiabatic changes
-- This is _always possible for two independent variables_
-	- Using the first law, one finds that $dp/dV$ for $\dbar Q=0$ is _always unique_
-- For _three or more independent variables_, there are always _extra conditions_ for this to be true
+>In other words, in the neighbourhood of any equilibrium state of a system, there are always states which are inaccessible by an adiabatic process
+- This asserts that for _any system_, there is a _family of unique surfaces_ that can be reached by adiabatic changes
+	- The second statement implies that the inaccessible states are always _infinitesimally close_, which then leads to the first
 
-- All of these three statements are _equivalent_:
-	- A violation of Clausius' law _leads to_ a violation of Kelvin's law, and _vice versa_
-		- Combining a Kelvin violator with a [[#Cyclic processes|refrigerator]] makes it a Clausius violator, and vice versa
-	- A violation of Crathéodory's statement leads to a violation of Kelvin's law
-		- [[#Alternative derivations: Adiabatic surfaces|Proof]]
+- For _two independent variables_, the _first law_ is sufficient to make this true
+	- Using the first law, one finds that $dp/dV$ for $\dbar Q=0$ is _always unique_
+- For _three or more independent variables_, this statement is necessary as the _first law is insufficient_ to constrain the variables to make this possible
+
+- On each adiabatic surface, there is some _function of state_ $S$ which is _constant_
+
+### Equivalence
+- All of these three statements are _equivalent_
+- A violation of Clausius' law _leads to_ a violation of Kelvin's law, and _vice versa_
+	- Combining a Kelvin violator and a [[#Cyclic processes|refrigerator]] makes it a Clausius violator, and vice versa
+- Carathéodory's statement can be _derived from_ Kelvin's law
+	- [[#Alternative derivations: Adiabatic surfaces|Proof]]
 
 ## The Carnot engine
 - Let there be a _four-stage heat engine_, with _two isothermal_ and _two adiabatic_ processes:
@@ -375,6 +388,7 @@ $$\eta_\text{Carnot}=1-\frac{T_l}{T_h}$$
 $$S(B)-S(A)=\int_A^B \frac{\dbar Q}{T} \hspace{1cm}\text{ for any reversible path AB}$$
 - This function is _entropy_, which is a _state function_:
 $$dS=\frac{dQ_\text{rev}}{T}$$
+- Like energy, it is _extensive_, and defined _up to a constant_ (Later given by the Third Law)
 
 ## Law of increase of entropy
 - Consider two paths, one reversible, one irreversible, from $A$ to $B$:
@@ -386,9 +400,22 @@ $$dS\geq 0$$
 >[!info] Second Law of Thermodynamics
 >For a thermally isolated system, entropy cannot decrease
 - As a consequence, if any _irreversible process_ occurs in the system, entropy _must increase_
+- If a change is _adiabatic_, it is also inherently reversible and _isentropic_
 
 - For the universe as a whole, $U$ remains constant while $S$ increases
 - This gives rise to the _arrow of time_
+>[!quote] The Moving Finger
+>بر لوح نشان بودنی‌ها بوده‌است
+>پیوسته قلم ز نیک و بد فرسوده‌است
+>در روز ازل هر آنچه بایست بداد
+>غم خوردن و کوشیدن ما بیهوده‌است
+>
+>The Moving Finger writes; and having writ,
+>Moves on: nor all your Piety nor Wit
+>Shall lure it back to cancel half a Line,
+>Nor all your Tears wash out a Word of it.
+>
+>By عمر خیّام (Omar Khayyam), translated from Persian by Edward Fitzgerald
 
 ## Alternative derivations: Adiabatic surfaces
 - For any adiabatic change of any system:
@@ -398,6 +425,7 @@ $$\displaylines{\dbar Q=dU-\sum_i X_i\,dx_i=0 \\ \sum_i Y_i\,dy_i=0}$$
 - For any _two-variable_ system, such as a gas, an _adiabatic line_ obeys:
 $$\displaylines{dU-p\,dV=0 \\ \frac{dp}{dV}=-\frac{(\partial U/\partial V)_p+p}{(\partial U/\partial p)_V}}$$
 - This gives a _unique_ gradient, giving rise to a _family of adiabatic lines_
+- Only the _first law_ can already _guarantee_ the uniqueness of these adiabats
 - Example: For an ideal gas, the adiabats and isotherms
 ![[Isotherms and adiabats.png]]
 
@@ -405,11 +433,75 @@ $$\displaylines{dU-p\,dV=0 \\ \frac{dp}{dV}=-\frac{(\partial U/\partial V)_p+p}{
 - Example: For three variables, $Z_1\,dz_1+Z_2\,dz_2+Z_3\,dz_3=0$ _can encompass all space_, and is _constrained to a surface iff_:
 $$Z_1\left(\pd{Z_2}{z_3}-\pd{Z_3}{z_2}\right)+Z_2\left(\pd{Z_3}{Z_1}-\pd{Z_1}{z_3}\right)+Z_3\left(\pd{Z_1}{z_2}-\pd{Z_2}{z_1}\right)=0$$
 
+- Instead, the _existence of adiabatic surfaces_ must be derived from _Kelvin's statement_
+	![[Caratheodory from Kelvin.png]]
+	- Let $X$ be a third state variable
+	- Suppose _both $AB$ and $AC$ were adiabats_
+	- On $AB$, since $Q=0$ and $\Delta U<0$, _work is done by the system_
+	- On $BC$, since no work is done and $\Delta U>0$, _heat $Q$ is absorbed by the system_
+	- On $CA$, _work is done on the system without it expelling heat_
+	- Hence, this cycle _violates Kelvin's statement of the Second Law_
+	- Hence, for any point, _there are points inaccessible adiabatically_
+- This proves _Carathéodory's statement is another form of the Second Law_
 
+- Having proven that unique adiabatic surfaces exist, one can prove that for _any reversible change_, there exists a _function of empirical temperature_ $T(\theta)$ and _function of state_ $S$, such that $dQ_\text{rev}=T\,dS$ (warning: Long proof)
+	- Let there be a system with $n$ _independent parameters_ $\{y_i\}$
+	- Introduce a _new function of state_ $\phi(y_i)$ which is _constant for an adiabatic change_:
+	$$\sum_i Y_i\,dy_i=0 \hspace{1cm} \sum_i\pd{\phi}{y_i}\,dy_i=0$$
+	- Hence, for any changes _on the adiabatic surface_, and _any function of state_ $\lambda$:
+	$$\sum_i\left(Y_i-\lambda\pd{\phi}{y_i}\right)\,dy_i=0$$
+	- On the surface, there are only $n-1$ independent variables 
+	- _Choosing_ $\lambda$ such that for the _dependent_ variable $y_1$:
+	$$Y_1=\lambda\pd{\phi}{y_1}$$
+	- Hence, if the equations above have to be _true in general_, then _on the surface_:
+	$$Y_i=\lambda\pd{\phi}{y_i}\,\,\,\,\,\forall i$$
+	- Therefore, for a _reversible, non-adiabatic change_:
+	$$\dbar Q=\sum_i Y_i\,dy_i=\sum_i\lambda\pd{\phi}{y_i}\,dy_i=\lambda\,d\phi$$
+	- Now, one must prove that $\lambda$ is _purely a function of $\theta$ and $\phi$_
+	- Introduce a second system described by $m$ _independent variables_ $\{z_i\}$, in _thermal equilibrium_ with the first, at empirical temperature $\theta$
+	- Introduce $\lambda'$ and $\phi'$ asuch that
+	$$\dbar Q=\lambda\,d\phi \hspace{1cm} \dbar Q'=\lambda'\,d\phi'$$
+	- Then, introduce functions $\Phi(y_i,z_i)$ and $\Lambda(y_i,z_i)$ such that:
+	$$\displaylines{\Lambda\,d\Phi=\dbar Q+\dbar Q'=\lambda\,d\phi+\lambda'\,d\phi' \\ d\Phi=\frac{\lambda}{\Lambda}\,d\phi+\frac{\lambda'}{\Lambda'}\,d\phi'}$$
+	- Perform a change of variable to replace $(y_1,y_2)$ with $(\theta,\phi)$, and $(z_1,z_2)$ with $(\theta,\phi')$
+	- From the _total differential_ of $\Phi$, it is _purely a function of $\phi$ and $\phi'$_, and this extends to its _partial derivatives_, $\lambda/\Lambda$ and $\lambda/\Lambda$, hence:
+	$$\displaylines{\Lambda=\Lambda(\phi,\phi',\theta) \hspace{1cm} \lambda=\lambda(\phi,\theta)\hspace{1cm}\lambda'=\lambda'(\phi',\theta)\\ \pd{}{\theta}\left(\frac{\lambda}{\Lambda}\right)=\pd{}{\theta}\left(\frac{\lambda'}{\Lambda}\right)=0 \\ \pd{\ln\lambda}{\theta}=\pd{\ln\lambda'}{\theta}=\pd{\ln\Lambda}{\theta}}$$
+	- From the last line, one infers that _all terms are a function of $\theta$_
+	- Hence:
+	$$\lambda=F(\phi)\exp\left[\int\,g(\theta)\,d\theta\right]$$
+	- The form of $F(\phi)$ is _determined by the way in which the surfaces are labelled_
+	- Then, define:
+	$$\displaylines{T(\theta)\equiv C\exp\left[\int g(\theta)\,d\theta\right]\\ S(\phi)=\frac{1}{C}\int\,F(\phi)\,d\phi}$$
+	- Hence, for _any reversible process_:
+	$$dQ_\text{rev}=T\,dS$$
+	- where $T$ is a function of _empirical temperature only_, and $S$ is a _function of state_
 
 # State variables
+- So far, to descibe a gas (assuming constant $N$), one can deploy the variables:
+	- Intensive - _Absolute temperature_ $T$, _pressure_ $p$
+	- Extensive - _Internal energy_ $U$, _volume_ $V$, _entropy_ $S$
 
+## The first master equation
+- Note that for a _reversible process_, as $dQ_\text{rev}=T\,dS$ and $\dbar W=-p\,dV$:
+$$dU=T\,dS-p\,dV$$
+- In this equation, _only state variables are used_
+- Hence, this is _applicable for all processes, no matter if it is reversible_
+- This is known as a _Master Equation_
 
+- For _irreversible processes_:
+$$\displaylines{dU=\dbar Q+\dbar W=T\,dS-p\,dV \\ \dbar Q_\text{irrev.}<T\,dS \\ \dbar W_\text{irrev.}>-p\,dV}$$
+	- Example: Due to _friction_, the _applied pressure_ $p'>p$, and _more work is done_
+
+- From the Master Equation, one can write:
+$$T=\left(\pd{U}{S}\right)_V\hspace{1cm}p=-\left(\pd{U}{V}\right)_S$$
+- It can also be _inverted_ to give _entropy as a function of $U$ and $V$_:
+$$\displaylines{dS=\frac{1}{T}\,dU+\frac{p}{T}\,dV}$$
+
+## Thermodynamic potentials
+
+## Maxwell relations
+
+## Number of particles and the chemical potential
 
 # Thermodynamic systems
 
