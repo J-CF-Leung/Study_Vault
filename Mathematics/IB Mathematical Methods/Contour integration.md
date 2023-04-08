@@ -29,7 +29,7 @@ $$\begin{aligned}f(z)&=\sum_{n=-\infty}^\infty a_n(z-z_0)^n \\ &=\dots\frac{a_{-
 ## Definition
 - Consider the integral of $f(z)$ along the _contour_ $C$ from $z=\alpha$ to $\beta$
 - Aside from the _path_, the contour also includes the _travel direction_
-- The result _may depend on the contour_\
+- The result _may depend on the contour_
 
 - The _formal definition_ divides the interval $[\alpha,\beta]$ into $N$ parts:
 $$\displaylines{\alpha=z_0<z_1<z_2<\dots<z_N=\beta \\ \delta z_k=z_k-z_{k-1} \\ \Delta=\max_k|\delta z_k|}$$
@@ -125,7 +125,52 @@ $$f^{(n)}(z_0)=\frac{n!}{2\pi i}\oint_C\frac{f(z)}{(z-z_0)^{n+1}}\,dz$$
 - Hence at any point where $f$ is _analytic_, it is _infinitely differentiable_, and _all its derivatives exist_
 
 ## The point at infinity and stereographic projection
+- Some functions tend to a _well-defined limit for $z\to\infty$, irrespective of direction_ at which infinity is approached
+- Example: $f(z)=1/z$ tends to $0$ as $z\to\infty$ for all directions
+
+- In these cases, one can _model infinity as a single point_
+- This requires a _stereographic projection_, where the complex plane is mapped onto the _Riemann sphere_, with $z=0$ as the South Pole:
+![[Stereographic projection.png]]
+- For _any point on the plane_, a line is drawn _to the North Pole_
+- The _point_ at which the line _intersects with the sphere_ is the _equivalent point on the sphere_
+- The _South Pole_ is projected onto the origin
+- Circles of _fixed latitude_ are then projected onto _concentric circles around the origin_
+- Meanwhile, the _North Pole_ is _projected onto all points at infinite radius_
+	- It can be described as a _single point at infinity_
+
+- Near the _point at infinity_, the function is studied by defining a new variable:
+$$\zeta=\frac{1}{z}$$
+- Then define:
+$$g(\zeta)=f\left(\frac{1}{\zeta}\right)$$
+- One can find a _Laurent expansion_ for $g$ around $\zeta=0$
+- If there is a _singularity_ at that point, then $f$ has a _singularity at infinity_
+
+- Example:
+	$$f(z)=z^n \hspace{1cm} g(\zeta)=\zeta^{-n}$$
+	- $g$ has a _pole of order_ $n$ at $\zeta=0$, hence $f$ has a pole of order $n$ at infinity
+
+- Example:
+	$$f(z)=\exp(z) \hspace{1cm} g(\zeta)=\exp(1/\zeta)$$
+	- $g$ has an _essential singularity_ at $\zeta=0$, hence $f$ has an essential singularity at infinity
+
+- Example:
+	$$f(z)=1/z \hspace{1cm} g(\zeta)=\zeta$$
+	- $g$ has a _simple zero_ at $\zeta=0$, hence $f$ has a simple zero at infinity
+
+### Residues at infinity
+- Care must be taken when applying the theorem to residues at infinity
+- Strictly, the residue is a _property of $f\,dz$_ instead of just $f$
+
+- For example, if $C$ is an _anticlockwise contour around the unit circle_ in the $z-$plane:
+$$\frac{1}{2\pi i}\oint_C\frac{dz}{z}=1$$
+- At the same time, it is a _clockwise unit circle_ in the $\zeta-$plane
+- So it can be viewed as a contour _surrounding the point at infinity_
+- Hence, the integral is equal to _minus the sum of residues outside $C$_, despite the fact that $1/z$ has _no singular points_ there
+- Still, the _residue at $z=\infty$_ is $-1$
+- This is because the residue is a property of:
+$$\frac{dz}{z}=-\frac{d\zeta}{\zeta}$$
 
 ## Examples of applications
+- The residue theorem is often used to calculate _definite integrals_
 
 # Multi-valued functions and branch cuts

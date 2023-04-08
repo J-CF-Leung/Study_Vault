@@ -53,6 +53,7 @@ $$-\frac{dA_\text{sys}}{T}=dS_\text{sys}-\frac{dU}{T}=dS_\text{univ}$$
 ## Microstates and macrostates
 - For a system with an enormous number of particles, and thus, degrees of freedom, there is an immeasurable number of _microstates_
 	- The number of microstates is denoted $\Omega$
+- Overall, the microstate of the system is the _multi-particle wave function_
 
 - A *macrostate* is defined by the _bulk properties_ of the system, and _incorporates many microstates_
 - Macrostates are described by _thermodynamic variables_ such as $U, N, V, S, T, p, \mu$
@@ -126,6 +127,8 @@ $$A=-k_BT\ln{Q_N}$$
 $$E_\text{sys}=\varepsilon_i^{(A)}+\varepsilon_j^{(B)}+\varepsilon_k^{(C)}+\dots$$
 - The _subscript_ is the _state of the particle_, while the _superscript_ is the _particle index_
 - This is generally _only applicable to gases_
+- In terms of the wave function, the system is _separable_:
+$$\psi_\text{tot}=\psi_A\psi_B\psi_C\dots$$
 
 - Then, the _partition function_ becomes:
 $$Q_N=\sum_{i,j,k,\dots}\exp\left(-\frac{E_{\text{sys},i,j,k\dots}}{k_BT}\right)=\prod_\text{particles}\sum_i\exp\left(-\frac{\varepsilon_i}{k_BT}\right)=\prod_\text{particles}q$$
@@ -205,9 +208,53 @@ $$q=\sum_{\text{states }i} \exp\left(-\frac{\varepsilon_i}{k_BT}\right)=\sum_{\t
 - In this case, the _number of accessible levels_ is still valid, as _degenerate levels are still distinct_
 
 # Calculating the partition function
+- To derive the properties of a multi-molecular system, one will need to compute the _partition function_, taking into account the _overall motion_ of the molecules, as well as their _internal degrees of freedom_
 
-## Multiple degrees of freedom
+## Molecular degrees of freedom
+- In general, all _degrees of freedom_ within the system consist of:
+	- _Translational_ motion of the _molecules_ in space
+	- _Rotational_ motion of the molecules themselves
+	- _Vibrational_ motion of the _bonds_ in a molecule
+	- _Electronic_ interactions between _electrons and nuclei_ in the molecule
+- By the [[Molecular quantum mechanics#The Born-Oppenheimer approximation|Born-Oppenheimer approximation]], these modes are assumed to be _independent_
+	- For example, the rotational constant is assumed to be _constant_ despite vibration
+- In terms of the _wave function_ and _energies_:
+$$\displaylines{\psi=\psi_\text{trans}\psi_\text{rot}\psi_\text{vib}\psi_\text{elec}\\ \varepsilon_\text{tot}=\varepsilon_\text{trans}+\varepsilon_\text{rot}+\varepsilon_\text{vib}+\varepsilon_\text{elec}}$$
+- As the energies are _additive_, like the multi-particle case, the _molecular partition function_ becomes:
+$$q_\text{tot}=q_\text{trans}\,q_\text{rot}\,q_\text{vib}\,q_\text{elec}$$
 
+## Dealing with indistinguishable particles
+- As $Q_N$ is a product of all of these functions, _thermodynamic functions_ such as $A$ and $S$ become _additive_:
+$$A=-kT\ln Q^N=-kT\ln\frac{q^N}{N!}=A_\text{trans}+A_\text{rot}+A_\text{vib}+A_\text{elec}$$
+- Usually, the $N!$ factor is _associated with_ $q_\text{trans}$:
+$$\displaylines{A_\text{trans}=-kT\ln\frac{q_\text{trans}^N}{N!}=-NkT\ln q_\text{trans}+kT(N\ln N-N) \\ A_\text{rot}=-kT\ln q_\text{rot}^N=-NkT\ln q_\text{rot}}$$
+	- Similarly for _vibrational_ and _electronic_ degrees of freedom
+
+- Similarly, for _entropy_:
+$$\displaylines{\begin{aligned}S_\text{trans} &=k\ln\frac{q_\text{trans}^N}{N!}+kT\left(\pd{\ln q_\text{trans}^N/N!}{T}\right)_V \\ &=Nk\ln q_\text{trans} -Nk\ln N+Nk+NkT\left(\pd{\ln q_\text{trans}}{T}\right)_V\end{aligned} \\ \\  S_\text{rot}=Nk\ln q_\text{rot}+NkT\left(\pd{\ln q_\text{rot}}{kT}\right)_V}$$
+- For _internal energy_, the $N!$ _disappears after differentiation_:
+$$U=kT^2\left(\pd{\ln q^N/N!}{T}\right)_V=NkT^2\left(\pd{\ln q}{T}\right)_V$$
+- Hence, _all contributions have a similar formula_:
+$$U_\text{trans}=NkT^2\left(\pd{\ln q_\text{trans}}{T}\right)_V$$
+
+## Choice of energy zero
+- For _translation_ and _rotation_, all _types_ of molecules _have a common energy zero_
+- For _vibration_ and _electronic_, the _ground state energy_ relative to their "zero" _depends on the molecule_
+
+## Translational partition function
+- Model the _translational wave functions_ of the particles as the eigenstates of the [[Molecular quantum mechanics#Particle in a box|particle in a box]]
+- In _one dimensional box_ of length $a$, for a particle of mass $m$, the energies are:
+  $$E_n=\frac{n^2h^2}{8ma^2}$$
+- To make calculating the partition function easier, _estimate_ how many levels will be _significantly occupied_:
+$$\frac{n_\text{max}^2h^2}{8ma^2}\sim kT$$
+- In typical conditions, $n\sim 10^9$
+- Hence, replace the sum by an _integral_:
+$$q_\text{trans, 1D}=\sum_{n=1}^\infty\exp\left(-\frac{E_n}{kT}\right) \approx \int_0^\infty \exp\left(-\frac{E_n}{kT}\right)\,dn$$
+- The limit is _replaced_ with $0$ to simplify the integral
+- The _hypothetical_ state with $n=0$ has zero energy, so no correction is required
+
+- This gives:
+$$q_\text{trans, 1D}=\frac{1}{2}\left(\frac{8mkT a^2\pi}{h^2}\right)^{1/2}=\left(\frac{2\pi mkT}{\hbar^2}\right)^{1/2}a$$
 
 # Internal energy and heat capacity
 

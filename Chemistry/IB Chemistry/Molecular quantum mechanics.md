@@ -5,12 +5,23 @@
 # Models of bonding
 
 ## Electrons: Particle in a box
-- Used to model conjugated $\pi$ systems
+- Used to model _conjugated $\pi$ systems_
+- The potential is modelled as:
+$$V(x)=\begin{cases}0 &0<x<a \\ \infty &\text{elsewhere}\end{cases}$$
+- _Outside_ the molecule, the potential experiences a _dramatic increase_
+- This is only an _approximation_
+
 - For a box of length $a$ from $x=0$ to $x=a$, the wave functions are:
 $$\psi_n=A\sin\frac{n\pi x}{a}$$
 - The corresponding energies are:
 $$E_n=\frac{n^2\hbar^2\pi^2}{2ma^2}$$
-- Details: [[1D time-independent Hamiltonians#Particle in a box|Particle in a box]]
+- Derivation: [[1D time-independent Hamiltonians#Particle in a box|Particle in a box]]
+
+- For a _multi-dimensional_ particle in a box, the potential is _separable_:
+$$\displaylines{V(x,y,z)=V_x(x)+V_y(y)+V_z(z) \\\\ V_x(x)=\begin{cases}0 &0<x<a \\ \infty &\text{elsewhere}\end{cases} \hspace{1cm} V_y(y)=\begin{cases}0 &0<y<b \\ \infty &\text{elsewhere}\end{cases} \hspace{1cm} V_z(z)=\begin{cases}0 &0<z<c \\ \infty &\text{elsewhere}\end{cases}}$$
+- The energies are then _additive_:
+$$E=E_x+E_y+E_z=\frac{\hbar^2\pi^2}{2m}\left(\frac{n_x^2}{a^2}+\frac{n_y^2}{b^2}+\frac{n_z^2}{c^2}\right)$$
+- This model can also be used for _a molecule in a container_
 
 ## Nuclei: The quantum harmonic oscillator
 - Mathematical details and derivation: [[Quantum Harmonic Oscillator]]
@@ -100,7 +111,7 @@ $$E_n=\frac{\hbar^2}{2I}J(J+1)$$
 - Because of this, there is an _extra term_ in the rotational energy, proportional to $J^2(J+1)^2$
 	- Atkins, Friedman p. 274-275
 
-# Rotation and vibration
+# The vibrating rotor
 - Molecules both rotate and vibrate
 - Vibration has the variable $r-r_e$
 	- Example: harmonic oscillator, Morse potential
@@ -121,6 +132,9 @@ $$\Ham\Psi=[E_{vib}+BJ(J+1)]\Psi$$
 - $B$ can become _dependent on vibrational energy level_ (deviation from BO approximation)
 - As vibrational energy level increases, _bond length increases_
 - As a result, since $B\propto 1/I$, $B$ _decreases_
+- Overall, it can be approximated that at vibrational level $\nu$:
+$$B_\nu=B_e-\alpha\left(\nu+\frac{1}{2}\right)$$
+- $B_e$ is the _rotational constant at equilibrium_ (bottom of the vibrational energy well)
 
 # Spectroscopic principles
 - Bohr condition: for a transition between two states $\psi_m$ and $\psi_n$ facilitated by a photon, its _frequency $\nu_{mn}$ must equal_ $|E_n-E_m|/h$

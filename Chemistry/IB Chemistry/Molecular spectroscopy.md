@@ -1,5 +1,4 @@
 
-
 - Spectroscopy: _Determining structures using the interaction of electromagnetic radiation with matter_
 
 # Physical principles and approximations
