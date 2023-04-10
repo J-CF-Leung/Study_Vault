@@ -103,10 +103,10 @@ $$V(\bm{r})=\frac{1}{4\pi\epsilon_0}\frac{q}{r}$$
 $$V(\bm{r})=\frac{1}{4\pi\epsilon_0}\frac{\bm{p\cdot r}}{r^3}=\frac{1}{4\pi\epsilon_0}\frac{\bm{p\cdot\hat{r}}}{r^2}$$
 - The electric field is:
  $$\bm{E}(\bm{r})=\frac{1}{4\pi\epsilon_0}\frac{p}{r^3}\left[\bm{\hat{r}}\, 2\cos\theta+\bm{\hat{\theta}}\,\sin\theta\right]=\frac{1}{4\pi\epsilon_0}\frac{p}{r^3}\left[3(\bm{p\cdot \hat{r}})\bm{\hat{r}} -\bm{p}\right]$$
-	- As expected, falls off quicker than the monopole
+	- As expected, falls off _quicker than the monopole_
 	- As separation decreases, $|\bm{E}|$ tends to zero as expected
-	- At $\theta=0$, the field is radial
-	- At $\theta=\pi/2$, the field is azimuthal
+	- At $\theta=0$, the field is _radial_
+	- At $\theta=\pi/2$, the field is _azimuthal_
 
 ### A dipole in a uniform electric field
 - The _force and couple_ on a dipole in a uniform field:
@@ -193,7 +193,7 @@ $$\bm{E}=\frac{\lambda}{2\pi\epsilon_0r}\bm{\hat{r}}$$
 
 ## Laplace's and Poisson's equations
 - Consider the field at a point, expressed using the potential
-- Poisson's equation:
+- _Poisson's equation_:
 $$-\nabla\cdot\bm{E}=\nabla\cdot(\nabla V)=\nabla^2V=-\frac{\rho}{\epsilon_0}$$
 - Laplace operator: measure of curvature (relates curvature to charge density)
 
@@ -201,7 +201,9 @@ $$-\nabla\cdot\bm{E}=\nabla\cdot(\nabla V)=\nabla^2V=-\frac{\rho}{\epsilon_0}$$
 - Here, one gets Laplace's equation:
 $$\nabla^2V=0$$
 - [[Poisson and Laplace's equations|How to solve the damn things]]
-
+	- In many cases, due to the _uniqueness theorem_, one can simply _recreate the boundary conditions_, usually with an _image charge_
+	- Grounded flat plane: Opposite charge, in a "mirror" position
+	- Grounded sphere in a _uniform field_: Dipole in the centre
 
 ## Capacitance
 - Consider two conducting surfaces with potential difference $V$, holding opposite amounts of charge $Q$, the capacitance $C$ is:
