@@ -48,7 +48,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+                "file": "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
                 "mode": "source",
                 "source": false
               }
@@ -91,19 +91,19 @@
             }
           },
           {
-            "id": "e683ce9910bfdfb5",
+            "id": "5a60b2386f645177",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/IB Physics/Electromagnetism.md",
+                "file": "Physics/IB Physics/Fluid mechanics.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 2
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -120,7 +120,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/IB Physics/Electromagnetism.md"
+                    "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md"
                   }
                 }
               }
@@ -136,7 +136,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/IB Physics/Electromagnetism.md",
+                    "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -246,7 +246,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/IB Physics/Electromagnetism.md",
+                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -263,7 +263,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/IB Physics/Electromagnetism.md",
+                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -286,7 +286,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/IB Physics/Electromagnetism.md"
+                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md"
               }
             }
           },
@@ -316,23 +316,27 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e683ce9910bfdfb5",
+  "active": "313b748dafdfd837",
   "lastOpenFiles": [
-    "Past Papers/IB Physics/2012-13_Part_IB_Physics_B_paper_1.pdf",
-    "Physics/IB Physics/Electromagnetism.md",
-    "Mathematics/IB Mathematical Methods/Contour integration.md",
-    "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
+    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+    "Physics/Thermal Physics/Classical Thermodynamics.md",
     "Physics/IB Physics/Elasticity.md",
+    "Physics/IB Physics/Rigid body dynamics.md",
+    "Mathematics/IB Mathematical Methods/Contour integration.md",
+    "Physics/IB Physics/Fluid mechanics.md",
+    "Past Papers/IB Physics/2012-13_Part_IB_Physics_B_paper_1.pdf",
+    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+    "Chemistry/Images/Rotational partition function.png",
+    "Physics/IB Physics/Orbits.md",
+    "Physics/IB Physics/Electromagnetism.md",
+    "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
     "Past Papers/IB Physics/2013-14_Part_IB_Physics_B_Paper_1.pdf",
     "Past Papers/IB Physics/2012-13_Part_IB_Physics_A_paper_1.pdf",
     "Physics/IB Physics/Experimental methods and data analysis.md",
     "Physics/IB Physics/Newtonian dynamics and non-inertial frames.md",
-    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
-    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
-    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
     "Mathematics/Images/Stereographic projection.png",
     "Mathematics/IB Mathematical Methods/Cartesian tensors.md",
-    "Physics/Thermal Physics/Classical Thermodynamics.md",
     "Physics/Images/Caratheodory from Kelvin.png",
     "Pasted image 20230408140340.png",
     "Physics/Images/Caratheodory from Kelvin.png",
@@ -341,8 +345,6 @@
     "Physics/Images/Two paths.png",
     "Physics/Images/Carnot corollary proof.png",
     "Physics/Images/Carnot proof.png",
-    "Physics/Images/Carnot.png",
-    "Physics/IB Physics/Rigid body dynamics.md",
     "Physics/Thermal Physics/Statistical thermodynamics.md",
     "Physics/Quantum Mechanics/Topics in Quantum Mechanics.md",
     "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
@@ -361,8 +363,6 @@
     "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
     "Physics/Vectors and matrices in physics.md",
     "Operators, uncertainties and symmetries.md",
-    "Chemistry/IB Chemistry/Symmetry in molecules.md",
-    "Chemistry/IB Chemistry/Vibrational normal modes in molecules.md",
     "Misc or Personal/What to do.canvas"
   ]
 }

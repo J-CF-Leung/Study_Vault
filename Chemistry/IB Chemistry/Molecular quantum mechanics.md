@@ -479,7 +479,7 @@ $$\displaylines{\braket{\frac{1}{r_{12}}}_\pm=J\pm K \\ J=\int\int \psi_{1s}(1)\
 
 - Therefore, the multi-electron wave function is defined by 4 quantum numbers:
 $$\ket{\Psi}=\ket{LSJM_J}$$
-- Energy _does not depend on $M_J$_, and levels are $2J+1$-fold degenerate
+- Energy _does not depend on $M_J$_, and levels are $2J+1$-fold _degenerate_
 
 ## Terminology and term symbols
 - _Configuration_: _which orbital shells_ contain electrons

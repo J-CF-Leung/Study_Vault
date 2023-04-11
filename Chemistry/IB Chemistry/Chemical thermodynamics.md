@@ -254,7 +254,101 @@ $$q_\text{trans, 1D}=\sum_{n=1}^\infty\exp\left(-\frac{E_n}{kT}\right) \approx \
 - The _hypothetical_ state with $n=0$ has zero energy, so no correction is required
 
 - This gives:
-$$q_\text{trans, 1D}=\frac{1}{2}\left(\frac{8mkT a^2\pi}{h^2}\right)^{1/2}=\left(\frac{2\pi mkT}{\hbar^2}\right)^{1/2}a$$
+$$q_\text{trans, 1D}=\frac{1}{2}\left(\frac{8mkT a^2\pi}{h^2}\right)^{1/2}=\left(\frac{2\pi mkT}{h^2}\right)^{1/2}a\equiv\frac{a}{\Lambda}$$
+- $\Lambda$ is known as the _thermal wavelength_ of the system
+- A _typical value_ for $\Lambda$ would be about $\sim 10^{-11}\,\text{m}=0.1\text{Å}$
+ 
+- For a _three-dimensional_, _symmetrical_ box with sides of length $a$:
+$$q_\text{trans,3D}=\left(\frac{2\pi mkT}{h^2}\right)^{3/2}a^3\equiv\frac{V}{\Lambda^3}$$
+- As volume _increases_, the levels are _less densely spaced_, and _more levels are occupied_
+
+## Rotational partition function for diatomics
+- Here, the molecule is modelled as a [[Molecular quantum mechanics#The Rigid Rotor|Rigid Rotor]]:
+$$\displaylines{E_J=BJ(J+1) \\ B\equiv\frac{\hbar^2}{2I}=\frac{\hbar^2}{2\mu R^2}}$$
+- Here, $B$ is the _rotational constant_, $\mu$ is the _reduced mass_, and $R$ is the _bond length_
+- $J$ is the _quantum number_, an integer dictating the _angular momentum_
+
+- At each energy, there is a _degeneracy_ of $(2J+1)$ based on the _orientation_ of the molecule
+- Hence, the partition function is:
+$$\begin{aligned}q_\text{rot}&=\sum_{J=0}^\infty\,(2J+1)\exp\left(-\frac{BJ(J+1)}{kT}\right) \\ &=1+3\exp\left(-\frac{2B}{kT}\right)+5\exp\left(-\frac{6B}{kT}\right)+\dots\end{aligned}$$
+- Assuming a _high temperature_ and integrating w.r.t. $dJ$, one gets:
+$$\displaylines{q_\text{rot}=\frac{kT}{B}\equiv\frac{T}{\theta_\text{rot}} \\ \theta_\text{rot}\equiv\frac{B}{k}}$$
+- $\theta_\text{rot}$ is known as the _rotational temperature_
+- A typical value for diatomics is about $\sim 1-10\text{K}$
+
+- This approximation is _only valid if_ $T>\theta_\text{rot}$
+- Otherwise, the partition function must be evaluated using a _sum_
+
+- For _homonuclear_ diatomics, as the nuclei are _indistinguishable_, this requires the introduction of a _symmetry parameter_:
+$$q_\text{rot}=\frac{kT}{\sigma B}\equiv\frac{T}{\sigma\theta}$$
+- The symmetry parameter is $1$ for _heteronuclear_ diatomics, and $2$ for _homonuclear_ diatomics
+- Behaviour of the rotational partition function:
+![[Rotational partition function.png|350]]
+
+## Rotational partition function for non-linear molecules
+- For all non-linear molecules, there are _three rotational constants_, each associated with a _principal axis_ of the molecule:
+$$A=\frac{\hbar^2}{2I_a} \hspace{1cm} B=\frac{\hbar^2}{2I_b} \hspace{1cm} C=\frac{\hbar^2}{2I_c}$$
+- Each rotational constant is _associated with a rotational temperature_:
+$$\theta_{\text{rot},a}=\frac{A}{k}$$
+- Then, for $T>>\theta_\text{rot}$, it can be shown that:
+$$q_\text{rot}=\frac{1}{\sigma}\sqrt{\frac{\pi T^3}{\theta_{\text{rot,}a}\theta_{\text{rot,}b}\theta_{\text{rot,}c}}}$$
+
+## Vibrational partition function
+- Vibrating molecules are modelled as the [[Molecular quantum mechanics#Harmonic oscillator|quantum harmonic oscillator]]:
+$$E=\left(\nu+\frac{1}{2}\right)\hbar\omega$$
+- The _ground state_ has energy $\hbar\omega/2$
+
+- If the energies are evaluated _relative to the ground state_:
+$$q'_\text{vib}=1+\exp\left(-\frac{\hbar\omega}{kT}\right)++\exp\left(-\frac{2\hbar\omega}{kT}\right)+\dots$$
+- By summing this up as a _geometric series_:
+$$\displaylines{q_\text{vib}'=\frac{1}{1-\exp(-\hbar\omega/kT)}\equiv\frac{1}{1-\exp(-\theta_\text{vib}/T)} \\ \theta_\text{vib}=\frac{\hbar\omega}{k}}$$
+- Here, $\theta_\text{vib}$ is the _vibrational temperature_
+- Values have a _large range_ depending on the vibrational mode
+
+- If the energies are summed up from the _bottom of the potential well_:
+$$q_\text{vib}=\frac{\exp(-\hbar\omega/2kT)}{1-\exp(-\hbar\omega/kT)}\equiv\frac{\exp(-\theta_\text{vib}/2T)}{1-\exp(-\theta_\text{vib}/T)}$$
+- This is an _exact formula_
+
+- This is only the partition function for _one normal mode_
+- For a _non-linear_ molecule with $N$ atoms, there are $3N-6$ vibrational modes
+- For a _linear_ molecule with $N$ atoms, there are $3N-5$ vibrational modes
+
+- Each normal mode has _its own set of energy levels_ which the molecule can occupy
+- Hence, the _total vibrational partition function_ is:
+$$q_\text{vib}=\prod_\text{modes} q_{\text{vib},j}$$
+- If a mode is _degenerate_, it contributes _multiple identical partition functions_
+
+## Electronic partition function
+- The set of energy levels must be determined by [[Molecular spectroscopy#Electronic spectroscopy|spectroscopy]]
+- Many molecules have _degenerate electronic energy levels_
+- Hence, the partition function can be written as:
+$$q_\text{elec}=\sum_j g_j\exp\left(-\frac{E_{\text{elec},j}}{kT}\right)$$
+- If they are measured _from the ground state_:
+$$q_\text{elec}'=g_0+g_1\exp\left(-\frac{E_{\text{elec},1}}{kT}\right) +g_2\exp\left(-\frac{E_{\text{elec},2}}{kT}\right)+\dots$$
+- In many cases, the temperature is not high enough to excite up to most states, and _only the ground state is significantly occupied_, hence $q_\text{elec}'\approx g_0$
+
+- The _ground state energy_ will _depend on the molecule_
+- This becomes important when calculating the [[#Chemical equilibrium|equilibrium constant]]
+
+### Atoms
+- The electronic states of atoms are characterised by the [[Molecular quantum mechanics#Terminology and term symbols|term symbols]]:
+$$^{2S+1}L_J$$
+- $L$ is the _total orbital angular momentum_, determined by the _subshell_
+- $S$ is the _total spin angular momentum_
+- $J$ is the _total angular momentum_
+- Origins and details given [[Molecular quantum mechanics#Electron correlation|here]]
+
+- The degeneracy of such a state is $2J+1$
+	- Energy does not depend on $M_J$
+- This will often be $q_\text{elec}'$ at reasonable temperatures
+
+### Molecules
+- Molecules also have [[Descriptions of bonding#Molecular term symbols|term symbols]]:
+$$^{2S+1}\Lambda_{g/u}^{\pm}$$
+- Most molecules have _closed-shell configurations_, giving a degeneracy of 1
+- However, there are exceptions, such as oxygen:
+$$^3\Sigma_g^-$$
+- It is _triply degenerate_
 
 # Internal energy and heat capacity
 

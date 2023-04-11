@@ -42,9 +42,9 @@ $$\tau_1=\tau_2=\tau_3=-P$$
 
 ## Following the fluid
 - Often, one is looking at a _steady flow_, where the _velocity_ of the fluid is _constant at a point fixed in space_:
-$$\pd{\bm{u}}{t}=0$$
+$$\pd{\bm{v}}{t}=0$$
 - One can _visualise_ the motion of the fluid with _streamlines_, which are _aligned with the velocity_ of the fluid at any point:
-$$\displaylines{\frac{d\bm{x}_s}{ds}\wedge\bm{u}(s)=0 \\ \frac{dx_s}{u_x}=\frac{dy_s}{u_y}=\frac{dz_s}{u_z}}$$
+$$\displaylines{\frac{d\bm{x}_s}{ds}\wedge\bm{v}(s)=0 \\ \frac{dx_s}{u_x}=\frac{dy_s}{u_y}=\frac{dz_s}{u_z}}$$
 - Streamlines are _analagous to electric or magnetic field lines_
 
 - One can also use a _particle path_, which _follows a fluid element_
@@ -53,13 +53,13 @@ $$\displaylines{\frac{d\bm{x}_s}{ds}\wedge\bm{u}(s)=0 \\ \frac{dx_s}{u_x}=\frac{
 - For a _steady flow_, all three of these lines _coincide_
 - Quantities of interest (such as density and temperature) _are also constant at the particular point_
 
-- It is obvious that if one _follows a fluid element_, $\bm{u}$ and other quantities _must change_
+- It is obvious that if one _follows a fluid element_, $\bm{v}$ and other quantities _must change_
 - A _rate of change following the fluid_ is the _convective derivative_:
-$$\frac{D}{Dt}\equiv\pd{}{t}+\frac{dx_i}{dt}\pd{}{x_i}\equiv\pd{}{t}+\bm{u}\cdot\nabla$$
+$$\frac{D}{Dt}\equiv\pd{}{t}+\frac{dx_i}{dt}\pd{}{x_i}\equiv\pd{}{t}+\bm{v}\cdot\nabla$$
 - The second term can be interpreted as a _rate of change along the streamline_
 
 - Example: _Steady flow with uniform rotation_
-$$\displaylines{\bm{u}=(-\Omega y, \Omega x,0) \\\frac{D\bm{u}}{Dt}=(\bm{u}\cdot\nabla)\bm{u}=-\Omega^2(x,y,0)}$$
+$$\displaylines{\bm{v}=(-\Omega y, \Omega x,0) \\\frac{D\bm{v}}{Dt}=(\bm{v}\cdot\nabla)\bm{v}=-\Omega^2(x,y,0)}$$
 - This represents a _centrifugal acceleration_, as expected
 
 ## Continuity
@@ -79,7 +79,7 @@ $$\nabla\cdot\bm{v}=0$$
 - Account for the presence of gravity, with a _force per unit volume_:
 $$\rho \bm{g}=-\rho\nabla\phi_g$$
 - By considering _variations in pressure on the sides of the element_:
-$$\rho\frac{D\bm{u}}{Dt}=-\nabla P+\rho\bm{g}$$
+$$\rho\frac{D\bm{v}}{Dt}=-\nabla P+\rho\bm{g}$$
 - This is effectively the _equation of motion_ for a fluid element
 
 ## Bernoulli's equation
@@ -92,6 +92,8 @@ $$Av\left(\rho\phi+\frac{1}{2}\rho v^2+u\right)$$
 - Here, $u$ is the _internal energy density_
 - The _mass flow rate_ must be constant:
 $$A\rho v=\text{const.}$$
+- At each end, the pressure also does _work_ at rate:
+$$W_P=APv$$
 - Hence, one obtains _Bernoulli's equation_:
 $$\frac{u+P}{\rho}+\frac{1}{2}v^2+\phi=\text{const.}$$
 
@@ -99,16 +101,18 @@ $$\frac{u+P}{\rho}+\frac{1}{2}v^2+\phi=\text{const.}$$
 
 ### Incompressible flow
 - Density becomes a _constant_
-- Using the identity:
-$$(\nabla\wedge\bm{u})\wedge\bm{u}=(\bm{u}\cdot\nabla)\bm{u}-\nabla\left(\frac{1}{2}|\bm{u}|^2\right)$$
-- Substituting this into _Euler's equation_, one gets:
-$$\displaylines{(\nabla\wedge\bm{u})\wedge\bm{u}=-\nabla H \\ H=P+\rho\phi_g+\frac{1}{2}\rho |\bm{u}|^2}$$
-- Like above, each term is a _contribution to energy_
-- $\bm{u}H$ is then the _energy flux_
 
-- By dotting with $\bm{u}$ on both sides:
-$$(\bm{u}\cdot\nabla)H=0$$
+- Using the identity:
+$$(\nabla\wedge\bm{v})\wedge\bm{v}=(\bm{v}\cdot\nabla)\bm{v}-\nabla\left(\frac{1}{2}|\bm{v}|^2\right)$$
+- Substituting this into _Euler's equation_, one gets:
+$$\displaylines{(\nabla\wedge\bm{v})\wedge\bm{v}=-\nabla H \\ H=P+\rho\phi_g+\frac{1}{2}\rho |\bm{v}|^2}$$
+- Like above, each term is a _contribution to energy_
+- $\bm{v}H$ is then the _energy flux_
+
+- By dotting with $\bm{v}$ on both sides:
+$$(\bm{v}\cdot\nabla)H=0$$
 - This is _Bernoulli's equation for incompressible flow_, stating that $H$ is _constant along a streamline_
+	- Can also be derived from multiplying the result above with $\rho$
 - If the flow is _steady and irrotational_, then it is _constant everywhere_
 
 ## Approximations
@@ -130,7 +134,7 @@ $$\nabla^2\Psi=0$$
 
 ## The Circulation theorem
 - The _circulation_ $K$ around a loop $\Gamma$ is defined as:
-$$K=\oint_\Gamma\bm{u}\cdot\,d\bm{l}$$
+$$K=\oint_\Gamma\bm{v}\cdot\,d\bm{l}$$
 - Using Stokes' Theorem:
 $$K=\int\bm{\omega}\cdot\,d\bm{S}$$
 - By _applying the convective derivative to both sides_, and using _Euler's equation_:
@@ -140,7 +144,7 @@ $$\frac{DK}{Dt}=\oint \nabla\left(-\frac{P}{\rho}-\phi_g+\frac{1}{2}u^2\right)\c
 
 ## Potential flow of an irrotational fluid
 - Often applies to _bulk fluid_
-- Solving for velocity $\bm{u}=\nabla\Phi$ is equivalent to solving [[Poisson and Laplace's equations|Laplace's equation]]:
+- Solving for velocity $\bm{v}=\nabla\Phi$ is equivalent to solving [[Poisson and Laplace's equations|Laplace's equation]]:
 $$\nabla^2\Phi=0$$
 - A _source or sink_ of fluid is _analagous to an electric charge_
 
@@ -171,7 +175,7 @@ $$\nabla^2\Phi=0$$
 	- There is a _similar solution to the sphere_ by solving Laplace's solution:
 	$$\Phi=V_0\cos\theta\left(r+\frac{a^2}{r}\right)$$
 	- A _separate solution_ for irrotational flow is the _vortex_:
-	$$\bm{u}=\frac{\kappa}{2\pi r}\hat{\bm{e}}_\theta$$
+	$$\bm{v}=\frac{\kappa}{2\pi r}\hat{\bm{e}}_\theta$$
 	- Any _circulation_ around a loop _not containing the cylinder_ is _zero_
 	- Hence, _everywhere in the fluid_, the flow is _irrotational_
 	- The vortex is said to have _strength_ $\kappa$
@@ -193,9 +197,9 @@ $$\nabla^2\Phi=0$$
 - If $\bm{v}=\kappa/(2\pi r)\hat{\bm{r}}_\theta$ like above, there will be a _singularity_ at $r=0$
 
 - Instead, the fluid can form a _Helmholtz vortex_
-- It is said to have a _core_ of radius $r_c$, with vorticity $\bm{\Omega}=\nabla\wedge\bm{u}$
+- It is said to have a _core_ of radius $r_c$, with vorticity $\bm{\Omega}=\nabla\wedge\bm{v}$
 - The velocities are:
-$$\displaylines{\kappa=\pi r_c^2\Omega\\\bm{u}=\begin{cases}\frac{\kappa r}{2\pi r_c^2}\hat{\bm{e}}_\theta & r<r_c \\ \frac{\kappa}{2\pi r} \hat{\bm{e}}_\theta&r>r_c\end{cases}}$$
+$$\displaylines{\kappa=\pi r_c^2\Omega\\\bm{v}=\begin{cases}\frac{\kappa r}{2\pi r_c^2}\hat{\bm{e}}_\theta & r<r_c \\ \frac{\kappa}{2\pi r} \hat{\bm{e}}_\theta&r>r_c\end{cases}}$$
 - The solid core has _angular speed_ $\Omega/2$
 - Analagous to _uniform current in a wire_
 

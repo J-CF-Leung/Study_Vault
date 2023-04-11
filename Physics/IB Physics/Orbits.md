@@ -33,9 +33,11 @@ $$\frac{dU_\text{eff}}{dr}\Bigg|_{r=r_0}=0$$
 $$U_\text{eff}\approx U_0+\frac{1}{2}\frac{dU^2}{dr}\Bigg|_{r=r_0}(r-r_0)^2=U_0+\frac{(n+3)J^2}{mr_0^4}(r-r_0)^2$$
 - This is a _harmonic potential_, thus the equation of motion for $r$ can be written as:
 $$\displaylines{\epsilon=r-r_0 \\ m\ddot{\epsilon}+\omega_p^2\epsilon=0 \\ \omega_p=\sqrt{n+3}\frac{J}{mr_0^2}}$$
-- The angular frequency of _radial oscillations_ $\omega_p$ is _proportional_ to angular frequency of _rotation_:
+- The angular frequency of _radial oscillations_ $\omega_p$ is _proportional_ to angular frequency of _rotation_ $\omega_c$:
 $$\omega_p=\sqrt{n+3}\,\dot{\phi}=\sqrt{n+3}\omega_c$$
 ![[Orbit cases.png]]
+
+- If $\omega_p=(1-\epsilon)\omega_c$, where $\epsilon<<1$, in one period of _radial motion_, the _tip_ of the ellipse will appear to have shifted _forwards_, giving rise to a _precession frequency_ of $\epsilon\omega_p$
 
 ## Elliptical orbits and Kepler's Laws
 - Let there be an _attractive force_ obeying the _inverse square law_:
