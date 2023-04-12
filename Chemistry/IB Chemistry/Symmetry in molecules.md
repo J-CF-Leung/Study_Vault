@@ -247,6 +247,36 @@ $$a_k=\frac{1}{n_R(\Gamma^{(k)})}\sum_R\left[\chi^{(k)}(R)\right]^*\chi(R)$$
 	- Anti-symmetric: _double-prime_ $(\text{''})$
 
 # Infinite groups
+- For _linear molecules_, there is an _infinite number of symmetry operations_
+- The _principal axis_ is the _internuclear axis_, and rotation about it by _any angle_ $\alpha$ is a symmetry operation
+
+## Non-centrosymmetric molecules
+
+- If a molecule is _not centrosymmetric_ (e.g. $\text{OCS}$), then it belongs to the point group $C_{\infty v}$:
+![[C inf v character table.png]]
+- Taking the _internuclear axis_ as the $z-$ axis, there is an _infinite number_ of rotation operations generated, denoted $C^z(\alpha)$
+- There is also an _inifnite number of mirror planes_, $\infty\sigma_v$, which _contain the internuclear axis_
+- The _totally symmetric_ IR is labelled $\Sigma^+$
+
+## Centrosymmetric molecules
+
+- If a molecule is _centrosymmetric_ (e.g. $\text{CO}_2$), then it belongs to the point group $D_{\infty h}$
+![[D inf v character table.png]]
+- In addition to the _principal axis_, there is also an _inifinite number of $C_2$ axes_
+- The _principal axis_ also becomes an _axis of improper rotation_, around any angle
+- There is also a _centre of inversion_
+- There is a $\sigma_h$ plane, however that _corresponds to_ $S^z(\alpha)$
+
+## The irreducible representations
+- If a group is _one-dimensional_, it is labelled $\Sigma$
+	- The $\pm$ indicates whether or not it is _symmetric or antisymmetric under $\sigma_v$ reflection_
+
+- For $D_{\infty h}$, the $g/u$ subscript indicates symmetry _under inversion_
+	- $g$: symmetric (gerunde)
+	- $u$: antisymmetric
+
+- A state _transforming as_ a $\Sigma$ IR has _zero angular momentum_
+- $\Pi$, $\Delta$, $\Phi$ IRs are all _two-dimensional_, and correspond to $\pm1$, $\pm2$, and $\pm3$ _units of angular momentum about the principal axis_
 
 # Direct products
 - Given which representations two functions may transform as, one may want to know how the _product_ of those functions transform

@@ -158,7 +158,7 @@ $$\Delta\mathcal{E}=\mathcal{E}_{J+1}-\mathcal{E}_J=2\tilde{B}J(J+1)$$
 - However, given a molecule $A-B-C$, the moment of inertia is:
 $$I=m_Ar_{AB}^2+m_Cr_{BC}^2-\frac{(m_Ar_{AB}-m_Cr_{BC})^2}{m_A+m_B+m_C}$$
 - Therefore, to determine _both bond lengths_, the technique of _isotopic substitution_ is used
-- Assuming _bond length does not change_, this changes $\tilde{B}$
+- Assuming _bond lengths do not change_, this changes $I$, and therefore $\tilde{B}$
 - Therefore, both bond lengths can be found
 
 # Rotational Raman spectroscopy

@@ -105,6 +105,8 @@ $$\displaylines{P(E_i)=\frac{1}{Q_N}\exp\left(-\frac{E_i}{k_BT}\right) \\ Q_N=\s
 - This expression for probability applies to the _microstate_ of the _entire system_
 - It applies to _molecular energy levels if and only if_ the particles _do not interact_ (the energies are _independent_ of each other) 
 
+## Application of the Boltzmann distribution
+
 # The partition function
 - For a system with energy levels $\{E_i\}$, the _partition function_ $Q_N$ is:
 $$Q_N=\sum_i\exp\left(-\frac{E_i}{k_BT}\right)$$
@@ -352,11 +354,75 @@ $$^3\Sigma_g^-$$
 
 # Internal energy and heat capacity
 
+## Classical behaviour
+
+## Translational contribution
+
+## Rotational contribution
+
+## Vibrational contribution
+
+## Electronic contribution
+
+## Total
+
 # Entropy
+
+## Different contributions
+
+### Translational entropy
+
+### Rotational entropy
+
+### Vibrational entropy
+
+### Electronic entropy
+
+## Calorimetry
+
+## Behaviour at low temperatures
 
 # Nuclear spin statistics
 
+## Nuclear spin wave functions
+
+## Swapping nuclei
+
+## Ortho- and para-hydrogen
+
+## Raman spectra
+
+## Zero spin
+
+## Rotational partition function
+
 # Chemical equilibrium
+
+## Chemical potential and equilibrium
+
+## Equilibrium constants
+
+### In terms of concentration
+
+### In terms of pressure
+
+### Example: Ionisation of atoms
+
+## Adsorption of a gas and the Langmuir isotherm
+
 
 # Kinetics
 
+## Potential energy surfaces
+
+## Transition state theory
+
+## Steric factors
+
+## Kinetic isotope effect
+
+## A thermodynamic formulation
+
+### Relation to the Arrhenius equation
+
+### Volume of activation
