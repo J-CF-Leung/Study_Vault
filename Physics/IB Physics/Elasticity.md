@@ -79,7 +79,7 @@ $$\begin{pmatrix}\tau_{xx} & \tau_{xy} & \tau_{xz} \\ \tau_{yx} & \tau_{yy}& \ta
 
 - The _normal strains_ are:
 $$e_{ii}=\pd{X_i}{x_i}$$
-- The  _off-diagonal strain_ $e_{ij}$ is defined as _half of the shear angle_:
+- The _off-diagonal strain_ $e_{ij}$ is defined as _half of the shear angle_:
 $$e_{ij}=e_{ji}=\frac{1}{2}\left(\pd{X_i}{x_j}+\pd{X_j}{x_i}\right)$$
 - An _antisymmetric_ addition of the partial derivatives is simply a component of $\nabla\wedge \bm{X}$, hence it is a _rotation_
 - Therefore, the _strain tensor_ is _symmetric_:
@@ -123,6 +123,8 @@ $$\begin{aligned}U(\dunderline{\bm{e}})&=\frac{1}{2}\left[\left(B-\frac{2}{3}G\r
 ![[Beam bending parameters.png]]
 
 - Let there be some _load per unit length_ $W(x)$, causing some overall _displacement_ $\eta(x)$ in the beam
+	- Only consider _vertical loads_, meaning _no compressive or stretching forces_
+	- For those, see [[#Buckling]] or the bending of _elastica_
 - At some width across the beam, there is a _neutral plane_, where there is _no compression or tension_
 - Then there is some _radius of curvature_ $\mathcal{R}=dx/d\theta$
 - The _longitudinal strain_ can then be written as:
@@ -147,21 +149,50 @@ $$W=EI\frac{d^4\eta}{dx^4}$$
 	- _Hinge_: Force without couple, hence $\eta'\neq0$ but $\eta''=0$
 
 ### Reciprocity
-![[Beam bending reciprocity.png]]
+![[Beam bending reciprocity.png|500]]
 - Consider two situations:
-	- A _load_ $F$ applied at $P$, causing a _deflection_ at $Q$, $y_{QP}$
-	- A _load_ $F$ applied at $Q$, causing a _deflection_ at $P$, $y_{PQ}$
+	- A _load_ $F$ applied at $P$, causing a _deflection_ at $Q$, $\eta_{QP}$
+	- A _load_ $F$ applied at $Q$, causing a _deflection_ at $P$, $\eta_{PQ}$
 
 - Assume _linearity_, and that the deflections are _additive_ from different loads
 - Consider _work done_ when applying $F$ at $Q$ first, then $P$:
-$$W_{QP}=F\left(\frac{1}{2}y_{PP}+\frac{1}{2}y_{QQ}+y_{QP}\right)$$
+$$W_{QP}=F\left(\frac{1}{2}\eta_{PP}+\frac{1}{2}\eta_{QQ}+\eta_{QP}\right)$$
 - Then, consider applying at $P$ first, then $Q$:
-$$W_{QP}=F\left(\frac{1}{2}y_{PP}+\frac{1}{2}y_{QQ}+y_{PQ}\right)$$
+$$W_{QP}=F\left(\frac{1}{2}\eta_{PP}+\frac{1}{2}\eta_{QQ}+\eta_{PQ}\right)$$
 
 - Hence:
-$$y_{QP}=y_{PQ}$$
+$$\eta_{QP}=\eta_{PQ}$$
 
 ## Buckling
+- Consider a column being _compressed_ by a force $F$ on its two ends:
+![[Buckled beam.png|600]]
+- Set the _boundary conditions_ as:
+$$\eta(0)=\eta(L)=0$$
+
+- It can be shown that the _torque_ at each point _from the applied force_ is $-F\eta$
+- Balancing it with the _bending moment_:
+$$EI\frac{d^2\eta}{dx^2}=-F\eta$$
+- The solutions to this are:
+$$\displaylines{\eta=\eta_0\sin kx \\ k=\sqrt{\frac{F}{EI}}=\frac{n\pi}{L}}$$
+
+- From this, the beam _buckles_ and take a _sinusoidal shape_ at:
+$$F_\text{crit}=\frac{EI\pi^2}{L^2}$$
+- At $F<F_\text{crit}$, there is no solution _except_ $\eta(x)=0$
+	- The rod can _oscillate_ stably around the $n=0$ shape
+- When $F=F_\text{crit}$, there is suddenly an _additional solution_ for $n=1$, which the rod can take the shape of once given a _perturbation_ in either direction
+	- $n=0$ is a _neutral equilibrium_, and the rod can undergo a _zero-frequency motion_ towards $n=1$
+- Once $F>F_\text{crit}$, $n=0$ becomes _unstable_, and the _arched state is a stable equilibrium_
+
+- Consider the [[Classical Thermodynamics#Thermodynamic potentials|free energy]] of the rod $𝔙(\eta_0)$ by subtracting the _work done_ from the _total elastic energy_, it can be found to be:
+$$𝔙(\eta_0)=\left(\frac{\pi\eta_0}{2L}\right)^2L\left[(F_\text{crit}-F)+\frac{1}{4}F_\text{crit} \left(\frac{\pi\eta_0}{2L}\right)^2 \right]+O\left[F_\text{crit}L\left(\frac{\pi\eta_0}{2L}\right)^6\right]$$
+![[Elasticity bifurcation.png]]
+- At $F_\text{crit}$, the number of equilibria _increases_ from one to three
+- This is known as the _bifurcation of equilibria_
+
+- If the beam was given _lateral stabilising forces_, solutions for higher $n$ can be formed, with $F=n^2F_\text{crit}$
+	- In most cases, without stabilising forces, the beam _fails_ before it buckles to form those shapes
+
+- Depending on the _boundary conditions_ (e.g. clamping), the beam can take different (not exactly sinusoidal) shapes
 
 # Dynamics
 - Consider a _volume element_ $(\delta x,\delta y, \delta z)$
