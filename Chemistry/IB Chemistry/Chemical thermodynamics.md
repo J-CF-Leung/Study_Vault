@@ -345,7 +345,7 @@ $$^{2S+1}L_J$$
 - This will often be $q_\text{elec}'$ at reasonable temperatures
 
 ### Molecules
-- Molecules also have [[Descriptions of bonding#Molecular term symbols|term symbols]]:
+- Molecules also have [[Bonding in molecules#Molecular term symbols|term symbols]]:
 $$^{2S+1}\Lambda_{g/u}^{\pm}$$
 - Most molecules have _closed-shell configurations_, giving a degeneracy of 1
 - However, there are exceptions, such as oxygen:

@@ -9,12 +9,12 @@
         "dimension": 67.70833333333333,
         "children": [
           {
-            "id": "74f9c9e2a989472f",
+            "id": "313b748dafdfd837",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Past Papers/IB Physics/2013-14_Part_IB_Physics_B_Paper_1.pdf"
+                "file": "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_1.pdf"
               }
             }
           },
@@ -31,24 +31,12 @@
             }
           },
           {
-            "id": "313b748dafdfd837",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Chemistry/IB Chemistry/Descriptions of bonding.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "8445361aa556b81d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
                 "mode": "source",
                 "source": false
               }
@@ -101,9 +89,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "92240bfeffd4fb8e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 5
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -120,7 +120,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/Thermal Physics/Classical Thermodynamics.md"
+                    "file": "Mathematics/IB Mathematical Methods/Contour integration.md"
                   }
                 }
               }
@@ -136,7 +136,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
+                    "file": "Mathematics/IB Mathematical Methods/Contour integration.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -246,7 +246,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
+                "file": "Mathematics/IB Mathematical Methods/Contour integration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -263,7 +263,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
+                "file": "Mathematics/IB Mathematical Methods/Contour integration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -286,7 +286,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Thermal Physics/Classical Thermodynamics.md"
+                "file": "Mathematics/IB Mathematical Methods/Contour integration.md"
               }
             }
           },
@@ -316,14 +316,35 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "bdee2333112a0d60",
+  "active": "cdbe849fbebfa504",
   "lastOpenFiles": [
-    "Physics/IB Physics/Fluid mechanics.md",
+    "Mathematics/Images/ln z branches.png",
+    "Mathematics/IB Mathematical Methods/Transform methods.md",
     "Mathematics/IB Mathematical Methods/Contour integration.md",
-    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
-    "Chemistry/IB Chemistry/Descriptions of bonding.md",
-    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+    "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_1.pdf",
+    "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
+    "Physics/IB Physics/Experimental methods and data analysis.md",
+    "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
+    "Physics/Quantum Mechanics/1D time-independent Hamiltonians.md",
+    "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
+    "Past Papers/IB Physics/2020-21_Part_IB_Physics_B_Paper_1.pdf",
+    "Past Papers/IB Physics/2020-21_Part_IB_Physics_B_Paper_2.pdf",
+    "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_2.pdf",
+    "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_1.pdf",
+    "Past Papers/IB Physics/2011-12_Part_IB_Physics_B_Paper_2.pdf",
     "Chemistry/IB Chemistry/Symmetry in molecules.md",
+    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+    "Physics/IB Physics/Elasticity.md",
+    "Past Papers/IB Physics/2012-13_Part_IB_Physics_A_paper_2.pdf",
+    "Physics/IB Physics/Fluid mechanics.md",
+    "Physics/IB Physics/Waves.md",
+    "Physics/Thermal Physics/Classical Thermodynamics.md",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2013.pdf",
+    "Chemistry/IB Chemistry/Bonding in molecules.md",
+    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2012.pdf",
+    "Past Papers/Past Tripos papers-20230327/IB_A_2014.pdf",
     "Chemistry/Images/D inf v character table.png",
     "Chemistry/Images/C inf v character table.png",
     "Pasted image 20230412181720.png",
@@ -334,36 +355,15 @@
     "Chemistry/Images/Spectrochemical series.png",
     "Chemistry/Images/Sigma and pi acceptor.png",
     "Chemistry/Images/Sigma and pi donor.png",
-    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Chemistry/IB Chemistry/Vibrational normal modes in molecules.md",
-    "Physics/IB Physics/Elasticity.md",
-    "Past Papers/IB Physics/2013-14_Part_IB_Physics_B_Paper_1.pdf",
-    "Past Papers/IB Physics/2013-14_Part_IB_Physics_B_Paper_2.pdf",
-    "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_1.pdf",
-    "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_2.pdf",
-    "Past Papers/IB Physics/2012-13_Part_IB_Physics_B_paper_1.pdf",
     "!Beam bending reciprocity.png.md",
     "Physics/IB Physics/Rigid body dynamics.md",
-    "Physics/Thermal Physics/Classical Thermodynamics.md",
     "Physics/IB Physics/Orbits.md",
     "Physics/IB Physics/Electromagnetism.md",
     "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
-    "Past Papers/IB Physics/2012-13_Part_IB_Physics_A_paper_1.pdf",
-    "Physics/IB Physics/Experimental methods and data analysis.md",
     "Physics/IB Physics/Newtonian dynamics and non-inertial frames.md",
     "Mathematics/IB Mathematical Methods/Cartesian tensors.md",
     "Physics/Thermal Physics/Statistical thermodynamics.md",
-    "Physics/Quantum Mechanics/Topics in Quantum Mechanics.md",
-    "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
-    "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
-    "Physics/IB Physics/Waves.md",
-    "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
-    "Physics/Quantum Mechanics/1D time-independent Hamiltonians.md",
-    "Past Papers/IB Physics/2020-21_Part_IB_Physics_B_Paper_2.pdf",
-    "Past Papers/IB Physics/2011-12_Part_IB_Physics_A_Paper_2.pdf",
-    "Past Papers/IB Physics/2011-12_Part_IB_Physics_B_Paper_2.pdf",
-    "Past Papers/IB Physics/2021-22_Part_IB_Physics_A_Paper_2.pdf",
-    "Physics/IB Physics/Optics.md",
     "Misc or Personal/What to do.canvas"
   ]
 }

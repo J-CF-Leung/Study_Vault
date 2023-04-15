@@ -1,3 +1,4 @@
+
 - Heavily relies on results in [[Elementary Analysis#Analytic functions of a complex variable|complex analysis]]
 
 # Results from analysis
@@ -173,4 +174,71 @@ $$\frac{dz}{z}=-\frac{d\zeta}{\zeta}$$
 ## Examples of applications
 - The residue theorem is often used to calculate _definite integrals_
 
+### Integrals with trigonometric functions
+- Example integral (with $a>1$):
+$$I=\int_0^{2\pi}\frac{d\theta}{2(a-\cos\theta)}$$
+- Substitution:
+$$\displaylines{z=\exp(i\theta) \\ I=\oint_C \frac{i\,dz}{(z-z_+)(z-z_-)} \\ z_\pm=a\pm\sqrt{a^2-1}}$$
+- As $0<z_-<1$ and $z_+>1$, only _one pole_ needs to be considered:
+$$\res{z=z_-}\left(\frac{i}{(z-z_-)(z-z_+)}\right)=\frac{i}{z_--z_+}=-\frac{i}{2\sqrt{a^2-1}}$$
+- Hence, from the _residue theorem_:
+$$I=\frac{\pi}{\sqrt{a^2-1}}$$
+
+### Closing contours at infinity
+- Consider the integral:
+$$I=\int_0^\infty \frac{dx}{x^2+1}$$
+- Let the path on the _real axis_ from 
+
+### Double poles
+
+### Multiple poles
+
 # Multi-valued functions and branch cuts
+
+## Branch points and branch cuts
+- _Not all complex functions_ have a _unique value_ for each point $r\exp(i\theta)$ on the _complex plane_
+- Example: $\ln z$:
+$$\displaylines{\ln z=\ln r+i\theta \\ \ln i=\dots,-\frac{3}{2}i\pi,\frac{1}{2}i\pi,\frac{5}{2}i\pi,\dots=\left(2n+\frac{1}{2}\right)i\pi}$$
+- It can be seen that for any _closed contour_, which _does not encircle the origin_, the function _remains continuous and single-valued_
+- If the contour _encircles the origin_, then it must either be _continuous_ or _single-valued_
+
+- A point that _cannnot be encircled by a curve_ is called a _branch point_
+- The function is known to have a _branch point singularity_ at that point
+
+- Examples:
+	- $\ln(z-a)$ has a branch point at $z=a$
+	- $z^\alpha$ where $\alpha$ is _not an integer_ also has a branch point at the _origin_
+	- Specifically, $\sqrt{z}=\sqrt{r}\exp(i\theta/2)$ will _change sign_ if the origin is encircled as $\theta\to\theta+2\pi$
+
+- To ensure a function is _single-valued_, it is necessary to introduce a _branch cut_, which _no curve is permitted to cross_
+- Then, a _branch_ (allowed range) for a function is chosen:
+![[ln z branches.png]]
+- For $\ln z$, the _canonical branch cut_ is from $-\infty$ to the origin, such that $-\pi<\theta<\pi$
+- Then, the value of $\ln z$ is known as the _principal value_:
+$$\displaylines{z=x+i0^+\hspace{1cm} \ln z=\ln|x|+i\pi \\ z=x+i0^- \hspace{1cm} \ln z=\ln|x|-i\pi}$$
+- For any curve that _does not cross the cut_, the function is _single-valued_ and _continuous_
+
+- For some functions like $\ln z$, there can be an _infinite number_ of branches
+- For $\sqrt{z}=\sqrt{r}\exp(i\theta/2)$, there are only _two branches_, which have _different signs_
+
+- The function is _analytic everywhere except for the branch cut_
+- This also means that there _cannot be Laurent expansions about the branch point_
+	- For $\ln z$ or $\sqrt{z}$, any _annulus_ centred _around the origin_ will _cross the branch cut_
+
+- The choice of branch cut can be _arbitrary_:
+	- They _need not be straight_
+	- For $\ln z$, _any_ continuous, non-intersecting curve _from origin to infinity_ is fine, as long as a branch cut exists
+
+## Multiple branch points
+- Consider the function:
+$$\displaylines{\sqrt{z^2-1}=\sqrt{z-1}\sqrt{z+1} \\ \sqrt{z-1}=\sqrt{r_1}\exp(i\theta_1/2) \hspace{1cm} \sqrt{z+1}=\sqrt{r_2}\exp(i\theta_2/2) \\ \sqrt{z^2-1}=\sqrt{r_1r_2}\exp\left[i(\theta_1+\theta_2)/2\right]}$$
+- If a curve circles _either_ $z=1$ or $z=-1$, the function would have to _change sign_
+	- Example: $\theta_1\to\theta_1+2\pi$, and $\theta_2\to\theta_2$
+- However, if the curve encircles _both branch points_, then the function is _continuous_
+	- $\theta_1\to\theta_1+2\pi$, and $\theta_2\to\theta_2+2\pi$
+
+- This motivates a _branch cut_ on the _real axis_ from $z=-1$ to $z=1$
+- Alternatively, the branch cut can be from $z=-\infty$ to $z=-1$, then $z=1$ to $z=\infty$
+	- Technically _one branch cut_ that passes through the _point at infinity_
+
+- In general, _multiple branch cuts may sometimes be necessary_

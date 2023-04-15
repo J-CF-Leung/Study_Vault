@@ -337,7 +337,7 @@ $$Q_{ij}=\int \psi_i^*\hat{Q}\psi_j\,d\tau$$
 ### Hamiltonian
 - In the LCAO method, when calculating the _energy of an MO_ formed from AOs $s_A$ and $s_B$, one needs _two parameters_:
 $$\displaylines{\alpha=\int s_A\hat{\Ham}s_A\,d\tau=\int s_B\hat{\Ham}s_B\,d\tau \\ \beta=\int s_A\hat{\Ham}s_B\,d\tau}$$
-- [[Descriptions of bonding]]
+- [[Bonding in molecules]]
 
 - The Hamiltonian represents _energy_, which _cannot be changed by symmetry operations_
 - Hence, $\hat{\Ham}$ is represented by the _totally symmetric IR_

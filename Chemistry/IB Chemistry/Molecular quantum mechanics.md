@@ -131,6 +131,7 @@ $$\Ham\Psi=[E_{vib}+BJ(J+1)]\Psi$$
 
 - $B$ can become _dependent on vibrational energy level_ (deviation from BO approximation)
 - As vibrational energy level increases, _bond length increases_
+	- Due to the _asymmetry_ in the Morse potential
 - As a result, since $B\propto 1/I$, $B$ _decreases_
 - Overall, it can be approximated that at vibrational level $\nu$:
 $$B_\nu=B_e-\alpha\left(\nu+\frac{1}{2}\right)$$
@@ -482,13 +483,16 @@ $$\displaylines{\braket{\frac{1}{r_{12}}}_\pm=J\pm K \\ J=\int\int \psi_{1s}(1)\
 $$\ket{\Psi}=\ket{LSJM_J}$$
 - Energy _does not depend on $M_J$_, and levels are $2J+1$-fold _degenerate_
 
-## Terminology and term symbols
+## Energy levels and term symbols
 - _Configuration_: _which orbital shells_ contain electrons
 - _Term_: Values of _total orbital and spin angular momentum_ $L$ and $S$
 - _Level_: All three _total angular momentum quantum numbers_, $L$, $S$, and $J$
-	- Specifies energy
+	- Specifies _energy_
+	- Can be further split off into _states_ with different $M_J$, with _equal energies_
+
 - _Multiplicity_: $2S+1$, number of possible values for $M_S$
-	- Number of values of $J$ when $S\leq L$
+	- Number of values of $J$ (or number of _levels_) when $S\leq L$
+
 - The term symbol:
 ![[Term symbol.png|300px]]
 
@@ -498,17 +502,17 @@ $$\ket{\Psi}=\ket{LSJM_J}$$
 - Used to determine which energy level $E_{LSJ}$ is the lowest
 - Only applies to the _ground configuration_
 
-- Hund's _First Rule_: the lowest energy is given by _maximum $S$_
+- Hund's _First Rule_: the lowest energy _term_ is given by _maximum $S$_
 	- Maximises the number of Fermi holes
 	- Number of Fermi holes: _number of pairs of electrons with parallel spins_
 		- Calculated by $\,^nC_2$ (binomial coefficient)
 
-- Hund's _Second Rule_: at maximum $S$, the lowest energy is given by _maximum $L$_
+- Hund's _Second Rule_: at maximum $S$, the lowest energy _term_ is given by _maximum $L$_
 
 - Hund's _Third Rule_: 
-	- For a shell that is _less than half-full_, take the _lowest $J$_
-	- For a shell that is _more than half-full_, take the _maximum_ $J$
-	- Origin: spin-orbit coupling in _relativistic quantum mechanics_
+	- For a shell that is _less than half-full_, the lowest energy _level_ has the _lowest $J$_
+	- For a shell that is _more than half-full_, the lowest energy _level_ has the _maximum_ $J$
+	- Origin: _spin-orbit coupling_ in relativistic quantum mechanics
 
 - Technique: draw out grid of orbitals with $M_S$ on one axis, $M_L$ on the other, fill by applying the rules in order
 
@@ -542,7 +546,9 @@ $$\ket{\Psi}=\ket{LSJM_J}$$
 ### Anomalous ionisation energies
 - Hund's Rules _also apply to ground states of ions_
 - Consider _decrease in number of Fermi holes_ when ionising
-- Causes an energy penalty when ionising atoms with half or fully filled orbitals
+- Causes an _energy penalty_ when ionising atoms with half or fully filled orbitals
+	- Example: $\text{N}\to \text{N}^++\text{e}^-$ has a _loss_ of two Fermi holes, resulting in _higher ionisation energy_
+	- Example: $\text{O}\to \text{O}^++\text{e}^-$ has _no energy penalty_
 
 
 # The Variational Principle
