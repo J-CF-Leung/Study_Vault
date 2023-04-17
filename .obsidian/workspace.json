@@ -36,7 +36,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 2
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -120,7 +120,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Mathematics/IB Mathematical Methods/Contour integration.md"
+                    "file": "Chemistry/IB Chemistry/Symmetry in molecules.md"
                   }
                 }
               }
@@ -136,7 +136,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Mathematics/IB Mathematical Methods/Contour integration.md",
+                    "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -246,7 +246,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Contour integration.md",
+                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -263,7 +263,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Contour integration.md",
+                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -286,7 +286,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Contour integration.md"
+                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md"
               }
             }
           },
@@ -316,11 +316,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "cdbe849fbebfa504",
+  "active": "8445361aa556b81d",
   "lastOpenFiles": [
+    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+    "Mathematics/IB Mathematical Methods/Contour integration.md",
     "Mathematics/Images/ln z branches.png",
     "Mathematics/IB Mathematical Methods/Transform methods.md",
-    "Mathematics/IB Mathematical Methods/Contour integration.md",
     "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_1.pdf",
     "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
     "Physics/IB Physics/Experimental methods and data analysis.md",
@@ -333,7 +335,6 @@
     "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_1.pdf",
     "Past Papers/IB Physics/2011-12_Part_IB_Physics_B_Paper_2.pdf",
     "Chemistry/IB Chemistry/Symmetry in molecules.md",
-    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
     "Physics/IB Physics/Elasticity.md",
     "Past Papers/IB Physics/2012-13_Part_IB_Physics_A_paper_2.pdf",
     "Physics/IB Physics/Fluid mechanics.md",
@@ -342,7 +343,6 @@
     "Past Papers/Past Tripos papers-20230327/IB_A_2013.pdf",
     "Chemistry/IB Chemistry/Bonding in molecules.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
-    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Past Papers/Past Tripos papers-20230327/IB_A_2012.pdf",
     "Past Papers/Past Tripos papers-20230327/IB_A_2014.pdf",
     "Chemistry/Images/D inf v character table.png",
@@ -354,7 +354,6 @@
     "Chemistry/Images/Td character table.png",
     "Chemistry/Images/Spectrochemical series.png",
     "Chemistry/Images/Sigma and pi acceptor.png",
-    "Chemistry/Images/Sigma and pi donor.png",
     "Chemistry/IB Chemistry/Vibrational normal modes in molecules.md",
     "!Beam bending reciprocity.png.md",
     "Physics/IB Physics/Rigid body dynamics.md",
