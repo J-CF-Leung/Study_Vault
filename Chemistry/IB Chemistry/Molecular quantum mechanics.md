@@ -508,6 +508,7 @@ $$\ket{\Psi}=\ket{LSJM_J}$$
 		- Calculated by $\,^nC_2$ (binomial coefficient)
 
 - Hund's _Second Rule_: at maximum $S$, the lowest energy _term_ is given by _maximum $L$_
+	- Minimises _electron repulsion_
 
 - Hund's _Third Rule_: 
 	- For a shell that is _less than half-full_, the lowest energy _level_ has the _lowest $J$_

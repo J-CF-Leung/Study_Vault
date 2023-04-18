@@ -353,6 +353,14 @@ $$^3\Sigma_g^-$$
 - It is _triply degenerate_
 
 # Internal energy and heat capacity
+- Each _degree of freedom_ of the molecules have _their own contributions_ to internal energy and heat capacity
+- _Measuring_ heat capacity throughout a _range of temperatures_ gives a series of _plateaus_:
+![[Heat capacities.png]]
+
+- These plateaus are _the same for all diatomic molecules_
+- However, the _temperatures_ at which they appear _vary_ according to the molecule
+
+- At _low temperatures_
 
 ## Classical behaviour
 

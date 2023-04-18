@@ -304,18 +304,174 @@ $$A_{1g}\oplus B_{1g}\oplus E_u$$
 	- If there are $\pi$ interactions, they can _separate_, with $1b_{2g}$ moving _higher_
 
 # Linear molecules
+- Requires [[Symmetry in molecules#Infinite groups|infinite groups]]
+- Consider _diatomics_
 
 ## Symmetry orbitals
+- Construct $\sigma$ and $\pi$ _symmetry orbitals_ from $s$ and $p$ AOs
+- For many atoms, _$s-p$ mixing_ will also need to be considered
 
-## MO diagrams
+- Homonuclear diatomics belong to the $D_{\infty h}$ point group
+- Heteronuclear diatomics belong to the $C_{\infty v}$ point group
+
+### Simplest case: hydrogen gas
+- The simplest homonuclear diatomic is $\text{H}_2$, with _two $1s$ orbitals_, $1s_A$ and $1s_B$
+- By inspection, the symmetry orbitals are the _sum and difference_ of the orbitals:
+![[H2 SOs.png]]
+
+- Since they are of _different symmetries_, there is _no overlap_, and they form the _molecular orbitals_
+
+### Second period homonuclear diatomics
+- In the second period, the $1s$ orbitals are _too contracted_ to interact
+- The $2s$ orbitals behave _similarly to $1s$ orbitals_ in the first period
+- Meanwhile, the $2p_z$ orbitals also _form degenerate $\sigma$ SOs_:
+![[2pz sigma.png]]
+
+- As for the $2p_x$ and $2p_y$ orbitals, consider $(x_A,y_A,x_B,y_B)$, which transforms as $\Pi_u\oplus\Pi_g$:
+![[2px 2py pi.png]]
+
+- From this, one can construct the MO diagram by overlapping appropriate SOs:
+	- The $2p$ orbitals are _higher energy_ due to _shielding_, but all are originally _degenerate_
+![[Homonuclear diatomic MOs.png]]
+
+- By selecting overlap due to symmetry, one can account for the effects of $s-p$ _mixing_:
+	![[sp mixing.png]]
+	- The extent depends on the _energy separation_
+	- For $\text{O}$ and $\text{F}$, $2\sigma_g^+$ is _below_ $1\pi_u$
+- The mixing makes $1\sigma_g^+$ _more bonding_, while $2\sigma_g^+$ becomes _less bonding_
+- Meanwhile, $1\sigma_u^+$ becomes _less antibonding_
+
+### Heteronuclear diatomics
+- For heteronuclear diatomics, the point group is $C_{\infty v}$
+- The $2s$ and $2p_z$ MOs transform as $\Sigma^+$, while $2p_x$ and $2p_y$ transform as $\Pi$
+- Hence, _more orbitals match symmetry and overlap_:
+![[Heteronuclear MO diagram.png]]
+
+- Hence, $2\sigma^+$ and $3\sigma^+$ are now _further apart_
 
 ## Molecular term symbols
+- Analagous to [[Molecular quantum mechanics#Energy levels and term symbols|atomic term symbols]]
+- For each _configuration_, it is split into _terms_ based on $L$ and $S$, which are then split into _levels_ based on $J$
+
+- _Molecular_ term symbols also specify total $L$, $S$, and $J$, as well as adding _symmetry labels_
+
+- The _lowest energy_ level still follows [[Molecular quantum mechanics#Hund's rules|Hund's rules]]
+
+### Angular momentum
+- For spin, due to the [[Molecular quantum mechanics#Pauli Principle|Pauli Principle]], a _filled shell_ has _zero spin_
+- Otherwise, spins in _separate orbitals_ will _add_
+
+- For _orbital angular momentum_ in _diatomics_, only the _component along the inter-nuclear axis_ is defined
+	- There is now a "_preferred direction_"
+- The total component is obtained from _adding contributions from separate orbitals_
+- 1D $\Sigma$ IRs have $\lambda=0$,while 2D $\Pi$ IRs have $\lambda=\pm1$
+- The _total orbital angular momentum component_ is denoted $\Lambda$:
+| $\Lambda$ | $0$      | $1$   | $2$ |
+| --------- | -------- | ----- | --- |
+| Letter    | $\Sigma$ | $\Pi$ | $\Delta$    |
+
+### Symmetry labels
+- The _overall_ symmetry of a level is found by _combining_ the symmetry of _orbitals occupied by individual electrons_, via a _direct product_
+- When taking _inversion symmetry_ into account:
+$$g\otimes g=u\otimes u=g \hspace{1cm} g\otimes u=u\otimes g=u$$
+- When _only $\sigma$ orbitals_ are occupied, the $\pm$ labels for _reflection symmetry_ follow:
+$$+\otimes +=-\otimes -=+ \hspace{1cm} +\otimes -=-\otimes +=-$$
+
+### Term symbol without degenerate orbitals
+- Overall, the term symbol is denoted:
+$$^{2S+1}\Lambda_{g/u}^\pm$$
+- The left _superscript_ is the _spin multiplicity_
+- The right _subscript_ is the _inversion symmetry_, for _homonuclear diatomics_
+- The right _superscript_ is the _reflection symmetry_, only for $\Sigma$ levels
+	- For other levels, _interchanging_ electrons will _interchange wave-functions_, giving no meaning to a $\pm$ label
+
+- For _heteronuclear diatomics_, the term symbol _only has multiplicity and $\Lambda$_
+
+- From symmetry arguments above, if a set of _degenerate orbitals_ are _completely filled_, it contributes:
+$$^1\Sigma_g^+$$
+- Therefore, one _only needs to consider partially filled orbitals_
+
+- From Hund's rules, the _lowest energy_ level has the _maximum spin multiplicity_
+
+### Partially filled degenerate orbitals
+- For partially filled degenerate orbitals, there are _multiple ways to fill them_
+- They form _components_ of _triplet_ or _singlet_ states
+
+- Example: _Oxygen_ $\text{O}_2$ has a $(1\pi_g)^2$ configuration, which gives possible terms:
+$$1\Delta_g, ^1\Sigma_g,^3\Sigma_g$$
+- Due to Hund's rules, the _latter has the lowest energy_
+
+- However, the latter two have _reflection symmetry_, which must be determined by _considering the spatial wave function_
+- The respective spatial wave functions are:
+$$\displaylines{^1\Sigma_g\to\Psi_+=\frac{1}{\sqrt{2}}\left[\psi_+(1)\psi_-(2)+\psi_+(1)\psi_-(2)\right] \\ ^3\Sigma_g\to\Psi-=\frac{1}{\sqrt{2}}\left[\psi_+(1)\psi_-(2)-\psi_+(1)\psi_-(2)\right]}$$
+- The $\pm$ signs indicate $\pm1$ _angular momentum along the internuclear axis_
+- Hence, the wave functions transform as $\exp(\pm i\phi)$, leading to:
+$$\displaylines{\Psi_+\propto\cos(\phi_1-\phi_2) \\ \Psi_-\propto\sin(\phi_1-\phi_2)}$$
+- Reflection symmetry _inverts the signs of angles_, hence the terms available are:
+$$1\Delta_g, ^1\Sigma_g^+,^3\Sigma_g^-$$
+- It is _not the general case_ that singlet and triplet terms have _different signs_
+	- Example: $(1\sigma^+_g)^1(2\sigma^+_u)^1$ has levels $^1\Sigma_u^+$ and $^3\Sigma_u^+$
+
+### Direct products for symmetry labels
+- If there are _non-equivalent electrons_, then their _electronic wave function_ is simply a _product_
+- Hence, the term symboil, _excluding multiplicity_, can be given by _direct products_
+
+- This gives another reasoning for why _fully filled orbitals_ contribute $^1\Sigma_g^+$, as it is the _totally symmetric IR_
+- Example: _Excited state_ of $\text{N}_2$
+	$$\dots(3\sigma_g^+)^1(1\pi_g)^1\to \Sigma_g^+\otimes \Pi_g=\Pi_g$$
+	- This then gives rise to _separate triplet and singlet terms_
+
+### Notation for electronic states
+- The _ground state_ is sometimes given the additional label $X$
+- Example: ground state of $\text{N}_2$ has term $\text{X}\,^1\Sigma_g^+$
+- For excited states with the _same multiplicity_, they are labelled $\text{A},\text{B},\dots$
+- For excited states with _different multiplicity_, they are labelled $a,b,\dots$
 
 # Hückel Approximations
+- Approximations to calculate _energies of molecular orbitals_, applicable for _simple molecules_
 
 ## LCAO method and secular equations
+- The simplest method for _computing molecular orbitals_ is the [[Molecular quantum mechanics#Linear combination of atomic orbitals for diatomics|Linear Combination of Atomic Orbitals]] method, based on the Variational Principle
+- Let the _basis of atomic orbitals_ be $\{\phi_i\}$, any _molecular orbital_ is then written as:
+$$\psi=\sum_i c_i\phi_i$$
+- Then, using the Variational Principle and _minimising energy_:
+$$E\geq\frac{\braket{\psi|\hat{\Ham}|\psi}}{\braket{\psi|\psi}} \hspace{1cm} \pd{E}{c_k}=0$$
+- Introducing the notation for _matrix elements_ for the Hamiltonian and identity:
+$$\Ham_{ij}=\braket{\phi_i|\hat{\Ham}|\phi_j} \hspace{1cm} S_{ij}=\braket{\phi_i|\phi_j}$$
+- Then, one obtains the _secular equations_:
+$$\sum_j \left(\Ham_{ij}-ES_{ij}\right)c_j=0$$
+- This can be put into _matrix form_:
+$$\left[\begin{pmatrix}\Ham_{11} & \Ham_{12} & \dots & \Ham_{1N} \\ \Ham_{21} & \Ham_{22} & \dots & \Ham_{2N} \\ \vdots & \vdots & \ddots & \vdots \\ \Ham_{N1} & \Ham_{N2} & \dots & \Ham_{NN} \end{pmatrix} -E \begin{pmatrix}S_{11} & S_{12} & \dots & S_{1N} \\ S_{21} & S_{22} & \dots & S_{2N} \\ \vdots & \vdots & \ddots & \vdots \\ S_{N1} & S_{N2} & \dots & S_{NN} \end{pmatrix}\right] \begin{pmatrix} c_1 \\ c_2 \\ \vdots  \\ c_N\end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ \vdots  \\ 0\end{pmatrix}$$
 
-## Using symmetry
+## The approximations
+- The Hückel approximations consist of several steps
+- Assume the _basis functions are normalised_, and that _overlap between wavefunctions of different atoms is zero_: $$S_{ij}=\delta_{ij}$$	- Accounting for the overlap integral usually results in _minor shifts in energies_
+
+- Next, let the _matrix elements_ of the Hamiltonian be _defined as_:
+$$\displaylines{\Ham_{ii}=\alpha_i \\ \Ham_{ij}=\beta_{ij} \text{ for }i\neq j}$$
+- $\alpha$ can be interpreted as the _energy of the atomic orbital_ $\phi_i$
+- Meanwhile, $\beta$ can be interpreted as _energy resulting from overlap between_ $\phi_i$ and $\phi_j$
+- They are both _negative_
+- Since the Hamiltonian is _Hermitian_, and $\beta$ is real: $$\beta_{ij}=\beta_{ji}$$
+- Finally, apply the _tight-binding approximation_, where $\beta_{ij}$ is _only non-zero if $\phi_i$ and $\phi_j$ are on adjacent atoms_
+- The secular equations then become: $$\begin{pmatrix}\alpha_{11}-E & \beta_{12} & \dots & \beta_{1N} \\ \beta_{21} & \alpha_{22}-E & \dots & \beta_{2N} \\ \vdots & \vdots & \ddots & \vdots \\ \beta_{N1} & \beta_{N2} & \dots & \alpha_{NN}-E \end{pmatrix}\begin{pmatrix} c_1 \\ c_2 \\ \vdots  \\ c_N\end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ \vdots  \\ 0\end{pmatrix}$$
+- Solving this for $E$, then $\{c_i\}$ gives the _energies of all molecular orbitals_, as well as their _coefficients for atomic orbitals_
+
+- Ocassionally, _further approximations_ are needed
+- Example: in _carboxylate_, $\alpha_\text{O}=\alpha_\text{C}+\beta$
+	- Crude approximation, but takes into account that _oxygen orbitals are lower in energy_
+
+## Properties of results
+- By setting the _overlap matrix equal to the identity_, a result is that _the sum of energies is invariant_
+	- The problem becomes equivalent to _expressing $\hat{\Ham}$ in its eigenbasis_
+
+- For some $\pi$ systems, it can be found that by _letting electrons delocalise across many atoms_, the _overall energy is lowered_
+- The _delocalisation energy_ is the _difference_ between _total $\pi$ electron energy_, and the _localised electron energy_ obtained from a _model with separated $\pi$ bonds_
+- For delocalisation to be _favourable_, the energy must be _negative_
+	- $k\beta$, where $k>0$
+- This is especially relevant for [[#Rings|cyclic molecules]] and _aromaticity_
+
+## Exploiting symmetry
 
 ### Example: Cyclobutadiene
 
