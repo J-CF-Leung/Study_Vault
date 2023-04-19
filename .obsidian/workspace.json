@@ -24,7 +24,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
                 "mode": "source",
                 "source": false
               }
@@ -36,7 +36,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chemistry/IB Chemistry/Bonding in molecules.md",
+                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
                 "mode": "source",
                 "source": false
               }
@@ -101,21 +101,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "1278b5c7def756f3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Physics/IB Physics/Optics.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -132,7 +120,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md"
+                    "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md"
                   }
                 }
               }
@@ -148,7 +136,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                    "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -258,7 +246,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -275,7 +263,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -298,7 +286,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md"
+                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md"
               }
             }
           },
@@ -328,32 +316,35 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ccd70014f316fc28",
+  "active": "8445361aa556b81d",
   "lastOpenFiles": [
-    "Chemistry/Images/Heat capacities.png",
-    "Physics/Thermal Physics/Classical Thermodynamics.md",
+    "Chemistry/Images/Water displacements.png",
+    "Chemistry/IB Chemistry/Symmetry in molecules.md",
+    "Chemistry/Images/Chiral molecules.png",
+    "Chemistry/Images/Amino acid.png",
+    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+    "Chemistry/IB Chemistry/Vibrational normal modes in molecules.md",
     "Chemistry/IB Chemistry/Bonding in molecules.md",
+    "Chemistry/Images/Frost circle.png",
     "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_2.pdf",
-    "Physics/IB Physics/Optics.md",
     "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
-    "Physics/IB Physics/Waves.md",
     "Physics/IB Physics/Electromagnetism.md",
+    "Physics/IB Physics/Optics.md",
+    "Chemistry/Images/Butadiene SOs.png",
+    "Physics/Images/Butadiene p orbitals.png",
+    "Physics/Thermal Physics/Classical Thermodynamics.md",
+    "Physics/Images/Thermal equilibrium.png",
+    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+    "Chemistry/Images/Heat capacities.png",
+    "Physics/IB Physics/Waves.md",
     "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_1.pdf",
     "Mathematics/IB Mathematical Methods/Sturm-Liouville Theory.md",
     "Mathematics/IB Mathematical Methods/Calculus of variations.md",
-    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Chemistry/Images/Heteronuclear MO diagram.png",
     "Chemistry/Images/sp mixing.png",
     "Chemistry/Images/text27656-0.png",
-    "Chemistry/Images/Homonuclear diatomic MOs.png",
-    "Chemistry/Images/2px 2py pi.png",
-    "Chemistry/Images/2pz sigma.png",
-    "Chemistry/Images/H2 SOs.png",
-    "Chemistry/IB Chemistry/Symmetry in molecules.md",
-    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
-    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
     "Mathematics/IB Mathematical Methods/Contour integration.md",
-    "Mathematics/Images/ln z branches.png",
     "Mathematics/IB Mathematical Methods/Transform methods.md",
     "Physics/IB Physics/Experimental methods and data analysis.md",
     "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
@@ -367,11 +358,8 @@
     "Physics/IB Physics/Elasticity.md",
     "Past Papers/IB Physics/2012-13_Part_IB_Physics_A_paper_2.pdf",
     "Physics/IB Physics/Fluid mechanics.md",
-    "Past Papers/Past Tripos papers-20230327/IB_A_2013.pdf",
-    "Past Papers/Past Tripos papers-20230327/IB_A_2012.pdf",
-    "Chemistry/Images/D inf v character table.png",
-    "Chemistry/Images/C inf v character table.png",
-    "Chemistry/IB Chemistry/Vibrational normal modes in molecules.md",
+    "Past Papers/IB Chemistry A/IB_A_2013.pdf",
+    "Past Papers/IB Chemistry A/IB_A_2012.pdf",
     "!Beam bending reciprocity.png.md",
     "Physics/IB Physics/Rigid body dynamics.md",
     "Physics/IB Physics/Orbits.md",

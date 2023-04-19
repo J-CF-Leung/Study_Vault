@@ -161,6 +161,8 @@ $$pV=nRT=NkT$$
 
 # The first law, internal energy, and heat
 - The _molecular origin_ of internal energy will be ignored in a phenomenological study
+	- In an _ideal gas_, it would be the _kinetic energy_ of the molecules
+	- For many systems, it also depends on _external fields_ (gravitational, magnetic, etc.)
 
 ## Work, heat, and the first law
 - From experiments (mostly performed by Joule), it was found that _performing work on a system changes its stored energy_
@@ -402,7 +404,7 @@ $$dS\geq 0$$
 - As a consequence, if any _irreversible process_ occurs in the system, entropy _must increase_
 - If a change is _adiabatic_, it is also inherently reversible and _isentropic_
 
-- For the universe as a whole, $U$ remains constant while $S$ increases
+- For the _universe_ as a whole, $U$ remains constant while $S$ increases
 - This gives rise to the _arrow of time_
 >[!quote] The Moving Finger
 >بر لوح نشان بودنی‌ها بوده‌است
@@ -477,7 +479,7 @@ $$Z_1\left(\pd{Z_2}{z_3}-\pd{Z_3}{z_2}\right)+Z_2\left(\pd{Z_3}{Z_1}-\pd{Z_1}{z_
 	- where $T$ is a function of _empirical temperature only_, and $S$ is a _function of state_
 
 # State variables
-- So far, to descibe a gas (assuming constant $N$), one can deploy the variables:
+- So far, to descibe a _gas_ (assuming constant $N$), one can deploy the variables:
 	- Intensive - _Absolute temperature_ $T$, _pressure_ $p$
 	- Extensive - _Internal energy_ $U$, _volume_ $V$, _entropy_ $S$
 
@@ -492,16 +494,152 @@ $$dU=T\,dS-p\,dV$$
 $$\displaylines{dU=\dbar Q+\dbar W=T\,dS-p\,dV \\ \dbar Q_\text{irrev.}<T\,dS \\ \dbar W_\text{irrev.}>-p\,dV}$$
 	- Example: Due to _friction_, the _applied pressure_ $p'>p$, and _more work is done_
 
+- The Master Equation also implies that $U$ is a _function of_ $S$ and $V$:$$U=U(S,V)$$
 - From the Master Equation, one can write:
 $$T=\left(\pd{U}{S}\right)_V\hspace{1cm}p=-\left(\pd{U}{V}\right)_S$$
 - It can also be _inverted_ to give _entropy as a function of $U$ and $V$_:
-$$\displaylines{dS=\frac{1}{T}\,dU+\frac{p}{T}\,dV}$$
+$$\displaylines{S=S(U,V) \\ dS=\frac{1}{T}\,dU+\frac{p}{T}\,dV}$$
+- Hence, for the _internal energy_ of the system to be known, $S$ and $V$ must be known
+- They are known as the "natural variables" for $U$, as knowing $U(S,V)$ then gives _complete thermodynamic information_ for the system
+	- If $U$ is known as a function of $T$ and $V$, then there are still _unknowns_ for the system (in this case, $S$ and $p$ are unknown)
 
 ## Thermodynamic potentials
+- For an _isolated_ system, _entropy_ must _never decrease_
+- However, many systems are often kept in contact with a _reservoir_ at constant temperature
+- In these cases, one must maximise _total entropy_ of both the system and the reservoir
+- Hence, one can consider _thermodynamic potentials_ that must be _extremised_ in these cases
+
+- They are also useful for describing the system using _variables other than_ $S$ and $V$, as the former can be _hard to measure_
+
+- To derive them, one must perform _Legendre transforms_
+
+- The _enthalpy_ $H$ is defined as:
+$$\displaylines{H=U+pV \\ dH=T\,dS+V\,dp}$$
+- The _Helmholtz Free Energy_ $F$ is defined as:
+$$\displaylines{F=U-TS \\ dF=-S\,dT-p\,dV}$$
+- The _Gibbs Free Energy_ is defined as:
+$$\displaylines{G=H-TS=U+pV-TS \\ dG=-S\,dT+V\,dp}$$
+
+
+- For example, if $G(p,T)$ were known, then _complete thermodynamic information_ can be obtained for the system
 
 ## Maxwell relations
+- There are _special relationships_ between thermodynamic variables, using the fact that if $f$ is a _single-valued_, _differentiable_ function everywhere, then $df$ is an _exact differential_:
+$$\displaylines{f=f(x,y) \longrightarrow df=\left(\pd{f}{x}\right)\,dx+\left(\pd{f}{y}\right)\,dy \\ \pd{^2f}{x\partial y}=\pd{^2f}{y\partial x}}$$
+
+- By considering the _partial derivatives of each thermodynamic potential_:
+$$\left(\pd{}{S}\right)_V\left(\pd{U}{V}\right)_S=\left(\pd{}{V}\right)_S\left(\pd{U}{S}\right)_V \longrightarrow -\left(\pd{p}{S}\right)_V=\left(\pd{T}{V}\right)_S$$
+- Similarly, the collection of four _Maxwell's relations_ is:
+$$\begin{aligned}\left(\pd{T}{V}\right)_S &=-\left(\pd{p}{S}\right)_V \\ \left(\pd{T}{p}\right)_S &=\;\;\;\left(\pd{V}{S}\right)_p \\ \left(\pd{S}{V}\right)_T &=\;\;\;\left(\pd{p}{T}\right)_V \\ \left(\pd{S}{p}\right)_
+T &= -\left(\pd{V}{T}\right)_p\end{aligned}$$
+### An alternative derivation
+- Consider a _cyclic process_, where since $U$ Is a state function and _does not change_:
+$$\displaylines{\oint p\,dV=\oint T\,dS \\ \int\int\,dp\,dV=\int\int\,dT\,dS}$$
+- The _work done by the gas_ (area in the $p-V$ plane), is the same as the _heat absorbed by the gas_ (area in the $T-S$ plane)
+- Hence:
+$$\pd{(T,S)}{(p,V)}=1$$
+- This is the [[Vector calculus in 3-dimensions#The Jacobian matrix|Jacobian]] of the transformation from the $p-V$ plane to the $T-S$ plane is 1
+- Hence:
+$$\pd{(T,S)}{(x,y)}=\pd{(p,V)}{(x,y)}$$
+- Here, $(x,y)$ are each _pair of independent variables_ used in describing the system
+
+### Useful theorems
+- When considering partial derivatives, there are some useful relationships
+- For some function $x$:
+$$x=x(y,z) \hspace{1.5cm}dx=\left(\pd{x}{y}\right)_z\,dy+\left(\pd{x}{z}\right)_y\,dz$$
+- The _reciprocal theorem_:
+$$\left(\pd{x}{y}\right)_z=\frac{1}{(\partial y/\partial x)_z}$$
+- The _reciprocity theorem_:
+$$\left(\pd{x}{y}\right)_z\left(\pd{y}{z}\right)_x\left(\pd{z}{x}\right)_y=-1$$
+- This can be combined to give:
+$$\left(\pd{x}{y}\right)_z=-\left(\pd{x}{z}\right)_y\left(\pd{z}{y}\right)_x$$
 
 ## Number of particles and the chemical potential
+- All extensive variables scale with the _size_ of the system
+- This size is often determined by the _number of particles_
+- In many systems, this number can _change_
+	- Example: Chemical _reactions_
+
+- Terminology:
+	- An _isolated system_ can exchange _neither particles or energy_ with surroundings
+	- A _closed system_ can exchange _energy, but not particles_ with surroundings
+	- An _open system_ can exchange _energy and particles_ with surroundings
+
+- In systems where the number of particles $N$ can change:
+$$dU=T\,dS-p\,dV+\mu\,dN$$
+- Here, $\mu$ is known as the _chemical potential_
+- It is the _energy change when adding 1 particle while keeping $S$ and $V$ constant_:
+$$\mu=\left(\pd{U}{N}\right)_{S,V}$$
+- It is often _negative_, as keeping $S$ and $V$ constant _while adding particles_ will require a _reduction in energy_
+
+- When considering other themodynamic potentials:
+$$\displaylines{dH=T\,dS+V\,dp+\mu\,dN \\ dF=-S\,dT-p\,dV+\mu\,dN \\ dG=-S\,dT+V\,dp+\mu\,dN\\\mu=\left(\pd{U}{N}\right)_{S,V}=\left(\pd{H}{N}\right)_{S,p}=\left(\pd{F}{N}\right)_{T,V}=\left(\pd{G}{N}\right)_{T,p}}$$
+- Similarly, $dS$ can be rewritten:
+$$dS=\frac{dU}{T}+\frac{p}{T}\,dV-\frac{\mu}{T}\,dN$$
+
+### Multiple types of particles
+- If there are _many types of particles_, each with number $N_i$, then the Master Equations must be rewritten as:
+$$\displaylines{dU=T\,dS-p\,dV+\sum_i \mu_i\,dN_i \\ dH=T\,dS+p\,dV+\sum_i \mu_i\,dN_i \\ \vdots}$$
+- Each type of particle has _its own chemical potential_
+
+# Interpreting thermodynamic functions
+- Aside from _mathematical convenience_, each thermodynamic function has some _physical meaning_
+- For this section, consider a $p-V$ system, ignoring _other types of work_, or _external fields_
+
+## Entropy and equilibria
+
+$$\displaylines{dS=\frac{dU}{T}+\frac{p}{T}\,dV-\frac{\mu}{T}\,dN \\ \left(\pd{S}{U}\right)_{V,N}=\frac{1}{T} \hspace{1cm} \left(\pd{S}{V}\right)_{U,N}=\frac{p}{T} \hspace{1cm} \left(\pd{S}{U}\right)_{U,V}=-\frac{\mu}{T}}$$
+- For an _isolated system_, entropy can _never decrease_
+- When it is at a _maximum_, the system has reached an _equilibrium_
+
+- For the case of _thermal equilibrium_, consider _two systems_, with constant $V$ and $N$, at _different temperatures_, able to _exchange energy_:
+![[Thermal equilibrium.png]]
+- Since the two systems are _isolated_:
+$$dU_1+dU_2=0$$
+- The _total entropy change_ is:
+$$dS=\frac{dU_1}{T_1}+\frac{dU_2}{T_2}=\left(\frac{1}{T_1}-\frac{1}{T_2}\right)dU_1\geq0$$
+- Hence, if $T_1\neq T_2$, then _energy flows from the system with higher temperature_
+- This occurs until $T_1=T_2$, where the systems are in _thermal equilibrium_
+
+- Similarly, for two systems _with fixed $U$_ and $N$, sharing a _fixed total volume_, with a _frictionless, movable partition_ between them:
+$$dS=\left(\frac{p_1}{T_1}-\frac{p_2}{T_2}\right)dV_1\geq0$$
+- Hence, if $T_1=T_2$, the _partition moves towards the system with lower pressure_, until $p_1=p_2$, where _mechanical equilibrium is reached_
+
+- Similarly, for two systems _with fixed_ $U$ and $V$, sharing a _fixed total number of particles_, able to _exchange particles_ between them:
+$$dS=\left(\frac{\mu_2}{T_2}-\frac{\mu_1}{T_1}\right)dN_1\geq0$$
+- Hence, if $T_1=T_2$, _particles go towards the system with lower chemical potential_, until $\mu_1=\mu_2$, where _chemical equilibrium is reached_
+
+## Changes in heat
+- Many process involving heat exchange are done with _constraints_ on the system, such as _constant volume or pressure_
+
+- If heat is _emitted by_ a system $(\dbar Q<0)$, the process is said to be _exothermic_
+- If heat is _absorbed by_ a system $(\dbar Q>0)$, the process is said to be _endothermic_
+
+### Constant volume
+- The change in internal energy $U$ for any process:
+$$dU=T\,dS+p\,dV=\dbar Q+\dbar W$$
+- Consider a _reversible, isochoric_ $(dV=0)$ process:
+$$dU)_V=T\,dS=\dbar Q_\text{rev})_V$$
+- Any _reversible heat change_, at _constant volume_, is always equal to the _change in internal energy_
+- Hence, for this type of process:
+$$\displaylines{dU=C_V\,dT \\ \Delta U=\int_{T_1}^{T_2}C_V\,dT}$$
+
+### Constant pressure
+- The change in enthalpy $H$ for any process:
+$$\displaylines{H=U+pV \\ dH=dU+pdV+Vdp=TdS+Vdp}$$
+- Consider a _reversible, isobaric_ $(p=0)$ process:
+$$dH)_p=T\,dS=\dbar Q_\text{rev})_p$$
+- Any _reversible heat change_, at _constant pressure_, is always equal to the _change in internal energy_
+- Hence, for this type of process:
+$$\displaylines{dH=C_p\,dT \\ \Delta H=\int_{T_1}^{T_2}C_p\,dT}$$
+
+## Availability and variational principles
+- Often times, given the _constraints_ on a system (e.g. a _reservoir_), one may want to know:
+	- The maximum amount of _work_ that can be _extracted_ from the system
+	- The quantity to _extremise_ in order to _maximise entropy of the universe_
+
+
+## Scaling the system
 
 # Thermodynamic systems
 
@@ -516,110 +654,4 @@ $$\displaylines{dS=\frac{1}{T}\,dU+\frac{p}{T}\,dV}$$
 # Variational principles
 
 # Phase equilibrium and transitions
-
-# OLD
-
-## The state variables
-- At equilibrium, _entropy can be expressed as a function_ of 3 variables:
-$$S=S(U,N,V)$$
-	- $U=$ internal energy, $N=$ number of particles, $V=$ volume
-	- $S, U, N, V$ are _extensive variables, as they scale with system size_
-- The function can be inverted:
-$$U=U(S, V, N)$$
-- For infinitesimal changes in the system, the differential of internal energy is:
-$$dU=\left(\pd{U}{S}\right)_{N, V}dS+\left(\pd{U}{V}\right)_{N, S}dV + \left(\pd{U}{N}\right)_{S, V}dN$$
-- This expression defines 3 thermodynamic quantities:
-$$T=\left(\pd{U}{S}\right)_{N, V}\hspace{25pt}P=-\left(\pd{U}{V}\right)_{N, S}\hspace{25pt}\mu=\left(\pd{U}{N}\right)_{S, V}$$
-	- $T=$ temperature, $p=$ pressure, $\mu=$ chemical potential 
-	- $T, p, \mu$ are _intensive variables, which do not scale with system size_
-- This changes the expression to:
-$$dU=T\,dS-P\,dV+\mu\,dN$$
-- The intensive variables give rise to concepts of _thermal, mechanical, and chemical equilibrium_
-
-## The first law
-$$dU = \dbar Q + \dbar W$$
-	- $Q=$ _heat transferred_ from a source _outside the system_
-	- $W=$ _work done_ on the system
-- When there is an external pressure $p$ upon the system, with no change in $N$, $\dbar W=-p\,dV$ 
-- For equilibrium changes and fixed $N$, $dU=T\,dS+\dbar W$
-- Work: mechanical ($-p\,dV$), electrical, spring, magnetic
-
-## The second and third laws
-- Second law: Entropy never decreases
-	- As time goes on, the number of microstates available to a system never decreases
-	- At equilibrium, maximum entropy is reached
-- Third law: At absolute zero, the entropy of any body is zero
-	- A body cannot be brought to absolute zero by any finite series of operations
-
-# Engines and entropy
-
-
-
-# Thermodynamic potentials
-- The descriptors of a system come in _pairs of intensive and extensive variables_
-	- $T$ and $S$, $p$ and $V$ for a system with a fixed $N$ 
-- For energy, $S$ and $V$ are the _proper independent variables_, as an expression for $U(S,V)$ is all the necessary information to derive all other quantities ($T$, $p$) 
-- Other thermodynamic potentials defined as functions of another pair of proper independent variables
-	- One variable from $S$ or $T$, another from $p$ or $V$
-	- Formulas derived from _Legendre transforms_
-- For a system _at equilibrium_ with fixed $N$, _two non-conjugate variables_ are sufficient to determine the state of the system
-## Enthalpy/heat function
-- Enthalpy $H$ (or $W$ if you use $R$ for work like Goodstein)
-$$\begin{aligned} H(S,P)&=U+PV \\ dH &= T\,dS+V\,dP \end{aligned}$$
-- For equilibrium changes at _constant pressure_, $dH)_P = \dbar Q$
-
-## Helmholtz Free Energy
-- Helmholtz Free Energy $F$ (or $A$):
-$$\begin{aligned}F(T,V) &= U-TS \\ dF &= -S\,dT-P\,dV\end{aligned}$$
-- For equilibrium changes at _constant temperature_, $dF)_T = \dbar W$
-	- Analagous to $dU)_S = \dbar W$
-
-## Gibbs Free Energy
-- Gibbs Free Energy $G$ (or $\Phi$):
-$$\begin{aligned}G(P,T)&=F+PV=H-TS \\ dG &= -S\,dT+V\,dP \end{aligned}$$
-
-## Maxwell's relations
-- Due to the _symmetry of mixed derivatives_, using the definitions of the potentials:
-$$\begin{aligned}\left(\pd{P}{T}\right)_V&=\left(\pd{S}{V}\right)_T \\ \left(\pd{T}{V}\right)_S&=-\left(\pd{P}{S}\right)_V \\ \left(\pd{V}{S}\right)_P&=\left(\pd{T}{P}\right)_S \\ \left(\pd{S}{P}\right)_T&=-\left(\pd{V}{T}\right)_P    \end{aligned}$$
-- Holds for _any system_
-- Demonstrates that two non-conjugate variables can determine the behaviour of a system
-
-# Number of particles and the chemical potential
-- Differentials with $dN$:
-	$$\begin{aligned}dU&=T\,dS-P\,dV+\mu\,dN \\ 
-dH &= T\,dS+V\,dP+\mu \,dN \\ dF &= -S\,dT-P\,dV +\mu\,dN \\
-dG &= -S\,dT+V\,dP+\mu\,dN\end{aligned}$$
-	- All definitions and transforms above still apply, with $N$ as an extra variable
-- Definition of chemical potential $\mu$:
-$$\mu = \left(\pd{U}{N}\right)_{S, V} = \left(\pd{H}{N}\right)_{S, P} = \left(\pd{F}{N}\right)_{T, V} = \left(\pd{G}{N}\right)_{T, P}$$
-- Infinitesimal changes with proper independent variables fixed:
-$$\mu\,\dbar N = (\dbar U)_{S,V} = (\dbar H)_{S,P} = (\dbar F)_{T,V} = (\dbar \Phi)_{T,P}$$
-- Last 3 equalities applicable to any change (not necessarily $N$)
-
-- Chemical potential is an _intensive variable_ like $P$ and $T$
-- Consider a system with one type of particle, scaled up by $\lambda$, and $d(\lambda U)$, one gets:
-$$U=TS-PV+\mu N$$
-- By considering the differential, $\mu$ is shown to be a function of $P$ and $T$:
- $$d\mu = \frac{V}{N}dP-\frac{S}{N}dT$$
- - The same Legendre transforms apply, allowing $\mu$ to be redefined:
-$$G(P,T,N)=\mu N$$
-
-- The chemical potential is _not necessarily positive_
-	- To _keep $S$ and $V$ constant_ while adding a particle, $U$ may have to decrease
-	- For strong repulsions, $U$ may increase
-- One now needs _three non-conjugate variables_ in order to completely determine a system
-
-## The Landau potential
-- With the new pair of conjugate variables, new thermodynamic potentials are available
-- The _Landau potential_ is defined as:
-$$\displaylines{\Omega(T,V,\mu)=F-\mu N=-PV \\ d\Omega=-S\,dT-P\,dV-N\,d\mu}$$
-- With this, differentials of the potentials are related by:
-$$(\dbar\Omega)_{T,V,\mu}=(\dbar U)_{S,V,N}=(\dbar F)_{T,V,N}=(\dbar G)_{T,P,N}=(\dbar H)_{S,P,N}$$
-
-# Variational principles
-- There is often some _constraint_ in the processes occuring in a system
-	- e.g. constant $T$, constant $p$
-- Then, one may want to know the _maximum amount of work_ that can be extracted, i.e. the _free energy_
-
-# Non-gaseous systems
 

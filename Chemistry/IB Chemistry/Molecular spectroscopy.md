@@ -1,4 +1,3 @@
-
 - Spectroscopy: _Determining structures using the interaction of electromagnetic radiation with matter_
 
 # Physical principles and approximations
@@ -45,7 +44,7 @@ $$\displaylines{\Delta E_\text{tot}=\Delta E_\text{elec}+\Delta E_\text{vib}+\De
 - To generate an _oscillating electric field_ while rotating, the molecule must possess a _permanent dipole moment_
 	- The component along one direction will oscillate
 - _Gross selection rule_:  There must be a _permanent dipole moment_
-	- Caused by an _electronegativity difference_, plus the right type of _symmetry_
+	- Caused by an _electronegativity difference_, along with [[Symmetry in molecules#Dipole moments|symmetry considerations]]
 
 ## Vibrational spectra
 - As _internuclear distance oscillates_, a _change in dipole moment_ can be caused
@@ -288,6 +287,7 @@ $$\begin{aligned}\tilde{P}_{J''}&=\tilde{\omega}_0+(\tilde{B}_1-\tilde{B}_0)J''^
 - In the _P branch_, the absorption lines become _more widely spaced_ as $J''$ increases
 - In the _R branch_, the absorption lines become _more compressed_ as $J''$ increases
 ![[Carbon monoxide fundamental.png]]
+
 ## Finding the rotational constants
 - To find $\tilde{B}_1$, consider _two transitions that share the same lower state_ $J$
 - The energy difference between these two transitions is:
@@ -324,7 +324,7 @@ $$\tilde{R}_{J-1}-\tilde{P}_{J+1}=\mathcal{E}_0(J+1)-\mathcal{E}_0(J-1)=2\tilde{
 - Example: Acetylene
 ![[C2H2 vibes.png]]
 
-## Gross selection rules
+## Gross selection rules (qualitative)
 - _Not all vibrational modes will appear in an IR or Raman spectrum_
 
 ### IR spectra
@@ -356,6 +356,20 @@ $$\frac{d\alpha}{dx}\Bigg|_{x=0}\neq0$$
 - There are _combination and difference bands_
 - As mentioned before, there are also _overtones and hot bands_
 ![[Complicated spectrum.png]]
+
+## Finding normal modes
+- Requires consideration of [[Symmetry in molecules|symmetry]]
+
+- Consider how all possible _displacement vectors_ in a molecule transform
+	- Example: $\text{H}_2\text{O}$![[Water displacements.png]]
+- Overall, in water, all of the displacement vectors together transform as:
+$$3A_1\oplus A_2\oplus 3B_1\oplus 2B_2$$
+
+### Using X-H stretches
+
+## Symmetry-allowed transitions
+
+### Rule of mutual exclusion
 
 ## Perpendicular and parallel vibrations
 - Previously, the selection rules for a rigid rotor were $\Delta\nu=\pm1,\pm2,\dots$ and $\Delta J=\pm1$

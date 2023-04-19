@@ -472,10 +472,73 @@ $$\displaylines{\Ham_{ii}=\alpha_i \\ \Ham_{ij}=\beta_{ij} \text{ for }i\neq j}$
 - This is especially relevant for [[#Rings|cyclic molecules]] and _aromaticity_
 
 ## Exploiting symmetry
+- When considering the _basis set_ of orbitals, one can see that some orbitals are _never interconverted by symmetry operations_
+- By _separating_ sets that are never inter-converted, one can form _symmetry orbitals_ out of each separate set, before doing calculations
 
-### Example: Cyclobutadiene
+- Furthermore, as _only orbitals of the same symmetry overlap_, there can be _separate sets of secular equations_
+- This is equivalent to _transforming the secular matrix_ into the _symmetry orbital basis set_, and making a _block diagonal matrix_
 
-# Rings
+### Example: Butadiene
+- Consider butadiene, which is in the $C_{2h}$ point group
+- Consider the system of 4 $p$ orbitals:
+![[Butadiene p orbitals.png]]
+
+- $(\phi_1,\phi_4)$ and $(\phi_2,\phi_3)$ are _separate sets_, that are _never interconverted_
+- Consider $(\phi_1,\phi_4)$, which transforms as $B_g\oplus A_u$, and construct symmetry orbitals:
+$$\theta_a=\frac{1}{\sqrt{2}}(\phi_1+\phi_4) \hspace{1cm} \theta_c=\frac{1}{\sqrt{2}}(-\phi_1+\phi_4)$$
+- Then, apply the _same results_ to the other pair:
+$$\theta_b=\frac{1}{\sqrt{2}}(\phi_2+\phi_2) \hspace{1cm} \theta_d=\frac{1}{\sqrt{2}}(-\phi_2+\phi_3)$$
+![[Butadiene SOs.png]]
+
+- Consider the overlap between $\theta_a$ and $\theta_b$:
+$$\displaylines{\Ham_{aa}=\alpha \hspace{1cm} \Ham_{ab}=\beta \hspace{1cm} \Ham_{bb}=\alpha+\beta \\ E=\alpha+\frac{1}{2}(1\pm\sqrt{5})\beta}$$
+- Similarly, consider the overlap between $\theta_c$ and $\theta_d$:
+$$\displaylines{\Ham_{cc}=\alpha \hspace{1cm} \Ham_{cd}=\beta \hspace{1cm} \Ham_{dd}=\alpha-\beta \\ E=\alpha-\frac{1}{2}(1\pm\sqrt{5})\beta}$$
+- Since there are $4$ $\pi$ electrons, this gives a total energy of:
+$$E_\text{tot}=4\alpha+2\sqrt{5}\beta$$
+- This gives a _delocalisation energy_ of $2(\sqrt{5}-1)\beta$, which is _favourable_
 
 # Chains
+- Let there be $N$ carbon atoms in a _line_, numbered using index $s$, where $1\leq s\leq N$
+- Let the _atomic orbitals_ be numbered using index $n$, where $1\leq n\leq N$
+
+- With the Hückel Approximations, the Hamiltonian in this basis is given by:
+$$\hat{\Ham}=\begin{pmatrix}\alpha & \beta & 0 & 0 & 0 &\dots & 0 \\ \beta & \alpha & \beta & 0 &  0 &\dots & 0 \\ 0 & \beta & \alpha & \beta & 0 &\dots & 0 \\ \vdots & &  & \ddots & & & \vdots \\ 0 & & & & 0& \beta & \alpha\end{pmatrix}$$
+- The solution to the _coefficients_ on atom $s$, in molecular orbital $n$ is given by:
+$$c_s^{(n)}=\sqrt{\frac{2}{N+1}}\sin\frac{n\pi s}{N+1}$$
+- This is analagous to the [[Molecular quantum mechanics#Particle in a box|Particle in a box]], for a box of length $N+1$
+- By solving the secular equation:
+$$\displaylines{\beta c_{s-1}^{(n)}+\alpha c_{s}^{(n)}+\beta c_{s+1}^{(n)}=E^{(n)}c_s^{(n)} \\ E^{(n)}=\alpha+2\beta\cos\frac{n\pi}{N+1}}$$
+
+# Rings
+- Let there be $N$ carbon atoms in a _line_, numbered using index $s$, where $1\leq s\leq N$
+- Let the _atomic orbitals_ be numbered using index $n$, where $1\leq n\leq N$
+
+- Analagous to case of _chains_, except there is an _interaction between atoms_ $1$ _and_ $N$
+- The solution must also satisfy _cyclic boundary conditions_:
+$$c_s^{(n)}=c_{s+iN}^{(n)} \hspace{1cm} \forall i\in \mathbb{Z}$$
+- The Hamiltonian is then: $$\hat{\Ham}=\begin{pmatrix}\alpha & \beta & 0 & 0 & 0 &\dots & \beta \\ \beta & \alpha & \beta & 0 &  0 &\dots & 0 \\ 0 & \beta & \alpha & \beta & 0 &\dots & 0 \\ \vdots & &  & \ddots & & & \vdots \\ \beta & & & & 0& \beta & \alpha\end{pmatrix}$$
+- Hence, the solution for the _coefficients_ is:
+$$c_s^{(n)}=\sqrt{\frac{1}{N}}\exp\frac{2\pi ins}{N}$$
+- To obtain the energies: $$\displaylines{\beta c_{s-1}^{(n)}+\alpha c_{s}^{(n)}+\beta c_{s+1}^{(n)}=E^{(n)}c_s^{(n)} \\ E^{(n)}=\alpha+2\beta\cos\frac{2n\pi}{N}}$$
+- This means that for $n=0$, the orbital is _singly degenerate_
+- Similarly, for _even_ $N$, the orbital for $n=N/2$ is also singly degenerate
+
+## Frost circle
+- The choice for $n$ is somewhat _arbitrary_
+- For convenience, a common choice is:
+	- For _odd_ $N$, $n=0,\pm1,\pm2,\dots \pm(N-1)/2$
+	- For _even_ $N$, $n=0,\pm1,\pm2,\dots,\pm(N-2)/2,N/2$
+
+- The formula for energy leads to the _Frost circle construction_:
+![[Frost circle.png|600]]
+
+- The _non-degenerate orbitals_ are always _real_
+- As for the _degenerate_ orbitals, one can make _linear combinations_ such that they are real
+- This yields the _alternative set of coefficients_:
+$$\displaylines{c_s^{(0)}=\sqrt{\frac{1}{N}} \\ c_s^{(nc)}=\sqrt{\frac{2}{N}} \cos\frac{2\pi ns}{N} \\ c_s^{(ns)}=\sqrt{\frac{2}{N}} \sin\frac{2\pi ns}{N} \\ c_s^{(N/2)}=\sqrt{\frac{1}{N}} (-1)^s}$$
+- The latter equality is only true for _even $N$_
+- The range of $n$ is now:
+	- For _odd_ $N$, $n=1,2,\dots,(N-1)/2$
+	- For _even_ $N$, $n=1,2,\dots,N/2-1$
 
