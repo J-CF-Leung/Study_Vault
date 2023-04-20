@@ -24,7 +24,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
+                "file": "Physics/Thermal Physics/Statistical thermodynamics.md",
                 "mode": "source",
                 "source": false
               }
@@ -159,7 +159,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.356086848115316,
+                      "scale": 0.11957016218834093,
                       "close": true
                     }
                   }
@@ -316,34 +316,37 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "8445361aa556b81d",
+  "active": "bdee2333112a0d60",
   "lastOpenFiles": [
-    "Chemistry/Images/Water displacements.png",
+    "Chemistry/Images/H3+ vibrational modes.png",
+    "Chemistry/Images/Water vibrational modes.png",
     "Chemistry/IB Chemistry/Symmetry in molecules.md",
-    "Chemistry/Images/Chiral molecules.png",
-    "Chemistry/Images/Amino acid.png",
+    "Chemistry/IB Chemistry/Bonding in molecules.md",
+    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+    "Chemistry/Images/Nitrogen Raman spectra.png",
+    "Chemistry/Images/Nuclei swap.png",
+    "Chemistry/Chemical potential and chemical reactions.md",
+    "Chemistry/Images/Nuclei swap.png",
+    "Chemistry/Images/Residual entropy.png",
+    "Pasted image 20230420150615.png",
+    "Chemistry/IB Chemistry/Electrons in solids.md",
+    "Chemistry/Images/Rotational energy.png",
+    "Pasted image 20230420140322.png",
+    "Chemistry/Images/Rotational heat capacity.png",
+    "Physics/Thermal Physics/Statistical thermodynamics.md",
+    "Physics/Thermal Physics/Classical Thermodynamics.md",
+    "Chemistry/Images/Water displacements.png",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Chemistry/IB Chemistry/Vibrational normal modes in molecules.md",
-    "Chemistry/IB Chemistry/Bonding in molecules.md",
-    "Chemistry/Images/Frost circle.png",
     "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_2.pdf",
     "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
     "Physics/IB Physics/Electromagnetism.md",
     "Physics/IB Physics/Optics.md",
-    "Chemistry/Images/Butadiene SOs.png",
-    "Physics/Images/Butadiene p orbitals.png",
-    "Physics/Thermal Physics/Classical Thermodynamics.md",
-    "Physics/Images/Thermal equilibrium.png",
-    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
-    "Chemistry/Images/Heat capacities.png",
     "Physics/IB Physics/Waves.md",
     "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_1.pdf",
     "Mathematics/IB Mathematical Methods/Sturm-Liouville Theory.md",
     "Mathematics/IB Mathematical Methods/Calculus of variations.md",
-    "Chemistry/Images/Heteronuclear MO diagram.png",
-    "Chemistry/Images/sp mixing.png",
-    "Chemistry/Images/text27656-0.png",
     "Mathematics/IB Mathematical Methods/Contour integration.md",
     "Mathematics/IB Mathematical Methods/Transform methods.md",
     "Physics/IB Physics/Experimental methods and data analysis.md",
@@ -361,9 +364,6 @@
     "Past Papers/IB Chemistry A/IB_A_2013.pdf",
     "Past Papers/IB Chemistry A/IB_A_2012.pdf",
     "!Beam bending reciprocity.png.md",
-    "Physics/IB Physics/Rigid body dynamics.md",
-    "Physics/IB Physics/Orbits.md",
-    "Mathematics/IB Mathematical Methods/Poisson and Laplace's equations.md",
     "Misc or Personal/What to do.canvas"
   ]
 }

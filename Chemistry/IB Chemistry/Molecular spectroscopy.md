@@ -175,6 +175,9 @@ $$\mathcal{E}_\text{upper}-\mathcal{E}_\text{lower}=\tilde{B}(4J+6)$$
 - $\Delta J$ is defined by convention to be $J(\text{upper})-J(\text{lower})$
 - Therefore, all Raman lines _are in the S branch_
 ![[N2 Raman.png|600]]
+- The _intensity distribution_ is explained with [[Chemical thermodynamics#Nuclear spin statistics|nuclear spin statistics]]
+- In some cases, such as $^{16}\text{O}_2$, some peaks may _vanish_ as some states are _not allowed_
+
 # Vibrational potentials and selection rules
 ![[Internuclear potential.png|500]]
 - General behaviour of a diatomic:
@@ -364,8 +367,23 @@ $$\frac{d\alpha}{dx}\Bigg|_{x=0}\neq0$$
 	- Example: $\text{H}_2\text{O}$![[Water displacements.png]]
 - Overall, in water, all of the displacement vectors together transform as:
 $$3A_1\oplus A_2\oplus 3B_1\oplus 2B_2$$
+- Then, one must eliminate _translational and rotational degrees of freedom_
+- This leads to _subtracting representations that_ $x,y,z, R_x,R_y,R_z$ _transform as_
+
+- In water, the result is:
+$$2A_1\oplus B_1$$
+- This corresponds to the _bend_ and _symmetric stretch_ which transform as $A_1$
+- There is also an _antisymmetric stretch_ which transforms as $B_1$
+![[Water vibrational modes.png]]
+
+- There can also be _degenerate modes_, corresponding to _multi-dimensional representations_
+- Example: in the $\text{H}_3^+$ ion, the modes transform as:
+$$A_1\oplus E'$$
+- This corresponds to a _symmetric stretch_ and two _degenerate bends_:
+![[H3+ vibrational modes.png|350]]
 
 ### Using X-H stretches
+
 
 ## Symmetry-allowed transitions
 

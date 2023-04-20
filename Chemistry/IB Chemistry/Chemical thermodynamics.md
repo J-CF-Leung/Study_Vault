@@ -220,8 +220,9 @@ $$q=\sum_{\text{states }i} \exp\left(-\frac{\varepsilon_i}{k_BT}\right)=\sum_{\t
 	- _Electronic_ interactions between _electrons and nuclei_ in the molecule
 - By the [[Molecular quantum mechanics#The Born-Oppenheimer approximation|Born-Oppenheimer approximation]], these modes are assumed to be _independent_
 	- For example, the rotational constant is assumed to be _constant_ despite vibration
-- In terms of the _wave function_ and _energies_:
-$$\displaylines{\psi=\psi_\text{trans}\psi_\text{rot}\psi_\text{vib}\psi_\text{elec}\\ \varepsilon_\text{tot}=\varepsilon_\text{trans}+\varepsilon_\text{rot}+\varepsilon_\text{vib}+\varepsilon_\text{elec}}$$
+- In terms of the _wave function_ and _energies_:$$\displaylines{\psi_\text{mol}=\psi_\text{trans}\psi_\text{rot}\psi_\text{vib}\psi_\text{elec}\\ \varepsilon_\text{tot}=\varepsilon_\text{trans}+\varepsilon_\text{rot}+\varepsilon_\text{vib}+\varepsilon_\text{elec}}$$
+	- Ignoring [[#Nuclear spin statistics|nuclear spin]]
+
 - As the energies are _additive_, like the multi-particle case, the _molecular partition function_ becomes:
 $$q_\text{tot}=q_\text{trans}\,q_\text{rot}\,q_\text{vib}\,q_\text{elec}$$
 
@@ -320,6 +321,15 @@ $$q_\text{vib}=\frac{\exp(-\hbar\omega/2kT)}{1-\exp(-\hbar\omega/kT)}\equiv\frac
 $$q_\text{vib}=\prod_\text{modes} q_{\text{vib},j}$$
 - If a mode is _degenerate_, it contributes _multiple identical partition functions_
 
+### High and low temperature limits
+- At low temperatures, $T<<\theta_\text{vib}$, the partition function is:
+$$q_\text{vib}'(T\to0)\approx 1$$
+- All particles are _at the ground state_
+
+- At high temperatures, $T>>\theta_\text{vib}$, the partition function is _approximately linear_:
+$$q_\text{vib}'(T>>\theta_\text{vib})\approx\frac{1}{1-(1-\theta_\text{vib}/T)}=\frac{T}{\theta_\text{vib}}$$
+- At this point, $kT$ is _much larger than the energy spacing_, and the particles are able to occupy _many levels_
+
 ## Electronic partition function
 - The set of energy levels must be determined by [[Molecular spectroscopy#Electronic spectroscopy|spectroscopy]]
 - Many molecules have _degenerate electronic energy levels_
@@ -354,55 +364,232 @@ $$^3\Sigma_g^-$$
 
 # Internal energy and heat capacity
 - Each _degree of freedom_ of the molecules have _their own contributions_ to internal energy and heat capacity
-- _Measuring_ heat capacity throughout a _range of temperatures_ gives a series of _plateaus_:
+- _Measuring_ heat capacity (at _constant volume_) throughout a _range of temperatures_ gives a series of _plateaus_:
 ![[Heat capacities.png]]
 
-- These plateaus are _the same for all diatomic molecules_
+- These value on these plateaus are _the same for all diatomic molecules_
 - However, the _temperatures_ at which they appear _vary_ according to the molecule
 
-- At _low temperatures_
+- At _low temperatures_, only the _translational_ energy levels can be significantly occupied
+- As temperature rises, higher energy _degrees of feedom_ are excited
 
 ## Classical behaviour
+- From [[Statistical thermodynamics|classical statistical thermodynamics]], the _equipartition principle_ states that for _each independent quadratic term in energy_, there is an _equal contribution_ to internal energy
+	- Quadratic in terms of _position_ or _velocity_
+- This assumes the energy spectrum is _continuous_, and all potentials are _quadratic_
+- If a system has $N$ _quadratic terms in energy_, the internal energy _per mole_ is:
+$$U=\frac{N}{2}RT=C_VT$$
+
+- The three _translational_ kinetic energy components give $(3/2)RT$
+- For a _diatomic_, the two _rotational_ kinetic energy components give $RT$
+- For a _diatomic_, the _vibrational_ kinetic and potential energy components give $RT$
+
+- Hence, at _high temperatures_, the expected heat capacity at _constant volume_ is:
+$$C_V=\frac{7}{2}RT$$
+
 
 ## Translational contribution
+- The [[#Translational partition function|translational partition function]] at temperature $T$ is:
+$$q_\text{trans}=\left(\frac{2\pi mkT}{h^2}\right)^{3/2}\propto T^{3/2}$$
+- Then calculating the internal energy:
+$$U_\text{trans}=NkT^2\left(\pd{\ln q_\text{trans}}{T}\right)_V=\frac{3}{2}NkT$$
+- This _matches_ the _equipartition_ prediction, as the partition function is _calculated with the assumption_ that $kT$ is much larger than the energy spacing
 
 ## Rotational contribution
+- The [[#Rotational partition function|rotational partition function]] at temperature $T$ is:
+$$q_\text{rot}=\frac{T}{\sigma\theta_\text{rot}}\propto T$$
+- This gives the internal energy contribution:
+$$U_\text{rot}=NkT$$
+- This partition function is also calculated from the assumption that $kT$ is _much larger than energy spacing_
+
+- At _very low temperatures_, as all particles are only at the _lowest_ energy level, the system _cannot absorb energy_, and heat capacity is near zero
+- At _intermediate temperatures_, the heat capacity must be calculated _numerically_
+![[Rotational heat capacity.png|500]]
+
+- For _polyatomic molecules_, one needs to take into account that there are _three rotational degrees of freedom_, making the equipartition value $(3/2)NkT$
 
 ## Vibrational contribution
+- The [[#Vibrational partition function|vibrational partition function]], measuring energy _from the ground state_, is:
+$$q_\text{vib}'=\frac{1}{1-\exp(-\theta_\text{vib}/T)}$$
+- This expression is _exact_ at any temperature
+- This gives the internal energy:
+$$U_\text{vib}'=\frac{Nk\theta_\text{vib}}{\exp(\theta_\text{vib}/T)-1}$$
+- If measured _from the bottom of the well_, there is an extra term of $Nk\theta_\text{vib}/2$
+- This has _no effect on heat capacity_, which can be evaluated to be:
+$$C_{V,\text{vib}}=\frac{Nk\theta_\text{vib}^2}{T^2}\frac{\exp(\theta_\text{vib}/T)}{\left[\exp(\theta_\text{vib}/T)-1\right]^2}$$
+### High and low temperature limits
+- At _low temperature_, $T<<\theta_\text{vib}$, all particles are _at the ground state_, and are _unable to absorb energy_
+$$U_\text{vib}'(T\to0)\approx 0 \hspace{1cm} C_{V,\text{vib}}(T\to0)\approx 0$$
+
+- At _high temperature_, the internal energy and heat capacity _reach the equipartition values_:
+$$U_\text{vib}'(T>>\theta_\text{vib})\approx NkT \hspace{1cm} C_{V,\text{vib}}(T>>\theta_\text{vib})\approx Nk$$
+![[Rotational energy.png]]
 
 ## Electronic contribution
-
-## Total
-
+- At most _reasonable_ temperatures, only the _electronic ground state_ at energy $\varepsilon^0$ is ocupied
+- Hence, the electronic contribution is simply:
+$$U_\text{elec}\approx N\varepsilon^0 \hspace{1cm} C_{V,\text{elec}}\approx 0$$
 # Entropy
+- From the [[Classical Thermodynamics|Third Law]], the entropy of a _perfect crystal_ at _abolute zero_ is zero
+- From that, the entropy is calculated by the definition of its infinitesimal:
+$$dS=\frac{\dbar Q_\text{rev}}{T}$$
+- From statistical thermodynamics, it can be derived from the partition function:
+$$S=k\ln Q_N+T\left(\pd{\ln Q}{T}\right)_V=k\ln Q_N+\frac{U}{T}$$
 
 ## Different contributions
+- As the partition function is multiplicative and energy is additive, entropy can be separated into _additive contributions_:
+$$S_\text{tot}=S_\text{trans}+S_\text{rot}+S_\text{vib}+S_\text{elec}$$
+- As the $1/N!$ factor is associated with the _translational partition function_, it is associated with _translational entropy_ as well
 
 ### Translational entropy
+- Due to the $1/N!$ factor, the _translational entropy_ in terms of the _molecular translational partition function_, and _translational internal energy_ is:
+$$\begin{aligned} S_\text{trans} &= Nk\ln q_\text{trans}-Nk\ln N+Nk+\frac{U_\text{trans}}{T} \\ &= Nk\left[\ln\left(\frac{2\pi mkT}{h^2}\right)^{3/2}V-\ln N+\frac{5}{2}\right]\end{aligned}$$
+- This is also under the assumption that $kT$ is _much larger than energy spacing_
 
 ### Rotational entropy
+- Again, assuming that $T>>\theta_\text{vib}$:
+$$\begin{aligned}S_\text{rot} &= Nk\ln q_\text{rot}+\frac{U_\text{rot}}{T} \\ &= Nk\left(\ln\frac{T}{\sigma\theta_\text{rot}}+1\right)\end{aligned}$$
+- This also only applies to _diatomics_
+
+- For _polyatomics_, one needs to use the corresponding expressions for the [[#Rotational partition function for non-linear molecules|rotational partition function]] and internal energy
 
 ### Vibrational entropy
+- As the expressions for the vibrational partition function and energy are more complicated, it is better to _calculate them separately_ before substituting:
+$$S_\text{vib}=Nk\ln q_\text{vib}'+\frac{U_\text{vib}'}{T}$$
+- If there are _multiple vibrational modes_, then the entropy of each mode is _additive_
+- The entropy is _unaffected by the reference energy_, as long as $q$ and $U$ _share the same reference_
+
+- If $T<<\theta_\text{vib}$, then as $q_\text{vib}'\approx 1$ and $U_\text{vib}'\approx0$, there is _zero entropy_
 
 ### Electronic entropy
+- At reasonable temperatures, _approximately all particles are at electronic ground state_
+- Hence, the entropy is:
+$$S_\text{elec}=Nk\ln q_\text{elec}'+\frac{U_\text{elec}'}{T}\approx Nk\ln g_0$$
+- This is the _configurational entropy_ from the number of degeneracies at the ground state
 
 ## Calorimetry
+- The value of entropy can be obtained by _calorimetry_, which measures the _heat capacity_ at constant pressure for a _large range of temperatures_
+- In addition, the material may undergo _phase changes_, such as melting or boiling, which take place at _constant temperature_, with an _enthalpy change_ $\Delta H_{pc}$ for the change
+- The entropy change of this phase transition is:
+$$\Delta S_\text{pc}=\frac{\Delta H_\text{pc}}{T_{pc}}$$
+- Then, the value is given by a _numerical integration_, relative to _absolute zero_:
+$$S(T)=\int_0^T \frac{C_p(T')}{T'}\,dT'+\sum_\text{pc} \frac{\Delta H_\text{pc}}{T_\text{pc}}$$
 
 ## Behaviour at low temperatures
+- At low temperatures, it becomes _difficult to measure_ $C_p$
+- However, in most cases, the heat capacity at temperatures near absolute zero follow the [[Electrons in solids|Debye Law]]:
+$$C_p=\alpha T^3$$
+- Hence, $\alpha$ is extrapolated and used to calculate $\Delta S$ at low temperatures
+
+- Aside from this, for many _asymmetrical molecules_, there is a _residual entropy_ that causes an _underestimation in the calorimetric value_ compared to the computational value
+
+- This is due to the fact that even at low temperatures, there is some _randomness in the crystal structure_ that is "frozen-in"
+	- Theoretically, the _ordered structure_ is only attainable at _absolute zero_, which is unreachable
+![[Residual entropy.png]]
+
+- The residual _configurational_ entropy is given by:
+$$S_\text{res}=k\ln n_g^N=Nk\ln n_g$$
+- Here, $n_g$ is the _number of configurations_ a molecule can take in a crystal
+	- Example: $2$ for _asymmetrical diatomics_ like $\text{CO}$, $4$ for $\text{CH}_3\text{Cl}$
 
 # Nuclear spin statistics
+- The total _molecular wave function_ does not only of _molecular motion_ and the _electronic wave function_, but also _nuclear spin_ as well
+- From the [[Molecular quantum mechanics#The Born-Oppenheimer approximation|Born-Oppenheimer approximation]], all the wave functions are _separable_:
+$$\Psi=\psi_\text{trans}\psi_\text{rot}\psi_\text{vib}\psi_\text{elec}\psi_\text{nuc, spin}$$
+- Discussion is restricted to _homonuclear diatomics_ and _symmetric, linear triatomics_
 
 ## Nuclear spin wave functions
+- A nucleus is characterised by a _nuclear spin quantum number $I$_, which can have _integer or half-integer_ values
+- The nuclear spin has a _component_ along some direction, characterised by quantum number $m_I$, which can take $(2I+1)$ values from $-I$ to $I$
+
+- From the [[Molecular quantum mechanics#Pauli Principle|Pauli Principle]], for molecules with _equivalent nuclei_, with respect to the operation of _swapping nuclei_, the _overall_ wave function must be _symmetric_ if the nuclei are _bosons_, and _antisymmetric_ if the nuclei are _fermions_
+
+- For a _homonuclear diatomic_, there are a total of $(2I+1)^2$ nuclear spin states
+	- $(I+1)(2I+1)$ are _symmetric_, including $(2I+1)$ where the nuclei have identical $m_I$
+	- $I(2I+1)$ are _antisymmetric_
 
 ## Swapping nuclei
+- The operation of _swapping labels of nuclei_ must also _keep all other labels and coordinates the same_
+- Hence, _multiple symmetry operations_ are required to do this:
+![[Nuclei swap.png]]
 
-## Ortho- and para-hydrogen
+- The _vibrational_ and _translational_ wave functions are _wholly unaffected_ by any of these operations
+	- For _diatomics_, the vibrational wave function is always _totally symmetric_
+- The _nuclear spin_ wave function is _only affected by_ $p_\text{nuc}$, which has the effect of _swapping labels in the spin wave function only_
+	- Depends on if the spin wave function is _symmetric_ or _antisymmetric_
+- The _rotational_ wave function is _only affected by_ $C_2$
+	- Since the _angular part_ is a _spherical harmonic_, it is _symmetric_ w.r.t. _even_ $J$, and being _antisymmetric_ w.r.t. _odd_ $J$
+- The _electronic_ wave function is affected by $i_\text{elec}$ and $\sigma_\text{v, elec}$
+	- The effect of $i_\text{elec}$ is dependent on the $g/u$ label in the [[Bonding in molecules#Molecular term symbols|molecular term symbol]]
+	- Similarly, the effect of $\sigma_\text{v, elec}$ is given by the $\pm$ label
 
-## Raman spectra
+## Spin $1/2$: Ortho- and para-hydrogen
+- _Hydrogen nuclei_ have a nuclear spin of $1/2$, making them _fermions_, so that the _overall_ wave function must be _anti-symmetric w.r.t. swapping nuclei_
+- This gives _one anti-symmetric_, and _three symmetric spin states_
+- It has a ground state molecular term symbol of $^1\Sigma_g^+$, making it _symmetric_ with respect to $i_\text{elec}$ and $\sigma_\text{v, elec}$
+- Hence, the only wave functions which are _antisymmetric w.r.t. swapping nuclei_ are:
+	- An _even_ $J$ with an _antisymmetric nuclear spin function_, known as _para-hydrogen_
+	- An _odd_ $J$ with a _symmetric nuclear spin function_, known as _ortho-hydrogen_
 
-## Zero spin
+- Typically, while hydrogen molecules can _change rotational energy levels_, the _nuclear spin state is unchangeable_ without breaking the $\text{H}-\text{H}$ bond
+- As they occpy _different energy levels_, they end up with _different physical properties_, such as internal energy and heat capacity
+- Therefore, ortho- and para-hydrogen are _separable_
+
+- By using a _paramagnetic catalyst_ that can break the $\text{H}-\text{H}$ bond, at _low temperatures_, one can make a sample of _pure para-hydrogen_, as it occupies the _lower energy_ $J=0$ state
+
+- The _populations_ of ortho- and para-hydrogen as a function of the values of $J$ are:
+$$\begin{aligned}N(\text{ortho, odd J})&\propto 3(2J+1)\exp\left(-\frac{BJ(J+1)}{kT}\right) \\ N(\text{para, even J})&\propto (2J+1)\exp\left(-\frac{BJ(J+1)}{kT}\right)\end{aligned}$$
+- A consequence of this is _peaks of alternating $3:1$ intensity in the Raman spectrum_, modulated by an _envelope_
+	- As $\Delta J=\pm2$ in Raman spectra, the _symmetry of the wave function does not change_
+- This behaviour can also be seen in $^{15}\text{N}$, which also has a spin of $1/2$
+- Comparing the Raman spectra of $^{14}\text{N}^{15}\text{N}$ and $^{15}\text{N}_2$:
+![[Nitrogen Raman spectra.png]]
+
+## Spin $1$: $^{14}\text{N}_2$
+- $^{14}\text{N}$ nuclei have a spin of 1
+- This gives $6$ _anti-symmetric_ and $3$ _symmetric spin states_
+- Since the nuclei are _bosons_, this means the _overall wave function is symmetric_
+- It also has an electronic ground term of $^1\Sigma_g^+$
+
+- Hence, _even_ $J$ accompany _symmetric nuclear spin states_, and _odd_ $J$ accompany _anti-symmetric nuclear spin states_
+
+- This gives an alternating $6:3:6:3$ intensity ratio in the Raman spectrum
+
+## Spin zero: $^{16}\text{O}_2$
+- In the case of $I=0$ (such as in $^{16}\text{O}$ and $^{12}\text{C}$), _there is no nuclear spin state_
+	- Therefore, the effect of $p_\text{nuc}$ is entirely _omitted_
+- Spin zero nuclei are always _bosons_
+
+- The term symbol for the electronic ground state is $^3\Sigma_g^-$
+	- Symmetric w.r.t. $i_\text{elec}$, anti-symmetric w.r.t. $\sigma_\text{v, elec}$
+- From the fact that the nuclei are bosons, _only states with odd $J$ are allowed to exist_
+- Hence, in the Raman spectrum, _only lines of odd $J$ are seen_
+
+## A more complex case: $^{12}\text{C}^{16}\text{O}_2$
+- Only the _oxygen nuclei are equivalent_ and should be considered when swapping
+- The term symbol for the electronic ground state is $^1\Sigma_g^+$
+- Hence, _only states with even $J$ are allowed to exist_ in the vibrational _ground state_
+
+- The _symmetric stretch_ is Raman active, and as the _vibrational_ wave function in this case is _symmetric_, lines of _even $J$_ are seen
+- The _antisymmetric stretch_ is IR active, and as the _vibrational_ wave function transitions from _symmetric to antisymmetric_ (and vice versa), $\Delta J=\pm1$ lines can be seen in the _rotational fine structure_
 
 ## Rotational partition function
+- When considering _homonuclear diatomics_, the _nuclear spin partition function_ is "intertwined" with the _rotational partition function_, therefore they are often _considered together_
+- For _heteronuclear diatomics_, they are _separable_:
+$$\begin{aligned}q_{NS}q_\text{rot}&=(2I_1+1)(2I_2+1)\left[\sum_J(2J+1)\exp\left( -\frac{BJ(J+1)}{kT}\right) \right] \\ &=(2I_1+1)(2I_2+1)\frac{T}{\theta_\text{rot}}\end{aligned}$$
+
+- For _homonuclear diatomics_, odd and even $J$ values have to be considered _separately_:
+$$\begin{aligned} q_{NS}q_\text{rot}&=g_{NS\text{, even}}\sum_\text{even J}(2J+1)\exp\left( -\frac{BJ(J+1)}{kT}\right) \\ &\hspace{0.4cm}+ g_{NS\text{, odd}}\sum_\text{odd J}(2J+1)\exp\left( -\frac{BJ(J+1)}{kT}\right) \end{aligned}$$
+- Here, $g_{NS}$ is the number of _spin states compatible with even or odd $J$_
+
+- In the _high temperature limit_ $T>>\theta_\text{rot}$, the two sums are _equal_ and equal to $T/(2\theta_\text{rot})$:
+$$q_{NS}q_\text{rot}=(g_{NS\text{, odd}}+g_{NS,\text{ even}})\frac{T}{2\theta_\text{rot}}$$
+
+- In most cases, $g_\text{NS}$ is _not considered_, as it _does not affect energy and entropy_, and _cancels out in equilibrium constants_
+- Hence, the _symmetry factor_ $\sigma$ is introduced in the rotational partition function to account for this:
+$$q_\text{rot}=\frac{T}{\sigma\theta_\text{rot}}$$
+- The symmetry factor is equal to _the number of equivalent nuclei_ in the molecule
+- The _more equivalent nuclei_, the _fewer rotational states_ are available to the molecule
 
 # Chemical equilibrium
 
