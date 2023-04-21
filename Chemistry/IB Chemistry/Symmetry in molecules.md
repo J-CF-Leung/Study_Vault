@@ -292,6 +292,8 @@ $$\bm{p}=\sum_i q_i\bm{r}_i$$
 - The dipole moment _cannot be affected by symmetry operations_
 - Hence, a molecule _only possesses a permanent dipole moment iff_ $x,y$ or $z$ _transform as the totally symmetric IR_
 
+- If a molecule has a permanent dipole moment, then its [[Molecular spectroscopy#Pure rotational spectra|pure rotational spectra]] can be recorded
+
 - If a molecule has a _centre of symmetry_, then since linear combinations of the coordinates are _anti-symmetric_, then it _cannot possess a permanent dipole moment_
 
 ## Chirality

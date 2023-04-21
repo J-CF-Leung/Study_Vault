@@ -1156,7 +1156,7 @@ $$\displaylines{\omega=\frac{ck}{\sqrt{1-\omega_p^2/\omega^2}} \\ \omega^2=c^2k^
 - Relevant relations:
 $$\displaylines{\bm{D}=\epsilon\epsilon_0\bm{E} \\ \bm{B}=\mu\mu_0\bm{H} \\ \bm{J}=\sigma\bm{E} \\ \nabla\wedge\bm{H}=\sigma\bm{E}+\epsilon\epsilon_0\pd{\bm{E}}{t}}$$
 - For solutions:
-$$\bm{E}=\bm{E}_0\exp(-i\omega t) \hspace{1.5cm}\bm{H}=\bm{H}_0\exp(i\omega t)$$
+$$\bm{E}=\bm{E}_0\exp(-i\omega t) \hspace{1.5cm}\bm{H}=\bm{H}_0\exp(-i\omega t)$$
 - From the equations above, there is an _effective dielectric constant_ $\epsilon'$:
 $$\nabla\wedge\bm{H}=-i\omega\epsilon'\epsilon_0\bm{E}\equiv-i\omega\left(1+\frac{i\sigma}{\omega\epsilon_0}\right)\bm{E}$$
 - For metals, _the imaginary part dominates_ for typical optical frequencies

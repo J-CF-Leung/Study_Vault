@@ -6,7 +6,7 @@
       {
         "id": "7720cfc61fde3e9c",
         "type": "tabs",
-        "dimension": 67.70833333333333,
+        "dimension": 68.00595238095238,
         "children": [
           {
             "id": "313b748dafdfd837",
@@ -14,7 +14,7 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_2.pdf"
+                "file": "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_1.pdf"
               }
             }
           },
@@ -108,7 +108,7 @@
       {
         "id": "a6c4709e929bd0bb",
         "type": "split",
-        "dimension": 32.291666666666664,
+        "dimension": 31.994047619047617,
         "children": [
           {
             "id": "3773db76a4512ef8",
@@ -316,14 +316,26 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "bdee2333112a0d60",
+  "active": "8445361aa556b81d",
   "lastOpenFiles": [
+    "Chemistry/IB Chemistry/Symmetry in molecules.md",
+    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+    "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
+    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+    "Physics/IB Physics/Optics.md",
+    "Physics/IB Physics/Electromagnetism.md",
+    "Physics/IB Physics/Orbits.md",
+    "Chemistry/Images/Ethene CH stretching modes.png",
+    "Chemistry/Images/Ethene CH stretches.png",
+    "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_1.pdf",
+    "Past Papers/IB Physics/2012-13_Part_IB_Physics_A_paper_1.pdf",
+    "Past Papers/IB Physics/2011-12_Part_IB_Physics_A_Paper_1.pdf",
+    "Past Papers/IB Physics/2011-12_Part_IB_Physics_A_Paper_2.pdf",
+    "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_2.pdf",
     "Chemistry/Images/H3+ vibrational modes.png",
     "Chemistry/Images/Water vibrational modes.png",
-    "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Chemistry/IB Chemistry/Bonding in molecules.md",
     "Chemistry/IB Chemistry/Chemical thermodynamics.md",
-    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
     "Chemistry/Images/Nitrogen Raman spectra.png",
     "Chemistry/Images/Nuclei swap.png",
     "Chemistry/Chemical potential and chemical reactions.md",
@@ -332,19 +344,10 @@
     "Pasted image 20230420150615.png",
     "Chemistry/IB Chemistry/Electrons in solids.md",
     "Chemistry/Images/Rotational energy.png",
-    "Pasted image 20230420140322.png",
-    "Chemistry/Images/Rotational heat capacity.png",
     "Physics/Thermal Physics/Statistical thermodynamics.md",
     "Physics/Thermal Physics/Classical Thermodynamics.md",
-    "Chemistry/Images/Water displacements.png",
-    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Chemistry/IB Chemistry/Vibrational normal modes in molecules.md",
-    "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_2.pdf",
-    "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
-    "Physics/IB Physics/Electromagnetism.md",
-    "Physics/IB Physics/Optics.md",
     "Physics/IB Physics/Waves.md",
-    "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_1.pdf",
     "Mathematics/IB Mathematical Methods/Sturm-Liouville Theory.md",
     "Mathematics/IB Mathematical Methods/Calculus of variations.md",
     "Mathematics/IB Mathematical Methods/Contour integration.md",
@@ -359,10 +362,7 @@
     "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_1.pdf",
     "Past Papers/IB Physics/2011-12_Part_IB_Physics_B_Paper_2.pdf",
     "Physics/IB Physics/Elasticity.md",
-    "Past Papers/IB Physics/2012-13_Part_IB_Physics_A_paper_2.pdf",
     "Physics/IB Physics/Fluid mechanics.md",
-    "Past Papers/IB Chemistry A/IB_A_2013.pdf",
-    "Past Papers/IB Chemistry A/IB_A_2012.pdf",
     "!Beam bending reciprocity.png.md",
     "Misc or Personal/What to do.canvas"
   ]

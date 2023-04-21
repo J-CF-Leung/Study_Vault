@@ -15,10 +15,7 @@
 $$\displaylines{\Delta E_\text{tot}=\Delta E_\text{elec}+\Delta E_\text{vib}+\Delta E_\text{rot} \\ \Delta E_\text{elec}>>\Delta E_\text{vib} >> \Delta E_\text{rot}}$$
 ![[Energy level spacings.png]]
 
-- Not all transitions between energy levels are allowed: see [[Molecular quantum mechanics#Spectroscopic principles]]
 
-- Vibrational transitions are _always accompanied by_ rotational transitions
-- Similarly, electronic transitions are _always accompanied by_ vibrational and rotational transitions
 - Corresponding sections of the EM spectrum for transitions:
 ![[Wavelengths for transitions.png]]
 
@@ -37,7 +34,16 @@ $$\displaylines{\Delta E_\text{tot}=\Delta E_\text{elec}+\Delta E_\text{vib}+\De
 
 - All of these require an _oscillating dipole_ with a _frequency corresponding to the interacting photon_
 - This leads to the _gross selection rules_ for each type of spectroscopy, specifying _what molecules_ can generate that type of spectrum
-- Then, there are _specific selection rules_ detailing _which transitions_ are allowed
+
+- The _intensity_ of a transition depends on the _rate_ at which the transition occurs
+- Given the _initial and final_ wave functions $\psi_i$ and $\psi_f$, the rate is given by _Fermi's Golden Rule_:$$B_{i\to f}\propto |\braket{\psi_f|\hat{\Ham'}|\psi_i}|$$
+- Here, $\hat{\Ham}'$ is the operator for the _perturbation_ by the electric field of the photon
+	- For IR, it is the _dipole operator_ $\hat{\mu}$
+	- For Raman spectroscopy, it is the _polarisability operator_ $\hat{\alpha}$
+- This gives rise to the _specific selection rules_, as some combinations of $\psi_i$ and $\psi_f$ will give rise to a rate of _zero_, which means the transition is _forbidden_
+
+- Vibrational transitions are _always accompanied by_ rotational transitions
+- Similarly, electronic transitions are _always accompanied by_ vibrational and rotational transitions
 
 ## Pure rotational spectra
 - A _pure_ rotational spectrum is one generated only from microwave radiation 
@@ -226,6 +232,7 @@ $$\nu_\text{max}=\frac{1}{2\chi_e}-\frac{1}{2}$$
 - The population distribution _still follows the Boltzmann distribution_
 - For typical molecules, $(E-E_0)>>kT$, hence _only the ground state is significantly populated at room temperature_
 
+## Transitions in an anharmonic oscillator
 - The _specific selection rule is less restrictive_
 - _All transitions are allowed_, as the asymmetric potential means the transition dipole moment, given by the Golden Rule, is _not completely cancelled out_
 ![[Morse transitions.png]]
@@ -382,12 +389,94 @@ $$A_1\oplus E'$$
 - This corresponds to a _symmetric stretch_ and two _degenerate bends_:
 ![[H3+ vibrational modes.png|350]]
 
+- Each mode $i$ can be described by some _generalised coordinate_ $Q_i$ which is some _linear combination of atomic displacements_, and hence _transforms like the mode_
+
 ### Using X-H stretches
+- Due to the _low mass_ of the hydrogen atom, many normal modes are _dominated_ by $\text{X}-\text{H}$ _stretching motions_
+- Therefore, one can often consider a _subset_ of the molecule's vibrations, with a _basis only consisting of $\text{X}-\text{H}$ stretches_:
+![[Ethene CH stretches.png|200]]
+- Example: In ethene, the collection of 4 stretches transforms as $A_{1g}\oplus B_{2g}\oplus B_{2u}\oplus B_{3u}$
+- Hence, the four _stretching modes_ found are:
+![[Ethene CH stretching modes.png]]
 
+- If the "centre of mass" of the _hydrogen_ atoms move, then the _heavier atoms_ will also need to move, by a lesser amount
 
-## Symmetry-allowed transitions
+## Vibrational wave functions
+- Overall, for _each normal mode_, they have an _independent wave function_, modelled by a [[Molecular quantum mechanics#Nuclei: The quantum harmonic oscillator|harmonic oscillator]], with _generalised coordinate_ $Q_i$:
+$$\displaylines{\psi_\text{vib}=\prod_\text{modes}\psi_i(Q_i) \\ \psi_i(Q_i)\propto H_{\nu_i}(Q_i)\exp\left(-\frac{1}{2}Q_i^2\right)}$$
+- Each of the modes have their _own energy levels_:
+$$E=\sum_\text{modes}\left(\nu_i+\frac{1}{2}\right)\hbar\omega_i$$
+- The factors $\exp(-Q_i^2/2)$ transforms like the _totally symmetric IR_
+- Hence, the _vibrational_ wavefunction transforms like a _direct product_ of the polynomials $H_{\nu}$
 
-### Rule of mutual exclusion
+- If $\nu_i$ is _even_, then $H_{\nu_i}(Q_i)$ transforms like the _totally symmetric IR_
+- If $\nu_i$ is _odd_, then $H_{\nu_i}(Q_i)$ transforms like $Q_i$, and hence _like the normal mode_ $i$
+
+- Hence, for _non-degenerate normal modes_
+	- For _even_ $\nu_i$, including the _ground state_, the wave function is _totally symmetric_
+	- For _odd_ $\nu_i$, including the _first excited state_, the wave function _transforms like the normal mode_
+
+- For a _degenerate_ normal mode, one needs to take the _direct product of the multi-dimensional IR_ (e.g. $E\otimes E$)
+
+- Then, for the _overall symmetry_ of $\psi_\text{vib}$, one takes a _direct product_ of the representations for the individual modes
+	- If _none_ of the normal modes are excited, then it is _totally symmetric_
+	- If _one_ of the modes is excited by _one level_, then $\psi_\text{vib}$ transforms like that mode
+
+## Symmetry-allowed transitions in IR
+- From [[#Origin of spectra|Fermi's Golden Rule]], the _intensity_ of a transition in IR depends on:
+$$B_{i\to f}\propto|\braket{\psi_{\nu_i'}|\hat{\mu}|\psi_{\nu_i}}|^2=\left|\int\psi_{\nu_i'}^* \hat{\mu}\psi_{\nu_i}\,dQ_i\right|^2$$
+- $\hat{\mu}$ is the _dipole operator_, which transforms as some _linear combination of_ $x,y,z$ 
+
+- Due to the nature of the harmonic oscillator, this rate is only _non-zero if_:
+$$\Delta\nu_i=\pm1$$
+- Typically, one checks the _fundamental transitions_, where $\nu=0\to1$, since the _ground state has the highest population_
+
+- Aside from this, the mode _must involve some change in dipole_, which depends on the _symmetry of the mode_
+- Overall, the intensity for normal mode $i$ transforms as:
+$$\Gamma_{\nu_i'}^{(i)}\otimes \Gamma_\hat{\mu}\otimes \Gamma_{\nu_i}^{(i)}$$
+- The transition is _non-zero iff this transforms as only the totally symmetric IR_
+
+- If $\Delta\nu=\pm1$, then _one of the wave functions is even_, and is totally symmetric
+- Hence, the _transition is allowed if the normal mode transforms as $x,y,z$_
+- Even then, the transition can have _low intensity_
+	- Example: The level is _high_, and the population is low
+
+- If $\Delta\nu\neq\pm1$, even if the transition is _symmetry-allowed_, the integral still _evaluates to zero_, and will not be detected
+
+- Since the potential is technially _anharmonic_, _overtones_ with $\Delta\nu>1$ are possible, but with _low intensity_
+
+## Symmetry-allowed transitions in Raman spectroscopy
+- In Raman spectroscopy, the intensity is given by:
+$$B_{i\to f}\propto |\braket{\psi_{\nu_i'}|\hat{\alpha}|\psi_{\nu_i}}|^2$$
+- $\hat{\alpha}$ is the _polarisability operator_, which transforms as a _quadratic combination_ of $x,y,z$
+	- e.g. $x^2$, $xy$, $yz$
+- Therefore, the _fundamental transition_ is allowed if _the normal mode transforms as a quadratic combination of coordinates_
+
+## Features, coincidences and combination lines
+- Each mode that is _active_ in the fundamental transition gives rise to a _feature_ in either the IR or Raman spectrum
+- Modes that have the _same symmetry_ will _not necessarily have the same frequency_
+
+- If a mode is _degenerate_, this only gives rise to _one feature_
+
+- If a mode is _active in both IR and Raman_, this is termed a _coincidence_
+
+- Sometimes, _combination lines_ can occur where more than one $\nu_i$ change
+	- Example: $(0,0,0)\to(1,0,1)$ in $\text{H}_2\text{O}$
+- In this case, consider the _symmetries of the inital and final wavefunctions_
+- Then, take the _direct product with the operator_, to determine if it is symmetry allowed:
+$$\left(\Gamma_{\nu_1'}^{(1)}\otimes\Gamma_{\nu_2'}^{(2)}\otimes\dots\right)\otimes\Gamma_{\hat{\mu}}\otimes\left(\Gamma_{\nu_1}^{(1)}\otimes\Gamma_{\nu_2}^{(2)}\otimes\dots\right)$$
+
+## The rule of mutual exclusion
+- If a molecule has a _centre of inversion_, then all representations are labelled with $g$ or $u$
+	- $g$: _symmetric_ w.r.t. inversion
+	- $u$: _anti-symmetric_ w.r.t. inversion
+
+- A _linear combination_ of coordinates $x,y,z$ will always be _anti-symmetric_
+- A _quadratic combination_ of $x,y,z$ will always be _symmetric_
+
+- If a normal mode transforms as $x,y,z$, then it _cannot transform as a quadratic combination_
+
+- This gives rise to the rule of mutual exclusion, where _coincidences cannot occur if the molecule has a centre of inversion_
 
 ## Perpendicular and parallel vibrations
 - Previously, the selection rules for a rigid rotor were $\Delta\nu=\pm1,\pm2,\dots$ and $\Delta J=\pm1$

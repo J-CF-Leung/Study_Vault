@@ -365,6 +365,7 @@ $$\braket{I}\propto\frac{1}{2}\braket{a_1^2}+\frac{1}{2}\braket{a_2^2} +\braket{
 - With $\omega_1=\omega_2$, the intensity _averaged over response time_ is:
 $$\mean{I}=\frac{1}{2}\mean{a_1^2}+\frac{1}{2}\mean{a_2^2}+\mean{a_1a_2\Re{\left[e^{i\delta}\right]}}$$
 - Here, $\delta=(\phi_1-\phi_2)=kx$ is the _phase difference_ between the two beams, where $x$ is the _path difference_
+	- The path difference is _twice_ the difference in the distances of the two mirrors
 - If the beams have equal intensities $I=I_0/2$:
 $$I(x)=I_0\left(1+\Re\left[e^{ikx}\right]\right)$$
 - $x$ is a _function of positions of the mirrors and beamsplitter_
