@@ -141,24 +141,6 @@ $$\theta=f(p,V)$$
 
 - For systems more complex than fluids (e.g. solids), _more variables_ will be needed to write the equation of state
 
-## The ideal gas equation of state
-- A series of observations on the _ideal gas_:
-	- _Boyles' Law_ states that at _constant temperature_, $pV$ is a _constant_
-	- _Charles' Law_ states that at _constant pressure_, $V/T$ is a _constant_
-- This leads to a _reference-independent, absolute temperature scale_, where temperature is commonly labelled $T$
-- At _zero temperature_, $pV=0$
-
-- _Avogadro's Law_ then states that for _equal volumes_ of gas at _the same pressure and temperature_ must contain _equal numbers of molecules_
-
-- Combining the previous gas laws, one gets the _ideal gas law_:
-$$pV=nRT=NkT$$
-	- $n$, $N$: Number of molecules (in moles or pure number)
-	- $R$, $k$: _universal_ constants
-
-- This is the _equation of state_ for an ideal gas
-
-- Historical note: an actual absolute/thermodynamic temperature scale first came from [[#Carnot efficiency and thermodynamic temperature|consideration of the Carnot engine]]
-
 # The first law, internal energy, and heat
 - The _molecular origin_ of internal energy will be ignored in a phenomenological study
 	- In an _ideal gas_, it would be the _kinetic energy_ of the molecules
@@ -198,7 +180,7 @@ $$U=U(P,V)\hspace{0.2cm}\text{ or }\hspace{0.2cm} U=U(P,T)\hspace{0.2cm} \text{ 
 $$dU=\dbar Q+\dbar W$$
 - The symbol $\dbar$ indicates that $Q$ and $W$ are _path-dependent_, instead of state dependent
 
-## Heat and temperature
+## Heat, temperature, and heat capacities
 - If two bodies with _different temperatures_ are placed in _thermal contact_:
 	- Their _individual energies_ will change without any work done
 	- The _heat supplied_ by one body is equal to the _heat gained_ by the other
@@ -244,6 +226,19 @@ $$\dbar W=-p\,dV$$
 - For a _finite process_, the _total work done on the gas_ can be written as:
 $$W=-\int p\,dV$$
 - This integral is _still path-dependent_, as _depending on the nature of the surroundings_, other state variables such as $T$ can still change
+
+### First law, energy, and heat capacities for gases
+- In the case of a _quasistatic change_, the [[#The first law, internal energy, and heat|first law]] can be rewritten as:
+$$\dbar Q=dU+p\,dV$$
+- For gases, the energy is a function of _volume_ and _temperature_:
+$$\displaylines{U=U(T,V) \\ dU=\left(\pd{U}{T}\right)_V\,dT+\left(\pd{U}{V}\right)_T\,dV}$$
+
+- This allows the [[#Heat, temperature, and heat capacities|heat capacity]] at _constant volume_ to be written as:
+$$C_V=\left(\pd{Q}{T}\right)_V=\left(\pd{U}{T}\right)_V$$
+- Similarly, the heat capacity at _constant pressure_ becomes:
+$$C_p=\left(\pd{Q}{T}\right)_p=\left(\pd{U}{T}\right)_V+\left[\left(\pd{U}{V}\right)_T+p\right] \left(\pd{V}{T}\right)_p$$
+- Their _difference_ is:
+$$C_p-C_V=\left[\left(\pd{U}{V}\right)_T+p\right] \left(\pd{V}{T}\right)_p$$
 
 ## Cyclic processes
 - Due to this path dependence, one can do a _cyclic process_, and _convert work done on the gas into heat_, which is then _extracted from the gas_:
@@ -370,7 +365,7 @@ $$\displaylines{f(\theta_1,\theta_3)=f(\theta_1,\theta_2)f(\theta_2,\theta_3)}$$
 - From this, _define_ $T$ such that:
 $$\eta_\text{Carnot}=1-\frac{T_l}{T_h}$$
 - This _defines_ the thermodynamic temperature scale
-- From [[#Ideal gases|computing efficiency for ideal gases]], it can be shown that _this is the same temperature as the_ [[#The ideal gas equation of state|ideal gas scale]]
+- From [[#Ideal gases|computing efficiency for ideal gases]], it can be shown that _this is the same temperature as the_ [[#Ideal gases|ideal gas temperature scale]]
 
 ## Clausius' inequality and entropy
 - From the definition above, for a Carnot cycle:
@@ -579,8 +574,9 @@ $$dS=\frac{dU}{T}+\frac{p}{T}\,dV-\frac{\mu}{T}\,dN$$
 
 ### Multiple types of particles
 - If there are _many types of particles_, each with number $N_i$, then the Master Equations must be rewritten as:
-$$\displaylines{dU=T\,dS-p\,dV+\sum_i \mu_i\,dN_i \\ dH=T\,dS+p\,dV+\sum_i \mu_i\,dN_i \\ \vdots}$$
+$$\displaylines{dU=T\,dS-p\,dV+\sum_i \mu_i\,dN_i \\ dH=T\,dS+p\,dV+\sum_i \mu_i\,dN_i \\ dF=-S\,dT-p\,dV+\sum_i \mu_i\,dN_i \\ dG=V\,dp-S\,dT+\sum_i \mu_i\,dN_i}$$
 - Each type of particle has _its own chemical potential_
+- This is required when considering [[Chemical thermodynamics#Chemical equilibrium|chemical equilibrium]]
 
 # Interpreting thermodynamic functions
 - Aside from _mathematical convenience_, each thermodynamic function has some _physical meaning_
@@ -638,12 +634,125 @@ $$\displaylines{dH=C_p\,dT \\ \Delta H=\int_{T_1}^{T_2}C_p\,dT}$$
 	- The maximum amount of _work_ that can be _extracted_ from the system
 	- The quantity to _extremise_ in order to _maximise entropy of the universe_
 
+- Consider a system, in contact with infinitely large _surroundings_, at _fixed_ temperature $T_0$ and pressure $p_0$: ![[System with surroundings.png|300]]
+- The system is _free to exchange heat with and do work on_ the surroundings
+
+- If heat $\dbar Q$ _enters_ the system, then the entropy change _of the system_ $dS\geq \dbar Q/T_0$ 
+- The first law is then:
+$$\dbar Q=dU-(\dbar W-p_0\,dV)$$
+- $\dbar W$ is _work done on the system_, specifically _excluding the surroundings_
+- Hence:
+$$\dbar W\geq dU+p_0\,dV-T_0\,dS$$
+- Define the _availability_ of the system as:
+$$A=U+p_0V-T_0S$$
+- Hence, _work done on the system can increase its availability_:
+$$\dbar W\geq dA$$
+- If the process is _reversible_, then $\dbar W=dA$
+- In other words, $dA$ is the _maximum amount of work that can be done by the system_
+
+- $dA$ can also be written as:
+$$dA=(T-T_0)\,dS-(p-p_0)\,dV$$
+- If the system is at _the same condition as the surroundings_, then it can _do no work_
+
+- If a system _cannot do work on its surroundings_:
+$$dA\leq0$$
+- This means the system will _tend towards an equilibrium where $A$ is minimum_
+
+- For an _isolated_ system with _fixed volume_, $dS\geq0$ 
+- For a system with _constant volume_, fixed at $T_0$, $F$ must be _minimised_
+- For a system at _constant pressure_, fixed at $T_0$, $G$ must be _minimised_
 
 ## Scaling the system
+- Let there be a system with _one type of particle_
+- Then, consider _scaling the system_, causing all _extensive_ variables to _increase_, while _keeping intensive variables constant_:
+$$dU=TdS-pdV+\mu dN$$
+- One can come to the conclusion that:
+$$U=TS-pV+\mu N$$
+- Or, by rearranging terms:
+$$G=\mu N$$
+- Hence, the _chemical potential_ $\mu$ can be considered _Gibbs Energy per particle_
 
 # Thermodynamic systems
+- The above discussion is _general_, applying to _all systems_
+- However, they can be _applied in specific scenarios_, given an _equation of state_ which connects all state variables
 
 ## Ideal gases
+- An ideal gas assumes _no molecular interactions_, and _no molecular size_
+
+### Equation of state
+- A series of observations on the _ideal gas_:
+	- _Boyles' Law_ states that at _constant temperature_, $pV$ is a _constant_
+	- _Charles' Law_ states that at _constant pressure_, $V/T$ is a _constant_
+- This leads to a _reference-independent, absolute temperature scale_, where temperature is commonly labelled $T$
+	- This coincides with the absolute temperature scale from consideration of [[#The Carnot engine]]
+- At _zero temperature_, $pV=0$
+
+- _Avogadro's Law_ then states that for _equal volumes_ of gas at _the same pressure and temperature_ must contain _equal numbers of molecules_
+
+- Combining the previous gas laws, one gets the _ideal gas law_:
+$$pV=nRT=NkT$$
+	- $n$, $N$: Number of molecules (in moles or pure number)
+	- $R$, $k$: _universal_ constants
+
+- This is the _equation of state_ for an ideal gas
+
+### Internal energy from kinetic theory
+- The expression for internal energy relies on _kinetic theory_
+- By considering the movement of $N$ particles in a _cuboid_ box:
+$$p=\frac{Nm}{V}\mean{v_x^2}=\frac{1}{3}\frac{Nm}{V}\mean{v^2}$$
+- Hence:
+$$U=\frac{1}{2}Nm\mean{v^2}=\frac{3}{2}NkT$$
+- The energy is _completely temperature-dependent_
+
+### Heat capacities
+- Recall the expressions for [[#First law, energy, and heat capacities for gases|heat capacities of a gas]] $$\displaylines{C_V=\left(\pd{U}{T}\right)_V \\ C_p=\left(\pd{U}{T}\right)_V+\left[\left(\pd{U}{V}\right)_T+p\right] \left(\pd{V}{T}\right)_p}$$
+- Since $U=U(T)$, using the _ideal gas equation of state_:
+$$\left(\pd{U}{V}\right)_T=0 \hspace{1cm} p\left(\pd{V}{T}\right)_p=Nk$$
+- Hence, the _heat capacities for one mole of gas_ are:
+$$\displaylines{C_V=\frac{3}{2}R \hspace{1cm} C_p=\frac{5}{2}R \\ C_p-C_V=R \hspace{1cm} \gamma=\frac{C_p}{C_V}=\frac{5}{3}}$$
+- Using the _adiabatic ratio_ $\gamma$, $C_p$ and $C_V$ can be rewritten as:
+$$C_V=\frac{1}{\gamma-1}R\hspace{1cm} C_p=\frac{\gamma}{\gamma-1}R$$
+
+### Entropy
+- Using the expression for an _infinitesimal change_ in entropy, for $n$ _moles_ of gas:
+$$dS=\frac{\dbar Q_\text{rev}}{T}=\frac{dU}{T}+\frac{p}{T}\,dV=\frac{nC_V}{T}\,dT+\frac{nR}{V}\,dV$$
+- Then using the ideal gas equation of state and _integrating along any path_:
+$$S=nC_V\ln T+nR\ln V+S_0(n)$$
+- $S_0(n)$ is an _integration constant_ dependent on $n$, which has to be derived from [[Statistical thermodynamics|statistical mechanics]]
+- Since $n\ln V$ is not extensive, $S_0(n)$ has to be manipulated to _make entropy extensive_:
+$$S(n)=nC_V\ln T+nR\ln\frac{V}{n}+nS_0'$$
+- The _first term_ accounts for the effects of _heat input_
+- The _second term_ accounts for the effects of _particle configuration_ in the container
+
+### Isothermal and Joule expansion
+- If a gas expands _isothermally_, then there is _no change in internal energy_:
+$$\Delta U=\Delta Q+\Delta W=0$$
+- As the gas must do _work_ to its surroundings, it has to _absorb heat_ in order to do so
+- If the expansion is done _reversibly_ (i.e. with a piston that can _match the gas pressure_), then the heat absorbed is:
+$$\Delta Q=-\Delta W=\int_{V_1}^{V_2} p\,dV=\int_{V_1}^{V_2}\frac{nRT}{V}\,dV=nRT\ln\frac{V_2}{V_1}$$
+- The _entropy change_ associated with the process is:
+$$\Delta S=nR\ln(V_2/V_1)$$
+- This agrees with the expression given [[#Entropy|above]]
+- This _reversible change_ results in _no change in entropy of the universe_, as the _reservoir_ used to maintain temperature will _lose heat_
+
+- If instead, the gas were to expand _suddenly_, in a _thermally isolated_ container previously filled with _vacuum_:
+$$\Delta U=\Delta Q=\Delta W=0$$
+- This is termed _Joule expansion_
+- However, since entropy is a _state function_, the entropy change is _still_ given by the expression above
+- In this case, there is an _entropy gain for the universe_
+
+### Adiabatic expansion
+- If the gas is _thermally isolated_, any _work done_ by it costs its internal energy:
+$$dU=\dbar W$$
+- If done _reversibly_:
+$$C_V\,dT=p\,dV$$
+- By integrating appropriately, one can get:
+$$pV^\gamma=\text{const.}$$
+- By using the ideal gas equation of state, one can also get:
+$$TV^{\gamma-1}=\text{const.}$$
+- This expression can also be obtained from the fact that the [[#Entropy|entropy of the ideal gas]] remains _constant_
+
+### Mixing and the Gibbs Paradox
 
 ## Engines
 
@@ -651,7 +760,7 @@ $$\displaylines{dH=C_p\,dT \\ \Delta H=\int_{T_1}^{T_2}C_p\,dT}$$
 
 ## Non-gaseous systems
 
-# Variational principles
+# The third law and absolute zero
 
 # Phase equilibrium and transitions
 

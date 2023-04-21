@@ -24,19 +24,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Thermal Physics/Statistical thermodynamics.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8445361aa556b81d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
                 "mode": "source",
                 "source": false
               }
@@ -72,7 +60,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Contour integration.md",
+                "file": "Mathematics/IB Mathematical Methods/Transform methods.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +91,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -120,7 +108,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md"
+                    "file": "Physics/Thermal Physics/Classical Thermodynamics.md"
                   }
                 }
               }
@@ -136,7 +124,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+                    "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -159,7 +147,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.11957016218834093,
+                      "scale": 0.6145008544833601,
                       "close": true
                     }
                   }
@@ -246,7 +234,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -263,7 +251,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -286,7 +274,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/IB Chemistry/Molecular spectroscopy.md"
+                "file": "Physics/Thermal Physics/Classical Thermodynamics.md"
               }
             }
           },
@@ -316,11 +304,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "8445361aa556b81d",
+  "active": "ccd70014f316fc28",
   "lastOpenFiles": [
-    "Chemistry/IB Chemistry/Symmetry in molecules.md",
-    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
     "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
+    "Physics/IB Physics/Oscillations.md",
+    "Physics/Thermal Physics/Classical Thermodynamics.md",
+    "Physics/Images/System with surroundings.png",
+    "Mathematics/IB Mathematical Methods/Transform methods.md",
+    "Mathematics/IB Mathematical Methods/Contour integration.md",
+    "Physics/Thermal Physics/Statistical thermodynamics.md",
+    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+    "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Physics/IB Physics/Optics.md",
     "Physics/IB Physics/Electromagnetism.md",
@@ -343,15 +337,10 @@
     "Chemistry/Images/Residual entropy.png",
     "Pasted image 20230420150615.png",
     "Chemistry/IB Chemistry/Electrons in solids.md",
-    "Chemistry/Images/Rotational energy.png",
-    "Physics/Thermal Physics/Statistical thermodynamics.md",
-    "Physics/Thermal Physics/Classical Thermodynamics.md",
     "Chemistry/IB Chemistry/Vibrational normal modes in molecules.md",
     "Physics/IB Physics/Waves.md",
     "Mathematics/IB Mathematical Methods/Sturm-Liouville Theory.md",
     "Mathematics/IB Mathematical Methods/Calculus of variations.md",
-    "Mathematics/IB Mathematical Methods/Contour integration.md",
-    "Mathematics/IB Mathematical Methods/Transform methods.md",
     "Physics/IB Physics/Experimental methods and data analysis.md",
     "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
     "Physics/Quantum Mechanics/1D time-independent Hamiltonians.md",
@@ -363,7 +352,6 @@
     "Past Papers/IB Physics/2011-12_Part_IB_Physics_B_Paper_2.pdf",
     "Physics/IB Physics/Elasticity.md",
     "Physics/IB Physics/Fluid mechanics.md",
-    "!Beam bending reciprocity.png.md",
     "Misc or Personal/What to do.canvas"
   ]
 }

@@ -242,3 +242,5 @@ $$\displaylines{\sqrt{z^2-1}=\sqrt{z-1}\sqrt{z+1} \\ \sqrt{z-1}=\sqrt{r_1}\exp(i
 	- Technically _one branch cut_ that passes through the _point at infinity_
 
 - In general, _multiple branch cuts may sometimes be necessary_
+
+## Integration around a branch cut
