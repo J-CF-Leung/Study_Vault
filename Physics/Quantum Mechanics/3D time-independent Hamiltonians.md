@@ -51,6 +51,9 @@ $$P(r)\,dr=|u|^2\,dr=|R|^2r^2\,dr$$
 - This gives the _probability of finding the particle in a spherical shell_ between $r$ and $r+dr$
 - Therefore, $|u|^2$ is known as the _radial distribution function_
 
+## The rigid rotor
+- One of the simplest 
+
 ## The infinite cubical well
 
 ## The infinite spherical well
