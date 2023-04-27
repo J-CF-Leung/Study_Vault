@@ -63,6 +63,9 @@ $$\displaylines{\hat{L}_+\ket{\lambda\mu_t}=\ket{0} \hspace{1cm} \hat{L}_z\ket{\
 $$\displaylines{\hat{L}^2\ket{lm_l}=\hbar^2l(l+1)\ket{lm_l} \hspace{1cm}\hat{L}_z\ket{lm_l}=\hbar m_l\ket{lm_l} \\ l=0, 1, 2,\dots \hspace{1cm} m_l=-l,-l+1,\dots,l-1,l}$$
 - There are $2l+1$ values of $m_l$, which always results in an _odd number_ since $l$ is an integer
 
+- $m_l$ is known as the _magnetic angular momentum quantum number_
+- $l$ is known as the _orbital angular momentum quantum number_
+
 - A _measurement of magnitude_ will yield:
 $$|\bm{L}|=\hbar\sqrt{l(l+1)}$$
 - After deriving these results, one can also find the effect of the _ladder operators_:

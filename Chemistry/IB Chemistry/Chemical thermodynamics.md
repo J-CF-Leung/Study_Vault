@@ -591,15 +591,108 @@ $$q_\text{rot}=\frac{T}{\sigma\theta_\text{rot}}$$
 - The symmetry factor is equal to _the number of equivalent nuclei_ in the molecule
 - The _more equivalent nuclei_, the _fewer rotational states_ are available to the molecule
 
-# Chemical equilibrium
+# Reactions and equilibrium
+- Consider the reaction below:
+$$\ce{\nu_AA + \nu_BB<=> \nu_MM + \nu_NN}$$
+- Starting from a mixture of $A$ and $B$, the reaction will _proceed until equilibrium is reached_, with some _mixture_ of $A$, $B$, $M$, and $N$
+- Equilibrium is reached at constant pressure when _Gibbs Free Energy is at a minimum_
+	- [[Classical Thermodynamics#Availability and variational principles|Why]]
+
+- Assume each component is _non-interacting_, hence the Gibbs Free Energy is _additive_
 
 ## Chemical potential and equilibrium
+- Given a _mixture_ of components, each with number of moles $n_i$, the _Gibbs Free Energy_ of the whole mixture is:$$G=\sum_i \mu_in_i \hspace{1cm} dG=\sum_i \mu_i\,dn_i$$
+	- $\mu_i$ is the _chemical potential_ of the component
+	 - Gibbs Free Energy is _additive_, and $G=\mu n$ for one component
+		- [[Classical Thermodynamics#Scaling the system|Derivation]]
+
+- The chemical potential can also be defined using the _Helmholtz Free Energy_:
+$$\mu_i=\left(\pd{A}{N_i}\right)_{V,T,n_j}$$
+- All components in the mixture have _different ground state energies_
+- When considering a reaction, one must use a _common origin for all components_
+	- Hence, the equilibrium depends on the _energy difference_
+
+- A ground state energy $\varepsilon^{0,i}$ gives an _additive constant_ $N_i\varepsilon^{0,i}$ to $A$
+
+- As the _particles for each component are indistinguishable_, the chemical potential _per particle_ is:
+$$\begin{aligned} \mu_i&=\pd{}{N_i}\left[-N_ikT\ln q_i+kT(N_i\ln N_i-N_i)+N_i\varepsilon^{0,i}\right] \\ &= -kT\ln\frac{q_i}{N_i}+\varepsilon^{0,i}\end{aligned}$$
+
+### Changes in chemical potential and solution activity
+- Modelling species $i$ as an _ideal gas_, at _constant $T$ and $N_i$_, the _change in $G$_ due to a change in its _partial pressure_ $p_i$ is:
+$$\Delta G=\int V\,dp=nRT\ln\frac{p_{i,2}}{p_{i,1}}$$
+- By setting $p_{i,1}$ as the _standard pressure_ $p^⦵=1\,\text{bar}$ , with a corresponding $G^0$, and dividing by $n$, the _change in chemical potential per mole_ can be written as:
+$$\mu_i=\mu^⦵_i+RT\ln\frac{p_i}{p^⦵}$$
+
+- This formula can also be applied to _solutions_, defining the quantity known as _activity_ $a_i$:
+$$\mu_i=\mu^⦵_i+RT\ln a_i$$
+- For _low concentrations_, the activity can be approximated as _concentration relative to a standard_ $c^⦵=1 \,\text{mol dm}^{-3}$:
+$$a_i\approx\frac{c_i}{c^⦵}$$
+
+## The reaction
+- Suppose there is an _arbitrary mixture_, which is _not at equilibrium_
+- Let the reaction proceed by some _amount_ $dz$, with $n_A$ _decreasing_ by $\nu_A\,dz$, similarly for other species
+- Hence, the _rate of change of Gibbs energy_ is:
+$$\frac{dG}{dz}=+\nu_M\mu_M+\nu_N\mu_N-\nu_A\mu_A-\nu_B\mu_B$$
+- At _equilibrium_, Gibbs energy is at a _minimum_, and $dG/dz=0$:
+$$\nu_M\mu_M^\text{eq}+\nu_N\mu_N^\text{eq}=\nu_A\mu_A^\text{eq}+\nu_B\mu_B^\text{eq}$$
+- All of the chemical potentials are at their _equilibrium values_
+
+- Comparing _two different points of the reaction_ by integrating over $dz$:
+$$\Delta_rG=+\nu_M\Delta\mu_M+\nu_N\Delta\mu_N-\nu_A\Delta\mu_A-\nu_B\Delta\mu_B$$
+
+### Change in Gibbs Free Energy
+- By using the formula for chemical potentials in terms of $p$ or $a\approx c/c^⦵$:
+$$\displaylines{\Delta_rG=\Delta_rG^⦵+RT\ln Q \\ \Delta_rG^⦵=\nu_M\mu_M^⦵+\nu_N\mu_N^⦵-\nu_A\mu_A^⦵-\nu_B\mu_B^⦵ \\ Q=\frac{p_M^{\nu_M}p_N^{\nu_N}}{p_A^{\nu_A}p_B^{\nu_B}}\left(\frac{1}{p^⦵}\right)^{\Delta\nu} \text{ or } \frac{c_M^{\nu_M}c_N^{\nu_N}}{c_A^{\nu_A}c_B^{\nu_B}} \left(\frac{1}{c^⦵}\right)^{\Delta\nu}}$$
+- The quantity in the natural logarithm is the _reaction quotient_, $Q$
+- $\Delta\nu$ is defined as:
+$$\Delta\nu\equiv\nu_M+\nu_N-\nu_A-\nu_B$$
+
+- As long as $\Delta_rG<0$, the reaction will _proceed forwards_ in order to _minimise_ $G$
 
 ## Equilibrium constants
+- Given the _concentrations_ of each species at _equilibrium_, the _equilibrium constant_ is a _dimensionless quantity_, which gives an _indication_ of the equilibrium position
 
-### In terms of concentration
+- In _equilibrium_, $\Delta_rG=0$, so there is _no driving force_ for the reaction:
+$$\Delta_rG^⦵=-RT\ln K$$
+- $K$, which is the _reaction quotient at equilibrium_, is defined as the _equilibrium constant_
+- It can be written as $K_c$ or $K_p$:
+$$K_p=\frac{p_M^{\nu_M}p_N^{\nu_N}}{p_A^{\nu_A}p_B^{\nu_B}}\left(\frac{1}{p^⦵}\right)^{\Delta\nu} \hspace{1cm} K_c=\frac{c_M^{\nu_M}c_N^{\nu_N}}{c_A^{\nu_A}c_B^{\nu_B}} \left(\frac{1}{c^⦵}\right)^{\Delta\nu}$$
 
-### In terms of pressure
+### In terms of partition functions
+- In order to rewrite chemical potential _in terms of concentration_:
+$$\mu_i= -kT\ln\frac{q_i}{N_i}+\varepsilon^{0,i}= -kT\ln\frac{f_i}{c_i}+\varepsilon^{0,i}$$
+- Here, $f_i$ is the _volume-independent partition function_:
+$$f=\frac{q}{V}=\frac{q_\text{trans}}{V} q_\text{rot} q_\text{vib} q_\text{elec}=\left(\frac{2\pi mkT}{h^2}\right)^{3/2}q_\text{rot}q_\text{vib}q_\text{elec}$$
+- Then, defining the _difference in ground state electronic energy_:
+$$\Delta \varepsilon_0=\nu_M\varepsilon^{0,M}+\nu_N\varepsilon^{0,N}-\nu_A \varepsilon^{0,A}-\nu_B\varepsilon^{0,B}$$
+- One can then _rewrite concentrations in terms of $\mu$_, then find $K_c$:
+$$K_c=\frac{f_M^{\nu_M}f_N^{\nu_N}}{f_A^{\nu_A}f_B^{\nu_B}}\left(\frac{1}{c^⦵}\right)^{\Delta\nu} \exp\left(-\frac{\Delta\varepsilon_0}{kT}\right)$$
+
+- Alternatively, for $K_p$, using the _standard chemical potential per mole_:
+$$\mu_i^⦵=-RT\ln\frac{q_i^⦵}{N_A}+N_A\varepsilon^{0,i}$$
+- Here, the partition function is _in the standard state_:
+$$q_i^⦵=\left(\frac{2\pi mkT}{h^2}\right)^{3/2}\left(\frac{RT}{p^⦵}\right)q_\text{rot}q_\text{vib}q_\text{elec}$$
+- Then, one can obtain an expression for $K_p$:
+$$K_p=\frac{(q_M^⦵)^{\nu_M}(q_N^⦵)^{\nu_N}}{(q_A^⦵)^{\nu_A}(q_B^⦵)^{\nu_B}}\left(N_A\right)^{-\Delta\nu}\exp\left(-\frac{\Delta\varepsilon_0}{kT}\right)$$
+
+### Interpretation
+- Consider a simple reaction: $$\ce{A<=>M}$$
+- The equilibrium constant is then:
+$$K_c=\frac{f_M}{f_A}\exp\left(-\frac{\varepsilon^{0,M}-\varepsilon^{0.A}}{kT}\right)$$
+- At _low temperatures_: 
+	- $f_M\approx f_A\approx1$, as molecules only occupy their respective _ground states_
+	- Molecules are _unlikely to interconvert_ due to the large _ground state energy difference_
+
+- As temperature _rises_: 
+	- $\exp(-\Delta\varepsilon_0/kT)$ becomes _less significant_
+	- The $f_M/f_A$ factor starts to _dominate_
+	- Molecules are more likely to interconvert to the _side with more densely packed states_, in order to _maximise entropy_
+
+### Example: Dissociation of a diatomic
+- Consider the reaction: $$\ce{A_2<=>2A}$$
+- The expression for $K_c$ is then:
+$$K_c=\frac{f_\ce{A}^2}{f_\ce{A_2}}\frac{1}{c^⦵}\exp\left(-\frac{D_e}{kT}\right)$$
+- Measuring energy _relative to that of two dissociated atoms_, $\Delta\varepsilon_0=D_e$
 
 ### Example: Ionisation of atoms
 
@@ -607,8 +700,15 @@ $$q_\text{rot}=\frac{T}{\sigma\theta_\text{rot}}$$
 
 
 # Kinetics
+- Thermodynamics deals with _what the equilibrium state is like_
+- Kinetics deals with _how fast equilibrium is reached_
 
 ## Potential energy surfaces
+- As a reaction between molecules proceeds, and electrons and nuclei _rearrange_, the _potential energy changes_
+- The _potential energy surface_ (PES) of the system specifies the _potential energy as a function of nuclear coordinates_
+
+- The surface will have _minima_, which correspond to _arrangements that give stable molecules_
+	- The molecule can _oscillate_ sround the stable position
 
 ## Transition state theory
 

@@ -60,7 +60,7 @@ used to it, so it doesn’t bother you any more.”
 - Macrostates with energy more or less _equally shared_ among particles become way more likely (way _more available mcirostates_)
 	- Consequence of equal probabilities
 
-- _Microstates_ can evolve _reversibly and deterministically with time_
+- _Microstates_ can evolve _reversibly and deterministically with timet_
 - As time goes on, a _macrostate irreversibly tends to its mean_, which defines _statistical equilibrium_
 	- This will later be characterised by the state variable of _entropy_
 - The _final_ macrostate will tend to be one with _the most number of microstates_
@@ -575,7 +575,9 @@ $$dS=\frac{dU}{T}+\frac{p}{T}\,dV-\frac{\mu}{T}\,dN$$
 ### Multiple types of particles
 - If there are _many types of particles_, each with number $N_i$, then the Master Equations must be rewritten as:
 $$\displaylines{dU=T\,dS-p\,dV+\sum_i \mu_i\,dN_i \\ dH=T\,dS+p\,dV+\sum_i \mu_i\,dN_i \\ dF=-S\,dT-p\,dV+\sum_i \mu_i\,dN_i \\ dG=V\,dp-S\,dT+\sum_i \mu_i\,dN_i}$$
-- Each type of particle has _its own chemical potential_
+- Each type of particle has _its own chemical potential_:
+	$$\mu_i=\left(\pd{U}{N_i}\right)_{S,V,N_j}$$
+	- The amount of particles for _other components_ $j\neq i$ must not change
 - This is required when considering [[Chemical thermodynamics#Chemical equilibrium|chemical equilibrium]]
 
 # Interpreting thermodynamic functions

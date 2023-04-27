@@ -52,7 +52,8 @@ $$P(r)\,dr=|u|^2\,dr=|R|^2r^2\,dr$$
 - Therefore, $|u|^2$ is known as the _radial distribution function_
 
 ## The rigid rotor
-- One of the simplest 
+- One of the simplest central potentials is the _rigid rotor_:
+$$\hat{\Ham}=\frac{\hat{L}^2}{2I}$$
 
 ## The infinite cubical well
 

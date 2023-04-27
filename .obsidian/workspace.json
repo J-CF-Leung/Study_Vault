@@ -14,7 +14,7 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Past Papers/IB Physics/2020-21_Part_IB_Physics_A_Paper_1.pdf"
+                "file": "Past Papers/IB Physics/2021-22_Part_IB_Physics_A_Paper_1.pdf"
               }
             }
           },
@@ -96,14 +96,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
+                "file": "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9b401969a58d6c22",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Materials Science/Electronic properties.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 8
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -120,7 +132,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md"
+                    "file": "Materials Science/Electronic properties.md"
                   }
                 }
               }
@@ -136,7 +148,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
+                    "file": "Materials Science/Electronic properties.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -209,7 +221,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "carrier",
+                "query": "de broglie",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -246,7 +258,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
+                "file": "Materials Science/Electronic properties.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -263,7 +275,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
+                "file": "Materials Science/Electronic properties.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -286,7 +298,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md"
+                "file": "Materials Science/Electronic properties.md"
               }
             }
           },
@@ -316,25 +328,30 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3a3c607b9ecf870d",
+  "active": "9b401969a58d6c22",
   "lastOpenFiles": [
-    "Past Papers/IB Physics/2020-21_Part_IB_Physics_A_Paper_1.pdf",
+    "Chemistry/IB Chemistry/Electrons in crystals.md",
+    "Physics/Condensed matter physics",
+    "Physics/Untitled.md",
+    "Physics/Thermal Physics/Untitled",
+    "Materials Science/Electronic properties.md",
+    "Physics/Quantum Mechanics/The failure of classical mechanics.md",
+    "Physics/IB Physics/Electromagnetism.md",
+    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+    "Physics/Thermal Physics/Classical Thermodynamics.md",
+    "Physics/IB Physics/Fluid mechanics.md",
     "Past Papers/IB Physics/2021-22_Part_IB_Physics_A_Paper_1.pdf",
+    "Past Papers/IB Physics/2020-21_Part_IB_Physics_A_Paper_1.pdf",
     "Past Papers/IB Physics/2018-19_Part_IB_Physics_A_Paper_1.pdf",
     "Past Papers/IB Physics/2017-18_Part_IB_Physics_A_Paper_1.pdf",
     "Past Papers/IB Physics/2016-17_Part_IB_Physics_A_Paper_1.pdf",
     "Past Papers/IB Physics/2015-16_Part_IB_Physics_A_Paper_1.pdf",
     "Past Papers/IB Physics/2014-15_Part_IB_Physics_A_Paper_1.pdf",
-    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
-    "Physics/Thermal Physics/Classical Thermodynamics.md",
-    "Past Papers/IB Physics/2013-14_Part_IB_Physics_B_Paper_1.pdf",
-    "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_2.pdf",
     "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_1.pdf",
-    "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
-    "Physics/Images/Stern-Gerlach experiment.png",
-    "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
     "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
-    "Physics/IB Physics/Electromagnetism.md",
+    "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
+    "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
+    "Physics/Images/Stern-Gerlach experiment.png",
     "Physics/IB Physics/Oscillations.md",
     "Physics/Images/System with surroundings.png",
     "Mathematics/IB Mathematical Methods/Transform methods.md",
@@ -347,7 +364,6 @@
     "Physics/IB Physics/Orbits.md",
     "Chemistry/Images/Ethene CH stretching modes.png",
     "Chemistry/Images/Ethene CH stretches.png",
-    "Past Papers/IB Physics/2012-13_Part_IB_Physics_A_paper_1.pdf",
     "Chemistry/Images/H3+ vibrational modes.png",
     "Chemistry/Images/Water vibrational modes.png",
     "Chemistry/IB Chemistry/Bonding in molecules.md",
@@ -359,11 +375,6 @@
     "Chemistry/IB Chemistry/Electrons in solids.md",
     "Chemistry/IB Chemistry/Vibrational normal modes in molecules.md",
     "Physics/IB Physics/Waves.md",
-    "Mathematics/IB Mathematical Methods/Sturm-Liouville Theory.md",
-    "Mathematics/IB Mathematical Methods/Calculus of variations.md",
-    "Physics/IB Physics/Experimental methods and data analysis.md",
-    "Physics/Quantum Mechanics/1D time-independent Hamiltonians.md",
-    "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
     "Misc or Personal/What to do.canvas"
   ]
 }
