@@ -104,6 +104,8 @@ $$\bm{k}=(k_x,k_y,k_z)=2\pi\left(\frac{l}{a_x},\frac{m}{a_y},\frac{n}{a_z}\right
 - Here, $l,m,n$ are _integers_
 - This also gives _quantised energies_, quadratic w.r.t. each index
 	- For each energy, there are _two electrons_ occupying it, with _opposite spins_
+- In _recriprocal space_, there is a set of _points_ with _permitted energies_
+	- It is _not a lattice_, as $E\propto k^2$
 
 - The wave functions can be pictured as _standing waves_
 

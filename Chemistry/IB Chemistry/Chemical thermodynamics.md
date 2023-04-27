@@ -663,8 +663,13 @@ $$K_p=\frac{p_M^{\nu_M}p_N^{\nu_N}}{p_A^{\nu_A}p_B^{\nu_B}}\left(\frac{1}{p^⦵}
 $$\mu_i= -kT\ln\frac{q_i}{N_i}+\varepsilon^{0,i}= -kT\ln\frac{f_i}{c_i}+\varepsilon^{0,i}$$
 - Here, $f_i$ is the _volume-independent partition function_:
 $$f=\frac{q}{V}=\frac{q_\text{trans}}{V} q_\text{rot} q_\text{vib} q_\text{elec}=\left(\frac{2\pi mkT}{h^2}\right)^{3/2}q_\text{rot}q_\text{vib}q_\text{elec}$$
+- One must choose a _common origin in energy_, in this case it is chosen to be the _energy of dissociated atoms_
+- For convenience, take $q_\text{vib}$ _from the bottom of the vibrational energy well_, which, relative to the dissociated atoms, has the _ground state electronic energy_
+
 - Then, defining the _difference in ground state electronic energy_:
-$$\Delta \varepsilon_0=\nu_M\varepsilon^{0,M}+\nu_N\varepsilon^{0,N}-\nu_A \varepsilon^{0,A}-\nu_B\varepsilon^{0,B}$$
+	$$\Delta \varepsilon_0=\nu_M\varepsilon^{0,M}+\nu_N\varepsilon^{0,N}-\nu_A \varepsilon^{0,A}-\nu_B\varepsilon^{0,B}$$
+	- This takes into account the _energy zeroes in_ $q_\text{elec}$
+
 - One can then _rewrite concentrations in terms of $\mu$_, then find $K_c$:
 $$K_c=\frac{f_M^{\nu_M}f_N^{\nu_N}}{f_A^{\nu_A}f_B^{\nu_B}}\left(\frac{1}{c^⦵}\right)^{\Delta\nu} \exp\left(-\frac{\Delta\varepsilon_0}{kT}\right)$$
 
@@ -703,14 +708,56 @@ $$K_c=\frac{f_\ce{A}^2}{f_\ce{A_2}}\frac{1}{c^⦵}\exp\left(-\frac{D_e}{kT}\righ
 - Thermodynamics deals with _what the equilibrium state is like_
 - Kinetics deals with _how fast equilibrium is reached_
 
-## Potential energy surfaces
+## Potential energy surfaces and transition states
 - As a reaction between molecules proceeds, and electrons and nuclei _rearrange_, the _potential energy changes_
 - The _potential energy surface_ (PES) of the system specifies the _potential energy as a function of nuclear coordinates_
+	- Often _multi-dimensional_, as each additional atom adds 3 additional _degrees of freedom_
 
 - The surface will have _minima_, which correspond to _arrangements that give stable molecules_
 	- The molecule can _oscillate_ sround the stable position
+- As the nuclei are _infnitely far apart_, the molecule has _zero energy_
+- As any nuclei become _close to each other_, the energy _tends to infinity_
+
+- The _reaction pathway_ of two molecules can be charted as a _path on the PES_
+- The _starting_ and _end-points_ are the _potential minima corresponding to reactants and products_
+
+- For each reaction, there is a _pathway with least expenditure of energy_
+
+- The least-energy pathway will still involve some _potential maximum_
+	- It may be a _saddle point_ overall, but _along the path_, it is a maximum
+- This is the _transition state_, corresponding to _partial breakage and formation of bonds_
+	- It _does not correspond to a stable molecule_, and exists for $\sim 10^{-13}\,\text{s}$
+	- It is distinct from the _reaction intermediate_, which exists in a _minimum_ and is an actual molecule
+- The _vast majority_ of molecules will travel via this pathway, as any _alternative route_ will require more energy that the molecules do not have
+
+- The _coordinate_ which maps the least-energy pathway is the _reaction coordinate_
+- It is some _linear combination of nuclear displacements_
+- The PES _along the reaction coordinate_ is known as the _reaction profile_:
+
 
 ## Transition state theory
+- Since the _activation energy_ is high, _very few molecules_ actually get there
+- Once the reactants _reach the transition state_, it takes _a smaller, but finite time_ to transform into the _products_
+- In that time, the transition state is also _likely to transform back into the reactants_
+- In other words, the reactants reach an _equilibrium with the transition state_
+- This can be expressed as follows:
+$$\ce{A + BC<=> TS-> AB + C}$$
+
+- Assuming _equilibrium_ between the reactants and transition state:
+$$K^*=\frac{c^⦵[\ce{TS}]}{[\ce{A}][\ce{BC}]}$$
+- The _rate of conversion to products_ is assumed to be _first-order_ w.r.t. $\text{TS}$:
+$$r=k_\text{1st}[\ce{TS}]=k_\text{1st}\frac{K^*}{c^⦵}[\text{A}][\text{BC}]$$
+- Hence, one can define a _second-order rate constant_:
+$$\displaylines{r=k_\text{2nd}[\ce{A}][\ce{BC}] \\ k_\text{2nd}\equiv \frac{1}{c^⦵}k_\text{1st}K^*}$$
+
+## Deriving the rate constant
+- From the expression for the equilibrium constant:
+$$K^*=\frac{c^⦵f_\text{TS}}{f_\ce{A}f_\ce{BC}}\exp\left(-\frac{\Delta\varepsilon_0^\ddagger}{RT}\right)$$
+- For $f_\ce{TS}$, one note that one of its _vibrational normal modes_ corresponds to _motion along the reaction coordinate_
+	- Since it is at a _maximum_, there is _no restoring force_, and the molecule simply _transforms into the product_
+	- For $\ce{A +BC->AB +C}$, this corresponds to the _asymmetric stretch_ 
+- Let the frequency of this normal mode be $\nu^\ddagger$, and _factor out its vibrational partition function_:
+$$\displaylines{K^*=\frac{c^⦵q^\ddagger f_\ce{TS}'}{f_\ce{A}f_\ce{BC}}\exp\left(-\frac{\Delta\varepsilon_0^\ddagger}{RT}\right) \\ q^\ddagger=\frac{\exp(-\theta_\text{vib})}{}}$$
 
 ## Steric factors
 

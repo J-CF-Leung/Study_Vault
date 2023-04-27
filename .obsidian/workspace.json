@@ -115,7 +115,7 @@
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 1
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -132,7 +132,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Materials Science/Electronic properties.md"
+                    "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md"
                   }
                 }
               }
@@ -148,7 +148,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Materials Science/Electronic properties.md",
+                    "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -258,7 +258,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Materials Science/Electronic properties.md",
+                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -275,7 +275,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Materials Science/Electronic properties.md",
+                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -298,7 +298,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Materials Science/Electronic properties.md"
+                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md"
               }
             }
           },
@@ -328,13 +328,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "9b401969a58d6c22",
+  "active": "ccd70014f316fc28",
   "lastOpenFiles": [
+    "Materials Science/Electronic properties.md",
     "Chemistry/IB Chemistry/Electrons in crystals.md",
     "Physics/Condensed matter physics",
     "Physics/Untitled.md",
     "Physics/Thermal Physics/Untitled",
-    "Materials Science/Electronic properties.md",
     "Physics/Quantum Mechanics/The failure of classical mechanics.md",
     "Physics/IB Physics/Electromagnetism.md",
     "Chemistry/IB Chemistry/Chemical thermodynamics.md",
