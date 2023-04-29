@@ -1,6 +1,9 @@
 
 - Only considering [[Fundamental concepts of quantum mechanics#Time-independent Hamiltonians and stationary states|time-independent wave functions and Hamiltonians]]
 - Considering _position-space_ wave functions
+- Hence, one needs to solve the _time-independent Schrodinger Equation_:
+$$\begin{aligned}\hat{\Ham}\psi(\bm{r})&=E\psi(\bm{r}) \\ -\frac{\hbar^2}{2m}\nabla^2\psi(\bm{r})+V(\bm{r})\psi(\bm{r})&=E\psi(\bm{r})\end{aligned}$$
+- The operator $\hat{\Ham}$ is the _Hamiltonian_
 
 # Models of bonding
 

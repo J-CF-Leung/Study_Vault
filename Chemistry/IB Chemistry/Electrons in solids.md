@@ -166,6 +166,98 @@ $$a_0=r_++r_-$$
 	- Example: $r_+/r_-$ for $\ce{MgO}$ is 0.51, and can be _accommodated_ by the rock salt or sphalerite structure, but the _optimum_ is the rock salt structure for a larger $\mathcal{A}$
 
 # The free electron gas
+- The simplest model of the _potential_ experienced by electrons is the _free electron gas_
+- It _ignores the periodic potential from nuclei_, as well as the _electron-electron repulsion_
+- The [[Molecular quantum mechanics|Hamiltonian]] experienced by the electrons is:
+$$\hat{\Ham}=-\frac{\hbar^2}{2m}\nabla^2$$
+
+## Electrons as plane waves
+- The _eigenfunctions_ of this Hamiltonian are:
+$$\psi_\bm{k}(\bm{r})=A\exp(i\bm{k}\cdot\bm{r})$$
+- $\bm{k}$ is the _wave-vector_ $(k_x,k_y,k_z)$
+- The electrons are _un-constrained plane waves_ with momentum $\bm{p}=\hbar\bm{k}$
+	- The _wavefronts_ are _planes linking points of constant phase_, perpendicular to $\bm{k}$
+- They have _wavelength_:
+$$\lambda=\frac{2\pi}{|\bm{k}|}=\frac{2\pi}{\sqrt{k_x^2+k_y^2+k_z^2}}$$
+
+- The corresponding _energies_ are:
+$$E_k=\frac{\hbar^2|\bm{k}|^2}{2m_e}$$
+- This can be visualised as a _sphere_ in the _space of wave-vectors_, or $k-$_space_
+
+- Without considering the boundary conditions, this results in a _continuous spectrum of energy_, making it difficult to define _energy levels_
+
+## Born-von Karman boundary conditions
+- The _BvK boundary conditions_ take the _periodicity_ of the lattice into account
+	- Still does not take the _nuclei_ into account
+
+- Let there be a _block_ of unit cells, with $N_i$ cells in each dimension $(i=1,2,3)$
+	- This block is in the _bulk_ of the material to neglect _edge effects_
+- Let the _lattice translation vector_ be:
+$$\bm{T}=\sum_i N_i\bm{a}_i=N_1\bm{a}_1+N_2\bm{a}_2+N_3\bm{a}_3$$
+
+- The boundary conditions assert that the function is _cyclic across the block of material_:
+$$\psi(\bm{r}+\bm{T})=\psi(\bm{r})$$
+
+- This _quantises_ the range of wave-vectors:
+$$\bm{k}=2\pi\left(\frac{n_1}{N_1a_1},\frac{n_2}{N_2a_2},\frac{n_3}{N_3a_3}\right)$$
+- Here, $n_i$ are _integers_
+- If $a_1=a_2=a_3$, this gives _equally spaced $k-$states_
+
+- In _one-dimension_, the [[Chemical thermodynamics#Density of states|density of states]] is the _reciprocal of the spacing_:
+$$D_\text{1D}=\frac{N_1a_1}{2\pi}=\frac{\Lagr}{2\pi}$$
+- Here, $N_1a_1=\Lagr$ is known as the _Born-von Karman length_
+
+- In _two-dimensions_:
+$$D_\text{2D}=\frac{N_1N_2A_c}{(2\pi)^2}=\frac{\mathcal{A}}{(2\pi)^2}$$
+- Here, $A_c=a_1a_2$ is the _area of the unit cell_
+- $\mathcal{A}=N_1N_2A_c$ is the _Born-von Karman area_
+
+- In _three-dimensions_:
+$$D_\text{3D}=\frac{N_1N_2N_3V_c}{(2\pi)^3}=\frac{\mathcal{V}}{(2\pi)^3}$$
+- Here, $V_c=a_1a_2a_3$ is the _volume of the unit cell_
+- $\mathcal{V}=N_1N_2N_3V_c$ is the _Born-von Karman volume_
+
+## Population of energy levels
+- In [[Chemical thermodynamics|Molecular thermodynamics]], the _number of accessible translational states_ is _much higher than the number of molecules_
+- For the _free electron gas_, the _energy spacing_ is much _larger_, and the _number density of electrons_ is very _high_ compared to a _gas_
+- This results in the fact that the _number of accessible states is too high_
+- Furthermore, one has to consider the [[Molecular quantum mechanics#Pauli Principle|Pauli Principle]] for electrons, which are _fermions_
+
+- Therefore, one _cannot use the Boltzmann distribution_
+- Instead, one needs the _Fermi-Dirac distribution_
+
+- In _absolute zero_, the electrons fill the energy levels up to an energy level known as the _Fermi level_ $E_F$
+- At a _finite temperature_, there is _sufficient energy_ to move some upper electrons to somewhat _above the Fermi level_
+- The number of levels are within $\sim k_BT$ of the Fermi level
+![[Fermi-Dirac distribution schematic.png]]
+
+- The Fermi-Dirac distribution is written as:
+$$f(E)=\frac{1}{\exp\left(\frac{E-\mu}{k_BT}\right)+1}$$
+- $f(E)$ is the _probability an electron occupies energy level $E$_
+- $\mu$ is the [[Chemical thermodynamics|chemical potential]] of the electron
+
+- In most cases, $\mu$ is _approximated as the Fermi energy_ $E_F$:
+$$f(E)=\frac{1}{\exp\left(\frac{E-E_F}{k_BT}\right)+1}$$
+![[Fermi-Dirac distribution graph.png]]
+- In most cases, $E_F>>k_BT$, so the _smoothing_ of the curve is very _slight_
+
+- In the _limiting case_ $E>>E_F$, the _exponential_ dominates, and one regains the _Boltzmann distribution_
+
+## Properties of the Free Electron gas
+- One can use the model to predict _physical properties_
+
+### Number of states
+- Given some energy $E\propto k^2$, the corresponding $k-$states lie on a _spherical shell_ in $k-$space
+
+- The _number of states_ $W(E)$ with an energy _up to_ $E$ can then be calculated by multiplying the _volume in $k-$space_, with the _density of BvK states_, then accounting for _spin_:
+$$W(E)=2\left(\frac{4}{3}\pi k^3\right)\left(\frac{\mathcal{V}}{(2\pi)^3}\right)=\frac{k^3\mathcal{V}}{3\pi^2}=\frac{\mathcal{V}}{3\pi^2}\left(\frac{2m_eE}{\hbar^2}\right)^{3/2}$$
+- If the _electron number density_ is $n_e$, within one _BvK volume_ $\mathcal{V}=N_1N_2N_3V_c$, the number of _experimentally accessible states_ is:
+$$W(E_F)=n_e\mathcal{V}$$
+- Then, one can calculate the _Fermi energy_
+$$E_F=\left(\frac{\hbar^2}{2m_e}\right)(3\pi^2 n_e)^{2/3}$$
+- At the Fermi enegry, the _Fermi wave-vector_ is then:
+$$k_F=(3\pi^2n_e)^{1/3}$$
+- These are _physically measurable quantities_, hence they must be _independent of $\mathcal{V}$_
 
 # The nearly-free electron gas
 

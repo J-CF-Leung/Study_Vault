@@ -105,7 +105,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -122,7 +122,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/Condensed matter physics/Crystal structures.md"
+                    "file": "Chemistry/IB Chemistry/Electrons in solids.md"
                   }
                 }
               }
@@ -138,7 +138,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/Condensed matter physics/Crystal structures.md",
+                    "file": "Chemistry/IB Chemistry/Electrons in solids.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -248,7 +248,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Condensed matter physics/Crystal structures.md",
+                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -265,7 +265,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Condensed matter physics/Crystal structures.md",
+                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -288,7 +288,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Condensed matter physics/Crystal structures.md"
+                "file": "Chemistry/IB Chemistry/Electrons in solids.md"
               }
             }
           },
@@ -318,16 +318,20 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "bc4aa77cf63c7867",
+  "active": "68853df9d1da064a",
   "lastOpenFiles": [
-    "Physics/Condensed matter physics/Semiconductors.md",
+    "Fermi-Dirac distribution graph.png",
+    "Fermi-Dirac distribution schematic.png",
+    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+    "Chemistry/IB Chemistry/Electrons in solids.md",
+    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Physics/Condensed matter physics/Crystal structures.md",
+    "Physics/Condensed matter physics/Semiconductors.md",
     "Physics/Condensed matter physics/Nearly Free Electron Model.md",
     "Physics/Condensed matter physics/Free Electron Model.md",
     "Physics/Condensed matter physics/Thermal Properties.md",
     "Physics/Condensed matter physics/Phonons.md",
     "Physics/Images/Wigner-Seitz unit cell.png",
-    "Chemistry/IB Chemistry/Electrons in solids.md",
     "Materials Science/Electronic properties.md",
     "Materials Science/Images/Fermi-Dirac distribution.png",
     "Chemistry/Images/Minimum radius ratios.png",
@@ -338,7 +342,6 @@
     "Materials Science/Images/Fermi-Dirac distribution.png",
     "Pasted image 20230429103652.png",
     "Past Papers/IB Physics/2021-22_Part_IB_Physics_A_Paper_1.pdf",
-    "Chemistry/Images/Diamond cubic structure.png",
     "Physics/Thermal Physics/Statistical thermodynamics.md",
     "Physics/Thermal Physics/Classical Thermodynamics.md",
     "Physics/IB Physics/Oscillations.md",
@@ -346,7 +349,6 @@
     "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
     "Mathematics/IB Mathematical Methods/Transform methods.md",
     "Physics/IB Physics/Elasticity.md",
-    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md",
     "Chemistry/IB Chemistry/Electrons in crystals.md",
     "Physics/Condensed matter physics",
@@ -364,8 +366,6 @@
     "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_1.pdf",
     "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
     "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
-    "Mathematics/IB Mathematical Methods/Contour integration.md",
-    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
     "Misc or Personal/What to do.canvas"
   ]
 }

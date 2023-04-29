@@ -107,6 +107,8 @@ $$\displaylines{P(E_i)=\frac{1}{Q_N}\exp\left(-\frac{E_i}{k_BT}\right) \\ Q_N=\s
 
 ## Application of the Boltzmann distribution
 
+### Density of states
+
 # The partition function
 - For a system with energy levels $\{E_i\}$, the _partition function_ $Q_N$ is:
 $$Q_N=\sum_i\exp\left(-\frac{E_i}{k_BT}\right)$$
