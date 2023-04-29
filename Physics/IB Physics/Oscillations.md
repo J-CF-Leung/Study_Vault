@@ -1,4 +1,4 @@
-
+- The investigation of _periodic behaviour_
 
 # The simple harmonic oscillator
 - Applies for a quadratic potential:
@@ -251,18 +251,26 @@ $$m\ddot{x}+\frac{dU}{dx}=0$$
 $$U(x)=U_0+\frac{1}{2}\frac{d^2U}{dx^2}\Bigg|_{x_0}\epsilon^2+\dots$$
 - For _small displacements_, the quadratic term _dominates_
 - Defining $d^2U/dx^2$ at $x_0$ as $U_0''$, the equation of motion becomes:
-$$\displaylines{\ddot{\epsilon}+\omega^2\epsilon=0 \\ \epsilon^2=\frac{U_0''}{m}}$$
+$$\displaylines{\ddot{\epsilon}+\omega^2\epsilon=0 \\ \omega^2=\frac{U_0''}{m}}$$
+- The _general solution_ to this is:
+$$\epsilon=A\cos(\omega t+\phi)$$
+- This is a _harmonic oscillation_, and the system is a _simple harmonic oscillator_
+
 ## Normal modes
-- A _simple harmonic oscillator_ involving _any number_ of particles will have _normal modes_ characteristic of the system
-- In a _normal mode_, every element of the system _oscillates at a single frequency_
+- For a _simple harmonic oscillator_ involving many degrees of freedom described using the "natural" displacement variables (e.g. Cartesian coordinates, angles), _in general, not all of them oscillate harmonically_
+
+- Instead, there are _linear combinations_ of the displacements known as _normal modes_
+- In a _normal mode_, every element of the system _oscillates at a single frequency_, known as the _normal mode frequency_
 
 - A _general free oscillation_ can always be expressed in terms of a _linear combination of normal modes_
-	- Amplitude and phase dtermined by _boundary conditions_
+	- Amplitude and phase determined by _boundary conditions_
 	- Each normal mode _evolves on its own_, and can be _recombined to find the general solution at any time_
 
 - If there are $N$ _degrees of freedom_ in the system, then there will be $N$ normal modes
+	- Not all of them will correspond to _oscillation_
+	- Instead, there will be _zero-frequency_ modes corresponding to _translation_ or _rotation_
 
-## The two-mass system
+## Example: the two-mass system
 ![[Two-mass SHM.png]]
 - The two masses, and the three springs are _identical_
 - Equations of motion:
@@ -308,12 +316,14 @@ $$K_{ij}=\pd{^2U}{q_i\partial q_j}$$
 - The two matrices are _symmetric by definition_
 
 ### Characteristic frequencies and normal modes
-- The Lagrangian of the system is:
+- The [[Analytical classical mechanics#Lagrangian mechanics|Lagrangian]] of the system is:
 $$\Lagr=\frac{1}{2}\sum_{i,j}M_{ij}\dot{q}_i\dot{q}_j-\frac{1}{2}\sum_{i,j}K_{ij}q_iq_j$$
 - By considering the _Euler-Lagrange equations_, and using the symmetries of the matrices:
 $$\sum_j \left(M_{ij}\ddot{q}_j+K_{ij}q_j\right)=0$$
 	- Take the _total derivative_ of the Lagrangian first
-- Substituting $q\propto\exp(i\omega t)$, this only has a solution if:
+- Substituting a _harmonic solution_, one finds:
+$$q_j=Q_j\exp(i\omega t)\longrightarrow K_{ij}Q_j-\omega^2M_{ij}Q_j=0$$
+- This only has a _non-zero solution_ if:
 $$\det(\dunderline{K}-\omega^2\dunderline{M})=0$$
 - This _resembles an eigenvalue equation_
 - The frequencies $\omega$ are the _characteristic frequencies_
@@ -350,7 +360,7 @@ $$\displaylines{\omega^2=0\longrightarrow \underline{X}=\begin{pmatrix}1 \\ 1 \\
 ### A molecule in 3 dimensions
 - Let there be $N$ atoms
 - It has $3N$ degrees of freedom, therefore _$3N$ normal modes_
-- There are always 3 translations
+- There are always 3 centre-of-mass translations
 - For _linear_ molecules, there are 2 rotational modes
 - For other molecules, there are 3
 - Therefore, _non-linear molecules have $3N-6$ vibrational modes_

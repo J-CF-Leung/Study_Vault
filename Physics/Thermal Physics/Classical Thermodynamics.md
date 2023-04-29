@@ -240,11 +240,11 @@ $$C_p=\left(\pd{Q}{T}\right)_p=\left(\pd{U}{T}\right)_V+\left[\left(\pd{U}{V}\ri
 - Their _difference_ is:
 $$C_p-C_V=\left[\left(\pd{U}{V}\right)_T+p\right] \left(\pd{V}{T}\right)_p$$
 
-## Cyclic processes
+## Cyclic processes, refrigerators and engines
 - Due to this path dependence, one can do a _cyclic process_, and _convert work done on the gas into heat_, which is then _extracted from the gas_:
 $$Q_\text{net, extracted}=W=-\oint p\,dV$$
 - Since the gas goes through a _cycle_, $\Delta U=0$
-- At _some points_ during the process, heat will be _input into the gas_, hence it is _not perfectly efficient_
+- At _some points_ during the process, heat will be _input into the gas_, hence it is _not perfect_
 - This type of _cyclic process_ is known as _refrigeration_, as heat is taken _out of the gas_
 
 - Similarly, one can run this cycle in a _reverse direction_, converting _heat supplied to the gas_, in order to _extract work done by the gas_:
@@ -376,7 +376,7 @@ $$\eta_\text{Carnot}=1-\frac{T_l}{T_h}$$
 >For any cyclic process, with $\dbar Q>0$ for heat supplied to the system:
 >$$\oint \frac{\dbar Q}{T}\leq 0$$
 >The equality holds for reversible processes
-- Proof: Consider some engine $E$ with the Carnot engine running in reverse
+- Proof: Consider some engine $E$ with the Carnot engine running in _reverse_
 	$$\displaylines{W=Q_h-Q_l=Q_h'-Q_l' \\ Q_h'>Q_h \\ \frac{Q_h'}{T_h}-\frac{Q_l'}{T_l}=(Q_h'-Q_h)\left(\frac{1}{T_h}-\frac{1}{T_l}\right)\leq0}$$
 	- Any _continuous_ cycle can be _cut_ into discrete "bits"
 	- Equality for reversible cycles: the inequality holds in both directions
@@ -386,6 +386,9 @@ $$S(B)-S(A)=\int_A^B \frac{\dbar Q}{T} \hspace{1cm}\text{ for any reversible pat
 - This function is _entropy_, which is a _state function_:
 $$dS=\frac{dQ_\text{rev}}{T}$$
 - Like energy, it is _extensive_, and defined _up to a constant_ (Later given by the Third Law)
+
+- One can then visualise the _Carnot cycle_ on the $T-S$ plane:
+![[Carnot in T-S.png]]
 
 ## Law of increase of entropy
 - Consider two paths, one reversible, one irreversible, from $A$ to $B$:
@@ -755,10 +758,44 @@ $$TV^{\gamma-1}=\text{const.}$$
 - This expression can also be obtained from the fact that the [[#Entropy|entropy of the ideal gas]] remains _constant_
 
 ### Mixing and the Gibbs Paradox
+- Recall that for the _Joule expansion for $n$ moles of one type of gas_:
+$$\Delta S=nR\ln\left(\frac{V_2}{V_1}\right)$$
+- Now consider _two distinguishable, non-interacting gases_, separated by a _partition_:
+![[Gibbs Paradox setup.png]]
+- If the partition is _removed_, since the gases _do not interact_, the entropy is simply _additive_:
+	$$\Delta S_\text{tot}=n_1R\ln\left(1+\frac{V_2}{V_1}\right) + n_2R\ln\left(1+\frac{V_1}{V_2}\right)$$
+	- The corresponding _reversible process_ used in this case requires _separate isothermal expansions_ of each gas, using _partitions only permeable to one gas_
+- However, if the two gases are made the _same_, then $\Delta S$ _vanishes_ despite the same action of removing the partition
+
+- This leads to the fact that the _statistical mechanics of indistinguishable particles is completely different_
+- If the two gases are the same, then _effectively nothing happens_, so $\Delta S=0$
 
 ## Engines
+- In general, an engine is a [[#Cyclic processes, refrigerators and engines|cyclic process]] which involves _inputting heat $Q_h$ into a gas_, converting it into _work $W$ done by the gas on another system_
+- The heat input is usually done via a _high-temperature reservoir_
 
-## Refrigerators
+- The _second law_ (specifically, [[#Carnot efficiency and thermodynamic temperature|Carnot's Theorem]] and [[#Clausius and Kelvin|Kelvin's statement]]) state that there are _no perfectly efficient engines_
+- The heat $Q_l$ which is _not converted to work_ is then _expelled_, typically into a _low temperature reservoir_:
+![[General engine.png|300]]
+- As the gas has to _do net positive work_, the cycle appears _clockwise_ on a $p-V$ diagram:
+![[Engine work done.png|350]]
+$$W=\oint p\,dV$$
+
+- The _efficiency_ of the engine is then defined similarly to the Carnot engine:
+$$\eta=\frac{W}{Q_h}=1-\frac{Q_l}{Q_h}$$
+- From Carnot's Theorem, for any engine consisting of only _reversible processes_, its efficiency is the _same as the Carnot engine_:
+$$\eta_\text{rev}=\eta_\text{Carnot}=1-\frac{T_l}{T_h}$$
+- For any engine with _irreversible_ processes:
+$$\eta_\text{irrev}<\eta_\text{rev}$$
+- Example: the _Otto_ and _Disel_ cycles
+
+- Example: the _Stirling_ engine
+
+## Refrigerators and heat pumps
+- If an engine runs _backwards_, converting _work $W$ done on the system into heat $Q_h$_, which is then _expelled from the gas_:
+![[Refrigerator schematic.png|300]]
+
+![[Refrigerator work done.png|350]]
 
 ## Non-gaseous systems
 

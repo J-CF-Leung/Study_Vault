@@ -12,9 +12,11 @@
             "id": "313b748dafdfd837",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Past Papers/IB Physics/2021-22_Part_IB_Physics_A_Paper_1.pdf"
+                "file": "Materials Science/Electronic properties.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -24,31 +26,55 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                "file": "Physics/Thermal Physics/Statistical thermodynamics.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "c240eae4c5e94084",
+            "id": "bc4aa77cf63c7867",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/IB Physics/Elasticity.md",
+                "file": "Physics/Condensed matter physics/Crystal structures.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "cf32ec15a31c997f",
+            "id": "68853df9d1da064a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/IB Physics/Rigid body dynamics.md",
+                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f20237aba262d571",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3c7750506fcf3ed3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
                 "mode": "source",
                 "source": false
               }
@@ -67,18 +93,6 @@
             }
           },
           {
-            "id": "5a60b2386f645177",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Physics/IB Physics/Fluid mechanics.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "92240bfeffd4fb8e",
             "type": "leaf",
             "state": {
@@ -91,7 +105,7 @@
             }
           },
           {
-            "id": "3a3c607b9ecf870d",
+            "id": "edc6ce65be658c03",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -101,21 +115,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "9b401969a58d6c22",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Materials Science/Electronic properties.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -132,7 +133,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md"
+                    "file": "Materials Science/Electronic properties.md"
                   }
                 }
               }
@@ -148,7 +149,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                    "file": "Materials Science/Electronic properties.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -171,7 +172,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.6145008544833601,
+                      "scale": 0.61450085448336,
                       "close": true
                     }
                   }
@@ -221,7 +222,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "de broglie",
+                "query": "peskin",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -258,7 +259,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                "file": "Materials Science/Electronic properties.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -275,7 +276,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                "file": "Materials Science/Electronic properties.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -298,7 +299,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md"
+                "file": "Materials Science/Electronic properties.md"
               }
             }
           },
@@ -328,19 +329,39 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ccd70014f316fc28",
+  "active": "313b748dafdfd837",
   "lastOpenFiles": [
-    "Materials Science/Electronic properties.md",
+    "Materials Science/Images/Fermi-Dirac distribution.png",
+    "Pasted image 20230429103652.png",
+    "Past Papers/IB Physics/2021-22_Part_IB_Physics_A_Paper_1.pdf",
+    "Chemistry/Images/Diamond cubic structure.png",
+    "Physics/Condensed matter physics/Crystal structures.md",
+    "Physics/Thermal Physics/Statistical thermodynamics.md",
+    "Physics/Thermal Physics/Classical Thermodynamics.md",
+    "Physics/IB Physics/Oscillations.md",
+    "Chemistry/IB Chemistry/Electrons in solids.md",
+    "Chemistry/Images/NaCl structure.png",
+    "Chemistry/Images/Graphene sheet.png",
+    "Chemistry/Images/2D hexagonal lattice.png",
+    "Chemistry/Images/hcp hexagonal cell.png",
+    "Chemistry/Images/fcc cubic unit cell.png",
+    "Chemistry/Images/bcc lattice cubic cell.png",
+    "Chemistry/Images/Cubic P primitive cell.png",
+    "Physics/Images/Cubic unit cells.png",
+    "Mathematics/IB Mathematical Methods/Small oscillations.md",
+    "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
+    "Mathematics/IB Mathematical Methods/Transform methods.md",
+    "Physics/IB Physics/Elasticity.md",
+    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+    "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md",
     "Chemistry/IB Chemistry/Electrons in crystals.md",
+    "Materials Science/Electronic properties.md",
     "Physics/Condensed matter physics",
     "Physics/Untitled.md",
     "Physics/Thermal Physics/Untitled",
     "Physics/Quantum Mechanics/The failure of classical mechanics.md",
     "Physics/IB Physics/Electromagnetism.md",
-    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
-    "Physics/Thermal Physics/Classical Thermodynamics.md",
     "Physics/IB Physics/Fluid mechanics.md",
-    "Past Papers/IB Physics/2021-22_Part_IB_Physics_A_Paper_1.pdf",
     "Past Papers/IB Physics/2020-21_Part_IB_Physics_A_Paper_1.pdf",
     "Past Papers/IB Physics/2018-19_Part_IB_Physics_A_Paper_1.pdf",
     "Past Papers/IB Physics/2017-18_Part_IB_Physics_A_Paper_1.pdf",
@@ -348,33 +369,14 @@
     "Past Papers/IB Physics/2015-16_Part_IB_Physics_A_Paper_1.pdf",
     "Past Papers/IB Physics/2014-15_Part_IB_Physics_A_Paper_1.pdf",
     "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_1.pdf",
-    "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
     "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
     "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
-    "Physics/Images/Stern-Gerlach experiment.png",
-    "Physics/IB Physics/Oscillations.md",
-    "Physics/Images/System with surroundings.png",
-    "Mathematics/IB Mathematical Methods/Transform methods.md",
     "Mathematics/IB Mathematical Methods/Contour integration.md",
-    "Physics/Thermal Physics/Statistical thermodynamics.md",
     "Chemistry/IB Chemistry/Molecular spectroscopy.md",
     "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Physics/IB Physics/Optics.md",
     "Physics/IB Physics/Orbits.md",
-    "Chemistry/Images/Ethene CH stretching modes.png",
-    "Chemistry/Images/Ethene CH stretches.png",
-    "Chemistry/Images/H3+ vibrational modes.png",
-    "Chemistry/Images/Water vibrational modes.png",
-    "Chemistry/IB Chemistry/Bonding in molecules.md",
-    "Chemistry/Images/Nitrogen Raman spectra.png",
-    "Chemistry/Images/Nuclei swap.png",
-    "Chemistry/Chemical potential and chemical reactions.md",
-    "Chemistry/Images/Nuclei swap.png",
-    "Chemistry/Images/Residual entropy.png",
-    "Chemistry/IB Chemistry/Electrons in solids.md",
-    "Chemistry/IB Chemistry/Vibrational normal modes in molecules.md",
-    "Physics/IB Physics/Waves.md",
     "Misc or Personal/What to do.canvas"
   ]
 }

@@ -112,7 +112,7 @@ $$\bm{k}=(k_x,k_y,k_z)=2\pi\left(\frac{l}{a_x},\frac{m}{a_y},\frac{n}{a_z}\right
 - At _absolute zero_, all of the _lowest-energy states_ are filled
 - For metals, the _highest energy state_ is the _Fermi level_ $E_F$
 
-## Fermi sphere and the density of states
+### Fermi sphere and the density of states
 - For simplification, assume a _simple cubic crystal_, where $a_x=a_y=a_z=L$
 - As $E\propto k^2$, the energy levels are _non-uniformly distributed in reciprocal space_
 - Equal values are _equidistant from the origin_
@@ -121,5 +121,66 @@ $$\bm{k}=(k_x,k_y,k_z)=2\pi\left(\frac{l}{a_x},\frac{m}{a_y},\frac{n}{a_z}\right
 - The _sphere_ in reciprocal space with the lowest energy states is known as the _Fermi sphere_, with radius $k_F$
 - At the _Fermi surface_, all the states have the _Fermi energy_:
 $$E_F=\frac{\hbar^2k_F^2}{2m}$$
+- Typically, the radius of the Fermi sphere is _much larger than the spacing between states_
+
+- For a given arbitrary energy $E$, the _number of available states_ $N(E)$ for electrons to occupy is:
+	$$N(E)=2\left(\frac{4}{3}\pi k^3\right)\left(\frac{2\pi}{L}\right)^{-3}=\frac{L^3}{3\pi^2}k^3=\frac{V}{3\pi^2}k^3$$
+	- Factor of 2: accounting for _spin_
+- Writing as a function of $E$:
+$$N(E)=\frac{V}{3\pi^2}\left(\frac{2mE}{\hbar^2}\right)^{3/2}$$
+- Then, one can find the _density of states_ $D(E)$ that gives the _density of electron states per unit energy_:
+$$D(E)\equiv\frac{dN}{dE}=\frac{V}{2\pi^2}\left(\frac{2m}{\hbar}\right)^{3/2}E^{1/2}\propto \sqrt{E}$$
+- This is assuming that the states are _dense_, making $E$ and $D$ _continuous functions_
+
+- Similarly, in _one dimension_, consider the _free electron line_, with length $2k$:
+$$\displaylines{N_\text{1D}(E)=2(2k)\left(\frac{2\pi}{L}\right)^{-1}=\frac{2L}{\pi}\left(\frac{2mE}{\hbar^2}\right)^{1/2} \\ D_\text{1D}(E)=\frac{L}{\pi}\left(\frac{2m}{\hbar^2}\right)^{1/2}E^{-1/2}\propto\frac{1}{\sqrt{E}}}$$
+- This is useful for modelling _carbon nanotubes_
+
+- Similarly, in _two dimensions_, considering the _free electron circle_, with radius $k$:
+$$\displaylines{N_\text{2D}(E)=2(\pi k^2)\left(\frac{2\pi}{L}\right)^{-2}=\frac{L^2}{2\pi}\left(\frac{2mE}{\hbar^2}\right) \\ D_\text{2D}(E)=\frac{L^2}{2\pi}\left(\frac{2m}{\hbar^2}\right)=\frac{mL^2}{\pi\hbar^2}}$$
+- This is useful for modelling _graphene sheets_
+- Notably, the density of states is _independent of $E$_
+
+### Occupation of energy levels at absolute zero
+- For _metals_, states are occupied _up to the Fermi surface_
+- For _insulators and semiconductors_, there are _no electronic states at the Fermi surface_
+	- Reason: [[#The nearly free elctron model]]
+	- Instead, at the Fermi energy, the _probability of occupation_ is $1/2$
+
+- Define $n$ as the _number of valence electrons per unit volume_
+- Rearranging the expression for $N_\text{3D}(E)$:
+$$k_F=(3\pi^2 n)^{1/3}$$
+- Example: In _copper_, the Fermi sphere volume is $\sim10^{22}$ times _bigger than the volume per state_
+
+### Occupation of energy levels at a finite temperature
+- A small fraction of valence electrons are _promoted_ from just below the Fermi surface, to _above_ the Fermi surface
+- The _probability_ of an electron energy level $E$ being occupied is given by the [[Statistical thermodynamics|Fermi-Dirac distribution]]:
+$$f(E)=\frac{1}{\exp\left(\frac{E-E_F}{k_BT}\right)+1}$$
+- If $f(E)=1$, the state is _fully occupied_
+- If $f(E)=0$, the state is _fully vacant_
+- If $E=E_F$, $f(E)=1/2$
+![[Fermi-Dirac distribution.png]]
+- At finite temperatures, the distribution is _smeared_ over an energy interval of order $k_BT$
+
+- One can then define the _occupied density of states_ $Z(E)$ as:
+$$Z(E)=D(E)f(E)$$
+- At absolute zero, there is a _sudden drop_ at $E=E_F$
+
+### Electrical conductivity
+- In contrast to the [[#The Drude model and drift velocity|Drude model]], where _all electrons_ contribute to conductivity, in the _free electron model_, only electrons _at the Fermi energy_ are viable _charge carriers_
+
+- Use a _semi-classical model_, where _classical laws_ are governing the "motion" of waves
+- A semi-classical electron with wave-vector $k$ has _velocity_:
+$$\bm{v}=\frac{\hbar \bm{k}}{m}$$
+- As $\mean{\bm{k}}=0$, this means there is _zero average velocity_
+
+- When an _electric field_ is applied:
+$$\bm{F}=\hbar\frac{d\bm{k}}{dt}=-e\bm{E}$$
+- Taking _collisions_ into account:
+$$\Delta\bm{k}=-\frac{e\tau\bm{E}}{\hbar}$$
+- This gives a _shift in the sphere of occupied wave-vectors_, hence a _shift in average velocity_
+- Hence, there is a _net velocity_, depending on both $\bm{E}$ as well as the _magnitude of_ $k_F$
+
+### Limitations
 
 ## The nearly free elctron model
