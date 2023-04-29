@@ -21,13 +21,23 @@
 
 ![[Bravais lattices.png]]
 
-## Cubic unit cells
+## Unit cells
+- Overall, any _repeating unit_ in a lattice that can _tessellate_ all space with the pattern is known as a _unit cell_
+- Unit cells are _not unique_, so one often takes _conventional unit cells_ that take _simple shapes_ and _reflect the crystal system_
+
+- Example: the _cubic unit cells_ for the cubic crystal systems
 ![[Cubic unit cells.png]]
 
+- A unit cell that only contains _one lattice point_ is known as a _primitive unit cell_
+	- Example: the primitive cubic unit cell above has $1/8$ of a lattice point _per corner_
+	- Example: the face-centred cubic unit cell above has 4 lattice points
 
 ## Wigner-Seitz cells
 - The _Wigner-Seitz construction_ produces _unique, primitive unit cells_
 - It finds a _locus of points closer in space from a particular lattice point than any other_
+- Mathematically, this is known as _Voronoi decomposition_
+![[Wigner-Seitz unit cell.png]]
+
 
 # Vectors and planes
 
@@ -58,19 +68,35 @@ $$(h\,k\,l)$$
 - Let there be a _periodic function_ $f(x)=f(x+a)$, describing a property of the crystal
 - It can then be written as a _Fourier series_:
 $$f(x)=\sum_{h=-\infty}^\infty C_h\exp(ik_hx)$$
-- The wave vectors $k_h$ are _uniformly separated points_, in a one-dimensional wave vector space, also known as the _$k-$space_
+- The wave vectors $k_h$ are _uniformly separated points_, in a one-dimensional wave vector space, also known as the _$k-$space_, or _reciprocal space_
 $$k_h=\frac{2\pi h}{a}$$
 - The _set of points_ is then known as the _reciprocal lattice_
 
 ## 3 dimensional orthorombic lattice
 - Then, let there be a lattice with $\pi/2$ between axes and $a\neq b\neq c$
+- Let the associated _wave vectors_ be:
+$$k_h=\frac{2\pi h}{a} \hspace{1cm} k_k=\frac{2\pi k}{b} \hspace{1cm} k_l=\frac{2\pi l}{c}$$
 - A periodic function is then described by:
 $$\begin{aligned}f(\bm{r})&=\sum_{h,k,l=-\infty}^\infty C_{hkl}\exp[i(k_hx+k_ky+k_lz)] \\ &=\sum_{h,k,l=-\infty}^\infty C_{hkl}\exp(i\bm{k}_{hkl}\cdot\bm{r}) \end{aligned}$$
-- The set of wave vectors 
+- The _set of wave vectors_ $\bm{k}_{hkl}=(k_h,k_k,k_l)$ form a 3D _reciprocal lattice_
+
+- When referring to the _reciprocal lattice vectors_, one uses the notation $\bm{G}_{hkl}$
+- $\bm{G}_{hkl}$ can _join any two points in the reciprocal lattice_
 
 ## The general case
 - Let a lattice have the _lattice vectors_ $\bm{a},\bm{b},\bm{c}$
 - The corresponding _reciprocal lattice vectors_ are given by:
 $$\bm{A}=2\pi\frac{\bm{b}\wedge\bm{c}}{\bm{a}\cdot(\bm{b}\wedge\bm{c})} \hspace{1cm} \bm{B}=2\pi\frac{\bm{c}\wedge\bm{a}}{\bm{a}\cdot(\bm{b}\wedge\bm{c})} \hspace{1cm} \bm{C}=2\pi\frac{\bm{a}\wedge\bm{b}}{\bm{a}\cdot(\bm{b}\wedge\bm{c})}$$
+- The _reciprocity_ is expressed as follows:
+	$$\bm{A}\cdot\bm{a}=2\pi \hspace{1cm}\bm{A}\cdot\bm{b}=\bm{A}\cdot\bm{c}=0$$
+	- And so on for other reciprocal lattice vectors
+
+- _Any reciprocal lattice vector_ is then expressed as:
+$$\bm{G}_{hkl}=h\bm{A}+k\bm{B}+l\bm{C}$$
+- Any function can then be described with:
+$$f(\bm{r})=\sum_{h,k,l=-\infty}^\infty C_{hkl}\exp(i\bm{G}_{hkl}\cdot\bm{r})$$
+- If $\bm{r}$ is a _lattice vector_, the dot product gives an _integer multiple of $2\pi$_, giving the required _periodicity_ in the function
+
+- If the lattice is _non-orthorombic_, then the _reciprocal lattice_ will also be _non-orthorombic_, and the reciprocal lattice vector will _not necessarily be parallel with the corresponding lattice vector_
 
 # Diffraction

@@ -76,13 +76,6 @@ $$\rho=\frac{\pi}{3\sqrt{2}}\approx 74\%$$
 - It is also known as the _cubic close-packed lattice_, as it has the _greatest packing density_ for a cubic structure
 - Each lattice point is _coordinated with $12$ other lattice points
 
-### Hexagonal close-packed
-- The _hexagonal close-packed_ structure contains _alternating_ hexagonally packed layers
-	- Pattern $ABAB\dots$
-![[hcp hexagonal cell.png]]
-
-- This structure also has the _highest packing density_, as it also consists of hexagonal layers
-
 ## Attaching a motif
 - For each lattice point $\bm{r}_i$, attach the $j$th atom of the _motif_ at $\bm{r}_i+\bm{a}_j$
 
@@ -108,6 +101,15 @@ $$\text{Atom 1: } (x_i,y_i,z_i) \hspace{1cm}\text{Atom 2: }\left(x_i+\frac{a}{4}
 - This forms a _tetrahedral network_:
 ![[Diamond cubic structure.png|600]]
 
+### Example: Hexagonal close-packed
+- The _hexagonal close-packed_ structure contains _alternating_ hexagonally packed layers
+	- Pattern $ABAB\dots$
+![[hcp hexagonal cell.png]]
+- It is a _primitive hexagonal lattice_, with motif:
+$$\text{Atom 1: } (x_i,y_i,z_i) \hspace{1cm}\text{Atom 2: }\left(x_i+\frac{a}{2},y_i+\frac{a}{2\sqrt{3}},z_i+\frac{c}{2}\right)$$
+- Where $c$ is the _height_ of the hexagonal unit cell
+- This structure also has the _highest packing density_, as it also consists of hexagonal layers
+
 ## The ionic model
 - For ionic crystals, the _lattice energy_ is defined as the _energy needed to dissociate a solid lattice into widely separated gaseous ions_
 - It must be deduced from a _thermodynamic cycle_
@@ -115,14 +117,16 @@ $$\text{Atom 1: } (x_i,y_i,z_i) \hspace{1cm}\text{Atom 2: }\left(x_i+\frac{a}{4}
 
 ### Electrostatic interactions
 - Assume a simple _one-dimensional lattice_:
-INSERT IMAGE HERE
-
-- The _electrostatic energy_ is:
+![[1D ionic lattice.png]]
+- Considering the electrostatic energy arising from interactions with _one ion_, then multiplying by _one mole_:
+$$E_\text{electrostatic}=-2N_A\frac{z_+z_-e^2}{4\pi\epsilon_0a}\left(1-\frac{1}{2}+\frac{1}{3}-\dots\right)$$
 
 - Define the dimensionless _Madelung constant_ $\mathcal{A}$ such that:
 $$E_\text{electrostatic}=-\frac{N_A\mathcal{A}z_-z_+e^2}{4\pi\epsilon_0a}$$
 - The Madelung constant is a _function of the lattice arrangement_
 - This model _generalises to 3D_, with different values of $\mathcal{A}$
+
+![[Madelung constant table.png]]
 
 ### Finding lattice enthalpy
 - If _only the electrostatic energy_ is accounted for, the lattice would simply _collapse_
@@ -145,14 +149,21 @@ $$a_0=r_++r_-$$
 
 - Approximating the ions as hard spheres, _equilibrium_ is reached when the _spacing is the sum of the ionic radii_
 - For a _fixed_ $a_0$, one also requires an _optimum value_ of $r_\pm$ to achieve _maximum contact_ between the spheres
+![[Radius ratio.png]]
 - This gives an optimum _radius ratio_, which is a function of the _structure_
+- If $r_+/r_-$ is _smaller_ than the optimum radius ratio, then the _cations and anions are not guaranteed to touch_, this gives an _unstable_ structure
+- If $r_+/r_-$ is _larger_ than the optimum radius ratio, then as oppositely charged ions _touch_, it still gives a _stable_ structure
+- Hence, the _optimum_ radius ratio is also the _minimum_ required by the structure
 
 - Example: Sodium chloride
-	IMAGE HERE
-	- The optimum radius ratio is:
+	![[NaCl radius ratio.png]]
+	- The optimum/minimum radius ratio is:
 	$$\frac{r_+}{r_-}=\sqrt{2}-1\approx 0.414$$
+- The optimal/minimal radius ratio for various structures:
+![[Minimum radius ratios.png]]
 
-- Given some _ionic radii_, one can then work out the _optimum structure_ where the _radius ratio_ is _close to optimum value for that structure_
+- Given some _ionic radii_, one can then work out the _optimum structure_ where the _radius ratio_ is _large enough_, and the _Madelung constant_ is also larger
+	- Example: $r_+/r_-$ for $\ce{MgO}$ is 0.51, and can be _accommodated_ by the rock salt or sphalerite structure, but the _optimum_ is the rock salt structure for a larger $\mathcal{A}$
 
 # The free electron gas
 
