@@ -337,7 +337,7 @@ $$\dbar W=\gamma\,dA$$
 	- From Kelvin's statement, $Q_l>0$
 
 - From the conservation of energy, the _work done by the gas_, and the _efficiency_ is:
-$$\displaylines{W=Q_h-Q_l \\ \eta \equiv\frac{W}{Q_h}=1-\frac{Q_l}{Q_h}}$$
+$$\displaylines{W=Q_h-Q_l \\ \eta \equiv\frac{W}{Q_h}=1-\frac{Q_l}{Q_h}<1}$$
 - The efficiency can be thought of as _how much work can be extracted for a given amount of heat input_
 
 >[!info] Carnot's Theorem
@@ -787,15 +787,55 @@ $$\eta=\frac{W}{Q_h}=1-\frac{Q_l}{Q_h}$$
 $$\eta_\text{rev}=\eta_\text{Carnot}=1-\frac{T_l}{T_h}$$
 - For any engine with _irreversible_ processes:
 $$\eta_\text{irrev}<\eta_\text{rev}$$
-- Example: the _Otto_ and _Disel_ cycles
+- _Real_ heat engines are often _irreversible_
+	- Friction and heat conduction cause _heat loss_
+	- Ideal processes often require high _speed_ and temperature/pressure _gradients_
+	- Hence, diagrams of engine cycles are _idealised_
+
+- Example: the _Otto_ and _Diesel_ cycles
+	- The _Otto_ cycle imitates an _internal combustion engine_
+	- It _takes in_ fuel and air _before_ performing the cycle $1\to2\to3\to4$, with the _isochoric heating_ performed by an _combustion_, and _isochoric cooling_ performed by an exhaust valve, plus _adiabatic expansion and compression_ in between
+	- _After_ the cycle, the gas is _expelled_ before more fuel and air is taken _in_
+	![[Otto_cycle-transformed.png|375]]
+	- The _efficiency_ of the cycle is given by: $$\eta_\text{Otto}=1-r^{1-\gamma}\equiv 1-\left(\frac{V_1}{V_2}\right)^{1-\gamma}$$
+	- $r$ is known as the _compression ratio_
+	- Typically, the _ideal_ efficiency that can be achieved is $\approx 0.6$, but only _half_ that is achieved
+		- When $r$ is _too high_, it can cause _shock waves_ that damage the engine
+	- It can be improved with the _Diesel cycle_: ![[fig5DieselIdeal_web-transformed.jpeg]]
+	- The combustion is instead at constant _pressure_, with the fuel being _injected_ during the process
+	- While having a _lower ideal efficiency than the Otto cycle_, it is easier to _achieve_:
+	$$\displaylines{\eta_\text{D}=1-r^{1-\gamma}\left(\frac{\alpha^\gamma-1}{\gamma(\alpha-1)}\right) \\ \alpha=\frac{V_3}{V_2}}$$
+	- The Otto and Diesel engines are _internal combustion engines_, where everything is done in _one container_
 
 - Example: the _Stirling_ engine
+	- It is an _external_ combustion engine
+	- Gas is expanded in a _hot cylinder_, moved to the _cold cylinder_ where it is then _compressed_, before being transferred _back into the hot cylinder_
+	![[Stirling cycle.png]]
+	- It is often done via two pistons in _quadrature_ ($90^o$ out of phase):
+	![[Stirling engine operation.png|600]]
+	- The wire _between cylinders_ acts as a "regenerator" to _store heat_, so the process is _not too irreversible_
 
 ## Refrigerators and heat pumps
-- If an engine runs _backwards_, converting _work $W$ done on the system into heat $Q_h$_, which is then _expelled from the gas_:
+- If an engine runs _backwards_, converting _work $W$ done on the system_, along with _heat $Q_l$ extracted_ from a low-temperature reservoir, into heat $Q_h$, which is then _expelled from the gas_, into a _high-temperature reservoir_:
 ![[Refrigerator schematic.png|300]]
+- This is a _refrigerator_, aimed at _keeping the low temperature reservoir cool_
 
 ![[Refrigerator work done.png|350]]
+
+- The _efficiency_ of the refrigerator is defined as:
+$$\eta=\frac{Q_l}{W}$$
+- It is the _heat extracted per unit of work_, and can be _larger than $1$_
+
+- The _ideal refrigerator_ is the _Carnot cycle run in reverse_, which still follows:
+$$\frac{Q_l}{T_l}=\frac{Q_h}{T_h}$$
+- The _ideal efficiency_ is then:
+$$\eta_\text{Carnot}=\frac{T_l}{T_h-T_l}$$
+
+- The same setup can also be utilised as a _heat pump_, which aims to _maintain the temperature of the hot reservoir_
+- In this case, the efficiency is:
+$$\eta=\frac{Q_h}{W}$$
+- The ideal efficiency is:
+$$\eta_\text{Carnot}=\frac{T_h}{T_h-T_l}$$
 
 ## Non-gaseous systems
 

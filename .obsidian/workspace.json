@@ -45,18 +45,6 @@
             }
           },
           {
-            "id": "f20237aba262d571",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "3c7750506fcf3ed3",
             "type": "leaf",
             "state": {
@@ -105,7 +93,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -122,7 +110,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Electrons in solids.md"
+                    "file": "Physics/Thermal Physics/Classical Thermodynamics.md"
                   }
                 }
               }
@@ -138,7 +126,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Electrons in solids.md",
+                    "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -248,7 +236,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
+                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -265,7 +253,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
+                "file": "Physics/Thermal Physics/Classical Thermodynamics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -288,7 +276,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/IB Chemistry/Electrons in solids.md"
+                "file": "Physics/Thermal Physics/Classical Thermodynamics.md"
               }
             }
           },
@@ -318,29 +306,29 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "bdee2333112a0d60",
+  "active": "3c7750506fcf3ed3",
   "lastOpenFiles": [
+    "Physics/Images/Stirling engine operation.png",
+    "Physics/Images/Stirling cycle.png",
+    "Physics/Images/fig5DieselIdeal_web-transformed.jpeg",
+    "Physics/Images/Otto_cycle-transformed.png",
+    "Physics/Images/Otto cycle.png",
+    "Physics/Images/Otto cycle.png",
+    "Physics/Images/Diesel cycle.png",
+    "Physics/Images/Otto cycle.png",
+    "Physics/Condensed matter physics/Crystal structures.md",
+    "Materials Science/Electronic properties.md",
     "Chemistry/Images/Fermi-Dirac distribution graph.png",
     "Chemistry/Images/Fermi-Dirac distribution schematic.png",
     "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Chemistry/IB Chemistry/Electrons in solids.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
-    "Physics/Condensed matter physics/Crystal structures.md",
     "Physics/Condensed matter physics/Semiconductors.md",
     "Physics/Condensed matter physics/Nearly Free Electron Model.md",
     "Physics/Condensed matter physics/Free Electron Model.md",
     "Physics/Condensed matter physics/Thermal Properties.md",
     "Physics/Condensed matter physics/Phonons.md",
     "Physics/Images/Wigner-Seitz unit cell.png",
-    "Materials Science/Electronic properties.md",
-    "Materials Science/Images/Fermi-Dirac distribution.png",
-    "Chemistry/Images/Minimum radius ratios.png",
-    "Chemistry/Images/Madelung constant table.png",
-    "Chemistry/Images/NaCl radius ratio.png",
-    "Chemistry/Images/Radius ratio.png",
-    "Chemistry/Images/1D ionic lattice.png",
-    "Materials Science/Images/Fermi-Dirac distribution.png",
-    "Pasted image 20230429103652.png",
     "Past Papers/IB Physics/2021-22_Part_IB_Physics_A_Paper_1.pdf",
     "Physics/Thermal Physics/Statistical thermodynamics.md",
     "Physics/Thermal Physics/Classical Thermodynamics.md",
