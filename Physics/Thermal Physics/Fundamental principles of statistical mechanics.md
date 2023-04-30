@@ -1,3 +1,6 @@
+>[!Warning]
+>This needs a bit of a revamping to make it "flow" better with the notes from IB Physics B (For now, most of it is from Landau and Lifshitz but rephrased)
+
 >[!quote]
 >Ludwig Boltzmann, who spent much of his life studying statistical mechanics, died in 1906, by his own hand. Paul Ehrenfest, carrying on the work, died similarly in 1933. Now it is our turn to study statistical mechanics.
 >
@@ -109,7 +112,7 @@ $$\pd{\rho}{t}=-\PB{\rho}{\Ham}$$
 - Therefore, $\ln{\rho}$ becomes:
 $$\ln{\rho}=\alpha+\beta E(q,p)$$
 >[!info] A fundamental principle of statistical mechanics
->The statistical properties of a system can be derived from only the energy (or Hamiltonian)
+>The statistical properties of a system can be derived from _only the energy_ (or Hamiltonian)
 
 ## The microcanonical ensemble
 - The simplest statistical distribution is where $\rho$ is constant for $E=E_0$, and zero everywhere else

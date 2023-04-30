@@ -500,6 +500,7 @@ $$\displaylines{S=S(U,V) \\ dS=\frac{1}{T}\,dU+\frac{p}{T}\,dV}$$
 - Hence, for the _internal energy_ of the system to be known, $S$ and $V$ must be known
 - They are known as the "natural variables" for $U$, as knowing $U(S,V)$ then gives _complete thermodynamic information_ for the system
 	- If $U$ is known as a function of $T$ and $V$, then there are still _unknowns_ for the system (in this case, $S$ and $p$ are unknown)
+	- To find these unknowns, one would need _equations of state_ so one can state $U$ in terms of the _proper variables_
 
 ## Thermodynamic potentials
 - For an _isolated_ system, _entropy_ must _never decrease_
@@ -650,7 +651,7 @@ $$\dbar Q=dU-(\dbar W-p_0\,dV)$$
 $$\dbar W\geq dU+p_0\,dV-T_0\,dS$$
 - Define the _availability_ of the system as:
 $$A=U+p_0V-T_0S$$
-- Hence, _work done on the system can increase its availability_:
+- Hence, _work done on the system by an external agent can increase its availability_:
 $$\dbar W\geq dA$$
 - If the process is _reversible_, then $\dbar W=dA$
 - In other words, $dA$ is the _maximum amount of work that can be done by the system_
@@ -659,13 +660,43 @@ $$\dbar W\geq dA$$
 $$dA=(T-T_0)\,dS-(p-p_0)\,dV$$
 - If the system is at _the same condition as the surroundings_, then it can _do no work_
 
-- If a system _cannot do work on its surroundings_:
+- If a system _cannot do work on other systems_:
 $$dA\leq0$$
 - This means the system will _tend towards an equilibrium where $A$ is minimum_
 
 - For an _isolated_ system with _fixed volume_, $dS\geq0$ 
 - For a system with _constant volume_, fixed at $T_0$, $F$ must be _minimised_
 - For a system at _constant pressure_, fixed at $T_0$, $G$ must be _minimised_
+
+- For specific situations, it is useful to derive inequalities considering $dS$ of both the system _and the reservoir_, where the _total must never decrease_
+	- For the _reservoir_, all heat exchange is _reversible_, hence $\dbar Q_\text{res}=T_0dS_\text{res}$
+
+## The Free Energies
+- The term _free energy_ indicates the _work that can be extracted by the system_
+
+### Helmholtz Free Energy
+- At _constant temperature_ $T_0$, the _total_ work done _on the system_ (including surroundings at $p_0$, plus any external sources), is $\dbar W-p_0\,dV$
+	- Where $\dbar W$ is defined as above (not including surroundings)
+- Then, using the _inequality for availability_ above:
+$$\dbar W_\text{tot}=\dbar W-p_0\,dV\geq dA)_{T=T_0}-p_0dV=dF)_{T=T_0}$$
+- This can also be derived by considering considering the _entropy change of the universe_, when the system is connected to a _reservoir_ at $T_0$
+
+- Hence, at $T_0$, $-dF)_{T=T_0}$ is the _maximum work obtainable from the system_:
+$$\dbar W_\text{by})_{T=T_0}\leq dF)_{T=T_0}$$
+- At _constant $T$ and $V$_, the system will _continue to do non-expansion work_ until the system is _at equilibrium_, where $dF=0$
+
+### Gibbs Free Energy
+- Consider a system at _constant temperature $T_0$ and pressure $p_0$_
+- The system is _not entirely $p-V$_, meaning there are _other system variables_ $x_i$, with _conjugate variables_ $X_i$
+	- Example: a mixture of _reacting chemical species_
+- Let the work _done by the system_ consist of a $p-V$ work term, as well as a _non-expansion work_ term:
+$$\dbar W_\text{by}=p_0\,dV+\sum_i X_i\,dx_i$$
+- Then, by either considering _availability_ or _total entropy change_, one gets:
+$$\sum_i X_i\,dx_i\leq -dG)_{T,p}$$
+- Hence, at $T_0$ and $p_0$, $-dG)_{T,p}$ is the _maximum non$-pV$ work obtainable from the system_
+
+- At _constant $T$ and $p$_, the system will _continue to do non-expansion work_ until it is _at equilibrium_, where $dG=0$
+	- Example: [[Chemical thermodynamics#Reactions and equilibrium|Equilibrium in chemistry]]
 
 ## Scaling the system
 - Let there be a system with _one type of particle_
@@ -676,6 +707,9 @@ $$U=TS-pV+\mu N$$
 - Or, by rearranging terms:
 $$G=\mu N$$
 - Hence, the _chemical potential_ $\mu$ can be considered _Gibbs Energy per particle_
+
+## Thermodynamic derivatives
+
 
 # Thermodynamic systems
 - The above discussion is _general_, applying to _all systems_
@@ -833,11 +867,13 @@ $$\eta_\text{Carnot}=\frac{T_l}{T_h-T_l}$$
 
 - The same setup can also be utilised as a _heat pump_, which aims to _maintain the temperature of the hot reservoir_
 - In this case, the efficiency is:
-$$\eta=\frac{Q_h}{W}$$
+$$\eta=\frac{Q_h}{W}>1$$
 - The ideal efficiency is:
 $$\eta_\text{Carnot}=\frac{T_h}{T_h-T_l}$$
 
 ## Non-gaseous systems
+
+
 
 # The third law and absolute zero
 
