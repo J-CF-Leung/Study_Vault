@@ -57,18 +57,6 @@
             }
           },
           {
-            "id": "b285a13dc7318daa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "cdbe849fbebfa504",
             "type": "leaf",
             "state": {
@@ -320,6 +308,7 @@
   },
   "active": "3c7750506fcf3ed3",
   "lastOpenFiles": [
+    "Physics/Images/Canonical ensemble.png",
     "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md",
     "Physics/Thermal Physics/Statistical thermodynamics.md",
     "Physics/Thermal Physics/Classical Thermodynamics.md",
