@@ -132,9 +132,9 @@ $$\rho=\text{const}\cdot\delta(E-E_0)$$
 - Integrating Schrödinger's equation for every particle is impossible
 
 ## The practical non-existence of stationary states
-- For macroscopic bodies, the energy eigenvalue spectrum is infinite, and extremely dense
+- For macroscopic bodies, the energy eigenvalue spectrum is _infinite, and extremely dense_
 - For a given finite range, the number of energy levels increases exponentially with particle number
-- The energy of a system is always "broadened" due to interactions with surroundings, with interaction energy >> gap between levels
+- The energy of a system is always "broadened" due to _interactions with surroundings_, with interaction energy >> gap between levels
 - The energy-time uncertainty principle:
 	- Let there be an interaction between particles last for time $t$, and the energy of one particle before and after the interaction be $E$ and $E'$ respectively
 	- Uncertainties: $|\Delta E-\Delta E'| \geq \hbar/\Delta t$

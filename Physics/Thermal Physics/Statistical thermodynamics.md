@@ -84,6 +84,8 @@ $$\frac{1}{T}=\left(\pd{S}{U}\right)_{V,N}$$
 - Consider the _canonical ensemble_
 - Given that the _system plus reservoir_ are in the _macrostate of fixed energy_ $E$, find the probability that the _system is in a microstate_ with energy $\epsilon$
 ![[Canonical ensemble.png]]
+
+## The Boltzmann Factor
 - The _probability_ of the system having energy $\epsilon$ is _proportional to the number of microstates of the reservoir_ $\Omega(E-\epsilon)$
 - Then, using a _Taylor expansion_ of $\ln\Omega(E)$:
 $$\ln\Omega(E-\epsilon)\approx \ln\Omega(E)-\epsilon\frac{d\,\ln\Omega}{dE}=\ln\Omega(E)-\beta\epsilon$$
@@ -96,6 +98,7 @@ $$P(\epsilon)\propto\exp(-\beta\epsilon)=\exp\left(-\frac{\epsilon}{k_BT}\right)
 - As more energy is transferred _out of the reservoir_, the number of microstates _shrinks_
 - The _most likely microstate_ is where the system is in the _ground state_
 
+## The Partition Function
 - Then, one needs to _normalise_ the distribution:
 $$P(E_i)=\frac{\exp(-\beta E_i)}{\sum_j \exp(-\beta E_j)}\equiv\frac{\exp(-\beta E_i)}{Z}$$
 - $Z$ is known as the _partition function_ of the system:
@@ -103,3 +106,55 @@ $$Z=\sum_i \exp\left(-\frac{E_i}{k_BT}\right)$$
 
 - If a particular energy level is _degenerate_, with degeneracy $g_i$:
 $$\displaylines{P(E_i)=\frac{g_i\exp(-\beta E_i)}{\sum_j g_j\exp(-\beta E_j)}\equiv g_i\frac{\exp(-\beta E_i)}{Z} \\ Z=\sum_i g_i \exp\left(-\frac{E_i}{k_BT}\right)}$$
+
+- Example: A _two-state_ system with energies $0$ and $\epsilon$, occupied by _one particle_:
+$$Z=1+\exp\left(-\frac{\epsilon}{k_BT}\right)$$
+
+## Energy and heat capacity
+- The _internal energy_ of a macroscopic body is the _statistical average_ over the microstates:
+$$U=\sum_\text{states} p_i E_i=\frac{1}{Z}\sum_i E_i\exp\left(-\frac{E_i}{k_BT}\right)=\frac{\sum_i E_i\exp(-\beta E_i)}{\sum_j \exp(-\beta E_j)}$$
+- This can be written as:
+$$U=-\frac{1}{Z}\frac{dZ}{d\beta}=-\frac{d\ln Z}{d\beta}$$
+
+- Then, one can write the _heat capacity_ as:
+$$C_V=\left(\pd{U}{T}\right)_V$$
+
+### Example: Harmonic oscillator
+- Example: A single particle modelled by the _harmonic oscillator_:
+$$E_n=\left(n+\frac{1}{2}\right)\hbar\omega$$
+- Taking the _ground state_ as zero energy:
+$$Z=1+\exp(-\beta\hbar\omega)+\exp(-2\beta\hbar\omega)+\dots=\frac{1}{1-\exp(-\beta\hbar\omega)}$$
+- Then, calculating the internal energy:
+$$U=-\frac{1}{Z}\frac{dZ}{d\beta}=\frac{\hbar\omega}{\exp(\beta\hbar\omega)-1}$$
+- At _low temperatures_, $\hbar\omega>>kT$, then $U\approx \hbar\omega\exp(-\beta\hbar\omega)$
+	- The _energy spacing_ is much larger than $kT$
+	- The _first excited state_ is rarely occupied
+- At _high temperatures_, $\hbar\omega<<kT$, then $U\approx kT$
+	- This is the _equipartition value_
+
+- The _heat capacity_ tends to _zero_ for low temperartues
+	- There is only a _slight chance_ that the particle gets up to the first excited state
+- The _heat capacity_ tends to $k$ for high temperatures
+
+## The classical limit: equipartition
+- Consider classical dynamics, where some _continuous variable_ $u_i$ contributes a _quadratic term_ to energy:
+$$E_i=\alpha u_i^2$$
+- Their contributions to internal energy are _additive_
+- Assuming states are _evenly spaced_ in $u_i$, then each _contribution_ is:
+	$$U_i=\frac{\int \alpha u_i^2 \exp(-\beta \alpha u_i^2)\,du_i}{\int \exp(-\beta \alpha u_i^2)\,du_i}=\frac{1}{2\beta}=\frac{kT}{2}$$
+	- If evaluating _total energy_, integrating over $du_1du_2\dots du_N$, the integrals separate
+
+- Hence, if energy has $N_t$ _quadratic terms_ in any coordinate or velocity, then:
+$$U_\text{tot}=\frac{N_tkT}{2}$$
+- For a system with _quantised energy levels_, at _high temperatures_ (where $kT$ is much larger than the _spacing_), the internal energy reaches the _equipartition limit_
+
+### Heat capacity of a diatomic gas
+- The _translational energy levels_ can be obtained from the particle in a box, and are often _very small compared to $kT$_
+- Hence, at _low temperatures_, $U\approx 3kT/2$ per particle
+	- For a _monoatomic gas_, this is true for _all temperatures_
+
+- At _higher temperatures_, the _rotational modes_ start being "activated", and $U\approx 5kT/2$
+	- Typical value for _diatomics at room temperature_
+
+- At _even higher temperatures_, the _vibrational modes_ are involved, and $U\approx 7kT/2$
+
