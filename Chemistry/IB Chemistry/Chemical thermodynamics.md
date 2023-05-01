@@ -759,7 +759,13 @@ $$K^*=\frac{c^⦵f_\text{TS}}{f_\ce{A}f_\ce{BC}}\exp\left(-\frac{\Delta\varepsil
 	- Since it is at a _maximum_, there is _no restoring force_, and the molecule simply _transforms into the product_
 	- For $\ce{A +BC->AB +C}$, this corresponds to the _asymmetric stretch_ 
 - Let the frequency of this normal mode be $\nu^\ddagger$, and _factor out its vibrational partition function_:
-$$\displaylines{K^*=\frac{c^⦵q^\ddagger f_\ce{TS}'}{f_\ce{A}f_\ce{BC}}\exp\left(-\frac{\Delta\varepsilon_0^\ddagger}{RT}\right) \\ q^\ddagger=\frac{\exp(-\theta_\text{vib})}{}}$$
+$$\displaylines{K^*=\frac{c^⦵q^\ddagger f_\ce{TS}'}{f_\ce{A}f_\ce{BC}}\exp\left(-\frac{\Delta\varepsilon_0^\ddagger}{RT}\right) \\ q^\ddagger=\frac{\exp(-h\nu^\ddagger/2kT)}{1-\exp(-h\nu^\ddagger/kT)}}$$
+- As this frequency corresponds to _dissociation_. $h\nu^\ddagger<<kT$, hence one gets:
+$$K^*=\frac{kT}{h\nu^\ddagger}\frac{c^⦵f'_\text{TS}}{f_\ce{A}f_\ce{BC}}\exp\left(-\frac{\Delta\varepsilon_0^\ddagger}{RT}\right)$$
+- The _first-order rate constant_ is the _rate of dissociation_, hence:
+$$k_\text{1st}=\nu^\ddagger$$
+- From this:
+$$\displaylines{r=k_\text{1st}[\ce{TS}]=k_\text{2nd}[\ce{A}][\ce{BC}] \\ k_\text{2nd}=\frac{1}{c^⦵}k_\text{1st}K^*=\frac{kT}{h}\frac{f'_\text{TS}}{f_\ce{A}f_\ce{BC}}\exp\left(-\frac{\Delta\varepsilon_0^\ddagger}{RT}\right)}$$
 
 ## Steric factors
 

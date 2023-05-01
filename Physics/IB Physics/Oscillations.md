@@ -327,14 +327,23 @@ $$q_j=Q_j\exp(i\omega t)\longrightarrow K_{ij}Q_j-\omega^2M_{ij}Q_j=0$$
 $$\det(\dunderline{K}-\omega^2\dunderline{M})=0$$
 - This _resembles an eigenvalue equation_
 - The frequencies $\omega$ are the _characteristic frequencies_
+	- They are always _real_
 - From the nature of the equation, _there are as many normal modes as there are degrees of freedom_
 
-- The _normal modes_ $\underline{\bm{Q}}$ in terms of the original coordinates:
-$$\displaylines{(\dunderline{\bm{K}}-\omega^2\dunderline{\bm{M}})\cdot\underline{\bm{Q}}=0 \\ \ddot{\bm{Q}}_i+\omega_\alpha^2\bm{Q}_i=0}$$
-- The Lagrangian can then be re-written as:
-$$\Lagr=\frac{1}{2}\sum_\alpha m_\alpha\left(\dot{Q}_\alpha^2-\omega_\alpha^2Q_\alpha^2\right)=\frac{1}{2}\sum_\alpha\left(\dot{Q}_\alpha'^2-\omega_\alpha^2Q_\alpha'^2\right)$$
-- Here, $Q_\alpha'$ are "normalised" _orthogonal_ modes:
-$$\displaylines{\underline{\bm{Q}}_\alpha'=\dunderline{\sqrt{\bm{M}}}\cdot\underline{\bm{Q}}_j \\ \underline{\bm{Q}}^T_i\cdot\dunderline{\bm{M}}\cdot\underline{\bm{Q}}_j=\underline{\bm{Q}}'_i\cdot\underline{\bm{Q}}_j'\propto\delta_{ij}}$$
+- The _normal modes_ $\bm{Q}^{(n)}$, satisfy:
+$$\displaylines{(\dunderline{\bm{K}}-\omega^2\dunderline{\bm{M}})\cdot\underline{\bm{Q}}=0 \\ \ddot{\bm{Q}}^{(n)}+\omega_n^2\bm{Q}^{(n)}=0}$$
+- The _general solution_ for the original coordinates are then:
+$$\bm{q}(t)=\Re\left\{\sum_m A^{(m)}\bm{Q}^{(m)}\exp[i(\omega_mt-\phi_m)]\right\}$$
+- There may be _zero modes_, where $\omega_m=0$, with the corresponding term:
+$$\lim_{\omega_m\to0} A^{(m)}\bm{Q}^{(m)}\sin(\omega_mt-\phi_m)=B^{(m)}\bm{Q}^{(m)}(t-t_{0,m})$$
+- Where $B^{(m)}=A^{(m)}\omega_m$ and $t_0=\omega_m\phi$
+- All constants $A^{(m)}$, $B^{(m)}$, and $\phi_m$ are determined by _initial conditions_
+
+	- The normal modes are _orthogonal_ w.r.t. $\dunderline{M}$:
+	$$\left(\underline{Q}^{(m)}\right)^T\cdot\dunderline{\bm{M}}\cdot\underline{Q}^{(n)}\propto\delta_{mn}$$
+	- Proof: Consider the _"eigenvalue" equations_ for $m$ and $n$, then use the fact that $\dunderline{M}$ and $\dunderline{K}$ are _symmetric_ (w.r.t. any basis)
+- One can then _rescale_ the normal modes
+- For _degenerate_ normal modes, one can always _orthogonalise_ the normal modes such that this is true
 
 ### More remarks on normal modes
 - Since the frequencies are _real_, the system must be inherently _stable_
