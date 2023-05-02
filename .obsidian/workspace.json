@@ -103,7 +103,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -120,7 +120,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Electrons in solids.md"
+                    "file": "Physics/Condensed matter physics/Phonons.md"
                   }
                 }
               }
@@ -136,7 +136,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Electrons in solids.md",
+                    "file": "Physics/Condensed matter physics/Phonons.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -246,7 +246,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
+                "file": "Physics/Condensed matter physics/Phonons.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -263,7 +263,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
+                "file": "Physics/Condensed matter physics/Phonons.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -286,7 +286,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/IB Chemistry/Electrons in solids.md"
+                "file": "Physics/Condensed matter physics/Phonons.md"
               }
             }
           },
@@ -316,8 +316,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "68853df9d1da064a",
+  "active": "3c7750506fcf3ed3",
   "lastOpenFiles": [
+    "Phonons with more interactions.png",
+    "Chemistry/IB Chemistry/Electrons in solids.md",
     "Chemistry/Images/Fermi circle shift.png",
     "Past Papers/IB Physics/2014-15_Part_IB_Physics_B_Paper_1.pdf",
     "Past Papers/IB Physics/2013-14_Part_IB_Physics_B_Paper_1.pdf",
@@ -325,7 +327,6 @@
     "Past Papers/IB Physics/2012-13_Part_IB_Physics_B_paper_1.pdf",
     "Past Papers/IB Physics/2011-12_Part_IB_Physics_B_Paper_1.pdf",
     "Past Papers/IB Physics/2011-12_Part_IB_Physics_B_Paper_2.pdf",
-    "Chemistry/IB Chemistry/Electrons in solids.md",
     "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Materials Science/Electronic properties in materials.md",
     "Physics/Images/Phonon alisasing.png",
@@ -349,7 +350,6 @@
     "Physics/Images/Phonon dispersion relationship wide range.png",
     "Physics/Crystal structure.md",
     "Physics/Images/Phonon dispersion relationship.png",
-    "Phonon phase diff. and freq.png",
     "Physics/IB Physics/Oscillations.md",
     "Physics/Thermal Physics/Statistical thermodynamics.md",
     "Past Papers/IB Physics/2018-19_Part_IB_Physics_B_Paper_2.pdf",

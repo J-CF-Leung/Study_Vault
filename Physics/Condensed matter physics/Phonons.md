@@ -7,7 +7,7 @@
 - The _energies_ of the normal modes are follow the [[Quantum Harmonic Oscillator]]:
 $$E_n=\left(n+\frac{1}{2}\right)\hbar\omega$$
 
-# 1D Harmonic crystal
+# Uniform 1D Harmonic crystal
 
 ## The travelling wave
 ![[1D harmonic crystal.png]]
@@ -45,15 +45,28 @@ $$\omega(q)=\sqrt{\frac{4\alpha}{m}}\left|\sin\left(\frac{qa}{2}\right)\right|$$
 - For values of $q$ outside the range, _"aliasing"_, as the _phases_ of each atom are unchanged, so the value has _no physical significance_:
 ![[Phonon alisasing.png]]
 
-- In other words, a phonon with wavevector $\bm{q}$ is _equivalent_ to a phonon with wavevector $\bm{q}+n\bm{G}$
+- In other words, a phonon with wavevector $\bm{q}$ is _equivalent_ to one with wavevector $\bm{q}+n\bm{G}$
+	- This corresponds to the _periodicity of the lattice_
+
+- The _number of modes_ is equal to the _number of atoms_ $N$
+- This leads to _discrete values_ of $q$, with separation $2\pi/(Na)$, which is usually very _small_
 
 ## Properties
 - As the wave is technically modelled as the [[Quantum Harmonic Oscillator]], the energy of the wave is actually _quantised_:
 $$E_n=\left(n+\frac{1}{2}\right)\hbar\omega$$
 - Every mode has a _zero-point energy_
 
+- The _momentum_ associated with the phonon is $\hbar q$
+	- Applying the _momentum operator_ to the wave function
+
+- The phonon has _group velocity_ corresponding to the _velocity of sound_ in the solid:
+$$v_g=\pd{\omega}{q}$$
+
+- The phonons themselves have _particle character_, being _bosons_
+
 ### Wavelength limits
 - At the _Brillouin zone boundary_, $q=\pi/a$, the wavelength is at a _minimum_, $2a$
+- The _phase difference_ between each atom is $\pi$
 - One then gets a _standing wave_, at the _maximum possible frequency_
 $$\omega_\text{max}=\sqrt{\frac{4\alpha}{m}} \hspace{1cm} \pd{\omega}{q}=0$$
 
@@ -69,12 +82,38 @@ $$v_p=v_g=\sqrt{\frac{\alpha a}{m/a}}=\sqrt{\frac{Y}{\rho}}$$
 - One can _superpose_ the solutions as the system is _linear_
 - One then obtains:
 $$\omega^2=\frac{4}{m}\left(k_1\sin^2\left(\frac{qa}{2}\right)+k_2\sin^2\left(qa\right)\right)$$
-- Phonons can also _interact with each other_
+
+![[Phonons with more interactions.png]]
+
 
 - Technically, the interaction potential is _anharmonic_, allowing phonons to _interact with each other_ without complete destructive interference
 
-## Crystal momentum
+## Crystal momentum, scattering, and phonon interactions
 - A phonon with wavevector $q$ has a _crystal momentum_ $\hbar q$
+	- Associated with the _travelling wave_, not associated with the particles
 - If it interacts with an _external particle_ (i.e. scattering), then the _overall momentum must be conserved_
 - If the initial and final wave-vectors of the external particle are $\bm{k}_i$ and $\bm{k}_f$, then it is _analagous to_ [[Crystal structure and diffraction#Diffraction|diffraction]]:
 $$\bm{k}_f=\bm{k}_i+\bm{q}$$
+- This corresponds to the _annihilation_ of a phonon with wavevector $\bm{q}$, or the _creation_ of a phonon with wavevector $-\bm{q}$
+- Due to _energy conservation_, this scattering is _inelastic_
+
+- If two phonons _coalesce_ and form a _new phonon_:
+$$\bm{q}_\text{new}=\bm{q}_1+\bm{q}_2$$
+- If it lies _outside_ the first Brillouin Zone, then $\bm{G}$ can be _subtracted_ for an equivalent $\bm{q}_\text{new}$
+
+- Hence, the momentum conservation for _neutron scattering_ can be modified as:
+$$\bm{k}_f=\bm{k}_i\pm\bm{q}\pm\bm{G}$$
+- The _plus_ signs refer to the _annihilation_ of a phonon
+- The _minus_ signs refer to the _creation_ of a phonon
+
+- Similarly, _energ conservation_ requires:
+$$\frac{\hbar^2}{2m}k_f^2=\frac{\hbar^2}{2m}k_i^2\pm\hbar\omega$$
+
+- In practice, _monochromatic particle beams_ are used for diffraction
+	- $\bm{k}$ are controlled by _scattering angles_ relative to the surface 
+	- Each different $\bm{k}_f$ corresponds to a _different phonon interaction_
+	- $\omega$ is measured by _time of flight_
+	- The _neutron energy_ depends on the _type_ of phonon
+	- There may also be an _elastic peak_
+
+# 1D Diatomic Lattice
