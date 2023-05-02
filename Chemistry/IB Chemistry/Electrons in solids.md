@@ -245,8 +245,11 @@ $$f(E)=\frac{1}{\exp\left(\frac{E-E_F}{k_BT}\right)+1}$$
 
 ## Properties of the Free Electron gas
 - One can use the model to predict _physical properties_
+- They _should not depend_ on the BvK volume, which is a _mathematical construction_
+- These _measurable quantities_ can serve as a _test_ for the model
+	- Generally found to work well for _group 1 metals_
 
-### Number of states
+### Fermi energy and wave-vector
 - Given some energy $E\propto k^2$, the corresponding $k-$states lie on a _spherical shell_ in $k-$space
 
 - The _number of states_ $W(E)$ with an energy _up to_ $E$ can then be calculated by multiplying the _volume in $k-$space_, with the _density of BvK states_, then accounting for _spin_:
@@ -258,6 +261,66 @@ $$E_F=\left(\frac{\hbar^2}{2m_e}\right)(3\pi^2 n_e)^{2/3}$$
 - At the Fermi enegry, the _Fermi wave-vector_ is then:
 $$k_F=(3\pi^2n_e)^{1/3}$$
 - These are _physically measurable quantities_, hence they must be _independent of $\mathcal{V}$_
+
+### Average energy
+- To obtain _average energy at absolute zero_, one must find the _density of states_ $D(E)$ as a function of energy:
+$$D(E)=\frac{d\,W(E)}{dE}=\frac{\mathcal{V}}{2\pi^2}\left(\frac{2m_e}{\hbar^2}\right)^{3/2}\sqrt{E}$$
+- The density of states _increases with energy_
+
+- Then, one obtains the _average energy_ by:
+$$\mean{E}=\frac{\int_0^{E_F}E\,D(E)\,dE}{\int_0^{E_F}D(E)\,dE}=\frac{3}{5}E_F$$
+### Heat capacity
+- The _Debye law_ says that _insulating_ solids have a heat capacity $\propto T^3$ at _low temperatures_
+- For _metals_, there is an _additional_ linear term
+
+- At a _low temperature_, only electrons _within $k_BT$ of the Fermi level_ are excited
+- The total _change in thermal energy_ for one _mole_ of electrons is then _approximately_:
+	$$U\sim(k_BT)N_A\frac{k_BT}{E_F}$$
+	- This _ignores the non-uniform density of states_
+
+- The _heat capacity_ is then:
+$$C_V=\pd{U}{T}\sim \frac{2Rk_BT}{E_F}=2R\frac{T}{T_F}$$
+- Here, $T_F$ is the _characteristic Fermi temperature_:
+$$T_F=\frac{E_F}{k_B}$$
+- A more _rigorous treatment_ using the Fermi-Dirac distribution then gives:
+$$C_V=\frac{\pi^2R}{2}\frac{T}{T_F}$$
+
+### Bulk modulus
+- The _bulk modulus_ of a material is defined as:
+$$B=-\frac{p}{\delta V/V}$$
+- $p$ is the _pressure_ used to _compress_ the material
+- Expressing in terms of _infinitesimals_:
+$$B=-V\left(\pd{p}{V}\right)_{T,N} \hspace{1cm} p=-\left(\pd{U}{V}\right)_N$$
+- Considering the _bulk_ of the crystal, using the _BvK volume_ as the variable:
+$$E_F=\frac{\hbar^2}{2m_e}\left(3\pi^2n_e\right)^{2/3}=\frac{\hbar^2}{2m_e}\left(3\pi^2\frac{N}{\mathcal{V}}\right)^{2/3}$$
+- Doing the derivatives:
+$$B=-\mathcal{V}\left(\pd{p}{\mathcal{V}}\right)_{T,N} \hspace{1cm} p=-\left(\pd{U}{\mathcal{V}}\right)_N$$
+- One finds the bulk modulus as:
+$$B=\frac{2}{3}E_Fn_e$$
+
+## Electrical conductivity
+- Metals are _good conductors_ of electricity
+	- Conductivity often _decreases with increasing temperature_
+- When there is _no applied electric field_, $\bm{k}$ is _spread symmetrically_ in the _Fermi sphere_
+- On _average_, the electrons have _zero net velocity_
+
+- When an _electric field_ is applied, the electrons experience a _force_ opposite the field
+- Electrons regularly _collide_ with nuclei, but _on average_, they manage to _drift_ in the direction opposite the field
+- This means _on average_, the Fermi sphere is _shifted_:
+![[Fermi circle shift.png]]
+- This gives a _net drift velocity_, which gives rise to a _current_
+
+- For this to occur, there must also be _empty states_ in the direction of the field
+	- Always true for the _free electron gas_
+
+- In this model, only the _number of electrons near the Fermi energy_ will _contribute_ to conductivity
+	- In contrast to the classical _Drude model_, where _all electrons_ drift and contribute to conductivity
+
+- In the _Drude model_, the _drift velocity_ is given by:
+	$$\bm{v}_d=\frac{e\bm{E}\tau}{m_e}$$
+	- $\tau$: average _scattering time_
+- This gives the _current density_:
+$$\bm{J}=\frac{n_ee^2\tau}{m_e}\bm{E}$$
 
 # The nearly-free electron gas
 
