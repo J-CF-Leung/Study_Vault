@@ -99,6 +99,8 @@ $$\psi(\bm{r})=\psi(\bm{r}+\bm{a})$$
 $$\psi=\exp(i\bm{k}\cdot\bm{r})=\exp(ik_xx)\exp(ik_yy)\exp(ik_zz)$$
 - The _energy_ is then:
 $$E=\frac{\hbar^2k^2}{2m}=\frac{\hbar^2}{2m}(k_x^2+k_y^2+k_z^2)$$
+![[E(k) free electron.png]]
+
 - From the _boundary conditions_, the _wave-vector_ is _quantised_:
 $$\bm{k}=(k_x,k_y,k_z)=2\pi\left(\frac{l}{a_x},\frac{m}{a_y},\frac{n}{a_z}\right)$$
 - Here, $l,m,n$ are _integers_
@@ -178,9 +180,41 @@ $$\bm{v}=\frac{\hbar \bm{k}}{m}$$
 $$\bm{F}=\hbar\frac{d\bm{k}}{dt}=-e\bm{E}$$
 - Taking _collisions_ into account:
 $$\Delta\bm{k}=-\frac{e\tau\bm{E}}{\hbar}$$
-- This gives a _shift in the sphere of occupied wave-vectors_, hence a _shift in average velocity_
+- This gives a _shift in the sphere of occupied wave-vectors_, hence a _shift in average velocity_:
+$$\Delta\bm{v}=\frac{\hbar\Delta\bm{k}}{m}=-\frac{e\tau\bm{E}}{m}$$
 - Hence, there is a _net velocity_, depending on both $\bm{E}$ as well as the _magnitude of_ $k_F$
+- The _conductivity_ can then be found:
+$$\sigma=\frac{n^*e^2\tau}{m}$$
+- $n^*$ is the _effective valence electron density_, as only the electrons _near the Fermi surface_ will contribute to conductivity
+- The total number of _promoted_ valence electrons is $n^*V$, with $n^*<<n$
+
+- The _net effect_ of an applied electric field is to make electrons _near the Fermi energy_ gain an _increment_ of energy $\Delta E$, promoting them into higher energies
+
+- Hence, conductivity depends on the _occupied_ [[#Fermi sphere and the density of states|density of states]] _at the Fermi level_
 
 ### Limitations
+- Although _better than the Drude model_, it still predicts that _all materials are metals_
+- The _potential of positive ions_ is still ignored
 
-## The nearly free elctron model
+## The nearly free electron model
+- The new Hamiltonian is:
+$$\hat{\Ham}=-\frac{\hbar^2}{2m}\nabla^2+V(\bm{r})$$
+- In _one dimension_, $V(x)$ is simply a _simple periodic_ potential modelling ions with spacing $a$
+- When it is _near ion cores_, it goes to _negative infinity_ as $1/x$
+![[Nearly free electron model potential.png]]
+
+- The electrons can be said to _scatter_ from the potential well
+- This causes _band gaps_, at $k=n\pi/a$
+- These wave vectors are at the _Brillouin zone boundaries_
+- The _magnitude_ of the gaps depends on the _strength_ of the potential
+
+- Hence, there are _permitted ranges_ of energy known as _bands_
+	- Within the bands, the energies are still _quantised_
+
+- At the _boundaries_:
+$$\pd{E}{k}=0$$
+- When _away_ from the boundaries, the bands are _similar in shape_ to those in the free electron model (i.e. _parabolic_)
+
+- In _insulators_, the lower band is _full_, and fields _cannot easily promote_ the electrons to cause any _change_ in $k$ and $v$
+
+- In _metals_, bands are _partally filled_, so fields can cause a _change_ in $k$ and $v$

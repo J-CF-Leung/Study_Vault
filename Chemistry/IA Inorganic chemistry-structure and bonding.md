@@ -115,7 +115,7 @@ Number of electron pairs | Common arrangement (Example) | Alternative (Example)
 - Composed of elements from opposite ends of periodic table
 - Bonding involves little covalency, and is non-directional
 - Overview of common $\ce{AB}$ structures:
-	- Detailed description: [[Crystal structure]]
+	- Detailed description: [[Crystal structures]]
 	- Four-coordinate:
 		- Zinc blende (cubic $\ce{ZnS}$), cubic F with half of tetrahedral interstices filled
 		- Wurtzite (hexagonal $\ce{ZnS}$)

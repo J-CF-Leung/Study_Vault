@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Materials Science/Electronic properties.md",
+                "file": "Materials Science/Electronic properties in materials.md",
                 "mode": "source",
                 "source": false
               }
@@ -92,8 +92,7 @@
               }
             }
           }
-        ],
-        "currentTab": 6
+        ]
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -110,7 +109,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md"
+                    "file": "Materials Science/Electronic properties in materials.md"
                   }
                 }
               }
@@ -126,7 +125,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                    "file": "Materials Science/Electronic properties in materials.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -149,7 +148,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.61450085448336,
+                      "scale": 0.6145008544833596,
                       "close": true
                     }
                   }
@@ -236,7 +235,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                "file": "Materials Science/Electronic properties in materials.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -253,7 +252,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                "file": "Materials Science/Electronic properties in materials.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -276,7 +275,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md"
+                "file": "Materials Science/Electronic properties in materials.md"
               }
             }
           },
@@ -306,21 +305,26 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ea89fcd31082d77b",
+  "active": "1240bf5783d867d9",
   "lastOpenFiles": [
+    "Materials Science/Images/E(k) free electron.png",
+    "Materials Science/Images/Nearly free electron model potential.png",
+    "Chemistry/IB Chemistry/Electrons in solids.md",
+    "Physics/Condensed matter physics/Phonons.md",
+    "Materials Science/Electronic properties in materials.md",
+    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+    "Chemistry/IA Inorganic chemistry-structure and bonding.md",
     "Past Papers/IB Chemistry A/IB_A_2014.pdf",
     "Mathematics/IB Mathematical Methods/Transform methods.md",
     "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
     "Chemistry/IB Chemistry/Bonding in molecules.md",
-    "Physics/Condensed matter physics/Phonons.md",
     "Chemistry/IB Chemistry/Molecular spectroscopy.md",
-    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_1.pdf",
     "Past Papers/IB Physics/2017-18_Part_IB_Physics_B_Paper_2.pdf",
-    "Phonon dispersion relationship wide range.png",
+    "Physics/Images/Phonon dispersion relationship wide range.png",
     "Physics/Crystal structure.md",
-    "Phonon dispersion relationship.png",
+    "Physics/Images/Phonon dispersion relationship.png",
     "Phonon phase diff. and freq.png",
     "Physics/Images/1D harmonic crystal.png",
     "Physics/Condensed matter physics/Crystal structures.md",
@@ -331,16 +335,13 @@
     "Past Papers/IB Physics/2021-22_Part_IB_Physics_A_Paper_2.pdf",
     "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_1.pdf",
     "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_2.pdf",
-    "Materials Science/Electronic properties.md",
     "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md",
-    "Chemistry/IB Chemistry/Electrons in solids.md",
     "Physics/Images/Canonical ensemble.png",
     "Physics/Thermal Physics/Classical Thermodynamics.md",
     "Physics/Images/Stirling engine operation.png",
     "Physics/Images/Stirling cycle.png",
     "Physics/Images/fig5DieselIdeal_web-transformed.jpeg",
     "Physics/Images/Otto_cycle-transformed.png",
-    "Physics/Images/Otto cycle.png",
     "Physics/Condensed matter physics/Semiconductors.md",
     "Physics/Condensed matter physics/Nearly Free Electron Model.md",
     "Physics/Condensed matter physics/Free Electron Model.md",
@@ -352,7 +353,6 @@
     "Physics/Condensed matter physics",
     "Physics/Untitled.md",
     "Physics/Quantum Mechanics/The failure of classical mechanics.md",
-    "Physics/IB Physics/Electromagnetism.md",
     "Misc or Personal/What to do.canvas"
   ]
 }
