@@ -92,7 +92,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -109,7 +110,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Materials Science/Electronic properties in materials.md"
+                    "file": "Physics/Condensed matter physics/Phonons.md"
                   }
                 }
               }
@@ -125,7 +126,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Materials Science/Electronic properties in materials.md",
+                    "file": "Physics/Condensed matter physics/Phonons.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -235,7 +236,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Materials Science/Electronic properties in materials.md",
+                "file": "Physics/Condensed matter physics/Phonons.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -252,7 +253,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Materials Science/Electronic properties in materials.md",
+                "file": "Physics/Condensed matter physics/Phonons.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -275,7 +276,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Materials Science/Electronic properties in materials.md"
+                "file": "Physics/Condensed matter physics/Phonons.md"
               }
             }
           },
@@ -305,13 +306,19 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "1240bf5783d867d9",
+  "active": "bdee2333112a0d60",
   "lastOpenFiles": [
+    "Physics/Images/Phonon alisasing.png",
+    "Physics/Condensed matter physics/Crystal structure and diffraction.md",
+    "Physics/Images/Diffraction methods.png",
+    "Physics/Images/Ewald sphere.png",
+    "Physics/Images/All Bravais lattice types.png",
+    "Physics/Images/Diffraction from crystal.png",
+    "Physics/Condensed matter physics/Phonons.md",
+    "Materials Science/Electronic properties in materials.md",
     "Materials Science/Images/E(k) free electron.png",
     "Materials Science/Images/Nearly free electron model potential.png",
     "Chemistry/IB Chemistry/Electrons in solids.md",
-    "Physics/Condensed matter physics/Phonons.md",
-    "Materials Science/Electronic properties in materials.md",
     "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Chemistry/IA Inorganic chemistry-structure and bonding.md",
     "Past Papers/IB Chemistry A/IB_A_2014.pdf",
@@ -327,7 +334,6 @@
     "Physics/Images/Phonon dispersion relationship.png",
     "Phonon phase diff. and freq.png",
     "Physics/Images/1D harmonic crystal.png",
-    "Physics/Condensed matter physics/Crystal structures.md",
     "Physics/IB Physics/Oscillations.md",
     "Physics/Thermal Physics/Statistical thermodynamics.md",
     "Past Papers/IB Physics/2018-19_Part_IB_Physics_B_Paper_2.pdf",
@@ -336,12 +342,7 @@
     "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_1.pdf",
     "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_2.pdf",
     "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md",
-    "Physics/Images/Canonical ensemble.png",
     "Physics/Thermal Physics/Classical Thermodynamics.md",
-    "Physics/Images/Stirling engine operation.png",
-    "Physics/Images/Stirling cycle.png",
-    "Physics/Images/fig5DieselIdeal_web-transformed.jpeg",
-    "Physics/Images/Otto_cycle-transformed.png",
     "Physics/Condensed matter physics/Semiconductors.md",
     "Physics/Condensed matter physics/Nearly Free Electron Model.md",
     "Physics/Condensed matter physics/Free Electron Model.md",

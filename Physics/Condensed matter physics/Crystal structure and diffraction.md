@@ -19,7 +19,7 @@
 	- Face-centred, on all faces $(F)$
 	- Face-centred, on a single face/base-centred $(A,B,C)$
 
-![[Bravais lattices.png]]
+![[All Bravais lattice types.png]]
 
 ## Unit cells
 - Overall, any _repeating unit_ in a lattice that can _tessellate_ all space with the pattern is known as a _unit cell_
@@ -99,4 +99,23 @@ $$f(\bm{r})=\sum_{h,k,l=-\infty}^\infty C_{hkl}\exp(i\bm{G}_{hkl}\cdot\bm{r})$$
 
 - If the lattice is _non-orthorombic_, then the _reciprocal lattice_ will also be _non-orthorombic_, and the reciprocal lattice vector will _not necessarily be parallel with the corresponding lattice vector_
 
+- One can also _divide_ the reciprocal lattice into its own _Wigner-Seitz cells_, which are then named the _first Brillouin zone_
+
 # Diffraction
+- Let a beam with wave-vector $\bm{k}$ be _incident_ on a specimen, then be _elastically scattered_ with out-going wavevector $\bm{k}_f$:
+![[Diffraction from crystal.png]]
+- The _outgoing_ beam has the highest amplitude when $(\bm{k}_f-\bm{k}_i)\cdot\bm{r}=2n\pi$
+- Hence, _diffraction peaks_ are seen when:
+$$\bm{k}_f-\bm{k}_i=\bm{G}_{hkl}$$
+- In other words, for a diffraction peak, the _difference in wave-vector_ must match a _recriprocal lattice vector_
+
+- This condition can be expressed using the _Ewald sphere_:
+![[Ewald sphere.png]]
+- The diffraction peak is seen when the sphere _intersects two reciprocal lattice points_
+
+- In _single-crystal diffraction_, all part of the crystal have _one uniform orientation_
+- They form _diffraction spots_, and is very _precise_
+
+- In _powder diffraction_, all parts of the sample have _different orientations_
+- They form _diffraction rings_
+![[Diffraction methods.png]]
