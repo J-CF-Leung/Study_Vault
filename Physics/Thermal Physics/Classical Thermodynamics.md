@@ -870,6 +870,7 @@ $$\eta_\text{Carnot}=\frac{T_l}{T_h-T_l}$$
 $$\eta=\frac{Q_h}{W}>1$$
 - The ideal efficiency is:
 $$\eta_\text{Carnot}=\frac{T_h}{T_h-T_l}$$
+- Hence, it is _more efficient than direct heating_
 
 ## Non-gaseous systems
 

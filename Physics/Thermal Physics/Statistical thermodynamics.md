@@ -158,3 +158,11 @@ $$U_\text{tot}=\frac{N_tkT}{2}$$
 
 - At _even higher temperatures_, the _vibrational modes_ are involved, and $U\approx 7kT/2$
 
+# Entropy
+- In [[Classical Thermodynamics#The second law and entropy|classical thermodynamics]], a _change in entropy_ is defined as:
+$$dS=\frac{\dbar Q}{T}$$
+
+## Gibbs Entropy
+- The _Gibbs definition_:
+$$S_\text{Gibbs}=-\sum_i p_i\ln p_i$$
+- Applicable to _small systems_ as well

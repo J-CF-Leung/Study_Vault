@@ -327,11 +327,16 @@ $$q_j=Q_j\exp(i\omega t)\longrightarrow K_{ij}Q_j-\omega^2M_{ij}Q_j=0$$
 $$\det(\dunderline{K}-\omega^2\dunderline{M})=0$$
 - This _resembles an eigenvalue equation_
 - The frequencies $\omega$ are the _characteristic frequencies_
-	- They are always _real_
+	- By multiplying $K_{ij}Q_j-\omega^2M_{ij}Q_j$ by $Q_i$ and summing:
+	$$\omega^2=\frac{K_{ij}Q_iQ_j}{M_{ij}Q_iQ_j}>0$$
+	- Hence, all the frequencies are _real_
+
 - From the nature of the equation, _there are as many normal modes as there are degrees of freedom_
 
+- For each $\omega_n$, there is a _generalised eigenvector_ $\bm{Q}^{(n)}$
 - The _normal modes_ $\bm{Q}^{(n)}$, satisfy:
-$$\displaylines{(\dunderline{\bm{K}}-\omega^2\dunderline{\bm{M}})\cdot\underline{\bm{Q}}=0 \\ \ddot{\bm{Q}}^{(n)}+\omega_n^2\bm{Q}^{(n)}=0}$$
+$$\displaylines{(\dunderline{\bm{K}}-\omega_n^2\dunderline{\bm{M}})\cdot\underline{\bm{Q}}^{(n)}=0 \hspace{1cm} K_{ij}Q_j^{(n)}-\omega_n^2M_{ij}Q_j^{(n)}=0}$$
+
 - The _general solution_ for the original coordinates are then:
 $$\bm{q}(t)=\Re\left\{\sum_m A^{(m)}\bm{Q}^{(m)}\exp[i(\omega_mt-\phi_m)]\right\}$$
 - There may be _zero modes_, where $\omega_m=0$, with the corresponding term:
@@ -339,11 +344,11 @@ $$\lim_{\omega_m\to0} A^{(m)}\bm{Q}^{(m)}\sin(\omega_mt-\phi_m)=B^{(m)}\bm{Q}^{(
 - Where $B^{(m)}=A^{(m)}\omega_m$ and $t_0=\omega_m\phi$
 - All constants $A^{(m)}$, $B^{(m)}$, and $\phi_m$ are determined by _initial conditions_
 
-	- The normal modes are _orthogonal_ w.r.t. $\dunderline{M}$:
-	$$\left(\underline{Q}^{(m)}\right)^T\cdot\dunderline{\bm{M}}\cdot\underline{Q}^{(n)}\propto\delta_{mn}$$
-	- Proof: Consider the _"eigenvalue" equations_ for $m$ and $n$, then use the fact that $\dunderline{M}$ and $\dunderline{K}$ are _symmetric_ (w.r.t. any basis)
-- One can then _rescale_ the normal modes
-- For _degenerate_ normal modes, one can always _orthogonalise_ the normal modes such that this is true
+- The normal modes are _orthogonal_ w.r.t. $\dunderline{M}$: $$\left(\underline{Q}^{(m)}\right)^T\cdot\dunderline{\bm{M}}\cdot\underline{Q}^{(n)}\propto\delta_{mn}$$
+	- Proof: Consider the _"eigenvalue" equations_ for $m$ and $n$, dot them respectively, then use the fact that $\dunderline{M}$ and $\dunderline{K}$ are _symmetric_ (w.r.t. any basis)
+	- For _degenerate_ normal modes, one can always _orthogonalise_ the normal modes such that this is true
+	- One can always _rescale_ the normal modes such that: $$\left(\underline{Q}^{(m)}\right)^T\cdot\dunderline{\bm{M}}\cdot\underline{Q}^{(n)}=\delta_{mn}$$
+
 
 ### More remarks on normal modes
 - Since the frequencies are _real_, the system must be inherently _stable_
