@@ -96,7 +96,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/IB Physics/Oscillations.md",
+                "file": "Mathematics/IB Mathematical Methods/Group Theory.md",
                 "mode": "source",
                 "source": false
               }
@@ -113,6 +113,7 @@
           {
             "id": "3773db76a4512ef8",
             "type": "tabs",
+            "dimension": 50.048216007714565,
             "children": [
               {
                 "id": "86bbe26a529a72ad",
@@ -120,7 +121,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/IB Physics/Oscillations.md"
+                    "file": "Mathematics/IB Mathematical Methods/Group Theory.md"
                   }
                 }
               }
@@ -129,6 +130,7 @@
           {
             "id": "a6faa71d3e231a85",
             "type": "tabs",
+            "dimension": 49.951783992285435,
             "children": [
               {
                 "id": "1240bf5783d867d9",
@@ -136,7 +138,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/IB Physics/Oscillations.md",
+                    "file": "Mathematics/IB Mathematical Methods/Group Theory.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -225,6 +227,14 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "8ee7b9fda20cd8a1",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
@@ -246,7 +256,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/IB Physics/Oscillations.md",
+                "file": "Mathematics/IB Mathematical Methods/Group Theory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -263,7 +273,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/IB Physics/Oscillations.md",
+                "file": "Mathematics/IB Mathematical Methods/Group Theory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -286,7 +296,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/IB Physics/Oscillations.md"
+                "file": "Mathematics/IB Mathematical Methods/Group Theory.md"
               }
             }
           },
@@ -318,10 +328,15 @@
   },
   "active": "15651e3bc43ab0b9",
   "lastOpenFiles": [
+    "Mathematics/Images/Square Rm1.png",
+    "Mathematics/Images/Square m1R.png",
+    "Mathematics/Images/Square reflection.png",
+    "Mathematics/Images/Square rotation.png",
+    "Mathematics/Images/Sets algebras groups.png",
+    "Physics/IB Physics/Oscillations.md",
     "Mathematics/IB Mathematical Methods/Contour integration.md",
     "Mathematics/IB Mathematical Methods/Transform methods.md",
     "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_2.pdf",
-    "Physics/IB Physics/Oscillations.md",
     "Physics/Condensed matter physics/Thermal Properties.md",
     "Past Papers/IB Physics/2020-21_Part_IB_Physics_B_Paper_2.pdf",
     "Past Papers/IB Physics/2018-19_Part_IB_Physics_B_Paper_2.pdf",
@@ -347,14 +362,10 @@
     "Physics/Images/Diffraction methods.png",
     "Physics/Images/Ewald sphere.png",
     "Physics/Images/All Bravais lattice types.png",
-    "Physics/Images/Diffraction from crystal.png",
-    "Materials Science/Images/E(k) free electron.png",
-    "Materials Science/Images/Nearly free electron model potential.png",
     "Chemistry/IA Inorganic chemistry-structure and bonding.md",
     "Chemistry/IB Chemistry/Bonding in molecules.md",
     "Chemistry/IB Chemistry/Molecular spectroscopy.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
-    "Physics/Images/Phonon dispersion relationship wide range.png",
     "Physics/Crystal structure.md",
     "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md",
     "Physics/Condensed matter physics/Semiconductors.md",
@@ -363,7 +374,6 @@
     "Mathematics/IB Mathematical Methods/Small oscillations.md",
     "Physics/IB Physics/Elasticity.md",
     "Chemistry/IB Chemistry/Electrons in crystals.md",
-    "Physics/Untitled.md",
     "Misc or Personal/What to do.canvas"
   ]
 }
