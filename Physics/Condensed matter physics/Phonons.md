@@ -117,3 +117,23 @@ $$\frac{\hbar^2}{2m}k_f^2=\frac{\hbar^2}{2m}k_i^2\pm\hbar\omega$$
 	- There may also be an _elastic peak_
 
 # 1D Diatomic Lattice
+- Consider a _1D diatomic chain with two types of atoms_:
+![[1D diatomic lattice.png]]
+- $a$ is _half the size of the unit cell_
+
+- The _equations of motion_ are:
+$$\displaylines{m_A\ddot{u}_{2n}=\alpha(u_{2n+1}+u_{2n-1}-2u_n) \\ m_B\ddot{u}_{2n+1}=\alpha(u_{2n+2}+u_{2n}-2u_{2n+1})}$$
+- Using the _trial solutions_:
+$$u_{2n}=U_1\exp[i(2nqa-\omega t)] \hspace{1cm} u_{2n+1}=U_2\exp[i((2n+1)qa-\omega t)]$$
+- Substituting these into the equations of motion:
+$$\omega^2=\frac{\alpha}{m_Am_B}\left[(m_A+m_B)\pm\left\{(m_A+m_B)^2-4m_Am_B\sin^2(qa)\right\}^2\right]$$
+
+- The two solutions form _two branches_ in the dispersion relationship:
+![[Phonon branches.png]]
+
+- The _lower branch_ is known as the _acoustic mode_
+	- As $q\to0$, it corresponds to _sound waves_
+	- As $q\to0$, $\omega\to0$
+- The _upper branch_ is known as the _optical mode_
+	- It interacts _strongly with electromagnetic radiation_ of similar $\omega$
+	- Photons can be _absorbed_ to create phonons

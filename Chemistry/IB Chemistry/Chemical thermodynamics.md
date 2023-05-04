@@ -720,6 +720,14 @@ $$K_c=\frac{f_\ce{A}^2}{f_\ce{A_2}}\frac{1}{c^⦵}\exp\left(-\frac{D_e}{kT}\righ
 - As the nuclei are _infnitely far apart_, the molecule has _zero energy_
 - As any nuclei become _close to each other_, the energy _tends to infinity_
 
+- _Example_: $$\ce{A +BC->AB +C}$$
+	![[PES.png]]
+	- One can draw a perspective view, or a _contour plot_, where paths _perpendicular_ to the contours are _uphill/downhill_
+	- There are "valleys" corresponding to an _equilibrium bond length_ for either $r_\ce{AB}$ or $r_\ce{BC}$
+	- They _connect_ at one point to form a "pass"
+	- For _large internuclear distances_, there is a _plateau_ in energy
+	- Any _cross-section_ at _constant_ $r_\ce{AB}$ or $r_\ce{BC}$ will form a familiar _PE curve_
+
 - The _reaction pathway_ of two molecules can be charted as a _path on the PES_
 - The _starting_ and _end-points_ are the _potential minima corresponding to reactants and products_
 
