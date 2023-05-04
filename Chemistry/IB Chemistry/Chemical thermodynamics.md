@@ -724,7 +724,7 @@ $$K_c=\frac{f_\ce{A}^2}{f_\ce{A_2}}\frac{1}{c^⦵}\exp\left(-\frac{D_e}{kT}\righ
 	![[PES.png]]
 	- One can draw a perspective view, or a _contour plot_, where paths _perpendicular_ to the contours are _uphill/downhill_
 	- There are "valleys" corresponding to an _equilibrium bond length_ for either $r_\ce{AB}$ or $r_\ce{BC}$
-	- They _connect_ at one point to form a "pass"
+	- They _connect_ at one point to form a "pass", which has a _higher energy_ than all other points in the valley
 	- For _large internuclear distances_, there is a _plateau_ in energy
 	- Any _cross-section_ at _constant_ $r_\ce{AB}$ or $r_\ce{BC}$ will form a familiar _PE curve_
 

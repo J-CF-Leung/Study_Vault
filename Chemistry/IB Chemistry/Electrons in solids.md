@@ -110,12 +110,47 @@ $$\text{Atom 1: } (x_i,y_i,z_i) \hspace{1cm}\text{Atom 2: }\left(x_i+\frac{a}{2}
 - Where $c$ is the _height_ of the hexagonal unit cell
 - This structure also has the _highest packing density_, as it also consists of hexagonal layers
 
-## The ionic model
+## Periodicity and plane waves
+- Let some function in the crystal be modelled as a _plane wave_
+- The effect on the atoms is dependent on the _value of the wave function at that point_
+- Consider _two waves_, with a _difference in wave-vector_ $2\pi/a$:
+![[Plane wave aliasing.png]]
+- In general, waves with wavenumbers $\bm{k}+n(2\pi/a)$ will be _equivalent_, as the wave functions have _the same value at lattice points_
+- They are said to be _commensurate_
+
+- Therefore, only waves of wavenumber $-\pi/a<k<\pi/a$ will be _well-defined_
+- This is known as the _reduced zone representation_
+
+- In _multiple dimensions_, each wave-number is also only defined within:
+$$\displaylines{-\pi/a_x<k_x<\pi/a_x \\ -\pi/a_y<k_y<\pi/a_y \\ -\pi/a_z<k_z<\pi/a_z}$$
+- Then, to use the _reduced-zone representation_:
+$$(k_x,k_y,k_z) \iff \left(k_x+n_x\frac{2\pi}{a_x},k_y+n_y\frac{2\pi}{a_y},k_z+n_z\frac{2\pi}{a_z}\right)$$
+
+## The reciprocal lattice
+- The _reciprocal lattice_ provides a way to describe what _plane waves in a lattice_ will be _commensurate_
+- In _one dimension_, commensurate waves have $\Delta k=2\pi/a$
+- Therefore, one can form a _lattice in $k-$space_, which consist of _commensurate wave-numbers_:
+![[1D reciprocal lattice.png]]
+
+- If a _primitive real-space lattice vector_ is $\bm{a}_i$, and a _primitive reciprocal lattice vector_ is $\bm{b}_j$:
+$$\bm{a}_i\cdot\bm{b}_j=2\pi\delta_{ij}$$
+
+- In _three dimensions_:
+$$\bm{b}_1=\frac{2\pi(\bm{a}_2\cdot\bm{a}_3)}{\bm{a}_1\cdot(\bm{a}_2\wedge\bm{a}_3)}$$
+- There are other _cyclic permutations_ that form $\bm{b}_2$ and $\bm{b}_3$
+- The _volume_ of a reciprocal lattice cell is:
+$$\bm{b}_1\cdot(\bm{b_2}\cdot\bm{b}_3)=\frac{(2\pi)^3}{\bm{a}_1\cdot(\bm{a}_2\wedge\bm{a}_3)}=\frac{(2\pi)^3}{V_c}$$
+
+- _Examples_ of reciprocal lattices:
+![[Reciprocal lattice examples.png]]
+- Similarly, the reciprocal lattice of cubic $I$ is cubic $F$
+
+# Ionic crystals
 - For ionic crystals, the _lattice energy_ is defined as the _energy needed to dissociate a solid lattice into widely separated gaseous ions_
 - It must be deduced from a _thermodynamic cycle_
 	- Using _ionisation energies, electron affinities, and enthalpies of formation_
 
-### Electrostatic interactions
+## Electrostatic interactions
 - Assume a simple _one-dimensional lattice_:
 ![[1D ionic lattice.png]]
 - Considering the electrostatic energy arising from interactions with _one ion_, then multiplying by _one mole_:
@@ -128,7 +163,7 @@ $$E_\text{electrostatic}=-\frac{N_A\mathcal{A}z_-z_+e^2}{4\pi\epsilon_0a}$$
 
 ![[Madelung constant table.png]]
 
-### Finding lattice enthalpy
+## Finding lattice enthalpy
 - If _only the electrostatic energy_ is accounted for, the lattice would simply _collapse_
 - One must account for the _overlap of filled orbitals_, causing a _repulsion between ions_
 - This is modelled by an _empirical term_:
@@ -140,7 +175,7 @@ $$E=-\frac{N_A\mathcal{A}z_-z_+e^2}{4\pi\epsilon_0a}+\frac{B}{a^n}$$
 $$E_0=-\frac{N_A\mathcal{A}z_-z_+e^2}{4\pi\epsilon_0a_0}\left(1-\frac{1}{n}\right)$$
 - As this is an _crude theory_, it is often tolerable to _approximate_ the lattice _enthalpy_ as:
 $$\Delta_L H^o\approx\frac{N_A\mathcal{A}z_-z_+e^2}{4\pi\epsilon_0a_0}\left(1-\frac{1}{n}\right)$$
-### Ionic radii
+## Ionic radii
 - By considering _many ionic crystals_, one can define _ionic radii_ for each ion:
 $$a_0=r_++r_-$$
 - The ions are considered to be _hard spheres_
@@ -184,6 +219,9 @@ $$\lambda=\frac{2\pi}{|\bm{k}|}=\frac{2\pi}{\sqrt{k_x^2+k_y^2+k_z^2}}$$
 $$E_k=\frac{\hbar^2|\bm{k}|^2}{2m_e}$$
 - This can be visualised as a _sphere_ in the _space of wave-vectors_, or $k-$_space_
 
+- In _one-dimension_, this results in a _parabolic dispersion curve_:
+![[1D FEG dispersion curve.png]]
+
 - Without considering the boundary conditions, this results in a _continuous spectrum of energy_, making it difficult to define _energy levels_
 
 ## Born-von Karman boundary conditions
@@ -202,6 +240,9 @@ $$\psi(\bm{r}+\bm{T})=\psi(\bm{r})$$
 $$\bm{k}=2\pi\left(\frac{n_1}{N_1a_1},\frac{n_2}{N_2a_2},\frac{n_3}{N_3a_3}\right)$$
 - Here, $n_i$ are _integers_
 - If $a_1=a_2=a_3$, this gives _equally spaced $k-$states_
+- They _do not correspond_ to [[#The reciprocal lattice|reciprocal lattice points]]
+	- They are much more _densely packed_ than the reciprocal lattice
+	- NvK points are also _not a physical quantity_, while the reciprocal lattice is completely physical
 
 - In _one-dimension_, the [[Chemical thermodynamics#Density of states|density of states]] is the _reciprocal of the spacing_:
 $$D_\text{1D}=\frac{N_1a_1}{2\pi}=\frac{\Lagr}{2\pi}$$
@@ -323,6 +364,50 @@ $$B=\frac{2}{3}E_Fn_e$$
 $$\bm{J}=\frac{n_ee^2\tau}{m_e}\bm{E}$$
 
 # The nearly-free electron gas
+- This _starts from the FEG model_, then makes adjustments by _taking the electronic potential of nuclei_ into account
+
+## Applying the reduced-zone representation
+- Consider the [[#Electrons as plane waves|dispersion curve]] in the free electron gas model, then apply the [[#Periodicity and plane waves|reduced-zone representation]]:
+![[FEG backfolding.png]]
+
+- Similarly, considering _differently angled lines_ in a two-dimensional dispersion plot, one can construct:
+![[2D reduced zone FEG dispersion.png]]
+
+## Band gap formation in 1D
+- Consider two _degenerate wave-functions_:
+$$\psi_+=\exp\left(+i\frac{\pi x}{a}\right) \hspace{1cm} \psi_-=\exp\left(-i\frac{\pi x}{a}\right)$$
+- Then, consider the _linear combinations_:
+$$\psi_c=\cos(\pi x/a)=\frac{\psi_++\psi_-}{2} \hspace{1cm} \psi_s=\sin(\pi x/a)=\frac{\psi_+-\psi_-}{2i}$$
+- $\psi_c$ has a _non-zero value_ at the _lattice points_
+- $\psi_s$ has _nodes_ at lattice points
+![[psic and psis.png]]
+- Then, if there are _interactions with atoms_, this will cause an _energy split_ (the degeneracy is _lifted_)
+
+- Then, considering _lower wave-numbers_:
+![[psic and psis lower wavenumber.png]]
+- Averaged over _several cycles_, the degeneracy _remains_
+
+- Hence, this forms a _perturbation_ to the dispersion plot due to the loss of degeneracy:
+![[Band gap formation.png]]
+- Hence, for a _range of energies_, there are _no available $k-$states_
+
+- If the _Fermi level_ is within the band gap, for _low temperatures_, electric conduction is _impossible_, as the electrons _cannot be promoted_
+
+- In the _first band_, the _number of available states_ is:
+$$N_1=\frac{2\pi}{a}\frac{\mathcal{L}}{2\pi}=\frac{\mathcal{L}}{a}$$
+- If each unit cell has _one valence electron_, they would fill $\mathcal{L}/(2a)$ states, which _fills up half of the first band_, therefore the material will be a _metallic conductor_
+- If each unit cell has _two valence electrons_, this _completely fills up the first band_, making the material an _insulator_
+
+- Hence, this model predicts _group 2 metals are insulators_
+- Therefore, one must consider _more dimensions_ for a viable model
+
+## Band gaps in 2 dimensions
+![[2D NFEG dispersion curve.png]]
+
+- In 2 dimensions, the _bands corresponding to different $\bm{k}$ directions_ will _overlap_, as their gaps are at _different energies_
+- The electrons will _start filling the second band before the first one is completely filled_
+
+
 
 # The tight-binding model
 

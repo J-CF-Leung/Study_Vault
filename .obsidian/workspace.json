@@ -90,8 +90,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -109,7 +108,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md"
+                    "file": "Chemistry/IB Chemistry/Electrons in solids.md"
                   }
                 }
               }
@@ -126,7 +125,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                    "file": "Chemistry/IB Chemistry/Electrons in solids.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -244,7 +243,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -261,7 +260,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -284,7 +283,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md"
+                "file": "Chemistry/IB Chemistry/Electrons in solids.md"
               }
             }
           },
@@ -314,23 +313,28 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d50eeb69e73232dd",
+  "active": "68853df9d1da064a",
   "lastOpenFiles": [
-    "Chemistry/Images/PES.png",
+    "Chemistry/Images/Reciprocal lattice examples.png",
+    "Chemistry/Images/1D reciprocal lattice.png",
+    "David Morin's Limericks.md",
     "Chemistry/IB Chemistry/Electrons in solids.md",
+    "Chemistry/Images/2D NFEG dispersion curve.png",
+    "Chemistry/Images/Band gap formation.png",
+    "Chemistry/Images/psic and psis lower wavenumber.png",
+    "Chemistry/Images/psic and psis.png",
+    "Chemistry/Images/2D reduced zone FEG dispersion.png",
+    "Chemistry/Images/FEG backfolding.png",
+    "Chemistry/Images/1D FEG dispersion curve.png",
+    "Chemistry/Images/Plane wave aliasing.png",
+    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+    "Chemistry/Images/PES.png",
     "Physics/Condensed matter physics/Phonons.md",
-    "Physics/Images/Phonon branches.png",
     "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_2.pdf",
     "Chemistry/IB Chemistry/Bonding in molecules.md",
     "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Chemistry/IB Chemistry/Molecular spectroscopy.md",
     "Mathematics/IB Mathematical Methods/Group Theory.md",
-    "Physics/Images/1D diatomic lattice.png",
-    "Mathematics/Images/Square Rm1.png",
-    "Mathematics/Images/Square m1R.png",
-    "Mathematics/Images/Square reflection.png",
-    "Mathematics/Images/Square rotation.png",
-    "Mathematics/Images/Sets algebras groups.png",
     "Physics/IB Physics/Oscillations.md",
     "Mathematics/IB Mathematical Methods/Contour integration.md",
     "Mathematics/IB Mathematical Methods/Transform methods.md",
@@ -349,10 +353,6 @@
     "Past Papers/IB Physics/2011-12_Part_IB_Physics_B_Paper_2.pdf",
     "Materials Science/Electronic properties in materials.md",
     "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
-    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
-    "Physics/Images/Phonons with more interactions.png",
-    "Chemistry/Images/Fermi circle shift.png",
-    "Physics/Images/Phonon alisasing.png",
     "Physics/Condensed matter physics/Crystal structure and diffraction.md",
     "Chemistry/IA Inorganic chemistry-structure and bonding.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
@@ -361,7 +361,6 @@
     "Physics/Condensed matter physics/Semiconductors.md",
     "Physics/Condensed matter physics/Nearly Free Electron Model.md",
     "Physics/Condensed matter physics/Free Electron Model.md",
-    "Mathematics/IB Mathematical Methods/Small oscillations.md",
     "Misc or Personal/What to do.canvas"
   ]
 }
