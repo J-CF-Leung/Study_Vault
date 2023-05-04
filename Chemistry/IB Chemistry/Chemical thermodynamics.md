@@ -729,7 +729,13 @@ $$K_c=\frac{f_\ce{A}^2}{f_\ce{A_2}}\frac{1}{c^⦵}\exp\left(-\frac{D_e}{kT}\righ
 	- Any _cross-section_ at _constant_ $r_\ce{AB}$ or $r_\ce{BC}$ will form a familiar _PE curve_
 
 - The _reaction pathway_ of two molecules can be charted as a _path on the PES_
-- The _starting_ and _end-points_ are the _potential minima corresponding to reactants and products_
+- The _starting_ and _end-points_ are the _potential minima corresponding to reactants and products_, with many _possible paths_ connecting them
+- Example: $$\ce{A +BC->AB +C}$$
+	![[PES possible paths.png]]
+	- Path 1: _Dissociation_ of the atoms before forming the product
+	- Path 2: _Compressing_ both distances before dissociating into the product
+	- Path 3: Around the _side_ of the valley
+	- Path 4: Through the _centre_ of the "valley", taking the _last energy_ pathway
 
 - For each reaction, there is a _pathway with least expenditure of energy_
 
@@ -740,9 +746,10 @@ $$K_c=\frac{f_\ce{A}^2}{f_\ce{A_2}}\frac{1}{c^⦵}\exp\left(-\frac{D_e}{kT}\righ
 	- It is distinct from the _reaction intermediate_, which exists in a _minimum_ and is an actual molecule
 - The _vast majority_ of molecules will travel via this pathway, as any _alternative route_ will require more energy that the molecules do not have
 
-- The _coordinate_ which maps the least-energy pathway is the _reaction coordinate_
+- The _coordinate_ which maps the _least-energy pathway_ is the _reaction coordinate_
 - It is some _linear combination of nuclear displacements_
 - The PES _along the reaction coordinate_ is known as the _reaction profile_:
+![[Reaction coordinate.png|500]]
 
 
 ## Transition state theory
@@ -774,10 +781,39 @@ $$K^*=\frac{kT}{h\nu^\ddagger}\frac{c^⦵f'_\text{TS}}{f_\ce{A}f_\ce{BC}}\exp\le
 $$k_\text{1st}=\nu^\ddagger$$
 - From this:
 $$\displaylines{r=k_\text{1st}[\ce{TS}]=k_\text{2nd}[\ce{A}][\ce{BC}] \\ k_\text{2nd}=\frac{1}{c^⦵}k_\text{1st}K^*=\frac{kT}{h}\frac{f'_\text{TS}}{f_\ce{A}f_\ce{BC}}\exp\left(-\frac{\Delta\varepsilon_0^\ddagger}{RT}\right)}$$
+- This has units of $\text{m}^{3}\,\text{s}^{-1}$
+- For units of $\text{mol}^{-1}\, \text{m}^{3}\,\text{s}^{-1}$, the first factor is $RT/h$
 
-## Steric factors
+## Applications of transition state theory
+- $f_\ce{TS}'$ is often _hard to compute_, but can be used to make _approximate predictions_
 
-## Kinetic isotope effect
+### Steric factors
+- Consider two reactions, one with a _diatomic_, the other with a _shapeless molecule_:
+$$\displaylines{\ce{A +BC-> AB +C} \\ \ce{A +D->AD}}$$
+![[Steric factor.png]]
+- Assume the same _type of partition function_ have _similar magnitudes_, and:
+$$q_\text{trans}>>q_\text{rot}>>q_\text{vib}$$
+- Notation for clarity:
+$$q_\text{trans}\to\{\text{trans}\}$$
+- Comparing the _starting materials_, as well as the two _transition states_:
+$$\displaylines{\frac{f'_\ce{A-B-C}}{f'_\ce{A}f'_\ce{B-C}}=\frac{\{\text{trans}\}^3\{\text{rot}\}^2\{\text{vib}\}^3}{\{\text{trans}\}^3\{\text{trans}\}^3\{\text{rot}\}^2\{\text{vib}\}}=\frac{\{\text{vib}\}^2}{\{\text{trans}\}^3} \\ \frac{f'_\ce{A-D}}{f'_\ce{A}f'_\ce{D}}=\frac{\{\text{trans}\}^3\{\text{rot}\}^2}{\{\text{trans}\}^3\{\text{trans}\}^3}=\frac{\{\text{rot}\}^2}{\{\text{trans}\}^3}}$$
+- The _steric factor_ is then defined as the _ratio of the rate constants_:
+$$p=\frac{k_\text{end}(\ce{A +BC})}{k_\text{2nd}(\ce{A+D})}=\frac{\{\text{vib}\}^2}{\{\text{rot}\}^2}$$
+
+### Kinetic isotope effect
+- Consider _replacing an $\ce{H}$ atom with a deuterium $\ce{D}$ atom_ at position $*$:
+![[Kinetic isotope effect.png]]
+- The _ratio of frequencies_ between molecules $A$ and $B$ is simply:
+$$\frac{\nu_\ce{A}}{\nu_\ce{B}}=\sqrt{\frac{\mu_\ce{B}}{\mu_\ce{A}}}$$
+- Given that the hydrogen is a light atom is attached to a _heavy molecule_:
+$$\displaylines{h\nu>>kT \\ q_\text{vib}=\frac{\exp(-h\nu/2kT)}{1-\exp(-h\nu/kT)}\approx \exp(-h\nu/2kT)}$$
+- The _ratio of rate constants_ is then:
+$$\frac{k_\text{2nd}(\ce{H})}{k_\text{2nd}(\ce{D})}=\frac{q_\text{vib}(\ce{D})}{q_\text{vib}(\ce{H})}\approx\exp\left(-\frac{h(\nu_\ce{D}-\nu_\ce{H})}{2kT}\right)>1$$
+
+- This can be interpreted as the _difference in vibrational ground states_
+- The vibration with $\ce{D}$ has the _lower ground state energy_
+
+- For the reaction above, _deuterating reduces the rate_ by a factor of $\approx7$
 
 ## A thermodynamic formulation
 
