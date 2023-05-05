@@ -103,7 +103,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 1
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -121,7 +121,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Mathematics/IB Mathematical Methods/Group Theory.md"
+                    "file": "Physics/Condensed matter physics/Phonons.md"
                   }
                 }
               }
@@ -138,7 +138,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Mathematics/IB Mathematical Methods/Group Theory.md",
+                    "file": "Physics/Condensed matter physics/Phonons.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -256,7 +256,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Group Theory.md",
+                "file": "Physics/Condensed matter physics/Phonons.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -273,7 +273,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Group Theory.md",
+                "file": "Physics/Condensed matter physics/Phonons.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -296,7 +296,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Group Theory.md"
+                "file": "Physics/Condensed matter physics/Phonons.md"
               }
             }
           },
@@ -326,9 +326,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "8b41358b48426586",
+  "active": "3c7750506fcf3ed3",
   "lastOpenFiles": [
-    "1-1 vs onto.png",
+    "Physics/Condensed matter physics/Thermal Properties.md",
+    "Travelling phonon excess energy.png",
+    "Physics/Condensed matter physics/Semiconductors.md",
+    "Mathematics/Images/1-1 vs onto.png",
+    "Physics/Condensed matter physics/Phonons.md",
+    "Mathematics/IB Mathematical Methods/Group Theory.md",
     "Mathematics/Images/D4 multiplication table.png",
     "Mathematics/Images/Square mirror planes.png",
     "Physics/Thermal Physics/Classical Thermodynamics.md",
@@ -337,24 +342,19 @@
     "Chemistry/Images/Kinetic isotope effect.png",
     "Chemistry/Images/Steric factor.png",
     "Chemistry/IB Chemistry/Electrons in solids.md",
-    "Physics/Condensed matter physics/Phonons.md",
     "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
     "Chemistry/Images/Reaction coordinate.png",
     "Chemistry/Images/Reciprocal lattice examples.png",
     "Chemistry/Images/1D reciprocal lattice.png",
     "David Morin's Limericks.md",
     "Chemistry/Images/2D NFEG dispersion curve.png",
-    "Chemistry/Images/Band gap formation.png",
-    "Chemistry/Images/psic and psis lower wavenumber.png",
     "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_2.pdf",
     "Chemistry/IB Chemistry/Bonding in molecules.md",
     "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Chemistry/IB Chemistry/Molecular spectroscopy.md",
-    "Mathematics/IB Mathematical Methods/Group Theory.md",
     "Physics/IB Physics/Oscillations.md",
     "Mathematics/IB Mathematical Methods/Contour integration.md",
     "Mathematics/IB Mathematical Methods/Transform methods.md",
-    "Physics/Condensed matter physics/Thermal Properties.md",
     "Past Papers/IB Physics/2020-21_Part_IB_Physics_B_Paper_2.pdf",
     "Past Papers/IB Physics/2018-19_Part_IB_Physics_B_Paper_2.pdf",
     "Past Papers/IB Physics/2017-18_Part_IB_Physics_B_Paper_2.pdf",
@@ -371,7 +371,6 @@
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Physics/Crystal structure.md",
     "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md",
-    "Physics/Condensed matter physics/Semiconductors.md",
     "Physics/Condensed matter physics/Nearly Free Electron Model.md",
     "Physics/Condensed matter physics/Free Electron Model.md",
     "Misc or Personal/What to do.canvas"

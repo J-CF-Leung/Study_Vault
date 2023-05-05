@@ -4,7 +4,7 @@
 	- All displacements are at _fixed ratios_ to each other
 
 - The corresponding frequencies and displacements can be derived _classically_
-- The _energies_ of the normal modes are follow the [[Quantum Harmonic Oscillator]]:
+- However, the _energies_ of the normal modes must follow the [[Quantum Harmonic Oscillator]]:
 $$E_n=\left(n+\frac{1}{2}\right)\hbar\omega$$
 
 # Uniform 1D Harmonic crystal
