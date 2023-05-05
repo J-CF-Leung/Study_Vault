@@ -166,3 +166,5 @@ $$dS=\frac{\dbar Q}{T}$$
 - The _Gibbs definition_:
 $$S_\text{Gibbs}=-\sum_i p_i\ln p_i$$
 - Applicable to _small systems_ as well
+
+- For _large systems_, in the _canonical ensemble_, this approaches the [[#Statistical view of temperature|Boltzmann distribution of entropy]]

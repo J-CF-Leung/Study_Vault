@@ -877,6 +877,15 @@ $$\eta_\text{Carnot}=\frac{T_h}{T_h-T_l}$$
 
 
 # The third law and absolute zero
+- Originated from _electrochemical measurements_
+
+- Nernst's postulate: Near _absolute zero_, all reactions in a system in _internal equilibrium_ take place with _no change in entropy_
+
+- Planck's statement: The entropy of all systems in _internal equilibrium_ at absolute zero may be _taken at zero_
+
+## Determining entropy
+- Using:
+$$\displaylines{dS=\frac{\dbar Q_\text{rev}}{T} \\ C_p=T\left(\pd{S}{T}\right)_p}$$
 
 # Phase equilibrium and transitions
 
