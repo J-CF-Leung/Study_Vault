@@ -76,9 +76,13 @@ $$\displaylines{\frac{1}{\Omega_1}\frac{d\Omega_1}{dU_1}-\frac{1}{\Omega_2}\frac
 - This also defines another _state variable_: _Entropy_
 	$$S=k_B\ln\Omega$$
 	- $k_B=$ Boltzmann's constant
-- A state of _maximum number of microstates_ has _maximum entropy_
+- A _macrostate of maximum number of microstates_ has _maximum entropy_
+- This is applicable for a _macrostate of fixed energy_ or in the [[#Statistics, density of states, and ensembles|microcanonical ensemble]]
 - This forms a "bridge" to [[Classical Thermodynamics#State variables|Classical Thermodynamics]] as it matches the definition of $S$ via the Master Equation:
 $$\frac{1}{T}=\left(\pd{S}{U}\right)_{V,N}$$
+- This is most applicable to _large systems_, with a _large density of states_ as the system is allowed to exchange _infinitesimal_ energy
+	- For smaller systems, use [[#Definition of Gibbs Entropy|Gibbs entropy]]
+
 # Boltzmann Distribution
 
 - Consider the _canonical ensemble_
@@ -159,12 +163,37 @@ $$U_\text{tot}=\frac{N_tkT}{2}$$
 - At _even higher temperatures_, the _vibrational modes_ are involved, and $U\approx 7kT/2$
 
 # Entropy
+- For a system of energy $U$, the _entropy associated with the number of microstates_ $\Omega$ is:
+$$S=k_B\ln\Omega(U)$$
+- For actual systems, like the [[#Boltzmann Distribution|canonical ensemble]], the system can be in _macrostates of different energy and entropy_
+
+- The _total entropy_ of the system is associated with the _total number of microstates_ $N$:
+$$S_\text{tot}=k_B\ln N$$
+- It can be broken into _two parts_:
+	- Entropy associated with the _freedom to choose macrostates_
+	- Entropy associated with the _freedom to choose microstates within the macrostates_
+$$S_\text{tot}=S+S_\text{micro}$$
+
+## Gibbs formula for Entropy
+- For each _macrostate_ $i$, let there be $n_i$ _microstates_
+$$\sum_i n_i=N$$
+- Then since _all microstates are equally probable_, define the _probability_ of finding the system in the $i$th macrostate as:
+	$$P_i=\frac{n_i}{N}$$
+	- It is often an _unmeasurable quantity_
+- The entropy _associated with the microstates_ is then:
+$$S_\text{micro}=\sum_i P_iS_i=k_B\sum_i P_i\ln n_i$$
+- Carrying out the subtraction, one finds the _Gibbs formula_ for $S$:
+$$S=-k_B\sum_i P_i\ln P_i$$
+## Connection to classical thermodynamics
 - In [[Classical Thermodynamics#The second law and entropy|classical thermodynamics]], a _change in entropy_ is defined as:
-$$dS=\frac{\dbar Q}{T}$$
+$$dS=\frac{\dbar Q_\text{rev}}{T}$$
+- Considering the [[Classical Thermodynamics#The first law, internal energy, and heat|first law]], and the formula for $U$ in terms of the _energies and probabilities of the constituent states_:
+$$dU=\dbar Q+\dbar W=d\left(\sum_i P_iE_i\right)$$
+- Consider _reversible processes_ with either _no work done_, or _no heat transfer_
+![[Heat and work for states.png]]
+- Heat can be seen as _increasing occupancy_ of higher states _without changing their energies_
+- Work can be seen as _changing energies of each state_ while _not changing occupancy_
 
-## Gibbs Entropy
-- The _Gibbs definition_:
-$$S_\text{Gibbs}=-\sum_i p_i\ln p_i$$
-- Applicable to _small systems_ as well
+- As entropy is _purely associated with microstate probabilities_, only _heat transfer_ can increase it
 
-- For _large systems_, in the _canonical ensemble_, this approaches the [[#Statistical view of temperature|Boltzmann distribution of entropy]]
+## Deriving the Boltzmann Distribution
