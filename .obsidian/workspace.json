@@ -9,19 +9,7 @@
         "dimension": 68.00595238095238,
         "children": [
           {
-            "id": "68853df9d1da064a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3c7750506fcf3ed3",
+            "id": "25e8a6053642895c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -31,67 +19,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "cdbe849fbebfa504",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mathematics/IB Mathematical Methods/Contour integration.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "92240bfeffd4fb8e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3c00c806321afc9a",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_2.pdf"
-              }
-            }
-          },
-          {
-            "id": "25e8a6053642895c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Physics/Thermal Physics/Statistical thermodynamics.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8b41358b48426586",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mathematics/IB Mathematical Methods/Group Theory.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 5
+        ]
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -109,7 +38,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/Thermal Physics/Statistical thermodynamics.md"
+                    "file": "Physics/Condensed matter physics/Phonons.md"
                   }
                 }
               }
@@ -126,7 +55,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/Thermal Physics/Statistical thermodynamics.md",
+                    "file": "Physics/Condensed matter physics/Phonons.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -244,7 +173,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Thermal Physics/Statistical thermodynamics.md",
+                "file": "Physics/Condensed matter physics/Phonons.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -261,7 +190,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Thermal Physics/Statistical thermodynamics.md",
+                "file": "Physics/Condensed matter physics/Phonons.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -284,7 +213,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Thermal Physics/Statistical thermodynamics.md"
+                "file": "Physics/Condensed matter physics/Phonons.md"
               }
             }
           },
@@ -314,35 +243,36 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "bdee2333112a0d60",
+  "active": "25e8a6053642895c",
   "lastOpenFiles": [
-    "Physics/Images/Heat and work for states.png",
-    "Physics/Condensed matter physics/Phonons.md",
     "Physics/Condensed matter physics/Thermal Properties.md",
+    "Physics/Condensed matter physics/Phonons.md",
+    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+    "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
+    "Mathematics/IB Mathematical Methods/Contour integration.md",
+    "Misc or Personal/Quotes.md",
+    "Chemistry/IB Chemistry/Electrons in solids.md",
+    "Physics/Thermal Physics/Statistical thermodynamics.md",
+    "Mathematics/IB Mathematical Methods/Group Theory.md",
+    "Physics/Images/Heat and work for states.png",
     "Physics/Images/Travelling phonon excess energy.png",
     "Physics/Condensed matter physics/Semiconductors.md",
     "Mathematics/Images/1-1 vs onto.png",
-    "Mathematics/IB Mathematical Methods/Group Theory.md",
     "Mathematics/Images/D4 multiplication table.png",
     "Mathematics/Images/Square mirror planes.png",
     "Physics/Thermal Physics/Classical Thermodynamics.md",
-    "Physics/Thermal Physics/Statistical thermodynamics.md",
-    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Chemistry/Images/Kinetic isotope effect.png",
     "Chemistry/Images/Steric factor.png",
-    "Chemistry/IB Chemistry/Electrons in solids.md",
     "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
     "Chemistry/Images/Reaction coordinate.png",
     "Chemistry/Images/Reciprocal lattice examples.png",
     "Chemistry/Images/1D reciprocal lattice.png",
     "David Morin's Limericks.md",
-    "Chemistry/Images/2D NFEG dispersion curve.png",
     "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_2.pdf",
     "Chemistry/IB Chemistry/Bonding in molecules.md",
     "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Chemistry/IB Chemistry/Molecular spectroscopy.md",
     "Physics/IB Physics/Oscillations.md",
-    "Mathematics/IB Mathematical Methods/Contour integration.md",
     "Mathematics/IB Mathematical Methods/Transform methods.md",
     "Past Papers/IB Physics/2020-21_Part_IB_Physics_B_Paper_2.pdf",
     "Past Papers/IB Physics/2018-19_Part_IB_Physics_B_Paper_2.pdf",
@@ -361,7 +291,6 @@
     "Physics/Crystal structure.md",
     "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md",
     "Physics/Condensed matter physics/Nearly Free Electron Model.md",
-    "Physics/Condensed matter physics/Free Electron Model.md",
     "Misc or Personal/What to do.canvas"
   ]
 }

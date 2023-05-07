@@ -774,14 +774,14 @@ $$K^*=\frac{c^⦵f_\text{TS}}{f_\ce{A}f_\ce{BC}}\exp\left(-\frac{\Delta\varepsil
 	- Since it is at a _maximum_, there is _no restoring force_, and the molecule simply _transforms into the product_
 	- For $\ce{A +BC->AB +C}$, this corresponds to the _asymmetric stretch_ 
 - Let the frequency of this normal mode be $\nu^\ddagger$, and _factor out its vibrational partition function_:
-$$\displaylines{K^*=\frac{c^⦵q^\ddagger f_\ce{TS}'}{f_\ce{A}f_\ce{BC}}\exp\left(-\frac{\Delta\varepsilon_0^\ddagger}{RT}\right) \\ q^\ddagger=\frac{\exp(-h\nu^\ddagger/2kT)}{1-\exp(-h\nu^\ddagger/kT)}}$$
+$$\displaylines{K^*=\frac{c^⦵q^\ddagger f_\ce{TS}'}{f_\ce{A}f_\ce{BC}}\exp\left(-\frac{\Delta\varepsilon_0^\ddagger}{RT}\right)\equiv q^\ddagger K^\ddagger \\ q^\ddagger=\frac{\exp(-h\nu^\ddagger/2kT)}{1-\exp(-h\nu^\ddagger/kT)} \hspace{1cm} }$$
 - As this frequency corresponds to _dissociation_. $h\nu^\ddagger<<kT$, hence one gets:
 $$K^*=\frac{kT}{h\nu^\ddagger}\frac{c^⦵f'_\text{TS}}{f_\ce{A}f_\ce{BC}}\exp\left(-\frac{\Delta\varepsilon_0^\ddagger}{RT}\right)$$
 - The _first-order rate constant_ is the _rate of dissociation_, hence:
 $$k_\text{1st}=\nu^\ddagger$$
 - From this:
 $$\displaylines{r=k_\text{1st}[\ce{TS}]=k_\text{2nd}[\ce{A}][\ce{BC}] \\ k_\text{2nd}=\frac{1}{c^⦵}k_\text{1st}K^*=\frac{kT}{h}\frac{f'_\text{TS}}{f_\ce{A}f_\ce{BC}}\exp\left(-\frac{\Delta\varepsilon_0^\ddagger}{RT}\right)}$$
-- This has units of $\text{m}^{3}\,\text{s}^{-1}$
+- This has _units_ of $\text{molecule m}^{3}\,\text{s}^{-1}$
 - For units of $\text{mol}^{-1}\, \text{m}^{3}\,\text{s}^{-1}$, the first factor is $RT/h$
 
 ## Applications of transition state theory
@@ -815,7 +815,14 @@ $$\frac{k_\text{2nd}(\ce{H})}{k_\text{2nd}(\ce{D})}=\frac{q_\text{vib}(\ce{D})}{
 
 - For the reaction above, _deuterating reduces the rate_ by a factor of $\approx7$
 
-## A thermodynamic formulation
+## The thermodynamic formulation
+- Starting from transition state theory:
+$$k_\text{2nd}=\frac{1}{c^⦵}k_\text{1st}K^*=\frac{1}{c^⦵} \nu^\ddagger (q^\ddagger K^\ddagger)$$
+- Then, using the expression for $q^\dagger$:
+$$k_\text{2nd}=\frac{1}{c^⦵} \frac{kT}{h}K^\ddagger$$
+
+- Then, relating $K^\ddagger$ to the [[#Equilibrium constants|Gibbs Free Energy]]:
+$$k_\text{2nd}=\frac{1}{c^⦵} \frac{kT}{h}\exp\left(-\frac{\Delta G^\ddagger}{RT}\right)$$
 
 ### Relation to the Arrhenius equation
 
