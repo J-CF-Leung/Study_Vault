@@ -492,7 +492,7 @@ $$\displaylines{\bm{H}(\bm{r})=-\nabla\phi_m(\bm{r}) \\ \bm{B}(\bm{r})=-\mu_0\na
 - Physical meaning of $\phi_m$: _unrelated to work_, simply the shape of a landscape to generate $\bm{B}$
 
 ### Magnetic scalar potential of a current loop
-- The solid angle $d\Omega$ is defined by an element of surface area $d\bm{S}$ on a sphere of radius $r$:
+- The _solid angle_ $d\Omega$ is defined by an element of surface area $d\bm{S}$ on a sphere of radius $r$:
 $$d\Omega=\frac{|d\bm{S}|}{r^2}$$
 - If the centre is not at the centre of the sphere, or the surface is not spherical:
 $$d\Omega=\frac{|d\bm{S}|}{r^2}\cos\theta=\frac{d\bm{S\cdot r}}{r^3}$$

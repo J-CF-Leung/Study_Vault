@@ -879,13 +879,33 @@ $$\eta_\text{Carnot}=\frac{T_h}{T_h-T_l}$$
 # The third law and absolute zero
 - Originated from _electrochemical measurements_
 
-- Nernst's postulate: Near _absolute zero_, all reactions in a system in _internal equilibrium_ take place with _no change in entropy_
+>[!info] Nernst's statement
+>Near absolute zero, all reactions in a system in internal equilibrium take place with no change in entropy
 
-- Planck's statement: The entropy of all systems in _internal equilibrium_ at absolute zero may be _taken at zero_
+>[!info] Planck's statement 
+>The entropy of all systems in _internal equilibrium_ at absolute zero may be _taken at zero_
 
 ## Determining entropy
 - Using:
 $$\displaylines{dS=\frac{\dbar Q_\text{rev}}{T} \\ C_p=T\left(\pd{S}{T}\right)_p}$$
+
+## Consequences
+- Consider the _heat capacity_ when holding variable $x$ constant:
+$$C_x=T\left(\pd{S}{T}\right)_x$$
+- A phase of a system goes to zero entropy _smoothly_
+- Hence, _heat capacities go to zero_ at absolute zero
+
+## Unattainability of absolute zero
+- Consider using a _Carnot cycle_ to cool a system
+
+- It can be shown that a consequence of the third law is that _absolute zero can never be obtained in finite steps_
+![[Third law cooling.png]]
+
+>[!info] An alternative form of the Third Law 
+>It is impossible by any procedure, no matter how idealized, to reduce the temperature of
+>any system to zero temperature in a finite number of finite operations
+
+
 
 # Phase equilibrium and transitions
 

@@ -110,6 +110,7 @@ $$g^{-1}=g^{q-1}$$
 - A _subgroup_ of $G$ is a _subset_ of $G$ which is _a group in its own right_
 - If $H$ is a _subset_ of $G$, $H\subset G$
 - If $H$ is a _subgroup_ of $G$, $H<G$
+	- If $G$ is also to be _included as a subgroup_ of itself, $H\leq G$
 
 - By inspection, $D_4$ has 5 order-2 subgroups:
 $$\{I,R^2\}, \{I, m_1\}, \{I, m_2\}, \{I, m_3\}, \{I, m_4\}$$
@@ -147,3 +148,72 @@ $$f:G\to G'$$
 $$\text{If }g_3=g_1\circ g_2\text{ , then } f(g_3)=f(g_1)*f(g_2)$$
 - For isomorphic groups, the _identities map onto each other_:
 $$\displaylines{ I'=f(I) \\ h\circ g=I \Longrightarrow f(h)*f(g)=I'}$$
+- Example: the [[#Subgroups|Klein 4-Groups]] are isomorphic
+
+- One can also form a set of $n\times n$ _matrices_ that become _isomorphic_ to a group under _matrix multiplication_, this is known as a _faithful representation_ of the group
+
+# Conjugacy classes
+- A _property_ of inverses:
+$$(g_1g_2)^{-1}=g_2^{-1}g_1^{-1}$$
+- Can be proven using _associativity_ of group products
+
+- Two _group elements_ $g_1,g_2\in G$ are known to be _conjugate_ to each other if there exists _any_ group element $g$ such that:
+$$g_2=gg_1g^{-1} \text{ or } g_2g=gg_1$$
+- If $g_1$ and $g_2$ are _conjugate_, it is denoted:
+$$g_1\sim g_2$$
+
+- The _conjugacy_ is an _equivalence relation_, which gives the properties:
+1. Reflexivity: $$g_1\sim g_1$$
+2. Symmetry: $$g_1\sim g_2\text{ implies }g_2\sim g_1$$
+3. Transitivity: $$\text{If }g_1\sim g_2 \text{ and }g_2\sim g_3\text{, then } g_1\sim g_3$$
+- In general, if an equivalence relation exists in a set $S$, this _separates_ the set into _distinct subsets_, known as _equivalence classes_, where any elements $a$ and $b$ in the class satisfy $a\sim b$, but elements in _different classes_ are not equivalent
+
+- The _equivalence classes_ of a group $G$ are known as _conjugacy classes_
+
+- Example: The conjugacy classes of $D_4$ (denoted in the top row)
+	![[D4 conjugacy classes.png]]
+	- Example: $m_2R=Rm_1$
+
+- The _identity_ element is always _in its own conjugacy class_
+- An _Abelian subgroup_ has all of its elements _in their own conjugacy class_
+
+- A group element _and its inverse_ (if different), _may or may not_ be in the same class
+
+## Normal subgroups
+- A _normal subgroup_ $H$ of a group $G$ is a _subgroup_ containing _complete conjugacy classes_
+
+- $H$ is _normal_ if $H\leq G$ and $\forall h\in H$ and $\forall g\in G$:
+$$ghg^{-1}\in H$$
+- This is _denoted_ $H\trianglelefteq G$
+	- If $H\neq G$, and $H$ is a normal subgroup of $G$, then $H\triangleleft G$
+
+- Example: one can show that the _order-4 subgroups_ of $D_4$ are _normal_, while the order-2 subgroups are not
+	- However, the order-2 subgroups can be normal subgroups of the Vierergruppe
+
+- _Trivially_, $\{I\}$ and $G$ itself are _normal subgroups_ of $G$
+- Normal subgroups, _excluding_ these, are known as _proper normal subgroups_ of $G$
+
+# Vector spaces
+- Consider _vectors_ imposed on a square, an object with point group $D_4$, with the _origins at the centre of the square_:
+![[D4 vectors.png]]
+- The vectors are represented:
+$$\underline{x}=\pmatrix{x_1 \\ x_2}$$
+- Then, consider the _rotation matrix_:
+$$\dunderline{R}\underline{x}=\pmatrix{0 & 1 \\ -1 & 0}\pmatrix{x_1 \\ x_2}=\pmatrix{x_2 \\ x_1}$$
+- This corresponds to a _clockwise rotation_ by $\pi/2$ radians
+
+- In fact, _all elements of the group_ can be represented using a _matrix_
+	- The matrices form a _group under matrix multiplication_, which is _isomorphic_ to $D_4$
+
+- For each _subgroup_, there are _subspaces_ of $\mathbb{R}^2$ which are _invariant_ (still mapped onto an element of the subspace after the operation)
+
+- The _Vierergruppe_ $\{I, R^2, m_1, m_2\}$ leaves _scalar multiples_ of $(0\;1)^T$ and $(1\;0)^T$ invariant
+- The _Vierergruppe_ $\{I,R^3,m_3,m_4\}$ leaves _scalar muliples_ of $(1\;1)^T$ and $(1\;-1)^T$ invariant
+
+# Cosets and Lagrange's Theorem
+- Given a group $G$, along with _subgroup_ $H=\{I,h_1,h_2,\dots\}$ of $G$, and an element $g\in G$
+- The _left coset_ of $H$ in $G$ is defined as:
+$$gH=\{g,gh_1,gh_2,\dots\}$$
+- The _right coset_ of $H$ in $G$ is defined as:
+$$Hg=\{g,h_1g,h_2g,\dots\}$$
+- If $G$ is _Abelian_, then the left and right cosets are _equivalent_
