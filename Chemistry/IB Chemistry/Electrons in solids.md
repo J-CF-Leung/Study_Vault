@@ -145,6 +145,19 @@ $$\bm{b}_1\cdot(\bm{b_2}\cdot\bm{b}_3)=\frac{(2\pi)^3}{\bm{a}_1\cdot(\bm{a}_2\we
 ![[Reciprocal lattice examples.png]]
 - Similarly, the reciprocal lattice of cubic $I$ is cubic $F$
 
+## Brillouin zones
+- Similar to how a _real lattice_ can be divided into _primitive unit cells_, a _reciprocal lattice_ can be divided into _Brillouin zones_
+
+- The _first Brillouin zone_ from a lattice point is the region _closer to the origin_ than it is to _any other point_ in reciprocal space
+
+- _Planes_ between two _nearest-neighbour points_ are known as _Bragg planes_
+- In general, the $n$th Brillouin zone is a region of reciprocal space that can be _reached from the first Brillouin zone_, while crossing $(n-1)$ Bragg planes
+- They must _all have the same area/volume_
+
+- In 1D: ![[1D Brillouin zones.png]]
+- A 2D _rectangular_ lattice: ![[2D Brillouin zones.png]]
+- The _volume_ of each Brillouin zone in reciprocal space is the _volume of a reciprocal lattice unit cell_, or $(2\pi)^3/V_c$
+
 # Ionic crystals
 - For ionic crystals, the _lattice energy_ is defined as the _energy needed to dissociate a solid lattice into widely separated gaseous ions_
 - It must be deduced from a _thermodynamic cycle_
@@ -390,25 +403,94 @@ $$\psi_c=\cos(\pi x/a)=\frac{\psi_++\psi_-}{2} \hspace{1cm} \psi_s=\sin(\pi x/a)
 - Hence, this forms a _perturbation_ to the dispersion plot due to the loss of degeneracy:
 ![[Band gap formation.png]]
 - Hence, for a _range of energies_, there are _no available $k-$states_
+- These band gaps will appear at the _edge of the_ [[#Brillouin zones|Brillouin zone]]
 
 - If the _Fermi level_ is within the band gap, for _low temperatures_, electric conduction is _impossible_, as the electrons _cannot be promoted_
 
-- In the _first band_, the _number of available states_ is:
-$$N_1=\frac{2\pi}{a}\frac{\mathcal{L}}{2\pi}=\frac{\mathcal{L}}{a}$$
-- If each unit cell has _one valence electron_, they would fill $\mathcal{L}/(2a)$ states, which _fills up half of the first band_, therefore the material will be a _metallic conductor_
+- In the _first band_, for $L$ _unit cells_, the _number of available states_ is:
+$$N_1=\frac{2\pi}{a}\frac{La}{2\pi}=L$$
+- If each unit cell has _one valence electron_, they would fill $L/2$ states, which _fills up half of the first band_, therefore the material will be a _metallic conductor_
+	- Each BvK state can hold two electrons
 - If each unit cell has _two valence electrons_, this _completely fills up the first band_, making the material an _insulator_
 
 - Hence, this model predicts _group 2 metals are insulators_
 - Therefore, one must consider _more dimensions_ for a viable model
 
-## Band gaps in 2 dimensions
+## Band gaps in more dimensions
+- A band diagram for 2 dimensions, in the _reduced zone representation_:
 ![[2D NFEG dispersion curve.png]]
 
-- In 2 dimensions, the _bands corresponding to different $\bm{k}$ directions_ will _overlap_, as their gaps are at _different energies_
+- In 2 or 3 dimensions, the _bands corresponding to different $\bm{k}$ directions_ will _overlap_, as their gaps are at _different energies_
 - The electrons will _start filling the second band before the first one is completely filled_
 
+- Overall, each _Brillouin zone_ for a crystal of $L$ unit cells can still fit $L$ $k-$states
+	- This means each zone can fit $2L$ _electrons_
 
+## Fermi surfaces
+- As electrons _start to fill up_ the first Brillouin zone, as $E\propto k^2$, the _filled states are within a sphere in_ $k-$space, also known as the _Fermi sphere_
+
+- A _group 1_ metal with one valence electron _per unit cell_ will occupy _half_ the states, with the presence of _empty states_ above the Fermi level leading to _conduction_
+	- In other words, the _Fermi sphere is within the first Brillouin zone_
+
+- A _group 2_ metal will lead to a _Fermi sphere intersecting the first Brillouin zone_ (depending on the metal), and having regions inside _both the 1st and 2nd Brillouin zones_:
+![[Group 1 group 2 fermi circles.png]]
+- The first Brillouin zone is _partially filled_, however due to the _band gap_ between the first and second Brillouin zones, the Fermi surface is _distorted_, and starts to _bulge_
 
 # The tight-binding model
+- Instead of considering _each electron separately in a potential_ (akin to a _gas_), consider the solid as a "giant molecule"
+- Like [[Bonding in molecules|normal molecules]], use _atomic orbitals as a basis_ in order to form _molecular orbitals_ extending over the solid
+
+- With the _large amount of atomic orbitals_, this leads to a _large number of closely-spaced molecular orbitals_
+- The molecular orbitals must take the _translational symmetry_ of the crystal into account
+
+## Electron bands in one dimension
+- Let there be $N$ unit cells, contributing $N$ _atomic orbitals_ in total
+- Let the orbital at _position_ $r$ be $\phi_r$
+- This then forms the _crystal orbital_ $\psi_k$:
+$$\psi_k=\sum_{r=1}^\infty c_k^{(r)}\phi_r$$
+- $k$ ranges from $1$ to $N$
+
+- Then, deploy the [[#Born-von Karman boundary conditions]], where the wave-function must _repeat_ after $N$ atoms:
+$$c_k^{(N+r)}=c_k^{(r)}$$
+- This is _satisfied_ by coefficients of the form:
+	$$c_k^{(r)}=\exp(ikra) \;\;,\;\; k=\frac{2m\pi}{Na}$$
+	- Where $m$ is an _integer
+
+- Hence, the states are also _quantised_, with _spacing_ $2\pi/Na$
+
+- For $m=0$, _all orbitals_ will contribute _in-phase_, which gives the _most bonding crystal orbital possible_
+- For $m=\pm N/2$, _all orbitals_ will _alternate_ between phases $0$ and $\pi$, which gives the _most anti-bonding crystal orbital_
+
+- It can easily be proven that if $|m|>N/2$, it simply gives a _crystal orbital that can be represented by_ $m-N$
+- This matches the assertion that there are $N$ crystal orbitals, with:
+$$\displaylines{-\frac{N}{2}<m<\frac{N}{2} \\ -\frac{\pi}{a}<k<\frac{\pi}{a}}$$
+
+- The _energies_ are then simply given by:
+$$E_k=\left(\int \psi_k^*\,\hat{\Ham}\,\psi_k\,d\tau\right)\left(\int \psi_k^*\psi_k\,d\tau\right)^{-1}$$
+
+### Hückel Approximations
+- To calculate the energy, apply the [[Bonding in molecules#Hückel Approximations|Hückel Approximations]]
+	- They assume _tight binding_ of electrons to their nuclei
+	- While "loose" enough to _overlap_ with other orbitals, still "tight" enough that the interactions are _short range_
+
+- All AOs have the _same energy_ $\alpha$:
+$$\int \phi_r^*\,\hat{\Ham}\,\phi_r\,d\tau=\alpha$$
+- The _resonance integral_ is only non-zero for _neighbouring atoms_, and always takes the _same value_ $\beta$:
+$$\int \phi_r^*\,\hat{\Ham}\,\phi_{r+1}\,d\tau=\beta\,\delta_{r',r+1}$$
+- Neglect the _overlap integral_:
+$$\int\phi_r^*\phi_s\,d\tau=0 \;\;\text{ for }r\neq s$$
+- The atomic orbitals are _normalised_:
+$$\int \phi_r^*\phi_r\,d\tau=1$$
+
+- Then, using these approximations:
+$$\displaylines{ \int\psi_k^*\psi_k\,d\tau=N \\ \int\psi_k^*\,\hat{\Ham}\,\psi_k\,d\tau=N\alpha+[\exp(ika)+\exp(-ika)]N\beta}$$
+- This then gives the _energies of the crystal orbitals_:
+$$E_k=\alpha+2\beta\cos(ka)$$
+- These _discrete values_ of energy then form a _band_, of width $|4\beta|$
+- Considering $s$ orbitals, an _in-phase_ interaction is _always favourable_, hence $\beta<0$:
+![[Tight binding 1D band.png]]
+- Each band can then accomodate $2N$ _electrons_ in total
+- One can also _normalise_ the crystal orbitals:
+$$\Psi_k=\frac{1}{\sqrt{N}}\sum_{r=1}^N \exp(ikra)\,\phi_r$$
 
 # Semiconductors

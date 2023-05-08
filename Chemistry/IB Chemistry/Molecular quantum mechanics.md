@@ -449,9 +449,9 @@ $$\Psi_-=\psi_-\sigma_t=\frac{1}{\sqrt{2}}\Big[\psi_{1s}(1)\psi_{2s}(2)-\psi_{1s
 ## Coulomb and exchange integrals
 - The average electron repulsion is found by:
 $$\braket{\frac{1}{r_{12}}}_\pm=\braket{\Psi_\pm|\frac{1}{r_{12}}|\Psi_\pm}=\braket{\psi_\pm|\frac{1}{r_{12}}|\psi_\pm}$$
-- Expanding the average electron repulsion:
+- Expanding the _average electron repulsion_:
 $$\displaylines{\braket{\frac{1}{r_{12}}}_\pm=J\pm K \\ J=\int\int \psi_{1s}(1)\psi_{2s}(2)\frac{1}{r_{12}}\psi_{1s}(1)\psi_{2s}(2)\,d^3\bm{r}_1d^3\bm{r}_2=\int\int |\psi_{1s}(1)|^2|\psi_{2s}(2)|^2\frac{1}{r_{12}}\,d^3\bm{r}_1\,d^3\bm{r}_2 \\ K=\int\int \psi_{1s}(1)\psi_{2s}(2)\frac{1}{r_{12}}\psi_{1s}(2)\psi_{2s}(1)\,d^3\bm{r}_1\,d^3\bm{r}_2 }$$
-- $J$ is the _Coulomb integral_, quantifying the classical electron repulsion
+- $J$ is the _Coulomb integral_, quantifying the _classical_ electron repulsion
 - $K$ is the _exchange integral_, resulting from the particles being indistinguishable, it can be understood as an "overlap density" of $\psi_{1s}\psi_{2s}$
 	- It is always _positive_, but the _sign_ of its contribution depends on whether the _spin_ wave function is a _triplet_ or a _singlet_
 

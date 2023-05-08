@@ -451,6 +451,7 @@ $$\left[\begin{pmatrix}\Ham_{11} & \Ham_{12} & \dots & \Ham_{1N} \\ \Ham_{21} & 
 $$\displaylines{\Ham_{ii}=\alpha_i \\ \Ham_{ij}=\beta_{ij} \text{ for }i\neq j}$$
 - $\alpha$ can be interpreted as the _energy of the atomic orbital_ $\phi_i$
 - Meanwhile, $\beta$ can be interpreted as _energy resulting from overlap between_ $\phi_i$ and $\phi_j$
+	- This is known as the _resonance integral_
 - They are both _negative_
 - Since the Hamiltonian is _Hermitian_, and $\beta$ is real: $$\beta_{ij}=\beta_{ji}$$
 - Finally, apply the _tight-binding approximation_, where $\beta_{ij}$ is _only non-zero if $\phi_i$ and $\phi_j$ are on adjacent atoms_

@@ -17,7 +17,8 @@
 - The _deterministic_ description given by classical mechanics gives way to a _probabalistic_ description given by quantum mechanics
 - The _wave function itself is deterministic_ (if the system is left alone) but _still only describes probabilities_ for measurement
 
-## Forms of the wave function
+## Forms of the wave function for a free particle
+
 ### Plane waves
 - The most simple form of a wave function is the _plane wave_
 $$\psi(x,t)=A\exp[i(kx-\omega t)]$$
