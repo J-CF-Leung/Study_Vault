@@ -1,7 +1,18 @@
 - One can calculate the _energy stored in a crystal_ via its normal modes, or [[Phonons]]
 - Then, one can calculate its _contribution to the crystal's heat capacity_
 
+- If the crystal is also a _conductor_, the _electrons_ also contribute to energy
+
 # Heat capacities of insulators
+- Only the energy of _atoms_ are included, in the form of [[Phonons|lattice vibrations]], with many _modes_ of different frequencies $\omega$
+$$E_n=\left(n+\frac{1}{2}\right)\hbar\omega$$
+
+- As temperature increases, more _modes_ are excited, hence energy increases
+
+- Each mode has a _zero-point energy_, which can be ignored in calculating _heat capacity_
+
+## Internal energy
+
 
 ## The density of states
 - Assuming the crystal is a _rectangular box_ of side lengths $A, B, C$

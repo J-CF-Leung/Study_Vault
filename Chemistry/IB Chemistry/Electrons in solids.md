@@ -158,6 +158,9 @@ $$\bm{b}_1\cdot(\bm{b_2}\cdot\bm{b}_3)=\frac{(2\pi)^3}{\bm{a}_1\cdot(\bm{a}_2\we
 - A 2D _rectangular_ lattice: ![[2D Brillouin zones.png]]
 - The _volume_ of each Brillouin zone in reciprocal space is the _volume of a reciprocal lattice unit cell_, or $(2\pi)^3/V_c$
 
+- Brillouin zones of a 2D _square_ lattice:
+![[Square lattice BZ 1-6.png]]
+
 # Ionic crystals
 - For ionic crystals, the _lattice energy_ is defined as the _energy needed to dissociate a solid lattice into widely separated gaseous ions_
 - It must be deduced from a _thermodynamic cycle_
@@ -487,10 +490,89 @@ $$\displaylines{ \int\psi_k^*\psi_k\,d\tau=N \\ \int\psi_k^*\,\hat{\Ham}\,\psi_k
 - This then gives the _energies of the crystal orbitals_:
 $$E_k=\alpha+2\beta\cos(ka)$$
 - These _discrete values_ of energy then form a _band_, of width $|4\beta|$
+- The energy is _symmetric_ w.r.t. $k$
+
+### The s band
 - Considering $s$ orbitals, an _in-phase_ interaction is _always favourable_, hence $\beta<0$:
 ![[Tight binding 1D band.png]]
 - Each band can then accomodate $2N$ _electrons_ in total
 - One can also _normalise_ the crystal orbitals:
 $$\Psi_k=\frac{1}{\sqrt{N}}\sum_{r=1}^N \exp(ikra)\,\phi_r$$
+
+- The _number of $k-$states_ $W(E)$, up to energy $E$ is calculated by:
+$$W(E)=\frac{2|k(E)|}{2\pi/Na}=\frac{Na}{\pi}|k(E)|$$
+- The _density of $k-$states_ $D(E)$ is then given by:
+$$D(E)=\frac{d\,W(E)}{dE}=\frac{dW}{dk}\left(\frac{dE}{dk}\right)^{-1}=-\frac{N}{2\pi\beta}\frac{1}{\sin(ka)}$$
+![[1D s band density of states.png]]
+- This is a function of $E$, hence only consider _absolute value_ of $k$
+- It is _inverse_ to the _slope_ of the dispersion curve
+- The rise to _infinity_ is only seen in _one dimension_
+
+### The p bands
+- Consider _head-on_ $(\sigma)$ interactions between $p$ orbitals
+- If all orbitals are combined _in-phase_, this gives rise to _anti-bonding_ interactions
+- Hence, $\beta>0$, and the dispersion relation gives:
+![[1D p band dispersion curve.png]]
+
+- When considering $\pi$ interactions, an _in-phase_ combination is _bonding_
+- This gives a dispersion curve _similar to the $s-$band_
+
+### s-p mixing
+- Like orbitals in molecules, _s-bands and p-bands can mix_
+- Like the _symmetry criteria_ in molecules, only _crytal orbitals with the same_ $k$ can mix
+
+- Consider the interactions between the $s$ and $p$ crystal orbitals at $k=0$:
+	- $s$ crystal orbital is _bonding_, $p$ crystal orbital is _antibonding_
+![[sp band mixing k0.png]]
+- The _constructive_ and _destructive_ interferences will _cancel out_
+- Hence, at $k=0$, there is _no mixing_
+- Similarly, at $k=\pm\pi/a$, there is _no mixing_
+
+- Then consider the interactions at $k=\pm\pi/2a$:
+![[sp band mixing halfway.png]]
+- Consider the _real parts_ of the orbitals
+	- From symmetry, the _imaginary parts_ have the same interactions
+- This then gives _bonding interactions_, hence there is _mixing_
+- This _pushes the band energies apart_
+	- The $s$ band is _stabilised_, and vice versa
+- From _symmetry_, this $k$ value gives the _maximum mixing_
+
+- If the $s$ and $p$ orbitals are _spaced far apart_, this gives _weak mixing_ (left figure below):
+![[sp band mixing.png]]
+
+- If $s$ and $p$ orbitals are _close in energy_, and the _original energies cross_ at some value of $k$, the _mixing_ will create an _avoided crossing_ (right figure above)
+- The bands will "interconvert" in nature at $k=\pi/a$
+
+### Bands from hybrid atomic orbitals
+- Bands can be created from _hybrid atomic orbitals_
+	- Useful for considering _semiconductors_
+- For example, consider the $sp$ orbitals in 1D
+
+- First, consider _localised pairwise interactions_ between _adjacent_ hybrid orbitals
+- There are _bonding MOs_ that form _across_ atoms:
+	- Formed due to interactions between $sp$ orbitals in _different directions_, belonging to _adjacent_ atoms
+![[Band formation from sp bonding.png]]
+- At $k=0$, all of the _bonding_ orbitals are _in-phase_, and form an _overall bonding_ orbital
+	- It is the _lowest energy crystal orbital_ possible
+- At $k=\pi/a$, there is a mix of _bonding and antibonding interactions_, which leads to a _higher energy_ orbital relative to $k=0$
+
+- Then, consider the _antibonding_ MOs formed across atoms:
+![[sp band antibonding.png]]
+- At $k=0$, all the _antibonding_ orbitals combine in-phase to form an _overall antibonding_ orbital
+	- It is the _highest energy crystal orbital_ possible
+- At $k=\pi/a$, there is a mix of _bonding and antibonding_ interactions, which forms a _lower energy_ orbital relative to $k=0$
+
+- The process of band formation can be summarised by:
+![[sp band formation summary.png]]
+- The band width is $|2\beta_2|$, where $\beta_2$ depends on the _energy difference_ between $s$ and $p$:
+$$\beta_2=\alpha_s-\alpha_p$$
+
+## Electron bands in two dimensions
+- Similar to one dimension, the _crystal orbitals_ are still a _linear combination_ of atomic orbitals, but determined by _two parameters_, $k_x$ and $k_y$
+- Characterise the _atomic_ orbitals by two positional parameters, $r$ and $s$
+$$\psi_{k_x,k_y}=\sum_{r,s} c_{k_x,k_y}^{(r,s)}\;\phi_{r,s}$$
+- The simplest case is a _square lattice_
+- The solution can be given by:
+$$\displaylines{c_{k_x,k_y}^{(r,s)}=\exp(ik_xra)\exp(ik_ysa) \\ k_x=m_x\frac{2\pi}{Na} \hspace{1cm} k_y=m_y\frac{2\pi}{Na}}$$
 
 # Semiconductors

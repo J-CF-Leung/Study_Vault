@@ -1,4 +1,4 @@
-- Phonons are _collective excitations_ in a lattice
+- The atoms in a lattice can be _excited_ in order to vibrate
 - They are the [[Oscillations#Normal modes|normal modes]] of the system, where:
 	- All atoms oscillate at the _same frequency_
 	- All displacements are at _fixed ratios_ to each other
@@ -6,6 +6,9 @@
 - The corresponding frequencies and displacements can be derived _classically_
 - However, the _energies_ of the normal modes must follow the [[Quantum Harmonic Oscillator]]:
 $$E_n=\left(n+\frac{1}{2}\right)\hbar\omega$$
+- A vibration of energy $E_n$ can be said to have $n$ _phonons_, which are _quasiparticles_, of energy $\hbar\omega$, with a particular _wave vector_ $\bm{k}$ and momentum associated with the nature of the vibration
+- As modes are _excited_, more phonons are said to be _created_
+
 
 # Uniform 1D Harmonic crystal
 
@@ -59,7 +62,7 @@ $$E_n=\left(n+\frac{1}{2}\right)\hbar\omega$$
 - The _momentum_ associated with the phonon is $\hbar q$
 	- Applying the _momentum operator_ to the wave function
 
-- The phonon has _group velocity_ corresponding to the _velocity of sound_ in the solid:
+- The phonons have _group velocity_ corresponding to the _velocity of sound_ in the solid:
 $$v_g=\pd{\omega}{q}$$
 
 - The phonons themselves have _particle character_, being _bosons_
@@ -143,9 +146,12 @@ $$\omega^2=\frac{\alpha}{m_Am_B}\left[(m_A+m_B)\pm\left\{(m_A+m_B)^2-4m_Am_B\sin
 $$\omega_A\left(q=\pm\frac{\pi}{2a}\right)=\sqrt{\frac{2\alpha}{m_A}} \hspace{1cm} \omega_O\left(q=\pm\frac{\pi}{2a}\right)=\sqrt{\frac{2\alpha}{m_B}}$$
 - At the _centre_ of the zone:
 $$\omega_A(q\to 0)\approx \sqrt{\frac{2\alpha}{m_A+m_B}}qa \hspace{1cm} \omega_O(q=0)=\sqrt{\frac{2\alpha}{\mu}}=\sqrt{2\alpha\left(\frac{1}{m_A}+\frac{1}{m_B}\right)}$$
+- $\mu$ is the _reduced mass_ of the two atoms
 
 - In the _acoustic mode_, neighbouring atoms move _roughly in phase_
 - In the _optical mode_, neighbouring atoms move _roughly out of phase_
+	- As _oppositely charged_ particles oscillate out of phase, this _couples strongly with an oscillating electric field_ (photons)
+	- Photons of similar $\omega$ has a _very small_ wavenumber compared to other wavenumbers in the Brillouin zone
 ![[Acoustic optical mode displacements.png]]
 
 - At the _zone boundaries_, each mode correspond to different _standing waves_ of wavelength $4a$, where _different sets_ of atoms move depending on the mode
@@ -162,6 +168,8 @@ $$\omega_A(q\to 0)\approx \sqrt{\frac{2\alpha}{m_A+m_B}}qa \hspace{1cm} \omega_O
 - Then, due to _unequal masses_, the branches _split_:
 ![[Backfolding.png]]
 
+- The _centre_ of the optical branch corresponds to a wavevector of $\pi/a$ in the original lattice, or a _wavelength_ of $2a$
+
 # 3 dimensional lattices
 - There are _different dispersion curves_ for _longitudinal_ and _transverse_ modes, in both _optical_ and _acoustic_ branches (if the lattice is not monoatomic)
 	- Depending on the _propagation direction_, transverse modes can be _degenerate_
@@ -171,6 +179,7 @@ $$\omega_A(q\to 0)\approx \sqrt{\frac{2\alpha}{m_A+m_B}}qa \hspace{1cm} \omega_O
 ![[Neon phonon dispersion.png]]
 
 - _Longitudinal_ modes are typically _higher energy_
+	- It is harder to _compress_ a bond than to _shear_ a bond
 - _Transverse_ modes are commonly degenerate along _high symmetry_ directions
 	- $(\xi\,0\,0)$ and $(\xi\,\xi\,\xi)$ but _not_ $(\xi\,\xi\,0)$
 

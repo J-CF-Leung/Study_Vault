@@ -180,10 +180,17 @@ $$\sum_i n_i=N$$
 - Then since _all microstates are equally probable_, define the _probability_ of finding the system in the $i$th macrostate as:
 	$$P_i=\frac{n_i}{N}$$
 	- It is often an _unmeasurable quantity_
+	- Formally, it is the probability of finding the state within a _statistical ensemble_ of $N$ systems
 - The entropy _associated with the microstates_ is then:
 $$S_\text{micro}=\sum_i P_iS_i=k_B\sum_i P_i\ln n_i$$
 - Carrying out the subtraction, one finds the _Gibbs formula_ for $S$:
 $$S=-k_B\sum_i P_i\ln P_i$$
+
+### In the microcanonical ensemble
+- In the [[#Statistics, density of states, and ensembles|microcanonical ensemble]] with $\Omega$ states, they are _equally probable_, hence $P_i=1/\Omega$
+- The entropy _associated with choosing between these states_ is then:
+$$S=-k_B\sum_i\frac{1}{\Omega}\ln\frac{1}{\Omega}=k_B\ln\Omega$$
+
 ## Connection to classical thermodynamics
 - In [[Classical Thermodynamics#The second law and entropy|classical thermodynamics]], a _change in entropy_ is defined as:
 $$dS=\frac{\dbar Q_\text{rev}}{T}$$
@@ -197,3 +204,17 @@ $$dU=\dbar Q+\dbar W=d\left(\sum_i P_iE_i\right)$$
 - As entropy is _purely associated with microstate probabilities_, only _heat transfer_ can increase it
 
 ## Deriving the Boltzmann Distribution
+- In the _canonical ensemble_, the system, connected to a reservoir of temperature $T$, has freedom to be in _many macrostates of different energies_ $E_i$
+	- Each macrostate has a _different number of total microstates_ for the combined system of the reservoir and the system
+- There is some _statistical distribution_ of macrostates, which gives the _maximum entropy_
+- There is a _statistical average_ of energy, $\mean{E}=U$
+
+- Given a state of energy $E_i$ has probability $P_i$, the system is subject to _constraints_:
+$$\sum_i P_i=1 \hspace{1cm} \sum_i P_iE_i=U$$
+- Using the technique of [[Calculus of variations#Constrained variation|Lagrange multipliers]], define the Lagrangian:
+$$\Lagr=\sum_i -P_i\ln P_i-\alpha\sum_i P_i-\beta\sum P_iE_i$$
+- Then, optimise by:
+$$\pd{\Lagr}{P_j}=\pd{\Lagr}{\alpha}=\pd{\Lagr}{\beta}=0$$
+- This then gives the _distribution_:
+$$P_j=\frac{\exp(-\beta E_j)}{\exp(1+\alpha)}\equiv\frac{\exp(-\beta E_j)}{Z}$$
+- This is then simply the Boltzmann distribution

@@ -6,7 +6,7 @@
       {
         "id": "7720cfc61fde3e9c",
         "type": "tabs",
-        "dimension": 73.95833333333334,
+        "dimension": 67.78273809523809,
         "children": [
           {
             "id": "25e8a6053642895c",
@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Thermal Physics/Radiation.md",
+                "file": "Physics/Thermal Physics/Statistical thermodynamics.md",
                 "mode": "source",
                 "source": false
               }
@@ -38,7 +38,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Condensed matter physics/Free Electron Model.md",
+                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
                 "mode": "source",
                 "source": false
               }
@@ -62,7 +62,7 @@
       {
         "id": "a6c4709e929bd0bb",
         "type": "split",
-        "dimension": 26.041666666666668,
+        "dimension": 32.217261904761905,
         "children": [
           {
             "id": "3773db76a4512ef8",
@@ -282,22 +282,28 @@
   },
   "active": "041d1941965902cd",
   "lastOpenFiles": [
-    "Physics/Condensed matter physics/Phonons.md",
-    "Physics/Images/Salt dispersion relation.png",
-    "Physics/Images/Lead phonon dispersion.png",
-    "Physics/Images/Neon phonon dispersion.png",
-    "Physics/Images/Backfolding.png",
-    "Physics/Images/Acoustic optical mode displacements.png",
-    "Physics/Images/Zone boundary acoustic optical modes.png",
-    "Acoustic and optical mode displacements.png",
-    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Chemistry/IB Chemistry/Electrons in solids.md",
-    "Chemistry/Images/Tight binding 1D band.png",
+    "Physics/Condensed matter physics/Phonons.md",
+    "Physics/Condensed matter physics/Thermal Properties.md",
+    "Physics/Condensed matter physics/Free Electron Model.md",
+    "Physics/Thermal Physics/Statistical thermodynamics.md",
+    "Physics/Thermal Physics/Thermal Radiation.md",
+    "Physics/Thermal Physics/Classical Thermodynamics.md",
+    "Physics/IB Physics/Electromagnetism.md",
+    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+    "Chemistry/Images/sp band formation summary.png",
+    "Chemistry/Images/sp band antibonding.png",
+    "Chemistry/Images/Band formation from sp bonding.png",
+    "Chemistry/Images/sp band mixing.png",
+    "Chemistry/Images/sp band mixing halfway.png",
+    "Chemistry/Images/sp band mixing k0.png",
+    "Chemistry/Images/1D p band dispersion curve.png",
+    "Chemistry/Images/1D s band density of states.png",
+    "Physics/Condensed matter physics/Crystal structure and diffraction.md",
+    "Chemistry/Images/Square lattice BZ 1-6.png",
+    "Physics/Images/Salt dispersion relation.png",
     "Chemistry/IB Chemistry/Bonding in molecules.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
-    "Chemistry/Images/Group 1 group 2 fermi circles.png",
-    "Chemistry/Images/2D Brillouin zones.png",
-    "Physics/Condensed matter physics/Free Electron Model.md",
     "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
     "Mathematics/IB Mathematical Methods/Group Theory.md",
     "Physics/IB Physics/Experimental methods and data analysis.md",
@@ -307,19 +313,13 @@
     "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
     "Physics/Topics in Electromagnetism.md",
     "Physics/Vectors and matrices in physics.md",
-    "Physics/Thermal Physics/Radiation.md",
-    "Physics/IB Physics/Electromagnetism.md",
-    "Physics/Thermal Physics/Classical Thermodynamics.md",
-    "Physics/Condensed matter physics/Thermal Properties.md",
     "Mathematics/IB Mathematical Methods/Contour integration.md",
     "Misc or Personal/Quotes.md",
-    "Physics/Thermal Physics/Statistical thermodynamics.md",
     "Physics/Condensed matter physics/Semiconductors.md",
     "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
     "David Morin's Limericks.md",
     "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_2.pdf",
     "Chemistry/IB Chemistry/Symmetry in molecules.md",
-    "Physics/IB Physics/Oscillations.md",
     "Past Papers/IB Physics/2020-21_Part_IB_Physics_B_Paper_2.pdf",
     "Past Papers/IB Physics/2018-19_Part_IB_Physics_B_Paper_2.pdf",
     "Past Papers/IB Physics/2017-18_Part_IB_Physics_B_Paper_2.pdf",

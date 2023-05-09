@@ -877,23 +877,36 @@ $$\eta_\text{Carnot}=\frac{T_h}{T_h-T_l}$$
 
 
 # The third law and absolute zero
-- Originated from _electrochemical measurements_
-
+- Originated from _electrochemical measurements_ at low temperatures:
 >[!info] Nernst's statement
 >Near absolute zero, all reactions in a system in internal equilibrium take place with no change in entropy
 
+- Further _postulate_:
 >[!info] Planck's statement 
 >The entropy of all systems in _internal equilibrium_ at absolute zero may be _taken at zero_
 
+- _Experimentally_, even at temperatures _close_ to absolute zero, systems may have some "frozen-in" disorder, or be in a _non-equilibrium_ state that requires energy to settle into _internal equilibrium_
+
+- _Quantum mechanically_, from the [[Statistical thermodynamics#Statistical view of temperature|statistical definition of entropy]], this means that there is _no degeneracy_ at the _ground state_
+	- For _large systems_, perturbations will ensure there is _splitting_, even at the ground level
+	- Components of _large systems_ will also still be able to _exchange energy_ before reaching _internal equilibrium_
+
 ## Determining entropy
-- Using:
+- Experimentally, _heat capacity_ gives information on entropy:
 $$\displaylines{dS=\frac{\dbar Q_\text{rev}}{T} \\ C_p=T\left(\pd{S}{T}\right)_p}$$
+- By mapping $C_p$ as a function of _temperature_:
+$$S(T)=S(T_0)+\int_{T_0}^T \frac{C_p}{T}\,dT$$
+- The Third Law allows $S(T=0)$ to be set at _zero_, such that entropy has a _definite value_ at any temperature
 
 ## Consequences
 - Consider the _heat capacity_ when holding variable $x$ constant:
 $$C_x=T\left(\pd{S}{T}\right)_x$$
 - A phase of a system goes to zero entropy _smoothly_
 - Hence, _heat capacities go to zero_ at absolute zero
+- This leads to the fact that _classical models_ which predict _constant heat capacities_ ([[Statistical thermodynamics#The classical limit: equipartition|equipartition of energy]]) are _false_, and only good approximations at _high temperatures_
+
+- Similarly, from the _Maxwell relations_, other derivatives such as _expansivity_ vanish:
+$$\frac{1}{V}\left(\pd{V}{T}\right)_p=\frac{1}{V}\left(\pd{S}{p}\right)_T\to0$$
 
 ## Unattainability of absolute zero
 - Consider using a _Carnot cycle_ to cool a system

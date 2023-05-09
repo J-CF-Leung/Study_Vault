@@ -909,6 +909,12 @@ $$\displaylines{\nabla\cdot\bm{D}=\rho \\ \nabla\wedge E=-\pd{\bm{B}}{t} \\ \nab
 
 
 # Electromagnetic waves
+- One can generate _oscillating_ electric and magnetic fields that satisfy the _wave equation_
+- The simplest form is a _plane, monochromatic_ wave
+
+- Charged particles _accelerating_ will always emit _electromagnetic radiation_
+	- They are often _not plane waves_
+	- Radiation from _thermal motion_ is termed [[Thermal Radiation]]
 
 ## In free space
 - In free space, Maxwell's equations are:
