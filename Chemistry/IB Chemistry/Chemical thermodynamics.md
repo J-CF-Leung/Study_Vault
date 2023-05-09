@@ -627,8 +627,9 @@ $$\mu_i=\mu^⦵_i+RT\ln\frac{p_i}{p^⦵}$$
 
 - This formula can also be applied to _solutions_, defining the quantity known as _activity_ $a_i$:
 $$\mu_i=\mu^⦵_i+RT\ln a_i$$
-- For _low concentrations_, the activity can be approximated as _concentration relative to a standard_ $c^⦵=1 \,\text{mol dm}^{-3}$:
+- For _low concentrations_, the activity can be approximated as _concentration relative to a standard_ $c^⦵=1 \,\text{molecule m}^{-3}$:
 $$a_i\approx\frac{c_i}{c^⦵}$$
+- This standard $c^⦵$ is chosen as the partition functions and chemical potentials are _defined per molecule_
 
 ## The reaction
 - Suppose there is an _arbitrary mixture_, which is _not at equilibrium_
@@ -821,8 +822,19 @@ $$k_\text{2nd}=\frac{1}{c^⦵}k_\text{1st}K^*=\frac{1}{c^⦵} \nu^\ddagger (q^\d
 - Then, using the expression for $q^\dagger$:
 $$k_\text{2nd}=\frac{1}{c^⦵} \frac{kT}{h}K^\ddagger$$
 
-- Then, relating $K^\ddagger$ to the [[#Equilibrium constants|Gibbs Free Energy]]:
-$$k_\text{2nd}=\frac{1}{c^⦵} \frac{kT}{h}\exp\left(-\frac{\Delta G^\ddagger}{RT}\right)$$
+- Then, relating $K^\ddagger$ to the [[#Equilibrium constants|Gibbs Free Energy]], in _solutions_, and adjusting the _unit_:
+$$k_\text{2nd}=\frac{1}{[]^⦵} \frac{kT}{h}\exp\left(-\frac{\Delta_r G^{⦵,\ddagger}}{RT}\right)$$
+- Here, $\Delta_r G^{⦵,\ddagger}$ is the _Gibbs Energy change_ from the reactants _to the transition state_
+- $[]^⦵$ is a _standard concentration_ of $\text{mol dm}^{-3}$
+
+- For reactions in the _gas phase_:
+$$k_\text{2nd}=\frac{1}{p^⦵} \frac{kT}{h}\exp\left(-\frac{\Delta_r G^{⦵,\ddagger}}{RT}\right)$$
+- The _factors_ of $[]^⦵$ and $p^⦵$ ensure $k_\text{2nd}$ are in the correct _units_
+	- Solution: $\text{mol}^{-1}\,\text{dm}^3\,\text{s}^{-1}$
+	- Gas: $\text{N}^{-1}\,\text{m}^2\,\text{s}^{-1}$
+
+- Then using the _definition_ of $\Delta_rG$:
+$$k_\text{2nd}=\frac{1}{c^⦵} \frac{kT}{h}\exp\left(\frac{\Delta_r S^{⦵,\ddagger}}{R}\right)\exp\left(-\frac{\Delta_r H^{⦵,\ddagger}}{RT}\right)$$
 
 ### Relation to the Arrhenius equation
 

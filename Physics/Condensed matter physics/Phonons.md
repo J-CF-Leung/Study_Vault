@@ -130,6 +130,7 @@ $$\omega^2=\frac{\alpha}{m_Am_B}\left[(m_A+m_B)\pm\left\{(m_A+m_B)^2-4m_Am_B\sin
 
 - The two solutions form _two branches_ in the dispersion relationship:
 ![[Phonon branches.png]]
+- As the lattice now _repeats_ after $2a$, the _edges_ of the Brillouin zone are at $\pm\pi/2a$
 
 - The _lower branch_ is known as the _acoustic mode_
 	- As $q\to0$, it corresponds to _sound waves_
@@ -137,3 +138,52 @@ $$\omega^2=\frac{\alpha}{m_Am_B}\left[(m_A+m_B)\pm\left\{(m_A+m_B)^2-4m_Am_B\sin
 - The _upper branch_ is known as the _optical mode_
 	- It interacts _strongly with electromagnetic radiation_ of similar $\omega$
 	- Photons can be _absorbed_ to create phonons
+
+- At the _edge_ of the first Brillouin zone:
+$$\omega_A\left(q=\pm\frac{\pi}{2a}\right)=\sqrt{\frac{2\alpha}{m_A}} \hspace{1cm} \omega_O\left(q=\pm\frac{\pi}{2a}\right)=\sqrt{\frac{2\alpha}{m_B}}$$
+- At the _centre_ of the zone:
+$$\omega_A(q\to 0)\approx \sqrt{\frac{2\alpha}{m_A+m_B}}qa \hspace{1cm} \omega_O(q=0)=\sqrt{\frac{2\alpha}{\mu}}=\sqrt{2\alpha\left(\frac{1}{m_A}+\frac{1}{m_B}\right)}$$
+
+- In the _acoustic mode_, neighbouring atoms move _roughly in phase_
+- In the _optical mode_, neighbouring atoms move _roughly out of phase_
+![[Acoustic optical mode displacements.png]]
+
+- At the _zone boundaries_, each mode correspond to different _standing waves_ of wavelength $4a$, where _different sets_ of atoms move depending on the mode
+![[Zone boundary acoustic optical modes.png]]
+- The _lower energy_ mode corresponds to movement of _lighter atoms_
+- The _higher energy_ mode corresponds to movement of _heavier atoms_
+
+## Backfolding
+- The formation of _branches_ can be understood using the process of _backfolding_
+- Initially, the Brillouin zone spans $-\pi/a < q < \pi/a$
+- Then, for a diatomic lattice, it is _halved_ and spans $-\pi/2a<q<\pi/2a$
+- The "branches" _outside_ the zone are then _shifted_ by $\pm\pi/a$
+
+- Then, due to _unequal masses_, the branches _split_:
+![[Backfolding.png]]
+
+# 3 dimensional lattices
+- There are _different dispersion curves_ for _longitudinal_ and _transverse_ modes, in both _optical_ and _acoustic_ branches (if the lattice is not monoatomic)
+	- Depending on the _propagation direction_, transverse modes can be _degenerate_
+
+## Monoatomic FCC solid
+- There are _only acoustic modes_, but split into _longitudinal_ and _transverse_ modes
+![[Neon phonon dispersion.png]]
+
+- _Longitudinal_ modes are typically _higher energy_
+- _Transverse_ modes are commonly degenerate along _high symmetry_ directions
+	- $(\xi\,0\,0)$ and $(\xi\,\xi\,\xi)$ but _not_ $(\xi\,\xi\,0)$
+
+- In $fcc$, due to the structure of the lattice, there are _many neighbours_, leading to _multiple Fourier components_ for the longitudinal mode
+
+- Further example: Lead
+![[Lead phonon dispersion.png]]
+
+## Rock salt
+- Dispersion relations in $\ce{NaCl}$:
+![[Salt dispersion relation.png]]
+
+- Each _optical_ and _acoustic_ branch has its own _longitudinal_ and _transverse_ modes
+- Dispersion along $(\xi\,\xi\,\xi)$ is _similar_ to the 1D diatomic lattice as there are _alternating planes_ of $\ce{Na}$ and $\ce{Cl}$
+
+- The highest frequencies in an _ionic solid_ also tend to be _higher_ than those in a _covalent crystal_, due to the strength of the ionic bonds
