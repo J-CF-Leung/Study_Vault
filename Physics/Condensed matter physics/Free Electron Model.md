@@ -86,6 +86,7 @@ $$T_F=\frac{E_F}{k_B}$$
 - The heat capacity is _linear in temperature_, in contrast to [[Phonons|heat capacity of phonons]], which have a _cubic dependence_
 
 ### An intuitive derivation
+![[Electronic heat capacity.png]]
 - Raising temperature _only raises energy of thermally excited electrons_, which may be treated _classically_
 $$\Delta U_\text{el}=n_\text{ex}\frac{3}{2}k_BT=\frac{3}{2}g(\varepsilon_F)(k_BT)^2$$
 - To find $g(\varepsilon_F)$ in terms of $N$:
@@ -93,12 +94,74 @@ $$g(\epsilon_F)\propto \varepsilon_F^{1/2} \longrightarrow N=\int_0^{\varepsilon
 - Taking the _factors_ into account:
 $$C_\text{el}\approx\frac{9}{2}Nk_B\frac{T}{T_F}$$
 
-### Heat capacity in metals
+### Total heat capacity in metals
 - Taking both _electrons and phonons_ into account:
 $$C_\text{metal}=\gamma T+\beta T^3$$
 - This can be _linearised_ by plotting $C/T$ as a function of $T^2$
 
-- The electronic heat capacity is _proportional to_ $NTmn^{-2/3}$
+- From finding [[#Fermi energy]], the electronic heat capacity is _proportional to_ $NTmn^{-2/3}$
 - The discrepancy due to _lattice interactions_ can be accounted for by replacing $m$ with an _effective mass_ $m^*$
 	- $m^*/m_e$ can be _larger than_ or _less than_ $1$
 	- A _strong_ electron-electron interaction can lead to $m^*/m_e\sim 10^3$
+
+## Electron pressure and bulk modulus
+- When _compressing_ a solid, the _wavelengths_ shorten, and the _occupied states rise in energy_, which also changes _Fermi energy_
+- From [[Classical Thermodynamics|thermodynamics]]:
+$$P=-\left(\pd{U}{V}\right)_S$$
+- At _absolute zero_, simply compute $-\partial U/\partial V$
+- States are only filled _up to the Fermi level_
+- The _average energy per electron_ $U$ is then:
+$$\mean{U}=\int_0^{\varepsilon_F}\varepsilon\,g(\varepsilon)\,d\varepsilon\left(\int_0^{\varepsilon_F}\,g(\varepsilon)\,d\varepsilon\right)^{-1}=\int_0^{\varepsilon_F}\varepsilon^{3/2}\,d\varepsilon\left(\int_0^{\varepsilon_F}\,\varepsilon^{1/2}\,d\varepsilon\right)^{-1}=\frac{3}{5}\varepsilon_F$$
+
+- PRESSURE AND BULK MODULUS
+
+## Motion of electrons
+- Applying an _electric or magnetic_ field causes electrons to _accelerate_
+- Electrons can also _collide_ with other electrons and _scatter_
+
+### Scattering
+- After an electron _collides_, the direction is _randomised_, and $\mean{\bm{v}}=0$
+- After some time, the _probability_ that an electron has _not collided_ is $\exp(-t/\tau)$
+- The _mean velocity_ is then:
+$$\mean{v}=v\exp(-t/\tau)$$
+- The collisions then induce an _exponential decay_ of velocity:
+$$\frac{d\mean{v}}{dt}=-\frac{\bm{v}}{\tau}$$
+
+- _Without scattering_, the force of the electron is given by the [[Electromagnetism#The Lorentz Force and the Biot-Savart Law|Lorentz force]]:
+$$m^*\frac{d\bm{v}}{dt}=-e\bm{E}-e\bm{v}\wedge\bm{B}$$
+
+
+### Optical reflectivity
+- Reflectivity is related to the _inertia of the free electrons_ when they are _driven_ by an oscillating electric field
+- At _optical frequencies_, $\omega>>1/\tau$, so _scattering can be ignored_
+- Applying an electric field $\bm{E}$ causes a _response_ $\bm{x}$:
+$$\bm{E}=\bm{E}_0\exp(i\omega t) \hspace{1cm} \bm{x}=\bm{x}_0\exp(i\omega t)$$
+- Substituting into the _equation of motion_:
+$$\bm{x}_0=\frac{e\bm{E}_0}{m^*\omega^2}$$
+
+- This causes a _dipole moment_ $\bm{p}=-e\bm{x}_0$
+- This then causes a [[Electromagnetism#Polarisation and bound charge density|polariation]]:
+$$\bm{P}=-ne\bm{x}_0=-\frac{ne^2}{m^*\omega^2}\bm{E}_0$$
+- The _dielectric constant_ is then:
+$$\epsilon(\omega)=1-\frac{ne^2}{\epsilon_0m^*\omega^2}=1-\frac{\omega_p^2}{\omega^2}$$
+- $\omega_p$ is known as the _plasma frequency_:
+$$\omega_p^2=\frac{ne^2}{\epsilon_0m^*}$$
+- The _refractive index_ $n$ is defined as $\sqrt{\epsilon}$
+
+- If $\omega<\omega_p$, 
+
+### Electrical conductivity
+- When an _electric field_ is applied to a material, electrons gain some _extra momentum_ oppposite to the field
+- Originally, there is a _sphere of states_, which is _centered_ in $k-$space
+- With the field, the sphere is _displaced_:
+$$\frac{d\bm{k}}{dt}=-\frac{1}{\hbar}e\bm{E}$$
+- Eventually, _scattering_ will _limit displacement_ of the sphere
+
+- _Phonon scattering_ have wave-vectors _comparable_ to electrons, but with _very small energies_ compared to $\varepsilon_F$
+- This can _strongly change direction_ of the electrons, but with _slight changes to magnitude_
+
+- Electrons can also _scatter off defects_, with large changes in _direction_, not _magnitude_
+
+### Wiedemann-Franz Law
+
+## Hall Effect

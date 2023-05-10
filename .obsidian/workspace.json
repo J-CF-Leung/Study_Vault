@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Condensed matter physics/Phonons.md",
+                "file": "Physics/Condensed matter physics/Free Electron Model.md",
                 "mode": "source",
                 "source": false
               }
@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Thermal Physics/Statistical thermodynamics.md",
+                "file": "Physics/Thermal Physics/Kinetic Theory of Gases.md",
                 "mode": "source",
                 "source": false
               }
@@ -51,6 +51,18 @@
               "type": "markdown",
               "state": {
                 "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7b862baec516adcc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mathematics/IB Mathematical Methods/Group Theory.md",
                 "mode": "source",
                 "source": false
               }
@@ -282,15 +294,21 @@
   },
   "active": "041d1941965902cd",
   "lastOpenFiles": [
-    "Chemistry/IB Chemistry/Electrons in solids.md",
-    "Physics/Condensed matter physics/Phonons.md",
-    "Physics/Condensed matter physics/Thermal Properties.md",
-    "Physics/Condensed matter physics/Free Electron Model.md",
-    "Physics/Thermal Physics/Statistical thermodynamics.md",
-    "Physics/Thermal Physics/Thermal Radiation.md",
     "Physics/Thermal Physics/Classical Thermodynamics.md",
-    "Physics/IB Physics/Electromagnetism.md",
     "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+    "Mathematics/IB Mathematical Methods/Group Theory.md",
+    "Chemistry/IB Chemistry/Electrons in solids.md",
+    "Chemistry/Images/2D crystal orbitals.png",
+    "Chemistry/Images/2D electron dispersion.png",
+    "Physics/Condensed matter physics/Free Electron Model.md",
+    "Physics/Images/Electronic heat capacity.png",
+    "Physics/Thermal Physics/Statistical thermodynamics.md",
+    "Physics/Thermal Physics/Kinetic Theory of Gases.md",
+    "Physics/IB Physics/Experimental methods and data analysis.md",
+    "Physics/Thermal Physics/Thermal Radiation.md",
+    "Physics/Condensed matter physics/Thermal Properties.md",
+    "Physics/Condensed matter physics/Phonons.md",
+    "Physics/IB Physics/Electromagnetism.md",
     "Chemistry/Images/sp band formation summary.png",
     "Chemistry/Images/sp band antibonding.png",
     "Chemistry/Images/Band formation from sp bonding.png",
@@ -298,15 +316,10 @@
     "Chemistry/Images/sp band mixing halfway.png",
     "Chemistry/Images/sp band mixing k0.png",
     "Chemistry/Images/1D p band dispersion curve.png",
-    "Chemistry/Images/1D s band density of states.png",
     "Physics/Condensed matter physics/Crystal structure and diffraction.md",
-    "Chemistry/Images/Square lattice BZ 1-6.png",
-    "Physics/Images/Salt dispersion relation.png",
     "Chemistry/IB Chemistry/Bonding in molecules.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
-    "Mathematics/IB Mathematical Methods/Group Theory.md",
-    "Physics/IB Physics/Experimental methods and data analysis.md",
     "Past Papers/IB Chemistry A/IB_A_2021.pdf",
     "Past Papers/IB Chemistry A/IB_A_2022.pdf",
     "Chemistry/IB Chemistry/Molecular spectroscopy.md",
@@ -319,7 +332,6 @@
     "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
     "David Morin's Limericks.md",
     "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_2.pdf",
-    "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Past Papers/IB Physics/2020-21_Part_IB_Physics_B_Paper_2.pdf",
     "Past Papers/IB Physics/2018-19_Part_IB_Physics_B_Paper_2.pdf",
     "Past Papers/IB Physics/2017-18_Part_IB_Physics_B_Paper_2.pdf",

@@ -572,7 +572,23 @@ $$\beta_2=\alpha_s-\alpha_p$$
 - Characterise the _atomic_ orbitals by two positional parameters, $r$ and $s$
 $$\psi_{k_x,k_y}=\sum_{r,s} c_{k_x,k_y}^{(r,s)}\;\phi_{r,s}$$
 - The simplest case is a _square lattice_
-- The solution can be given by:
+- The solution is given by:
 $$\displaylines{c_{k_x,k_y}^{(r,s)}=\exp(ik_xra)\exp(ik_ysa) \\ k_x=m_x\frac{2\pi}{Na} \hspace{1cm} k_y=m_y\frac{2\pi}{Na}}$$
+![[2D crystal orbitals.png]]
+- The Hückel Approximations _hold respectively in each dimension_
+	- Orbital $(r.s)$ intreracts with orbitals at $(r\pm1,s)$, contributing $2\beta\cos(k_xa)$
+	- It also interacts with orbitals at $(r,s\pm1)$, contributing $2\beta\cos(k_ya)$
+- There are $N^2$ such terms in total
+- Adding the energy _of the orbital_ itself, and normalising:
+$$E_{k_x,k_y}=\alpha+2\beta[\cos(k_xa)+\cos(k_ya)]$$
+
+- The _first Brillouin zone_ is a _square_ where $-\pi/a<k_x,k_y,\pi/a$
+- The dispersion curve can be represented as a _path between high symmetry points_, or a _contour plot_ can be used:
+![[2D electron dispersion.png]]
+
+- The _density of states_ $D(E)$ can be understood as being proportional to the _length of a constant energy contour_
+- It is _zero_ at $E=\alpha\pm4\beta$, or $(0,0)$ and $(\pm\pi/a,\pm\pi/a)$
+	- The drop is _abrupt_, and is known as a _van Hove singularity_
+- There is a _maximum_ at $E=\alpha$
 
 # Semiconductors

@@ -1,4 +1,5 @@
-- Rigorous discussion w/ _derivations_: [[Classical Thermodynamics]]
+- To describe states and the effect of _reactions_, one needs the tools of [[Classical Thermodynamics]]
+- To understand what is happening and make calculations based on the states of _molecules_, one needs the tools of [[Statistical thermodynamics]]
 
 # State variables and reversibility
 
@@ -46,6 +47,10 @@ $$\displaylines{A=U-TS \\ dA=dU-T\,dS-S\,dT=-p\,dV-S\,dT}$$
 - Following similar logic to above, at _constant volume and temperature_:
 $$-\frac{dA_\text{sys}}{T}=dS_\text{sys}-\frac{dU}{T}=dS_\text{univ}$$
 - From this, for a _spontaneous process at constant volume and temperature_, $A$ _decreases_
+
+## Gibbs-Helmholtz relations
+- From the definitions of $F$ and $G$, one can [[Classical Thermodynamics#Gibbs-Helmholtz relations|derive]] the _Gibbs-Helmholtz relations_:
+$$\displaylines{U=-T^2\left(\pd{(A/T)}{T}\right)_V \\ H=-T^2\left(\pd{(G/T)}{T}\right)_p}$$
 
 # Statistics and the Boltzmann distribution
 - Detail: [[Statistical thermodynamics]]
@@ -594,7 +599,7 @@ $$q_\text{rot}=\frac{T}{\sigma\theta_\text{rot}}$$
 $$\ce{\nu_AA + \nu_BB<=> \nu_MM + \nu_NN}$$
 - Starting from a mixture of $A$ and $B$, the reaction will _proceed until equilibrium is reached_, with some _mixture_ of $A$, $B$, $M$, and $N$
 - Equilibrium is reached at constant pressure when _Gibbs Free Energy is at a minimum_
-	- [[Classical Thermodynamics#Availability and variational principles|Why]]
+	- [[Classical Thermodynamics#Availability and variational principles|Variational Principles in Classical Thermodynamics]]
 
 - Assume each component is _non-interacting_, hence the Gibbs Free Energy is _additive_
 
@@ -625,7 +630,7 @@ $$\mu_i=\mu^⦵_i+RT\ln\frac{p_i}{p^⦵}$$
 $$\mu_i=\mu^⦵_i+RT\ln a_i$$
 - For _low concentrations_, the activity can be approximated as _concentration relative to a standard_ $c^⦵=1 \,\text{molecule m}^{-3}$:
 $$a_i\approx\frac{c_i}{c^⦵}$$
-- This standard $c^⦵$ is chosen as the partition functions and chemical potentials are _defined per molecule_
+- This _standard $c^⦵$_ is chosen as the partition functions and chemical potentials are _defined per molecule_
 
 ## The reaction
 - Suppose there is an _arbitrary mixture_, which is _not at equilibrium_
@@ -657,7 +662,16 @@ $$\Delta_rG^⦵=-RT\ln K$$
 - It can be written as $K_c$ or $K_p$:
 $$K_p=\frac{p_M^{\nu_M}p_N^{\nu_N}}{p_A^{\nu_A}p_B^{\nu_B}}\left(\frac{1}{p^⦵}\right)^{\Delta\nu} \hspace{1cm} K_c=\frac{c_M^{\nu_M}c_N^{\nu_N}}{c_A^{\nu_A}c_B^{\nu_B}} \left(\frac{1}{c^⦵}\right)^{\Delta\nu}$$
 
-### In terms of partition functions
+### van't Hoff equation
+- Using the definition of $G$, $\Delta_rG$ can also be written as:
+$$\Delta_rG^⦵=\Delta_rH^⦵-T\Delta_rS^⦵$$
+- Using the [[#Gibbs-Helmholtz relations]]:
+$$\left(\pd{(\Delta_r G^⦵/T)}{T}\right)_p=-\frac{\Delta_rH^⦵}{T^2}$$
+- This then gives the _van't Hoff equation_:
+$$\frac{d\,\ln K}{dT}=-\frac{\Delta_rH^⦵}{RT^2}$$
+- Here, $K_c$ should be used for _solutions_ and $K_p$ should be used for _gases_
+
+### K_c and K_p in terms of partition functions
 - In order to rewrite chemical potential _in terms of concentration_:
 $$\mu_i= -kT\ln\frac{q_i}{N_i}+\varepsilon^{0,i}= -kT\ln\frac{f_i}{c_i}+\varepsilon^{0,i}$$
 - Here, $f_i$ is the _volume-independent partition function_:
@@ -833,5 +847,10 @@ $$k_\text{2nd}=\frac{1}{p^⦵} \frac{kT}{h}\exp\left(-\frac{\Delta_r G^{⦵,\dda
 $$k_\text{2nd}=\frac{1}{c^⦵} \frac{kT}{h}\exp\left(\frac{\Delta_r S^{⦵,\ddagger}}{R}\right)\exp\left(-\frac{\Delta_r H^{⦵,\ddagger}}{RT}\right)$$
 
 ### Relation to the Arrhenius equation
+- The _Arrhenius equation_ for the rate constant:
+$$k_\text{2nd}=A\exp\left(-\frac{E_a}{RT}\right)$$
+- This _defines_ $E_a$, or the _activation energy_ of the reaction
+- This can be put into a more useful form:
+$$\left(\pd{\ln k_\text{2nd}}{T}\right)_V=\frac{E_a}{RT^2}$$
 
 ### Volume of activation

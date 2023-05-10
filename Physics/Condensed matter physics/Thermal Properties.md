@@ -45,6 +45,8 @@ $$g(\omega)=g(k)\frac{dk}{d\omega}=\frac{3V\omega^2}{2\pi^2v_s^3}$$
 - Integrate to obtain $U$, while accounting for the _correct number of modes_
 - There are $3N$ modes, hence define the _Debye frequency_ $\omega_D$:
 $$3N=\int_0^{\omega_D} g(\omega)\,d\omega$$
+- _Roughly_, this corresponds to the frequency where $\lambda=2a$
+	- The _shortest possible_ wavelength
 
 ## Limitations
 - At _low_ $\omega$, the _actual dispersion relationship_ is also approximately linear, hence the Debye model is a _good match_

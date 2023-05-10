@@ -522,6 +522,15 @@ $$\displaylines{G=H-TS=U+pV-TS \\ dG=-S\,dT+V\,dp}$$
 
 - For example, if $G(p,T)$ were known, then _complete thermodynamic information_ can be obtained for the system
 
+## Gibbs-Helmholtz relations
+- In some cases. [[#The Free Energies]] are more useful to measure and evaluate
+- Hence, one can express $U$ and $H$ in terms of the _derivatives_ of these quantities
+- Using the definitions of entropy as:
+$$S=-\left(\pd{F}{T}\right)_V=-\left(\pd{G}{T}\right)_p$$
+- Then using the definitions of $F$ and $G$:
+$$\displaylines{U=F+TS=F-T\left(\pd{F}{T}\right)_V=-T^2\left(\pd{(F/T)}{T}\right)_V \\ H=G+TS=G-T\left(\pd{G}{T}\right)_p=-T^2\left(\pd{(G/T)}{T}\right)_p}$$
+- These are the _Gibbs-Helmholtz relations_
+
 ## Maxwell relations
 - There are _special relationships_ between thermodynamic variables, using the fact that if $f$ is a _single-valued_, _differentiable_ function everywhere, then $df$ is an _exact differential_:
 $$\displaylines{f=f(x,y) \longrightarrow df=\left(\pd{f}{x}\right)\,dx+\left(\pd{f}{y}\right)\,dy \\ \pd{^2f}{x\partial y}=\pd{^2f}{y\partial x}}$$
@@ -684,6 +693,7 @@ $$\dbar W_\text{tot}=\dbar W-p_0\,dV\geq dA)_{T=T_0}-p_0dV=dF)_{T=T_0}$$
 - Hence, at $T_0$, $-dF)_{T=T_0}$ is the _maximum work obtainable from the system_:
 $$\dbar W_\text{by})_{T=T_0}\leq dF)_{T=T_0}$$
 - At _constant $T$ and $V$_, the system will _continue to do non-expansion work_ until the system is _at equilibrium_, where $dF=0$
+	- More "useful" for physicists
 
 ### Gibbs Free Energy
 - Consider a system at _constant temperature $T_0$ and pressure $p_0$_
@@ -696,6 +706,7 @@ $$\sum_i X_i\,dx_i\leq -dG)_{T,p}$$
 - Hence, at $T_0$ and $p_0$, $-dG)_{T,p}$ is the _maximum non$-pV$ work obtainable from the system_
 
 - At _constant $T$ and $p$_, the system will _continue to do non-expansion work_ until it is _at equilibrium_, where $dG=0$
+	- Especially useful for studying systems in chemistry
 	- Example: [[Chemical thermodynamics#Reactions and equilibrium|Equilibrium in chemistry]]
 
 ## Scaling the system

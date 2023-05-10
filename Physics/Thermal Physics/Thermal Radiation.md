@@ -27,6 +27,7 @@ $$u(T)=\int u_\lambda(\lambda, T)\,d\lambda$$
 - Consider the number of photons hitting a _unit area per unit time_, with energy in range $[\epsilon,\epsilon+d\epsilon]$ in _angle range_ $[\theta,\theta+d\theta]$:
 $$dN=[n(\epsilon)d\epsilon](c\cos\theta)\frac{2\pi\sin\theta\,d\theta}{4\pi}$$
 	- Numerator of latter fraction: _solid angle $d\Omega$ of thin ring_
+	- Similar method to the [[Kinetic Theory of Gases]]
 
 - Using [[Relativity|Einstein's energy-momentum relation]], and the fact that _photons are massless_:
 $$\epsilon=|\bm{p}|c$$
@@ -88,3 +89,28 @@ $$g=u+\frac{1}{3}u-\frac{4}{3}u=0$$
 
 - This can be understood by the fact that since _photon number does not need to be conserved_, at _equilibrium_, for _constant volume_, the _number of photons_ is such that Helmholtz Free Energy is at a _minimum_
 $$\mu=\left(\pd{F}{N}\right)_{T,V}=0$$
+## Density of states and the ultraviolet catastrophe
+- Consider photons in a _cubic box_ of lengths $L$
+- With the condition that $E_\parallel(x=0)=E_\parallel(x=L)=0$:
+$$\bm{E}=\bm{E}_0\sin(k_xx)\sin(k_yy)\sin(k_zz)$$
+- Where the wave-vector is:
+$$\bm{k}=\frac{\pi}{L}(n_x\,n_y\,n_z)$$
+- In $k-$space, each state has a _volume_ of $(\pi/L)^3=\pi^3/V$, which are _uniformly distributed_
+- As photon energy depends on $|\bm{k}|$, _states of equal energy_ lie on _shells_ in $k-$space
+- For each $k-$state, there are _two polarisations_
+
+- To find the _density of states $g(k)$_ in $k$:
+$$\displaylines{dN=g(k)\,dk=2\frac{4\pi k^2\,dk/8}{(\pi/L)^3} \\ g(k)=\frac{Vk^2}{\pi^2}}$$
+- Then to find the _density of states $g(\epsilon)$_:
+$$\displaylines{\epsilon=\hbar kc \\ g(\epsilon)=\frac{dN}{d\epsilon}=g(k)\frac{dk}{d\epsilon}=\frac{V\epsilon^2}{\hbar^3c^3\pi^2}}$$
+- As for the _density of states in wavelength_ $g(\lambda)$:
+$$\displaylines{\epsilon=\frac{hc}{\lambda} \\ g(\lambda)=\frac{V}{\hbar^3c^3\pi^2}\frac{h^2c^2}{\lambda^2}\frac{d\epsilon}{d\lambda}=\frac{8\pi V}{\lambda^4}}$$
+
+- According to classical mechanics, the wave energy has _two terms_ in $E$ and $B$, hence each state has energy $k_BT$
+- This gives the _energy density_:
+$$u_\lambda=\frac{du}{d\lambda}=k_BT\,g(\lambda)=\frac{8\pi Vk_BT}{\lambda^4}$$
+- This is the _Rayleigh-Jeans law_
+- The energy density _diverges_ as $\lambda\to 0$
+- This is known as the _ultraviolet catastrophe_
+
+## Planck's Law
