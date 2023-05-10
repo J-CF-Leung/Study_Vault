@@ -661,6 +661,8 @@ $$\Delta_rG^⦵=-RT\ln K$$
 - $K$, which is the _reaction quotient at equilibrium_, is defined as the _equilibrium constant_
 - It can be written as $K_c$ or $K_p$:
 $$K_p=\frac{p_M^{\nu_M}p_N^{\nu_N}}{p_A^{\nu_A}p_B^{\nu_B}}\left(\frac{1}{p^⦵}\right)^{\Delta\nu} \hspace{1cm} K_c=\frac{c_M^{\nu_M}c_N^{\nu_N}}{c_A^{\nu_A}c_B^{\nu_B}} \left(\frac{1}{c^⦵}\right)^{\Delta\nu}$$
+- The relation between them can be written as:
+$$K_c=K_p\left(\frac{p^⦵}{c^⦵kT}\right)^{\Delta\nu}$$
 
 ### van't Hoff equation
 - Using the definition of $G$, $\Delta_rG$ can also be written as:
@@ -668,8 +670,12 @@ $$\Delta_rG^⦵=\Delta_rH^⦵-T\Delta_rS^⦵$$
 - Using the [[#Gibbs-Helmholtz relations]]:
 $$\left(\pd{(\Delta_r G^⦵/T)}{T}\right)_p=-\frac{\Delta_rH^⦵}{T^2}$$
 - This then gives the _van't Hoff equation_:
-$$\frac{d\,\ln K}{dT}=-\frac{\Delta_rH^⦵}{RT^2}$$
+$$\frac{d\,\ln K}{dT}=\frac{\Delta_rH^⦵}{RT^2}$$
 - Here, $K_c$ should be used for _solutions_ and $K_p$ should be used for _gases_
+
+- Using the relation between $K_c$ and $K_p$, one can write that in a _gaseous medium_:
+$$\frac{d\,\ln K_c}{dT}=\frac{\Delta_rH^⦵-\Delta\nu RT}{RT^2}$$
+
 
 ### K_c and K_p in terms of partition functions
 - In order to rewrite chemical potential _in terms of concentration_:
@@ -829,7 +835,7 @@ $$\frac{k_\text{2nd}(\ce{H})}{k_\text{2nd}(\ce{D})}=\frac{q_\text{vib}(\ce{D})}{
 ## The thermodynamic formulation
 - Starting from transition state theory:
 $$k_\text{2nd}=\frac{1}{c^⦵}k_\text{1st}K^*=\frac{1}{c^⦵} \nu^\ddagger (q^\ddagger K^\ddagger)$$
-- Then, using the expression for $q^\dagger$:
+- Then, using the expression for $q^\dagger$, one gets the _Eyring equation_:
 $$k_\text{2nd}=\frac{1}{c^⦵} \frac{kT}{h}K^\ddagger$$
 
 - Then, relating $K^\ddagger$ to the [[#Equilibrium constants|Gibbs Free Energy]], in _solutions_, and adjusting the _unit_:
@@ -844,13 +850,34 @@ $$k_\text{2nd}=\frac{1}{p^⦵} \frac{kT}{h}\exp\left(-\frac{\Delta_r G^{⦵,\dda
 	- Gas: $\text{N}^{-1}\,\text{m}^2\,\text{s}^{-1}$
 
 - Then using the _definition_ of $\Delta_rG$:
-$$k_\text{2nd}=\frac{1}{c^⦵} \frac{kT}{h}\exp\left(\frac{\Delta_r S^{⦵,\ddagger}}{R}\right)\exp\left(-\frac{\Delta_r H^{⦵,\ddagger}}{RT}\right)$$
+$$k_\text{2nd}=\frac{1}{[]^⦵} \frac{kT}{h}\exp\left(\frac{\Delta_r S^{⦵,\ddagger}}{R}\right)\exp\left(-\frac{\Delta_r H^{⦵,\ddagger}}{RT}\right)$$
+- To _experimentally determine_ the parameters, _rearrange_ into a straight line equation:
+$$\ln\frac{k_\text{2nd}}{T}=\ln\frac{k}{h[]^⦵}+\frac{\Delta_r S^{⦵,\ddagger}}{R}-\frac{\Delta_r H^{⦵,\ddagger}}{R}\left(\frac{1}{T}\right)$$
+- A plot of $\ln(k_\text{2nd}/T)$ as a _function of_ $1/T$ then gives $\Delta_rS^\ddagger$ and $\Delta_rH^\ddagger$
+- Typically, measurements are done for a _small temperature range_
 
 ### Relation to the Arrhenius equation
 - The _Arrhenius equation_ for the rate constant:
 $$k_\text{2nd}=A\exp\left(-\frac{E_a}{RT}\right)$$
 - This _defines_ $E_a$, or the _activation energy_ of the reaction
+- Rates must also be recorded at _constant volume_
 - This can be put into a more useful form:
 $$\left(\pd{\ln k_\text{2nd}}{T}\right)_V=\frac{E_a}{RT^2}$$
+- Then rewriting the _Eyring equation_:
+$$\left(\pd{\ln k_\text{2nd}}{T}\right)_V=\frac{1}{T}+\left(\pd{\ln K^\ddagger}{T}\right)_V$$
+
+- For the second term, use the [[#van't Hoff equation]]:
+$$\frac{d\,\ln K}{dT}=-\frac{\Delta_rH^⦵}{RT^2}$$
+- The usage of $K_c$ or $K_p$ depends on if the reaction is taking place in _solution_ or _gas_
+	- In a _gas_, $K_c/K_p$ has a [[#van't Hoff equation|temperature dependence]]
+
+- Combining the equations, one gets that in a _solution_:
+$$E_a=\Delta_rH^{⦵,\ddagger}+RT\;\;\;\text{ in solution}$$
+- Meanwhile, in a _gas_:
+$$E_a=\Delta_rH^{⦵,\ddagger}+(1+\Delta\nu)RT\;\;\;\text{ in a gas}$$
+
+- By _substituting_ the above into the Arrhenius equation, one can rewrite the _pre-exponential factor_ $A$
+- For a _reaction in solution_:
+$$k_\text{2nd}=\left[\frac{kT}{[]^⦵h}\exp\left(\frac{\Delta_r S^{⦵,\ddagger}}{R}+1\right)\right]\exp\left(-\frac{E_a}{RT}\right)$$
 
 ### Volume of activation

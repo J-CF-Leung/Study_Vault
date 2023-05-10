@@ -2,6 +2,7 @@
 - They are the [[Oscillations#Normal modes|normal modes]] of the system, where:
 	- All atoms oscillate at the _same frequency_
 	- All displacements are at _fixed ratios_ to each other
+- Quantum mechanically, they are described by _multi-particle wave functions_
 
 - The corresponding frequencies and displacements can be derived _classically_
 - However, the _energies_ of the normal modes must follow the [[Quantum Harmonic Oscillator]]:

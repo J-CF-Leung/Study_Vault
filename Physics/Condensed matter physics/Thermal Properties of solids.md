@@ -12,7 +12,26 @@ $$E_n=\left(n+\frac{1}{2}\right)\hbar\omega$$
 - Each mode has a _zero-point energy_, which can be ignored in calculating _heat capacity_
 
 ## Internal energy
+- Each vibrational mode contributes _separately_ to internal energy
 
+### Energy of one mode
+- If the solid is in _contact_ with a reservoir of temperature $T$, then the _number of phonons $n$ in a mode_ of frequency $\omega$ follows the [[Statistical thermodynamics#Boltzmann Distribution|Boltzmann Distribution]]:
+$$P_n\propto\exp\left(-\frac{n\hbar\omega}{k_BT}\right)\equiv\exp(-n\beta\hbar\omega)$$
+- One can then write the [[Statistical thermodynamics#The Partition Function|Partition Function]]:
+$$Z=\sum_{n=0}^\infty \exp\left(-n\beta\hbar\omega\right)=\frac{1}{1-\exp(\beta\hbar\omega)}$$
+- The _average energy_ stored in the $i$th mode at temperature $T$ is then:
+$$E_i=-\frac{1}{Z}\pd{Z}{\beta}=\frac{\hbar\omega_i}{\exp(\beta\hbar\omega_i)-1}$$
+- At _low temperatures_, where $\beta\hbar\omega_i>>1$:
+$$E_i\approx\hbar\omega_i\exp\left(-\frac{\hbar\omega_i}{k_BT}\right)$$
+- At _high temperatures_, where $\beta\hbar\omega_i<<1$:
+$$E_i\approx k_BT$$
+- This agrees with the [[Statistical thermodynamics#The classical limit: equipartition|equipartition theorem]], where each vibrational mode has $k_BT$ of energy, _independent of frequency_
+- For $N$ atoms, there must be $3N$ normal modes
+- Hence, at _high temperatures_, one gets the _Dulong-Petit law_:
+$$U\approx 3Nk_BT \hspace{2cm} C\approx 3Nk_B$$
+
+### Total internal energy
+- To find the _total internal energy_ of the solid, one 
 
 ## The density of states
 - Assuming the crystal is a _rectangular box_ of side lengths $A, B, C$

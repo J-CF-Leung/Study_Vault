@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Condensed matter physics/Free Electron Model.md",
+                "file": "Physics/Condensed matter physics/Thermal Properties of solids.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,8 +68,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -87,7 +86,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md"
+                    "file": "Physics/Condensed matter physics/Thermal Properties of solids.md"
                   }
                 }
               }
@@ -104,7 +103,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                    "file": "Physics/Condensed matter physics/Thermal Properties of solids.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -222,7 +221,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                "file": "Physics/Condensed matter physics/Thermal Properties of solids.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -239,7 +238,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                "file": "Physics/Condensed matter physics/Thermal Properties of solids.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -262,7 +261,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md"
+                "file": "Physics/Condensed matter physics/Thermal Properties of solids.md"
               }
             }
           },
@@ -292,22 +291,22 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "041d1941965902cd",
+  "active": "25e8a6053642895c",
   "lastOpenFiles": [
-    "Physics/Thermal Physics/Classical Thermodynamics.md",
-    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Mathematics/IB Mathematical Methods/Group Theory.md",
+    "Physics/Thermal Physics/Statistical thermodynamics.md",
+    "Physics/Condensed matter physics/Thermal Properties of solids.md",
+    "Physics/Condensed matter physics/Phonons.md",
+    "Physics/Condensed matter physics/Free Electron Model.md",
+    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+    "Physics/Thermal Physics/Classical Thermodynamics.md",
     "Chemistry/IB Chemistry/Electrons in solids.md",
     "Chemistry/Images/2D crystal orbitals.png",
     "Chemistry/Images/2D electron dispersion.png",
-    "Physics/Condensed matter physics/Free Electron Model.md",
     "Physics/Images/Electronic heat capacity.png",
-    "Physics/Thermal Physics/Statistical thermodynamics.md",
     "Physics/Thermal Physics/Kinetic Theory of Gases.md",
     "Physics/IB Physics/Experimental methods and data analysis.md",
     "Physics/Thermal Physics/Thermal Radiation.md",
-    "Physics/Condensed matter physics/Thermal Properties.md",
-    "Physics/Condensed matter physics/Phonons.md",
     "Physics/IB Physics/Electromagnetism.md",
     "Chemistry/Images/sp band formation summary.png",
     "Chemistry/Images/sp band antibonding.png",
