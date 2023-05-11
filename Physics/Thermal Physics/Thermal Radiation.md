@@ -73,7 +73,7 @@ $$\frac{du}{u}=4\frac{dT}{T} \Longrightarrow u\propto T^4$$
 - Then using _Kirchoff's law_, the _energy emitted per unit time_ for a _black-body_ is:
 $$\int e_\lambda\,d\lambda=\sigma T^4$$
 - This is the _Stefan-Boltzmann Law_
-- $\sigma$ is a _proportionality constant_ that must be derived from statistical thermodynamics
+- $\sigma$ is a _proportionality constant_ that must be [[#Planck's Law|derived]] from statistical thermodynamics
 
 ## Gibbs Energy and chemical potential
 - The [[Classical Thermodynamics#Gibbs Free Energy|Gibbs Energy]] of a photon gas is given by:
@@ -114,3 +114,26 @@ $$u_\lambda=\frac{du}{d\lambda}=k_BT\,g(\lambda)=\frac{8\pi Vk_BT}{\lambda^4}$$
 - This is known as the _ultraviolet catastrophe_
 
 ## Planck's Law
+- It was proposed that radiation is emitted in _quanta_, or "packets" of energy
+- The [[Statistical thermodynamics#The Partition Function|partition function]]and _internal energy_ for a blackbody radiating at frequency $\omega$ are:
+$$\displaylines{Z=\sum_{n=0}^\infty \exp\left(-\frac{n\hbar\omega}{k_BT}\right)=\sum_{n=0}^\infty \exp(-n\beta\hbar\omega)=\frac{1}{1-\exp(-\beta\hbar\omega)} \\ U=-\frac{1}{Z}\frac{dZ}{d\beta}=\frac{\hbar\omega}{\exp(\beta\hbar\omega)-1}}$$
+- To find the _total energy_, one needs the _density of states_ in $\omega$:
+$$g(\omega)=g(\epsilon)\frac{d\epsilon}{d\omega}=\frac{V\omega^2}{c^3\pi^2}$$
+- The _energy density_ for spectral range $\omega$ to $\omega+d\omega$ is then:
+$$u(\omega,T)=g(\omega)\frac{U}{V}=\frac{\hbar\omega^3}{\pi^2c^3\left[\exp(\hbar\omega/k_BT)-1\right]}$$
+- This is _Planck's law for radiation_
+
+- Integrating $u$ over the _entire spectral range_:
+$$u(T)=\frac{\hbar}{\pi^2c^3}\int_0^\infty \frac{\omega^3}{\exp(\beta\hbar\omega)-1}\,d\omega=\frac{\hbar}{\pi^2c^3}\left(\frac{k_BT}{\hbar}\right)^4\int_0^\infty\frac{x^3}{e^x-1}\,dx$$
+- This gives the energy density:
+$$u(T)=\frac{k_B^4\pi^2}{15\hbar^3c^3}T^4$$
+- Then by considering [[#Kirchoff's Law]], one gets the [[#Stefan-Boltzmann Law]]:
+$$\displaylines{\int\,e_\lambda\,d\lambda=\frac{c}{4}u(T)=\sigma T^4 \\ \sigma=\frac{k_B^4 \pi^2}{60\hbar^3 c^2}=5.67\times 10^{-8}\,\text{W m}^{-2}\text{ K}^{-4}}$$
+
+## Wien's distribution and displacement laws
+- By considering that $u_\omega\,|d\omega|=u_\lambda\,|d\lambda|$:
+$$u_\lambda=u_\omega\left|\frac{d\omega}{d\lambda}\right|=\frac{8\pi ch}{\lambda^5}\frac{1}{\exp(hc/\lambda k_BT)-1}$$
+- This is _Wien's distribution law_:
+$$u_\lambda=\lambda^{-5}f(\lambda T)$$
+- By _differentiating_ w.r.t $\lambda$. one obtains _Wien's displacement law_:
+$$\displaylines{\frac{du_\lambda}{d\lambda}\Bigg|_{\lambda_\text{max}}=0 \\ \lambda_\text{max}T\approx 2.9\text{ mm K}}$$

@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Thermal Physics/Kinetic Theory of Gases.md",
+                "file": "Physics/Thermal Physics/Thermal Radiation.md",
                 "mode": "source",
                 "source": false
               }
@@ -67,7 +67,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -85,7 +85,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Electrons in solids.md"
+                    "file": "Physics/Thermal Physics/Thermal Radiation.md"
                   }
                 }
               }
@@ -102,7 +102,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Electrons in solids.md",
+                    "file": "Physics/Thermal Physics/Thermal Radiation.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -220,7 +220,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
+                "file": "Physics/Thermal Physics/Thermal Radiation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -237,7 +237,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
+                "file": "Physics/Thermal Physics/Thermal Radiation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -260,7 +260,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/IB Chemistry/Electrons in solids.md"
+                "file": "Physics/Thermal Physics/Thermal Radiation.md"
               }
             }
           },
@@ -290,8 +290,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "48c2076383aed1b7",
+  "active": "9952e3b9bd292db1",
   "lastOpenFiles": [
+    "Past Papers/IB Chemistry A/IB_A_2013.pdf",
+    "Physics/Quantum Mechanics/The failure of classical mechanics.md",
+    "Physics/Thermal Physics/Thermal Radiation.md",
+    "Physics/Thermal Physics/Kinetic Theory of Gases.md",
+    "Chemistry/IB Chemistry/Electrons in solids.md",
     "Chemistry/Images/Intrinsic semiconductor band structure.png",
     "Chemistry/Images/Graphene dispersion.png",
     "Chemistry/Images/Graphene 1st BZ zone.png",
@@ -301,11 +306,9 @@
     "Chemistry/Images/2 atom lattice antibonding.png",
     "Chemistry/Images/2 atom lattice bonding.png",
     "Chemistry/Images/1D two atom lattice.png",
-    "Past Papers/IB Chemistry A/IB_A_2013.pdf",
     "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Past Papers/IB Chemistry A/IB_A_2012.pdf",
-    "Chemistry/IB Chemistry/Electrons in solids.md",
     "Past Papers/IB Chemistry A/IB_A_2011.pdf",
     "Past Papers/IB Chemistry A/IB_A_2022.pdf",
     "Past Papers/IB Chemistry A/IB_A_2001.pdf",
@@ -320,13 +323,10 @@
     "Physics/Condensed matter physics/Nearly Free Electron Model.md",
     "Physics/Condensed matter physics/Semiconductors.md",
     "Physics/Images/Germanium conductivity.png",
-    "Physics/Images/Normal Umklapp scattering.png",
     "Mathematics/IB Mathematical Methods/Group Theory.md",
     "Physics/Thermal Physics/Statistical thermodynamics.md",
     "Physics/Thermal Physics/Classical Thermodynamics.md",
-    "Physics/Thermal Physics/Kinetic Theory of Gases.md",
     "Physics/IB Physics/Experimental methods and data analysis.md",
-    "Physics/Thermal Physics/Thermal Radiation.md",
     "Physics/IB Physics/Electromagnetism.md",
     "Physics/Condensed matter physics/Crystal structure and diffraction.md",
     "Chemistry/IB Chemistry/Bonding in molecules.md",
@@ -337,7 +337,6 @@
     "Physics/Vectors and matrices in physics.md",
     "Mathematics/IB Mathematical Methods/Contour integration.md",
     "Misc or Personal/Quotes.md",
-    "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
     "Misc or Personal/What to do.canvas"
   ]
 }

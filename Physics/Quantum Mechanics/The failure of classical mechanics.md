@@ -33,6 +33,7 @@ $$E=hf=\hbar\omega$$
 - A _perfect blackbody absorbs all radiation_, with no reflections 
 
 - The _energy density_ of the radiation is given by the _density of states_ multiplies by the _energy of each state_
+- [[Thermal Radiation|Properties of thermal radiation]]
 - Consider the _number of states_ with frequency range between $\nu$ and $\nu+d\nu$:
 $$dn=N(\nu)\,d\nu=\frac{8\pi\nu^2}{c^3}d\nu$$
 - From classical thermodynamics, the energy of each state is given by $k_BT$
