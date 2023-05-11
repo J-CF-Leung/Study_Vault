@@ -57,8 +57,12 @@ $$dS=\frac{dU}{T}-\frac{\mu \,dN}{T}$$
 - Consider a _particle reservoir_ of temperature $T$
 - There is an _electron of energy $\varepsilon$_ in equilibrium with the reservoir
 - In the _ground state_, the entropy of the reservoir is $S_0=k_B\ln\Omega_0$
-
-- DERIVATION
+- To occupy a state of energy $\varepsilon$, the _reservoir entropy_ is then:
+$$S_0+dS=S_0-\frac{\varepsilon}{T}+\frac{\mu}{T}=k_B\ln\Omega$$
+- The _ratio of microstates_ is then given by:
+$$\ln\frac{\Omega}{\Omega_0}=-\frac{\varepsilon-\mu}{k_BT}$$
+- The probability can then be _normalised:
+$$p_F(\varepsilon)=\frac{\exp[-(\varepsilon-\mu)/k_BT]}{1+\exp[-(\varepsilon-\mu)/k_BT]}$$
 
 - This gives the _Fermi-Dirac distribution_:
 $$p_F(\varepsilon)=\frac{1}{\exp[(\varepsilon-\mu)/k_BT]+1}$$
@@ -66,15 +70,19 @@ $$p_F(\varepsilon)=\frac{1}{\exp[(\varepsilon-\mu)/k_BT]+1}$$
 	- The states are _filled up to_ energy $\mu$
 
 - At a _finite temperature_, it is _smeared out_ with order $k_BT$
+![[Physics/Images/Fermi-Dirac distribution.png]]
 
 - The _density of occupied electron states_ is given by $g(\varepsilon)p_F(\varepsilon)$
 - It is the _graph of_ $g(\varepsilon)$ _smeared out_ at the step
+![[Occupied electron states.png]]
 
 - The _chemical potential_ $\mu(T)$ is the _energy at which_ a state has a _$1/2$ chance of being occupied_
 	- The value of $\mu$ at _absolute zero_ is then the Fermi energy
 
 - There is often a _weak variation_ in $\mu(T)$ at _low_ $T$
-	- At low temperatures, it is _assumed_ $\mu(T)\approx \mu(T=0)$
+	- At low temperatures, it is _assumed_ $\mu(T)\approx \mu(T=0)=\varepsilon_F$
+- The _exact_ chemical potential can be obtained by:
+$$N=\int_0^\infty \frac{g(\varepsilon)}{\exp[(\varepsilon-\mu)/k_BT]+1}\,d\varepsilon$$
 
 ## Electronic energy and heat capacity
 - The _total thermal energy_ of the electrons is given by:
@@ -104,32 +112,57 @@ $$C_\text{metal}=\gamma T+\beta T^3$$
 	- $m^*/m_e$ can be _larger than_ or _less than_ $1$
 	- A _strong_ electron-electron interaction can lead to $m^*/m_e\sim 10^3$
 
-## Electron pressure and bulk modulus
-- When _compressing_ a solid, the _wavelengths_ shorten, and the _occupied states rise in energy_, which also changes _Fermi energy_
-- From [[Classical Thermodynamics|thermodynamics]]:
-$$P=-\left(\pd{U}{V}\right)_S$$
-- At _absolute zero_, simply compute $-\partial U/\partial V$
-- States are only filled _up to the Fermi level_
-- The _average energy per electron_ $U$ is then:
+### Average electronic energy
+- At absolute zero. states are only filled _up to the Fermi level_
+- The _average energy per electron_ $U$, at _absolute zero_ can then be found as:
 $$\mean{U}=\int_0^{\varepsilon_F}\varepsilon\,g(\varepsilon)\,d\varepsilon\left(\int_0^{\varepsilon_F}\,g(\varepsilon)\,d\varepsilon\right)^{-1}=\int_0^{\varepsilon_F}\varepsilon^{3/2}\,d\varepsilon\left(\int_0^{\varepsilon_F}\,\varepsilon^{1/2}\,d\varepsilon\right)^{-1}=\frac{3}{5}\varepsilon_F$$
 
-- PRESSURE AND BULK MODULUS
+## Electron pressure and bulk modulus
+- When _compressing_ a solid, the _wavelengths_ shorten, and the _occupied states rise in energy_, which also changes _Fermi energy_
+- From [[Classical Thermodynamics|thermodynamics]], compute the derivative of the _total energy_ of $N$ electrons:
+$$P=-\left(\pd{U}{V}\right)_S$$
+- Computing the derivative, _keeping $N$ constant_:
+$$P=-\pd{U}{\varepsilon_F}\pd{\varepsilon_F}{V}=-\left(\frac{3}{5}N\right)\left(-\frac{2}{3}\frac{\varepsilon_F}{V}\right)=\frac{2}{5}n\varepsilon_F$$
+
+- The _bulk modulus_ is then defined by:
+$$K_T=-V\left(\pd{P}{V}\right)_T$$
+
+- Computing the derivative, _keeping $N$ constant_, the bulk modulus can then be found as:
+$$K_T=\frac{2}{3}n\varepsilon_F$$
+![[Bulk modulus actual values.png]]
+
+- The electron gas contributes to a _short-range repulsive interaction_
+- Meanwhile, there is also an unaccounted _Coulombic attraction_ between electrons and ion cores
 
 ## Motion of electrons
 - Applying an _electric or magnetic_ field causes electrons to _accelerate_
-- Electrons can also _collide_ with other electrons and _scatter_
+- Electrons can also _collide_ with either _phonons_ or _defects_ in the solid:
+$$\frac{1}{\tau}=\frac{1}{\tau_\text{phonon}}+\frac{1}{\tau_\text{defect}}$$
+- Interaction _between electrons_ cannot be treated as scattering
 
-### Scattering
+### Accounting for scattering
 - After an electron _collides_, the direction is _randomised_, and $\mean{\bm{v}}=0$
 - After some time, the _probability_ that an electron has _not collided_ is $\exp(-t/\tau)$
 - The _mean velocity_ is then:
 $$\mean{v}=v\exp(-t/\tau)$$
 - The collisions then induce an _exponential decay_ of velocity:
-$$\frac{d\mean{v}}{dt}=-\frac{\bm{v}}{\tau}$$
+$$\frac{d\mean{v}}{dt}=-\frac{\mean{v}}{\tau}$$
 
 - _Without scattering_, the force of the electron is given by the [[Electromagnetism#The Lorentz Force and the Biot-Savart Law|Lorentz force]]:
 $$m^*\frac{d\bm{v}}{dt}=-e\bm{E}-e\bm{v}\wedge\bm{B}$$
+- With _collisions_, there is effectively a _drag term_:
+$$\displaylines{\frac{d\bm{v}}{dt}=\frac{1}{m^*}(-e\bm{E}-e\bm{v}\wedge\bm{B})-\frac{\bm{v}}{\tau} \\ m^*\left(\frac{d\bm{v}}{dt}+\frac{\bm{v}}{\tau}\right)=-e\bm{E}-e\bm{v}\wedge\bm{B}}$$
 
+### Electron drift, mobility and conductivity
+- The _drift velocity_ $\bm{v}_\text{drift}$ of electrons is defined as:
+$$m^*\frac{\bm{v}_\text{drift}}{\tau}=-e\bm{E}$$
+- The _electron mobility_ $\mu$ is defined as:
+$$\mu=\frac{v_\text{drift}}{E}=\frac{e\tau}{m^*}$$
+
+- The _current density_ $\bm{j}$, or _current per area_:
+$$\bm{j}=n(-e)\bm{v}_\text{drift}=\frac{ne^2\tau}{m^*}\bm{E}=ne\mu\bm{E}$$
+- Hence, one obtains _Ohm's Law_:
+$$\displaylines{\bm{j}=\sigma\bm{E} \\ \sigma=\frac{ne^2\tau}{m^*}=ne\mu}$$
 
 ### Optical reflectivity
 - Reflectivity is related to the _inertia of the free electrons_ when they are _driven_ by an oscillating electric field
@@ -148,7 +181,9 @@ $$\epsilon(\omega)=1-\frac{ne^2}{\epsilon_0m^*\omega^2}=1-\frac{\omega_p^2}{\ome
 $$\omega_p^2=\frac{ne^2}{\epsilon_0m^*}$$
 - The _refractive index_ $n$ is defined as $\sqrt{\epsilon}$
 
-- If $\omega<\omega_p$, 
+- If $\omega<\omega_p$, $n$ is _imaginary_, creating an _evanescent wave_, and _reflecting all power_
+- If $\omega>\omega_p$, $n$ is _real_, and the material is _transparent_
+![[Optical reflectivities.png]]
 
 ### Electrical conductivity
 - When an _electric field_ is applied to a material, electrons gain some _extra momentum_ oppposite to the field

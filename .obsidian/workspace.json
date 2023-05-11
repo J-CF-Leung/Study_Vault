@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Condensed matter physics/Phonons.md",
+                "file": "Physics/Condensed matter physics/Free Electron Model.md",
                 "mode": "source",
                 "source": false
               }
@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Thermal Physics/Thermal Radiation.md",
+                "file": "Physics/Thermal Physics/Kinetic Theory of Gases.md",
                 "mode": "source",
                 "source": false
               }
@@ -66,8 +66,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -85,7 +84,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/Thermal Physics/Thermal Radiation.md"
+                    "file": "Physics/Condensed matter physics/Free Electron Model.md"
                   }
                 }
               }
@@ -102,7 +101,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/Thermal Physics/Thermal Radiation.md",
+                    "file": "Physics/Condensed matter physics/Free Electron Model.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -220,7 +219,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Thermal Physics/Thermal Radiation.md",
+                "file": "Physics/Condensed matter physics/Free Electron Model.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -237,7 +236,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Thermal Physics/Thermal Radiation.md",
+                "file": "Physics/Condensed matter physics/Free Electron Model.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -260,7 +259,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Thermal Physics/Thermal Radiation.md"
+                "file": "Physics/Condensed matter physics/Free Electron Model.md"
               }
             }
           },
@@ -290,22 +289,25 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "9952e3b9bd292db1",
+  "active": "25e8a6053642895c",
   "lastOpenFiles": [
+    "Optical reflectivities.png",
+    "Physics/Images/Bulk modulus actual values.png",
+    "Physics/Images/Occupied electron states.png",
+    "Physics/Images/Fermi-Dirac distribution.png",
+    "Physics/Condensed matter physics/Phonons.md",
+    "Physics/Thermal Physics/Kinetic Theory of Gases.md",
+    "Physics/Images/MB speeds.png",
+    "Physics/Images/MB shell.png",
+    "Physics/Images/MB distribution mass dependence.png",
+    "Physics/Images/MB distribution temperature dependence.png",
+    "Physics/Thermal Physics/Thermal Radiation.md",
     "Past Papers/IB Chemistry A/IB_A_2013.pdf",
     "Physics/Quantum Mechanics/The failure of classical mechanics.md",
-    "Physics/Thermal Physics/Thermal Radiation.md",
-    "Physics/Thermal Physics/Kinetic Theory of Gases.md",
     "Chemistry/IB Chemistry/Electrons in solids.md",
     "Chemistry/Images/Intrinsic semiconductor band structure.png",
     "Chemistry/Images/Graphene dispersion.png",
     "Chemistry/Images/Graphene 1st BZ zone.png",
-    "Chemistry/Images/Polyacetylene.png",
-    "Chemistry/Images/s-p band mixing.png",
-    "Chemistry/Images/1D two atom basis bands.png",
-    "Chemistry/Images/2 atom lattice antibonding.png",
-    "Chemistry/Images/2 atom lattice bonding.png",
-    "Chemistry/Images/1D two atom lattice.png",
     "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Past Papers/IB Chemistry A/IB_A_2012.pdf",
@@ -317,12 +319,10 @@
     "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_1.pdf",
     "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_2.pdf",
     "Past Papers/IB Physics/2018-19_Part_IB_Physics_A_Paper_2.pdf",
-    "Physics/Condensed matter physics/Phonons.md",
     "Physics/Condensed matter physics/Thermal Properties of solids.md",
     "Physics/Condensed matter physics/Free Electron Model.md",
     "Physics/Condensed matter physics/Nearly Free Electron Model.md",
     "Physics/Condensed matter physics/Semiconductors.md",
-    "Physics/Images/Germanium conductivity.png",
     "Mathematics/IB Mathematical Methods/Group Theory.md",
     "Physics/Thermal Physics/Statistical thermodynamics.md",
     "Physics/Thermal Physics/Classical Thermodynamics.md",
