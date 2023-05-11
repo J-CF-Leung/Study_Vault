@@ -538,7 +538,7 @@ $$D(E)=\frac{d\,W(E)}{dE}=\frac{dW}{dk}\left(\frac{dE}{dk}\right)^{-1}=-\frac{N}
 - From _symmetry_, this $k$ value gives the _maximum mixing_
 
 - If the $s$ and $p$ orbitals are _spaced far apart_, this gives _weak mixing_ (left figure below):
-![[sp band mixing.png]]
+![[s-p band mixing.png]]
 
 - If $s$ and $p$ orbitals are _close in energy_, and the _original energies cross_ at some value of $k$, the _mixing_ will create an _avoided crossing_ (right figure above)
 - The bands will "interconvert" in nature at $k=\pi/a$
@@ -555,12 +555,14 @@ $$D(E)=\frac{d\,W(E)}{dE}=\frac{dW}{dk}\left(\frac{dE}{dk}\right)^{-1}=-\frac{N}
 - At $k=0$, all of the _bonding_ orbitals are _in-phase_, and form an _overall bonding_ orbital
 	- It is the _lowest energy crystal orbital_ possible
 - At $k=\pi/a$, there is a mix of _bonding and antibonding interactions_, which leads to a _higher energy_ orbital relative to $k=0$
+- So, the bonding orbitals form their own _band_ of crystal orbitals
 
 - Then, consider the _antibonding_ MOs formed across atoms:
 ![[sp band antibonding.png]]
 - At $k=0$, all the _antibonding_ orbitals combine in-phase to form an _overall antibonding_ orbital
 	- It is the _highest energy crystal orbital_ possible
 - At $k=\pi/a$, there is a mix of _bonding and antibonding_ interactions, which forms a _lower energy_ orbital relative to $k=0$
+- So, the antibonding orbitals form a _separate band_ of crystal orbitals
 
 - The process of band formation can be summarised by:
 ![[sp band formation summary.png]]
@@ -588,7 +590,113 @@ $$E_{k_x,k_y}=\alpha+2\beta[\cos(k_xa)+\cos(k_ya)]$$
 
 - The _density of states_ $D(E)$ can be understood as being proportional to the _length of a constant energy contour_
 - It is _zero_ at $E=\alpha\pm4\beta$, or $(0,0)$ and $(\pm\pi/a,\pm\pi/a)$
-	- The drop is _abrupt_, and is known as a _van Hove singularity_
+	- The drop is _abrupt_, and is known as a _van Hove singularity_, commonly seen in 2D and 3D systems
+	- A singularity appears in the [[#The s band|1D case]] as a rise to _infinity_ instead of a drop
 - There is a _maximum_ at $E=\alpha$
 
+## A two-atom basis
+- Consider a lattice with _two atoms per lattice point_:
+![[1D two atom lattice.png]]
+- Let the separation between each atom be _smaller_ than half the lattice point separation, or $2a'<a$
+	- In other words, the _closest distance between neighbouring pairs_ is _longer_ than the _distance between atoms in a basis_
+
+- Let each atom contribute _one orbital_
+	- Typically formed using $\pi$ systems
+- Like the [[#Bands from hybrid atomic orbitals|case of hybridised orbitals]], the _bonding_ and _antibonding_ orbitals will form _separate bands_
+
+- The _bonding orbitals_:
+![[2 atom lattice bonding.png]]
+- As $2a'<a$, the _bonding interaction in the basis_ is _stronger_ than any _antibonding_ interaction between _neighbouring pairs_
+- Hence, all crystal orbitals in the band are _bonding_
+	- The totally in-phase combination is the _most bonding_, and vice versa
+
+- The _antibonding_ orbitals:
+![[2 atom lattice antibonding.png]]
+- Similarly, the _antibonding interaction in the basis_ is _stronger_ than any _bonding_ interaction between _neighbouring pairs_
+- Hence, all crystal orbitals in the band are _antibonding_
+
+- Therefore, as long as $2a'<a$, there is a _band gap_:
+![[1D two atom basis bands.png]]
+
+- Like the case of [[#s-p mixing]], there are still _minor interactions_ between the crystal orbitals
+- If $2a'<a$, and each orbital contributes _one electron_, the material is an _insulator_
+	- There are _two electrons per cell_, therefore the $\pi$ band is _full_
+
+- If $2a'=a$, the orbitals at $k=\pm\pi/a$ are _purely non-bonding_
+	- If each orbital contributes one electron, at the Fermi level, there are more _available states_, hence the material is a _conductor_
+
+### Polyacetylene and Peierl's distortion
+- A _one-dimensional_ system which _approximates_ the system above is _polyacetylene_:
+![[Polyacetylene.png]]
+- Each _carbon atom_ gives one $p_\pi$ orbital, containing _one electron_
+
+- The electrons _fully fill_ the $\pi$ band
+- Even if $2a'=a$, the _total energy can be lowered_ by _distorting_ the molecule and _shortening_ $a'$
+- This is known as _Peierl's distortion_
+- Hence, _neutral_ 1D systems can only be _insulators_
+
+### Graphene
+- In order to make a _conductor_ in low dimensions with the above _band structure_, one would need to _move the Fermi level_
+
+- [[#Example: Hexagonal net in graphene|Graphene]] is a _2D hexagonal net_ of carbons, each contributing _one electron_
+- Its 1st Brillouin zone is:
+![[Graphene 1st BZ zone.png]]
+
+- The $p_\pi$ orbitals in graphene form:
+![[Graphene dispersion.png]]
+
+- One still needs to _dope_ graphene in order to _move the Fermi level_ and make a conductor
+- Typical donors are $\ce{Li}$ or $\ce{Na}$
+- Typical acceptors are $\ce{Br}$ and $\ce{AsF5}$
+
 # Semiconductors
+- Building blocks for _electronic devices_
+
+## Conductivity
+- The _resistance $R$_ of a material is given by:
+$$R=\frac{\rho l}{A}$$
+- It is equal to the _ratio_ of _potential difference_ across the material to the _current_ through it
+- $R$ depends on the _dimensions_ of the material, with length $l$ and area $A$
+- The _resistivity_ $\rho$ of the material is an _intrinsic property_ of the material
+	- Metals: $\sim 10^{-8}\Omega\text{m}$
+	- Semiconductors: $\sim 10^{-2}\Omega\text{m}$
+	- Glass: $\sim 10^{11}\Omega\text{m}$
+
+- The _conductivity $\sigma$_ of a material is defined as:
+$$\sigma=\frac{1}{\rho}$$
+- Conductivity is often _temperature-dependent_
+
+- _Metals_ are said to have _high conductivity_ over a _wide range of temperatures_
+	- Resistivity _increases linearly_ over a narrow range of temperature
+
+- _Semiconductors_ have _intermediate conductivity_
+	- Conductivity _increases_ with temperature, via an _Arrhenius relation_: 
+	$$\sigma_\text{semi}\propto\exp\left(-\frac{E}{k_BT}\right)$$
+- Semiconductors can be _intrinsic_ or _extrinsic_
+- An _intrinsic semiconductor_ is often a _pure substance_, which is intrinsically conductive
+- An _extrinsic semiconductor_ is often conductive due to _impurities_, introduced by _doping_
+
+- _Insulators_ have _low conductivity_ over a _wide range of temperatures_
+
+- _Superconductors_ will have _exactly zero resistivity_ at _extremely low temperatures_ $\sim 10K$
+
+## Intrinsic semiconductors
+- A common _band structure_ in intrinsic semiconductors:
+![[Intrinsic semiconductor band structure.png]]
+- There is a lower _valence band_, as well as an upper _conduction band_, with a _band gap_ in between, of magnitude denoted $E_g$
+	- Typical $E_g\sim 10^0\text{ eV}$ for silicon and germanium
+
+- The lower _valence band_ can be imagined to be formed from _bonding orbitals_, such as the $\sigma$ band formed from $sp^3$ orbitals in silicon
+	- [[#Bands from hybrid atomic orbitals]]
+- Similarly, the conduction band can be imagined to form from _antibonding orbitals_
+
+- At _absolute zero_, the valence band is _full_ and the conduction band is _empty_
+
+- At a _finite temperature_, electrons are _promoted_ into the conduction band
+- Therefore, there are _empty states_ for electrons to move into, making the material a _conductor_
+
+- The _absence of an electron_ is called a _hole_, denoted $h^+$
+- The _migration of electrons_ can be thought of as _migration of holes in an opposite direction_
+
+- The _number of promoted electrons_ is _equal_ to the _number of holes_ in an _intrinsic_ semiconductor
+

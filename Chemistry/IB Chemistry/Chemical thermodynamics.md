@@ -550,7 +550,7 @@ $$\begin{aligned}N(\text{ortho, odd J})&\propto 3(2J+1)\exp\left(-\frac{BJ(J+1)}
 
 ## Spin $1$: $^{14}\text{N}_2$
 - $^{14}\text{N}$ nuclei have a spin of 1
-- This gives $6$ _anti-symmetric_ and $3$ _symmetric spin states_
+- This gives $6$ _symmetric_ and $3$ _anti-symmetric spin states_
 - Since the nuclei are _bosons_, this means the _overall wave function is symmetric_
 - It also has an electronic ground term of $^1\Sigma_g^+$
 
@@ -641,9 +641,6 @@ $$\frac{dG}{dz}=+\nu_M\mu_M+\nu_N\mu_N-\nu_A\mu_A-\nu_B\mu_B$$
 $$\nu_M\mu_M^\text{eq}+\nu_N\mu_N^\text{eq}=\nu_A\mu_A^\text{eq}+\nu_B\mu_B^\text{eq}$$
 - All of the chemical potentials are at their _equilibrium values_
 
-- Comparing _two different points of the reaction_ by integrating over $dz$:
-$$\Delta_rG=+\nu_M\Delta\mu_M+\nu_N\Delta\mu_N-\nu_A\Delta\mu_A-\nu_B\Delta\mu_B$$
-
 ### Change in Gibbs Free Energy
 - By using the formula for chemical potentials in terms of $p$ or $a\approx c/c^⦵$:
 $$\displaylines{\Delta_rG=\Delta_rG^⦵+RT\ln Q \\ \Delta_rG^⦵=\nu_M\mu_M^⦵+\nu_N\mu_N^⦵-\nu_A\mu_A^⦵-\nu_B\mu_B^⦵ \\ Q=\frac{p_M^{\nu_M}p_N^{\nu_N}}{p_A^{\nu_A}p_B^{\nu_B}}\left(\frac{1}{p^⦵}\right)^{\Delta\nu} \text{ or } \frac{c_M^{\nu_M}c_N^{\nu_N}}{c_A^{\nu_A}c_B^{\nu_B}} \left(\frac{1}{c^⦵}\right)^{\Delta\nu}}$$
@@ -683,7 +680,8 @@ $$\mu_i= -kT\ln\frac{q_i}{N_i}+\varepsilon^{0,i}= -kT\ln\frac{f_i}{c_i}+\varepsi
 - Here, $f_i$ is the _volume-independent partition function_:
 $$f=\frac{q}{V}=\frac{q_\text{trans}}{V} q_\text{rot} q_\text{vib} q_\text{elec}=\left(\frac{2\pi mkT}{h^2}\right)^{3/2}q_\text{rot}q_\text{vib}q_\text{elec}$$
 - One must choose a _common origin in energy_, in this case it is chosen to be the _energy of dissociated atoms_
-- For convenience, take $q_\text{vib}$ _from the bottom of the vibrational energy well_, which, relative to the dissociated atoms, has the _ground state electronic energy_
+- For convenience, take $q_\text{vib}$ _from the bottom of the vibrational energy well_, which, relative to the dissociated atoms, has the _ground state electronic energy_:
+$$q_\text{vib}=\frac{\exp(-\theta_\text{vib}/2T)}{1-\exp(-\theta_\text{vib}/T)}$$
 
 - Then, defining the _difference in ground state electronic energy_:
 	$$\Delta \varepsilon_0=\nu_M\varepsilon^{0,M}+\nu_N\varepsilon^{0,N}-\nu_A \varepsilon^{0,A}-\nu_B\varepsilon^{0,B}$$

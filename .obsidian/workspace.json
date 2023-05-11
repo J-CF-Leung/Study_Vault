@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Condensed matter physics/Thermal Properties of solids.md",
+                "file": "Physics/Condensed matter physics/Phonons.md",
                 "mode": "source",
                 "source": false
               }
@@ -57,18 +57,17 @@
             }
           },
           {
-            "id": "7b862baec516adcc",
+            "id": "c22b996a98b73509",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Mathematics/IB Mathematical Methods/Group Theory.md",
-                "mode": "source",
-                "source": false
+                "file": "Past Papers/IB Chemistry A/IB_A_2013.pdf"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -86,7 +85,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/Condensed matter physics/Thermal Properties of solids.md"
+                    "file": "Chemistry/IB Chemistry/Electrons in solids.md"
                   }
                 }
               }
@@ -103,7 +102,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/Condensed matter physics/Thermal Properties of solids.md",
+                    "file": "Chemistry/IB Chemistry/Electrons in solids.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -221,7 +220,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Condensed matter physics/Thermal Properties of solids.md",
+                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -238,7 +237,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Condensed matter physics/Thermal Properties of solids.md",
+                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -261,7 +260,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Condensed matter physics/Thermal Properties of solids.md"
+                "file": "Chemistry/IB Chemistry/Electrons in solids.md"
               }
             }
           },
@@ -291,53 +290,54 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "25e8a6053642895c",
+  "active": "48c2076383aed1b7",
   "lastOpenFiles": [
+    "Chemistry/Images/Intrinsic semiconductor band structure.png",
+    "Chemistry/Images/Graphene dispersion.png",
+    "Chemistry/Images/Graphene 1st BZ zone.png",
+    "Chemistry/Images/Polyacetylene.png",
+    "Chemistry/Images/s-p band mixing.png",
+    "Chemistry/Images/1D two atom basis bands.png",
+    "Chemistry/Images/2 atom lattice antibonding.png",
+    "Chemistry/Images/2 atom lattice bonding.png",
+    "Chemistry/Images/1D two atom lattice.png",
+    "Past Papers/IB Chemistry A/IB_A_2013.pdf",
+    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
+    "Past Papers/IB Chemistry A/IB_A_2012.pdf",
+    "Chemistry/IB Chemistry/Electrons in solids.md",
+    "Past Papers/IB Chemistry A/IB_A_2011.pdf",
+    "Past Papers/IB Chemistry A/IB_A_2022.pdf",
+    "Past Papers/IB Chemistry A/IB_A_2001.pdf",
+    "Past Papers/IB Physics/2021-22_Part_IB_Physics_A_Paper_2.pdf",
+    "Past Papers/IB Physics/2021-22_Part_IB_Physics_A_Paper_1.pdf",
+    "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_1.pdf",
+    "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_2.pdf",
+    "Past Papers/IB Physics/2018-19_Part_IB_Physics_A_Paper_2.pdf",
+    "Physics/Condensed matter physics/Phonons.md",
+    "Physics/Condensed matter physics/Thermal Properties of solids.md",
+    "Physics/Condensed matter physics/Free Electron Model.md",
+    "Physics/Condensed matter physics/Nearly Free Electron Model.md",
+    "Physics/Condensed matter physics/Semiconductors.md",
+    "Physics/Images/Germanium conductivity.png",
+    "Physics/Images/Normal Umklapp scattering.png",
     "Mathematics/IB Mathematical Methods/Group Theory.md",
     "Physics/Thermal Physics/Statistical thermodynamics.md",
-    "Physics/Condensed matter physics/Thermal Properties of solids.md",
-    "Physics/Condensed matter physics/Phonons.md",
-    "Physics/Condensed matter physics/Free Electron Model.md",
-    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Physics/Thermal Physics/Classical Thermodynamics.md",
-    "Chemistry/IB Chemistry/Electrons in solids.md",
-    "Chemistry/Images/2D crystal orbitals.png",
-    "Chemistry/Images/2D electron dispersion.png",
-    "Physics/Images/Electronic heat capacity.png",
     "Physics/Thermal Physics/Kinetic Theory of Gases.md",
     "Physics/IB Physics/Experimental methods and data analysis.md",
     "Physics/Thermal Physics/Thermal Radiation.md",
     "Physics/IB Physics/Electromagnetism.md",
-    "Chemistry/Images/sp band formation summary.png",
-    "Chemistry/Images/sp band antibonding.png",
-    "Chemistry/Images/Band formation from sp bonding.png",
-    "Chemistry/Images/sp band mixing.png",
-    "Chemistry/Images/sp band mixing halfway.png",
-    "Chemistry/Images/sp band mixing k0.png",
-    "Chemistry/Images/1D p band dispersion curve.png",
     "Physics/Condensed matter physics/Crystal structure and diffraction.md",
     "Chemistry/IB Chemistry/Bonding in molecules.md",
-    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
-    "Past Papers/IB Chemistry A/IB_A_2021.pdf",
-    "Past Papers/IB Chemistry A/IB_A_2022.pdf",
     "Chemistry/IB Chemistry/Molecular spectroscopy.md",
     "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
     "Physics/Topics in Electromagnetism.md",
     "Physics/Vectors and matrices in physics.md",
     "Mathematics/IB Mathematical Methods/Contour integration.md",
     "Misc or Personal/Quotes.md",
-    "Physics/Condensed matter physics/Semiconductors.md",
     "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
-    "David Morin's Limericks.md",
-    "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_2.pdf",
-    "Past Papers/IB Physics/2020-21_Part_IB_Physics_B_Paper_2.pdf",
-    "Past Papers/IB Physics/2018-19_Part_IB_Physics_B_Paper_2.pdf",
-    "Past Papers/IB Physics/2017-18_Part_IB_Physics_B_Paper_2.pdf",
-    "Past Papers/IB Physics/2016-17_Part_IB_Physics_B_Paper_2.pdf",
-    "Past Papers/IB Physics/2015-16_Part_IB_Physics_B_Paper_2.pdf",
-    "Past Papers/IB Physics/2014-15_Part_IB_Physics_B_Paper_2.pdf",
-    "Past Papers/IB Physics/2013-14_Part_IB_Physics_B_Paper_2.pdf",
     "Misc or Personal/What to do.canvas"
   ]
 }
