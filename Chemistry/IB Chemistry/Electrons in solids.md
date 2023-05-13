@@ -274,7 +274,7 @@ $$D_\text{3D}=\frac{N_1N_2N_3V_c}{(2\pi)^3}=\frac{\mathcal{V}}{(2\pi)^3}$$
 - Here, $V_c=a_1a_2a_3$ is the _volume of the unit cell_
 - $\mathcal{V}=N_1N_2N_3V_c$ is the _Born-von Karman volume_
 
-## Population of energy levels
+## Populations of energy levels
 - In [[Chemical thermodynamics|Molecular thermodynamics]], the _number of accessible translational states_ is _much higher than the number of molecules_
 - For the _free electron gas_, the _energy spacing_ is much _larger_, and the _number density of electrons_ is very _high_ compared to a _gas_
 - This results in the fact that the _number of accessible states is too high_
@@ -695,8 +695,110 @@ $$\sigma=\frac{1}{\rho}$$
 - At a _finite temperature_, electrons are _promoted_ into the conduction band
 - Therefore, there are _empty states_ for electrons to move into, making the material a _conductor_
 
+### Holes
 - The _absence of an electron_ is called a _hole_, denoted $h^+$
 - The _migration of electrons_ can be thought of as _migration of holes in an opposite direction_
 
-- The _number of promoted electrons_ is _equal_ to the _number of holes_ in an _intrinsic_ semiconductor
+- In an _intrinsic_ semiconductor, the _number of promoted electrons_ $n_e$ is _equal_ to the _number of holes_ in the valence band $n_h$:
+$$n_e=n_h$$
+- The _total conductivity_ due to the _number densities_ of electrons and holes, $n_e$ and $n_h$:
+$$\sigma=n_ee\mu_e+n_he\mu_h$$
+- $\mu_e$ and $\mu_h$ are the _mobilities_ of the electrons and holes
+	- Applying an electric field $E$ will cause them to move at _speed_ $\mu E$
 
+### Distribution of electrons
+- Consider the [[#Population of energy levels|Fermi-Dirac distribution]]:
+$$f(E)=\frac{1}{\exp[(E-E_F)/k_BT]+1}$$
+- The _density of occupied states_ $Z(E)$ is then:
+$$Z(E)=f(E)D(E)$$
+- Where $D(E)$ is the _density of states_ and is a property of the system
+- For a _semiconductor_:
+![[Semiconductor density of occupied states.png]]
+- At a _finite temperature_, the electrons _leave the valence band_ and go _into the conduction band_
+- The _total number of electrons_ is _conserved_
+
+- If the _density of states_ of the two bands have _the same form_, the _Fermi energy_ must be exactly in the _middle of the band gap_
+- If they have _different forms_, then from the _conservation_ of number of electrons, one can see that the Fermi energy is _displaced_
+
+- At _absolute zero_, the position Fermi energy can be seen as the _limit_ of its position at _low temperatures_
+
+### Temperature dependence of conductivity
+- The number of _promoted electrons_:
+$$N_e=\int_{E_c}^\infty\,Z(E)\,dE=\int_{E_c}^\infty\frac{D(E)}{\exp[(E-E_F)/k_BT]+1}\,dE$$
+- $E_c$ is the _energy at the bottom of the conduction band_
+- The limit at _infinity_ is justified as long as the _width of the conduction band_ $>>kT$
+
+- Assume $D(E)$ is a _constant_ $c$
+- Normally, $E_c-E_F>>k_BT$, therefore:
+$$N_e\approx c\int_{E_c}^\infty \exp\left(-\frac{E-E_F}{k_BT}\right)\,dE=ck_BT\exp\left(-\frac{E_c-E_F}{k_BT}\right)$$
+- If the Fermi energy is _in the middle of the band gap_:
+$$\displaylines{E_c-E_F=\frac{1}{2}E_g \\ \sigma\propto N_e\propto \exp\left(-\frac{E_g}{2k_BT}\right)}$$
+- Under typical conditions, as $E_g>>k_BT$, ignore the _linearity_ in $T$
+- One can approximate the _activation energy_ of the process as _half the band gap_
+
+### Statistical mechanics of electrons and holes
+- The _generation_ of an _electron in the conduction band_, with a _hole in the valence band_ can be modelled as a _"reaction"_:
+$$\cdot\ce{<=>e-+h+}$$
+- $\cdot$ is the _ground state_, with the filled conduction band and empty conduction band at absolute zero
+	- It is _non-degenerate_ and _immobile_, hence it is _ignored_ when calculating $K_c$
+- Consider the [[Chemical thermodynamics#Reactions and equilibrium|equilibrium]] of this reaction:
+$$K_c=\frac{n_hn_e}{(c^o)^2}=\frac{f_ef_h}{(c^o)^2}\exp\left(-\frac{\Delta\varepsilon_0}{k_BT}\right)$$
+- The electrons and holes have _electronic degeneracies_ of $2$ due to spin
+	- This is then effectively their _electronic partition function_
+- By considering the [[Chemical thermodynamics#Translational partition function|translational partition functions]] as well:
+$$K_c=\frac{4(m_e^*m_h^*)^{3/2}}{(c^o)^2}\left(\frac{2\pi k_BT}{h^2}\right)^{3}\exp\left(-\frac{E_g}{k_BT}\right)$$
+- The masses are replaced with _effective masses_
+
+- A typical value of $K_c$ for $\ce{Si}$ at $300\text{K}$ is $\sim 10^{30}$, which works out to $n_e\approx 10^{15}\text{ m}^{3}$, which is still only _one promoted electron per_ $10^{13}$ _atoms_
+
+### Effective mass
+- The _effective mass_ allows one to apply results from the _nearly free/tight-binding_ models to results from the _free electron model_
+- The _dispersion curve_ can be approximated as _parabolic_ in certain limits
+
+- For a _free electron_, $E_k=k^2\hbar^2/2m_e$
+- From the [[#The tight-binding model|tight-binding model]]:
+$$E_k=\alpha+2\beta\cos(ka)$$
+- Consider the _long wavelength limit_, where $|ka|<<\pi$:
+$$E_k\approx \alpha+2\beta-\beta k^2a^2$$
+- Ignoring the _constant terms_, $E_k\propto k^2$, which is _similar to the free electron energy_
+- Hence, define the _effective mass_ $m_e^*$:
+$$\displaylines{\frac{\hbar^2k^2}{2m_e^*}=-\beta k^2a^2 \\ m_e^*=-\frac{\hbar^2}{2\beta a^2}}$$
+- As $\beta<0$, the effective mass is still _positive_
+
+- Similarly, in the _short wavelength limit_:
+$$m_e^*=\frac{\hbar^2}{2\beta a^2}<0$$
+
+- $\beta$ determines the _width_ of the band, and it is _inversely proportional_ to the effective mass
+- The _definition_ of the effective mass can be written as:
+$$\frac{1}{m_e^*}=\frac{1}{\hbar^2}\frac{d^2E_k}{dk^2}$$
+- It depends on the _curvature_ of the dispersion curve
+
+- The effective mass gives the _response of an electron to an applied electric field_
+	- A _positive_ $m_e^*$ moves _opposite_ to the field
+	- A _negative_ $m_e^*$ moves _in the direction of the field_
+
+- In the _tight-binding model_:
+$$\frac{1}{m_e^*}=-\frac{2\beta a^2}{\hbar^2}\cos(ka)$$
+- For $ka=\pi/2$, the effective mass becomes _infinite_
+	- An applied electric field _will not affect the electron_
+
+## Extrinsic semiconductors
+- An _extrinsic_ semiconductor is a semiconductor with _low concentration dopant atoms_, which act as _impurities_
+	- A typical dopant atom concentration is in _parts per million_
+
+- The most important form is _substituional doping_, which _swaps out_ the original atoms with dopant atoms
+- If the dopant has _more valence electrons_ than the host, the semiconductor is _n-type_
+	- There is an _excess_ of electrons, and the dopant is known as a _donor_
+	- The charge carriers are _electrons_
+- If the dopant has _fewer valence electrons_ than the host, the semiconductor is _p-type_
+	- Electrons are _withdrawn_, and the dopant is known as an _acceptor_
+	- The charge carriers are _holes_
+
+- If the host is _silicon_ $\ce{Si}$ or _germanium_ $\ce{Ge}$
+	- Typical _donors_: $\ce{P, As, Sb}$
+	- Typical _acceptors_: $\ce{Al, Ga}$
+- An alternative to silicon is _gallium arsenide_, $\ce{GaAs}$
+
+# Semiconductor devices
+
+# Spectroscopic measurement of electrical properties
