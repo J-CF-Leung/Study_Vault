@@ -63,3 +63,105 @@ $$v_{f\text{ max}}<\mean{v}<v_\text{rms}$$
 ![[MB speeds.png]]
 
 # Pressure
+- The _collisions_ of gas molecules on a wall produces a _net force_, and thus a _pressure_
+
+## Collisions on a wall
+- Consider particles with velocity $u_x$ _perpendicular_ to a wall of _area_ $A$, in a box of volume $V$
+- Let there be $N$ particles with mass $m$
+- The _impulse per collision_ is $2mu_x$, with _collision rate_ $Au_xN/2V$
+- Therefore, the _average pressure_ is:
+$$p=m\mean{u_x^2}\frac{N}{V}$$
+- As $\mean{u_x^2}=\mean{u^2}/3$:
+$$pV=\frac{1}{3}Nm\mean{u}^2=nRT$$
+- The second equality comes from the [[Classical Thermodynamics#Ideal gases|ideal gas law]]
+- Therefore, the energy is the [[Statistical thermodynamics#The classical limit: equipartition|equipartition]] value:
+$$U=\frac{3}{2}nRT$$
+
+## From the Maxwell-Boltzmann distribution
+- Let the _number of molecules per unit volume_ with speed between $v$ and $v+dv$ be:
+$$n\,f(v)\,dv$$
+- The _fraction_ of molecules in a trajectory covering _solid angle_ $d\Omega$:
+$$\frac{d\Omega}{4\pi}=\frac{2\pi\sin\theta\,d\theta}{4\pi}=\frac{1}{2}\sin\theta\,d\theta$$
+- Hence, the _number of molecules per unit volume_, with _speed_ in interval $[v,v+dv]$, with trajectory of angle $[\theta,\theta+d\theta]$:
+$$\frac{1}{2}nf(v)\sin\theta\,d\theta\,dv$$
+- In a time interval $dt$, the particles travelling at angle $\theta$ _normal_ to the wall sweep a volume $Av\cos\theta\,dt$
+- Therefore, the number of molecules _hitting_ the wall in the abov conditions:
+$$dN=nAv\cos\theta\,dt\,f(v)\,dv\,\frac{1}{2}\sin\theta\,d\theta$$
+- As the molecules have _momentum change_ $2mv\cos\theta$:
+$$p=\int2mv\cos\theta\,dN=mn\int_0^\infty\,dv\,v^2f(v)\int_0^{\pi/2}\cos^2\theta\sin\theta\,d\theta$$
+- Therefore, the _pressure_ is:
+$$\displaylines{p=\frac{1}{3}mn\mean{v^2} \\ pV=\frac{1}{3}mN\mean{v^2}=Nk_BT}$$
+- Where the second equality comes from [[Statistical thermodynamics#The classical limit: equipartition|equipartition]]
+
+## Dalton's law
+- In a _mixture of gases_, the _total pressure_ is the _sum of partial pressures_ of the separate components:
+$$\displaylines{p=nk_BT \hspace{1cm} n=\sum_i n_i \\ p=\sum_i n_ik_BT=\sum_i p_i}$$
+
+# Effusion and flux
+- _Effusion_ is a process where a gas _escapes from a hole_, which is _small_, so molecules can _pass through without colliding with each other_
+- The _rate of effusion_ is:
+$$nAv_\text{rms}\propto nA\sqrt{\frac{T}{m}}$$
+- It is often _limited_ by the _mean free path_ of collisions between the particles
+
+- The _flux_ through a surface is 
+
+- The _number of particles_ hitting a unit area of a wall in unit time in ...
+$$dN=$$
+
+- Therefore the _flux_ is:
+$$\Phi=\frac{1}{4}n\mean{v}$$
+- Substituting the result from [[#Averages and maximums|the Maxwell-Boltzmann distribution]]:
+$$\Phi=\frac{p}{\sqrt{2\pi mk_BT}}$$
+
+## Graham's law
+- At _equal pressure_, the _effusion speed_ of different gases is _inversely proportional_ to the _square root of their densities_
+- This agrees with the expression for _flux_
+
+- The _effusion rate_ is defined as the _number of molecules_ hitting a hole of area $A$:
+$$\text{Effusion rate}\;=\;\Phi A$$
+- A _practical use_ is to _measure the vapour pressure_ of a liquid by measuring _rate of mass loss_ from effusion
+
+- _Effusion_ is inherently a _speed-selective process_
+- The _number of molecules_ passing through the hole is proportional to:
+$$Av\,dt\cos\theta\,nf(v)\,dv\frac{1}{2}\sin\theta\,d\theta\propto vf(v)\,dv$$
+- Therefore, the _speed distribution of effused molecules_ is:
+$$\propto v^3\exp(-mv^2/2k_BT)$$
+
+# Collisions
+- For a _dilute gas_, one can treat molecules as _classical particles_, or _hard spheres_
+- One can also approximate that a collision _randomises molecular velocities_
+- Therefore, one can derive a _mean free path_ of particles
+
+## The statistics of collisions
+- Let some volume have a _number density_ of $n$
+- Assume _all gas molecules are stationary_, except for _one_, moving at _speed_ $v$
+- Let the molecule have _collision cross-section_ $\sigma$
+- Then in some time $\delta t$, the particle _sweeps out_ volume $\sigma v\delta t$
+- A _collision_ occurs if _another molecule_ lies inside this volume
+
+- The _chance_ which this collision occurs in this time is $n\sigma v\delta t$
+
+- Let $P(t)$ be the _probability_ where the molecule _survives without colliding_ for time $t$
+- The _fraction_ $P(t+\delta t)/P(t)$ is then the probability that the molecule survives until $t+\delta t$, _given_ that it survived until $t$:
+$$\frac{P(t+\delta t)}{P(t)}=1-n\sigma v\delta t$$
+- By _integrating_:
+$$P(t)=\exp(-n\sigma vt)$$
+- From its definition, $P(t=0)=1$
+
+- Then, one can find the _mean collision time_:
+$$\tau=$$
+
+## Collision cross-section
+- Consider two _spheres_ of radius $a_1$ and $a_2$
+- Let there be a _hard-sphere potental_, as a function of the _distance between them_:
+$$V(r)=$$
+
+## Mean free path
+- The expression for _mean free path_ $\lambda$ is then:
+$$\lambda=\mean{v}\tau=\frac{\mean{v}}{n\sigma\mean{v_r}}$$
+- Here, $\mean{v_r}$ is the _mean relative speed_ of molecules:
+$$\displaylines{\bm{v}_r=\bm{v}_1-\bm{v}_2 \\ \mean{v_r^2}=\mean{v_1^2}+\mean{v_2^2}-2\mean{\bm{v}_1\cdot\bm{v}_2}=2\mean{v^2}}$$
+- Approximating:
+$$\mean{v_r}\approx \sqrt{2}\mean{v}$$
+- From this, the _mean free path_ is:
+$$\lambda=\frac{1}{\sqrt{2}n\sigma}=\frac{k_BT}{\sqrt{2}p\sigma}$$

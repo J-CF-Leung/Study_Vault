@@ -223,9 +223,9 @@ $$Hg=\{g,h_1g,h_2g,\dots\}$$
 - Similarly, $H$ and its _right cosets_ will also _partition_ $G$ but in a different way, unless $H$ is _normal_
 
 - Two cosets are _either disjoint or identical_
-	- Suppose $h_1g_1=h_2g_2$
-
-- BORING THINGS ABOUT COSETS FILL IN LATER
+	- Suppose $Hg_1$ and $Hg_2$ have one element in common, $h_1g_1=h_2g_2$
+	- Then $Hg_1=Hh_1^{-1}h_2g_2=Hg_2$, since $h_1^{-1}h_2\in H$ due to closure
+- Two cosets are _only identical iff_ $g_1g_2^{-1}\in H$
 
 - Then, one can state _Lagrange's Theorem_:
 - Let $G$ be a _finite group_ and let $H\subset G$, not necessarily normal, then the theorem states:

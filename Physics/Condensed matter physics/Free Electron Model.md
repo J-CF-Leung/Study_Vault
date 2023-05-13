@@ -163,10 +163,12 @@ $$\mu=\frac{v_\text{drift}}{E}=\frac{e\tau}{m^*}$$
 $$\bm{j}=n(-e)\bm{v}_\text{drift}=\frac{ne^2\tau}{m^*}\bm{E}=ne\mu\bm{E}$$
 - Hence, one obtains _Ohm's Law_:
 $$\displaylines{\bm{j}=\sigma\bm{E} \\ \sigma=\frac{ne^2\tau}{m^*}=ne\mu}$$
+- $\sigma$ is known as the _conductivity
 
 ### Optical reflectivity
 - Reflectivity is related to the _inertia of the free electrons_ when they are _driven_ by an oscillating electric field
 - At _optical frequencies_, $\omega>>1/\tau$, so _scattering can be ignored_
+	- Equivalent condition: $\lambda>>l$
 - Applying an electric field $\bm{E}$ causes a _response_ $\bm{x}$:
 $$\bm{E}=\bm{E}_0\exp(i\omega t) \hspace{1cm} \bm{x}=\bm{x}_0\exp(i\omega t)$$
 - Substituting into the _equation of motion_:
@@ -191,12 +193,71 @@ $$\omega_p^2=\frac{ne^2}{\epsilon_0m^*}$$
 - With the field, the sphere is _displaced_:
 $$\frac{d\bm{k}}{dt}=-\frac{1}{\hbar}e\bm{E}$$
 - Eventually, _scattering_ will _limit displacement_ of the sphere
+![[Conductivity in k space.png]]
 
 - _Phonon scattering_ have wave-vectors _comparable_ to electrons, but with _very small energies_ compared to $\varepsilon_F$
 - This can _strongly change direction_ of the electrons, but with _slight changes to magnitude_
 
-- Electrons can also _scatter off defects_, with large changes in _direction_, not _magnitude_
+- Electrons can also _scatter off defects_, with large changes in _direction_, not _energy_
 
-### Wiedemann-Franz Law
+- In order for scattering to occur, there must be _available states_ for the electron, at a _similar energy_ to before scattering
+- All states in the _bulk_ of the Fermi sphere are filled
+- Hence, electrons must scatter to states _near the Fermi surface_
+
+- Scattering causes electrons at the _front_ of the Fermi sphere to go to the _back_
+- Hence, the sphere eventually reaches an _equilibrium displacement in $k-$space_
+![[Fermi sphere scattering.png]]
+
+- The total scattering rate is an _average_ of electrons in the _bulk_ which are _not scattered_, and electrons at the _front_ which are scattered strongly
+
+### Temperature deendence of resistivity
+- Consider the rate of collision:
+$$\frac{1}{\tau}=\frac{1}{\tau_\text{phonon}}+\frac{1}{\tau_\text{defect}}$$
+- The _defect rate_ is _temperature-independent_
+
+- At _low temperatures_, phonon density is _low_, hence scattering is _defect-dominant_
+- At _high temperatures_, the _phonon density_ is _proportional to temperature_
+- The scattering is _phonon-dominant_, where $\tau_\text{phonon}<<\tau_\text{defect}$
+- _Resistivity_ $\rho=1/\sigma$ is then _proportional to temperature_
+![[Matthiessen.png]]
+- This is known as _Matthiessens' rule_
+
+### Electron thermal conductivity
+- For _electron thermal conductivity_, it is _analagous_ to [[Phonons#Thermal conductivity in insulators|phonons]]:
+$$\kappa_\text{el}=\frac{1}{3}C_\text{el}\mean{c}l$$
+- As only electrons near the _Fermi level_ are excited, let $\mean{c}\approx v_F$, and $l\approx v_F\tau$
+- $\kappa_\text{el}$ then becomes:
+$$\kappa_\text{el}=\frac{\pi^2}{3}\frac{nk_B^2T}{m^*}\tau$$
+- Generally, for _pure metals_, this is _much bigger than phonon conductivity_
+	- At _high temperatures_, phonons dominate scattering and are much less conductive
+- As $\tau\propto 1/T$, thermal conductivity is _roughly constant with temperature_
+
+### Wiedemann-Franz law
+- Consider the ratio $\kappa_\text{el}/(\sigma T)$:
+$$\frac{\kappa}{\sigma T}=\frac{\pi^2}{3}\frac{nk_B^2T}{m^*}\tau \left(\frac{ne^2\tau}{m^*}\right)^{-1}\frac{1}{T}=\frac{\pi^2}{3}\left(\frac{k_B}{e}\right)^2$$
+- This is the _Lorenz number_, and theoretically, is _constant for all metals_
+- Reinforces that both conductivities have the _same underlying mechanism_
+- Typically holds for _not too low temperatures_
+
+- Typically _agrees with experimental results_
 
 ## Hall Effect
+- A _magnetic field_ is applied _perpendicular_ to the current flow of a conductor
+- This causes electrons to _drift_, and _build up_ across the side of the conductor
+- Eventually, the _field from built-up charges_ causes a _Hall voltage_, and _balances_ the magnetic force:
+![[Hall effect.png]]
+- _Equilibrium_ is established when:
+$$-e\bm{E}_H=-e\bm{v}\wedge\bm{B}=-e\frac{\bm{j}}{-ne}\wedge\bm{B}$$
+- Hence:
+$$\bm{E}_H=-\frac{1}{ne}\bm{j}\wedge\bm{B}=R_H\bm{j}\wedge\bm{B}$$
+- The measured _Hall voltage_ gives $E_H$, and $\bm{j}$ and $\bm{B}$ are controlled
+- $R_H$ is the _Hall coefficient_:
+$$R_H=-\frac{1}{ne}$$
+- It gives the _density and sign of charge carriers_
+- As _electrons_ are the predicted charge carriers, it should be _negative_
+
+- The ratio of _density of charge carriers_ $n$ to the _density of atoms_ $n_\text{atom}$:
+$$\frac{n}{n_\text{atom}}=-\frac{1}{n_\text{atom}eR_H}$$
+![[Hall effect values.png]]
+- Therefore, the free electron model _cannot adequately describe some metals_
+- This leads to the [[Nearly Free Electron Model]]

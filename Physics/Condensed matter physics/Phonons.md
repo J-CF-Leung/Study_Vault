@@ -175,6 +175,10 @@ $$\omega_A(q\to 0)\approx \sqrt{\frac{2\alpha}{m_A+m_B}}qa \hspace{1cm} \omega_O
 - There are _different dispersion curves_ for _longitudinal_ and _transverse_ modes, in both _optical_ and _acoustic_ branches (if the lattice is not monoatomic)
 	- Depending on the _propagation direction_, transverse modes can be _degenerate_
 
+- If there are $p$ atoms in a basis, there are $3p$ _modes_ in total
+- $3$ of those branches will be _acoustic_
+- $3(p-1)$ of those branches will be _optical_
+
 ## Monoatomic FCC solid
 - There are _only acoustic modes_, but split into _longitudinal_ and _transverse_ modes
 ![[Neon phonon dispersion.png]]
@@ -262,19 +266,19 @@ $$U\approx 3Nk_BT \hspace{2cm} C\approx 3Nk_B$$
 $$E_i\approx\hbar\omega_i\exp\left(-\frac{\hbar\omega_i}{k_BT}\right)$$
 ## Debye model of the density of states
 - Assuming the crystal is a _rectangular box_ of side lengths $A, B, C$
-- The _phonon modes_ are simply _plane wave states_, which satisfy the _boundary conditions_
+- The _phonon modes_ are simply _plane wave states_, which satisfy _cyclic boundary conditions_
 - The allowed wave-vectors are then:
-$$\bm{k}=\left(\frac{n_x\pi}{A},\frac{n_y\pi}{B},\frac{n_z\pi}{C}\right)$$
+$$\bm{k}=\left(\frac{2n_x\pi}{A},\frac{2n_y\pi}{B},\frac{2n_z\pi}{C}\right)$$
 - These states then form a _lattice_ in $k-$_space_
-- Each state occupies a _volume_ $\pi^3/(ABC)=\pi^3/V$
+- Each state occupies a _volume_ $(2p\i)^3/(ABC)=8\pi^3/V$
 
 - Then, consider the states within a _shell_ of width $dk$
-	- Only consider _positive_ $k$, hence an _eighth_ of a sphere
+	- Each $k$ state has _transverse and longitudinal modes_
 - The _number of states_ in that shell is:
-$$dN=g(k)\,dk=\frac{3(4\pi k^2/8)\,dk}{\pi^3/(ABC)}$$
+$$dN=g(k)\,dk=\frac{3(4\pi k^2)\,dk}{8\pi^3/(ABC)}$$
 - $g(k)$ is the _density of states_ in $k-$space:
 $$g(k)=\frac{3Vk^2}{2\pi^2}$$
-- The factor of 3 accounts for _transverse and longitudinal modes_
+
 - Then, transforming to $\omega-$space:
 $$g(\omega)\,d\omega=g(k)\,dk$$
 - The _Debye theory_ makes a simple _approximation_
