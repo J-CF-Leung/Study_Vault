@@ -244,7 +244,7 @@ $$C\approx 3Nk_B$$
 - If the solid is in _contact_ with a reservoir of temperature $T$, then the _number of phonons $n$ in a mode_ of frequency $\omega$ follows the [[Statistical thermodynamics#Boltzmann Distribution|Boltzmann Distribution]]:
 $$P_n\propto\exp\left(-\frac{n\hbar\omega}{k_BT}\right)\equiv\exp(-n\beta\hbar\omega)$$
 - One can then write the [[Statistical thermodynamics#The Partition Function|Partition Function]]:
-$$Z=\sum_{n=0}^\infty \exp\left(-n\beta\hbar\omega\right)=\frac{1}{1-\exp(\beta\hbar\omega)}$$
+$$Z=\sum_{n=0}^\infty \exp\left(-n\beta\hbar\omega\right)=\frac{1}{1-\exp(-\beta\hbar\omega)}$$
 - The _average energy_ stored in the $i$th mode at temperature $T$ is then:
 $$E_i=-\frac{1}{Z}\pd{Z}{\beta}=\frac{\hbar\omega_i}{\exp(\beta\hbar\omega_i)-1}$$
 
@@ -270,7 +270,7 @@ $$E_i\approx\hbar\omega_i\exp\left(-\frac{\hbar\omega_i}{k_BT}\right)$$
 - The allowed wave-vectors are then:
 $$\bm{k}=\left(\frac{2n_x\pi}{A},\frac{2n_y\pi}{B},\frac{2n_z\pi}{C}\right)$$
 - These states then form a _lattice_ in $k-$_space_
-- Each state occupies a _volume_ $(2p\i)^3/(ABC)=8\pi^3/V$
+- Each state occupies a _volume_ $(2\pi)^3/(ABC)=8\pi^3/V$
 
 - Then, consider the states within a _shell_ of width $dk$
 	- Each $k$ state has _transverse and longitudinal modes_

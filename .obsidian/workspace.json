@@ -57,7 +57,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -75,7 +75,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Electrons in solids.md"
+                    "file": "Physics/Thermal Physics/Kinetic Theory of Gases.md"
                   }
                 }
               }
@@ -92,7 +92,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Electrons in solids.md",
+                    "file": "Physics/Thermal Physics/Kinetic Theory of Gases.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -210,7 +210,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
+                "file": "Physics/Thermal Physics/Kinetic Theory of Gases.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -227,7 +227,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
+                "file": "Physics/Thermal Physics/Kinetic Theory of Gases.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -250,7 +250,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/IB Chemistry/Electrons in solids.md"
+                "file": "Physics/Thermal Physics/Kinetic Theory of Gases.md"
               }
             }
           },
@@ -280,17 +280,20 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "bdee2333112a0d60",
+  "active": "9952e3b9bd292db1",
   "lastOpenFiles": [
-    "Physics/Images/Semiconductor density of occupied states.png",
+    "Impact parameter tube.png",
+    "Physics/Images/Hard sphere potential.png",
+    "Physics/Images/Kinetic theory annulus.png",
     "Physics/Condensed matter physics/Free Electron Model.md",
+    "Physics/Condensed matter physics/Phonons.md",
+    "Physics/Condensed matter physics/Nearly Free Electron Model.md",
+    "Physics/Images/Semiconductor density of occupied states.png",
     "Chemistry/IB Chemistry/Electrons in solids.md",
     "David Morin's Limericks.md",
     "Physics/Images/Hall effect values.png",
     "Physics/Images/Hall effect.png",
     "Physics/Images/1D potential.png",
-    "Physics/Condensed matter physics/Phonons.md",
-    "Physics/Condensed matter physics/Nearly Free Electron Model.md",
     "Physics/Thermal Physics/Kinetic Theory of Gases.md",
     "Physics/Images/Electron bands.png",
     "Physics/Images/Electron dispersion reduced zone.png",
@@ -298,14 +301,11 @@
     "Mathematics/IB Mathematical Methods/Group Theory.md",
     "Physics/Condensed matter physics/Crystal structure and diffraction.md",
     "Physics/Images/Matthiessen.png",
-    "Physics/Images/Fermi sphere scattering.png",
-    "Physics/Images/Conductivity in k space.png",
     "Physics/IB Physics/Electromagnetism.md",
     "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Past Papers/IB Physics/2013-14_Part_IB_Physics_B_Paper_1.pdf",
     "Past Papers/IB Physics/2013-14_Part_IB_Physics_B_Paper_2.pdf",
     "Past Papers/IB Chemistry A/IB_A_2013.pdf",
-    "Physics/Images/Optical reflectivities.png",
     "Physics/Thermal Physics/Thermal Radiation.md",
     "Physics/Quantum Mechanics/The failure of classical mechanics.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",

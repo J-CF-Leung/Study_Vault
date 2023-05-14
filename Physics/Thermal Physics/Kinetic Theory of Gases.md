@@ -81,14 +81,17 @@ $$U=\frac{3}{2}nRT$$
 - Let the _number of molecules per unit volume_ with speed between $v$ and $v+dv$ be:
 $$n\,f(v)\,dv$$
 - The _fraction_ of molecules in a trajectory covering _solid angle_ $d\Omega$:
-$$\frac{d\Omega}{4\pi}=\frac{2\pi\sin\theta\,d\theta}{4\pi}=\frac{1}{2}\sin\theta\,d\theta$$
+	$$\frac{d\Omega}{4\pi}=\frac{2\pi\sin\theta\,d\theta}{4\pi}=\frac{1}{2}\sin\theta\,d\theta$$
+	- The solid angle is that of an _annulus_:
+	![[Kinetic theory annulus.png]]
+
 - Hence, the _number of molecules per unit volume_, with _speed_ in interval $[v,v+dv]$, with trajectory of angle $[\theta,\theta+d\theta]$:
 $$\frac{1}{2}nf(v)\sin\theta\,d\theta\,dv$$
 - In a time interval $dt$, the particles travelling at angle $\theta$ _normal_ to the wall sweep a volume $Av\cos\theta\,dt$
-- Therefore, the number of molecules _hitting_ the wall in the abov conditions:
+- Therefore, the number of molecules _hitting_ the wall in the above conditions:
 $$dN=nAv\cos\theta\,dt\,f(v)\,dv\,\frac{1}{2}\sin\theta\,d\theta$$
 - As the molecules have _momentum change_ $2mv\cos\theta$:
-$$p=\int2mv\cos\theta\,dN=mn\int_0^\infty\,dv\,v^2f(v)\int_0^{\pi/2}\cos^2\theta\sin\theta\,d\theta$$
+$$p=\int2mv\cos\theta\,\frac{dN}{dt}=mn\int_0^\infty\,dv\,v^2f(v)\int_0^{\pi/2}\cos^2\theta\sin\theta\,d\theta$$
 - Therefore, the _pressure_ is:
 $$\displaylines{p=\frac{1}{3}mn\mean{v^2} \\ pV=\frac{1}{3}mN\mean{v^2}=Nk_BT}$$
 - Where the second equality comes from [[Statistical thermodynamics#The classical limit: equipartition|equipartition]]
@@ -103,10 +106,10 @@ $$\displaylines{p=nk_BT \hspace{1cm} n=\sum_i n_i \\ p=\sum_i n_ik_BT=\sum_i p_i
 $$nAv_\text{rms}\propto nA\sqrt{\frac{T}{m}}$$
 - It is often _limited_ by the _mean free path_ of collisions between the particles
 
-- The _flux_ through a surface is 
+- The _molecular flux_ through a surface is the _number of molecules_ hitting a _unit area_, _per unit time_, with units of $\text{m}^{-2}\,\text{s}^{-1}$
 
-- The _number of particles_ hitting a unit area of a wall in unit time in ...
-$$dN=$$
+- The _number of particles_ hitting a _unit area of a wall per unit time_ with speed in range $v$ to $v+dv$, at angles between $\theta$ and $\theta+d\theta$:
+$$dN=nv\cos\theta f(v)\,dv\frac{1}{2}\sin\theta\,d\theta$$
 
 - Therefore the _flux_ is:
 $$\Phi=\frac{1}{4}n\mean{v}$$
@@ -125,7 +128,7 @@ $$\text{Effusion rate}\;=\;\Phi A$$
 - The _number of molecules_ passing through the hole is proportional to:
 $$Av\,dt\cos\theta\,nf(v)\,dv\frac{1}{2}\sin\theta\,d\theta\propto vf(v)\,dv$$
 - Therefore, the _speed distribution of effused molecules_ is:
-$$\propto v^3\exp(-mv^2/2k_BT)$$
+$$f_\text{Effusion}(v)\propto v^3\exp(-mv^2/2k_BT)$$
 
 # Collisions
 - For a _dilute gas_, one can treat molecules as _classical particles_, or _hard spheres_
@@ -148,13 +151,27 @@ $$\frac{P(t+\delta t)}{P(t)}=1-n\sigma v\delta t$$
 $$P(t)=\exp(-n\sigma vt)$$
 - From its definition, $P(t=0)=1$
 
+- The probability of a particle _surviving_ until time $t$, then _colliding_ after time $dt$:
+$$\exp(-n\sigma vt)n\sigma v\,dt$$
+- This probability is already _normalised_
+	- Integrate w.r.t. $t$ from 0 to infinity
+
 - Then, one can find the _mean collision time_:
-$$\tau=$$
+$$\tau=\int_0^\infty t\exp(-n\sigma vt)\,n\sigma v\,dt=\frac{1}{n\sigma v}$$
 
 ## Collision cross-section
 - Consider two _spheres_ of radius $a_1$ and $a_2$
 - Let there be a _hard-sphere potental_, as a function of the _distance between them_:
-$$V(r)=$$
+$$V(r)=\begin{cases} \infty &{r\leq a_1+a_2} \\ 0 &r\geq a_1+a_2\end{cases}$$
+![[Hard sphere potential.png]]
+
+- Define $b$ as the _impact parameter_ between two moving molecules, as the _distance of closest approach_ that would result if the trajectories were _undeflected_
+- For hard-sphere potentials:
+$$b<a_1+a_2$$
+- A collision takes place when the _centres of the molecules_ lie within a _tube_ of radius $a_1+a_2$
+![[Impact parameter tube.png|600]]
+- This area is known as the _collision cross-section_:
+$$\sigma=\pi(a_1+a_2)^2$$
 
 ## Mean free path
 - The expression for _mean free path_ $\lambda$ is then:
@@ -165,3 +182,4 @@ $$\displaylines{\bm{v}_r=\bm{v}_1-\bm{v}_2 \\ \mean{v_r^2}=\mean{v_1^2}+\mean{v_
 $$\mean{v_r}\approx \sqrt{2}\mean{v}$$
 - From this, the _mean free path_ is:
 $$\lambda=\frac{1}{\sqrt{2}n\sigma}=\frac{k_BT}{\sqrt{2}p\sigma}$$
+- In _air_, at _atmospheric pressure_, $\lambda\approx 68\,\text{nm}$
