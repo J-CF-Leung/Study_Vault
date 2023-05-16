@@ -43,19 +43,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "c5ff6f8770495005",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Past Papers/IB Chemistry A/IB_A_2015.pdf"
-              }
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -73,7 +62,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Electrons in solids.md"
+                    "file": "Physics/Condensed matter physics/Nearly Free Electron Model.md"
                   }
                 }
               }
@@ -90,7 +79,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Electrons in solids.md",
+                    "file": "Physics/Condensed matter physics/Nearly Free Electron Model.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -208,7 +197,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
+                "file": "Physics/Condensed matter physics/Nearly Free Electron Model.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -225,7 +214,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
+                "file": "Physics/Condensed matter physics/Nearly Free Electron Model.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -248,7 +237,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/IB Chemistry/Electrons in solids.md"
+                "file": "Physics/Condensed matter physics/Nearly Free Electron Model.md"
               }
             }
           },
@@ -278,31 +267,31 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "48c2076383aed1b7",
+  "active": "25e8a6053642895c",
   "lastOpenFiles": [
-    "Bipolar junction transistor.png",
-    "p-n junction reverse bias.png",
-    "p-n junction forward bias.png",
-    "p-n contact potential.png",
-    "p-n junction.png",
+    "Physics/Thermal Physics/Transport phenomena.md",
+    "Physics/Condensed matter physics/Nearly Free Electron Model.md",
+    "Physics/Images/Lifting degeneracy.png",
+    "Chemistry/IB Chemistry/Electrons in solids.md",
+    "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
+    "Physics/Images/NFE small and large k.png",
+    "Physics/Images/Electron basis states.png",
+    "Past Papers/IB Chemistry A/IB_A_2015.pdf",
+    "Chemistry/Images/Bipolar junction transistor.png",
+    "Chemistry/Images/p-n junction reverse bias.png",
+    "Chemistry/Images/p-n junction forward bias.png",
+    "Chemistry/Images/p-n contact potential.png",
+    "Chemistry/Images/p-n junction.png",
     "Chemistry/Images/Extrinsic semiconductor conductivity.png",
     "Chemistry/Images/n type Fermi level.png",
-    "Chemistry/Images/Donor and acceptor levels.png",
-    "Chemistry/Images/Doped semiconductors electronic structure.png",
-    "Past Papers/IB Chemistry A/IB_A_2015.pdf",
-    "Physics/Condensed matter physics/Nearly Free Electron Model.md",
     "Chemistry/IB Chemistry/Bonding in molecules.md",
     "Chemistry/IB Chemistry/Symmetry in molecules.md",
-    "Chemistry/IB Chemistry/Electrons in solids.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Chemistry/IB Chemistry/Molecular spectroscopy.md",
     "Physics/Condensed matter physics/Free Electron Model.md",
     "Physics/Quantum Mechanics/1D time-independent Hamiltonians.md",
     "Past Papers/IB Chemistry A/IB_A_2012.pdf",
-    "Physics/Thermal Physics/Transport phenomena.md",
-    "Physics/Images/Shear of a fluid.png",
     "Physics/Thermal Physics/Kinetic Theory of Gases.md",
-    "Physics/Images/Impact parameter tube.png",
     "Physics/Condensed matter physics/Phonons.md",
     "David Morin's Limericks.md",
     "Mathematics/IB Mathematical Methods/Group Theory.md",
@@ -325,7 +314,6 @@
     "Physics/Thermal Physics/Classical Thermodynamics.md",
     "Physics/IB Physics/Experimental methods and data analysis.md",
     "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
-    "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
     "Misc or Personal/What to do.canvas"
   ]
 }

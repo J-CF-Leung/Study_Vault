@@ -43,34 +43,51 @@ $$\Psi_k(x)=\sum_{n=-\infty}^\infty C_{k,n}\frac{1}{\sqrt{A}}\exp[i(k+nG_1)x]$$
 
 - Equivalently:
 $$\displaylines{\ket{\Psi_k}=\sum_{n=-\infty}^\infty C_{k,n}\ket{\phi_{k,n}}\\\braket{x|\phi_{k,n}}=\frac{1}{\sqrt{A}}\exp[i(k+nG_1)x]}$$
-- $\ket{\phi_{k,n}}$ are the _electron basis states_
-- In $k-$space, they are _seprarated by_ $G_1$ along the $k-$axis
-- The states are represented by _plane waves_, hence they lie on the _free electron dispersion curve_
-- The _overall wave-function_ is given by a _weighted sum_
-
+- $\ket{\phi_{k,n}}$ are the _electron basis states_ for wave-vector $k$
+	- The $1/\sqrt{A}$ is a _normalising factor_
+- In $k-$space, they are _seprarated by_ $G_1$ along the $k-$axis starting from $k$
+- The states are represented by _plane waves_, hence they lie on the _free electron dispersion curve_:
+![[Electron basis states.png]]
+- The _overall wave-function_ $\Psi_k$ is given by a _weighted sum_ of the basis states
+ 
 - If the potential is _weak_, only basis states $\ket{\phi_{k,n}}$ with _energy close to that of the central basis state_ $\ket{\phi_{k,0}}$ will have _significant contributions_ to the overall wavefunction
+
+## Matrix elements of the Hamiltonian
+- The _Hamiltonian_ of the crystal in the position basis:
+$$\hat{\Ham}\xrightarrow{x\text{ basis}}-\frac{\hbar^2}{2m}\frac{d^2}{dx^2}+\sum_{p=-\infty}^\infty \cos(pG_1x)$$
+- The _matrix elements_ of the Hamiltonian can then be calculated:
+$$\braket{\phi_{k,m}|\hat{\Ham}|\phi_{k,n}}=\frac{\hbar^2}{2m_e}(k+mG_1)^2\delta_{m,n}+\sum_p\frac{V_p}{2}(\delta_{n,m+p}+\delta_{n,m-p})$$
 
 ## Two-state approximation
 - For a weak potential, let the _electron wave function_ be a _linear combination_ of two basis states:
 $$\ket{\Psi_k}=C_{k,0}\ket{\phi_{k,0}}+C_{k,1}\ket{\phi_{k,1}}$$
 - $\ket{\phi_{k,1}}$ and $\ket{\phi_{k,-1}}$ are _both valid choices_
 
+- For _limiting behaviour_, one can guess the behaviour of the function at small and large $k$:
+![[NFE small and large k.png]]
+
+### Small k
 - For a _small value_ of $k$, near the centre, there is a _significant energy difference_ between the two states
-- The _additional basis state_ has _little contribution_ to the overall wavefunciton:
+- Hence, the _additional basis state_ has _little contribution_ to the overall wavefunciton:
 $$\ket{\Psi_k}\approx\ket{\phi_{k,0}}$$
 - The energy is _close to the free particle energy_
 
+### Large k
 - For a _large value_ of $k$, near the _zone boundary_, the two states have _comparable energy_
 - They both have a _significant contribution_ to $\ket{\Psi_k}$
 - At $k=G_1/2$, they have _equal contributions_
 
-- When the two states _contribute equally_, they superpose to form _standing waves_
-- The $\cos^2$ probability distribution is _higher energy_
-DIAGRAMMMMMMMMMMMMMMMMMMMM
+- When the two states _contribute equally_, they superpose to form _standing waves_:
+$$\displaylines{\Psi_+(x)=\frac{1}{2}[\phi_{G_1/2}(x)+\phi_{-G_1/2}(x)]\propto\cos\left(\frac{\pi x}{a}\right)\\ \Psi_-(x)=\frac{1}{2}[\phi_{G_1/2}(x)-\phi_{-G_1/2}(x)]\propto\sin\left(\frac{\pi x}{a}\right)}$$
+- The two wave-functions have _different energies_, as they have _different values_ at points of _high and low potential_
+![[Lifting degeneracy.png]]
 - Hence, the _degeneracy of the two states is lifted_
 
 ## Solutions to the Schrodinger equation
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+- Only using two states as a basis, find the _energies as a function of $k$_ by finding the _eigenvalues of the Hamiltonian_:
+$$\hat{\Ham}\ket{\Psi_k}=E_k\ket{\Psi_k}$$
+- To do this, one needs to find the [[#Matrix elements of the Hamiltonian|matrix elements]]:
+$$\displaylines{H_{00}=E_{k,0}=\frac{\hbar^2}{2m_e}k^2}$$
 
 - This gives energies as a function of $k$:
 $$E_k=\frac{1}{2}\left(E_{k,-1}+E_{k,0}\right)\pm\sqrt{\frac{1}{4}(E_{k,-1}-E_{k,0})^2+\left(\frac{V_1}{2}\right)^2}$$
