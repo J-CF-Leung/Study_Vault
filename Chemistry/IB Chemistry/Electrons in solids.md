@@ -798,7 +798,130 @@ $$\frac{1}{m_e^*}=-\frac{2\beta a^2}{\hbar^2}\cos(ka)$$
 	- Typical _donors_: $\ce{P, As, Sb}$
 	- Typical _acceptors_: $\ce{Al, Ga}$
 - An alternative to silicon is _gallium arsenide_, $\ce{GaAs}$
+	- Typical _donors_; $\ce{Ge}$ substituting $\ce{Ga}$
+	- Typical _acceptors_: $\ce{Ge}$ substituting $\ce{As}$
+
+### Electronic structure
+- In an _n-type_ semiconductor, the electrons from the dopant give a _discrete set of levels_ right under the conduction band
+	- The _dilute concentration_ means there is _no overlap_, and there is no band
+- A typical gap between $E_d$ and the conduction band is on the order of $\text{meV}$
+- At room temperature, they can be _excited into the conduction band_
+- Typically, the number of _excited electons from the dopant_ will _greatly exceed_ the number of excited _intrinsic electrons_
+
+- In a _p-type_ semiconductor, the acceptor atoms create _discrete vacancies_ right above the valence band
+- At room temperature, _electrons can be excited onto the acceptor level_
+- This creates _holes in the valence band_
+- There are _very few electrons in the conduction band_
+![[Doped semiconductors electronic structure.png]]
+
+### Donor levels
+- To model the donor levels, assume the _donor atoms are hydrogen-like_, with the lone electron being the one _donated into the conduction band_
+- When calculating the _Coulomb potential_, use the _relative permittivity_ of the semiconductor
+- This _decreases the charge-charge interaction_
+- One also needs to use the _effective mass of the electron_:
+$$\displaylines{\epsilon_0\to\epsilon_r\epsilon_0 \hspace{1cm} m_e\to m_e^* \\ E_n=-\frac{R_H}{n^2}=-\frac{e^4m_e}{32\pi^2\epsilon_0^2}\frac{1}{n^2} \\ R_{H,\text{eff}}=R_{H,\text{eff}}\frac{m_e^*}{m_e\epsilon_r^2}}$$
+- The orbitals will also _change size_ due to this interaction
+- Therefore, one must change the _Bohr radius_:
+$$a_0=\frac{4\pi\hbar^2}{e^2}\frac{\epsilon_0}{m_e}\to a_{0,\text{eff}}=a_0\frac{\epsilon_rm_e}{m_e^*}$$
+- Define the _zero energy_ as the _bottom of the conduction band_
+	- Ionisation is then defined as _taking the electron into the conduction band_
+
+### Acceptor levels
+- To model te acceptor levels, similar to the donor levels, assume the _acceptor atoms are hydrogen-like_
+- The zero energy is defined as _relative to the top of the valence band_:
+$$E_n=+\frac{R_{H,\text{eff}}}{n^2}$$
+![[Donor and acceptor levels.png]]
+
+### Fermi energy
+- In [[#Intrinsic semiconductors]], the _Fermi level_ is near the _middle of the band gap_
+- In _extrinsic_ semiconductors, the Fermi level is _dependent on the donor/acceptor level_
+
+- For _n-type_ semiconductors:
+![[n type Fermi level.png]]
+
+- The _density of states_ is _much higher in the conduction band_ than in the donor levels
+- At _low temperatures_, the valence band is still _completely filled_, while _most donor levels_ are unoccupied, as the electrons are excited
+- Therefore, the Fermi level is _between the bottom of the conduction band and the donor levels_, when the temperature is _ambient_
+
+- At _high temperatures_, the Fermi level will be _somewhere below the acceptor levels_, as the valence band becomes _partially filled_
+
+### Temperature dependence of conductivity
+
+
+- Therefore, _ideal behaviour_ will show clear separation between the temperature regimes:
+![[Extrinsic semiconductor conductivity.png]]
+
+### Equilibrium between electrons and holes
+- Consider the [[#Statistical mechanics of electrons and holes|equilibrium for electron and hole concentrations]]
+- For _extrinsic_ semiconductors, this equilibrium is _also established_, with a _similar equilibrium constant_
+- Any _addition_ of _electrons/holes_ will _disturb_ the equilibrium and _push_ the equilibrium the other way
+- Then, electrons/holes become the _majority charge carrier_
+
+### Impurity bands
+- When the _dopant concentration is high_
 
 # Semiconductor devices
+- Most devices use _extrinsic semiconductors_
+
+## The p-n junction
+- The _p-n diode_ consists of _n-type_ and _p-type_ semiconductors _attached_ in a particular direction
+- If there is a voltage such that the _positive side_ is connected to the _p-type_ semiconductor, this is _forward bias_
+	- Vice versa, there is a _reverse bias_
+
+- If a _forward bias_ is applied, there is a _current flow_, as the _excess electrons_ in the _n-type_ material will _flow to the positive side_ and _recombine_ with the holes
+	- Similarly, the _holes migrate to the negative side_
+- The electrons are then _replenished_ by the battery
+- If there is a _reverse bias_, _current cannot flow through the junction_ as the electrons and holes _stay_ on their respective sides
+
+- If an _AC current_ is applied, it is _rectified_ as only one direction of current flow is _allowed_
+![[p-n junction.png]]
+
+### Electron bands in a p-n junction
+- The Fermi energy can be approximated by the _chemical potential_
+- At equilibrium, the _chemical potentials_ in the two semiconductors must be _equal_
+
+![[p-n contact potential.png]]
+- Let the two types of semiconductor intially come into _contact_, without any _external potential_
+- There is a _flow of electrons_ from the _n-type_ to the _p-type_ semiconductor, as the _chemical  potential decreases_ across the junction
+- There is a _build-up of opposite charges_ in the semiconductors
+- In the _n-type_ semiconductor, there is a _build-up of positive charge_, which _lowers the energies of the bands_
+- Similarly, in the _p-type_ semiconductor, there is a _rise in energies_
+- This occurs until the _Fermi energies are equal_
+
+- In the end, there is a _contact potential_ between the semiconductors
+- On either side of the _contact point_, there is a _depletion region_ where the electrons and holes have _combined_
+
+- The contact potential is of _similar magnitude to the band gap_
+	- A $1\text{eV}$ band gap gives rise to $\sim1\,\text{V}$ contact potential
+
+![[p-n junction forward bias.png]]
+- When there is a _forward bias_, the external potential produces a _constant gradient in chemical potential_
+
+![[p-n junction reverse bias.png]]
+- When there is a _reverse bias_, the chemical potential gradient is _unfavourable_ as there are _no uphill electrons_ that can lower their energy
+
+### Applications
+- As electrons _recombine with holes_, they can _emit energy in the form of photons_
+- This forms a _light-emitting diode_
+
+- Meanwhile _solar cells_ will _create_ electrons and holes by _absorbing photons_
+- The electrons and holes then flow and create a _current_
+
+## Bipolar junction transistor
+![[Bipolar junction transistor.png]]
+- In the transistor, there are _two pieces of n-type_ semiconductor, with _one piece of p-type_ semiconductor in-between
+- This is effectively _two p-n junctions_, one of which has a _forward bias_, while the other has a _reverse bias_
+	- The side of the forward bias is the _emitter_, while the other is the _collector_
+- The _p-type_ piece is known as the _base_, and has to be _thin_
+
+- The _emitter_ will flow _from the emitter_ into the _base_, as well as the _collector_
+- Define the _current ratios_:
+$$\alpha=\frac{I_c}{I_e} \hspace{1cm} \beta=\frac{I_c}{I_b}$$
+- From _current conservation_:
+$$\beta=\frac{\alpha}{1-\alpha}$$
+- As the base is _thin_, $I_c>>I_b$, hence $\beta>>1$
+- $\beta$ is known as the _gain_ of the transistor
+
+- By manipulating the _base current_, the transistor can be made into an _amplifier_
 
 # Spectroscopic measurement of electrical properties

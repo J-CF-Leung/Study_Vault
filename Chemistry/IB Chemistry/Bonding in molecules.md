@@ -398,7 +398,7 @@ $$^1\Sigma_g^+$$
 - They form _components_ of _triplet_ or _singlet_ states
 
 - Example: _Oxygen_ $\text{O}_2$ has a $(1\pi_g)^2$ configuration, which gives possible terms:
-$$1\Delta_g, ^1\Sigma_g,^3\Sigma_g$$
+$$^1\Delta_g, ^1\Sigma_g,^3\Sigma_g$$
 - Due to Hund's rules, the _latter has the lowest energy_
 
 - However, the latter two have _reflection symmetry_, which must be determined by _considering the spatial wave function_

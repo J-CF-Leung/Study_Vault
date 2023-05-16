@@ -72,13 +72,93 @@ DIAGRAMMMMMMMMMMMMMMMMMMMM
 ## Solutions to the Schrodinger equation
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
+- This gives energies as a function of $k$:
+$$E_k=\frac{1}{2}\left(E_{k,-1}+E_{k,0}\right)\pm\sqrt{\frac{1}{4}(E_{k,-1}-E_{k,0})^2+\left(\frac{V_1}{2}\right)^2}$$
+- The wavefunction is a _superposition of two states_
+
+
 ## Band structure
 - With a more _general_ potential:
 $$V(x)=\sum_n V_n\cos(nG_1x)$$
 - This will link states at _higher energies_
-- There are _gaps_ at
+- There are _gaps_ of $V_n$ at $nG_1/2$
 
 - This leads to a _band structure_, where electron states can only lie in _energy ranges_, or _bands_
 - The _Fermi energy_ $\varepsilon_F$ determines how _far up_ the band structure is filled
 ![[Electron bands.png]]
 - The _level_ at which the bands are filled determines the _conductivity_ of the material
+
+## Electrical conductivity
+- Similar to the [[Free Electron Model#Electrical conductivity|free electron model]], an _applied electric field_ will _shift_ the Fermi sphere and cause a _drift velocity_, allowing the material to _conduct_ electricity
+- However for the sphere to move, one requires _nearby empty $k-$states_
+
+- In $k-$space, one can map out the _bands and band gaps_
+- If a band is _completely filled_, the Fermi sphere _cannot move_ without a _large jump in electron energy_, and the material is an _insulator_
+- If a band is _partially filled_, the Fermi sphere is easily _displaced_, and the material is a _conductor_
+
+### 1 dimensional model
+- In _1 dimension_, the _separation of $k-$states_ is $2\pi/L$
+- The _size_ of the first Brillouin zone is $2\pi/a$, hence the _number of states_ is $L/a=n$
+- As the electrons have _two spin states_, each _band_ can accommodate $2n$ electrons
+
+- If there is an _odd number of electrons per atom_, the material is an _insulator_
+	- The topmost band is _full_
+- if there is an _even number of electrons per atom_, the material is a _conductor_
+	- The topmost band is _half full_
+- This _does not match observations_ (e.g. Group 2 metals)
+
+### 2D model
+- In the _free electron model_, the energy is a _paraboloid_ in $k-$space
+- As states are filled _up to the Fermi energy_, this forms a _circular contour_
+
+- With a _weak potential_, there is a _small energy gap at the zone boundary_
+- There is an _energy overlap_ between the 1st and 2nd bands
+- At the _band gap_, energies _vary with position_, hence the _Fermi energy contour crosses_ into the 2nd Brillouin zone
+- At the gap, there tends to _bulges_ in the Fermi surface at the band gap
+- Hence, as _both bands_ are _partially filled_ at the Fermi level, the material is a _conductor_
+
+- With a _strong potential_, the energy gap is _much larger_
+- There is _no overlap in energies_
+- The Fermi surface follows the _shape of the 1st Brillouin zone_
+- As only the first band is _full_, the material is an _insulator_
+
+### Conduction
+- With _no electric field_, the Fermi surface is _symmetric_
+- There are _equal numbers_ of electrons moving _forwards and backwards_
+
+- With an electric field:
+$$-e\bm{E}=\hbar\frac{d\bm{k}}{dt}$$
+- The electrons move towards _higher $k-$states_
+- Phonons and defects will _scatter_ the electrons into _empty states_
+
+### Bloch oscillations
+- If the electric field is _strong_, and the scattering processes are _weak_, the occupied states will _move continuously through $k-$space_
+- They can _cross into the 2nd Brillouin zone_
+- The _group velocity_ is _reversed_
+
+- The _backfolding_ of zones means the process is _continuous_
+- Overall, the _electron group velocity oscillates_
+- This is known as the _Bloch oscillation_
+
+## Effective mass
+- Define the _effective mass_ $m^*$ such that:
+$$m^*\frac{dv}{dt}=\hbar\frac{dk}{dt}$$
+- As _wavepackets_ are being considered, $v$ is the _group velocity_:
+$$m^*\frac{d}{dt}\left(\frac{d\omega}{dk}\right)=\frac{m^*}{\hbar}\frac{d^2\varepsilon}{dk^2}\frac{dk}{dt}$$
+- From this, the formula for effective mass is:
+$$m^*=\hbar^2\left(\frac{d^2\varepsilon}{dk^2}\right)^{-1}$$
+- This is analagous to:
+$$\varepsilon=\frac{\hbar^2k^2}{2m^*}\Longrightarrow m^*=\hbar^2\left(\frac{d^2\varepsilon}{dk^2}\right)^{-1}$$
+- Therefore, depending on the _band structure_ or the _band_ itself, $m^*$ is _dependent on $k$_
+- Depending on the position of $\varepsilon_F$, _more than one effective mass_ can be present at the Fermi level
+
+## Almost full bands and holes
+- Consider a band that has _few empty states near the top_
+- These are at the region _close to the zone boundary_
+- It is easier to _offset_ the reduced zone scheme
+
+- The _lower_, almost full band is the _valence band_
+- The _upper_, almost empty band is the _conduction band_
+
+- As an _electric field_ is applied, the _empty states move_ in $k-$space
+- This is equivalent to considering the movement of _holes_ in the _direction of the field_
