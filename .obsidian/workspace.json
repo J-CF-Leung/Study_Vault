@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Condensed matter physics/Nearly Free Electron Model.md",
+                "file": "Physics/Condensed matter physics/Semiconductors.md",
                 "mode": "source",
                 "source": false
               }
@@ -43,6 +43,18 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "7328f3ba81e6e4fa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Physics/IB Physics/Experimental methods and data analysis.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ]
       },
@@ -62,7 +74,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/Condensed matter physics/Nearly Free Electron Model.md"
+                    "file": "Physics/Condensed matter physics/Semiconductors.md"
                   }
                 }
               }
@@ -79,7 +91,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/Condensed matter physics/Nearly Free Electron Model.md",
+                    "file": "Physics/Condensed matter physics/Semiconductors.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -102,7 +114,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.35608684811531555,
+                      "scale": 0.614500854483359,
                       "close": true
                     }
                   }
@@ -197,7 +209,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Condensed matter physics/Nearly Free Electron Model.md",
+                "file": "Physics/Condensed matter physics/Semiconductors.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -214,7 +226,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Condensed matter physics/Nearly Free Electron Model.md",
+                "file": "Physics/Condensed matter physics/Semiconductors.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -237,7 +249,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Condensed matter physics/Nearly Free Electron Model.md"
+                "file": "Physics/Condensed matter physics/Semiconductors.md"
               }
             }
           },
@@ -269,51 +281,52 @@
   },
   "active": "25e8a6053642895c",
   "lastOpenFiles": [
-    "Physics/Thermal Physics/Transport phenomena.md",
-    "Physics/Condensed matter physics/Nearly Free Electron Model.md",
-    "Physics/Images/Lifting degeneracy.png",
+    "Diode I-V characteristic.png",
     "Chemistry/IB Chemistry/Electrons in solids.md",
+    "Physics/Condensed matter physics/Semiconductors.md",
+    "Physics/Images/Donor and acceptor states.png",
+    "Physics/IB Physics/Experimental methods and data analysis.md",
+    "Past Papers/IB Physics/2018-19_Part_IB_Physics_A_Paper_2.pdf",
+    "Past Papers/IB Physics/2020-21_Part_IB_Physics_A_Paper_2.pdf",
+    "Past Papers/IB Physics/2021-22_Part_IB_Physics_A_Paper_2.pdf",
+    "Physics/IB Physics/Electromagnetism.md",
+    "Physics/Images/Electron promotion.png",
+    "Physics/Condensed matter physics/Nearly Free Electron Model.md",
+    "Past Papers/IB Physics/2021-22_Part_IB_Physics_A_Paper_1.pdf",
+    "Past Papers/IB Physics/2017-18_Part_IB_Physics_B_Paper_1.pdf",
+    "Physics/Images/Holes.png",
+    "Physics/Images/Holes.png",
+    "Physics/Images/Offset reduced zone scheme.png",
+    "Physics/Images/Two state energies.png",
+    "Physics/Thermal Physics/Transport phenomena.md",
+    "Past Papers/IB Physics/2018-19_Part_IB_Physics_B_Paper_1.pdf",
+    "Past Papers/IB Physics/2020-21_Part_IB_Physics_B_Paper_1.pdf",
+    "Past Papers/IB Physics/2020-21_Part_IB_Physics_B_Paper_2.pdf",
+    "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_2.pdf",
+    "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_1.pdf",
+    "Mathematics/IB Mathematical Methods/Partial differential equations.md",
+    "Physics/Images/Lifting degeneracy.png",
     "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
     "Physics/Images/NFE small and large k.png",
     "Physics/Images/Electron basis states.png",
-    "Past Papers/IB Chemistry A/IB_A_2015.pdf",
     "Chemistry/Images/Bipolar junction transistor.png",
-    "Chemistry/Images/p-n junction reverse bias.png",
-    "Chemistry/Images/p-n junction forward bias.png",
-    "Chemistry/Images/p-n contact potential.png",
-    "Chemistry/Images/p-n junction.png",
-    "Chemistry/Images/Extrinsic semiconductor conductivity.png",
-    "Chemistry/Images/n type Fermi level.png",
     "Chemistry/IB Chemistry/Bonding in molecules.md",
     "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Chemistry/IB Chemistry/Molecular spectroscopy.md",
     "Physics/Condensed matter physics/Free Electron Model.md",
     "Physics/Quantum Mechanics/1D time-independent Hamiltonians.md",
-    "Past Papers/IB Chemistry A/IB_A_2012.pdf",
     "Physics/Thermal Physics/Kinetic Theory of Gases.md",
     "Physics/Condensed matter physics/Phonons.md",
     "David Morin's Limericks.md",
     "Mathematics/IB Mathematical Methods/Group Theory.md",
     "Physics/Condensed matter physics/Crystal structure and diffraction.md",
-    "Physics/IB Physics/Electromagnetism.md",
     "Chemistry/IB Chemistry/Chemical thermodynamics.md",
-    "Past Papers/IB Physics/2013-14_Part_IB_Physics_B_Paper_1.pdf",
-    "Past Papers/IB Physics/2013-14_Part_IB_Physics_B_Paper_2.pdf",
-    "Past Papers/IB Chemistry A/IB_A_2013.pdf",
     "Physics/Thermal Physics/Thermal Radiation.md",
     "Physics/Quantum Mechanics/The failure of classical mechanics.md",
-    "Past Papers/IB Chemistry A/IB_A_2011.pdf",
-    "Past Papers/IB Chemistry A/IB_A_2022.pdf",
-    "Past Papers/IB Chemistry A/IB_A_2001.pdf",
-    "Past Papers/IB Physics/2021-22_Part_IB_Physics_A_Paper_2.pdf",
-    "Past Papers/IB Physics/2021-22_Part_IB_Physics_A_Paper_1.pdf",
     "Physics/Condensed matter physics/Thermal Properties of solids.md",
-    "Physics/Condensed matter physics/Semiconductors.md",
     "Physics/Thermal Physics/Statistical thermodynamics.md",
     "Physics/Thermal Physics/Classical Thermodynamics.md",
-    "Physics/IB Physics/Experimental methods and data analysis.md",
-    "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
     "Misc or Personal/What to do.canvas"
   ]
 }

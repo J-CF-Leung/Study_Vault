@@ -60,7 +60,7 @@ $$\braket{\phi_{k,m}|\hat{\Ham}|\phi_{k,n}}=\frac{\hbar^2}{2m_e}(k+mG_1)^2\delta
 
 ## Two-state approximation
 - For a weak potential, let the _electron wave function_ be a _linear combination_ of two basis states:
-$$\ket{\Psi_k}=C_{k,0}\ket{\phi_{k,0}}+C_{k,1}\ket{\phi_{k,1}}$$
+$$\ket{\Psi_k}=C_{k,0}\ket{\phi_{k,0}}+C_{k,-1}\ket{\phi_{k,-1}}$$
 - $\ket{\phi_{k,1}}$ and $\ket{\phi_{k,-1}}$ are _both valid choices_
 
 - For _limiting behaviour_, one can guess the behaviour of the function at small and large $k$:
@@ -87,12 +87,15 @@ $$\displaylines{\Psi_+(x)=\frac{1}{2}[\phi_{G_1/2}(x)+\phi_{-G_1/2}(x)]\propto\c
 - Only using two states as a basis, find the _energies as a function of $k$_ by finding the _eigenvalues of the Hamiltonian_:
 $$\hat{\Ham}\ket{\Psi_k}=E_k\ket{\Psi_k}$$
 - To do this, one needs to find the [[#Matrix elements of the Hamiltonian|matrix elements]]:
-$$\displaylines{H_{00}=E_{k,0}=\frac{\hbar^2}{2m_e}k^2}$$
+$$\displaylines{H_{00}=E_{k,0}=\frac{\hbar^2}{2m_e}k^2 \\ H_{0\bar{1}}= H_{\bar{1}0}=\frac{V_1}{2} \\ H_{\bar{1}\bar{1}}=E_{k,-1}=\frac{\hbar^2}{2m_e}(k-G_1)^2}$$
 
 - This gives energies as a function of $k$:
 $$E_k=\frac{1}{2}\left(E_{k,-1}+E_{k,0}\right)\pm\sqrt{\frac{1}{4}(E_{k,-1}-E_{k,0})^2+\left(\frac{V_1}{2}\right)^2}$$
 - The wavefunction is a _superposition of two states_
 
+![[Two state energies.png]]
+- The interaction of the basis states with the potential leads to an _avoided crossing_ of the two original dispersion curves
+- This leads to the formation of _bands_, with a _gap_ of $V_1$ at $k=\pm G_1/2$
 
 ## Band structure
 - With a more _general_ potential:
@@ -173,9 +176,36 @@ $$\varepsilon=\frac{\hbar^2k^2}{2m^*}\Longrightarrow m^*=\hbar^2\left(\frac{d^2\
 - Consider a band that has _few empty states near the top_
 - These are at the region _close to the zone boundary_
 - It is easier to _offset_ the reduced zone scheme
+![[Offset reduced zone scheme.png]]
 
 - The _lower_, almost full band is the _valence band_
 - The _upper_, almost empty band is the _conduction band_
 
 - As an _electric field_ is applied, the _empty states move_ in $k-$space
-- This is equivalent to considering the movement of _holes_ in the _direction of the field_
+- This is equivalent to considering the movement of _holes_ in the _direction of the field_:
+
+
+- Consider the _promotion_ of an electron from the valence band _to the conduction band_:
+![[Electron promotion.png]]
+- The total _energy change_ $\Delta E$ of the process:
+$$\Delta E=E_\text{gap}+\frac{\hbar^2k_e^2}{2m_e}+\frac{\hbar^2k_h^2}{2m_h}$$
+- The energies are measured _relative to the top of the valence band_
+- The _energy and momentum of the conduction band_ are then $-\varepsilon_e$ and $-\hbar k_e$
+- Therefore, define the _energy and momentum of holes_:
+$$\varepsilon_h=-\varepsilon_e \hspace{1cm} k_h=-k_e$$
+- The _net momentum_ of the band is due to an _electron on the opposite side_
+
+- As the _electron effective mass_ at the top of the band is _negative_, it is much easier to imagine a _hole_ moving in an opposite direction to the electron with a _positive effective mass_
+
+- The _conventions_ for a hole are:
+$$q=+|e| \hspace{1cm} m_h>0 \hspace{1cm} E=+\frac{\hbar^2k_h^2}{2m_h}$$
+
+- In the 2D divalent metal, there are _holes_ in the 1st Brillouin zone, with _electrons_ in the 2nd Brillouin zone
+- They have _different effective masses_ due to different curvatures
+
+## Observation
+
+### Hall Effect
+
+### Cyclotron resonance
+
