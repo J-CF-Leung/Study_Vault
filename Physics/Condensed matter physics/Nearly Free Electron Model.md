@@ -102,19 +102,45 @@ $$E_k=\frac{1}{2}\left(E_{k,-1}+E_{k,0}\right)\pm\sqrt{\frac{1}{4}(E_{k,-1}-E_{k
 $$V(x)=\sum_n V_n\cos(nG_1x)$$
 - This will link states at _higher energies_
 - There are _gaps_ of $V_n$ at $nG_1/2$
+	- Consider the interaction between $\Psi_+$ and $\Psi_-$ for the $n$th Fourier component
 
 - This leads to a _band structure_, where electron states can only lie in _energy ranges_, or _bands_
 - The _Fermi energy_ $\varepsilon_F$ determines how _far up_ the band structure is filled
 ![[Electron bands.png]]
-- The _level_ at which the bands are filled determines the _conductivity_ of the material
+- The _level_ at which the bands are filled determines the [[#Electrical conductivity]] of the material
+
+## Electron motion and effective mass
+- Model the electrons using a _semiclassical approximation_
+- They are considered as _wavepackets_ with _group velocity_:
+$$\bm{v}(\bm{k})=\frac{d\omega}{d\bm{k}}=\frac{1}{\hbar}\frac{dE_k}{d\bar{k}}$$
+- This is a _non-vanishing velocity_ (unless $E_k$ is stationary), and is _purely due to the lattice potential itself_, determining the _position of the electron_
+- The quantity $\hbar\bm{k}$ is known as _crystal momentum_
+	- The Hamiltonian and momentum operators _do not have simultaneous eigenstates_
+- If any _external force_ is applied, this would _change the momentum of the electron itself_
+
+- Define the _effective mass_ $m^*$ such that:
+$$m^*\frac{dv}{dt}=\hbar\frac{dk}{dt}$$
+- Substitute the formula for group velocity:
+$$m^*\frac{d}{dt}\left(\frac{d\omega}{dk}\right)=\frac{m^*}{\hbar}\frac{d^2\varepsilon}{dk^2}\frac{dk}{dt}$$
+- From this, the formula for effective mass is:
+$$m^*=\hbar^2\left(\frac{d^2\varepsilon}{dk^2}\right)^{-1}$$
+- This is analagous to:
+$$\varepsilon=\frac{\hbar^2k^2}{2m^*}\Longrightarrow m^*=\hbar^2\left(\frac{d^2\varepsilon}{dk^2}\right)^{-1}$$
+- Therefore, depending on the _band structure_ or the _band_ itself, $m^*$ is _dependent on $k$_
+- Depending on the position of $\varepsilon_F$, _more than one effective mass_ can be present at the Fermi level
+
+- The _time evolution_ of the electron wave-vector is dependent on _external forces_:
+$$\hbar\frac{d\bm{k}}{dt}=-e\left[\bm{E}+\bm{v}\wedge\bm{B}\right]$$
 
 ## Electrical conductivity
 - Similar to the [[Free Electron Model#Electrical conductivity|free electron model]], an _applied electric field_ will _shift_ the Fermi sphere and cause a _drift velocity_, allowing the material to _conduct_ electricity
+	- There is a _non-zero average crystal momentum_ for the electrons
 - However for the sphere to move, one requires _nearby empty $k-$states_
 
 - In $k-$space, one can map out the _bands and band gaps_
 - If a band is _completely filled_, the Fermi sphere _cannot move_ without a _large jump in electron energy_, and the material is an _insulator_
 - If a band is _partially filled_, the Fermi sphere is easily _displaced_, and the material is a _conductor_
+![[Conductor vs insulator.png]]
 
 ### 1 dimensional model
 - In _1 dimension_, the _separation of $k-$states_ is $2\pi/L$
@@ -126,21 +152,27 @@ $$V(x)=\sum_n V_n\cos(nG_1x)$$
 - if there is an _even number of electrons per atom_, the material is a _conductor_
 	- The topmost band is _half full_
 - This _does not match observations_ (e.g. Group 2 metals)
+![[1D model band filling.png]]
 
-### 2D model
+### 2D model for a divalent metal
 - In the _free electron model_, the energy is a _paraboloid_ in $k-$space
-- As states are filled _up to the Fermi energy_, this forms a _circular contour_
+- As states are filled _up to the Fermi energy_, this forms a _circular contour_:
+![[Free electron Fermi contour.png|400]]
 
 - With a _weak potential_, there is a _small energy gap at the zone boundary_
 - There is an _energy overlap_ between the 1st and 2nd bands
 - At the _band gap_, energies _vary with position_, hence the _Fermi energy contour crosses_ into the 2nd Brillouin zone
 - At the gap, there tends to _bulges_ in the Fermi surface at the band gap
-- Hence, as _both bands_ are _partially filled_ at the Fermi level, the material is a _conductor_
+- Hence, as _both bands_ are _partially filled_ at the Fermi level, the material is a _conductor_:
+![[Divalent metal weak potential.png]]
 
 - With a _strong potential_, the energy gap is _much larger_
 - There is _no overlap in energies_
 - The Fermi surface follows the _shape of the 1st Brillouin zone_
 - As only the first band is _full_, the material is an _insulator_
+![[Divalent metal insulator.png]]
+- Variation in the Fermi surface:
+![[Divalent Fermi surfaces.png]]
 
 ### Conduction
 - With _no electric field_, the Fermi surface is _symmetric_
@@ -154,25 +186,19 @@ $$-e\bm{E}=\hbar\frac{d\bm{k}}{dt}$$
 ### Bloch oscillations
 - If the electric field is _strong_, and the scattering processes are _weak_, the occupied states will _move continuously through $k-$space_
 - They can _cross into the 2nd Brillouin zone_
-- The _group velocity_ is _reversed_
-
+- The _observed group velocity_ is _reversed_
+![[Bloch oscillations.png]]
 - The _backfolding_ of zones means the process is _continuous_
-- Overall, the _electron group velocity oscillates_
+- Overall, the _electron group velocity oscillates_, and an _AC current_ is generated from a _DC electric field_
 - This is known as the _Bloch oscillation_
 
-## Effective mass
-- Define the _effective mass_ $m^*$ such that:
-$$m^*\frac{dv}{dt}=\hbar\frac{dk}{dt}$$
-- As _wavepackets_ are being considered, $v$ is the _group velocity_:
-$$m^*\frac{d}{dt}\left(\frac{d\omega}{dk}\right)=\frac{m^*}{\hbar}\frac{d^2\varepsilon}{dk^2}\frac{dk}{dt}$$
-- From this, the formula for effective mass is:
-$$m^*=\hbar^2\left(\frac{d^2\varepsilon}{dk^2}\right)^{-1}$$
-- This is analagous to:
-$$\varepsilon=\frac{\hbar^2k^2}{2m^*}\Longrightarrow m^*=\hbar^2\left(\frac{d^2\varepsilon}{dk^2}\right)^{-1}$$
-- Therefore, depending on the _band structure_ or the _band_ itself, $m^*$ is _dependent on $k$_
-- Depending on the position of $\varepsilon_F$, _more than one effective mass_ can be present at the Fermi level
+- For a _band structure_:
+$$\varepsilon=-V_0\cos(ka)$$
+- This gives rise to Bloch oscillations:
+$$\displaylines{\hbar\frac{dk}{dt}=-eE \\ v(k)=\frac{V_0a}{\hbar}\sin(ka)=-\frac{V_0a}{\hbar}\sin\left(\frac{eEa}{\hbar}t\right)}$$
+- Due to the requirement of _very little scattering_, this typically only happens for _pure metals at very low temperatures_
 
-## Almost full bands and holes
+## Holes
 - Consider a band that has _few empty states near the top_
 - These are at the region _close to the zone boundary_
 - It is easier to _offset_ the reduced zone scheme
@@ -181,27 +207,37 @@ $$\varepsilon=\frac{\hbar^2k^2}{2m^*}\Longrightarrow m^*=\hbar^2\left(\frac{d^2\
 - The _lower_, almost full band is the _valence band_
 - The _upper_, almost empty band is the _conduction band_
 
-- As an _electric field_ is applied, the _empty states move_ in $k-$space
-- This is equivalent to considering the movement of _holes_ in the _direction of the field_:
-
-
 - Consider the _promotion_ of an electron from the valence band _to the conduction band_:
-![[Electron promotion.png]]
-- The total _energy change_ $\Delta E$ of the process:
-$$\Delta E=E_\text{gap}+\frac{\hbar^2k_e^2}{2m_e}+\frac{\hbar^2k_h^2}{2m_h}$$
-- The energies are measured _relative to the top of the valence band_
-- The _energy and momentum of the conduction band_ are then $-\varepsilon_e$ and $-\hbar k_e$
+![[Electron promotion 1.png]]
+
+- It is convenient to model this as a __completely filled valence band__, along with a particle known as a __"hole" in a separate hole band__, and the _electron in the conduction band_
+![[Hole band.png]]
+
+- Consider that in a _completely filled band_:
+$$\sum_\text{band}\bm{k}=0$$
+- The hole model must still _conserve energy and momentum_
+	- Measure energy from the _top of the valence band_, such that the electrons in the _valence band_ have _negative energy_, and the _hole band has positive energy_
 - Therefore, define the _energy and momentum of holes_:
 $$\varepsilon_h=-\varepsilon_e \hspace{1cm} k_h=-k_e$$
-- The _net momentum_ of the band is due to an _electron on the opposite side_
+- Ways of looking at momentum:
+	- A _completely filled valence band_ with zero momentum, plus the _hole in the hole band_ with momentum $\hbar k_h=-\hbar k_e$
+	- A valence band with _one electron missing_, with net momentum due to the electron on the _other side_, with momentum $-\hbar k_e$
 
-- As the _electron effective mass_ at the top of the band is _negative_, it is much easier to imagine a _hole_ moving in an opposite direction to the electron with a _positive effective mass_
-
+- As the _electron effective mass_ at the top of the valence band is _negative_, it is much easier to imagine a _hole_ moving in an _opposite direction to the electron_ with a _positive effective mass_: $$m_h^*=-m_e^*>0$$
 - The _conventions_ for a hole are:
 $$q=+|e| \hspace{1cm} m_h>0 \hspace{1cm} E=+\frac{\hbar^2k_h^2}{2m_h}$$
+### Dynamics of a hole
+- When a field is applied, the _empty state in the valence band moves with the filled states_
+- As the _empty states moves opposite_ to the field, this can be modelled as a _hole moving in the direction of the field_
+	- As the hole model has a _completely filled valence band_, the momentum _only comes from the hole band_
+$$\bm{k}_h=-\bm{k}_e \hspace{1cm} \frac{d\bm{k}_h}{dt}=-\frac{d\bm{k}_e}{dt}$$
+![[Hole movement.png]]
+![[Hole vs eletron movement.png]]
 
+### Return to the divalent metal
 - In the 2D divalent metal, there are _holes_ in the 1st Brillouin zone, with _electrons_ in the 2nd Brillouin zone
 - They have _different effective masses_ due to different curvatures
+![[Divalent metal charge carriers.png]]
 
 ## Observation
 

@@ -95,17 +95,18 @@ $$\displaylines{\hat{L}^2\ket{JM}=\hbar^2J(J+1)\ket{JM} \hspace{1cm}\hat{L}_z\ke
 
 # The Rigid Rotor
 - Consider a diatomic molecule, where nuclei have mass $m_1$ and $m_2$, with bond length $R$
-- It freely rotates around its centre of mass
-- There is no potential
+- It freely _rotates around its centre of mass_
+- There is _no potential_
 - The Hamiltonian is equal to the kinetic energy:
 $$\hat{\Ham}=\frac{\hat{L}^2}{2I}=\frac{\hat{L}^2}{2\mu R^2}$$
 	- $I$: moment of inertia
 	- $\mu$: reduced mass $m_1m_2/(m_1+m_2)$
 
-- As the Hamiltonian is proportional to $\hat{L}^2$, its eigenfunctions are the spherical harmonics
+- As the Hamiltonian is proportional to $\hat{L}^2$, its eigenfunctions are the _spherical harmonics_
 - The eigenvalues are proportional to eigenvalues of $\hat{L}^2$
 $$E_n=\frac{\hbar^2}{2I}J(J+1)$$
 - Define the _rotational constant_ $B=\hbar^2/2I$
+- As $L^2$ must have _fixed values_, a _smaller molecule_ must rotate _faster_ to achieve it
 - As the energy eigenfunctions are independent of $m$, $J_z$ has a $2J+1$ fold _degeneracy_
 
 ## Centrifugal distortion

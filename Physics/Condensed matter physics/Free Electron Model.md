@@ -140,6 +140,9 @@ $$K_T=\frac{2}{3}n\varepsilon_F$$
 $$\frac{1}{\tau}=\frac{1}{\tau_\text{phonon}}+\frac{1}{\tau_\text{defect}}$$
 - Interaction _between electrons_ cannot be treated as scattering
 
+- Treat the electrons _semi-classically_, so a _velocity_ can still be defined:
+$$\bm{v}=\frac{\bm{p}}{m}=\frac{\hbar\bm{k}}{m}$$
+
 ### Accounting for scattering
 - After an electron _collides_, the direction is _randomised_, and $\mean{\bm{v}}=0$
 - After some time, the _probability_ that an electron has _not collided_ is $\exp(-t/\tau)$
