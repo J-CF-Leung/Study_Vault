@@ -66,8 +66,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -85,7 +84,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Electrons in solids.md"
+                    "file": "Physics/Condensed matter physics/Semiconductors.md"
                   }
                 }
               }
@@ -102,7 +101,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Electrons in solids.md",
+                    "file": "Physics/Condensed matter physics/Semiconductors.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -220,7 +219,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
+                "file": "Physics/Condensed matter physics/Semiconductors.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -237,7 +236,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
+                "file": "Physics/Condensed matter physics/Semiconductors.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -260,7 +259,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/IB Chemistry/Electrons in solids.md"
+                "file": "Physics/Condensed matter physics/Semiconductors.md"
               }
             }
           },
@@ -292,6 +291,12 @@
   },
   "active": "bdee2333112a0d60",
   "lastOpenFiles": [
+    "Physics/Images/Moving chemical potential.png",
+    "Physics/Images/p-type doping.png",
+    "Pasted image 20230518214829.png",
+    "Physics/Images/n-type doping.png",
+    "Past Papers/IB Chemistry A/IB_A_2015.pdf",
+    "Physics/Condensed matter physics/Semiconductors.md",
     "Pasted image 20230518123847.png",
     "Chemistry/IB Chemistry/Electrons in solids.md",
     "Chemistry/Images/GaAs exciton peak.png",
@@ -300,12 +305,7 @@
     "Chemistry/Images/Donor level transitions.png",
     "Chemistry/Images/Exciton levels.png",
     "Chemistry/Images/Doped n-type bands.png",
-    "Chemistry/Images/Indirect transitions.png",
-    "Chemistry/Images/Direct vs indirect band gaps.png",
-    "Chemistry/Images/Electron promotion.png",
-    "Past Papers/IB Chemistry A/IB_A_2015.pdf",
     "Chemistry/IB Chemistry/Chemical thermodynamics.md",
-    "Physics/Condensed matter physics/Semiconductors.md",
     "Physics/Condensed matter physics/Nearly Free Electron Model.md",
     "Physics/Thermal Physics/Transport phenomena.md",
     "Physics/Thermal Physics/Kinetic Theory of Gases.md",

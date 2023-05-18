@@ -32,13 +32,20 @@ $$\displaylines{\epsilon_0\to\epsilon_r\epsilon_0 \hspace{1cm} m_e\to m_e^*\\ E_
 - As the electrons are _less tightly bound_, at _higher dopant concentrations_, the wavefunctions can overlap and form an _impurity band_
 
 
-### n-type doping
-- Electrons are _donated into the conduction band_
-- Bound states are formed _below the conduction band_, but can still be _ionised into the conduction band_
+### n-type and p-type doping
+- In _n-type_ doping, _electrons_ are _donated into the conduction band_
+- Bound states are formed _below the conduction band_, but the electrons can also be _ionised into the conduction band_ while the dopant atom forms a _cation_
+	- The bound state: the excess elctron _bound to_ a _positive ion_
+![[n-type doping.png]]
 
-### p-type doping
 - Doping with a _p-type_ dopant forms a _hole_
-- The hole can form _bound states above the valence band_, but can still be _ionised_ to give a hole in the valence band
+- The hole can form _bound states above the valence band_, but holes can also be _ionised_ to give a _hole in the valence band_ while the p-type dopant forms an _anion_
+	- The bound state: the _hole_ is _bound to_ a _negative ion_
+![[p-type doping.png]]
+
+- Typically, for $\ce{Si}$, typical dopants are:
+	- n-type: $\ce{P}$ or $\ce{As}$
+	- p-type: $\ce{Al}$ or $\ce{B}$
 
 ![[Donor and acceptor states.png]]
 
@@ -48,17 +55,19 @@ $$\displaylines{\epsilon_0\to\epsilon_r\epsilon_0 \hspace{1cm} m_e\to m_e^*\\ E_
 ## Chemical potential
 - When $\varepsilon=\mu$, with the Fermi-Dirac distribution:
 $$p(\varepsilon=\mu)=\frac{1}{2}$$
+- Consider the _chemical potential_ of the _electrons_ as a function of _temperature_
 
 - In an _n-type_ semiconductor:
-- At _absolute zero_, as the conduction band is _empty_ while the _donor states_ are full, $\mu$ is _just above the donor states_
+- At _absolute zero_, as the conduction band is _empty_ while the _donor states_ are full, $\mu$ is _just below the conduction band_
 - As electrons from the donor states are _excited_ into the conduction band, the _chemical potential moves down_
+![[Moving chemical potential.png]]
 
 - In a _p-type_ semiconductor:
-
-- Thechemical potential _moves up_
+- At _absolute zero_, as the valence band is _full_ while the acceptor states are _empty_, $\mu$ is _just above the valence band_
+- As the electrons from the valence band are _excited_ into the acceptor states, the _chemical potential moves up_
 
 - In both cases, the chemical potential _moves towards the middle of the gap_
-- At _high temperatures_
+- At _high temperatures_, electrons can _be excited from the valence band directly to the conduction band_, so donor/acceptor states are _less important_
 
 # Semiconductor devices
 
