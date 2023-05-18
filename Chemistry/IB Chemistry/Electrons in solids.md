@@ -803,10 +803,12 @@ $$\frac{1}{m_e^*}=-\frac{2\beta a^2}{\hbar^2}\cos(ka)$$
 
 ### Electronic structure
 - In an _n-type_ semiconductor, the electrons from the dopant give a _discrete set of levels_ right under the conduction band
+	- The electrons are effectively _bound_ to the donor atom
 	- The _dilute concentration_ means there is _no overlap_, and there is no band
 - A typical gap between $E_d$ and the conduction band is on the order of $\text{meV}$
 - At room temperature, they can be _excited into the conduction band_
 - Typically, the number of _excited electons from the dopant_ will _greatly exceed_ the number of excited _intrinsic electrons_
+	- The gap between 
 
 - In a _p-type_ semiconductor, the acceptor atoms create _discrete vacancies_ right above the valence band
 - At room temperature, _electrons can be excited onto the acceptor level_
@@ -925,3 +927,76 @@ $$\beta=\frac{\alpha}{1-\alpha}$$
 - By manipulating the _base current_, the transistor can be made into an _amplifier_
 
 # Spectroscopic measurement of electrical properties
+
+## Band gaps in intrinsic semiconductors
+- An electron can _absorb energy_ to be _promoted_ from the _valence band_ into the _conduction band_
+- There is a _minimum absoption energy_ corresponing to the _band gap_
+![[Chemistry/Images/Electron promotion.png]]
+- During promotion, _angular momentum_ of the system must be _conserved_
+- This leads to an _angular momentum selection rule_:
+$$\Delta l=\pm1$$
+- Example: transition from _s-band_ to _p-band_
+	- But no transition _within a band_
+
+- There is also a _linear momentum selection rule_:
+$$\bm{k}_f=\bm{k}_i+\bm{k}_\text{photon}$$
+- $\bm{p}=\hbar\bm{k}$
+- For photons, $E=pc$, and for a band gap of $\sim 1\text{eV}$, $k_p\approx 10^6\text{m}^{-1}$
+
+### Direct band gaps
+- For a typical crystal, $k$ at the _zone boundary_ $\approx 10^9\text{m}^{-1}$
+- Therefore, for _vertical transitions_, one can _approximate_:
+$$\Delta\bm{k}=\bm{k}_f-\bm{k}_i\approx 0$$
+![[Direct vs indirect band gaps.png]]
+
+### Indirect band gaps and phonons
+- For a material where the _lowest separation in energy_ matches the _band gap_, it is a _direct band gap_, where the lowest energy transition is _vertical_
+	- Typically, $\ce{GaAs}$ has a direct band gap
+
+- For some materials, the _lowest energy separation_ also has a _difference in $\bm{k}$
+- These are _indirect band gaps_
+- The difference in $\bm{k}$ are provided by _lattice vibrations_ known as [[Phonons]]
+
+- A typical phonon has energy $\sim k_BT$
+	- Typically _much smaller_ than band gap $(\approx \,25\text{meV})$
+- Given the phonon has _speed_ $c_\text{phon}$:
+$$k_\text{phon}\approx \frac{k_BT}{\hbar c_\text{phon}}$$
+- The speed of a phonon is typically _the speed of sound_ in the material
+- This gives a momentum $\sim 10^9\text{m}^{-1}$, matching the _wavevector at the zone boundary_
+
+- _Indirect_ transitions involving phonons are typically _less likely_
+- Transitions can _generate or eliminate phonons_
+	- _Thermal processes_ can also change phonon number
+
+- Typical absorption profile:
+![[Indirect transitions.png]]
+- Typically, for _light-emitting diodes_, one wants a _direct band gap_ material as the _creation of phonons wastes energy_
+
+## Band gaps in extrinsic semiconductors
+- Consider an _n-type semiconductor_:
+![[Doped n-type bands.png]]
+- The _donor levels_ are approximately [[#Donor levels|hydrogenic]]:
+$$E_n=-\frac{R_\text{H, eff}}{n^2}=-\frac{R_H}{n^2}\frac{m_e^*}{m_e\epsilon_r^2}$$
+- The _transition_ from level $1$ to level $n$:
+$$h\nu_{1\to n}=R_H\frac{m_e^*}{m_e\epsilon_r^2}\left(1-\frac{1}{n^2}\right)$$
+- In _actual experiments_, the frequencies are _about the right order of magnitude_, suggesting the hydrogenic model is _too simplistic_
+	- Typical magnitude: $10^0\,\text{meV}$, in the _infrared_ spectrum
+![[Donor level transitions.png]]
+
+- At _higher temperatures_, one can see a _series of transitions in the optical region_ corresponding to excitations _from the valence band_ into the hydrogenic levels
+
+## Excitons
+- _Excitons_ consist of _electrons and holes bound together_
+- They are created when electrons are _excited_ via _irradiation_, as the _electron and the created hole_ can be _bound together_ and occupy energy levels
+
+- The exciton effectively has the _reduced mass_:
+$$\mu=\frac{m_e^*m_h^*}{m_e^*+m_h^*}$$
+- They can then occupy _hydrogenic energy levels_:
+$$E_n=-\frac{R_{H,\text{eff}}}{n^2}=-\frac{R_H}{n^2}\frac{\mu}{m_e\epsilon_r^2}$$
+- $R_{H,\text{eff}}$ is then the _effective binding energy_ of the exciton
+![[Exciton levels.png]]
+- At _low temperatures_, the exciton transitions can be observed:
+$$h\nu_R=E_h-\frac{R_{H,\text{eff}}}{n^2}$$
+![[Cu2O exciton spectrum.png]]
+- A _low temperature_ is required such that the electrons are not simply promoted _into the conduction band_
+![[GaAs exciton peak.png]]

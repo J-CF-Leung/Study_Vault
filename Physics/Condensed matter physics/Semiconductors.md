@@ -66,12 +66,14 @@ $$p(\varepsilon=\mu)=\frac{1}{2}$$
 
 ### Neutral behaviour
 - Bring _n-type_ and _p-type_ materials into _contact_
+	- They are initially _charge neutral_ 
 - As electrons and holes _diffuse across the barrier_, there is a _depletion region_ formed at the interface as the electrons and holes _cancel out_, and there are _no charge carriers_
 
 - As there is _charge separation_, there is an _electric field_ which will eventually _stop charge carrier flow_
 - There is a _contact potential_ that balances the difference in $\mu$
 
 - Eventually, the _chemical potentials_ will _equalise_ across the system
+![[p-n junction contact.png]]
 
 ### Forward bias
 - A field is applied to _force majority carriers towards the junction_

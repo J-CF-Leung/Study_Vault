@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Condensed matter physics/Nearly Free Electron Model.md",
+                "file": "Physics/Condensed matter physics/Semiconductors.md",
                 "mode": "source",
                 "source": false
               }
@@ -55,7 +55,7 @@
             }
           },
           {
-            "id": "9827dbea12f80f3e",
+            "id": "f56d92abb6b79df1",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -66,7 +66,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -84,7 +85,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/Condensed matter physics/Nearly Free Electron Model.md"
+                    "file": "Chemistry/IB Chemistry/Electrons in solids.md"
                   }
                 }
               }
@@ -101,7 +102,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/Condensed matter physics/Nearly Free Electron Model.md",
+                    "file": "Chemistry/IB Chemistry/Electrons in solids.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -219,7 +220,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Condensed matter physics/Nearly Free Electron Model.md",
+                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -236,7 +237,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Condensed matter physics/Nearly Free Electron Model.md",
+                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -259,7 +260,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Condensed matter physics/Nearly Free Electron Model.md"
+                "file": "Chemistry/IB Chemistry/Electrons in solids.md"
               }
             }
           },
@@ -291,35 +292,35 @@
   },
   "active": "bdee2333112a0d60",
   "lastOpenFiles": [
-    "Physics/Images/Divalent metal charge carriers.png",
-    "Physics/Images/Hole vs eletron movement.png",
-    "Physics/Images/Hole movement.png",
-    "Physics/Images/Hole band.png",
-    "Physics/Images/Electron promotion 1.png",
-    "Physics/Images/Hole movement.png",
-    "Physics/Images/Conductor vs insulator.png",
-    "Physics/Images/Divalent Fermi surfaces.png",
-    "Physics/Images/Divalent metal insulator.png",
-    "Physics/Images/Divalent metal weak potential.png",
-    "Physics/Images/Free electron Fermi contour.png",
-    "Physics/Condensed matter physics/Free Electron Model.md",
-    "Physics/Condensed matter physics/Nearly Free Electron Model.md",
-    "Physics/Condensed matter physics/Semiconductors.md",
+    "Pasted image 20230518123847.png",
+    "Chemistry/IB Chemistry/Electrons in solids.md",
+    "GaAs exciton peak.png",
+    "Chemistry/Images/Cu2O exciton spectrum.png",
+    "Exciton spectrum.png",
+    "Chemistry/Images/Donor level transitions.png",
+    "Chemistry/Images/Exciton levels.png",
+    "Chemistry/Images/Doped n-type bands.png",
+    "Chemistry/Images/Indirect transitions.png",
+    "Chemistry/Images/Direct vs indirect band gaps.png",
+    "Chemistry/Images/Electron promotion.png",
     "Past Papers/IB Chemistry A/IB_A_2015.pdf",
     "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+    "Physics/Condensed matter physics/Semiconductors.md",
+    "Physics/Condensed matter physics/Nearly Free Electron Model.md",
+    "Physics/Thermal Physics/Transport phenomena.md",
+    "Physics/Thermal Physics/Kinetic Theory of Gases.md",
+    "Physics/Condensed matter physics/Free Electron Model.md",
     "Chemistry/IB Chemistry/Molecular spectroscopy.md",
     "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
     "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Physics/IB Physics/Experimental methods and data analysis.md",
-    "Chemistry/IB Chemistry/Electrons in solids.md",
     "Past Papers/IB Physics/2018-19_Part_IB_Physics_A_Paper_2.pdf",
     "Past Papers/IB Physics/2020-21_Part_IB_Physics_A_Paper_2.pdf",
     "Past Papers/IB Physics/2021-22_Part_IB_Physics_A_Paper_2.pdf",
     "Physics/IB Physics/Electromagnetism.md",
     "Past Papers/IB Physics/2021-22_Part_IB_Physics_A_Paper_1.pdf",
     "Past Papers/IB Physics/2017-18_Part_IB_Physics_B_Paper_1.pdf",
-    "Physics/Thermal Physics/Transport phenomena.md",
     "Past Papers/IB Physics/2018-19_Part_IB_Physics_B_Paper_1.pdf",
     "Past Papers/IB Physics/2020-21_Part_IB_Physics_B_Paper_1.pdf",
     "Past Papers/IB Physics/2020-21_Part_IB_Physics_B_Paper_2.pdf",
@@ -329,7 +330,6 @@
     "Chemistry/IB Chemistry/Bonding in molecules.md",
     "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Physics/Quantum Mechanics/1D time-independent Hamiltonians.md",
-    "Physics/Thermal Physics/Kinetic Theory of Gases.md",
     "Physics/Condensed matter physics/Phonons.md",
     "David Morin's Limericks.md",
     "Mathematics/IB Mathematical Methods/Group Theory.md",

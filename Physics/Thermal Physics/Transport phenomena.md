@@ -1,11 +1,14 @@
 - Phenomena related to _transport via gases_
 - Viscosity: _momentum_ transport
 - Thermal conductivity: _heat_ transport
+- Diffusion: _particle_ transport
 
 - The essential _approximations_:
 $$L>>\lambda>>d$$
 - $L$: _container size_, so the _scale_ of the flow is much larger than the mean free path
 - $d$: _molecule diameter_, to avoid _intermolecular interactions_
+
+- All formulas are derived _with this set of assumptions_
 
 # Viscosity
 - Viscosity is a measure of the _resistance of a fluid to a deformation under shear stress_
@@ -21,11 +24,11 @@ $$\tau_{xz}=\frac{F}{A}$$
 $$\tau_{xz}=\eta\frac{d\mean{u_x}}{dz}$$
 
 ## Momentum flux
-- Consider a case where _mean free path_ of the particles is _larger_ than the plate separation
-- As molecules travel in the $+z$ direction, they _move from a layer of lower $\mean{u_x}$ to one of higher $\mean{u_x}$_, hence there is _net momentum transfer_ in the $-x$ direction to the upper layer
+- As molecules _arrive at a layer_ of bulk speed $\mean{u_x}$, they are _thermalised_ to have that speed in the $x-$direction
+- As they then travel in the $+z$ direction, they _move from a layer of lower $\mean{u_x}$ to one of higher $\mean{u_x}$_, hence there is _net momentum transfer_ in the $-x$ direction to the upper layer
 	- Similar, one travelling in the $-z$ direction has the opposite effect
 - Therefore there is some _momentum flux_ $\Pi$ which is _opposite to the velocity gradient_, with a magnitude equal to $\tau_{xz}$:
-$$\Pi=$$
+$$\Pi_z=-\eta\pd{\mean{u_x}}{z}$$
 
 ## Viscosity of a gas
 - Consider molecules travelling at some angle $\theta$ to the $z-$axis at a particular _plane of interest_:
@@ -100,7 +103,7 @@ $$-k^2D=i\omega \Longrightarrow k=\pm(1+i)\sqrt{\frac{\omega}{2D}}$$
 $$T(x,t)=\sum_\omega \exp(i\omega t)\exp\left[(i-1)\sqrt{\frac{\omega}{2D}}x\right]$$
 - If there is only _one frequency_, let the boundary conditions be:
 $$T(0,t)=T_0+\Delta T\cos(\Omega t)$$
-$$T(x,t)=T_0+\Delta T\exp(-x/\delta)...$$
+$$T(x,t)=T_0+\Delta T\exp(-\frac{x}{\delta})\cos\left(\Omega t-\frac{x}{\delta}\right)$$
 - Here, $\delta$ is the _skin depth_, which is _inversely proportional_ to $\sqrt{\Omega}$
 - Hence, _higher frequencies cannot penetrate far_
 - There is also a _phase shift_ in the spatial oscillations compared to those in time
