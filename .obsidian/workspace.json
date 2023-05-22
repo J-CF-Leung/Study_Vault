@@ -9,24 +9,12 @@
         "dimension": 67.78273809523809,
         "children": [
           {
-            "id": "25e8a6053642895c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Physics/Condensed matter physics/Semiconductors.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "9952e3b9bd292db1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Thermal Physics/Transport phenomena.md",
+                "file": "Physics/Condensed matter physics/Semiconductors.md",
                 "mode": "source",
                 "source": false
               }
@@ -50,7 +38,7 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Past Papers/IB Chemistry A/IB_A_2015.pdf"
+                "file": "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_1.pdf"
               }
             }
           },
@@ -60,13 +48,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+                "file": "Physics/Thermal Physics/Kinetic Theory of Gases.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c2e4613cf82416f7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Physics/IB Physics/Electromagnetism.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -84,7 +85,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/Condensed matter physics/Semiconductors.md"
+                    "file": "Chemistry/IB Chemistry/Electrons in solids.md"
                   }
                 }
               }
@@ -101,7 +102,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/Condensed matter physics/Semiconductors.md",
+                    "file": "Chemistry/IB Chemistry/Electrons in solids.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -124,7 +125,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.614500854483359,
+                      "scale": 0.04015038399035772,
                       "close": true
                     }
                   }
@@ -219,7 +220,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Condensed matter physics/Semiconductors.md",
+                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -236,7 +237,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Condensed matter physics/Semiconductors.md",
+                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -259,7 +260,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Condensed matter physics/Semiconductors.md"
+                "file": "Chemistry/IB Chemistry/Electrons in solids.md"
               }
             }
           },
@@ -289,54 +290,53 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "bdee2333112a0d60",
+  "active": "48c2076383aed1b7",
   "lastOpenFiles": [
+    "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_1.pdf",
+    "Past Papers/IB Physics/2013-14_Part_IB_Physics_B_Paper_1.pdf",
+    "Physics/IB Physics/Electromagnetism.md",
+    "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_2.pdf",
+    "Physics/IB Physics/Orbits.md",
+    "Past Papers/IB Physics/2013-14_Part_IB_Physics_B_Paper_2.pdf",
+    "Past Papers/IB Physics/2014-15_Part_IB_Physics_A_Paper_1.pdf",
+    "Physics/Condensed matter physics/Semiconductors.md",
+    "Chemistry/IB Chemistry/Electrons in solids.md",
+    "Physics/Condensed matter physics/Nearly Free Electron Model.md",
+    "Physics/Condensed matter physics/Phonons.md",
+    "Physics/Condensed matter physics/Free Electron Model.md",
+    "Physics/Condensed matter physics/Crystal structure and diffraction.md",
+    "Physics/IB Physics/Elasticity.md",
+    "Physics/Thermal Physics/Transport phenomena.md",
+    "Physics/Thermal Physics/Thermal Radiation.md",
+    "Physics/Thermal Physics/Statistical thermodynamics.md",
+    "Physics/Thermal Physics/Phase transitions.md",
+    "Physics/Thermal Physics/Kinetic Theory of Gases.md",
+    "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md",
+    "Physics/Thermal Physics/Classical Thermodynamics.md",
+    "Physics/Quantum Mechanics/Topics in Quantum Mechanics.md",
+    "Physics/Quantum Mechanics/The failure of classical mechanics.md",
+    "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
+    "Physics/Quantum Mechanics/Quantum statistical mechanics.md",
+    "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
+    "Physics/Quantum Mechanics/Path integrals in quantum mechanics.md",
+    "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
+    "Physics/Quantum Mechanics/Density matrix.md",
+    "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
+    "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_1.pdf",
+    "Past Papers/IB Physics/2012-13_Part_IB_Physics_B_paper_2.pdf",
+    "Past Papers/IB Physics/2012-13_Part_IB_Physics_B_paper_1.pdf",
+    "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_2.pdf",
+    "Past Papers/IB Physics/2015-16_Part_IB_Physics_B_Paper_1.pdf",
+    "Physics/Images/npn transistor.png",
+    "Physics/Images/Direct vs indirect band gaps.png",
+    "Physics/Images/Avalanche breakdown.png",
+    "Physics/Images/Zener diode I-V characteristic.png",
+    "Physics/Images/Forward bias.png",
+    "Physics/Images/Forward reverse bias.png",
     "Physics/Images/Moving chemical potential.png",
     "Physics/Images/p-type doping.png",
     "Pasted image 20230518214829.png",
     "Physics/Images/n-type doping.png",
-    "Past Papers/IB Chemistry A/IB_A_2015.pdf",
-    "Physics/Condensed matter physics/Semiconductors.md",
-    "Pasted image 20230518123847.png",
-    "Chemistry/IB Chemistry/Electrons in solids.md",
-    "Chemistry/Images/GaAs exciton peak.png",
-    "Chemistry/Images/Cu2O exciton spectrum.png",
-    "Exciton spectrum.png",
-    "Chemistry/Images/Donor level transitions.png",
-    "Chemistry/Images/Exciton levels.png",
-    "Chemistry/Images/Doped n-type bands.png",
-    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
-    "Physics/Condensed matter physics/Nearly Free Electron Model.md",
-    "Physics/Thermal Physics/Transport phenomena.md",
-    "Physics/Thermal Physics/Kinetic Theory of Gases.md",
-    "Physics/Condensed matter physics/Free Electron Model.md",
-    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
-    "Physics/Quantum Mechanics/3D time-independent Hamiltonians.md",
-    "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
-    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
-    "Physics/IB Physics/Experimental methods and data analysis.md",
-    "Past Papers/IB Physics/2018-19_Part_IB_Physics_A_Paper_2.pdf",
-    "Past Papers/IB Physics/2020-21_Part_IB_Physics_A_Paper_2.pdf",
-    "Past Papers/IB Physics/2021-22_Part_IB_Physics_A_Paper_2.pdf",
-    "Physics/IB Physics/Electromagnetism.md",
-    "Past Papers/IB Physics/2021-22_Part_IB_Physics_A_Paper_1.pdf",
-    "Past Papers/IB Physics/2017-18_Part_IB_Physics_B_Paper_1.pdf",
-    "Past Papers/IB Physics/2018-19_Part_IB_Physics_B_Paper_1.pdf",
-    "Past Papers/IB Physics/2020-21_Part_IB_Physics_B_Paper_1.pdf",
-    "Past Papers/IB Physics/2020-21_Part_IB_Physics_B_Paper_2.pdf",
-    "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_2.pdf",
-    "Mathematics/IB Mathematical Methods/Partial differential equations.md",
-    "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
-    "Chemistry/IB Chemistry/Bonding in molecules.md",
-    "Chemistry/IB Chemistry/Symmetry in molecules.md",
-    "Physics/Quantum Mechanics/1D time-independent Hamiltonians.md",
-    "Physics/Condensed matter physics/Phonons.md",
-    "David Morin's Limericks.md",
-    "Mathematics/IB Mathematical Methods/Group Theory.md",
-    "Physics/Condensed matter physics/Crystal structure and diffraction.md",
-    "Physics/Thermal Physics/Thermal Radiation.md",
-    "Physics/Quantum Mechanics/The failure of classical mechanics.md",
-    "Physics/Condensed matter physics/Thermal Properties of solids.md",
     "Misc or Personal/What to do.canvas"
   ]
 }

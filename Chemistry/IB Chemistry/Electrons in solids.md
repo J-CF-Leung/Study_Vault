@@ -736,7 +736,7 @@ $$\displaylines{E_c-E_F=\frac{1}{2}E_g \\ \sigma\propto N_e\propto \exp\left(-\f
 - Under typical conditions, as $E_g>>k_BT$, ignore the _linearity_ in $T$
 - One can approximate the _activation energy_ of the process as _half the band gap_
 
-### Statistical mechanics of electrons and holes
+### Equilibrium of electrons and holes
 - The _generation_ of an _electron in the conduction band_, with a _hole in the valence band_ can be modelled as a _"reaction"_:
 $$\cdot\ce{<=>e-+h+}$$
 - $\cdot$ is the _ground state_, with the filled conduction band and empty conduction band at absolute zero
@@ -848,7 +848,16 @@ $$E_n=+\frac{R_{H,\text{eff}}}{n^2}$$
 - At _high temperatures_, the Fermi level will be _somewhere below the acceptor levels_, as the valence band becomes _partially filled_
 
 ### Temperature dependence of conductivity
+- At _low temperatures_, the _donor electrons/acceptor holes_ are steadily _promoted/occupied_
+	- For an _n-type_ semiconductor where $E_c-E_d$ is the _energy difference_ between the conduction band and donor levels:
+$$\sigma\propto\exp\left(-\frac{E_c-E_d}{k_BT}\right)$$
+- This is the _extrinsic region_
 
+- At _higher temperatures_, all electrons/holes from doping _run out_, and conductivity remains _constant_
+- This is the _exhaustion region_
+
+- At _even higher temperatures_, electrons can be promoted directly _from the valence band to the conduction band_, and conductivity increases exponentially again
+- This is the _instrinsic region_
 
 - Therefore, _ideal behaviour_ will show clear separation between the temperature regimes:
 ![[Extrinsic semiconductor conductivity.png]]
@@ -947,7 +956,7 @@ $$\bm{k}_f=\bm{k}_i+\bm{k}_\text{photon}$$
 - For a typical crystal, $k$ at the _zone boundary_ $\approx 10^9\text{m}^{-1}$
 - Therefore, for _vertical transitions_, one can _approximate_:
 $$\Delta\bm{k}=\bm{k}_f-\bm{k}_i\approx 0$$
-![[Direct vs indirect band gaps.png]]
+![[Chemistry/Images/Direct vs indirect band gaps.png]]
 
 ### Indirect band gaps and phonons
 - For a material where the _lowest separation in energy_ matches the _band gap_, it is a _direct band gap_, where the lowest energy transition is _vertical_

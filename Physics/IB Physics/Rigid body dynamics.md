@@ -146,9 +146,6 @@ $$\Omega_b\sin\theta_b=\Omega_s\sin\theta_s$$
 - Spinning around the $2-$axis: _Unstable_, the polhode will make large excursions around the body
 - This is the famous _tennis racket theorem_
 
-### Free precession of triaxial bodies
-
-
 ## The Major Axis Theorem for non-rigid bodies
 - Real objects are _not perfectly rigid_
 - During _free precession_, the _centrifugal forces_ change as $\bm{\omega}$ changes, and the object _deforms_, and _loses energy_

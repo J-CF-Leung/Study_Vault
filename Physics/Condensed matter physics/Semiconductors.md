@@ -36,11 +36,15 @@ $$\displaylines{\epsilon_0\to\epsilon_r\epsilon_0 \hspace{1cm} m_e\to m_e^*\\ E_
 - In _n-type_ doping, _electrons_ are _donated into the conduction band_
 - Bound states are formed _below the conduction band_, but the electrons can also be _ionised into the conduction band_ while the dopant atom forms a _cation_
 	- The bound state: the excess elctron _bound to_ a _positive ion_
+- The bound state is _slightly lower in energy_ from the conduction band due to the _potential of the dopant ion core_
+	- The _relative permittivity_ of the material is $>1$, hence $E_d$ is typically _small_
 ![[n-type doping.png]]
 
 - Doping with a _p-type_ dopant forms a _hole_
 - The hole can form _bound states above the valence band_, but holes can also be _ionised_ to give a _hole in the valence band_ while the p-type dopant forms an _anion_
 	- The bound state: the _hole_ is _bound to_ a _negative ion_
+- - The bound state is _slightly higher in energy_ than the valence band due to the _potential of the dopant ion core_
+	- The _relative permittivity_ of the material is $>1$, hence $E_a$ is typically _small_
 ![[p-type doping.png]]
 
 - Typically, for $\ce{Si}$, typical dopants are:
@@ -73,24 +77,27 @@ $$p(\varepsilon=\mu)=\frac{1}{2}$$
 
 ## p-n junction
 
-### Neutral behaviour
+### Neutral behaviour and the contact potential
 - Bring _n-type_ and _p-type_ materials into _contact_
 	- They are initially _charge neutral_ 
 - As electrons and holes _diffuse across the barrier_, there is a _depletion region_ formed at the interface as the electrons and holes _cancel out_, and there are _no charge carriers_
 
 - As there is _charge separation_, there is an _electric field_ which will eventually _stop charge carrier flow_
-- There is a _contact potential_ that balances the difference in $\mu$
-
-- Eventually, the _chemical potentials_ will _equalise_ across the system
+- The field also _changes the energies of each band_, along with the _chemical potentials_ in each semicondctor
+- Eventually, the _chemical potentials across the system equalise_
 ![[p-n junction contact.png]]
 
-### Forward bias
+### Forward and reverse bias
+- In _forward bias_:
 - A field is applied to _force majority carriers towards the junction_
+- The external potential _cancels out some of the contact potential_, and _lowers chemical potential on the p-side_
 - This gives _good electrical conductivity_
+![[Forward bias.png]]
 
-### Reverse bias
+- In _reverse bias_:
 - A field is applied to _force majority carriers away from the junction_
 - This gives _very poor electrical conductivity_
+![[Forward reverse bias.png]]
 
 ### Generation and recombination currents
 - With a _forward bias_, the majority carriers _diffuse then recombine_ in order to _maintain equilibrium_
@@ -99,15 +106,83 @@ $$p(\varepsilon=\mu)=\frac{1}{2}$$
 - With a _reverse bias_, the _minority carriers_ diffuse and recombine instead
 - This creates a _generation current_
 
-- The addition of a bias increases $\mu$ to $\mu+eV$:
+- As $\epsilon>\mu$, _approximate_ the Fermi-Dirac distribution:
+$$p_0(\varepsilon)\approx\exp[-(\varepsilon-\mu)/k_BT]$$
 
+- The _addition of a bias_ increases $\mu$ to $\mu+eV$, and changes the _distribution_:
 $$p_V(\varepsilon)\approx p_0(\varepsilon)\exp(eV/k_BT)$$
 ### I-V Characteristic
-- At _zero bias_, the currents _cancel_
+- At _zero bias_, the generation and recombination currents _cancel_
 - Bias _does not change_ the generation current $I_{0,e}$
 - A _forward bias_ will allow _a number of electrons_ $\propto \exp(eV/k_BT)$ to _cross_ the junction, making a _recombination current_
 - Hence, the _total current_ varies as:
 $$I=I_0\left[\exp\left(\frac{eV}{k_BT}\right)-1\right]$$
 ![[Diode I-V characteristic.png]]
 
-- Hence, a diode is a _one-way conductor_
+- Hence, a diode is effectively a _one-way conductor_
+- It can act as a _rectifier_ that _only lets current through one way_
+	- An _AC current_ can be made into a _DC signal_ of varying magnitude with time
+
+## Diode breakdown
+- With a _sufficiently large reverse bias_, a p-n junction can _break down_
+- It starts to _conduct in the reverse direction_
+
+### Zener diode
+- A _Zener breakdown_ is caused by _tunnelling_ at a large reverse bias
+- Electrons can _tunnel from the p-type_ into the _conduction band of the n-type_
+
+- This can be _engineered to occur_ at a particular bias, requiring _heavy doping_
+- It can be used as a _voltage reference_
+![[Zener diode I-V characteristic.png]]
+
+### Avalanche diode
+- An _alternative mechanism_ for reverse bias breakdown
+![[Avalanche breakdown.png]]
+- Carriers that are _thermally excited_ within the junction can _gain energy between collisions_
+- This creates _new electron-hole pairs_
+- Hence there can be a _large reverse current_, which can also _dissipate heat_
+
+- It can be used as _voltage references_, as _protection devices_, or _photon detectors_
+	- A photon can _trigger_ an avalanche
+
+## Light Emitting Diodes
+- A _forward bias_ is applied to a p-n junction
+- As _majority carriers recombine_, they _release energy_
+- In a _direct band gap_ material, the _most efficient_ process is to _emit light_
+	- The _wavelength_ is determined by the _size of the band gap_
+
+- A _direct band gap_ means the _smallest energy transition_ is _vertical_, or requires only a _small change in $k$_
+- A typical photon for the transition has _very little $k$_
+
+- An _indrect band gap_ material requires a _change in $k$_ for the smallest energy transition
+- Emission requires the _creation or annihilation_ of a [[Phonons|phonon]]
+- As energy is _dissipated as heat_, this is an _inefficient emission process_
+
+![[Physics/Images/Direct vs indirect band gaps.png]]
+
+## Semiconductor laser
+- In a _laser_, all photons are _coherent_ (have the same phase)
+
+- In _equilibrium_, the _lower energy states_ are much more populated
+- Lasers require _population inversion_, where the electrons are _driven_ to occupy the _higher energy state_
+
+- A _photon_ that _matches_ the energy levels can _interact_ with the electrons to cause _transitions_ to the upper enegry level
+- Hence, this generates _more photons_, which are _coherent_
+
+- Typically, _very heavy doping_ is required
+- This _pushes_ the chemical potential _into the conduction/valence bands_
+- A _strong forward bias_ is applied to a heavily doped p-n junction
+- The forward bias _injects_ carriers to the other side of the junction to _maintain population inversion_
+
+- The junction is _surrounded_ by a reflecting optical cavity
+- At the _interface_, the photons are _emitted_
+
+## Solar cell
+- A solar cell is the _reverse_ of LEDs and semiconductor lasers
+- Photons are _absorbed_ to generate _electron-hole pairs_, which then _drive an external current_
+
+- The _generated carrier pairs_ are _swept out of the junction_ by the field, creating a _photocurrent_
+- The _photocurrent_ then acts as a _forward bias_
+
+## n-p-n transistor
+![[npn transistor.png]]
