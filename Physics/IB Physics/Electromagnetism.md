@@ -1205,6 +1205,7 @@ $$\displaylines{\delta\equiv\sqrt{\frac{2}{\sigma\omega\mu_0\mu}} \\ \bm{E}=\bm{
 - The two currents travel in _opposite directions_, with the same magnitude $I(z)$
 - There is a voltage $V(z)$ between the wires
 - $V$ and $I$ are _functions of both time and position_
+![[Transmission line I-V.png]]
 
 - The system has some inductance $L$ and capacitance $C$ _per unit length_
 - By considering _infinitesimal changes_ in both $V$ and $I$ across $dz$:
@@ -1270,6 +1271,7 @@ $$\frac{dU}{dt}=[IV]_b-[IV]_a$$
 
 - Considering a _load $R$ at the other end_ of a transmission line from a voltage source
 - The source _carries energy away from the source towards the load_
+![[Transmission line with load.png]]
 
 - If $R=Z$, _all power is absorbed_ as $dU/dt=0$, and all power is absorbed
 - If $R\neq Z$, _some power must be reflected_ as $dU/dt\neq0$
@@ -1277,6 +1279,7 @@ $$\frac{dU}{dt}=[IV]_b-[IV]_a$$
 ### Reflection on transmission lines
 - Let there be a terminal load with impedance $Z_t$, from its definition:
 $$\frac{V_t}{I_t}=Z_t$$
+![[Mismatched transmission line.png]]
 - The forward and backwards travelling waves are:
 $$\displaylines{V_i=V_1\exp[-i(kz-\omega t)]\hspace{1.5cm}I_i=I_1\exp[-i(kz-\omega t)] \\ V_r=V_2\exp[-i(-kz-\omega t)]\hspace{1.5cm}I_r=I_2\exp[-i(-kz-\omega t)]}$$
 - Considering _boundary conditions_:
@@ -1288,6 +1291,7 @@ $$r\equiv\frac{V_2}{V_1}=\frac{Z_t-Z}{Z_t+Z} \hspace{1.5cm} t\equiv\frac{V_t}{V_
 ### Input impedances on transmission lines
 - Consider the length of the line to be $a$
 - Assume the _input impedance_ to be $Z$, matched with the transmission line
+![[Mismatched with input.png]]
 - The input and reflected voltages and currents are:
 $$\displaylines{V_i=V_1\exp[-i(kz-\omega t)] \hspace{1.5cm} I_i\equiv V_i/Z \\ V_r=rV_1\exp[-i(-kz-\omega t)] \hspace{1.5cm} I_r\equiv -V_r/Z}$$
 - The impedance $Z_\text{in}$ is defined as:
@@ -1351,6 +1355,8 @@ $$\lambda_c=2a$$
 - Notation for waveguides: $\text{TE}_{mn}$ has mode $m$ in the $x-$direction and $n$ in the $y-$direction
 - _Electric field is always transverse_, while the $\bm{H}$ field has _both $x$ and $z$ components
 	- $\bm{H}$ field _circulates_, giving rise to _currents in the plates_
+
+![[Te10 mode.png]]
 
 ### The general rectangular case
 - $\bm{E}$ can vary with _both $x$ and $y$

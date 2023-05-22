@@ -850,7 +850,7 @@ $$E_n=+\frac{R_{H,\text{eff}}}{n^2}$$
 ### Temperature dependence of conductivity
 - At _low temperatures_, the _donor electrons/acceptor holes_ are steadily _promoted/occupied_
 	- For an _n-type_ semiconductor where $E_c-E_d$ is the _energy difference_ between the conduction band and donor levels:
-$$\sigma\propto\exp\left(-\frac{E_c-E_d}{k_BT}\right)$$
+$$\sigma\propto\exp\left(-\frac{E_c-E_d}{2k_BT}\right)$$
 - This is the _extrinsic region_
 
 - At _higher temperatures_, all electrons/holes from doping _run out_, and conductivity remains _constant_

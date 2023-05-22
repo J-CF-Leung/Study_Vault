@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
+                "file": "Chemistry/IB Chemistry/Symmetry in molecules.md",
                 "mode": "source",
                 "source": false
               }
@@ -38,7 +38,7 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_1.pdf"
+                "file": "Past Papers/IB Physics/2013-14_Part_IB_Physics_B_Paper_1.pdf"
               }
             }
           },
@@ -67,7 +67,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -85,7 +85,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Electrons in solids.md"
+                    "file": "Physics/IB Physics/Electromagnetism.md"
                   }
                 }
               }
@@ -102,7 +102,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Chemistry/IB Chemistry/Electrons in solids.md",
+                    "file": "Physics/IB Physics/Electromagnetism.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -220,7 +220,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
+                "file": "Physics/IB Physics/Electromagnetism.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -237,7 +237,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chemistry/IB Chemistry/Electrons in solids.md",
+                "file": "Physics/IB Physics/Electromagnetism.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -260,7 +260,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chemistry/IB Chemistry/Electrons in solids.md"
+                "file": "Physics/IB Physics/Electromagnetism.md"
               }
             }
           },
@@ -290,17 +290,34 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "48c2076383aed1b7",
+  "active": "c2e4613cf82416f7",
   "lastOpenFiles": [
-    "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_1.pdf",
+    "Physics/Images/Te10 mode.png",
+    "Physics/Images/Mismatched with input.png",
+    "Physics/Images/Mismatched transmission line.png",
+    "Physics/Images/Transmission line with load.png",
+    "Physics/Images/Transmission line I-V.png",
+    "Physics/Thermal Physics/Classical Thermodynamics.md",
     "Past Papers/IB Physics/2013-14_Part_IB_Physics_B_Paper_1.pdf",
-    "Physics/IB Physics/Electromagnetism.md",
-    "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_2.pdf",
-    "Physics/IB Physics/Orbits.md",
-    "Past Papers/IB Physics/2013-14_Part_IB_Physics_B_Paper_2.pdf",
-    "Past Papers/IB Physics/2014-15_Part_IB_Physics_A_Paper_1.pdf",
-    "Physics/Condensed matter physics/Semiconductors.md",
+    "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_1.pdf",
+    "Past Papers/IB Physics/2020-21_Part_IB_Physics_B_Paper_1.pdf",
+    "Past Papers/IB Physics/2018-19_Part_IB_Physics_B_Paper_1.pdf",
+    "Past Papers/IB Physics/2017-18_Part_IB_Physics_B_Paper_1.pdf",
+    "Past Papers/IB Physics/2016-17_Part_IB_Physics_B_Paper_1.pdf",
+    "Past Papers/IB Physics/2015-16_Part_IB_Physics_B_Paper_1.pdf",
+    "Past Papers/IB Physics/2014-15_Part_IB_Physics_B_Paper_1.pdf",
+    "Past Papers/IB Physics/2011-12_Part_IB_Physics_B_Paper_2.pdf",
+    "Past Papers/IB Physics/2012-13_Part_IB_Physics_B_paper_2.pdf",
+    "Chemistry/IB Chemistry/Symmetry in molecules.md",
+    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+    "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Chemistry/IB Chemistry/Electrons in solids.md",
+    "Chemistry/IB Chemistry/Chemical thermodynamics.md",
+    "Chemistry/IB Chemistry/Bonding in molecules.md",
+    "Untitled.md",
+    "Physics/IB Physics/Electromagnetism.md",
+    "Physics/IB Physics/Orbits.md",
+    "Physics/Condensed matter physics/Semiconductors.md",
     "Physics/Condensed matter physics/Nearly Free Electron Model.md",
     "Physics/Condensed matter physics/Phonons.md",
     "Physics/Condensed matter physics/Free Electron Model.md",
@@ -312,31 +329,15 @@
     "Physics/Thermal Physics/Phase transitions.md",
     "Physics/Thermal Physics/Kinetic Theory of Gases.md",
     "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md",
-    "Physics/Thermal Physics/Classical Thermodynamics.md",
     "Physics/Quantum Mechanics/Topics in Quantum Mechanics.md",
     "Physics/Quantum Mechanics/The failure of classical mechanics.md",
     "Physics/Quantum Mechanics/Schrödinger's Wave mechanics.md",
-    "Physics/Quantum Mechanics/Quantum statistical mechanics.md",
-    "Physics/Quantum Mechanics/Quantum Harmonic Oscillator.md",
-    "Physics/Quantum Mechanics/Path integrals in quantum mechanics.md",
-    "Physics/Quantum Mechanics/Fundamental concepts of quantum mechanics.md",
-    "Physics/Quantum Mechanics/Density matrix.md",
-    "Physics/Quantum Mechanics/Angular momentum in quantum mechanics.md",
-    "Past Papers/IB Physics/2013-14_Part_IB_Physics_A_Paper_1.pdf",
-    "Past Papers/IB Physics/2012-13_Part_IB_Physics_B_paper_2.pdf",
-    "Past Papers/IB Physics/2012-13_Part_IB_Physics_B_paper_1.pdf",
-    "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_2.pdf",
-    "Past Papers/IB Physics/2015-16_Part_IB_Physics_B_Paper_1.pdf",
     "Physics/Images/npn transistor.png",
     "Physics/Images/Direct vs indirect band gaps.png",
     "Physics/Images/Avalanche breakdown.png",
     "Physics/Images/Zener diode I-V characteristic.png",
     "Physics/Images/Forward bias.png",
     "Physics/Images/Forward reverse bias.png",
-    "Physics/Images/Moving chemical potential.png",
-    "Physics/Images/p-type doping.png",
-    "Pasted image 20230518214829.png",
-    "Physics/Images/n-type doping.png",
     "Misc or Personal/What to do.canvas"
   ]
 }
