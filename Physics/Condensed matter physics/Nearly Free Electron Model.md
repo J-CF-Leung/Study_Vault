@@ -182,6 +182,8 @@ $$\hbar\frac{d\bm{k}}{dt}=-e\left[\bm{E}+\bm{v}\wedge\bm{B}\right]$$
 $$-e\bm{E}=\hbar\frac{d\bm{k}}{dt}$$
 - The electrons move towards _higher $k-$states_
 - Phonons and defects will _scatter_ the electrons into _empty states_
+![[Nearly free conduction.png]]
+- There is a _net group velocity_ opposite the field
 
 ### Bloch oscillations
 - If the electric field is _strong_, and the scattering processes are _weak_, the occupied states will _move continuously through $k-$space_

@@ -204,7 +204,8 @@ $$\psi_P\propto \frac{\psi_0d^2}{2}\frac{J_1(kd\sin\theta/2)}{kd\sin\theta/2}$$
 
 - This also defines the _angular resolution_ of a telescope from the Rayleigh criterion
 - In geometrical optics, the _approximation_ is that a finite lens can produce a point image
-- In fact, the _angular radius_ of the image is $1.22\lambda/d$
+- In fact, the _angular radius_ of the image is:
+$$\lambda\approx1.22\frac{\lambda}{d}$$
 
 ## Babinet's Principle
 - Consider two _complementary apertures_ $a$ and $b$

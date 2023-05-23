@@ -520,7 +520,7 @@ $$\displaylines{\hat{m}=\frac{\mean{xy}-\mean{x}\mean{y}}{\mean{x^2}-\mean{x}^2}
 - The best fit line is said to go through the _centre of gravity_ of points
 
 - From [[#Combination of random errors|Error propagation]], the errors in these quantities are given by:
-$$\displaylines{\sigma_m^2=\sum_i\left(\pd{\hat{m}}{y_i}\right)^2\sigma^2 \\ \hat{\sigma}^2=\frac{1}{N-2}\sum_i[y_i-(\hat{m}x_i+\hat{c})]^2}$$
+$$\displaylines{\sigma_m^2=\sum_i\left(\pd{\hat{m}}{y_i}\right)^2\hat{\sigma}^2 \\ \hat{\sigma}^2=\frac{1}{N-2}\sum_i[y_i-(\hat{m}x_i+\hat{c})]^2}$$
 - $\hat{\sigma}^2$ quantifies the _deviation of data from the best-fit model_
 - The $N-2$ is the _number of degrees of freedom_ in the model, as there are two parameters
 

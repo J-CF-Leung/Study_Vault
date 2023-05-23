@@ -99,8 +99,14 @@ $$\frac{u+P}{\rho}+\frac{1}{2}v^2+\phi=\text{const.}$$
 
 - This is simply a manifestation of _conservation of energy_, with each term representing a different contribution
 
+- $u+P$ is the [[Classical Thermodynamics#Thermodynamic potentials|specific enthalpy]] $H/V$ of the fluid
+- For a _perfect gas_:
+$$u+P=\frac{\gamma}{\gamma-1}P$$
+
 ### Incompressible flow
 - Density becomes a _constant_
+- _Incompressibility_ means $\gamma\to\infty$, $u\to0$
+	- Incompressibility leads to $C_p\to\infty$
 
 - Using the identity:
 $$(\nabla\wedge\bm{v})\wedge\bm{v}=(\bm{v}\cdot\nabla)\bm{v}-\nabla\left(\frac{1}{2}|\bm{v}|^2\right)$$
@@ -114,6 +120,7 @@ $$(\bm{v}\cdot\nabla)H=0$$
 - This is _Bernoulli's equation for incompressible flow_, stating that $H$ is _constant along a streamline_
 	- Can also be derived from multiplying the result above with $\rho$
 - If the flow is _steady and irrotational_, then it is _constant everywhere_
+	- Hence, the _enthalpy flow_ of a body of fluid is constant
 
 ## Approximations
 - _Incompressible flow_ is defined as:
@@ -247,11 +254,12 @@ $$\rho\frac{D\bm{v}}{Dt}=-\nabla P+\rho\bm{g}+\eta\nabla^2\bm{v}$$
 - This leads to a _diffusion equation_ w.r.t. the fluid element:
 $$\frac{1}{3}\lambda_cv_T\nabla^2Q=\frac{DQ}{Dt}$$
 	- Factor of $1/3$: 3 degrees of freedom
-- Thus, the _kinematic viscosity_ is defined as:
+	- Can be derived from the [[Kinetic Theory of Gases]]
+- The _kinematic viscosity_ is defined as:
 $$\nu\equiv\frac{\eta}{\rho}=\frac{1}{3}\lambda_cv_T$$
 
 ## Boundary layers
-- Boundary condition for _surface of solid body_: No slip
+- Boundary condition for _surface of solid body_: No slip, hence $v$ matches the body
 - There must be a _boundary layer_ with a _velocity gradient_
 - This region must have some _vorticity_
 ![[Boundary layer.png]]
