@@ -1283,7 +1283,7 @@ $$\frac{V_t}{I_t}=Z_t$$
 - The forward and backwards travelling waves are:
 $$\displaylines{V_i=V_1\exp[-i(kz-\omega t)]\hspace{1.5cm}I_i=I_1\exp[-i(kz-\omega t)] \\ V_r=V_2\exp[-i(-kz-\omega t)]\hspace{1.5cm}I_r=I_2\exp[-i(-kz-\omega t)]}$$
 - Considering _boundary conditions_:
-$$V_t=V_i+V_r \hspace{1.5cm} I_t=I_i+I_r$$
+	$$V_t=V_i+V_r \hspace{1.5cm} I_t=I_i+I_r=\frac{V_t}{Z_t}$$
 - Letting the $z=0$ at the load:
 $$r\equiv\frac{V_2}{V_1}=\frac{Z_t-Z}{Z_t+Z} \hspace{1.5cm} t\equiv\frac{V_t}{V_1}=1+r=\frac{2Z_t}{Z_t+Z}$$
 
@@ -1294,7 +1294,7 @@ $$r\equiv\frac{V_2}{V_1}=\frac{Z_t-Z}{Z_t+Z} \hspace{1.5cm} t\equiv\frac{V_t}{V_
 ![[Mismatched with input.png]]
 - The input and reflected voltages and currents are:
 $$\displaylines{V_i=V_1\exp[-i(kz-\omega t)] \hspace{1.5cm} I_i\equiv V_i/Z \\ V_r=rV_1\exp[-i(-kz-\omega t)] \hspace{1.5cm} I_r\equiv -V_r/Z}$$
-- The impedance $Z_\text{in}$ is defined as:
+- The _input impedance_ $Z_\text{in}$ is _defined_ as:
 $$Z_\text{in}=\frac{V_i+V_r}{I_i+I_r}\Bigg|_{z=-a}=\frac{e^{ika}+re^{-ika}}{e^{ika}-re^{-ika}}Z$$
 - From the definition of $r$, one can show that:
 $$\frac{Z_\text{in}}{Z}=\frac{Z_t\cos ka+iZ\sin ka}{Z\cos ka+iZ_t\sin ka}$$
@@ -1323,7 +1323,8 @@ $$\frac{Z_\text{in}}{Z}=\frac{Z_t\cos ka+iZ\sin ka}{Z\cos ka+iZ_t\sin ka}$$
 
 - Consider 2 plane, $y-$polarised waves with wavevectors at angles $\pm\theta$ to the $z-$axis
 $$\bm{k}_1=k(\bm{\hat{x}}\sin\theta+\bm{\hat{z}}\cos\theta) \hspace{1.5cm} \bm{k}_2=k(-\bm{\hat{x}}\sin\theta+\bm{\hat{z}}\cos\theta)$$
-- It can easily be proven that the combination of the waves is:
+![[Plane wave pairs.png]]
+- It can easily be proven that the _combination_ of the waves is:
 $$E_y=2iE_0\exp[i(kz\cos\theta-\omega t)]\sin(kx\sin\theta)$$
 - There are _planes of constant $x$_ where the _electric field vanishes_
 - The wave _propagates in the $z-$direction while being standing in the $x-$direction_
@@ -1348,7 +1349,7 @@ $$k_\text{eff}^2=k^2-\frac{m^2\pi^2}{a^2}$$
 - There is a _critical wavelength_, which wavelengths in the waveguide must be _under_
 $$\lambda_c=2a$$
 ### Rectangular waveguides
-- As the field is $y-$polarised, the guide can be _completely closed_ by placing plates in _planes of constant $y$_ so there is no parallel field
+- As the field is $y-$polarised, the guide can be _completely closed_ by placing plates in _planes of constant $y$_ while ensuring there is _no parallel field_
 - Since $H_y=0$, let any 2 plates be placed at $y=0$ and $y=b$
 - As the waveguide is closed, there can be _no voltage difference_ between plates
 

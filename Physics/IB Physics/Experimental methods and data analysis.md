@@ -303,7 +303,9 @@ $$s(t)=x(t)c(t) \iff \tilde{S}(\nu)=\frac{1}{\sqrt{2\pi}}\tilde{X}(\nu)*C(\nu)$$
 - If the signal is _noisy_, there is no point sampling so finely
 
 - If there are $2^N$ quantising bins, it is known as _N-bit sampling_
-- If one _oversamples_ with a frequency _several times above Nyquist rate_, this allows _averaging_ to _reduce noise_
+- If one _oversamples_ with a frequency _factor of $N$ above Nyquist rate_, this allows _averaging_ to improve the _resolution_ by $\sqrt{N}$
+
+- Overall, a sampling of $N$ times the normal rate will _reduce the signal-to-noise ratio_ by $\sqrt{N}$
 
 ## Sampling duration
 - The Nyquist criterion requires _two samples per cycle_ for the _highest frequency_
