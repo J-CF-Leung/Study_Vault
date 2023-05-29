@@ -10,7 +10,8 @@
 
 - The element is the _generator_ of the operation
 
-## Types of symmetry elements
+## Types of symmetry elements 
+
 | Element                            | Operation                  | Symbol   |
 | ---------------------------------- | -------------------------- | -------- |
 | Identity                           | Identity                   | $E$      |

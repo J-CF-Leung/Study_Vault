@@ -96,7 +96,8 @@ $$\ket{\Psi_\text{left}}=\begin{pmatrix}A \\ -Ai \end{pmatrix} \hspace{2cm} \ket
 $$\ket{\Psi}=\begin{pmatrix} A \\ B\,\exp(i\phi)\end{pmatrix}$$
 
 # Impedance and power
-- Impedance for any system is defined as a _ratio of a driving force to a flow or velocity_
+- Impedance for any system is defined as a _ratio of a driving force to a flow or velocity_:
+$$Z=\frac{\text{Force}}{\text{Resultant velocity response}}$$
 - For a transverse wave, the velocity response is the _transverse response_ $\dot{\psi}$
 
 - The power input is the _transverse force_ $F$ times the _transverse velocity_ $\dot{\psi}$

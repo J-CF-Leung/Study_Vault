@@ -431,9 +431,11 @@ $$\displaylines{\mean{r}=\lambda \\ \text{Var}(r)=\lambda}$$
 
 - Since each pulse is short, the _frequency spectrum is approximately flat_ (white)
 - If $N$ electrons arrive in random during $\Delta t$, there is a _current fluctuation_ $\sqrt{N}e/\Delta t$
+	- The _Poisson error_ in $N$ is $\sqrt{N}$
 - The _average current_ is $Ne/\Delta t$
 - If there is a range of frequencies $\Delta\nu=1/\Delta t$, then:
 $$\mean{\Delta I^2}\approx 2I_\text{av}e\Delta\nu$$
+- The _factor of 2_ is approximate and from a more rigorous derivation
 
 ## The Gaussian distribution
 - The distribution is:
