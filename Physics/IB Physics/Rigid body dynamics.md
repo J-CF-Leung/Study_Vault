@@ -220,7 +220,7 @@ $$\dot{\phi}=\frac{J_3\pm\sqrt{J_3^2-4I_1mgh\cos\theta}}{2I_1\cos\theta}$$
 
 - At the gyroscopic limit, the _two possible precession frequencies_ $\dot{\phi}$
 - _Slow precession_, $\dot{\phi}^2$ is neglected:
-$$\dot{\phi}\approx\frac{mgh}{I_3}$$
+$$\dot{\phi}\approx\frac{mgh}{J_3}$$
 - _Fast precession_, $mgh$ couple term is neglected:
 $$\dot{\phi}\approx\frac{J_3}{I_1\cos\theta}=\Omega_s$$
 	- Since the couple is negligible, it approaches _free precession_, hence $\dot{\phi}\approx \Omega_s$

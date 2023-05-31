@@ -435,4 +435,5 @@ $$\psi=A\sin\left(\frac{n\pi v}{b}y\right)\exp(i\omega t)\exp(\pm|k_x|x)$$
 - There is _no net power flow slong the guide_
 - An incident wave on the guide _will be perfectly reflected_, forming a standing wave
 
-- If there is a second discontinuity, the wave can be transmitted _beyond the guide_
+- If there is a _second discontinuity_, the wave can be transmitted _beyond the guide_
+	- Analagous to [[1D time-independent Hamiltonians#High barrier and tunnelling|tunnelling]]

@@ -438,6 +438,7 @@ $$\psi_\pm=\frac{1}{\sqrt{2}}[\psi_a(1)\psi_b(2)\pm\psi_a(2)\psi_b(1)]$$
 - Due to the continuity of $\psi$, for small $r_{12}$ _it is much more likely to find two electrons in a singlet state_, this is the _Fermi hole_
 - Repulsion potential is inversely proportional to $r_{12}$
 - Average repulsion energy is _substantially less for electrons of triplet states_
+![[Fermi hole.png]]
 
 # The Helium atom
 - The $1s^2$ configuration can _only accommodate a singlet state_
@@ -454,7 +455,7 @@ $$\braket{\frac{1}{r_{12}}}_\pm=\braket{\Psi_\pm|\frac{1}{r_{12}}|\Psi_\pm}=\bra
 $$\displaylines{\braket{\frac{1}{r_{12}}}_\pm=J\pm K \\ J=\int\int \psi_{1s}(1)\psi_{2s}(2)\frac{1}{r_{12}}\psi_{1s}(1)\psi_{2s}(2)\,d^3\bm{r}_1d^3\bm{r}_2=\int\int |\psi_{1s}(1)|^2|\psi_{2s}(2)|^2\frac{1}{r_{12}}\,d^3\bm{r}_1\,d^3\bm{r}_2 \\ K=\int\int \psi_{1s}(1)\psi_{2s}(2)\frac{1}{r_{12}}\psi_{1s}(2)\psi_{2s}(1)\,d^3\bm{r}_1\,d^3\bm{r}_2 }$$
 - $J$ is the _Coulomb integral_, quantifying the _classical_ electron repulsion
 - $K$ is the _exchange integral_, resulting from the particles being indistinguishable, it can be understood as an "overlap density" of $\psi_{1s}\psi_{2s}$
-	- It is always _positive_, but the _sign_ of its contribution depends on whether the _spin_ wave function is a _triplet_ or a _singlet_
+	- It is always _positive_, but the _sign of its contribution_ depends on whether the _spin_ wave function is a _triplet_ or a _singlet_
 
 - The 3 triplet states have a _lower energy_ than the singlet state due to the Fermi hole
 

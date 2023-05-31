@@ -97,10 +97,11 @@ $$\mu=\alpha_0E_0\sin2\pi\nu t+\frac{1}{2}\beta E_0\left\{\cos2\pi(\nu-\nu_m)t-\
 - Quantities in _wavenumbers_ with units of $\text{cm}^{-1}$ are denoted with a tilde ~
 - $\tilde{c}$ is the speed of light in $\text{cm s}^{-1}$
 
-- Branches of emission lines:
+- Branches of emission lines: 
+
 | $\Delta J$        | $-2$ | $-1$ | $0$ | $+1$ | $+2$ |
 | ----------------- | ---- | ---- | --- | ---- | ---- |
-| Naming convention | O    | P    | Q   | R    | S     |
+| Naming convention | O    | P    | Q   | R    | S    |
 
 
 # Rotational microwave spectroscopy

@@ -366,6 +366,7 @@ $$A_{1g}\oplus B_{1g}\oplus E_u$$
 - The total component is obtained from _adding contributions from separate orbitals_
 - 1D $\Sigma$ IRs have $\lambda=0$,while 2D $\Pi$ IRs have $\lambda=\pm1$
 - The _total orbital angular momentum component_ is denoted $\Lambda$:
+
 | $\Lambda$ | $0$      | $1$   | $2$ |
 | --------- | -------- | ----- | --- |
 | Letter    | $\Sigma$ | $\Pi$ | $\Delta$    |
