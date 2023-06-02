@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/IB Physics/Fluid mechanics.md",
+                "file": "Physics/Condensed matter physics/Free Electron Model.md",
                 "mode": "source",
                 "source": false
               }
@@ -50,12 +50,11 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Past Papers/IB Chemistry A/IB_A_2020.pdf"
+                "file": "Past Papers/IB Physics/2017-18_Part_IB_Physics_A_Paper_2.pdf"
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       },
       {
         "id": "a6c4709e929bd0bb",
@@ -73,7 +72,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Past Papers/IB Chemistry A/IB_A_2020.pdf"
+                    "file": "Physics/Condensed matter physics/Free Electron Model.md"
                   }
                 }
               }
@@ -90,7 +89,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Past Papers/IB Chemistry A/IB_A_2020.pdf",
+                    "file": "Physics/Condensed matter physics/Free Electron Model.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -208,7 +207,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Past Papers/IB Chemistry A/IB_A_2020.pdf",
+                "file": "Physics/Condensed matter physics/Free Electron Model.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -225,7 +224,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Past Papers/IB Chemistry A/IB_A_2020.pdf",
+                "file": "Physics/Condensed matter physics/Free Electron Model.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -248,7 +247,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Past Papers/IB Chemistry A/IB_A_2020.pdf"
+                "file": "Physics/Condensed matter physics/Free Electron Model.md"
               }
             }
           },
@@ -278,37 +277,37 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7328f3ba81e6e4fa",
+  "active": "9952e3b9bd292db1",
   "lastOpenFiles": [
-    "Past Papers/IB Chemistry A/IB_A_2019.pdf",
-    "Chemistry/IB Chemistry/Bonding in molecules.md",
-    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
-    "Physics/IB Physics/Fluid mechanics.md",
-    "Past Papers/IB Physics/2018-19_Part_IB_Physics_B_Paper_1.pdf",
-    "Past Papers/IB Physics/2018-19_Part_IB_Physics_B_Paper_2.pdf",
     "Past Papers/IB Physics/2017-18_Part_IB_Physics_A_Paper_2.pdf",
+    "Physics/Condensed matter physics/Free Electron Model.md",
+    "Physics/IB Physics/Optics.md",
+    "Physics/IB Physics/Waves.md",
+    "Physics/IB Physics/Electromagnetism.md",
+    "Past Papers/IB Physics/2018-19_Part_IB_Physics_B_Paper_1.pdf",
+    "Past Papers/IB Physics/2021-22_Part_IB_Physics_B_Paper_1.pdf",
+    "Past Papers/IB Physics/2020-21_Part_IB_Physics_B_Paper_1.pdf",
+    "Physics/IB Physics/Orbits.md",
+    "Physics/IB Physics/Fluid mechanics.md",
+    "Past Papers/IB Physics/2017-18_Part_IB_Physics_B_Paper_1.pdf",
+    "Chemistry/IB Chemistry/Bonding in molecules.md",
+    "README.md",
+    "Past Papers/IB Chemistry A/IB_A_2020.pdf",
+    "Past Papers/IB Chemistry A/IB_A_2019.pdf",
+    "Chemistry/IB Chemistry/Molecular spectroscopy.md",
+    "Past Papers/IB Physics/2018-19_Part_IB_Physics_B_Paper_2.pdf",
     "Past Papers/IB Physics/2021-22_Part_IB_Physics_A_Paper_2.pdf",
     "Past Papers/IB Physics/2020-21_Part_IB_Physics_A_Paper_2.pdf",
-    "Past Papers/IB Physics/2018-19_Part_IB_Physics_A_Paper_2.pdf",
-    "Past Papers/IB Physics/2021-22_Part_IB_Physics_A_Paper_1.pdf",
-    "Past Papers/IB Physics/2016-17_Part_IB_Physics_A_Paper_2.pdf",
-    "Past Papers/IB Physics/2016-17_Part_IB_Physics_A_Paper_1.pdf",
     "Physics/IB Physics/Oscillations.md",
     "Physics/Condensed matter physics/Semiconductors.md",
     "Chemistry/IB Chemistry/Molecular quantum mechanics.md",
     "Chemistry/Images/Fermi hole.png",
     "Physics/IB Physics/Rigid body dynamics.md",
     "Chemistry/IB Chemistry/Chemical thermodynamics.md",
-    "Physics/IB Physics/Waves.md",
-    "Physics/IB Physics/Electromagnetism.md",
     "Physics/IB Physics/Elasticity.md",
-    "Physics/IB Physics/Optics.md",
     "Physics/Condensed matter physics/Nearly Free Electron Model.md",
-    "Physics/IB Physics/Orbits.md",
-    "README.md",
     "Physics/Condensed matter physics/Crystal structure and diffraction.md",
     "Physics/Condensed matter physics/Phonons.md",
-    "Physics/Condensed matter physics/Free Electron Model.md",
     "Physics/IB Physics/Experimental methods and data analysis.md",
     "Chemistry/IB Chemistry/Symmetry in molecules.md",
     "Physics/Images/Plane wave pairs.png",

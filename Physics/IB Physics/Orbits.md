@@ -111,6 +111,7 @@ $$J^2=Amr_0$$
 ## Non-elliptical orbits
 - From above, eccentricity can be expressed in terms of _energy and angular momentum_:
 $$e^2=1+\frac{2EJ^2}{mA^2}$$
+
 | Eccentricity | Orbit      | Energy              |
 | ------------ | ---------- | ------------------- |
 | $e=0$        | Circular   | $-mA^2/(2J^2)$ |

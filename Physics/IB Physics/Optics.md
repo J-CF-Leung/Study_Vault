@@ -366,7 +366,7 @@ $$\braket{I}\propto\frac{1}{2}\braket{a_1^2}+\frac{1}{2}\braket{a_2^2} +\braket{
 - With $\omega_1=\omega_2$, the intensity _averaged over response time_ is:
 $$\mean{I}=\frac{1}{2}\mean{a_1^2}+\frac{1}{2}\mean{a_2^2}+\mean{a_1a_2\Re{\left[e^{i\delta}\right]}}$$
 - Here, $\delta=(\phi_1-\phi_2)=kx$ is the _phase difference_ between the two beams, where $x$ is the _path difference_
-	- The path difference is _twice_ the difference in the distances of the two mirrors
+	- The path difference is _twice the difference in the distances of the two mirrors_
 - If the beams have equal intensities $I=I_0/2$:
 $$I(x)=I_0\left(1+\Re\left[e^{ikx}\right]\right)$$
 - $x$ is a _function of positions of the mirrors and beamsplitter_
@@ -410,8 +410,8 @@ $$\text{Visibility}=\frac{I_\text{max}-I_\text{min}}{I_\text{max}+I_\text{min}}$
 - At the _first zero_ of the envelope, the _fringe contrast goes to zero_, and this can be used to find $\Delta k$
 - The _spectral resolution_ depends on the _range of $x$_ and whether or not _a full envelope can be seen_, hence $\Delta k$ measured
 
-- It can be shown that for a _maximum separation_ of points on a wavefront, $w$, the resolution is:
-$$\frac{\Delta\lambda}{\lambda}=\frac{\lambda}{w}$$
+- It can be shown that for a _maximum separation_ of points on a wavefront, $w=2\Delta x$, the resolution is:
+$$\left|\frac{\Delta\lambda}{\lambda}\right|=\frac{\Delta k}{k}=\frac{2\pi}{w}\frac{\lambda}{2\pi}=\frac{\lambda}{w}$$
 - Analagous to the [[#Resolution|resolution for a diffraction grating]], which also depends on _maximum separation between points on the wavefront_
 
 

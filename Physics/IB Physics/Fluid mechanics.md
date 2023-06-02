@@ -146,6 +146,7 @@ $$K=\oint_\Gamma\bm{v}\cdot\,d\bm{l}$$
 $$K=\int\bm{\omega}\cdot\,d\bm{S}$$
 - By _applying the convective derivative to both sides_, and using _Euler's equation_:
 $$\frac{DK}{Dt}=\oint \nabla\left(-\frac{P}{\rho}-\phi_g+\frac{1}{2}u^2\right)\cdot d\bm{l}=0$$
+	- The derivative also applies to $d\bm{l}$
 - Hence, _vortex lines are conserved_, and _moves with the fluid_
 	- For an _ideal fluid_
 
@@ -265,5 +266,8 @@ $$\nu\equiv\frac{\eta}{\rho}=\frac{1}{3}\lambda_cv_T$$
 ![[Boundary layer.png]]
 - This can lead to _vortex shedding_
 
-## Reynolds number
-- Let there be some
+## Reynolds number and drag force
+- A viscous fluid flowing at speed $v$ will experience _intertial stress_ $\sim\rho v^2$ and _viscous stress_ $\eta v/L$, where $L$ is a _characteristic length scale_
+- Define the _Reynolds number_ $N_R$:
+$$N_R=\frac{\rho vL}{\eta}$$
+- For a _low Reynolds number flow_
