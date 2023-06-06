@@ -727,7 +727,34 @@ $$K_c=\frac{f_\ce{e}f_{\ce{M+}}}{f_\ce{M}}\frac{1}{c^o}\exp\left(-\frac{E_I}{kT}
 $$K_c=\left(\frac{2\pi m_e kT}{h^2}\right)^{3/2}\frac{2g_{0,\ce{M+}}}{g_{0,\ce{M}}}\exp\left(-\frac{E_I}{kT}\right)$$
 
 ## Adsorption of a gas and the Langmuir isotherm
+- Consider the _adsorption_ of a gas onto some surface
+- Assumptions:
+	- The surface has a _fixed number_ of sites $M$, which can only absorb _one molecule each_
 
+- Let there be $N$ adsorbed molecules at one time
+- In _equilibrium_, the _rates of adsorption and desorption are equal_
+- The rate of adsorption is proportional to pressure, hence one can write:
+$$k_a(M-N)p=k_dN$$
+- Defining $\theta=N/M$ as the _proportion of sites occupied_:
+$$\theta=\frac{K_\text{ads}p}{1+K_\text{ads}p} \hspace{1cm} K_\text{ads}=\frac{k_a}{k_d}$$
+- At _large pressures_, or $pK_\text{ads}>>1$, _most sites are occupied_
+
+- At equilibrium, the _chemical potentials are equal_:
+$$\mu(\text{ads})=\mu(\text{g})$$
+- For the _free gas_, assume it is _monoatomic_, hence:
+$$\mu(\text{g})=-kT\left(\frac{q_\text{trans}}{N_\text{gas}}\right)+\varepsilon_\text{free}^0=-kT\ln\left(\frac{kT}{p\Lambda^3}\right)+\varepsilon_\text{free}^0$$
+- As for the _adsorbed gas_, consider the _number of ways $N$ molecules can be adsorbed_, and assume they _all have the same energy_:
+$$Q_N=\frac{M!}{N!(M-N)!}$$
+- Then the chemical potential can be derived:
+$$\displaylines{A=-kT\ln Q_N \\ \mu(\text{ads})=\left(\pd{A}{N}\right)_V+\varepsilon_\text{ads}^0=kT\ln\left(\frac{\theta}{1-\theta}\right)+\varepsilon_\text{ads}^0}$$
+- Rearranging, this gives:
+$$\displaylines{\Delta\varepsilon^0=\varepsilon_\text{ads}^0-\varepsilon_\text{free}^0 \\ \theta=\frac{bp}{1+bp} \hspace{1cm} b=\frac{\Lambda^3}{kT}\exp\left(-\frac{\Delta\varepsilon^0}{kT}\right)}$$
+- If the molecules had _internal degrees of freedom_, the form of $\theta$ would likely be different
+
+- As $\Lambda=h/\sqrt{2\pi mkT}$, $b$ _decreases for larger atoms_
+	- This is an _entropic effect_ as the energy levels of the gas are _closer_ and its entropy increases
+- In most cases, the _exponential term dominates_ in $b$
+- As $\Delta\varepsilon^0$ becomes _more negative_, $b$ increases
 
 # Kinetics
 - Thermodynamics deals with _what the equilibrium state is like_

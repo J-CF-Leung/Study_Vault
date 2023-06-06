@@ -38,7 +38,7 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Past Papers/IB Chemistry A/IB_A_2016.pdf"
+                "file": "Past Papers/IB Chemistry A/IB_A_2017.pdf"
               }
             }
           },
@@ -276,10 +276,11 @@
   },
   "active": "48c2076383aed1b7",
   "lastOpenFiles": [
+    "Chemistry/IB Chemistry/Electrons in solids.md",
+    "Past Papers/IB Chemistry A/IB_A_2017.pdf",
     "Past Papers/IB Chemistry A/IB_A_2016.pdf",
     "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Physics/IB Physics/Electromagnetism.md",
-    "Chemistry/IB Chemistry/Electrons in solids.md",
     "Physics/Thermal Physics/Transport phenomena.md",
     "Past Papers/IB Chemistry A/IB_A_2015.pdf",
     "Past Papers/IB Chemistry A/IB_A_2014.pdf",
@@ -303,7 +304,6 @@
     "Physics/Condensed matter physics/Crystal structure and diffraction.md",
     "Physics/IB Physics/Oscillations.md",
     "Past Papers/IB Physics/2014-15_Part_IB_Physics_A_Paper_2.pdf",
-    "Past Papers/IB Physics/2015-16_Part_IB_Physics_A_Paper_2.pdf",
     "Physics/IB Physics/Orbits.md",
     "Physics/IB Physics/Fluid mechanics.md",
     "README.md",
