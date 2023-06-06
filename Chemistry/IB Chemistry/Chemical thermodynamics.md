@@ -750,6 +750,7 @@ $$\displaylines{A=-kT\ln Q_N \\ \mu(\text{ads})=\left(\pd{A}{N}\right)_V+\vareps
 - Rearranging, this gives:
 $$\displaylines{\Delta\varepsilon^0=\varepsilon_\text{ads}^0-\varepsilon_\text{free}^0 \\ \theta=\frac{bp}{1+bp} \hspace{1cm} b=\frac{\Lambda^3}{kT}\exp\left(-\frac{\Delta\varepsilon^0}{kT}\right)}$$
 - If the molecules had _internal degrees of freedom_, the form of $\theta$ would likely be different
+- This is the _same form_ as from the kinetics argument
 
 - As $\Lambda=h/\sqrt{2\pi mkT}$, $b$ _decreases for larger atoms_
 	- This is an _entropic effect_ as the energy levels of the gas are _closer_ and its entropy increases
