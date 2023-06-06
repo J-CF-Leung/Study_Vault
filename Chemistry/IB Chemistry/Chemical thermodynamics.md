@@ -683,8 +683,7 @@ $$f=\frac{q}{V}=\frac{q_\text{trans}}{V} q_\text{rot} q_\text{vib} q_\text{elec}
 - For convenience, take $q_\text{vib}$ _from the bottom of the vibrational energy well_, which, relative to the dissociated atoms, has the _ground state electronic energy_:
 $$q_\text{vib}=\frac{\exp(-\theta_\text{vib}/2T)}{1-\exp(-\theta_\text{vib}/T)}$$
 
-- Then, defining the _difference in ground state electronic energy_:
-	$$\Delta \varepsilon_0=\nu_M\varepsilon^{0,M}+\nu_N\varepsilon^{0,N}-\nu_A \varepsilon^{0,A}-\nu_B\varepsilon^{0,B}$$
+- Then, defining the _difference in ground state electronic energy_: $$\Delta \varepsilon_0=\nu_M\varepsilon^{0,M}+\nu_N\varepsilon^{0,N}-\nu_A \varepsilon^{0,A}-\nu_B\varepsilon^{0,B}$$
 	- This takes into account the _energy zeroes in_ $q_\text{elec}$
 
 - One can then _rewrite concentrations in terms of $\mu$_, then find $K_c$:
@@ -717,6 +716,15 @@ $$K_c=\frac{f_\ce{A}^2}{f_\ce{A_2}}\frac{1}{c^⦵}\exp\left(-\frac{D_e}{kT}\righ
 - Measuring energy _relative to that of two dissociated atoms_, $\Delta\varepsilon_0=D_e$
 
 ### Example: Ionisation of atoms
+- Consider the _gas phase ionisation_ of a metal ion:
+$$\ce{M(g)<=>M+(g) +e-}$$
+- The difference in ground state energies is simply the _ionisation energy_ $E_I$:
+$$K_c=\frac{f_\ce{e}f_{\ce{M+}}}{f_\ce{M}}\frac{1}{c^o}\exp\left(-\frac{E_I}{kT}\right)$$
+- The _translational_ partition functions of the atom and the ion _approximately cancel_
+- One only has to consider their _electronic ground state degeneracies_
+- For the electron, its degeneracy is 2 due to _spin_
+- Taking its translational partition function into account as well:
+$$K_c=\left(\frac{2\pi m_e kT}{h^2}\right)^{3/2}\frac{2g_{0,\ce{M+}}}{g_{0,\ce{M}}}\exp\left(-\frac{E_I}{kT}\right)$$
 
 ## Adsorption of a gas and the Langmuir isotherm
 
@@ -879,3 +887,10 @@ $$E_a=\Delta_rH^{⦵,\ddagger}+(1+\Delta\nu)RT\;\;\;\text{ in a gas}$$
 $$k_\text{2nd}=\left[\frac{kT}{[]^⦵h}\exp\left(\frac{\Delta_r S^{⦵,\ddagger}}{R}+1\right)\right]\exp\left(-\frac{E_a}{RT}\right)$$
 
 ### Volume of activation
+- Pressure of _gas phase reactions_ directly affects concentration and rate
+- For a _reaction in solution_, at _sufficiently high pressures_, rate can be affected
+	- The largest changes often involve _reactions with ions_
+- From the Master equation:
+$$\displaylines{dG=Vdp-S\,dT \\ d(\Delta_r G^\ddagger)=(\Delta_rV^\ddagger)\,dp-(\Delta_rS^\ddagger)\,dT \\ \left(\pd{\Delta_r G^\ddagger}{p}\right)_T=\Delta_r V^\ddagger}$$
+- Using the Eyring equation:
+$$\left(\pd{\Delta_r G^\ddagger}{p}\right)_T = \Delta_r V^\ddagger}$$

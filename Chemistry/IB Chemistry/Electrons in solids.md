@@ -738,7 +738,7 @@ $$\displaylines{E_c-E_F=\frac{1}{2}E_g \\ \sigma\propto N_e\propto \exp\left(-\f
 
 ### Equilibrium of electrons and holes
 - The _generation_ of an _electron in the conduction band_, with a _hole in the valence band_ can be modelled as a _"reaction"_:
-$$\cdot\ce{<=>e-+h+}$$
+$$\cdot\ce{<=>e- +h+}$$
 - $\cdot$ is the _ground state_, with the filled conduction band and empty conduction band at absolute zero
 	- It is _non-degenerate_ and _immobile_, hence it is _ignored_ when calculating $K_c$
 - Consider the [[Chemical thermodynamics#Reactions and equilibrium|equilibrium]] of this reaction:
@@ -825,6 +825,8 @@ $$\displaylines{\epsilon_0\to\epsilon_r\epsilon_0 \hspace{1cm} m_e\to m_e^* \\ E
 - The orbitals will also _change size_ due to this interaction
 - Therefore, one must change the _Bohr radius_:
 $$a_0=\frac{4\pi\hbar^2}{e^2}\frac{\epsilon_0}{m_e}\to a_{0,\text{eff}}=a_0\frac{\epsilon_rm_e}{m_e^*}$$
+- Hence, orbitals tend to _expand_ relative to their usual size
+
 - Define the _zero energy_ as the _bottom of the conduction band_
 	- Ionisation is then defined as _taking the electron into the conduction band_
 
@@ -862,14 +864,15 @@ $$\sigma\propto\exp\left(-\frac{E_c-E_d}{2k_BT}\right)$$
 - Therefore, _ideal behaviour_ will show clear separation between the temperature regimes:
 ![[Extrinsic semiconductor conductivity.png]]
 
-### Equilibrium between electrons and holes
-- Consider the [[#Statistical mechanics of electrons and holes|equilibrium for electron and hole concentrations]]
+### Electron-hole equilibrium
+- Consider the [[#Equilibrium of electrons and holes]]
 - For _extrinsic_ semiconductors, this equilibrium is _also established_, with a _similar equilibrium constant_
 - Any _addition_ of _electrons/holes_ will _disturb_ the equilibrium and _push_ the equilibrium the other way
 - Then, electrons/holes become the _majority charge carrier_
 
 ### Impurity bands
-- When the _dopant concentration is high_
+- When the _dopant concentration is high_, the dopant orbitals can _form their own band_
+- If each dopant contributes _one electron/hole_, the resultant band is _half-full_
 
 # Semiconductor devices
 - Most devices use _extrinsic semiconductors_
@@ -1005,7 +1008,7 @@ $$E_n=-\frac{R_{H,\text{eff}}}{n^2}=-\frac{R_H}{n^2}\frac{\mu}{m_e\epsilon_r^2}$
 - $R_{H,\text{eff}}$ is then the _effective binding energy_ of the exciton
 ![[Exciton levels.png]]
 - At _low temperatures_, the exciton transitions can be observed:
-$$h\nu_R=E_h-\frac{R_{H,\text{eff}}}{n^2}$$
+$$h\nu_R=E_g-\frac{R_{H,\text{eff}}}{n^2}$$
 ![[Cu2O exciton spectrum.png]]
 - A _low temperature_ is required such that the electrons are not simply promoted _into the conduction band_
 ![[GaAs exciton peak.png]]

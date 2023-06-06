@@ -1,4 +1,5 @@
 - Phenomena related to _transport via gases_
+	- Particle movement: [[Kinetic Theory of Gases]]
 - Viscosity: _momentum_ transport
 - Thermal conductivity: _heat_ transport
 - Diffusion: _particle_ transport
@@ -35,19 +36,23 @@ $$\Pi_z=-\eta\pd{\mean{u_x}}{z}$$
 $$dN=v\cos\theta\,f(v)dv\,\frac{1}{2}\sin\theta d\theta$$
 - Since the last collision, the particle has travelled $\lambda\cos\theta$ in the $z-$direction
 - The _transfer of momentum_ is then:
-$$\Delta p=$$
+$$\Delta p=-m\pd{u_x}{z}(\lambda\cos\theta)$$
 - Viscosity is then given by:
 $$\eta=\frac{1}{3}nm\lambda\mean{v}$$
+- This is also known as the _dynamic viscosity_
+	- The _kinematic viscosity_ is $\nu=\eta/\rho$
 
 - The viscosity is _independent of pressure_, as $\lambda\propto 1/n$ at _constant temperature_
+	- More molecules but with _lower mean free path_
 
-- For _gases_, the viscosity _increases with temperature_
+- For _gases_, the viscosity _increases with temperature_ $(\eta\propto \sqrt{T})$
 
 # Thermal conductivity
 - The _heat flux_ $\bm{J}$ is the _power_ transported across a _unit area_
 - The _thermal conductivity_ $\kappa$ in an _isotropic material_ is defined as:
 $$\bm{J}=-\kappa\nabla T$$
 
+- Consider molecules _crossing planes_, and bringing a _deficit of thermal energy_
 - The _thermal conductivity_ is then found as:
 $$\kappa=\frac{1}{3}nC\mean{v}\lambda=\frac{1}{3}C_V\mean{v}\lambda$$
 - Like viscosity, heat transfer is _indpendent of pressure_, and $\propto T^{1/2}$
@@ -64,7 +69,7 @@ $$\Phi_z=-D\pd{n}{z}$$
 - $D$ is known as the _diffusion coefficient_
 - In three dimensions, _Fick's First Law_ gives:
 $$\bm{\Phi}=-D\nabla n$$
-- From KINETIC THEORY PROOF
+- From looking at the _excess molecules hitting a unit area per second_:
 $$D=\frac{1}{3}\lambda\mean{v}$$
 
 - $D$ is _inversely proportional_ to pressure, and hence also _inversely proportional_ to $n$
@@ -72,6 +77,15 @@ $$D=\frac{1}{3}\lambda\mean{v}$$
 
 - For a _mixture_ of two molecules, replace $\sigma$, and also use the _reduced mass_ $\mu'$:
 $$\sigma=\pi(a_1+a_2)^2 \hspace{1cm} \mu=\frac{2m_1m_2}{(m_1+m_2)^2}$$
+
+# Dependence on conditions
+- From the formula above, one can predict how transport coefficients _depend on parameters of the gas_:
+
+|         $\eta$         |         $\kappa$          |            $D$            |
+|:----------------------:|:-------------------------:|:-------------------------:|
+|     $\propto p^0$      |       $\propto p^0$       |       $\propto 1/p$       |
+|   $\propto \sqrt{T}$   |    $\propto \sqrt{T}$     |     $\propto T^{3/2}$     |
+| $\propto \sqrt{m}/d^2$ | $\propto 1/(d^2\sqrt{m})$ | $\propto 1/(d^2\sqrt{m})$ |
 
 # Heat/diffusion equation
 - Consider equations obeyed by _heat flux_ $\bm{J}$ and _particle flux_ $\bm{\Phi}$:

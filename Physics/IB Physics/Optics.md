@@ -22,7 +22,7 @@ $$Z=\frac{|\bm{E}|}{|\bm{H}|}=c\mu=\sqrt{\frac{\mu\mu_0}{\epsilon\epsilon_0 }}=Z
 $$Z=\frac{Z_0}{n} \hspace{1.5cm} Z_0=\sqrt{\frac{\mu_0}{\epsilon_0}}$$
 # Approximations of physical optics
 - Most accurate - Quantum Electrodynamics (QED) - nope
-- Maxwell's Equations: accurate for situations where light has intensity _much higher than the energy of individual protons_
+- Maxwell's Equations: accurate for situations where light has intensity _much higher than the energy of individual photons_
 - Physical optics/scalar wave theory: ignores polarisation, using _Huygen's Principle to model wave propagation_
 - Ray optics: _very small $\lambda$_, wave properties can be ignored
 
@@ -82,6 +82,7 @@ $$R>>\frac{D^2}{\lambda}$$
 
 - Then, the wave amplitude at $P$ is given by the _Fraunhofer integral_:
 $$\psi_P\propto\iint_\Sigma \psi_\Sigma \,h(x,y)\,\exp\left[-ik\left(\frac{x_0x+y_0y}{R}\right)\right]\,dx\,dy$$
+
 - If illuminated with a _plane wave_, $\psi_\Sigma$ remains constant
 	- Often satisfied by using a lens to make a _parallel beam_
 
@@ -124,7 +125,7 @@ $$k\sin\theta=q=2m\pi/D\equiv mG$$
 	- Fourier transform tends to the comb function as $N$ approaches infinity
 
 ### Single wide aperture
-- The aperture function of an aperture with witdth $a$ is:
+- The aperture function of an aperture with width $a$ is:
 $$h(y)=\begin{cases}1 &|y|<a/2 \\ 0 &|y|>a/2\end{cases}$$
 - The diffracted intensity is:
 $$I_p(q)=I_0a^2\sinc^2\left(\frac{qa}{2}\right)$$
@@ -234,7 +235,7 @@ $$\psi_P\propto\iint_\Sigma \frac{h(x,y)K(x,y)\exp\left(ik\frac{x^2+y^2}{2R}\rig
 $$\psi_P(0,0)\propto\iint_\Sigma h(x,y)\exp\left(ik\frac{x^2+y^2}{2R}\right)\,dx\,dy$$
 ### Rectangular aperture and the Fresnel integrals
 - Let there be a rectangular aperture where $x_1<x<x_2$ and $y_1<y<y_2$
-- Since the aperture function is separable, the integral can be written as:
+- Since the aperture function is _separable_, the integral can be written as:
 $$\psi_P\propto\int_{x_1}^{x_2}\exp\left(\frac{ikx^2}{2R}\right)\,dx \int_{y_1}^{y_2}\exp\left(\frac{iky^2}{2R}\right)\,dy$$
 - Redefining the _dimensionless_ variables:
 $$u=x\sqrt{\frac{2}{R\lambda}} \hspace{1.5cm} v=y\sqrt{\frac{2}{R\lambda}}$$
