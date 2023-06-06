@@ -881,6 +881,7 @@ $$\frac{d\,\ln K}{dT}=-\frac{\Delta_rH^⦵}{RT^2}$$
 $$E_a=\Delta_rH^{⦵,\ddagger}+RT\;\;\;\text{ in solution}$$
 - Meanwhile, in a _gas_:
 $$E_a=\Delta_rH^{⦵,\ddagger}+(1+\Delta\nu)RT\;\;\;\text{ in a gas}$$
+- Hence, as expected, _activation energy_ and _enthalpy of activation_ have a strong correlation
 
 - By _substituting_ the above into the Arrhenius equation, one can rewrite the _pre-exponential factor_ $A$
 - For a _reaction in solution_:
@@ -892,5 +893,27 @@ $$k_\text{2nd}=\left[\frac{kT}{[]^⦵h}\exp\left(\frac{\Delta_r S^{⦵,\ddagger}
 	- The largest changes often involve _reactions with ions_
 - From the Master equation:
 $$\displaylines{dG=Vdp-S\,dT \\ d(\Delta_r G^\ddagger)=(\Delta_rV^\ddagger)\,dp-(\Delta_rS^\ddagger)\,dT \\ \left(\pd{\Delta_r G^\ddagger}{p}\right)_T=\Delta_r V^\ddagger}$$
+- $\Delta_r V^\ddagger$ is known as the _volume of activation_ for the reaction, and can be interpreted as the _volume change_ in a reaction
+
 - Using the Eyring equation:
-$$\left(\pd{\Delta_r G^\ddagger}{p}\right)_T = \Delta_r V^\ddagger}$$
+$$\left(\pd{\ln k_\text{2nd}}{p}\right)_T=-\frac{\Delta_r V^\ddagger}{RT}$$
+- Assuming that $\Delta_rV^\ddagger$ _does not change significantly_ with pressure, the right-hand side is constant
+
+### Interpreting volume and entropies of activation
+- Like the _enthalpy_ of activation, the _volume_ and _entropy_ of activation for a reaction is _dependent on the reaction mechanism_
+
+- For a _bimolecular_ reaction $\ce{A +B->C}$, there is a _loss of translational degrees of freedom_ so there is a _negative_ $\Delta_r S^\ddagger$
+- Similarly, a _dissociation_ results in a _positive_ $\Delta_r S^\ddagger$
+- A _ring closing/opening_ reaction will also commonly result in a negative/positive $\Delta_r S^\ddagger$
+
+- For _ions_ in a _polar solvent_, the _coordination_ of solvent molecules leads to a _low entropy_, this is known as _electrostriction_
+	- Hence, the _association_ of ionic species to make a _neutral transition state_ will lead to a _positive_ $\Delta_rS^\ddagger$
+	- This can also occur when the charge is more _spread out_, leading to less electrostriction
+
+- A _charge dispersal/delocalisation_ will lead to a _positive_ $\Delta_r V^\ddagger$, while _charge separation_ in the transition state leads to a _negative_ $\Delta_r V^\ddagger$
+
+- Consider a _substitution_ for transition metal complexes:
+$$\ce{ML_5X + Y -> ML_5Y + X}$$
+- The mechanism can be _associative_, _dissociative_, or _interchange_
+	- Associative: $\Delta_rS^\ddagger, \Delta_rV^\ddagger<0$
+	- Dissociative: $\Delta_rS^\ddagger, \Delta_rV^\ddagger>0$
