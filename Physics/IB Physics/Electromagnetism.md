@@ -1361,9 +1361,13 @@ $$\lambda_c=2a$$
 
 ### The general rectangular case
 - $\bm{E}$ can vary with _both $x$ and $y$
+- For a _transverse mode_, $E_z=0$
 - The general solution for the $\text{TE}_{mn}$ is:
 $$\displaylines{E_x=A_0k_y\cos(k_xx)\sin(k_yy)\cos(k_zz-\omega t) \\ E_y=-A_0k_x\sin(k_xx)\cos(k_yy)\cos(k_zz-\omega t) \\ E_z=0 \\ \bm{k}=\left(\frac{m\pi}{a},\frac{n\pi}{b},k_g\right)}$$
 - The _waveguide equation_ is:
 $$k_g^2=\frac{\omega^2}{c^2}-\frac{m^2\pi^2}{a^2}-\frac{n^2\pi^2}{b^2}\equiv k_0^2-k_c^2$$
 - For propagating waves, $k_g$ _must be positive_, there is a _critical frequency_ that the wave must be above to propagate
 - Below the _cutoff_, the wave will be _evanescent_
+
+- Similar to the $\text{TE}_{mn}$ modes, there can be $\text{TM}_{mn}$ modes
+	- $\text{TM}_{n0}$ or $\text{TM}_{0m}$ modes can only exist if the walls are _permanently magnetised_
