@@ -20,6 +20,7 @@ $$U_\text{eff}(r)=\frac{Ar^{n+1}}{n+1}+\frac{J^2}{2mr^2}$$
 - Define the equilibrium distance $r_0$ such that:
 $$\frac{dU_\text{eff}}{dr}\Bigg|_{r=r_0}=0$$
 - The potential behaves differently for different values of $n$:
+
 | Condition on $n$ | Stability at $r_0$ | Boundedness                          | $r\to\infty$            | $r\to0$                 |
 | ---------------- | ------------------ | ------------------------------------ | ----------------------- | ----------------------- |
 | $n\geq-1$        | Stable             | Bound                                | $U_\text{eff}\to\infty$ | $U_\text{eff}\to\infty$ |
