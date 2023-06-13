@@ -14,6 +14,8 @@
 - A _group_ is an _algebra_ which must _satisfy several axioms_
 ![[Sets algebras groups.png]]
 - A generic group is denoted $G$, with _elements_ $g_1,g_2,\dots$
+	- The _label_ of group elements can be _discrete or continuous_
+	- The set of elements can be _infinite_ or _finite_ (See [[#Orders]])
 - The group must also contain a _group product_, denoted $g_1g_2$
 
 ## The axioms
@@ -22,12 +24,6 @@
 2. _Identity_: There must exist a single _identity element_, denoted by $I$, such that, for _every element_ $g\in G$ $$Ig=g \hspace{1cm} gI=g$$
 3. _Inverse_: For every element $g\in G$, there must exist an _inverse_ of that element $g^{-1}\in G$ such that $$gg^{-1}=I=g^{-1}g$$
 4. _Associativity_: For any 3 elements $g_1,g_2,g_3\in G$, $$(g_1g_2)g_3=g_1(g_2g_3)$$
-
-## Example: The integers $\mathbb{Z}$ under addition
-1. _Closure_: $$a,b\in \mathbb{Z} \Longrightarrow a+b\in\mathbb{Z}$$
-2. _Identity_: $$a+0=a \hspace{1cm} 0+a=a$$
-3. _Inverse_: $$a+(-a)=0 \hspace{1cm} (-a)+a=0$$
-4. _Associativity_: $$(a+b)+c=a+(b+c)$$
 ## Corollaries
 - A group's _identity element is unique_
 	- Assume that there are two _different_ identity elements, $I$ and $I'$, where $I\neq I'$
@@ -49,7 +45,52 @@ $$g_1g_2=g_2g_1$$
 - For _non-Abelian groups_, if $g_1,g_2\in G$:
 $$g_1g_2\neq g_2g_1$$
 >[!quote]
->"There's nothing wrong with non-Abelian groups"
+>"There's nothing wrong with non-Abelian groups!"
+
+## Examples
+- Elements can be _physical transformations_, or operations done on sets
+
+### Example: The integers $\mathbb{Z}$ under addition
+- To see that it follows the axioms:
+
+1. _Closure_: $$a,b\in \mathbb{Z} \Longrightarrow a+b\in\mathbb{Z}$$
+2. _Identity_: $$a+0=a \hspace{1cm} 0+a=a$$
+3. _Inverse_: $$a+(-a)=0 \hspace{1cm} (-a)+a=0$$
+4. _Associativity_: $$(a+b)+c=a+(b+c)$$
+- Addition is _commutative_, or _Abelian_
+
+- This can also be expanded to _all real numbers under addition_
+
+### Other (important) examples
+- _Rotations_ in _3-dimensional Euclidean_ space, $SO(3)$
+	- This group is _non-Abelian_
+	- Clearly, it has _infinite_ elements
+	- $SO$ stands for _special orthogonal group_
+- _Rotations_ in _2-dimensional Euclidean_ space, $SO(2)$
+	- This group is _Abelian_
+
+- The _permutation group_ $S_n$, which _rearranges_ an _ordered set_ of $n$ elements
+	- The group has $n!$ elements
+- The group of _even permutations_ $A_n$
+
+- The $n$ _roots_ of $1$ form the group $Z_n$ under _multiplication_
+- This can be expanded to _all complex numbers of magnitude_ $1$, or $\exp(i\phi)$, under multiplication
+
+- The _addition_ of integers $\text{mod} \;N$
+	- Example: Under addition $\text{mod}\;5$, $\{0,1,2,3,4\}$ form a group
+
+- The [[Relativity|Lorentz boost]] with _boost angle_ $\varphi$
+
+- The set of $n\times n$ matrices with determinants equal to $1$, or _special matrices_, with the group being denoted $SL(n,R)$, or the _special linear group_ with _real entries_
+	- The _complex_ case is $SL(n,C)$
+
+- Sets of transformations leaving a [[Crystal structure and diffraction|crystal lattice]] invariant are known as _space groups_
+	- Consisting of _translations_, _rotations_, _reflections_, and sometimes _inversions_
+- _Excluding translations_ from space groups gives _point groups_
+	- They leave a point _invariant_
+	- They are used to describe [[Symmetry in molecules|molecules]]
+- An example of point groups are the _dihedral groups_ $D_n$, the symmetries of an _$n-$sided regular polygon_
+
 
 # A point group: The symmetries of a square
 - Consider the _group of transformations_, representing the _symmetries of a square_
@@ -86,8 +127,6 @@ $$\{I,R,R^2,R^3,m_1,m_2,m_3,m_4\}=\{R^4,R,R^2,R^3,m_1,R^3m_1,R^2m_1,Rm_1\}$$
 - This is known as the _$4-$fold dihedral group_ $D_4$
 - In general, the symmetry group for a _regular polygon of $n$ sides_ is the $n-$_fold dihedral group_ $D_n$
 
-- These are _point groups_, where a single point is _fixed_ under all symmetry operations
-
 # Orders
 - The _order_ $|G|$ of a group $G$ is _how many elements it contains_
 
@@ -112,6 +151,7 @@ $$g^{-1}=g^{q-1}$$
 - If $H$ is a _subgroup_ of $G$, $H<G$
 	- If $G$ is also to be _included as a subgroup_ of itself, $H\leq G$
 
+## Example: The subgroups of $D_4$
 - By inspection, $D_4$ has 5 order-2 subgroups:
 $$\{I,R^2\}, \{I, m_1\}, \{I, m_2\}, \{I, m_3\}, \{I, m_4\}$$
 - There is also an order-4 subgroup:
@@ -127,6 +167,38 @@ $$\{I,R^2,m_1m_2\}, \{I,R^2,m_3,m_4\}$$
 	- Or _Vierergruppe_, denoted $V$
 
 - Although $D_4$ itself is _non-Abelian_, its _subgroups_ are
+
+# Cosets and Lagrange's Theorem
+- Given a group $G$, along with _subgroup_ $H=\{I,h_1,h_2,\dots\}$ of $G$, and an element $g\in G$
+- The _left coset_ of $H$ in $G$ is defined as:
+$$gH=\{g,gh_1,gh_2,\dots\}$$
+- The _right coset_ of $H$ in $G$ is defined as:
+$$Hg=\{g,h_1g,h_2g,\dots\}$$
+- If $G$ is _Abelian_, then the left and right cosets are _equivalent_
+- Each coset contains $|H|$ elements
+
+- The subgroup $H$ and its _left cosets_ will _partition_ $G$, as they _divide_ $G$ into _disjoint subsets_
+- Similarly, $H$ and its _right cosets_ will also _partition_ $G$ but in a different way, unless $H$ is _normal_
+
+- Two cosets are _either disjoint or identical_
+	- Suppose $Hg_1$ and $Hg_2$ have one element in common, $h_1g_1=h_2g_2$
+	- Then $Hg_1=Hh_1^{-1}h_2g_2=Hg_2$, since $h_1^{-1}h_2\in H$ due to closure
+- Two cosets are _only identical iff_ $g_1g_2^{-1}\in H$
+
+- Then, one can state _Lagrange's Theorem_:
+- Let $G$ be a _finite group_ and let $H\subset G$, not necessarily normal, then the theorem states:
+$$|G|=n|H| \hspace{1cm} n\in \mathbb{Z}$$
+- Proof: Suppose there are $n$ _distinct right cosets_ of $H$, including $HI$
+	- As they are all _disjoint_, and each has $|H|$ elements
+	- Each element of $G$ is _in exactly one coset_, hence $|G|=n|H|$
+
+- Corollary: The _order of any element_ in $G$ will _divide_ $|G|$
+	- Each element can form a [[#Subgroups|cyclic subgroup]] with _order equal to that of the generating element_ 
+
+- This also leads to the result that _every order-4 group_ $G$ is _isomorphic_ either to the _cyclic group_ $C_4$, or the _Vierergruppe_ $V$
+
+
+
 
 # Mappings
 - A _mapping_ is basically a _single-valued function_
@@ -209,34 +281,4 @@ $$\dunderline{R}\underline{x}=\pmatrix{0 & 1 \\ -1 & 0}\pmatrix{x_1 \\ x_2}=\pma
 
 - The _Vierergruppe_ $\{I, R^2, m_1, m_2\}$ leaves _scalar multiples_ of $(0\;1)^T$ and $(1\;0)^T$ invariant
 - The _Vierergruppe_ $\{I,R^3,m_3,m_4\}$ leaves _scalar muliples_ of $(1\;1)^T$ and $(1\;-1)^T$ invariant
-
-# Cosets and Lagrange's Theorem
-- Given a group $G$, along with _subgroup_ $H=\{I,h_1,h_2,\dots\}$ of $G$, and an element $g\in G$
-- The _left coset_ of $H$ in $G$ is defined as:
-$$gH=\{g,gh_1,gh_2,\dots\}$$
-- The _right coset_ of $H$ in $G$ is defined as:
-$$Hg=\{g,h_1g,h_2g,\dots\}$$
-- If $G$ is _Abelian_, then the left and right cosets are _equivalent_
-- Each coset contains $|H|$ elements
-
-- The subgroup $H$ and its _left cosets_ will _partition_ $G$, as they _divide_ $G$ into _disjoint subsets_
-- Similarly, $H$ and its _right cosets_ will also _partition_ $G$ but in a different way, unless $H$ is _normal_
-
-- Two cosets are _either disjoint or identical_
-	- Suppose $Hg_1$ and $Hg_2$ have one element in common, $h_1g_1=h_2g_2$
-	- Then $Hg_1=Hh_1^{-1}h_2g_2=Hg_2$, since $h_1^{-1}h_2\in H$ due to closure
-- Two cosets are _only identical iff_ $g_1g_2^{-1}\in H$
-
-- Then, one can state _Lagrange's Theorem_:
-- Let $G$ be a _finite group_ and let $H\subset G$, not necessarily normal, then the theorem states:
-$$|G|=n|H| \hspace{1cm} n\in \mathbb{Z}$$
-- Proof: Suppose there are $n$ _distinct right cosets_ of $H$, including $HI$
-	- As they are all _disjoint_, and each has $|H|$ elements
-	- Each element of $G$ is _in exactly one coset_, hence $|G|=n|H|$
-
-- Corollary: The _order of any element_ in $G$ will _divide_ $|G|$
-	- Each element can form a [[#Subgroups|cyclic subgroup]] with _order equal to that of the generating element_ 
-
-- This also leads to the result that _every order-4 group_ $G$ is _isomorphic_ either to the _cyclic group_ $C_4$, or the _Vierergruppe_ $V$
-
 

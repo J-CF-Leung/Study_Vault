@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/IB Physics/Electromagnetism.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Thermal Physics/Thermal Radiation.md",
+                "file": "Mathematics/IB Mathematical Methods/Group Theory.md",
                 "mode": "source",
                 "source": false
               }
@@ -72,7 +72,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Physics/IB Physics/Electromagnetism.md"
+                    "file": "README.md"
                   }
                 }
               }
@@ -89,7 +89,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Physics/IB Physics/Electromagnetism.md",
+                    "file": "README.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -207,7 +207,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/IB Physics/Electromagnetism.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -224,7 +224,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/IB Physics/Electromagnetism.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -247,7 +247,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/IB Physics/Electromagnetism.md"
+                "file": "README.md"
               }
             }
           },
@@ -279,6 +279,11 @@
   },
   "active": "9952e3b9bd292db1",
   "lastOpenFiles": [
+    "Physics/Thermal Physics/Classical Thermodynamics.md",
+    "Past Papers/IB Physics/2018-19_Part_IB_Physics_B_Paper_2.pdf",
+    "Mathematics/IB Mathematical Methods/Group Theory.md",
+    "Physics/Thermal Physics/Thermal Radiation.md",
+    "Physics/IB Physics/Electromagnetism.md",
     "Languages and Linguistics/Linguistics.md",
     "Languages and Linguistics/Latin.md",
     "Languages and Linguistics/Language families.md",
@@ -286,17 +291,13 @@
     "Languages and Linguistics/German grammar.md",
     "Languages and Linguistics/German vocabulary.md",
     "Languages and Linguistics",
-    "Past Papers/IB Physics/2018-19_Part_IB_Physics_B_Paper_2.pdf",
-    "Physics/IB Physics/Electromagnetism.md",
     "Past Papers/IB Physics/2017-18_Part_IB_Physics_B_Paper_2.pdf",
-    "Physics/Thermal Physics/Thermal Radiation.md",
     "Physics/Thermal Physics/Kinetic Theory of Gases.md",
     "Physics/Thermal Physics/Fundamental principles of statistical mechanics.md",
     "Chemistry/IB Chemistry/Chemical thermodynamics.md",
     "Physics/IB Physics/Fluid mechanics.md",
     "Past Papers/IB Physics/2016-17_Part_IB_Physics_B_Paper_2.pdf",
     "Chemistry/IB Chemistry/Electrons in solids.md",
-    "Physics/Thermal Physics/Classical Thermodynamics.md",
     "Past Papers/IB Chemistry A/IB_A_2022.pdf",
     "Past Papers/IB Chemistry A/IB_A_2021.pdf",
     "Past Papers/IB Physics/2015-16_Part_IB_Physics_B_Paper_2.pdf",
@@ -313,8 +314,6 @@
     "Physics/Condensed matter physics/Semiconductors.md",
     "Physics/IB Physics/Waves.md",
     "Physics/IB Physics/Optics.md",
-    "Physics/Condensed matter physics/Phonons.md",
-    "Physics/Condensed matter physics/Nearly Free Electron Model.md",
     "Chemistry/Images/Fermi hole.png",
     "Physics/Images/Plane wave pairs.png",
     "Physics/Images/Nearly free conduction.png",

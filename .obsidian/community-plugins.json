@@ -4,5 +4,7 @@
   "obsidian-vault-statistics-plugin",
   "obsidian-paste-image-rename",
   "obsidian-quiet-outline",
-  "obsidian-git"
+  "obsidian-git",
+  "dataview",
+  "obsidian-annotator"
 ]
