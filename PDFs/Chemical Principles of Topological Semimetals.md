@@ -838,3 +838,227 @@ annotation-target:: Topological_semimetals.pdf
 >%%TAGS%%
 >
 ^5js78icwp3h
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T10:17:09.123Z","updated":"2023-06-25T10:17:09.123Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":19504,"end":19569},{"type":"TextQuoteSelector","exact":"when such acrossing can appear and whether the crossing is stable","prefix":"tion we have to address is thus ","suffix":". Whentwo bands cross, it means "}]}]}
+>```
+>%%
+>*%%PREFIX%%tion we have to address is thus%%HIGHLIGHT%% ==when such acrossing can appear and whether the crossing is stable== %%POSTFIX%%. Whentwo bands cross, it means*
+>%%LINK%%[[#^clkb1p3ot3|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^clkb1p3ot3
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T10:17:34.354Z","updated":"2023-06-25T10:17:34.354Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":19750,"end":19801},{"type":"TextQuoteSelector","exact":"likely tooverlap as they move away from the Γpoint.","prefix":"s have a bandwidth and are thus ","suffix":" However, thishappens most commo"}]}]}
+>```
+>%%
+>*%%PREFIX%%s have a bandwidth and are thus%%HIGHLIGHT%% ==likely tooverlap as they move away from the Γpoint.== %%POSTFIX%%However, thishappens most commo*
+>%%LINK%%[[#^4lkdz7i6887|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^4lkdz7i6887
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T10:17:49.284Z","updated":"2023-06-25T10:17:49.284Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":20130,"end":20247},{"type":"TextQuoteSelector","exact":"closed-shell systems, where the energy of the bands of the closed-shelloverlap with the ones of the next, empty shell","prefix":"thin the BZ, we are looking for ","suffix":". Ideally, just twobands cross a"}]}]}
+>```
+>%%
+>*%%PREFIX%%thin the BZ, we are looking for%%HIGHLIGHT%% ==closed-shell systems, where the energy of the bands of the closed-shelloverlap with the ones of the next, empty shell== %%POSTFIX%%. Ideally, just twobands cross a*
+>%%LINK%%[[#^2k4rr89m947|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^2k4rr89m947
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T10:18:48.251Z","updated":"2023-06-25T10:18:48.251Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":20564,"end":20635},{"type":"TextQuoteSelector","exact":" notevery band crossing that appears due to overlapping shells isstable","prefix":"cation arises from the fact that","suffix":". Crossings can be avoided, whic"}]}]}
+>```
+>%%
+>*%%PREFIX%%cation arises from the fact that%%HIGHLIGHT%% ==notevery band crossing that appears due to overlapping shells isstable== %%POSTFIX%%. Crossings can be avoided, whic*
+>%%LINK%%[[#^96cvs7y9aka|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^96cvs7y9aka
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T10:18:55.135Z","updated":"2023-06-25T10:18:55.135Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":20805,"end":20901},{"type":"TextQuoteSelector","exact":" depends onthe orbital (band) symmetry and whether mixing between theorbitals (bands) is allowed","prefix":"a crossing is allowed or not; it","suffix":". Take for example the molecular"}]}]}
+>```
+>%%
+>*%%PREFIX%%a crossing is allowed or not; it%%HIGHLIGHT%% ==depends onthe orbital (band) symmetry and whether mixing between theorbitals (bands) is allowed== %%POSTFIX%%. Take for example the molecular*
+>%%LINK%%[[#^amcrpuus8bg|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^amcrpuus8bg
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T10:19:02.454Z","updated":"2023-06-25T10:19:02.454Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":21242,"end":21371},{"type":"TextQuoteSelector","exact":"two bands that have the same irreduciblerepresentation cross, they can mix, the crossing will be avoided,and thus a gap will open","prefix":"v character table.Similarly, if ","suffix":" (Figure 3a−d). If the two cross"}]}]}
+>```
+>%%
+>*%%PREFIX%%v character table.Similarly, if%%HIGHLIGHT%% ==two bands that have the same irreduciblerepresentation cross, they can mix, the crossing will be avoided,and thus a gap will open== %%POSTFIX%%(Figure 3a−d). If the two cross*
+>%%LINK%%[[#^i1tqksfkbdg|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^i1tqksfkbdg
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T10:19:14.239Z","updated":"2023-06-25T10:19:14.239Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":21652,"end":21737},{"type":"TextQuoteSelector","exact":"Thus, in graphene, the π- and π*-bandsmust have different irreducible representations","prefix":"f allowedto cross) (Figure 3e). ","suffix":", which is indeedthe case (in th"}]}]}
+>```
+>%%
+>*%%PREFIX%%f allowedto cross) (Figure 3e).%%HIGHLIGHT%% ==Thus, in graphene, the π- and π*-bandsmust have different irreducible representations== %%POSTFIX%%, which is indeedthe case (in th*
+>%%LINK%%[[#^gv3cjvk78g|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^gv3cjvk78g
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T10:19:29.897Z","updated":"2023-06-25T10:19:29.897Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":22093,"end":22206},{"type":"TextQuoteSelector","exact":" In thepresence of a significant amount of SOC, point groups have tobe extended to (electron spin) double groups,","prefix":"y would SOC affect a degeneracy?","suffix":" which accountfor half integer a"}]}]}
+>```
+>%%
+>*%%PREFIX%%y would SOC affect a degeneracy?%%HIGHLIGHT%% ==In thepresence of a significant amount of SOC, point groups have tobe extended to (electron spin) double groups,== %%POSTFIX%%which accountfor half integer a*
+>%%LINK%%[[#^ebidumv2l8|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^ebidumv2l8
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T10:19:49.993Z","updated":"2023-06-25T10:19:49.993Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":23383,"end":23424},{"type":"TextQuoteSelector","exact":", most TSMs are not (strongly) correlated","prefix":"cessible in adouble group. Still","suffix":",which is why the rules discusse"}]}]}
+>```
+>%%
+>*%%PREFIX%%cessible in adouble group. Still%%HIGHLIGHT%% ==, most TSMs are not (strongly) correlated== %%POSTFIX%%,which is why the rules discusse*
+>%%LINK%%[[#^sipiqlswds|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^sipiqlswds
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T10:19:59.236Z","updated":"2023-06-25T10:19:59.236Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":23719,"end":23746},{"type":"TextQuoteSelector","exact":"C3, C4 or C6symmetry elemen","prefix":"ly the case if we have either a ","suffix":"t (see also ref 25 for a discuss"}]}]}
+>```
+>%%
+>*%%PREFIX%%ly the case if we have either a%%HIGHLIGHT%% ==C3, C4 or C6symmetry elemen== %%POSTFIX%%t (see also ref 25 for a discuss*
+>%%LINK%%[[#^eor2uivim0d|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^eor2uivim0d
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T10:20:30.280Z","updated":"2023-06-25T10:20:30.280Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":25287,"end":25392},{"type":"TextQuoteSelector","exact":"resulting Dirac electrons have avery low mass (ideally 0) which will result in them beingextremely mobile","prefix":"SMs?For one, we expect that the ","suffix":", and thus these materials are v"}]}]}
+>```
+>%%
+>*%%PREFIX%%SMs?For one, we expect that the%%HIGHLIGHT%% ==resulting Dirac electrons have avery low mass (ideally 0) which will result in them beingextremely mobile== %%POSTFIX%%, and thus these materials are v*
+>%%LINK%%[[#^c871my3pztg|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^c871my3pztg
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T10:20:44.872Z","updated":"2023-06-25T10:20:44.872Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":25728,"end":25889},{"type":"TextQuoteSelector","exact":"if the bands arespin split, they turn into WSMs. These host the Weyl Fermion,which is a Fermion that is chiral and different from the usualDirac Fermions we know","prefix":"or the interest in DSMs is that ","suffix":". Although this Fermion was pred"}]}]}
+>```
+>%%
+>*%%PREFIX%%or the interest in DSMs is that%%HIGHLIGHT%% ==if the bands arespin split, they turn into WSMs. These host the Weyl Fermion,which is a Fermion that is chiral and different from the usualDirac Fermions we know== %%POSTFIX%%. Although this Fermion was pred*
+>%%LINK%%[[#^qxh8tdachj|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^qxh8tdachj
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T10:20:56.853Z","updated":"2023-06-25T10:20:56.853Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":26116,"end":26236},{"type":"TextQuoteSelector","exact":" in the latter, the crossing point is only two-folddegenerate.28,93,94 This is because in WSMs the bands are spinsplit; ","prefix":" between a DSM and aWSM is that,","suffix":"thus each band is only singly de"}]}]}
+>```
+>%%
+>*%%PREFIX%%between a DSM and aWSM is that,%%HIGHLIGHT%% ==in the latter, the crossing point is only two-folddegenerate.28,93,94 This is because in WSMs the bands are spinsplit;== %%POSTFIX%%thus each band is only singly de*
+>%%LINK%%[[#^ahhiidz0vu8|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^ahhiidz0vu8
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T10:21:10.321Z","updated":"2023-06-25T10:21:10.321Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":26421,"end":26500},{"type":"TextQuoteSelector","exact":"there cannot be a net chirality in the crystals, Weyl cones alwayscome in pairs","prefix":"assigned to this crossing. Since","suffix":". The resulting Weyl Fermions ar"}]}]}
+>```
+>%%
+>*%%PREFIX%%assigned to this crossing. Since%%HIGHLIGHT%% ==there cannot be a net chirality in the crystals, Weyl cones alwayscome in pairs== %%POSTFIX%%. The resulting Weyl Fermions ar*
+>%%LINK%%[[#^rg4g7l3xgxa|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^rg4g7l3xgxa
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T10:21:26.375Z","updated":"2023-06-25T10:21:26.375Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":27445,"end":27618},{"type":"TextQuoteSelector","exact":"we cannot have inversion(I) and time-reversal (T) symmetry at the same time, since thecombination of these two symmetries will always force all bandsto be doubly degenerate.","prefix":"order to have spin split bands, ","suffix":" In I asymmetric, i.e., non-cent"}]}]}
+>```
+>%%
+>*%%PREFIX%%order to have spin split bands,%%HIGHLIGHT%% ==we cannot have inversion(I) and time-reversal (T) symmetry at the same time, since thecombination of these two symmetries will always force all bandsto be doubly degenerate.== %%POSTFIX%%In I asymmetric, i.e., non-cent*
+>%%LINK%%[[#^d4uoqxjq9xe|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^d4uoqxjq9xe
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T10:23:57.928Z","updated":"2023-06-25T10:23:57.928Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":28069,"end":28120},{"type":"TextQuoteSelector","exact":"Weyl crossings appear away from high-symmetry lines","prefix":" inversion asymmetric compounds,","suffix":". Since T-symmetry is still pres"}]}]}
+>```
+>%%
+>*%%PREFIX%%inversion asymmetric compounds,%%HIGHLIGHT%% ==Weyl crossings appear away from high-symmetry lines== %%POSTFIX%%. Since T-symmetry is still pres*
+>%%LINK%%[[#^4qjpn6vinyt|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^4qjpn6vinyt
