@@ -1062,3 +1062,241 @@ annotation-target:: Topological_semimetals.pdf
 >%%TAGS%%
 >
 ^4qjpn6vinyt
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T18:14:37.057Z","updated":"2023-06-25T18:14:37.057Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":26379,"end":26414},{"type":"TextQuoteSelector","exact":"chirality assigned to this crossing","prefix":"onopole,meaning that there is a ","suffix":". Sincethere cannot be a net chi"}]}]}
+>```
+>%%
+>*%%PREFIX%%onopole,meaning that there is a%%HIGHLIGHT%% ==chirality assigned to this crossing== %%POSTFIX%%. Sincethere cannot be a net chi*
+>%%LINK%%[[#^bs6svw3uytp|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^bs6svw3uytp
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T18:15:17.857Z","updated":"2023-06-25T18:15:17.857Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":27791,"end":27885},{"type":"TextQuoteSelector","exact":"away from the time-reversal invariantmomenta (TRIMs), which are high-symmetry points in the BZ","prefix":"fect.95 Thiseffect only appears ","suffix":"(only the ones where kx, ky, and"}]}]}
+>```
+>%%
+>*%%PREFIX%%fect.95 Thiseffect only appears%%HIGHLIGHT%% ==away from the time-reversal invariantmomenta (TRIMs), which are high-symmetry points in the BZ== %%POSTFIX%%(only the ones where kx, ky, and*
+>%%LINK%%[[#^sm7quzflp7c|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^sm7quzflp7c
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T18:15:33.272Z","updated":"2023-06-25T18:15:33.272Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":28195,"end":28218},{"type":"TextQuoteSelector","exact":"minimum number of four.","prefix":"yl cones will be multiplied to a","suffix":" If further crystal symmetry act"}]}]}
+>```
+>%%
+>*%%PREFIX%%yl cones will be multiplied to a%%HIGHLIGHT%% ==minimum number of four.== %%POSTFIX%%If further crystal symmetry act*
+>%%LINK%%[[#^ji0bcyyaova|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^ji0bcyyaova
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T18:16:14.470Z","updated":"2023-06-25T18:16:14.470Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":28482,"end":28546},{"type":"TextQuoteSelector","exact":"highly preferredto have as few Weyl cones as possible in the BZ.","prefix":"s of Weyl Fermions, it would be ","suffix":" The secondpossibility for creat"}]}]}
+>```
+>%%
+>*%%PREFIX%%s of Weyl Fermions, it would be%%HIGHLIGHT%% ==highly preferredto have as few Weyl cones as possible in the BZ.== %%POSTFIX%%The secondpossibility for creat*
+>%%LINK%%[[#^v8iso5gnwf|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^v8iso5gnwf
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T18:16:23.253Z","updated":"2023-06-25T18:16:23.253Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":28607,"end":28622},{"type":"TextQuoteSelector","exact":"lose T-symmetry","prefix":"eating a WSM would be to try to ","suffix":"28 (Figure 4a). This can be achi"}]}]}
+>```
+>%%
+>*%%PREFIX%%eating a WSM would be to try to%%HIGHLIGHT%% ==lose T-symmetry== %%POSTFIX%%28 (Figure 4a). This can be achi*
+>%%LINK%%[[#^mjdisvfqhuf|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^mjdisvfqhuf
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T18:16:27.784Z","updated":"2023-06-25T18:16:27.784Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":28668,"end":28694},{"type":"TextQuoteSelector","exact":"applying a magnetic field;","prefix":". This can be achieved easily by","suffix":" however, the effected (Zeeman) "}]}]}
+>```
+>%%
+>*%%PREFIX%%. This can be achieved easily by%%HIGHLIGHT%% ==applying a magnetic field;== %%POSTFIX%%however, the effected (Zeeman)*
+>%%LINK%%[[#^j1ozw604tp|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^j1ozw604tp
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T18:16:41.070Z","updated":"2023-06-25T18:16:41.070Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":29016,"end":29052},{"type":"TextQuoteSelector","exact":"not yet manyexamples of magnetic WSM","prefix":"tly break T-symmetry. There are ","suffix":"s. In order to predict a magneti"}]}]}
+>```
+>%%
+>*%%PREFIX%%tly break T-symmetry. There are%%HIGHLIGHT%% ==not yet manyexamples of magnetic WSM== %%POSTFIX%%s. In order to predict a magneti*
+>%%LINK%%[[#^dtktku1mogw|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^dtktku1mogw
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T18:16:53.626Z","updated":"2023-06-25T18:16:53.626Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":29418,"end":29469},{"type":"TextQuoteSelector","exact":"allowing for Weylcones to be on high-symmetry lines","prefix":"metry breaking (see Figure 4a), ","suffix":" (see Figure 4b). Therefore,it i"}]}]}
+>```
+>%%
+>*%%PREFIX%%metry breaking (see Figure 4a),%%HIGHLIGHT%% ==allowing for Weylcones to be on high-symmetry lines== %%POSTFIX%%(see Figure 4b). Therefore,it i*
+>%%LINK%%[[#^r3hxxy7jgm|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^r3hxxy7jgm
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T18:17:21.529Z","updated":"2023-06-25T18:17:21.529Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":31102,"end":31161},{"type":"TextQuoteSelector","exact":"twofolddegenerate band crossings, but the cones are tilted ","prefix":".106,107 Type II WSMs also have ","suffix":"(see Figure4c) so that it is not"}]}]}
+>```
+>%%
+>*%%PREFIX%%.106,107 Type II WSMs also have%%HIGHLIGHT%% ==twofolddegenerate band crossings, but the cones are tilted== %%POSTFIX%%(see Figure4c) so that it is not*
+>%%LINK%%[[#^1hujfycj4i8|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^1hujfycj4i8
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T18:17:58.762Z","updated":"2023-06-25T18:17:58.762Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":31595,"end":31613},{"type":"TextQuoteSelector","exact":" line or a circle.","prefix":"neracy is not just apoint, but a","suffix":"18,108−111 In contrast to a norm"}]}]}
+>```
+>%%
+>*%%PREFIX%%neracy is not just apoint, but a%%HIGHLIGHT%% ==line or a circle.== %%POSTFIX%%18,108−111 In contrast to a norm*
+>%%LINK%%[[#^infqiq6l5r|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^infqiq6l5r
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T18:18:16.874Z","updated":"2023-06-25T18:18:16.874Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":31641,"end":31733},{"type":"TextQuoteSelector","exact":"normalDSM or (type I) WSM, where the Fermi surface should just bea point (or several points)","prefix":"cle.18,108−111 In contrast to a ","suffix":", nodal line semimetals (NLSMs)h"}]}]}
+>```
+>%%
+>*%%PREFIX%%cle.18,108−111 In contrast to a%%HIGHLIGHT%% ==normalDSM or (type I) WSM, where the Fermi surface should just bea point (or several points)== %%POSTFIX%%, nodal line semimetals (NLSMs)h*
+>%%LINK%%[[#^vd99j40sp8r|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^vd99j40sp8r
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T18:18:21.616Z","updated":"2023-06-25T18:18:21.616Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":31768,"end":31801},{"type":"TextQuoteSelector","exact":" loops or lines as Fermi surfaces","prefix":"odal line semimetals (NLSMs)have","suffix":" (Figure 5). Thus, theconcentrat"}]}]}
+>```
+>%%
+>*%%PREFIX%%odal line semimetals (NLSMs)have%%HIGHLIGHT%% ==loops or lines as Fermi surfaces== %%POSTFIX%%(Figure 5). Thus, theconcentrat*
+>%%LINK%%[[#^3read44v1sb|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^3read44v1sb
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T18:18:29.128Z","updated":"2023-06-25T18:18:29.128Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":31823,"end":31896},{"type":"TextQuoteSelector","exact":"concentration of Dirac or Weyl electrons is much higher inthese materials","prefix":"i surfaces (Figure 5). Thus, the","suffix":", which makes them preferable ca"}]}]}
+>```
+>%%
+>*%%PREFIX%%i surfaces (Figure 5). Thus, the%%HIGHLIGHT%% ==concentration of Dirac or Weyl electrons is much higher inthese materials== %%POSTFIX%%, which makes them preferable ca*
+>%%LINK%%[[#^rv39g5nxaol|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^rv39g5nxaol
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T18:31:35.927Z","updated":"2023-06-25T18:31:35.927Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":40250,"end":40265},{"type":"TextQuoteSelector","exact":"new description","prefix":"L APPROACH TOTOPOLOGYRecently a ","suffix":" of topological materials wasint"}]}]}
+>```
+>%%
+>*%%PREFIX%%L APPROACH TOTOPOLOGYRecently a%%HIGHLIGHT%% ==new description== %%POSTFIX%%of topological materials wasint*
+>%%LINK%%[[#^aprpeiswnhj|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^aprpeiswnhj
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T18:31:49.307Z","updated":"2023-06-25T18:31:49.307Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":40619,"end":40739},{"type":"TextQuoteSelector","exact":"classification of the symmetry orirreducible representation of an orbital if it is repeated in acrystallographic lattice","prefix":"ll 230 spacegroups. An EBR is a ","suffix":". Let us, for example, consider "}]}]}
+>```
+>%%
+>*%%PREFIX%%ll 230 spacegroups. An EBR is a%%HIGHLIGHT%% ==classification of the symmetry orirreducible representation of an orbital if it is repeated in acrystallographic lattice== %%POSTFIX%%. Let us, for example, consider*
+>%%LINK%%[[#^5fjpde6o5hw|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^5fjpde6o5hw
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T18:32:04.160Z","updated":"2023-06-25T18:32:04.160Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":41179,"end":41252},{"type":"TextQuoteSelector","exact":"EBR is thus a set of bands; i.e.,several bands can belong to a single EBR","prefix":"lecular orbitals in a solid. An ","suffix":", just like severalmolecular orb"}]}]}
+>```
+>%%
+>*%%PREFIX%%lecular orbitals in a solid. An%%HIGHLIGHT%% ==EBR is thus a set of bands; i.e.,several bands can belong to a single EBR== %%POSTFIX%%, just like severalmolecular orb*
+>%%LINK%%[[#^2ozpo5r7trf|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^2ozpo5r7trf
+
+
+>%%
+>```annotation-json
+>{"created":"2023-06-25T19:05:35.918Z","updated":"2023-06-25T19:05:35.918Z","document":{"title":"Chemical Principles of Topological Semimetals","link":[{"href":"urn:x-pdf:7f5dbebce7000e13496754293777bd83"},{"href":"vault:/PDFs/Topological_semimetals.pdf"}],"documentFingerprint":"7f5dbebce7000e13496754293777bd83"},"uri":"vault:/PDFs/Topological_semimetals.pdf","target":[{"source":"vault:/PDFs/Topological_semimetals.pdf","selector":[{"type":"TextPositionSelector","start":42821,"end":42908},{"type":"TextQuoteSelector","exact":"If the Fermi level lies within a single, connected EBR, thematerial will be a semimetal","prefix":"el also plays an important role.","suffix":". Graphene is an example for thi"}]}]}
+>```
+>%%
+>*%%PREFIX%%el also plays an important role.%%HIGHLIGHT%% ==If the Fermi level lies within a single, connected EBR, thematerial will be a semimetal== %%POSTFIX%%. Graphene is an example for thi*
+>%%LINK%%[[#^hjll3axpnrj|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^hjll3axpnrj
