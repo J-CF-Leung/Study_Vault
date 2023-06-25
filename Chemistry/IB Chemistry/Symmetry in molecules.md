@@ -1,4 +1,4 @@
-- General discussion and basics of group theory: [[Group Theory]]
+- General discussion and basics of group theory: [[Foundations of Group Theory]]
 
 - When describing the symmetry of molecules, _only the arrangement of atoms matters_
 - The _specific atoms are not important_
@@ -315,7 +315,7 @@ $$\bm{p}=\sum_i q_i\bm{r}_i$$
 # Direct products
 - Given which representations two functions may transform as, one may want to know how the _product_ of those functions transform
 
-- Mathematically, the representation is given by the [[Group Theory|direct product]]
+- Mathematically, the representation is given by the [[Foundations of Group Theory|direct product]]
 - The _characters_ multiply directly, operation by operation
 
 - Example: $B_1\otimes B_2$ for $C_{2v}$ gives $A_2$

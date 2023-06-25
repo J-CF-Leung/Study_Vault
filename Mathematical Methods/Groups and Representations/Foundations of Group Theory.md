@@ -140,12 +140,6 @@ $$k\leq|G|$$
 - If an element $g$ has order $q$:
 $$g^{-1}=g^{k-1}$$
 # Subgroups
-- Consider the _multiplication table_ for a group
-- The elements of the table are $g_2g_1$, where $g_1$ is on the _top row_, and $g_2$ is on the _left row_:
-![[D4 multiplication table.png]]
-- Each row is a _complete rearrangement_ of every other row
-- Each element only _appears in a row once_
-
 - A _subgroup_ of $G$ is a _subset_ of $G$ which is _a group in its own right_
 - If $H$ is a _subset_ of $G$, $H\subset G$
 - If $H$ is a _subgroup_ of $G$, $H<G$
@@ -177,6 +171,13 @@ $$\{I,R^2,m_1,m_2\}, \{I,R^2,m_3,m_4\}$$
 - They are the [[#The Vierergruppe|Klein 4-groups/Vierergruppe]], denoted $K_4$ or $V$
 
 - Although $D_4$ itself is _non-Abelian_, its _subgroups_ are
+
+# Multiplication Tables
+- Consider organising _all possible products between two group elements_ into a table
+- The elements of the table are $g_2g_1$, where $g_1$ is on the _top row_, and $g_2$ is on the _left row_:
+![[D4 multiplication table.png]]
+- Each row is a _complete rearrangement_ of every other row
+- Each element only _appears in a row once_
 
 # Cosets and Lagrange's Theorem
 - Given a group $G$, along with _subgroup_ $H=\{I,h_1,h_2,\dots\}$ of $G$, and an element $g\in G$
