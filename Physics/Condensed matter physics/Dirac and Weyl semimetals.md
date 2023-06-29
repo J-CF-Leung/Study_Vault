@@ -37,3 +37,6 @@
 - Hence, if an arbitrary surface has an _odd number_ of crossings with a Fermi surface, that Fermi surface belongs to a _Weyl semimetal_
 
 - In order for there to be a Weyl crossing, _either_ inversion or time-reversal symmetry must be _broken_
+	- _Non-centrosymmetric_ materials: via the _Dreelhaus_ effect (related to S-OC), making Weyl points appear _away from high-symmetry lines_
+	- _Breaking $T$ symmetry_: applying a _magnetic_ field
+- From the _no-go theorem_, Weyl points always appear in _pairs_ of opposite chirality or monopole charge

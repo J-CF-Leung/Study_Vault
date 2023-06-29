@@ -37,7 +37,7 @@ $$\Psi(x)=u_k(x)\exp(ikx)$$
 - In general, _Bloch's theorem_ states that _solutions of the Schrodinger equation for a periodic potential_ must have the form:
 $$\Psi_\bm{k}(\bm{r})=u_\bm{k}(\bm{r})\exp(i\bm{k}\cdot\bm{r})$$
 - $u_k(\bm{r})$ must _reflect the periodicity of the potential_:
-$$u_k(x)=\sum_{n=-\infty}^\infty C_{k,n}\frac{1}{\sqrt{A}}\exp(inG_1x)$$
+$$\displaylines{u_\bm{k}(\bm{r}+\bm{R})=u_\bm{k}(\bm{r}) \\ u_k(x)=\sum_{n=-\infty}^\infty C_{k,n}\frac{1}{\sqrt{A}}\exp(inG_1x)}$$
 - The _overall wave-function_ is then:
 $$\Psi_k(x)=\sum_{n=-\infty}^\infty C_{k,n}\frac{1}{\sqrt{A}}\exp[i(k+nG_1)x]$$
 

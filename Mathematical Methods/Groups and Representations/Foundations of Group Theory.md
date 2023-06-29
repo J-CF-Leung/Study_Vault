@@ -157,7 +157,7 @@ $$g^{-1}=g^{k-1}$$
 $$\{I,g,g^2,\dots,g^{k-1}\}$$
 - Since $G$ is finite, this sequence is _also finite_, as $g^k=I$
 - This set of elements forms the _cyclic subgroup_ $Z_k$
-- If $k=|G|$, then the cyclic subgroup is $G$ itself
+- If $k=|G|$, then the cyclic subgroup is $G$ _itself_
 
 ## Example: The subgroups of $D_4$
 - By inspection, $D_4$ has 5 order-2 subgroups:
@@ -174,10 +174,25 @@ $$\{I,R^2,m_1,m_2\}, \{I,R^2,m_3,m_4\}$$
 
 # Multiplication Tables
 - Consider organising _all possible products between two group elements_ into a table
-- The elements of the table are $g_2g_1$, where $g_1$ is on the _top row_, and $g_2$ is on the _left row_:
+- The elements of the table are $g_2g_1$, where $g_1$ is on the _top row_, and $g_2$ is on the _left row_
+- For example, the multiplication table of $D_4$:
 ![[D4 multiplication table.png]]
 - Each row is a _complete rearrangement_ of every other row
-- Each element only _appears in a row once_
+- Each element appears in a row or column _once and only once_
+	- Suppose in the $i$th row, $g_ig_j=g_ig_k$, then $g_j=g_k$
+
+## Constructing multiplication tables for small n
+- Using the "once and only once" rule, one can construct _all possible groups_ of small order $n$ by only considering the multiplication table
+- Let there be some group of order $4$, with elements $(I,A,B,C)$, and use the definition of the identity:
+
+ |     | $I$ | $A$ | $B$ | $C$ |
+ | --- | --- | --- | --- | --- |
+ | $I$ | $I$ | $A$ | $B$ | $C$ |
+ | $A$ | $A$ |     |     |     |
+ | $B$ | $B$ |     |     |     |
+ | $C$ | $C$ |     |     |     |
+
+
 
 # Cosets and Lagrange's Theorem
 - Given a group $G$, along with _subgroup_ $H=\{I,h_1,h_2,\dots\}$ of $G$, and an element $g\in G$
@@ -186,6 +201,7 @@ $$gH=\{g,gh_1,gh_2,\dots\}$$
 - The _right coset_ of $H$ in $G$ is defined as:
 $$Hg=\{g,h_1g,h_2g,\dots\}$$
 - If $G$ is _Abelian_, then the left and right cosets are _equivalent_
+- Unsurprisingly, they are _not groups_
 - Each coset contains $|H|$ elements
 
 - The subgroup $H$ and its _left cosets_ will _partition_ $G$, as they _divide_ $G$ into _disjoint subsets_
@@ -223,7 +239,15 @@ $$(f,g)^{-1}=(f^{-1},g^{-1})$$
 - The _order_ of the group:
 $$|F\otimes G|=|F||G|$$
 
+- $F$ and $G$ can then be considered _subgroups_ of $F\otimes G$ with elements $(f,I)$ and $(g,I)$
+
 ## The Vierergruppe
+-  Consider the direct product $Z_2\otimes Z_2$
+- The elements are $(1,1)$, $(1,-1)$, $(1,-1)$ and $(-1,-1)$
+- This is another definition of Klein's _Vierergruppe_, denoted $V$
+	- Can also be noted as one of the [[#Example The subgroups of $D_4$|subgroups of D4]]
+
+- It is _distinct_ from $Z_4$, as the _square of any element_ in $V$ gives the _identity_
 
 
 # Mappings
