@@ -74,10 +74,13 @@ $$g_1g_2\neq g_2g_1$$
 - The group of _even permutations_ $A_n$
 
 - The $n$ _roots_ of $1$ form the group $Z_n$ under _multiplication_
-- This can be expanded to _all complex numbers of magnitude_ $1$, or $\exp(i\phi)$, under multiplication
+	- This group is said to be _cyclic_
+- This can be expanded to _all complex numbers of magnitude_ $1$, or $\exp(i\phi)$, under multiplication, with a group denoted $U(1)$
+	- This is [[#Mappings|isomorphic]] to $SO(2)$
 
 - The _addition_ of integers $\text{mod} \;N$
 	- Example: Under addition $\text{mod}\;5$, $\{0,1,2,3,4\}$ form a group
+	- This is [[#Mappings|isomorphic]] to the cyclic group of order $N$, $Z_N$
 
 - The [[Relativity|Lorentz boost]] with _boost angle_ $\varphi$
 
@@ -172,28 +175,6 @@ $$\{I,R^2,m_1,m_2\}, \{I,R^2,m_3,m_4\}$$
 
 - Although $D_4$ itself is _non-Abelian_, its _subgroups_ are
 
-# Multiplication Tables
-- Consider organising _all possible products between two group elements_ into a table
-- The elements of the table are $g_2g_1$, where $g_1$ is on the _top row_, and $g_2$ is on the _left row_
-- For example, the multiplication table of $D_4$:
-![[D4 multiplication table.png]]
-- Each row is a _complete rearrangement_ of every other row
-- Each element appears in a row or column _once and only once_
-	- Suppose in the $i$th row, $g_ig_j=g_ig_k$, then $g_j=g_k$
-
-## Constructing multiplication tables for small n
-- Using the "once and only once" rule, one can construct _all possible groups_ of small order $n$ by only considering the multiplication table
-- Let there be some group of order $4$, with elements $(I,A,B,C)$, and use the definition of the identity:
-
- |     | $I$ | $A$ | $B$ | $C$ |
- | --- | --- | --- | --- | --- |
- | $I$ | $I$ | $A$ | $B$ | $C$ |
- | $A$ | $A$ |     |     |     |
- | $B$ | $B$ |     |     |     |
- | $C$ | $C$ |     |     |     |
-
-
-
 # Cosets and Lagrange's Theorem
 - Given a group $G$, along with _subgroup_ $H=\{I,h_1,h_2,\dots\}$ of $G$, and an element $g\in G$
 - The _left coset_ of $H$ in $G$ is defined as:
@@ -248,7 +229,42 @@ $$|F\otimes G|=|F||G|$$
 	- Can also be noted as one of the [[#Example The subgroups of $D_4$|subgroups of D4]]
 
 - It is _distinct_ from $Z_4$, as the _square of any element_ in $V$ gives the _identity_
+	- In other words, _every element is self-inverse_
 
+# Multiplication tables and presentations
+- Ways to _define_ groups by stating the results of _group products_
+
+## Multiplication tables
+- Consider organising _all possible products between two group elements_ into a table
+- The elements of the table are $g_2g_1$, where $g_1$ is on the _top row_, and $g_2$ is on the _left row_
+- For example, the multiplication table of $D_4$:
+![[D4 multiplication table.png]]
+- Each row is a _complete rearrangement_ of every other row
+- Each element appears in a row or column _once and only once_
+	- Suppose in the $i$th row, $g_ig_j=g_ig_k$, then $g_j=g_k$
+
+## Constructing multiplication tables for small n
+- Using the "once and only once" rule, one can construct _all possible groups_ of small order $n$ by only considering the multiplication table
+- Let there be some group of order $4$, with elements $(I,A,B,C)$, and use the definition of the identity:
+
+![[Order 4 Cayley table stage 1.png|250]]
+
+- Then, there are _two possible choices_:
+$$A^2=I \;\;\;\text{ or }\;\;\; A^2=B$$
+- $A^2=B$ and $A^2=C$ are the same as the only difference is _relabelling_
+
+- Then continuing to use the _once and only once_ rule, one finds that there are _only two possible order-4 groups_:
+![[Order 4 Cayley tables.png|500]]
+
+- The left is the $Z_4$ _cyclic group_
+- The right is the _Vierergruppe_ $V$
+
+## Presentations
+- For _large groups_, it is much easier to define groups via _presentations_
+- They list elements from which _all other elements_ can be obtained, or the _generators_
+- Example: the generators of the [[#A point group The symmetries of a square|D4 group]] are $\{R,m_1\}$
+- For the two order 4 groups:
+$$\displaylines{Z_4: \braket{A|A^4=I} \\ Z_2\otimes Z_2:\braket{A,B|A^2=B^2=I\;,\; AB=BA}}$$
 
 # Mappings
 - A _mapping_ is basically a _single-valued function_
@@ -262,18 +278,35 @@ $$f:G\to G'$$
 	- Left: One-to-one, but _not onto_
 	- Right: Onto, but _not one-to-one_
 
-- Let there be a mapping is _between two finite groups of the same order_ $G$ and $G'$, i.e. $$f:G\to G' \;\;\;\text{ with }\;\;\; |G|=|G'|$$
-- If the mapping is one-to-one, then it is _also onto_
-- If such a mapping _preserves the group operations_ (i.e. the _structure of the group table_ stays the same), then the groups are said to be _isomorphic_, and the mapping is known as an _isomorphism_
+- Let there be a mapping is _between two finite groups_ $G$ and $G'$, i.e. $$f:G\to G'$$
+- If such a mapping _preserves the group operations_ (i.e. the _structure of the group table_ stays the same), then the groups are said to be _homomorphic_, and the mapping is known as an _homomorphism_
+
 - Let the group operation in $G$ be denoted $\circ$, and the group operation in $G'$ be $*$
-- For $G$ and $G'$ to be _isomorphic_:
+- For $G$ and $G'$ to be _homomorphic_:
 $$\text{If }g_3=g_1\circ g_2\text{ , then } f(g_3)=f(g_1)*f(g_2)$$
 - For isomorphic groups, the _identities map onto each other_:
 $$\displaylines{ I'=f(I) \\ h\circ g=I \Longrightarrow f(h)*f(g)=I'}$$
-- Example: the [[#Subgroups|Klein 4-Groups]] are isomorphic
+
+- If a homomorphism is also _one-to-one and onto_, then it is also an _isomorphism_
+- In most cases, one would consider mappings between _groups of the same order_, which are _isomorphic_
+
+## Examples of isomorphisms
 - _Every order-4 group_ $G$ is _isomorphic_ either to the _cyclic group_ $C_4$, or the _Vierergruppe_ $V$
 
 - One can also form a set of $n\times n$ _matrices_ that become _isomorphic_ to a group under _matrix multiplication_, this is known as a _faithful representation_ of the group
+
+- Consider the group $Z_2\otimes Z_3$, and the _repeated composition_ of $(1,1)$, starting from $(0,0)$:
+$$\displaylines{Z_2\otimes Z_3 \\ (0,0)\to(1,1)\to(2,2)=(0,2)\to(1,0)\to(0,1)\to(1,2)\to(0,0)}$$
+- This _cycles_ through _all 6 possible elements_
+- Hence, $Z_2\otimes Z_3$ is _isomorphic_ to $Z_6$
+
+- An _isomorphism_ between $Z_p\otimes Z_q$ and $Z_{pq}$ only occurs when $p$ and $q$ are _relatively prime_
+- Example: consider the same case with $Z_2\otimes Z_4$:
+$$\displaylines{Z_2\otimes Z_4 \\ (0,0)\to(1,1)\to(0,2)\to(1,3)\to(0,0) \\ (0,1)\to(1,2)\to(0,3)\to(1,0)\to(0,1)}$$
+- This can be represented using a _discrete lattice on a torus_:
+![[Z2 Z4 structure.png]]
+
+- In another example, $SO(2)$ and $U(1)$ are _isomorphic_
 
 # Conjugacy classes
 - A _property_ of inverses:
