@@ -194,8 +194,10 @@ $$Hg=\{g,h_1g,h_2g,\dots\}$$
 - Two cosets are _only identical iff_ $g_1g_2^{-1}\in H$
 
 - Then, one can state _Lagrange's Theorem_:
-- Let $G$ be a _finite group_ and let $H\subset G$, not necessarily normal, then the theorem states:
+>[!info] Lagrange's Theorem
+>Let $G$ be a _finite group_ and let $H\subset G$, not necessarily normal, then the theorem states:
 $$|G|=n|H| \hspace{1cm} n\in \mathbb{Z}$$
+
 - Proof: Suppose there are $n$ _distinct right cosets_ of $H$, including $HI$
 	- As they are all _disjoint_, and each has $|H|$ elements
 	- Each element of $G$ is _in exactly one coset_, hence $|G|=n|H|$
@@ -307,6 +309,21 @@ $$\displaylines{Z_2\otimes Z_4 \\ (0,0)\to(1,1)\to(0,2)\to(1,3)\to(0,0) \\ (0,1)
 ![[Z2 Z4 structure.png]]
 
 - In another example, $SO(2)$ and $U(1)$ are _isomorphic_
+
+# Permutation Groups and Cayley's Theorem
+- The _permutation groups_ $S_n$ is rearranges $n$ objects, and evidently has $n!$ elements
+	- The _subgroup_ $A_n$ only has the _even permutations_
+
+>[!info] Cayley's Theorem
+> _All_ finite groups are _isomorphic to a subgroup_ of $S_n$
+
+- A row in the [[#Multiplication tables|multiplication table]] of some group $G$ with elements $\{g_1,g_2,\dots,g_n\}$ will have products $\{g_ig_1,g_ig_2,\dots,g_ig_n\}$, which from the _once and only once_ rule, must be _some permutation_ of the elements of $G$
+- Hence, $g_i$ can be _mapped onto_ a subgroup of the permutation group 
+	- $(n<n!)$, especially for _large $n$_
+
+- Example: 
+	- $Z_2$ is isomorphic to $S_2$ 
+	- $Z_3$ is isomorphic to $A_3$, a _subgroup_ of $S_3$
 
 # Conjugacy classes
 - A _property_ of inverses:

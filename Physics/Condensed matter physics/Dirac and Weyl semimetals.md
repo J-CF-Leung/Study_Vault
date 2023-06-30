@@ -30,7 +30,7 @@
 
 - If _spin-up_ and _spin-down_ bands cross, this makes the Weyl point _chiral_
 - They are _topological defects_ analagous to _magnetic monopoles_
-	- The analagous "magnetic field" is known as _Berry curvature_
+	- The analagous "magnetic field" is known as _Berry curvature_, and the points act as _sources and sinks_ depending on chirality
 
 - Unlike other solids, which have _closed Fermi surfaces_, Weyl semimetals have _Fermi arcs_ which _terminate_ at Weyl points:
 ![[Weyl arc.png]]
@@ -39,4 +39,7 @@
 - In order for there to be a Weyl crossing, _either_ inversion or time-reversal symmetry must be _broken_
 	- _Non-centrosymmetric_ materials: via the _Dreelhaus_ effect (related to S-OC), making Weyl points appear _away from high-symmetry lines_
 	- _Breaking $T$ symmetry_: applying a _magnetic_ field
-- From the _no-go theorem_, Weyl points always appear in _pairs_ of opposite chirality or monopole charge
+- Weyl points always appear in _pairs_ of opposite chirality or monopole charge
+
+- Generally, Weyl points are _stable_ w.r.t small perturbations in _parameters of the Hamiltonian_
+- They can only disappear upon _annihilation with another Weyl point_
