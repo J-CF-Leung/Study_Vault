@@ -41,5 +41,7 @@
 	- _Breaking $T$ symmetry_: applying a _magnetic_ field
 - Weyl points always appear in _pairs_ of opposite chirality or monopole charge
 
+- A Fermi surface _enclosing_ a Weyl point will have a _well-defined Chern number_
+
 - Generally, Weyl points are _stable_ w.r.t small perturbations in _parameters of the Hamiltonian_
 - They can only disappear upon _annihilation with another Weyl point_

@@ -294,6 +294,7 @@ $$\displaylines{ I'=f(I) \\ h\circ g=I \Longrightarrow f(h)*f(g)=I'}$$
 
 ## Examples of isomorphisms
 - _Every order-4 group_ $G$ is _isomorphic_ either to the _cyclic group_ $C_4$, or the _Vierergruppe_ $V$
+	- Can be seen from constructing all possible [[#Constructing multiplication tables for small n|multiplication tables]] for $n=4$
 
 - One can also form a set of $n\times n$ _matrices_ that become _isomorphic_ to a group under _matrix multiplication_, this is known as a _faithful representation_ of the group
 
@@ -325,12 +326,41 @@ $$\displaylines{Z_2\otimes Z_4 \\ (0,0)\to(1,1)\to(0,2)\to(1,3)\to(0,0) \\ (0,1)
 	- $Z_2$ is isomorphic to $S_2$ 
 	- $Z_3$ is isomorphic to $A_3$, a _subgroup_ of $S_3$
 
-# Conjugacy classes
+## Cycles and transpositions
+- An _element_ of the permutation group $S_5$ can be written as:
+$$g=\pmatrix{1&2&3&4&5 \\ 4&1&5&2&3}$$
+- This permutation takes: $1\to 5$, $2\to1$, and so forth
+- It can also be said that it _cyclically permutes_ $1\to4\to2\to1$ and $3\to5\to3$
+- This suggests a _compact notation_:
+$$g=(142)(35)$$
+- In other words, the permutation consists of a _3-cycle_ and a _2-cycle_
+	- 2-cycles are also known as _transpositions_
+
+- _Any_ permutation $P$ can be _resolved_ into cycles of various lengths, with _no cycle containing any number in common_
+	- A _1-cycle_ means leaving a number _unchanged_
+	- Proof: _construct_ a cycle, and if there are numbers left over, construct another cycle until the entire permutation is resolved
+- 1-cycles are usually _omitted_:
+$$g=\pmatrix{1&2&3&4&5 \\ 1&5&3&4&2}\longrightarrow g=(25)$$
+
+- _Any_ $n-$cycle, with $n>2$, can be _written as a product of transpositions_:
+	- In the above example, $(142)=(14)(42)$
+- Properties of products:
+	- If 2-cycles _have no numbers in common_, they _commute_ (Example: $(12)(34)=(34)(12)$)
+	- $(ab)(ba)=I$
+	- $(ab)(bc)(cd)=(abcd)$
+	- $(abc)(cde)=(abcde)$
+
+- All 2-cycles are _odd_, and hence all 3-cycles are _even_, and so on
+- Then, a permutation is _even or odd_ if it _decomposes_ into an _even or odd number of exchanges/transpositions_
+
+- This leads to the theorem that _all groups of even order_ have _at least one element_ $g$ with order 2, or in other words, $g^2=I$
+
+# Equivalence classes
 - A _property_ of inverses:
 $$(g_1g_2)^{-1}=g_2^{-1}g_1^{-1}$$
 - Can be proven using _associativity_ of group products
 
-- Two _group elements_ $g_1,g_2\in G$ are known to be _conjugate_ to each other if there exists _any_ group element $g$ such that:
+- Two _group elements_ $g_1,g_2\in G$ are known to be _conjugate_ to each other if _there exists any group element_ $g$ such that:
 $$g_2=gg_1g^{-1} \text{ or } g_2g=gg_1$$
 - If $g_1$ and $g_2$ are _conjugate_, it is denoted:
 $$g_1\sim g_2$$
@@ -341,17 +371,22 @@ $$g_1\sim g_2$$
 3. Transitivity: $$\text{If }g_1\sim g_2 \text{ and }g_2\sim g_3\text{, then } g_1\sim g_3$$
 - In general, if an equivalence relation exists in a set $S$, this _separates_ the set into _distinct subsets_, known as _equivalence classes_, where any elements $a$ and $b$ in the class satisfy $a\sim b$, but elements in _different classes_ are not equivalent
 
-- The _equivalence classes_ of a group $G$ are known as _conjugacy classes_
-
-- Example: The conjugacy classes of $D_4$ (denoted in the top row)
+- Example: The equivalence classes of $D_4$ (denoted in the top row)
 	![[D4 conjugacy classes.png]]
 	- Example: $m_2R=Rm_1$
 
-- The _identity_ element is always _in its own conjugacy class_
-- An _Abelian subgroup_ has all of its elements _in their own conjugacy class_
+- Example: $A_4$ falls into 4 equivalence classes:
+$$\displaylines{\{I\}, \;\{(12)(34),(13)(24),(14)(23)\},\;\{(123),(142),(134),(243)\} \\ \{(132),(124),(143),(234)\}}$$
+	- Example: $1\leftrightarrow2$ and $3\leftrightarrow4$ exchanges $(123)$ to $(214)=(142)$
+- Within $S_4$, $(124)$ and $(134)$ are equivalent, but _not in_ $A_4$ as $(23)$ is not an element there
+- Permutations in the _same equivalence class_ must _have the same cycle structure_
+- However, elements with _the same cycle structure_ are _not necessarily equivalent_
+
+- The _identity_ element is always _in its own equivalence class_
+- An _Abelian group_ has all of its elements _in their own equivalence class_
 
 - A group element _and its inverse_ (if different), _may or may not_ be in the same class
-
+- However, for a class $c$ consisting of $\{g_1,\dots,g_{n_c}\}$, then the _inverses of those elements_, $\{g_1^{-1},\dots,g_{n_c}^{-1}\}$ _also forms a class_ $\bar{c}$, which may or may not be the same as $c$
 
 ## Normal subgroups
 - A _normal subgroup_ $H$ of a group $G$ is a _subgroup_ containing _complete conjugacy classes_
