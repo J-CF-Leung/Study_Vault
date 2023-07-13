@@ -355,7 +355,7 @@ $$g=\pmatrix{1&2&3&4&5 \\ 1&5&3&4&2}\longrightarrow g=(25)$$
 
 - This leads to the theorem that _all groups of even order_ have _at least one element_ $g$ with order 2, or in other words, $g^2=I$
 
-# Equivalence classes
+# Equivalence classes and invariant subgroups
 - A _property_ of inverses:
 $$(g_1g_2)^{-1}=g_2^{-1}g_1^{-1}$$
 - Can be proven using _associativity_ of group products
@@ -388,19 +388,40 @@ $$\displaylines{\{I\}, \;\{(12)(34),(13)(24),(14)(23)\},\;\{(123),(142),(134),(2
 - A group element _and its inverse_ (if different), _may or may not_ be in the same class
 - However, for a class $c$ consisting of $\{g_1,\dots,g_{n_c}\}$, then the _inverses of those elements_, $\{g_1^{-1},\dots,g_{n_c}^{-1}\}$ _also forms a class_ $\bar{c}$, which may or may not be the same as $c$
 
-## Normal subgroups
-- A _normal subgroup_ $H$ of a group $G$ is a _subgroup_ containing _complete conjugacy classes_
+## Invariant subgroups
+- An _invariant subgroup_ $H$ of a group $G$ is a _subgroup_ containing _complete conjugacy classes_
 
-- $H$ is _normal_ if $H\leq G$ and $\forall h\in H$ and $\forall g\in G$:
+- $H$ is _normal_ if $H\leq G$, and $\forall h\in H$ and $\forall g\in G$:
 $$ghg^{-1}\in H$$
+	- Or in other words, the group $gHg^{-1}=\{gh_1g^{-1},gh_2g^{-1},\dots\}$ is identical to $H$ for any $g$ in $G$ but not in $H$
 - This is _denoted_ $H\trianglelefteq G$
-	- If $H\neq G$, and $H$ is a normal subgroup of $G$, then $H\triangleleft G$
+	- If $H\neq G$, and $H$ is an invariant subgroup of $G$, then $H\triangleleft G$
 
-- Example: one can show that the _order-4 subgroups_ of $D_4$ are _normal_, while the order-2 subgroups are not
-	- However, the order-2 subgroups can be normal subgroups of the Vierergruppe
+- Example: one can show that the _order-4 subgroups_ of $D_4$ are _invariant_, while the order-2 subgroups are not
+	- However, the order-2 subgroups can be invariant subgroups of the Vierergruppe
+- Example: $Z_4$ is a subgroup of $\mathcal{Q}$
+- Given a [[#Direct products|direct product group]] $G=E\otimes F$, $E$ and $F$ are _both invariant subgroups_ of $G$
 
-- _Trivially_, $\{I\}$ and $G$ itself are _normal subgroups_ of $G$
-- Normal subgroups, _excluding_ these, are known as _proper normal subgroups_ of $G$
+- _Trivially_, $\{I\}$ and $G$ itself are _invariant subgroups_ of $G$
+- Invariant subgroups, _excluding_ these, are known as _proper normal subgroups_ of $G$
+
+## Derived subgroups
+- Given a group $G$, with elements $a,b$, let:
+$$\braket{a,b}\equiv a^{-1}b^{-1}ab=(ba)^{-1}(ab)$$
+- Note:
+$$\braket{a,a}=I\hspace{1cm}\braket{a,b}^{-1}=\braket{b,a}$$
+- The product $\braket{a,b}\braket{c,d}$ does _not necessarily_ have the form $\braket{e,f}$ for some $e$ and $f$
+
+- Denote $\{x_1,x_2,\dots\}$ the objects $\braket{a,b}$ as $a$ and $b$ _range over all elements_ of $G$
+- Then, this set, along with _all possible products_ of the objects, constitute a _subgroup_ of $G$
+	- Not all products are of the form $\braket{a,b}$
+- This is known as the _derived subgroup_ $\mathcal{D}$
+
+- Example: the derived subgroup of $S_n$ is $A_n$
+	- Any product of four permutation is, by definition, _even_
+- Example: the derived subgroup of $A_4$ is $V=Z_2\otimes Z_2$
+
+- For an _Abelian_ group $G$, $\braket{a,b}=I$, hence $\mathcal{D}$ is simply the _trivial subgroup_ $\{I\}$
 
 # Vector spaces
 - Consider _vectors_ imposed on a square, an object with point group $D_4$, with the _origins at the centre of the square_:

@@ -128,6 +128,7 @@ $$R_2=S^{-1}R_1S$$
 
 - If there is a _horizontal plane_ present, it is labelled with subscript $h$
 - _Otherwise_, if it is a $C$ group, the subscript is $v$, or $d$ if it is a $D$ group
+	- $C_{nv}$ is also known as the [[The Finite Groups|dihedral groups]]
 
 - If there is an $S_{2n}$ axis _collinear_ with the $C_n$ axis, then the group is $S_{2n}$
 

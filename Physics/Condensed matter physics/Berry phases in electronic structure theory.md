@@ -7,7 +7,7 @@
 
 - They suggest that _quantisation and topology_ play a significant role
 
-# Quantisation in polarisation and surface charge
+# Quantisation in charges and currents
 - The _classical definition_ of [[Electromagnetism#Polarisation and bound charge density|Polarisation]] $\bm{P}$ is _dipole moment per unit volume_:
 $$\bm{P}=\frac{\bm{p}}{V_\text{cell}}=\frac{1}{V_\text{cell}}\int_\text{cell}\bm{r}\,\rho(\bm{r})\,d^3\bm{r}$$
 - The _first equality assumes_ the solid can be _decomposed_ into _polarised atoms/molecules_, separated by _charge-free regions_
@@ -30,6 +30,7 @@ $$\rho(\bm{r})=-\nabla\cdot\bm{P}(\bm{r})$$
 $$\rho_\text{surf}=\bm{P}\cdot\hat{\bm{n}}$$
 ## Branching values of polarization
 - Through a variety of arguments, one can argue that in a _repeating lattice_, values of $\bm{P}$ form _branches_, or in other words, is _well defined modulo some "quantum"_
+- Firstly, assume a _non-interacting_ Hamiltonian
 
 ### Due to the lattice
 - Considering a _lattice of point charges_, there may be _multiple ways_ to write the charge positions, differing by a _lattice vector_
@@ -40,6 +41,7 @@ $$\Delta \bm{P}\cdot\hat{\bm{n}}=\frac{e\,\hat{\bm{n}}\cdot\bm{R}}{V_\text{cell}
 - As $\Delta\bm{P}$ is a _constant_, this _does not affect_ $\rho$ or $\bm{J}$
 - As for branching values of _surface charge density_, one can interpret this as there being a _surface band_ within the _bulk gap_ that can either be _fully filled_ or _empty_ depending on the Fermi level
 	- Both the _bulk and surface_ must be _insulating_ or charge can flow as the _surface Hamiltonian_ changes
+	- A _local_ change in the Hamiltonian only induces a _local_ change insurface charge (the "nearsightedness" principle)
 	- Hence the Fermi level must have _zero density of states_ both in the bulk and the surface
 - The branching values can be expressed as:
 $$\sigma_\text{surf}:=\bm{P}\cdot\hat{\bm{n}}$$
@@ -83,3 +85,19 @@ $$\Delta P_\text{x,cyc}=\oint \frac{dP_x}{d\lambda}\,d\lambda=\frac{Nea}{V_\text
 - Hence, the branching nature of polarisation and the difference of $e\bm{R}/V_\text{cell}$ are said to be _robust against interactions_
 
 ## Orbital magnetisation and surface currents
+- The [[Electromagnetism#Magnetostatics in homogeneous magnetic materials|magnetisation]] of a material has two contributions:
+	- _Spin_ magnetisation from _excess electron spin_ in any direction
+	- _Orbital_ magnetisation, typically induced by _spin-orbit coupling_
+
+- Consider an _insulator_ with some _orbital magnetisation_ $\bm{M}_\text{orb}$
+- Orbital magnetisation manifests in the form of a _surface current_:
+$$\bm{K}_\text{surf}=\bm{M}_\text{orb}\times \hat{\bm{n}}$$
+- $\bm{K}_\text{surf}$ is a _dissipationless current_ as it continuously generated a $\bm{B}$ field
+	- _Microscopically_, dissipationless currents can manifest simply in the ground electronic states of multi-electron atoms
+- Unlike polarisation, $\bm{M}_\text{orb}$ is _unique_ for a given Hamiltonian
+	- Any _local change_ of the surface modifying $\bm{K}_\text{surf}$ will result in a _charge buildup_ (as the surface is insulating), which is impossible in a _stationary state_
+- Hence, for an _insulator_, $\bm{M}_\text{orb}$ is a _bulk property_
+
+- Like polarisation, this uniqueness is _robust against interactions and disorder_
+
+## Edge band structure
