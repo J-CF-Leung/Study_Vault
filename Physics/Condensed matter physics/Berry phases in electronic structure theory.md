@@ -101,3 +101,4 @@ $$\bm{K}_\text{surf}=\bm{M}_\text{orb}\times \hat{\bm{n}}$$
 - Like polarisation, this uniqueness is _robust against interactions and disorder_
 
 ## Edge band structure
+- Let there be a _two-dimensional insulating crystal_
