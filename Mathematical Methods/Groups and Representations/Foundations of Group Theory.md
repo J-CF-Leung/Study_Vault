@@ -182,7 +182,7 @@ $$gH=\{g,gh_1,gh_2,\dots\}$$
 - The _right coset_ of $H$ in $G$ is defined as:
 $$Hg=\{g,h_1g,h_2g,\dots\}$$
 - If $G$ is _Abelian_, then the left and right cosets are _equivalent_
-- Unsurprisingly, they are _not groups_
+- Unsurprisingly, they are _not groups themselves_
 - Each coset contains $|H|$ elements
 
 - The subgroup $H$ and its _left cosets_ will _partition_ $G$, as they _divide_ $G$ into _disjoint subsets_
@@ -195,7 +195,7 @@ $$Hg=\{g,h_1g,h_2g,\dots\}$$
 
 - Then, one can state _Lagrange's Theorem_:
 >[!info] Lagrange's Theorem
->Let $G$ be a _finite group_ and let $H\subset G$, not necessarily normal, then the theorem states:
+>Let $G$ be a _finite group_ and let $H\subset G$, not necessarily invariant, then the theorem states:
 $$|G|=n|H| \hspace{1cm} n\in \mathbb{Z}$$
 
 - Proof: Suppose there are $n$ _distinct right cosets_ of $H$, including $HI$
@@ -206,7 +206,7 @@ $$|G|=n|H| \hspace{1cm} n\in \mathbb{Z}$$
 	- Each element can form a [[#Subgroups|cyclic subgroup]] with _order equal to that of the generating element_ 
 
 - _Example_: $Z_3$ is a subgroup of any $Z_{3n}$, where $n$ is an integer
-	- Then if $p$ is _prime_, $Z_p$ has _no trivial subgroups_
+	- Then if $p$ is _prime_, $Z_p$ has _no non-trivial subgroups_
 
 # Direct products
 - Given two groups $F$ and $G$, with elements $f$ and $g$, one can generate a group $H$ via their _direct product_:
@@ -356,16 +356,18 @@ $$g=\pmatrix{1&2&3&4&5 \\ 1&5&3&4&2}\longrightarrow g=(25)$$
 - This leads to the theorem that _all groups of even order_ have _at least one element_ $g$ with order 2, or in other words, $g^2=I$
 
 # Equivalence classes and invariant subgroups
+
+## Equivalence
 - A _property_ of inverses:
 $$(g_1g_2)^{-1}=g_2^{-1}g_1^{-1}$$
 - Can be proven using _associativity_ of group products
 
-- Two _group elements_ $g_1,g_2\in G$ are known to be _conjugate_ to each other if _there exists any group element_ $g$ such that:
+- Two _group elements_ $g_1,g_2\in G$ are known to be _equivalent_ to each other if _there exists any group element_ $g$ such that:
 $$g_2=gg_1g^{-1} \text{ or } g_2g=gg_1$$
-- If $g_1$ and $g_2$ are _conjugate_, it is denoted:
+- If $g_1$ and $g_2$ are _equivalent_, it is denoted:
 $$g_1\sim g_2$$
 
-- The _conjugacy_ is an _equivalence relation_, which gives the properties:
+- The _equivalence relation_ has the properties:
 1. Reflexivity: $$g_1\sim g_1$$
 2. Symmetry: $$g_1\sim g_2\text{ implies }g_2\sim g_1$$
 3. Transitivity: $$\text{If }g_1\sim g_2 \text{ and }g_2\sim g_3\text{, then } g_1\sim g_3$$
@@ -394,8 +396,8 @@ $$\displaylines{\{I\}, \;\{(12)(34),(13)(24),(14)(23)\},\;\{(123),(142),(134),(2
 - $H$ is _normal_ if $H\leq G$, and $\forall h\in H$ and $\forall g\in G$:
 $$ghg^{-1}\in H$$
 	- Or in other words, the group $gHg^{-1}=\{gh_1g^{-1},gh_2g^{-1},\dots\}$ is identical to $H$ for any $g$ in $G$ but not in $H$
-- This is _denoted_ $H\trianglelefteq G$
-	- If $H\neq G$, and $H$ is an invariant subgroup of $G$, then $H\triangleleft G$
+- This is _denoted_ $H\trianglelefteq G$, or $G\trianglerighteq H$
+	- If $H\neq G$, and $H$ is an invariant subgroup of $G$, then $H\triangleleft G$ or $G\triangleright H$
 
 - Example: one can show that the _order-4 subgroups_ of $D_4$ are _invariant_, while the order-2 subgroups are not
 	- However, the order-2 subgroups can be invariant subgroups of the Vierergruppe
@@ -405,18 +407,21 @@ $$ghg^{-1}\in H$$
 - _Trivially_, $\{I\}$ and $G$ itself are _invariant subgroups_ of $G$
 - Invariant subgroups, _excluding_ these, are known as _proper invariant subgroups_ of $G$
 
+- If $G$ is _Abelian_, then _all subgroups are invariant_
+
 - Invariant subgroups can have _invariant subgroups of themselves_
 
 ## Derived subgroups
 - Given a group $G$, with elements $a,b$, let:
 $$\braket{a,b}\equiv a^{-1}b^{-1}ab=(ba)^{-1}(ab)$$
+- This is also known as the _commutator_
 - Note:
 $$\braket{a,a}=I\hspace{1cm}\braket{a,b}^{-1}=\braket{b,a}$$
 - The product $\braket{a,b}\braket{c,d}$ does _not necessarily_ have the form $\braket{e,f}$ for some $e$ and $f$
 
 - Denote $\{x_1,x_2,\dots\}$ the objects $\braket{a,b}$ as $a$ and $b$ _range over all elements_ of $G$
 - Then, this set, along with _all possible products_ of the objects, constitute a _subgroup_ of $G$
-	- Not all products are of the form $\braket{a,b}$
+	- Not all products are of the form $\braket{a,b}$ 
 - This is known as the _derived subgroup_ $\mathcal{D}$
 
 - Example: the derived subgroup of $S_n$ is $A_n$
@@ -427,6 +432,53 @@ $$\braket{a,a}=I\hspace{1cm}\braket{a,b}^{-1}=\braket{b,a}$$
 - Hence, the _size_ of the subgroup is a "measure" of _how non-Abelian_ $G$ is
 
 - All _derived_ subgroups are also _invariant_
+	- Let $g^{-1}ag=\tilde{a}$, then one can show $g^{-1}a^{-1}g=\tilde{a}^{-1}$
+	- One can show that $g^{-1}\braket{a,b}g=\braket{\tilde{a},\tilde{b}}$
+	- As the latter _must also be in $\mathcal{D}$_, $\mathcal{D}$ must be _invariant_
+
+- Example: the derived subgroup of the [[The Finite Groups#The dihedral group|dihedral group]] is $Z_{n/2}$ for _even_ $n$, and $Z_n$ for _odd_ $n$
+
+## Simple groups
+- A group is _simple_ if it has _no proper invariant subgroups_
+	- In other words, the _only_ invariant subgroups are $\{I\}$ and the group itself
+	- As all groups will have cyclic subgroups, "simplicity" is better expressed with the absence of _invariant_ subgroups
+- If the _derived subgroup_ is _non-trivial_, then $G$ is _not simple_
+	- Good way of quickly finding out if a group is simple
+
+## The kernel
+- Let there be a [[#Mappings|homomorphic mapping]] $f$, which maps $G$ onto itself
+	- In other words, $f(g_1)f(g_2)=f(g_1g_2)$
+- The _kernel_ of $G$ is a _subgroup_, comprised of the elements _mapped onto the identity_
+- The kernel is _always an invariant subgroup_ of $G$
+
+## Cosets, the quotient group and abelianisation
+- Let $G\triangleright H$, meaning $H$ is an _invariant subgroup_ of $G$
+- Consider the _left cosets_ $gH$ for some element $g\in G$:
+$$gH=\{gh_1,gh_2,\dots\}$$
+- There are many such possible cosets $g_aH,g_bH,\dots$
+- Since $H$ is _invariant_, the left cosets $gH$ are _identical_ to the right cosets $Hg$
+
+- The set of _elements from separate cosets multiplied_:
+$$(g_ah_i)(g_bh_j)=(g_ag_b)(g_b^{-1}h_ig_b)h_j=(g_ag_b)(h_lh_j)=g_ch_k$$
+- The last equality is due to _closure_
+- Hence, _cosets close under multiplication_
+- The _identity_ of the set of cosets is simply $IH$, as $(IH)(gH)=gH$
+- The _inverse_ of $gH$ is $g^{-1}H$
+- The group product between cosets is also _associative_
+
+- Hence, _cosets form a group of their own_
+- This is known as the _quotient group_, denoted $Q=G/H$
+
+- The _order_ (number of elements) of $Q$, is $|Q|=|G|/|H|$
+	- It is proven [[#Cosets and Lagrange's Theorem|above]] that the cosets _partition_ $G$, and Lagrange's Theorem guarantees that $|Q|$ is an integer
+- In _general_, $Q$ is _not a subgroup_ of $G$
+
+- Example: the quotient group $Q=\mathcal{Q}/Z_4$ is $Z_2$
+	- The cosets are $Z_4$ and $jZ_4$, where the latter is equivalent to $kZ_4$
+
+- Consider the quotient group $Q=G/\mathcal{D}$, where $\mathcal{D}$ is the [[#Derived subgroups|derived subgroup]]
+	- $\mathcal{D}$ is _always invariant_
+- This is known as the _abelianization_ of $G$
 
 # Vector spaces
 - Consider _vectors_ imposed on a square, an object with point group $D_4$, with the _origins at the centre of the square_:

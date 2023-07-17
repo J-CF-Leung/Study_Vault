@@ -278,3 +278,45 @@ annotation-target:: Non-Abelian_states.pdf
 >%%TAGS%%
 >
 ^pnm8pu90yh
+
+
+>%%
+>```annotation-json
+>{"created":"2023-07-17T13:28:49.155Z","updated":"2023-07-17T13:28:49.155Z","document":{"title":"Non-Abelian_states.pdf","link":[{"href":"urn:x-pdf:9c44bd9d8ad067bebe44ae5df0a791ba"},{"href":"vault:/PDFs/Non-Abelian_states.pdf"}],"documentFingerprint":"9c44bd9d8ad067bebe44ae5df0a791ba"},"uri":"vault:/PDFs/Non-Abelian_states.pdf","target":[{"source":"vault:/PDFs/Non-Abelian_states.pdf","selector":[{"type":"TextPositionSelector","start":7602,"end":7713},{"type":"TextQuoteSelector","exact":": two braiding trajectories that may be deformed into one another without the quasiparticles ever getting close","prefix":"f the quasiparticles’ trajectory","suffix":" should apply the same transform"}]}]}
+>```
+>%%
+>*%%PREFIX%%f the quasiparticles’ trajectory%%HIGHLIGHT%% ==: two braiding trajectories that may be deformed into one another without the quasiparticles ever getting close== %%POSTFIX%%should apply the same transform*
+>%%LINK%%[[#^b7x4gpkolmn|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^b7x4gpkolmn
+
+
+>%%
+>```annotation-json
+>{"created":"2023-07-17T13:30:13.081Z","updated":"2023-07-17T13:30:13.081Z","document":{"title":"Non-Abelian_states.pdf","link":[{"href":"urn:x-pdf:9c44bd9d8ad067bebe44ae5df0a791ba"},{"href":"vault:/PDFs/Non-Abelian_states.pdf"}],"documentFingerprint":"9c44bd9d8ad067bebe44ae5df0a791ba"},"uri":"vault:/PDFs/Non-Abelian_states.pdf","target":[{"source":"vault:/PDFs/Non-Abelian_states.pdf","selector":[{"type":"TextPositionSelector","start":10259,"end":10293},{"type":"TextQuoteSelector","exact":" usually originate from a symmetry","prefix":".Degeneracies in quantum spectra","suffix":" of the underlying Hamiltonian, "}]}]}
+>```
+>%%
+>*%%PREFIX%%.Degeneracies in quantum spectra%%HIGHLIGHT%% ==usually originate from a symmetry== %%POSTFIX%%of the underlying Hamiltonian,*
+>%%LINK%%[[#^n95nyuqokcm|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^n95nyuqokcm
+
+
+>%%
+>```annotation-json
+>{"created":"2023-07-17T13:31:52.613Z","updated":"2023-07-17T13:31:52.613Z","document":{"title":"Non-Abelian_states.pdf","link":[{"href":"urn:x-pdf:9c44bd9d8ad067bebe44ae5df0a791ba"},{"href":"vault:/PDFs/Non-Abelian_states.pdf"}],"documentFingerprint":"9c44bd9d8ad067bebe44ae5df0a791ba"},"uri":"vault:/PDFs/Non-Abelian_states.pdf","target":[{"source":"vault:/PDFs/Non-Abelian_states.pdf","selector":[{"type":"TextPositionSelector","start":10555,"end":10611},{"type":"TextQuoteSelector","exact":" does not originate from a simple symmetry of the system","prefix":"n-Abelian state is different. It","suffix":", and as such it is robust. Smal"}]}]}
+>```
+>%%
+>*%%PREFIX%%n-Abelian state is different. It%%HIGHLIGHT%% ==does not originate from a simple symmetry of the system== %%POSTFIX%%, and as such it is robust. Smal*
+>%%LINK%%[[#^yptio71c89m|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^yptio71c89m

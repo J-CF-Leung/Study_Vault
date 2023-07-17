@@ -2,9 +2,9 @@
 - Consider a position-space wave function at time $t$, evolved from $\ket{\Psi(t_0)}$:
 $$\begin{aligned}\Psi(x,t)=\braket{x|\Psi(t)}&=\sum_n\braket{x|E_n}\exp\left(-\frac{iE_n(t-t_0)}{\hbar}\right)\braket{E_n|\Psi(t_0)}\\ &= \int \sum_n\braket{x|E_n}\left(-\frac{iE_n(t-t_0)}{\hbar}\right)\braket{E_n|x'}\braket{x'|\Psi(t_0)}\,dx' \\
 &=\int K(x,t,x',t_0)\Psi(x',t_0)\,dx'\end{aligned}$$
-- The kernel of the integral operator, $K(x,t,x',t_0)$ is known as the _propagator_, similar to the one in wave mechanics
-- It dictates the time-evolution of a position-space wave function given an initial state
-- The propagator is also equal to the matrix elements of the time-evolution operator in the position basis:
+- The _kernel_ of the integral operator, $K(x,t,x',t_0)$ is known as the _propagator_, similar to the one in wave mechanics
+- It dictates the _time-evolution of a position-space wave function given an initial state_
+- The propagator is also equal to the _matrix elements of the time-evolution operator_ in the _position basis_:
 $$K(x,t,x',t_0)=\sum_n\braket{x|E_n}\exp\left(-\frac{iE_n(t-t_0)}{\hbar}\right)\braket{E_n|x'}=\braket{x|\teo(t,t_0)|x'}$$
 ## The propagator as a transition amplitude
 - It can also be thought of as a _[[Fundamental concepts of quantum mechanics#Transition amplitude|transition amplitude]]_ from the position eigenstate $\ket{x'}$ at time $t_0$ to the eigenstate $\ket{x}$ at time $t$:

@@ -398,7 +398,7 @@ $$\displaylines{[\hat{X}_i,\hat{P}_j]=i\hbar\delta_{ij}\hspace{1cm}\text{ for }i
 $$\displaylines{\hat{X}_1\ket{x_1x_2}=x_1\ket{x_1x_2} \\ \hat{X}_2\ket{x_1x_2}=x_2\ket{x_1x_2} \\ \braket{x_1'x_2'|x_1x_2}=\delta(x_1-x_1')\delta(x_2-x_2')}$$
 - In the coordinate basis:
 $$\displaylines{\wv\xrightarrow{x\text{ basis}}\braket{x_1x_2|\Psi}=\Psi(x_1,x_2) \\ \hat{X}_i\xrightarrow{x\text{ basis}} x_i \\ \hat{P}_i\xrightarrow{x\text{ basis}} -i\hbar\pd{}{x_i}}$$
-- In general, the _probability density_ that particle 1 is near $x_1$ and particle 2 is near $x_2$ is:
+- In general, the _probability density_ that particle 1 is near $x_1$, _and_ particle 2 is near $x_2$ is:
 $$P(x_1,x_2)=|\braket{x_1x_2|\Psi}|^2$$
 - The wave function would then be normalised as:
 $$\braket{\Psi|\Psi}=\int |\braket{x_1x_2|\Psi}|^2\,dx_1\,dx_2=1$$
@@ -407,7 +407,12 @@ $$\braket{\Psi|\Psi}=\int |\braket{x_1x_2|\Psi}|^2\,dx_1\,dx_2=1$$
 - In _general_, one can define simultaneous eigenkets $\ket{\omega_1\omega_2}$ for _any two commuting operators_ $\Omega_1(X_1,P_1)$ and $\Omega_2(X_2,P_2)$
 	- Any function of $X_1,P_1$ must commute with any function of $X_2,P_2$
 
-### The two-particle Hilbert space
+- Denote the Hilbert space _spanned by the simultaneous eigenkets_ as $\mathbb{V}_{1\otimes2}$
+
+### The direct product space
+- The eigenkets _for each particle_ span their _own Hilbert space_
+	- The eigenbasis $\ket{x_1}$ spans the space $\mathbb{V}_1$, likewise for particle 2
+- The corresponding _operators for each particle_ act on _their own vector spaces_
 
 ### Time-evolution of two particles
 

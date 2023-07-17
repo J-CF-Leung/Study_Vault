@@ -13,6 +13,7 @@
 
 - For the interchange to occur, there must be an _energy gap_ between the ground states and their _excitations_
 	- Common in many-body systems
+- Practically, the interchange is driven by _external stimuli_ of the system
 
 - The _insensitivity to noise_ makes this an ideal candidate for _quantum computing_
 
@@ -42,3 +43,20 @@ $$\Psi(r_2,r_1,\dots,r_N)=\exp(i\phi)\Psi(r_1,r_2,\dots,r_N)$$
 
 - Let the set of _particle positions_ be $\{r_i\}$, while the _collective excitations_ are described by coordinates $\{R_i(t)\}$ 
 - The degenerate ground states are labelled by $\ket{\Psi_\alpha\{R_i\}}$
+
+- Due to the _degeneracy_, the braiding can transform $\ket{\Psi_\alpha\{R_i\}}$ into a _different ground state_, $\ket{\Psi_\beta\{R_j\}}$
+- This is described by a _unitary matrix_ $U_{\alpha\beta}$
+- This is dependent on the _topology of the trajectory_, not its geometry
+	- a.k.a. the _windings_ of the quasiparticle trajectories, and their _mutual interchanges_
+	- The _same transformation_ can be descibed by _two trajectories_, which can be _deformed into each other_, with the _quasiparticles remaining far apart_
+
+- A _series of braidings_ would be described by a _matrix product_, which is _non-commutative_
+
+- In _typical_ systems, the _degeneracies_ result from some _symmetry_ of the Hamiltonian
+	- Upon _breaking_ the symmetry (e.g. with a _magnetic field_), the degeneracy is _broken_
+- In _non-Abelian_ states, the degeneracy is _independent_ of symmetry, and hence is _robust_ against external influences
+	- Only removed when the perturbation is of the order of the _energy gap_
+
+## Example: Phonons
+- _Non-Abelian frame charges_ can occur at _band crossings_ of crystals under certain conditions
+	- Example: Crossings in phonon frequency spectrum due to _band inversion_

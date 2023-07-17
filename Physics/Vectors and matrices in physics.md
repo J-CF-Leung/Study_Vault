@@ -265,6 +265,7 @@ $$\braket{k|\hat{K}|k'}=k\delta(k-k')$$
 $$\displaylines{\hat{X}\ket{x}=x\ket{x} \\ \braket{x|\hat{X}|x'}= x\delta(x-x') \\ \braket{x|\hat{X}f}=xf(x)}$$
 
 - From this, the interrelationships between $\hat{X}$ and $\hat{K}$ in their eigenbases are:
+
 |                                   | $\hat{X}$             | $\hat{K}$              |
 | --------------------------------- | --------------------- | ---------------------- |
 | $\braket{x \vert\hat{Q}\vert x'}$ | $x\delta(x-x')$       | $-i\delta'(x-x')$ |
@@ -274,4 +275,4 @@ $$\displaylines{\hat{X}\ket{x}=x\ket{x} \\ \braket{x|\hat{X}|x'}= x\delta(x-x') 
 $$[\hat{X},\hat{K}]=i\hat{I}$$
 - The $k-$basis has huge significance in quantum mechanics, as $\hat{P}=\hbar\hat{K}$ is the _momentum operator_
 
-# Tensor product spaces
+# Direct product spaces
