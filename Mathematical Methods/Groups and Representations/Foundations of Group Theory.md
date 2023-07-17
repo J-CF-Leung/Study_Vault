@@ -403,7 +403,9 @@ $$ghg^{-1}\in H$$
 - Given a [[#Direct products|direct product group]] $G=E\otimes F$, $E$ and $F$ are _both invariant subgroups_ of $G$
 
 - _Trivially_, $\{I\}$ and $G$ itself are _invariant subgroups_ of $G$
-- Invariant subgroups, _excluding_ these, are known as _proper normal subgroups_ of $G$
+- Invariant subgroups, _excluding_ these, are known as _proper invariant subgroups_ of $G$
+
+- Invariant subgroups can have _invariant subgroups of themselves_
 
 ## Derived subgroups
 - Given a group $G$, with elements $a,b$, let:
@@ -422,6 +424,9 @@ $$\braket{a,a}=I\hspace{1cm}\braket{a,b}^{-1}=\braket{b,a}$$
 - Example: the derived subgroup of $A_4$ is $V=Z_2\otimes Z_2$
 
 - For an _Abelian_ group $G$, $\braket{a,b}=I$, hence $\mathcal{D}$ is simply the _trivial subgroup_ $\{I\}$
+- Hence, the _size_ of the subgroup is a "measure" of _how non-Abelian_ $G$ is
+
+- All _derived_ subgroups are also _invariant_
 
 # Vector spaces
 - Consider _vectors_ imposed on a square, an object with point group $D_4$, with the _origins at the centre of the square_:
