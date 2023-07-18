@@ -415,6 +415,7 @@ $$ghg^{-1}\in H$$
 - Given a group $G$, with elements $a,b$, let:
 $$\braket{a,b}\equiv a^{-1}b^{-1}ab=(ba)^{-1}(ab)$$
 - This is also known as the _commutator_
+	- Confusing name for physicists!
 - Note:
 $$\braket{a,a}=I\hspace{1cm}\braket{a,b}^{-1}=\braket{b,a}$$
 - The product $\braket{a,b}\braket{c,d}$ does _not necessarily_ have the form $\braket{e,f}$ for some $e$ and $f$
@@ -423,6 +424,7 @@ $$\braket{a,a}=I\hspace{1cm}\braket{a,b}^{-1}=\braket{b,a}$$
 - Then, this set, along with _all possible products_ of the objects, constitute a _subgroup_ of $G$
 	- Not all products are of the form $\braket{a,b}$ 
 - This is known as the _derived subgroup_ $\mathcal{D}$
+	- Or the _commutator subgroup_, denoted $[G,G]$ (confusing!)
 
 - Example: the derived subgroup of $S_n$ is $A_n$
 	- Any product of four permutation is, by definition, _even_
@@ -437,6 +439,13 @@ $$\braket{a,a}=I\hspace{1cm}\braket{a,b}^{-1}=\braket{b,a}$$
 	- As the latter _must also be in $\mathcal{D}$_, $\mathcal{D}$ must be _invariant_
 
 - Example: the derived subgroup of the [[The Finite Groups#The dihedral group|dihedral group]] is $Z_{n/2}$ for _even_ $n$, and $Z_n$ for _odd_ $n$
+
+### Solvable and perfect groups
+- Denoting $G$ by $G^{(0)}$, there can be a _series_ where $G^{(i+1)}=[G^{(i)},G^{(i)}]$
+- If this ends with the _trivial group_ of $I$, then the group is _solvable_
+- If $G^{(1)}=G$, then the group is _perfect_
+
+- The _smallest perfect group_ is $A_5$
 
 ## Simple groups
 - A group is _simple_ if it has _no proper invariant subgroups_
@@ -479,6 +488,20 @@ $$(g_ah_i)(g_bh_j)=(g_ag_b)(g_b^{-1}h_ig_b)h_j=(g_ag_b)(h_lh_j)=g_ch_k$$
 - Consider the quotient group $Q=G/\mathcal{D}$, where $\mathcal{D}$ is the [[#Derived subgroups|derived subgroup]]
 	- $\mathcal{D}$ is _always invariant_
 - This is known as the _abelianization_ of $G$
+
+## Composition series and the maximal invariant subgroup
+- Suppose there is some invariant subgroup $H_1$ of $G$
+- $H_1$ may contain _its own invariant subgroup_ $H_2$
+- Following this, one can make a _composition series_:
+$$G\triangleright H_1\triangleright H_2\triangleright \dots\triangleright H_k\triangleright I$$
+- One can then have a sequence of _quotient groups_:
+$$G/H_1\supset H_1/H_2\supset\dots\supset H_k$$
+- Example: $\mathcal{Q}\triangleright Z_4\triangleright Z_2\triangleright I$
+
+- The shortest series would be given by the _maximal invariant subgroups_
+- This is helped by the theorem:
+>[!info] Theorem
+>Given a group $G$ with invariant subgroup $H$, forming the quotient group $Q=G/H$. Suppose that Q has no proper invariant subgroup. Then, $H$ is the _maximal invariant subgroup_.
 
 # Vector spaces
 - Consider _vectors_ imposed on a square, an object with point group $D_4$, with the _origins at the centre of the square_:
