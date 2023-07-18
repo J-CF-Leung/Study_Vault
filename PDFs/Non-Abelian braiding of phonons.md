@@ -755,3 +755,143 @@ annotation-target:: Non-Abelian_phonons.pdf
 >%%TAGS%%
 >
 ^6devtg6mcni
+
+
+>%%
+>```annotation-json
+>{"created":"2023-07-18T09:32:39.558Z","updated":"2023-07-18T09:32:39.558Z","document":{"title":"Multigap topology and non-Abelian braiding of phonons from first principles","link":[{"href":"urn:x-pdf:e5738591b321da83a8c1abae2ccee2ba"},{"href":"vault:/PDFs/Non-Abelian_phonons.pdf"}],"documentFingerprint":"e5738591b321da83a8c1abae2ccee2ba"},"uri":"vault:/PDFs/Non-Abelian_phonons.pdf","target":[{"source":"vault:/PDFs/Non-Abelian_phonons.pdf","selector":[{"type":"TextPositionSelector","start":18483,"end":18497},{"type":"TextQuoteSelector","exact":"quadratic node","prefix":"d such node is referred to as a ","suffix":"[Fig. 2(d)]. Hereafter, we label"}]}]}
+>```
+>%%
+>*%%PREFIX%%d such node is referred to as a%%HIGHLIGHT%% ==quadratic node== %%POSTFIX%%[Fig. 2(d)]. Hereafter, we label*
+>%%LINK%%[[#^8s2p6u6jjym|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^8s2p6u6jjym
+
+
+>%%
+>```annotation-json
+>{"created":"2023-07-18T09:33:25.134Z","updated":"2023-07-18T09:33:25.134Z","document":{"title":"Multigap topology and non-Abelian braiding of phonons from first principles","link":[{"href":"urn:x-pdf:e5738591b321da83a8c1abae2ccee2ba"},{"href":"vault:/PDFs/Non-Abelian_phonons.pdf"}],"documentFingerprint":"e5738591b321da83a8c1abae2ccee2ba"},"uri":"vault:/PDFs/Non-Abelian_phonons.pdf","target":[{"source":"vault:/PDFs/Non-Abelian_phonons.pdf","selector":[{"type":"TextPositionSelector","start":17282,"end":17312},{"type":"TextQuoteSelector","exact":" integer or half-integer value","prefix":"class in Eq. (3) can either have","suffix":"s, in-dicating the presence of 2"}]}]}
+>```
+>%%
+>*%%PREFIX%%class in Eq. (3) can either have%%HIGHLIGHT%% ==integer or half-integer value== %%POSTFIX%%s, in-dicating the presence of 2*
+>%%LINK%%[[#^xswp8vad12|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^xswp8vad12
+
+
+>%%
+>```annotation-json
+>{"created":"2023-07-18T09:33:35.804Z","updated":"2023-07-18T09:33:35.804Z","document":{"title":"Multigap topology and non-Abelian braiding of phonons from first principles","link":[{"href":"urn:x-pdf:e5738591b321da83a8c1abae2ccee2ba"},{"href":"vault:/PDFs/Non-Abelian_phonons.pdf"}],"documentFingerprint":"e5738591b321da83a8c1abae2ccee2ba"},"uri":"vault:/PDFs/Non-Abelian_phonons.pdf","target":[{"source":"vault:/PDFs/Non-Abelian_phonons.pdf","selector":[{"type":"TextPositionSelector","start":17342,"end":17379},{"type":"TextQuoteSelector","exact":" 2|χn| stable nodes within the patch.","prefix":"ues, in-dicating the presence of","suffix":"For instance, assuming the prese"}]}]}
+>```
+>%%
+>*%%PREFIX%%ues, in-dicating the presence of%%HIGHLIGHT%% ==2|χn| stable nodes within the patch.== %%POSTFIX%%For instance, assuming the prese*
+>%%LINK%%[[#^a384yhd5cbj|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^a384yhd5cbj
+
+
+>%%
+>```annotation-json
+>{"created":"2023-07-18T09:37:41.106Z","updated":"2023-07-18T09:37:41.106Z","document":{"title":"Multigap topology and non-Abelian braiding of phonons from first principles","link":[{"href":"urn:x-pdf:e5738591b321da83a8c1abae2ccee2ba"},{"href":"vault:/PDFs/Non-Abelian_phonons.pdf"}],"documentFingerprint":"e5738591b321da83a8c1abae2ccee2ba"},"uri":"vault:/PDFs/Non-Abelian_phonons.pdf","target":[{"source":"vault:/PDFs/Non-Abelian_phonons.pdf","selector":[{"type":"TextPositionSelector","start":19389,"end":19429},{"type":"TextQuoteSelector","exact":" lower bound of the powerlike dispersion","prefix":" Euler class is that it givesthe","suffix":" of the bands ata band crossing "}]}]}
+>```
+>%%
+>*%%PREFIX%%Euler class is that it givesthe%%HIGHLIGHT%% ==lower bound of the powerlike dispersion== %%POSTFIX%%of the bands ata band crossing*
+>%%LINK%%[[#^b2euys4ddzj|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^b2euys4ddzj
+
+
+>%%
+>```annotation-json
+>{"created":"2023-07-18T09:42:21.741Z","updated":"2023-07-18T09:42:21.741Z","document":{"title":"Multigap topology and non-Abelian braiding of phonons from first principles","link":[{"href":"urn:x-pdf:e5738591b321da83a8c1abae2ccee2ba"},{"href":"vault:/PDFs/Non-Abelian_phonons.pdf"}],"documentFingerprint":"e5738591b321da83a8c1abae2ccee2ba"},"uri":"vault:/PDFs/Non-Abelian_phonons.pdf","target":[{"source":"vault:/PDFs/Non-Abelian_phonons.pdf","selector":[{"type":"TextPositionSelector","start":19511,"end":19540},{"type":"TextQuoteSelector","exact":" lower bound of the exponent ","prefix":"isely, the number 2|χn|gives the","suffix":"of the leading term in aTaylor e"}]}]}
+>```
+>%%
+>*%%PREFIX%%isely, the number 2|χn|gives the%%HIGHLIGHT%% ==lower bound of the exponent== %%POSTFIX%%of the leading term in aTaylor e*
+>%%LINK%%[[#^2fn2q59cpvw|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^2fn2q59cpvw
+
+
+>%%
+>```annotation-json
+>{"created":"2023-07-18T09:42:51.077Z","updated":"2023-07-18T09:42:51.077Z","document":{"title":"Multigap topology and non-Abelian braiding of phonons from first principles","link":[{"href":"urn:x-pdf:e5738591b321da83a8c1abae2ccee2ba"},{"href":"vault:/PDFs/Non-Abelian_phonons.pdf"}],"documentFingerprint":"e5738591b321da83a8c1abae2ccee2ba"},"uri":"vault:/PDFs/Non-Abelian_phonons.pdf","target":[{"source":"vault:/PDFs/Non-Abelian_phonons.pdf","selector":[{"type":"TextPositionSelector","start":19722,"end":19819},{"type":"TextQuoteSelector","exact":"electronic band structures,the dispersion at band crossings almost always realizes thelower bound","prefix":"tween electrons and phonons. In ","suffix":" indicated by their Euler class "}]}]}
+>```
+>%%
+>*%%PREFIX%%tween electrons and phonons. In%%HIGHLIGHT%% ==electronic band structures,the dispersion at band crossings almost always realizes thelower bound== %%POSTFIX%%indicated by their Euler class*
+>%%LINK%%[[#^l1lccplm5l|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^l1lccplm5l
+
+
+>%%
+>```annotation-json
+>{"created":"2023-07-18T09:43:01.987Z","updated":"2023-07-18T09:43:01.987Z","document":{"title":"Multigap topology and non-Abelian braiding of phonons from first principles","link":[{"href":"urn:x-pdf:e5738591b321da83a8c1abae2ccee2ba"},{"href":"vault:/PDFs/Non-Abelian_phonons.pdf"}],"documentFingerprint":"e5738591b321da83a8c1abae2ccee2ba"},"uri":"vault:/PDFs/Non-Abelian_phonons.pdf","target":[{"source":"vault:/PDFs/Non-Abelian_phonons.pdf","selector":[{"type":"TextPositionSelector","start":20109,"end":20182},{"type":"TextQuoteSelector","exact":"order of band crossings in phonon band structures is almostalways doubled","prefix":"the topology. Interestingly, the","suffix":", with the exception of the disp"}]}]}
+>```
+>%%
+>*%%PREFIX%%the topology. Interestingly, the%%HIGHLIGHT%% ==order of band crossings in phonon band structures is almostalways doubled== %%POSTFIX%%, with the exception of the disp*
+>%%LINK%%[[#^k4e2o75jadi|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^k4e2o75jadi
+
+
+>%%
+>```annotation-json
+>{"created":"2023-07-18T09:46:12.366Z","updated":"2023-07-18T09:46:12.366Z","document":{"title":"Multigap topology and non-Abelian braiding of phonons from first principles","link":[{"href":"urn:x-pdf:e5738591b321da83a8c1abae2ccee2ba"},{"href":"vault:/PDFs/Non-Abelian_phonons.pdf"}],"documentFingerprint":"e5738591b321da83a8c1abae2ccee2ba"},"uri":"vault:/PDFs/Non-Abelian_phonons.pdf","target":[{"source":"vault:/PDFs/Non-Abelian_phonons.pdf","selector":[{"type":"TextPositionSelector","start":20664,"end":20741},{"type":"TextQuoteSelector","exact":"sign of the Euler class and of the non-Abelian frame charge isgauge dependent","prefix":"he frame charges. Therefore, the","suffix":", and for an individual node tak"}]}]}
+>```
+>%%
+>*%%PREFIX%%he frame charges. Therefore, the%%HIGHLIGHT%% ==sign of the Euler class and of the non-Abelian frame charge isgauge dependent== %%POSTFIX%%, and for an individual node tak*
+>%%LINK%%[[#^i5ng6ke6sg|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^i5ng6ke6sg
+
+
+>%%
+>```annotation-json
+>{"created":"2023-07-18T09:48:03.911Z","updated":"2023-07-18T09:48:03.911Z","document":{"title":"Multigap topology and non-Abelian braiding of phonons from first principles","link":[{"href":"urn:x-pdf:e5738591b321da83a8c1abae2ccee2ba"},{"href":"vault:/PDFs/Non-Abelian_phonons.pdf"}],"documentFingerprint":"e5738591b321da83a8c1abae2ccee2ba"},"uri":"vault:/PDFs/Non-Abelian_phonons.pdf","target":[{"source":"vault:/PDFs/Non-Abelian_phonons.pdf","selector":[{"type":"TextPositionSelector","start":20836,"end":20898},{"type":"TextQuoteSelector","exact":"relative signbetween two distinct nodes is not gauge dependent","prefix":" physical meaning. However, the ","suffix":" as it pro-vides information on "}]}]}
+>```
+>%%
+>*%%PREFIX%%physical meaning. However, the%%HIGHLIGHT%% ==relative signbetween two distinct nodes is not gauge dependent== %%POSTFIX%%as it pro-vides information on*
+>%%LINK%%[[#^s34k5ek34n|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^s34k5ek34n
+
+
+>%%
+>```annotation-json
+>{"created":"2023-07-18T09:48:14.684Z","updated":"2023-07-18T09:48:14.684Z","document":{"title":"Multigap topology and non-Abelian braiding of phonons from first principles","link":[{"href":"urn:x-pdf:e5738591b321da83a8c1abae2ccee2ba"},{"href":"vault:/PDFs/Non-Abelian_phonons.pdf"}],"documentFingerprint":"e5738591b321da83a8c1abae2ccee2ba"},"uri":"vault:/PDFs/Non-Abelian_phonons.pdf","target":[{"source":"vault:/PDFs/Non-Abelian_phonons.pdf","selector":[{"type":"TextPositionSelector","start":21082,"end":21214},{"type":"TextQuoteSelector","exact":" consistentglobal topological configuration where the relative signs of allnodes agree with their gauge-invariant relative stability","prefix":"pological frame charges to get a","suffix":". Sucha global picture can be ob"}]}]}
+>```
+>%%
+>*%%PREFIX%%pological frame charges to get a%%HIGHLIGHT%% ==consistentglobal topological configuration where the relative signs of allnodes agree with their gauge-invariant relative stability== %%POSTFIX%%. Sucha global picture can be ob*
+>%%LINK%%[[#^ly3la5mfph|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^ly3la5mfph
