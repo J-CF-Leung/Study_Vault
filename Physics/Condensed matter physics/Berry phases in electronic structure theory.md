@@ -43,6 +43,7 @@ $$\Delta \bm{P}\cdot\hat{\bm{n}}=\frac{e\,\hat{\bm{n}}\cdot\bm{R}}{V_\text{cell}
 	- Both the _bulk and surface_ must be _insulating_ or charge can flow as the _surface Hamiltonian_ changes
 	- A _local_ change in the Hamiltonian only induces a _local_ change insurface charge (the "nearsightedness" principle)
 	- Hence the Fermi level must have _zero density of states_ both in the bulk and the surface
+![[Surface LDOS.png]]
 - The branching values can be expressed as:
 $$\sigma_\text{surf}:=\bm{P}\cdot\hat{\bm{n}}$$
 - This means $\bm{P}\cdot\hat{\bm{n}}$ is _multi-valued_, and $\sigma$ is _one of the values_
@@ -53,6 +54,7 @@ $$\sigma_\text{surf}:=\bm{P}\cdot\hat{\bm{n}}$$
 - Example: a _1D electronic Hamiltonian_, where $\lambda$ goes from $0$ to $2\pi$
 $$\Ham=\frac{p^2}{2m}-V_0\cos\left(\frac{2\pi}{a}x-\lambda\right)$$
 - For a _large $V_0$_, the charge is _semiclassically localised_, hence if the change in $\lambda$ is _gradual_, then a _charge_ of $-e$ can be _pumped_ by $+a\hat{x}$ in one cycle
+![[Charge pumping.png]]
 
 - Hence, for a _given Hamiltonian_, $\bm{P}$ is _not uniquely defined_
 - For an _adiabatic change_, $V_0$ can be _any size_, and charge transport can still be achieved
@@ -61,7 +63,8 @@ $$\Ham=\frac{p^2}{2m}-V_0\cos\left(\frac{2\pi}{a}x-\lambda\right)$$
 	$$\Delta\bm{P}_{i\to f}\equiv\int_i^f\bm{J}(t)\,dt=\int_i^f\frac{d\bm{P}}{d\lambda}\frac{d\lambda}{dt}\,dt=\int_i^f\frac{d\bm{P}}{d\lambda}\,d\lambda$$
 - The derivative is _well-defined_ as the difference between branched values is _constant_
 	- $\bm{R}$ is constant as long as the change is _adiabatic_
-- Hence, time is a _passive variable_, and for a _closed loop_:
+![[Hamiltonian parameter change.png]]
+- Hence, time is a _passive variable_, and for a _closed loop_, using the result from [[#Due to the lattice|lattice considerations]]:
 $$\Delta\bm{P}_\text{cyc}=\oint\frac{d\bm{P}}{d\lambda}\,d\lambda=\frac{e\bm{R}}{V_\text{cell}}$$
 - To express the fact that the values are in _branches_, adopt the notation:
 $$\Delta\bm{P}_{i\to f}:=\bm{P}_f-\bm{P}_i$$
@@ -70,6 +73,7 @@ $$\Delta\bm{P}_{i\to f}:=\bm{P}_f-\bm{P}_i$$
 
 ### Slow spatial variation in a supercell
 - Let there be an $N\times1\times1$ _supercell_ where the _local Hamiltonian_ varies slowly from $\lambda=0$ to $\lambda=1$, where $\Ham(\lambda=0)=\Ham(\lambda=1)$
+![[Supercell.png]]
 - Given the spatial variation is _adiabatic_, each primitive cell is _neutral_
 - Hence, the _total charge_ is:
 $$Q=bc\int_0^{Na}-\nabla\cdot\bm{P}\,dx=-bc\int_0^{Na}\frac{dP_x(\lambda(x))}{dx}\,dx=-\frac{V_\text{cell}}{a}\int_0^1\frac{dP_x}{d\lambda}\,d\lambda$$
@@ -92,6 +96,8 @@ $$\Delta P_\text{x,cyc}=\oint \frac{dP_x}{d\lambda}\,d\lambda=\frac{Nea}{V_\text
 - Consider an _insulator_ with some _orbital magnetisation_ $\bm{M}_\text{orb}$
 - Orbital magnetisation manifests in the form of a _surface current_:
 $$\bm{K}_\text{surf}=\bm{M}_\text{orb}\times \hat{\bm{n}}$$
+![[Surface current.png]]
+
 - $\bm{K}_\text{surf}$ is a _dissipationless current_ as it continuously generated a $\bm{B}$ field
 	- _Microscopically_, dissipationless currents can manifest simply in the ground electronic states of multi-electron atoms
 - Unlike polarisation, $\bm{M}_\text{orb}$ is _unique_ for a given Hamiltonian
@@ -102,3 +108,36 @@ $$\bm{K}_\text{surf}=\bm{M}_\text{orb}\times \hat{\bm{n}}$$
 
 ## Edge band structure
 - Let there be a _two-dimensional insulating crystal_
+- Assume the _edge_ of the crystal has the _same periodicity as the bulk_
+	- Such that $k$ is still defined on the edges
+- Let the edge currents travel _counterclockwise_, such that the _top edge_ has current $// -\hat{\bm{x}}$
+
+- The _bulk bands_ will have a _gap_ where the Fermi energy lies (for an insulator)
+- Let there be some _edge state_, represented as a _line_ crossing the gap:
+![[Edge state.png]]
+
+- As the edge state _crosses the Fermi energy_, it will _contribute to the edge current_ $I$
+
+- In _one dimension_, given some _change_ in $E_F$ from $E_1$ to $E_2$, the change in _edge band contribution_ is:
+$$\Delta I=\int_{k_1}^{k_2}\frac{dk}{2\pi}(-ev_g)=-\frac{e}{2\pi\hbar}\int_{k_1}^{k_2}\frac{dE}{dk}dk=-\frac{e}{h}(E_2-E_1)$$
+- Let the $E$ be a function of some electrostatic potential $\phi$, such that $E=E_F+e\phi$
+- Then define a _circulatory conductance_:
+$$G=\pd{I}{\phi}=e\pd{I}{E_F}=-\frac{e^2}{h}$$
+- _Raising_ the potential will _lower_ the energies of the surface states, contributing more _negative_ current
+- For a crossing in the _opposite direction_, $dE/dk<0$, and the $\Delta I$ will _cancel out_, having _no effect_ on $\bm{M}_\text{orb}$
+
+- In order for channels in _only one direction_ to exist, _time-reversal_ (TR) symmetry must be _broken_, typically via a _magnetic field_
+
+- If there is an _excess_ up/downward crossing on one edge, it must exist for _all edges_ regardless of orientation to uphold charge conservation
+- In this case, the current would depend on the _density of edge states_, hence the _number of excess crossings_
+	- _Total_ crossings don't matter, only the _excess_
+
+- These edge states are referred to as _chiral_
+	- Either clockwise or counterclockwise _around the entire bulk_
+- As chirality is _shared across all edges_, hence it must be a _bulk property_, characterised by some _interger_:
+$$n_\text{up}-n_\text{down}=-C$$
+- Hence, the _total circulatory conductance_ (counterclockwise) is:
+$$G=C\frac{e^2}{h}$$
+
+- Insulators with $C=0$ are _trivial_
+	- Including vacuums and systems with TR symmetry

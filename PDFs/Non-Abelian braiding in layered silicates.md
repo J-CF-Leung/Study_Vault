@@ -432,3 +432,73 @@ annotation-target:: Non-Abelian_phonons_2.pdf
 >%%TAGS%%
 >
 ^45biuxzv1hj
+
+
+>%%
+>```annotation-json
+>{"created":"2023-07-19T08:14:26.914Z","updated":"2023-07-19T08:14:26.914Z","document":{"title":"Phonons as a platform for non-Abelian braiding and its manifestation in layered silicates","link":[{"href":"urn:x-pdf:99a1a70cfc846198c0f5e7aec0acb60d"},{"href":"vault:/PDFs/Non-Abelian_phonons_2.pdf"}],"documentFingerprint":"99a1a70cfc846198c0f5e7aec0acb60d"},"uri":"vault:/PDFs/Non-Abelian_phonons_2.pdf","target":[{"source":"vault:/PDFs/Non-Abelian_phonons_2.pdf","selector":[{"type":"TextPositionSelector","start":11057,"end":11090},{"type":"TextQuoteSelector","exact":"extension of the three-band case1","prefix":"configurations pose anintricate ","suffix":"0, featuring oppositekinds of ea"}]}]}
+>```
+>%%
+>*%%PREFIX%%configurations pose anintricate%%HIGHLIGHT%% ==extension of the three-band case1== %%POSTFIX%%0, featuring oppositekinds of ea*
+>%%LINK%%[[#^5rbcc6se6u|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^5rbcc6se6u
+
+
+>%%
+>```annotation-json
+>{"created":"2023-07-19T08:14:30.870Z","updated":"2023-07-19T08:14:30.870Z","document":{"title":"Phonons as a platform for non-Abelian braiding and its manifestation in layered silicates","link":[{"href":"urn:x-pdf:99a1a70cfc846198c0f5e7aec0acb60d"},{"href":"vault:/PDFs/Non-Abelian_phonons_2.pdf"}],"documentFingerprint":"99a1a70cfc846198c0f5e7aec0acb60d"},"uri":"vault:/PDFs/Non-Abelian_phonons_2.pdf","target":[{"source":"vault:/PDFs/Non-Abelian_phonons_2.pdf","selector":[{"type":"TextPositionSelector","start":11103,"end":11162},{"type":"TextQuoteSelector","exact":"oppositekinds of each charge and a charge of −1 in each gap","prefix":"he three-band case10, featuring ","suffix":". The regionswhere several adjac"}]}]}
+>```
+>%%
+>*%%PREFIX%%he three-band case10, featuring%%HIGHLIGHT%% ==oppositekinds of each charge and a charge of −1 in each gap== %%POSTFIX%%. The regionswhere several adjac*
+>%%LINK%%[[#^lyzh7q6rre|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^lyzh7q6rre
+
+
+>%%
+>```annotation-json
+>{"created":"2023-07-19T08:18:49.926Z","updated":"2023-07-19T08:18:49.926Z","document":{"title":"Phonons as a platform for non-Abelian braiding and its manifestation in layered silicates","link":[{"href":"urn:x-pdf:99a1a70cfc846198c0f5e7aec0acb60d"},{"href":"vault:/PDFs/Non-Abelian_phonons_2.pdf"}],"documentFingerprint":"99a1a70cfc846198c0f5e7aec0acb60d"},"uri":"vault:/PDFs/Non-Abelian_phonons_2.pdf","target":[{"source":"vault:/PDFs/Non-Abelian_phonons_2.pdf","selector":[{"type":"TextPositionSelector","start":11386,"end":11441},{"type":"TextQuoteSelector","exact":"constrained by the crystalline symmetries of the system","prefix":" configurations of the nodes are","suffix":", leadingto a projection of the "}]}]}
+>```
+>%%
+>*%%PREFIX%%configurations of the nodes are%%HIGHLIGHT%% ==constrained by the crystalline symmetries of the system== %%POSTFIX%%, leadingto a projection of the*
+>%%LINK%%[[#^roq7u0extih|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^roq7u0extih
+
+
+>%%
+>```annotation-json
+>{"created":"2023-07-19T08:20:53.024Z","updated":"2023-07-19T08:20:53.024Z","document":{"title":"Phonons as a platform for non-Abelian braiding and its manifestation in layered silicates","link":[{"href":"urn:x-pdf:99a1a70cfc846198c0f5e7aec0acb60d"},{"href":"vault:/PDFs/Non-Abelian_phonons_2.pdf"}],"documentFingerprint":"99a1a70cfc846198c0f5e7aec0acb60d"},"uri":"vault:/PDFs/Non-Abelian_phonons_2.pdf","target":[{"source":"vault:/PDFs/Non-Abelian_phonons_2.pdf","selector":[{"type":"TextPositionSelector","start":11885,"end":11988},{"type":"TextQuoteSelector","exact":"band order of the Kagome bands can be inverted atdifferent strains and under different electric fields.","prefix":"ferred across adjacent gaps.The ","suffix":" We calculatethe strain-dependen"}]}]}
+>```
+>%%
+>*%%PREFIX%%ferred across adjacent gaps.The%%HIGHLIGHT%% ==band order of the Kagome bands can be inverted atdifferent strains and under different electric fields.== %%POSTFIX%%We calculatethe strain-dependen*
+>%%LINK%%[[#^kp2b8o5wo9|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^kp2b8o5wo9
+
+
+>%%
+>```annotation-json
+>{"created":"2023-07-19T08:21:49.849Z","updated":"2023-07-19T08:21:49.849Z","document":{"title":"Phonons as a platform for non-Abelian braiding and its manifestation in layered silicates","link":[{"href":"urn:x-pdf:99a1a70cfc846198c0f5e7aec0acb60d"},{"href":"vault:/PDFs/Non-Abelian_phonons_2.pdf"}],"documentFingerprint":"99a1a70cfc846198c0f5e7aec0acb60d"},"uri":"vault:/PDFs/Non-Abelian_phonons_2.pdf","target":[{"source":"vault:/PDFs/Non-Abelian_phonons_2.pdf","selector":[{"type":"TextPositionSelector","start":13692,"end":13733},{"type":"TextQuoteSelector","exact":"fixed strainsunder tunable electric field","prefix":" focus on phonon dispersions at ","suffix":", because the strain is fixed by"}]}]}
+>```
+>%%
+>*%%PREFIX%%focus on phonon dispersions at%%HIGHLIGHT%% ==fixed strainsunder tunable electric field== %%POSTFIX%%, because the strain is fixed by*
+>%%LINK%%[[#^ma0j32g965|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^ma0j32g965
