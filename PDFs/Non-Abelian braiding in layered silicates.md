@@ -502,3 +502,45 @@ annotation-target:: Non-Abelian_phonons_2.pdf
 >%%TAGS%%
 >
 ^ma0j32g965
+
+
+>%%
+>```annotation-json
+>{"created":"2023-07-21T13:20:14.408Z","updated":"2023-07-21T13:20:14.408Z","document":{"title":"Phonons as a platform for non-Abelian braiding and its manifestation in layered silicates","link":[{"href":"urn:x-pdf:99a1a70cfc846198c0f5e7aec0acb60d"},{"href":"vault:/PDFs/Non-Abelian_phonons_2.pdf"}],"documentFingerprint":"99a1a70cfc846198c0f5e7aec0acb60d"},"uri":"vault:/PDFs/Non-Abelian_phonons_2.pdf","target":[{"source":"vault:/PDFs/Non-Abelian_phonons_2.pdf","selector":[{"type":"TextPositionSelector","start":16727,"end":16778},{"type":"TextQuoteSelector","exact":" As a result, six nodes arecreated near the Γpoint ","prefix":"nds belong to the same irrep Λ1.","suffix":"within the gap Δ11 at 0.7 eV/Å, "}]}]}
+>```
+>%%
+>*%%PREFIX%%nds belong to the same irrep Λ1.%%HIGHLIGHT%% ==As a result, six nodes arecreated near the Γpoint== %%POSTFIX%%within the gap Δ11 at 0.7 eV/Å,*
+>%%LINK%%[[#^td51nlsba2|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^td51nlsba2
+
+
+>%%
+>```annotation-json
+>{"created":"2023-07-21T13:20:19.965Z","updated":"2023-07-21T13:20:19.965Z","document":{"title":"Phonons as a platform for non-Abelian braiding and its manifestation in layered silicates","link":[{"href":"urn:x-pdf:99a1a70cfc846198c0f5e7aec0acb60d"},{"href":"vault:/PDFs/Non-Abelian_phonons_2.pdf"}],"documentFingerprint":"99a1a70cfc846198c0f5e7aec0acb60d"},"uri":"vault:/PDFs/Non-Abelian_phonons_2.pdf","target":[{"source":"vault:/PDFs/Non-Abelian_phonons_2.pdf","selector":[{"type":"TextPositionSelector","start":16133,"end":16179},{"type":"TextQuoteSelector","exact":"Due to the C6 rotational symmetry ofthe system","prefix":"ndsbelong to the same Σ1 irrep. ","suffix":", there are six nodes in total w"}]}]}
+>```
+>%%
+>*%%PREFIX%%ndsbelong to the same Σ1 irrep.%%HIGHLIGHT%% ==Due to the C6 rotational symmetry ofthe system== %%POSTFIX%%, there are six nodes in total w*
+>%%LINK%%[[#^cmc9k53haq6|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^cmc9k53haq6
+
+
+>%%
+>```annotation-json
+>{"created":"2023-07-21T13:21:00.997Z","updated":"2023-07-21T13:21:00.997Z","document":{"title":"Phonons as a platform for non-Abelian braiding and its manifestation in layered silicates","link":[{"href":"urn:x-pdf:99a1a70cfc846198c0f5e7aec0acb60d"},{"href":"vault:/PDFs/Non-Abelian_phonons_2.pdf"}],"documentFingerprint":"99a1a70cfc846198c0f5e7aec0acb60d"},"uri":"vault:/PDFs/Non-Abelian_phonons_2.pdf","target":[{"source":"vault:/PDFs/Non-Abelian_phonons_2.pdf","selector":[{"type":"TextPositionSelector","start":17730,"end":17801},{"type":"TextQuoteSelector","exact":"an associated transfer of patchEuler class and non-Abelian frame charge","prefix":"m one gap to adjacent gaps with ","suffix":"s (see the ‘Method’section for a"}]}]}
+>```
+>%%
+>*%%PREFIX%%m one gap to adjacent gaps with%%HIGHLIGHT%% ==an associated transfer of patchEuler class and non-Abelian frame charge== %%POSTFIX%%s (see the ‘Method’section for a*
+>%%LINK%%[[#^0lu0mil6wal|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^0lu0mil6wal

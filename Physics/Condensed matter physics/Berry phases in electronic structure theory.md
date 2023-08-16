@@ -19,6 +19,8 @@ $$\bm{P}=\frac{\bm{p}}{V_\text{cell}}=\frac{1}{V_\text{cell}}\int_\text{cell}\bm
 
 - A new definition of polarisation must _satisfy certain bulk properties_
 
+- The distinction between _"bound"_ and _"free"_ charges is _not always clear_ as they can result from _defects_ or _stoichiometric variations_ within the material
+
 ## Properties of polarisation
 - For a crystalline insulator _changing slowly in time_ but still remaining _spatially periodic_, there will be a _macroscopic current density_ in the interior:
 $$\bm{J}=\frac{d\bm{P}}{dt}$$
@@ -141,3 +143,16 @@ $$G=C\frac{e^2}{h}$$
 
 - Insulators with $C=0$ are _trivial_
 	- Including vacuums and systems with TR symmetry
+- A _vacuum-exposed_ surface of an insulator with integer $C$ has $C$ more _down-going_ channels contributing to current, and is necessarily _metallic_
+- An _interface_ between insulators A and B has an excess of $C_A-C_B$ downgoing channels, measuring current _counterclockwise around A_, and is also necessarily _metallic_ 
+
+- An _adiabatic change_ in the bulk _Hamiltonian_ which _does not close the gap_ will leave $C$ _invariant_
+
+## Anomalous Hall Conductivity
+- The presence of _edge channels_ is also instrumental in the _anomalous Hall effect_
+
+- Let there be some 2D insulator with sheet current $\bm{K}$, under electric field $\bm{\mathcal{E}}$ in the plane
+	- This current is _dissipationless_, and _not due to free carriers_
+- Let the $2\times2$ _conductivity tensor_ $\sigma_{ij}$ be:
+$$\sigma_{ij}=\frac{dK_i}{d\mathcal{E}_j}$$
+- Consider only _first-order_ effects of $\bm{\mathcal{E}}$

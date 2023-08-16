@@ -15,7 +15,7 @@ $$\bm{r}=\pmatrix{x \\ y} \hspace{1.5cm} \bm{r}'=\pmatrix{x'\\y'}$$
 $$\displaylines{\bm{r}'=R(\theta)\,\bm{r} \\ R(\theta)=\pmatrix{\cos\theta & \sin\theta \\ -\sin\theta&\cos\theta}}$$
 - A _vector_ is anything that _transforms like_ the above relation
 
-## Rotations from invariance of length
+## Rotations from invariance of length and distance
 - Let there be a transformation law $\bm{p}'=R\bm{p}$, describing a _rotation_, where the form of $R$ is unknown (ignore the above)
 
 - The _length_ of _any vector_ $\bm{p}$ is _invariant_ under the rotation, as $p^2$ remains unchanged
@@ -39,12 +39,17 @@ $$\det{R}=+1$$
 
 - $2\times2$ matrices that are both special and orthogonal are the _generators_ of the _special orthogonal group of order $2$_, or $SO(2)$
 
+- As vectors _between_ two points transform in the same way, one gets that the _distances_ between two points (no matter how close) are _unchanged_:
+$$\displaylines{(\Delta x')^2+(\Delta y')^2=(\Delta x)^2+(\Delta y)^2 \\ dx'^2+dy'^2=dx^2+dy^2}$$
+
+- Hence, rotations can also be defined as linear transformations $(x,y)\to(x',y')$ such that _distances are left unchanged_
+	- This makes _no reference to a shared origin_ (or any origin)
 ## Lie's approach
 - Let there be some rotation by an _infinitesimal angle_ $\theta$
 - Then the rotation matrix can be written as:
 $$R(\theta)\approx I+A(\theta)$$
 - Where the _components_ of $A$ are of _order_ $\theta$, neglecting terms of $O(\theta^2)$ and smaller
-	- This requirement also gives $\det{R}=+1$
+	- This requirement also gives $\det{R}=+1$ as reflections are _not continuously related_ to the identity
 - Using the requirement that $R$ is orthogonal:
 $$R^TR\approx I+A^T+A=I$$
 
@@ -63,4 +68,8 @@ $$R(\theta)=\exp(\theta\mathcal{J})=\sum_{n=0}^\infty \frac{1}{n!}(\theta\mathca
 
 - This approach can be generalised to _higher dimensions_, using larger antisymmetric matrices
 
-## Higher dimensions
+## Higher dimensions and the rotation group
+- As before, a rotation in $N-$dimensional space is a transformation which _leaves distance unchanged_:
+$$\displaylines{d\bm{x}'=Rd\bm{x}\\ds^2=\sum_{i=1}^N(dx^i)^2=ds'^2}$$
+- This gives the conditions:
+$$R^TR=I \hspace{1.5cm} \det R=1$$
