@@ -128,6 +128,7 @@ $$\Delta I=\int_{k_1}^{k_2}\frac{dk}{2\pi}(-ev_g)=-\frac{e}{2\pi\hbar}\int_{k_1}
 $$G=\pd{I}{\phi}=e\pd{I}{E_F}=-\frac{e^2}{h}$$
 - _Raising_ the potential will _lower_ the energies of the surface states, contributing more _negative_ current
 - For a crossing in the _opposite direction_, $dE/dk<0$, and the $\Delta I$ will _cancel out_, having _no effect_ on $\bm{M}_\text{orb}$
+- $G=\partial I/\partial \phi$ is also equivalent to $\partial M/\partial\phi$
 
 - In order for channels in _only one direction_ to exist, _time-reversal_ (TR) symmetry must be _broken_, typically via a _magnetic field_
 
@@ -154,6 +155,23 @@ $$G=C\frac{e^2}{h}$$
 
 - Let there be some 2D insulator with sheet current $\bm{K}$, under electric field $\bm{\mathcal{E}}$ in the plane
 	- This current is _dissipationless_, and _not due to free carriers_
+	- For an _insulating surface_, there must be _no conductivity in the bulk_
 - Let the $2\times2$ _conductivity tensor_ $\sigma_{ij}$ be:
 $$\sigma_{ij}=\frac{dK_i}{d\mathcal{E}_j}$$
-- Consider only _first-order_ effects of $\bm{\mathcal{E}}$
+- Consider only _first-order_ effects of $\bm{\mathcal{E}}$, and let the insulator be in a _stationary state_
+
+- Any _symmetric terms_ must be zero, as a non-zero $K_x$ with $\mathcal{E}_x$ will _deposit_ energy into a system, hence:
+$$\sigma_{AHC}=\sigma_{yx}=-\sigma_{xy}$$
+- Consider two _anomalous Hall insulators_ in contact, with separate currents $\bm{K}$:
+![[Anomalous Hall insulators.png]]
+ - For a reasonably small $\mathcal{E}_0$, the left-right potential drop is _less than the band gap_
+ - For a _non-zero_ $K$, the _upper and lower edges must be metallic_ to prevent charge build-up
+ - Similarly, at the _interface_:
+$$\sigma_{AHC}^A=\sigma_{AHC}^B$$
+- By similar reasoning, $\sigma_{AHC}$ is _unaffected by a continuous change in the Hamiltonian_
+	- Let there be a Hamiltonian $\Ham(\lambda)$ and let $\lambda$ differ slightly for $A$ and $B$
+
+- If $\sigma_{AHC}=0$ everywhere, the material is a _normal insulator
+- For non-zero $\sigma_{AHC}$, there must be [[#Edge band structure|edge currents]] to prevent charge accumulation
+- Hence, for an _anomalous Hall insulator_:
+$$\sigma_{xy}=C\frac{e^2}{h}$$
