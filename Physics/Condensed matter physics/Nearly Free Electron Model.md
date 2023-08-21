@@ -112,7 +112,7 @@ $$V(x)=\sum_n V_n\cos(nG_1x)$$
 ## Electron motion and effective mass
 - Model the electrons using a _semiclassical approximation_
 - They are considered as _wavepackets_ with _group velocity_:
-$$\bm{v}(\bm{k})=\frac{d\omega}{d\bm{k}}=\frac{1}{\hbar}\frac{dE_k}{d\bar{k}}$$
+$$\bm{v}(\bm{k})=\frac{d\omega}{d\bm{k}}=\frac{1}{\hbar}\nabla_kE_k$$
 - This is a _non-vanishing velocity_ (unless $E_k$ is stationary), and is _purely due to the lattice potential itself_, determining the _position of the electron_
 - The quantity $\hbar\bm{k}$ is known as _crystal momentum_
 	- The Hamiltonian and momentum operators _do not have simultaneous eigenstates_
@@ -130,7 +130,7 @@ $$\varepsilon=\frac{\hbar^2k^2}{2m^*}\Longrightarrow m^*=\hbar^2\left(\frac{d^2\
 - Depending on the position of $\varepsilon_F$, _more than one effective mass_ can be present at the Fermi level
 
 - The _time evolution_ of the electron wave-vector is dependent on _external forces_:
-$$\hbar\frac{d\bm{k}}{dt}=-e\left[\bm{E}+\bm{v}\wedge\bm{B}\right]$$
+$$m^*\frac{d\bm{v}}{dt}=\hbar\frac{d\bm{k}}{dt}=-e\left[\bm{E}+\bm{v}\wedge\bm{B}\right]$$
 
 ## Electrical conductivity
 - Similar to the [[Free Electron Model#Electrical conductivity|free electron model]], an _applied electric field_ will _shift_ the Fermi sphere and cause a _drift velocity_, allowing the material to _conduct_ electricity
@@ -244,6 +244,19 @@ $$\bm{k}_h=-\bm{k}_e \hspace{1cm} \frac{d\bm{k}_h}{dt}=-\frac{d\bm{k}_e}{dt}$$
 ## Observation
 
 ### Hall Effect
+- Both _electrons and holes_ contribute to conduction:
+$$\displaylines{\sigma_e=\frac{n_ee^2\tau_e}{m_e^*}=n_ee\mu_e \hspace{1cm} \sigma_h=\frac{n_he^2\tau_h}{m_h^*}=n_he\mu_h \hspace{1cm} \\ \bm{J}=(\sigma_e+\sigma_h)\bm{E}}$$
+- As they belong to different bands, $m_e^*\neq m_h^*$
 
+- The [[Free Electron Model#Hall Effect|Hall coefficient]] can then be written as:
+$$R_H==\frac{-n_e\mu_e^2+n_h\mu_h^2}{e(n_e\mu_e+n_h\mu_h)^2}$$
+- For a _divalent metal_, $n_e=n_h$, so Hall coefficient is _determined by mobility_
+- Other properties such as $\tau$ are difficult to determine just from theory
 ### Cyclotron resonance
+- Charged particles move in _circular orbits_ around magnetic fields:
+$$\omega_c=\frac{eB}{m^*}$$
+- These _resonances_ can be determined via _strong absorption of radio waves_
+- This resonance is of _group velocity_
 
+- For the resonance to be _observed_, $\omega_c\tau>1$
+- Hence, _strong magnetic fields_ and _low temperatures_ are typically needed for this condition
