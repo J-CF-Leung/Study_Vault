@@ -172,6 +172,26 @@ $$\sigma_{AHC}^A=\sigma_{AHC}^B$$
 	- Let there be a Hamiltonian $\Ham(\lambda)$ and let $\lambda$ differ slightly for $A$ and $B$
 
 - If $\sigma_{AHC}=0$ everywhere, the material is a _normal insulator
+
 - For non-zero $\sigma_{AHC}$, there must be [[#Edge band structure|edge currents]] to prevent charge accumulation
+- On the top edge, there must be a net amount of _right-going edge states_
+- Imposing the condition that the current is _divergence-free_:
+$$\displaylines{\frac{dI_\text{top}}{dx}=-K_y \\ K_y=-\frac{dI}{d\phi}\frac{d\phi}{dx}=C\frac{e^2}{h}\mathcal{E}_x}$$
+
 - Hence, for an _anomalous Hall insulator_:
-$$\sigma_{xy}=C\frac{e^2}{h}$$
+$$\sigma_{yx}=C\frac{e^2}{h}$$
+- As before, this is also equal to $\partial M_\text{orb}/\partial\phi$
+
+### Induction and the Středa formula
+- Let there be a _perpendicularly applied, time-varying magnetic field_ $B_\perp$
+- From [[Electromagnetism#Faraday's Law|Faraday's Law]]:
+$$\displaylines{\nabla\times\bm{\mathcal{E}}=-\frac{d\bm{B}}{dt} \\ \bm{K}=\sigma_\text{AHC}\,\hat{\bm{n}}\times\bm{\mathcal{E}}}$$
+- _Electron density per unit area_ $n$ varies in time as:
+$$-e\dot{n}=-\nabla\cdot\bm{K}$$
+- Integrating _from zero magnetic field_:
+$$\Delta n=\frac{\sigma_\text{AHC}}{e}B_\perp=C\frac{e}{h}B_\perp$$
+- This is the _Středa formula_
+- As the magnetic field is turned up, electrons are _removed from edge states_ and _pumped into the interior_
+
+- It can also be derived as a _Maxwell relation_ for _energy per unit area_ $E$: 
+$$\displaylines{\pd{E}{B_\perp}=-M_\text{orb} \hspace{1cm} \pd{E}{\phi}=\sigma_\text{charge}=-en \\ \sigma_\text{AHC}=\pd{M_\text{orb}}{\phi}=-\pd{}{\phi}\pd{E}{B_\perp}=-\pd{}{B_\perp}\pd{E}{\phi}=e\pd{n}{B_\perp}}$$
