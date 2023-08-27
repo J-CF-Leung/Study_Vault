@@ -1,4 +1,4 @@
-- Consider rotations as _acting on the observer_, a.k.a. changing the _axes_
+- - Consider rotations as _acting on the observer_, a.k.a. changing the _axes_
 
 ## Vectors and the rotation matrix
 - Let there be _two sets of Cartesian axes_, which _share an origin_, but with rotated angle $\theta$
@@ -93,7 +93,7 @@ $$R(\theta)=\exp\left(i\sum_j\theta_jJ_j\right)=\exp(i\bm{\theta}\cdot\bm{J})$$
 
 ## Lie algebra
 - In simple terms, the _Lie algebra_ is a way to understand how these groups behave
-### Rotations
+### Commutators and the Lie algebra of SO(3)
 - Let there be two _infinitesimal rotations_:
 $$R\simeq I+A \hspace{1cm} R'=I+B$$
 - Then consider:
@@ -130,3 +130,46 @@ $$[T_a,T_b]=if_{abc}T_c$$
 - While the _Lie group_ is characterised by _multiplication_ (as seen in its [[Foundations of Group Theory#Presentations|presentation]]), the _Lie algebra_ is characterised by _commutation_
 	- The real antisymmetric matrices $\mathcal{J}$ in the rotation group _do not close under multiplication_, only _commutation_
 		- "One has to get out of the algebra before getting back in"
+
+- _Formally_, the _Lie algebra_ is the _linear space_ spanned by _linear combinations of generators_ $\sum_i\theta_i\mathcal{J}_i$
+	- In rotation groups, _linear combinations make no sense_, as composites are represented by _multiplication_
+- It can also be described as a linear vector space $V$ with a map $f:V\otimes V\to V$, which satisfy $f(A,B)=-f(B,A)$
+
+- The relation between the group and algebra are implied by the _Baker-Campbell-Hausdorff formula_:
+$$\displaylines{e^Ae^B=e^C \\ C=A+B+\frac{1}{2}[A,B]+\frac{1}{12}([A,[A,B]]+[B,[B,A]])}$$
+
+### The generators of SO(N)
+- For _any number of dimensions_ $N$, the generators $J_{(mn)}$ are constructed by:
+	- Have the entry in the $m$-th row and $n$-th column be $1$
+	- Have the entry in the $n$-th row and $m$-th column be $-1$
+	- Have _all other_ entries be 0
+	- Multiply by $-i$ to be _Hermitian_
+- Or, in index notation:
+$$(J_{(mn)})^{ij}=-i(\delta^{mi}\delta^{nj}-\delta^{ni}\delta^{mj})$$
+- Evidently, $J_{(mn)}=-J_{(nm)}$ and $J_{(mm)}=0$ 
+- The _total number of unique generators_ is $N(N-1)/2$
+
+- As before, any _infinitesimal rotation_ is written as:
+$$\displaylines{R\simeq I+A \\ A=i\sum_{mn}\,\theta_{(mn)}J_{(mn)}}$$
+- The _antisymmetric coefficients_ $\theta_{(mn)}=-\theta_{(nm)}$ denote the $N(N-1)/2$ _generalised angles_
+- $J_{(mn)}$ are the _generators of the special orthogonal group_ $SO(N)$
+
+#### Note on labelling
+- Rotations are _not always uniquely labelled by an axis_, but are labelled by _planes_
+- In 3-dimensional space, planes are _uniquely defined by vectors_
+	- A rotation around the $z-$axis can be said to be in the $xy$ plane
+
+### The Lie algebra of SO(N)
+- The _commutators_ between $J_{(mn)}$ can be worked out to obtain the Lie algebra
+- However, consider the general case $[J_{(mn)},J_{(pq)}]$
+- If they have _no integers in common_, the rotations must _commute_
+- If they have _two integers in common_, then the commutator is simply _zero_
+
+- For _one integer in common_, assume $m=p$ without loss of generality
+- This is the same as a commutator in the _subgroup_ [[#Commutators and the Lie algebra of SO(3)|SO(3)]], but relabelled:
+$$[J_{(mn)},J_{(mq)}]=iJ_{(nq)}$$
+- Then using the _antisymmetry_ of the generators:
+$$[J_{(mn)},J_{(pq)}]=i\left[\delta^{mp}J_{(nq)}+\delta^{nq}J_{(np)}-\delta^{mq}J_{(np)}-\delta^{np}J_{(mq)}\right]$$
+
+- The coefficients in front of the generators are the [[#General Lie groups|structure constants]]
+	- Each generator can technically labelled with a _single index_, thus fitting the definition in the above section

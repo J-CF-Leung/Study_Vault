@@ -195,3 +195,20 @@ $$\Delta n=\frac{\sigma_\text{AHC}}{e}B_\perp=C\frac{e}{h}B_\perp$$
 
 - It can also be derived as a _Maxwell relation_ for _energy per unit area_ $E$: 
 $$\displaylines{\pd{E}{B_\perp}=-M_\text{orb} \hspace{1cm} \pd{E}{\phi}=\sigma_\text{charge}=-en \\ \sigma_\text{AHC}=\pd{M_\text{orb}}{\phi}=-\pd{}{\phi}\pd{E}{B_\perp}=-\pd{}{B_\perp}\pd{E}{\phi}=e\pd{n}{B_\perp}}$$
+
+# Overview of electronic structure theory
+- The Hamiltonian for _electrons in a crystalline solid_:
+$$\displaylines{\Ham=T_e+T_n+V_{e-e}+V_{n-e}+V_{n-n}+\dots \\ T_e=\sum_i\frac{p_i^2}{2m_e} \hspace{1cm} T_n=\sum_I\frac{p_I^2}{2M_I} \\ V_{e-e}=\frac{1}{2}\sum_{ij}\frac{e^2}{|\bm{r}_i-\bm{r}_j|}\hspace{1cm}V_{n-e}=-\frac{1}{2}\sum_{iI}\frac{Z_Ie^2}{|\bm{r}_i-\bm{r}_I|}\hspace{1cm}V_{n-n}=\frac{1}{2}\sum_{IJ}\frac{Z_IZ_Je^2}{|\bm{r}_I-\bm{r}_J|}}$$
+- It must be _simplified_ to get any useful information
+
+## Approximations and the density functional
+- The [[Molecular quantum mechanics#The Born-Oppenheimer approximation|Born-Oppenheimer approximation]] states that since _nuclei are much heavier_, they can be treated as _fixed_:
+$$\Ham_\text{elec}=T_e+V_{e-e}+V_{n-e}$$
+- Defining:
+$$V_\text{ext}(\bm{r})=\sum_I\frac{e^2Z_I}{|\bm{r}-\bm{R}_I|}$$
+- Hence the Hamiltonian can be written as:
+$$\Ham=\sum_i\left[\frac{p_i^2}{2m_e}+V_\text{ext}(\bm{r}_i)\right]+\frac{1}{2}\sum_{ij}\frac{e^2}{|\bm{r}_i-\bm{r}_j|}$$
+- Generally, this _cannot be written as a_ [[Fundamental concepts of quantum mechanics#Multiple degrees of freedom|Slater determinant]]
+
+- In _density-functional theory_, the Hamiltonian is regarded as a _functional of the ground-state electron density_ $n(\bm{r})$
+- This reduces $\Ham$ to an _approximate one-particle mean-field Hamiltonian_

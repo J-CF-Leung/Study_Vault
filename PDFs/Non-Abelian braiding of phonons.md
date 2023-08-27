@@ -1525,3 +1525,31 @@ annotation-target:: Non-Abelian_phonons.pdf
 >%%TAGS%%
 >
 ^cwcleb7lv3f
+
+
+>%%
+>```annotation-json
+>{"created":"2023-08-25T08:48:31.747Z","updated":"2023-08-25T08:48:31.747Z","document":{"title":"Multigap topology and non-Abelian braiding of phonons from first principles","link":[{"href":"urn:x-pdf:e5738591b321da83a8c1abae2ccee2ba"},{"href":"vault:/PDFs/Non-Abelian_phonons.pdf"}],"documentFingerprint":"e5738591b321da83a8c1abae2ccee2ba"},"uri":"vault:/PDFs/Non-Abelian_phonons.pdf","target":[{"source":"vault:/PDFs/Non-Abelian_phonons.pdf","selector":[{"type":"TextPositionSelector","start":24987,"end":25183},{"type":"TextQuoteSelector","exact":"patch Euler class of ±1 (0) can either corre-spond to two nodes with the same (opposite) frame charge(s),or contain two opposite (same) charge nodes and an extraDirac string in the neighboring gap","prefix":"e two possibleconfigurations: a ","suffix":".We next check whether the assig"}]}]}
+>```
+>%%
+>*%%PREFIX%%e two possibleconfigurations: a%%HIGHLIGHT%% ==patch Euler class of ±1 (0) can either corre-spond to two nodes with the same (opposite) frame charge(s),or contain two opposite (same) charge nodes and an extraDirac string in the neighboring gap== %%POSTFIX%%.We next check whether the assig*
+>%%LINK%%[[#^vpd2v8mx0xn|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^vpd2v8mx0xn
+
+
+>%%
+>```annotation-json
+>{"created":"2023-08-25T13:19:27.005Z","updated":"2023-08-25T13:19:27.005Z","document":{"title":"Multigap topology and non-Abelian braiding of phonons from first principles","link":[{"href":"urn:x-pdf:e5738591b321da83a8c1abae2ccee2ba"},{"href":"vault:/PDFs/Non-Abelian_phonons.pdf"}],"documentFingerprint":"e5738591b321da83a8c1abae2ccee2ba"},"uri":"vault:/PDFs/Non-Abelian_phonons.pdf","target":[{"source":"vault:/PDFs/Non-Abelian_phonons.pdf","selector":[{"type":"TextPositionSelector","start":13736,"end":13823},{"type":"TextQuoteSelector","exact":"noncommutativity of the charges {i, j, k} and the nontrivialaction of their conjugation","prefix":" non-Abelian, as captured by the","suffix":", e.g., j−1i j  = − ji j = j2i ="}]}]}
+>```
+>%%
+>*%%PREFIX%%non-Abelian, as captured by the%%HIGHLIGHT%% ==noncommutativity of the charges {i, j, k} and the nontrivialaction of their conjugation== %%POSTFIX%%, e.g., j−1i j  = − ji j = j2i =*
+>%%LINK%%[[#^pi54jhwxvy|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^pi54jhwxvy
