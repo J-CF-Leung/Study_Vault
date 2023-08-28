@@ -47,7 +47,7 @@ $$\bm{F}=-\frac{A}{r^2}\hat{\bm{r}}$$
 
 - _First Law_: Planetary orbits are _ellipses with the Sun at one focus_
 - _Second Law_: The line _joining the planet and the Sun_ sweeps out _an equal amount of area in equal times_
-	- Due to the conservation of angular momentum
+	- Due to the conservation of _angular momentum_
 - _Third Law_: The _square of the period_ of the planet around the sun is _proportional the cubed of the semi-major axis_ of the orbit
 
 - Using _conservation of angular momentum and energy_, and making a _substitution_:
