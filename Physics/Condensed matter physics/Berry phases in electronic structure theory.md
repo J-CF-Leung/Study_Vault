@@ -211,4 +211,30 @@ $$\Ham=\sum_i\left[\frac{p_i^2}{2m_e}+V_\text{ext}(\bm{r}_i)\right]+\frac{1}{2}\
 - Generally, this _cannot be written as a_ [[Fundamental concepts of quantum mechanics#Multiple degrees of freedom|Slater determinant]]
 
 - In _density-functional theory_, the Hamiltonian is regarded as a _functional of the ground-state electron density_ $n(\bm{r})$
-- This reduces $\Ham$ to an _approximate one-particle mean-field Hamiltonian_
+	- Proof: Hohenberg and Kohn (1964)
+- This reduces $\Ham$ to an _approximate one-particle mean-field Hamiltonian_:
+$$\Ham_\text{KS}=\frac{p^2}{2m}+V_\text{KS}^{[n]}(\bm{r})$$
+- The _ground-state energy_ must also then be a functional of $n(\bm{r})$, and _takes its minimum at the true ground state_
+- This minimum can then be _computed without referencing the many-body wave function_
+	- Method: _Kohn-Sham procedure_, it is _iterative_
+- The _accuracy_ of this is _dependent on the energy functional used_
+
+- Given the form of $V_\text{KS}^{[n]}$, one finds the _single-particle Kohn-Sham eigenvalues and eigenvectors_:
+$$\Ham_\text{KS}\ket{\psi_i}=E_i\ket{\psi_i}$$
+- Identifying the _lowest_ $N$ _eigenvalues_, one then _constructs_ the charge density:
+$$n(\bm{r})=\sum_{i=1}^N|\psi_i(\bm{r})|^2$$
+- This is then _plugged back in_ to obtain the _new_ $\Ham_\text{KS}$
+
+- The _expectation value_ of any _observable_ $\mathcal{O}$ is then given by:
+$$\mean{\mathcal{O}}=\sum_{i=1}^N\braket{\psi_i|\mathcal{O}|\psi_i}$$
+## Spin
+- For materials with _light elements_, the spin-up and spin-down electrons are _treated independently_
+- _Separate equations_ are written for spin-up and spin-down electrons, with wave-functions $\ket{\psi_{i,\uparrow}}$ and $\ket{\psi_{i,\downarrow}}$
+- The _total electron density_ is then $n(\bm{r})=n_\uparrow(\bm{r})+n_\downarrow(\bm{r})$
+- One must also _appropriately generalise terms of the Kohn-Sham potential_
+- This is the _local spin-density approximation_
+
+- For materials with _heavier elements_, the _spin-orbit coupling term_ must be included in the Kohn-Sham Hamiltonian
+- Similarly, with _external electromagnetic fields_, one must also add the appropriate terms
+
+## Periodicity in a crystal

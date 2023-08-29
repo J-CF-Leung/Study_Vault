@@ -253,6 +253,7 @@ $$T_{1g}\oplus T_{2g}\oplus T_{1u}\oplus T_{2u}$$
 ![[Td character table.png]]
 
 - The _metal AOs_ are classified according to:
+
 | Cartesian function       | Corresponding orbital(s)      | Irreducible representation     |
 | ------------------------ | ----------------------------- | ------------------------------ |
 | $(x^2+y^2+z^2)$          | $4s$                          | Totally symmetric IR, $A_1$ |
@@ -281,6 +282,7 @@ $$\Delta_t\approx0.44\Delta_o$$
 ![[D4h character table.png]]
 
 - The _metal AOs_ have symmetries:
+
 | Cartesian function | Corresponding orbital(s) | Irreducible representation     |
 | ------------------ | ------------------------ | ------------------------------ |
 | $(x^2+y^2+z^2)$    | $4s$                     | Totally symmetric IR, $A_{1g}$ |

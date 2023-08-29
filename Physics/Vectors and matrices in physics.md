@@ -29,7 +29,7 @@ $$\ket{V}=\sum_n a_n\ket{i}$$
 
 ## Dual spaces, adjoints and inner products
 - Vector spaces used in quantum mechanics are _inner product spaces_
-- The inner product involves a vector and its _dual_
+- The _inner product_ involves a vector and the _dual_ of a vector
 
 - The _dual_ is in the _dual space_ $\mathbb{V}^*$ of the original vector space $\mathbb{V}$
 - The _dual_ of a ket is known as the _bra_ and denoted $\bra{V}$
@@ -77,12 +77,15 @@ $$\displaylines{\hat{O}\alpha\ket{V}=\alpha\hat{O}\ket{V} \\ \hat{O}[\alpha\ket{
 - The _identity operator_ leaves the vector alone:
 $$I\ket{a}=\ket{a}$$
 - If the basis set in this space is $\{\ket{u_m}\}$, then this can be written as:
-$$\ket{a}=\sum_m \ket{u_m}\braket{u_m|a}=\sum_m\mathcal{P}_m\ket{a}$$
+$$\ket{a}=\sum_m \ket{u_m}\braket{u_m|a}=\sum_m\mathbb{P}_m\ket{a}$$
 - Here, $\mathbb{P}_m$ is the _projection operator_ along direction $\ket{u_m}$
+	- They are formed by the _outer product_ of $\ket{u_m}$ with itself
 - It gives the _component_ of $\ket{a}$ along $\ket{u_m}$, multiplied by $\ket{u_m}$
 - The above equation also leads to the identity:
-$$\sum_m\mathcal{P}_m=\sum_m\ket{u_m}\bra{u_m}=\hat{I}$$
+$$\sum_m\mathbb{P}_m=\sum_m\ket{u_m}\bra{u_m}=\hat{I}$$
 - This is known as the _completeness relation_, and must be satisfied for a basis to be _complete_
+
+
 
 ## Matrix elements
 - Expanding $\hat{O}\ket{V}$ using the completeness relation:
@@ -276,3 +279,19 @@ $$[\hat{X},\hat{K}]=i\hat{I}$$
 - The $k-$basis has huge significance in quantum mechanics, as $\hat{P}=\hbar\hat{K}$ is the _momentum operator_
 
 # Direct product spaces
+- Given _two vector spaces_, one can perform a _direct product_ (or _Cartesian product_)
+- With two spaces $\mathbb{V}_1$ and $\mathbb{V}_2$, the _direct product space_ is denoted $\mathbb{V}_1\otimes\mathbb{V}_2$
+- The _dimensionality_ of the new space is _the product of the dimensionalities_ of $\mathbb{V}_1$ and $\mathbb{V}_2$
+	- Contrasted with the [[#Subspaces and direct sums|direct sum]], where dimensionalities _add_
+
+- The _basis vectors_ of this direct product space are formed by the _direct products of the original basis vectors_ ($\ket{x_1}$ for $\mathbb{V}_1$ and $\ket{x_2}$ for $\mathbb{V}_2$)
+	- This is _distinct_ from the [[#Dual spaces, adjoints and inner products|inner product]] or [[#Identity and projection operators|outer product]], which involve vectors from the _same space_
+- Example: the basis vectors $\mathbb{V}_1\otimes\mathbb{V}_2$ may be denoted $\ket{x_1}\otimes\ket{x_2}$
+- The direct product is a _linear operation_:
+$$(\alpha\ket{x_1}+\alpha'\ket{x_1'})\otimes(\beta\ket{x_2})=\alpha\beta\ket{x_1}\ket{x_2}+\alpha'\beta\ket{x_1}\otimes\ket{x_2}$$
+
+- These basis vectors $\ket{x_1}\otimes\ket{x_2}$ _span_ the vector space, but _not every element of_ $\mathbb{V}_1\otimes\mathbb{V}_2$ _is a direct product_, such as:
+$$\ket{\psi}=\ket{x_1}\otimes\ket{x_2}+\ket{x_1'}\otimes\ket{x_2'}$$
+
+- If $\mathbb{V}_1$ and $\mathbb{V}_2$ correspond to [[#Physical Hilbert space for 1 degree of freedom|physical Hilbert spaces]], then the basis vectors of $\mathbb{V}_1\otimes\mathbb{V}_2$ are _normalised_ such that:
+$$(\bra{x_1'}\otimes\bra{x_2'})(\ket{x_1}\otimes\ket{x_2})=\braket{x_1'|x_1}\braket{x_2'|x_2}=\delta(x_1-x_1')\delta(x_2-x_2')$$

@@ -414,6 +414,9 @@ $$\braket{\Psi|\Psi}=\int |\braket{x_1x_2|\Psi}|^2\,dx_1\,dx_2=1$$
 	- The eigenbasis $\ket{x_1}$ spans the space $\mathbb{V}_1$, likewise for particle 2
 - The corresponding _operators for each particle_ act on _their own vector spaces_
 
+- The _two-particle Hilbert space_ can be derived from the [[Vectors and matrices in physics#Direct product spaces|direct product space]] $\mathbb{V}_1\otimes\mathbb{V}_2$
+- 
+
 ### Time-evolution of two particles
 
 #### Separable Hamiltonians
