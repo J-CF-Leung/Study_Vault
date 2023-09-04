@@ -407,16 +407,30 @@ $$\braket{\Psi|\Psi}=\int |\braket{x_1x_2|\Psi}|^2\,dx_1\,dx_2=1$$
 - In _general_, one can define simultaneous eigenkets $\ket{\omega_1\omega_2}$ for _any two commuting operators_ $\Omega_1(X_1,P_1)$ and $\Omega_2(X_2,P_2)$
 	- Any function of $X_1,P_1$ must commute with any function of $X_2,P_2$
 
+- The operators still act normally:
+$$\hat{T}_\text{CM}=\frac{\hat{P}_\text{CM}^2}{2M}=\frac{\hat{P}_1^2+\hat{P}_2^2+2\hat{P}_1\hat{P}_2}{2(m_1+m_2)}$$
+
 - Denote the Hilbert space _spanned by the simultaneous eigenkets_ as $\mathbb{V}_{1\otimes2}$
 
+- The _simultaneous eigenbasis_ can be established for _any physical quantity_:
+$$\wv=\sum_{\omega_1}\sum_{\omega_2}C_{\omega_1,\omega_2}\ket{\omega_1\omega_2}$$
 ### The direct product space
 - The eigenkets _for each particle_ span their _own Hilbert space_
 	- The eigenbasis $\ket{x_1}$ spans the space $\mathbb{V}_1$, likewise for particle 2
+	- For _any physical quantity_, not just position
 - The corresponding _operators for each particle_ act on _their own vector spaces_
 
 - The _two-particle Hilbert space_ can be derived from the [[Vectors and matrices in physics#Direct product spaces|direct product space]] $\mathbb{V}_1\otimes\mathbb{V}_2$
-- 
+- The _operators_ in this space are _direct products of operators in the original spaces_:
+$$\displaylines{\hat{X}_1^{(1)\otimes(2)}\ket{x_1x_2}=\hat{X}_1^{(1)\otimes(2)}(\ket{x_1}\otimes\ket{x_2})=\ket{\hat{X}_1^{(1)}x_1}\otimes\ket{\hat{I}^{(2)}x_2} \\\hat{X}_1^{(1)\otimes(2)}=\hat{X}_1^{(1)}\otimes \hat{I}^{(2)}\\ (\hat{\Gamma}_1^{(1)}\otimes\hat{\Lambda}_2^{(2)})(\ket{\omega_1}\otimes\ket{\omega_2})=\ket{\hat{\Gamma}_1^{(1)}\omega_1}\otimes\ket{\hat{\Lambda}_2^{(2)}\omega_2}}$$
 
+- One can prove the following properties:
+	- Operators on _different particles_ always _commute_: $\left[\Omega_1^{(1)}\otimes I^{(2)},I^{(1)}\otimes\Lambda_2^{(2)}\right]$
+	- $\left(\Omega_1^{(1)}\otimes\Gamma_2^{(2)}\right)\left(\theta_1^{(1)}\otimes\Lambda_2^{(2)}\right)=\left(\Omega\theta\right)_1^{(1)}\otimes\left(\Gamma\Lambda\right)_2^{(2)}$
+	- If $\left[\Omega_1^{(1)},\Lambda_1^{(1)}\right]=\Gamma_1^{(1)}$, then $\left[\Omega_1^{(1)\otimes(2)},\Lambda_1^{(1)\otimes(2)}\right]=\Gamma_1^{(1)}\otimes I_2^{(2)}$  
+	- $\left(\Omega_1^{(1)\otimes(2)}+\Omega_2^{(1)\otimes(2)}\right)^2 = (\Omega_1^2)^{(1)}\otimes I^{(2)} + I^{(1)}\otimes(\Omega_2^2)^{(2)}+2\Omega_1^{(1)}\otimes\Omega_2^{(2)}$
+
+- From this, one regains the commutation relations from [[#Two particles in one dimension|above]]
 ### Time-evolution of two particles
 
 #### Separable Hamiltonians

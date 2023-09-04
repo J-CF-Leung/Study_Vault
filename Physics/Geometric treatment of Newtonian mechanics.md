@@ -54,6 +54,7 @@ $$\bm{A}\cdot\bm{B}\equiv\frac{1}{4}\left[(\bm{A}+\bm{B})^2-(\bm{A}-\bm{B})^2\ri
 ### Tensors (and vectors) as linear functions
 - A _rank $n$ tensor_ $\textbf{T}$ can be treated as a _linear function of $n$ vectors_ which _outputs a real scalar_
 	- Example: if $\textbf{T}$ is a rank-3 tensor, $\textbf{T}(\bm{A},\bm{B},\bm{C})$ is a real scalar
+- [[Cartesian tensors|Component-focused treatment of tensors]]
 - _Linearity_:
 $$\textbf{T}(e\bm{E}+f\bm{F},\bm{B},\bm{C})=e\,\textbf{T}(\bm{E},\bm{B},\bm{C})+f\,\textbf{T}(\bm{F},\bm{B},\bm{C})$$
 
@@ -97,3 +98,37 @@ $$\frac{d\bm{p}}{dt}=q(\bm{E}+\bm{v}\times\bm{B})$$
 	- [[Orbits#Elliptical orbits and Kepler's Laws|Analysis using radial coordinates]]
 
 # Component representation
+- Notation: [[Einstein notation|Einstein summation notation]], tensor components are labelled with _index notation_
+
+- In _Euclidean_ 3-space, one often uses a set of [[Vectors and matrices#Orthonormal bases|orthonormal basis vectors]] $\{\bm{e}_1,\bm{e}_2,\bm{e}_3\}$
+- They are associated with a _Cartesian coordinate system_:
+$$\{x,y,z\}\equiv\{x^1,x^2,x^3\}\equiv\{x_1,x_2,x_3\}$$
+- $\bm{e}_j$ points _along_ the $x_j$ direction, and the _orthonormality_ can be expressed as:
+$$\bm{e}_j\cdot\bm{e}_k=\delta_{jk}$$
+
+- _Any vector_ $\bm{A}$ can be _expanded_, and the components can be found by:
+$$\bm{A}=A_j\bm{e}_j \hspace{1cm} A_j=\bm{A}\cdot\bm{e}_j$$
+- _Any tensor_ $\textbf{T}$ can then be _expanded_ in terms of the _tensor products of basis vectors_:
+$$\textbf{T}=T_{ijk}\,\bm{e}_i\otimes\bm{e}_j\otimes\bm{e}_k$$
+- Using the [[#Outer product and contraction|definition of the outer product]], the components are:
+$$T_{ijk}=\textbf{T}(\bm{e}_i,\bm{e}_j,\bm{e}_k)$$
+
+- For example, the [[#Tensors (and vectors) as linear functions|metric tensor]] has components:
+$$g_{jk}=\textbf{g}(\bm{e}_j,\bm{e}_k)=\bm{e}_j\cdot\bm{e}_k=\delta_{jk}$$
+- Given a tensor formed by a _tensor product_, the components are the _product of the components of the original vectors_
+$$(T\otimes S)_{ijklm}=T_{ijk}S_{lm}$$
+- In _component notation_, by _expanding_ the vectors in terms of components, one can write:
+$$\bm{A}\cdot\bm{B}=A_jB_j \hspace{1cm} \textbf{T}(\bm{A},\bm{B},\bm{C})=T_{ijk}A_iB_jC_k$$
+
+- As for _contraction_, the components of the contracted tensor is a _sum of original components over two indices_
+$$\text{components of [1\&3 contraction of } \textbf{R}] = R_{ijik}$$
+
+- If two tensors have _the same set of components_, but with _swapped indices_:
+$$F_{ab}=G_{ba}$$
+- For this to be _true in one basis_, it has to be _the same in all bases_, hence this is _still a basis-independent, geometric statement_
+## Laws of motion in index notation
+- [[#The laws of motion]] expressed using the _vector components_ are:
+$$\displaylines{v_i=\frac{dx_i}{dt}\hspace{1cm}p_i=mv_i\hspace{1cm}a_i=\frac{dv_i}{dt}=\frac{d^2x_i}{dt^2} \\ E=\frac{1}{2}mv_jv_j \hspace{1cm} \frac{dp_i}{dt}=q(E_i+\epsilon_{ijk}v_jB_k)}$$
+- This is still _basis-independent_, although it can be _interpreted_ as being in terms of _a particular Cartesian coordinate system_
+
+## Orthogonal transformations of bases
