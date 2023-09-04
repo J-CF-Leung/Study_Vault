@@ -132,3 +132,4 @@ $$\displaylines{v_i=\frac{dx_i}{dt}\hspace{1cm}p_i=mv_i\hspace{1cm}a_i=\frac{dv_
 - This is still _basis-independent_, although it can be _interpreted_ as being in terms of _a particular Cartesian coordinate system_
 
 ## Orthogonal transformations of bases
+- Consider _two different Cartesian coordinate systems_ $\{x,y,z\}\equiv\{x_1,x_2.x_3\}$, and $\{\bar{x},\bar{y},\bar{z}\}\equiv\{x_\bar{1},x_\bar{2},x_\bar{3}\}$ 
