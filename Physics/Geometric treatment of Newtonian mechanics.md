@@ -132,4 +132,6 @@ $$\displaylines{v_i=\frac{dx_i}{dt}\hspace{1cm}p_i=mv_i\hspace{1cm}a_i=\frac{dv_
 - This is still _basis-independent_, although it can be _interpreted_ as being in terms of _a particular Cartesian coordinate system_
 
 ## Orthogonal transformations of bases
-- Consider _two different Cartesian coordinate systems_ $\{x,y,z\}\equiv\{x_1,x_2.x_3\}$, and $\{\bar{x},\bar{y},\bar{z}\}\equiv\{x_\bar{1},x_\bar{2},x_\bar{3}\}$ 
+- Consider _two different Cartesian coordinate systems_ $\{x,y,z\}\equiv\{x_1,x_2.x_3\}$, and $\{\bar{x},\bar{y},\bar{z}\}\equiv\{x_\bar{1},x_\bar{2},x_\bar{3}\}$, with _bases_ $\{\bm{e}_i\}$ and $\{\bm{e}_\bar{p}\}$
+- One can _expand_ the basis vectors of one basis _in terms of those of the other_:
+$$\bm{e}_i=\bm{e}_\bar{p}R_{\bar{p}i} \hspace{1cm} \bm{e}_\bar{p}=\bm{e}_iR_{i\bar{p}}$$
