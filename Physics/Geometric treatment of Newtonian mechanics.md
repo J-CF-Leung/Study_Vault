@@ -135,4 +135,35 @@ $$\displaylines{v_i=\frac{dx_i}{dt}\hspace{1cm}p_i=mv_i\hspace{1cm}a_i=\frac{dv_
 - Consider _two different Cartesian coordinate systems_ $\{x,y,z\}\equiv\{x_1,x_2.x_3\}$, and $\{\bar{x},\bar{y},\bar{z}\}\equiv\{x_\bar{1},x_\bar{2},x_\bar{3}\}$, with _bases_ $\{\bm{e}_i\}$ and $\{\bm{e}_\bar{p}\}$
 - One can _expand_ the basis vectors of one basis _in terms of those of the other_:
 $$\bm{e}_i=\bm{e}_\bar{p}R_{\bar{p}i} \hspace{1cm} \bm{e}_\bar{p}=\bm{e}_iR_{i\bar{p}}$$
-- 
+- $R_{\bar{p}i}$ and $R_{i\bar{p}}$ are the components of a _transformation matrix_:
+$$[R_{\bar{p}i}]=\begin{bmatrix}R_{\bar{1}1}&R_{\bar{1}2}&R_{\bar{1}3}\\R_{\bar{2}1}&R_{\bar{2}2}&R_{\bar{2}3}\\R_{\bar31}&R_{\bar{3}2}&R_{\bar{3}3}\end{bmatrix}$$
+	- The components on the $i-$th _column_ are the _components of_ $\bm{e}_i$ in the $\{\bm{e}_\bar{p}\}$ basis
+
+- These two matrices must be _inverses_ of each other:
+$$R_{i\bar{p}}R_{\bar{p}j}=\delta_{ij}$$
+- The _orthonormality_ of the two bases implies that the _transverse_ of a transformation matrix must be its _inverse_:
+$$\displaylines{\delta_{ij}=\bm{e}_i\cdot\bm{e}_j=(R_{\bar{p}i}R_{\bar{q}j})\bm{e}_\bar{p}\cdot\bm{e}_\bar{q}=R_{\bar{p}i}R_{\bar{p}j} \\ R_{i\bar{p}}=(R_{\bar{p}i})^{-1}=(R_{\bar{p}i})^T}$$
+- These _transformations between orthonormal bases_ are represented by _orthogonal matrices_, which are associated with _reflections and rotations_
+	- This _does not imply the matrix is symmetric_
+	- Example: rotating by angle $\phi$ _about_ the $z-$axis:
+	$$[R_{\bar{p}i}]=\begin{bmatrix}\cos\phi & \sin\phi & 0 \\ -\sin\phi & \cos\phi & 0 \\ 0&0&1\end{bmatrix}$$
+
+- Vectors have _components depending on the basis_:
+$$\displaylines{\bm{A}=A_i\bm{e}_i=A_i(R_{\bar{p}i}\bm{e}_p)=(R_\bar{pi}A_i)\bm{e}_\bar{p}=A_\bar{p}\bm{e}_\bar{p} \\ A_\bar{p}=R_{\bar{p}i}A_i}$$
+- Similarly, for _components of tensors_:
+$$T_{\bar{p}\bar{q}\bar{r}}=R_{\bar{p}i}R_{\bar{q}j}R_{\bar{r}k}T_{ijk}$$
+- These transformation laws are _different to those of the bases_:
+$$\displaylines{\bm{e}_\bar{p}=\bm{e}_iR_{i\bar{p}} \\ A_\bar{p}=R_{\bar{p}i}A_i\hspace{1cm }T_{\bar{p}\bar{q}\bar{r}}=R_{\bar{p}i}R_{\bar{q}j}R_{\bar{r}k}T_{ijk}}$$
+- Useful convention:
+	- Indices to _sum over_ are on the _"same side"_
+	- _Basis_ vectors _before transformation_ go on the _left_
+	- Vector/tensor _components before transformation_ go on the _right_
+
+- These laws _do not imply_ that the physical vectors _share an origin_
+- If the basis sets have the _same origin_, then the _components are equal to the coordinates_ in those basis sets
+- Hence, the _coordinates follow the transformation laws_
+
+- The _product_ of two rotation matrices $[R_{i\bar{p}}R_{\bar{p}\bar{\bar{s}}}]$ is _another rotation matrix_ $[R_{i\bar{\bar{s}}}]$
+- This means the rotation matrices form a [[Rotations and Lie Algebra|rotation group]]
+
+# Differentiation of scalars, vectors and tensors

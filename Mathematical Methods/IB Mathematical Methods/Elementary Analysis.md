@@ -143,7 +143,7 @@ $$f'(z_0)=\lim_{z\to z_0}\frac{f(z)-f(z_0)}{z-z_0}=\lim_{\delta z\to0} \frac{f(z
 - Express $f$ and $z$ in terms of their real and imaginary parts:
 $$f(z)\equiv f(x+iy)\equiv u(x,y)+iv(x,y)$$
 - If $f'(z)$ exists, it can be obtained by taking limits _along the real axis_ ($\delta y=0$), or _along the imaginary axis_ ($\delta x=0$)
-- By comparing the real and imaginary parts of doing the derivative both ways:
+- By comparing the real and imaginary parts of $df/dz$ both ways:
 $$\pd{u}{x}=\pd{v}{y} \hspace{1.5cm} \pd{v}{x}=-\pd{u}{y}$$
 - These are the _Cauchy-Riemann equations_
 - They are _necessary and sufficient conditions_ for $f(z)$ to be complex differentiable, provided the partial derivatives are _continuous_

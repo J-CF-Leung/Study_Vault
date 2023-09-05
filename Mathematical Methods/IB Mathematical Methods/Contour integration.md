@@ -187,11 +187,34 @@ $$I=\frac{\pi}{\sqrt{a^2-1}}$$
 ### Closing contours at infinity
 - Consider the integral:
 $$I=\int_0^\infty \frac{dx}{x^2+1}$$
-- Let the path on the _real axis_ from 
-
+- Let $C$ be a _semicircular contour_ on the _upper half-plane_
+- As $|z|$ tends to _infinity_, $|zf(z)|$ tends to _zero_, hence _only the straight segment contributes_:
+$$I=\frac{1}{2}\int_{-\infty}^\infty\frac{1}{x^2+1}\,dx=\frac{1}{2}\oint_C\frac{dz}{z^2+1}=(\pi i)\sum [\text{residues of } f(z)\text{ in upper half plane}]$$
+- Write $f(z)$ as:
+$$\frac{1}{1+z^2}=\frac{1}{(z+i)(z-i)}$$
+- Hence:
+$$I=\frac{\pi}{2}$$
 ### Double poles
+- Consider the integral:
+$$I=\int_0^\infty\frac{dx}{(x^2+a^2)^2}$$
+- Using the _same semicircular contour as above_:
+$$I=\frac{1}{2}\oint_C\frac{dz}{(z+ia)^2(z-ia)^2}$$
+- For double pole at $z=ia$, use the [[#Residues|above formula]]:
+$$\res{z=ia} f(z)=\lim_{z\to ia}\frac{d}{dz}\frac{1}{(z+ia)^2}=-\frac{1}{4}ia^{-3}$$
+- Therefore, the integral is:
+$$I=\frac{\pi}{4a^3}$$
 
 ### Multiple poles
+- Consider the integral:
+$$I=\int_0^\infty\frac{dx}{1+x^4}$$
+- Using the _same semicircular contour as above_:
+$$\displaylines{I=\frac{1}{2}\oint_C\frac{dz}{(z-z_1)(z-z_2)(z-z_3)(z-z_4)}\\ z_1=\exp(i\pi/4)\hspace{1cm}z_2=\exp(3i\pi/4)\hspace{1cm}z_3=\exp(-i\pi/4)\hspace{1cm}z_4=\exp(-3i\pi/4)}$$
+- Considering the residues in the _upper half plane_ ($z_1$ and $z_2$):
+$$I=\frac{\pi}{2\sqrt{2}}$$
+
+- Or, one can use a _quarter circle_ only encircling $z_1$
+- The _real axis_ contribution is $I$, and the arc contribution still vanishes
+- As the contour _goes down the imaginary axis_, that contribution is $-iI$
 
 # Multi-valued functions and branch cuts
 
