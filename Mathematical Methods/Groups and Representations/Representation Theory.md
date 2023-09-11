@@ -90,5 +90,40 @@ $$D^{(4)}(g)=D^{(1)}(g)\oplus D^{(3)}(g)$$
 - There may be a basis where _only_ $D(h)$ is block diagonal
 
 ## Unitary representations
- 
+>[!info] Unitarity Theorem
+>All _finite_ groups have _unitary representations_
+>i.e. $D^\dagger(g)D(g)=I$ for _all_ $g$ and _all representations_
+
+- Related to the fact that for _any element_ $g$ in a _finite group_, there is some $k$ such that $g(k)=I$
+
+- Proof:
+	- 
+
+## Compactness
+- Consider whether or not the _unitarity theorem_ applies to _infinite groups_
+- It holds for the _special orthogonal groups_: $R(\theta)^TR(\theta)=I$
+
+- However, it _does not hold_ for many other orthogonal groups, no matter if it is _discrete_ (e.g. additive group for integers) or _continuous_ (Lorentz group)
+
+- The proof for the unitarity theorem in this case requires an _integral over the continuous group_:
+$$\int\,d\mu(g)\,(\dots)$$
+- If this integral _converges_, the group is _compact_, and _proofs for finite groups apply_
+
+## Product representation
+- One can create _larger, reducible representations_ using [[#Reducible representations|direct sums]]
+- However, one can also use [[Vectors and matrices in physics#Direct product spaces|direct products]] to create larger representations
+
+- Given _two representations_ of dimensions $d_r$ and $d_s$, with rep. matrices $D^{(r)}(g)$ and $D^{(s)}(g)$, one defines the _direct product representation_ with the direct product matrices
+	- The representations exist in _different vector spaces_ with different dimensionalities
+$$\displaylines{D(g)=D^{(r)}(g)\otimes D^{(s)}(g) \\ D(g)_{a\alpha,b\beta}=D^{(r)}(g)_{ab}\,D^{(s)}(g)_{\alpha\beta}}$$
+
+
+- The resulting representation has $d_rd_s$ dimensions
+- One can check using the _definition of the direct product_ that $D(g)$ _is a representation_
+
+- In _general_, this product representation is _not necessarily reducible_
+
+- The _characters_ of the direct product representation:
+$$\chi(c)=\sum_{a\alpha}D(g)_{a\alpha,a\alpha}=\left(\sum_a D^{(r)}(g)_{aa}\right)\left(\sum_\alpha D^{(s)}(g)_{\alpha\alpha}\right)=\chi^{(r)}(c)\chi^{(s)}(c)$$
+
 # Schur's lemma and orthogonality

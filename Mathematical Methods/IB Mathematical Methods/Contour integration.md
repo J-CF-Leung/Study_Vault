@@ -223,7 +223,7 @@ $$I=\frac{\pi}{2\sqrt{2}}$$
 - Example: $\ln z$:
 $$\displaylines{\ln z=\ln r+i\theta \\ \ln i=\dots,-\frac{3}{2}i\pi,\frac{1}{2}i\pi,\frac{5}{2}i\pi,\dots=\left(2n+\frac{1}{2}\right)i\pi}$$
 - It can be seen that for any _closed contour_, which _does not encircle the origin_, the function _remains continuous and single-valued_
-- If the contour _encircles the origin_, then it must either be _continuous_ or _single-valued_
+- If the contour _encircles the origin_, then it must either be _discontinuous_ or _multi-valued_
 
 - A point that _cannnot be encircled by a curve_ is called a _branch point_
 - The function is known to have a _branch point singularity_ at that point
@@ -242,7 +242,8 @@ $$\displaylines{z=x+i0^+\hspace{1cm} \ln z=\ln|x|+i\pi \\ z=x+i0^- \hspace{1cm} 
 - For any curve that _does not cross the cut_, the function is _single-valued_ and _continuous_
 
 - For some functions like $\ln z$, there can be an _infinite number_ of branches
-- For $\sqrt{z}=\sqrt{r}\exp(i\theta/2)$, there are only _two branches_, which have _different signs_
+- For $\sqrt{z}=\sqrt{r}\exp(i\theta/2)$, there are only _two branches_, which have _different signs_:
+$$\sqrt{z}\,\Big|_{\theta+2\pi}=-\sqrt{z}\,\Big|_{\theta}$$
 
 - The function is _analytic everywhere except for the branch cut_
 - This also means that there _cannot be Laurent expansions about the branch point_
