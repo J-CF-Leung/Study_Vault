@@ -432,11 +432,58 @@ $$\displaylines{\hat{X}_1^{(1)\otimes(2)}\ket{x_1x_2}=\hat{X}_1^{(1)\otimes(2)}(
 
 - From this, one regains the commutation relations from [[#Two particles in one dimension|above]]
 ### Time-evolution of two particles
-
+- The _state vector_ $\wv$ in the vector space $\mathbb{V}_{1\otimes2}$ evolves in time according to:
+$$i\hbar\ket{\dot{\Psi}}=\left[\frac{\hat{P}_1^2}{2m_1}+\frac{\hat{P}_2^2}{2m_2}+\hat{V}(\hat{X}_1,\hat{X}_2)\right]\wv=\hat{\Ham}\wv$$
 #### Separable Hamiltonians
+- In the case where the two particles _do not interact with each other_ but experience _independent potentials_ (which are not necessarily identical):
+$$\Ham=\frac{P_1^2}{2m_1}+V_1(X_1)+\frac{P_2^2}{2m_2}+V_2(X_2)=\Ham_1+\Ham_2$$
 
+- As in _classical mechanics_, this means the two particles _evolve independently of each other_, hence the energies are _separately conserved_:
+$$E=E_1+E_2$$
+- The _time-independent_ equation becomes:
+$$[\Ham_1(X_1,P_1)+\Ham_2(X_2,P_2)]\ket{E}=E\ket{E}$$
+- As the two Hamiltonians _commute_, there are _simultaneous eigenstates_, which are formed from the _direct product_ between the eigenstates of the _single-particle_ Hamiltonians
+	- $\ket{E}$ is a _basis vector_ for $\mathbb{V}_{1\otimes2}$ if the energy eigenstates are used instead of position
+$$\displaylines{\ket{E}=\ket{E_1}\otimes\ket{E_2} \\ \Ham_1^{(1)}\ket{E_1}=E_1\ket{E_1} \hspace{1.5cm} \Ham_2^{(2)}\ket{E_2}=E_2\ket{E_2}}$$
+- In this state, particle 1 is in _eigenstate_ $E_1$ and similarly for particle 2:
+$$\Ham\ket{E}=(\Ham_1+\Ham_2)\ket{E}=(E_1+E_2)\ket{E}$$
+- For a _stationary state_:
+$$\wv=\ket{E}\exp(-iEt/\hbar)=\ket{E_1}\exp(-iE_1t/\hbar)\otimes\ket{E_2}\exp(-iE_2t/\hbar)$$
+
+##### In the coordinate basis
+- _Projecting_ the time-independent equation into the _coordinate basis_ $\ket{x_1x_2}=\ket{x_1}\otimes\ket{x_2}$:
+$$\displaylines{\left[-\frac{\hbar^2}{2m_1}\pd{^2}{x_1^2}+V_1(x_1)-\frac{\hbar^2}{2m_2}\pd{^2}{x_2^2}+V_2(x_2)\right]\psi_E(x_1,x_2)=E\,\psi_E(x_1,x_2) \\ \psi_E(x_1,x_2)=\braket{x_1x_2|E}}$$
+- Use the method of [[Partial differential equations#Separation of variables|separation of variables]] (substitute the separable solution then divide the equation by $\psi_E$)
+$$\displaylines{\psi_E(x_1,x_2)=\psi_{E_1}(x_1)\psi_{E_2}(x_2) \\ \begin{aligned}\frac{1}{\psi_{E_1}}\left[-\frac{\hbar^2}{2m_1}\pd{^2}{x_1^2}+V_1(x_1)\right]\psi_{E_1}(x_1)&=E_1 \\ \frac{1}{\psi_{E_2}}\left[-\frac{\hbar^2}{2m_2}\pd{^2}{x_2^2}+V_2(x_2)\right]\psi_{E_2}(x_2)&=E_2 \\E_1+E_2&=E\end{aligned}}$$
+- From this, one gets:
+$$\braket{x_1x_2|\Psi_E}=\Psi_E(x_1,x_2,t)=\psi_{E_1}\exp(-iE_1t/\hbar)\,\psi_{E_2}\exp(-iE_2t/\hbar)$$
 #### Two interacting particles
+- Consider the _general problem_ where:
+$$\displaylines{\Ham=\frac{P_1^2}{2m_1}+\frac{P_2^2}{2m_2}+V(x_1,x_2) \\ V(x_1,x_2)\neq V_1(x_1)+V_2(x_2)}$$
+- _Generally_, this _cannot be reduced_ to two independent single-particle problems
 
-## More particles
+- However, consider the case where there is _no external potential_, only an _interaction potential_:
+$$V(x_1,x_2)=V(x_1-x_2)$$
+- In order to make this Hamiltonian _separable_, use the same transformation of variables as in the [[Analytical classical mechanics#The two-body problem|classical two-body problem]]:
+$$\displaylines{x_\text{CM}=\frac{m_1x_1+m_2x_2}{m_1+m_2} \hspace{1.5cm} p_\text{CM}=M\dot{x}_\text{CM}=m_1\dot{x}_1+m_2\dot{x}_2\\ x=x_1-x_2 \hspace{1.5cm} p=\mu\dot{x}\equiv\frac{m_1m_2}{m_1+m_2}\dot{x} \\ \Ham=\Ham_\text{CM}+\Ham_\text{rel}=\frac{p_\text{CM}^2}{2M}+\frac{p^2}{2\mu}+V(x)}$$
+- The system is effectively a _free particle_ of mass $M$, at $x_\text{CM}$ with $p_\text{CM}$, as well as a particle with _reduced mass_ $\mu$, at $x$, moving under the influence of $V(x)$
+
+- The _new quantisation conditions_, with _all other commutators zero_:
+$$[X_\text{CM},P_\text{CM}]=[X,P]=i\hbar$$
+- Following similar steps as above:
+$$\displaylines{\Ham=\frac{P_\text{CM}^2}{2M}+\frac{P^2}{2\mu}+V(X) \\ \psi_E(x_\text{CM},x)=\left[\frac{1}{\sqrt{2\pi\hbar}}\exp(ip_\text{CM}x_\text{CM}/\hbar)\right]\psi_{E_\text{rel}}(x) \\E=\frac{p_\text{CM}^2}{2M}+E_\text{rel}}$$
+- If one transforms to a frame where $p_\text{CM}=0$, then the free particle wave function becomes _constant_
+- All the dynamics is _within_ $\psi_\text{rel}(x)$
+## More particles in more dimensions
+- In _one dimension_, for _more than two non-interacting_ particles, the technique of _separation_ still applies
+- For _interacting particles_, one _generally cannot_ use the technique of centre-of-mass coordinates
+	- Exception: _harmonic oscillator_ Hamiltonians using _normal coordinates_
+
+- For _one particle in two dimensions_, one typically refers to the degrees of freedom as $x$ and $y$, with position eigenkets $\ket{xy}$ and momentum eigenkets $\ket{p_xp_y}$
+
+- In _three dimensions_, the _position eigenket_ can be written as $\ket{\bm{r}}$, and the _orthonormality_ relation becomes:
+$$\braket{\bm{r}|\bm{r}'}=\braket{xyz|x'y'z'}=\delta(x-x')\delta(y-y')\delta(z-z')=\delta^3(\bm{r}-\bm{r}')$$
+- When there are _more particles_, an extra label will be used
+	- A _two-particle momentum eigenstate in 3 dimensions_ is $\ket{\bm{p}_1\bm{p}_2}$
 
 ## Identical particles

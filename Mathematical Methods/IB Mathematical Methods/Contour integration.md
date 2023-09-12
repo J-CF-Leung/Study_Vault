@@ -227,6 +227,7 @@ $$\displaylines{\ln z=\ln r+i\theta \\ \ln i=\dots,-\frac{3}{2}i\pi,\frac{1}{2}i
 
 - A point that _cannnot be encircled by a curve_ is called a _branch point_
 - The function is known to have a _branch point singularity_ at that point
+- The _order_ of a branch point is the _number of paths around_ the point that must be taken before the function returns to its _original value_
 
 - Examples:
 	- $\ln(z-a)$ has a branch point at $z=a$
