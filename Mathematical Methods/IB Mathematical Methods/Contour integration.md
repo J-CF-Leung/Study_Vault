@@ -177,7 +177,7 @@ $$\frac{dz}{z}=-\frac{d\zeta}{\zeta}$$
 ### Integrals with trigonometric functions
 - Example integral (with $a>1$):
 $$I=\int_0^{2\pi}\frac{d\theta}{2(a-\cos\theta)}$$
-- Substitution:
+- Substitution, using a _circular contour_:
 $$\displaylines{z=\exp(i\theta) \\ I=\oint_C \frac{i\,dz}{(z-z_+)(z-z_-)} \\ z_\pm=a\pm\sqrt{a^2-1}}$$
 - As $0<z_-<1$ and $z_+>1$, only _one pole_ needs to be considered:
 $$\res{z=z_-}\left(\frac{i}{(z-z_-)(z-z_+)}\right)=\frac{i}{z_--z_+}=-\frac{i}{2\sqrt{a^2-1}}$$
@@ -188,6 +188,8 @@ $$I=\frac{\pi}{\sqrt{a^2-1}}$$
 - Consider the integral:
 $$I=\int_0^\infty \frac{dx}{x^2+1}$$
 - Let $C$ be a _semicircular contour_ on the _upper half-plane_
+	- A _straight segment_ from $z=-\infty$ to $z=\infty$
+	- A _semicircular segment_ in the upper-half plane, with $R\to\infty$
 - As $|z|$ tends to _infinity_, $|zf(z)|$ tends to _zero_, hence _only the straight segment contributes_:
 $$I=\frac{1}{2}\int_{-\infty}^\infty\frac{1}{x^2+1}\,dx=\frac{1}{2}\oint_C\frac{dz}{z^2+1}=(\pi i)\sum [\text{residues of } f(z)\text{ in upper half plane}]$$
 - Write $f(z)$ as:
@@ -278,8 +280,49 @@ $$\oint_C \frac{z^p}{z^2+1}\,dz$$
 - The _small circle_ with radius $\epsilon$ gives a _negligible contribution_ as $\epsilon\to0$
 - Similarly, the _large circle_ gives a negligible contribution as radius $R\to\infty$
 - On the _upper straight contour_, $z=x$
-- On the _lower straifht contour_, $z=x\exp{(2i\pi)}$
+- On the _lower straight contour_, $z=x\exp{(2i\pi)}$
 - Hence:
 $$\oint_C\frac{z^p}{z^2+1}\,dz=[1-\exp(2ip\pi)]I$$
 - From the residue theorem:
 $$I=\frac{\pi}{2\cos(p\pi/2)}$$
+# Jordan's Lemma
+- Consider the integral:
+$$\lim_{R\to\infty} \oint_{C_R}g(z)\exp(i\lambda z)\,dz$$
+- Where:
+	- $\lambda>0$ is a _constant_
+	- $g(z)$ is _analytic_ in the _upper half plane_, $\Im(z)>0$
+	- The contour $C_R$ is a _semicircle_ of radius $R$ in the _upper half plane_, where $z=R\exp(i\theta)$
+
+- Then, _Jordan's Lemma_ states that if $g(z)\to0$ uniformly on $C_R$ as $R\to\infty$, then:
+$$\lim_{R\to\infty} \oint_{C_E}g(z)\exp(i\lambda z)\,dz=0$$
+- For _negative_ $\lambda$, then the semicircle must be in the _lower half plane_
+- The _condition_ of decreasing $g(z)$ can be expressed as:
+$$|g(Re^{i\theta})|<G(R)\hspace{1cm}\text{for }0<\theta<\pi$$
+	- where $G(R)$ tends to zero as $R\to\infty$
+
+## Use in contour integration
+
+### Oscillatory integral
+- Consider the integral:
+$$I=\int_0^\infty \frac{\cos x}{x^2+1}\,dx$$
+- _Split_ the integral:
+$$I=\frac{1}2{\left[\int_0^\infty\frac{\exp(ix)}{x^2+1}\,dx+\int_0^\infty\frac{\exp(-ix)}{x^2+1}\,dx\right]=\frac{1}{2}\int_{-\infty}^\infty\frac{\exp(ix)}{x^2+1}\,dx}$$
+- Use a _semi-circular contour_, and from Jordan's lemma, the _curved segment has no contribution_:
+$$I=2\pi i\sum \text{(residues in the upper-half plane)}=\frac{\pi}{2e}$$
+
+### Singularity on contour
+- Consider the integral:
+$$I=\int_0^\infty \frac{\sin x}{x}\,dx$$
+- _Split_ the integral:
+$$I=\frac{1}{2i}{\left[\int_0^\infty\frac{\exp(ix)}{x}\,dx-\int_0^\infty\frac{\exp(-ix)}{x}\,dx\right]=\frac{1}{2i}\int_{-\infty}^\infty\frac{\exp(ix)}{x}\,dx}$$
+- Use a contour that _avoids_ the singularity at $z=0$:
+![[Contour avoiding origin.png]]
+- From the _residue theorem_:
+$$\oint\frac{\exp(iz)}{z}\,dz=0$$
+- From Jordan's Lemma, the contribution on $C_2$ disappears
+- On the _small semicircle_ $C_r$:
+$$\int_\pi^0 \frac{\exp(ire^{i\theta})}{re^{i\theta}}d(re^{i\theta})=i\int_\pi^0[1+O(r)]\,d\theta=-i\pi+O(r)$$
+- Using the result as $r\to0$:
+$$\int_{-\infty}^\infty\frac{\exp(ix)}{x}\,dx=i\pi$$
+- Hence:
+$$I=\frac{\pi}{2}$$

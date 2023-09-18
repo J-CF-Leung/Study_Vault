@@ -167,3 +167,24 @@ $$\displaylines{\bm{e}_\bar{p}=\bm{e}_iR_{i\bar{p}} \\ A_\bar{p}=R_{\bar{p}i}A_i
 - This means the rotation matrices form a [[Rotations and Lie Algebra|rotation group]]
 
 # Differentiation of scalars, vectors and tensors
+- Consider a _tensor field_ $\textbf{T}(\mathcal{P})$ in Euclidean 3-space
+	- The tensor is _dependent_ on the vector $\bm{x}_\mathcal{P}$ from some arbitrary origin ($\bm{x}_\mathcal{P}$ is not in any of the slots)
+- Along some _vector_ $\bm{A}$, one defines the _directional derivative_ of $\textbf{T}$ along $\bm{A}$ as:
+$$\nabla_\bm{A}\textbf{T}(\mathcal{P})=\lim_{\epsilon\to0}\frac{1}{\epsilon}\left[\textbf{T}(\bm{x}_\mathcal{P}+\epsilon\bm{A})-\textbf{T}(\bm{x}_\mathcal{P})\right]$$
+- This also applies to _vector fields_ $\bm{B}(\mathcal{P})$ and _scalar fields_ $\psi(\mathcal{P})$
+- The directional derivative is _the same rank as_ $\textbf{T}$
+
+- Hence, there is some tensor $\nabla\textbf{T}$, known as the _gradient_ of $\textbf{T}$
+- If $\textbf{T}$ has rank $n$, $\nabla\textbf{T}$ has rank $n+1$:
+$$\nabla_\bm{A}\textbf{T}=\nabla\textbf{T}(\_,\_,\dots,\_,\bm{A})$$
+
+- The gradient is written in _index notation_ as:
+$$T_{i_1i_2\dots i_n;j}$$
+- The _directional derivative_ is then:
+$$(\nabla_\bm{A}\textbf{T})_{i_1i_2\dots i_n}=T_{i_1i_2\dots i_n;j}A_j$$
+- Then one can prove that in _any Cartesian coordinate system_:
+$$T_{i_1i_2\dots i_n;j}=\pd{T_{i_1i_2\dots i_n}}{x_j}\equiv T_{abc,j}$$
+- This _does not apply to curvilinear coordinate systems_
+
+- From the definition of the derivative, _product rules apply_:
+$$\displaylines{\nabla_\bm{A}(\textbf{S}\otimes\textbf{T})=(\nabla_\textbf{A}\textbf{S})\otimes\textbf{T}+\textbf{S}\otimes(\nabla_\textbf{A}\textbf{T} \\ (S_{ab}T_{cde})_{;j}A_j=(S_{ab;jA_j})T_{cde}+S_{ab}(T_{cde;j}A_j)  \\ \\\nabla_\bm{A}(f\textbf{T})=(\nabla_\textbf{A}f)\textbf{T}+f(\nabla_\bm{A}\textbf{T})\\ (fT_{abc})_{;j}=(f_{;j}A_j)T_{abc}+f(T_{abc;j}A_j)}$$
