@@ -269,3 +269,17 @@ $$\displaylines{\sqrt{z^2-1}=\sqrt{z-1}\sqrt{z+1} \\ \sqrt{z-1}=\sqrt{r_1}\exp(i
 - In general, _multiple branch cuts may sometimes be necessary_
 
 ## Integration around a branch cut
+- If the _integrand_ is a function with a branch cut, then the _integration contour must not cross it_
+- Consider the integral:
+$$I=\int_0^\infty\frac{x^p}{x^2+1}\,dx\;, \;0<p<1$$
+- Use a _keyhole contour_:
+$$\oint_C \frac{z^p}{z^2+1}\,dz$$
+![[Keyhole contour.png]]
+- The _small circle_ with radius $\epsilon$ gives a _negligible contribution_ as $\epsilon\to0$
+- Similarly, the _large circle_ gives a negligible contribution as radius $R\to\infty$
+- On the _upper straight contour_, $z=x$
+- On the _lower straifht contour_, $z=x\exp{(2i\pi)}$
+- Hence:
+$$\oint_C\frac{z^p}{z^2+1}\,dz=[1-\exp(2ip\pi)]I$$
+- From the residue theorem:
+$$I=\frac{\pi}{2\cos(p\pi/2)}$$

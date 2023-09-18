@@ -94,7 +94,7 @@ $$D^{(4)}(g)=D^{(1)}(g)\oplus D^{(3)}(g)$$
 >All _finite_ groups have _unitary representations_
 >i.e. $D^\dagger(g)D(g)=I$ for _all_ $g$ and _all representations_
 
-- Related to the fact that for _any element_ $g$ in a _finite group_, there is some $k$ such that $g(k)=I$
+- Related to the fact that for _any element_ $g$ in a _finite group_, there is some $k$ such that $g^k=I$
 
 - Proof:
 	- 
@@ -127,3 +127,24 @@ $$\displaylines{D(g)=D^{(r)}(g)\otimes D^{(s)}(g) \\ D(g)_{a\alpha,b\beta}=D^{(r
 $$\chi(c)=\sum_{a\alpha}D(g)_{a\alpha,a\alpha}=\left(\sum_a D^{(r)}(g)_{aa}\right)\left(\sum_\alpha D^{(s)}(g)_{\alpha\alpha}\right)=\chi^{(r)}(c)\chi^{(s)}(c)$$
 
 # Schur's lemma and orthogonality
+
+>[!info] Schur's lemma
+>If $D(g)$ is an _irreducible representation_ of a finite group $G$ and if there is some matrix $A$ such that $AD(g)=D(g)A$ for all $g$, then $A=\lambda I$ for some _constant_ $\lambda$
+
+- In other words, if there is a matrix $A$ which is _NOT the identity_, and it _commutes with a representation matrix $D(g)$_ for _all_ $g$, then $D(g)$ must _not be irreducible_
+
+- From this, one can prove _Schur's Orthogonality Relation_
+- Given a $d-$dimensional irreducible representation $D(g)$ for a _finite group_ $G$ with $N(G)$ _elements_:
+$$\sum_g D^\dagger(g)_{ij}D(g)_{kl}=\frac{N(G)}{d}\delta_{il}\delta_{jk}$$
+- In other words, when _summing over_ group elements, any information related to _orientation_ disappears
+- Proof: using Schur's Lemma
+- If $j=k$, then the left hand side becomes $N(G)\delta_{il}$ due to [[#Unitary representations|unitarity]] and the constant on the right hand side must be $N(G)/d$
+
+- Corollary: for _two representations_:
+$$\sum_g D^{(r)\dagger}(g)_{ij}\,D^{(s)}(g)_{kl}=\frac{N(G)}{d_r}\delta_{rs}\delta_{il}\delta_{jk}$$
+- For the right hand side to be non-zero, the representations _must be equivalent_
+
+## Character orthogonality and character tables
+- Setting $i=j$ and $k=l$ above, then _summing_:
+$$\sum_c n_c\left(\chi^{(r)}(c)\right)^*\left(\chi^{(s)}(c)\right)=N(G)\delta^{rs}$$
+- Where $n_c$ is the number of _classes_ in the group
