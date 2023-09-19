@@ -146,5 +146,14 @@ $$\sum_g D^{(r)\dagger}(g)_{ij}\,D^{(s)}(g)_{kl}=\frac{N(G)}{d_r}\delta_{rs}\del
 
 ## Character orthogonality and character tables
 - Setting $i=j$ and $k=l$ above, then _summing_:
-$$\sum_c n_c\left(\chi^{(r)}(c)\right)^*\left(\chi^{(s)}(c)\right)=N(G)\delta^{rs}$$
+$$\sum_c n_c\left(\chi^{(r)}(c)\right)^*\left(\chi^{(s)}(c)\right)=N(G)\delta_{rs}$$
 - Where $n_c$ is the number of _classes_ in the group
+- Example: the cyclic group $Z_N$
+	- $D^{(k)}(j)=\chi^{(k)}(j)=\exp(2i\pi kj/N)$
+	- Equivalence classes are labelled _by element_ as the group is Abelian
+	- $\sum_{j=0}^{N-1}\exp[2i\pi(l-k)j/N]=N\delta_{kl}$
+	- This is the basis of [[Fourier series and transforms|Fourier series analysis]]
+
+- For a given _finite group_, one can construct a _character table_
+- Along the _vertical axis_, one lists the _equivalence classes_ $c$
+- Along the _horizontal axis_, one lists the different _irreducible representations_ $r$
