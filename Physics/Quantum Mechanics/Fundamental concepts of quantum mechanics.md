@@ -162,6 +162,10 @@ $$\wv\xrightarrow{\Omega\text{ measured, }\omega \text{ obtained}} \frac{1}{\sqr
 - In that case, some intuition may be used to determine commutation relations and other properties
 
 ### The Hamiltonian
+- To construct the Hamiltonian, one starts from the _classical_ Hamiltonian $\Ham(x,p)$
+- Then, one makes the _substitution_ $\hat{\Ham}(x\to\hat{X}, p\to\hat{P})$
+- For example. the _1-dimensional harmonic oscillator_:
+$$\Ham=\frac{p^2}{2m}+\frac{1}{2}m\omega^2x^2 \hspace{0.25cm} \longrightarrow\hspace{0.25cm} \hat{\Ham}=\frac{\hat{P}^2}{2m}+\frac{1}{2}m\omega^2\hat{X}^2$$
 
 ## Uncertainty principles
 - As the measured values of observables is now _probabilistic_, the distributions will come with some _variance_
@@ -487,3 +491,44 @@ $$\braket{\bm{r}|\bm{r}'}=\braket{xyz|x'y'z'}=\delta(x-x')\delta(y-y')\delta(z-z
 	- A _two-particle momentum eigenstate in 3 dimensions_ is $\ket{\bm{p}_1\bm{p}_2}$
 
 ## Identical particles
+- If two particles are _identical_, it means it is _impossible to observe a difference in intrinsic properties_ (mass, charge, spin, etc.)
+- In _classical mechanics_ it is always possible to _label_ identical particles by _following their non-identical past trajectories_, such that _exchanging_ the particles at any particular time creates a _non-equivalent situation_
+- In _quantum mechanics_, as particles _do not have continuous trajectories_, a _particle exchange_ at _any time_ must _not change the physical situation_
+
+### Allowed state vectors for two identical particles
+- Suppose two _distinguishable particles_, $1$ and $2$, are found at $x_1=a$ and $x_2=b$ (where $a\neq b$) denote the state as $\wv=\ket{x_1=a, x_2=b}=\ket{ab}$ 
+- When the particles are _exchanged_, $\wv=\ket{ba}$
+- $\wv$ is described by an _ordered pair_ of numbers
+
+- If the observation is repeated with _identical particles_, as the configuration is _physically equivalent_:
+$$\ket{\Psi(a,b)}=\pm\ket{\Psi(b,a)}$$
+- Proof:
+	- Let $\ket{\Psi(a,b)}=\pm\ket{\Psi(b,a)}$ where $\alpha\in\mathbb{C}$
+	- As $a$ and $b$ are an _unordered pair_, one can only define a _unique sum_ $a+b$
+	- Therefore, the state vector lies in an _eigenspace_ spanned by $\ket{ab}$ and $\ket{ba}$
+	- $\wv=\beta\ket{ab}+\gamma\ket{ba}$
+	- Substituting this into the above relation, $\beta=\alpha\gamma$ and $\gamma=\alpha\beta$
+	- Hence, $\alpha=\pm1$
+
+- One can then construst the (unnormalised) _allowed state vectors_, which can be _symmetric_ $(\alpha=1)$ or _antisymmetric_ $(\alpha=-1)$:
+$$\displaylines{\ket{ab, S}=\ket{ab}+\ket{ba} \\ \ket{ab,A}=\ket{ab}-\ket{ba}}$$
+- _Labels_ of $x_1$ and $x_2$ become _physically irrelevant_
+
+- This process applies to _any variable_ $\Omega$
+- If the values $\omega_1$ and $\omega_2$ are mentioned, the allowed state vectors are $\ket{\omega_1\omega_2, S}$ and $\ket{\omega_1\omega_2,A}$
+	- If $\Omega$ is _degenerate_, let $\omega$ represent the eigenvalues of a _complete set of commuting operators_
+
+### Bosons and Fermions
+- For a _given species of particle_, it must _only collapse into either symmetric or antisymmetric states_
+	- If the contrary were true, the Hilbert space of possible states contains both $S$ and $A$ vectors, along with its _linear combinations_ which are not physically allowed
+
+- Particles _always in symmetric states_ are known as _bosons_
+	- Particle _exchange_ leaves the wave function _completely unchanged_
+- Particles _always in antisymmetric states_ are known as _fermions_
+	- Particle _exchange_ only _flips the sign_ of the wave function
+
+- Due to the _antisymmetry_ of _fermions_, one gets the _Pauli Exclusion Principle_:
+>[!info] Pauli Exclusion Principle
+>Two identical fermions cannot be in the same quantum state
+- Proof: $\ket{\omega\omega, A}=\ket{0}$
+
