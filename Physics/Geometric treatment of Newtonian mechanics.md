@@ -35,11 +35,13 @@ $$|\Delta\bm{x}|^2\equiv(\Delta\bm{x})^2\equiv(\Delta\sigma)^2$$
 $$d\bm{x}=\frac{d\mathcal{P}}{d\lambda}d\lambda=\frac{d\bm{x}}{d\lambda}d\lambda$$
 - $d\bm{x}/d\lambda$ is known as the _tangent vector_ of the curve at $\mathcal{P}(\lambda)$
 ### Products
-- Given _a pair of vectors at the same point_, they can define a _parallelogram_
-- The _cross product_ between the vectors is the _vector orthogonal to the parallelogram_, with the _length equal to the area_
+- Given _a pair of vectors at the same point_, $\bm{A}$ and $\bm{B}$, they can define a _parallelogram_
+- The _cross product_ $\bm{A}\times\bm{B}$ between the vectors is the _vector orthogonal to the parallelogram_, with the _length equal to the area_
 
-- If a vector is _rotated towards the other_ by a _right angle_, then the _area of the new parallelogram_ is the _inner product_
-- The _inner product_ can also be defined by:
+- If a vector is _rotated towards the other_ by a _right angle_, then the _area of the new parallelogram_ is the _inner product_ $\bm{A}\cdot\bm{B}$
+- The inner product between _two identical vectors_ then gives the _squared norm/distance_ of the _vector_:
+$$|\Delta\bm{x}|^2=\Delta\bm{x}\cdot\Delta\bm{x}$$
+- The inner product can _alternatively be defined_ by:
 $$\bm{A}\cdot\bm{B}\equiv\frac{1}{4}\left[(\bm{A}+\bm{B})^2-(\bm{A}-\bm{B})^2\right]$$
 
 ### Fields and spatial derivatives
@@ -60,6 +62,7 @@ $$\textbf{T}(e\bm{E}+f\bm{F},\bm{B},\bm{C})=e\,\textbf{T}(\bm{E},\bm{B},\bm{C})+
 
 - The [[#Products|inner product]] is a _function of two vectors_, and therefore can be regarded as a _tensor of rank $2$_, known as the _metric tensor_ $\textbf{g}$:
 $$\textbf{g}(\bm{A},\bm{B})=\bm{A}\cdot\bm{B}$$
+- Due to this, the _metric tensor_ encodes how to calculate _distance_ in Euclidean space, and is a _fundamental property
 - The metric tensor is _symmetric_, as $\bm{A}\cdot \bm{B}=\bm{B}\cdot \bm{A}$
 
 - A vector can then be regarded as a _tensor of rank one_:
@@ -169,6 +172,8 @@ $$\displaylines{\bm{e}_\bar{p}=\bm{e}_iR_{i\bar{p}} \\ A_\bar{p}=R_{\bar{p}i}A_i
 # Differentiation of scalars, vectors and tensors
 - Consider a _tensor field_ $\textbf{T}(\mathcal{P})$ in Euclidean 3-space
 	- The tensor is _dependent_ on the vector $\bm{x}_\mathcal{P}$ from some arbitrary origin ($\bm{x}_\mathcal{P}$ is not in any of the slots)
+
+## Directional derivative and gradient
 - Along some _vector_ $\bm{A}$, one defines the _directional derivative_ of $\textbf{T}$ along $\bm{A}$ as:
 $$\nabla_\bm{A}\textbf{T}(\mathcal{P})=\lim_{\epsilon\to0}\frac{1}{\epsilon}\left[\textbf{T}(\bm{x}_\mathcal{P}+\epsilon\bm{A})-\textbf{T}(\bm{x}_\mathcal{P})\right]$$
 - This also applies to _vector fields_ $\bm{B}(\mathcal{P})$ and _scalar fields_ $\psi(\mathcal{P})$
@@ -188,3 +193,44 @@ $$T_{i_1i_2\dots i_n;j}=\pd{T_{i_1i_2\dots i_n}}{x_j}\equiv T_{abc,j}$$
 
 - From the definition of the derivative, _product rules apply_:
 $$\displaylines{\nabla_\bm{A}(\textbf{S}\otimes\textbf{T})=(\nabla_\textbf{A}\textbf{S})\otimes\textbf{T}+\textbf{S}\otimes(\nabla_\textbf{A}\textbf{T} \\ (S_{ab}T_{cde})_{;j}A_j=(S_{ab;jA_j})T_{cde}+S_{ab}(T_{cde;j}A_j)  \\ \\\nabla_\bm{A}(f\textbf{T})=(\nabla_\textbf{A}f)\textbf{T}+f(\nabla_\bm{A}\textbf{T})\\ (fT_{abc})_{;j}=(f_{;j}A_j)T_{abc}+f(T_{abc;j}A_j)}$$
+
+- It is worth noting that in a _Cartesian coordinate system_, the [[#Component representation|metric tensor]] has components $g_{ab}=\delta_{ab}$ 
+## Divergence and Laplacian
+-  Consider the _contraction_ of the _gradient of a vector field_, $\nabla\bm{A}(\_,\_)$, to create a _scalar field_, known as the _divergence_ of $\bm{A}$
+$$\nabla\cdot\bm{A}\equiv\text{contraction}(\nabla\bm{A})=A_{a;a}=\pd{}{x_a}A_a$$
+- For a _tensor field_, one needs to _specify the index of the divergence_:
+$$T_{abc;b}=\pd{T_{abc}}{x_b}\neq T_{abc;a}\neq T_{abc;c}$$
+
+- By taking a _double gradient_ then _contracting over both gradient slots_, one obtains the _Laplacian_ of the tensor field:$$\nabla^2\textbf{T}\equiv(\nabla\cdot\nabla)\textbf{T} \hspace{1cm}(\nabla^2\textbf{T})_{abc}=T_{abc;jj}$$
+	- Notation: $T_{abc, jk}\equiv\partial^2T_{abc}/\partial x_j\partial x_k$
+
+## The Levi-Civita tensor and curl
+- The _metric tensor_ $\textbf{g}$ encodes _distance_ in the space
+- The _Levi-Civita tensor_ $\bf{\epsilon}$ encodes _generalised volume_ in the space
+- Together, the two tensors _define the geometry of the space_
+
+- In an $n-$dimensional _Euclidean_ space, $\bf{\epsilon}$ is a _rank $n$_, _completely antisymmetric tensor_
+- A _parallelepiped_ with $n$ edges $\bm{A}_1, \bm{A}_2,\dots,\bm{A}_n$ has _volume_:
+$$\text{volume}=\epsilon(\bm{A}_1, \bm{A}_2,\dots,\bm{A}_n)$$
+- This volume can be _positive or negative_
+- From _antisymmetry_, one can _flip_ the parallelepiped:
+$$\epsilon(\bm{A}_1,\dots,\bm{A}_i,\dots,\bm{A}_j,\dots,\bm{A}_n)=-\epsilon(\bm{A}_1,\dots,\bm{A}_j,\dots,\bm{A}_i,\dots,\bm{A}_n)$$
+
+- If the edges are _linearly dependent_, the volume _vanishes_
+- If the volume for _one parallelepiped_ is determined, it is determined for _all parallelepipeds_
+	- For _orthonormal legs_ determined by $\textbf{g}$, the parallelepiped has _unit volume_ $\pm1$
+	- This is known as the _compatibility relationship_ between $\epsilon$ and $\textbf{g}$
+
+- $\epsilon$ is _fully determined_ by _antisymmetry_, _compatibility_ with $\textbf{g}$, and a _sign convention_ for the volume
+	- In $3-$space, _right-handed_ parallelepipeds have _positive_ volume
+- For example, in $3-$space with a _right-handed orthonormal basis_:$$\begin{aligned}\epsilon_{123}&=+1 \\ \epsilon_{abc}&=\begin{cases}+1&\text{ if  }a,b,c \text{ is an even permutation of }1,2,3 \\ -1&\text{ if  }a,b,c \text{ is an odd permutation of }1,2,3 \\ 0 &\text{ if }a,b,c\text{ are not all different}\end{cases} \end{aligned}$$
+	- It is _flipped_ in a _left-handed_ basis
+
+- From the definition of the [[#Products|cross product]]:
+$$\bm{A}\times\bm{B}\equiv\epsilon(\_,\bm{A},\bm{B}); \hspace{1cm} (\bm{A}\times\bm{B})_i=\epsilon_{ijk}A_jB_k$$
+
+- Then, one can define the _curl_ of vector field $\bm{A}$ as a _double contraction_ of the tensor $\epsilon\otimes \nabla A$:
+$$(\nabla\times\bm{A})_i=\epsilon_{ijk}A_{k;j}=\epsilon_{ijk}\pd{A_k}{x_j}$$
+
+- In _Euclidean 3-space_, the _contraction of a product_ between two Levi-Civita tensors is:$$\epsilon_{ijm}\epsilon_{klm}=\delta^{ij}_{kl}=\delta^i_k\delta^j_l-\delta^i_l\delta^j_k$$
+	- 4-index notation: _positive_ on the same side, _negative_ when _diagonal_
