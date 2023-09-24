@@ -128,7 +128,7 @@ $$\pd{\Psi}{\hat{\bm{n}}}\Bigg|_S=\hat{\bm{n}}\cdot\nabla\Psi=f(\bm{x})$$
 ## The other uniqueness theorem in electrostatics
 
 # Green's functions
-- A general discussion: [[Second order linear ODEs and Green's Functions]]
+- A general discussion: [[Green's Functions for ODEs]]
 - Relies on [[Dirac Delta Function#Higher dimension Delta functions|higher dimensional Delta Functions]]
 - Let the _Green's function_ satisfy, for $\bm{r}$ in the volume $V$:
 $$\nabla_x^2G(\bm{x},\bm{x}')=\delta^3(\bm{x}-\bm{x}') $$

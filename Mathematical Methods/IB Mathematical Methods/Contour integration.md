@@ -326,3 +326,21 @@ $$\int_\pi^0 \frac{\exp(ire^{i\theta})}{re^{i\theta}}d(re^{i\theta})=i\int_\pi^0
 $$\int_{-\infty}^\infty\frac{\exp(ix)}{x}\,dx=i\pi$$
 - Hence:
 $$I=\frac{\pi}{2}$$
+## Gaussian integration lemma
+- For any _real_ number $a$, it is known that:
+$$\int_{-\infty}^\infty \exp[-(u+a)^2]\,du=\sqrt{\pi}$$
+- For a _complex_ constant $a$, one must prove it via _contour integration_
+- Let there be a variable $v=u+a$:
+$$\int_{-\infty}^\infty\exp[-(u+a)^2]\,du=\int_{-\infty}^\infty \exp(-v^2)\,dv$$
+
+- Let there be a _rectangular contour_ with vertices at $\pm R$ and $\pm R+i\,\text{Im } a$
+- As the function is _analytic everywhere_, from Cauchy's Theorem:
+$$0=\int_{-R}^R \exp(-u^2)\,du-\int_{-R+i\,\text{Im }a}^{R+i\,\text{Im }a}\exp(-v^2)\,dv+2\exp(-R^2)\int_0^{\text{Im }a}\exp(y^2)\sin(2Ry)\,dy$$
+- Then as $R\to\infty$, one finds that for _any_ $a\in\mathbb{C}$:
+$$\int_{-\infty}^\infty \exp[-(u+a)^2]\,du=\sqrt{\pi}$$
+
+
+
+
+
+ 

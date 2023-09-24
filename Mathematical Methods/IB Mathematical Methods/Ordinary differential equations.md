@@ -1,5 +1,3 @@
-
-
 # Classification
 - The _general first-order_ ordinary differential equation is:
 $$y'+p(x)y=f(x)$$
@@ -22,7 +20,7 @@ $$y(x)=\alpha y_1(x)+\beta y_2(x)$$
 - If $y=0$ implies $\alpha=\beta=0$, then they are _linearly independent_
 - If they are linearly independent, $y(x)$ is the _general solution_
 
-- The [[Second order linear ODEs and Green's Functions#The Wronskian|Wronskian]] $W(x)=y_1y_2'-y_2y_1'$ is _non-zero if they are linearly independent_
+- The [[Green's Functions for ODEs#The Wronskian|Wronskian]] $W(x)=y_1y_2'-y_2y_1'$ is _non-zero if they are linearly independent_
 
 - One can find the _derivative of the Wronskian_ to be:
 $$W'=\frac{dW}{dx}=y_1y_2''-y_2y_1''=-pW$$
@@ -39,8 +37,6 @@ $$y_2(x)=y_1(x)\int^x\frac{W(\eta)}{y_1^2(\eta)}\,d\eta=y_1(x)\int^x\frac{\kappa
 - The indefnite integral _involves an arbitrary additive constant_
 - $W$ is determined up to a multiplicative constant, since $y_2$ _can be multiplied by any constant_
 - From this, _the integral gives the general solution_
-
-
 # Series solutions
 - Generalise the homogeneous ODE to _complex function_ $y$ of _complex variable_ $z$:
 $$y''(z)+p(z)y'(z)+q(z)y(z)=0$$

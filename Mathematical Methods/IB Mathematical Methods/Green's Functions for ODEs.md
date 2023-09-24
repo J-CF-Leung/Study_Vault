@@ -44,8 +44,6 @@ $$Ay(a)+By'(a)=E$$
 
 - _Initial value problem_: both $y$ and $y'$ specified at one point
 - _Boundary value problem_: BCs are specified at different points
-
-
 # Green's functions
 ## For two-point homogeneous boundary value problems
 - Problem: the differential equation with the operator $L$
@@ -55,7 +53,7 @@ $$L=\frac{d^2}{dx^2}+p(x)\frac{d}{dx}+q(x)$$
 $$\displaylines{Ay(a)+By'(a)=0 \\ Cy(b)+Dy'(b)=0}$$
 	- $A$ and $B$, and $C$ and $D$ are not both zero
 
-- Let there be a function $G(x,\zeta)$ that is the reponse to forcing at the point $\zeta$
+- Let there be a function $G(x,\zeta)$ that is the _reponse to forcing_ at the point $\zeta$
 $$\Lagr G(x,\zeta)=\delta(x-\zeta)$$
 - Here, $\delta(x-\zeta)$ is the [[Dirac Delta Function]] 
 - When $x\neq\zeta$, $G$ satisfies the homogeneous equation $\Lagr G=0$
@@ -108,14 +106,14 @@ $$\alpha_+-\alpha_-=-\frac{y_2(\zeta)}{W(\zeta)} \hspace{1cm} \beta_+-\beta_-=\f
 
 - The boundary conditions:
 $$\displaylines{AG(a,\zeta)+BG_x(a,\zeta)=0 \\ CG(b,\zeta)+DG_x(b,\zeta)=0}$$
-- For simplicity, construct complementary functions such that:
+- For simplicity, construct _complementary functions_ such that:
 $$Ay_1(a)+By_1'(a)=0 \hspace{1cm} Cy_2(b)+Dy_2'(b)=0$$
 - Then, substituting this into the boundary conditions for the Green's function:
 $$\alpha_+=\beta_-=0$$
 - Using all of the above equations:
 $$G(x,\zeta)= \begin{cases}\frac{y_1(x)y_2(\zeta)}{W(\zeta)} &a\leq x < \zeta \\ \frac{y_1(\zeta)y_2(x)}{W(\zeta)} &\zeta\leq z\leq b \end{cases}$$
 
-- When $W(\zeta)$ vanishes, as $y_2=cy_1$, the complementary function satisfies both boundary conditions at once, and the solution may not exist, or be unique
+- When $W(\zeta)$ vanishes, as $y_2=cy_1$, the complementary function _satisfies both boundary conditions at once_, and the solution may not exist, or be unique
 
 ## Homogeneous initial value problems
 - Let there be a hompgeneous boundary condition at $x=a$:

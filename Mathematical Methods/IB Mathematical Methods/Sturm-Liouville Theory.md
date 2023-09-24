@@ -115,7 +115,7 @@ $$\Lagr y(x)=f(x)$$
 - If $\Lagr$ is _in Sturm-Liouville form_ and has a _complete orthonormal set of eigenfunctions_ $\{y_n\}$ and eigenvalues $\lambda_n$
 - The _formal solution is of the form_:
 $$y(x)=\int_\alpha^\beta G(x,x')f(x')\,dx'$$
-- Here, $G$ is the [[Second order linear ODEs and Green's Functions|Green's Function]]:
+- Here, $G$ is the [[Green's Functions for ODEs|Green's Function]]:
 $$\Lagr_xG(x,x')=\delta(x-x')$$
 - $\Lagr_x$ means the _operator acts with respect to $x$_
 

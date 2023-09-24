@@ -3,7 +3,16 @@
 ## Inertial reference frames
 - All measurements are made in _inertial reference frames_
 - It can be imagined as a 3D _lattice_ with clocks at every point
-- The _spacing_ between points is _uniform_, and the _clocks tick uni
+- The _spacing_ between points is _uniform_, and the _clocks tick uniformly_
+	- On the scale of _wavelength and period_ of _light emitted by atoms_
+- The clocks are _synchronised_
+	- If clock A _emits_ a pulse of light at $t_e$, which is then _reflected_ by clock B and _returned_ to A at $t_r$, the _time of bouncing_ $t_b$ measured by B is _equal_ to $(t_e+t_r)/2$ measured by A
+
+- A particular set of _spatial and temporal coordinates_ is termed an _event_
+	- Or a precise _point_ in 4-dimensional _spacetime_
+- A _4-vector_ is an _arrow_ in 4-D _spacetime_, reaching _from one event to another_
+	- 3-vector: $\Delta\bm{x}$
+	- 4-vector: $\Delta\vec{x}$
 # The fundamental principles of Einsteinian relativity
 
 1. The laws of physics are _identical for all inertial frames of reference_
@@ -18,7 +27,7 @@ $$c=2.99792458\times10^8\,\text{m}\,\text{s}^{-1}$$
 	- Galilean relativity can be obtained by letting $c\rightarrow\infty$
 
 # Intervals
-- A particular set of _spatial and temporal coordinates_ is termed an _event_
+
 - Space-time can be described by points in a _4-dimensional space_, known as _world-points_, which form a _world-line_
 	- A _uniform motion_ produces a _straight_ world-line
 

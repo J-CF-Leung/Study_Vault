@@ -64,7 +64,7 @@ $$\mathcal{F}\left[\frac{1}{\sqrt{2\pi\epsilon^2}}\exp\left(-\frac{x^2}{2\epsilo
 	- The Fourier transform of a Gaussian is a Gaussian
 	- For a narrow Gaussian, the Fourier transform will be wide, and vice versa
 
-- The [[Second order linear ODEs and Green's Functions#The Dirac Delta function ❤|Dirac Delta function]]
+- The [[Green's Functions for ODEs#The Dirac Delta function ❤|Dirac Delta function]]
 $$\mathcal{F}[\delta(x-a)]=\frac{1}{\sqrt{2\pi}}e^{ika}$$
 	- The Fourier transform of $\delta(x)$ is $1/\sqrt{2\pi}$, _consistent with the limit_ of the narrow Gaussian
 
@@ -121,9 +121,9 @@ $$\tilde{f}(-k)=\pm \tilde{f}(k)$$
 "Now we move on to the two that I think are magic"
 >-Dr. S. J. Cowley, 2022
 
-- Differentiation by $x$: Use the Leibniz rule and the definition of the inverse transform
+- _Differentiation_ by $x$: Use the Leibniz rule and the definition of the inverse transform
 $$\mathcal{F}\left[\frac{d^nf}{dx^n}\right]=(ik)^n\mathcal{F}[f]$$
-- Multiplication by $x$: differentiate the Fourier transform by $k$
+- _Multiplication_ by $x$: differentiate the Fourier transform by $k$
 $$i\frac{d\tilde{f}}{dk}=\mathcal{F}[xf(x)]$$
 
 
@@ -241,3 +241,4 @@ $$-k^2\tilde{\psi}-a^2\tilde{\psi}=-\tilde{f}$$
 $$\tilde{\psi}=\frac{\tilde{f}}{k^2+a^2}$$
 - From this, the solution is:
 $$\psi=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty e^{ikx}\frac{\tilde{f}}{k^2+a^2}\,dk$$
+- Detailed method: [[Transform methods]]

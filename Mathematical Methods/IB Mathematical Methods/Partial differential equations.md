@@ -131,3 +131,4 @@ $$\frac{X''}{X}=-\frac{Y''}{Y}-\frac{f}{XY}$$
 - Apply a [[Fourier series and transforms#Properties of Fourier transforms|Fourier transform]] to both sides to convert a _spatial derivative to multiplication by $k$_
 - Solve for the Fourier transform
 - Invert the Fourier transform
+- [[Transform methods#The diffusion equation|Diffusion equation with Fourier transforms]]
