@@ -81,6 +81,7 @@ $$\rho \bm{g}=-\rho\nabla\phi_g$$
 - By considering _variations in pressure on the sides of the element_:
 $$\rho\frac{D\bm{v}}{Dt}=-\nabla P+\rho\bm{g}$$
 - This is effectively the _equation of motion_ for a fluid element
+- One can also consider the [[Geometric objects in Newtonian mechanics#Equation of motion for a Newtonian fluid|stress tensor]] of the fluid to obtain this equation
 
 ## Bernoulli's equation
 

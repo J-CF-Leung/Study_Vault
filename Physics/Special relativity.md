@@ -1,4 +1,11 @@
+# Foundational concepts
+
+## Inertial reference frames
+- All measurements are made in _inertial reference frames_
+- It can be imagined as a 3D _lattice_ with clocks at every point
+- The _spacing_ between points is _uniform_, and the _clocks tick uni
 # The fundamental principles of Einsteinian relativity
+
 1. The laws of physics are _identical for all inertial frames of reference_
 	- The _forms_ of the laws are _invariant with respect to coordinate transformations_
 2. The velocity at which interactions _propagate_ (aka. the maximum possible velocity in the universe), the speed of light $c$, is the same in all inertial frames of reference
@@ -29,3 +36,4 @@ $$ds^2=c^2dt^2-dx^2-dy^2-dz^2$$
 	- Due to the _homogeneity and isotropy of space and time_, the proportionality constant must only depend on the _magnitude of relative velocity_ between the two frames
 	- By comparing the _ratios of proportionality constants_ for 3 frames, one concludes that the constant must be _unity_
 $$\displaylines{ds^2=ds'^2 \\ s^2=s'^2}$$
+

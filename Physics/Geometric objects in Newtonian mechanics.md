@@ -1,5 +1,5 @@
 - Physical quantities and laws can be expressed in _geometric forms_, i.e. _independent of any coordinate system, basis vectors, or reference frames_
-	- This can be viewed as a _Newtonian version_ of one of the [[Relativity#The fundamental principles of Einsteinian relativity|principles of Einsteinian relativity]]
+	- This can be viewed as a _Newtonian version_ of one of the [[Special relativity#The fundamental principles of Einsteinian relativity|principles of Einsteinian relativity]]
 
 - Instead of describing tensors using _components_, they can be interpreted as _vector-valued linear function of vectors_
 
@@ -205,11 +205,30 @@ $$T_{abc;b}=\pd{T_{abc}}{x_b}\neq T_{abc;a}\neq T_{abc;c}$$
 	- Notation: $T_{abc, jk}\equiv\partial^2T_{abc}/\partial x_j\partial x_k$
 
 ## The Levi-Civita tensor and curl
+- Define the _Levi-Civita tensor_ $\epsilon$, such that in an $n-$dimensional _Euclidean_ space, $\bf{\epsilon}$ is a _rank $n$_, _completely antisymmetric tensor_
+
+- $\epsilon$ is _fully determined_ by _antisymmetry_, _compatibility_ with metric tensor $\textbf{g}$, and a _sign convention_ for the volume
+	- In $3-$space, _right-handed_ parallelepipeds have _positive_ volume
+	- [[#Volume and integration|Relationship with metric tensor]]
+- For example, in $3-$space with a _right-handed orthonormal basis_:$$\begin{aligned}\epsilon_{123}&=+1 \\ \epsilon_{abc}&=\begin{cases}+1&\text{ if  }a,b,c \text{ is an even permutation of }1,2,3 \\ -1&\text{ if  }a,b,c \text{ is an odd permutation of }1,2,3 \\ 0 &\text{ if }a,b,c\text{ are not all different}\end{cases} \end{aligned}$$
+	- It is _flipped_ in a _left-handed_ basis
+
+- From the definition of the [[#Products|cross product]] as the area of a _parallelogram_:
+$$\bm{A}\times\bm{B}\equiv\epsilon(\_,\bm{A},\bm{B}); \hspace{1cm} (\bm{A}\times\bm{B})_i=\epsilon_{ijk}A_jB_k$$
+
+- Then, one can define the _curl_ of vector field $\bm{A}$ as a _double contraction_ of the tensor $\epsilon\otimes \nabla A$:
+$$(\nabla\times\bm{A})_i=\epsilon_{ijk}A_{k;j}=\epsilon_{ijk}\pd{A_k}{x_j}$$
+
+- In _Euclidean 3-space_, the _contraction of a product_ between two Levi-Civita tensors is:$$\epsilon_{ijm}\epsilon_{klm}=\delta^{ij}_{kl}=\delta^i_k\delta^j_l-\delta^i_l\delta^j_k$$
+	- 4-index notation: _positive_ on the same side, _negative_ when _diagonal_
+
+# Volume and integration
+## The Levi-Civita tensor and volume
 - The _metric tensor_ $\textbf{g}$ encodes _distance_ in the space
 - The _Levi-Civita tensor_ $\bf{\epsilon}$ encodes _generalised volume_ in the space
+	- Example: the _cross product_ gives the _area of a parallelogram_ spanned by 2 vectors
 - Together, the two tensors _define the geometry of the space_
 
-- In an $n-$dimensional _Euclidean_ space, $\bf{\epsilon}$ is a _rank $n$_, _completely antisymmetric tensor_
 - A _parallelepiped_ with $n$ edges $\bm{A}_1, \bm{A}_2,\dots,\bm{A}_n$ has _volume_:
 $$\text{volume}=\epsilon(\bm{A}_1, \bm{A}_2,\dots,\bm{A}_n)$$
 - This volume can be _positive or negative_
@@ -221,16 +240,99 @@ $$\epsilon(\bm{A}_1,\dots,\bm{A}_i,\dots,\bm{A}_j,\dots,\bm{A}_n)=-\epsilon(\bm{
 	- For _orthonormal legs_ determined by $\textbf{g}$, the parallelepiped has _unit volume_ $\pm1$
 	- This is known as the _compatibility relationship_ between $\epsilon$ and $\textbf{g}$
 
-- $\epsilon$ is _fully determined_ by _antisymmetry_, _compatibility_ with $\textbf{g}$, and a _sign convention_ for the volume
-	- In $3-$space, _right-handed_ parallelepipeds have _positive_ volume
-- For example, in $3-$space with a _right-handed orthonormal basis_:$$\begin{aligned}\epsilon_{123}&=+1 \\ \epsilon_{abc}&=\begin{cases}+1&\text{ if  }a,b,c \text{ is an even permutation of }1,2,3 \\ -1&\text{ if  }a,b,c \text{ is an odd permutation of }1,2,3 \\ 0 &\text{ if }a,b,c\text{ are not all different}\end{cases} \end{aligned}$$
-	- It is _flipped_ in a _left-handed_ basis
+## Parallelograms and parallelepipeds
 
-- From the definition of the [[#Products|cross product]]:
-$$\bm{A}\times\bm{B}\equiv\epsilon(\_,\bm{A},\bm{B}); \hspace{1cm} (\bm{A}\times\bm{B})_i=\epsilon_{ijk}A_jB_k$$
+- In 2-D space with a _right-handed orthonormal basis_, the _area of a parallelogram_ spanned by $\bm{A}$ and $\bm{B}$ is known as a $2-$volume:
+$$\epsilon(\bm{A},\bm{B})=\epsilon_{ab}A_aB_b=A_1B_2-A_2B_1=\text{det}\pmatrix{A_1&B_1\\A_2&B_2}=|\bm{A}\times\bm{B}|$$
+- Similarly, in 3-D space with a right-handed orthonormal basis, the _$3-$volume of a parallelepiped_ spanned by $\bm{A}$, $\bm{B}$, and $\bm{C}$:
+$$\epsilon(\bm{A},\bm{B},\bm{C})=\epsilon_{ijk}A_iB_jC_k=\bm{A}\cdot(\bm{B}\times\bm{C})=\text{det}\pmatrix{A_1&B_1&C_1\\A_2&B_2&C_2\\A_3&B_3&C_3}$$
+- For infinitesimal _integration volumes_, one can simply use the vectors $d\bm{x}_i=dx_i\bm{e}_i$
+	- 2D area $dA=dx\,dy$,  3D volume $dV=dx\,dy\,dz$
 
-- Then, one can define the _curl_ of vector field $\bm{A}$ as a _double contraction_ of the tensor $\epsilon\otimes \nabla A$:
-$$(\nabla\times\bm{A})_i=\epsilon_{ijk}A_{k;j}=\epsilon_{ijk}\pd{A_k}{x_j}$$
+- In Euclidean 3-space, the _vectorial surface area_ of a parallelogram spanned by $\bm{A}$ and $\bm{B}$:
+$$\bm{\Sigma}=\bm{A}\times\bm{B}=\epsilon(\_,\bm{A},\bm{B})$$
+- This vector has a _magnitude equal to the area_, and points _perpendicular_
+- $\epsilon(\bm{C},\bm{A},\bm{B})$ would be the volume of a parallelepiped spanned by $\bm{C}$, $\bm{A}$, $\bm{B}$
+- A parallelogram has _two faces_, one where $\bm{\Sigma}(\bm{C})>0$, and one where $\bm{\Sigma}(\bm{C})<0$
 
-- In _Euclidean 3-space_, the _contraction of a product_ between two Levi-Civita tensors is:$$\epsilon_{ijm}\epsilon_{klm}=\delta^{ij}_{kl}=\delta^i_k\delta^j_l-\delta^i_l\delta^j_k$$
-	- 4-index notation: _positive_ on the same side, _negative_ when _diagonal_
+## Gauss' and Stokes' Theorems
+- For a _compact 3-dimensional region_ $\mathcal{V}_3$ with a _closed 2-dimensional boundary_ $\partial\mathcal{V}_3$, _Gauss' Theorem_ states:
+$$\int_{\mathcal{V}_3}(\nabla\cdot\bm{A})\,dV=\int_{\partial\mathcal{V}_3}\bm{A}\cdot\,d\bm{\Sigma}$$
+- For a _compact 2-dimensional region_ $\mathcal{V}_2$ with a _closed 1-dimensional boundary_ $\partial\mathcal{V}_2$, _Stokes' Theorem_ states:
+$$\int_{\mathcal{V}_2}(\nabla\times\bm{A})\cdot\,d\bm{\Sigma}=\int_{\partial\mathcal{V}_2}\bm{A}\cdot d\bm{l}$$
+
+- Example: Electric charge in a region with charge density $\rho_e$
+	- _Total charge_ in the region is obtained by integrating $\rho_e\,dV$ over $\mathcal{V}_3$
+	- Charge _flows out_ of the region with _flux_ $\bm{j}$
+	- The law of _charge conservation_ states:
+	$$\frac{d}{dt}\int_{\mathcal{V}_3}\rho_e\,dV+\int_{\partial\mathcal{V}_3}\bm{j}\cdot d\bm{\Sigma}=0$$
+	- By applying _Gauss' Law_ to the second integral and moving $d/dt$ in the first:
+	$$\pd{\rho_e}{t}+\nabla\cdot\bm{j}=0$$
+	- This statement is _coordinate-independent_
+
+# The stress tensor and momentum conservation
+- When a _force_ $\bm{F}$ is exerted on some _2-surface_ $\bm{\Sigma}$, it can have a _normal component_, as well as a _tangential component_
+	- The surface vector points _perpendicular_ to the surface itself
+- CONVENTION: Force considered is exerted _BY_ the object
+	- More convenient when considering _momentum flow_
+
+- Treating $\bm{F}$ as a _linear function_ of surface $\bm{\Sigma}$, one can define the _stress tensor_ $\textbf{T}$:
+$$\bm{F}(\_)=\textbf{T}(\_,\bm{\Sigma}) \hspace{1cm} F_i=T_{ij}\Sigma_j$$
+- From the law of _action and reaction_, changing the _sign_ of $\Sigma_j$ also _reverses the force_
+
+- $T_{jk}$ has two interpretations:
+	- The  $\bm{e}_j$ _component_ of _force exerted per unit area perpendicular_ to $\bm{e}_k$
+	- The _$\bm{e}_j$ component_ of _momentum crossing a unit area perpendicular_ to $\bm{e}_k$, _per unit time_, in the _direction_ $-x_k\to+x_k$
+- In other words, the _stress tensor_ also gives the _flux of momentum_
+
+- Considering the stress tensor applied to some _volume_, the stresses also exert _torques_
+- Such that the volume does not _infinitely rotate_, $\textbf{T}$ must be _symmetric_:
+$$T_{ij}=T_{ji}$$
+
+- Example:
+	- A _Newtonian fluid_ is _unable to maintain shear stress_
+	- When _stationary_, it has some _isotropic pressure_ $P$ exerted BY the fluid element, hence $T_{ij}=P\delta_{ij}=Pg_{ij}$, or $\textbf{T}=P\textbf{g}$ 
+	- For an _arbitrary surface_ $\bm{n}$, $F_j=T_{jk}\Sigma_k=Pg_{jk}An_k=PAn_j$
+
+- From the fact that the stress tensor represents _momentum flux_, given some volume $\mathcal{V}_3$ with area $\partial\mathcal{V}_3$, with _momentum density_ $\bm{G}$, its _conservation_ requires that:
+$$\frac{d}{dt}\int_{\mathcal{V}_3}\bm{G}\,dV+\int_{\partial\mathcal{V}_3}\textbf{T}\cdot d\bm{\Sigma}=0 \hspace{1.5cm}\frac{d}{dt}\int_{\mathcal{V}_3}G_i\,dV+\int_{\partial\mathcal{V}_3}T_{ij}\,d\Sigma_j=0 $$
+- Then using the [[#Gauss' and Stokes' Theorems|Gauss' Theorem]]:
+$$\pd{\bm{G}}{t}+\nabla\cdot\textbf{T}=0 \hspace{1.5cm} \pd{G_i}{t}+T_{ij;j}=0$$
+
+- As $\textbf{T}$ is symmetric, the _divergence_ can act on _either index_
+- This is the _differential law of momentum conservation_
+	- Can be interpreted as a form of _Newton's second law_
+
+- This links the _change in momentum in a volume_ with the _difference in forces across the surface_
+- The sign of this equation is _DEPENDENT ON CONVENTION_
+	- Convention: $T_{ij}$ concerns force exerted BY the volume
+
+## Equation of motion for a Newtonian fluid
+- Consider a perfect fluid with _density_ $\rho$, _pressure_ $P$, and velocity $\bm{v}$ that vary _in time and space_
+- The _momentum density_ is $\bm{G}=\rho\bm{v}$
+- Considering the _additional momentum transport from the moving fluid_:
+$$\textbf{T}=P\textbf{g}+\rho\bm{v}\otimes\bm{v} \hspace{1.5cm} T_{ij}=Pg_{ij}+\rho v_iv_j$$
+- Then considering _mass conservation_:
+$$\pd{\rho}{t}+\nabla\cdot(\rho\bm{v})=0$$
+- One can track the _rate of change as measured when moving locally with the fluid_:
+$$\frac{d}{dt}\equiv \pd{}{t}+\bm{v}\cdot\nabla$$
+- This is known as the _convective derivative_
+- Then, one can rewrite _mass conservation_, and see that the _divergence of $\bm{v}$_ is _minus the fractional change in density in the rest frame_:
+$$\frac{1}{\rho}\frac{d\rho}{dt}=-\nabla\cdot\bm{v}$$
+- By using the above, the _differential law of momentum conservation_ becomes:
+$$\frac{d\bm{v}}{dt}=-\frac{\nabla P}{\rho}$$
+- This is _Euler's equation_, which one can more directly obtain from [[Fluid mechanics#Euler's equation|Newton's second law]]
+
+## Electromagnetic stress tensor
+- Consider a region with electric field $\bm{E}$, with a material of _charge density_ $\rho$
+- The _total force per unit volume_ is:
+$$\pd{\bm{G}}{t}=\rho\bm{E}=\epsilon_0(\nabla\cdot\bm{E})\bm{E}$$
+- The second equality is achieved using [[Electromagnetism#Maxwell's equations|Gauss' Law for electric fields]]
+- Using component notation:
+$$\pd{G_i}{t}=\epsilon_0E_i\partial_jE_j=\epsilon_0[\partial_j(E_iE_j)-E_j\partial_jE_i]$$
+- Then using $\nabla\times\bm{E}=0$, $\partial_iE_j=\partial_jE_i$:
+$$\pd{G_i}{t}=\epsilon_0[\partial_j(E_iE_j)-E_j\partial_iE_j]=\epsilon_0\partial_j\left(E_iE_j-\frac{1}{2}\delta_{ij}E^2\right)$$
+- Recognising the right as $T_{ij;j}$:
+$$T_{ij}=\frac{\epsilon_0}{2}(E^2g_{ij}-2E_iE_j)$$
+- Similarly, adding the contribution of the [[Electromagnetism#The Lorentz Force and the Biot-Savart Law|magnetic field]]:
+$$\textbf{T}=\frac{\epsilon_0}{2}\left[(E^2+c^2B^2)\textbf{g}-2(\bm{E}\otimes\bm{E}+c^2\bm{B}\otimes\bm{B})\right]$$

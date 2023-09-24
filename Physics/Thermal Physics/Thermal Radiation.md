@@ -29,7 +29,7 @@ $$dN=[n(\epsilon)d\epsilon](c\cos\theta)\frac{2\pi\sin\theta\,d\theta}{4\pi}$$
 	- Numerator of latter fraction: _solid angle $d\Omega$ of thin ring_
 	- Similar method to the [[Kinetic Theory of Gases]]
 
-- Using [[Relativity|Einstein's energy-momentum relation]], and the fact that _photons are massless_:
+- Using [[Special relativity|Einstein's energy-momentum relation]], and the fact that _photons are massless_:
 $$\epsilon=|\bm{p}|c$$
 - For _perfectly reflecting surfaces_, $\Delta p$ on the surface is $2\epsilon\cos\theta/c$
 - Hence, the _pressure_ is:

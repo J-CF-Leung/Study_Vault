@@ -421,7 +421,7 @@ $$dU=\int(\Delta \bm{D})\cdot\bm{E}\;d^3\bm{r}$$
 - Magnetostatics: constantly moving charges, time-invariant current
 
 - For time-invariant systems, electric and magnetic fields are separate
-	- No need to deal with [[Relativity]]
+	- No need to deal with [[Special relativity]]
 
 ## The Lorentz Force and the Biot-Savart Law
 - Let there be a test current element $d\bm{l}$, with its direction defining the current flow
@@ -929,7 +929,7 @@ $$\nabla^2\bm{E}=(\nabla^2 E_x ,\nabla^2 E_y,\nabla^2E_z)$$
 - From this, we see that _the fields satisfy the [[Waves#The wave equation|wave equation]]_
 - The speed of the wave is:
 $$c=\frac{1}{\sqrt{\mu_0\epsilon_0}}=299,792,458 \text{ m s}^{-1}$$
-- The speed is _the same for all observers_, leading to Einstein's [[Relativity|special theory of relativity]]
+- The speed is _the same for all observers_, leading to Einstein's [[Special relativity|special theory of relativity]]
 
 ## Plane wave in isotropic medium along the z-direction
 - Let the plane wave be propagating along $z$:
@@ -1033,7 +1033,7 @@ $$\bm{N}=\bm{E\wedge H}$$
 >-Richard Feynman
 
 ## Pressure and momentum for plane waves
-- Using [[Relativity|Einstein's energy-momentum relation]], and the fact that _photons are massless_:
+- Using [[Special relativity|Einstein's energy-momentum relation]], and the fact that _photons are massless_:
 $$E=|\bm{p}|c$$
 - The _energy per unit volume_ $U$ is related to _radiation momentum density_ $\bm{g}$ by:
 $$U=|\bm{g}|c$$
