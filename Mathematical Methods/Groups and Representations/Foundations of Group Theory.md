@@ -384,7 +384,7 @@ $$\displaylines{\{I\}, \;\{(12)(34),(13)(24),(14)(23)\},\;\{(123),(142),(134),(2
 - Permutations in the _same equivalence class_ must _have the same cycle structure_
 - However, elements with _the same cycle structure_ are _not necessarily equivalent_
 
-- The _identity_ element is always _in its own equivalence class_
+- The _identity_ element is _always in its own equivalence class_
 - An _Abelian group_ has all of its elements _in their own equivalence class_
 
 - A group element _and its inverse_ (if different), _may or may not_ be in the same class
