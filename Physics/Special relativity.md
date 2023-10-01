@@ -41,19 +41,47 @@ $$c=2.99792458\times10^8\,\text{m}\,\text{s}^{-1}$$
 	- Reason: light _does not require a medium to propagate_, and _does not have a mass_
 
 - In Galilean relativity, distances are relative, and time is absolute
-- In Einsteinian relativity (or just relativity), neither distance and time are absolute
+- In Einsteinian relativity (or just relativity), _neither distance and time are absolute_
 	- From the fact that _no velocities exceed_ $c$
 	- This implies that _simultaneity_ of events is not conserved across inertial frames
 	- Galilean relativity can be obtained by letting $c\rightarrow\infty$
 
-# Intervals
+# Intervals and Minkowski space
 - For _any two events_ $1$ and $2$, with a separation $\Delta\vec{x}$, the _interval_ defined in a given inertial frame is:
-$$(\Delta s)^2\equiv(\Delta t)^2-(\Delta x)^2-(\Delta y)^2-(\Delta z)^2$$
+$$(\Delta s)^2\equiv(\Delta t)^2-(\Delta x)^2-(\Delta y)^2-(\Delta z)^2=(\Delta t)^2-\sum_{i,j}\delta_{ij}\Delta x^i\Delta x^j$$
 - If the two events are _infinitely close_:
-$$ds^2=c^2dt^2-dx^2-dy^2-dz^2$$
+$$ds^2=dt^2-dx^2-dy^2-dz^2$$
+- The _coordinate separation_ $\Delta x^\alpha$ can _depend on the frame_ $(\Delta x^\alpha\neq\Delta x^{\alpha'})$
+
 - It can be proven that the interval is _invariant between frames_
 	- If $ds=0$, $ds'=0$, and as they are of the same order, $ds^2$ between two frames must be _proportional_ to each other
 	- Due to the _homogeneity and isotropy of space and time_, the proportionality constant must only depend on the _magnitude of relative velocity_ between the two frames
 	- By comparing the _ratios of proportionality constants_ for 3 frames, one concludes that the constant must be _unity_
-$$\displaylines{ds^2=ds'^2 \\ s^2=s'^2}$$
+$$\displaylines{ds^2=ds'^2 \\ (\Delta s)^2=(\Delta s')^2}$$
+- One can classify the _separation between two events_ by the _square of the interval_:
 
+| Interval         | Separation     |
+| ---------------- | -------------- |
+| $(\Delta s)^2>0$ | Timelike       |
+| $(\Delta s)^2=0$ | Null/lightlike |
+| $(\Delta s)^2<0$ | Spacelike               |
+
+- From the _frame invariance_, one can regard the interval as the _square length_ of $\Delta\vec{x}$:
+$$(\Delta\vec{x})^2\equiv(\Delta s)^2=(\Delta s')^2$$
+- This can be _negative_ (for spacelike events)
+
+- Just as _Euclidean distance_ is fundamental to geometry in flat [[Geometric principles in Newtonian mechanics|3-space]], the interval is fundamental to the geometry of _spacetime, or Minkowski space_
+
+## Tensor algebra in Minkowski space
+- Many [[Geometric principles in Newtonian mechanics|definitions in 3-space]] still _apply_
+- A _tensor_ $\bm{T}(\_,\_)$ is still a _real-valued linear function of vectors_ in Minkowski spacetime
+	- The _rank_ is still the number of vectors needed to produce a _scalar_
+- The _inner/dot product_ of two 4-vectors is still:
+$$\vec{A}\cdot\vec{B}\equiv\frac{1}{4}\left[(\vec{A}+\vec{B})^2-(\vec{A}-\vec{B})^2\right]$$
+	- where the squared length is simply the _interval_
+- The _metric tensor_ in spacetime is still a _rank 2 tensor_ for 2 4-vectors:
+$$\bm{g}(\vec{A},\vec{B})=\vec{A}\cdot\vec{B}$$
+- Then any vector is then a _rank 1 tensor_
+- Similarly, the [[Geometric principles in Newtonian mechanics#Tensor algebra|tensor product and contraction]] are defined in the same way as Euclidean space
+
+# 
