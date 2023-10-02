@@ -8,6 +8,7 @@
 >"I think I can safely say that nobody understand quantum mechanics"
 >-Richard Feynman
 
+- [ ] Bosons and fermions📅 2023-10-04 🔼 
 # Notation
 - Generic vectors are denoted with _kets_ $\ket{V}$
 - Operators have capital letters and hats $\hat{\Omega}$

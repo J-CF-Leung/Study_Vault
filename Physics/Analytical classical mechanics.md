@@ -7,6 +7,7 @@
 >
 >-David Morin
 
+- [ ] Add whatever is in TP1 notes📅 2023-10-4 🔼 
 # Lagrangian mechanics
 ## Principle of stationary action 
 - Let a particle have a trajectory $q(t)$ linking $q(t_1)$ and $q(t_2)$
