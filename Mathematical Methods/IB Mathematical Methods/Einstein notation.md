@@ -1,4 +1,4 @@
-
+- [ ] Information about covariant/contravariant components🔼 
 # The suffix notation
 - The _free suffices_ (typically $i,j,k$) range over the number of basis vectors
 - Equality of vectors implies equality of components:

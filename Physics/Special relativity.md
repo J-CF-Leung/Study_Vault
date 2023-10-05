@@ -153,4 +153,6 @@ $$\eta_{00}=1 \hspace{1cm} \eta_{11}=\eta_{22}=\eta_{33}=-1 \hspace{1cm} \eta_{\
 - One must introduce _contravariant components_ $T^{\alpha\beta\gamma}$ and _covariant components_ $T_{\alpha\beta\gamma}$
 
 ## Tensor index kung-fu
-- A vector/tensor's _contravariant components_ are defined as its _expansion coefficients_ in the basis
+- A vector/tensor's _contravariant components_ are defined as its _expansion coefficients_ in the basis:
+$$\vec{A}\equiv A^\alpha\vec{e}_\alpha \hspace{1.5cm} \textbf{T}=T^{\alpha\beta\gamma}\,\vec{e}_\alpha\otimes\vec{e}_\beta\otimes\vec{e}_\gamma$$
+- Indices are to be summed when they are _repeated with one up and one down_

@@ -523,9 +523,9 @@ $$\displaylines{\ket{ab, S}=\ket{ab}+\ket{ba} \\ \ket{ab,A}=\ket{ab}-\ket{ba}}$$
 - For a _given species of particle_, it must _only collapse into either symmetric or antisymmetric states_
 	- If the contrary were true, the Hilbert space of possible states contains both $S$ and $A$ vectors, along with its _linear combinations_ which are not physically allowed
 
-- Particles _always in symmetric states_ are known as _bosons_
+- Particles _always in symmetric states_ are known as __bosons__
 	- Particle _exchange_ leaves the wave function _completely unchanged_
-- Particles _always in antisymmetric states_ are known as _fermions_
+- Particles _always in antisymmetric states_ are known as __fermions__
 	- Particle _exchange_ only _flips the sign_ of the wave function
 
 - Due to the _antisymmetry_ of _fermions_, one gets the _Pauli Exclusion Principle_:
@@ -533,3 +533,67 @@ $$\displaylines{\ket{ab, S}=\ket{ab}+\ket{ba} \\ \ket{ab,A}=\ket{ab}-\ket{ba}}$$
 >Two identical fermions cannot be in the same quantum state
 - Proof: $\ket{\omega\omega, A}=\ket{0}$
 
+- The _spin statistics theorem_, derived from _quantum field theory_, asserts that, in _three dimensions_, where particles have _spin_ $s$:
+	- Particles with _integer spin_ are _bosons_
+	- Particles with _half-integer spin_ are _fermions_
+- This _does not apply_ to _one or two dimensions_
+
+- In three dimensions, for _spin-1/2 particles_, which can only go _spin up or down_, means the state vector must be _antisymmetric w.r.t. spin as well_:
+$$\ket{\omega_1s_1,\omega_2s_2,A}=\ket{\omega_1s_1,\omega_2s_2}-\ket{\omega_2s_2,\omega_1s_1}$$
+- Of course, it vanishes if $\omega_1=\omega_2$ and $s_1=s_2$
+
+### Bosonic and Fermionic Hilbert Spaces
+- The set of _symmetric_ state vectors can form a _Hilbert space_ $\mathbb{V}_S$
+- The set of _anti-symmetric_ state vectors can form another Hilbert space $\mathbb{V}_A$
+
+- Consider the [[#The direct product space|two-particle Hilbert space]] $\mathbb{V}_{1\otimes2}$ 
+- For every pair of vectors $\ket{\omega_1=a,\omega_2=b}$ and $\ket{\omega_1=b,\omega_2=a}$, they can form a _bosonic_ state vector and a _fermionic_ state vector
+	- If $a=b$, it automatically forms a _bosonic_ state vector, with no corresponding fermionic vector
+- Therefore, $\mathbb{V}_{1\otimes2}$ is the _direct sum_ of two vector spaces:
+$$\mathbb{V}_{1\otimes2}=\mathbb{V}_S\oplus\mathbb{V}_A$$
+- The former has _slightly higher dimensionality_
+
+- By considering the propagator, one can show that particles _starting out_ in $\mathbb{V}_S$ or $\mathbb{V}_A$ will _stay in that Hilbert space_
+
+### Normalisation
+- For the ket $\ket{\omega_1\omega_2,S}$, since $\ket{\omega_1\omega_2}$ and $\ket{\omega_2\omega_1}$ are _orthonormal_, the normalisation is:
+$$\ket{\omega_1\omega_2,S}=\frac{1}{\sqrt{2}}[\ket{\omega_1\omega_2}+\ket{\omega_2\omega_1}]$$
+- If $\omega_1=\omega_2$, the eigenket is _already normalised_
+
+- Then the probability of finding two _bosons_ with wave function $\ket{\Psi_S}$ in the eigenstate $\ket{\omega_1\omega_2,S}$ is:
+$$P_S(\omega_1,\omega_2)=|\braket{\omega_1\omega_2,S|\Psi_S}|^2$$
+- The normalisation condition:
+$$1=\braket{\Psi_S|\Psi_S}=\sum_\text{dist}|\braket{\omega_1\omega_2,S|\Psi_S}|^2=\sum_\text{dist}P(\omega_1,\omega_2)$$
+- The sum is over _physically distinct_ states, as $\ket{\omega_1\omega_2,S}=\ket{\omega_2\omega_1,S}$
+	- If $\omega$ takes discrete values, the sum would be $$\sum_\text{dist}=\sum_{\omega_2=\omega_\text{min}}^{\omega_\text{max}}\sum_{\omega_1=\omega_{\text{min}}}^{\omega_2}$$
+	- Or, one could sum over _the whole range of values for both_, then _divide_ by 2
+
+- Similarly, for a _continuous variable_ like position:
+$$1=\iint P_S(x_1,x_2)\frac{dx_1dx_2}{2}=\iint |\braket{x_1x_2,S|\Psi_S}|^2\frac{dx_1dx_2}{2}$$
+- It is customary to denote the _position-space wave function as_:
+$$\Psi_S(x_1,x_2)=\frac{1}{\sqrt{2}}\braket{x_1x_2,S|\Psi_S}$$
+- Such that:
+$$1=\iint|\Psi_S(x_1,x_2)|^2\,dx_1dx_2\hspace{1.5cm}P_S(x_1,x_2)=2|\Psi_S(x_1,x_2)|^2\,dx_1dx_2$$
+- Exploiting the fact that $\ket{\Psi_S}$ is _symmetrised_, one can write $\Psi_S(x_1,x_2)$ as:
+$$\Psi_S(x_1,x_2)=\braket{x_1x_2|\Psi_S}$$
+- The normalisation condition can also be rewritten as:
+$$1=\braket{\Psi_S|\Psi_S}=\iint\braket{\Psi_S|x_1x_2}\braket{x_1x_2|\Psi_S}\,dx_1dx_2=\iint |\Psi_S(x_1,x_2)|^2\,dx_1dx_2$$
+- $\ket{x_1x_2}$ is _not_ an element of $\mathbb{V}_S$, and $\braket{x_1x_2|\Psi_S}$ has _no physical significance_ apart from the fact that it is _related to_ $\braket{x_1x_2,S|\Psi_S}$ by a _scale factor_ only
+
+- One can repeat the above for _fermionic state vectors_:
+$$\displaylines{\ket{\omega_1\omega_2,A}=\frac{1}{\sqrt2}[\ket{\omega_1\omega_2}-\ket{\omega_2\omega_1}]\\P_A(\omega_1,\omega_2)=|\braket{\omega_1\omega_2,A|\Psi_A}|^2\\\Psi_A(x_1,x_2)=\frac{1}{\sqrt{2}}\braket{x_1x_2,A|\Psi_A}=\braket{x_1x_2|\Psi_A}\\1=\iint|\braket{x_1x_2,A|\Psi_A}|\,\frac{dx_1dx_2}{2}=\iint|\Psi_A(x_1,x_2)|^2\,dx_1dx_2}$$
+- For a two-particle system with states characterised by _quantum number_ $n$, where $\braket{x|n}=\Psi_n(x)$, a normalised bosonic/fermionic state vector would be:
+$$\displaylines{\ket{\Psi_{S/A}}=\frac{1}{\sqrt{2}}(\ket{n_1n_2}\pm\ket{n_2n_1})\\ \begin{aligned}\Psi_{S/A}(x_1,x_2)&=\frac{1}{\sqrt{2}}\braket{x_1x_2,S/A|\Psi_{S/A}}\\&=\frac{1}{\sqrt{2}}[\Psi_{n_1}(x_1)\Psi_{n_2}(x_2)\pm\Psi_{n_2}(x_1)\Psi_{n_1}(x_2)]\\&=\braket{x_1x_2|\Psi_{S/A}}\end{aligned}}$$
+- The _fermionic_ state vector can be written as a _determinant_:
+$$\Psi_A(x_1,x_2)=\frac{1}{\sqrt{2}}\begin{vmatrix}\Psi_{n_1}(x_1)&\Psi_{n_2}(x_1)\\\Psi_{n_1}(x_2)&\Psi_{n_2}(x_2)\end{vmatrix}$$
+
+- Expanding out $P_{S/A}(x_1,x_2)$:
+$$\begin{aligned}P_{S/A}(x_1,x_2)&=|\Psi_{n_1}(x_1)|^2|\Psi_{n_2}(x_2)|^2+|\Psi_{n_2}(x_1)|^2|\Psi_{n_1}(x_2)|^2\\&\pm\left[\Psi_{n_1}^*(x_1)\Psi_{n_2}(x_1)\Psi_{n_2}^*(x_2)\Psi_{n_1}(x_2)+\Psi_{n_2}^*(x_1)\Psi_{n_1}(x_1)\Psi_{n_1}^*(x_2)\Psi_{n_2}(x_2)\right]\end{aligned}$$
+- The first two terms are the same as the probability distribution for _distinguishable particles_
+- The latter are the _interference terms_
+	- For _fermions_, as $x_1\to x_2$, $P_A\to0$ as expected
+	- For _bosons_, as $x_1\to x_2$, the probability is _double that of distinguishable particles_
+- This helps to _distinguish bosons and fermions using measurements_
+- This treatment _ignores spin_
+
+### More identical particles

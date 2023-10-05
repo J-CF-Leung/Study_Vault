@@ -67,6 +67,8 @@ $$y(x)=\int_a^b G(x,\zeta)f(\zeta)\,d\zeta$$
 - Reasons:
 	- By _substituting the above into the BCs_, one can see that they are satisfied
 	- By _applying $\Lagr$ to both sides_, one regains the original ODE
+- This is equivalent to _adding all impulse responses_ at points $\zeta$, _weighted_ by $f(\zeta)$, to form the _general solution_
+	- Example: adding _potentials_ from different _charges_ ([[Poisson and Laplace's equations]])
 
 - $G(x,\zeta)$ is called the _Green's function_ of $\Lagr$ for the given homogeneous boundary conditions 
 
