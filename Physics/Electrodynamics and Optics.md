@@ -2,8 +2,8 @@
 # Electrodynamics and Maxwell's Equations
 
 ## Fields and charges
-- In _free space_, one can define the _electric field_ $\bm{E}(\bm{r})$ and _magnetic flux density_ $\bm{B}(\bm{r})$
-- The _Lorentz force_ on a _point charge_ $q$ moving with _velocity_ $\bm{v}$:
+- In _free space_, one can define the [[Electromagnetism#The electrostatic force and field|electric field]] $\bm{E}(\bm{r})$ and [[Electromagnetism#The Lorentz Force and the Biot-Savart Law|magnetic flux density]] $\bm{B}(\bm{r})$
+- The [[Electromagnetism#The Lorentz Force and the Biot-Savart Law|Lorentz force]] on a _point charge_ $q$ moving with _velocity_ $\bm{v}$:
 $$\bm{F}=q(\bm{E}+\bm{v}\times\bm{B})$$
 	- $\bm{E}$ gives force _per unit charge_
 	- $\bm{B}$ gives force _per unit current_
@@ -12,11 +12,10 @@ $$\bm{F}=q(\bm{E}+\bm{v}\times\bm{B})$$
 - There can also be some _current distribution_ with _total current density_ $\bm{J}_T(\bm{r})$
 - The _conservation of charge_ leads to _continuity_:
 $$\displaylines{\int_S \bm{J}_T\cdot d\bm{S}=-\frac{d}{dt}\int_V \rho_T\,\,dV \\ \nabla\cdot\bm{J}_T=-\pd{\rho_T}{t}}$$
-- From _experimental observations_, in _vacuum_, the fields obey _Maxwell's Equations_:
+- From _experimental observations_, in _vacuum_, the fields obey [[Electromagnetism#Maxwell's equations|Maxwell's Equations]]:
 $$\displaylines{\nabla\cdot\bm{E}=\frac{\rho}{\epsilon_0} \\ \nabla\times\bm{E}=-\pd{\bm{B}}{t}\\\nabla\cdot\bm{B}=0\\\nabla\times\bm{B}=\mu_0\bm{J}+\mu_0\epsilon_0\pd{\bm{E}}{t}}$$
 - This implies that $\bm{E}$ and $\bm{B}$ are _dependent on each other_
 	- The extra terms are the _inductive_ and _displacement_ current terms
-- This is the phenomenon of _electromagnetic induction_
 ## Statics
 - In the _electrostatic_ and _magnetostatic_ regimes, $\partial\bm{E}/\partial t=\partial\bm{B}/\partial t=0$
 - In _electrostatics_, $\bm{E}$ is _conservative_, as $\nabla\times\bm{E}=0$, hence one can define an _electrostatic potential_:
@@ -63,11 +62,12 @@ $$\epsilon=1+\chi\hspace{1.5cm}\mu=1+\chi_m$$
 $$\bm{D}=\epsilon\epsilon_0\bm{E}\hspace{1.5cm}\bm{B}=\mu\mu_0\bm{H}$$
 
 ## Electromagnetic energy
-- The energy $U$ stored in the _fields_ in the volume $V$ bounded by surface $S$:
+- The [[Electromagnetism#Energy flow in electromagnetic waves|energy]] $U$ stored in the _fields_ in the volume $V$ bounded by surface $S$:
 $$U=\int_V\left(\frac{1}{2}\bm{E}\cdot\bm{D}+\frac{1}{2}\bm{B}\cdot\bm{H}\right)\,dV$$
 - From Maxwell's equations, one can show:
 $$\frac{dU}{dt}=-\int_S(\bm{E}\times\bm{H})\cdot\,d\bm{S}-\int_V\bm{J}\cdot\bm{E}\,dV$$
-- The RHS term is _dissipative_ due to _work done_
+- The latter term is _dissipative_ due to _work done_
+	- There is _no work done by the Lorentz force_
 
 - One can then define the _energy density_ at a point:
 $$u=\frac{1}{2}\bm{E}\cdot\bm{D}+\frac{1}{2}\bm{B}\cdot\bm{H}$$
@@ -81,7 +81,7 @@ $$\bm{B}=\nabla\times\bm{A}$$
 $$\bm{E}=-\dot{\bm{A}}-\nabla\phi$$
 
 ## Boundary conditions
-- From converting Maxwell's equations to the _integral forms_, one can define the _boundary conditions_ in media
+- From converting Maxwell's equations to the _integral forms_, one can define the [[Electromagnetism#Inhomogeneous dielectrics and boundary conditions|boundary conditions in media]]
 
 - $\bm{D}_\perp$ is conserved _in the absence of free charges at the interface_
 - $\bm{B}_\perp$ and $\bm{E}_{||}$ are _conserved_
