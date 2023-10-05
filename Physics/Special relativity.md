@@ -140,7 +140,17 @@ $$\frac{d\vec{p}}{d\tau}=\vec{F}(\_)=q\textbf{F}(\_,\vec{u})$$
 $$\vec{u}\cdot\vec{F}=\vec{F}(\vec{u})=q\textbf{F}(\vec{u},\vec{u})=0$$
 - Hence, $\textbf{F}$ is _anti-symmetric_, or $\textbf{F}(\vec{A},\vec{B})=-\textbf{F}(\vec{B},\vec{A})$
 
-# Component representation and tensor index kung-fu
+# Component representation
+## Lorentz reference frame
 - In Minkowski spacetime, with an _inertial reference frame_, one defines a _Lorentz coordinate system_ $\{t,x,y,z\}=\{x^0,x^1,x^2,x^3\}$, with a set of _Lorentz basis vectors_ $\{\vec{e}_t,\vec{e}_x,\vec{e}_y,\vec{e}_z\}=\{\vec{e}_0,\vec{e}_1,\vec{e}_2,\vec{e}_3\}$
 - The basis vector $\vec{e}_\alpha$ points _along_ the $x^\alpha$ coordinate direction, which is _orthogonal to all other directions_
-- They have _squared length_ 
+- They have _squared length_ $1$ for $\alpha=0$, and $-1$ for $\alpha=1,2,3$:
+$$\vec{e}_\alpha\cdot\vec{e}_\beta=\eta_{\alpha\beta}$$
+- Here, $\eta_{\alpha\beta}$ is the _analog of the Kronecker delta in Minkowski spacetime_:
+$$\eta_{00}=1 \hspace{1cm} \eta_{11}=\eta_{22}=\eta_{33}=-1 \hspace{1cm} \eta_{\alpha\beta}=0\text{ if }\alpha\neq\beta$$
+- _Any_ coordinate system where $\vec{e}_\alpha\cdot\vec{e}_\beta=\eta_{\alpha\beta}$ is said to be _orthonormal_
+- From this, [[Geometric principles in Newtonian mechanics#Component representation|component representations in Euclidean 3-space]] _do not hold in Minkowski spacetime_ 
+- One must introduce _contravariant components_ $T^{\alpha\beta\gamma}$ and _covariant components_ $T_{\alpha\beta\gamma}$
+
+## Tensor index kung-fu
+- A vector/tensor's _contravariant components_ are defined as its _expansion coefficients_ in the basis
