@@ -137,4 +137,9 @@ $$G(x,\zeta) = \begin{cases} 0 &a\leq x<\zeta \\ \frac{y_1(\zeta)y_2(x)-y_1(x)y_
 
 - Solution: $y_\text{ibc}+y_\text{hbc}$
 
-
+## As an eigenfunction expansion
+- From [[Sturm-Liouville Theory]], given that the Sturm-Lioville operator $\Lagr$ has _orthonormal eigenfunctions_ $\{y_n\}$, with _eigenvalues_ $\lambda_n$, the Green's function can take the form:
+	- Normalisation: _delta function_
+$$G(x,x')=\sum_{n=1}^\infty \frac{1}{\lambda_n} y_n(x)y_n^*(x')$$
+- The _solution_ is then:
+$$y(x)=\sum_{n=1}^\infty y_n\frac{1}{\lambda_n}\int_{\alpha}^\beta y_n^*(x')f(x')\,dx'=\sum_{n=1}^\infty y_n(x)\frac{\braket{y_n|f}}{\lambda_n}$$
