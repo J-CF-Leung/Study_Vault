@@ -155,4 +155,24 @@ $$\eta_{00}=1 \hspace{1cm} \eta_{11}=\eta_{22}=\eta_{33}=-1 \hspace{1cm} \eta_{\
 ## Tensor index kung-fu
 - A vector/tensor's _contravariant components_ are defined as its _expansion coefficients_ in the basis:
 $$\vec{A}\equiv A^\alpha\vec{e}_\alpha \hspace{1.5cm} \textbf{T}=T^{\alpha\beta\gamma}\,\vec{e}_\alpha\otimes\vec{e}_\beta\otimes\vec{e}_\gamma$$
-- Indices are to be summed when they are _repeated with one up and one down_
+- Indices are to be summed when they are _repeated with one up and one down__
+
+- The _covariant_ components are defined as:
+$$A_\alpha\equiv\vec{A}(\vec{e}_\alpha)=\vec{A}\cdot\vec{e}_\alpha \hspace{1.5cm}T_{\alpha\beta\gamma}\equiv\textbf{T}(\vec{e}_\alpha,\vec{e}_\beta,\vec{e}_\gamma)$$
+- There is also a set of basis vectors $\{\vec{e}^\alpha\}$ that is _dual_ to $\{\vec{e}_\alpha\}$
+
+- From this definition, the _metric tensor_ has the _covariant components_ $g_{\alpha\beta}=\vec{e}_\alpha\cdot\vec{e}_\beta=\eta_{\alpha\beta}$
+- The covariant components can then be _calculated from its contravariant components_:
+$$T_{\lambda\mu\nu}=T^{\alpha\beta\gamma}g_{\lambda\alpha}g_{\mu\beta}g_{\nu\gamma}$$
+- This implies that when _lowering a spatial index_, the sign _flips_, while _lowering a temporal index leaves it unchanged_:
+$$\displaylines{i,j,k=1,2,3 \\ T_{ijk}=-T^{ijk}\hspace{1cm}T_{0jk}=T^{0jk}\hspace{1cm}T_{00k}=-T^{00k}\hspace{1cm}T_{000}=T^{000}\\ g_{jk}=g^{jk}=-1\hspace{1cm}g_{0k}=g^{0k}=0\hspace{1cm}g_{00}=g^{00}=+1}$$
+- The special case is the _metric tensor_, where both types of components equal $\eta_{jk}$
+- From this, one can find what happens when _raising_ an index:
+$$T^{\alpha\beta\gamma}=T_{\lambda\mu\nu}g^{\lambda\alpha}g^{\mu\beta}g^{\nu\gamma}$$
+- One can then define _mixed components_ of a tensor:
+$$T^{\alpha}_{\mu\nu}=T^{\alpha\beta\gamma}g_{\mu\beta}g_{\nu\gamma}=T_{\lambda\mu\nu}g^{\lambda\alpha}$$
+- The _mixed components of the metric_ are simply $g^\alpha_\beta=g_\alpha^\beta=\delta_{\alpha\beta}$
+
+- The contravariant vomponents of an _outer product_ $\textbf{T}\otimes\textbf{S}$ is then $T^{\alpha\beta\gamma}S^{\mu\nu}$
+- From this, one can find formulas for the _inner product_ and _output of a tensor_
+$$\vec{A}\cdot\vec{B}=A_\alpha B^\alpha=A^\alpha B_\alpha$$

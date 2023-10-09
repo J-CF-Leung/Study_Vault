@@ -29,9 +29,9 @@ $$p=\pm\sqrt{2mE}$$
 - Difference with classical case: degeneracy of energy leads to a subspace of eigenvectors
 $$\ket{E} = \beta\Ket{p=+\sqrt{2mE}}+\gamma\Ket{p=-\sqrt{2mE}}$$
 	- One particle with energy $E$ can be observed to be moving left or right
-- Due to the degeneracy, it is more appropriate to label states and construct $\teo$ using $p$:
+- Due to the degeneracy, it is more appropriate to _label states and construct $\teo$ using $p$_:
 $$\begin{aligned} \teo(t) &= \int_{-\infty}^\infty \ket{p}\bra{p}\exp(-ip^2t/2m\hbar)\,dp \\ &= \sum_{\alpha=\pm} \int_0^{\infty} \frac{m}{\sqrt{2mE}} \ket{E,\alpha}\bra{E,\alpha} \,\exp(-iEt/\hbar)\, dE \end{aligned}$$
-- As the $x$-space momentum eigenfunction is $\exp(ipx/\hbar)/\sqrt{2\pi\hbar}$, the energy eigenfunction is:
+- As the $x$-space momentum eigenfunction is $\exp(ipx/\hbar)/\sqrt{2\pi\hbar}$, the _energy eigenfunction_ is:
 $$\braket{x|E} = \beta\frac{\exp(i\sqrt{2mE}x/\hbar)}{\sqrt{2\pi\hbar}} +\gamma\frac{\exp(-i\sqrt{2mE}x/\hbar)}{\sqrt{2\pi\hbar}}$$
 - The stationary state in the position space is:
 $$\braket{x|\Psi_E(t)}=\beta\frac{\exp[ik(x-\hbar kt/2m)]}{\sqrt{2\pi\hbar}}+ \gamma\frac{\exp[(-ik(x+\hbar kt/2m)]}{\sqrt{2\pi\hbar}}$$
@@ -39,6 +39,9 @@ $$\braket{x|\Psi_E(t)}=\beta\frac{\exp[ik(x-\hbar kt/2m)]}{\sqrt{2\pi\hbar}}+ \g
 	- The _phase velocity_ of a point on the wave is $\hbar k/2m$, or half of the classical velocity
 - As for the [[Path integrals in quantum mechanics#The propagator|propagator]], it can be constructed from $\teo$:
 $$K(x,t,x',t_0)=\braket{x|\teo(t,t_0)|x'}=\sqrt{\frac{m}{2\pi i\hbar t}} \exp\left[\frac{im(x-x')^2}{2\hbar t}\right]$$
+- In _three dimensions_, the free particle eigenvector is:
+$$\braket{\bm{r}|\bm{p}}=\frac{1}{\sqrt{2\pi\hbar}}\exp\left(i\frac{\bm{p}\cdot\bm{r}}{\hbar}\right)$$
+
 ### Wave packets and the group velocity
 - The stationary states are _non-normalisable, and cannot represent physical particles_
 	- They can instead be interpreted as a _beam_
@@ -73,7 +76,6 @@ $$\displaylines{\braket{X}=\frac{p_0t}{m}=\frac{\braket{P}t}{m} \\ \Delta X(t)=\
 - The wave packet disperses, but maintains its group velocity
 
 # Unbound states in piecewise-constant potentials
-
 
 ## Constant potential
 - Let there be a _constant potential_ $V_0$

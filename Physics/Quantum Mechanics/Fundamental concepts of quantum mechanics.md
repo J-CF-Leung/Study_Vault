@@ -202,8 +202,14 @@ $$\psi(x)=A\exp\left[\frac{ip_0}{\hbar}(x-a)\right]\exp\left[-\frac{(x-a)^2}{2\D
 
 - Projected onto the position basis, the wave function and the action of the operators are:
 $$\displaylines{\wv\xrightarrow{x\text{ basis}}\braket{x_1x_2\dots x_N|\Psi}=\Psi(x_1,x_2,\dots,x_N) \\ \hat{X}_i\wv\xrightarrow{x\text{ basis}}\braket{x_1x_2\dots x_N|\hat{X}_i\Psi}=x_i\Psi(x_1,x_2,\dots,x_N) \\ \hat{P}_i\wv\xrightarrow{x\text{ basis}}\braket{x_1x_2\dots x_N|\hat{P}_i|\Psi}=-i\hbar\pd{}{x_i}\Psi(x_1,x_2,\dots,x_N)}$$
+- One can write the operators as _vectors_:
+$$\hat{\bm{r}}=(\hat{x}_1,\hat{x}_2,\dots,\hat{x}_N) \hspace{1.5cm}\hat{\bm{p}}=(\hat{p}_1,\hat{p}_2,\dots,\hat{p}_N)$$
+- Relationship between basis:
+$$\displaylines{\braket{\hat{\bm{r}}|\hat{\bm{p}}|\hat{\bm{r}}'}=-i\hbar\delta'(\bm{r}-\bm{r}')=-i\hbar\delta(\bm{r}-\bm{r}')\nabla_x \\ \braket{\hat{\bm{p}}|\hat{\bm{r}}|\hat{\bm{p}}'}=i\hbar\delta'(\bm{p}-\bm{p}')=i\hbar\delta(\bm{p}-\bm{p}')\nabla_p}$$
 
 - Then, dynamical variables $\omega(x_i,p_j)$ are represented by operators $\hat{\Omega}(\hat{X}_i,\hat{P}_j)$
+- The _commutation relations_ remain the same:
+$$[\hat{x}_i,\hat{x}_j]=[\hat{p}_i,\hat{p}_j]=0\hspace{1.5cm}[\hat{x}_i,\hat{p}_j]=i\hbar\delta_{ij}$$
 
 - The other postulates remain the same
 - The probability that one finds the particle in range $(x_1,x_2,\dots,x_N)$ and $(x_1+dx_1,x_2+dx_2,\dots,x_N+dx_N)$ is:
@@ -222,6 +228,11 @@ $$\begin{aligned}\hat{\Ham}&\xrightarrow{x\text{ basis}}-\frac{\hbar^2}{2m}\left
 $$\displaylines{[\hat{x},\hat{p}^l]=i\hbar l\hat{p}^{l-1}=i\hbar\pd{\hat{p}^l}{\hat{p}} \\ [\hat{x},F(\hat{x},\hat{p})]=i\hbar\pd{F}{\hat{p}} \\ [\hat{p},F(\hat{x},\hat{p})]=-i\hbar\pd{F}{\hat{x}}}$$
 - Example:
 $$[\hat{x},\hat{p}\hat{x}\hat{p}]=i\hbar(\hat{x}\hat{p}+\hat{p}\hat{x})$$
+$$[\hat{\bm{r}},\hat{\bm{p}}^2]=2i\hbar\hat{\bm{p}}$$
+
+- If $[\hat{A},\hat{B}]=0$, then $[\hat{A}^m,\hat{B}^n]=0$
+- If $[\hat{C},\hat{A}]=[\hat{C},\hat{B}]=0$, even if $[\hat{A},\hat{B}]\neq0$, $[\hat{C},\hat{AB}]=0$
+
 
 # Time-evolution: The Schrödinger equation
 
@@ -272,7 +283,7 @@ $$\teo=\sum_n\ket{E_n}\bra{E_n}\exp\left(-\frac{iE_nt}{\hbar}\right)$$
 	- The matrix elements of $\teo$ in the $x$-basis gives the [[Path integrals in quantum mechanics|propagator]]
 - Thus, the state ket becomes:
 $$\ket{\Psi(t)} = \teo\ket{\Psi(0)}=\sum_n\braket{E_n|\Psi(0)}\exp\left(-\frac{iE_nt}{\hbar}\right)\ket{E_n}=\sum_nc_{E,n}\exp\left(-\frac{iE_nt}{\hbar}\right)\ket{E_n}$$
-- The _normal modes_ of the equation, $\ket{E_n(t)}=\exp(-iE_nt/\hbar)\ket{E_n}$, are known as _stationary states_, as the _probability distribution for any variable remains constant_:
+- The _normal modes_ of the equation, $\ket{E_n(t)}=\exp(-iE_nt/\hbar)\ket{E_n}$, are known as _stationary states_, as the _probability distribution for ANY variable remains constant_:
 $$|\braket{q|E_n(t)}|^2=|\braket{q|E_n}\exp(-iE_nt/\hbar)|^2=|\braket{q|E_n}|^2$$
 - Each eigenstate _evolves on its own_, and the wave function _remains a linear combination with the same coefficients_
 
@@ -280,7 +291,7 @@ $$|\braket{q|E_n(t)}|^2=|\braket{q|E_n}\exp(-iE_nt/\hbar)|^2=|\braket{q|E_n}|^2$
 $$\Ham\ket{E_n}=E_n\ket{E_n}$$
 - Projected onto the $x$ basis with $\Ham=T+V$:
 $$-\frac{\hbar^2}{2m}\nabla^2\psi_n(x)+V\psi_n(x)=E_n\psi_n(x)$$
-- Solving this thing: [[1D time-independent Hamiltonians]]
+- Solving this thing: [[1D time-independent Hamiltonians]], [[3D time-independent Hamiltonians]]
 
 ## Time-dependent Hamiltonians: various methods
 
@@ -305,8 +316,6 @@ $$\displaylines{\psi=A\exp[i(kx-\omega t)] \\ J=\frac{\hbar k}{m}|A|^2}$$
 - Here, $\hbar k/m$ is the _classical speed_
 
 - If $k$ is _imaginary_ (i.e. an evanescent wave), $J=0$
-
-
 
 # The Schrödinger and Heisenberg pictures
 - So far, we have been working with the _Schrödinger picture_, where the _state kets evolve with time, with the operators remaining constant_
@@ -595,5 +604,5 @@ $$\begin{aligned}P_{S/A}(x_1,x_2)&=|\Psi_{n_1}(x_1)|^2|\Psi_{n_2}(x_2)|^2+|\Psi_
 	- For _bosons_, as $x_1\to x_2$, the probability is _double that of distinguishable particles_
 - This helps to _distinguish bosons and fermions using measurements_
 - This treatment _ignores spin_
-
 ### More identical particles
+- 
