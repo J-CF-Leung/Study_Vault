@@ -8,7 +8,7 @@
 >"I think I can safely say that nobody understand quantum mechanics"
 >-Richard Feynman
 
-- [ ] Bosons and fermions📅 2023-10-04 🔼 
+- [x] Bosons and fermions 🔼 📅 2023-10-04 ✅ 2023-10-09
 # Notation
 - Generic vectors are denoted with _kets_ $\ket{V}$
 - Operators have capital letters and hats $\hat{\Omega}$
@@ -604,5 +604,20 @@ $$\begin{aligned}P_{S/A}(x_1,x_2)&=|\Psi_{n_1}(x_1)|^2|\Psi_{n_2}(x_2)|^2+|\Psi_
 	- For _bosons_, as $x_1\to x_2$, the probability is _double that of distinguishable particles_
 - This helps to _distinguish bosons and fermions using measurements_
 - This treatment _ignores spin_
+- This also shows that for cases where the _particle wave functions have negligible overlap_, one can simply _ignore symmetrisation_
+	- e.g. if inter-particle distance $>>$ extent of wave-functions
 ### More identical particles
-- 
+- For $N>2$, in general, one can _only_ form vectors that are either _always symmetric or antisymmetric_ under _all possible exchanges_
+- There are only _two possible state vectors_ out of $N!$ _product vectors_
+- Therefore, the _dimensionality_ of $\mathbb{V}_S\oplus\mathbb{V}_A$ is _smaller_ than that of the direct product space for $N\geq 3$
+
+- For $N$ particles, with possible states $\Psi_n$, one can write the _bosonic_ state as:
+$$\displaylines{\wv=\sqrt{\frac{\prod_im_i!}{N!}}\sum_n\ket{\Psi_{n_1}}\otimes\ket{\Psi_{n_2}}\otimes\dots\otimes\ket{\Psi_{n_N}} \\ \Psi(x_1,x_2,\dots x_N)=\sqrt{\frac{\prod_im_i!}{N!}}\sum_n\Psi_{n_1}(x_1)\Psi_{n_2}(x_2)\dots\Psi_{n_N}(x_N)}$$
+- The normalisation factor includes the fact that _multiple bosons can occupy the same state_ (with $\sum m_i=N$), and the sum takes place over _all permutations_ of possible wave functions
+
+- For the _fermionic state_, one can write it as a _Slater determinant_:
+$$\Psi(x_1,x_2,\dots x_N)=\frac{1}{\sqrt{N!}}\begin{vmatrix}\Psi_{n_1}(x_1)&\Psi_{n_2}(x_1)&\dots&\Psi_{n_N}(x_1)\\\Psi_{n_1}(x_2)&\Psi_{n_2}(x_2)&\dots&\Psi_{n_N}(x_2) \\ \vdots&\vdots&\ddots&\vdots\\ \Psi_{n_1}(x_N)&\Psi_{n_2}(x_N)&\dots&\Psi_{n_N}(x_N)\end{vmatrix}$$
+- One can see that _interchange_ corresponds to _swapping columns_, which _switches_ the sign of the determinant
+- If two particles occupy the _same state_, one sees that the determinant _vanishes_
+
+# Spin

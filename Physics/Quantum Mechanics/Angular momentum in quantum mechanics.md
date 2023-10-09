@@ -141,11 +141,20 @@ $$s=0,\frac{1}{2},1,\frac{3}{2}\dots \hspace{1cm} m_s=-s,-s+1,\dots,s-1,s$$
 - This later gives rise to the [[Fundamental concepts of quantum mechanics#Bosons and Fermions|spin-statistics theorem]], where spin determines the _exchange symmetry of the wave-function_
 
 ### Spin 1/2
+- For $s=1/2$, there are only _two possible orientations_, $\ket{m_s=+1/2}$ and $\ket{m_s=-1/2}$
+- Denote these as $\ket{\uparrow}$ and $\ket{\downarrow}$ respectively
 
+- One can express the _spin wave function_ as a _spinor_:
+$$\displaylines{\wv=\Psi_\uparrow\ket{\uparrow}+\Psi_\downarrow\ket{\downarrow}\\ \Psi\longrightarrow\pmatrix{\Psi_\uparrow\\\Psi_\downarrow}}$$
 
-### Singlet and triplet states
-- Consider 2 spin $1/2$ particles
-- The addition of the $z$ component is straight-forward:
+- In this basis, the _matrix elements_ of the operators are:
+$$\displaylines{\hat{S}^2=\frac{3\hbar^2}{4}\pmatrix{1&0\\0&1}\hspace{1.5cm}\hat{S}_z=\frac{\hbar}{2}\pmatrix{1&0\\0&-1}\\\hat{S}_+=\hbar\pmatrix{0&1\\0&0}\hspace{1.5cm}\hat{S}_-=\hbar\pmatrix{0&0\\1&0} \\ \hat{S}_x=\frac{\hbar}{2}\pmatrix{0&1\\1&0}\hspace{1.5cm}\hat{S}_y=\frac{\hbar}{2i}\pmatrix{0&-i\\i&0}}$$
+
+- The introduction of spin $1/2$ _doubles_ the dimensionality of the Hilbert space
+- One introduces a basis $\ket{xyzs_z}$ which diagonalise the operators $\hat{X},\hat{Y},\hat{Z},\hat{S}_z$
+- The state vector in this basis becomes:
+$$\braket{xyzs_z|\psi}=\pmatrix{\psi(x,y,z,\hbar/2)\\ \psi(x,y,z,-\hbar/2)}$$
+	- where $\psi(x,y,z,\pm\hbar/2)$ are each an _infinite-dimensional_ vector with the values of $\psi$ as a function of position
 # General angular momenta
 
 ## The operators
