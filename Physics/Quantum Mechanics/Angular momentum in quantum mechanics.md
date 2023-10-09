@@ -6,13 +6,14 @@
 
 - It is also convenient to define a _total angular momentum_ $\hat{\bm{J}}\equiv\hat{\bm{L}}+\hat{\bm{S}}$
 
+- [ ] Start addition of angular momentum📅 2023-10-10 ⏫ 
 # Orbital angular momentum
 - The _orbital_ angular momentum is _analagous to classical angular momentum_:
 $$\displaylines{\hat{\bm{L}}=\hat{\bm{X}}\wedge\hat{\bm{P}} \hspace{1cm} \hat{L}_i=\epsilon_{ijk}\hat{X}_j\hat{P}_k}$$
 - There is _one operator for each direction_, as well as a _total orbital angular momentum operator_:
 $$\hat{\bm{L}}^2=\hat{L}_x^2+\hat{L}_y^2+\hat{L}_z^2$$
 - From its definition, _orbital_ angular momentum is found to obey the _commutation relations_:
-$$\displaylines{[\hat{L}_i,\hat{L}_j]=i\hbar\epsilon_{ijk}\hat{L}_k \hspace{1cm} \hat{\bm{L}}\wedge\hat{\bm{L}}=i\hbar\hat{\bm{L}} \\ [\hat{L}_i,\hat{L}^2]=0}$$
+$$\displaylines{[\hat{L}_i,\hat{L}_j]=i\hbar\epsilon_{ijk}\hat{L}_k \hspace{1cm} \hat{\bm{L}}\wedge\hat{\bm{L}}=i\hbar\hat{\bm{L}} \\ [\hat{L}_i,\hat{r}_j]=i\hbar\epsilon_{ijk}\hat{r}_k\hspace{1cm}[\hat{L}_i,\hat{p}_j]=i\hbar\epsilon_{ijk}\hat{p}_k \\ [\hat{L}_i,\hat{L}^2]=[\hat{L}_i,\hat{r}^2] = [\hat{L}_i,\hat{p}^2]=0}$$
 ## In different bases
 - In the _Cartesian basis_, the operators can be written as:
 $$\displaylines{\hat{L}_i=\epsilon_{ijk}\hat{X}_j\hat{P}_k\xrightarrow{x\text{ basis}}-i\hbar \bm{r}\wedge\nabla=-i\hbar\epsilon_{ijk} x_j\pd{}{x_k} \\ \hat{L}_x\to -i\hbar \left(y\pd{}{z}-z\pd{}{y}\right) \hspace{0.2cm},\hspace{0.2cm} \hat{L}_y\to -i\hbar \left(z\pd{}{x}-x\pd{}{z}\right) \hspace{0.2cm},\hspace{0.2cm} \hat{L}_z\to -i\hbar \left(x\pd{}{y}-y\pd{}{x}\right)}$$
@@ -24,6 +25,9 @@ $$\hat{L}_z\xrightarrow{\theta,\phi\text{ basis}}-i\hbar\pd{}{\phi}$$
 - From this, the form of the _total orbital angular momentum_ operator is:
 $$\hat{L}^2\xrightarrow{\theta,\phi\text{ basis}} -\hbar^2\left[ \frac{1}{\sin\theta}\pd{}{\theta}\left(\sin\theta \pd{}{\theta}\right)+\frac{1}{\sin^2\theta}\pd{^2}{\phi^2}\right]$$
 - This is the _angular part of the Laplacian_
+
+- From this, one can see that for any _radial function_ $f(r)$:
+$$[f(r),\hat{L}]=0$$
 
 ## The eigenvalue problem
 - The operators $\bm{\hat{L}}^2$ and $\hat{L}_z$ _commute_
@@ -37,12 +41,14 @@ $$L^2\ket{\lambda\mu}=\lambda\ket{\lambda\mu} \hspace{1.5cm}L_z \ket{\lambda\mu}
 - Like the [[Quantum Harmonic Oscillator|quantum harmonic oscillator]] problem, finding eigenfunctions of angular momentum also involves _ladder operators_
 - The ladder operators for angular momentum are defined as:
 $$\hat{L}_\pm=L_x\pm iL_y$$
+- Note that they are _Hermitian conjugates_ of each other, as $\hat{L}_\pm^\dagger=\hat{L}_\mp$
+
 - The ladder operators satisfy the _commutation relations_:
-$$[\hat{L_z},\hat{L}_\pm]=\pm\hbar\hat{L}_\pm \hspace{2cm} [\hat{L}^2,\hat{L}_\pm]=0$$
+$$[\hat{L_z},\hat{L}_\pm]=\pm\hbar\hat{L}_\pm \hspace{1cm} [\hat{L}^2,\hat{L}_\pm]=0\hspace{1cm}[\hat{L}_+,\hat{L}_-]=2\hbar\hat{L}_z$$
 - It is worth noting their form in _spherical coordinates_:
 $$\hat{L}_\pm=\hbar\exp(\pm i\phi)\left[\pm\pd{}{\theta}+i\cot\theta\pd{}{\phi}\right]$$
 
-- Combining the two ladder operators also yields the following relation:
+- _Combining_ the two ladder operators also yields the following relation:
 $$\hat{L}^2=\hat{L}_\pm\hat{L}_\mp+\hat{L}_z^2\mp\hbar\hat{L}_z$$
 
 - If $\ket{\lambda\mu}$ is an eigenket of $\hat{L_z}$ and $\hat{L}^2$, then $\hat{L}_\pm\ket{\lambda\mu}$ is _also an eigenket_:
@@ -101,6 +107,11 @@ $$\displaylines{\hat{L}_\pm\ket{lm_l}=\hbar\sqrt{l(l+1)-m_l(m_l\pm1)}\Ket{l,(m_l
 $$\hat{P}Y_l^{m_l}(\theta,\phi)=Y_l^{m_l}(\pi-\theta,\pi+\phi)=(-1)^lY_l^{m_l}(\theta,\phi)$$
 - Hence, they are _eigenfunctions of the parity operator_
 
+- Appearance of the spherical harmonics:
+![[Spherical harmonics.png]]
+- An _equal mix_ of $m$'s is _isotropic_:
+$$\sum_{m=-l}^{+l}=\text{const.}$$
+
 # Spin angular momentum
 - From the _Stern-Gerlach_ experiment, it was shown that there is a type of _angular momentum with no spatial dependence_, which was also _quantised_
 - A beam of particles known to have a _magnetic dipole moment_ is sent through an _inhomogeneous magnetic field_:
@@ -113,10 +124,10 @@ $$\hat{P}Y_l^{m_l}(\theta,\phi)=Y_l^{m_l}(\pi-\theta,\pi+\phi)=(-1)^lY_l^{m_l}(\
 - The _spin angular momentum operators_ follow the _same commutation relations_ as orbital angular momentum:
 $$[\hat{S}_i,\hat{S}_j]=\epsilon_{ijk}i\hbar\hat{S}_k \hspace{1cm} [\hat{S}_i,\hat{S}^2]=0$$
 
-
-- It also follows the same eigenvalue equations:
+- One can still define the _ladder operators_:
+$$\hat{S}_\pm=S_x\pm iS_y$$
+- Since these operators have the _same algebraic structure_, they obey _the same eigenvalue equations_:
 $$\displaylines{\hat{S}^2\ket{sm_s}=\hbar^2s(s+1)\ket{sm_s}\hspace{1cm} \hat{S}_z\ket{sm_s}=\hbar m_s\ket{sm_s} \\ \hat{S}_\pm\ket{sm_s}=\hbar\sqrt{s(s+1)-m_s(m_s\pm1)}\ket{s(m_s\pm1)}}$$
-
 
 - While $l$ can only take integer values, $s$ does not have this constraint:
 $$s=0,\frac{1}{2},1,\frac{3}{2}\dots \hspace{1cm} m_s=-s,-s+1,\dots,s-1,s$$
@@ -127,7 +138,7 @@ $$s=0,\frac{1}{2},1,\frac{3}{2}\dots \hspace{1cm} m_s=-s,-s+1,\dots,s-1,s$$
 	- Photons: $s=1$
 	- $\Delta$ baryons: $s=3/2$
 	- Gravitons: $s=2$
-- This later gives rise to the [[Fundamental concepts of quantum mechanics#Multiple degrees of freedom|spin statistics theorem]]
+- This later gives rise to the [[Fundamental concepts of quantum mechanics#Bosons and Fermions|spin-statistics theorem]], where spin determines the _exchange symmetry of the wave-function_
 
 ### Spin 1/2
 
@@ -135,8 +146,42 @@ $$s=0,\frac{1}{2},1,\frac{3}{2}\dots \hspace{1cm} m_s=-s,-s+1,\dots,s-1,s$$
 ### Singlet and triplet states
 - Consider 2 spin $1/2$ particles
 - The addition of the $z$ component is straight-forward:
-$$$$
+# General angular momenta
 
-### General addition of spin
+## The operators
+- The existence of different _types_ of angular momenta, and considering the dynamics of _multiple particles_, motivates the introdution of _general angular momentum operator_:
+$$\hat{\bm{J}}=(\hat{J}_x,\hat{J}_y,\hat{J}_z)=(\hat{J}_1,\hat{J}_2,\hat{J}_3)$$
+- They must still satisfy the _commutation relations_:
+$$[\hat{J}_i,\hat{J}_j]=i\hbar\epsilon_{ijk}\hat{J}_k$$
+- The eigenstates are still characterised by _quantum numbers_ $j$ and $m$, which can be _integer/half-integer_:
+$$\displaylines{\hat{J}^2\ket{jm}=\hbar^2j(j+1)\ket{jm}\hspace{1cm} \hat{J}_z\ket{jm}=\hbar m\ket{jm}\\\braket{j'm'|jm}=\delta_{jj'}\delta_{mm'} \\ j=0,\frac{1}{2},1,\frac{3}{2}\dots \hspace{1cm} m=-j,-j+1,\dots,j-1,j}$$
+- For _orbital_ angular momentum, $j=l$ which only takes _integer_ values
+	- Invariance after spatial rotation of $2\pi$
+- One can still define _ladder operators_:
+$$\displaylines{\hat{J}_\pm=\hat{J_x}\pm i\hat{J}_y\\\hat{J}_\pm\ket{jm}=\hbar\sqrt{j(j+1)-m(m\pm1)}\ket{j(m\pm1)}}$$
+- Again, at the _top or bottom_ of the ladder, $\hat{J}_\pm$ simply _annihilates_ the states:
+$$\hat{J}_+\ket{jj}=\hat{J}_-\ket{j,-j}=\ket{0}$$
 
-# Adding angular momenta
+## Matrix elements
+- From the _orthonormality_ of the eigenstates, obtain the _matrix elements_:
+$$\displaylines{\braket{j'm'|\hat{J}_\pm|jm}=\hbar\sqrt{j(j+1)-m(m\pm1)}\delta_{jj'}\delta_{m',m\pm1}\\ \braket{j'm'|\hat{J}^2|jm}=\hbar^2j(j+1)\delta_{jj'}\delta_{mm'}\\\braket{j'm'|\hat{J}_z|jm}=m\hbar\delta_{jj'}\delta_{mm'}}$$
+- One can obtain the matrix elements for $\hat{J}_x$ and $\hat{J}_y$ via:
+$$\hat{J}_x=\frac{\hat{J}_++\hat{J}_-}{2}\hspace{1.5cm}\hat{J}_y=\frac{\hat{J}_+-\hat{J}_-}{2i}$$
+- As the matrix elements _vanish unless_ $j=j'$, one can consider the matrix as being made of _block diagonals_, with each block corresponding to a value of $j$
+
+- For example, for $j=1/2$:
+$$\displaylines{\hat{J}_z=\pmatrix{\braket{\uparrow|\hat{J}_z|\uparrow}&\braket{\uparrow|\hat{J}_z|\downarrow}\\\braket{\downarrow|\hat{J}_z|\uparrow}&\braket{\downarrow|\hat{J}_z|\downarrow}}=\frac{\hbar}{2}\pmatrix{1&0\\0&-1}\\ 
+\hat{J}_+=\hbar\pmatrix{0&1\\0&0}\hspace{2cm}\hat{J}_-=\hbar\pmatrix{0&0\\1&0} \\ \hat{J}_x=\frac{\hbar}{2}\pmatrix{0&1\\1&0}\hspace{2cm}\hat{J}_y=\frac{\hbar}{2i}\pmatrix{0&-i\\i&0}}$$
+- One then obtains the _Pauli matrices_:
+$$\displaylines{\hat{\bm{J}}=\frac{\hbar}{2}\bm{\sigma} \\ \sigma_x=\pmatrix{0&1\\1&0}\hspace{1cm}\sigma_y=\pmatrix{0&-i\\i&0}\hspace{1cm}\sigma_z=\pmatrix{1&0\\0&-1}}$$
+
+## Measurements and uncertainty
+- The _uncertainty relation_ for $\hat{J}_x$ and $\hat{J}_y$:
+$$\Delta J_x\Delta J_y\geq \frac{\hbar}{2}|\mean{J_z}|$$
+- For the _eigenstate_ $\ket{jm}$, $\Delta J_z=0$, and as _possible measured values_ of $\hat{J}_x$ and $\hat{J}_y$ are _evenly distributed_:
+$$\mean{\hat{\bm{J}}}=\left(0,0,m\hbar\right)$$
+# Addition of angular momenta
+- One may want to _add_ different angular momenta in a system
+	- _Total angular momentum_ of one particle $\hat{\bm{J}}=\hat{\bm{L}}+\hat{\bm{S}}$
+	- _Total spin_ of two particles $\hat{\bm{S}}=\hat{\bm{S}}_1+\hat{\bm{S}}_2$
+

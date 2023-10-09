@@ -18,6 +18,12 @@ $$\ket{\Psi(t)} =\sum_n\ket{E_n}\braket{E_n|\Psi_0}\exp(-iE_nt/\hbar) =\int \ket
 	- If there is an _abrupt but finite jump_ in $V$ (and therefore $\psi''$), $\psi'$ _will still be continuous_
 	- If the jump is _infinitely large_ (e.g. Dirac delta), $\psi'$ is discountinuous but $\psi$ is still continuous
 
+## Boundedness
+- _Classically_, a particle is _bound_ if its energy is _smaller than the maximum potential over a finite region of space that contains the particle_
+- Quantum mechanically, if a particle is _unbound_, there is a _continuum of states_ with energy $E$ within some range
+- If the particle is _bound_, they can only have a _discrete spectrum_ of energies $E$
+- The wave-function will also be _normalisable_:
+$$\int |\psi(\bm{r})|^2\,d^3\bm{r}<\infty$$
 
 # The free particle
 - From an older perspective: [[Schrödinger's Wave mechanics]]

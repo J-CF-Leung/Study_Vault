@@ -1,6 +1,16 @@
 >[!info] Notation
 > As the speed of light is _constant_, one can use _geometrised units_:
 > $$c=2.99792458\times10^8\,\text{m}\,\text{s}^{-1}=1$$
+
+- [ ] Lorentz transformations📅 2023-10-10 ⏫ 
+- [ ] Accelerating frames and rapidity 📅 2023-10-10 ⏫ 
+- [ ] Length contraction and time dilation 📅 2023-10-10 ⏫ 
+
+- In _Newtonian mechanics_, when two frames travel with _relative velocity_ $v$, one performs a _Galilean transformation_:
+$$ct'=ct \hspace{1cm}x'=x-vt\hspace{1cm}y'=y\hspace{1cm}z'=z$$
+- The notion of time is _absolute_
+
+- This _distance between simultaneous events_ is _constant_
 # Foundational concepts
 
 ## Inertial reference frames and spacetime
@@ -72,7 +82,12 @@ $$(\Delta\vec{x})^2\equiv(\Delta s)^2=(\Delta s')^2$$
 
 - Just as _Euclidean distance_ is fundamental to geometry in flat [[Geometric principles in Newtonian mechanics|3-space]], the interval is fundamental to the geometry of _spacetime, or Minkowski space_
 
-## Tensor algebra in Minkowski space
+## Tensor algebra in Minkowski spacenot done
+due after today
+due before in one week
+short mode
+hide edit button
+hide backlink
 - Many [[Geometric principles in Newtonian mechanics|definitions in 3-space]] still _apply_
 - A _tensor_ $\textbf{T}(\_,\_)$ is still a _real-valued linear function of vectors_ in Minkowski spacetime
 	- The _rank_ is still the number of vectors needed to produce a _scalar_
@@ -174,5 +189,40 @@ $$T^{\alpha}_{\mu\nu}=T^{\alpha\beta\gamma}g_{\mu\beta}g_{\nu\gamma}=T_{\lambda\
 - The _mixed components of the metric_ are simply $g^\alpha_\beta=g_\alpha^\beta=\delta_{\alpha\beta}$
 
 - The contravariant vomponents of an _outer product_ $\textbf{T}\otimes\textbf{S}$ is then $T^{\alpha\beta\gamma}S^{\mu\nu}$
-- From this, one can find formulas for the _inner product_ and _output of a tensor_
-$$\vec{A}\cdot\vec{B}=A_\alpha B^\alpha=A^\alpha B_\alpha$$
+- From this, one can find formulas for the _inner product_ and _scalar output of a tensor_
+$$\vec{A}\cdot\vec{B}=A_\alpha B^\alpha=A^\alpha B_\alpha\hspace{1.5cm}\textbf{T}(\bm{A},\bm{B},\bm{C})=T_{\alpha\beta\gamma}A^\alpha B^\beta C^\gamma=T^{\alpha\beta\gamma}A_\alpha B_\beta C_\gamma$$
+
+- The _covariant components_ of a _contraction_ may be written as $R^\mu_{\alpha\mu\beta}$
+- The _contravariant_ ones for the same contraction are then $R^{\alpha\mu\beta}_\mu$
+
+- Laws can also be written in terms of this index notation, such as the [[#The Lorentz force law|Lorentz force law]]:
+$$\frac{dp_\mu}{d\tau}=qF_{\mu\nu}u^\nu$$
+
+- The formula for the inner product also leads to an expression for the _invariant interval_ between two events at $x^\alpha$ to $x^\alpha+dx^\alpha$:
+$$ds^2=g_{\alpha\beta}dx^\alpha dx^\beta=dt^2-dx^2-dy^2-dz^2$$
+- This is the _special relativistic line element_
+
+# Particle kinetics in index notation
+- Let there be a particle with _4-velocity_ $\vec{u}$ and _4-momentum_ $\vec{p}$
+- Choose a _Lorentz frame_ with _coordinates_ $x^\alpha$ with _basis vectors_ $\{\vec{e}_\alpha\}$
+- The components of 4-velocity:
+$$u^\alpha=\frac{dx^\alpha}{d\tau}$$
+- This implies that the components of _3-velocity_ are:
+$$v^j\equiv\frac{dx^j}{dt}=\frac{dx^j/d\tau}{dt/d\tau}=\frac{u^j}{u^0}$$
+- From the fact that $|\vec{u}|^2=1$, one gets:
+$$u_0=\gamma\hspace{1.5cm}u^j=\gamma v^j$$
+- where $\gamma$ is the _Lorentz factor_:
+$$\gamma=\frac{1}{\sqrt{1-\delta_{ij}v^iv^j}}=\frac{1}{\sqrt{1-|\bm{v}|^2}}$$
+- This 3-velocity lives in a _3-dimensional Euclidean slice_ of Minkowski spacetime, where $t=\text{const.}$
+	- It is sometimes called the _slice of simultaneity_ for this specific Lorentz frame
+	- The _spatial part_ of $\vec{u}$ can be thought as the 3-vector $\bm{u}=\gamma\bm{v}$
+![[3-velocity.png|400]]
+
+- The particle's _relativistic energy_ is described by $p^0$:
+$$\mathcal{E}\equiv p^0=m\gamma=\frac{m}{\sqrt{1-|\bm{v}|^2}}$$
+- For $|\vec{v}|<<1$:
+$$\mathcal{E}\approx m+\frac{1}{2}m|\bm{v}|^2$$
+- This is the _sum_ of the _rest energy_ $m$ and _klnetic energy_ $E=mv^2/2$
+
+- The particle's _3-momentum_ is then:
+$$\bm{p}=m\bm{u}=\gamma m\bm{v}=\mathcal{E}\bm{v}$$

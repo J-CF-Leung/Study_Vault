@@ -1,3 +1,5 @@
+- [ ] Finish incomplete sections in 3D Hamiltonians🔼 
+
 - In 3 dimensions, the Hamiltonian bcomes:
 $$\Ham=\frac{P^2}{2m}+V=\frac{1}{2m}(P_x^2+P_y^2+P_z^2)+V$$
 - In the position basis, the Hamiltonian is:
@@ -26,7 +28,7 @@ $$\hat{\Ham}\psi=E\psi \hspace{1cm} \hat{L}^2\psi=\hbar^2l(l+1)\psi \hspace{1cm}
 
 - The solutions to the angular equation are the [[Special functions and orthogonal relations#Spherical harmonics|spherical harmonics]]:
 $$Y^m_l(\theta,\phi)=\sqrt{\frac{(2l+1)}{4\pi}\frac{(l-m)!}{(l+m)!}}\exp(im\phi)P^m_l(\cos\theta)$$
-- The spherical harmonics are mutually orthogonal:
+- The spherical harmonics are _orthonormal_:
 $$\int_0^\pi\int_0^{2\pi}\left[Y^m_l(\theta,\phi)\right]^*\left[Y^{m'}_{l'} (\theta,\phi)\right]\sin\theta\,d\theta\,d\phi=\delta_{ll'}\delta_{mm'}$$
 - $P_l^m(x)$ are the _associated Legendre functions_, defined using the _Legendre polynomials_ $P_l(x)$
 $$P_l^m(x)\equiv (-1)^m\left(1-x^2\right)^{m/2}\left(\frac{d}{dx}\right)^mP_l(x)$$
@@ -63,7 +65,9 @@ $$\hat{\Ham}=\frac{\hat{L}^2}{2I}$$
 - Consider the _bound states_ of a single electron in an atom
 - For an _electron_ in a _hydrogen-like_ atom with atomic charge $Z$, the potential is:
 $$V(r)=-\frac{1}{4\pi\epsilon_0}\frac{Ze^2}{r}$$
-
+- Note that:
+$$[\hat{\Ham},\hat{L}_i]=[\hat{\Ham},\hat{L}^2]=[\hat{L}^2,\hat{L}_i]=0$$
+- As there are _three commuting operators_, one concludes that the eigenstates are _simultaneous eigenstates_, characterised by 3 _quantum numbers_
 ### Finding energies
 - From this, the radial equation becomes:
 $$-\frac{\hbar^2}{2m_e}\frac{d^2u}{dr^2}+\left[\frac{l(l+1)\hbar^2}{2m_e
@@ -90,10 +94,13 @@ $$a_0=\frac{4\pi\epsilon_0\hbar^2}{m_ee^2}=0.53\times10^{-10}\,\text{m}$$
 $$E_n=-\frac{13.6Z^2}{n^2}\,\text{eV}$$
 - This is exactly the _same result as the Bohr model_
 
-- For a _hydrogen-like_ atom, the energy _only depends on_ $n$
+- For a _hydrogen-like_ atom, the energy _only depends on_ $n$:
+$$\hat{\Ham}\ket{nlm_l}=E_n\ket{nlm_l}$$
+- For a more _complex_ atom, $E_n\to E_{nl}$
+- However, one can see that the _radial function_ depends on _both_ $n$ and $l$
 
 ### Energy eigenstates
-- From the above results, the eigenfunctions feature the [[Special functions and orthogonal relations#Associated Laguerre polynomials|associated Lagueere polynomials]]
+- From the above results, the eigenfunctions feature the [[Special functions and orthogonal relations#Associated Laguerre polynomials|associated Laguerre polynomials]]
 
 - The eigenstates are determined by _three quantum numbers_, as the eigenstate is a _simultaneous eigenstate of three commuting operators_
 - $n$ determines the _energy_ of the eigenstate
@@ -106,11 +113,16 @@ $$\begin{aligned}n&\geq1 \\ l&=0,1,2,\dots,n-1 \\ m_l&=-l,-l+1,\dots-1,0,1,\dots
 $$g_n=2\sum_{l=0}^{n-1}(2l+1)=2n^2$$
 - The factor of two is due to [[Angular momentum in quantum mechanics#Spin angular momentum|spin]]
 
-- As it is a central potential, there is an _angular part_, given by the _spherical harmonics_
+- As it is a central potential, there is an _angular part_, given by the _spherical harmonics_:
+$$\psi_{nlm}(r,\theta,\phi)=R_{nl}(r)Y^m_l(\theta,\phi)$$
 - The formula for the eigenstates is (after normalisation):
 $$\psi_{nlm}=\sqrt{\left(\frac{2}{na_0}\right)^3\frac{(n-l+1)!}{2n(n+l)!}}\exp\left(-\frac{r}{na}\right)\left(\frac{2r}{na}\right)^l\left[L^{2l+1}_{n-l-1}\left(\frac{2r}{na}\right)\right]Y_l^m(\theta,\phi)$$
-
+- Of course, these states are _orthonormal_:
+$$\braket{n'l'm'|nlm}=\delta_{nn'}\delta_{ll'}\delta_{mm'}$$
+- Note that for _non-zero_ $l$, the wave function _vanishes at the origin_ as $\psi\propto \exp(-r/na)r^l$
 ### Radial distribution function
 - To visualise the radial probability density, one can use the [[#The radial equation|radial distribution function]]:
-$$P(r)=r^2|R_{nl}(r)|^2$$
+$$P_{nl}(r)=r^2|R_{nl}(r)|^2$$
 ![[Hydrogen radial distribution function.png]]
+- The _average radius_ of the wave-function:
+$$\mean{r}_{nl}=\int_0^\infty rP(r)\,dr=\frac{3a_0}{2Z}\left(n^2-\frac{l(l+1)}{3}\right)$$
