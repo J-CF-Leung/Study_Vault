@@ -1,4 +1,5 @@
-
+- [ ] Link to IB notes  📅 2023-10-10 🔼 
+- [ ] Finish lecture 2📅 2023-10-11 ⏫ 
 # Electrodynamics and Maxwell's Equations
 
 ## Fields and charges
@@ -106,8 +107,115 @@ $$\displaylines{\bm{k}\cdot\bm{D}=\bm{k}\cdot\bm{B}=0 \\ \bm{k}\times\bm{E}=\ome
 - For _real_ fields and _real_ $\bm{k}$:
 $$\bm{B}\perp\bm{k},\; \bm{B}\perp\bm{E},\; \bm{D}\perp\bm{k},\; \bm{D}\perp\bm{H}$$
 
+
 - For _isotropic materials_, $\bm{D}||\bm{E}$ and $\bm{B}||\bm{H}$ since $\epsilon$ and $\mu$ are _scalars_
 - Then $(\bm{E},\bm{H},\bm{k})$ form a _right-handed set of mutually perpendicular vectors_
 - Then $\bm{E}\times\bm{H}=\bm{N}||\bm{k}$, forming a _transverse EM wave_
 - The _ratio of strengths_:
-$$\frac{|\bm{E}|}{|\bm{H}|}=\frac{c}{n}$$
+$$\frac{|\bm{E}|}{|\bm{B}|}=\frac{c}{n}$$
+- The _characteristic impedance_:
+$$\frac{|\bm{E}|}{|\bm{H}|}=\sqrt{\frac{\mu\mu_0}{\epsilon\epsilon_0}}=Z=\sqrt{\frac{\mu}{\epsilon}}Z_0$$
+
+- If there is _free charge_ present, $\nabla\cdot\bm{D}\neq0$, so $\bm{D}$ and $\bm{E}$ can have _longitudinal components_
+- For the case of $\epsilon=0$ (e.g. _plasma_ at _plasma frequency_), $\bm{k}||\bm{E}$
+
+## Linear polarisation
+- The _polarisation_ of the wave is the _direction_ of $\bm{E}$ in an electromagnetic wave
+	- e.g. $\bm{E}_0=(1,0,0), \bm{B}_0=, \bm{k}=,$ this is "$x-$polarised" 
+- If it is _constant_, it is _plane-polarised_
+
+- At _interfaces_, the _reflection_ and _transmission_ are dependent on whether or not the polarisation is _in the plane of incidence_
+	- $\perp$ to the plane: $s-$polarisation
+	- $//$ to the plane: $p-$polarisation
+- One can then use _boundary conditions_ to _derive_ reflection and transmission coefficients:
+FRESNEL'S RELATIONS
+
+- At _normal incidence_, where $\theta_1=0$, $r_p=-r_s$ and $t_p=t_s$
+- At _grazing incidence_ where $\theta_1\to\pi/2$, $r_p,r_s=1$
+- At _Brewster's angle_ where $\theta_1=\tan^{-1}(n_2/n_1)$, $r_p=0$
+	- Used in _polarising devices_
+
+# Optics
+- Results typically apply to _wide range of frequencies_, including _non-visible_ spectrum
+- At optical frequencies, _magnetic properties are negligible_, hence:
+$$n=\sqrt{\epsilon\mu}\to\sqrt{\epsilon}$$
+
+## Polarised light
+- A _general_ polarisation state is a _superposition of plane wave solutions_
+- Consider two _perpendicular_ plane-polarised waves:
+$$\bm{E}_1=\bm{i}a_1E_0\exp[i(kz-\omega t)]\hspace{1cm}\bm{E}_2=\bm{j}a_2E_0\exp[i(kz-\omega t)]$$
+
+- For _real_ $a_1$ and $a_2$, the waves are _in-phase_
+- It is a _plane-polarised wave_ at angle $\theta=\tan^{-1}(a_2/a_1)$, with amplitude $E_T=E_0\sqrt{a_1^2+a_2^2}$
+
+- Let there be some _phase difference_ $\delta$
+- For $a_1=1$ and $a_2=i=\exp(i\pi/2)$, the second wave _lags_ by $\pi/2$:
+$$\bm{E}_2=\bm{j}E_0\exp[i(kz-(\omega_t-\pi/2))]$$
+- At $z=0$ and taking the _real parts_:
+$$\bm{E}_T(z=0)=E_0\bm{i}\cos(\omega t)+E_0\bm{j}\sin(\omega t)$$
+- At $t=0$:
+$$\bm{E}_T(t=0)=E_0\bm{i}\cos(kz)-E_0\bm{j}\sin(kz)$$
+![[anticlockwise circular polarisation.png]]
+- This is a _left-hand circularly polarised wave_
+- It is _anti-clockwise_ when looking _towards the source_
+
+- For $a_1=1$ and $a_2=-i$, it is a _right-hand circularly polarised wave_
+
+- For $|a_1|\neq|a_2$ and $\delta\neq\pi/2$, it is _elliptically polarised_
+- For $a_1=a$ and $a_2=b\exp(i\delta)$:
+$$\frac{E_x^2}{a^2}+\frac{E_y^2}{b^2}-2\cos\delta\frac{E_x}{a}\frac{E_y}{b}=\sin^2\delta$$
+
+- The convention to describe polarisation is using the _Jones vectors_:
+$$\pmatrix{a_1\\ a_2}$$
+- These only apply when the _phase difference is constant_
+
+- One can form _linear combinations_ of the states
+- Example: combine _right-handed_ and _left-handed_ polarisations:
+$$\frac{1}{\sqrt{2}}\pmatrix{1\\i}+\frac{1}{\sqrt{2}}\pmatrix{1\\-i}=\sqrt{2}\pmatrix{1\\0}$$
+
+## Anisotropic media
+- A _dichroic material_ will _absorb_ light polarised in _one direction more than others_
+	- A _wire grid_ will absorb electric fields _parallel_ to the wires due to _energy dissipation_
+	- Typical _polaroid films_ have _aligned conducting polymeric chains_
+
+- If a device _absorbs light in the_ $y-$direction, one can represent it via a _Jones matrix_:
+$$\displaylines{J_x=\pmatrix{1&0\\0&0}\\J_x\pmatrix{1\\0}=\pmatrix{1\\0}\\J_y\pmatrix{0\\1}=\pmatrix{0\\0}}$$
+- For a _transmitting axis_ oriented at $\theta$ to the $x-$axis:
+$$J_\theta=\pmatrix{\cos^2\theta&\sin\theta\cos\theta\\\sin\theta\cos\theta&\sin^2\theta}$$
+- One can prove that $x-$polarised light passing through the polariser has _intensity_:
+$$I=I_0\cos^2\theta$$
+- This is _Malus's Law_
+
+- For light passing through _multiple optical elements_ $A,B,C$:
+$$J=CBA$$
+- This _multiplies the Jones vector in the correct order_
+- For _crossed polarisers_:
+$$J_\theta J_{\theta+\pi/2}=0$$
+## Birefringence
+- For _isotropic materials_, $\epsilon$, $\mu$, $\chi_m$ are all _scalars_
+
+- However, natural materials can be _anisotropic_
+- Here, the permittivity can be a _second-rank tensor_:
+$$\bm{D}=\epsilon_0\dunderline{\epsilon}\cdot\bm{E}\hspace{2cm}D_i=\epsilon_0\epsilon_{ij}E_j$$
+- From _energy conservation_, $\dunderline{\epsilon}$ must be _Hermitian_:
+$$\epsilon_{ij}=\epsilon_{ji}^*$$
+- It therefore is _diagonalisable_ and has _real, orthogonal eigenvectors_
+- For _lossless media_, it is _real_ and therefore _symmetric_
+
+- It can therefore have _diagonal entries_ $n_i^2$
+- If $n_1\neq n_2\neq n_3$, it is _biaxial_
+- If $n_1=n_2\neq n_3$, it is _uniaxial_
+	- Convention to have $n_1=n_2$
+$$\dunderline{\epsilon}=\pmatrix{n_o^2&0&0\\0&n_o^2&0\\0&0&n_e^2}$$
+- $o$ denotes the _ordinary_ directions
+- $e$ denotes the _extraordinary_ direction, or the _optic axis_
+
+- The _birefringence_ is:
+$$\Delta n=n_e-n_0$$
+- _Calcite_ has $\Delta n=-0.172$
+
+- $\bm{D}//\bm{E}$ _if and only if_ $\bm{E}$ is _along the optic axis_, or if it is _perpendicular_ to it
+- If this does not apply, the _propagation of energy_ may not be in the direction of wave propagation, or $\bm{N}$ is _not parallel_ to $\bm{k}$
+## Waves in anisotropic, non-magnetic materials
+- As the material is non-magnetic, $\mu\approx 1$ and $\bm{B}//\bm{H}$, and:
+$$\bm{B}\perp\bm{k}\text{ and }\bm{E}\hspace{1.5cm}\bm{D}\perp\bm{k}\text{ and }\bm{H}$$
