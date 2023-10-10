@@ -226,3 +226,16 @@ $$\mathcal{E}\approx m+\frac{1}{2}m|\bm{v}|^2$$
 
 - The particle's _3-momentum_ is then:
 $$\bm{p}=m\bm{u}=\gamma m\bm{v}=\mathcal{E}\bm{v}$$
+- For a _photon_, $\mathcal{E}=\hbar\omega$, and since $|\vec{p}|^2=m^2=0$, $\bm{p}=\hbar\omega\hat{\bm{n}}$
+
+- Conservation of energy and momentum
+
+$$\mathcal{E}=$$
+
+# Lorentz transformations
+
+# Spacetime diagrams for boosts
+
+# Derivatives
+
+# Electromgnetism
