@@ -16,4 +16,4 @@
 - _String theory_ is a field theory
 	- Map from $\mathbb{R}^2$ or $\mathbb{R}$ (depending on if the string is _open or closed_) to $\mathbb{R}^{26}$
 
-- Mathematically, _thermodynamics_ is also a field theory??
+- Mathematically, _thermodynamics_ is also a field theory

@@ -19,8 +19,11 @@
 - Sun and moon: 0.5 arcminutes in the sky
 - Parsec: distance at which _$1\,\text{AU}$ subtends $1$ arc second_ = $206265 \,\text{AU}$
 ![[Parsec definition.png]]
-- Nearest star: Proxima Centauri, $1.3\,\text{pc}$ away
+- Nearest star: Proxima Centauri, $1.3\,\text{pc}$ away, $\theta=0.764\,\text{arcsec}$
 - To the _galactic centre_: $8.5\,\text{kpc}$
+
+- Astronomical coordinate system:
+![[Astronomical coordinate system.png|500]]
 
 - Radius of the Sun: $6.96\times 10^{8} \,\text{m}$
 
@@ -40,7 +43,7 @@ $$\frac{F_1}{F_2}=10^{0.4(m_2-m_1)}$$
 $$m-M=2.5\log(d/10)^2=5\log d-5$$
 - $d$ is the _distance in parsecs_
 
-# Stars and Galactic Chemical Evolution
+# Galactic Chemical Evolution
 - Definition: an object where _nuclear reactions balance surface radiative losses_
 
 - Birth of a star:
@@ -78,3 +81,53 @@ $$m-M=2.5\log(d/10)^2=5\log d-5$$
 - The _disk_ contains _most of the stellar mass_, and is often _metal rich_, with many _young stars_
 - The _bulge_ is _thicker_ and _roughly spherical_, with a young and old stars, and a _supermassive black hole_
 - The _halo_ has largely _dispersion-dominated kinematics_, is _metal-poor_, and has _globular clusters_ containing _very old objects_
+
+# Stars
+- Most stars form in _clusters_
+- To first approximation, they are:
+	- Roughly at the _same distance_ from us
+	- Roughly the _same age_
+	- Roughly the same _chemical composition_
+
+- The _main properties_ of a star:
+	- Mass
+	- Temperature
+	- Luminosity
+	- Gravity
+	- Age
+	- Chemical composition $(Z)$
+- _Mass_ is typically the _dominant factor_ in all factors _except chemical composition_
+
+## Motion
+- Tracking a star's position and _eliminating the effects of Earth's orbit_ gives the _proper motion_ of a star
+	- Position of stars _within a galaxy_ is _not fixed_
+	- Measured in $\text{arcsec}/\text{yr}$
+
+- One can measure the _redshift_ of a star to find the _radial velocity_
+- Reddening can either be due to _motion_ or is _intrinsic_
+- Therefore, one must use _well-defined spectral features_
+- The redshift is defined as:
+$$z\equiv\frac{\lambda_\text{obs}-\lambda_0}{\lambda_0}$$
+- One can then find the _radial velocity_ $v$:
+$$v=cz$$
+- This is a _limiting case_ of the _result from special relativity_, as $v<<c$
+
+- By _combining_ proper motion and radial velocity, one finds the _true space motion_ of a star
+
+## Luminosity
+- One measures the light of a star through _broad-band filters_
+- _Vega_ provides a _zero-point_ for magnitude:
+![[Vega spectrum.png]]
+
+- One can often _estimate_ the spectrum for a star with a _blackbody spectrum_
+- This is given by _Planck's Law_:
+$$\displaylines{B_\lambda(T)=\frac{2hc^2}{\lambda^5}\frac{1}{\exp(hc/\lambda kT)-1}\\ B_\nu(T)=\frac{2h\nu^3}{c^2}\frac{1}{\exp(h\nu/kT)-1}}$$
+- The _maximum_ of the spectrum is given by _Wien's displacement law_:
+$$\lambda_\text{max}T=0.290\text{ cm K}$$
+- The _energy per unit area per unit time_ is given by the _Stefan-Boltzmann law_:
+$$\int B_\lambda\,d\lambda=\sigma T^4$$
+- The _total luminosity_ is then:
+$$L=4\pi R^2\sigma T^4$$
+- By _comparing the fluxes through different filters_, one has a _photometric estimate_ of the star's _effective temperature_
+- The _Hertzsprung-Russell diagram_:
+![[H-R diagram.png]]

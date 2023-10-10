@@ -148,13 +148,24 @@ $$s=0,\frac{1}{2},1,\frac{3}{2}\dots \hspace{1cm} m_s=-s,-s+1,\dots,s-1,s$$
 $$\displaylines{\wv=\Psi_\uparrow\ket{\uparrow}+\Psi_\downarrow\ket{\downarrow}\\ \Psi\longrightarrow\pmatrix{\Psi_\uparrow\\\Psi_\downarrow}}$$
 
 - In this basis, the _matrix elements_ of the operators are:
-$$\displaylines{\hat{S}^2=\frac{3\hbar^2}{4}\pmatrix{1&0\\0&1}\hspace{1.5cm}\hat{S}_z=\frac{\hbar}{2}\pmatrix{1&0\\0&-1}\\\hat{S}_+=\hbar\pmatrix{0&1\\0&0}\hspace{1.5cm}\hat{S}_-=\hbar\pmatrix{0&0\\1&0} \\ \hat{S}_x=\frac{\hbar}{2}\pmatrix{0&1\\1&0}\hspace{1.5cm}\hat{S}_y=\frac{\hbar}{2i}\pmatrix{0&-i\\i&0}}$$
+$$\displaylines{\hat{S}^2=\frac{3\hbar^2}{4}\pmatrix{1&0\\0&1}\hspace{1.5cm}\hat{S}_z=\frac{\hbar}{2}\pmatrix{1&0\\0&-1}\\\hat{S}_+=\hbar\pmatrix{0&1\\0&0}\hspace{1.5cm}\hat{S}_-=\hbar\pmatrix{0&0\\1&0} \\ \hat{S}_x=\frac{\hbar}{2}\pmatrix{0&1\\1&0}\hspace{1.5cm}\hat{S}_y=\frac{\hbar}{2}\pmatrix{0&-i\\i&0}}$$
 
 - The introduction of spin $1/2$ _doubles_ the dimensionality of the Hilbert space
 - One introduces a basis $\ket{xyzs_z}$ which diagonalise the operators $\hat{X},\hat{Y},\hat{Z},\hat{S}_z$
 - The state vector in this basis becomes:
 $$\braket{xyzs_z|\psi}=\pmatrix{\psi(x,y,z,\hbar/2)\\ \psi(x,y,z,-\hbar/2)}$$
 	- where $\psi(x,y,z,\pm\hbar/2)$ are each an _infinite-dimensional_ vector with the values of $\psi$ as a function of position
+
+- Introduce the _Pauli matrices_ $\bm{\sigma}$:
+$$\sigma_x=\pmatrix{0&1\\1&0}\hspace{1.5cm}\sigma_y=\pmatrix{0&-i\\i&0}\hspace{1.5cm} \sigma_z=\pmatrix{1&0\\0&-1}$$
+- They _anticommute_:
+$$[\sigma_i,\sigma_j]_+=0$$
+- They follow:
+$$\sigma_i\sigma_j=i\epsilon_{ijk}\sigma_k$$
+- They are _traceless_:
+$$\text{Tr }\sigma_i=0$$
+- The _square_ of any Pauli matrix is $I$:
+$$\sigma_i^2=I$$
 # General angular momenta
 
 ## The operators
@@ -194,3 +205,50 @@ $$\mean{\hat{\bm{J}}}=\left(0,0,m\hbar\right)$$
 	- _Total angular momentum_ of one particle $\hat{\bm{J}}=\hat{\bm{L}}+\hat{\bm{S}}$
 	- _Total spin_ of two particles $\hat{\bm{S}}=\hat{\bm{S}}_1+\hat{\bm{S}}_2$
 
+## Finding the eigenstates
+- Let there be an operator comprised of _two generic angular momentum operators_ added:
+$$\hat{\bm{J}}=\hat{\bm{J}}'+\hat{\bm{J}}''$$
+- It can be represented by a $(2j'+1)(2j''+1)-$dimensional matrix
+	- Like before, it is _block-diagonal_
+- It follows the _same commutation relations_ as a _general_ angular momentum operator
+
+- It must then itself have _a set of angular momentum eigenstates_:
+$$\displaylines{\hat{J}^2\ket{jm}=\hbar^2j(j+1)\ket{jm}\hspace{1cm} \hat{J}_z\ket{jm}=\hbar m\ket{jm}\\\braket{j'm'|jm}=\delta_{jj'}\delta_{mm'} \\ j=0,\frac{1}{2},1,\frac{3}{2}\dots \hspace{1cm} m=-j,-j+1,\dots,j-1,j}$$
+- One can see that the _product state_ $\ket{jm}=\ket{j'm'}\otimes\ket{j''m''}$ is an eigenstate of $\hat{J}_z$, but _in general_ is _not_ an eigenstate of $\hat{J}^2$
+$$\displaylines{(\hat{J}_z'+\hat{J}_z'')\ket{jm}=(m'+m'')\hbar\ket{jm}\\ m=m'+m''}$$
+- In _general_, the eigenstate should be written as a _linear combination_ of the original eigenstates:
+$$\ket{jm}=\sum_{m',m''}\left[\ket{j'm'}\otimes\ket{j''m''}\right]\braket{j'm';j''m''|jm}$$
+- The sum is over valus of $m'$ and $m''$ such that $m'+m''=m$
+	- Or one can treat the inner products as _zero_
+- The inner products are known as the _Clebsh-Gordan coefficients_, and give the _overlap_ between the states
+
+- For a _given_ $j'$ and $j''$, one can show that $j$ takes the values:
+$$j=j'+j'',j'+j''-1,\dots,|j'-j''|+1,|j'-j''|$$
+- Intuitively, from the angular momentum vectors being _parallel_ to _anti-parallel_
+- The _maximum_ values of $m'$ and $m''$ are simply $j'$ and $j''$ respectively
+- Hence, the maximum possible value of $m$ is simply $j'+j''$, as expected
+
+- Typically, $j'$ and $j''$ are _given_ but one can also specify the state as $\ket{jmj'j''}$
+
+- For a _given_ $j'$ and $j''$, start with the state $j=j'+j''$ with the _maximum_ $m$:
+$$\ket{j=j'+j'', m=j'+j''}=\ket{j'j'}\otimes\ket{j''j''}$$
+- One can then apply the _ladder operator_:
+$$\displaylines{\hat{J}_\pm=\hat{J}_\pm'+\hat{J}_\pm''\\\hat{J}_\pm\ket{jm}=\left(\hat{J}'_\pm\ket{j'm'}\right)\otimes\ket{j''m''}+\ket{j'm'}\otimes\left(\hat{J}_\pm''\ket{j''m''}\right)}$$
+- To obtain states of _other_ $j$ but _same_ $m$, use the fact that the states are _orthogonal_:
+$$\braket{j_1m|j_2m}=0$$
+
+![[Clebsch-Gordan coefficients.png]]
+## Two spin-1/2 particles
+- For $s'=s''=1/2$, start from the state:
+$$\ket{11}=\ket{\uparrow}\ket{\uparrow}$$
+- Applying the operator $\hat{S}_-=\hat{S}'_-+\hat{S}''_-$:
+$$\ket{10}=\frac{1}{\sqrt{2}}\left(\ket{\uparrow}\ket{\downarrow}+\ket{\downarrow}\ket{\uparrow}\right)$$
+- The state with $s=1$ and $m_s=-1$ is obvious:
+$$\ket{1,-1}=\ket{\downarrow}\ket{\downarrow}$$
+- Then from the fact that $\braket{10|00}=0$:
+$$\ket{00}=\frac{1}{\sqrt{2}}\left(\ket{\uparrow}\ket{\downarrow}-\ket{\downarrow}\ket{\uparrow}\right)$$
+
+- The $s=1$ ladder is known as the _triplet_ state
+- The $s=0$ ladder is known as the _singlet_ state
+
+- This is significant when studying the electron wave-function of the [[Molecular quantum mechanics#The Helium atom|helium atom]]

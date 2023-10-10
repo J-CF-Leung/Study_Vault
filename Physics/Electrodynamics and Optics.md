@@ -1,5 +1,4 @@
-- [ ] Link to IB notes  📅 2023-10-10 🔼 
-- [ ] Finish lecture 2📅 2023-10-11 ⏫ 
+
 # Electrodynamics and Maxwell's Equations
 
 ## Fields and charges
@@ -19,12 +18,12 @@ $$\displaylines{\nabla\cdot\bm{E}=\frac{\rho}{\epsilon_0} \\ \nabla\times\bm{E}=
 	- The extra terms are the _inductive_ and _displacement_ current terms
 ## Statics
 - In the _electrostatic_ and _magnetostatic_ regimes, $\partial\bm{E}/\partial t=\partial\bm{B}/\partial t=0$
-- In _electrostatics_, $\bm{E}$ is _conservative_, as $\nabla\times\bm{E}=0$, hence one can define an _electrostatic potential_:
+- In _electrostatics_, $\bm{E}$ is _conservative_, as $\nabla\times\bm{E}=0$, hence one can define an [[Electromagnetism#The electrostatic potential|electrostatic potential]]:
 $$\bm{E}=-\nabla\phi(\bm{r})$$
-- In _magnetostatics_, in _regions where_ $\bm{J}_T=0$, one can define a _magnetic scalar potential_:
+- In _magnetostatics_, in _regions where_ $\bm{J}_T=0$, one can define a [[Electromagnetism#The magnetic scalar potential|magnetic scalar potential]]:
 $$\bm{B}=-\mu_0\nabla\phi_m(\bm{r})$$
 
-- This combined with the other Maxwell's equations give _Poisson's equation_:
+- This combined with the other Maxwell's equations give [[Electromagnetism#Laplace's and Poisson's equations|Poisson's equation]]:
 $$\nabla^2\phi=\frac{\rho_T}{\epsilon_0}$$
 - Similarly for the magnetic scalar potential:
 $$\nabla^2\phi_m=0$$
@@ -38,12 +37,12 @@ $$\nabla^2\phi_m=0$$
 - In the presence of a _medium_, $\bm{E}$ and $\bm{B}$ can _induce electric/magnetic dipoles_
 - Define _dipole moments per unit volume_ $\bm{P}(\bm{r})$ and $\bm{M}(\bm{r})$
 
-- The _electric polarisation_ $\bm{P}$ gives the _surface/volume charge densities_:
+- The [[Electromagnetism#Polarisation and bound charge density|electric polarisation]] $\bm{P}$ gives the _surface/volume charge densities_:
 $$\sigma_P=\bm{P}\cdot\hat{\bm{n}} \hspace{1.5cm} \rho_P=-\nabla\cdot\bm{P}$$
 - If $\bm{P}$ is _time-dependent_, there is an associated _volume current density_:
 $$\nabla\cdot\bm{J}_P=-\dot{\rho}_P=\nabla\cdot\dot{\bm{P}}\Longrightarrow \bm{J}_P=\dot{\bm{P}}$$
 
-- Meanwhile, the _magnetisation_ $\bm{M}$ gives _surface/volume current densities_:
+- Meanwhile, the [[Electromagnetism#Surface magnetisation currents|magnetisation]] $\bm{M}$ gives _surface/volume current densities_:
 $$\bm{J}_M=\nabla\times\bm{M}\hspace{1.5cm}\bm{j}_M=\bm{M}\times\hat{\bm{n}}$$
 
 - The _total charge and current volume distributions_ give:
@@ -51,7 +50,7 @@ $$\displaylines{\rho_T=\rho+\rho_P=\rho-\nabla\cdot\bm{P} \\ \bm{J}_T=\bm{J}+\bm
 - One then defines the _auxiliary fields_:
 $$\displaylines{\bm{D}=\epsilon_0\bm{E}+\bm{P} \\ \bm{H}=\frac{1}{\mu_0}\bm{B}-\bm{M}}$$
 
-- In _media_, this gives _another set of Maxwell's equations_:
+- In _media_, this gives [[Electromagnetism#Maxwell's equations|Maxwell's equations in media]]:
 $$\displaylines{\nabla\cdot\bm{D}=\rho\\\nabla\cdot\bm{B}=0\\\nabla\times\bm{E}=-\pd{\bm{B}}{t}\\\nabla\times\bm{H}=\bm{J}+\pd{\bm{D}}{t}}$$
 
 - In _linear, isotropic media_, one can define the _susceptibilities_:
@@ -121,14 +120,14 @@ $$\frac{|\bm{E}|}{|\bm{H}|}=\sqrt{\frac{\mu\mu_0}{\epsilon\epsilon_0}}=Z=\sqrt{\
 
 ## Linear polarisation
 - The _polarisation_ of the wave is the _direction_ of $\bm{E}$ in an electromagnetic wave
-	- e.g. $\bm{E}_0=(1,0,0), \bm{B}_0=, \bm{k}=,$ this is "$x-$polarised" 
+	- e.g. $\bm{E}_0=(1,0,0), \bm{B}_0=(0,1,0), \bm{k}=(0,0,1),$ this is "$x-$polarised" 
 - If it is _constant_, it is _plane-polarised_
 
 - At _interfaces_, the _reflection_ and _transmission_ are dependent on whether or not the polarisation is _in the plane of incidence_
 	- $\perp$ to the plane: $s-$polarisation
 	- $//$ to the plane: $p-$polarisation
-- One can then use _boundary conditions_ to _derive_ reflection and transmission coefficients:
-FRESNEL'S RELATIONS
+- One can then use _boundary conditions_ to [[Electromagnetism#Fresnel's relations|derive]] reflection and transmission coefficients:
+$$\displaylines{r_{p}=\frac{n_2\cos\theta_1-n_1\cos\theta_2}{n_2\cos\theta_1+n_1\cos\theta_2} \hspace{1.5cm} t_{p}=\frac{2n_1\cos\theta_i}{n_2\cos\theta_i+n_1\cos\theta_t} \\ r_s=\frac{n_1\cos\theta_1-n_2\cos\theta_2}{n_1\cos\theta_1+n_2\cos\theta_2} \hspace{1.5cm} t_s=\frac{2n_1\cos\theta_i}{n_1\cos\theta_i+n_2\cos\theta_t}}$$
 
 - At _normal incidence_, where $\theta_1=0$, $r_p=-r_s$ and $t_p=t_s$
 - At _grazing incidence_ where $\theta_1\to\pi/2$, $r_p,r_s=1$
@@ -166,7 +165,7 @@ $$\bm{E}_T(t=0)=E_0\bm{i}\cos(kz)-E_0\bm{j}\sin(kz)$$
 $$\frac{E_x^2}{a^2}+\frac{E_y^2}{b^2}-2\cos\delta\frac{E_x}{a}\frac{E_y}{b}=\sin^2\delta$$
 
 - The convention to describe polarisation is using the _Jones vectors_:
-$$\pmatrix{a_1\\ a_2}$$
+$$\displaylines{\text{General elliptical polarisation:}\pmatrix{a\\ b\exp(i\delta)} \\ \bm{L}_x=\pmatrix{1\\0}\hspace{1.5cm}\bm{L}_y=\pmatrix{0\\1}\hspace{1.5cm} \bm{L}_\theta=\pmatrix{\cos\theta\\\sin\theta} \\ \bm{C}_R=\frac{1}{\sqrt{2}}\pmatrix{1\\-i}\hspace{1.5cm}\bm{C}_L=\frac{1}{\sqrt{2}}\pmatrix{1\\ i}}$$
 - These only apply when the _phase difference is constant_
 
 - One can form _linear combinations_ of the states
@@ -219,3 +218,7 @@ $$\Delta n=n_e-n_0$$
 ## Waves in anisotropic, non-magnetic materials
 - As the material is non-magnetic, $\mu\approx 1$ and $\bm{B}//\bm{H}$, and:
 $$\bm{B}\perp\bm{k}\text{ and }\bm{E}\hspace{1.5cm}\bm{D}\perp\bm{k}\text{ and }\bm{H}$$
+- Therefore, $\bm{D}$, $\bm{B}$ and $\bm{k}$ are _mutually orthogonal_
+
+- If $\bm{D}$ is along a _principal axis_, then $\bm{E}\times\bm{H}=\bm{N}||\bm{k}$
+- It is then the _same as an isotropic medium_
