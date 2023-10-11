@@ -16,6 +16,8 @@ $$m\frac{d^2x_i}{dt^2}=F_i$$
 - These laws are completely _deterministic_
 - One can define a _centre of mass_ $X_i$ and _total mass_ $M$, such that for _external forces_ $F_\text{ext}$:
 $$M\frac{d^2X_i}{dt^2}=F_{\text{ext},i}$$
+- This seems to be a _result_ of Newtonian mechanics, instead of a _principle_
+- This is a principle of _locality_, or that _far away_, one can ignore the _internal structure_ of an object
 
 - _However_, Newtonian mechanics _does not specify_ the necessary frame in which to measure $t$
 - It does not explain the _physical origins_ of $\bm{F}$
@@ -28,6 +30,7 @@ $$M\frac{d^2X_i}{dt^2}=F_{\text{ext},i}$$
 # Lagrangian mechanics
 ## Hamilton's Principle of Stationary Action 
 - Let there be a _map_ from $\mathbb{R}$ to $\mathbb{R}^3$
+	- Typically from _time_ to _configuration space_
 - Fix the _initial_ and _final_ times $t_i$ and $t_f$
 - There are _many possible maps_ fixing $t_i$ and $t_f$
 
@@ -70,15 +73,16 @@ $$m\ddot{x}_i=-\pd{V}{x_i}$$
 - For _velocity dependent_ (but still _conservative_!) forces, $L$ takes a different form that reproduces the _correct equations of motion_
 - Example: Coriolis $(2m\dot{r}\dot{\theta})$, Euler $(mr\ddot{\theta})$ , and centrifugal forces $(mr\dot{\theta}^2)$ arise from polar E-L equations
 
-- One can also apply _constraints_ using _Lagrange multipliers_
+- One can also apply _constraints_ using _Lagrange multipliers_ (as long as they are _holonomic_)
 - One can also easily spot _symmetries_ in the system
 ## Generalised momentum and force conjugates
 - _Canonical momentum_ conjugate $p_i$:
 $$p_i=\pd{L}{\dot{q}_i}$$
+
 - _Canonical force_ conjugate $F_i$:
 $$F_i=\pd{L}{q_i}$$
 - Polar coordinates: 
-	- $p_\theta=mr^2\dot{\theta}$, angular moentum
+	- $p_\theta=mr^2\dot{\theta}$, angular momentum
 	- $F_\theta=$ torque
 ## Cyclic coordinates and conservation of momentum
 - If $L=L(\dot{q}_i)$,  $F_i=\dot{p}_i=0$
@@ -115,10 +119,10 @@ $$\pd{L}{s}\Bigg{|}_{s=0}=\frac{d}{dt}\left(\sum_i\pd{L}{Q_i}\pd{Q_i}{s}\Bigg|_{
 ### Example: Translations, homogeneity of space
 - Consider a system of $i$ particles, at positions $\bm{r}_i$ translated by vector $\bm{n}$
 $$\bm{r}_i(t) \rightarrow \bm{r}_i(t)+s \,\bm{n}$$
-- Invariance of $L$ after translation:
+- If $L$ is _invariant_ after translation:
 $$\pd{L}{s}=\frac{d}{dt}\left(\sum_i\bm{p}_i\cdot\bm{n} \right)=0$$
-- Total momentum along direction $\bm{n}$ is conserved
-- The conservation holds for all $\bm{n}$, therefore total momentum is conserved
+- _Total momentum along_ direction $\bm{n}$ is conserved
+- The conservation holds for all $\bm{n}$, therefore _total momentum is conserved_
 	- Example: Two-body system
 	- Applying Noether's theorem for all directions --> $\dot{p}_i=0$  $\forall\; i$
 ### Isotropy of space and rotational invariance
@@ -127,14 +131,14 @@ $$\pd{L}{s}=\frac{d}{dt}\left(\sum_i\bm{p}_i\cdot\bm{n} \right)=0$$
 - $\hat{\bm{n}}$: arbitrary axis, therefore $\bm{L}$ is conserved
 ### Homogeneity of time
 - _Time-translation_ invariance
-- Moving the system in time does not affect its evolution
+- Moving the system in _time_ does not affect its evolution
 - Lagrangian _cannot explicitly depend on time_
 - Total change in value of Lagrangian:
 $$\frac{dL}{dt}=\frac{d}{dt}\left(\sum_i\pd{L}{\dot{q}_i}\dot{q}_i\right)+\pd{L}{t}$$
 - Introduce the _Hamiltonian_:
 $$\Ham=\sum_i\left(\pd{L}{\dot{q}_i}\dot{q}_i\right)-L$$
 $$\frac{d\Ham}{dt}=-\pd{L}{t}$$
-- The Hamiltonian only changes when the Lagrangian depends explicitly on time
+- The Hamiltonian _only changes when the Lagrangian depends explicitly on time_
 - When $L=T-V$, $\Ham=T+V=E$
 - Energy is conserved when Lagrangian does not depend explicitly on time
 	- Example: Magnetic field that varies with time
@@ -147,24 +151,31 @@ $$\frac{d\Ham}{dt}=-\pd{L}{t}$$
 
 # Hamiltonian formulation
 ## Hamiltonian as a Legendre transform
-- In the Lagrangian formulation, $p_i=\partialL/\partial \dot{q}_i$
+- In the Lagrangian formulation, $p_i=\partial L/\partial \dot{q}_i$
 - In the Hamiltonian formulation, $\dot{q}$ _becomes the derived quantity_ from $p$:
 $$\dot{q}_i=\pd{\Ham}{p_i}$$
 - To find $\Ham$, one can use the _Legendre transform_, giving:
 $$\Ham=\sum_i\left(\pd{L}{\dot{q}_i}\dot{q}_i\right)-L=\sum_i \dot{q}_ip_i-L$$
 - Considering the total differential of $\Ham$, one gets _Hamilton's equations_:
 $$\begin{aligned}\dot{q}_i&=\pd{\Ham}{p_i} \\[8pt] \dot{p}_i&=-\pd{\Ham}{q_i} \\[8pt] \frac{d\Ham}{dt}&=-\pd{L}{t}\end{aligned}$$
-- Cyclic coordinates still exist in the Hamiltonian formulation, with $\dot{p_i}=0$ if $\Ham$ does not depend on $q_i$
+- _Cyclic coordinates_ still exist in the Hamiltonian formulation, with $\dot{p_i}=0$ if $\Ham$ does not depend on $q_i$
 
 ## Phase space
-- In the Lagrangian formalism, a system's state is described by a _point in $n-$dimensional configuration space_, with a definite velocity
+- In the Lagrangian formalism, a system's state is described by a _point in $n-$dimensional configuration space_, with a _definite velocity_
+	- For a _given point_ $q$, one must also give $\dot{q}$ to determine the trajectory
+	- Due to the fact that the E-L equation is _second-order_
 - In the Hamiltonian formalism, a system is described by a single _point in $2n-$dimensional phase space_
+	- For a _given point_ $(q,p)$, there is _only one trajectory_ passing through that point
+	- Due to the fact that Hamilton's equations are _first-order_
+
 - The velocity of a point moving through phase space:
 $$\bm{v}_{phase} = \sum_i(\dot{q}_i\hat{q}_i+\dot{p}_i\hat{p}_i)$$
 - If energy is conserved, the point stays on a $2n-1$-dimensional _surface of constant energy_
 - The collection of all possible trajectories is known as _phase space flow_
 - The flow is _divergenceless_:
 $$\nabla\cdot\bm{v}_{phase}=\sum_i\left(\pd{\dot{q}_i}{q_i}+\pd{\dot{p}_i}{p_i}\right)=0$$
+- This corresponds to the fact that _only one trajectory_ passes through every point
+
 - Example of phase space flow: 1-dimensional harmonic oscillator
 	- Phase space: 2-dimensional
 	$$\frac{x^2}{2E/k}+\frac{p^2}{2mE}=1$$
@@ -181,8 +192,13 @@ In other words, the distribution function along a phase space trajectory is cons
 dp_i \rightarrow d\bar{p}_i=dp_i-\pd{\Ham}{q_i}dt}$$
 	- The volume element at time $t+dt$:
 	$$d\bar{V}=d\bar{q}_1\cdots d\bar{q}_n d\bar{p}_1\cdots d\bar{p}_n=\left|\pd{(\bar{q},\bar{p})}{(q,p)}\right|\,dV=(\det\mathcal{J})\,dV$$
-	- It can be proven that the [[Vector calculus in 3-dimensions#The Jacobian matrix|Jacobian]]  is equal to $1+O(dt^2)$ 
+	- It can be proven that the [[Vector calculus in 3-dimensions#The Jacobian matrix|Jacobian]] is equal to $1+O(dt^2)$ 
 	- Therefore the volume is unchanged
+
+- Or, given some volume $V$ in the phase space, compute the _flux_ through the outer surface, and use the fact that the _flow is divergenceless_:
+$$\frac{dV}{dt}=\int_S\bm{v}\cdot\,d\bm{S}=\int_V\nabla\cdot\bm{v}\,dV=0$$
+- If the system is _dissipative_ (and cannot be described by $L$ or $H$), the volume _shrinks_
+
 - Liouville's equation: the _number of phase points around a "comoving" volume is unchanged_
 	- $\rho$: the [[Fundamental principles of statistical mechanics#The statistical distribution function|statistical distribution function]]
 	 $$\frac{d\rho}{dt}=\pd{\rho}{t}+\sum_i \pd{\rho}{q_i}\dot{q}_i+\pd{\rho}{p_i}\dot{p}_i=0$$
@@ -192,15 +208,14 @@ dp_i \rightarrow d\bar{p}_i=dp_i-\pd{\Ham}{q_i}dt}$$
 - For statistical distribution functions $\rho=\rho(\Ham(q,p))$, $\partial\rho/\partial t=0$
 	- Example: distributions in [[Fundamental principles of statistical mechanics|statistical mechanics]]
 
-
 # Comparison between formulations of mechanics
-| Newtonian                                                                                           | Lagrangian                                                              | Hamiltonian                                                             |
-| --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| Vectorial description, trajectory determined "step-by-step" through time                            | Scalar-based/variational description, trajectory determined all at once | Variational description                                                 |
-| For $n$ degrees of freedom, state described by $n$ coordinates and $n$ velocities $(q, \dot{q})$    | Same as Newtonian mechanics                                             | For $n$ DOF, state described by $n$ coordinates and $n$ momenta $(q,p)$ |
-| State represented by a point moving with definite velocity in $n-$dimensional _configuration space_ | Same as Newtonian mechanics                                             | State described by a point in $2n-$dimensional _phase space_              |
-| $n$ coordinates evolve according to $n$ _second-order equations_                                      | Same as Newtonian mechanics                                             | $2n$ coordinates and momenta obey $2n$ _first-order equations_            |
-|                                                                                                     |  For a given $L$, several trajectories can pass through a given point in configuration space depending on $\dot{q}$   | For a given $\Ham$, only one trajectory passes through a given point in phase space |
+| Newtonian                                                                                           | Lagrangian                                                                                                         | Hamiltonian                                                                         |
+| --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
+| Vectorial description, trajectory determined "step-by-step" through time                            | Scalar-based/variational description, trajectory determined all at once                                            | Variational description                                                             |
+| For $n$ degrees of freedom, state described by $n$ coordinates and $n$ velocities $(q, \dot{q})$    | Same as Newtonian mechanics                                                                                        | For $n$ DOF, state described by $n$ coordinates and $n$ momenta $(q,p)$             |
+| State represented by a point moving with definite velocity in $n-$dimensional _configuration space_ | Same as Newtonian mechanics                                                                                        | State described by a point in $2n-$dimensional _phase space_                        |
+| $n$ coordinates evolve according to $n$ _second-order equations_                                    | Same as Newtonian mechanics                                                                                        | $2n$ coordinates and momenta obey $2n$ _first-order equations_                      |
+|                                                                                                     | For a given $L$, several trajectories can pass through a given point in configuration space _depending on_ $\dot{q}$ | For a given $\Ham$, _only one_ trajectory passes through a given point in phase space |
 # Poisson brackets
 - _Poisson brackets_ (PBs) are another way to express relations in classical mechanics
 $$\PB{\omega}{\lambda}=\sum_i\left(\pd{\omega}{q_i}\pd{\lambda}{p_i}-\pd{\omega}{p_i}\pd{\lambda}{q_i}\right)$$

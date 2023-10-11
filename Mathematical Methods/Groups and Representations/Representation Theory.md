@@ -1,3 +1,8 @@
+- A note on notation: use _upper indices_ on _complex column vectors_
+- Then define the _lower index_ such that:
+$$\phi_i\equiv(\phi^i)^*$$
+- The _inner product_ is then:
+$$\braket{\phi|\psi}=\phi_i\psi^i$$
 # Representations and characters
 - The idea is to _represent group elements by matrices_
 - The matrices must _reflect the [[Foundations of Group Theory#Multiplication tables|multiplicative table]] of the group_

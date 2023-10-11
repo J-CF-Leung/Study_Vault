@@ -6,7 +6,7 @@
 
 - It is also convenient to define a _total angular momentum_ $\hat{\bm{J}}\equiv\hat{\bm{L}}+\hat{\bm{S}}$
 
-- [ ] Start addition of angular momentum📅 2023-10-10 ⏫ 
+- [x] Start addition of angular momentum ⏫ 📅 2023-10-10 ✅ 2023-10-11
 # Orbital angular momentum
 - The _orbital_ angular momentum is _analagous to classical angular momentum_:
 $$\displaylines{\hat{\bm{L}}=\hat{\bm{X}}\wedge\hat{\bm{P}} \hspace{1cm} \hat{L}_i=\epsilon_{ijk}\hat{X}_j\hat{P}_k}$$

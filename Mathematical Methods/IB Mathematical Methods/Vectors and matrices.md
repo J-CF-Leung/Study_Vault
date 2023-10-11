@@ -1,4 +1,3 @@
-- [ ] Finish section from Zee Group Theory 🔼 📅 2023-10-08 
 
 >[!quote]
 "This material is almost as dry as the Sahara, or East Anglia"
@@ -127,6 +126,21 @@ $$\mathcal{AB}\neq\mathcal{BA}\Longleftrightarrow\textbf{AB}\neq\textbf{BA}\Long
 - However, it is _associative_:
 $$\textbf{A}(\textbf{BC})=(\textbf{AB})\textbf{C}\Longleftrightarrow A_{ik}(B_{kl}C_{lj})=(A_{ik}B_{kl})C_{lj}$$
 
+## Transpose and Trace
+- Given a matrix $M$, one can perform a _transpose_ $M^T$:
+$$(M^T)_{ij}=M_{ji}$$
+- The transpose of a _row vector_ then gives a _column vector_
+
+- By writing out the matrix multiplication, one can prove that the _transpose of a product_ is:
+$$(MN)^T=N^TM^T$$
+
+- The _trace_ of a matrix $A$ is defined as:
+$$\text{Tr}(A)=A_{ii}$$
+- Although $AB\neq BA$, the _trace_ of the two products are _identical_:
+$$\text{Tr}(AB)=\text{Tr}(BA)$$
+- From this, one sees that the trace is also invariant under _cyclic permutations_:
+$$\text{Tr}(ABC)=\text{Tr}(CAB)=\text{Tr}(BCA)$$
+
 ## Transformations
 - Let $\{\bm{u}_i\}$ and $\{\bm{u}_i'\}$ be two sets of basis vectors in an $n$-dimensional $\mathbb{V}$
 - One can express the latter basis in terms of a _linear relationship_ with a set of numbers $A_{ij}$
@@ -154,9 +168,6 @@ $$\textbf{v}=\begin{pmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{pmatrix} \hspace{1
 - The above relations can be expressed as:
 $$\displaylines{\textbf{v}=\textbf{Av'} \iff \textbf{v'}=\textbf{A}^{-1}\textbf{v} 
  \\ \textbf{u'}=\textbf{uA}}$$
-
-## Matrix multiplication
-
 
 ## Special properties of matrices
 - Properties of _real_ matrices:
@@ -228,7 +239,7 @@ $$|\braket{\bm{u}|\bm{v}}|\leq |\bm{u}||\bm{v}|$$
 $$|\bm{u}+\bm{v}|\leq |\bm{u}|+|\bm{v}|$$
 
 ## Scalar product in terms of components, and the metric
-- Suppose there is a scalar product defined in a vector space with basis vectors $\{\bm{u}_i\}$
+- Suppose there is a _scalar product_ defined in a vector space with basis vectors $\{\bm{u}_i\}$
 - Define the complex numbers $G_{ij}$:
 $$G_{ij}=\bm{u}_i\cdot\bm{u}_j$$
 - For _any_ two vectors:

@@ -2,7 +2,7 @@
 > As the speed of light is _constant_, one can use _geometrised units_:
 > $$c=2.99792458\times10^8\,\text{m}\,\text{s}^{-1}=1$$
 
-- [ ] Lorentz transformations📅 2023-10-10 ⏫ 
+- [x] Lorentz transformations ⏫ 📅 2023-10-10 ✅ 2023-10-11
 - [ ] Accelerating frames and rapidity 📅 2023-10-10 ⏫ 
 - [ ] Length contraction and time dilation 📅 2023-10-10 ⏫ 
 
@@ -82,18 +82,15 @@ $$(\Delta\vec{x})^2\equiv(\Delta s)^2=(\Delta s')^2$$
 
 - Just as _Euclidean distance_ is fundamental to geometry in flat [[Geometric principles in Newtonian mechanics|3-space]], the interval is fundamental to the geometry of _spacetime, or Minkowski space_
 
-## Tensor algebra in Minkowski spacenot done
-due after today
-due before in one week
-short mode
-hide edit button
-hide backlink
+## Tensor algebra in Minkowski space
 - Many [[Geometric principles in Newtonian mechanics|definitions in 3-space]] still _apply_
 - A _tensor_ $\textbf{T}(\_,\_)$ is still a _real-valued linear function of vectors_ in Minkowski spacetime
 	- The _rank_ is still the number of vectors needed to produce a _scalar_
 - The _inner/dot product_ of two 4-vectors is still:
 $$\vec{A}\cdot\vec{B}\equiv\frac{1}{4}\left[(\vec{A}+\vec{B})^2-(\vec{A}-\vec{B})^2\right]$$
 	- where the squared length is simply the _interval_
+- Like in Euclidean 3-space, the _inner product_ is as _frame-independent_ as the _4-vectors themselves_
+
 - The _metric tensor_ in spacetime is still a _rank 2 tensor_ for 2 4-vectors:
 $$\textbf{g}(\vec{A},\vec{B})=\vec{A}\cdot\vec{B}$$
 - Then any vector is then a _rank 1 tensor_
@@ -228,11 +225,81 @@ $$\mathcal{E}\approx m+\frac{1}{2}m|\bm{v}|^2$$
 $$\bm{p}=m\bm{u}=\gamma m\bm{v}=\mathcal{E}\bm{v}$$
 - For a _photon_, $\mathcal{E}=\hbar\omega$, and since $|\vec{p}|^2=m^2=0$, $\bm{p}=\hbar\omega\hat{\bm{n}}$
 
-- Conservation of energy and momentum
+- This demonstrates that _every 4-vector_ can be _split_ in a "3+1" manner, as a _vector_ and a _scalar_
+- The 3+1 split of 4-momentum gives the _energy_ and _momentum_
+- From the _conservation of 4-momentum_, one gets the _conservations of 3-momentum and energy_:
+$$\sum_\bar{A}\bm{p}_\bar{A}=\sum_A\bm{p}_A\hspace{1.5cm}\sum_\bar{A}\mathcal{E}_\bar{A}=\sum_A\mathcal{E}_A$$
+- Energy and momentum are _frame-dependent_
 
-$$\mathcal{E}=$$
+- Let there be a _particle_ with some 4-momentum $\vec{p}$, _observed_ by someone with 4-velocity $\vec{U}$
+- As the 4-velocity has components $U^0=1$ and $U^i=0$, the _measured energy_ is $p^0$ in the _observer's frame_, given by:
+$$\mathcal{E}=\vec{p}\cdot\vec{U}$$
+- $\mathcal{E}$ is from the _observer's frame_, but the _inner product is frame-independent_
+
+## The Doppler Effect
+- Let there be some _moving atom_ with _ordinary velocity_ $\bm{v}$ emitting a photon at an _observer_, whose direction is $\bm{n}$:
+![[Doppler effect.png]]
+
+- By using the above formula using the inner product _evaluated in the receiver's frame_, one gets:
+$$\frac{\nu_\text{rec}}{\nu_\text{em}}=\frac{\sqrt{1-|\bm{v}|^2}}{1-\bm{v}\cdot\bm{n}}$$
+- If $\bm{v}//\bm{n}$, and $\bm{v}$ is going _towards_ the observer:
+$$\frac{\nu_\text{rec}}{\nu_\text{em}}=\sqrt{\frac{1+|\bm{v}|}{1-|\bm{v}|}}$$
+- If it is going _away_ from the observer, the signs are _flipped_
+
+- If the particle has _mass_ and is emitted with velocity $\bm{V}$:
+$$\frac{\mathcal{E}_\text{rec}}{\mathcal{E}_\text{em}}=\frac{\sqrt{1-|\bm{v}|^2}}{1-\bm{v}\cdot\bm{V}}$$
+
+## Velocity addition
+- Let there be two particles travelling at _ordinary velocities_ $\bm{v}$ and $\bm{v}'$
+- One may want to _transform_ to the frame of the particle travelling at $\bm{v}$, and find the _transformed velocity_ of $\bm{v}'$, denoted $\bm{v}_f$
+
+- Use the _invariance of the inner product_ $\vec{v}\cdot\vec{v}'$:
+$$\gamma_f=\gamma\gamma'(1-\bm{v}\cdot\bm{v}')$$
+- If $\bm{v}$ and $\bm{v}'$ face the _same direction_:
+$$v_f=\frac{v+v'}{1-vv'}$$
 
 # Lorentz transformations
+- Let there be _two different inertial frames_ with coordinates $\{x^\alpha\}$ and $\{x^\bar{\mu}\}$, and basis vectors $\{\vec{e}_\alpha\}$ and $\{\vec{e}_\bar{\mu}\}$
+- Write the _transformations_ as:
+$$\vec{e}_\alpha=\vec{e}_\bar{\mu}{L^\bar{\mu}}_\alpha\hspace{1.5cm}\vec{e}_\bar\mu=\vec{e}_\alpha{L^\alpha}_\bar\mu$$
+- It is obvious that they are _inverses_ of each other:
+$${L^\bar\mu}_\alpha {L^\alpha}_\bar\nu={\delta^\bar\mu}_\bar\nu\hspace{1.5cm}{L^\alpha}_\bar\mu {L^\bar\mu}_\beta={\delta^\alpha}_\beta$$
+- As in Euclidean 3-space, the _orthonormality_ of the bases dictates that the transformation is _orthogonal_ (reflection or rotation), and the same _holds in Minkowski spacetime_
+- By using the transformation laws:
+$$g_{\alpha\beta}={L^\bar\mu}_\alpha {L^\bar\nu}_\beta \,g_{\bar\mu\bar\nu}\hspace{1.5cm} g_{\bar\mu\bar\nu}={L^\alpha}_\bar\mu {L^\beta}_\bar\nu \,g_{\alpha\beta}$$
+- Any matrix $L$ satisfying this is known as a _Lorentz transformation_
+
+- The transformation laws for the _components_ of 4-vectors:
+$$A^\bar\mu={L^\bar\mu}_\alpha A^\alpha\hspace{1.5cm}T^{\bar\mu\bar\nu\bar\rho}={L^\bar\mu}_\alpha{L^\bar\nu}_\beta{L^\bar\rho}_\gamma \,T^{\alpha\beta\gamma}$$
+- As long as the _spacetime origins_ of the frames _coincide_, then the vectors to some event will have _components_ equal to the _spacetime coordinates_, such that the _coordinates also follow the above transformation laws_:
+$${x^\bar\mu}={L^\bar\mu}_\alpha x^\alpha$$
+
+- The _product_ of two Lorentz transformations gives _another_ Lorentz transformation
+- Hence, all Lorentz transformations form the _Lorentz group_
+## Boosts
+- A specific type of Lorentz transformation is known as the _pure boost_:
+$${L^\bar\mu}_\alpha=\pmatrix{\gamma&-\beta\gamma&0&0\\-\beta\gamma&\gamma&0&0\\0&0&1&0\\0&0&0&1}\hspace{1.5cm}{L^\alpha}_\bar\mu=\pmatrix{\gamma&\beta\gamma&0&0\\\beta\gamma&\gamma&0&0\\0&0&1&0\\0&0&0&1}$$
+- $\gamma$ is the [[#Particle kinetics in index notation|Lorentz factor]] previously derived:
+$$|\beta|<1\hspace{1cm}\gamma=\frac{1}{\sqrt{1-\beta^2}}$$
+
+- This gives the _change of coordinates_:
+$$\displaylines{\bar{t}=\gamma(t-\beta x)\hspace{1cm}\bar x=\gamma(x-\beta t)\hspace{1cm}\bar y=y\hspace{1cm}\bar z=z\\ t=\gamma(\bar t+\beta\bar x)\hspace{1cm}x=\gamma(\bar x+\beta\bar t)\hspace{1cm}y=\bar y\hspace{1cm}z=\bar z}$$
+- If there is a particle _at rest_ at $x_0$ _in the unbarred frame_, $\bar{x}=\gamma x_0-\beta\bar{t}$
+- In other words, an observer _at rest in the unbarred frame_ sees the _barred frame_ moving at $\bm{v}=+\beta\bm{e}_x$
+
+- A boost along some _unit vector_ $\hat{\bm{n}}$ can be written as follows:
+$${L^\bar0}_0=\gamma\hspace{1cm}{L^\bar\mu}_0={L^\bar0}_\mu=\beta\gamma n^\mu \hspace{1cm} {L^\bar\mu}_\nu={L^\bar\nu}_\mu=(\gamma-1)n^\mu n^\nu+\delta^{\mu\nu}$$
+- As for _pure rotations_, they can be represented by:
+$${L^\bar\mu}_\alpha=\pmatrix{1&0&0&0\\0&{R^1}_1&{R^1}_2&{R^1}_3 \\ 0&{R^2}_1&{R^2}_2&{R^2}_3 \\ 0&{R^3}_1&{R^3}_2&{R^3}_3}$$
+- Here, $R$ is a _rotation matrix_ in Euclidean 3-space
+- One can show that the _general_ Lorentz transformation is a _sequence_ of _pure boosts_, _pure rotations_, and _pure inversions_
+## Rapidity
+- One can define a _rapidity_ $\psi$ such that $\beta=\tanh\psi$
+- Then one finds that:
+$$\gamma=\cosh\psi \hspace{1.5cm}\beta\gamma=\sinh\psi$$
+- One can then _rewrite the Lorentz boosts_:
+$$\displaylines{{L^\bar\mu}_\alpha=\pmatrix{\cosh\psi&-\sinh\psi&0&0\\-\sinh\psi&\cosh\psi&0&0\\0&0&1&0\\0&0&0&1}\\ \bar{t}=t\cosh\psi-x\sinh\psi \hspace{1cm}\bar x=x\sinh\psi-t\cosh\psi\hspace{1cm}\bar y=y\hspace{1cm}\bar z=z}$$
+- This is like a _rotation_ in Minkowski space, but with _hyperbolic_ angles
 
 # Spacetime diagrams for boosts
 
