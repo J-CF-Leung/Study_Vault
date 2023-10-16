@@ -4,7 +4,8 @@
 
 - [x] Lorentz transformations ⏫ 📅 2023-10-10 ✅ 2023-10-11
 - [ ] Accelerating frames and rapidity 📅 2023-10-10 ⏫ 
-- [ ] Length contraction and time dilation 📅 2023-10-10 ⏫ 
+- [x] Length contraction and time dilation ⏫ 📅 2023-10-10 ✅ 2023-10-13
+- [ ] Catch up to notes
 
 - In _Newtonian mechanics_, when two frames travel with _relative velocity_ $v$, one performs a _Galilean transformation_:
 $$ct'=ct \hspace{1cm}x'=x-vt\hspace{1cm}y'=y\hspace{1cm}z'=z$$
@@ -300,6 +301,34 @@ $$\gamma=\cosh\psi \hspace{1.5cm}\beta\gamma=\sinh\psi$$
 - One can then _rewrite the Lorentz boosts_:
 $$\displaylines{{L^\bar\mu}_\alpha=\pmatrix{\cosh\psi&-\sinh\psi&0&0\\-\sinh\psi&\cosh\psi&0&0\\0&0&1&0\\0&0&0&1}\\ \bar{t}=t\cosh\psi-x\sinh\psi \hspace{1cm}\bar x=x\sinh\psi-t\cosh\psi\hspace{1cm}\bar y=y\hspace{1cm}\bar z=z}$$
 - This is like a _rotation_ in Minkowski space, but with _hyperbolic_ angles
+
+- When performing [[#Velocity addition|velocity addition]], one can also treat it as a _series of successive Lorentz transforms_:
+$$\displaylines{\bar{\bar x}=\bar \gamma(\bar x-\bar\beta\bar t)\hspace{1.5cm}\bar{\bar t}=\bar\gamma(\bar t-\bar\beta\bar x) \\ \bar x=\gamma(x-\beta t)\hspace{1.5cm}\bar t=\gamma(t-\beta x)} $$
+- By substituting the _rapidities_ into the transformations, one finds:
+$$\bar{\bar x}=x\sinh(\psi+\bar\psi)-t\cosh(\psi+\bar\psi)$$
+
+## Time dilation and length contraction
+- Consider an object of _proper length_ $l_0$ in frame $(\bar{t},\bar{x},\bar{y},\bar{z})$, lying along $\bar{x}$
+	- Let the object go from points $A$ to $B$, so $\bar{x}_B(\bar t)-\bar x_A(\bar t)=l_0$
+- If an observer in the frame $(t,x,y,z)$ performs the _length measurement_ $x_B(t)-x_A(t)$, from the transformations one finds that the length is _contracted_:
+$$l=x_B(t)-x_A(t)=\frac{l_0}{\gamma}<l_0$$
+- For a _length measurement_, one is measuring the interval between _two events in a slice of simultaneity in that frame_
+
+- Consider an _ideal clock_ at _rest_ in frame $(\bar{t},\bar{x},\bar{y},\bar{z})$, measuring _proper time_ $T_0$
+- For an observer in the frame $(t,x,y,z)$ performs the _time elapsed_ in their frame _while the clock ticks_ $T_0$, they find that:
+$$T=\gamma T_0>T_0$$
+- From that observer's perspective, a _moving clock runs slower_
+
+## Acceleration
+- Let the _velocity_ of frame $\{\vec{e}_\bar\mu\}$ _vary in time_
+- Taking the _derivative_ of the _velocity 4-vector_ with respect to _proper time_:
+$$\vec{a}=\frac{d\vec{u}}{d\tau}$$
+- Denoting the _3-acceleration_ as $\bm{a}\equiv d\bm{v}/dt$, the _4-acceleration_ can be _split_:
+$$\vec{a}=(\gamma^4|\bm{v}||\bm{a}|,\gamma^4|\bm{v}||\bm{a}|\bm{v}+\gamma^2\bm{a})$$
+- For _constant $m$_, the [[#Particle kinetics in index notation|4-force]] $\vec{F}=m\vec{a}$
+
+- Given that a frame $\{\vec{e}_\bar\mu\}$ has some _acceleration_ $a(t)$ as observed by $\{\vec{e}_\alpha\}$, the _rapidity_ of the transformation is given by:
+$$\psi=\int a(t)\,dt$$
 
 # Spacetime diagrams for boosts
 

@@ -45,3 +45,31 @@ $$\bm{F}=m_I\frac{d^2\bm{x}}{dt^2}$$
 - Gravity manifests itself as the global _curvature of space-time_, caused by the presence of _matter_
 
 - Experimental evidence (gravitational waves, mercury's precession) has shown that for _extreme gravity_, Einsteinian relativity is _much more accurate than Newtonian mechanics_
+
+- The above conclusions motivate the description of spacetime as a _manifold_
+- In _special relativity_, _Minkowski spacetime_ is a 4-dimensional manifold
+- In _general relativity_, spacetime is a _manifold_ that responds _dynamically_ to mass and energy
+
+# Manifolds and coordinates
+- _Informally_, an $n-$dimensional manifold is a _surface_ on which one can have a _network_ of _coordinate patches_, where the surface _resembles_ $\mathbb{R}^n$, but only _locally_
+- In relativity, the _network_ is a set of _events_, and the whole _patch_ is _spacetime_
+
+- Formally, an $n-$dimensional manifold is a _structure consisting of_:
+	- A _set_ $\mathcal{M}$ of _points_ $P$
+	- A _countable_ family of _subsets of_ $\mathcal{M}$, known as _fundamental coordinate patches_ $C_\alpha$, such that the _union_ of all $C_\alpha$ is the whole set $\mathcal{M}$
+	- One can _map_ each $C_\alpha$ to an _open subset of_ $\mathbb{R}^n$, with each point having _coordinates_ $x^a=(x^0,x^1,\dots,x^n)$
+- Generally, one is _unable_ to _cover_ the entire manifold with _one patch_
+- The manifold is _differentiable_ if the patches are joined _smoothly_
+- Manifolds are often _embedded_ in some higher-dimensional Euclidean space
+	- Example: a _curved_ 2D surface (e.g. bubble) in 3D space
+	- This is not a _necessary condition_ for a manifold to exist
+- An example of a manifold is the _set of 3D rotations_ in space
+
+- Once manifolds are defined, one can support _objects_ on this manifold
+	- _Scalar fields_ $\phi(x^a)$
+	- _Curves_ $x^\mu(s)$
+	- _Surfaces_ $x^\mu(s_1,s_2)$
+	- _Tangent vectors_ $dx^\mu/ds|_{s_0}$ _along a curve_
+	- _Tangent spaces_, a collection of _tangent vectors for all curves passing through a point $s_0$_, which forms a _vector space_
+
+

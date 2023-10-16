@@ -5,6 +5,8 @@
 
 - Laws are in fact _constrained_ by the fact that they are _coordinate and basis independent_
 - Instead, they are _geometric relationships_ between _geometric objects_ such as vectors and tensors
+
+- [ ] Notes from Arnold (manifolds)
 # Mathematical prerequisites
 
 ## Vectors

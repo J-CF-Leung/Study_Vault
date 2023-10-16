@@ -1,4 +1,4 @@
-
+- [ ] Anisotropic materials
 # Electrodynamics and Maxwell's Equations
 
 ## Fields and charges
@@ -139,7 +139,7 @@ $$\displaylines{r_{p}=\frac{n_2\cos\theta_1-n_1\cos\theta_2}{n_2\cos\theta_1+n_1
 - At optical frequencies, _magnetic properties are negligible_, hence:
 $$n=\sqrt{\epsilon\mu}\to\sqrt{\epsilon}$$
 
-## Polarised light
+## Polarised light and the Jones representation
 - A _general_ polarisation state is a _superposition of plane wave solutions_
 - Consider two _perpendicular_ plane-polarised waves:
 $$\bm{E}_1=\bm{i}a_1E_0\exp[i(kz-\omega t)]\hspace{1cm}\bm{E}_2=\bm{j}a_2E_0\exp[i(kz-\omega t)]$$
@@ -163,6 +163,8 @@ $$\bm{E}_T(t=0)=E_0\bm{i}\cos(kz)-E_0\bm{j}\sin(kz)$$
 - For $|a_1|\neq|a_2$ and $\delta\neq\pi/2$, it is _elliptically polarised_
 - For $a_1=a$ and $a_2=b\exp(i\delta)$:
 $$\frac{E_x^2}{a^2}+\frac{E_y^2}{b^2}-2\cos\delta\frac{E_x}{a}\frac{E_y}{b}=\sin^2\delta$$
+![[Elliptical polarisation.png]]
+$$\tan2\alpha=\frac{2ab\cos\theta}{a^2-b^2}$$
 
 - The convention to describe polarisation is using the _Jones vectors_:
 $$\displaylines{\text{General elliptical polarisation:}\pmatrix{a\\ b\exp(i\delta)} \\ \bm{L}_x=\pmatrix{1\\0}\hspace{1.5cm}\bm{L}_y=\pmatrix{0\\1}\hspace{1.5cm} \bm{L}_\theta=\pmatrix{\cos\theta\\\sin\theta} \\ \bm{C}_R=\frac{1}{\sqrt{2}}\pmatrix{1\\-i}\hspace{1.5cm}\bm{C}_L=\frac{1}{\sqrt{2}}\pmatrix{1\\ i}}$$
@@ -220,5 +222,93 @@ $$\Delta n=n_e-n_0$$
 $$\bm{B}\perp\bm{k}\text{ and }\bm{E}\hspace{1.5cm}\bm{D}\perp\bm{k}\text{ and }\bm{H}$$
 - Therefore, $\bm{D}$, $\bm{B}$ and $\bm{k}$ are _mutually orthogonal_
 
-- If $\bm{D}$ is along a _principal axis_, then $\bm{E}\times\bm{H}=\bm{N}||\bm{k}$
-- It is then the _same as an isotropic medium_
+- If $\bm{D}$ is along _any principal axis_, then $\bm{E}\times\bm{H}=\bm{N}||\bm{k}$
+- It is then the _same as an isotropic medium_ but with $n$ depending on the axis
+
+- For a _uniaxial material_:
+$$\pmatrix{D_x\\D_y\\D_z}=\epsilon_0\pmatrix{\epsilon_1&0&0\\0&\epsilon_1&0\\0&0&\epsilon_3}\pmatrix{E_x\\E_y\\E_z}$$
+- As long as $\bm{D}$ is in the $\hat{\bm{e}}_1-\hat{\bm{e}}_2$ _plane_ (meaning $\perp\hat{\bm{e}}_3$), $\bm{D}||\bm{E}$
+- Otherwise, $\bm{N}$ is _not necessarily parallel_ to $\bm{k}$
+
+### A geometric approach to wave propagation
+- The _energy density_ is proportional to $\bm{D}\cdot\bm{E}$
+- For some _fixed_ energy density:
+$$\epsilon_0\bm{D}\cdot\bm{E}=\bm{D}\epsilon^{-1}\bm{D}=1$$
+- As $\epsilon$ is _diagonalised_, this defines an _ellipsoid_, the _optical indicatrix_:
+$$\frac{D_x^2}{\epsilon_1}+\frac{D_y^2}{\epsilon_2}+\frac{D_z^2}{\epsilon_3}=1$$
+
+- For a given $\bm{D}$, the corresponding $\bm{E}$ can be shown to be _normal to the ellipsoid surface_ at the tip of $\bm{D}$
+
+- From Maxwell's equations, $\bm{k}\times\bm{k}\times\bm{E}=-\mu_0\omega^2\bm{D}$
+- Letting the angle between $\bm{E}$ and the plane _perpendicular to_ $\bm{k}$ be $\alpha$, $|\bm{k}\times\bm{k}\times\bm{E}|=k^2E\cos\alpha$, and $\epsilon_0ED\cos\alpha=\epsilon_0\bm{E}\cdot\bm{D}=1$
+- From this, calculate the _refractive index_:
+$$n^2=c^2\frac{k^2}{\omega^2}=\frac{c^2}{\omega^2}\frac{\mu_0\omega^2D}{E\cos\alpha}\epsilon_0ED\cos\alpha=|\bm{D}|^2$$
+- Hence, the _radius vector of the ellipsoid_ in direction of $\bm{D}$ is the _refractive index_
+
+- One can represent this in terms of _Huygens wavelets_
+
+- For $\bm{D}\perp\hat{\bm{e}}_3$, $v=c/n_o$, making a _spherical wavelet_, independent of direction in the plane
+- For _other polarisations_, for some $\bm{D}$ with angle $\theta$ to $\hat{\bm{e}}_3$, it travels with _effective refractive index_ $n_b$:
+$$\frac{(n_b\cos\theta)^2}{n_o^2}+\frac{(n_b\sin\theta)^2}{n_e^2}=1$$
+- These form _extraordinary wavelets_, which are _ellipsoidal_
+	- It has _azimuthal symmetry_ around $\hat{\bm{e}}_3$
+
+### Double refraction
+![[Double refraction.png]]
+- Let some wave _enter_ a _uniaxial crystal_ with $\bm{k}_\text{inc}$ _normal_ to the surface, making some angle $\theta$ to the _optic axis_
+
+- If $\bm{D}\perp\hat{\bm{e}}_3$, $\bm{D}||\bm{E}$, and _spherical wavelets_ are formed
+- This is an _ordinary ray_
+
+- If $\bm{D}$ has some _component_ parallel to $\hat{\bm{e}}_3$, the wavelets are _ellipsoidal_
+- This creates an _extraordinary ray_, which is _laterally shifted_ before exiting the crystal
+
+### Waveplates
+- Consider a _plane-polarised wave normally incident_ on a material
+![[Waveplate.png]]
+- Let the _fast axis_ be along $x$, with $n_f>n_s$
+
+- Depending on the _orientation_ of $\bm{E}$, components experience _different optical thicknesses_
+- The _Jones matrix_ for this case:
+$$\pmatrix{\exp(i\omega n_fd/c)&0\\0&\exp(i\omega n_sd/c)}\propto\pmatrix{\exp(-i\Delta\phi/2)&0\\0&\exp(i\Delta\phi/2)}$$
+- The _phase difference_ $\Delta\phi$ is defined as:
+$$\Delta\phi=\omega\frac{(n_s-n_f)d}{c}$$
+
+- This creates a _quarter-wave_ plate or a _half-wave_ plate
+	- $\Delta\phi = \pi/2$: a _quarter-wave_ plate
+	- $\Delta\phi=\pi$: a _half-wave_ plate
+- For a _quarter-wave_ plate with fast axis along $x$:
+$$\dunderline{J}_{\lambda/4,x}=\exp(i\pi/4)\pmatrix{1&0\\0&i}$$
+- For a _half-wave_ plate with fast axis along $x$:
+$$\dunderline{J}_{\lambda/2,x}=\exp(i\pi/2)\pmatrix{1&0\\0&-1}$$
+- For a _general plane-polarised wave_:
+$$\dunderline{J}\underline{L}=\pmatrix{\exp(-i\Delta\phi/2)\cos\theta \\ \exp(i\Delta\phi/2)\sin\theta}$$
+- For $\Delta\phi=\pi/2$ (_quarter-wave_ plate), $\dunderline{J}\underline{L}=\pmatrix{\cos\theta&i\sin\theta}^T$
+	- This is an _elliptically polarised_ wave, with $\alpha=0$, with $\cos\theta$ and $\sin\theta$ as the _semi-major and minor axes_
+	- For $\theta=0$ or $\pi/2$, it is _linearly polarised_
+	- For $\theta=\pi/4$, it is a _left-handed circularly polarised_
+- For $\Delta\phi=\pi$ (_half-wave_ plate), $\dunderline{J}\underline{L}=\pmatrix{\cos\theta&-\sin\theta}^T$
+	- This is _plane-polarised_, directed at angle $-\theta$ relative to the $x-$axis
+	- It is _rotated_
+	- If $\theta=\pi/4$, it is _perpendicular_ to the original
+- If $\theta=0$ or $\theta=\pi/2$, it is _completely unaffected_ by the waveplate as $\bm{E}$ is _along one of the principal axis_
+### Induced birefringence
+- Optical anisotropy can be _induced_ in originally _isotropic_ materials
+
+- When an isotropic, _photoelastic_ material is subjected to _stress_, one induces _stress birefringence_
+- The stress causes a distortion at the _molecular level_ to make the dielectric tensor _anisotropic_
+- _Experimentally_, when an _isotropic_ material is placed between _crossed polars_, _no light passes through_
+- When a stress is applied, the _stress pattern_ can be _visualised_ by seeing how different _stressed sections_ affect the _polarisation_
+
+- When an _external electric field_ $\bm{E}_0$ is applied, an isotropic material can _become uniaxially birefringent_, with the _optic axis_ along $\bm{E}_0$
+- This comes from the _alignment_ of polar molecules in _fluids_
+- The birefringence _cannot depend on the sign_ of $E_0$, hence one gets:
+$$\Delta n=\lambda_0KE_0^2$$
+- $K$ is the _Kerr constant_ of the material
+- The _Kerr cell_:
+![[Kerr Effect.png]]
+
+
+- In _solids_, $\bm{E}$ can _lower the crystal symmetry_ of the material
+- If there is _no inversion symmetry_, it can often _differentiate between field directions_
+- This is the _Pockels effect_, and _linear field dependence_ is possible

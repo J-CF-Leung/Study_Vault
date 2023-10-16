@@ -7,6 +7,7 @@
 >
 >-David Morin
 
+
 - In mechanics, $\exists$ _coordinates_ $\{x_i\}$ and _time_ in some _inertial frame_
 	- There is a _map_ from $\mathbb{R}$ (time) to $\mathbb{R}^3$ (space)
 - In _Newtonian mechanics_, $\{x_i\}$ obey the _second law_:
@@ -105,6 +106,10 @@ $$L=\frac{1}{2}(m_1+m_2)|\dot{\bm{r}}_{CM}|^2+\frac{1}{2}\frac{m_1m_2}{m_1+m_2}|
 
 - This can also occur since there is a _conserved quantity_
 
+- A _holonomic constraint_ is in the form:
+$$f(q_i,t)=0$$
+- This can be incorporated as a _Lagrange multiplier_
+- Or, one can make a _coordinate transformation_ to take advantage of the constraint
 # Symmetries and Noether's Theorem
 - A symmetry is an operation that does not change the functional form of the Lagrangian or Hamiltonian
 
@@ -136,10 +141,10 @@ $$\pd{L}{s}=\frac{d}{dt}\left(\sum_i\bm{p}_i\cdot\bm{n} \right)=0$$
 - Total change in value of Lagrangian:
 $$\frac{dL}{dt}=\frac{d}{dt}\left(\sum_i\pd{L}{\dot{q}_i}\dot{q}_i\right)+\pd{L}{t}$$
 - Introduce the _Hamiltonian_:
-$$\Ham=\sum_i\left(\pd{L}{\dot{q}_i}\dot{q}_i\right)-L$$
-$$\frac{d\Ham}{dt}=-\pd{L}{t}$$
+$$H=\sum_i\left(\pd{L}{\dot{q}_i}\dot{q}_i\right)-L$$
+$$\frac{dH}{dt}=-\pd{L}{t}$$
 - The Hamiltonian _only changes when the Lagrangian depends explicitly on time_
-- When $L=T-V$, $\Ham=T+V=E$
+- When $L=T-V$, $H=T+V=E$
 - Energy is conserved when Lagrangian does not depend explicitly on time
 	- Example: Magnetic field that varies with time
 
@@ -153,12 +158,13 @@ $$\frac{d\Ham}{dt}=-\pd{L}{t}$$
 ## Hamiltonian as a Legendre transform
 - In the Lagrangian formulation, $p_i=\partial L/\partial \dot{q}_i$
 - In the Hamiltonian formulation, $\dot{q}$ _becomes the derived quantity_ from $p$:
-$$\dot{q}_i=\pd{\Ham}{p_i}$$
-- To find $\Ham$, one can use the _Legendre transform_, giving:
-$$\Ham=\sum_i\left(\pd{L}{\dot{q}_i}\dot{q}_i\right)-L=\sum_i \dot{q}_ip_i-L$$
-- Considering the total differential of $\Ham$, one gets _Hamilton's equations_:
-$$\begin{aligned}\dot{q}_i&=\pd{\Ham}{p_i} \\[8pt] \dot{p}_i&=-\pd{\Ham}{q_i} \\[8pt] \frac{d\Ham}{dt}&=-\pd{L}{t}\end{aligned}$$
-- _Cyclic coordinates_ still exist in the Hamiltonian formulation, with $\dot{p_i}=0$ if $\Ham$ does not depend on $q_i$
+$$\dot{q}_i=\pd{H}{p_i}$$
+- To find $H$, one can use the _Legendre transform_, giving:
+$$H=\sum_i\left(\pd{L}{\dot{q}_i}\dot{q}_i\right)-L=\sum_i \dot{q}_ip_i-L$$
+- Considering the total differential of $H$, one gets _Hamilton's equations_:
+$$\begin{aligned}\dot{q}_i&=\pd{H}{p_i} \\[8pt] \dot{p}_i&=-\pd{H}{q_i} \\[8pt] \frac{dH}{dt}&=-\pd{L}{t}\end{aligned}$$
+- _Cyclic coordinates_ still exist in the Hamiltonian formulation, with $\dot{p_i}=0$ if $H$ does not depend on $q_i$
+- The _minus sign_ hints at a _symplectic structure_ of the coordinate system
 
 ## Phase space
 - In the Lagrangian formalism, a system's state is described by a _point in $n-$dimensional configuration space_, with a _definite velocity_
@@ -188,8 +194,8 @@ In other words, the distribution function along a phase space trajectory is cons
 - Proof of unchanging volume
 	- Volume element at time $t$: $dV=dq_1dq_2\cdots dq_ndp_1dp_2 \cdots dp_n$
 	- After time $dt$:
-	$$\displaylines {dq_i \rightarrow d\bar{q}_i=dq_i +\pd{\Ham}{p_i}\,dt \\
-dp_i \rightarrow d\bar{p}_i=dp_i-\pd{\Ham}{q_i}dt}$$
+	$$\displaylines {dq_i \rightarrow d\bar{q}_i=dq_i +\pd{H}{p_i}\,dt \\
+dp_i \rightarrow d\bar{p}_i=dp_i-\pd{H}{q_i}dt}$$
 	- The volume element at time $t+dt$:
 	$$d\bar{V}=d\bar{q}_1\cdots d\bar{q}_n d\bar{p}_1\cdots d\bar{p}_n=\left|\pd{(\bar{q},\bar{p})}{(q,p)}\right|\,dV=(\det\mathcal{J})\,dV$$
 	- It can be proven that the [[Vector calculus in 3-dimensions#The Jacobian matrix|Jacobian]] is equal to $1+O(dt^2)$ 
@@ -204,8 +210,8 @@ $$\frac{dV}{dt}=\int_S\bm{v}\cdot\,d\bm{S}=\int_V\nabla\cdot\bm{v}\,dV=0$$
 	 $$\frac{d\rho}{dt}=\pd{\rho}{t}+\sum_i \pd{\rho}{q_i}\dot{q}_i+\pd{\rho}{p_i}\dot{p}_i=0$$
 	- $d\rho/dt$: along a phase trajectory
 	- $\partial\rho/\partial t$: at a particular point
-- True for any system with a Hamiltonian $\Ham(q,p,t)$
-- For statistical distribution functions $\rho=\rho(\Ham(q,p))$, $\partial\rho/\partial t=0$
+- True for any system with a Hamiltonian $H(q,p,t)$
+- For statistical distribution functions $\rho=\rho(H(q,p))$, $\partial\rho/\partial t=0$
 	- Example: distributions in [[Fundamental principles of statistical mechanics|statistical mechanics]]
 
 # Comparison between formulations of mechanics
@@ -215,27 +221,37 @@ $$\frac{dV}{dt}=\int_S\bm{v}\cdot\,d\bm{S}=\int_V\nabla\cdot\bm{v}\,dV=0$$
 | For $n$ degrees of freedom, state described by $n$ coordinates and $n$ velocities $(q, \dot{q})$    | Same as Newtonian mechanics                                                                                        | For $n$ DOF, state described by $n$ coordinates and $n$ momenta $(q,p)$             |
 | State represented by a point moving with definite velocity in $n-$dimensional _configuration space_ | Same as Newtonian mechanics                                                                                        | State described by a point in $2n-$dimensional _phase space_                        |
 | $n$ coordinates evolve according to $n$ _second-order equations_                                    | Same as Newtonian mechanics                                                                                        | $2n$ coordinates and momenta obey $2n$ _first-order equations_                      |
-|                                                                                                     | For a given $L$, several trajectories can pass through a given point in configuration space _depending on_ $\dot{q}$ | For a given $\Ham$, _only one_ trajectory passes through a given point in phase space |
+|                                                                                                     | For a given $L$, several trajectories can pass through a given point in configuration space _depending on_ $\dot{q}$ | For a given $H$, _only one_ trajectory passes through a given point in phase space |
 # Poisson brackets
 - _Poisson brackets_ (PBs) are another way to express relations in classical mechanics
 $$\PB{\omega}{\lambda}=\sum_i\left(\pd{\omega}{q_i}\pd{\lambda}{p_i}-\pd{\omega}{p_i}\pd{\lambda}{q_i}\right)$$
-- The rate of change of a dynamical variable $\omega(x,p,t)$ is simply expressed with PBs:
-	 $$\frac{d\omega}{dt}=\PB{\omega}{\Ham}+\pd{\omega}{t}$$
+- The _rate of change in time_ of a dynamical variable $\omega(x,p,t)$ is simply expressed with PBs:
+	 $$\frac{d\omega}{dt}=\PB{\omega}{H}+\pd{\omega}{t}$$
 	- Lioville's equation can also be restated in the same way:
-$$\pd{\rho}{t}=-\PB{\rho}{\Ham}$$
-- As all coordinates and momenta are independent variables, the PBs between them are:
+$$\pd{\rho}{t}=-\PB{\rho}{H}$$
+- Therefore, if an observable _does not depend explicitly on time_, and the PB _vanishes_, it is a _conserved quantity_
+
+- If $H$ _does not depend_ on one of the coordinates, $\PB{p}{H}=0$, hence one derives the _conservation of canonical momentum_
+
+- As all coordinates and momenta are _independent variables_, the PBs between them are:
 $$\PB{q_i}{q_j}=\PB{p_i}{p_j}=0$$
 $$\PB{q_i}{p_j}=\delta_{ij}$$
 - Hamilton's equations can be written in terms of PBs:
-$$\dot{q}_i = \PB{q_i}{\Ham}\;\;\;\;\dot{p_i} = \PB{p_i}{\Ham}$$
+$$\dot{q}_i = \PB{q_i}{H}\;\;\;\;\dot{p_i} = \PB{p_i}{H}$$
+
 - Anticommutativity, linearity, product rule, Jacobi identity:
 $$\begin{aligned}\PB{\omega}{\lambda}&=-\PB{\lambda}{\omega} \\ \PB{\omega}{a\lambda+b\sigma}&= a\PB{\omega}{\lambda}+b\PB{\omega}{\sigma} \\ \PB{\omega}{\lambda\sigma}&=\lambda\PB{\omega}{\sigma}+\PB{\omega}{\lambda}\sigma \end{aligned}$$
 $$\PB{\omega}{\PB{\lambda}{\sigma}}+\PB{\sigma}{\PB{\omega}{\lambda}}+\PB{\lambda}{\PB{\sigma}{\omega}}= 0$$
-- Taking derivatives with Poisson brackets:
+- Taking _derivatives_ with Poisson brackets:
 $$\PB{\omega}{q_i}=-\pd{\omega}{p_i}\;\;\;\;\PB{\omega}{p_i}=\pd{\omega}{q_i}$$
 
-# Canonical transformations
-- By transforming to another coordinate system, while the _values_ of $L$ and $\Ham$ do not change, their _functional forms_ will 
+- These properties are similar to that of the _commutators in quantum mechanics_
+- Take [[Fundamental concepts of quantum mechanics#Ehrenfest's Theorem|Ehrenfest's Theorem]]:
+$$\frac{d\mean{\hat{O}}}{dt}=\mean{\pd{\hat{O}}{t}}+\mean{[\hat{O},\hat{H}]}$$
+- This suggests the relation between them to be:
+$$\PB{A}{B}\longleftrightarrow\frac{1}{i\hbar}[\hat{A},\hat{B}]$$
+# Transformations
+- By transforming to another coordinate system, while the _values_ of $L$ and $H$ do not change, their _functional forms_ will 
 ## Point transformations
 - A point transformation relies on the original coordinates:
 $$q_i(t) \rightarrow \bar{q}_i(q,t)$$
@@ -245,9 +261,21 @@ $$\frac{d}{dt}\pd{L}{\dot{\bar{q}_i}}-\pd{L}{\bar{q}_i} =
 - The new conjugate momenta are:
 $$\bar{p}_i = \pd{L}{\dot{\bar{q}}_i} = \sum_j p_j\pd{q_j}{\bar{q}_i}$$
 - The Hamiltonian can be defined as a function of $(\bar{q},\bar{p})$:
-$$\Ham = \sum_i\dot{\bar{q}}_i\bar{p_i}-L$$
-$$\dot{\bar{q}}_i = \pd{\Ham}{\bar{p}_i}\;\;,\;\;\dot{\bar{p}}_i=-\pd{\Ham}{\bar{q}_i}$$
+$$H = \sum_i\dot{\bar{q}}_i\bar{p_i}-L$$
+$$\dot{\bar{q}}_i = \pd{H}{\bar{p}_i}\;\;,\;\;\dot{\bar{p}}_i=-\pd{H}{\bar{q}_i}$$
 
+## Canonical transformations
+- Consider the transformation $q\to p$ and $p\to q$, this preserves the _structure of Hamilton's equations_
+	- Said to preserve the _symplectic structure_
+- Clearly, this transformation is somehow _"canonical"_
+
+- Let there be some _general transformation_:
+$$q\to Q(q,p)\hspace{1.5cm}p\to P(q,p)$$
+- One can then _rewrite_ $H$ as $H(Q,P)$
+
+- For _Hamilton's equations to hold_ in this new coordinate system:
+$$\PB{Q_i}{P_j}=\delta_{ij}$$
+- If this holds, the transformation is _canonical_
 
 ## Generating functions
 
@@ -267,8 +295,139 @@ $$\pd{S}{q_i}=p_i$$
 - Consider its total derivative with respect to time:
 $$\displaylines{\frac{dS}{dt}=L \\ \frac{dS}{dt}=\pd{S}{t}+\sum_i \pd{S}{q_i}\dot{q}_i=\pd{S}{t}+\sum_ip_i\dot{q}_i}$$
 - Using the definition for the Hamiltonian, one gets:
-$$\pd{S}{t}=-\Ham$$
+$$\pd{S}{t}=-H$$
+
+- Also consider:
+$$\frac{S}{\hbar}=\frac{1}{\hbar}\int L\,dt=\frac{1}{\hbar}\int (p\dot{q}-H)\,dt=\int k\,dq-\omega\,dt$$
+- This corresponds to the _phase_ of a wave
+- From _Hamilton's principle_, this must be _extremised along the classical path_
+- This is similar to the trajectory from _wave optics_ to _geometrical optics_
+
 # Electromagnetism
+
+## Reproducing the Lorentz force
+- Let there be some particle with _charge_ $q$, in _electric_ and _magnetic fields_ $\bm{E}$ and $\bm{B}$ 
+- In _Newtonian_ mechanics, it is under some _Lorentz force_:
+$$m\dot{\bm{v}}=e(\bm{E}+\bm{v}\times\bm{B})$$
+- The _Lagrangian_ and _Hamiltonian_ must _reproduce_ this result
+- To reproduce the _electric_ force, one must incorporate the _electrostatic potential_ $\phi$
+
+- To reproduce the _magnetic_ force, let there be a term in the potential varying _linearly_ with the velocity:
+$$V(\bm{x},\dot{\bm{x}},t)=e\phi(\bm{x})-e\dot{x}_jA_j(\bm{x},t)$$
+- This is in fact the _most general form_ of $V$ which is _linear in velocity_
+- The corresponding _Lagrangian_:
+$$L(\bm{x},\dot{\bm{x}},t)=\frac{1}{2}m|\dot{\bm{x}}|^2-e(\phi-\dot{\bm{x}}\cdot\bm{A})$$
+
+- The derivative with respect to _position_:
+$$\pd{L}{x_i}=-e\pd{\phi}{x_i}+e\dot x_j\pd{A_j}{x_i}$$
+- The corresponding _canonical momentum_ then becomes:
+$$p_i=m\dot x_i+eA_i$$
+- Hence, _mechanical momentum does not equal the canonical one_
+- Then using the _E-L Equation_:
+$$\displaylines{\dot p_i=m\ddot{x}_i+e\frac{dA_i}{dt}=m\ddot{x}_i+e\dot{x}_j\pd{A_i}{x_j}+\pd{A_i}{t}=\pd{L}{x_i} \\ m\ddot{x}_i=e\left(-\pd{\phi}{x_i}+\dot x_j\pd{A_j}{x_i}-\dot{x}_j\pd{A_i}{x_j}-\pd{A_i}{t}\right)=e\left(-\pd{\phi}{x_i}-\pd{A_i}{t}+\left(\dot{\bm{x}}\times\nabla\times\bm{A}\right)_i\right)}$$
+
+- This gives:
+$$m\ddot{\bm{x}}=q[\bm{E}+\bm{v}\times\bm{B}]$$
+- Where:
+$$\bm{E}=-\nabla\phi-\pd{\bm{A}}{t}\hspace{1.5cm}\bm{B}=\nabla\times\bm{A}$$
+- Therefore, the Lagrangian above _correctly reproduces the Lorentz force law_
+
+- To write down the _Hamiltonian_:
+$$H=\bm{p}\cdot\dot{\bm{q}}-L=\frac{1}{2}m|\dot{\bm{x}}|^2+e\phi=\frac{1}{2m}|\bm{p}-e\bm{A}|^2+e\phi$$
+- The Hamiltonian (and the corresponding equations) _must not be written in terms of $m\dot{\bm{x}}$_, but _in the actual canonical momentum_ $\bm{p}=m\dot{\bm{x}}+e\bm{A}$
+
+- If there is _translational invariance_ in the magnetic field, it is _canonical momentum_ that is conserved instead of mechanical momentum
+	- Example: _cyclotron_ motion
+## Gauge symmetry
+- Let there be a _transformation_ where $f$ is _any function_ $f(\bm{x},t)$
+$$\phi\to\phi-\pd{f}{t}\hspace{1.5cm}\bm{A}\to\bm{A}+\nabla f$$
+- One can check that this leaves $\bm{E}$ and $\bm{B}$ _invariant_
+- It _shifts_ the Lagrangian, but _not the equations of motion_
+- This is known as a _gauge symmetry_
+
+- There can exist only _one condition_ (the arbitrary $f$) for the gauge
+	- $\phi=0$ is allowed but $\bm{A}=0$ is not, as it governs three _components_
+- One can choose an _axial gauge_:
+$$\bm{n}\cdot\bm{A}=0$$
+- Due to the arbitrary gradient, one can also choose a _Coulomb gauge_:
+$$\nabla\cdot\bm{A}=0$$
+- Or the _Lorenz gauge_:
+$$\pd{\phi}{t}+\nabla\cdot\bm{A}=0$$
+- The latter still has some _ambiguity_ as one can use any $f$ that satisfies:
+$$\pd{^2f}{t^2}-\nabla^2f=0$$
+
+- One can motivate the _form of the Lagrangian_ by requiring that it is _gauge invariant_
+$$V=e(\phi-\dot{x}_iA_i)=e\left(\frac{dt}{dt}\phi-\frac{dx_i}{dt}A_i\right)$$
+- One can see that the Lagrangian is also _Lorentz invariant_
+# Relativistic particle dynamics
+
+- Minkowski spacetime
+## 4-vectors
+- A _Lorentz transformation_ is a transformation between _frames_ in _Minkowski spacetime_
+- _4-vectors_ are _Lorentz invariant_ objects
+	- Its components are not Lorentz invariant
+
+- Define a _contravariant 4-vector_ $x^\mu$, with $\mu=0,1,2,3$
+	- $0$ is the _time_ component
+	- $1,2,3$ are the _space_ components
+	- Set $c=1$
+- The _position contravariant 4-vector_
+$$x^\mu=(x^0,x^1,x^2,x^3)=(t,x,y,z)$$
+- Then define a _covariant vector_ $x_\mu$ 
+$$x_\mu=(x_0,x_1,x_2,x_3)=(t,-x,-y,-z)$$
+
+- The _inner product_ of the vectors:
+$$x^\mu x_\mu=t^2-x^2-y^2-z^2$$
+- This produces a _Lorentz invariant quantity_
+
+- Let there be some _field_ $\phi(x^\mu)$, then consider its _differential_:
+$$d\phi=\pd{\phi}{x^\mu}dx^\mu$$
+- $d\phi$ is _Lorentz invariant_, hence $\partial\phi/\partial x^\mu$ is a _covariant 4-vector_:
+$$\pd{\phi}{x^\mu}=\partial_\mu\phi$$
+- Similarly, the corresponding _contravariant 4-vector_ is $\partial\phi/\partial x_\mu=\partial^\mu\phi$
+
+- One can _raise and lower indices_ using the _metric tensor_:
+$$\displaylines{g_{\mu\nu}=g^{\mu\nu}=\text{diag}(1,-1,-1,-1)=\pmatrix{1&0&0&0\\0&-1&0&0\\0&0&-1&0\\0&0&0&-1} \\ x_\mu=x^\nu g_{\mu\nu}}$$
+- This corresponds to converting between a _column vector_ and a _row vector_
+
+- To _preserve innner products_, a _Lorentz transformation_ must _obey_:
+$$g_{\alpha\beta}={L^\bar\mu}_\alpha {L^\bar\nu}_\beta \,g_{\bar\mu\bar\nu}\hspace{1.5cm} g_{\bar\mu\bar\nu}={L^\alpha}_\bar\mu {L^\beta}_\bar\nu \,g_{\alpha\beta}$$
+## The relativistic free particle Lagrangian
+- The _action must be Lorentz invariant_
+- Hence, for a _free particle_, define the _action_ as the _proper time elapsed_:
+$$S=-mc^2\int d\tau=-mc\int\sqrt{dx_\mu dx^\mu}=-mc^2\int\sqrt{1-\frac{\dot{x}_i\dot{x}^i}{c^2}}\,dt$$
+- Then one gets the _Lagrangian_:
+$$L=-mc^2\sqrt{1-\frac{\dot{x}_i\dot{x}^i}{c^2}}$$
+- For $\dot{x}_i\dot{x}^i<<c^2$, one can take the _non-relativistic limit_:
+$$L\approx-mc^2+\frac{1}{2}mv^2$$
+- The Lagrangian is _not Lorentz invariant_, but the _action_ is due to $\int\,dt$
+- For the action to remain _real_, $\dot{x}_i\dot{x}^i<c^2$
+
+- One can then find the _canonical momentum_:
+$$p_i=\gamma m\dot{x}_i$$
+- The _Hamiltonian_:
+$$H=\gamma mc^2$$
+
+- From the _symmetry w.r.t. translation_ of $L$:
+$$p_i=\text{const.}\Longrightarrow v_i=\text{const.}$$
+
+- The above formulation takes _time_ as the _independent variable_
+- From the point of relativity, this _compromises the symmetry_ of spacetime
+
+- Let there be a _parameter_ $\lambda$ parametrising _all components_ $x^\mu$
+- The _action_ is then written as:
+$$S=-mc\int\sqrt{\frac{dx_\mu}{d\lambda}\frac{dx^\mu}{d\lambda}}\,d\lambda$$
+- This is _independent of parametrisation_
+- This reveals the _gauge symmetry_ of the action, as it is _invariant_ under the transformation:
+$$\lambda\to\lambda'(\lambda)$$
+
+## The relativistic electromagnetic Lagrangian
+- Define a _contrvariant 4-vector_ such that:
+$$A^\mu=\left(\frac{\phi}{c},A^i\right)$$
+- From electrodynamics, it can be proven that this is _Lorentz invariant_
+- Then let its contribution to the _Lagrangian_ be:
+$$-e\frac{dx_\mu}{dt}A^\mu$$
+
 
 # Routhian mechanics
 

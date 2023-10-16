@@ -74,3 +74,101 @@ $$|\delta|=\frac{e\Phi}{\hbar}=2\pi\frac{\Phi}{\Phi_0}\hspace{1.5cm}\Phi_0\equiv
 
 - This proves that there can still be _electromagnetic effects_ in regions where the _field is zero_
 - This effect is still _gauge invariant_ as it only depends on the _total enclosed flux_
+
+# Landau levels
+- _Classically_, a charged particle goes into _cyclotron motion_ when in a _magnetic field_ $\bm{B}$:
+$$E=\frac{1}{2}mr^2\omega_c^2\hspace{1.5cm}\omega_c=\frac{q|\bm{B}|}{m}$$
+- In the _quantum_ case, one finds that orbital energies can be _quantised_
+
+- With _no electric potential_, the Hamiltonian is:
+$$\hat\Ham=\frac{1}{2m}\left|\hat{\bm{p}}-q\bm{A}\right|^2=\frac{1}{2m}\hat{\bm{\Pi}}^2$$
+- The operator $\hat{\bm{\Pi}}$ is defined as:
+$$\hat{\bm{\Pi}}=\hat{\bm{p}}-q\bm{A}$$
+- It follows the _commutation relation_:
+$$[\hat{\Pi}_i,\hat{\Pi}_j]=iq\hbar\epsilon_{ijk}B_k$$
+- Introduce the _non-Hermitian_ operators:
+$$\displaylines{\hat{a}_\pm=\sqrt{\frac{1}{2q\hbar B}}\left(\hat{\Pi}_x\pm i\hat{\Pi}_y\right)\\ [\hat{a}_+,\hat{a}_-]=-\frac{i}{q\hbar B}[\hat{\Pi}_x,\hat{\Pi}_y]=\frac{B_z}{B}}$$
+- One finds that the Hamiltonian can be _rewritten_ as:
+$$\hat\Ham=\hbar\omega_c\left(\hat{a}_+\hat{a}_-+\frac{1}{2}\right)+\frac{1}{2m}\hat{\Pi}_z^2\hspace{2cm}\omega_c=\frac{qB}{m}$$
+- The _first term_ corresponds to the [[Quantum Harmonic Oscillator]], with the energy levels:
+$$E_\nu=\hbar\omega_c\left(\nu_L+\frac{1}{2}\right)$$
+- Therefore, the terms in the Hamiltonian _transverse to the magnetic field_ give rise to the quantised _Landau levels_:
+$$\Delta E=\hbar\omega_c$$
+- For a magnetic field of $1\text{T}$, this gives $\Delta E\approx 1.2\times 10^{-4}\,\text{eV}$
+	- This is _much smaller_ than $kT$ at _room temperature_
+	- At $1.3\,\text{K}$, $kT\sim \Delta E$
+
+## The Landau gauge
+- Choose a _Coulomb gauge_ such that:
+$$\bm{A}=(-By,0,0)$$
+- The Hamiltonian then becomes:
+$$\hat{\Ham}=\frac{1}{2m_e}\left[(\hat p_x-eB_y)^2+\hat p_y^2+\hat p_z^2\right]$$
+- The Schrödinger equation now admits _separated variable solutions_ of the form:
+$$\displaylines{\psi(\bm{r})=\exp[ik_xx+ik_zz]\chi(y)\hspace{1.5cm}\hat{\Ham}_\chi\chi(y)=E\chi(y)\\ \hat\Ham_\chi=}$$
+
+- The Hamiltonian then has the form of the _harmonic oscillator_, where $\omega=\omega_c$ and the _central position_ is $y=y_0$:
+$$\displaylines{\hat\Ham_\chi= \\ y_0=\frac{\hbar k_x}{eB}}$$
+- This gives the _total energy_:
+$$E_{\nu,k_x}=\left(\nu_L+\frac{1}{2}\right)\hbar\omega_c+\frac{\hbar^2k_z^2}{2m_e}$$
+- In _2-dimensional systems_, one can _ignore_ the contribution of $k_z$
+	- Example: _boundaries_ between materials
+
+## 2D Electron gas
+- Consider a _layer_ of electrons confined to $z=0$ in the region:
+$$-\frac{L_x}{2}<x<\frac{L_x}{2}\hspace{1.5cm} -\frac{L_y}{2}<y<\frac{L_y}{2}$$
+- Consider the case where there is _no magnetic field_
+- For a 2D [[Free Electron Model|free electron gas]] (accounting for _degeneracy due to spin_), the _density of states in energy_ is _constant_:
+$$g(E)=\frac{1}{A}\frac{dN}{dE}=\frac{m_e}{\pi\hbar^2}$$
+- Then, for a system of $N$ electrons, states are occupied up to the _Fermi level_:
+$$\frac{N}{A}=g(E)E_F$$
+
+- Once the _magnetic field_ $B_z$ is applied, the _Landau levels_ appear
+- The eigenstates then have the form:
+$$\psi(\bm{r})=\exp(ik_xx)\chi(y)$$
+- Assuming that the _extent_ of $\chi$ is much _smaller_ than $L_y$:
+$$|y_0|<\frac{L_y}{2}\Longrightarrow |k_x|<\frac{eBL_y}{2\hbar}$$
+- Hence the _number of available states per Landau level_ is:
+$$N_L=\frac{2|k_{x,\text{max}}|}{\pi/L_x}=\frac{2eBh}{h}=\frac{2\Phi}{\Phi_0}$$
+- where $\Phi_0$ is the [[#The Aharanov-Bohm Effect|flux quantum]]
+- Hence, the _number of states per unit area per level_ is $n=2B/\Phi_0$
+- Each Landau level is _highly degenerate_
+
+- At _zero field_, one can check that the _number of electrons per unit area in an energy interval_ of $\hbar\omega_c$ is:
+$$g(E)\hbar\omega_c=\frac{2B}{\Phi_0}$$
+- Therefore, the effect of switching on a field is to transform a _continuum of states_ into a set of _delta functions_:
+![[landau levels.png]]
+
+- One can find the _occupied fraction_ of the _highest Landau level_ as:
+$$f_L=\frac{E_F}{\hbar\omega_c}-\text{int}\left[\frac{E_F}{\hbar\omega_c}\right]$$
+- Therefore, as $B$ increases, $f_L$ is _periodic_ with a period of:
+$$\Delta\left(\frac{E_F}{\hbar\omega_c}\right)=1\Longrightarrow\Delta\left(\frac{1}{B}\right)=\frac{he}{m_eE_F}$$
+- Hence, many _physical properties_ vary periodically as $1/B$
+- This is responsible for the [[Quantum Hall Effect]]
+
+
+# Spin and magnetic moments
+- _Classically_, one can define an _orbital magnetic moment_:
+$$\bm{\mu}_L=\frac{q}{2m}\bm{L}=\gamma_L\bm{L}$$
+
+- Similarly, one can define an _orbital magnetic moment operator_, in terms of the [[Angular momentum in quantum mechanics#Orbital angular momentum|orbital angular momentum]]
+$$\hat{\bm{\mu}}_L=\gamma_L\hat{\bm{L}}$$
+- One can also define an _intrinsic magnetic moment_, proportional to the [[Angular momentum in quantum mechanics#Spin angular momentum|spin]]:
+$$\hat{\bm{\mu}}_S=\gamma_S\hat{\bm{S}}$$
+- The _Dirac equation_ for spin-half particles predicts that the intrinsic magnetic moment is:
+$$\hat{\bm\mu}_S=\gamma_S\hat{\bm{S}}\equiv\frac{q}{m}\hat{\bm{S}}$$
+- For _electrons_:
+$$(\hat{\bm\mu}_S)_e=-\frac{e}{m_e}\hat{\bm{S}}=-2\frac{\mu_B}{\hbar}\hat{\bm{S}}$$
+- $\mu_B$ is the _Bohr magneton_:
+$$\mu_B\equiv\frac{e\hbar}{2m_e}$$
+
+- _Experimental measurements_ have led to _adjustments_ to the factor for _electrons_
+- Introduce the $g-$factor:
+$$\displaylines{g_e\approx2.0023\\(\hat{\bm\mu}_S)_e=-\frac{g_e}{2}\frac{e}{m_e}\hat{\bm{S}}=-g_e\frac{\mu_B}{\hbar}\hat{\bm{S}}}$$
+
+- One can define the _scalar magnetic moment_ of a particle $\mu$:
+$$\mu\equiv\braket{\uparrow|\hat{S}_z|\downarrow}$$
+
+
+## Intwraction with a magnetic field
+- The term of the Hamiltonian describing _interaction of spin with an external field_:
+$$\hat{H}=-\hat{\bm{\mu}}\cdot\bm{B}$$

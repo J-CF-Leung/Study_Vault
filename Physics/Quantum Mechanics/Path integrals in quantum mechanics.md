@@ -28,7 +28,7 @@ $$\braket{x_n,t_n|x_{n-1},t_{n-1}}=\braket{x_n| \teo(t_n)\,\teo^\dagger(t_{n-1})
 $$\braket{x_n,t_n|x_{n-1},t_{n-1}}=\frac{1}{\sqrt{2i\pi\hbar\epsilon/m}}\exp\left(\frac{i\epsilon}{\hbar}\Lagr\right)$$
 	- where $\Lagr$ is the [[Analytical classical mechanics|Lagrangian]]
 - An alternative, less rigorous but elegant proof is presented by Dirac using using the Hamilton-Jacobi equations as a classical analogy
-- $\epsilon\Lagr$ can be considered to be the action from $t_{n-1}$ to $t_n$, or $S(n,n-1)$
+- $\epsilon\Lagr$ can be considered to be the _action_ from $t_{n-1}$ to $t_n$, or $S(n,n-1)$
 - For the full transition amplitude $\braket{x_N,t_N|x_1,t_1}$:
 $$\begin{aligned}\braket{x_N,t_N|x_1,t_1}&=\lim_{N\to\infty}\left(\frac{m}{2\pi i\hbar\epsilon}\right)^{(N-1)/2}\int\,dx_{N-1}\int\,dx_{N-2}\,...\int\,dx_2\\ &\;\;\;\;\times\prod_{n=2}^N\exp{\left(\frac{iS(n,n-1)}{\hbar}\right)}\end{aligned}$$
 - This infinite-dimensional integral is known as _Feynman's path integral_, and can be written as:
