@@ -98,16 +98,16 @@ $$\Delta E=\hbar\omega_c$$
 	- This is _much smaller_ than $kT$ at _room temperature_
 	- At $1.3\,\text{K}$, $kT\sim \Delta E$
 
-## The Landau gauge
+## Choosing the Landau gauge
 - Choose a _Coulomb gauge_ such that:
 $$\bm{A}=(-By,0,0)$$
 - The Hamiltonian then becomes:
-$$\hat{\Ham}=\frac{1}{2m_e}\left[(\hat p_x-eB_y)^2+\hat p_y^2+\hat p_z^2\right]$$
+$$\hat{\Ham}=\frac{1}{2m_e}\left[(\hat p_x-eBy)^2+\hat p_y^2+\hat p_z^2\right]$$
 - The Schrödinger equation now admits _separated variable solutions_ of the form:
-$$\displaylines{\psi(\bm{r})=\exp[ik_xx+ik_zz]\chi(y)\hspace{1.5cm}\hat{\Ham}_\chi\chi(y)=E\chi(y)\\ \hat\Ham_\chi=}$$
+$$\displaylines{\psi(\bm{r})=\exp[ik_xx+ik_zz]\chi(y)\hspace{1.5cm}\hat{\Ham}_\chi\chi(y)=E\chi(y)\\ \hat\Ham_\chi=\frac{1}{2m}\left[(\hbar k_x-eBy)^2+\hat{p}_y^2+\hbar^2k_z^2\right]}$$
 
 - The Hamiltonian then has the form of the _harmonic oscillator_, where $\omega=\omega_c$ and the _central position_ is $y=y_0$:
-$$\displaylines{\hat\Ham_\chi= \\ y_0=\frac{\hbar k_x}{eB}}$$
+$$\displaylines{\hat\Ham_\chi=\frac{\hat{p}_y^2}{2m_e}+\frac{1}{2}m\omega_c^2(y-y_0)^2+\frac{\hbar^2k_z^2}{2m_e} \\ y_0=\frac{\hbar k_x}{eB}}$$
 - This gives the _total energy_:
 $$E_{\nu,k_x}=\left(\nu_L+\frac{1}{2}\right)\hbar\omega_c+\frac{\hbar^2k_z^2}{2m_e}$$
 - In _2-dimensional systems_, one can _ignore_ the contribution of $k_z$
@@ -146,9 +146,11 @@ $$\Delta\left(\frac{E_F}{\hbar\omega_c}\right)=1\Longrightarrow\Delta\left(\frac
 - This is responsible for the [[Quantum Hall Effect]]
 
 
-# Spin and magnetic moments
+# Spin and the magnetic moment operator
 - _Classically_, one can define an _orbital magnetic moment_:
 $$\bm{\mu}_L=\frac{q}{2m}\bm{L}=\gamma_L\bm{L}$$
+- $\gamma_L$ is known as the _gyromagnetic ratio_
+	- Derivation: let there be a _charged particle_ in a circular orbit, then $\mu=IA$
 
 - Similarly, one can define an _orbital magnetic moment operator_, in terms of the [[Angular momentum in quantum mechanics#Orbital angular momentum|orbital angular momentum]]
 $$\hat{\bm{\mu}}_L=\gamma_L\hat{\bm{L}}$$
@@ -156,6 +158,9 @@ $$\hat{\bm{\mu}}_L=\gamma_L\hat{\bm{L}}$$
 $$\hat{\bm{\mu}}_S=\gamma_S\hat{\bm{S}}$$
 - The _Dirac equation_ for spin-half particles predicts that the intrinsic magnetic moment is:
 $$\hat{\bm\mu}_S=\gamma_S\hat{\bm{S}}\equiv\frac{q}{m}\hat{\bm{S}}$$
+- The gyromagnetic ratio is _different_ for orbital and spin angular momentum
+	- There is an additional _factor of two_
+
 - For _electrons_:
 $$(\hat{\bm\mu}_S)_e=-\frac{e}{m_e}\hat{\bm{S}}=-2\frac{\mu_B}{\hbar}\hat{\bm{S}}$$
 - $\mu_B$ is the _Bohr magneton_:
@@ -163,12 +168,44 @@ $$\mu_B\equiv\frac{e\hbar}{2m_e}$$
 
 - _Experimental measurements_ have led to _adjustments_ to the factor for _electrons_
 - Introduce the $g-$factor:
-$$\displaylines{g_e\approx2.0023\\(\hat{\bm\mu}_S)_e=-\frac{g_e}{2}\frac{e}{m_e}\hat{\bm{S}}=-g_e\frac{\mu_B}{\hbar}\hat{\bm{S}}}$$
+$$\displaylines{g_e\approx2.0023\\(\hat{\bm\mu}_S)_e=-\frac{g_e}{2}\frac{e}{m_e}\hat{\bm{S}}=-g_e\frac{\mu_B}{\hbar}\hat{\bm{S}}\hspace{1.5cm} (\gamma_S)_e=-g_e\frac{\mu_B}{\hbar}}$$
 
 - One can define the _scalar magnetic moment_ of a particle $\mu$:
-$$\mu\equiv\braket{\uparrow|\hat{S}_z|\downarrow}$$
+$$\mu\equiv\braket{\uparrow|\hat{\mu}_z|\uparrow}=\gamma_S\braket{\uparrow|\hat{S}_z|\uparrow}=\gamma_S\frac{\hbar}{2}$$
+- Therefore, for the _electron_:
+$$\mu=-g_e\frac{\mu_B}{2}\approx-\mu_B$$
 
-
-## Intwraction with a magnetic field
+# Interaction with a magnetic field
 - The term of the Hamiltonian describing _interaction of spin with an external field_:
 $$\hat{H}=-\hat{\bm{\mu}}\cdot\bm{B}$$
+- Expanding out the $\hat{\bm{\mu}}$ operator:
+$$\displaylines{\hat{H}_B=-(\gamma_L\hat{\bm{L}}+\gamma_S\hat{\bm{S}})\cdot\bm{B}=-\frac{e}{2m_e}(\hat{\bm{L}}+g_e\hat{\bm{S}})\cdot\bm{B} \\ \hat{H}_B=-\frac{\mu_B}{\hbar}(\hat{\bm{L}}+g_e\hat{\bm{S}})\cdot\bm{B}}$$
+
+## Spin precession
+- Consider a particle of spin $\bm{S}$ in a _magnetic field_ $\bm{B}$
+- The _time-evolution_ of the expectation value of $\bm{S}$, using [[Fundamental concepts of quantum mechanics#Ehrenfest's Theorem|Ehrenfest's Theorem]]:
+$$\frac{d}{dt}\mean{\hat{\bm{S}}}=\frac{i}{\hbar}\mean{[\hat{H},\hat{\bm{S}}]}$$
+- Most components of $\hat{H}$ will _commute_ with $\hat{\bm{S}}$, _except_ the spin interaction:
+$$[\bm{B}\cdot\hat{\bm{S}},\hat{S}_i]=\bm{B}\cdot[\hat{\bm{S}},\hat{S}_i]=i\hbar\epsilon_{ijk}\hat{S}_jB_k=i\hbar\left(\hat{\bm{S}}\times\bm{B}\right)_i$$
+- Therefore, the _expectation value_ of spin satisfies:
+$$\frac{d}{dt}\mean{\hat{\bm{S}}}=\gamma_S\mean{\hat{\bm{S}}}\times\bm{B}=\mean{\hat{\bm{\mu}}}\times\bm{B}$$
+- This resembles the [[Electromagnetism#Magnetic dipoles|precession of a magnetic dipole]] in classical mechanics
+
+- This corresponds to _precession_ of the spin expectation values _around_ $\bm{B}$:
+![[Spin precession.png]]
+- This is at the _Larmor frequency_ $\omega_S$:
+$$\omega_S=\gamma_SB$$
+- For $\bm{B}=(0,0,B)$, the spin expectation value behaves as:
+$$\mean{\hat{S}_x}=A\cos(\omega t+\phi)\hspace{1.5cm}\mean{\hat{S}_y}=-A\sin(\omega t+\phi)\hspace{1.5cm}\mean{\hat{S}_z}=\text{const.}$$
+
+## Precession of the spin-1/2 particle
+- For a _spin-1/2 particle_, the _Larmor frequency_ is:
+$$\omega_S=g_e\frac{e}{2m_e}B=\frac{g_e}{2}\omega_c$$
+- Here, $\omega_c$ is the _cyclotron frequency_, or the frequency of the _particle's circular motion_
+- The _difference in frequencies_ is:
+$$\omega_S-\omega_c=\frac{g_e-2}{2}\omega_c$$
+## Energy eigenstates
+- Orienting the _magnetic field_ along the $z-$axis:
+$$\bm{B}=(0,0,B)\hspace{2cm}\hat{H}=-\mu_SB\hat{S}_z$$
+- From this, the eigenstates of $\hat{S}_z$ are _also energy eigenstates_:
+$$\displaylines{\hat{S}_z\ket{sm_s}=m_s\hbar\ket{sm_s} \\ \hat{H}\ket{sm_s}=-\gamma_Sm_sB\hbar\ket{sm_s}\Longrightarrow E_s=-\gamma_sm_sB\hbar=-m_s\hbar\omega_s}$$

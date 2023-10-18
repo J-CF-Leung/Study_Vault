@@ -216,7 +216,7 @@ $$\hat{\bm{J}}=\hat{\bm{J}}'+\hat{\bm{J}}''$$
 $$\displaylines{\hat{J}^2\ket{jm}=\hbar^2j(j+1)\ket{jm}\hspace{1cm} \hat{J}_z\ket{jm}=\hbar m\ket{jm}\\\braket{j'm'|jm}=\delta_{jj'}\delta_{mm'} \\ j=0,\frac{1}{2},1,\frac{3}{2}\dots \hspace{1cm} m=-j,-j+1,\dots,j-1,j}$$
 - One can see that the _product state_ $\ket{jm}=\ket{j'm'}\otimes\ket{j''m''}$ is an eigenstate of $\hat{J}_z$, but _in general_ is _not_ an eigenstate of $\hat{J}^2$
 $$\displaylines{(\hat{J}_z'+\hat{J}_z'')\ket{jm}=(m'+m'')\hbar\ket{jm}\\ m=m'+m''}$$
-- In _general_, the eigenstate should be written as a _linear combination_ of the original eigenstates:
+- In _general_, the eigenstate should b e written as a _linear combination_ of the original eigenstates:
 $$\ket{jm}=\sum_{m',m''}\left[\ket{j'm'}\otimes\ket{j''m''}\right]\braket{j'm';j''m''|jm}$$
 - The sum is over valus of $m'$ and $m''$ such that $m'+m''=m$
 	- Or one can treat the inner products as _zero_

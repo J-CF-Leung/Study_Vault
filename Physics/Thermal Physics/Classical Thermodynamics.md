@@ -597,7 +597,7 @@ $$\displaylines{dU=T\,dS-p\,dV+\sum_i \mu_i\,dN_i \\ dH=T\,dS+p\,dV+\sum_i \mu_i
 - Aside from _mathematical convenience_, each thermodynamic function has some _physical meaning_
 - For this section, consider a $p-V$ system, ignoring _other types of work_, or _external fields_
 
-## Entropy and equilibria
+## Entropy and types of equilibria
 
 $$\displaylines{dS=\frac{dU}{T}+\frac{p}{T}\,dV-\frac{\mu}{T}\,dN \\ \left(\pd{S}{U}\right)_{V,N}=\frac{1}{T} \hspace{1cm} \left(\pd{S}{V}\right)_{U,N}=\frac{p}{T} \hspace{1cm} \left(\pd{S}{U}\right)_{U,V}=-\frac{\mu}{T}}$$
 - For an _isolated system_, entropy can _never decrease_

@@ -58,7 +58,8 @@ $$\bm{F}=m_I\frac{d^2\bm{x}}{dt^2}$$
 	- A _set_ $\mathcal{M}$ of _points_ $P$
 	- A _countable_ family of _subsets of_ $\mathcal{M}$, known as _fundamental coordinate patches_ $C_\alpha$, such that the _union_ of all $C_\alpha$ is the whole set $\mathcal{M}$
 	- One can _map_ each $C_\alpha$ to an _open subset of_ $\mathbb{R}^n$, with each point having _coordinates_ $x^a=(x^0,x^1,\dots,x^n)$
-- Generally, one is _unable_ to _cover_ the entire manifold with _one patch_
+- Generally, one is _unable_ to _cover_ the entire manifold with _one non-degenerate patch_
+	- Requirement that $C_\alpha$ is mapped onto an _open subset_
 - The manifold is _differentiable_ if the patches are joined _smoothly_
 - Manifolds are often _embedded_ in some higher-dimensional Euclidean space
 	- Example: a _curved_ 2D surface (e.g. bubble) in 3D space
@@ -68,8 +69,14 @@ $$\bm{F}=m_I\frac{d^2\bm{x}}{dt^2}$$
 - Once manifolds are defined, one can support _objects_ on this manifold
 	- _Scalar fields_ $\phi(x^a)$
 	- _Curves_ $x^\mu(s)$
-	- _Surfaces_ $x^\mu(s_1,s_2)$
+	- _Surfaces_ $x^\mu(s^1,s^2,\dots s^M)$
 	- _Tangent vectors_ $dx^\mu/ds|_{s_0}$ _along a curve_
-	- _Tangent spaces_, a collection of _tangent vectors for all curves passing through a point $s_0$_, which forms a _vector space_
+	- _Tangent spaces_, a collection of _tangent vectors for all curves passing through a point $s_0$_, which forms a _vector space_, with the _same dimension_ as the _manifold_
+- The _basis_ of a tangent space is the set of vectors $\hat{e}_\mu=\partial_\mu=\partial/\partial x^\mu$
 
+- From the _chain rule_, one gets the _transformation law_ for basis vectors:
+$$\partial_{\mu'}=\pd{x^\mu}{x^{\mu'}}\partial_\mu$$
+- One then gets the _transformation law for components_ of vector $V=V^\mu\partial_\mu$:
+$$\displaylines{V^\mu\partial_\mu=V^{\mu'}\partial_{\mu'}=V^{\mu'}\pd{x^\mu}{x^{\mu'}}\partial_\mu \\ V^{\mu'}=\pd{x^{\mu'}}{x^\mu}V^\mu}$$
+- This transformation is _not necessarily linear_
 

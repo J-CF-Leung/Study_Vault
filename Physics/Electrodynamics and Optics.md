@@ -1,4 +1,4 @@
-- [ ] Anisotropic materials
+- [ ] Interference and coherence 📅 2023-10-18 🔼 
 # Electrodynamics and Maxwell's Equations
 
 ## Fields and charges
@@ -312,3 +312,61 @@ $$\Delta n=\lambda_0KE_0^2$$
 - In _solids_, $\bm{E}$ can _lower the crystal symmetry_ of the material
 - If there is _no inversion symmetry_, it can often _differentiate between field directions_
 - This is the _Pockels effect_, and _linear field dependence_ is possible
+
+### Optical activity
+- Some materials have _chirality_ at the _molecular level_
+	- The _mirror image_ is _unable to be superimposed_ onto the original molecule
+- The material is _optically active_, or _circularly birefringent_
+- It _responds differently_ to _left and right-handed circularly polarised waves_
+	- Circular polarised waves are said to be the _characteristic waves_
+- It has _different refractive indices_ for the waves, denoted $n_L$ and $n_R$
+	- Effectively a [[#Waveplates|waveplate]] but for circularly polarised waves
+
+- Consider the fact that a _linearly_ polarised wave is a _sum_ of two circularly polarised waves:
+$$\bm{L}_x=\pmatrix{1\\0}=\frac{\bm{C}_L+\bm{C}_R}{\sqrt{2}}$$
+- The chiral plate of thickness $d$ then gives _additional phases_ of $\exp(i\omega n_{L/R}d/c)$
+- Defining $\Delta\phi=\omega(n_L-n_R)d/c$:
+$$\bm{L}_x\longrightarrow\pmatrix{\cos(\Delta\phi/2)\\-\sin(\Delta\phi/2)}$$
+- This gives _another plane-polarised wave_, but rotated _clockwise_ 
+	- Looking _towards_ the source
+- The _specific rotatory power_ is the _rotation per unit length_:
+$$\alpha=\frac{\Delta\phi}{2d}=\frac{\omega}{2c}(n_L-n_R)$$
+- If $n_L>n_R,\;\alpha>0$, the medium is _dextrorotatory (d-rotatory)_
+	- The wave rotates _clockwise_
+- If $n_L<n_R,\;\alpha<0$, the medium is _levorotatory (l-rotatory)_
+	- The wave rotates _anti-clockwise_
+
+### The Faraday Effect
+- _Electric field_ can induce _birefringence_
+- Similarly, a _magnetic field_ can induce _chirality_
+- An example is an [[Electromagnetism#Waves in plasmas|EM wave in plasma]], with $\bm{B}_0||\bm{k}$ (known as the _Faraday geometry_)
+- The _equation of motion_ of _electrons_ in plasma:
+$$m\ddot{\bm{r}}=-e(\bm{E}+\dot{\bm{r}}\times\bm{B}_0)$$
+- Have _harmonic solutions_:
+$$\bm{E}=\pmatrix{E_x\\E_y}\exp(-i\omega t) \hspace{1.5cm}\bm{r}=\pmatrix{x_0\\y_0}\exp(-i\omega t)$$
+- The amplitudes are _not necessarily real_, to account for _phase difference_
+- Define the _cyclotron frequency_ of the system:
+$$\omega_c=\frac{eB_0}{m}$$
+- Then to find the _response to circularly polarised wave_:
+$$\displaylines{-\omega^2(x_0+iy_0)=-\frac{e}{m}(E_x+iE_y)+\omega\omega_c(x_0+iy_0) \\ -\omega^2(x_0-iy_0)=-\frac{e}{m}(E_x-iE_y)+\omega\omega_c(x_0-iy_0)}$$
+- _Effective susceptibilities_
+
+- One finds that the _effective dielectric constants_ are:
+$$\epsilon_\frac{L}{R}(\omega)=1-\frac{\omega_p^2}{\omega(\omega\mp\omega_c)}$$
+- The _angle of rotation_ is then, in the limit of a _weak field_:
+$$\theta=\frac{\Delta\phi}{2}=\frac{\omega(n_L-n_R)d}{c}\approx\frac{\omega_p^2\omega_cd}{2c\omega^2\sqrt{1-\omega_p
+^2/\omega^2}}$$
+- Define the _Verdet coefficient_ as:
+$$\theta=VB_0d\Longrightarrow V=\frac{e\omega_p^2}{2mc\omega^2\sqrt{1-\omega_p^2/\omega^2}}$$
+
+- Any $z-$component of $\bm{E}$ is always _unaffected_ as $z-$motion is _unaffected_ by $\bm{B}_0$
+- If one _solves_ for $x_0$ and $y_0$:
+$$\dunderline{\epsilon}=1+\dunderline{\chi}=\pmatrix{1-\frac{\omega_p^2}{\omega^2-\omega_c^2}&\frac{i\omega_c\omega_p^2}{\omega(\omega^2-\omega_c^2)}&0\\\frac{-i\omega_c\omega_p^2}{\omega(\omega^2-\omega_c^2)}&1-\frac{\omega_p^2}{\omega^2-\omega_c^2}&0\\0&0&1-\frac{\omega_p^2}{\omega^2}}$$
+- As expected, the matrix is _Hermitian_
+- When $\bm{B}\to0$, one regains an _isotropic plasma_
+
+## Interference and partial polarisation
+- When considering EM waves, the interference must be in _vector_ form
+- Consider the superposition of _two waves_ along the $z-$axis, _perpendicularly plane polarised_, with some _phase difference_ $\delta$
+- The _Poynting vector_ is then:
+$$\bm{N}=\bm{E}\times\bm{H}=\pmatrix{E_{1x}\cos(\omega t)\\E_{2y}\cos(\omega t+\delta)\\0}$$

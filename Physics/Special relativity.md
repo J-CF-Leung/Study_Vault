@@ -3,7 +3,7 @@
 > $$c=2.99792458\times10^8\,\text{m}\,\text{s}^{-1}=1$$
 
 - [x] Lorentz transformations ⏫ 📅 2023-10-10 ✅ 2023-10-11
-- [ ] Accelerating frames and rapidity 📅 2023-10-10 ⏫ 
+- [x] Accelerating frames and rapidity ⏫ 📅 2023-10-10 ✅ 2023-10-17
 - [x] Length contraction and time dilation ⏫ 📅 2023-10-10 ✅ 2023-10-13
 - [ ] Catch up to notes
 
@@ -257,7 +257,7 @@ $$\frac{\mathcal{E}_\text{rec}}{\mathcal{E}_\text{em}}=\frac{\sqrt{1-|\bm{v}|^2}
 - Use the _invariance of the inner product_ $\vec{v}\cdot\vec{v}'$:
 $$\gamma_f=\gamma\gamma'(1-\bm{v}\cdot\bm{v}')$$
 - If $\bm{v}$ and $\bm{v}'$ face the _same direction_:
-$$v_f=\frac{v+v'}{1-vv'}$$
+$$v_f=\frac{v+v'}{1+vv'}$$
 
 # Lorentz transformations
 - Let there be _two different inertial frames_ with coordinates $\{x^\alpha\}$ and $\{x^\bar{\mu}\}$, and basis vectors $\{\vec{e}_\alpha\}$ and $\{\vec{e}_\bar{\mu}\}$
@@ -327,7 +327,7 @@ $$\vec{a}=\frac{d\vec{u}}{d\tau}$$
 $$\vec{a}=(\gamma^4|\bm{v}||\bm{a}|,\gamma^4|\bm{v}||\bm{a}|\bm{v}+\gamma^2\bm{a})$$
 - For _constant $m$_, the [[#Particle kinetics in index notation|4-force]] $\vec{F}=m\vec{a}$
 
-- Given that a frame $\{\vec{e}_\bar\mu\}$ has some _acceleration_ $a(t)$ as observed by $\{\vec{e}_\alpha\}$, the _rapidity_ of the transformation is given by:
+- Given that a frame $\{\vec{e}_\bar\mu\}$ has some _acceleration_ $a(t)$ as observed by $\{\vec{e}_\alpha\}$, and $v(t=0)=0$, the _rapidity_ of the Lorentz transformation is given by:
 $$\psi=\int a(t)\,dt$$
 
 # Spacetime diagrams for boosts
