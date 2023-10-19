@@ -93,7 +93,7 @@ $$S_i=k\ln\Omega_i$$
 
 - The quantity $E_i-TS_i$ is _a property of the microstate_, and is _NOT_ free energy
 
-- The _Helmholtz free energy_ $F=U-TS$ is a property of the system at _equilibrium_, in the most probably _macrostate_
+- The _Helmholtz free energy_ $F=U-TS$ is a property of the system at _equilibrium_, in the most probable _macrostate_
 - The _minimum_ of $E_i-TS_i$ is $F$
 	- The corresponding values of $E_i$ and $S_i$ are then the _macrostate_ thermodynamic variables
 
@@ -106,19 +106,19 @@ $$S_i=k\ln\Omega_i$$
 - While $\Omega$ is _not extensive_, $\ln\Omega$ is:
 $$\ln\Omega=\ln\Omega_1+\ln\Omega_2$$
 - For a _given_ $E_1$, the system will try to _maximise_ the number of states:
-$$\pd{\Omega}{E_1}=\Omega_2\pd{\Omega_1}{E_1}-\Omega_1\pd{\Omega_2}{E_1}=0$$
+$$\pd{\Omega}{E_1}=\Omega_2\pd{\Omega_1}{E_1}-\Omega_1\pd{\Omega_2}{E_2}=0$$
 - Dividing _both sides_ by $\Omega$:
-$$\pd{}{E_1}\ln\Omega_1=\pd{}{E_1}\ln\Omega_2$$
+$$\pd{}{E_1}\ln\Omega_1=\pd{}{E_2}\ln\Omega_2$$
 
-- Using the above definition of _entropy_:
-$$T_1=T_2$$
+- Using the above definition of _entropy_, define _temperature_:
+$$\displaylines{\frac{1}{T}=\pd{S}{E} \\ T_1=T_2}$$
 
 ## Gibbs Entropy
 - Consider an _open_ system, which is connected to a _reservoir_
 - It has _no fixed energy_
-- Consider an _ensemble_ of $N$ replicas of the system, each with _different configurations_
+- Consider an _ensemble_ of $N$ replicas of the system, each with _different configurations and energies_
 	- The replicas are _not time-dependent_
-- A subset of these replicas has energy $E_i$
+- A _subset_ of these replicas has energy $E_i$
 - Define the proportion of this subset as $p_i(E_i)$
 
 - The _total number of states_, taking into account the _indistinguishability_ of replicas with the same energy:
@@ -130,7 +130,10 @@ $$S=-Nk\sum_i\frac{N_i}{N}\ln\frac{N_i}{N}=-Nk\sum_i p_i\ln p_i$$
 - This is the _Gibbs entropy_
 
 ## Ensembles
-- The _microcanonical ensemble_ is one with _closed systems_, where the _energy $E$ is constant_
+- As mentioned above, a _statistical ensemble_ is a set of _replicas_ of the system, covering _all possible configurations_
+
+### Microcanonical ensemble
+- The _microcanonical ensemble_ is one with _isolated systems_, where the _energy $E$ is constant_
 - There are _states_ $\Omega(E)$, each with probability $p_i$
 	- These are not microstates
 	- They are fundamentally indistinguishable
@@ -138,9 +141,84 @@ $$S=-Nk\sum_i\frac{N_i}{N}\ln\frac{N_i}{N}=-Nk\sum_i p_i\ln p_i$$
 $$\sum_i p_i=1$$
 - One wishes to _maximise entropy_ with the constraint of normalisation
 - Using [[Calculus of variations#Lagrange multipliers|Lagrange multipliers]], maximise the function:
-$$\pd{}{p_i}\left[-k_B\sum_i p_i\ln p_i-\lambda\sum_i p_i\right]=0$$
+$$\pd{}{p_i}\left[-k_B\sum_k p_k\ln p_k-\lambda\sum_k p_k\right]=0$$
 - One then gets:
 $$p_i=\exp\left(-\frac{\lambda}{k_B}-1\right)$$
 - This is _constant_
+	- Reinforcing the fact that _the states are indistinguishable_
 - Hence, the probability can simply be written as:
 $$p_i=\frac{1}{\Omega}$$
+
+### Canonical ensemble and the partition function
+- A _canonical ensemble_ contains systems _connected to energy reservoirs_, such that _microstates can have any energy $E_i$_
+- There must still be some _average energy of the system_ $U$
+- Alongside normalisation, this gives the _constraints_:
+$$\sum_i p_iE_i=U \hspace{1.5cm} \sum_i p_i=1$$
+- Maximising $S/k_B$ with the constraints:
+$$\pd{}{p_i}\left(-\sum_i p_k\ln p_k-\lambda\sum_k p_k-\beta\sum_k p_kE_k\right)=0$$
+- One then gets:
+$$p_i=\exp[-(\lambda+1)-\beta E_i]$$
+- Ignoring the _constant prefactor_, then _normalising_:
+$$\displaylines{\sum_\text{states} \exp(-\beta E_i)=\sum_\text{microstates}\Omega_i \exp(-\beta E_i)=Z \\ p_i=\frac{\exp(-\beta E_i)}{Z}}$$
+- $Z$ is the _partition function_ of the system
+- From the definition of _entropy_, one can get that:
+$$\beta=\frac{1}{kT}$$
+- From the _partition function_, one can get the _internal energy_ and the _free energy_:
+$$U=-\pd{}{\beta}\ln Z\hspace{1.5cm} F=-kT\ln Z$$
+
+- One can express the partition function as:
+$$Z=\sum_\text{microstates} \exp\left(-\frac{E_i-TS_i}{kT}\right)$$
+- This sum has the _largest contribution_ from the _minimum_ of $E_i-TS_i$
+- One can then make an _approximation_ of the _equilibrium values_ using the minimum
+
+- The above expressions give $U$ and $F$ as _functions of $T$_
+- $T$ is only the _proper variable for the latter_
+- However, $\partial U/\partial T$ still gives _heat capacity_
+- One must perform _transformations_ to get _other useful quantities_ from $U$
+
+### Grand canonical ensemble
+- A set of _open systems_, able to _exchange energy and number of particles_ with a _reservoir_
+- _Microstates_ can have _any energy $E_i$ or number of particles_ $N_i$
+- There must be some _average_ $N$
+
+- Constrained minimisation of $S/k_B$:
+$$\pd{}{p_i}\left(-\sum_k p_k\ln p_k-\lambda \sum_k p_k-\beta\sum_k p_kE_k-\kappa \sum_k p_kN_k\right)=0$$
+- One then gets:
+$$p_i=\exp[-(\lambda+1)-\beta E_i-\kappa N_i]$$
+- Defining $\kappa$ as $-\mu/kT$:
+$$p_i=\frac{1}{\Xi}\exp(-\beta E_i+\beta\mu N_i)$$
+- Define the _grand partition function_:
+$$\Xi=\sum_i\exp[-\beta(E_i-\mu N_i)]$$
+- One can rewrite it as:
+$$\Xi=\sum_\text{microstates}\exp[-\beta(E_i-TS_i)]\exp(\beta\mu N_i)=\sum_{N_i}Z(N_i)\exp(\beta\mu N_i)$$
+- Using the definition of entropy:
+$$-kT\ln\Xi=F-\mu N=\Phi(T,V,\mu)$$
+- $\Phi$ is known as the _grand potential_
+
+### Gibbs ensemble
+- For this ensemble, let the systems be able to _expand/contract_, and also be able to _exchange energy_ with the reservoir
+- Constrained minimisation:
+$$\pd{}{p_i}\left(-\sum_k p_k\ln p_k-\lambda \sum_k p_k-\beta\sum_k p_kE_k-\gamma \sum_k p_kV_k\right)=0$$
+- Defining $\gamma\equiv-\beta p$:
+$$p_i=\frac{1}{Y}\exp[-\beta (E_i-pV_i)]$$
+- From the partition function $Y$, one can derive _thermodynamic potential_ $G(T,p,N)$
+
+### Conclusions
+- For each ensemble, one can derive some _partition function_, and the corresponding _thermodynamic potential_
+- Each potential must depend on both _intensive and extensive variables_
+	- One would not be able to define a partition function or potential for _fixed_ $(T,p,\mu)$
+
+## Examples
+### The two-level system
+- At _high temperature_, the particles are _evenly distributed across both levels_
+	- _Entropy_ is maximised in this distribution
+
+### Point defect in a lattice
+- Let there be a lattice with $N$ atoms and $n$ _vacancies_
+	- $N+n$ _total sites_
+- _Occupying_ a vacancy has _energetic cost_ $\epsilon$
+- The energy of a microstate is then $n\epsilon$, and the _number of states_ is then:
+$$\Omega=\frac{(N+n)!}{N!n!}$$
+- _Minimising_ $E_n-TS_n$:
+$$n_\text{eq}=\frac{N}{\exp(\beta\epsilon)-1}$$
+- There is _no upper limit_ on $n_\text{eq}$ as temperature gets _high_

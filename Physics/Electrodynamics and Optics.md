@@ -355,10 +355,10 @@ $$\displaylines{-\omega^2(x_0+iy_0)=-\frac{e}{m}(E_x+iE_y)+\omega\omega_c(x_0+iy
 - One finds that the _effective dielectric constants_ are:
 $$\epsilon_\frac{L}{R}(\omega)=1-\frac{\omega_p^2}{\omega(\omega\mp\omega_c)}$$
 - The _angle of rotation_ is then, in the limit of a _weak field_:
-$$\theta=\frac{\Delta\phi}{2}=\frac{\omega(n_L-n_R)d}{c}\approx\frac{\omega_p^2\omega_cd}{2c\omega^2\sqrt{1-\omega_p
+$$\theta=\frac{\Delta\phi}{2}=\frac{\omega(n_L-n_R)d}{c}\approx-\frac{\omega_p^2\omega_cd}{2c\omega^2\sqrt{1-\omega_p
 ^2/\omega^2}}$$
 - Define the _Verdet coefficient_ as:
-$$\theta=VB_0d\Longrightarrow V=\frac{e\omega_p^2}{2mc\omega^2\sqrt{1-\omega_p^2/\omega^2}}$$
+$$\theta=VB_0d\Longrightarrow V=-\frac{e\omega_p^2}{2mc\omega^2\sqrt{1-\omega_p^2/\omega^2}}$$
 
 - Any $z-$component of $\bm{E}$ is always _unaffected_ as $z-$motion is _unaffected_ by $\bm{B}_0$
 - If one _solves_ for $x_0$ and $y_0$:
@@ -400,3 +400,96 @@ $$\alpha=\frac{I_\text{pol}}{I_\text{pol}+I_\text{unpol}}$$
 
 - From _Fourier analysis_, purely monochromatic waves must have _infinite spatial and temporal extent_
 - Hence, _real_ sources can only be _quasi-monochromatic_
+
+- The _theory of coherence_ describes _non-monochromatic_ waves _quantitatively_
+### Power spectra
+- Let there be some _time-dependent function_ $f(t)$
+- Take its [[Fourier series and transforms|Fourier transform]]:
+$$f(t)=\frac{1}{2\pi}\int_{-\infty}^\infty F(\omega)\exp(i\omega t)\,d\omega \hspace{1cm} F(\omega)=\int$$
+- The _power_ in frequency range $\omega$ to $\omega+d\omega$ is the _power spectrum_:
+$$P(\omega)\,d\omega=|F(\omega)|^2\,d\omega$$
+
+### Light sources
+
+#### Laser
+- Light produced by _stimulated emission_
+- It is (almost) a _pure harmonic wave_:
+$$\displaylines{f(t)\sim \cos(\omega t+\alpha) \\ F(\omega)\propto \exp(i\alpha)\delta(\omega-\omega_0)+\exp(-i\alpha)\delta(\omega+\omega_0)}$$
+- It is a _pair_ of delta functions at $\pm\omega_0$
+
+#### Spectral lines
+- Example: _gas discharge_ lamps
+- There are _several broadening mechanisms_
+
+- _Lifetime_ broadening:
+	- Unstimulated emission from an _isolated, stationary atom_ can be characterised by a _decaying harmonic wave_, with some _lifetime_ $\tau_s$, and _frequency_ $\omega_s=1/\tau_s$
+	$$\displaylines{f(t)=\exp(-\omega_st)\exp(i\omega_0t) \\ F(\omega)=\frac{1}{\omega-\omega_0-i\omega_s} \\ P(\omega)\sim \frac{1}{(\omega-\omega_0)^2+\omega_s^2}}$$
+	- It is a _Lorentzian_ power spectrum, _centred_ on $\omega_0$ with _linewidth_ (full-width half maximum) $2\omega_s$
+	![[Lifetime broadening.png]]
+
+- _Thermal_ broadening:
+	- Radiation from atoms _moving in the line of sight_ (at $v_x$) will be _Doppler shifted_
+	$$\omega-\omega_0=\frac{\omega_0 v_x}{c}$$
+	- From kinetic theory, the _distribution of velocities_ is _Gaussian_
+	- The _power spectrum_ is then:
+	$$P(\omega)\sim \exp\left(-\frac{m(\omega-\omega_0)^2c^2}{2\omega_0^2 k_BBT}\right)=\exp\left(-\frac{(\omega-\omega_0)^2}{2\sigma^2}\right)$$
+	- The _full-width half maximum_ is then given by:
+	$$2.36\sigma=2.36\,\omega_0\left(\frac{k_BT}{mc^2}\right)^{1/2}$$
+	- The _width scales with temperature_
+
+- _Pressire_ broadening:
+	- Atoms are subject to _collisions_ with other atoms
+	- This _perturbs_ the _phase correlation_
+	- The _mean time_ $\tau_1$ is:
+	$$\tau_1=\frac{1}{4N\mean{v}A}=\frac{b\sqrt{T}}{p}$$
+	- This produces another _Lorentzian_ profile:
+	$$P(\omega)\sim\frac{1}{(\omega-\omega_0)^2+1/\tau_1^2}$$
+
+- A gas discharge lamp has an output of a _superposition_ of large numbers of _independent photons_ from _similar atoms_
+- Overall, one gets a _convolution_ of the different broadening profiles
+- The _quasi-monochromatic waveform_:
+![[Quasi-monochromatic.png]]
+
+#### White light
+- A _large number_ of atoms with _different emission frequencies_, or atoms on a _black body_, results in _white light_ with a _broad power spectrum_
+![[White light.png]]
+### Interference and coherence
+- One must be able to calculate _interference with partially coherent light_
+- A _partially coherent_ wavefield:
+![[Partial coherence.png]]
+- _Phase registration_ is _lost_ over $l_c=c\tau_c$
+- $\tau_c$ is the _temporal coherence length_, which is _along the direction of propagation_
+- $w_c$ is the _spatial coherence width_, which is _perpendicular to the direction of propagation_
+
+- To _measure_ these lengths, let there be _ideal, identical lossless optical fibres_ which _sample_ points on a wavefield, and let them _interfere_
+![[Optical stethoscope.png]]
+
+- The _time average_ of a function $g(t)$ is defined as:
+$$\mean{g(t)}=\lim_{T\to\infty}\int_{-\infty}^\infty g(t)\,dt$$
+- The _resultant intensity_ of the interference pattern:
+$$I\sim \mean{(A_1+A_2)(A_1^*+A_2^*)}=\mean{|A_1|^2}+\mean{|A_2|^2}+\mean{A_1A_2^*}+\mean{A_1^*A_2}$$
+- The _cross terms_ determine _interference effects_
+
+- Suppose there are two measurements:
+	- $f_1$ at $\bm{r}_1$ at time $t$
+	- $f_2$ at $\bm{r}_2$ at time $t-\tau$
+- Then define the _mutual coherence function_:
+$$\Gamma(\bm{r}_1,\bm{r}_2,\tau)=\mean{f_1(\bm{r}_1,t)f_2^*(\bm{r}_2,t-\tau)}$$
+- This assumes there is _correlation_ in the behaviour after $\tau$ across time $t$
+
+- By _normalising intensity_, one gets the _degree of mutual coherence_:
+$$\displaylines{\gamma(\bm{r}_1,\bm{r}_2,\tau)=\frac{\Gamma(\bm{r}_1,\bm{r}_2,\tau)}{\sqrt{I_1I_2}} \\ I_i=\Gamma(\bm{r}_1,\bm{r}_1,0) \\ 0<\gamma<1}$$
+
+- This determines how _effectively_ the source waves can _interfere_
+- If $|\gamma|\sim 1$, this means $I$ can go _down to zero_ due to the _interference terms_, giving _good fringe contrast_
+
+- Examining the wavefield _along direction of propagation_ compares $f(t)$ at the _same point in the wavefront_, $\bm{r}_1=\bm{r}_2$, at _different times_, $t$ and $t-\tau$
+- This investigates _temporal coherence_
+
+- Examining the wavefield _along the wavefront_ compares $f(t)$ at the _same time_, $\tau=0$, at _different points along the wavefront_, $\bm{r}_1\neq\bm{r}_2$
+- This investigates _spatial coherence_
+
+### Temporal coherence
+
+
+### Spatial coherence
