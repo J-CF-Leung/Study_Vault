@@ -82,7 +82,7 @@ $$g_1g_2\neq g_2g_1$$
 	- Example: Under addition $\text{mod}\;5$, $\{0,1,2,3,4\}$ form a group
 	- This is [[#Mappings|isomorphic]] to the cyclic group of order $N$, $Z_N$
 
-- The [[Special relativity|Lorentz boost]] with _boost angle_ $\varphi$
+- The [[Special Relativity|Lorentz boost]] with _boost angle_ $\varphi$
 
 - The set of $n\times n$ matrices with determinants equal to $1$, or _special matrices_, with the group being denoted $SL(n,R)$, or the _special linear group_ with _real entries_
 	- The _complex_ case is $SL(n,C)$

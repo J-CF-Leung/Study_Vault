@@ -81,3 +81,6 @@ $$\epsilon_{ijk}\epsilon_{ijk}=6$$
 $$\bm{a\cdot(b\wedge c)}=a_i(b\wedge c)_i=\epsilon_{ijk}\,a_i\,b_j\,c_k$$
 - The vector triple product: use the product of two Levi-Civita tensors
 $$a\wedge(b\wedge c) = (\bm{a\cdot c})\bm{b}-(\bm{a\cdot b})\bm{c}$$
+
+
+# Covariant and contravariant components

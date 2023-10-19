@@ -306,6 +306,12 @@ $$\displaylines{{L^\bar\mu}_\alpha=\pmatrix{\cosh\psi&-\sinh\psi&0&0\\-\sinh\psi
 $$\displaylines{\bar{\bar x}=\bar \gamma(\bar x-\bar\beta\bar t)\hspace{1.5cm}\bar{\bar t}=\bar\gamma(\bar t-\bar\beta\bar x) \\ \bar x=\gamma(x-\beta t)\hspace{1.5cm}\bar t=\gamma(t-\beta x)} $$
 - By substituting the _rapidities_ into the transformations, one finds:
 $$\bar{\bar x}=x\sinh(\psi+\bar\psi)-t\cosh(\psi+\bar\psi)$$
+## Loss of simultaneity
+- Consider the Lorentz boost for a _time interval_:
+$$\Delta \bar t=\gamma(\Delta t-\beta\Delta x)$$
+- One can see that if events $A$ and $B$ are _simultaneous_ in $S$, they _may not be simultaneous_ in $S'$
+- However, provided their separation is _timelike_, the _sign_ of $\Delta t$ is conserved, or the _causality_ of the events is _Lorentz invariant_
+
 
 ## Time dilation and length contraction
 - Consider an object of _proper length_ $l_0$ in frame $(\bar{t},\bar{x},\bar{y},\bar{z})$, lying along $\bar{x}$

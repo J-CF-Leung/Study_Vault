@@ -1,4 +1,5 @@
-- [ ] Interference and coherence 📅 2023-10-18 🔼 
+- [x] Interference and coherence 🔼 📅 2023-10-18 ✅ 2023-10-18
+- [ ] Finish optical activity and Faraday Effect ⏫ 📅 2023-10-19 
 # Electrodynamics and Maxwell's Equations
 
 ## Fields and charges
@@ -367,6 +368,35 @@ $$\dunderline{\epsilon}=1+\dunderline{\chi}=\pmatrix{1-\frac{\omega_p^2}{\omega^
 
 ## Interference and partial polarisation
 - When considering EM waves, the interference must be in _vector_ form
+
+### Perpendicular plane-polarised waves
 - Consider the superposition of _two waves_ along the $z-$axis, _perpendicularly plane polarised_, with some _phase difference_ $\delta$
 - The _Poynting vector_ is then:
-$$\bm{N}=\bm{E}\times\bm{H}=\pmatrix{E_{1x}\cos(\omega t)\\E_{2y}\cos(\omega t+\delta)\\0}$$
+$$\begin{aligned}\bm{N}=\bm{E}\times\bm{H}&=\begin{pmatrix}E_{1x}\cos(\omega t)\\E_{2y}\cos(\omega t+\delta)\\0\end{pmatrix} \times\begin{pmatrix}-H_{2x}\cos(\omega t+\delta) \\ H_{1y}\cos(\omega t) \\ 0\end{pmatrix} \\ &= \begin{pmatrix}0 \\ 0 \\ E_{1x}H_{1y}\cos^2(\omega t)+E_{2y}H_{2x} \cos^2(\omega t+\delta) \end{pmatrix}\end{aligned}$$
+- This is _identical_ to the energy propagation for _two independent waves_
+- The _intensity at a point_ from two _superimposed perpendicularly plane-polarised waves_ is the _sum_ of the intensity of two waves
+- In other words, _perpendicular plane-polarised waves do not interfere_
+
+### Unpolarised and partially polarised light
+- Many natural sources have the _direction_ of $\bm{E}$ changing _randomly_ in time and space
+- It is said to be _unpolarised_
+- The $x$ and $y$ components of $\bm{E}$ are _unpolarised_
+- Plane-polarised beams produced by passing the _same unpolarised beam_ through $x$ and $y$ polarisers will be _mutually incoherent_
+	- There is _no well-defined phase difference_, hence they _cannot interfere_
+
+- A beam with both _polarised and unpolarised_ light with intensities $I_\text{pol}$ and $I_\text{unpol}$, is said to be _partially polarised_
+- The _degree of polarisation_ is defined as:
+$$\alpha=\frac{I_\text{pol}}{I_\text{pol}+I_\text{unpol}}$$
+### The Fresnel-Arago Laws
+- The conclusions above can be _summarised_ as:
+1. Two _coherent_ beams, plane polarised _parallel_, will _interfere_
+2. Two _coherent_ beams, plane polarised _perpendicularly_, _cannot interfere_
+3. Two _plane-polarised_ beams (no matter the orientation), _derived_ from components of _unpolarised light_, are _mutually incoherent_ and hence _cannot interfere_
+
+## Coherence
+- For simplicity, consider _scalar_ waves
+- Interference relies on a _well-defined phase difference_ between the wavelets, such that there is a well-defined sum
+- This can only be true for _purely monochromatic waves_
+
+- From _Fourier analysis_, purely monochromatic waves must have _infinite spatial and temporal extent_
+- Hence, _real_ sources can only be _quasi-monochromatic_

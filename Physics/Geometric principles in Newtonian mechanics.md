@@ -1,5 +1,5 @@
 - Physical quantities and laws can be expressed in _geometric forms_, i.e. _independent of any coordinate system, basis vectors, or reference frames_
-	- This can be viewed as a _Newtonian version_ of one of the [[Special relativity#The fundamental principles of Einsteinian relativity|principles of Einsteinian relativity]]
+	- This can be viewed as a _Newtonian version_ of one of the [[Special Relativity#The fundamental principles of Einsteinian relativity|principles of Einsteinian relativity]]
 
 - Instead of describing tensors using _components_, they can be interpreted as _vector-valued linear function of vectors_
 
