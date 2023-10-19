@@ -1,5 +1,4 @@
-- [x] Interference and coherence 🔼 📅 2023-10-18 ✅ 2023-10-18
-- [ ] Finish optical activity and Faraday Effect ⏫ 📅 2023-10-19 
+
 # Electrodynamics and Maxwell's Equations
 
 ## Fields and charges
@@ -405,7 +404,7 @@ $$\alpha=\frac{I_\text{pol}}{I_\text{pol}+I_\text{unpol}}$$
 ### Power spectra
 - Let there be some _time-dependent function_ $f(t)$
 - Take its [[Fourier series and transforms|Fourier transform]]:
-$$f(t)=\frac{1}{2\pi}\int_{-\infty}^\infty F(\omega)\exp(i\omega t)\,d\omega \hspace{1cm} F(\omega)=\int$$
+$$f(t)=\frac{1}{2\pi}\int_{-\infty}^\infty F(\omega)\exp(i\omega t)\,d\omega \hspace{1cm} F(\omega)=\int_{-\infty}^\infty f(t)\exp(-i\omega t)\,dt$$
 - The _power_ in frequency range $\omega$ to $\omega+d\omega$ is the _power spectrum_:
 $$P(\omega)\,d\omega=|F(\omega)|^2\,d\omega$$
 

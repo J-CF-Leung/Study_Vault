@@ -2,6 +2,7 @@
 	- The laws of physics are _invariant_ across _inertial reference frames_
 	- The _speed of causality_ for _all observers_ is the _speed of light in vacuum_ $c$
 	- There is _no longer absolute time or simultaneity_
+- Like special relativity, laws are written in terms of _geometric objects_, such as _vectors_ and _tensors_
 
 - Notation: [[Einstein notation]]
 - Apply the language of [[Special Relativity#Component representation|tensors, covariant and contravariant components]]
@@ -145,10 +146,47 @@ $$\partial_{\mu'}=\pd{x^\mu}{x^{\mu'}}\partial_\mu$$
 $$\displaylines{V^\mu\partial_\mu=V^{\mu'}\partial_{\mu'}=V^{\mu'}\pd{x^\mu}{x^{\mu'}}\partial_\mu \\ V^{\mu'}=\pd{x^{\mu'}}{x^\mu}V^\mu}$$
 - This transformation is _not necessarily linear_
 
-## Dual space
+- The _tangent vector_ to a curve $x^a(u)$ can then be defined:
+$$\frac{d}{du}=\frac{dx^\mu}{du}\pd{}{x^\mu}$$
+- These vectors are _contravariant_
+## Covariant/dual vectors
+- One can define _covariant vectors_
+- For example, the _gradient_ of a _scalar field_:
+$$X_\mu=\pd{\phi}{x^\mu}$$
+- The _component transformation_:
+$$X'_\mu=\pd{\phi'}{x^{\mu'}}=\pd{x^\nu}{x^{\mu'}}\pd{\phi}{x^\nu}=\pd{x^\nu}{x^{\mu'}}X_\nu$$
+- This is a _covariant vector_, which inabits the _dual space_ to that of the contravariant vectors
+- The _basis_ in this dual space are then the _gradients_ $\hat{e}^\mu=dx^\mu$
+	- One can verify that they are _orthonormal_ to the other basis:
+	$$\hat{e}^\mu\cdot\hat{e}_\nu=\pd{x^\mu}{x^\nu}={\delta^\mu}_\nu$$
+
+- _Summing_ a product of _contravariant_ and _covariant_ vectors makes a _scalar_, which is _invariant under transformations_:
+$$X_\mu'V^{\mu'}=\pd{x^\nu}{x^{\mu'}}\pd{x^{\mu'}}{x^\lambda}X_\nu V^\lambda={\delta^\nu}_\lambda X_\nu V^\lambda=X_\nu V^\nu$$
 
 ## Tensors
+- At a given point $P$ on the manifold, one can define a _tensor_, a _multilinear map_
+- A $(k,l)$ tensor takes $k$ _contravariant_ vectors and $l$ _covariant_ vectors to produce a _scalar_
+	- The tensor is said to have _rank $k+l$_
+	- Tensor _components_ can be said to be completely _covariant, contravariant, or mixed_
+- Like _vectors_, tensors are _geometric objects_ that are _coordinate independent_
 
+- Its _components_ in some given basis are:
+$${T^{\mu_1\dots \mu_k}}_{\nu_1\dots \nu_l}=T(dx^{\mu_1},\dots dx^{\mu_k},\partial_{\nu_1},\dots\partial_{\nu_l})$$
+- Like _vector components_, tensor components can also be _transformed_:
+$${T^{\mu_1'\dots \mu_k'}}_{\nu_1'\dots \nu_l'}=\pd{x^{\mu_1'}}{x^{\mu_1}}\dots \pd{x^{\mu_k'}}{x^{\mu_k}}\pd{x^{\nu_1}}{x^{\nu_1'}}\dots \pd{x^{\nu_l}}{x^{\nu_l'}}{T^{\mu_1\dots \mu_k}}_{\nu_1\dots \nu_l}$$
+### Tensor operations
+- _Addition_ is done _by component_:
+$$(T+S)_{\mu\nu}=T_{\mu\nu}+S_{\mu\nu}$$
+- One can check that this _still obeys the transformation law_
+
+- The _outer product_ of a $(p,q)$ tensor and an $(r,s)$ tensor produces a $(p+r,q+s)$ _tensor_
+- The outer product of $S$ and $T$ is _denoted_ $S\otimes T$, with _components_:
+$${(S\otimes T)^{\lambda_1\dots\lambda_p\mu_1\dots\mu_r}}_{\nu_1 \dots\nu_q\xi_1\dots\xi_s}={S^{\lambda_1\dots\lambda_p}}_{\nu_1 \dots\nu_q}{T^{\mu_1\dots\mu_r}}_{\xi_1\dots\xi_s}$$
+- For example, the _outer product of two contravariant vectors_ creates a $(2,0)$ _tensor_
+
+- The operation of _contraction_ sets a _contravariant_ and _covariant_ index _equal_, then proceeds to _sum_ them
+- A $(k,l)$ tensor is _contracted_ to a $(k-1,l-1)$ tensor
+- The tensor
 ## The metric
 
 ## Local geometry and Riemannian manifolds

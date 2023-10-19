@@ -170,6 +170,7 @@ $$\mu_B\equiv\frac{e\hbar}{2m_e}$$
 - Introduce the $g-$factor:
 $$\displaylines{g_e\approx2.0023\\(\hat{\bm\mu}_S)_e=-\frac{g_e}{2}\frac{e}{m_e}\hat{\bm{S}}=-g_e\frac{\mu_B}{\hbar}\hat{\bm{S}}\hspace{1.5cm} (\gamma_S)_e=-g_e\frac{\mu_B}{\hbar}}$$
 
+## Scalar magnetic moment
 - One can define the _scalar magnetic moment_ of a particle $\mu$:
 $$\mu\equiv\braket{\uparrow|\hat{\mu}_z|\uparrow}=\gamma_S\braket{\uparrow|\hat{S}_z|\uparrow}=\gamma_S\frac{\hbar}{2}$$
 - Therefore, for the _electron_:
@@ -209,3 +210,81 @@ $$\omega_S-\omega_c=\frac{g_e-2}{2}\omega_c$$
 $$\bm{B}=(0,0,B)\hspace{2cm}\hat{H}=-\mu_SB\hat{S}_z$$
 - From this, the eigenstates of $\hat{S}_z$ are _also energy eigenstates_:
 $$\displaylines{\hat{S}_z\ket{sm_s}=m_s\hbar\ket{sm_s} \\ \hat{H}\ket{sm_s}=-\gamma_Sm_sB\hbar\ket{sm_s}\Longrightarrow E_s=-\gamma_sm_sB\hbar=-m_s\hbar\omega_s}$$
+- Here, $\omega_s$ is the _Larmor frequency_
+- Therefore, in $B$, for spin $s$, there are $2s+1$ _discrete energy levels_
+
+## Wave-function evolution
+- For a particle _in a spin eigenstate_, $\ket{\psi(t=0)}=\ket{sm_s}$, the spin state evolves as:
+$$\ket{\psi(t)}=\exp(im_s\omega_st)\ket{sm_s}$$
+- The _expectation value_ of spin is then:
+$$\mean{\hat{S}_z}(t)=\braket{\psi(t)|\hat{S}_z|\psi(t)}=m_s\hbar$$
+- With the ladder operators, one also finds that:
+$$\mean{\hat{S}_+}=\mean{\hat{S}_-}=\mean{\hat{S}_x}=\mean{\hat{S}_y}=0$$
+- From this, one finds that from the _expectation value of spin_, there is _no "visible" precession_:
+$$\mean{\hat{\bm{S}}}=\Braket{\psi(t)|\hat{\bm{S}}|\psi(t)}=(0,0,m_s\hbar)$$
+
+- For an _arbitrary spin state_:
+$$\Ket{\psi(t=0)}=\sum_{m_s}c_{m_s}\ket{sm_s}$$
+- The state then evolves with time as:
+$$\ket{\psi(t)}=\sum_{m_s}c_{m_s}\exp(im_s\omega_st)\ket{sm_s}$$
+- The expectation values are then:
+$$\mean{\hat{\bm{S}}}=\Braket{\psi(t)|\hat{\bm{S}}|\psi(t)}=(A_{xy}\cos(\omega_st), B_{xy}\sin(\omega_st),m_s\hbar)$$
+- This matches _predictions from Ehrenfest's Theorem_
+
+## Magnetic moment of nuclei
+- The _proton_ has a charge, while the _neutron_ is _neutral_, hence one might expect an _analogy_ with the electron, where the proton has a moment while the neutron doesn't
+- However, _both protons and neutrons have non-zero magnetic moments_
+- Introduce the _nuclear magneton_ $\mu_N$:
+$$\mu_N\equiv\frac{e\hbar}{2m_p}$$
+- Then define proton and neutron _g-factors_:
+$$\displaylines{\hat{\bm{\mu}}_p=g_p\frac{\mu_N}{\hbar}\hat{\bm{S}}_p \hspace{1.5cm} \mu_p=g_p\frac{\mu_N}{2} \\ \hat{\bm{\mu}}_n=g_n\frac{\mu_N}{\hbar}\hat{\bm{S}}_n \hspace{1.5cm} \mu_n=g_n\frac{\mu_N}{2}}$$
+- Experimental evidence shows:
+$$\displaylines{g_p\approx+5.586 \\ g_n\approx-3.826}$$
+- This is evidence that these particles have _internal structure_ (quarks)
+
+- _Atomic nuclei_ can possess _any possible value of spin_
+- One then needs to _generalise_ the definition of scalar magnetic moment, to instead use the _maximal value of $m_s$_:
+$$\mu\equiv\Braket{S,S|\left(\hat{\mu}_s\right)_z|S,S}$$
+- Using this definition:
+$$\mu=\gamma_SS\hbar=g_S\mu_NS$$
+- The _spin precession frequency_ for the nuclei is then:
+$$\omega_s=\gamma_SB=\frac{\mu B}{S\hbar}=\frac{g_S\mu_NB}{\hbar}$$
+- The spin of the nucleus is typically denoted $\hat{\bm{I}}$
+- One may also use a different _convention_ for nuclear spin:
+$$\hat{\bm{\mu}}_I=-g_I\frac{\mu_B}{\hbar}\hat{\bm{I}}$$
+- The Hamiltonian is then:
+$$\hat{H}_B=-\hat{\bm{\mu}}_I\cdot\bm{B}$$
+- The _total magnetic contribution_ to the Hamiltonian is then:
+$$\hat{H}_B=\frac{\mu_B}{\hbar}(\hat{\bm{L}}+g_e\hat{\bm{S}}+g_I\hat{\bm{I}})\cdot\bm{B}$$
+
+# Stern-Gerlach experiment
+- _Classically_, with a magnetic dipole moment $\bm{\mu}$ in an _external magnetic field_ $\bm{B}$, it is subject to a _torque_:
+$$\bm{G}=\bm{\mu}\times\bm{B}$$
+- If the field is _non-uniform_, then it is subject to a _force_:
+$$\bm{F}=\nabla(\bm{\mu}\cdot\bm{B})$$
+- For a sample of _identical, randomly oriented dipoles_, there is a _continuum of possible trajectories_
+
+- In the _quantum_ case, there is a _finite number_ of _distinct spatial trajectories_
+- Consider a beam of _neutral_ particles in a _slowly varying magnetic field_:
+$$\bm{B}(\bm{r})=\bm{B}_0+\bm{B}_1(\bm{r}) \hspace{1.5cm}|\bm{B}_1(\bm{r})|\ll|\bm{B}_0|$$
+- Orient $\bm{B}_0$ along the $z-$axis: $\bm{B}_0=(0,0,B_0)$
+- Letting the particles have _magnetic dipole moment_ $\hat{\bm{\mu}}_S=\gamma_S\hat{\bm{S}}$:
+$$\hat{H}=\frac{\hat{\bm{p}}^2}{2m}-\hat{\bm{\mu}}_S\cdot\bm{B}=\frac{\hat{\bm{p}}^2}{2m}-\gamma_S\left(\hat{S}_zB_0-\hat{\bm{S}}\cdot\bm{B}_1(\bm{r})\right)$$
+- Then use _Ehrenfest's theorem_:
+$$\frac{d}{dt}\mean{\hat{\bm{r}}}=\frac{i}{\hbar}\mean{[\hat{H},\hat{\bm{r}}]} \hspace{1.5cm} \frac{d}{dt}\mean{\hat{\bm{p}}}=\frac{i}{\hbar}\mean{[\hat{H},\hat{\bm{p}}]}$$
+- As $\hat{\bm{S}}$ commutes with $\hat{\bm{r}}$ and $\hat{\bm{p}}$, and calculating the remaining commutator:
+$$\frac{d}{dt}\mean{\hat{\bm{r}}}=\frac{1}{m}\mean{\hat{\bm{p}}}$$
+- By using the [[Fundamental concepts of quantum mechanics#Useful commutation relations|commutator relation]] $[f(\bm{r}),\hat{\bm{p}}]=i\hbar\nabla f$:
+$$\frac{d}{dt}\mean{\hat{\bm{p}}}=\gamma_S\sum_{i}\mean{\hat{S}_i}\mean{\nabla B_{1,i}(\bm{r})}$$
+- _Neglecting_ the effect of $\bm{B}_1$ on the _spin component_, and supposing that the particle _is in a spin eigenstate_ $\ket{sm_s}$, such that $\braket{\hat{\bm{S}}}$ [[#Wave-function evolution|remains constant]]: 
+$$\frac{d}{dt}\mean{\hat{\bm{p}}}=m\frac{d^2}{dt^2}\mean{\hat{\bm{r}}}=\gamma_S m_s\hbar\mean{\nabla B_{1,z}(\bm{r})}$$
+- Hence, there are $2s+1$ _different trajectories_
+
+- For some _arbitrary initial spin state_, there is _precession_
+- However, as long as $|\bm{B}_1(\bm{r})|$ is _small_, the precession will be _extremely rapid_ relative to the _timescale associated with motion through the field_
+- There must be _multiple trajectories_, with _intensity_ proportional to $|c_{m_s}|^2$:
+![[Stern-Gerlach trajectories.png]]
+
+- If the experiment is performed with _atoms_, one must take into account the _total spin_:
+$$\hat{\bm{F}}=\hat{\bm{I}}+\hat{\bm{L}}+\hat{\bm{S}}$$
+- For example, $\text{Cs}$ has $I=7/2$ and a _single valence electron_ $(S=1/2)$, with $L=0$, hence $F=3,4$, and there are _nine beams_
