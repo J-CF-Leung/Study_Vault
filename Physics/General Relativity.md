@@ -186,7 +186,12 @@ $${(S\otimes T)^{\lambda_1\dots\lambda_p\mu_1\dots\mu_r}}_{\nu_1 \dots\nu_q\xi_1
 
 - The operation of _contraction_ sets a _contravariant_ and _covariant_ index _equal_, then proceeds to _sum_ them
 - A $(k,l)$ tensor is _contracted_ to a $(k-1,l-1)$ tensor
-- The tensor
+- The tensor $\tenscom{T}{\lambda\mu}{\nu}$ has _possible contractions_ $\tenscom{T}{\lambda\mu}{\lambda}$, $\tenscom{T}{\lambda\lambda}{\nu}$, and $\tenscom{T}{\lambda\mu}{\mu}$
+	- They all form _vectors_, either _covariant or contravariant_
+	- In general, these are _not equal_
+- A _contraction_ of $(1,1)$ tensor $v^\mu X_\nu$ is a _scalar_
+
+### Symmetry and antisymmetry
 ## The metric
 
 ## Local geometry and Riemannian manifolds
