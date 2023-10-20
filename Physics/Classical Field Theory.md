@@ -1,6 +1,10 @@
 - The _degrees of freedom_ are represented by _fields_
 - _Fields_ are _functions/maps between two sets of numbers_
 
+- Notation: _natural units_, $\hbar=c=1$
+	- Conversion: $\hbar c=0.2\,\text{GeV}\,\text{fm}$
+	- $[\text{T}]=[\text{E}]^{-1}=[\text{M}]^{-1}$
+
 - [ ] Add bits from TP1 notes 📅 2023-10-19 ⏫ 
 # Field theories in physics
 - The dynamics of a _point particle_ is a classical field theory
@@ -62,7 +66,7 @@ $$\frac{dp}{dt}=\int\pd{\pi}{t}\,dx-\int\pd{J}{x}\,dx=0$$
 - This gives the _conservation of canonical momentum_
 ## Generalising to more dimensions
 - For _more dimensions_, the action is:
-$$S=\int\Lagr\left(\phi,\pd{\phi}{t},\nabla\phi\right)\,dt\,dx_1dx_2\dots dx_d$$
+$$S=\int\Lagr\left(\phi,\pd{\phi}{t},\nabla\phi,x^\mu\right)\,dt\,dx_1dx_2\dots dx_d$$
 - The Euler-Lagrange equation is then:
 $$\pd{\Lagr}{\phi}=\pd{}{t}\left(\pd{\Lagr}{\dot{\phi}}\right)+\nabla\cdot\left(\pd{\Lagr}{(\nabla\phi)}\right)$$
 - The _conservation of canonical momentum_ is then:
@@ -82,7 +86,8 @@ $$\partial_\mu J^\mu=0$$
 $$S=\int\Lagr\,dx^\mu$$
 - The spacetime element is _Lorentz invariant_
 
-- One writes down the most _general_ Lagrangian, up to _second order terms_:
+- One writes down the most _general_ Lagrangian, up to _second order terms_
+	- Dimension of $\Lagr$: $[M]^4$
 $$\Lagr=\alpha(\partial^\mu\phi)(\partial_\mu\phi)+\beta\partial^\mu\partial_\mu\phi+\gamma\phi\partial^\mu\partial_\mu\phi+\delta\phi+\epsilon\phi^2$$
 - Impose the _boundary condition_ that
 
@@ -94,7 +99,68 @@ $$\Lagr=(\alpha-\gamma)(\partial^\mu\phi)(\partial_\mu\phi)+\partial^\mu$$
 
 - Then redefine $\epsilon$ as, getting the Lagrangian density as:
 $$\Lagr=\frac{1}{2}(\partial^\mu\phi)(\partial_\mu\phi)-\frac{1}{2}m^2\phi^2$$
-
+- Writing it out in more detail:
+$$\Lagr=\frac{1}{2c^2}\left(\pd{\phi}{t}\right)^2-\frac{1}{2}(\nabla\phi)^2-\frac{1}{2}m^2\phi^2$$
 
 - The equation of motion is then the _Klein-Gordon equation_:
 $$\partial^\mu\partial_\mu\phi+m^2\phi=0$$
+	- For a _different metric_, there is a _minus sign_
+
+- One also gets the _canonical momentum density_:
+$$\pi=\pd{\Lagr}{\dot{\phi}}=\frac{1}{c^2}\left(\pd{\phi}{t}\right)$$
+- The _Hamiltonian density_ is then:
+$$\Ham=\frac{c^2\pi^2}{2}+\frac{1}{2}(\nabla\phi)^2+\frac{1}{2}m^2\phi^2$$
+
+## Fourier analysis of Klein-Gordon equation
+- For simplicity, take _one spatial dimension_
+- Let there be a _plane wave solution_ to the Klein-Gordon equation:
+$$\phi=\exp[i(kx-\omega t)]$$
+- This gives the condition:
+$$\omega^2=k^2+m^2$$
+- One can then _superimpose_ solutions (with $N(-k)=N(k)$ as a normalising factor)
+	- Ensure $\phi$ is _real_:
+$$\phi=\int\,dk\,N(k)\,\left[a(k)\exp[i(kx-\omega t)]+a^*(k)\exp[-i(kx-\omega t)]\right]$$
+- One can then try to write the Hamiltonian:
+$$H=\int\left(\frac{c^2\pi^2}{2}+\frac{1}{2}(\nabla\phi)^2+\frac{1}{2}m^2\phi^2\right)\,dx$$
+- Using:
+$$\int\,dx\exp[i(k\pm k')x]=2\pi\delta(k\pm k')\hspace{1.5cm} N(-k)=N(k)\hspace{1.5cm}\omega(-k)=\omega(k)$$
+- One finds:
+$$H=2\pi\int\,dk\,[N(k)\omega(k)]^2[a(k)a^*(k)+a^*(k)a(k)]$$
+- The _explicit time dependence disappears_ as $\Lagr$ is _not explicitly dependent on time_
+- In _quantum field theory_, $a(k)$ is an _operator_ and $a$ and $a^*$ _may not commute_
+- Choose $N(k)$:
+$$N(k)=\frac{1}{2\pi}\frac{1}{2\omega}$$
+- This _keeps the Hamiltonian Lorentz invariant_
+- The Hamiltonian is then:
+$$H=\int\,dk\,N(k)\frac{\omega(k)}{2}[a(k)a^
+*(k){+a^*(k)a(k)}]$$
+- In the _classical_ regime:
+$$H=\int\,dk\,N(k)\omega(k)|a(k)|^2$$
+- $N(k)$ can be interpreted as _number of modes_
+- $\omega(k)$ is the _energy of modes_
+- Each mode behaves as a _simple/quantum harmonic oscillator_
+	- Energy is _relativistic_
+
+- For _3 spatial dimensions_:
+$$\phi\propto\exp[i(\bm{k}\cdot\bm{r}-\omega t)]$$
+- Normalisation:
+$$N(k)=\frac{1}{(2\pi)^3}\frac{1}{2\omega(k)}$$
+- The expression for the _Hamiltonian_ holds
+
+## Complex scalar fields
+- Let there be a general _complex scalar field_ $\phi(x^\mu)$
+- The Lagrangian must be _invariant_ with respect to adding a _phase_ to $\phi$
+- The most _general Lagrangian_:
+$$\Lagr=\partial_\mu\phi(\partial^\mu\phi^*)-m^2\phi^*\phi$$
+- _Decompose_ the scalar field:
+$$\phi=\phi_1+i\phi_2$$
+- Treating $\phi$ and $\phi^*$ as _independent_:
+$$\pi=\pd{\Lagr}{\dot{\phi}}=\dot{\phi}^* \hspace{1.5cm} \pi^*=\pd{\Lagr}{\dot{\phi^*}}=\dot{\phi}$$
+- The _Hamiltonian density_:
+$$\Ham=\pi\dot{\phi}+\pi^*\dot{\phi^*}-\Lagr$$
+- One then gets _separate Klein-Gordon equations_ for $\phi$ and $\phi^*$
+
+- The Fourier decomposition:
+$$\phi=\int\,dk\,N(k)[a(k)\exp(ikx-i\omega t)+b^*(k)\exp(-ikx+i\omega t)]$$
+- The Hamiltonian:
+$$H=\int\,dk\,N(k)\omega(k)[|a(k)|^2+|b(k)|^2]$$
