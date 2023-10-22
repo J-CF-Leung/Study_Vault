@@ -222,3 +222,4 @@ $$\Omega=\frac{(N+n)!}{N!n!}$$
 - _Minimising_ $E_n-TS_n$:
 $$n_\text{eq}=\frac{N}{\exp(\beta\epsilon)-1}$$
 - There is _no upper limit_ on $n_\text{eq}$ as temperature gets _high_
+- Hence, this is an _unphysical_ model

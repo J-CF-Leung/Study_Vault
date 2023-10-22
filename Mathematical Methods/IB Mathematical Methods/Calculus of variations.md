@@ -175,7 +175,7 @@ $$\Lambda[y_\text{trial}]\geq\lambda_0$$
 - Hence, the bound can be _refined by minimising $\Lambda$_ w.r.t. the parameters:
 $$\lambda_0\leq \min_{\{a_i\}}\Lambda(\{a_i\})$$
 
-- Application: the [[Topics in Quantum Mechanics#The Variational Principle|Variational Principle in Quantum Mechanics]]
+- Application: the [[Approximation Methods#Variational method|Variational method in quantum mechanics]]
 
 - The _next-lowest eigenvalue_ $\lambda_1$ can be estimated using a _trial function orthogonal to $y_0$_
 	- Proof: similar for lowest eigenvalue but $y_0$ is not included in the expansion due to _orthgonality_

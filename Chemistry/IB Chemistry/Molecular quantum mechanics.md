@@ -558,7 +558,7 @@ $$\ket{\Psi}=\ket{LSJM_J}$$
 
 
 # The Variational Principle
-- Origin and detail: [[Topics in Quantum Mechanics#The Variational Principle]]
+- Origin and detail: [[Approximation Methods#Variational method|Variational method in quantum mechanics]]
 >[!info] The Variational Principle
 >Let there be an arbitrary Hamiltonian $\Ham$, with ground state energy $E_0$. For _any_ normalised wave function $\wv$:
 $$\tilde{E}=\braket{\Psi|\Ham|\Psi}\geq E_0$$

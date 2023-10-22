@@ -72,7 +72,7 @@ $$\pd{\Lagr}{\phi}=\pd{}{t}\left(\pd{\Lagr}{\dot{\phi}}\right)+\nabla\cdot\left(
 - The _conservation of canonical momentum_ is then:
 $$\pd{\pi}{t}+\nabla\cdot\bm{J}=0$$
 - As time and space are on _equal footing_, treat $t$ as _another coordinate variable_:
-$$\displaylines{\Lagr=\Lagr(\phi,\partial_\mu\phi) \\ \pd{\Lagr}{\phi}=\partial_\mu\pd{\Lagr}{[\partial_\mu\phi]}}$$
+$$\displaylines{\Lagr=\Lagr(\phi,\partial_\mu\phi) \\ \pd{\Lagr}{\phi}=\partial_\mu\left(\pd{\Lagr}{[\partial_\mu\phi]}\right)}$$
 - Then if $\partial\Lagr/\partial\phi=0$:
 $$\partial_\mu J^\mu=0$$
 
@@ -89,15 +89,19 @@ $$S=\int\Lagr\,dx^\mu$$
 - One writes down the most _general_ Lagrangian, up to _second order terms_
 	- Dimension of $\Lagr$: $[M]^4$
 $$\Lagr=\alpha(\partial^\mu\phi)(\partial_\mu\phi)+\beta\partial^\mu\partial_\mu\phi+\gamma\phi\partial^\mu\partial_\mu\phi+\delta\phi+\epsilon\phi^2$$
-- Impose the _boundary condition_ that
+- Impose the _boundary condition_ that $\phi\to 0$ at _infinity_, and is _fixed_ for _two points in time_ (distant past and future)
 
 - One can _rewrite_ this as:
-$$\Lagr=(\alpha-\gamma)(\partial^\mu\phi)(\partial_\mu\phi)+\partial^\mu$$
+$$\Lagr=(\alpha-\gamma)(\partial^\mu\phi)(\partial_\mu\phi)+\partial^\mu(\beta\partial_\mu\phi+\gamma\phi\partial_\mu\phi)+\delta\phi+\epsilon\phi^2$$
+- _Integrating_ this over a 4D surface, the second term gives a _constant_, which _does not affect_ the equations of motion
 
-- One can then _define_ $\alpha-\gamma$ as
+- One can then _define_ $\alpha-\gamma$ as $1/2$
 - This leads to the _equation of motion_:
+$$\partial^\mu\partial_\mu\phi-\delta-2\epsilon\phi=0$$
+	- _Lower_ the index using the metric, making the $(\partial_\mu\phi)(\partial^\mu\phi)$ term contribute _twice_
+- Then impose the boundary conditions to make $\delta$ _vanish_
 
-- Then redefine $\epsilon$ as, getting the Lagrangian density as:
+- Then redefine $\epsilon$ as $-m^2/2$, getting the Lagrangian density as:
 $$\Lagr=\frac{1}{2}(\partial^\mu\phi)(\partial_\mu\phi)-\frac{1}{2}m^2\phi^2$$
 - Writing it out in more detail:
 $$\Lagr=\frac{1}{2c^2}\left(\pd{\phi}{t}\right)^2-\frac{1}{2}(\nabla\phi)^2-\frac{1}{2}m^2\phi^2$$
@@ -110,6 +114,9 @@ $$\partial^\mu\partial_\mu\phi+m^2\phi=0$$
 $$\pi=\pd{\Lagr}{\dot{\phi}}=\frac{1}{c^2}\left(\pd{\phi}{t}\right)$$
 - The _Hamiltonian density_ is then:
 $$\Ham=\frac{c^2\pi^2}{2}+\frac{1}{2}(\nabla\phi)^2+\frac{1}{2}m^2\phi^2$$
+- This can only be _positive-definite_ iff the $\phi^2$ coefficient is _positive_
+	- Negative: one gets states with _arbitrary large negative energy_, hence the state has _no stable ground state_, which is _unphysical_
+	- This justifies $\epsilon=-m^2/2$
 
 ## Fourier analysis of Klein-Gordon equation
 - For simplicity, take _one spatial dimension_

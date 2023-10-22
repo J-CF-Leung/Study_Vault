@@ -108,3 +108,79 @@ $$E_n=\left(n+\frac{1}{2}\right)\hbar\omega-\frac{\epsilon^2}{2m\omega^2}$$
 - This can be found from the _true solution_, found from _rewriting the potential_:
 $$V(x)=\frac{1}{2}m\omega^2\left(x+\frac{\epsilon}{2m\omega^2}\right)^2 -\frac{\epsilon^2}{2m\omega^2}$$
 - Hence, _all energy levels_ are _lowered_ by a _common amount_
+
+### Van der Waals interaction
+![[van der Waals.png]]
+$$\displaylines{\hat{H}=\hat{H}_0+V \\ \hat{H}_0= \\ V=\frac{e^2}{4\pi\epsilon_0}\left(\frac{1}{r}+\right)}$$
+
+- The _perturbed ground state_ is the _product_ of two [[3D time-independent Hamiltonians#The hydrogen-like atom|hydrogen atom ground states]] $\ket{nlm}=\ket{100}$:
+
+
+- For $r\gg a_0$, one can use a _multipole expansion_ for $V$
+
+- The _first order correction vanishes_
+- The _second order energy correction_:
+
+- It _varies as_ $1/r^6$, and is _attractive_ since the energy correction is _negative_
+
+## Degenerate perturbation theory
+- If a pair of _zeroth order eigenstates_ are _degenerate in energy_:
+$$\braket{m^{(0)}|\hat{H}^{(1)}|n^{(0)}}=0\;\;\;\text{   for } n\neq m$$
+- As the zeroth order states and the Hamiltonian are _given quantities_, there is _no guarantee that this occurs_
+
+- Form a _new basis from the degnerate eigenstates_:
+$$\hat{H}^{(0)}(c_1\ket{n_j^{(0)}}+c_2\ket{n_k^{(0)}})=$$
+- One should then make sure the _basis satisfies the condition_:
+$$H'_{\alpha\beta}\equiv\braket{n^{(0)}_\alpha|\hat{H}'|n^{(0)}_\beta}=E'_{n,\alpha}\delta_{\alpha\beta}$$
+- This _diagonalises_ a _block_ of the matrix corresponding to the _degenerate eigenstates_
+
+- Stuff stuff stuff
+
+- Therefore, one should find a basis that _diagonalises_ $\hat{A}$, where $[\hat{A},\hat{H}]=0$
+
+- The _first order corrections_ are then just the _eigenvalues_ $E'_{n,\alpha}$:
+$$\Delta E_{n,\alpha}^{(1)}=E'_{n,\alpha}$$
+- In general, the eigenvalues are _different_
+- The energy level then _splits_:
+![[Degenerate perturbation.png]]
+
+### Example: 2D square well
+
+- Consider the _first excited state_, which has _degenerate eigenvectors_ $\ket{1,2}$ and $\ket{2,1}$
+
+- Diagonalising:
+
+
+![[degenerate square well.png]]
+- where $A=$
+# Variational method
+- The _variational method_ gives an _upper bound_ of eigenstate energies for _any_ $\hat{H}$
+- The method relies on _guessing and optimising trial wavefunctions_ $\psi_\text{trial}(\alpha_i)$, depending on some _variational parameters_ $\alpha_i$
+- The optimising involves _minimising the trial energy_
+
+- Consider a Hamiltonian with _unknown eigenstates and energies_:
+$$\hat{H}\ket{n}=E_n\ket{n}$$
+- Introdced some _normalised trial state_ $\ket{\psi(\alpha)}$:
+$$\ket{\psi(\alpha)}=\sum_n a_n(\alpha)\ket{\alpha}\hspace{1.5cm}\sum_n|a_n(\alpha)|^2=1$$
+- The _expectation value_ is then:
+$$E_\alpha\equiv\braket{\psi(\alpha)|\hat{H}|\psi(\alpha)}=\sum_n$$
+- Therefore:
+$$E_\alpha\geq E_0$$
+# Rayleigh-Ritz method
+- A type of the variational method, using a _trial wave fucntion_ of the form:
+$$\psi(\bm{r})=\sum_j\alpha_j\psi_j(\bm{r})$$
+- $\psi_j$ are a _linearly independent set_ of wavefunctions, which are _not necessarily complete or orthonormal_
+- Minimising energy algebra nightmare
+
+- Define the matrices ($S$ is the _overlap matrix_):
+$$H_{jk}=\braket{\psi_j|\hat{H}|\psi_k}=H_{kj}^* \hspace{1.5cm} S_{jk}=\braket{\psi_j|\psi_k}=S_{kj}^*$$
+- The basis set is _not necessarily orthonormal_, hence the matrix elements _are not diagonalised_
+
+- The minimum then corresponds to:
+$$\sum_k\alpha_k(H_{jk}-ES_{jk})=0$$
+- One can represent this with a _matrix equation_:
+$$(\dunderline{H}-E\dunderline{S})\cdot\underline{\alpha}=0$$
+- To get _non-trivial solutions_:
+$$\text{det}(\dunderline{H}-E\dunderline{S})=0$$
+- This is known as the _secular equation_
+- The _lowest solution_ for $E$ gives the _upper bound for ground state energy_

@@ -154,26 +154,30 @@ $$\frac{d}{du}=\frac{dx^\mu}{du}\pd{}{x^\mu}$$
 - For example, the _gradient_ of a _scalar field_:
 $$X_\mu=\pd{\phi}{x^\mu}$$
 - The _component transformation_:
-$$X'_\mu=\pd{\phi'}{x^{\mu'}}=\pd{x^\nu}{x^{\mu'}}\pd{\phi}{x^\nu}=\pd{x^\nu}{x^{\mu'}}X_\nu$$
+$$X_{\mu'}=\pd{\phi'}{x^{\mu'}}=\pd{x^\nu}{x^{\mu'}}\pd{\phi}{x^\nu}=\pd{x^\nu}{x^{\mu'}}X_\nu$$
 - This is a _covariant vector_, which inabits the _dual space_ to that of the contravariant vectors
+
 - The _basis_ in this dual space are then the _gradients_ $\hat{e}^\mu=dx^\mu$
 	- One can verify that they are _orthonormal_ to the other basis:
 	$$\hat{e}^\mu\cdot\hat{e}_\nu=\pd{x^\mu}{x^\nu}={\delta^\mu}_\nu$$
 
 - _Summing_ a product of _contravariant_ and _covariant_ vectors makes a _scalar_, which is _invariant under transformations_:
-$$X_\mu'V^{\mu'}=\pd{x^\nu}{x^{\mu'}}\pd{x^{\mu'}}{x^\lambda}X_\nu V^\lambda={\delta^\nu}_\lambda X_\nu V^\lambda=X_\nu V^\nu$$
+$$X_{\mu'}V^{\mu'}=\pd{x^\nu}{x^{\mu'}}\pd{x^{\mu'}}{x^\lambda}X_\nu V^\lambda={\delta^\nu}_\lambda X_\nu V^\lambda=X_\nu V^\nu$$
 
 ## Tensors
 - At a given point $P$ on the manifold, one can define a _tensor_, a _multilinear map_
 - A $(k,l)$ tensor takes $k$ _contravariant_ vectors and $l$ _covariant_ vectors to produce a _scalar_
 	- The tensor is said to have _rank $k+l$_
 	- Tensor _components_ can be said to be completely _covariant, contravariant, or mixed_
+- The linearity of a type $(1,1)$ tensor:
+$$\begin{aligned}T(\alpha W_\mu+\beta X_\mu,\gamma V^\nu+\delta Z^\nu)&=\alpha\gamma \,T(W_\mu,V^\nu)+\alpha\delta\,T(W_\mu,Z^\nu) \\ &+ \beta\gamma \,T(X_\mu,V^\nu)+\beta\delta\,T(X_\mu,Z^\nu)\end{aligned}$$
 - Like _vectors_, tensors are _geometric objects_ that are _coordinate independent_
 
 - Its _components_ in some given basis are:
 $${T^{\mu_1\dots \mu_k}}_{\nu_1\dots \nu_l}=T(dx^{\mu_1},\dots dx^{\mu_k},\partial_{\nu_1},\dots\partial_{\nu_l})$$
 - Like _vector components_, tensor components can also be _transformed_:
 $${T^{\mu_1'\dots \mu_k'}}_{\nu_1'\dots \nu_l'}=\pd{x^{\mu_1'}}{x^{\mu_1}}\dots \pd{x^{\mu_k'}}{x^{\mu_k}}\pd{x^{\nu_1}}{x^{\nu_1'}}\dots \pd{x^{\nu_l}}{x^{\nu_l'}}{T^{\mu_1\dots \mu_k}}_{\nu_1\dots \nu_l}$$
+	- The _primed coordinates_ remain _"upstairs/downstairs" on both sides_
 ### Tensor operations
 - _Addition_ is done _by component_:
 $$(T+S)_{\mu\nu}=T_{\mu\nu}+S_{\mu\nu}$$
@@ -191,8 +195,61 @@ $${(S\otimes T)^{\lambda_1\dots\lambda_p\mu_1\dots\mu_r}}_{\nu_1 \dots\nu_q\xi_1
 	- In general, these are _not equal_
 - A _contraction_ of $(1,1)$ tensor $v^\mu X_\nu$ is a _scalar_
 
+### Expansion of tensor
+- The _components_ of a tensor:
+$${T^{\mu_1\dots \mu_k}}_{\nu_1\dots \nu_l}=T(dx^{\mu_1},\dots dx^{\mu_k},\partial_{\nu_1},\dots\partial_{\nu_l})$$
+- This can be expressed using the _outer product_:
+$$T=\tenscom{T}{\mu_1\dots\mu_k}{\nu_1\dots\nu_l}(\partial_{\mu_1}\otimes\dots\otimes\partial_{\mu_k}, dx^{\nu_1}\otimes\dots\otimes dx^{\nu_l})$$
+
 ### Symmetry and antisymmetry
-## The metric
+- A type $(0,2)$ tensor $S_{\mu\nu}$ is _symmetric if_ $S_{\mu\nu}=S_{\nu\mu}$
+- It is _antisymmetric_ if $S_{\mu\nu}=-S_{\nu\mu}$
+
+- One can _decompose_ any second-rank tensor into _symmetric and anti-symmetric parts_:
+$$S_{\mu\nu}=\frac{1}{2}(S_{\mu\nu}+S_{\nu\mu})+\frac{1}{2}(S_{\mu\nu}-S_{\nu\mu})$$
+- One can denote the _symmetric and anti-symmetric parts_ by:
+$$S_{(\mu\nu)}=\frac{1}{2}(S_{\mu\nu}+S_{\nu\mu}) \hspace{1.5cm} S_{[\mu\nu]}=\frac{1}{2}(S_{\mu\nu}-S_{\nu\mu})$$
+- One can then _generalise_ this to an $n-$th rank tensor:
+$$\displaylines{S_{(\mu_1\mu_2\dots\mu_n)}=\frac{1}{n!}(S_{\mu_1\mu_2\dots\mu_n}+S_{\mu_2\mu_1\dots\mu_n}+\dots) \\ S_{[\mu_1\mu_2\dots\mu_n]}=\frac{1}{n!}(S_{\mu_1\mu_2\dots\mu_n}-S_{\mu_2\mu_1\dots\mu_n}+\dots)}$$
+- The first sum is over _all possible permutations_
+- The second sum is an _alternating sum_, with a _negative sign for odd permutations_
+- $1/n!$ is a _normalising factor_ such that for a _totally symmetric matrix_, $S_{(\mu_1\mu_2\dots)}=S_{\mu_1\mu_2\dots}$
+
+- One can also _symmetrise over a subset of indices_:
+$$S_{(\lambda\mu)\nu}=\frac{1}{2}(S_{\lambda\mu\nu}+S_{\mu\lambda\nu})$$
+- Symmetrisation can only take place _among only covariant or contravariant indices_
+- The symmetry of the tensor is _independent of coordinate basis_
+
+### Quotient theorem
+- _Not all_ sets of quantities labelled with indices are _necessarily tensor components_
+- Tensors must satisfy some _quotient relation_
+
+- If a set of quantities, when _contracted_ with an _arbitrary tensor_ produces _another tensor_, the _original set must form the components of a tensor_
+- Example: a set of quantities $\tenscom{T}{\lambda}{\mu\nu}$, contracted with vector $v^\alpha$:
+$$\displaylines{\tenscom{T'}{\lambda}{\mu\nu}v'^\nu=\pd{x^{\lambda'}}{x^\lambda}\pd{x_{\mu'}}{x_\mu}\tenscom{T}{\lambda}{\mu\nu}v^{\nu}=\pd{x^{\lambda'}}{x^\lambda}\pd{x_{\mu'}}{x_\mu}\tenscom{T}{\lambda}{\mu\nu}\left(v^{\nu'}\pd{x^\nu}{x^{\nu'}}\right) \\ \tenscom{T'}{\lambda}{\mu\nu}=\pd{x^{\lambda'}}{x^\lambda}\pd{x_{\mu'}}{x_\mu}\pd{x_{\nu'}}{x_\nu}\tenscom{T}{\lambda}{\mu\nu}}$$
+
+## The metric tensor
+- The _geometry_ of a manifold is defined by its _metric_
+- Consider two _neighbouring points_ on a manifold, with coordinates $x^\mu$ and $x^\mu+dx^\mu$
+- The _local geometry_ there is given by the _interval_
+
+- On a _Riemannian manifold_, the interval takes the form:
+$$ds^2=g_{\mu\nu}(x)dx^\mu dx^\nu$$
+- The interval is _quadratic in coordinate differentials_
+- $g_{\mu\nu}$ are components of the _metric tensor_
+	- Each component is known as a _metric function_
+	- Components are _dependent on coordinate system_
+- Example: the _Minkowski metric_ $\eta_{\mu\nu}$, where $ds^2=dt^2-dx^2-dy^2-dz^2$
+
+- The geometry is _Riemannian_ if $ds^2>0$, and _pseudo-Riemannian_ if not
+
+- The metric can always be chosen as _symmetric_
+	- The _antisymmetric_ part contributes _zero to the interval_
+- From this, for an $N-$dimensional manifold, there are $N(N+1)/2$ _independent metric functions_ at each point
+
+- As the interval is _invariant under transformations_:
+$$\displaylines{ds^2=g_{\mu\nu}dx^\mu dx^\nu=g_{\mu'\nu'}\,dx^{\mu'}dx^{\nu'} \\ g_{\mu'\nu'}(x')=\pd{x^\mu}{x^{\mu'}}\pd{x^\nu}{x^{\nu'}}\,g_{\mu\nu}(x(x'))}$$
+- As there are $N$ _arbitrary_ coordinate transformations one can perform, there are only $N(N-1)/2$ _independent functional degrees of freedom_ for the tensor
 
 ## Local geometry and Riemannian manifolds
 
