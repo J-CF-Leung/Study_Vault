@@ -221,6 +221,8 @@ $$\ket{jm}=\sum_{m',m''}\left[\ket{j'm'}\otimes\ket{j''m''}\right]\braket{j'm';j
 - The sum is over valus of $m'$ and $m''$ such that $m'+m''=m$
 	- Or one can treat the inner products as _zero_
 - The inner products are known as the _Clebsh-Gordan coefficients_, and give the _overlap_ between the states
+- The _matrix_ of coefficients is a _block-diagonal, unitary_ matrix
+	- It is not just unitary, but _orthogonal_ as the coefficients are _real_
 
 - For a _given_ $j'$ and $j''$, one can show that $j$ takes the values:
 $$j=j'+j'',j'+j''-1,\dots,|j'-j''|+1,|j'-j''|$$
@@ -238,6 +240,9 @@ $$\displaylines{\hat{J}_\pm=\hat{J}_\pm'+\hat{J}_\pm''\\\hat{J}_\pm\ket{jm}=\lef
 $$\braket{j_1m|j_2m}=0$$
 
 ![[Clebsch-Gordan coefficients.png]]
+
+- For $j_1=j_2$, the _resultant_ eigenstate is either _symmetric or antisymmetric_ w.r.t. _particle exchange_:
+$$\ket{j_2m_2j_1m_1}=(-1)^{j-(j_1+j_2)}\ket{j_1m_1j_2m_2}$$
 ## Two spin-1/2 particles
 - For $s'=s''=1/2$, start from the state:
 $$\ket{11}=\ket{\uparrow}\ket{\uparrow}$$

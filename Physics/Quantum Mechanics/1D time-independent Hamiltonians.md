@@ -113,7 +113,7 @@ $$\Psi_1(x,t)=A\exp[i(k_1x-\omega t)]+rA\exp[-i(k_1x+\omega t)]$$
 $$\Psi_2(x,t)=tA\exp[i(k_2x-\omega t)]$$
 - Applying the _boundary conditions for continuity_:
 $$r=\frac{k_1-k_2}{k_1+k_2} \hspace{1cm} t=\frac{2k_1}{k_1+k_2}$$
-- [[#The Probability Current]] in each region, for each travelling direction:
+- [[Fundamental concepts of quantum mechanics#Probability flow|The probability current]] in each region, for each travelling direction:
 $$\displaylines{J_1^+=\frac{\hbar k_1}{m}|A|^2 \\ J_1^-=|rA|^2\frac{\hbar k_1}{m}=|A|^2\left|\frac{k_1-k_2}{k_1+k_2}\right|^2\frac{\hbar k_1}{m} \\ J_2^+=|tA|^2\frac{\hbar k_2}{m}=|A|^2\left|\frac{2k_1}{k_1+k_2}\right|^2\frac{\hbar k_2}{m}}$$
 - It can be checked that it is _conserved across the boundary_, $J_1^+-J_1^-=J_2^+$
 - Only _valid for travelling wave_, or $k_2\in\mathbb{R}$

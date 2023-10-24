@@ -91,6 +91,7 @@ $$\sum_m\mathbb{P}_m=\sum_m\ket{u_m}\bra{u_m}=\hat{I}$$
 - Expanding $\hat{O}\ket{V}$ using the completeness relation:
 $$\displaylines{\hat{O}\ket{V}=\sum_{i,j} \ket{i}\braket{i|\hat{O}|j}\braket{j|V}=\sum_{i,j}O_{ij}\ket{i}\braket{j|V} \\ \hat{O}\equiv\sum_{i,j}O_{ij}\ket{i}\bra{j}}$$
 - $O_{nm}=\braket{u_n|\hat{O}|u_m}$ are known as the _matrix elements_ of $\hat{O}$ in this particular basis
+	- The _columns_ of the matrix are the _components of_ $\hat{O}\ket{u_m}$ in this basis
 
 ## Products and commutators
 - The _product_ of two operators acting on $\ket{a}$ is equivalent to each acting in turn:

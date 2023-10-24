@@ -62,6 +62,7 @@ $$\oint\bm{A}\cdot d\bm{s}=\iint_S\bm{B}\cdot d\bm{S}=\Phi$$
 - In _cylindrical coordinates_ with origin at the centre of the solenoid:
 $$\bm{A}=\frac{\Phi}{2\pi\rho}\hat{\phi}=\nabla\left(\frac{\Phi\phi}{2\pi}\right)$$
 - As $\chi$ is _multiple-valued_, the entire region is now _multiply-connected_
+
 - As each _path_ is still in a _singly-connected region_:
 $$\psi_{D,\chi}=\psi_{A,0}\exp\left[i\frac{q}{\hbar}\int_A\bm{A}(\bm{s})\cdot d\bm{s}\right]+ \psi_{B,0}\exp\left[i\frac{q}{\hbar}\int_B\bm{A}(\bm{s})\cdot d\bm{s}\right]$$
 - As $A-B$ is a _loop_ around the solenoid:
@@ -103,7 +104,7 @@ $$\Delta E=\hbar\omega_c$$
 $$\bm{A}=(-By,0,0)$$
 - The Hamiltonian then becomes:
 $$\hat{\Ham}=\frac{1}{2m_e}\left[(\hat p_x-eBy)^2+\hat p_y^2+\hat p_z^2\right]$$
-- The Schrödinger equation now admits _separated variable solutions_ of the form:
+- The Schrödinger equation now admits _separated variable solutions_ of the form (as it _commutes_ with $\hat{p}_x$ and $\hat{p}_z$)
 $$\displaylines{\psi(\bm{r})=\exp[ik_xx+ik_zz]\chi(y)\hspace{1.5cm}\hat{\Ham}_\chi\chi(y)=E\chi(y)\\ \hat\Ham_\chi=\frac{1}{2m}\left[(\hbar k_x-eBy)^2+\hat{p}_y^2+\hbar^2k_z^2\right]}$$
 
 - The Hamiltonian then has the form of the _harmonic oscillator_, where $\omega=\omega_c$ and the _central position_ is $y=y_0$:
@@ -201,7 +202,7 @@ $$\mean{\hat{S}_x}=A\cos(\omega t+\phi)\hspace{1.5cm}\mean{\hat{S}_y}=-A\sin(\om
 
 ## Precession of the spin-1/2 particle
 - For a _spin-1/2 particle_, the _Larmor frequency_ is:
-$$\omega_S=g_e\frac{e}{2m_e}B=\frac{g_e}{2}\omega_c$$
+$$\omega_S=\gamma_S B=g_e\frac{e}{2m_e}B=\frac{g_e}{2}\omega_c$$
 - Here, $\omega_c$ is the _cyclotron frequency_, or the frequency of the _particle's circular motion_
 - The _difference in frequencies_ is:
 $$\omega_S-\omega_c=\frac{g_e-2}{2}\omega_c$$

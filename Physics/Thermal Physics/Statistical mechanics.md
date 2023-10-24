@@ -1,7 +1,7 @@
 - Ideas _emerge_ from [[Classical Thermodynamics|Thermodynamics]]
 - It deals with _energy_ in _large, (non-)interacting systems_
 
-# Thermodynamics
+# Thermodynamics 
 - _Energy_ is a _conserved quantity_, given by the _first law_:
 >[!info] First Law of Thermodynamics
 >Energy is conserved, and both heat and work are forms of energy
@@ -9,6 +9,9 @@
 - $U$ is the _internal energy_ of the system
 - $Q$ is the _heat supplied_ to the system
 - $W$ is the _work done on_ the system
+
+- _Detailed recap_:
+	![[Classical Thermodynamics#The first law, internal energy, and heat]]
 
 - A _large system_ is one where there are _many particles_, and it becomes _impossible to solve for motion of all particles_
 - Hence, one must deal with _statistical properties_
@@ -48,9 +51,10 @@ $$U=U(S,V,N)$$
 - Let there be a _closed system at equilibrium_
 - _Divide_ the system into two subsystems
 - From the fact that $dS=0$, $dS_1+dS_2=0$
-- For _any change_ in $1$, $2$ must 
+- For _any change_ in $1$, $2$ must have the _opposite_ $(dX_1=-dX_2)$
 - Using the _Master Equation_:
-$$\displaylines{dS=\frac{dU}{T}+\frac{p}{T}dV-\frac{\mu}{T}dN \\ dS_1+dS_2=}$$
+$$\displaylines{dS=\frac{dU}{T}+\frac{p}{T}dV-\frac{\mu}{T}dN \\ dS_1+dS_2=\left(\frac{1}{T_1}+\frac{1}{T_2}\right)dU+\left(\frac{p_1}{T_1}+\frac{p_2}{T_2}\right)dV-\left(\frac{\mu_1}{T_1}+\frac{\mu_2}{T_2}\right)dN=0}$$
+
 - As the division is _arbitrary_, _all intensive variables_ must be _uniform_ throughout the system
 
 ### Reservoir and availability
@@ -70,10 +74,10 @@ $$dA=(T-T_R)\,dS-(p-p_R)\,dV+(\mu-\mu_R)\,dN$$
 
 - Availability is linked to the _probability_ of a system to have some value $x$ of a variable
 $$\displaylines{S_\text{tot}(x)=k_B\ln\Omega(x) \\ P(x)\propto\exp\left(\frac{S_\text{tot}}{k_B}\right)=\exp\left(-\frac{S_\text{tot}}{k_BT}\right)}$$
-
 ### Thermodynamic potentials
+- Consider a body with _constant $V$_ and $N$ 
 
-### Minimising potentials and availability
+### Minimising potentials
 
 # Statistics
 - The "state" of a system specifies its _configuration_
@@ -82,6 +86,9 @@ $$\displaylines{S_\text{tot}(x)=k_B\ln\Omega(x) \\ P(x)\propto\exp\left(\frac{S_
 $$p_i\propto\exp\left(-\frac{E_i}{kT}\right)$$
 
 ## Microstates and macrostates
+- _Detailed recap_:
+	![[Statistical thermodynamics#Microstates and macrostates]]
+
 - The _microstate_ of a system is a collection of states, all with the _same energy_ $E_i$
 	- They _cannot be distinguished_
 - If a microstate has _degeneracy_ $\Omega_i$:
@@ -95,7 +102,7 @@ $$S_i=k\ln\Omega_i$$
 
 - The _Helmholtz free energy_ $F=U-TS$ is a property of the system at _equilibrium_, in the most probable _macrostate_
 - The _minimum_ of $E_i-TS_i$ is $F$
-	- The corresponding values of $E_i$ and $S_i$ are then the _macrostate_ thermodynamic variables
+	- The corresponding values of $E_i$ and $S_i$ are then the _thermodynamic variables_ of the _macrostate_
 
 ## Temperature
 - Consider a _closed_ system which is in two _partitions_
@@ -169,7 +176,8 @@ $$U=-\pd{}{\beta}\ln Z\hspace{1.5cm} F=-kT\ln Z$$
 - One can express the partition function as:
 $$Z=\sum_\text{microstates} \exp\left(-\frac{E_i-TS_i}{kT}\right)$$
 - This sum has the _largest contribution_ from the _minimum_ of $E_i-TS_i$
-- One can then make an _approximation_ of the _equilibrium values_ using the minimum
+- One can then make an _approximation_ of the _equilibrium values_ using the minimum:
+$$\text{min}(E_i-TS_i)\approx U-TS$$
 
 - The above expressions give $U$ and $F$ as _functions of $T$_
 - $T$ is only the _proper variable for the latter_
@@ -223,3 +231,56 @@ $$\Omega=\frac{(N+n)!}{N!n!}$$
 $$n_\text{eq}=\frac{N}{\exp(\beta\epsilon)-1}$$
 - There is _no upper limit_ on $n_\text{eq}$ as temperature gets _high_
 - Hence, this is an _unphysical_ model
+
+### The paramagnet
+- Magnetic moments can be _spin up or down_, under the influence of an _external magnetic field_ $B$
+- If it is _aligned_, the energy is $-mB<0$, and the _antiparallel_ energy is $mB>0$
+- The spins _do not interact with each other_
+
+- For a _single spin_:
+$$Z_1=\exp\left(-\frac{mB}{kT}\right)+\exp\left(\frac{mB}{kT}\right)=2\text{cosh}\left(\frac{mB}{kT}\right)$$
+- For $N$ sites:
+$$Z_N=Z_1^N$$
+- The _free energy_:
+$$F=-NkT\ln\left(2\text{cosh}\left(\frac{mB}{kT}\right)\right)$$
+- As expected, it is _extensive_
+- The _magnetisation_, or _magnetic moment per spin_:
+$$M=-\pd{F}{B}=m\tanh\left(\frac{mB}{kT}\right)$$
+
+- There is an _alternative approach_ using _minimisation_
+- The _internal energy_ for each _microstate_:
+$$E=mB(N_--N_+)$$
+- The _number of states_ for each _microstate_:
+$$\Omega=\frac{N!}{N_+!N_-!}$$
+- _Defining_ the magnetisation:
+$$M=m\frac{N_+-N_-}{N}\hspace{1.5cm} E=-NMB$$
+- By _minimising_ $F=E-TS$ w.r.t. $M$, one gets the magnetisation:
+$$M=m\tanh\left(\frac{mB}{kT}\right)$$
+
+- There is _another alternative approach_ by defining $\sigma_i=\pm1$ for each site, writing out the _energy_, then the _partition function_ by summing _all configurations_
+## The many-level system
+- For the [[Quantum Harmonic Oscillator]], there are _many equally spaced, singly degenerate levels_:
+$$E_n=\hbar\omega\left(n+\frac{1}{2}\right)$$
+- Then write the partition function $Z$:
+$$Z=\sum_{n=0}^\infty \exp\left[-\frac{\hbar\omega}{kT}\left(n+\frac{1}{2}\right)\right]=\frac{\exp(-\hbar\omega/2kT)}{1-\exp(-\hbar\omega/kT)}=\frac{1}{2\sinh(\hbar\omega/2kT)}$$
+- For _low temperature_, $Z\approx \exp(-\hbar\omega/2kT)$
+
+- Doing the required derivative, one gets the _internal energy_:
+$$U=\frac{\hbar\omega}{2}\coth\left(\frac{\hbar\omega}{2kT}\right)$$
+- One can also get that at _high temperature_, the _heat capacity_ is _constant_
+
+# Continuous systems
+- A system with _continuous energy levels_
+
+## The ideal gas
+- Let there be a gas of _volume_ $V$, _temperature_ $T$, with _number of particles_ $N$
+- Each particle only has _kinetic energy_ $p^2/2m$
+
+- The partition function is coverted to an _integral over phase space_
+- As _phase space volume_ has dimensionality, and $Z$ is dimensionless, introduce the _normalising factor_:
+$$\Delta x\Delta p\sim 2\pi\hbar$$
+- A _factor_ in $Z$ only adds a _constant_ to entropy or energy
+- Therefore, the partition function is:
+$$Z=\int\frac{d^3x\,d^3p}{(2\pi\hbar)^3}\exp\left(-\frac{p_x^2+p_y^2+p_z^2}{2mkT}\right)$$
+- Evaluating the integral:
+$$Z=\frac{V}{(2\pi\hbar)^3}\left(\sqrt{}\right)$$

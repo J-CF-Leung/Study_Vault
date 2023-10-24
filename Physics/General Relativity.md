@@ -57,7 +57,7 @@ $$\bm{F}=m_I\frac{d^2\bm{x}}{dt^2}$$
 - In _special relativity_, _Minkowski spacetime_ is a 4-dimensional manifold
 - In _general relativity_, spacetime is a _manifold_ that responds _dynamically_ to mass and energy
 
-# Manifolds
+# Manifolds, vectors, tensors and geometry
 - _Informally_, an $n-$dimensional manifold is a _surface_ on which one can have a _network_ of _coordinate patches_, where the surface _resembles_ $\mathbb{R}^n$, but only _locally_
 - In relativity, the _network_ is a set of _events_, and the whole _patch_ is _spacetime_
 
@@ -149,7 +149,7 @@ $$\displaylines{V^\mu\partial_\mu=V^{\mu'}\partial_{\mu'}=V^{\mu'}\pd{x^\mu}{x^{
 - The _tangent vector_ to a curve $x^a(u)$ can then be defined:
 $$\frac{d}{du}=\frac{dx^\mu}{du}\pd{}{x^\mu}$$
 - These vectors are _contravariant_
-## Covariant/dual vectors
+### Covariant/dual vectors
 - One can define _covariant vectors_
 - For example, the _gradient_ of a _scalar field_:
 $$X_\mu=\pd{\phi}{x^\mu}$$
@@ -163,8 +163,117 @@ $$X_{\mu'}=\pd{\phi'}{x^{\mu'}}=\pd{x^\nu}{x^{\mu'}}\pd{\phi}{x^\nu}=\pd{x^\nu}{
 
 - _Summing_ a product of _contravariant_ and _covariant_ vectors makes a _scalar_, which is _invariant under transformations_:
 $$X_{\mu'}V^{\mu'}=\pd{x^\nu}{x^{\mu'}}\pd{x^{\mu'}}{x^\lambda}X_\nu V^\lambda={\delta^\nu}_\lambda X_\nu V^\lambda=X_\nu V^\nu$$
+## The metric tensor
+- The _geometry_ of a manifold is defined by its _metric_
+- Consider two _neighbouring points_ on a manifold, with coordinates $x^\mu$ and $x^\mu+dx^\mu$
+- The _local geometry_ there is given by the _interval_
 
-## Tensors
+- On a _Riemannian manifold_, the interval takes the form:
+$$ds^2=g_{\mu\nu}(x)dx^\mu dx^\nu$$
+- The interval is _quadratic in coordinate differentials_
+- $g_{\mu\nu}$ are components of the _metric tensor_
+	- Each component is known as a _metric function_, which is _dependent on the point onb the manifold_ at which it is evaluated
+	- Components are _dependent on coordinate system_
+- Example: the _Minkowski metric_ $\eta_{\mu\nu}$, where $ds^2=dt^2-dx^2-dy^2-dz^2$
+
+- The geometry is _Riemannian_ if $ds^2>0$, and _pseudo-Riemannian_ if not
+
+- The metric can always be chosen as _symmetric_
+	- The _antisymmetric_ part contributes _zero to the interval_
+- From this, for an $N-$dimensional manifold, there are $N(N+1)/2$ _independent metric functions_ at each point
+- If the metric is _diagonal_ $(g_{\mu\nu}=0\;\; \forall\mu\neq\nu)$, the coordinate system is _orthogonal_
+	- Example: The Minkowski metric
+
+- As the interval is _invariant under transformations_:
+$$\displaylines{ds^2=g_{\mu\nu}dx^\mu dx^\nu=g_{\mu'\nu'}\,dx^{\mu'}dx^{\nu'} \\ g_{\mu'\nu'}(x')=\pd{x^\mu}{x^{\mu'}}\pd{x^\nu}{x^{\nu'}}\,g_{\mu\nu}(x(x'))}$$
+- As there are $N$ _arbitrary_ coordinate transformations one can perform, there are only $N(N-1)/2$ _independent functional degrees of freedom_ for the tensor
+
+## Local geometry
+- The _intrinsic geometry_ of a manifold is characterised by the _line element_
+	- It is _independent_ of any _embedding_ in higher-dimensional space
+
+- Example: a _cylindrical surface_ embedded in $\mathbb{R}^3$
+	- The interval is $ds^2=dz^2+ad\phi^2$
+	- It is _locally identical_ to a 2D plane, as one can make a _transformation_ $ds^2=dz'^2+dy'^2$
+	- This transformation can be made _everywhere_, as a _2D sheet_ can be _continuously rolled_ into a cylinder, so its _intrinsic geometry_ is said to be _identical to the Euclidean plane_
+	- The _extrinsic geometry_ is seen in $\mathbb{R}^3$, where it is _curved_
+- Example: a _2-sphere_ embedded in $\mathbb{R}^3$
+	- The interval is $ds^2=a^2d\theta^2+a^2\sin^2\theta d\phi^2$
+	- While it is _locally identical_, the transformation _cannot be made over the whole sphere_
+	- The sphere is _intrinsically curved_
+	![[2-sphere.png]]
+
+- Generally, relativity deals with _intrinsic geometry_, which is _independent of embedding_
+- While the _topology_ of the manifold is _intrinsic_, it is _non-local_, and hence _irrelevant to general relativity_
+
+### The 2-sphere and 3-sphere
+- Let there be a _2-sphere_, embedded in $\mathbb{R}^3$ defined by:
+$$x^2+y^2+z^2=a$$
+- The _line element_ in _3-space_ is $ds^2=dx^2+dy^2+dz^2$
+
+- From the definition of the 2-sphere, one gets the _constraint_ $xdx+ydy+zdz=0$
+- Substituting $dz$, one gets the _induced line element_:
+$$ds^2=dx^2+dy^2+\frac{(xdx+ydy)^2}{a^2-(x^2+y^2)}$$
+- Using _plane polar coordinates_ (on the _tangent plane_):
+$$\displaylines{x=\rho\cos\phi\hspace{1.5cm}y=\rho\cos\phi \\ ds^2=\frac{a^2}{a^2-\rho^2}d\rho^2+\rho^2d\phi^2}$$
+- Thus, one gets the _induced metric_
+- There is a _singularity_ at $\rho=a$ 
+	- This corresponds to the _equator relative to the point_ at which $ds$ is evaluated
+![[2-sphere polars.png]]
+
+- Next, consider the _3-sphere_, embedded in $\mathbb{R}^4$:
+$$x^2+y^2+z^2+w^2=a^2$$
+- Similarly, the _induced line element_ is:
+$$ds^2=dx^2+dy^2+dz^2+\frac{(xdx+ydy+zdz)^2}{a^2-(x^2+y^2+z^2)}$$
+- Similarly, using _spherical polar coordinates_ in the tangent space:
+$$ds^2=\frac{a^2}{a^2-r^2}dr^2+r^2d\theta^2+r^2\sin^2\theta \,d\phi^2$$
+- This describes a _non-Euclidean_ 3D space
+- For $a\to\infty$, one recovers _3D Euclidean space_
+	- For $r\ll a$, $\mathbb{R}^3$ is recovered _locally_
+
+- One should not try to visualise the 3-sphere
+## Lengths and volumes
+- Consider sume _curve_ $x^\mu(u)$ between points $A$ and $B$ on some manifold
+- Since $ds^2=g_{\mu\nu}x^\mu x^\nu$ is the _invariant distance_ between neighbouring points, the _length along a curve_ is:
+$$L_{AB}=\int_{u_A}^{u_B} \left|g_{\mu\nu}\frac{dx^\mu}{du}\frac{dx^\nu}{du}\right|^{1/2}du$$
+
+- For the _volume_ of some region, assume a _diagonal_ metric, where $g_{\mu\nu}=0$ if $\mu\neq\nu$:
+	- Consider the _sides_ of the element with length $ds=\sqrt{g_{ii}}dx^i$
+$$dV=\sqrt{|g_{11}g_{22}\dots g_{NN}|}\,dx^1dx^2\dots dx^N$$
+- The quantity in square root is the _determinant_ of the metric tensor
+	- One can check that it transforms as $g'=g/J^2$, where $J$ is the [[#Coordinate transformations|Jacobian]]
+- The product of differentials transforms as $dx^{1'}dx^{2'}\dots = Jdx^1dx^2\dots$
+- Hence, one sees that the volume element is _invariant_:
+$$dV=\sqrt{|g|}\,dx^1dx^2\dots dx^N$$
+## Local Cartesian Coordinates on Riemannian manifolds
+- On a _Riemannian_ manifold, it is _generally not possible_ to choose coordinates such that the _line element_ is in a _Euclidean form_ at _every point_ (i.e. make the metric tensor $g_{\mu\nu}=\delta_{\mu\nu}$)
+	- There are $N(N+1)/2$ _independent functions_ but only $N$ _transformations_
+
+- However, it is possible to make it _Euclidean for a small area around some given point_
+- This condition corresponds to:
+$$\displaylines{g_{\mu\nu}(P)=\delta_{\mu\nu}\hspace{1.5cm}\pd{g_{\mu\nu}}{x^\rho}\Bigg|_P=0 \\ g_{\mu\nu}=\delta_{\mu\nu}+O[(x-x_P)^2]}$$
+- These are the _local Cartesian coordinates_ at point $P$
+- This corresponds to a _local intertial frame_
+
+- Consider the _Taylor expansion_ of the _coordinate transformation_
+- One can show that since $g_{\mu\nu}'$ has $N(N+1)/2$ _independent values_, and the _coordinates_ ${\partial x'^\rho}/{\partial x'^\sigma}$ has $N^2$ _degrees of freedom_, one can _fix_ $g'_{\mu\nu}$ and still have $N(N-1)/2$ degrees of freedom _remaining_
+- Similarly, $\partial g_{\mu\nu}/\partial x^\rho$ has $N^2(N+1)/2$ _independent values_, and the _coordinates_ $\partial x'^\mu/\partial x^\rho\partial x^\sigma$ have $N^2(N+1)/2$ degrees of freedom, one can _fix_ $\partial g'_{\mu\nu}/\partial x^\rho$
+
+- However, the _second derivatives of the metric cannot be eliminated_, and these terms give rise to the _curvature_ of the manifold 
+## Pseudo-Riemannian manifolds
+- For a _pseudo-Riemannian manifold_, $ds^2$ can be _zero or negative_
+- This implies that the _eigenvalues_ of $g_{\mu\nu}$ can be _negative_
+
+- One can find _local coordinates_ such that at some point:
+$$g_{\mu\nu}(P)=\eta_{\mu\nu}\hspace{1.5cm}\pd{g_{\mu\nu}}{x^\rho}\Bigg|_P=0 $$
+- Where the matrix $\eta_{\mu\nu}$:
+$$\eta_{\mu\nu}=\text{diag}(\pm1,\pm1,\dots\pm1)$$
+- The _signature_ of the manifold is the number of _positive_ entries _minus_ the number of _negative_ entries
+
+- Example: _Minkowski spacetime_
+$$\displaylines{ds^2=c^2dt^2-dx^2-dy^2-dz^2 \\ g_{\mu\nu}=\text{diag}(+1,-1,-1,-1)}$$
+
+# Tensor algebra
 - At a given point $P$ on the manifold, one can define a _tensor_, a _multilinear map_
 - A $(k,l)$ tensor takes $k$ _contravariant_ vectors and $l$ _covariant_ vectors to produce a _scalar_
 	- The tensor is said to have _rank $k+l$_
@@ -178,7 +287,7 @@ $${T^{\mu_1\dots \mu_k}}_{\nu_1\dots \nu_l}=T(dx^{\mu_1},\dots dx^{\mu_k},\parti
 - Like _vector components_, tensor components can also be _transformed_:
 $${T^{\mu_1'\dots \mu_k'}}_{\nu_1'\dots \nu_l'}=\pd{x^{\mu_1'}}{x^{\mu_1}}\dots \pd{x^{\mu_k'}}{x^{\mu_k}}\pd{x^{\nu_1}}{x^{\nu_1'}}\dots \pd{x^{\nu_l}}{x^{\nu_l'}}{T^{\mu_1\dots \mu_k}}_{\nu_1\dots \nu_l}$$
 	- The _primed coordinates_ remain _"upstairs/downstairs" on both sides_
-### Tensor operations
+## Tensor operations
 - _Addition_ is done _by component_:
 $$(T+S)_{\mu\nu}=T_{\mu\nu}+S_{\mu\nu}$$
 - One can check that this _still obeys the transformation law_
@@ -195,13 +304,13 @@ $${(S\otimes T)^{\lambda_1\dots\lambda_p\mu_1\dots\mu_r}}_{\nu_1 \dots\nu_q\xi_1
 	- In general, these are _not equal_
 - A _contraction_ of $(1,1)$ tensor $v^\mu X_\nu$ is a _scalar_
 
-### Expansion of tensor
+### Expansion of a tensor
 - The _components_ of a tensor:
 $${T^{\mu_1\dots \mu_k}}_{\nu_1\dots \nu_l}=T(dx^{\mu_1},\dots dx^{\mu_k},\partial_{\nu_1},\dots\partial_{\nu_l})$$
 - This can be expressed using the _outer product_:
 $$T=\tenscom{T}{\mu_1\dots\mu_k}{\nu_1\dots\nu_l}(\partial_{\mu_1}\otimes\dots\otimes\partial_{\mu_k}, dx^{\nu_1}\otimes\dots\otimes dx^{\nu_l})$$
 
-### Symmetry and antisymmetry
+## Symmetry and antisymmetry
 - A type $(0,2)$ tensor $S_{\mu\nu}$ is _symmetric if_ $S_{\mu\nu}=S_{\nu\mu}$
 - It is _antisymmetric_ if $S_{\mu\nu}=-S_{\nu\mu}$
 
@@ -220,42 +329,57 @@ $$S_{(\lambda\mu)\nu}=\frac{1}{2}(S_{\lambda\mu\nu}+S_{\mu\lambda\nu})$$
 - Symmetrisation can only take place _among only covariant or contravariant indices_
 - The symmetry of the tensor is _independent of coordinate basis_
 
-### Quotient theorem
+## Quotient theorem
 - _Not all_ sets of quantities labelled with indices are _necessarily tensor components_
 - Tensors must satisfy some _quotient relation_
 
 - If a set of quantities, when _contracted_ with an _arbitrary tensor_ produces _another tensor_, the _original set must form the components of a tensor_
 - Example: a set of quantities $\tenscom{T}{\lambda}{\mu\nu}$, contracted with vector $v^\alpha$:
 $$\displaylines{\tenscom{T'}{\lambda}{\mu\nu}v'^\nu=\pd{x^{\lambda'}}{x^\lambda}\pd{x_{\mu'}}{x_\mu}\tenscom{T}{\lambda}{\mu\nu}v^{\nu}=\pd{x^{\lambda'}}{x^\lambda}\pd{x_{\mu'}}{x_\mu}\tenscom{T}{\lambda}{\mu\nu}\left(v^{\nu'}\pd{x^\nu}{x^{\nu'}}\right) \\ \tenscom{T'}{\lambda}{\mu\nu}=\pd{x^{\lambda'}}{x^\lambda}\pd{x_{\mu'}}{x_\mu}\pd{x_{\nu'}}{x_\nu}\tenscom{T}{\lambda}{\mu\nu}}$$
+## The metric tensor revisited
+- From the above, it is clear that the _metric tensor_ is type $(0,2)$
+- Hence it is a _bilinear map_ from a _pair of vectors_ to a _real number_
+- One can then use it to define an _inner product_ between vectors:
+$$g(a,b)=g_{\mu\nu}a^\mu b^\nu$$
 
-## The metric tensor
-- The _geometry_ of a manifold is defined by its _metric_
-- Consider two _neighbouring points_ on a manifold, with coordinates $x^\mu$ and $x^\mu+dx^\mu$
-- The _local geometry_ there is given by the _interval_
+### Index kung-fu and the inverse
+- It can also be used to _map vectors to co-vectors_:
+$$v_\mu\equiv g_{\mu\nu}v^\nu$$
+- This is known as _lowering the index_
+- One can also change the _type of a tensor_:
+$$T_{\mu\nu}=g_{\mu\lambda}\tenscom{T}{\lambda}{\nu}$$
 
-- On a _Riemannian manifold_, the interval takes the form:
-$$ds^2=g_{\mu\nu}(x)dx^\mu dx^\nu$$
-- The interval is _quadratic in coordinate differentials_
-- $g_{\mu\nu}$ are components of the _metric tensor_
-	- Each component is known as a _metric function_
-	- Components are _dependent on coordinate system_
-- Example: the _Minkowski metric_ $\eta_{\mu\nu}$, where $ds^2=dt^2-dx^2-dy^2-dz^2$
+- One can define an _inverse metric_:
+$$(g^{-1})^{\lambda\mu}g_{\mu\nu}=\delta^\lambda_\nu$$
+- One can prove that this _obeys tensor transformation laws_
+- It is often simply denoted $g^{\lambda\mu}$
+- This is consistent with _index lowering_:
+$$g_{\mu\rho}g_{\nu\sigma}g^{\rho\sigma}=g_{\rho\mu}\tenscom{\delta}{\rho}{\nu}=g_{\mu\nu}$$
 
-- The geometry is _Riemannian_ if $ds^2>0$, and _pseudo-Riemannian_ if not
+- In other words, the _inverse metric_ is used to _map co-vectors to vectors_:
+$$v^\mu\equiv g^{\mu\nu}v_\nu$$
+- This is known as _raising the index_
 
-- The metric can always be chosen as _symmetric_
-	- The _antisymmetric_ part contributes _zero to the interval_
-- From this, for an $N-$dimensional manifold, there are $N(N+1)/2$ _independent metric functions_ at each point
+- By applying the metric, then its _inverse_, one recovers the _original object_
 
-- As the interval is _invariant under transformations_:
-$$\displaylines{ds^2=g_{\mu\nu}dx^\mu dx^\nu=g_{\mu'\nu'}\,dx^{\mu'}dx^{\nu'} \\ g_{\mu'\nu'}(x')=\pd{x^\mu}{x^{\mu'}}\pd{x^\nu}{x^{\nu'}}\,g_{\mu\nu}(x(x'))}$$
-- As there are $N$ _arbitrary_ coordinate transformations one can perform, there are only $N(N-1)/2$ _independent functional degrees of freedom_ for the tensor
+- One can raise and lower indices on general tensors:
+$$\tenscom{T}{\lambda\mu}{\nu}=T_{\rho\sigma\nu}g^{\rho\lambda}g^{\sigma\mu}=T^{\lambda\mu\rho}g_{\rho\nu}$$
 
-## Local geometry and Riemannian manifolds
+- If one _raises only one index of the metric_, one gets:
+$$\tenscom{g}{\mu}{\nu}=\delta^\mu_\nu$$
+- This follows from the _definition of the inverse metric_ $g^{\mu\lambda}g_{\lambda\nu}=\delta^\mu_\nu$
+- One can show that _its components are the same in any coordinate system_
 
+## The inner product
+- Using the definitions above, one can rewrite the _inner product_:
+$$g_{\mu\nu}a^\mu b^\nu=g^{\mu\nu}a_\mu b_\nu=a_\nu b^\nu=a^\nu b_\nu$$
+- On a _Riemannian manifold_, the $a^\nu a_\nu\geq0$, with _equality iff $a$_ is the _null vector_
+- On a _pseudo-Riemannian manifold_, $a^\nu b_\nu$ can be _zero or negative_
 
-### Intrinsic and extrinsic geometry
+- One can define a _generalised length_ of a vector as:
+$$|v|=|g_{\mu\nu}v^\mu v^\nu|^{1/2}$$
+- One can also define a _generalised angle_ $\theta$:
+$$\cos\theta=\frac{a_\mu b^\nu}{|a||b|}$$
+- On a _pseudo-Riemannian manifold_, $|\cos\theta|>1$ is _possible_
 
-## Line and volume elements
-
-## Pseudo-Riemannian manifolds
+- If $\cos\theta$ _vanishes_, then the vectors are _orthogonal_

@@ -290,6 +290,10 @@ $$\displaylines{\bar{t}=\gamma(t-\beta x)\hspace{1cm}\bar x=\gamma(x-\beta t)\hs
 
 - A boost along some _unit vector_ $\hat{\bm{n}}$ can be written as follows:
 $${L^\bar0}_0=\gamma\hspace{1cm}{L^\bar\mu}_0={L^\bar0}_\mu=\beta\gamma n^\mu \hspace{1cm} {L^\bar\mu}_\nu={L^\bar\nu}_\mu=(\gamma-1)n^\mu n^\nu+\delta^{\mu\nu}$$
+- Derivation: 
+	- _Split_ positions into _parallel and perpendicular components_, then express $x^\bar{\mu}$ as a linear combination of $x^\nu$
+	- Alternatively, apply _pure rotations_ along with the _boost along a spatial axis_
+
 - As for _pure rotations_, they can be represented by:
 $${L^\bar\mu}_\alpha=\pmatrix{1&0&0&0\\0&{R^1}_1&{R^1}_2&{R^1}_3 \\ 0&{R^2}_1&{R^2}_2&{R^2}_3 \\ 0&{R^3}_1&{R^3}_2&{R^3}_3}$$
 - Here, $R$ is a _rotation matrix_ in Euclidean 3-space

@@ -2,6 +2,7 @@
 	- Perturbation Theory
 	- The variational method
 
+- [ ] Finish note📅 2023-10-24 ⏫ 
 # Time-independent perturbation theory
 - Consider an _"unperturbed"_ Hamiltonian $\hat{H}^{(0)}$, with _known_ eigenstates and eigenvalues:
 $$\hat{H}^{(0)}\ket{n^{(0)}}=E_n^{(0)}\ket{n^{(0)}}\hspace{1.5cm}\braket{n^{(0)}|m^{(0)}}=\delta_{nm}$$

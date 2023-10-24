@@ -481,6 +481,7 @@ $$\displaylines{\gamma(\bm{r}_1,\bm{r}_2,\tau)=\frac{\Gamma(\bm{r}_1,\bm{r}_2,\t
 
 - This determines how _effectively_ the source waves can _interfere_
 - If $|\gamma|\sim 1$, this means $I$ can go _down to zero_ due to the _interference terms_, giving _good fringe contrast_
+	- If $I_1=I_2$, then the resultant intensity can go back to _zero_
 
 - Examining the wavefield _along direction of propagation_ compares $f(t)$ at the _same point in the wavefront_, $\bm{r}_1=\bm{r}_2$, at _different times_, $t$ and $t-\tau$
 - This investigates _temporal coherence_
@@ -489,6 +490,96 @@ $$\displaylines{\gamma(\bm{r}_1,\bm{r}_2,\tau)=\frac{\Gamma(\bm{r}_1,\bm{r}_2,\t
 - This investigates _spatial coherence_
 
 ### Temporal coherence
+- The _temporal coherence_ of a source gives information on the _spectral content_
 
+- Potential setup to investigate temporal coherence:
+![[Temporal coherence stethoscope.png]]
+- The _time delay_ $\tau=2d/c$ can be altered _spatially_
+- This is _amplitude division_, so $\bm{r}_1\equiv\bm{r}_2$
+- Take the divided amplitudes to be _equal_, $A_1=f(t)$, and $A_2=f(t-\tau)$
+
+- The output intensity:
+$$\displaylines{I(\tau)=\mean{(A_1+A_2)(A_1^*+A_2^*)}=2I_0+2\Re{[(\Gamma(\tau)]} \\ \Gamma(\tau)=\mean{f(t)f^*(t-\tau)}}$$
+- $\Gamma$ in this is the _temporal coherence function_, _quantified_ by $I$
+
+- Write $\Gamma$ as $|\Gamma(\tau)|\exp[i\Delta(\tau)]$
+- This gives intensity:
+$$I(\tau)=2I_0+2|\Gamma(\tau)|\cos[\Delta(\tau)]$$
+- For a _quasi-monochromatic_ waveform $f(t)\approx \exp(-i\omega_0t)$:
+$$\Gamma(\tau)=\mean{f(t)f^*(t-\tau)}\approx \exp(-i\omega_0\tau)=\exp(-2ik_0d)$$
+- The phase term _oscillates_ with change in $d$, on the _order of the wavelength_
+	- _Rapidly_ compared to variation in _amplitude_ (light is quasi-monochromatic)
+- One then observes _fringes_, with _contrast_ $V$:
+$$V(\tau)=\frac{I_\text{max}-I_\text{min}}{I_\text{max}+I_\text{min}}=\frac{|\Gamma(\tau)|}{I_0}=|\gamma(\tau)|$$
+- $\gamma(\tau)$ is the _degree of temporal coherence_
+	- The _normalised_ temporal coherence function
+- One can check that $\Gamma(0)=I_0$ and $V(0)=1$
+- As $\tau$ increases, any element of _decorrelation_ in $f(\tau)$ causes $V$ to _decrease_
+
+#### Auto-correlation
+- For some _irregular normalised waveform_ $f(t)$, its _auto-correlation_ $h(\tau)$:
+$$h(\tau)=\int_{-\infty}^\infty f(t)f^*(t-\tau)\,dt$$
+- For some _quasi-random function_, it is _unity_ at $\tau=0$ then _quickly drops off_
+	- For a truly random function, it approaches a _delta function_
+
+- One can prove that the _Fourier transform_ of $h(\tau)$ is:
+$$\mathcal{F}[h(\tau)]=H(\omega)=F(\omega)F^*(\omega)=|F(\omega)|^2$$
+- This is the _Wiener-Khinchine Theorem_
+
+- As $h(\tau)\sim \gamma(\tau)$, one shows that the _power spectrum_ is given by the Fourier transform of the _fringe visibility_:
+$$P(\omega)=\mathcal{F}[\gamma(\tau)\equiv V(\tau)]$$
+
+- Define _relative intensity_
+
+- Therefore one can write $P(\omega)$ as:
+
+#### Fourier transform spectroscopy
+- The _Michelson interferometer_:
+![[Michelson interferometer.png]]
+- The _compensator plate_ eliminates phase difference due to _optical path in glass_
+- Typical _advantages_:
+	- Radiation _throughput_ is higher as it is _not limited by slit width_
+	- The _signal-to-noise ratio_ is higher as the signal _continuously falls on the detector_
+	- The _spectral resolution_ is given by $\lambda/\delta\lambda\approx 2d/\lambda=m$, where $m$ is the _number of fringes recorded_
+
+- Suppose the power spectrum is _Gaussian_ due to [[#Spectral lines|broadening]]
+$$P(\omega)=C\exp\left(-\frac{(\omega-\omega_0)^2}{2\sigma^2}\right)$$
+- Find the temporal coherence function:
+$$\Gamma(\tau)=\mathcal{F}^{-1}[P(\omega)]=\exp(i\omega_0\tau)\exp\left(-\frac{\tau^2}{2(1/\sigma^2)}\right)$$
+- The _relative intensity_ is then:
+$$I_r(\tau=2d/c)=1+\exp\left(-\frac{\sigma^2\tau^2}{2}\right)\cos(\omega_0\tau)$$
+- The _visibility_ is then:
+$$V(\tau)=\exp\left(-\frac{\sigma^2\tau^2}{2}\right)$$
+![[Michelson broadened spectral line.png]]
+- The _spacing_ of the fringes is related to _central frequency_
+- The _modulation_ of the fringes gives the _broadening_
+- As $d$ increases, the beams become _gradually less coherent_
+
+- Define the _coherence length_ $l_c$ as the _path difference_ $2d$ where $V(\tau)=1/e$
+- This determines the _frequency bandwidth_ $\delta\omega\sim\sigma$
+- From the expression for $V(\tau)$:
+$$l_c=\frac{c\sqrt{2}}{\sigma}\sim\frac{\lambda^2}{2\delta\lambda}$$
+- This is really a measure of _coherence time_:
+$$\tau_c=\frac{l_c}{c}\propto\sigma^{-1}$$
+- Example for $\text{Kr}^{84}$, $l_c\approx 0.78\,\text{m}$
+
+- For a _spatial observation_ of temporal coherence, use _double slits_ with the broadened source:
+![[Temporal coherence slits.png]]
+- The _differing path lengths_ mean that the beams become _less mutually coherent_ as $l$ increases, such that _fringe visibility decreases_
 
 ### Spatial coherence
+- Let there be a _perfectly monochromatic_, but _incoherent_ source
+	- Different _spatial locations_ in the source are _uncorrelated_
+![[Spatial coherence stethoscope.png]]
+- Slits are illuminated by _beams_ of wavelength $\lambda$ and with _finite angular width_
+- The _intensity variation in the source plane_ is $I(x)$
+
+- Each _beam_ produces its own _fringes_, which are _offset from each other_
+- The _fringe contrast_ is then _degraded_
+
+- If the _angular width_ of the source is $\alpha$, then fringes are _offset_ by $\alpha D$
+- The _fringe spacing_ is $\lambda D/d$, hence one _loses contrast_ if:
+$$\alpha D>\frac{\lambda D}{d}\Longrightarrow d>\frac{\lambda}{\alpha}\approx w_c$$
+- It gives _coherence variations across the wavefield_, or _spatial/lateral coherence_
+	- _Temporal coherence_ is _along_ the beam, or _longitudinal_
+- $w_c$ is known as the _coherence width_

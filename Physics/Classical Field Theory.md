@@ -5,7 +5,7 @@
 	- Conversion: $\hbar c=0.2\,\text{GeV}\,\text{fm}$
 	- $[\text{T}]=[\text{E}]^{-1}=[\text{M}]^{-1}$
 
-- [ ] Add bits from TP1 notes 📅 2023-10-19 ⏫ 
+- [x] Add bits from TP1 notes ⏫ 📅 2023-10-19 ✅ 2023-10-23
 # Field theories in physics
 - The dynamics of a _point particle_ is a classical field theory
 	- The map: from a set in $\mathbb{R}$ (_time_) to a set in $\mathbb{R}^3$ (_space_)
@@ -134,7 +134,7 @@ $$\int\,dx\exp[i(k\pm k')x]=2\pi\delta(k\pm k')\hspace{1.5cm} N(-k)=N(k)\hspace{
 - One finds:
 $$H=2\pi\int\,dk\,[N(k)\omega(k)]^2[a(k)a^*(k)+a^*(k)a(k)]$$
 - The _explicit time dependence disappears_ as $\Lagr$ is _not explicitly dependent on time_
-- In _quantum field theory_, $a(k)$ is an _operator_ and $a$ and $a^*$ _may not commute_
+- In _quantum field theory_, $a(k)$ is a _ladder operator_ and $a$ and $a^*$ _may not commute_
 - Choose $N(k)$:
 $$N(k)=\frac{1}{2\pi}\frac{1}{2\omega}$$
 - This _keeps the Hamiltonian Lorentz invariant_
@@ -171,3 +171,56 @@ $$\Ham=\pi\dot{\phi}+\pi^*\dot{\phi^*}-\Lagr$$
 $$\phi=\int\,dk\,N(k)[a(k)\exp(ikx-i\omega t)+b^*(k)\exp(-ikx+i\omega t)]$$
 - The Hamiltonian:
 $$H=\int\,dk\,N(k)\omega(k)[|a(k)|^2+|b(k)|^2]$$
+## Electromagnetic fields
+- Consider a _field_ $A_\mu$ from spacetime $\mathbb{R}^4$ to $\mathbb{R}^4$
+- Physical quantities must be _gauge invariant_:
+$$A_\mu\longrightarrow A_\mu+\partial_\mu f(x^\mu)$$
+
+- Make an _antisymmetric tensor_ which is _gauge invariant_
+$$F_{\alpha\beta}=\partial_\alpha A_\beta-\partial_\beta A_\alpha$$
+- This is the _Maxwell tensor_
+- These components are _not Lorentz invariant_
+	- The indices are _not summed over_
+- Writing out components:
+$$F_{\alpha\beta}=\pmatrix{0 & E_x/c & E_y/c & E_z/c \\-E_x/c &0 & -B_z & B_y \\-E_y/c & B_z & 0 & -B_x \\ -E_z/c & -B_y & B_x & 0}$$
+- Constructing the _general Lagrangian_ by only allowing _second-order_ terms:
+$$\Lagr= aF_{\alpha\beta}F^{\alpha\beta}-J^\mu A_\mu$$
+- where $J^\mu$ is some _current density_
+- Gauge-invariance requires that the current density is _divergenceless_ $(\partial_\mu J^\mu=0)$
+
+- From the Euler-Lagrange equations:
+$$J^\alpha+4a\partial_\mu F^{\mu\alpha}=0$$
+- To make the Hamiltonian _positive-definite_:
+$$a=-\frac{1}{4\mu_0}$$
+- With this constant, one recovers:
+$$\text{div }\bm{E}=\frac{\rho}{\epsilon_0} \hspace{1.5cm} \text{curl }\bm{B}=\epsilon_0\mu_0\pd{\bm{E}}{t}+\mu_0\bm{J}$$
+- The _continuity equation_ can be recovered from $\partial_\mu J^\mu=0$
+- From the fact that $F_{\alpha\beta}$ is _anti-symmetric_:
+$$\partial_\lambda F_{\mu\nu}+\partial_\nu F_{\lambda\mu}+\partial_\mu F_{\nu\lambda}=0$$
+- One recovers the _other two Maxwell's equations_
+
+- One can _fix_ the gauge of $A^\mu$
+- The _Lorenz gauge_ is _Lorentz invariant_:
+$$\partial_\mu A^\mu=0$$
+
+# Symmetries and conservation laws
+- The simplest conservation law from the Lagrangian is the _conservation of momentum density_ if $\Lagr$ does _not explicitly depend on_ $\phi$:
+$$\pd{}{\phi}\left(\pd{\phi}{[\partial_\mu\phi]}\right)=0$$
+- The momentum density is said to be a _conserved charge_
+
+## Noether's theorem
+- This links any _smooth, continuous symmetry_ to a _conserved charge_
+	- A _Lie group_ symmetry
+	- Example: translation, but not reflection
+
+- Do it in $1+1$ dimensions
+- Suppose the Lagrangian density $\Lagr$ is _invariant_ under the _infinitesimal_ change:
+$$\phi\to\phi+\delta\phi$$
+- From this:
+$$\delta\Lagr=\pd{\Lagr}{\phi}\delta\phi+\pd{\Lagr}{\phi'}\delta\phi'+\pd{\Lagr}{\dot{\phi}}\delta\dot{\phi}=0$$
+- From the _equations of motion_:
+$$\pd{}{x}\left(\pd{}{}\right)=0$$
+- Then define the _charge and current_:
+$$\rho=\hspace{1.5cm}\bm{J}=$$
+
+- _Generalise_ to arbitrary space dimensions:

@@ -331,6 +331,7 @@ $$m\ddot{\bm{x}}=q[\bm{E}+\bm{v}\times\bm{B}]$$
 - Where:
 $$\bm{E}=-\nabla\phi-\pd{\bm{A}}{t}\hspace{1.5cm}\bm{B}=\nabla\times\bm{A}$$
 - Therefore, the Lagrangian above _correctly reproduces the Lorentz force law_
+	- From the _most general_ Lagrangian possible that is _linear to velocity_
 
 - To write down the _Hamiltonian_:
 $$H=\bm{p}\cdot\dot{\bm{q}}-L=\frac{1}{2}m|\dot{\bm{x}}|^2+e\phi=\frac{1}{2m}|\bm{p}-e\bm{A}|^2+e\phi$$
