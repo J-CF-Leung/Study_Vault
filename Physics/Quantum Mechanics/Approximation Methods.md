@@ -128,19 +128,24 @@ $$\displaylines{\hat{H}=\hat{H}_0+V \\ \hat{H}_0= \\ V=\frac{e^2}{4\pi\epsilon_0
 - If a pair of _zeroth order eigenstates_ are _degenerate in energy_:
 $$\braket{m^{(0)}|\hat{H}^{(1)}|n^{(0)}}=0\;\;\;\text{   for } n\neq m$$
 - As the zeroth order states and the Hamiltonian are _given quantities_, there is _no guarantee that this occurs_
+- The original _degenerate eigenstates_, with _degeneracy_ $g$:
+$$\hat{H}^{(0)}\ket{n_j^{(0)}}=E_n^{(0)}\ket{n_j^{(0)}}\hspace{1.5cm}j=1,2,\dots g$$
+
 
 - Form a _new basis from the degnerate eigenstates_:
-$$\hat{H}^{(0)}(c_1\ket{n_j^{(0)}}+c_2\ket{n_k^{(0)}})=$$
+$$\hat{H}^{(0)}(c_1\ket{n_j^{(0)}}+c_2\ket{n_k^{(0)}})=E_n^{(0)}(c_1\ket{n_j^{(0)}}+c_2\ket{n_k^{(0)}})$$
 - One should then make sure the _basis satisfies the condition_:
 $$H'_{\alpha\beta}\equiv\braket{n^{(0)}_\alpha|\hat{H}'|n^{(0)}_\beta}=E'_{n,\alpha}\delta_{\alpha\beta}$$
-- This _diagonalises_ a _block_ of the matrix corresponding to the _degenerate eigenstates_
+- This _diagonalises_ a _block_ of the matrix corresponding to the _degenerate eigenstates_:
+$$H'=\text{diag}(E_{n,1}',E_{n,2}',\dots E_{n,g}')$$
+- $E_{n,\alpha}'$ are a set of _constants_
+- To find the energies, one can diagonalise the $g\times g$ matrix $H'_{jk}=\braket{n_j^{(0)}|\hat{H}'|n_k^{(0)}}$
 
-- Stuff stuff stuff
-
+- One can also _diagonalise_ the matrix _without explicitly solving for eigenvalues_ in the $\ket{n_j^{(0)}}$ basis, use the fact that _commuting operators have common eigenvectors_
 - Therefore, one should find a basis that _diagonalises_ $\hat{A}$, where $[\hat{A},\hat{H}]=0$
 
 - The _first order corrections_ are then just the _eigenvalues_ $E'_{n,\alpha}$:
-$$\Delta E_{n,\alpha}^{(1)}=E'_{n,\alpha}$$
+$$\Delta E_{n,\alpha}^{(1)}=\braket{n_\alpha^{(0)}|\hat{H}'|n_\alpha^{(0)}}=E'_{n,\alpha}$$
 - In general, the eigenvalues are _different_
 - The energy level then _splits_:
 ![[Degenerate perturbation.png]]

@@ -168,6 +168,7 @@ $$(\hat{\bm\mu}_S)_e=-\frac{e}{m_e}\hat{\bm{S}}=-2\frac{\mu_B}{\hbar}\hat{\bm{S}
 $$\mu_B\equiv\frac{e\hbar}{2m_e}$$
 
 - _Experimental measurements_ have led to _adjustments_ to the factor for _electrons_
+- QED reason: the electron is _not exactly pointlike_, but is _constantly absorbing/re-emitting virtual photons_
 - Introduce the $g-$factor:
 $$\displaylines{g_e\approx2.0023\\(\hat{\bm\mu}_S)_e=-\frac{g_e}{2}\frac{e}{m_e}\hat{\bm{S}}=-g_e\frac{\mu_B}{\hbar}\hat{\bm{S}}\hspace{1.5cm} (\gamma_S)_e=-g_e\frac{\mu_B}{\hbar}}$$
 

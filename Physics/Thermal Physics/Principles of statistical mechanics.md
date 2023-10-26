@@ -147,7 +147,7 @@ $$\rho=\text{const}\cdot\delta(E-E_0)$$
 - For a statistical matrix $\hat{w}$, the mean of a physical quantity $\Omega$ is:
 $$\overline{\braket{\Omega}}=\text{Tr}(\hat{\Omega}\hat{w})$$
 - The ensemble is never _in_ one of the states of the statistical matrix, as there is no stationary state, the matrix simply a tool to calculate resultant averages of macroscopic quantities
-- The statistical matrix is the quantum analogue of [[Fundamental principles of statistical mechanics#The statistical distribution function|the statistical distribution function]] 
+- The statistical matrix is the quantum analogue of [[Principles of statistical mechanics#The statistical distribution function|the statistical distribution function]] 
 - Theorems applied to the classical case, such as relative fluctuations also apply here
 - Comparison
 	- Classical: direct probability distribution of the system having position and momenta $(q,p)$

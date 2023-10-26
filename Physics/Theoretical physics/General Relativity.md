@@ -302,7 +302,7 @@ $${(S\otimes T)^{\lambda_1\dots\lambda_p\mu_1\dots\mu_r}}_{\nu_1 \dots\nu_q\xi_1
 - The tensor $\tenscom{T}{\lambda\mu}{\nu}$ has _possible contractions_ $\tenscom{T}{\lambda\mu}{\lambda}$, $\tenscom{T}{\lambda\lambda}{\nu}$, and $\tenscom{T}{\lambda\mu}{\mu}$
 	- They all form _vectors_, either _covariant or contravariant_
 	- In general, these are _not equal_
-- A _contraction_ of $(1,1)$ tensor $v^\mu X_\nu$ is a _scalar_
+- A _contraction_ of $(1,1)$ tensor $V^\mu X_\nu$ is a _scalar_
 
 ### Expansion of a tensor
 - The _components_ of a tensor:
@@ -334,8 +334,8 @@ $$S_{(\lambda\mu)\nu}=\frac{1}{2}(S_{\lambda\mu\nu}+S_{\mu\lambda\nu})$$
 - Tensors must satisfy some _quotient relation_
 
 - If a set of quantities, when _contracted_ with an _arbitrary tensor_ produces _another tensor_, the _original set must form the components of a tensor_
-- Example: a set of quantities $\tenscom{T}{\lambda}{\mu\nu}$, contracted with vector $v^\alpha$:
-$$\displaylines{\tenscom{T'}{\lambda}{\mu\nu}v'^\nu=\pd{x^{\lambda'}}{x^\lambda}\pd{x_{\mu'}}{x_\mu}\tenscom{T}{\lambda}{\mu\nu}v^{\nu}=\pd{x^{\lambda'}}{x^\lambda}\pd{x_{\mu'}}{x_\mu}\tenscom{T}{\lambda}{\mu\nu}\left(v^{\nu'}\pd{x^\nu}{x^{\nu'}}\right) \\ \tenscom{T'}{\lambda}{\mu\nu}=\pd{x^{\lambda'}}{x^\lambda}\pd{x_{\mu'}}{x_\mu}\pd{x_{\nu'}}{x_\nu}\tenscom{T}{\lambda}{\mu\nu}}$$
+- Example: a set of quantities $\tenscom{T}{\lambda}{\mu\nu}$, contracted with vector $V^\alpha$:
+$$\displaylines{\tenscom{T'}{\lambda}{\mu\nu}v'^\nu=\pd{x^{\lambda'}}{x^\lambda}\pd{x_{\mu'}}{x_\mu}\tenscom{T}{\lambda}{\mu\nu}V^{\nu}=\pd{x^{\lambda'}}{x^\lambda}\pd{x_{\mu'}}{x_\mu}\tenscom{T}{\lambda}{\mu\nu}\left(V^{\nu'}\pd{x^\nu}{x^{\nu'}}\right) \\ \tenscom{T'}{\lambda}{\mu\nu}=\pd{x^{\lambda'}}{x^\lambda}\pd{x_{\mu'}}{x_\mu}\pd{x_{\nu'}}{x_\nu}\tenscom{T}{\lambda}{\mu\nu}}$$
 ## The metric tensor revisited
 - From the above, it is clear that the _metric tensor_ is type $(0,2)$
 - Hence it is a _bilinear map_ from a _pair of vectors_ to a _real number_
@@ -344,7 +344,7 @@ $$g(a,b)=g_{\mu\nu}a^\mu b^\nu$$
 
 ### Index kung-fu and the inverse
 - It can also be used to _map vectors to co-vectors_:
-$$v_\mu\equiv g_{\mu\nu}v^\nu$$
+$$V_\mu\equiv g_{\mu\nu}V^\nu$$
 - This is known as _lowering the index_
 - One can also change the _type of a tensor_:
 $$T_{\mu\nu}=g_{\mu\lambda}\tenscom{T}{\lambda}{\nu}$$
@@ -357,7 +357,7 @@ $$(g^{-1})^{\lambda\mu}g_{\mu\nu}=\delta^\lambda_\nu$$
 $$g_{\mu\rho}g_{\nu\sigma}g^{\rho\sigma}=g_{\rho\mu}\tenscom{\delta}{\rho}{\nu}=g_{\mu\nu}$$
 
 - In other words, the _inverse metric_ is used to _map co-vectors to vectors_:
-$$v^\mu\equiv g^{\mu\nu}v_\nu$$
+$$V^\mu\equiv g^{\mu\nu}V_\nu$$
 - This is known as _raising the index_
 
 - By applying the metric, then its _inverse_, one recovers the _original object_
@@ -377,9 +377,39 @@ $$g_{\mu\nu}a^\mu b^\nu=g^{\mu\nu}a_\mu b_\nu=a_\nu b^\nu=a^\nu b_\nu$$
 - On a _pseudo-Riemannian manifold_, $a^\nu b_\nu$ can be _zero or negative_
 
 - One can define a _generalised length_ of a vector as:
-$$|v|=|g_{\mu\nu}v^\mu v^\nu|^{1/2}$$
+$$|v|=|g_{\mu\nu}V^\mu V^\nu|^{1/2}$$
 - One can also define a _generalised angle_ $\theta$:
 $$\cos\theta=\frac{a_\mu b^\nu}{|a||b|}$$
 - On a _pseudo-Riemannian manifold_, $|\cos\theta|>1$ is _possible_
 
 - If $\cos\theta$ _vanishes_, then the vectors are _orthogonal_
+
+# Vector and tensor calculus on manifolds
+- On a _manifold_, as vectors and tensors inhibit _different tangent spaces_, there is _no unique way_ to _compare_ vectors/tensors at different points
+
+- For a _scalar field_, its _gradient_ $\partial\phi/\partial x^\mu$ is a [[#Covariant/dual vectors|covector]]
+	- It can be made into a vector by _raising the index_
+	- It _maps_ some vector displacement $dx^\nu$ into an _infinitesimal change in the scalar_
+
+## Covariant derivatives
+- In _Euclidean space_, the _derivatives_ of tensor components are with respect to _global Cartesian coordinates_
+- It _preserves_ the tensorial nature of the object (_transforming_ in the same way)
+
+- One can see that when applying the "typical" formula for a _gradient of a vector_
+$$\pd{V^{\mu'}}{x^{\nu'}}=\pd{x^\lambda}{x^{\nu'}}\pd{}{x^\lambda}\left(V^\mu\pd{x^{\mu'}}{x^\mu}\right)=\pd{x^\lambda}{x^{\nu'}}\pd{x^{\mu'}}{x^\mu}\pd{V^\mu}{x^\lambda}+\pd{x^\lambda}{x^{\nu'}}\pd{^2x^{\mu'}}{x^\lambda x^\mu}V^\mu$$
+- The _first term_ is the transformation for a type $(1,1)$ tensor, but the _latter term_ is extra
+- Hence, this object is _not a tensor_
+
+- One must create a _covariant derivative_ with the properties:
+	- For a type $(k,l)$ tensor $\tenscom{T}{\mu_1\dots\mu_k}{\nu_1\dots\nu_l}$, the covariant derivative $\nabla_\lambda \tenscom{T}{\mu_1\dots\mu_k}{\nu_1\dots\nu_l}$ must be a _type_ $(k,l+1)$ tensor
+	- When acting on a _scalar field_ $\phi$, it must create the _gradient_ of that field $\partial\phi/\partial x^\mu$
+	- _Linearity_: for tensors of the same type $T$ and $S$, and _constants_ $\alpha$ and $\beta$:
+	$$\nabla_\mu(\alpha T+\beta S)=\alpha\nabla_\mu T+\beta\nabla_\mu S$$
+	- The _product rule_:
+	$$\nabla_\mu(T\otimes S)=(\nabla_\mu T)\otimes S+T\otimes(\nabla_\mu S)$$
+
+- To eliminate the extra term, let the covariant derivative be:
+$$\nabla_\mu V^\nu=\partial_\mu V^\nu+\Gamma^\nu_{\mu\lambda}V^{\lambda}$$
+- The coefficients are _components_ of a _set of $n$ matrices_ $\tenscom{(\Gamma_\mu)}{\nu}{\lambda}$
+	- One matrix for each $\mu$
+- They are the _connection coefficients_

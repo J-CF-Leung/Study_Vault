@@ -2,7 +2,7 @@
 
 # The statistical mechanics of polymers
 - Modelling of polymers usually involves some coarse-graining, such as grouping atoms into "beads"
-- For a polymer with $n$ particles, its configurational [[Fundamental principles of statistical mechanics|partition function]] is expressed as:
+- For a polymer with $n$ particles, its configurational [[Principles of statistical mechanics|partition function]] is expressed as:
 $$Z=\int d\bm{r}^n \exp[-\beta U(\bm{r}^n)]$$
 
 - The flexibility of a chain depends on both short and long range interferences

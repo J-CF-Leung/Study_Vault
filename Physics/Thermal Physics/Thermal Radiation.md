@@ -115,7 +115,7 @@ $$u_\lambda=\frac{du}{d\lambda}=k_BT\,g(\lambda)=\frac{8\pi Vk_BT}{\lambda^4}$$
 
 ## Planck's Law
 - It was proposed that radiation is emitted in _quanta_, or "packets" of energy
-- The [[Statistical thermodynamics#The Partition Function|partition function]]and _internal energy_ for a blackbody radiating at frequency $\omega$ are:
+- The [[Foundations of statistical thermodynamics#The Partition Function|partition function]]and _internal energy_ for a blackbody radiating at frequency $\omega$ are:
 $$\displaylines{Z=\sum_{n=0}^\infty \exp\left(-\frac{n\hbar\omega}{k_BT}\right)=\sum_{n=0}^\infty \exp(-n\beta\hbar\omega)=\frac{1}{1-\exp(-\beta\hbar\omega)} \\ U=-\frac{1}{Z}\frac{dZ}{d\beta}=\frac{\hbar\omega}{\exp(\beta\hbar\omega)-1}}$$
 - To find the _total energy_, one needs the _density of states_ in $\omega$:
 $$g(\omega)=g(\epsilon)\frac{d\epsilon}{d\omega}=\frac{V\omega^2}{c^3\pi^2}$$

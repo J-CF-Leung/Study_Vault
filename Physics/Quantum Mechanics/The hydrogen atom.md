@@ -10,7 +10,7 @@ $$\hat{H}_0=\frac{\hat{p}^2}{2m_e}+V(r)\hspace{1.5cm} V(r)=-e\phi(r)=-\frac{Ze^2
 - The eigenstates are then _direct products_ of spatial and spin eigenstates:
 $$\ket{nlm_lsm_s}=\ket{nlm_l}\otimes\ket{sm_s}$$
 - The energies depend _only on_ $n$:
-$$\hat{H_0}\ket{}=E_n\ket{} \hspace{1.5cm}E_n=-\frac{Z^2}{n^2}R_\infty$$
+$$\hat{H_0}\ket{nlm_lsm_s}=E_n\ket{mlm_lsm_s} \hspace{1.5cm}E_n=-\frac{Z^2}{n^2}R_\infty$$
 - The _degeneracy_ of each level is $2n^2$
 
 - In _spherical polars_, the spatial components:
@@ -33,13 +33,13 @@ $$\ket{njm_jls}=\sum_{m_l+m_s=m_j}\ket{nlm_lsm_s}\braket{lm_lsm_s|jm_j}$$
 - One can prove that:
 $$[\hat{\bm{L}}\cdot\hat{\bm{S}},\hat{\bm{L}}^2]=[\hat{\bm{L}}\cdot\hat{\bm{S}},\hat{\bm{S}}^2]=0$$
 - Therefore:
-$$[\hat{\bm{J}}^2,\hat{\bm{L}}^2]==0$$
+$$[\hat{\bm{J}}^2,\hat{\bm{L}}^2]=[\hat{\bm{J}}^2,\hat{\bm{S}}^2]=[\hat{\bm{J}}^2,\hat{\bm{L}}\cdot\hat{\bm{S}}]=0$$
 
 - One can see that for the Hamiltonian, there are _two mutually commuting sets of operators_, each of which has _its own set of simultaneous eigenstates_:
-$$\displaylines{\{\hat{H},\}\Longrightarrow\ket{} \\ \{\hat{H},\}\Longrightarrow\ket{}}$$
+$$\displaylines{\{\hat{H},\hat{\bm{L}}^2,\hat{L}_z,\hat{\bm{S}}^2,\hat{S}_z\}\Longrightarrow\ket{nlm_lsm_s} \\ \{\hat{H},\hat{\bm{J}}^2,\hat{J}_z,\hat{\bm{L}}^2,\hat{\bm{S}}^2\}\Longrightarrow\ket{njm_jls}}$$
 
 # Relativistic effects
-- The Schrodinger equation is _Lorentz invariant_
+- The Schrodinger equation is _not Lorentz invariant_
 	- It has a _first-order time derivative_ and _second-order space derivatives_
 
 ## Zero spin: Klein-Gordon equation
@@ -52,14 +52,21 @@ $$\frac{1}{c^2}\pd{^2\psi}{t^2}-\nabla^2\psi+\frac{m^2c^2}{\hbar^2}\psi=0$$
 - This describes _relativistic particles of zero spin_
 
 ## Spin-half: Dirac equation
-- The _Dirac equation_ can be expressed as:
+- [[The Dirac Equation]] can be expressed as:
 $$i\hbar\pd{\psi}{t}=\hat{H}\psi \hspace{1.5cm} \hat{H}=c\hat{\bm{\alpha}}\cdot\hat{\bm{p}}+\beta mc^2$$
+- Here, $\bm{\alpha}$ is a vector of three $4\times4$ matrices, and $\beta$ is a $4\times4$ matrix
+
 - One has to describe the wave function via a _spinor_:
+$$\psi=\pmatrix{\psi_1 & \psi_2 & \psi_3 &\psi_4}^T$$
+- The first two degrees of freedom correspond to a _particle_, either spin _up or down_
+- The second two degrees of freedom correspond to an _antiparticle_ with spin _up or down_
+- In the _non-relativistic limit_, $\psi$ becomes a _two-component_ spinor
 
 - An external field is introduced with the _substitutions_:
 $$\bm{p}\to\bm{p}-q\bm{A} \hspace{1.5cm} E\to E+q\phi$$
 - This gives the equation:
-$$(E'-q\phi)\psi=$$
+$$\begin{aligned}(E'-q\phi)\psi = &\Bigg[\frac{1}{2m}|\hat{\bm{p}}-q\bm{A}|^2-\frac{q}{m}\hat{\bm{S}}\cdot\bm{B}-\frac{\hat{\bm{p}}^4}{8m^3c^2} \\ &+\frac{q\hbar^2}{8m^2c^2}(\nabla^2\phi)+\frac{q}{2m^2c^2}\hat{\bm{S}}\cdot(\nabla\phi\times\hat{\bm{p}})\Bigg] \psi\end{aligned}$$
+
 - $E'$ is the _relativistic kinetic energy_:
 $$E'\equiv E-mc^2$$
 
@@ -72,16 +79,134 @@ $$\hat{H}_B=-\hat{\bm{\mu}}_S\cdot\bm{B} \hspace{1.5cm}\hat{\bm{\mu}}\equiv\frac
 
 ## Application to the hydrogen atom
 - Compute the _leading_ relativistic effects, up to terms of _order_ $v^2/c^2$
-- With the _absence_ of an external _magnetic_ field, the Dirac equation becomes:
+- With the _absence_ of an external _magnetic_ field:
+$$\displaylines{\bm{A}=0 \hspace{1cm}\bm{B}=0 \hspace{1cm}q=-e\hspace{1cm}\phi=\phi(r)=-\frac{Ze}{4\pi\epsilon_0r} \\ E'\psi = \left[\frac{1}{2m_e}|\bm{p}|^2-e\phi(r)-\frac{\hat{\bm{p}}^4}{8m_e^3c^2} -\frac{e\hbar^2}{8m_e^2c^2}(\nabla^2\phi)-\frac{e}{2m_e^2c^2}\hat{\bm{S}} \cdot(\nabla\phi\times\hat{\bm{p}}) \right]\psi}$$
 
 - This corresponds to applying some _perturbation_ $H'$ given by:
+$$\begin{aligned}\hat{H}'&=-\frac{\hat{\bm{p}}^4}{8m_e^3c^2} -\frac{e\hbar^2}{8m_e^2c^2}(\nabla^2\phi)-\frac{e}{2m_e^2c^2}\hat{\bm{S}} \cdot(\nabla\phi\times\hat{\bm{p}}) \\ &=\hat{H}_R+\hat{H}_D+\hat{H}_{SO} \end{aligned}$$
 
 ### Terms in the perturbation
-- The first term can be understood as the _first-order relativistic correction_ to electron energy
+- $\hat{H}_R$ can be understood as the _first-order relativistic correction_ to electron energy:
+$$E=\sqrt{p^2c^2+m_e^2c^4}=m_ec^2+\frac{p^2}{2m_e}-\frac{(p^2)^2}{8m_e^3c^2}+\dots$$
+- This gives the correction term:
+$$\hat{H}'_R=-\frac{\hat{\bm{p}}^4}{8m_e^3c^2}$$
 
-- Spin-orbit term
+- $\hat{H}_{SO}$ can be evaluated:
+$$\nabla\phi\times\hat{\bm{p}}=\frac{1}{r}\pd{\phi}{r}\hat{\bm{r}}\times\hat{\bm{p}}=\frac{1}{r}\pd{\phi}{r}\hat{\bm{L}}$$
+- This gives the _spin-orbit term_:
+$$\hat{H}_{SO}=\frac{1}{2m_e^2c^2}\frac{1}{r}\frac{dV(r)}{dr}\hat{\bm{L}}\cdot\hat{\bm{S}}$$
+- Then for a _hydrogen-like atom_:
+$$V(r)=-\frac{Ze^2}{4\pi\epsilon_0r}\Longrightarrow\hat{H}_{SO}=\frac{1}{2m_e^2c^2}\frac{Ze^2}{4\pi\epsilon_0}\frac{1}{r^3}\hat{\bm{L}}\cdot\hat{\bm{S}}$$
+- The _semi-classical approach_:
+	- The _orbiting_ of the electron through an _electric field_
+	- After a _Lorentz transformation_, this gives a _magnetic field_
+	- The interaction of the _dipole moment_ $\hat{\bm{\mu}}$ with the _apparent magnetic field_
 
-- The _Darwin term_ is _purely relativistic_ in origin
+- The _Darwin term_ is _purely quantum_ in origin:
+$$\hat{H}_D=-\frac{e\hbar^2}{8m_e^2c^2}(\nabla^2\phi)$$
+- This results from the _"smearing"_ (or _Zitterbewegung_) of the _electron wave-function_
 
+- All of the perturbations are typically _small_:
+$$\frac{\mean{\hat{H}_R}}{\mean{\hat{H}_0}}\sim\frac{p^4/(8m_e^3c^2)}{p^2/(2m_e)}\sim\frac{v^2}{c^2}\ll1$$
+- This justifies the use of _first-order perturbation theory_
 ### Applying perturbation theory
 - As the _unperturbed_ energy levels are _degenerate_, one must use [[Approximation Methods#Degenerate perturbation theory|degenerate perturbation theory]]
+- One must find and _diagonalise_ a $2n^2\times 2n^2$ matrix with elements $\braket{n_j^{(0)}|\hat{H}'|n_k^{(0)}}$
+- This _breaks_ the degeneracy of each level, to give the _fine structure_
+
+#### Relativistic correction
+- As the term is _independent of spin_, work in the _uncoupled basis_ $\ket{nlm_lsm_s}$:
+$$\braket{nl'm_l's'm_s'|\hat{H}_R|nlm_lsm_s}=\braket{nl'm_l'|\hat{H}_R|nlm_l}\delta_{m_s'm_s}$$
+- Instead of working with $\hat{p}^4$, express the perturbation _in terms of_ $\hat{H}_0$:
+$$\hat{H}_R=-\frac{1}{2m_ee^2}\left(\frac{\hat{\bm{p}}^2}{2m_e}\right)^2=-\frac{1}{2m_ee^2}(\hat{H}_0-V)^2=-\frac{1}{2m_ee^2}(\hat{H}_0^2-\hat{H}_0V-V\hat{H}_0+V^2)$$
+- The _spatial wavefunction_ is:
+$$\ket{nlm_l}\to R_{nl}(r)Y_{lm_l}(\theta,\phi)$$
+- From the fact that the _spherical harmonics are orthonormal_, the _matrix elements_ are:
+$$\displaylines{\braket{nl'm_l'|f(r)|nlm_l}=\mean{f(r)}_{nl}\delta_{ll'}\delta_{m_l'm_l} \\ \mean{f(r)}_{nl}=\int_0^\infty r^2f(r)\,R_{nl}(r)^2\,dr}$$
+- Therefore, the _uncoupled basis_ $\ket{nlm_l}$ _diagonalises_ the matrix $\hat{H}_R$
+	- The expectation values depend _only_ on $n$ and $l$
+- Therefore, this basis can be used for _degenerate perturbation theory_
+
+- Define the _fine structure constant_:
+$$\alpha\equiv\frac{e^2}{4\pi\epsilon_0\hbar c}\approx\frac{1}{137}$$
+- The _unperturbed energies_:
+$$E_n=-\frac{Z^2}{n^2}R_\infty\hspace{1.5cm}2R_\infty=\alpha^2m_ec^2$$
+- Using the equations above:
+$$(\Delta E)_R=-\left(\frac{}{}\right)$$
+
+#### Spin-orbit correction
+- The spin-orbit pertubration:
+$$\hat{H}_{SO}=\xi(r)\hat{\bm{L}}\cdot\hat{\bm{S}}\hspace{1.5cm}\xi(r)=\propto$$
+- Express the dot product as:
+$$2\hat{\bm{L}}\cdot\hat{\bm{S}}=\hat{\bm{J}}^2-\hat{\bm{L}}^2-\hat{\bm{S}}^2$$
+- The _coupled_ basis states $\ket{njm_jls}$ are _simultaneous eigenstates_ of these operators
+- The _matrix elements_ are then:
+$$\braket{}$$
+- As $\xi(r)$ is _radial_:
+
+- For _any_ $s$ state, where $l=0$, one gets that there is _no spin-orbit energy_:
+$$(\Delta E)_{SO,l=0}=0$$
+- The _energy correction_ is then:
+
+- As $s=1/2$, $j=l\pm1/2$ and the _spin-orbit correction_ for $l>0$ can be written as:
+
+- Using the fact that $l=0,1,2,\dots n-1$, each level $n$ is _split_ into $(2n+1)$ energies
+
+#### Spin-orbit commutation relations
+- One can check that $\hat{\bm{L}}\cdot\hat{\bm{S}}$ _commutes_ with the set of operators $\{\hat{\bm{J}}^2,\hat{J}_z,\hat{\bm{L}}^2,\hat{\bm{S}}^2\}$
+- As the choice of axis is arbitrary:
+$$[\hat{\bm{L}}\cdot\hat{\bm{S}},\hat{\bm{L}}]=-[\hat{\bm{L}}\cdot\hat{\bm{S}},\hat{\bm{S}}]\neq0 \hspace{1cm} [\hat{\bm{L}}\cdot\hat{\bm{S}},\hat{\bm{J}}]=0$$
+- From this, the _commutation relations_ with the _spin-orbit term_:
+
+
+#### The Darwin term
+- For a $1/r$ potential, the _Laplacian_ gives:
+$$\nabla^2(1/r)=-4\pi\delta^3(\bm{r})$$
+- Therefore the _matrix element_:
+$$\braket{\psi|(\nabla^2\phi)|\psi}=-\frac{Ze}{\epsilon_0}|\psi(0)|^2$$
+- _Only_ the $s$ states have a _non-zero potential_ at $r=0$, evaluating $|\psi(0)|^2$:
+$$(\Delta E)_D=\begin{cases}\frac{Z^4\alpha^2}{n^3}R_\infty &l=0 \\ 0 & l>0\end{cases}$$
+### Resulting fine structure
+- The _scale_ of the energy perturbations:
+
+- The _perturbations_, in units of $Z^4\alpha^2R_\infty/4n^3$:
+
+- The _individual perturbations_ are _independent of_ $m_l$ and $m_s$
+
+- When the corrections are _summed_, the _total correction_ is:
+$$(\Delta E)_{FS}=\frac{Z^4}{4n^3}\left(\frac{3}{n}-\frac{4}{j+1/2}\right)\alpha^2R_\infty$$
+- It depends on $n$ and $j$, but _not_ $l$
+- Hence, the $n$th energy level _splits_ into $n$ separate energy levels
+
+- States with the _same_ $j$ but _different_ $l$ will remain _degenerate in energy_
+![[Hydrogen fine structure.png]]
+![[Hydrogen fine structure energies.png]]
+
+## The Lamb shift
+- There is _experimental evidence_ that levels of the _same_ $l$ are _not degenerate_:
+$$\delta\nu(2S_{1/2}-2SP_{1/2})\approx 1000\,\text{MHz}$$
+- Along with the fact that $g_e\neq 2$, this is evidence of _quantum electrodynamics_
+
+- Experiment: a _beam_ of hydrogen atoms _excited_ to $2S_{1/2}$
+- _Microwave radiation_, in the presence of an _external magnetic field_, is used to induce _transitions_
+
+- The _QED correction_ is much _larger for_ $S$ states:
+![[Lamb shifts.png]]
+
+# Hyperfine structure
+- _Hyperfine structure_ is the effect due to the _atomic nucleus_, _except_ those due to its _charge_ or _finite mass_
+	- Examples: _finite size_, the _nuclear spin_, _magnetic dipoles_, _electric quadrupoles_
+
+- The most significant effect is due to the _dipole moment_ assoiated with _nuclear spin_:
+$$(\hat{\bm{\mu}}_S)_p=$$
+- This gives a _magnetic field_ $\bm{B}_p$
+- Its interaction with the _electron magnetic dipole moment_ gives the _hyperfine interaction_:
+$$\hat{H}_{bf}=-(\hat{\bm{\mu}}_S)_e\cdot\bm{B}_p=$$
+
+- _Classically_, the magnetic moment $\bm{M}$ generates a _magnetic field_:
+
+- This gives the _Hamiltonian_:
+## S states
+- For $l=0$, the hyperfine interaction is:
+
+- There is _no contribution from orbital angular momentum_

@@ -8,7 +8,7 @@
 
 - Every particle behaves as if it's in equilibrium with a _reservoir_ of temperature $T$
 - The reservoir is simply _every other gas particle_
-- Hence, one can use results from the [[Statistical thermodynamics#Statistics, density of states, and ensembles|canonical ensemble]], where the _energies_ of each particle obey the [[Statistical thermodynamics#Boltzmann Distribution|Boltzmann Distribution]]
+- Hence, one can use results from the [[Foundations of statistical thermodynamics#Statistics, density of states, and ensembles|canonical ensemble]], where the _energies_ of each particle obey the [[Foundations of statistical thermodynamics#Boltzmann Distribution|Boltzmann Distribution]]
 
 # Distribution of speeds and velocities
 
@@ -29,7 +29,7 @@ $$\mean{v_{x}}=0$$
 $$\mean{|v_x|}=2\int_0^\infty v_x\,f_{1D}(v_x)\,dv_x=\sqrt{\frac{2k_BT}{\pi m}}$$
 - One can also find the _root-mean square_:
 $$\mean{v_x^2}=\int_{-\infty}^\infty v_x^2\,f_{1D}(v_x)\,dv_x=\frac{k_BT}{m}$$
-- This matches the [[Statistical thermodynamics#The classical limit: equipartition|equipartition theorem]]:
+- This matches the [[Foundations of statistical thermodynamics#The classical limit: equipartition|equipartition theorem]]:
 $$\frac{1}{2}m\mean{v_x^2}=\frac{1}{2}k_BT$$
 
 ## Maxwell-Boltzmann distribution
@@ -74,7 +74,7 @@ $$p=m\mean{u_x^2}\frac{N}{V}$$
 - As $\mean{u_x^2}=\mean{u^2}/3$:
 $$pV=\frac{1}{3}Nm\mean{u}^2=nRT$$
 - The second equality comes from the [[Classical Thermodynamics#Ideal gases|ideal gas law]]
-- Therefore, the energy is the [[Statistical thermodynamics#The classical limit: equipartition|equipartition]] value:
+- Therefore, the energy is the [[Foundations of statistical thermodynamics#The classical limit: equipartition|equipartition]] value:
 $$U=\frac{3}{2}nRT$$
 
 ## From the Maxwell-Boltzmann distribution
@@ -94,7 +94,7 @@ $$dN=nAv\cos\theta\,dt\,f(v)\,dv\,\frac{1}{2}\sin\theta\,d\theta$$
 $$p=\int2mv\cos\theta\,\frac{dN}{dt}=mn\int_0^\infty\,dv\,v^2f(v)\int_0^{\pi/2}\cos^2\theta\sin\theta\,d\theta$$
 - Therefore, the _pressure_ is:
 $$\displaylines{p=\frac{1}{3}mn\mean{v^2} \\ pV=\frac{1}{3}mN\mean{v^2}=Nk_BT}$$
-- Where the second equality comes from [[Statistical thermodynamics#The classical limit: equipartition|equipartition]]
+- Where the second equality comes from [[Foundations of statistical thermodynamics#The classical limit: equipartition|equipartition]]
 
 ## Dalton's law
 - In a _mixture of gases_, the _total pressure_ is the _sum of partial pressures_ of the separate components:

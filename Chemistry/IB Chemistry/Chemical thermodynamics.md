@@ -1,5 +1,5 @@
 - To describe states and the effect of _reactions_, one needs the tools of [[Classical Thermodynamics]]
-- To understand what is happening and make calculations based on the states of _molecules_, one needs the tools of [[Statistical thermodynamics]]
+- To understand what is happening and make calculations based on the states of _molecules_, one needs the tools of [[Foundations of statistical thermodynamics]]
 
 # State variables and reversibility
 
@@ -53,7 +53,7 @@ $$-\frac{dA_\text{sys}}{T}=dS_\text{sys}-\frac{dU}{T}=dS_\text{univ}$$
 $$\displaylines{U=-T^2\left(\pd{(A/T)}{T}\right)_V \\ H=-T^2\left(\pd{(G/T)}{T}\right)_p}$$
 
 # Statistics and the Boltzmann distribution
-- Detail: [[Statistical thermodynamics]]
+- Detail: [[Foundations of statistical thermodynamics]]
 
 ## Microstates and macrostates
 - For a system with an enormous number of particles, and thus, degrees of freedom, there is an immeasurable number of _microstates_
@@ -90,7 +90,7 @@ $$\begin{aligned}\frac{P_f}{P_i}=\frac{\Omega_f}{\Omega_i} =\exp(-\Delta S/k)\en
 
 ## Temperature
 - Temperature is a variable _only defined at thermal equilibrium_
-- A _statistical definition_: [[Statistical thermodynamics#Statistical view of temperature]]
+- A _statistical definition_: [[Foundations of statistical thermodynamics#Statistical view of temperature]]
 $$\begin{aligned}\frac{1}{k_BT}&=\frac{d(\ln\Omega)}{dU} \\ T&=\left(\pd{U}{S}\right)_V\end{aligned}$$
 
 ## The Boltzmann distribution
@@ -121,7 +121,7 @@ $$U=\sum_i P_iE_i=\frac{1}{Q_N}\sum_iE_i\exp\left(-\frac{E_i}{k_BT}\right)=k_BT^
 
 - Meanwhile, _entropy_ $S$ can be written as:
 $$S=\frac{U}{T}+k_B\ln{Q_N}=k_BT\left(\pd{\ln Q_N}{T}\right)_V+k_B\ln Q_N$$
-- This is proven from _another definition of entropy_, given [[Statistical thermodynamics|here]]
+- This is proven from _another definition of entropy_, given [[Foundations of statistical thermodynamics|here]]
 - From this, one can derive the expression for _Helmholtz Free Energy_ $A$:
 $$A=-k_BT\ln{Q_N}$$
 ## Multi-particle systems
@@ -377,7 +377,7 @@ $$^3\Sigma_g^-$$
 - As temperature rises, higher energy _degrees of feedom_ are excited
 
 ## Classical behaviour
-- From [[Statistical thermodynamics|classical statistical thermodynamics]], the _equipartition principle_ states that for _each independent quadratic term in energy_, there is an _equal contribution_ to internal energy
+- From [[Foundations of statistical thermodynamics|classical statistical thermodynamics]], the _equipartition principle_ states that for _each independent quadratic term in energy_, there is an _equal contribution_ to internal energy
 	- Quadratic in terms of _position_ or _velocity_
 - This assumes the energy spectrum is _continuous_, and all potentials are _quadratic_
 - If a system has $N$ _quadratic terms in energy_, the internal energy _per mole_ is:

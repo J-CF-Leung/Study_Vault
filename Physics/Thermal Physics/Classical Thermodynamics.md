@@ -39,10 +39,10 @@ used to it, so it doesn’t bother you any more.”
 - The _simplest_ thermodynamic systems are _homogeneous fluids and gases_
 	- A _deformation_ without change in volume _leaves thermal properties unchanged_
 
-- _Justifying_ all of the laws given below is the job of [[statistical thermodynamics]]
+- _Justifying_ all of the laws given below is the job of [[Foundations of statistical thermodynamics]]
 
 # Brief statistical justifications
-- [[Fundamental principles of statistical mechanics]]
+- [[Principles of statistical mechanics]]
 
 - For a system with an enormous number of particles, and thus, degrees of freedom, there is an immeasurable number of _microstates_
 	- The number is denoted $\Omega$
@@ -52,10 +52,10 @@ used to it, so it doesn’t bother you any more.”
 - For thermodynamics to work, 2 fundamental suppositions must be made:
 1. After a sufficiently long time, the _initial conditions become irrelevant_ as particles redistribute energy and momentum until equilibrium is reached
 2. For a system _in equilibrium_, all possible microstates are equally likely 
-	- [[Fundamental principles of statistical mechanics#The equal probabilities postulate]]
+	- [[Principles of statistical mechanics#The equal probabilities postulate]]
 
 - A *macrostate* is defined by the _bulk properties_ of the system, and _incorporates many microstates_
-		- The probability of a particular microstate, _given a macrostate_ is governed by the [[Fundamental principles of statistical mechanics#The statistical distribution function|statistical distribution function]]
+		- The probability of a particular microstate, _given a macrostate_ is governed by the [[Principles of statistical mechanics#The statistical distribution function|statistical distribution function]]
 - Macrostates are described by _thermodynamic variables_ such as $U, N, V, S, T, p, \mu$
 - Macrostates with energy more or less _equally shared_ among particles become way more likely (way _more available mcirostates_)
 	- Consequence of equal probabilities
@@ -768,7 +768,7 @@ $$C_V=\frac{1}{\gamma-1}R\hspace{1cm} C_p=\frac{\gamma}{\gamma-1}R$$
 $$dS=\frac{\dbar Q_\text{rev}}{T}=\frac{dU}{T}+\frac{p}{T}\,dV=\frac{nC_V}{T}\,dT+\frac{nR}{V}\,dV$$
 - Then using the ideal gas equation of state and _integrating along any path_:
 $$S=nC_V\ln T+nR\ln V+S_0(n)$$
-- $S_0(n)$ is an _integration constant_ dependent on $n$, which has to be derived from [[Statistical thermodynamics|statistical mechanics]]
+- $S_0(n)$ is an _integration constant_ dependent on $n$, which has to be derived from [[Foundations of statistical thermodynamics|statistical mechanics]]
 - Since $n\ln V$ is not extensive, $S_0(n)$ has to be manipulated to _make entropy extensive_:
 $$S(n)=nC_V\ln T+nR\ln\frac{V}{n}+nS_0'$$
 - The _first term_ accounts for the effects of _heat input_
@@ -898,7 +898,7 @@ $$\eta_\text{Carnot}=\frac{T_h}{T_h-T_l}$$
 
 - _Experimentally_, even at temperatures _close_ to absolute zero, systems may have some "frozen-in" disorder, or be in a _non-equilibrium_ state that requires energy to settle into _internal equilibrium_
 
-- _Quantum mechanically_, from the [[Statistical thermodynamics#Statistical view of temperature|statistical definition of entropy]], this means that there is _no degeneracy_ at the _ground state_
+- _Quantum mechanically_, from the [[Foundations of statistical thermodynamics#Statistical view of temperature|statistical definition of entropy]], this means that there is _no degeneracy_ at the _ground state_
 	- For _large systems_, perturbations will ensure there is _splitting_, even at the ground level
 	- Components of _large systems_ will also still be able to _exchange energy_ before reaching _internal equilibrium_
 
@@ -914,7 +914,7 @@ $$S(T)=S(T_0)+\int_{T_0}^T \frac{C_p}{T}\,dT$$
 $$C_x=T\left(\pd{S}{T}\right)_x$$
 - A phase of a system goes to zero entropy _smoothly_
 - Hence, _heat capacities go to zero_ at absolute zero
-- This leads to the fact that _classical models_ which predict _constant heat capacities_ ([[Statistical thermodynamics#The classical limit: equipartition|equipartition of energy]]) are _false_, and only good approximations at _high temperatures_
+- This leads to the fact that _classical models_ which predict _constant heat capacities_ ([[Foundations of statistical thermodynamics#The classical limit: equipartition|equipartition of energy]]) are _false_, and only good approximations at _high temperatures_
 
 - Similarly, from the _Maxwell relations_, other derivatives such as _expansivity_ vanish:
 $$\frac{1}{V}\left(\pd{V}{T}\right)_p=\frac{1}{V}\left(\pd{S}{p}\right)_T\to0$$

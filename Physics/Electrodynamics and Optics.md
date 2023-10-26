@@ -489,7 +489,7 @@ $$\displaylines{\gamma(\bm{r}_1,\bm{r}_2,\tau)=\frac{\Gamma(\bm{r}_1,\bm{r}_2,\t
 - Examining the wavefield _along the wavefront_ compares $f(t)$ at the _same time_, $\tau=0$, at _different points along the wavefront_, $\bm{r}_1\neq\bm{r}_2$
 - This investigates _spatial coherence_
 
-### Temporal coherence
+## Temporal coherence
 - The _temporal coherence_ of a source gives information on the _spectral content_
 
 - Potential setup to investigate temporal coherence:
@@ -516,8 +516,8 @@ $$V(\tau)=\frac{I_\text{max}-I_\text{min}}{I_\text{max}+I_\text{min}}=\frac{|\Ga
 - One can check that $\Gamma(0)=I_0$ and $V(0)=1$
 - As $\tau$ increases, any element of _decorrelation_ in $f(\tau)$ causes $V$ to _decrease_
 
-#### Auto-correlation
-- For some _irregular normalised waveform_ $f(t)$, its _auto-correlation_ $h(\tau)$:
+### Auto-correlation
+- For some _irregular normalised waveform_ $f(t)$, its [[Fourier series and transforms#Correlations|auto-correlation]] $h(\tau)$:
 $$h(\tau)=\int_{-\infty}^\infty f(t)f^*(t-\tau)\,dt$$
 - For some _quasi-random function_, it is _unity_ at $\tau=0$ then _quickly drops off_
 	- For a truly random function, it approaches a _delta function_
@@ -533,7 +533,7 @@ $$P(\omega)=\mathcal{F}[\gamma(\tau)\equiv V(\tau)]$$
 
 - Therefore one can write $P(\omega)$ as:
 
-#### Fourier transform spectroscopy
+### Fourier transform spectroscopy
 - The _Michelson interferometer_:
 ![[Michelson interferometer.png]]
 - The _compensator plate_ eliminates phase difference due to _optical path in glass_
@@ -567,7 +567,7 @@ $$\tau_c=\frac{l_c}{c}\propto\sigma^{-1}$$
 ![[Temporal coherence slits.png]]
 - The _differing path lengths_ mean that the beams become _less mutually coherent_ as $l$ increases, such that _fringe visibility decreases_
 
-### Spatial coherence
+## Spatial coherence
 - Let there be a _perfectly monochromatic_, but _incoherent_ source
 	- Different _spatial locations_ in the source are _uncorrelated_
 ![[Spatial coherence stethoscope.png]]
@@ -583,3 +583,81 @@ $$\alpha D>\frac{\lambda D}{d}\Longrightarrow d>\frac{\lambda}{\alpha}\approx w_
 - It gives _coherence variations across the wavefield_, or _spatial/lateral coherence_
 	- _Temporal coherence_ is _along_ the beam, or _longitudinal_
 - $w_c$ is known as the _coherence width_
+
+- For the _two rays_:
+$$k(\rho_1+r_1-\rho_2-r_2)= kd(\sin\theta+\sin\chi)\approx kd\left(\frac{x}{L}+\frac{y}{D}\right)=2ks$$
+- Given some _intensity profile_ at the _source_, the _amplitude_ at $P$ is then:
+$$\psi(y)\sim\sqrt{I(x)}\exp[ik(\rho+R)](e^{iks}+e^{-iks})=2\sqrt{I(x)}\exp[ik(\rho+R)]\cos(ks)$$
+
+- If the extended source is _incoherent_ (beams from different points are _uncorrelated_), then the _net intensity as a function of $d$_ is obtained by _summing intensities_:
+$$\begin{aligned}I_y(d)&=\int |\psi(y)|^2\,dx=4\int I(x)\cos^2(2ks)\,dx \\ &=2I_0+2\Re\left[\exp(-ikdy/D)\int I(x)\exp(-ikdx/L)\,dx\right]\end{aligned}$$
+- Then by _changing variables_, with $x=L\theta$, $y=d\chi$, and $I(x)\,dx=I(\theta)\,d\theta$, with $kd=u$:
+$$I_y(u)=2I_0+2I_0\Re[\exp(-iu\chi)\gamma(u)]$$
+- Defining $\gamma(u)$, as well as a phase $\beta$:
+$$\displaylines{\gamma(u)=\frac{1}{I_0}\int I(\theta)\,\exp(-iu\theta)\,d\theta=\frac{\mathcal{F}[I(\theta)]}{I_0}\equiv|\gamma(u)|\exp(-i\beta) \\ I_y(u)=2I_0+2I_0|\gamma(u)|\cos\left(\beta+\frac{kdy}{D}\right)}$$
+- There are $\cos^2$ fringes with _spacing_ determined by $kdy/D$
+- $|\gamma(u)|$ defines the _fringe contrast_ at point $y$
+- There is some _offset_ $\beta$, determined by the _angular profile_ $I(\theta)$
+
+- For a _symmetric source profile_ (about the axis):
+$$\beta=\begin{cases}0&\gamma(u)>0 \\ \pi&\gamma(u)<0\end{cases}$$
+- The _visibility_ of the fringes is defined by:
+$$V=\gamma(u=kd)$$
+- It can be _negative_ (if a minimum occurs where a _maximum_ is expected)
+
+- The visibility gives the _intensity profile_ of the source 
+- Define $\gamma(u)$ as the _degree of lateral coherence_
+	- The _van Cittert-Zernike theorem_
+- $\gamma(u)$ is determined by the _slit separation_ $d$, and can be used to define a _coherence width_
+
+### Examples
+- Given a _distant, uniform line source_ with _angular width_ $\alpha$:
+$$\gamma(u)=\frac{1}{I_0}\int_{-\alpha/2}^{\alpha/2}J\exp(-iu\theta)\,d\theta=\sinc\left(\frac{u\alpha}{2}\right)$$
+- The _fringe contrast_ will _fall to zero_ at:
+$$\frac{u\alpha}{2}=\pi\longrightarrow w_c\sim d=\frac{\lambda}{\alpha}$$
+- Beyond which, $V$ becomes _negative_
+
+- For a uniform _disc source_ of _angular diameter_ $\alpha$ illuminating the pinholes of separation $d$:
+$$\gamma(u)=\frac{2J_1(u\alpha/2)}{u\alpha/2}\longrightarrow w_c=\frac{1.22\lambda}{\alpha}\sim\frac{\lambda}{\alpha}$$
+- In general, the _broader the source_, the _narrower the coherence width_
+
+- For a _fixed source width_, and _increasing slit separation_:
+![[Spatial coherence comparison.png]]
+- $V$ goes _through zero_ then rises again
+- When there is a _central minimum_, that indicates $\gamma(u)<0$
+
+- For an _increasing source width_, and _fixed slit separation_:
+![[Spatial coherence comparison 2.png]]
+
+### Coherence area and volume
+- For a _2D source_, there is some _coherence area_
+- When combined with [[#Temporal coherence]] effects, one can find a [[#Fourier transform spectroscopy|coherence length]]
+- This gives a _coherence volume_
+
+- For _sunlight_, $\lambda\approx 500\,\text{nm}$, $\delta\lambda\approx500\,\text{nm}$, $\alpha\sim 0.5^o\sim0.01\,\text{rad}$:
+$$w_c\sim\frac{\lambda}{\alpha}\sim5\times 10^{-5}\,\text{m}\hspace{1.5cm} l_c\sim\frac{\lambda^2}{\delta\lambda}\sim 500\,\text{nm}$$
+- These are _very small scales_ when compared to every day objects
+- Hence, one needs _filtered light_ to make measurements
+
+# Electrodynamics
+- A _conservative field_, such as the _electrostatic_ one, is described by a _scalar potential_ $\phi$:
+$$\bm{E}=-\nabla\phi$$
+- In _general_, $\bm{E}$ is _time-dependent_, and _non-conservative_ from _Faraday's Law_:
+$$\oint\bm{E}\cdot d\bm{l}=-\int\dot{\bm{B}}\cdot d\bm{S}$$
+- Similarly:
+$$\oint \bm{H}\cdot d\bm{l}=\int(\bm{J}+\dot{\bm{D}})\cdot d\bm{S}$$
+- The _magnetic scalar potential_ $\phi_m$ can only be defined for _static_ circumstances and in _current-free regions_
+
+## The magnetic vector potential
+- Since $\nabla\cdot{\bm{B}}=0$ _at all times_, one can define the _magnetic vector potential_ $\bm{A}$:
+$$\bm{B}(\bm{r})=\nabla\times\bm{A}(\bm{r})$$
+- Given some _loop_ $L$, for _any surface_ $S$ bounded by $L$:
+$$\Phi_S=\int\bm{B}\cdot d\bm{S}=\oint_L \bm{A}\cdot d\bm{l}$$
+- The _flux_ through the surface is only determined by $\bm{A}$ _along the bounding path_
+	- Expected from $\nabla\cdot\bm{B}=0$
+
+- One can then find the corresponding _electric field_:
+$$\bm{E}=-\nabla\phi-\pd{\bm{A}}{t}$$
+- For _static situations_, it reduces to the electrostatic potential
+
+### Gauge transformations

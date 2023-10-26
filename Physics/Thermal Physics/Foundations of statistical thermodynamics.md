@@ -4,7 +4,7 @@
 # Describing a system
 
 ## Microstates and macrostates
-- For a system with an enormous number of particles, and thus, degrees of freedom, there is an immeasurable number of _microstates_
+- For a system with an enormous number of particles, and thus, degrees of freedom, there is an immeasurable number of __microstates__
 
 - In _classical mechanics_, this _specifies position and velocity of every constituent particle_
 - In _quantum mechanics_, it is the _multi-particle wave function_
@@ -13,20 +13,21 @@
 - For thermodynamics to work, 2 fundamental suppositions must be made:
 1. After a sufficiently long time, the _initial conditions become irrelevant_, as particles redistribute energy and momentum until equilibrium is reached
 2. For a system _in equilibrium_, all possible microstates are equally likely
-	- [[Fundamental principles of statistical mechanics#The equal probabilities postulate]]
+	- [[Principles of statistical mechanics#The equal probabilities postulate]]
 	- This means eventually, the system will have _explored all possible microstates_
 
-- A *macrostate* is defined by the _bulk properties_ of the system, and _incorporates many microstates_
+- A __macrostate__ is defined by the _bulk properties_ of the system, and _incorporates many microstates_
 - Macrostates are described by [[Chemical thermodynamics#State variables and reversibility|state variables]] such as $U, N, V, S, T, p, \mu$
 	- _Extensive variables_ $U,N,V,S$ will _scale with_ the system
 	- _Intensive variables_ $T,p,\mu$ will _remain constant_ when scaling the system
 - Macrostates with energy more or less _equally shared_ among particles become way more likely (way _more available microstates_)
 	- Consequence of equal probabilities
+	- From the _central limit theorem_, the _mean_ of a quantity (such as energy) is close to its _median_ (value for the _most common microstate_)
 
 ## Statistics, density of states, and ensembles
 - The _number of microstates_ with energy $E$, _given a macrostate_ is given by a function $\Omega(E)$
 	- It is _purely a function of energy_
-	- Sometimes called the [[Fundamental principles of statistical mechanics#The statistical distribution function|statistical distribution function]]
+	- Sometimes called the [[Principles of statistical mechanics#The statistical distribution function|statistical distribution function]]
 
 - For a system with _discrete energy levels_, $\Omega$ is simply the _number of microstates_ with energy $E$
 
@@ -53,7 +54,7 @@ $$\Omega(E)=g(E) \delta E$$
 	- This is characterised by the state variable of _entropy_
 - The _final_ macrostate will tend to be one with _the most number of microstates_
 	- Consequence of equal probabilities (the system spends the most time in that macrostate)
-	- There will be [[Fundamental principles of statistical mechanics#Fluctuations|fluctuations]] in that macrostate that reduce as the _number of particles_ grows
+	- There will be [[Principles of statistical mechanics#Fluctuations|fluctuations]] in that macrostate that reduce as the _number of particles_ grows
 
 - If a sudden _change_ occurs to the system, the _set of available microstates_ changes
 	- If there are _significantly more microstates_ than before, then the change is _irreversible_, as it becomes incredibly _unlikely_ for the previous microstates to be occupied

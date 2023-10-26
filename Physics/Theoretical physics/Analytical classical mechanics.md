@@ -206,13 +206,13 @@ $$\frac{dV}{dt}=\int_S\bm{v}\cdot\,d\bm{S}=\int_V\nabla\cdot\bm{v}\,dV=0$$
 - If the system is _dissipative_ (and cannot be described by $L$ or $H$), the volume _shrinks_
 
 - Liouville's equation: the _number of phase points around a "comoving" volume is unchanged_
-	- $\rho$: the [[Fundamental principles of statistical mechanics#The statistical distribution function|statistical distribution function]]
+	- $\rho$: the [[Principles of statistical mechanics#The statistical distribution function|statistical distribution function]]
 	 $$\frac{d\rho}{dt}=\pd{\rho}{t}+\sum_i \pd{\rho}{q_i}\dot{q}_i+\pd{\rho}{p_i}\dot{p}_i=0$$
 	- $d\rho/dt$: along a phase trajectory
 	- $\partial\rho/\partial t$: at a particular point
 - True for any system with a Hamiltonian $H(q,p,t)$
 - For statistical distribution functions $\rho=\rho(H(q,p))$, $\partial\rho/\partial t=0$
-	- Example: distributions in [[Fundamental principles of statistical mechanics|statistical mechanics]]
+	- Example: distributions in [[Principles of statistical mechanics|statistical mechanics]]
 
 # Comparison between formulations of mechanics
 | Newtonian                                                                                           | Lagrangian                                                                                                         | Hamiltonian                                                                         |

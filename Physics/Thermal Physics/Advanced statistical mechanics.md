@@ -25,7 +25,7 @@
 >The entropy of all systems in _internal equilibrium_ at absolute zero may be _taken at zero_
 
 # Thermodynamic variables
-- One describes the system using _thermodynamic variables_
+- One describes a system at _equilibrium_ using _thermodynamic variables_
 - If there is some _generalised force_ acting on some system, characterised by some _displacement_, one can define its form of _energy_:
 $$d(\text{Energy})=(\text{Force})\cdot d(\text{Displacement})$$
 - The "force" and "displacement" are _conjugate variables_
@@ -87,10 +87,20 @@ $$p_i\propto\exp\left(-\frac{E_i}{kT}\right)$$
 
 ## Microstates and macrostates
 - _Detailed recap_:
-	![[Statistical thermodynamics#Microstates and macrostates]]
+	![[Foundations of statistical thermodynamics#Microstates and macrostates]]
 
-- The _microstate_ of a system is a collection of states, all with the _same energy_ $E_i$
+- The __microstates__ of a system is a collection of _states_ (specifying _configuration_, a point in _phase space_), all with the _same energy_ $E_i$
 	- They _cannot be distinguished_
+- A __macrostate__ is defined by the _bulk properties_ of the system, and _incorporates many microstates_
+- Macrostates are described by [[Chemical thermodynamics#State variables and reversibility|state variables]] such as $U, N, V, S, T, p, \mu$
+	- _Extensive variables_ $U,N,V,S$ will _scale with_ the system
+	- _Intensive variables_ $T,p,\mu$ will _remain constant_ when scaling the system
+- Macrostates with energy more or less _equally shared_ among particles become way more likely (way _more available microstates_)
+	- Consequence of equal probabilities
+	- From the _central limit theorem_, the _mean_ of a quantity (such as energy) is close to its _median_ (value for the _most common microstate_)
+
+### Microstates and macrostates in the canonical ensemble
+- Let a system be part of the [[Foundations of statistical thermodynamics#Boltzmann Distribution|canonical ensemble]]
 - If a microstate has _degeneracy_ $\Omega_i$:
 $$p_i\propto\Omega_i\exp\left(-\frac{E_i}{kT}\right)=\exp\left(-\frac{E_i-kT\ln\Omega_i}{kT}\right)\equiv\exp\left(-\frac{E_i-TS_i}{T}\right)$$
 - Defining the _entropy_ as:
@@ -196,8 +206,10 @@ $$p_i=\exp[-(\lambda+1)-\beta E_i-\kappa N_i]$$
 - Defining $\kappa$ as $-\mu/kT$:
 $$p_i=\frac{1}{\Xi}\exp(-\beta E_i+\beta\mu N_i)$$
 - Define the _grand partition function_:
-$$\Xi=\sum_i\exp[-\beta(E_i-\mu N_i)]$$
-- One can rewrite it as:
+$$\Xi=\sum_i\sum_{N_i}\exp[-\beta(E_i[N_i]-\mu N_i)]$$
+- One must sum over both _energy microstates_, as well as _all possible numbers of particles_
+
+- Taking into account the _degeneracy_ of each microstate:
 $$\Xi=\sum_\text{microstates}\exp[-\beta(E_i-TS_i)]\exp(\beta\mu N_i)=\sum_{N_i}Z(N_i)\exp(\beta\mu N_i)$$
 - Using the definition of entropy:
 $$-kT\ln\Xi=F-\mu N=\Phi(T,V,\mu)$$
@@ -258,6 +270,8 @@ $$M=m\frac{N_+-N_-}{N}\hspace{1.5cm} E=-NMB$$
 $$M=m\tanh\left(\frac{mB}{kT}\right)$$
 
 - There is _another alternative approach_ by defining $\sigma_i=\pm1$ for each site, writing out the _energy_, then the _partition function_ by summing _all configurations_
+
+![[Paramagnet variables.png]]
 ## The many-level system
 - For the [[Quantum Harmonic Oscillator]], there are _many equally spaced, singly degenerate levels_:
 $$E_n=\hbar\omega\left(n+\frac{1}{2}\right)$$
@@ -269,18 +283,110 @@ $$Z=\sum_{n=0}^\infty \exp\left[-\frac{\hbar\omega}{kT}\left(n+\frac{1}{2}\right
 $$U=\frac{\hbar\omega}{2}\coth\left(\frac{\hbar\omega}{2kT}\right)$$
 - One can also get that at _high temperature_, the _heat capacity_ is _constant_
 
-# Continuous systems
+
+
+# The ideal gas in the canonical ensemble
+- Let there be a gas of _volume_ $V$, _temperature_ $T$, with _number of particles_ $N$
+	- Still free to _exchange energy_ with a reservoir
+- Each particle only has _kinetic energy_ $p^2/2m$
 - A system with _continuous energy levels_
 
-## The ideal gas
-- Let there be a gas of _volume_ $V$, _temperature_ $T$, with _number of particles_ $N$
-- Each particle only has _kinetic energy_ $p^2/2m$
-
+## Single particle partition function (in phase space)
 - The partition function is coverted to an _integral over phase space_
 - As _phase space volume_ has dimensionality, and $Z$ is dimensionless, introduce the _normalising factor_:
 $$\Delta x\Delta p\sim 2\pi\hbar$$
-- A _factor_ in $Z$ only adds a _constant_ to entropy or energy
+	- Another approach is from considering _particle in a box_ wave-functions, with _periodic boundary conditions_, and considering some _shell_ in $k-$space
+
+- A _factor_ in $Z$ only adds a _constant_ to entropy or energy4
+	- Aside from the $1/2\pi\hbar$, the partition function is still _entirely classical_
+	- The factor _embeds "quantumness"_
 - Therefore, the partition function is:
 $$Z=\int\frac{d^3x\,d^3p}{(2\pi\hbar)^3}\exp\left(-\frac{p_x^2+p_y^2+p_z^2}{2mkT}\right)$$
 - Evaluating the integral:
-$$Z=\frac{V}{(2\pi\hbar)^3}\left(\sqrt{}\right)$$
+$$Z=\int d^3x\left(\int\exp\left(-\frac{p^2}{2mkT}\right)\frac{dp}{2\pi\hbar}\right)^3=\left(\frac{kTm}{2\pi\hbar^2}\right)^{3/2}V\equiv\frac{V}{\lambda^3}$$
+- Similarly, for a 1D or 2D gas, the corresponding $Z$ are $L/\lambda$ and $A/\lambda^2$
+
+- $\lambda$ is the _thermal wavelength_:
+$$\lambda\equiv\sqrt{\frac{2\pi\hbar^2}{mkT}}=\left(\frac{2\pi\hbar^2}{m}\beta\right)^{1/2}$$
+- It can also be recognised as the _de Broglie wavelength_ when $\mean{p}=\sqrt{mkT}$ (when the _mean momentum_ corresponds to _thermal motion_)
+
+- This gives _energy_:
+$$U=-\pd{}{\beta}\ln Z=\frac{3}{2}kT$$
+
+### Single particle partition function (in configuration space)
+- In _configuration space_, as _potential energy_ $V(x)=0$, the _Boltzmann factors_ are $1$
+- Therefore, $Z$ is the _number of possible configurations of the particle in a box_
+- The above result means that this is given by the number of _packets_ of size $\lambda^3$ in $V$
+
+## Internal degrees of freedom
+- The gas can have _internal degrees of freedom_
+- This gives the _partition function_:
+$$Z=Z_1Z_\text{int}=\left(\frac{V}{\lambda^3}\right)^NZ_\text{int}$$
+
+### External potential
+- There can be some _external potential_:
+$$\displaylines{E=\frac{p^2}{2m}+\phi\Longrightarrow Z=\frac{V}{\lambda^3}\exp\left(-\frac{\phi}{kT}\right) \\ U=-\pd{}{\beta}\ln Z=\frac{3}{2}kT+\phi}$$
+- It can be _electrical_, or _gravitational_
+
+### Diatomic
+- For a _diatomic molecule_, there are [[#The many-level system|vibrational]] and _rotational_ degrees of freedom
+	- Vibrational: [[#The many-level system|quantum harmonic oscillator]] (many-level system)
+	- Rotationa;: _Rigid rotor_, characterised by quantum number $J$ with _degeneracy_ $2J+1$
+$$\displaylines{Z_\text{osc}=\frac{1}{2\sinh(\beta\hbar\omega/2)} \\ Z_\text{rot}=\sum_{J}(2J+1)\exp\left(-\frac{\beta\hbar^2J(J+1)}{2I}\right)}$$
+- One can take a _low and high temperature limits_ for $Z_\text{rot}$:
+$$\displaylines{Z_\text{rot}(T\to 0)=1 \\ Z_\text{rot}(T\to\infty)\approx \int_0^\infty(2J+1)\exp\left(-\frac{\beta\hbar^2J(J+1)}{2I}\right)\,dJ=\frac{I}{\hbar^2\beta}}$$
+- The internal energy is then:
+$$\displaylines{U(T\to0)=\frac{3}{2}kT+\coth\frac{\beta\hbar\omega}{2}+\frac{3\hbar^2}{I}\exp\left(\frac{\beta\hbar^2}{I}\right) \\ U(T\to\infty)=\frac{3}{2}kT+\coth\frac{\beta\hbar\omega}{2}+kT}$$
+- At _high temperature_, as there are _2 rotational degrees of freedom_, $U_\text{rot}\approx kT$
+
+## N particles in a box
+- For a gas of $N$ _indistinguishable particles_, one must add a factor:
+$$Z_N=\frac{Z_1^N}{N!}=\frac{1}{N!}\left(\frac{V}{\lambda^3}\right)^NZ_\text{int}^N$$
+- The _internal energy_:
+$$U=-\pd{}{\beta}\ln Z=-N\pd{}{\beta}\ln Z_1=\frac{3}{2}NkT+NU_\text{int}$$
+
+- The _free energy_:
+$$\begin{aligned}F =-kT\ln Z &= -NkT\ln Z_1+kT(N\ln N-N) \\ &=NkT\ln\left(\frac{N\lambda^3}{eVZ_\text{int}}\right)\end{aligned}$$
+- One can then get _pressure_:
+$$F=-\pd{F}{V}=\frac{NkT}{V}$$
+- As for _entropy_:
+$$\begin{aligned}S=-\pd{F}{T}&=-Nk\ln\left(\frac{N}{V}\frac{\lambda^3}{eZ_\text{int}}\right)+\frac{3}{2}Nk \\ &=\frac{3}{2}Nk+\frac{5}{2}Nk\ln T-Nk\ln p+S_0\end{aligned}$$
+- $S_0$ takes care of the _internal degrees of freedom and extra factors_
+
+- The _Sackur-Tetrode formula_:
+$$\begin{aligned}S&=C_p\ln T-Nk\ln p+S_0 \\ &=C_V\ln T+Nk\ln V+\tilde{S}_0\end{aligned}$$
+- The _chemical potential_:
+$$\mu=\pd{F}{N}=kT\ln\left(\frac{N\lambda^3}{V}\right)+\mu_0$$
+- Like above, $\mu_0$ takes care of the _internal degrees of freedom_ and _extra factors_
+- Example: with the external potential
+$$\mu=kT\ln\left(\frac{N\lambda^3}{V}\right)+\phi$$
+- $N\lambda^3$ can be interpreted as the _volume fraction_ in the box, hence:
+$$\mu=kT\ln c+\phi$$
+- $c$ can be interpreted as a _concentration_
+
+- For $N\lambda^3/V\ll1$, it is the _classical limit_ where the particles can be interpreted as _"pointlike"_, and the _wave-functions do not overlap_
+	- Can be reached by _low temperature_ or _low $N$_
+- For $N\lambda^3/V\gg1$, _quantum effects_ start to interfere
+
+# The ideal gas in the grand canonical ensemble
+- Consider the _ideal gas_, with _variable energy and particle number_, and _fixed_ $T$ and $\mu$
+- The [[#Grand canonical ensemble|grand partition function]]:
+$$\Xi=\sum_{N_i=0}^\infty\sum_\text{states}\exp[-\beta(E_i-\mu N_i)]=\sum_{N_i=0}^\infty \frac{1}{N_i!}Z_1^{N_i}\exp(\beta\mu N_i)$$
+- This can then be rewritten as:
+$$\Xi=\exp\left(Z_1e^{\beta\mu}\right)=\exp\left(\frac{V}{\lambda^3}Z_\text{int}e^{\beta\mu}\right)$$
+- One then gets the _grand potential_:
+$$\Phi=-kT\ln\Xi=-kT\frac{V}{\lambda^3}Z_\text{int}e^{\beta\mu}$$
+
+- Assume $Z_\text{int}=1$
+- The _pressure_ of the gas:
+$$p=-\pd{\Phi}{V}=\frac{kT}{\lambda^3}e^{\beta\mu}\hspace{1.5cm}N=-\pd{\Phi}{\mu}=\frac{V}{\lambda^3}e^{\beta\mu}$$
+- From this, one can get the _ideal gas law_ $pV=NkT$
+- One can also _invert_ the relation for $N$ above to get:
+$$\mu=kT\ln\left(\frac{N\lambda^3}{V}\right)$$
+
+## Langmuir isotherm
+- Let the _3D gas_ be able to be _adsorbed_ onto a _2D surface_
+- There is some _energy change_ $-\Delta<0$ when _adsorbed_
+
+- One can consider it as a _single system_ in _equilibrium_, where $T_1=T_2$, $\mu_1=\mu_2$, and $p_1=p_2$
+- One can also consider the _adsorbing layer_ as a system _connected to a reservoir_

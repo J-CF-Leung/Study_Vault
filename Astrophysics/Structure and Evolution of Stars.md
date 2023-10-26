@@ -82,7 +82,7 @@ $$m-M=2.5\log(d/10)^2=5\log d-5$$
 - The _bulge_ is _thicker_ and _roughly spherical_, with a young and old stars, and a _supermassive black hole_
 - The _halo_ has largely _dispersion-dominated kinematics_, is _metal-poor_, and has _globular clusters_ containing _very old objects_
 
-# Stars
+# Observing stars
 - Most stars form in _clusters_
 - To first approximation, they are:
 	- Roughly at the _same distance_ from us
@@ -131,3 +131,28 @@ $$L=4\pi R^2\sigma T^4$$
 - By _comparing the fluxes through different filters_, one has a _photometric estimate_ of the star's _effective temperature_
 - The _Hertzsprung-Russell diagram_:
 ![[H-R diagram.png]]
+
+# How stars generate energy
+- Stars are formed from the _contraction_ of nebulae
+
+## Gravitational potential energy
+- Using the _virial theorem_ in equilibrium:
+$$-2\mean{K}=\mean{U} \hspace{1.5cm}\mean{E}=\frac{1}{2}\mean{U}$$
+
+- Consider the _gravitational potential energy_ of a _thin shell_ at radius $r$:
+$$dU_g=-G\frac{M(r)4\pi\rho(r) r^2}{r}\,dr$$
+- Assume the _density is uniform_:
+$$U_g=-\frac{16\pi^2}{15}G\mean{\rho}^2R^5=-\frac{3}{5}\frac{GM^2}{R}$$
+- From the virial theorem, _half_ of the energy is converted into _kinetic_ energy, and _radiated away_
+- The energy from contraction for the _Sun_ is estimated to be $1.2\times 10^{41}\,\text{J}$
+- At the sun's present luminosity, the energy will be radiated in:
+$$\Delta\tau\approx 1\times 10^{7}\,\text{yr}$$
+- This is the _Kelvin-Helmholtz timescale_
+- About _2 orders of magnitude smaller_ than the age of the Solar System
+
+- Using the [[Kinetic Theory of Gases#Maxwell-Boltzmann distribution|Maxwell-Boltzmann distribution]]:
+$$f(v)=\sqrt{\frac{2}{\pi}}\left(\frac{m}{kT}\right)^{3/2}v^2\exp\left(-\frac{mv^2}{2kT}\right)$$
+- Finding the _root-mean-square speed_:
+$$v_\text{rms}=\sqrt{\frac{3kT}{m}}$$
+- Assuming the star is made of _only hydrogen_, one can equate kinetic energies to get the _temperature_:
+$$\mean{T}=\frac{1}{5}\frac{GMm_p}{kR}$$
