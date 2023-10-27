@@ -243,8 +243,12 @@ $$J^\mu=\pd{\Lagr}{(\partial_\mu\varphi_j)}\delta\varphi_j$$
 $$\delta\varphi_j=\epsilon t_{jk}\varphi_k\Longrightarrow J^\mu=\pd{\Lagr}{(\partial_\mu\varphi_j)}t_{jk}\varphi_k$$
 
 ## Phase symmetry
+- The Lagrangian is _invariant uder a global phase change_
 
-## Gauge symmetry
+- The _positive_ and _negative_ Fourier components contribute _different signs_ to the conserved charge
+	- This represents _particles_ and _anti-particles_
+
+## Phase and gauge symmetry
 - Suppose the _phase_ of the complex scalar field $\varphi$ is a _function of space-time coordinates_:
 $$\varphi\to \exp(-i\epsilon(x^\mu))\varphi \Longrightarrow \partial^\mu\varphi\to$$
 - It is _not a symmetry_ of the Klein-Gordon Lagrangian
@@ -265,6 +269,10 @@ $$\Lagr=(D_\mu\varphi^*) (D^\mu\varphi)-m^2\varphi^*\varphi-\frac{1}{4\mu_0}\dot
 $$\delta\varphi=-ie\epsilon\varphi \hspace{1.5cm}\delta\varphi^*=ie\epsilon\varphi$$
 - This gives:
 $$J^\mu=-e\epsilon[\varphi D^\mu\varphi^*-\varphi^* D^\mu\varphi]$$
+
+- For the Lagrangian to be _invariant under a spacetime dependent phase transformation_, one needs an _electromagnetic field_
+- One must also introduce a _covariant derivative_
+	- It represents _mechanical momentum_
 
 ## The energy-momentum tensor
 - Let the Lagrangian vary by some _total derivative_

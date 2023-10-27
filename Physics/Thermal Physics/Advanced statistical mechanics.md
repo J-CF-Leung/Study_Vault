@@ -385,8 +385,65 @@ $$p=-\pd{\Phi}{V}=\frac{kT}{\lambda^3}e^{\beta\mu}\hspace{1.5cm}N=-\pd{\Phi}{\mu
 $$\mu=kT\ln\left(\frac{N\lambda^3}{V}\right)$$
 
 ## Langmuir isotherm
-- Let the _3D gas_ be able to be _adsorbed_ onto a _2D surface_
+- Let the _3D gas_ at temperature $T$ be able to be _adsorbed_ onto a _2D surface_
 - There is some _energy change_ $-\Delta<0$ when _adsorbed_
 
 - One can consider it as a _single system_ in _equilibrium_, where $T_1=T_2$, $\mu_1=\mu_2$, and $p_1=p_2$
 - One can also consider the _adsorbing layer_ as a system _connected to a reservoir_
+
+# Mixtures of an ideal gas
+- Let there be a _total particle number_ $N$ and _total pressure_ $p$
+- $N_i$ and $p_i$ of each _subsystem_ are _additive_:
+$$\sum_i N_i=N\hspace{1.5cm}\sum_i p_i=p$$
+- The entropy of _each contribution_:
+$$S_i=C_{p_i}\ln T-N_ik\ln p_i+S_{0i}$$
+- Calculate an _entropy of mixing_:
+$$\Delta S_\text{mix}=S_\text{mixed}-S_\text{pure}=-k\sum_i N_i\ln p_i+kN\ln p_0=-k\sum_i N_i\ln\frac{p_i}{p_0}$$
+- Given they are in the _same volume_, with the _same temperature_:
+$$\Delta S_\text{mix}=-Nk\sum_i \frac{N_i}{N}\ln\frac{N_i}{N}\equiv-Nk\sum_i c_i\ln c_i$$
+- $c_i$ is some _number fraction_ in the mixture
+
+- If there are only _two species_, $A$ and $B$:
+$$\displaylines{c_B=1-c_A\equiv 1-c \\ \Delta S_\text{mix}=Nk[c\ln c+(1-c)\ln(1-c)]}$$
+- This has a _maximum_ at $c=0.5$
+- At $c=0$ or $c=1$, $d(\Delta S_\text{mix})/dc=\pm\infty$
+
+# Chemical reactions
+- Let a _chemical reaction_ happen at _constant_ $T$ and $p$
+- The _total change in Gibbs Free Energy_ $G$:
+$$dG(p,T)=\sum_\text{species}\mu_i dN_i$$
+- Incorporating _reaction coefficients_ $\nu_i$ such that:
+$$\sum_i \nu_i c_i=0$$
+- At _equilibrium_:
+$$dG=\sum_i \nu_i\mu_i\,dN_0=0\Longrightarrow \sum_i\nu_i\mu_i=0$$
+- Then writing the _chemical potential_ in the [[#The ideal gas in the grand canonical ensemble|grand canonical ensemble]]:
+$$\mu_i=kT\ln\left(\frac{N_i}{Z_1(i)}\right)$$
+- Substituting this formula, define the _equilibrium constant_ $K$:
+$$K=\prod_i N_i^{\nu_i}=\prod_iZ_1^{\nu_i}(i)$$
+- The constant is _dimensionless_
+
+- For a _bimolecular_ reaction:
+$$\displaylines{A+B\longrightarrow C \\ K_N=\frac{N_AN_B}{N_C}=\frac{Z_1(A)Z_1(B)}{Z_1(C)}}$$
+- If the species all have _no internal degrees of freedom_:
+$$K_N=\frac{V^2}{\lambda_A^3\lambda_B^3}\frac{\lambda_C^3}{V}\sim\frac{V}{\lambda^3}\gg1$$
+- Therefore, the reaction does not occur _unless the reaction has some potential energy advantage_
+
+# The high-temperature limit
+- For the [[#The many-level system|quantum harmonic oscillator]], at _high temperatures_:
+$$Z=\frac{1}{2\sinh(\beta\hbar\omega/2)}\approx\frac{kT}{\hbar\omega}$$
+- However, treating it as a _continuous system_:
+$$Z=\int\frac{dx\,dp}{2\pi\hbar}\exp\left(-\frac{p^2}{2mkT}-\frac{\kappa x^2}{2kT}\right)=\frac{1}{\lambda}\sqrt{\frac{2\pi kT}{\kappa}}$$
+- This can only be true if the _size of the system_ $L$ is such that $\kappa L^2\gg kT$
+- However, at the _high temperature limit_ where $\kappa L^2\ll kT$:
+$$Z\approx\frac{L}{\lambda}$$
+
+# Classical to quantum
+- Consider the ratio:
+$$\frac{N\lambda^3}{V}$$
+- If this quantity $\gg1$, the _wave functions of the particles_ start to _overlap_
+- The _classical particle_ becomes a _bad approximation_, and one can only speak of _states_
+
+- For a system with _energy levels_ $\varepsilon_i$ each with occupation number $n_i$, with _total number of particles_ $N$ and _total energy_ $E$, denote some _microstate_ by $(N,E)$:
+$$Z(N)=\sum_{n_1,n_2,\dots}\exp[-\beta(n_1\varepsilon_1+n_2\varepsilon_2+\dots)]$$
+- If there is _no fixed particle number_:
+$$\Xi=\sum_{n_1,n_2,\dots}\exp[-\beta(n_1\varepsilon_1+n_2\varepsilon_2+\dots)]\exp(\beta\mu N)$$

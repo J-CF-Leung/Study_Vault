@@ -164,7 +164,7 @@ $$\bm{E}_T(t=0)=E_0\bm{i}\cos(kz)-E_0\bm{j}\sin(kz)$$
 - For $a_1=a$ and $a_2=b\exp(i\delta)$:
 $$\frac{E_x^2}{a^2}+\frac{E_y^2}{b^2}-2\cos\delta\frac{E_x}{a}\frac{E_y}{b}=\sin^2\delta$$
 ![[Elliptical polarisation.png]]
-$$\tan2\alpha=\frac{2ab\cos\theta}{a^2-b^2}$$
+$$\tan2\alpha=\frac{2ab\cos\delta}{a^2-b^2}$$
 
 - The convention to describe polarisation is using the _Jones vectors_:
 $$\displaylines{\text{General elliptical polarisation:}\pmatrix{a\\ b\exp(i\delta)} \\ \bm{L}_x=\pmatrix{1\\0}\hspace{1.5cm}\bm{L}_y=\pmatrix{0\\1}\hspace{1.5cm} \bm{L}_\theta=\pmatrix{\cos\theta\\\sin\theta} \\ \bm{C}_R=\frac{1}{\sqrt{2}}\pmatrix{1\\-i}\hspace{1.5cm}\bm{C}_L=\frac{1}{\sqrt{2}}\pmatrix{1\\ i}}$$
@@ -266,7 +266,7 @@ $$\frac{(n_b\cos\theta)^2}{n_o^2}+\frac{(n_b\sin\theta)^2}{n_e^2}=1$$
 ### Waveplates
 - Consider a _plane-polarised wave normally incident_ on a material
 ![[Waveplate.png]]
-- Let the _fast axis_ be along $x$, with $n_f>n_s$
+- Let the _fast axis_ be along $x$, with $n_f<n_s$
 
 - Depending on the _orientation_ of $\bm{E}$, components experience _different optical thicknesses_
 - The _Jones matrix_ for this case:
@@ -278,7 +278,7 @@ $$\Delta\phi=\omega\frac{(n_s-n_f)d}{c}$$
 	- $\Delta\phi = \pi/2$: a _quarter-wave_ plate
 	- $\Delta\phi=\pi$: a _half-wave_ plate
 - For a _quarter-wave_ plate with fast axis along $x$:
-$$\dunderline{J}_{\lambda/4,x}=\exp(i\pi/4)\pmatrix{1&0\\0&i}$$
+$$\dunderline{J}_{\lambda/4,x}=\exp(-i\pi/4)\pmatrix{1&0\\0&i}$$
 - For a _half-wave_ plate with fast axis along $x$:
 $$\dunderline{J}_{\lambda/2,x}=\exp(i\pi/2)\pmatrix{1&0\\0&-1}$$
 - For a _general plane-polarised wave_:
@@ -353,7 +353,7 @@ $$\displaylines{-\omega^2(x_0+iy_0)=-\frac{e}{m}(E_x+iE_y)+\omega\omega_c(x_0+iy
 
 - One finds that the _effective dielectric constants_ are:
 $$\epsilon_\frac{L}{R}(\omega)=1-\frac{\omega_p^2}{\omega(\omega\mp\omega_c)}$$
-- The _angle of rotation_ is then, in the limit of a _weak field_:
+- The _angle of rotation_ $\theta$ is then, in the limit of a _weak field_:
 $$\theta=\frac{\Delta\phi}{2}=\frac{\omega(n_L-n_R)d}{c}\approx-\frac{\omega_p^2\omega_cd}{2c\omega^2\sqrt{1-\omega_p
 ^2/\omega^2}}$$
 - Define the _Verdet coefficient_ as:
