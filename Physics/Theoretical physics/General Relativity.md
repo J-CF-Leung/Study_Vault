@@ -139,6 +139,7 @@ $$f_1(x^1,x^2,\dots x^n)=0,\dots, f_{n-m}(x^1,x^2,\dots x^n)=0$$
 
 - The _basis_ of a tangent space is the set of vectors $\hat{e}_\mu=\partial_\mu=\partial/\partial x^\mu$
 	- _Any_ directional derivative is a _linear combination_ of $\{\partial_\mu\}$
+$$\vec{V}=V^\mu\pd{}{x^\mu}$$
 
 - From the _chain rule_, one gets the _transformation law_ for basis vectors:
 $$\partial_{\mu'}=\pd{x^\mu}{x^{\mu'}}\partial_\mu$$
@@ -149,6 +150,8 @@ $$\displaylines{V^\mu\partial_\mu=V^{\mu'}\partial_{\mu'}=V^{\mu'}\pd{x^\mu}{x^{
 - The _tangent vector_ to a curve $x^a(u)$ can then be defined:
 $$\frac{d}{du}=\frac{dx^\mu}{du}\pd{}{x^\mu}$$
 - These vectors are _contravariant_
+
+- 
 ### Covariant/dual vectors
 - One can define _covariant vectors_
 - For example, the _gradient_ of a _scalar field_:
@@ -391,7 +394,7 @@ $$\cos\theta=\frac{a_\mu b^\nu}{|a||b|}$$
 	- It can be made into a vector by _raising the index_
 	- It _maps_ some vector displacement $dx^\nu$ into an _infinitesimal change in the scalar_
 
-## Covariant derivatives
+## Covariant derivatives and the connection
 - In _Euclidean space_, the _derivatives_ of tensor components are with respect to _global Cartesian coordinates_
 - It _preserves_ the tensorial nature of the object (_transforming_ in the same way)
 
@@ -400,6 +403,7 @@ $$\pd{V^{\mu'}}{x^{\nu'}}=\pd{x^\lambda}{x^{\nu'}}\pd{}{x^\lambda}\left(V^\mu\pd
 - The _first term_ is the transformation for a type $(1,1)$ tensor, but the _latter term_ is extra
 - Hence, this object is _not a tensor_
 
+### Covariant derivative of a vector
 - One must create a _covariant derivative_ with the properties:
 	- For a type $(k,l)$ tensor $\tenscom{T}{\mu_1\dots\mu_k}{\nu_1\dots\nu_l}$, the covariant derivative $\nabla_\lambda \tenscom{T}{\mu_1\dots\mu_k}{\nu_1\dots\nu_l}$ must be a _type_ $(k,l+1)$ tensor
 	- When acting on a _scalar field_ $\phi$, it must create the _gradient_ of that field $\partial\phi/\partial x^\mu$
@@ -408,8 +412,81 @@ $$\pd{V^{\mu'}}{x^{\nu'}}=\pd{x^\lambda}{x^{\nu'}}\pd{}{x^\lambda}\left(V^\mu\pd
 	- The _product rule_:
 	$$\nabla_\mu(T\otimes S)=(\nabla_\mu T)\otimes S+T\otimes(\nabla_\mu S)$$
 
-- To eliminate the extra term, let the covariant derivative be:
+- To eliminate the extra term, let the _covariant derivative_ be _defined_:
 $$\nabla_\mu V^\nu=\partial_\mu V^\nu+\Gamma^\nu_{\mu\lambda}V^{\lambda}$$
 - The coefficients are _components_ of a _set of $n$ matrices_ $\tenscom{(\Gamma_\mu)}{\nu}{\lambda}$
-	- One matrix for each $\mu$
+	- One matrix for each _direction_ $\mu$
+	- For an $n-$dimensional manifold, there are $n^3$ "components"
 - They are the _connection coefficients_
+	- They _connect_ different areas of the manifold
+- From _transforming_ both sides of the equation, one sees that $\tenscom{(\Gamma_\mu)}{\nu}{\lambda}$ is _not a tensor_
+	- Purposeful, as the _extra terms_ make sure the transformation is valid
+$$\Gamma^{\nu'}_{\mu'\lambda'}=\pd{x^{\nu'}}{x^\nu}\pd{x^{\mu}}{x^{\mu'}} \pd{x^{\lambda}}{x^{\lambda'}}\Gamma^\nu_{\mu\lambda}+\pd{x^\mu}{x^{\mu'}}\pd{x^\lambda}{x^{\lambda'}}\pd{^2x^{\nu'}}{x^\mu\partial x^\lambda}$$
+- One can also see that the tensor is _not unique_ as it only has to satisfy the above
+	- The _difference_ of two connections $\Gamma$ and $\tilde{\Gamma}$, their _difference_ transforms as a type $(1,2)$ tensor
+	- Hence, it is _unique up to_ a type $(1,2)$ tensor
+
+### Generalising the covariant derivative
+- For _covectors_, there may be a _different connection_:
+$$\nabla_\mu\omega_\nu=\partial_\mu\omega_\nu+\tilde{\Gamma}^\lambda_{\mu\nu}\omega_\lambda$$
+
+- Then one must define a covariant derivative with _two new properties_:
+	- It must _commute with contractions_:
+	$$\nabla_\mu \tenscom{T}{\lambda}{\lambda\rho}=\tenscom{(\nabla T)_\mu}{\;\lambda}{\lambda\rho}$$
+	- For a _scalar_, it reduces to the _partial derivative_:
+	$$\nabla_\mu\phi=\partial_\mu\phi$$
+- The first is equivalent to requiring $\nabla_\mu\delta^\lambda_\rho=0$ (The _Kronecker Delta_ is _covariantly constant_)
+
+- By considering the covariant derivative of a _scalar_ $\nabla_\mu(\omega_\lambda V^\lambda)$:
+$$\displaylines{\tilde{\Gamma}^\nu_{\mu\lambda}=-\Gamma^\nu_{\mu\lambda} \\ \nabla_\mu\omega_\lambda=\partial_\mu\omega_\lambda-\Gamma^\nu_{\mu\lambda}\omega_\nu}$$
+
+- Then, the _general expression_ for the connection can be built up:
+$$\begin{aligned}\nabla_\sigma \tenscom{T}{\mu_1\mu_2\dots\mu_k}{\nu_1\nu_2\dots\nu_l}&=\partial_\sigma \tenscom{T}{\mu_1\mu_2\dots\mu_k}{\nu_1\nu_2\dots\nu_l} \\ &+\Gamma^{\mu_1}_{\sigma\lambda}\tenscom{T}{\lambda\mu_2\dots\mu_k}{\nu_1\nu_2\dots\nu_l} + \Gamma^{\mu_2}_{\sigma\lambda}\tenscom{T}{\mu_1\lambda\dots\mu_k}{\nu_1\nu_2\dots\nu_l}+\dots \\ &-\Gamma^{\lambda}_{\sigma\nu_1}\tenscom{T}{\mu_1\mu_2\dots\mu_k}{\lambda\nu_2\dots\nu_l} - \Gamma^{\lambda}_{\sigma\nu_2}\tenscom{T}{\mu_1\mu_2\dots\mu_k}{\nu_1\lambda\dots\nu_l}-\dots\end{aligned}$$
+- Convenient _notation_:
+$$\nabla_\sigma \tenscom{T}{\mu_1\mu_2\dots\mu_k}{\nu_1\nu_2\dots\nu_l}\equiv \tenscom{T}{\mu_1\mu_2\dots\mu_k}{\nu_1\nu_2\dots\nu_l;\sigma}$$
+
+### The torsion tensor
+- From the discussion above, consider the fact that _any connection_ can be written as a _combination_ of some _fiducial connection_ with a _type $(1,2)$ tensor_:
+$$\Gamma^{\lambda}_{\mu\nu}=\hat{\Gamma}^\lambda_{\mu\nu}+\tenscom{S}{\lambda}{\mu\nu}$$
+- Then consider the fact that by _permuting lower indices_, one can form _another connection_ (as the non-tensorial term has _commut-able partial derivatives_)
+
+- Then define the _torsion tensor_:
+$$\tenscom{T}{\lambda}{\mu\nu}=\Gamma^\lambda_{\mu\nu}-\Gamma^\lambda_{\nu\mu}=2\Gamma^\lambda_{[\mu\nu]}$$
+- It is clearly _antisymmetric_
+## The metric connection
+- Define a _unique connection_, on a manifold with _metric_ $g_{\mu\nu}$
+	- Let it be _torsion-free_: $$\Gamma^\lambda_{\mu\nu}=\Gamma^\lambda_{(\mu\nu)}$$
+	- Let it be _metric compatible_:
+	$$\nabla_\rho g_{\mu\nu}=0$$
+- From this, one also gets that the _inverse metric is covariantly constant_
+- Metric compatibility also means the _covariant derivative commutes with index raising/lowering_:
+$$g_{\mu\lambda}\nabla_\rho V^\lambda=\nabla_\rho(g_{\mu\lambda}V^\lambda)=\nabla_\rho V_\mu$$
+
+- By considering the _cyclic permutations_ of the metric compatibility, and subtracting two of the equations from the third, one can _solve for the metric connection_:
+$$\displaylines{\partial_\rho g_{\mu\nu}=\Gamma^\lambda_{\rho\mu} g_{\lambda\nu}+\Gamma^\lambda_{\rho\nu}g_{\mu\lambda}\\\Gamma^\sigma_{\mu\nu}=\frac{1}{2}g^{\sigma\rho}(\partial_\mu g_{\nu\rho}+\partial_\nu g_{\rho\mu}-\partial_\rho g_{\mu\nu})}$$
+- These are also called _Christoffel symbols_
+
+- From the first equation above:
+$$g^{\mu\nu}\partial_\rho g_{\mu\nu}=2\Gamma^\lambda_{\rho\lambda}$$
+- Using _Jacobi's formula_ $|\dunderline{M}|^{-1}\partial_\rho|\dunderline{M}|=\text{Tr}(\dunderline{M}^{-1}\partial_\rho\dunderline{M})$:
+$$\Gamma^\lambda_{\rho\lambda}=\frac{1}{2}g^{-1}\partial_\rho g=\frac{1}{\sqrt{|g|}}\partial_\rho \sqrt{|g|}$$
+### For local Cartesian coordinates
+- For _any metric_, one can make it [[#Local Cartesian Coordinates on Riemannian manifolds|locally Cartesian]]
+- As the _derivatives vanish_, one gets that _the metric connection vanishes_
+- In this case, the _covariant derivative reduces to partial differentiation_
+
+### The divergence, curl, and Laplacian
+- One can define a _covariant divergence_:
+$$\nabla_\mu V^\mu=\frac{1}{\sqrt{|g|}}\partial_\lambda\left(\sqrt{|g|}V^\lambda\right)$$
+- The _curl_ of some _dual vector field_ $X$ is defined as the _antisymmetric part_ of the covariant derivative:
+$$(\text{curl }X)_{\mu\nu}=\nabla_\mu X_\nu-\nabla_\nu X_\mu=\partial_\mu X_\nu-\partial_\nu X_\mu$$
+- One can prove that this is _independent of connection_
+- The _curl of a gradient vanishes_ 
+
+- The _Laplacian operator_ is then:
+$$\nabla^2\phi=\nabla_\mu(g^{\mu\nu}\nabla_\nu\phi)=\frac{1}{\sqrt{|g|}}\partial_\mu(\sqrt{g}\,g^{\mu\nu}\partial_\nu\phi)$$
+## Intrinsic derivative along a curve
+
+## Parallel transport
+
+## Geodesics

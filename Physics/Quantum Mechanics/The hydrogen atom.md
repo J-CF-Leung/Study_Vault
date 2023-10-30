@@ -210,3 +210,22 @@ $$\hat{H}_{bf}=-(\hat{\bm{\mu}}_S)_e\cdot\bm{B}_p=$$
 - For $l=0$, the hyperfine interaction is:
 
 - There is _no contribution from orbital angular momentum_
+
+- _Total angular momentum_ of the hydrogen atom:
+$$\hat{\bm{F}}=\hat{\bm{L}}+\hat{\bm{S}}+\hat{\bm{I}}$$
+- For $l=0$, as $\hat{L}\ket{n00}=0$:
+$$\mean{\hat{\bm{F}}^2}=\mean{\hat{\bm{S}}^2}+\mean{\hat{\bm{I}}^2}+2\mean{\hat{\bm{S}}\cdot\hat{\bm{I}}}$$
+
+
+- Stuff
+
+- The hyperfine interaction _splits_ each $S-$state into 2 separate levels
+
+- In comparison to _fine structure_, the splitting is _suppressed_ by a factor of:
+$$m_e/m_p\sim 1/2000$$
+
+- For _excited_ states, $(\Delta E)_{hf}\propto 1/n^3$
+
+### The 21cm line
+
+## P,D,F states

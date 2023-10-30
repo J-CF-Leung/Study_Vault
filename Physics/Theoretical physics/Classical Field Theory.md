@@ -244,6 +244,7 @@ $$\delta\varphi_j=\epsilon t_{jk}\varphi_k\Longrightarrow J^\mu=\pd{\Lagr}{(\par
 
 ## Phase symmetry
 - The Lagrangian is _invariant uder a global phase change_
+- It is said to belong to the $U(1)$ symmetry group
 
 - The _positive_ and _negative_ Fourier components contribute _different signs_ to the conserved charge
 	- This represents _particles_ and _anti-particles_
@@ -294,6 +295,7 @@ $$\Lagr\to \Lagr+\epsilon^\mu\partial_\mu\Lagr$$
 - One then gets:
 $$\partial^\nu\left(\pd{\Lagr}{(\partial^\nu\varphi)}\partial^\mu\varphi-\delta^\mu_\nu\Lagr\right)=0$$
 - This gives the _energy-momentum tensor_ $\tenscom{T}{\mu}{\nu}$
+	- There is _no symmetry_ as $\mu$ and $\nu$ are _different types of indices_
 
 ### Longitudinal wave on an elastic rod
 - From a [[#The wave on an elastic rod|previous derivation]]:
@@ -315,3 +317,77 @@ $$\Lagr=-\frac{1}{4}F_{\alpha\beta}F^{\alpha\beta}=-\frac{1}{4}g^{\alpha\gamma}g
 - The form of this tensor is _not gauge invariant_, and _not symmetric_
 - From the derivation, one can _freely add_ any tensor of the form:
 $$\partial_\lambda \Omega^{\lambda\mu\nu}\longrightarrow\partial$$
+
+### In general relativity
+- In general relativity, the _invariant element of space-time_ is $\sqrt{-g}$, where $g=\text{det}(g_{\mu\nu})$, and $g_{\mu\nu}$ is the _metric tensor_
+- The _Einstein-Hilbert action_ is:
+$$S=\int\Lagr\sqrt{-g}\,d^4x$$
+- The term $\sqrt{-g}\, d^4x$ is some _volume element_
+
+- One should replace derivatives with the _covariant derivatives_
+- After some _coordinate transformation_ $x^\mu\to x^\mu+\epsilon^\mu$:
+$$\delta S=\frac{1}{2}\int T_{\mu\nu}(\partial^\nu\epsilon^\mu+\partial^\mu\epsilon^\nu)$$
+- Comes from the fact that $T_{\mu\nu}$ is _symmetric_
+- The corresponding _shift in the metric_:
+$$\delta g^{\mu\nu}=\partial^\mu\epsilon^\nu+\partial^\nu\epsilon^\mu$$
+- Symmetry requires that for _any coordinate transformation_:
+$$0=\frac{1}{2}\int(\partial^\mu\epsilon^\nu+\partial^\nu\epsilon^\mu)\left(\sqrt{-g}\,T_{\mu\nu}-2\frac{\delta S}{\delta g^{\mu\nu}}\right)$$
+- The _energy-momentum tensor_ is then:
+$$T_{\mu\nu}=\frac{2}{\sqrt{-g}}\frac{\delta S}{g^{\mu\nu}}$$
+## Angular momentum
+- Define the tensor:
+$$M^{\lambda\mu\nu}=x^\mu T^{\lambda\nu}-x^\nu T^{\lambda\mu}$$
+- The _derivative_ w.r.t. $\lambda$:
+$$\partial_\lambda M^{\lambda\mu\nu}=\delta^\mu_\lambda T^{\lambda\nu}-\delta^\nu_\lambda T^{\lambda\mu}=0$$
+- This is valid as long as $T$ is _symmetric_
+
+- This _conserved quantity_ is linked to some _rotation_
+- Considering that $T^{0i}$ are the components of _momentum density_, define the _total angular momentum tensor_:
+$$J^{\mu\nu}=\int d^3\bm{r}M^{0\mu\nu}$$
+
+- The _total angular momentum_ includes both the _orbital_ and _intrinsic_ parts
+- In the _rest frame_ of an object, the _intrinsicangular momentum_ is known as the _spin_
+
+- The _spin 4-vector_:
+$$S^\mu=-\frac{1}{2}\epsilon^{\nu\alpha\beta}U_{\nu}J_{\alpha\beta}$$
+- In the _rest frame_, as $U_0=1$ and $U_i=0$, one gets $S^i=J^i$, giving the _intrinsic angular momentum_
+
+# Symmetry breaking
+- One breaks the symmetry of the _solutions/trajectories_, instead of the Lagrangian
+	- The _dynamical laws_ are invariant under symmetry, but the _particular solutions_ are not
+- In _quantum states_, one can get _spontaneous symmetry breaking_ for the _ground state_
+
+- Types of symmetries to break:
+	- _Global symmetry_
+	- _Gauge symmetry_
+
+## Breaking of the U(1) symmetry
+- The _Klein-Gordon field_:
+$$\Lagr=\partial^\mu\varphi\partial_\mu\varphi-m^2\varphi^*\varphi$$
+- Consider adding an _additional term_ with _higher powers_ of the field
+	- Keep the _global symmetry_
+	- This is an _interaction term_
+$$\Lagr=\partial^\mu\varphi\partial_\mu\varphi-m^2\varphi^*\varphi-\frac{\lambda}{2}(\varphi^*\varphi)^2$$
+- The corresponding _Hamiltonian density_:
+$$\Ham=\pi^*\pi+m^2\varphi^*\varphi+\frac{\lambda}{2}(\varphi^*\varphi)^2$$
+- For a positive-definite, $\Ham$, $\lambda>0$
+- This also gives the _possibility_ that $m^2<0$
+- With $-m^2>0$, one _shifts_ the state of _minimum energy_
+- There are then _infinitely many ground states_ given:
+$$\varphi_0^*\varphi_0=\frac{-m^2}{\lambda}$$
+
+- Each state _does not obey the symmetry on its own_, so the symmetry is said to be _spontaneously broken_
+	- The transformation _changes the state_
+
+- Choose the state (and choose _sign convention_ such that $m^2>0$)
+$$\varphi_0=\sqrt{\frac{m^2}{\lambda}}$$
+- Given a _variation_ in the field:
+$$\varphi=\varphi_0+\frac{1}{\sqrt{2}}(\chi_1+i\chi_2)$$
+- The _potential_ is then:
+$$V(\varphi)=V(\varphi_0)+m^2\chi_1^2+O(\chi^3)$$
+- Stuff
+
+- By _inspecting_ the equation, one gets that for $\chi_1$, the _dispersion relation_ is:
+$$\omega=\pm\sqrt{k^2+m^2}$$
+- For the field $\chi_2$, one gets that the particle is _massless_
+	- It is known as the _Goldstone field_ (creating the Goldstone boson)
