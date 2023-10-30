@@ -249,7 +249,7 @@ $$\delta\varphi_j=\epsilon t_{jk}\varphi_k\Longrightarrow J^\mu=\pd{\Lagr}{(\par
 - The _positive_ and _negative_ Fourier components contribute _different signs_ to the conserved charge
 	- This represents _particles_ and _anti-particles_
 
-## Phase and gauge symmetry
+## Gauge symmetry
 - Suppose the _phase_ of the complex scalar field $\varphi$ is a _function of space-time coordinates_:
 $$\varphi\to \exp(-i\epsilon(x^\mu))\varphi \Longrightarrow \partial^\mu\varphi\to$$
 - It is _not a symmetry_ of the Klein-Gordon Lagrangian
@@ -271,7 +271,7 @@ $$\delta\varphi=-ie\epsilon\varphi \hspace{1.5cm}\delta\varphi^*=ie\epsilon\varp
 - This gives:
 $$J^\mu=-e\epsilon[\varphi D^\mu\varphi^*-\varphi^* D^\mu\varphi]$$
 
-- For the Lagrangian to be _invariant under a spacetime dependent phase transformation_, one needs an _electromagnetic field_
+- For the Lagrangian to be _invariant under a spacetime dependent phase transformation_, one _needs an electromagnetic field_
 - One must also introduce a _covariant derivative_
 	- It represents _mechanical momentum_
 
@@ -358,8 +358,8 @@ $$S^\mu=-\frac{1}{2}\epsilon^{\nu\alpha\beta}U_{\nu}J_{\alpha\beta}$$
 - In _quantum states_, one can get _spontaneous symmetry breaking_ for the _ground state_
 
 - Types of symmetries to break:
-	- _Global symmetry_
-	- _Gauge symmetry_
+	- _Global symmetry_ (spacetime _invariant_)
+	- _Gauge symmetry_ (_dependent_ on spacetime coordinates)
 
 ## Breaking of the U(1) symmetry
 - The _Klein-Gordon field_:
@@ -383,11 +383,43 @@ $$\varphi_0^*\varphi_0=\frac{-m^2}{\lambda}$$
 $$\varphi_0=\sqrt{\frac{m^2}{\lambda}}$$
 - Given a _variation_ in the field:
 $$\varphi=\varphi_0+\frac{1}{\sqrt{2}}(\chi_1+i\chi_2)$$
-- The _potential_ is then:
-$$V(\varphi)=V(\varphi_0)+m^2\chi_1^2+O(\chi^3)$$
-- Stuff
+- One can then write the Lagrangian and Hamiltonian as:
+$$\displaylines{\Lagr=\frac{1}{2}(\partial^\mu\chi_1)(\partial_\mu\chi_1)+\frac{1}{2}(\partial^\mu\chi_2)(\partial_\mu\chi_2)-V(\varphi_0)-m_1\chi_1^2+O(\chi^3) \\ \\ \Ham=}$$
 
 - By _inspecting_ the equation, one gets that for $\chi_1$, the _dispersion relation_ is:
-$$\omega=\pm\sqrt{k^2+m^2}$$
+$$\omega=\pm\sqrt{k^2+2m^2}$$
 - For the field $\chi_2$, one gets that the particle is _massless_
 	- It is known as the _Goldstone field_ (creating the Goldstone boson)
+- This asymmetry corresponds to the _energy cost_ in different directions of the potential energy function
+
+## Breaking gauge symmetry
+- For the _local gauge transformation_:
+$$\varphi\to\exp(i\epsilon(x^\mu))\varphi$$
+- The Lagrangian must have somne _coupling to an electromagnetic field_
+- Also add the quartic term in the _potential_ above:
+$$\Lagr=\dots-V(\varphi)$$
+
+- The _covariant derivative_ contributes an extra term:
+$$(ieA_\mu\varphi_0)^*(ieA^\mu\varphi_0)=\frac{e^2m^2}{\lambda}A_\mu A^\mu$$
+- In the _Lorenz gauge_ where $\partial_\mu A^\mu=0$:
+$$\partial_\nu\partial^\nu A_\mu+\frac{2e^2m^2}{\lambda}A_\mu=0$$
+- The _dispersion relation_ for $A_\mu$ is then:
+$$\omega=\pm\sqrt{k^2+2e^2m^2/\lambda}$$
+- The field is said to _gain mass_ $em\sqrt{2/\lambda}$
+
+## Higgs mechanism
+- Write the perturbation:
+$$\varphi=\varphi_0+\frac{1}{\sqrt{2}}(\chi_1+i\chi_2)$$
+- The _covariant derivative_ becomes
+
+- Then make the _gauge transformation_
+
+- This _removes_ the $\chi_2$ terms ("eats" the Goldstone boson)
+
+- The [[Rotations and Lie Algebra|Lie group]] works on an $\mathbb{R}^n$ manifold instead of a set
+- If symmetry is _broken_ into some _subgroup $H$_, that is on an $\mathbb{R}^m$ manifold
+- For _global symmetry_, there are $n-m$ _Goldstone bosons_
+- For _local gauge symmetry_, there are $m$ _massive particles_
+
+## The standard model
+- In the _standard model_, the electromagnetic and weak interactions are given by the _Lie group_ $SU(2)\otimes U(1)$

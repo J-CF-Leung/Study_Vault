@@ -150,8 +150,6 @@ $$\displaylines{V^\mu\partial_\mu=V^{\mu'}\partial_{\mu'}=V^{\mu'}\pd{x^\mu}{x^{
 - The _tangent vector_ to a curve $x^a(u)$ can then be defined:
 $$\frac{d}{du}=\frac{dx^\mu}{du}\pd{}{x^\mu}$$
 - These vectors are _contravariant_
-
-- 
 ### Covariant/dual vectors
 - One can define _covariant vectors_
 - For example, the _gradient_ of a _scalar field_:
@@ -486,7 +484,32 @@ $$(\text{curl }X)_{\mu\nu}=\nabla_\mu X_\nu-\nabla_\nu X_\mu=\partial_\mu X_\nu-
 - The _Laplacian operator_ is then:
 $$\nabla^2\phi=\nabla_\mu(g^{\mu\nu}\nabla_\nu\phi)=\frac{1}{\sqrt{|g|}}\partial_\mu(\sqrt{g}\,g^{\mu\nu}\partial_\nu\phi)$$
 ## Intrinsic derivative along a curve
+- One often needs to take _derivatives of vectors along a curve_
+- Consider some vector $V(u)$ along some _curve_ $x^\mu(u)$
 
+- The _intrinsic derivative_ of the vector along the curve is then:
+$$\frac{DV^\mu}{Du}\equiv\frac{dx^\nu}{du}\nabla_\nu V^\mu=\frac{dx^\nu}{du}(\partial_\nu V^\mu+\Gamma^\mu_{\nu\lambda}V^\lambda)$$
+- Contracting the first term:
+$$\frac{DV^\mu}{Du}=\frac{dV^\mu}{du}+\frac{dx^\nu}{du}\Gamma^\mu_{\nu\lambda}V^\lambda$$
+- The _first term_ is the _ordinary derivative_, which _does not transform as a vector_
+- Therefore, one needs the _connection term_
+
+- This can be extended to _tensors_
+- Example: type $(1,1)$
+$$\frac{D\tenscom{T}{\mu}{\nu}}{Du}=\frac{d\tenscom{T}{\mu}{\nu}}{du}+\frac{dx^\rho}{du}(\Gamma^\mu_{\rho\lambda}\tenscom{T}{\lambda}{\nu}-\Gamma^\lambda_{\rho\nu}\tenscom{T}{\mu}{\lambda})$$
 ## Parallel transport
+- The _covariant derivative_ will _compare_ the vectors/tensors at different points after they are _parallel transported_ to the same point
+- _Parallel transportation_ keeps the vector/tensor _constant_, while moving it _along a curve_
+![[Parallel transport.png]]
+- In _Euclidean space_, this is given by $dV^\mu/du=0$
+- On a _manifold_, parallel transport of a vector $V^\mu$ is given by:
+$$\frac{DV^\mu}{Du}=0$$
+- This also applies to _tensors_:
+$$\frac{D\tenscom{T}{\mu_1\mu_2\dots\mu_k}{\nu_1\nu_2\dots\nu_l}}{Du}=0$$
+- One can see that the parallel transport is _dependent on the path taken_
+	- The vectors live in _different tangent spaces_
+![[Parallel transport sphere.png|400]]
+- One can check that for a _given path_, transport is _independent of parametrisation_
+- One can also check that $D|V|^2/Du=0$ for parallel transport
 
 ## Geodesics
