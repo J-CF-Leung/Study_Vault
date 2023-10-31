@@ -7,13 +7,18 @@
 $$m\ddot{\bm{r}}=q(\bm{E}+\bm{v}\times\bm{B})$$
 - The _fields_ are given by:
 $$\bm{E}=-\nabla\phi-\pd{\bm{A}}{t}\hspace{1.5cm}\bm{B}=\nabla\times\bm{A}$$
-- It can then be shown that the Hamiltonian is:
+- Get the [[Analytical classical mechanics#Electromagnetism|electromagnetic Hamiltonian]]
 $$\Ham=\frac{1}{2m}\left|\bm{p}-q\bm{A}(\bm{r},t)\right|^2+q\phi(\bm{r},t)$$
+- $\bm{p}$ is the _canonical momentum_
+	- $\bm{p}=m\dot{\bm{x}}+q\bm{A}=\bm{p}_m+q\bm{A}$, where $\bm{p}_m=m\dot{\bm{x}}$ is the _mechanical momentum_
+
 - This suggests the _Hamiltonian operator_:
 $$\hat\Ham=\frac{1}{2m}\left|\hat{\bm{p}}-q\bm{A}\right|^2+q\phi$$
 - In the _position basis_, the _time-dependent Schrödinger equation_ is:
 $$i\hbar\pd{\psi}{t}=\frac{1}{2m}\left|-i\hbar\nabla-q\bm{A}(\bm{r},t)\right|^2\psi+q\phi(\bm{r},t)\psi$$
 
+- For a _free particle_, the _eigenstates_ are:
+$$\psi(\bm{r},t)=\exp\left[i\left(\bm{k}\cdot\bm{r}+\frac{q}{\hbar}\bm{A}\cdot\bm{r}\right)\right]$$
 # Gauge invariance of the Schrödinger equation
 - The electric and magnetic fields are known to be _gauge-invariant_:
 $$\bm{A}\to\bm{A}'=\bm{A}+\nabla f\hspace{1.5cm}\phi\to\phi'=\phi-\pd{f}{t}$$
@@ -35,11 +40,11 @@ $$\chi(\bm{r})-\chi(\bm{r}_0)=\int_{\bm{r}_0}^{\bm{r}}\bm{A}(\bm{s})\cdot d\bm{s
 - Choosing $f=-\chi$, one can have a _gauge_ where $\bm{A}=0$
 - This works as long as the integration path is in a _simply-connected region_
 
-- Denote wave functions such that $\psi_\chi$ in the gauge for $\bm{A}=\nabla\chi$, and $\psi_0$ in the gauge for $\bm{A}=0$:
+- Denote wave functions such that $\psi_\chi$ in the _gauge_ for $\bm{A}=\nabla\chi$, and $\psi_0$ in the gauge for $\bm{A}=0$:
 $$\psi_0(\bm{r})=\psi_\chi(\bm{r})\exp\left[-i\frac{q}{\hbar}\chi\right]$$
 - Absorbing a _constant phase factor_, one can rewrite the above:
 $$\psi_\chi(\bm{r})=\psi_0(\bm{r})\exp\left[i\frac{q}{\hbar}\int_{\bm{r}_0}^\bm{r}\bm{A}(\bm{s})\cdot d\bm{s}\right]$$
-
+- One can then _solve for_ $\psi_0(\bm{r})$ in the _gauge_ $\bm{A}=0$ to get $\psi_\chi$
 # The Aharanov-Bohm Effect
 - In _classical physics_, it is _only the fields_ which have physical significance
 - In _quantum mechanics_, the potential $\bm{A}$ has significance
@@ -63,7 +68,7 @@ $$\oint\bm{A}\cdot d\bm{s}=\iint_S\bm{B}\cdot d\bm{S}=\Phi$$
 $$\bm{A}=\frac{\Phi}{2\pi\rho}\hat{\phi}=\nabla\left(\frac{\Phi\phi}{2\pi}\right)$$
 - As $\chi$ is _multiple-valued_, the entire region is now _multiply-connected_
 
-- As each _path_ is still in a _singly-connected region_:
+- As each _path_ is still in a _simply-connected region_:
 $$\psi_{D,\chi}=\psi_{A,0}\exp\left[i\frac{q}{\hbar}\int_A\bm{A}(\bm{s})\cdot d\bm{s}\right]+ \psi_{B,0}\exp\left[i\frac{q}{\hbar}\int_B\bm{A}(\bm{s})\cdot d\bm{s}\right]$$
 - As $A-B$ is a _loop_ around the solenoid:
 $$|\psi_{D,\chi}|^2=\left|\psi_{A,0}\exp\left[i\frac{q\Phi}{\hbar}\right]+\psi_{B,0}\right|^2$$

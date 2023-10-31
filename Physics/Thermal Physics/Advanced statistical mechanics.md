@@ -236,11 +236,11 @@ $$p_i=\frac{1}{Y}\exp[-\beta (E_i-pV_i)]$$
 ### Point defect in a lattice
 - Let there be a lattice with $N$ atoms and $n$ _vacancies_
 	- $N+n$ _total sites_
-- _Occupying_ a vacancy has _energetic cost_ $\epsilon$
-- The energy of a microstate is then $n\epsilon$, and the _number of states_ is then:
+- _Occupying_ a vacancy has _energetic cost_ $\varepsilon$
+- The energy of a microstate is then $n\varepsilon$, and the _number of states_ is then:
 $$\Omega=\frac{(N+n)!}{N!n!}$$
 - _Minimising_ $E_n-TS_n$:
-$$n_\text{eq}=\frac{N}{\exp(\beta\epsilon)-1}$$
+$$n_\text{eq}=\frac{N}{\exp(\beta\varepsilon)-1}$$
 - There is _no upper limit_ on $n_\text{eq}$ as temperature gets _high_
 - Hence, this is an _unphysical_ model
 
@@ -447,3 +447,49 @@ $$\frac{N\lambda^3}{V}$$
 $$Z(N)=\sum_{n_1,n_2,\dots}\exp[-\beta(n_1\varepsilon_1+n_2\varepsilon_2+\dots)]$$
 - If there is _no fixed particle number_:
 $$\Xi=\sum_{n_1,n_2,\dots}\exp[-\beta(n_1\varepsilon_1+n_2\varepsilon_2+\dots)]\exp(\beta\mu N)$$
+
+# Grand canonical ensemble
+- Characterise a system by _energy levels_ $\varepsilon_k$, each with _occupation number_ $n_k$
+- The _total energy_ of the system:
+$$E=\sum_k n_k\varepsilon_k$$
+- Mathematics
+- Then the _total grand partition function_ is:
+$$\Xi=\prod_k\Xi_k$$
+- The _grand potential_ is then:
+$$\Phi=\sum_k\Phi_k$$
+- _Classical limit_, where $\beta(\varepsilon_k-\mu)\gg1$
+$$\Xi_k\approx 1+\exp[-\beta(\varepsilon_k-\mu)]$$
+
+- Below the _quantum threshold_, where $N\lambda^3/V\gg1$, the effects of particles being _bosons_ and _fermions_ emerge
+- For _bosons_:
+$$\displaylines{\Xi_k=\sum_{n=0}^\infty\exp[-\beta(\varepsilon_k-\mu)n]=\frac{1}{1-\exp[-\beta(\varepsilon_k-\mu)]} \\ \Phi_k=kT\ln[1-\exp(-\beta\varepsilon_k+\beta\mu)] \\ \mean{n_k}=\pd{\Phi_k}{\mu}=\frac{1}{1-\exp[\beta(\varepsilon_k-\mu)]}}$$
+- For _fermions_:
+$$\displaylines{\Xi_k=\sum_{n=0}^1\exp[-\beta)(\varepsilon_k-\mu)n]=1-\exp[-\beta(\varepsilon_k-\mu)] \\ \Phi_k= \\ \mean{n_k}=\frac{1}{1+\exp[\beta(\varepsilon_k-\mu)]}}$$
+
+- For _bosons_ at _low temperatures_, $\mean{n_k}$ can start to _diverge_
+	- This gives rise to the _Bose-Einstein condensate_
+
+- For _fermions_ at _low temperatures_, $\mean{n_k}$ becomes _constant_ at _lower levels_ until the _Fermi energy_ $\varepsilon_F$ where it _drops off quickly_
+	- The _chemical potential_ can be _approximated_ by $\varepsilon_F$ as it is the _energy gained by adding one particle_
+
+# The Fermi gas
+- Given the _energy distribution_:
+$$\mean{n_k}=\frac{1}{1+\exp[\beta(\varepsilon_k-\mu)]}$$
+- The _total number of particles_:
+$$N=\sum_k\mean{n_k}=\int\frac{d^3x\,d^3p}{(2\pi\hbar)^3}\frac{1}{1+\exp[\beta(\varepsilon_k-\mu)]}$$
+- Writing the _density of states_ $g(\varepsilon)$:
+$$N=V\int_0^\infty g(\varepsilon)n(\varepsilon)\,d\varepsilon$$
+- One can then use the _distribution at absolute zero_:
+$$N=V\int_0^{\varepsilon_F}$$
+- One then finds that the _Fermi energy_ is:
+$$\varepsilon_F=\left[\left(\frac{}{}\right)\frac{N}{V}\right]^{2/3}$$
+
+- The _internal energy_ of the gas:
+$$U=\sum_k\varepsilon_k\mean{n_k}=V\int_0^\infty g(\varepsilon)\,d\varepsilon\frac{\epsilon}{1+\exp[]}$$
+- At _absolute zero_:
+$$U|_{T=0}=V\left(\frac{}{}\right)\left(\frac{N}{V}\right)^{5/3}$$
+- This is _not a function of temperature_, as it is _evaulated_ at $T=0$
+
+- When one _compresses_ the gas, due to the _Pauli principle_, the energies are _raised_, giving the _Fermi pressure_:
+$$p_F=-\pd{U}{V}=(\dots)\frac{\hbar^2}{m}\left(\frac{N}{V}\right)^{5/3}$$
+- This is _not the actual pressure_, as $U|_{T=0}$ is _not a thermodynamic variable_

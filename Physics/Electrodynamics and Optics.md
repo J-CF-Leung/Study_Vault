@@ -661,3 +661,55 @@ $$\bm{E}=-\nabla\phi-\pd{\bm{A}}{t}$$
 - For _static situations_, it reduces to the electrostatic potential
 
 ### Gauge transformations
+- $\bm{B}=\nabla\times\bm{A}$ _does not completely specify_ $\bm{A}$
+- One can get the _same vector field_ with:
+$$\bm{A}\to\bm{A}+\nabla\chi$$
+- One must then make a _corresponding change to potential_:
+$$\phi\to\phi-\pd{\chi}{t}$$
+- $\chi$ can be _any scalar function_ of $\bm{x}$ and $t$
+- It is called the _gauge_
+- All physical laws are _gauge invariant_
+
+- One often chooses the _divergence_ of $\bm{A}$ as $\nabla^2\chi$ is arbitrary
+
+- The _Coulomb gauge_:
+$$\nabla\cdot\bm{A}=0$$
+- The _Lorenz gauge_:
+$$\nabla\cdot\bm{A}+\frac{1}{c^2}\pd{\phi}{t}=0$$
+
+## Poisson's equation for the vector potential
+- From substituting the definition of $\bm{A}$, for the _Coulomb gauge_:
+$$\nabla^2\bm{A}=-\mu_0\bm{J}$$
+- This is simply _Poisson's equation_ again
+	- Each _component_ must obey its own Poisson's equation
+$$\bm{A}(\bm{r})=\frac{\mu_0}{4\pi}\int_\text{all space}\frac{\bm{J}(\bm{r}')}{|\bm{r}-\bm{r}'|}\,d^3\bm{r}'$$
+- For some _line element_, $\bm{J}(\bm{r}')\to Idl'$, with $d\bm{A}||d\bm{l}'$
+- One can also recover the _Biot-Savart law_ by taking the curl
+
+- One can _find_ $\bm{A}$ by:
+	- Direct integration of the current distribution
+	- Integration of a _known_ $\bm{B}$ field
+	- Equating the _line integral_ to the _flux_ through any open surface bounded by the path
+
+- Example: for a _long, straight wire_, $B_\phi=\mu_0I/2\pi r$
+	- From the _symmetry_ of the integral, one gets that $\bm{A}$ is _parallel_ to the wire
+	![[Long straight wire B.png]]
+	- One then gets $A_z=-\mu_0I/(2\pi)\ln r$
+
+- Example: for a _solenoid_, $B_z=\mu_0 nI$ _inside_, and is _zero outside_
+	- Equate the _line integral_ of $\bm{A}$ to the _enclosed flux_
+	- _Inside_, $A_\phi=\mu_0nIr/2$
+	- _Outside_, $A_\phi=\mu_0nIa^2/2r$
+	- The _experimental effects_ of the $\bm{A}$ _outside_ can be seen in the [[Charged Particles#The Aharanov-Bohm Effect|Aharonov-Bohm Effect]]
+### The distant current loop and magnetic dipole
+- For a _current loop_:
+$$\bm{A}=\frac{\mu_0}{4\pi}\int\frac{Id\bm{r}'}{|\bm{r}-\bm{r}'|}$$
+- For a _distant loop_, make the approximation:
+$$|\bm{r}-\bm{r}'|^{-1}=$$
+- "Mathematical jiggery-pokery"
+
+- One gets the expression:
+$$\bm{A}(\bm{r})=\frac{\mu_0}{4\pi}\left[\oint_L\frac{I}{2}\bm{r}'\times d\bm{r}'\right]\frac{\bm{r}}{r^3}=\frac{\mu_0}{4\pi}\frac{\bm{m}\times\bm{r}}{r^3}$$
+- For a _planar loop_, the integral is $IS\hat{\bm{n}}$, where $S\hat{\bm{n}}$ is the _vector area_:
+$$\bm{m}=IS\hat{\bm{n}}$$
+- $\bm{m}$ is the _magnetic dipole_
