@@ -472,6 +472,11 @@ $$\displaylines{\Xi_k=\sum_{n=0}^1\exp[-\beta(\varepsilon_k-\mu)n]=1+\exp[-\beta
 - For _fermions_ at _low temperatures_, $\mean{n_k}$ becomes _constant_ at _lower levels_ until the _Fermi energy_ $\varepsilon_F$ where it _drops off quickly_
 	- The _chemical potential_ can be _approximated_ by $\varepsilon_F$ as it is the _energy gained by adding one particle_
 
+## Accounting for spin
+- Quantum particles all have _spin_ $s$
+- _Without external field_, spin _does not affect energy_, and there is a _degeneracy_:
+$$\sigma\equiv 2s+1$$
+
 # The Fermi gas
 - Given the _energy distribution_ $\varepsilon_k$:
 $$\mean{n_k}=\frac{1}{1+\exp[\beta(\varepsilon_k-\mu)]}$$
@@ -533,7 +538,30 @@ $$C=\pd{U}{T}=\frac{\pi^2}{3}k^2g(\varepsilon_F)T$$
 - The _classical limit_:
 $$\frac{N\lambda^3}{V}\ll1 \hspace{1.5cm}\mu=kT\ln\frac{N\lambda^3}{V}$$
 - The _grand potential_:
-$$\Phi=$$
+$$\Phi=-\frac{2}{3}U=$$
 - The _leading term_ of this expansion is 
 - This allows one to write:
 $$\Phi=-\frac{2}{3}V\exp(\beta\mu)\int_0^\infty\frac{}{}$$
+- This leads to the result for the [[#The ideal gas in the grand canonical ensemble|classical ideal gas]]
+
+- Considering the _first order term_ as well
+$$\Phi=\Phi_\text{ideal}(1-0.2\exp(\beta\mu)+\dots)$$
+
+# The Bose gas
+$$\displaylines{\Xi_k=\sum_{n=0}^\infty\exp[-\beta(\varepsilon_k-\mu)n]=\frac{1}{1-\exp[-\beta(\varepsilon_k-\mu)]} \\ \Phi_k=kT\ln[1-\exp(-\beta\varepsilon_k+\beta\mu)] \\ \mean{n_k}=\pd{\Phi_k}{\mu}=\frac{1}{1-\exp[\beta(\varepsilon_k-\mu)]}}$$
+- The _total grand potential_:
+$$\begin{aligned}\Phi&=\int\frac{d^3x\,d^3p}{(2\pi\hbar)^3}kT\ln[1-\exp[-\beta(\varepsilon_k-\mu)]] \\ &=-\frac{2}{3}U\end{aligned}$$
+- The occupation number distribution above _diverges_ when $\varepsilon_k=\mu$
+
+## Low tempature 
+- Take:
+$$\frac{N\lambda^3}{V}\sim1$$
+- For _bosons_, multiple particles can _occupy the same quantum state_
+- Therefore there are _many particles in the $\varepsilon=0$ state_, where they can form a _condensate_
+	- The rest of the particles are said to be _excited_
+
+- For a _isolated system of bosons_, $T,p,\mu$ are _uniform
+- At the _condensate_, $\mu\approx0$, hence $\mu\approx0$ _everywhere in the gas_
+
+- In the _low temperature limit:
+$$\mu\approx-\frac{kT}{M}$$

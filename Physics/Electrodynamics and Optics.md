@@ -703,13 +703,82 @@ $$\bm{A}(\bm{r})=\frac{\mu_0}{4\pi}\int_\text{all space}\frac{\bm{J}(\bm{r}')}{|
 	- The _experimental effects_ of the $\bm{A}$ _outside_ can be seen in the [[Charged Particles#The Aharanov-Bohm Effect|Aharonov-Bohm Effect]]
 ### The distant current loop and magnetic dipole
 - For a _current loop_:
-$$\bm{A}=\frac{\mu_0}{4\pi}\int\frac{Id\bm{r}'}{|\bm{r}-\bm{r}'|}$$
+$$\bm{A}=\frac{\mu_0}{4\pi}\oint\frac{Id\bm{r}'}{|\bm{r}-\bm{r}'|}$$
 - For a _distant loop_, make the approximation:
-$$|\bm{r}-\bm{r}'|^{-1}=$$
-- "Mathematical jiggery-pokery"
+$$|\bm{r}-\bm{r}'|^{-1}=\frac{1}{\sqrt{r^2+r'^2-2\bm{r}\cdot\bm{r}'}}\approx\frac{1}{r}\left(1-\frac{\bm{r}\cdot\bm{r}'}{r^2}+\dots\right)$$
+- Substitute into the integral:
+$$\bm{A}=\frac{\mu_0}{4\pi}\left[\frac{1}{r}\oint d\bm{r}' -\frac{1}{r^3}\oint (\bm{r}\cdot\bm{r}')\,d\bm{r}'+\dots\right]$$
+- The _first term is zero_
+- For the second term, one can prove:
+$$d\bm{r}'(\bm{r}\cdot\bm{r}')=\frac{1}{2}d[\bm{r}'(\bm{r}\cdot\bm{r}')]+\frac{1}{2}(\bm{r}'\times d\bm{r}')\times\bm{r}$$
+- The _perfect differential vanishes when integrated_
 
 - One gets the expression:
 $$\bm{A}(\bm{r})=\frac{\mu_0}{4\pi}\left[\oint_L\frac{I}{2}\bm{r}'\times d\bm{r}'\right]\frac{\bm{r}}{r^3}=\frac{\mu_0}{4\pi}\frac{\bm{m}\times\bm{r}}{r^3}$$
 - For a _planar loop_, the integral is $IS\hat{\bm{n}}$, where $S\hat{\bm{n}}$ is the _vector area_:
 $$\bm{m}=IS\hat{\bm{n}}$$
 - $\bm{m}$ is the _magnetic dipole_
+
+## Maxwell's equations in terms of potentials
+- Maxwell's equations feature _redundancy_:
+$$\displaylines{\div(\curl\bm{E})=-\div\dot{\bm{B}}=0}$$
+- This is already given by $\div\bm{B}=0$
+
+- They contain _8 independent unknowns_
+	- 4 _independent components of fields_
+	- The _current and charge densities_
+
+- Writing the fields _in terms of potentials_:
+$$\mu\mu_0\bm{H}=\curl\bm{A}\hspace{1.5cm}\frac{\bm{D}}{\epsilon\epsilon_0}=-\dot{\bm{A}}-\grad\phi$$
+$$\div\bm{E}=-\pd{}{t}\div\bm{A}-\nabla^2\phi=\frac{\rho}{\epsilon\epsilon_0}$$
+$$\grad\left(\div\bm{A}+\epsilon\epsilon_0\mu\mu_0\dot{\phi}\right)-\nabla^2\bm{A}=\mu\mu_0\bm{J}-\epsilon\epsilon_0\mu\mu_0\ddot{\bm{A}}$$
+- Then choose the [[#Gauge transformations|Lorenz gauge]]:
+$$\div\bm{A}+\epsilon\mu\frac{\dot{\phi}}{c^2}=0$$
+- This then gives two _wave equations_, with _source terms_
+$$\displaylines{\frac{\epsilon\mu}{c^2}\ddot{\phi}-\nabla^2\phi=\frac{\rho}{\epsilon\epsilon_0} \\ \frac{\epsilon\mu}{c^2}\ddot{\bm{A}}-\nabla^2\bm{A}=\mu\mu_0\bm{J}}$$
+- This contains the _same information as Maxwell's equations_
+- For _static fields_, they reduce to _Poisson's equation_, and the _Coulomb gauge_ also applies
+
+## Solving for the potentials
+- For simplicity, assume $\epsilon=\mu=1$
+- Both $\rho$ and $\bm{J}$ can _vary in time_
+- As the equations are _wave equations_, one expects equations of the form $f(t\pm r/c)$
+
+- Consider some _time-varying charge_ at the origin $q(r=0,t)$
+- The solution must be _spherically symmetric_, and go like an _inverse square_:
+$$\phi\sim\frac{1}{r}g\left(t-\frac{r}{c}\right)$$
+- This corresponds to an _outgoing wave_
+	- The solution at $(r,t)$ depends on the _charge at a time earlier_ by the _retarded time_ $r/c$
+	- This gives the notion of _causality_, hinting at [[Special Relativity|special relativity]]
+
+- If the charge _varies over timescale_ $\tau$, and $r\ll c\tau$, the solution _must be like the static case_
+- This gives the solution:
+$$\phi(r,t)=\frac{1}{4\pi\epsilon_0}\frac{q(t-r/c)}{r}$$
+
+- For a source term with some _charge distribution_ $\rho(\bm{r},t)$, _superimpose_ the solutions:
+$$\phi(r,t)=\frac{1}{4\pi\epsilon_0}\int_\text{all space}\frac{\rho(\bm{r}',t-|\bm{r}-\bm{r}'|/c)}{|\bm{r}-\bm{r}'|}\,dV$$
+- The _retarded scalar potential_ allows for the _propagation of information_ at a _finite speed_ $c$
+- Denote _evaluating at retarded time_:
+$$\displaylines{\rho\left(\bm{r}',t-\frac{|\bm{r}-\bm{r}'|}{c}\right)\equiv[\rho(\bm{r}',\bm{r},t)]\equiv[\rho] \\ \phi=}$$
+
+- Similarly, the _retarded vector potential_:
+$$\bm{A}=$$
+
+- The _differential_ of retarded quantities:
+$$\pd{}{r}[F]=-\frac{1}{c}[F']\hspace{1.5cm}\pd{}{t}[F]=[F']$$
+
+# Dipole radiation
+- _Moving charges_ will cause _time-varying fields_
+	- For a charge at _constant velocity_, one can _transform_ into a frame where the charge is _stationary_, and _cannot lose energy_
+- Therefore, only _accelerating charges radiate_
+
+- Consider a _time-varying dipole_ in free space:
+![[Time-varying dipole.png]]
+- If the dipole suddenly _flips direction_, the field at $X$ _does not flip direction until_ time $r/c$ _later_ due to retardation effects
+- If the dipole _oscillates_ with phase $\omega t$, then $\bm{E}$ must also oscillate but _shifted in phase_ due to the retardation, therefore having phase $\omega(t-r/c$)
+- The oscillating charge also involves a _current_, giving a _magnetic field_
+
+## The Hertzian dipole
+- There are _two opposite charges_, separated by distance $d$, giving a _current_
+- The _dipole moment_ is then:
+$$\bm{p}=(0,0,p_0\exp(-i\omega t))\hspace{1.5cm} I=-i\omega\frac{p_0}{d}\exp(-i\omega t)$$

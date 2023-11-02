@@ -257,3 +257,10 @@ $$\ket{00}=\frac{1}{\sqrt{2}}\left(\ket{\uparrow}\ket{\downarrow}-\ket{\downarro
 - The $s=0$ ladder is known as the _singlet_ state
 
 - This is significant when studying the electron wave-function of the [[Molecular quantum mechanics#The Helium atom|helium atom]]
+
+## The trivial case
+- Consider the combination $0\otimes j$
+- The total angular momentum states are then:
+$$\ket{jm}=\ket{00}\otimes\ket{jm}$$
+- This correspods to Clebsch-Gordan coefficients:
+$$\braket{00;jm|j'm'}=\delta_{jj'}\delta_{mm'}$$

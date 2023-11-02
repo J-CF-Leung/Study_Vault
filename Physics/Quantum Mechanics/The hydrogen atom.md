@@ -159,6 +159,7 @@ $$(\Delta E)_{SO}=\pm\frac{1}{2}\left(\frac{Z}{n}\right)^4\frac{n}{j+1/2}\frac{1
 - As the choice of axis is arbitrary:
 $$[\hat{\bm{L}}\cdot\hat{\bm{S}},\hat{\bm{L}}]=-[\hat{\bm{L}}\cdot\hat{\bm{S}},\hat{\bm{S}}]\neq0 \hspace{1cm} [\hat{\bm{L}}\cdot\hat{\bm{S}},\hat{\bm{J}}]=0$$
 - From this, the the _spin-orbit term_ commutes with the _coupled set_ $\{\hat{\bm{J}}^2, \hat{\bm{J}_z}, \hat{\bm{L}}^2.\hat{\bm{S}}^2\}$ but _not the uncoupled set_ 
+- Can be explained as a consequence of [[Symmetries in quantum mechanics#Scalar operators and commutation relations|rotational symmetry]]
 
 #### The Darwin term
 - For a $1/r$ potential, the _Laplacian_ gives:
