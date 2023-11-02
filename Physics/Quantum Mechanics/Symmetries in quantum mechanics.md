@@ -113,6 +113,31 @@ $$\omega=\pmatrix{0 & \omega_3 & -\omega_2 \\ -\omega_3 & 0 & \omega_1 \\ \omega
 - Example: for a _rotation of angle $\phi$ along the $z-$axis_, $\omega=(0,0,\phi)$
 $$R\approx\pmatrix{1&\phi&0 \\ -\phi&1&0 \\ 0&0&1}$$
 
+## The operator
+- Under some spatial rotation, the states _transform_ as:
+$$\ket{\psi}\to\hat{U}(R)\ket{\psi}$$
+- If the system is _rotationally invariant_, then $\hat{U}(R)$ is _unitary_
+
+- _Successive rotations_ can _combine_:
+$$\hat{U}(R_n)\dots\hat{U}(R_2)\hat{U}(R_1)=\hat{U}(R_n\dots R_2R_1)$$
+- The _rotation_ can then be written as:
+$$\displaylines{\hat{U}(\omega)=\hat{I}+\frac{i}{\hbar}(\hat{\bm{\omega}}\cdot\hat{\bm{J}})+O(\omega^2) \\ \hat{\bm{J}}=(\hat{J}_1,\hat{J}_2,\hat{J}_3)}$$
+- Consider _three successive infinitesimal rotations_ $R_1,R_2,R_3$ with $\omega'$, $\omega$, and $-\omega'$:
+$$\displaylines{R_3R_2R_1=I+\omega+\omega\omega'-\omega'\omega+O(\omega^2,\omega'^2)\approx I+\omega+\Omega \\ \Omega_i=\epsilon_{ijk}\omega_j'\omega_k}$$
+- Expanding the unitary operators:
+$$\hat{U}(R_3R_2R_1)=\hat{I}+\frac{i}{\hbar}(\hat{\bm{\omega}}\cdot\hat{\bm{J}})+\frac{i}{\hbar}(\hat{\bm{\Omega}}\cdot\hat{\bm{J}})+\dots$$
+- Expanding $\hat{U}(R_3)\hat{U}(R_2)\hat{U}(R_1)$, then _equating coefficients_:
+$$[\hat{J}_i,\hat{J}_j]=i\hbar\epsilon_{ijk}\hat{J}_k$$
+- One can then interpret $\bm{J}$ as the _total angular momentum operator_
+
+## The form of the operator
+- Let there be a rotation though some _angle_ $\phi_0$ about the $z-$axis:
+$$\displaylines{\bm{\omega}=(0,0,\phi_0) \\ \psi(\phi)\to\psi'(\phi)=\hat{U}(\phi_0)\psi(\phi)=\psi(\phi+\phi_0)}$$
+- In the case of an _infinitesimal rotation_:
+$$\hat{U}(\phi_0)=\hat{I}+\phi_0\pd{}{\phi}+\dots\equiv\hat{I}+\frac{i}{\hbar}\phi_0\hat{J}_z+\dots$$
+- This gives the _form_ of $\hat{J}_z$:
+$$\hat{J}_z=-i\hbar\pd{}{\phi}$$
+
 # Scalar operators
 
 # The Wigner-Eckart Theorem
