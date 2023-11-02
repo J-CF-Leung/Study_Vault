@@ -2,16 +2,14 @@
 > As the speed of light is _constant_, one can use _geometrised units_:
 > $$c=2.99792458\times10^8\,\text{m}\,\text{s}^{-1}=1$$
 
-- [x] Lorentz transformations ⏫ 📅 2023-10-10 ✅ 2023-10-11
-- [x] Accelerating frames and rapidity ⏫ 📅 2023-10-10 ✅ 2023-10-17
-- [x] Length contraction and time dilation ⏫ 📅 2023-10-10 ✅ 2023-10-13
-- [ ] Catch up to notes
-
 - In _Newtonian mechanics_, when two frames travel with _relative velocity_ $v$, one performs a _Galilean transformation_:
 $$ct'=ct \hspace{1cm}x'=x-vt\hspace{1cm}y'=y\hspace{1cm}z'=z$$
 - The notion of time is _absolute_
 
 - This _distance between simultaneous events_ is _constant_
+
+- S.R. is a _limiting case_ of [[General Relativity]] (GR)
+	- It can be described in the language of _manifolds_
 # Foundational concepts
 
 ## Inertial reference frames and spacetime
@@ -157,8 +155,8 @@ $$\vec{u}\cdot\vec{F}=\vec{F}(\vec{u})=q\textbf{F}(\vec{u},\vec{u})=0$$
 ## Lorentz reference frame
 - In Minkowski spacetime, with an _inertial reference frame_, one defines a _Lorentz coordinate system_ $\{t,x,y,z\}=\{x^0,x^1,x^2,x^3\}$, with a set of _Lorentz basis vectors_ $\{\vec{e}_t,\vec{e}_x,\vec{e}_y,\vec{e}_z\}=\{\vec{e}_0,\vec{e}_1,\vec{e}_2,\vec{e}_3\}$
 - The basis vector $\vec{e}_\alpha$ points _along_ the $x^\alpha$ coordinate direction, which is _orthogonal to all other directions_
-- They have _squared length_ $1$ for $\alpha=0$, and $-1$ for $\alpha=1,2,3$:
-$$\vec{e}_\alpha\cdot\vec{e}_\beta=\eta_{\alpha\beta}$$
+- They have _squared length_ $1$ for $\alpha=0$, and $-1$ for $\alpha=1,2,3$, giving the _Minkowski metric_:
+$$g_{\alpha\beta}=\vec{e}_\alpha\cdot\vec{e}_\beta=\eta_{\alpha\beta}$$
 - Here, $\eta_{\alpha\beta}$ is the _analog of the Kronecker delta in Minkowski spacetime_:
 $$\eta_{00}=1 \hspace{1cm} \eta_{11}=\eta_{22}=\eta_{33}=-1 \hspace{1cm} \eta_{\alpha\beta}=0\text{ if }\alpha\neq\beta$$
 - _Any_ coordinate system where $\vec{e}_\alpha\cdot\vec{e}_\beta=\eta_{\alpha\beta}$ is said to be _orthonormal_
@@ -266,6 +264,7 @@ $$\vec{e}_\alpha=\vec{e}_\bar{\mu}{L^\bar{\mu}}_\alpha\hspace{1.5cm}\vec{e}_\bar
 - It is obvious that they are _inverses_ of each other:
 $${L^\bar\mu}_\alpha {L^\alpha}_\bar\nu={\delta^\bar\mu}_\bar\nu\hspace{1.5cm}{L^\alpha}_\bar\mu {L^\bar\mu}_\beta={\delta^\alpha}_\beta$$
 - As in Euclidean 3-space, the _orthonormality_ of the bases dictates that the transformation is _orthogonal_ (reflection or rotation), and the same _holds in Minkowski spacetime_
+
 - By using the transformation laws:
 $$g_{\alpha\beta}={L^\bar\mu}_\alpha {L^\bar\nu}_\beta \,g_{\bar\mu\bar\nu}\hspace{1.5cm} g_{\bar\mu\bar\nu}={L^\alpha}_\bar\mu {L^\beta}_\bar\nu \,g_{\alpha\beta}$$
 - Any matrix $L$ satisfying this is known as a _Lorentz transformation_
@@ -277,6 +276,24 @@ $${x^\bar\mu}={L^\bar\mu}_\alpha x^\alpha$$
 
 - The _product_ of two Lorentz transformations gives _another_ Lorentz transformation
 - Hence, all Lorentz transformations form the _Lorentz group_
+
+## The Psuedo-Riemannian manifold (GR)
+- In the language of [[General Relativity]], a _Loentz transformation_ from $\{x^\mu\}$ to $\{x^{\mu'}\}$ must _leave the metric unchanged_
+	- Corresponding to _going between intertial frames_
+$$\eta_{\mu\nu}=\pd{x^\rho}{x^{\mu'}}\pd{x^\sigma}{x^{\nu'}}\eta_{\rho\sigma}$$
+- Stuff (check Weinberg)
+
+- The Lorentz transformations must then be _linear_, and _satisfy_:
+$$\displaylines{x^{\mu'}=\tenscom{\Lambda}{\mu'}{\nu}x^\nu+a^{\mu'} \\ \eta_{\mu\nu}=\tenscom{\Lambda}{\rho}{\mu}\tenscom{\Lambda}{\sigma}{\nu}\eta_{\rho\sigma}}$$
+- With the _first condition_, the transformation _maps striaight lines onto straight lines_
+	- With _non-zero_ $a^{\mu'}$, the transformation is in the _inhomogeneous affine group_
+	- With $a^{\mu'}=0$, the transformation is in the _homogeneous affine group_
+- The _second condition_ maintains the _constancy of the speed of light_, and _eliminates dilations_
+
+- The group of _all such possible transformations_ is the _Poincare group_ or the _inhomogeneous Lorentz group_
+- With $a^{\mu'}=0$, they belong to the _homogeneous Lorentz group_
+
+
 ## Boosts
 - A specific type of Lorentz transformation is known as the _pure boost_:
 $${L^\bar\mu}_\alpha=\pmatrix{\gamma&-\beta\gamma&0&0\\-\beta\gamma&\gamma&0&0\\0&0&1&0\\0&0&0&1}\hspace{1.5cm}{L^\alpha}_\bar\mu=\pmatrix{\gamma&\beta\gamma&0&0\\\beta\gamma&\gamma&0&0\\0&0&1&0\\0&0&0&1}$$
@@ -339,6 +356,7 @@ $$\vec{a}=(\gamma^4|\bm{v}||\bm{a}|,\gamma^4|\bm{v}||\bm{a}|\bm{v}+\gamma^2\bm{a
 
 - Given that a frame $\{\vec{e}_\bar\mu\}$ has some _acceleration_ $a(t)$ as observed by $\{\vec{e}_\alpha\}$, and $v(t=0)=0$, the _rapidity_ of the Lorentz transformation is given by:
 $$\psi=\int a(t)\,dt$$
+## Velocity transformation
 
 # Spacetime diagrams for boosts
 

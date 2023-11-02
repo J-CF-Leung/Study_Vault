@@ -113,7 +113,7 @@ $$x^\mu=x^\mu(s)$$
 - Meanwhile, a _surface_, or _submanifold_ of dimensionality $m$ requires $m$ parameters:
 	- $m<n$, the dimensionality of the embedding space
 $$x^\mu=x^\mu(s^1,s^2,\dots s^m)$$
-- The _special case_ $M=N-1$ is known as a _hypersurface_
+- The _special case_ $m=n-1$ is known as a _hypersurface_
 - One is able to _eliminate_ the parameters from the $n$ equations, such that there is _some function_ $f$:
 $$f(x^1,x^2,\dots x^n)=0$$
 
@@ -175,9 +175,9 @@ $$ds^2=g_{\mu\nu}(x)dx^\mu dx^\nu$$
 - $g_{\mu\nu}$ are components of the _metric tensor_
 	- Each component is known as a _metric function_, which is _dependent on the point onb the manifold_ at which it is evaluated
 	- Components are _dependent on coordinate system_
-- Example: the _Minkowski metric_ $\eta_{\mu\nu}$, where $ds^2=dt^2-dx^2-dy^2-dz^2$
 
 - The geometry is _Riemannian_ if $ds^2>0$, and _pseudo-Riemannian_ if not
+- Example: the _Minkowski metric_ $\eta_{\mu\nu}$, where $ds^2=dt^2-dx^2-dy^2-dz^2$
 
 - The metric can always be chosen as _symmetric_
 	- The _antisymmetric_ part contributes _zero to the interval_
@@ -189,6 +189,16 @@ $$ds^2=g_{\mu\nu}(x)dx^\mu dx^\nu$$
 $$\displaylines{ds^2=g_{\mu\nu}dx^\mu dx^\nu=g_{\mu'\nu'}\,dx^{\mu'}dx^{\nu'} \\ g_{\mu'\nu'}(x')=\pd{x^\mu}{x^{\mu'}}\pd{x^\nu}{x^{\nu'}}\,g_{\mu\nu}(x(x'))}$$
 - As there are $N$ _arbitrary_ coordinate transformations one can perform, there are only $N(N-1)/2$ _independent functional degrees of freedom_ for the tensor
 
+### Square of the tangent vector
+- The [[#Curves and surfaces|tangent vector]] to a curve $x^\mu(u)$:
+$$\frac{d}{du}=\frac{dx^\mu}{du}\pd{}{x^\mu}$$
+- Then take the _squared length_:
+$$g\left(\frac{d}{du},\frac{d}{du}\right)=g_{\mu\nu}\frac{dx^\mu}{du}\frac{dx^\nu}{du}$$
+- On a _pseudo-Riemannian manifold_:
+$$g\left(\frac{d}{du},\frac{d}{du}\right)=\begin{cases}>0&\text{ if timelike} \\ <0 &\text{ if spacelike} \\ =0&\text{ if null}\end{cases}$$
+- Therefore, a curve can be _classified_ as timelike, spacelike, or null based on the metric
+- For a _non-null_ curve, the _length_ of the tangent vector is the _derivative_ of the _proper path length_ $s$ w.r.t. $u$:
+$$\left|\frac{ds}{du}\right|=\left|g_{\mu\nu}\frac{dx^\mu}{du}\frac{dx^\nu}{du}\right|$$
 ## Local geometry
 - The _intrinsic geometry_ of a manifold is characterised by the _line element_
 	- It is _independent_ of any _embedding_ in higher-dimensional space
@@ -483,7 +493,7 @@ $$(\text{curl }X)_{\mu\nu}=\nabla_\mu X_\nu-\nabla_\nu X_\mu=\partial_\mu X_\nu-
 
 - The _Laplacian operator_ is then:
 $$\nabla^2\phi=\nabla_\mu(g^{\mu\nu}\nabla_\nu\phi)=\frac{1}{\sqrt{|g|}}\partial_\mu(\sqrt{g}\,g^{\mu\nu}\partial_\nu\phi)$$
-## Intrinsic derivative along a curve
+## The intrinsic derivative along a curve
 - One often needs to take _derivatives of vectors along a curve_
 - Consider some vector $V(u)$ along some _curve_ $x^\mu(u)$
 
@@ -512,4 +522,60 @@ $$\frac{D\tenscom{T}{\mu_1\mu_2\dots\mu_k}{\nu_1\nu_2\dots\nu_l}}{Du}=0$$
 - One can check that for a _given path_, transport is _independent of parametrisation_
 - One can also check that $D|V|^2/Du=0$ for parallel transport
 
-## Geodesics
+- Parallel transport is also _dependent on connection_
+- If the connection is _metric compatible_, the metric is _parallel transported_
+- One can then check that the _inner product of two parallel transported vectors_ is _conserved_
+
+## Geodesics, proper time, and affine parameters
+- A geodesic is an _extremal path_ between two points on a manifold
+	- A _generalisation_ of straight lines
+- They can also be defined as curves that _parallel transport vectors_
+
+- The condition of _parallel transporting the tangent vector_:
+$$\displaylines{\frac{Dt^\mu}{Du}=\frac{D}{Du}\frac{dx^\mu}{du}=0 \\ \frac{d^2x^\mu}{du^2}+\Gamma^\mu_{\rho\sigma}\frac{dx^\rho}{du}\frac{dx^\sigma}{du}=0}$$
+- This is the _geodesic equation_
+
+### Proper time and affine parameters
+- Geodesics are also paths of _maximum proper time_
+	- For _any timelike path_, one can construct a similar _null_ path with _zero path length_
+	- Therefore, the _extremised proper time_ must be a _maximum_
+- One can then _extremise_ the proper time:
+$$\tau=\int\left|g_{\mu\nu}\frac{dx^\mu}{du}\frac{dx^\nu}{du}\right|^{1/2}\,du$$
+- Add some _variation_ $\delta\tau$, with $f=g_{\mu\nu}(dx^\mu/du)(dx^\nu/du)$:
+$$\delta\tau=\frac{1}{2}\int\frac{1}{\sqrt{f}}\delta f\,du$$
+- Specify $\tau$ as the _parameter_ of the variation, such that the _tangent vector_ is the [[Special Relativity#Particle kinetics in index notation|4-velocity]] $U^\mu$, and $f=1$
+- For _stationary proper time_, one must extremise the integral:
+$$I=\frac{1}{2}\int f\,d\tau$$
+- By adding some _variation_ in $\delta x^\mu$, and _integrating by parts_, one recovers the _geodesic equation_ as:
+$$\displaylines{x^\mu\to x^\mu+\delta x^\mu \\ g_{\mu\nu}\to g_{\mu\nu}+(\partial_\sigma g_{\mu\nu})\delta x^\sigma \\ \frac{d^2x^\mu}{d\tau^2}+\Gamma^\mu_{\rho\sigma}\frac{dx^\rho}{d\tau}\frac{dx^\sigma}{d\tau}=0}$$
+- Therefore, the geodesic equation can be _parametrised by proper time_
+- In fact, it can be parametrised with _any parameter_ $\lambda$ that _satisfies_:
+$$\tau\to\lambda=a\tau+b$$
+- $\lambda$ is then known as an _affine parameter_
+- As the geodesic _parallel transports_ $|ds/du|$,  _any affine parameter_ is _constant_ along the curve
+
+- For a _timelike path_, the geodesic equation in terms of the _4-velocity_ and _4-momentum_:
+$$U^\lambda\nabla_\lambda U^\mu=0 \hspace{1.5cm} p^\lambda\nabla_\lambda p^\mu=0$$
+- For a _null path_, $\tau$ is _not a proper affine parameter_
+	- If it is a geodesic for _some parameter_ $\lambda$, then $a\lambda+b$ is also an affine parameter
+
+- In the derivation above, $f$ is the _Lagrangian_ of the variation
+- By writing out the _Euler-Lagrange equation_ explicitly, and _lowering indices_, one can get an _alternative form_ of the geodesic equation:
+$$\frac{d^2x_\mu}{d\tau^2}=\frac{1}{2}\partial_\mu g_{\nu\lambda}\frac{dx^\nu}{d\tau}\frac{dx^\lambda}{d\tau}$$
+### Particle kinetics and conserved quantities on a geodesic
+- A _freely-falling_ test particle (which _does not influence the geometry through which it moves_), will always _move along a geodesic_
+- It always _moves along the direction in which the 4-momentum is pointing_
+
+- A geodesic is also a path of _maximum proper time_
+	- It has _maximum proper time locally_
+	- Example: in the _twin paradox_, the stationary twin is _on a geodesic_
+
+- _Given_ some vector at a point, then _solving for subsequent motion on a geodesic_, one generates a _unique geodesic_, which is _everywhere timelike/null/spacelike_
+	- Parallel transport _preserves_ the interval
+
+- The _conservation_ of the interval follows from the fact that the _Lagrangian_ is _not explicitly dependent_ on the affine parameter
+
+- One can also see that if:
+$$\partial_\mu g_{\nu\lambda}=0\Longrightarrow \frac{dx_\mu}{d\tau}=\text{const.}$$
+- If the metric is _independent of some coordinate direction_ $x^\mu$, the $x^\mu$ component of the _tangent vector_ must be _conserved_
+- It is effectively the _conjugate momentum_

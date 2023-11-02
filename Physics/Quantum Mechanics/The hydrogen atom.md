@@ -132,32 +132,33 @@ $$\alpha\equiv\frac{e^2}{4\pi\epsilon_0\hbar c}\approx\frac{1}{137}$$
 - The _unperturbed energies_:
 $$E_n=-\frac{Z^2}{n^2}R_\infty\hspace{1.5cm}2R_\infty=\alpha^2m_ec^2$$
 - Using the equations above:
-$$(\Delta E)_R=-\left(\frac{}{}\right)$$
+$$(\Delta E)_R=-\left(\frac{Z}{n}\right)^4\left(\frac{n}{l+1/2}-\frac{3}{4}\right)\alpha^2 R_\infty$$
 
 #### Spin-orbit correction
 - The spin-orbit pertubration:
-$$\hat{H}_{SO}=\xi(r)\hat{\bm{L}}\cdot\hat{\bm{S}}\hspace{1.5cm}\xi(r)=\propto$$
+$$\hat{H}_{SO}=\xi(r)\hat{\bm{L}}\cdot\hat{\bm{S}}\hspace{1.5cm}\xi(r)\equiv\frac{1}{2m_e^2c^2}\frac{Ze^2}{4\pi\epsilon_0}\frac{1}{r^3}$$
 - Express the dot product as:
 $$2\hat{\bm{L}}\cdot\hat{\bm{S}}=\hat{\bm{J}}^2-\hat{\bm{L}}^2-\hat{\bm{S}}^2$$
 - The _coupled_ basis states $\ket{njm_jls}$ are _simultaneous eigenstates_ of these operators
-- The _matrix elements_ are then:
-$$\braket{}$$
-- As $\xi(r)$ is _radial_:
+- Combinging this with the fact that $\xi(r)$ is _radial_, the _matrix elements_ are then:
+$$\braket{nj'm_j'l's'|\xi(r)\hat{\bm{L}}\cdot\hat{\bm{S}}|njm_jls}=\frac{\hbar^2}{2}\left[j(j+1)-l(l+1)-s(s+1)\right] \mean{\xi(r)}_{nl}\delta_{j'j}\delta_{m_jm_j'}\delta_{ll'}$$
 
 - For _any_ $s$ state, where $l=0$, one gets that there is _no spin-orbit energy_:
 $$(\Delta E)_{SO,l=0}=0$$
+- For states with $l>0$:
+$$\mean{\frac{1}{r^3}}=\int_0^\infty \frac{1}{r}R_{nl}^2\,dr=\frac{Z^3}{a_0^3n^3}\frac{1}{l(l+1/2)(l+1)}$$
 - The _energy correction_ is then:
+$$(\Delta E)_{SO}=\frac{1}{2m_e^2c^2}\frac{Ze^2}{4\pi\epsilon_0}\frac{Z^3}{a_0^3n^3}\left[\frac{j(j+1)-l(l+1)-s(s+1)}{2l(l+1/2)(l+1)}\right]\hbar^2$$
 
 - As $s=1/2$, $j=l\pm1/2$ and the _spin-orbit correction_ for $l>0$ can be written as:
-
+$$(\Delta E)_{SO}=\pm\frac{1}{2}\left(\frac{Z}{n}\right)^4\frac{n}{j+1/2}\frac{1}{l+1/2}\alpha^2R_\infty$$
 - Using the fact that $l=0,1,2,\dots n-1$, each level $n$ is _split_ into $(2n+1)$ energies
 
 #### Spin-orbit commutation relations
 - One can check that $\hat{\bm{L}}\cdot\hat{\bm{S}}$ _commutes_ with the set of operators $\{\hat{\bm{J}}^2,\hat{J}_z,\hat{\bm{L}}^2,\hat{\bm{S}}^2\}$
 - As the choice of axis is arbitrary:
 $$[\hat{\bm{L}}\cdot\hat{\bm{S}},\hat{\bm{L}}]=-[\hat{\bm{L}}\cdot\hat{\bm{S}},\hat{\bm{S}}]\neq0 \hspace{1cm} [\hat{\bm{L}}\cdot\hat{\bm{S}},\hat{\bm{J}}]=0$$
-- From this, the _commutation relations_ with the _spin-orbit term_:
-
+- From this, the the _spin-orbit term_ commutes with the _coupled set_ $\{\hat{\bm{J}}^2, \hat{\bm{J}_z}, \hat{\bm{L}}^2.\hat{\bm{S}}^2\}$ but _not the uncoupled set_ 
 
 #### The Darwin term
 - For a $1/r$ potential, the _Laplacian_ gives:
@@ -168,8 +169,10 @@ $$\braket{\psi|(\nabla^2\phi)|\psi}=-\frac{Ze}{\epsilon_0}|\psi(0)|^2$$
 $$(\Delta E)_D=\begin{cases}\frac{Z^4\alpha^2}{n^3}R_\infty &l=0 \\ 0 & l>0\end{cases}$$
 ### Resulting fine structure
 - The _scale_ of the energy perturbations:
+$$\frac{\alpha^2R_\infty}{n^3}=\frac{7.25\times 10^{-4}}{n^3}\,\text{eV}$$
 
 - The _perturbations_, in units of $Z^4\alpha^2R_\infty/4n^3$:
+$$\displaylines{(\Delta E)_R=\frac{3}{n}-\frac{4}{l+1/2}\hspace{1.5cm}(\Delta E)_D=\begin{cases}4 &l=0 \\ 0&l>0\end{cases} \\ (\Delta E)_{SO}=\begin{cases}\pm{2}/[(j+1/2)(l+1/2)] &l>0 \\ 0&l=0\end{cases}}$$
 
 - The _individual perturbations_ are _independent of_ $m_l$ and $m_s$
 
@@ -198,34 +201,57 @@ $$\delta\nu(2S_{1/2}-2SP_{1/2})\approx 1000\,\text{MHz}$$
 	- Examples: _finite size_, the _nuclear spin_, _magnetic dipoles_, _electric quadrupoles_
 
 - The most significant effect is due to the _dipole moment_ assoiated with _nuclear spin_:
-$$(\hat{\bm{\mu}}_S)_p=$$
+$$(\hat{\bm{\mu}}_S)_p=g_p\frac{\mu_N}{\hbar}\hat{\bm{I}}$$
 - This gives a _magnetic field_ $\bm{B}_p$
 - Its interaction with the _electron magnetic dipole moment_ gives the _hyperfine interaction_:
-$$\hat{H}_{bf}=-(\hat{\bm{\mu}}_S)_e\cdot\bm{B}_p=$$
+$$\hat{H}_{bf}=-(\hat{\bm{\mu}}_S)_e\cdot\bm{B}_p=-\frac{\mu_B}{\hbar}(\hat{\bm{L}}+g_e\hat{\bm{S}})\cdot\bm{B}_p$$
 
-- _Classically_, the magnetic moment $\bm{M}$ generates a _magnetic field_:
-
-- This gives the _Hamiltonian_:
+- _Classically_, the magnetic moment $\bm{M}$ generates a [[Electrodynamics and Optics#The magnetic vector potential|magnetic potential]] and _field_:
+$$\displaylines{\bm{A}=-\frac{\mu_0}{4\pi}\bm{M}\times\grad\left(\frac{1}{r}\right) \\ \bm{B}=\frac{\mu_0}{4\pi}\left[\frac{3\bm{r}(\bm{r}\cdot\bm{M})-r^2\bm{M}}{r^5}+\frac{8\pi}{3}\bm{M}\delta^3(\bm{r})\right]}$$
+- The _Hamiltonian_ is then:
+$$\hat{H}_{hf}=g_p\frac{\mu_B\mu_N}{\hbar^2}(\hat{\bm{L}}+g_e\hat{\bm{S}})\frac{\mu_0}{4\pi}\left[\frac{3\bm{r}(\bm{r}\cdot\bm{I})-r^2\bm{I}}{r^5}+\frac{8\pi}{3}\bm{I}\delta^3(\bm{r})\right]$$
 ## S states
 - For $l=0$, the hyperfine interaction is:
+$$(\Delta E)_{l=0}=\braket{n00|\hat{H}_{hf}|n00}=\int\psi^*_{n00}(\bm{r})\hat{H}_{hf}\psi_{n00}(\bm{r})\,d^3\bm{r}$$
+- There is _no contribution from orbital angular momentum_ $(\bra{n00}|\hat{\bm{L}}=0)$
+- Due to _symmetry_:
+$$\mean{r_i^2}=\frac{1}{3}\mean{r^2}\hspace{1.5cm}3\bm{r}(\bm{r}\cdot\bm{I})-r^2\bm{I}=0$$
+- Hence, only the _delta function term_ contributes:
+$$(\Delta E)_{l=0}=g_eg_p\frac{\mu_B\mu_N}{\hbar^2}\frac{\mu_0}{4\pi}\mean{\hat{\bm{S}}\cdot\hat{\bm{I}}}\frac{8\pi}{3}|\psi_{n00}(0)|^2$$
+- This indicates that it is an _interaction between electron and proton dipoles_
+- Substituting $|\psi_{n00}(0)|^2=Z^3/(\pi n^3a_0^3)$:
+$$(\Delta E)_{l=0}=g_eg_p\frac{2}{3m_p}\frac{Z^3}{n^3}\frac{\alpha^4m_e^2c^2}{\hbar^2}\mean{\hat{\bm{S}}\cdot\hat{\bm{I}}}$$
 
-- There is _no contribution from orbital angular momentum_
-
-- _Total angular momentum_ of the hydrogen atom:
+- _Total angular momentum_ of the _hydrogen atom_:
 $$\hat{\bm{F}}=\hat{\bm{L}}+\hat{\bm{S}}+\hat{\bm{I}}$$
 - For $l=0$, as $\hat{L}\ket{n00}=0$:
-$$\mean{\hat{\bm{F}}^2}=\mean{\hat{\bm{S}}^2}+\mean{\hat{\bm{I}}^2}+2\mean{\hat{\bm{S}}\cdot\hat{\bm{I}}}$$
+$$\displaylines{\mean{\hat{\bm{F}}^2}=\mean{\hat{\bm{S}}^2}+\mean{\hat{\bm{I}}^2}+2\mean{\hat{\bm{S}}\cdot\hat{\bm{I}}} \\ \mean{\hat{\bm{S}}\cdot\hat{\bm{I}}}=\frac{\hbar^2}{2}[F(F+1)-s(s+1)-l(l+1)]}$$
+- For the hydrogen atom, $s=l=1/2$, hence $F=0,1$:
+$$\displaylines{\Delta E=\begin{cases}-(3/4)(\Delta E)_{hf} & F=0 \\ +(1/4)(\Delta E)_{hf} & F=1 \end{cases} \\ (\Delta E)_{hf}=\frac{4g_eg_p}{3}\frac{Z^3}{n^3}\frac{m_e}{m_p}\alpha^2R_\infty}$$
 
-
-- Stuff
-
-- The hyperfine interaction _splits_ each $S-$state into 2 separate levels
+- The hyperfine interaction _splits_ each $S-$state into 2 separate levels:
+![[Hyperfine split.png]]
+- The _degeneracy_ of the zeroth-order states is now $4n^2$
+	- Each hyperfine level has _degeneracy_ $2F+1$
 
 - In comparison to _fine structure_, the splitting is _suppressed_ by a factor of:
 $$m_e/m_p\sim 1/2000$$
+- For the _ground state_ $n=1$, the hyperfine splitting is:
+$$(\Delta E)_{hf}\approx 5.87\times 10^{-6}\,\text{eV} \hspace{1cm}\Delta\nu=1420.4\,\text{MHz}\hspace{1cm}\lambda=21.1\,\text{cm}$$
+- The _21cm_ line is produced when the _upper level_ is _decays_
+	- Correponds to a temperature of $0.07\,\text{K}$, so it is _significantly occupied_
 
 - For _excited_ states, $(\Delta E)_{hf}\propto 1/n^3$
 
 ### The 21cm line
 
 ## P,D,F states
+- Any _non-S state_ will also be _split into two separate levels_, $F=j\pm1/2$
+- The first-order energy shifts are then:
+$$(\Delta E)_{hf}=\frac{g_eg_p}{4}\frac{Z^3}{n^3}\frac{m_e}{m_p}\alpha^2R_\infty\left[\frac{F(F+1)-j(j+1)-3/4}{j(j+1)(l+1/2)}\right]$$
+- The splttings are of a _similar order_
+![[Hydrogen hyperfine structure.png]]
+
+- Each _hyperfine level_ has _degeneracy_ $2F+1$
+- For an _isolated atom_, the energy levels _cannot be split further_
+	- It can only be broken by some _external field_, which _breaks the rotational symmetry_

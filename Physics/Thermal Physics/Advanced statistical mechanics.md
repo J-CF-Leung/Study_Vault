@@ -464,7 +464,7 @@ $$\Xi_k\approx 1+\exp[-\beta(\varepsilon_k-\mu)]$$
 - For _bosons_:
 $$\displaylines{\Xi_k=\sum_{n=0}^\infty\exp[-\beta(\varepsilon_k-\mu)n]=\frac{1}{1-\exp[-\beta(\varepsilon_k-\mu)]} \\ \Phi_k=kT\ln[1-\exp(-\beta\varepsilon_k+\beta\mu)] \\ \mean{n_k}=\pd{\Phi_k}{\mu}=\frac{1}{1-\exp[\beta(\varepsilon_k-\mu)]}}$$
 - For _fermions_:
-$$\displaylines{\Xi_k=\sum_{n=0}^1\exp[-\beta)(\varepsilon_k-\mu)n]=1-\exp[-\beta(\varepsilon_k-\mu)] \\ \Phi_k= \\ \mean{n_k}=\frac{1}{1+\exp[\beta(\varepsilon_k-\mu)]}}$$
+$$\displaylines{\Xi_k=\sum_{n=0}^1\exp[-\beta(\varepsilon_k-\mu)n]=1+\exp[-\beta(\varepsilon_k-\mu)] \\ \Phi_k= \\ \mean{n_k}=\frac{1}{1+\exp[\beta(\varepsilon_k-\mu)]}}$$
 
 - For _bosons_ at _low temperatures_, $\mean{n_k}$ can start to _diverge_
 	- This gives rise to the _Bose-Einstein condensate_
@@ -473,10 +473,12 @@ $$\displaylines{\Xi_k=\sum_{n=0}^1\exp[-\beta)(\varepsilon_k-\mu)n]=1-\exp[-\bet
 	- The _chemical potential_ can be _approximated_ by $\varepsilon_F$ as it is the _energy gained by adding one particle_
 
 # The Fermi gas
-- Given the _energy distribution_:
+- Given the _energy distribution_ $\varepsilon_k$:
 $$\mean{n_k}=\frac{1}{1+\exp[\beta(\varepsilon_k-\mu)]}$$
 - The _total number of particles_:
 $$N=\sum_k\mean{n_k}=\int\frac{d^3x\,d^3p}{(2\pi\hbar)^3}\frac{1}{1+\exp[\beta(\varepsilon_k-\mu)]}$$
+
+## At absolute zero
 - Writing the _density of states_ $g(\varepsilon)$:
 $$N=V\int_0^\infty g(\varepsilon)n(\varepsilon)\,d\varepsilon$$
 - One can then use the _distribution at absolute zero_:
@@ -489,7 +491,49 @@ $$U=\sum_k\varepsilon_k\mean{n_k}=V\int_0^\infty g(\varepsilon)\,d\varepsilon\fr
 - At _absolute zero_:
 $$U|_{T=0}=V\left(\frac{}{}\right)\left(\frac{N}{V}\right)^{5/3}$$
 - This is _not a function of temperature_, as it is _evaulated_ at $T=0$
+	- The _zero-temperature limit_ is _purely quantum_ as $N\lambda^3/V\to\infty$
 
 - When one _compresses_ the gas, due to the _Pauli principle_, the energies are _raised_, giving the _Fermi pressure_:
 $$p_F=-\pd{U}{V}=(\dots)\frac{\hbar^2}{m}\left(\frac{N}{V}\right)^{5/3}$$
 - This is _not the actual pressure_, as $U|_{T=0}$ is _not a thermodynamic variable_
+
+- The _grand potential_ of the Fermi gas, using _integration by parts_ for the second equality:
+$$\begin{aligned}\Phi&=V\int_0^\infty -kT\ln(1+\exp[-\beta(\varepsilon_k-\mu)])\,g(\varepsilon)\,d\varepsilon  \\ &=-V\int_0^\infty N(\varepsilon)g(\varepsilon)\,d\varepsilon\end{aligned}$$
+
+## Momentum representation
+- Rewrite integrals in terms of _momentum_
+$$N=\sigma V\int_0^{\varepsilon_F}\frac{p^2\,dp}{2\pi^2\hbar^3}=\sigma V\frac{k_F^3}{6\pi^2}$$
+$$U=\sigma V\int_0^{\varepsilon_F}\frac{p^4\,dp}{2\pi^2(2m)\hbar^3}=$$
+- One then also gets that the _momentum at the Fermi level_:
+$$\hbar k_F=()^{1/3}\left(\frac{}{}\right)^{1/3}$$
+- The _Fermi pressure_:
+$$P_F=\frac{2}{5}\frac{N}{V}\varepsilon_F$$
+## Away from absolute zero
+- At $T>0$, the _chemical potential_ is _not equal_ to $\varepsilon_F$
+- One can do _Taylor expansions_ with $1/(\beta\varepsilon_F)$
+	- This is known as the _Sommerfeld expansion_
+- For the integral:
+$$\int_0^\infty \frac{A(\varepsilon)\,d\varepsilon}{\exp[\beta(\varepsilon-\mu)]+1}=\int_0^\mu A(\varepsilon)\,d\varepsilon+\frac{\pi^2}{6}(kT)^2A'(\mu)+\dots$$
+
+- Applying this to _internal energy_:
+$$\int_0^\infty\frac{\varepsilon\,g(\varepsilon)\,d\varepsilon}{\exp[]}=\int_0^\mu\,\varepsilon g(\varepsilon)\,d\varepsilon+\frac{\pi^2}{6}(kT)^2[g(\mu)+\mu g'(\mu)]$$
+- The _first term_ can be _expanded_:
+$$\int_0^{\varepsilon_F}\varepsilon g(\varepsilon)\,d\varepsilon+(\mu-\varepsilon_F)\varepsilon_F\,g(\varepsilon_F)+\dots$$
+- Expand $U$ with _correction terms_:
+$$U=U(T=0)+\dots$$
+- Looking at _total number of particles_:
+$$\displaylines{N=\int_0^\infty  \\ \frac{dN}{dT}=0=\frac{d\mu}{dT}g(\mu)+\frac{\pi^2}{3}k^2Tg'(\mu)=0}$$
+- One then gets an _expression_ for $\mu$:
+$$\mu=\varepsilon_F-\frac{\pi^2}{6}(kT)^2\frac{g'}{g}$$
+- Substituting in the corrections:
+$$U(T)=U(T=0)+\frac{\pi^2}{6}(kT)^2g(\varepsilon_F)$$
+- This then gives the _heat capacity_:
+$$C=\pd{U}{T}=\frac{\pi^2}{3}k^2g(\varepsilon_F)T$$
+## At high temperatures
+- The _classical limit_:
+$$\frac{N\lambda^3}{V}\ll1 \hspace{1.5cm}\mu=kT\ln\frac{N\lambda^3}{V}$$
+- The _grand potential_:
+$$\Phi=$$
+- The _leading term_ of this expansion is 
+- This allows one to write:
+$$\Phi=-\frac{2}{3}V\exp(\beta\mu)\int_0^\infty\frac{}{}$$
