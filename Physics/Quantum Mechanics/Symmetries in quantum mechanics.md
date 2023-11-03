@@ -40,7 +40,7 @@ $$[\hat{A},\hat{U}]=0\Longrightarrow[\hat{A},\hat{T}]=0$$
 
 - If the _Hamiltonian is invariant under symmetry_:
 $$[\hat{H},\hat{T}]=0$$
-- Then from [[Fundamental concepts of quantum mechanics#Ehrenfest's Theorem|Ehrenfest's Theorem]]:
+- Then from [[Principles of quantum mechanics#Ehrenfest's Theorem|Ehrenfest's Theorem]]:
 $$\frac{d}{dt}\braket{\psi|\hat{H}|\psi}=\frac{i}{\hbar}\braket{\psi|[\hat{H},\hat{T}]|\psi}=0$$
 
 - Hence, the _generator is conserved_

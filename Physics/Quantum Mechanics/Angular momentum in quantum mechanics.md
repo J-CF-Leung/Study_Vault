@@ -138,7 +138,7 @@ $$s=0,\frac{1}{2},1,\frac{3}{2}\dots \hspace{1cm} m_s=-s,-s+1,\dots,s-1,s$$
 	- Photons: $s=1$
 	- $\Delta$ baryons: $s=3/2$
 	- Gravitons: $s=2$
-- This later gives rise to the [[Fundamental concepts of quantum mechanics#Bosons and Fermions|spin-statistics theorem]], where spin determines the _exchange symmetry of the wave-function_
+- This later gives rise to the [[Principles of quantum mechanics#Bosons and Fermions|spin-statistics theorem]], where spin determines the _exchange symmetry of the wave-function_
 
 ### Spin 1/2
 - For $s=1/2$, there are only _two possible orientations_, $\ket{m_s=+1/2}$ and $\ket{m_s=-1/2}$

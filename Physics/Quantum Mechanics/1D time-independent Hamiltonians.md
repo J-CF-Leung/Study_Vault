@@ -1,6 +1,6 @@
-- The [[Fundamental concepts of quantum mechanics#Time-independent Hamiltonians and stationary states|time-independent Schrödinger equation]] solves for the eigenkets of the Hamiltonian:
+- The [[Principles of quantum mechanics#Time-independent Hamiltonians and stationary states|time-independent Schrödinger equation]] solves for the eigenkets of the Hamiltonian:
 $$\Ham\ket{E}=E\ket{E}$$
-- The resultant [[Fundamental concepts of quantum mechanics#The time-evolution operator|time-evolution operator]] and wave function become:
+- The resultant [[Principles of quantum mechanics#The time-evolution operator|time-evolution operator]] and wave function become:
 $$\teo = \sum_n\ket{E_n}\bra{E_n}\exp(-iE_nt/\hbar)=\int\ket{E}\bra{E}\exp(-iEt/\hbar)\,dE$$
 $$\ket{\Psi(t)} =\sum_n\ket{E_n}\braket{E_n|\Psi_0}\exp(-iE_nt/\hbar) =\int \ket{E}\braket{E|\Psi_0}\exp(-iEt/\hbar)\,dE$$
 
@@ -113,7 +113,7 @@ $$\Psi_1(x,t)=A\exp[i(k_1x-\omega t)]+rA\exp[-i(k_1x+\omega t)]$$
 $$\Psi_2(x,t)=tA\exp[i(k_2x-\omega t)]$$
 - Applying the _boundary conditions for continuity_:
 $$r=\frac{k_1-k_2}{k_1+k_2} \hspace{1cm} t=\frac{2k_1}{k_1+k_2}$$
-- [[Fundamental concepts of quantum mechanics#Probability flow|The probability current]] in each region, for each travelling direction:
+- [[Principles of quantum mechanics#Probability flow|The probability current]] in each region, for each travelling direction:
 $$\displaylines{J_1^+=\frac{\hbar k_1}{m}|A|^2 \\ J_1^-=|rA|^2\frac{\hbar k_1}{m}=|A|^2\left|\frac{k_1-k_2}{k_1+k_2}\right|^2\frac{\hbar k_1}{m} \\ J_2^+=|tA|^2\frac{\hbar k_2}{m}=|A|^2\left|\frac{2k_1}{k_1+k_2}\right|^2\frac{\hbar k_2}{m}}$$
 - It can be checked that it is _conserved across the boundary_, $J_1^+-J_1^-=J_2^+$
 - Only _valid for travelling wave_, or $k_2\in\mathbb{R}$
@@ -309,7 +309,7 @@ $$\phi_n(p)\propto\left[\delta\left(\frac{p}{\hbar}-\frac{n\pi}{a}\right)+\delta
 - Hence, as $n$ increases, the _uncertainty of $p$ decreases_
 - So, it gets _more likely to detect the momentum at the particle at the classical momentum_ $p_n\approx\sqrt{2mE_n}$
 
-- In terms of Ehrenfest's Theoem: [[Fundamental concepts of quantum mechanics#Expectation values and the classical limit|The classical limit]]
+- In terms of Ehrenfest's Theoem: [[Principles of quantum mechanics#Expectation values and the classical limit|The classical limit]]
 
 # Other potentials
 

@@ -7,9 +7,9 @@ $$\begin{aligned}\Psi(x,t)=\braket{x|\Psi(t)}&=\sum_n\braket{x|E_n}\exp\left(-\f
 - The propagator is also equal to the _matrix elements of the time-evolution operator_ in the _position basis_:
 $$K(x,t,x',t_0)=\sum_n\braket{x|E_n}\exp\left(-\frac{iE_n(t-t_0)}{\hbar}\right)\braket{E_n|x'}=\braket{x|\teo(t,t_0)|x'}$$
 ## The propagator as a transition amplitude
-- It can also be thought of as a _[[Fundamental concepts of quantum mechanics#Transition amplitude|transition amplitude]]_ from the position eigenstate $\ket{x'}$ at time $t_0$ to the eigenstate $\ket{x}$ at time $t$:
+- It can also be thought of as a _[[Principles of quantum mechanics#Transition amplitude|transition amplitude]]_ from the position eigenstate $\ket{x'}$ at time $t_0$ to the eigenstate $\ket{x}$ at time $t$:
 $$K(x,t,x',t_0)=\sum_n\bra{x}\exp\left(-i\frac{E_nt}{\hbar}\right)\ket{E_n}\bra{E_n}\exp\left(i\frac{E_nt_0}{\hbar}\right)\ket{x'}=\braket{x,t|x',t_0}$$
-	- where both base kets are interpreted as in the [[Fundamental concepts of quantum mechanics#The Schrödinger and Heisenberg pictures|Heisenberg picture]]
+	- where both base kets are interpreted as in the [[Principles of quantum mechanics#The Schrödinger and Heisenberg pictures|Heisenberg picture]]
 - $K(x,t,x',t_0)$ is the probability amplitude for a system to from eigenstate $\ket{x'}$ at $t_0$ to state $\ket{x}$ at time $t$
 - The wave function at $(x,t)$ is a weighted total of all amplitudes to arrive at $x$ from every other point in space within interval $t-t_0$
 - As position eigenkets at all times are complete, the transition amplitude obeys the composition property:

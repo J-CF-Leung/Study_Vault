@@ -33,7 +33,7 @@
 
 - For a system with a _continuous spectrum of energy_, define the _density of states_ $g(E)$, where $\Omega(E)$ gives the number of microstates in the _range_ of energies $E$ to $E+\delta E$:
 $$\Omega(E)=g(E) \delta E$$
-- The _spread_ in energy is often estimated from the [[Fundamental concepts of quantum mechanics#Energy-time uncertainty principle|energy-time uncertainty principle]], and is typically in the order of $10^{-24}\,\text{J}$
+- The _spread_ in energy is often estimated from the [[Principles of quantum mechanics#Energy-time uncertainty principle|energy-time uncertainty principle]], and is typically in the order of $10^{-24}\,\text{J}$
 
 - The probability of being in a microstate is obtained from _sampling the system at various times_, with the _collection_ of samples being titled the _ensemble_
 

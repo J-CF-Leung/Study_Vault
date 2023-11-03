@@ -19,7 +19,7 @@ $$L(\alpha\psi+\beta\phi)=\alpha L\psi+\beta L\psi$$
 	- If a _particular integral_ $\psi_p$ satisfies the inhomogeneous equation, and the _complementary solution_ $\psi_c$ satisfies the homogeneous one, $\alpha\psi_c+\psi_p$ satsfies the inhomogeneous equation
 
 ## Example
-- [[Fundamental concepts of quantum mechanics#The Schrödinger wave equation|The Schrödinger wave equation]]
+- [[Principles of quantum mechanics#The Schrödinger wave equation|The Schrödinger wave equation]]
 
 - The wave equation:
 $$\pd{^2y}{t^2}=v^2\nabla^2y$$

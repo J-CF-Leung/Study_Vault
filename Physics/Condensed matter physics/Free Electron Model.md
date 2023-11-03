@@ -9,7 +9,7 @@
 - The electrons are _not under any potential_
 	- Ignoring _nuclear attraction_, as well as electron-electron _repulsion_
 - There are still _boundary conditions_ taking the _periodicity_ of the crystal into account
-- The [[Fundamental concepts of quantum mechanics#Multiple degrees of freedom|Pauli Exclusion Principle]] still applies
+- The [[Principles of quantum mechanics#Multiple degrees of freedom|Pauli Exclusion Principle]] still applies
 
 - The _number of electrons_ depends on the _material_
 - There may be an _effective mass_ $m^*$ taking _lattice interactions_ into account

@@ -208,7 +208,7 @@ $$\Ham_\text{elec}=T_e+V_{e-e}+V_{n-e}$$
 $$V_\text{ext}(\bm{r})=\sum_I\frac{e^2Z_I}{|\bm{r}-\bm{R}_I|}$$
 - Hence the Hamiltonian can be written as:
 $$\Ham=\sum_i\left[\frac{p_i^2}{2m_e}+V_\text{ext}(\bm{r}_i)\right]+\frac{1}{2}\sum_{ij}\frac{e^2}{|\bm{r}_i-\bm{r}_j|}$$
-- Generally, this _cannot be written as a_ [[Fundamental concepts of quantum mechanics#Multiple degrees of freedom|Slater determinant]]
+- Generally, this _cannot be written as a_ [[Principles of quantum mechanics#Multiple degrees of freedom|Slater determinant]]
 
 - In _density-functional theory_, the Hamiltonian is regarded as a _functional of the ground-state electron density_ $n(\bm{r})$
 	- Proof: Hohenberg and Kohn (1964)

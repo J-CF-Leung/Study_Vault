@@ -1,6 +1,6 @@
 
 - For _electromagnetic_ phenomena in quantum mechanics, assume that the _quantum Hamiltonian_ has the _same form_ as the _classical Hamiltonian_ found in [[Electrodynamics and Optics|Classical Electrodynamics]]
-	- From one of the [[Fundamental concepts of quantum mechanics#The fundamental postulates|postulates]]
+	- From one of the [[Principles of quantum mechanics#The fundamental postulates|postulates]]
 - Then, the effects of _spin_ are added _by hand_ based on experiment
 
 - In _classical electrodynamics_, the equation of motion is
@@ -191,7 +191,7 @@ $$\displaylines{\hat{H}_B=-(\gamma_L\hat{\bm{L}}+\gamma_S\hat{\bm{S}})\cdot\bm{B
 
 ## Spin precession
 - Consider a particle of spin $\bm{S}$ in a _magnetic field_ $\bm{B}$
-- The _time-evolution_ of the expectation value of $\bm{S}$, using [[Fundamental concepts of quantum mechanics#Ehrenfest's Theorem|Ehrenfest's Theorem]]:
+- The _time-evolution_ of the expectation value of $\bm{S}$, using [[Principles of quantum mechanics#Ehrenfest's Theorem|Ehrenfest's Theorem]]:
 $$\frac{d}{dt}\mean{\hat{\bm{S}}}=\frac{i}{\hbar}\mean{[\hat{H},\hat{\bm{S}}]}$$
 - Most components of $\hat{H}$ will _commute_ with $\hat{\bm{S}}$, _except_ the spin interaction:
 $$[\bm{B}\cdot\hat{\bm{S}},\hat{S}_i]=\bm{B}\cdot[\hat{\bm{S}},\hat{S}_i]=i\hbar\epsilon_{ijk}\hat{S}_jB_k=i\hbar\left(\hat{\bm{S}}\times\bm{B}\right)_i$$
@@ -281,7 +281,7 @@ $$\hat{H}=\frac{\hat{\bm{p}}^2}{2m}-\hat{\bm{\mu}}_S\cdot\bm{B}=\frac{\hat{\bm{p
 $$\frac{d}{dt}\mean{\hat{\bm{r}}}=\frac{i}{\hbar}\mean{[\hat{H},\hat{\bm{r}}]} \hspace{1.5cm} \frac{d}{dt}\mean{\hat{\bm{p}}}=\frac{i}{\hbar}\mean{[\hat{H},\hat{\bm{p}}]}$$
 - As $\hat{\bm{S}}$ commutes with $\hat{\bm{r}}$ and $\hat{\bm{p}}$, and calculating the remaining commutator:
 $$\frac{d}{dt}\mean{\hat{\bm{r}}}=\frac{1}{m}\mean{\hat{\bm{p}}}$$
-- By using the [[Fundamental concepts of quantum mechanics#Useful commutation relations|commutator relation]] $[f(\bm{r}),\hat{\bm{p}}]=i\hbar\nabla f$:
+- By using the [[Principles of quantum mechanics#Useful commutation relations|commutator relation]] $[f(\bm{r}),\hat{\bm{p}}]=i\hbar\nabla f$:
 $$\frac{d}{dt}\mean{\hat{\bm{p}}}=\gamma_S\sum_{i}\mean{\hat{S}_i}\mean{\nabla B_{1,i}(\bm{r})}$$
 - _Neglecting_ the effect of $\bm{B}_1$ on the _spin component_, and supposing that the particle _is in a spin eigenstate_ $\ket{sm_s}$, such that $\braket{\hat{\bm{S}}}$ [[#Wave-function evolution|remains constant]]: 
 $$\frac{d}{dt}\mean{\hat{\bm{p}}}=m\frac{d^2}{dt^2}\mean{\hat{\bm{r}}}=\gamma_S m_s\hbar\mean{\nabla B_{1,z}(\bm{r})}$$

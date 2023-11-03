@@ -1,5 +1,5 @@
 
-- Only considering [[Fundamental concepts of quantum mechanics#Time-independent Hamiltonians and stationary states|time-independent wave functions and Hamiltonians]]
+- Only considering [[Principles of quantum mechanics#Time-independent Hamiltonians and stationary states|time-independent wave functions and Hamiltonians]]
 - Considering _position-space_ wave functions
 - Hence, one needs to solve the _time-independent Schrodinger Equation_:
 $$\begin{aligned}\hat{\Ham}\psi(\bm{r})&=E\psi(\bm{r}) \\ -\frac{\hbar^2}{2m}\nabla^2\psi(\bm{r})+V(\bm{r})\psi(\bm{r})&=E\psi(\bm{r})\end{aligned}$$
@@ -406,7 +406,7 @@ $$\displaylines{\hat{\Ham}\ket{nlm_lm_s}=E_{nl}\ket{nlm_lm_s} \\
 - In general, more useful to consider the _total_ spin and $m_s$ of a system to construct allowed states (by the Pauli Principle below)
 
 # Pauli Principle
-- [[Fundamental concepts of quantum mechanics#Identical particles|The quantum mechanics of identical particles]]
+- [[Principles of quantum mechanics#Identical particles|The quantum mechanics of identical particles]]
 - For 2 identical particles, the collective wavefunction is denoted $\Psi_{12}=\psi_1\psi_2$
 - In quantum mechanics, 2 electrons are _indistinguishable_ (labelling is impossible)
 

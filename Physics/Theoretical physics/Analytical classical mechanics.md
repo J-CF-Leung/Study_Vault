@@ -246,7 +246,7 @@ $$\PB{\omega}{\PB{\lambda}{\sigma}}+\PB{\sigma}{\PB{\omega}{\lambda}}+\PB{\lambd
 $$\PB{\omega}{q_i}=-\pd{\omega}{p_i}\;\;\;\;\PB{\omega}{p_i}=\pd{\omega}{q_i}$$
 
 - These properties are similar to that of the _commutators in quantum mechanics_
-- Take [[Fundamental concepts of quantum mechanics#Ehrenfest's Theorem|Ehrenfest's Theorem]]:
+- Take [[Principles of quantum mechanics#Ehrenfest's Theorem|Ehrenfest's Theorem]]:
 $$\frac{d\mean{\hat{O}}}{dt}=\mean{\pd{\hat{O}}{t}}+\mean{[\hat{O},\hat{H}]}$$
 - This suggests the relation between them to be:
 $$\PB{A}{B}\longleftrightarrow\frac{1}{i\hbar}[\hat{A},\hat{B}]$$
@@ -434,3 +434,12 @@ $$-e\frac{dx_\mu}{dt}A^\mu$$
 
 # Hamilton-Jacobi equations
 
+# Propagators and causality
+- The laws of physics are _causal_
+- One has to define a _direction in time_
+
+- Consider a _simple harmonic oscillator_, given an _impulse_ at $t=t'$
+	- There is _no loss of generality_ as _any force_ can be given as a _composition of delta functions_
+- The _equations of motion_:
+$$\ddot{x}+\gamma\dot{x}+\omega_0^2x=\delta(t-t')$$
+- This is the [[Green's Functions for ODEs|Green's Function]] for the system

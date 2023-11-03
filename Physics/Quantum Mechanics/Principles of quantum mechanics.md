@@ -304,7 +304,7 @@ $$\braket{b|\teo(t,0)|a}$$
 # Probability flow
 - The total probability of finding a particle anywhere in the universe is conserved:
 $$\braket{\Psi(0)|\Psi(0)}=\braket{\Psi(t)|\Psi(t)}=\int_\text{all space}\braket{\Psi(t)|\bm{r}}\braket{\bm{r}|\Psi(t)}\,d^3\bm{r}=\int_\text{all space}P(\bm{r},t)\,d^3\bm{r}$$
-- Consider the time derivative of $P(\bm{r},t)$, and using the [[Fundamental concepts of quantum mechanics#The Schrödinger wave equation|Schrödinger wave equation]]:
+- Consider the time derivative of $P(\bm{r},t)$, and using the [[Principles of quantum mechanics#The Schrödinger wave equation|Schrödinger wave equation]]:
 $$\begin{aligned}\pd{P}{t}&=\pd{}{t}[\Psi^*(x,t)\Psi(x,t)] \\
 &= \frac{i\hbar}{2m}\left[\Psi^*\nabla^2\Psi-\Psi\nabla^2\Psi^*\right] \\ &=  \frac{i\hbar}{2m} \nabla\cdot\left[\Psi^*\nabla\Psi-\Psi\nabla\Psi^*\right] \\\pd{P}{t}&=-\nabla\cdot\bm{J}\end{aligned}$$
 - Here, $\bm{J}$ is the _probability current density_
