@@ -1,4 +1,4 @@
-- Ideas _emerge_ from [[Classical Thermodynamics|Thermodynamics]]
+emerge_ from [[Classical Thermodynamics|Thermodynamics]]
 - It deals with _energy_ in _large, (non-)interacting systems_
 
 # Thermodynamics 
@@ -187,12 +187,13 @@ $$U=-\pd{}{\beta}\ln Z\hspace{1.5cm} F=-kT\ln Z$$
 $$Z=\sum_\text{microstates} \exp\left(-\frac{E_i-TS_i}{kT}\right)$$
 - This sum has the _largest contribution_ from the _minimum_ of $E_i-TS_i$
 - One can then make an _approximation_ of the _equilibrium values_ using the minimum:
-$$\text{min}(E_i-TS_i)\approx U-TS$$
+$$\text{min}(E_i-TS_i)\approx U-TS=F$$
+- This is one method to obtain the _expression_ for $F$
 
 - The above expressions give $U$ and $F$ as _functions of $T$_
 - $T$ is only the _proper variable for the latter_
 - However, $\partial U/\partial T$ still gives _heat capacity_
-- One must perform _transformations_ to get _other useful quantities_ from $U$
+- One must perform [[#Thermodynamic potentials|transformations]] to get _other useful quantities_ from $U$
 
 ### Grand canonical ensemble
 - A set of _open systems_, able to _exchange energy and number of particles_ with a _reservoir_
@@ -366,6 +367,7 @@ $$\mu=kT\ln c+\phi$$
 
 - For $N\lambda^3/V\ll1$, it is the _classical limit_ where the particles can be interpreted as _"pointlike"_, and the _wave-functions do not overlap_
 	- Can be reached by _low temperature_ or _low $N$_
+	- Here, one gets $\mu\ll0$
 - For $N\lambda^3/V\gg1$, _quantum effects_ start to interfere
 
 # The ideal gas in the grand canonical ensemble
@@ -383,6 +385,7 @@ $$p=-\pd{\Phi}{V}=\frac{kT}{\lambda^3}e^{\beta\mu}\hspace{1.5cm}N=-\pd{\Phi}{\mu
 - From this, one can get the _ideal gas law_ $pV=NkT$
 - One can also _invert_ the relation for $N$ above to get:
 $$\mu=kT\ln\left(\frac{N\lambda^3}{V}\right)$$
+- Once again, one can define a _classical limit_ where $\mu\ll0$
 
 ## Langmuir isotherm
 - Let the _3D gas_ at temperature $T$ be able to be _adsorbed_ onto a _2D surface_
@@ -552,6 +555,8 @@ $$\displaylines{\Xi_k=\sum_{n=0}^\infty\exp[-\beta(\varepsilon_k-\mu)n]=\frac{1}
 - The _total grand potential_:
 $$\begin{aligned}\Phi&=\int\frac{d^3x\,d^3p}{(2\pi\hbar)^3}kT\ln[1-\exp[-\beta(\varepsilon_k-\mu)]] \\ &=-\frac{2}{3}U\end{aligned}$$
 - The occupation number distribution above _diverges_ when $\varepsilon_k=\mu$
+- Compare with the Fermi gas:
+![[Fermi and Bose distributions.png]]
 
 ## Low tempature 
 - Take:
@@ -564,4 +569,142 @@ $$\frac{N\lambda^3}{V}\sim1$$
 - At the _condensate_, $\mu\approx0$, hence $\mu\approx0$ _everywhere in the gas_
 
 - In the _low temperature limit:
-$$\mu\approx-\frac{kT}{M}$$
+$$\mu\approx-\frac{kT}{N}$$
+- One can find a _critical temperature_ for Bose-Einstein condensate formation
+
+- The _number of particles_ in the gas (_not the condensate_), since $\mu=0$:
+$$N-N_c=V\int_0^\infty\frac{g(\varepsilon)\,d\varepsilon}{\exp(\beta\varepsilon)-1}$$
+
+- The condensation is a _second-order phase transition_
+## In two dimensions
+- Integral diverging (logarithmic divergence)
+- The _critical temperature_ $T_c=0$
+
+- One _can only have Bose-Einstein condensates for_ dimensions $d\geq3$
+
+- In 2D, the gas is also _sensitive to perturbations_
+- One can have _potential traps_ of depth $\Delta$ in a 2D gas, which form a _condensate_ with $T_c\neq0$ and $\mu=-\Delta$
+
+## Elementary excitations
+
+### Blackbody radiation
+- Dispersion relation
+
+- Debye law
+
+- Spectral density of energy
+
+- Stefan-Boltzmann law
+
+### Spin waves
+# Non-ideal gases and liquids
+- Stay purely in the _classical regime_
+
+## Pair interactions
+- For each _pair of particles_, let there be some _potential_ between them
+- A typical inter-particle potential:
+![[Pair interaction potential.png|400]]
+
+- The _Hamiltonian_ is:
+$$H=\sum_i\frac{p_i^2}{2m}+\sum_{j>i}\phi(r_{ij})$$
+- The _partition function_ can be _broken_ into the _ideal_ part and the _configurational_ part:
+$$\begin{aligned}Z_N&=\frac{1}{N!}\left[\prod_{i=1}^N\int\frac{d^3p_i}{(2\pi\hbar)^3}\exp\left(-\frac{\beta p_i^2}{2m}\right)\right]\left[\prod_i\int d^3r_i\exp\left(\sum_{j>i}-\beta\phi(r_{ij})\right)\right] \\ &=\frac{1}{N!}\left(\frac{1}{\lambda^3}\right)^NZ_\phi\end{aligned}$$
+
+- Define some _two-particle probability_, or the probability of finding 2 particles at $\bm{r}_1$ and $\bm{r}_2$
+	- Single particle $p_i=\exp(-\beta E_i)$
+$$P_2(\bm{r}_1,\bm{r}_2)=\frac{N(N-1)}{Z_\phi}\int\exp\left(\sum_{j>i}-\beta\phi(r_{ij})\right)\,d^3r_3\dots d^3r_N$$
+- $N(N-1)$ is a _normalisation factor_ to account for the _number of possible pairs_
+- It must _only depend on_ $r_{12}=|\bm{r}_1-\bm{r}_2|$ (translational invariance)
+
+- The probability has a _dimensionality_ $n^2=(N/V)^2$, where $n$ is _number density_
+
+- For _low densities_, due to _long range of interactions_:
+$$P_2(\bm{r}_1,\bm{r}_2)\approx\frac{N^2}{V^2}\exp[-\beta\phi(r_{12})]$$
+
+- Define the _radial distribution function_ (which is _dimensionless_)
+$$g(r_{12})=\frac{V^2}{N^2}P_2(\bm{r}_1,\bm{r}_2)\approx\exp[-\beta\phi(r_{12})]$$
+- _Forms_ of $g(r)$
+
+## Internal energy with pair interactions
+- $T,V,N$ are _not natural variables_ of $U$
+- Hence, one _does not have enough thermodynamic information_ from the above
+	- One can still get _heat capacity_
+
+- One can still get:
+$$U=\frac{3}{2}NkT-\pd{}{\beta}\ln Z_\phi$$
+- The _kinetic energy contribution_ remains _unchanged_
+
+- By _summing over all pairs_:
+$$-\pd{}{\beta}\ln Z_\phi=\frac{N(N-1)}{2Z_\phi}\int\phi(r_{12})\exp[-\beta\phi(r_{12})]\,d^3r_1\,d^3r_2\dots d^3r_N$$
+- Writing $d^3r_1\,d^3r_2$ as $d^3(r_1-r_2)\,d^3r_2$, one can substitute the _pair distribution function_ to find:
+$$U=\frac{3}{2}NkT+\frac{1}{2}\frac{N^2}{V}\int_0^\infty\phi(r)g(r)\,4\pi r^2\,dr$$
+- This is an _expansion_ of $U$ in _powers of density_ $N/V$, accounting for _pair interactions_
+	- _Higher order terms_ will need to account for _more interactions_
+- Any expansion in powers of density is known as a _virial expansion_
+## Virial Theorem
+- Given particles of position $\bm{r}_i$ and forces $\bm{f}_i$, the _virial_ of the system is defined as:
+$$\mathcal{V}=\sum_i-\frac{1}{2}\bm{r}_i\cdot\bm{f}_i$$
+- Writing out the force with Newton's second law:
+$$\mathcal{V}=\sum_i-\frac{1}{2}\bm{r}_i\cdot \left(m_i\frac{d\bm{v}_i}{dt}\right)=-\frac{1}{2}\sum_im
+_i\frac{d}{dt}(\bm{r}_i\cdot\bm{v}_i)+\frac{1}{2}\sum_im_iv_i^2$$
+- By _averaging_ the virial, one gets rid of the time derivative due to _fluctuations_:
+$$\mean{\mathcal{V}}=\frac{1}{2}\sum_im_i\mean{v_i^2}=\frac{3}{2}NkT$$
+
+- The virial can be due to _external forces_, which could be the _forces from a wall_:
+$$\mean{\mathcal{V}_\text{ext}}=-\frac{1}{2}\sum_i\mean{\bm{r}_i\cdot\bm{f}_i}=\frac{1}{2}\oint p\bm{r}\cdot\,d\bm{A}=\frac{p}{2}\int\div\bm{r}\,dV=\frac{3}{2}pV$$
+- For an _ideal gas_, by equating the virials, one recovers the _ideal gas law_
+
+### Accounting for pair interactions
+- The _internal virial_, using the fact that $f_{ij}=-f_{ji}$
+$$\mean{\mathcal{V}_\text{int}}_{ij}=-\frac{1}{2}\mean{r_if_{ij}+r_jf_{ji}}=\frac{1}{2}(r_i-r_j)\pd{\phi}{(r_i-r_j)}$$
+- The _average_ is then written as:
+$$\mean{\mathcal{V}_\text{int}}=\frac{1}{2}\sum_{i\neq j}\mean{r_{ij}\pd{\phi}{r_{ij}}}=\frac{N}{2}\frac{1}{2}\int$$
+- The final result:
+$$\mean{\mathcal{V}_\text{int}}=\frac{N^2}{4V}\int_0^\infty g(r)\,r\pd{\phi}{r}\,4\pi r^2\,dr$$
+- One then recovers:
+$$\mean{\mathcal{V}}=\frac{3}{2}NkT=\frac{3}{2}pV+\frac{N^2}{4V}\int_0^\infty g(r)\,r\pd{\phi}{r}\,4\pi r^2\,dr$$
+- One then gets the _virial equation of state_:
+$$p=\frac{NkT}{V}-\frac{N^2}{6V^2}\int g(r)\pd{\phi}{r}\,4\pi r^3\,dr$$
+- This _cannot be obtained from_ $U$, and must be derived _independently_
+
+- This is another _virial expansion_, only taking _pair interactions_ into account and hence only going into _second order_
+
+## Virial expansion
+- The general virial expansion:
+$$p=B_1(T)n+B_2(T)n^2+\dots$$
+- From the expansion above:
+$$\displaylines{B_1=kT \\ B_2=-\frac{1}{6}\int_0^\infty r\,g(r)\pd{\phi}{r}\,4\pi r^2\,dr}$$
+- Substituting $g=\exp(-\beta\phi)$, and integrating _by parts_
+$$B_2=\frac{1}{2}kT\int_0^\infty [1-\exp(-\beta\phi)]4\pi r^2\,dr$$
+
+- Modelling $\phi$ as a _hard sphere_:
+$$\displaylines{\phi(r)=\begin{cases}\infty&r<R \\ 0&r>R\end{cases}\\ B_2=}$$
+- If the potential is a _well_
+	- In the _repulsive part_, there is a _positive contribution_ to $B_2$
+	- In the _attractive part_, there is a _negative contribution_ to $B_2$
+
+- At _low temperatures_
+- At _high temperatures_
+
+- At the _Boyle temperature_ $T_b$, $B_2(T=T_b)=0$
+
+## Van der Waals gas
+- Due to _fluctuations_ in the _dipole moments_ of each particle, the pair interaction is:
+$$\phi\sim-\frac{A}{r^6}$$
+- The _total potential energy_:
+$$\sum_{i,j}\frac{1}{2}\phi(r_{ij})=\frac{N(N-1)}{2}\frac{1}{V}\int_R^\infty \phi(r)\,d^3r\sim -\frac{\varepsilon N^2}{V}$$
+
+- The _excluded volume effect_:
+$$Z(N)=\frac{1}{N!}\left(\frac{1}{\lambda^3}\right)^N\prod_i\int d^3r_i\exp\left(-\beta\sum\phi_{ij}\right)$$
+- Extracting the total potential energy, and taking into account the _excluded volume_ $b$ for each particle:
+$$Z(N)=\frac{1}{N!}\left(\frac{1}{\lambda^3}\right)^N\exp\left(\beta\frac{\varepsilon N^2}{V}\right)(V-Nb)^N$$
+- The _free energy_:
+$$F=$$
+- This gives the pressure:
+$$p=-\pd{F}{V}=\frac{NkT}{V-Nb}-\varepsilon\frac{N^2}{V^2}$$
+- This is the _Van der Waals equation of state_
+
+- As a _virial expansion_:
+$$p\approx\frac{NkT}{V}+\frac{N^2}{V^2}(bkT-\varepsilon)$$
+- The second virial coefficient:
+$$B_2=bkT-\varepsilon$$

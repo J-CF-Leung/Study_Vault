@@ -74,6 +74,7 @@ $$\displaylines{ds^2=ds'^2 \\ (\Delta s)^2=(\Delta s')^2}$$
 | $(\Delta s)^2>0$ | Timelike       |
 | $(\Delta s)^2=0$ | Null/lightlike |
 | $(\Delta s)^2<0$ | Spacelike               |
+![[Lightcone structure.png]]
 
 - From the _frame invariance_, one can _define_ the interval as the _square length_ of $\Delta\vec{x}$:
 $$(\Delta\vec{x})^2\equiv(\Delta s)^2=(\Delta s')^2$$
@@ -140,6 +141,7 @@ $$\vec{F}=\frac{d\vec{p}}{d\tau}$$
 - From the _invariance of rest-mass_:
 $$0=\frac{d(m^2)}{d\tau}=\frac{d|\vec{p}^2|}{d\tau}=2\vec{p}\cdot\vec{F}$$
 - Hence, _4-force is always orthogonal to 4-momentum_
+	- This also means that _4-velocity_ is orthogonal to _4-acceleration_
 
 ## The Lorentz force law
 - The Lorentz force for a particle with _charge_ $q$ and rest mass $m\neq0$ in an electromagnetic field, in _Newtonian_ space-time is:
@@ -199,8 +201,9 @@ $$ds^2=g_{\alpha\beta}dx^\alpha dx^\beta=dt^2-dx^2-dy^2-dz^2$$
 - This is the _special relativistic line element_
 
 # Particle kinetics in index notation
-- Let there be a particle with _4-velocity_ $\vec{u}$ and _4-momentum_ $\vec{p}$
 - Choose a _Lorentz frame_ with _coordinates_ $x^\alpha$ with _basis vectors_ $\{\vec{e}_\alpha\}$
+## 4-velocity, momentum, and acceleration
+- Let there be a particle with _4-velocity_ $\vec{u}$ and _4-momentum_ $\vec{p}$
 - The components of 4-velocity:
 $$u^\alpha=\frac{dx^\alpha}{d\tau}$$
 - This implies that the components of _3-velocity_ are:
@@ -212,6 +215,8 @@ $$\gamma=\frac{1}{\sqrt{1-\delta_{ij}v^iv^j}}=\frac{1}{\sqrt{1-|\bm{v}|^2}}$$
 - This 3-velocity lives in a _3-dimensional Euclidean slice_ of Minkowski spacetime, where $t=\text{const.}$
 	- It is sometimes called the _slice of simultaneity_ for this specific Lorentz frame
 	- The _spatial part_ of $\vec{u}$ can be thought as the 3-vector $\bm{u}=\gamma\bm{v}$
+- Applying another derivative gives the _4-acceleration_:
+$$\vec{a}=\frac{d\vec{u}}{d\tau}$$
 ![[3-velocity.png|400]]
 
 - The particle's _relativistic energy_ is described by $p^0$:
@@ -260,24 +265,27 @@ $$v_f=\frac{v+v'}{1+vv'}$$
 # Lorentz transformations
 - Let there be _two different inertial frames_ with coordinates $\{x^\alpha\}$ and $\{x^\bar{\mu}\}$, and basis vectors $\{\vec{e}_\alpha\}$ and $\{\vec{e}_\bar{\mu}\}$
 - Write the _transformations_ as:
-$$\vec{e}_\alpha=\vec{e}_\bar{\mu}{L^\bar{\mu}}_\alpha\hspace{1.5cm}\vec{e}_\bar\mu=\vec{e}_\alpha{L^\alpha}_\bar\mu$$
+$$\vec{e}_\alpha=\vec{e}_\bar{\mu}{\Lambda^\bar{\mu}}_\alpha\hspace{1.5cm}\vec{e}_\bar\mu=\vec{e}_\alpha{\Lambda^\alpha}_\bar\mu$$
 - It is obvious that they are _inverses_ of each other:
-$${L^\bar\mu}_\alpha {L^\alpha}_\bar\nu={\delta^\bar\mu}_\bar\nu\hspace{1.5cm}{L^\alpha}_\bar\mu {L^\bar\mu}_\beta={\delta^\alpha}_\beta$$
+$${\Lambda^\bar\mu}_\alpha {\Lambda^\alpha}_\bar\nu={\delta^\bar\mu}_\bar\nu\hspace{1.5cm}{\Lambda^\alpha}_\bar\mu {\Lambda^\bar\mu}_\beta={\delta^\alpha}_\beta$$
 - As in Euclidean 3-space, the _orthonormality_ of the bases dictates that the transformation is _orthogonal_ (reflection or rotation), and the same _holds in Minkowski spacetime_
 
 - By using the transformation laws:
-$$g_{\alpha\beta}={L^\bar\mu}_\alpha {L^\bar\nu}_\beta \,g_{\bar\mu\bar\nu}\hspace{1.5cm} g_{\bar\mu\bar\nu}={L^\alpha}_\bar\mu {L^\beta}_\bar\nu \,g_{\alpha\beta}$$
+$$g_{\alpha\beta}={\Lambda^\bar\mu}_\alpha {\Lambda^\bar\nu}_\beta \,g_{\bar\mu\bar\nu}\hspace{1.5cm} g_{\bar\mu\bar\nu}={\Lambda^\alpha}_\bar\mu {\Lambda^\beta}_\bar\nu \,g_{\alpha\beta}$$
 - Any matrix $L$ satisfying this is known as a _Lorentz transformation_
 
 - The transformation laws for the _components_ of 4-vectors:
-$$A^\bar\mu={L^\bar\mu}_\alpha A^\alpha\hspace{1.5cm}T^{\bar\mu\bar\nu\bar\rho}={L^\bar\mu}_\alpha{L^\bar\nu}_\beta{L^\bar\rho}_\gamma \,T^{\alpha\beta\gamma}$$
+$$A^\bar\mu={\Lambda^\bar\mu}_\alpha A^\alpha\hspace{1.5cm}T^{\bar\mu\bar\nu\bar\rho}={\Lambda^\bar\mu}_\alpha{\Lambda^\bar\nu}_\beta{\Lambda^\bar\rho}_\gamma \,T^{\alpha\beta\gamma}$$
 - As long as the _spacetime origins_ of the frames _coincide_, then the vectors to some event will have _components_ equal to the _spacetime coordinates_, such that the _coordinates also follow the above transformation laws_:
-$${x^\bar\mu}={L^\bar\mu}_\alpha x^\alpha$$
+$${x^\bar\mu}={\Lambda^\bar\mu}_\alpha x^\alpha$$
 
 - The _product_ of two Lorentz transformations gives _another_ Lorentz transformation
 - Hence, all Lorentz transformations form the _Lorentz group_
 
-## The Psuedo-Riemannian manifold (GR)
+- Vectors are then _classified_ as null, timelike, or spacelike based on their norm:
+$$\eta_{\mu\nu}V^\mu V^\nu\begin{cases}>0 &\text{timelike} \\ <0 &\text{spacelike} \\ =0 &\text{null}\end{cases}$$
+- They are classified as _future-pointing_ if $V^0>0$, and _past-pointing_ if $V^0<0$
+## The Psuedo-Riemannian manifold \[GR\]
 - In the language of [[General Relativity]], a _Loentz transformation_ from $\{x^\mu\}$ to $\{x^{\mu'}\}$ must _leave the metric unchanged_
 	- Corresponding to _going between intertial frames_
 $$\eta_{\mu\nu}=\pd{x^\rho}{x^{\mu'}}\pd{x^\sigma}{x^{\nu'}}\eta_{\rho\sigma}$$
@@ -296,7 +304,7 @@ $$\displaylines{x^{\mu'}=\tenscom{\Lambda}{\mu'}{\nu}x^\nu+a^{\mu'} \\ \eta_{\mu
 
 ## Boosts
 - A specific type of Lorentz transformation is known as the _pure boost_:
-$${L^\bar\mu}_\alpha=\pmatrix{\gamma&-\beta\gamma&0&0\\-\beta\gamma&\gamma&0&0\\0&0&1&0\\0&0&0&1}\hspace{1.5cm}{L^\alpha}_\bar\mu=\pmatrix{\gamma&\beta\gamma&0&0\\\beta\gamma&\gamma&0&0\\0&0&1&0\\0&0&0&1}$$
+$${\Lambda^\bar\mu}_\alpha=\pmatrix{\gamma&-\beta\gamma&0&0\\-\beta\gamma&\gamma&0&0\\0&0&1&0\\0&0&0&1}\hspace{1.5cm}{\Lambda^\alpha}_\bar\mu=\pmatrix{\gamma&\beta\gamma&0&0\\\beta\gamma&\gamma&0&0\\0&0&1&0\\0&0&0&1}$$
 - $\gamma$ is the [[#Particle kinetics in index notation|Lorentz factor]] previously derived:
 $$|\beta|<1\hspace{1cm}\gamma=\frac{1}{\sqrt{1-\beta^2}}$$
 
@@ -306,13 +314,13 @@ $$\displaylines{\bar{t}=\gamma(t-\beta x)\hspace{1cm}\bar x=\gamma(x-\beta t)\hs
 - In other words, an observer _at rest in the unbarred frame_ sees the _barred frame_ moving at $\bm{v}=+\beta\bm{e}_x$
 
 - A boost along some _unit vector_ $\hat{\bm{n}}$ can be written as follows:
-$${L^\bar0}_0=\gamma\hspace{1cm}{L^\bar\mu}_0={L^\bar0}_\mu=\beta\gamma n^\mu \hspace{1cm} {L^\bar\mu}_\nu={L^\bar\nu}_\mu=(\gamma-1)n^\mu n^\nu+\delta^{\mu\nu}$$
+$${\Lambda^\bar0}_0=\gamma\hspace{1cm}{\Lambda^\bar\mu}_0={\Lambda^\bar0}_\mu=\beta\gamma n^\mu \hspace{1cm} {\Lambda^\bar\mu}_\nu={\Lambda^\bar\nu}_\mu=(\gamma-1)n^\mu n^\nu+\delta^{\mu\nu}$$
 - Derivation: 
 	- _Split_ positions into _parallel and perpendicular components_, then express $x^\bar{\mu}$ as a linear combination of $x^\nu$
 	- Alternatively, apply _pure rotations_ along with the _boost along a spatial axis_
 
 - As for _pure rotations_, they can be represented by:
-$${L^\bar\mu}_\alpha=\pmatrix{1&0&0&0\\0&{R^1}_1&{R^1}_2&{R^1}_3 \\ 0&{R^2}_1&{R^2}_2&{R^2}_3 \\ 0&{R^3}_1&{R^3}_2&{R^3}_3}$$
+$${\Lambda^\bar\mu}_\alpha=\pmatrix{1&0&0&0\\0&{R^1}_1&{R^1}_2&{R^1}_3 \\ 0&{R^2}_1&{R^2}_2&{R^2}_3 \\ 0&{R^3}_1&{R^3}_2&{R^3}_3}$$
 - Here, $R$ is a _rotation matrix_ in Euclidean 3-space
 - One can show that the _general_ Lorentz transformation is a _sequence_ of _pure boosts_, _pure rotations_, and _pure inversions_
 ## Rapidity
@@ -320,7 +328,7 @@ $${L^\bar\mu}_\alpha=\pmatrix{1&0&0&0\\0&{R^1}_1&{R^1}_2&{R^1}_3 \\ 0&{R^2}_1&{R
 - Then one finds that:
 $$\gamma=\cosh\psi \hspace{1.5cm}\beta\gamma=\sinh\psi$$
 - One can then _rewrite the Lorentz boosts_:
-$$\displaylines{{L^\bar\mu}_\alpha=\pmatrix{\cosh\psi&-\sinh\psi&0&0\\-\sinh\psi&\cosh\psi&0&0\\0&0&1&0\\0&0&0&1}\\ \bar{t}=t\cosh\psi-x\sinh\psi \hspace{1cm}\bar x=x\sinh\psi-t\cosh\psi\hspace{1cm}\bar y=y\hspace{1cm}\bar z=z}$$
+$$\displaylines{{\Lambda^\bar\mu}_\alpha=\pmatrix{\cosh\psi&-\sinh\psi&0&0\\-\sinh\psi&\cosh\psi&0&0\\0&0&1&0\\0&0&0&1}\\ \bar{t}=t\cosh\psi-x\sinh\psi \hspace{1cm}\bar x=x\sinh\psi-t\cosh\psi\hspace{1cm}\bar y=y\hspace{1cm}\bar z=z}$$
 - This is like a _rotation_ in Minkowski space, but with _hyperbolic_ angles
 
 - When performing [[#Velocity addition|velocity addition]], one can also treat it as a _series of successive Lorentz transforms_:
@@ -346,20 +354,74 @@ $$l=x_B(t)-x_A(t)=\frac{l_0}{\gamma}<l_0$$
 $$T=\gamma T_0>T_0$$
 - From that observer's perspective, a _moving clock runs slower_
 
-## Acceleration
+## Acceleration and rapidity
 - Let the _velocity_ of frame $\{\vec{e}_\bar\mu\}$ _vary in time_
 - Taking the _derivative_ of the _velocity 4-vector_ with respect to _proper time_:
 $$\vec{a}=\frac{d\vec{u}}{d\tau}$$
 - Denoting the _3-acceleration_ as $\bm{a}\equiv d\bm{v}/dt$, the _4-acceleration_ can be _split_:
 $$\vec{a}=(\gamma^4|\bm{v}||\bm{a}|,\gamma^4|\bm{v}||\bm{a}|\bm{v}+\gamma^2\bm{a})$$
 - For _constant $m$_, the [[#Particle kinetics in index notation|4-force]] $\vec{F}=m\vec{a}$
+- One can _verify_ that $\vec{v}\cdot\vec{a}=0$
+	- Still a _component-free_ result
+
+- One can _transform_ to the instantaneous rest frame of the particle to get the _proper acceleration_ $\bm{\alpha}$
 
 - Given that a frame $\{\vec{e}_\bar\mu\}$ has some _acceleration_ $a(t)$ as observed by $\{\vec{e}_\alpha\}$, and $v(t=0)=0$, the _rapidity_ of the Lorentz transformation is given by:
 $$\psi=\int a(t)\,dt$$
 ## Velocity transformation
+- As _any 4-vectors_ transform according to the laws of a Lorentz transformation, the _components of velocities across different inertial frames also transform_:
+$$u'^\mu=\tenscom{\Lambda}{\mu}{\nu}u^\nu$$
+- With a boost of Lorentz factor $\gamma$ along the $x-$axis:
+$$\pmatrix{\gamma_{u}' \\ \gamma'_{u}\dot{x}_{u'}^1 \\ \gamma'_{u}\dot{x}_{u'}^2 \\ \gamma'_{u}\dot{x}_{u'}^3}=\pmatrix{\gamma&-\beta\gamma&0&0 \\ -\beta\gamma&\gamma&0&0 \\ 0&0&1&0 \\ 0&0&0&1}\pmatrix{\gamma_{u} \\ \gamma_{u}\dot{x}_{u}^1 \\ \gamma_{u}\dot{x}_{u}^2 \\ \gamma_{u}\dot{x}_{u}^3}$$
+- This relates the _Lorentz factors_:
+$$\frac{\gamma_u'}{\gamma_u}=\gamma(1-\beta\dot{x}_u^1)$$
+
+# Geodesics and kinetics in Minkowski space \[GR\]
+- For a _free particle_, it has _zero 4-acceleration_:
+$$\frac{du^\mu}{d\tau}=0$$
+- This derivative is _not a tensor_
+- In _global Cartesian coordinates_, as the [[General Relativity#The metric connection|metric connection]] vanishes
+
+- The _derivative along the world-line_ (with $\tau$ as the _affine parameter_):
+$$\frac{Du^\mu}{D\tau}=0$$
+- This means the _tangent vector of the world-line is parallel transported_
+
+- In other words, a _free particle in Minkowski spacetime moves along a [[General Relativity#Geodesics, proper time, and affine parameters|geodesic]]_
+
+- From above, _accleration and velocity_, as well as _force and momentum_ are always _orthogonal_:
+$$F^\mu p_\mu=a^\mu u_\mu=0$$
 
 # Spacetime diagrams for boosts
+- Boost angle
+
+- Invariant hyperbolae
 
 # Derivatives
 
+# Stress-energy tensor
+- Recall the _energy-momentum_ 4-vector $\vec{p}$
+	- _Timelike_ component $p^0$ is _energy_ $E$
+$$\displaylines{p^\mu=(\gamma m,\gamma\bm{p}) \\ p^\mu p^\mu=m^2}$$
+- The _4-force_:
+$$f^\mu=\frac{d\vec{p}}{d\tau}=m\frac{d^2\vec{x}}{d\tau^2}$$
 # Electromgnetism
+- Introduce the _4-potential_ $A_\mu$
+	- The _timelike_ component $A^0=\Phi$, the [[Electrodynamics and Optics#Electrodynamics and Maxwell's Equations|electric potential]]
+	- The _spacelike_ components $A^i=\bm{A}$, the [[Electrodynamics and Optics#The vector potential|magnetic vector potential]]
+- One can then introduce the _field-strength tensor_:
+$$F_{\mu\nu}=\partial_\mu A_\nu-\partial_\nu A_\mu$$
+
+- It replicates [[Electrodynamics and Optics#Gauge transformations|gauge invariance]]:
+$$\displaylines{A_\mu\to A_\mu+\partial_\mu \lambda(x) \\ F_{\mu\nu}\to F_{\mu\nu}}$$
+
+- _All physical quantities_ must be _gauge invariant_
+
+- The _antisymmetry_ of the field tensor can also be presented as:
+$$\partial_\mu F_{\nu\lambda}+\partial_\nu F_{\lambda\mu}+\partial_\lambda F_{\mu\nu}=0$$
+- This _implies_:
+$$\displaylines{\epsilon^{ijk}\partial_j E_k+\partial_0 B^i=0 \\ \partial_i B^i=0}$$
+- These are _Faraday's Law_ and _Gauss' Law for magnetic fields_ from _Maxwell's equations_
+
+- Introduce the _current 4-vector_ $\vec{J}$:
+	- The _timelike_ component $J^0=\rho$ is the _charge density_
+	- The _spacelike_ component $J^i=\bm{J}$, the _current density_

@@ -544,7 +544,7 @@ $$\tau=\int\left|g_{\mu\nu}\frac{dx^\mu}{du}\frac{dx^\nu}{du}\right|^{1/2}\,du$$
 - Add some _variation_ $\delta\tau$, with $f=g_{\mu\nu}(dx^\mu/du)(dx^\nu/du)$:
 $$\delta\tau=\frac{1}{2}\int\frac{1}{\sqrt{f}}\delta f\,du$$
 - Specify $\tau$ as the _parameter_ of the variation, such that the _tangent vector_ is the [[Special Relativity#Particle kinetics in index notation|4-velocity]] $U^\mu$, and $f=1$
-- For _stationary proper time_, one must extremise the integral:
+- For _stationary proper time_, one must _extremise_ the integral:
 $$I=\frac{1}{2}\int f\,d\tau$$
 - By adding some _variation_ in $\delta x^\mu$, and _integrating by parts_, one recovers the _geodesic equation_ as:
 $$\displaylines{x^\mu\to x^\mu+\delta x^\mu \\ g_{\mu\nu}\to g_{\mu\nu}+(\partial_\sigma g_{\mu\nu})\delta x^\sigma \\ \frac{d^2x^\mu}{d\tau^2}+\Gamma^\mu_{\rho\sigma}\frac{dx^\rho}{d\tau}\frac{dx^\sigma}{d\tau}=0}$$
@@ -552,19 +552,20 @@ $$\displaylines{x^\mu\to x^\mu+\delta x^\mu \\ g_{\mu\nu}\to g_{\mu\nu}+(\partia
 - In fact, it can be parametrised with _any parameter_ $\lambda$ that _satisfies_:
 $$\tau\to\lambda=a\tau+b$$
 - $\lambda$ is then known as an _affine parameter_
-- As the geodesic _parallel transports_ $|ds/du|$,  _any affine parameter_ is _constant_ along the curve
 
 - For a _timelike path_, the geodesic equation in terms of the _4-velocity_ and _4-momentum_:
 $$U^\lambda\nabla_\lambda U^\mu=0 \hspace{1.5cm} p^\lambda\nabla_\lambda p^\mu=0$$
 - For a _null path_, $\tau$ is _not a proper affine parameter_
 	- If it is a geodesic for _some parameter_ $\lambda$, then $a\lambda+b$ is also an affine parameter
 
-- In the derivation above, $f$ is the _Lagrangian_ of the variation
+- In the derivation above, $f$ is the _Lagrangian_ of the variation:
+$$\Lagr=g_{\mu\nu}\frac{dx^\mu}{d\tau}\frac{dx^\nu}{d\tau}$$
 - By writing out the _Euler-Lagrange equation_ explicitly, and _lowering indices_, one can get an _alternative form_ of the geodesic equation:
 $$\frac{d^2x_\mu}{d\tau^2}=\frac{1}{2}\partial_\mu g_{\nu\lambda}\frac{dx^\nu}{d\tau}\frac{dx^\lambda}{d\tau}$$
 ### Particle kinetics and conserved quantities on a geodesic
 - A _freely-falling_ test particle (which _does not influence the geometry through which it moves_), will always _move along a geodesic_
 - It always _moves along the direction in which the 4-momentum is pointing_
+	- Reflected in $p^\lambda\nabla_\lambda p^\mu=0$
 
 - A geodesic is also a path of _maximum proper time_
 	- It has _maximum proper time locally_
@@ -579,3 +580,30 @@ $$\frac{d^2x_\mu}{d\tau^2}=\frac{1}{2}\partial_\mu g_{\nu\lambda}\frac{dx^\nu}{d
 $$\partial_\mu g_{\nu\lambda}=0\Longrightarrow \frac{dx_\mu}{d\tau}=\text{const.}$$
 - If the metric is _independent of some coordinate direction_ $x^\mu$, the $x^\mu$ component of the _tangent vector_ must be _conserved_
 - It is effectively the _conjugate momentum_
+
+# Curvature
+- One characterises curvature using the _Riemann curvature tensor_
+- On a _flat space_:
+	- Parallel transport round a _loop_ leaves a vector _unchanged_
+	- _Covariant derivatives_ will _commute_
+	- Geodesics that are _initially parallel_ will _remain parallel_
+
+- On a curved space, the _change_ in a vector around a closed loop is related to _total curvature enclosed_
+- Then for _local curvature_, let there be an _infinitesimal loop_
+
+- For vector $V^\rho$, around a loop with vectors $A^\mu$ and $B^\nu$, the _change in the vector_ should be _proportional_ to components $V^\sigma$, as well as $A^\mu$ and $B^\nu$
+- Therefore, define the _Riemann curvature tensor_:
+$$\delta V^\rho=\tenscom{R}{\rho}{\sigma\mu\nu}V^\sigma A^\mu B^\nu$$
+- _Swapping_ the vectors results in a loop in the opposite direction, hence:
+$$\tenscom{R}{\rho}{\sigma\mu\nu}=-\tenscom{R}{\rho}{\sigma\nu\mu}$$
+- For an infinitesimal loop, take the _commutator_ of two _covariant derivatives_:
+$$[\nabla_\mu,\nabla_\nu]V^\rho=\nabla_\mu\nabla_\nu V^\rho-\nabla_\nu\nabla_\mu V^\rho$$
+- Expanding out all of the terms:
+$$[\nabla_\mu,\nabla_\nu]V^\rho=(\partial_\mu\Gamma^\rho_{\nu\sigma}-\nabla_\nu\Gamma^\rho_{\mu\sigma}+\Gamma^\rho_{\mu\lambda}\Gamma^\lambda_{\nu\sigma}-\Gamma^\rho_{\nu\lambda}\Gamma^\lambda_{\mu\sigma})V^\sigma-\tenscom{T}{\lambda}{\mu\nu}\nabla_\lambda V^\rho$$
+- Here, $\tenscom{T}{\lambda}{\mu\nu}$ is the _torsion tensor_, equal to $2\Gamma^\lambda_{[\mu\nu]}$
+- This is true for _any connection_
+
+- So, one can identify the _Riemann curvature tensor_:
+$$\tenscom{R}{\rho}{\mu\nu\sigma}=\partial_\mu\Gamma^\rho_{\nu\sigma}-\partial_\nu\Gamma^\rho_{\mu\sigma}+\Gamma^\rho_{\mu\lambda}\Gamma^\lambda_{\nu\sigma}-\Gamma^\rho_{\nu\lambda}\Gamma^\lambda_{\mu\sigma}$$
+- From this, the action of the commutator can be calculated for a _tensor of any rank_:
+$$[\nabla_\rho,\nabla_\sigma]\tenscom{X}{\mu_1\dots\mu_k}{\nu_1\dots\nu_k}$$

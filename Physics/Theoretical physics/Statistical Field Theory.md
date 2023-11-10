@@ -167,6 +167,7 @@ $$Z=\left[\right]$$
 $$F=f(T)+\alpha(T)m^2+\frac{1}{2}\beta(T)m^4+\gamma(T)|\nabla m|^2$$
 - Unlike in classical field theory, _all terms are positive-definite_
 - Therefore at the _minimum_, $|\nabla m|=0$
+![[Second order phase transition.png]]
 
 - So at the _minimum_, one finds:
 $$\overline{m}=0\;\;\;\text{ or }\;\;\;\overline{m}=\pm\sqrt{-\alpha/\beta}$$
@@ -181,7 +182,7 @@ $$\overline{m}=\pm\left(\frac{a}{b}\right)^{1/2}\sqrt{T_c-T}\;\;\;\text{ for }\;
 - Add some _external field_ $B$:
 $$F=f(T)+\alpha(T)m^2+\frac{1}{2}\beta(T)m^4+\gamma(T)|\nabla m|^2-mB$$
 - This gives:
-$$\displaylines{a(T-T_c)\overline{m}+2b\overline{m}^3-B=0 \\ \chi=\begin{cases}1/[2a(T-T_c)]&\text{for }T>T_c\;\; (\overline{m}=0) \\ 1/[4a(T-T_c)] &\text{for }T<T_c\end{cases}}$$
+$$\displaylines{2a(T-T_c)\overline{m}+2b\overline{m}^3-B=0 \\ \chi=\begin{cases}1/[2a(T-T_c)]&\text{for }T>T_c\;\; (\overline{m}=0) \\ 1/[4a(T-T_c)] &\text{for }T<T_c\end{cases}}$$
 - Similarly, one gets:
 $$\overline{m}|_{T_c}\propto B^{1/3}$$
 - One obtains the _same critical exponents_ as in the [[#Ising model]]
@@ -193,7 +194,7 @@ $$f=f_0+a(T-T_c)\rho^2+c\rho^3+\frac{b}{2}\rho^4$$
 - $\rho$ can take _positive or negative values_
 
 - As a function of _temperature_
-- (Graph here)
+![[Asymmetric free energy.png]]
 
 - This gives a _discontinuous transition in order parameter_
 	- Example: _melting_
@@ -202,3 +203,4 @@ $$f=f_0+a(T-T_c)\rho^2+c\rho^3+\frac{b}{2}\rho^4$$
 - Let there be a _negative quartic term_
 - To ensure free energy is bounded above zero, include a _sextic term_:
 $$f=f_0+a(T-T_c)m^2-\frac{b}{2}m^4+\frac{c}{3}m^6$$
+![[Symmetric first order transition.png]]

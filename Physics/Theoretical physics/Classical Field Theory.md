@@ -215,6 +215,7 @@ $$\partial_\mu A^\mu=0$$
 
 - From this, the _general Lagrangian_ for a _group of particles_ in an _external field_:
 $$S=\sum_\text{particles}\left\{-\int mc^2\,d\tau-\int eA_\mu\,dx^\mu(t)\right\}-\frac{1}{4}\int F_{\alpha\beta}F^{\alpha\beta}\,d^4x$$
+
 # Symmetries and conservation laws
 - The simplest conservation law from the Lagrangian is the _conservation of momentum density_ if $\Lagr$ does _not explicitly depend on_ $\varphi$:
 $$\pd{}{\varphi}\left(\pd{\varphi}{[\partial_\mu\varphi]}\right)=0$$
@@ -378,6 +379,7 @@ $$\varphi_0^*\varphi_0=\frac{-m^2}{\lambda}$$
 
 - Each state _does not obey the symmetry on its own_, so the symmetry is said to be _spontaneously broken_
 	- The transformation _changes the state_
+	- The _phase_ of the state is _spontaneously chosen_ by the system, and can take _any value_
 
 - Choose the state (and choose _sign convention_ such that $m^2>0$)
 $$\varphi_0=\sqrt{\frac{m^2}{\lambda}}$$
@@ -423,3 +425,144 @@ $$\varphi=\varphi_0+\frac{1}{\sqrt{2}}(\chi_1+i\chi_2)$$
 
 ## The standard model
 - In the _standard model_, the electromagnetic and weak interactions are given by the _Lie group_ $SU(2)\otimes U(1)$
+
+# The propagator
+## The quantum particle
+- The _Lagrangian density_:
+
+- This produces the _non-relativistic, time-dependent Schrodinger equation_
+
+- With some _interaction/forcing term_:
+$$i\hbar\pd{\Psi}{t}+\frac{\hbar^2}{2m}\pd{^2\Psi}{x^2}=F(x,t)$$
+- Following the approach of a similar [[Analytical classical mechanics#Propagators and causality|classical problem]], write down the _Green's function_:
+$$\psi=\int\,dt'\int\,dx'G(x,t,x',t')\,F(x',t')$$
+- Conduct _Fourier transforms_ with the functions $\exp{(-ipx/\hbar)}$ and $\exp{(-iEt/\hbar)}$
+- This gives:
+$$\displaylines{\left(E-\frac{p^2}{2m}\right)G(p,E)=1 \\ G(p,t,t')=\int\exp\left(-\frac{iE}{\hbar}(t-t')\right)\frac{1}{E-p^2/2m}\,\frac{dE}{2\pi\hbar}}$$
+- This gives _a pole on the real axis_:
+
+- Fourier transforming back to the position representation:
+
+## Klein-Gordon field
+- The Green's function:
+$$G(x^\mu)=\int\,dp^\nu\frac{\exp(-ip_\mu x^\mu)}{p^\mu p_\mu-m^2}$$
+- It is _Lorentz invariant_
+- The _poles_ arise when $p_0^2-p_i p^i=m^2$
+- On the $p_0$ _axis_, the poles are at $\pm\sqrt{p_i^2+m^2}$ 
+
+- One can use the $i\epsilon$ _prescription_, moving the poles _up the axis_:
+$$p^0\to p^0+i\epsilon$$
+
+- Causality dictates that $G(x^\mu)$ _disappears outside the forward light cone_
+
+- In quantum fields, to preserve causality, use the _Feynman prescription_:
+$$G(x^\mu)=\int\,dp^\nu\frac{\exp(-ip_\mu x^\mu)}{p^\mu p_\mu-m^2+i\epsilon}$$
+- This gives _one pole for each half-plane_
+- The Feynman propagator is _non-zero everywhere_
+- This corresponds to _having antiparticles travelling backwards in time_
+- This _does not affect causality of measurement_
+
+# The Dirac field
+- Spacetime is _Lorentz invariant_
+- The Lorentz transformation:
+$$x^\mu\longrightarrow\tenscom{\Lambda}{\mu}{\nu}x^\nu$$
+- The transformations form the _Lorentz group_
+
+- The _most general Lagrangian_ for a field _transforming as its representations_ must then be able to describe relativistic objects
+
+- The _representations_ of the group:
+$$1,$$
+- One can have a _scalar field_ transforming according to the _identity representation_
+- This leads to the [[#Relativistic scalar field|Klein-Gordon field]]
+
+- The Dirac equation reflects the fact that _numbers of particles can change_
+
+## The purely quantum mechanical field
+- Let there be the Lagrangian:
+$$\Lagr=\Psi^*\partial_0\Psi+(\nabla\Psi)^*(\nabla\Psi)+$$
+- This leads to the _time-dependent Schrodinger equation_
+
+- It respects $U(1)$ symmetry:
+$$\Psi\to$$
+- The _conserved current_ is:
+$$\pd{\Lagr}{}=\Psi^*\Psi$$
+- As the _probability current_ is conserved, one _cannot change the number of particles_
+
+## Klein-Gordon but quantum mechanical
+- Take the [[#Complex scalar fields|complex scalar field]]:
+$$\Lagr=(\partial_\mu\varphi^*)(\partial^\mu\varphi)-m^2\varphi^*\varphi$$
+- The _Fourier solution_ $\exp[i(\omega t-kx)]$ reflects that the relativistic relation:
+$$E^2=p^2+m^2$$
+- However, this means there is _no lower bound to energy_
+
+- The _Noether current_ from the $U(1)$ symmetry is:
+$$J^0=i\partial^0\varphi^*\varphi$$
+- This is _not positive-definite_ and therefore _cannot be interpreted as a probability density_
+
+## The Dirac equation
+- To construct an equation which has _only first derivatives_
+- Establishing _arbitrary constants_ $\gamma^\nu$ and $m$:
+$$(i\gamma^\nu\partial_\nu-m)\psi=0$$
+- Applying $(i\gamma^\mu\partial_\mu+m)$ on _both sides_, recognising the symmetry of the first term and using an _anticommutator_
+$$\left(\frac{1}{2}\{\gamma^\mu,\gamma^\nu\}\partial_\mu\partial_\nu-m^2\right)\psi=0$$
+- In order to reproduce the _Klein-Gordon equation_:
+$$\{\gamma^\mu,\gamma^\nu\}=\gamma^\mu\gamma^\nu+\gamma^\nu\gamma^\mu=2\eta^{\mu\nu}$$
+- Where $\eta^{\mu\nu}$ is the _Minkowski metric_
+
+- One can then see that $\gamma^\mu$ are _not scalars_
+- Instead, they are $4\times 4$ _matrices_:
+$$\gamma^0=\pmatrix{I_2&0 \\ 0&I_2}\hspace{1cm}\gamma^j=\pmatrix{0&\sigma_j \\ -\sigma_j &0}$$
+- Where $I_2$ is the $2\times2$ _identity matrix_, and $\sigma_j$ are the _Pauli spin matrices_
+
+- $\psi$ is then a _4-component complex vector_
+	- They represent the _spin states of the particle and antiparticle_
+
+## The Dirac Lagrangian
+- The Dirac equation is the _Euler-Lagrange equation_ of the Dirac Lagrangian:
+$$\Lagr=i\bar\psi\gamma^\mu\partial_\mu\psi-m\bar\psi\psi$$
+- Here, to make $\bar\psi\psi$ _Lorentz invariant_:
+$$\bar\psi=\psi^\dagger\gamma^0$$
+- One can _add a total derivative_ to make the Lagrangian _symmetric_ in $\bar\psi$ and $\psi$
+
+- The _equation of motion_ for $\bar\psi$:
+$$0=\pd{\Lagr}{\bar\psi}=(i\gamma^\mu\partial_\mu-m)\psi$$
+- The corresponding equation for $\psi$:
+$$i\partial_\mu\bar\psi\gamma^\mu=-m\bar\psi$$
+
+### The Hamiltonian
+- The corresponding _Hamiltonian_, taking into account that it is a _scalar_
+$$\displaylines{\Ham=\pi\pd{\psi}{t}+\pd{\bar\psi}{t}\bar\pi-\Lagr \\ \pi=\pd{\Lagr}{\dot\psi}=i\bar\psi\gamma^0=i\psi^\dagger\hspace{1cm}\bar\pi=0}$$
+- Putting everything together:
+$$\displaylines{\Ham=\psi^\dagger(-i\bm{\alpha}\cdot\nabla+\beta m)\psi \\ \gamma^0=\beta\hspace{1cm}\gamma^i=\beta\alpha^i}$$
+- The Hamiltonian is _not Loentz invariant_
+## The energy-momentum tensor
+- Computing the tensor:
+$$T^{\mu\nu}=\pd{\Lagr}{(\partial_\mu\psi)}\partial^\nu\psi-\eta^{\mu\nu}\Lagr=i\bar\psi\gamma^\mu\partial^\nu\psi$$
+- It is _not symmetric in its indices_
+
+- The _angular momentum tensor_:
+$$M^{\lambda\mu\nu}=x^\mu T^{\lambda\nu}-x^\nu T^{\lambda\mu}=i\bar\psi()$$
+- This quantity is _not conserved_
+- This only corresponds to _angular momentum_
+
+- To create a _conserved quantity_, add:
+$$S^{\lambda\mu\nu}=\frac{i}{4}\bar\psi()$$
+- The _total_ of these two tensors is _conserved_
+
+- The classical angular momentum:
+$$\displaylines{\bm{J}=\int\,d^3\bm{x}\left[\psi^\dagger()\right] \\ \Sigma_i=\pmatrix{\sigma_i&0\\0&\sigma_i}}$$
+- The _eigenvalues_ of $\Sigma_i$ are the values of _spin_
+- The two "parts" reflect the _particles and antiparticles_
+
+## Conserved current
+- From the U(1) symmetry of the Lagrangian:
+$$J^\mu=\bar\psi\gamma^\mu\psi$$
+
+## External fields
+- To couple to an _external field_:
+$$\displaylines{ D_\mu=\partial_\mu+ieA_\mu \\ \Lagr=i\bar\psi\gamma^\mu D_\mu\psi-m\bar\psi\psi}$$
+- The resulting _equation of motion_:
+
+- Where:
+$$[\gamma^\mu,\gamma^\nu]=\sigma^{\mu\nu}$$
+- This is the effect of _spin-orbit coupling_

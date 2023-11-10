@@ -349,7 +349,11 @@ $$\bm{E}=\pmatrix{E_x\\E_y}\exp(-i\omega t) \hspace{1.5cm}\bm{r}=\pmatrix{x_0\\y
 $$\omega_c=\frac{eB_0}{m}$$
 - Then to find the _response to circularly polarised wave_:
 $$\displaylines{-\omega^2(x_0+iy_0)=-\frac{e}{m}(E_x+iE_y)+\omega\omega_c(x_0+iy_0) \\ -\omega^2(x_0-iy_0)=-\frac{e}{m}(E_x-iE_y)+\omega\omega_c(x_0-iy_0)}$$
-- _Effective susceptibilities_
+- For $E_x=E_y=|\bm{E}|$, they correspond to _LCP_ and _RCP_, with some _displacement_ $a\pmatrix{1&i}^T$ as the _response_
+- With some _electron number density_ $n$, the _circular polarisation field_:
+$$P_L=-ena\pmatrix{1\\i}=\epsilon_0\chi_LE\pmatrix{1\\i}$$
+- The _effective susceptibility_ is then:
+$$\chi_L=-\frac{ne^2}{m\epsilon_0}\frac{1}{\omega^2-\omega\omega_c}=-\frac{\omega_p^2}{\omega^2-\omega\omega_c}$$
 
 - One finds that the _effective dielectric constants_ are:
 $$\epsilon_\frac{L}{R}(\omega)=1-\frac{\omega_p^2}{\omega(\omega\mp\omega_c)}$$
@@ -431,7 +435,7 @@ $$\displaylines{f(t)\sim \cos(\omega t+\alpha) \\ F(\omega)\propto \exp(i\alpha)
 	$$\omega-\omega_0=\frac{\omega_0 v_x}{c}$$
 	- From kinetic theory, the _distribution of velocities_ is _Gaussian_
 	- The _power spectrum_ is then:
-	$$P(\omega)\sim \exp\left(-\frac{m(\omega-\omega_0)^2c^2}{2\omega_0^2 k_BBT}\right)=\exp\left(-\frac{(\omega-\omega_0)^2}{2\sigma^2}\right)$$
+	$$P(\omega)\sim \exp\left(-\frac{m(\omega-\omega_0)^2c^2}{2\omega_0^2 k_BT}\right)=\exp\left(-\frac{(\omega-\omega_0)^2}{2\sigma^2}\right)$$
 	- The _full-width half maximum_ is then given by:
 	$$2.36\sigma=2.36\,\omega_0\left(\frac{k_BT}{mc^2}\right)^{1/2}$$
 	- The _width scales with temperature_
@@ -529,9 +533,11 @@ $$\mathcal{F}[h(\tau)]=H(\omega)=F(\omega)F^*(\omega)=|F(\omega)|^2$$
 - As $h(\tau)\sim \gamma(\tau)$, one shows that the _power spectrum_ is given by the Fourier transform of the _fringe visibility_:
 $$P(\omega)=\mathcal{F}[\gamma(\tau)\equiv V(\tau)]$$
 
-- Define _relative intensity_
+- Define _relative intensity_ $I_r(\tau)$:
+$$I_r(\tau)=\frac{I(\tau)}{2I_0}=1+\Re[\gamma(\tau)]$$
 
-- Therefore one can write $P(\omega)$ as:
+- Letting $f(t)$ and therefore $\gamma$ be _real_, one can write $P(\omega)$ as:
+$$P(\omega)=\mathcal{F}[I_r(\tau)-1]$$
 
 ### Fourier transform spectroscopy
 - The _Michelson interferometer_:
@@ -759,10 +765,10 @@ $$\phi(r,t)=\frac{1}{4\pi\epsilon_0}\frac{q(t-r/c)}{r}$$
 $$\phi(r,t)=\frac{1}{4\pi\epsilon_0}\int_\text{all space}\frac{\rho(\bm{r}',t-|\bm{r}-\bm{r}'|/c)}{|\bm{r}-\bm{r}'|}\,dV$$
 - The _retarded scalar potential_ allows for the _propagation of information_ at a _finite speed_ $c$
 - Denote _evaluating at retarded time_:
-$$\displaylines{\rho\left(\bm{r}',t-\frac{|\bm{r}-\bm{r}'|}{c}\right)\equiv[\rho(\bm{r}',\bm{r},t)]\equiv[\rho] \\ \phi=}$$
+$$\displaylines{\rho\left(\bm{r}',t-\frac{|\bm{r}-\bm{r}'|}{c}\right)\equiv[\rho(\bm{r}',\bm{r},t)]\equiv[\rho] \\ \phi=\frac{1}{4\pi\epsilon_0}\int_\text{all space}\frac{[\rho]}{|\bm{r}-\bm{r}'|}\,dV'}$$
 
 - Similarly, the _retarded vector potential_:
-$$\bm{A}=$$
+$$\bm{A}=\frac{\mu_0}{4\pi}\int\frac{[\bm{J}]\,dV'}{|\bm{r}-\bm{r}'|}$$
 
 - The _differential_ of retarded quantities:
 $$\pd{}{r}[F]=-\frac{1}{c}[F']\hspace{1.5cm}\pd{}{t}[F]=[F']$$
@@ -778,7 +784,184 @@ $$\pd{}{r}[F]=-\frac{1}{c}[F']\hspace{1.5cm}\pd{}{t}[F]=[F']$$
 - If the dipole _oscillates_ with phase $\omega t$, then $\bm{E}$ must also oscillate but _shifted in phase_ due to the retardation, therefore having phase $\omega(t-r/c$)
 - The oscillating charge also involves a _current_, giving a _magnetic field_
 
-## The Hertzian dipole
+## The Hertzian electric dipole
 - There are _two opposite charges_, separated by distance $d$, giving a _current_
 - The _dipole moment_ is then:
 $$\bm{p}=(0,0,p_0\exp(-i\omega t))\hspace{1.5cm} I=-i\omega\frac{p_0}{d}\exp(-i\omega t)$$
+- The _physical size_ of the dipole is taken as _small_ compared to the radiation wavelength $\lambda=2\pi c/\omega$
+- At some _distant point_ $P$ at $\bm{r}=(r,\theta,\phi)$ is given by the _retarded potential_ with $r\gg d$
+
+- Let $d\ll r$, such that _variations_ in $|\bm{r}-\bm{r}'|$ is _ignored_
+
+### Magnetic field
+- The magnetic potential:
+$$\bm{A}(r,t)=\frac{\mu_0}{4\pi r}\int[\bm{J}]\,dV'$$
+- where the _retarded current density_ gives:
+$$\int[\bm{J}]\,dV'=\dot{q}(t-r/c)d\,\hat{\bm{z}}=[\dot{\bm{p}}]$$
+- This gives the potential:
+$$\bm{A}(\bm{r},t)=\frac{\mu_0}{4\pi r}[\dot{\bm{p}}]=A\hat{z}$$
+- Decomposing $\bm{A}$ into _components in polar coordinates_, and using $\bm{B}=\nabla\times\bm{A}$:
+$$\displaylines{B_r=B_\phi=0 \\ B_\phi=-\sin\theta\pd{A}{r}=\frac{\mu_0}{4\pi}\sin\theta\left(\frac{[\dot{p}]}{r^2}+\frac{[\ddot{p}]}{rc}\right)}$$
+### Electric field
+- The _scalar potential_:
+$$\begin{aligned}\phi&=\frac{1}{4\pi\epsilon_0}\left[\frac{q(t-r_+/c)}{r_+}-\frac{q(t-r_-/c)}{r_-}\right] \\ &=\frac{1}{4\pi\epsilon_0}(r_+-r_-)\pd{}{r}\left[\frac{q(t-r/c)}{r}\right]\end{aligned}$$
+- Writing the distance $r_+-r_-$ as $d\cos\theta$ and doing the derivative:
+$$\phi=\frac{\cos\theta}{4\pi\epsilon_0}\left\{\frac{[p]}{r^2}+\frac{[\dot{p}]}{rc}\right\}$$
+- Calculating the _components_ by $\bm{E}=-\dot{\bm{A}}-\grad\phi$:
+$$\displaylines{E_\phi=0\\ E_r=\frac{2\cos\theta}{4\pi\epsilon_0}\left\{\frac{}{}+\frac{}{}\right\} \\ E_\theta=\frac{\sin\theta}{4\pi\epsilon_0}\left\{\right\}}$$
+### Behaviour of the field
+- The _non-zero components_:
+$$\begin{aligned}B_\phi&= \\ E_\phi&= \\ E_r&=\end{aligned}$$
+- The terms varying as $1/r^3$ correspond to a _static dipole_, but according to the _retarded dipole moment_
+
+- The _dipole term_ $\propto1/r^3$ will _dominate for small distances_ $r\ll\lambda$
+- The _induction term_ $\propto 1/r^2$ never dominates
+- The _radiation term_ $\propto1/r$ will _dominate for large distances_ $r\gg\lambda\gg d$
+
+![[Dipole field.png]]
+- The electric field _starts to form closed loops_ as they are _pinched off_
+	- They circulate in _different directions_
+
+- In the _far field region_, only the _radiation fields_ remain:
+
+
+	- The fields are _in phase_ with one another (with $[\ddot{p}]$)
+	- The field components are _proportional_ to each other as $E_\theta=cB_\phi$, as expected for _electromagnetic waves_
+	- The fields are _orthogonal in space_
+	- There is a _radially outward Poynting flux_
+	- The radiation is _polarised_
+
+### Power radiated
+- One can typically ignore the _induction fields_
+	- It is _not purely radial_
+	- It goes as $1/r^4$, which _does not correspond to a net outward energy flux_
+	- The flux _redistributes energy_ close to the dipole instead
+- In the _far field_:
+$$N=\frac{1}{\mu_0}E_\theta B_\phi=\frac{\mu_0}{16\pi^2 c}\sin^2\theta\frac{[\ddot{p}]^2}{r^2}$$
+- It goes as $1/r^2$ as expected
+
+- The _angular distribution_ is
+$$G(\theta,\phi)\propto\sin^2\theta$$
+- It has _cylindrical symmetry_, with the _maximum radiated power_ in the _equatorial plane_, and _zero along the polar axes_
+
+- The _instantaneous total radiated power_:
+$$P-\int\bm{N}\cdot d\bm{S}=\frac{\mu_0}{6\pi c}[\ddot{p}]^2$$
+- It is _independent of $r$_, so there is _no accumulation in energy_
+	- All energy is simply _radiated outwards_
+
+- Taking _time averages_:
+$$\displaylines{\mean{N(r,\theta,\phi)}=\frac{\mu_0\omega^4p_0^2}{32\pi^2c}\frac{\sin^2\theta}{r^2} \\ \mean{P}=\frac{\mu_0\omega^4p_0^2}{12\pi c}=\frac{\omega^4p_0^2}{12\pi\epsilon_0c^3}}$$
+
+## Multipole expansion
+- Let there be some _system_ of _charges and currents sinusoidally varying in time_:
+$$\rho()=\hspace{1cm}\bm{J}()=$$
+
+- In the _far field_:
+$$\bm{A}(\bm{r}.t)=$$
+- Writing $|\bm{r}-\bm{r}'|\approx r-\bm{n}\cdot\bm{r}'$, where $\bm{n}$ is _in the direction of $\bm{r}$_:
+$$\bm{A}(\bm{r})=\frac{\mu_0}{4\pi}\frac{}{}$$
+
+- Then, expand in _powers of_ $m$:
+$$\bm{A}(\bm{r})=$$
+- If the _source dimension_ $d$ is _small compared to wavelength_ $(kd\ll1)$, then terms with $m>1$ will _fall off rapidly_
+
+### Electrical dipole radiation term
+- Using _integration by parts_
+
+- Using _continuity_:
+$$\bm{A}(\bm{r})==$$
+
+### Magnetic dipole radiation term
+- This can be _split_ into contributions, which are _symmetric_ and _antisymmetric_:
+$$(\bm{n}\cdot\bm{r}')\bm{J}=\frac{1}{2}[]+\frac{1}{2}$$
+- The _antisymmetric term_ is dependent on the _magnetic dipole moment_:
+$$\displaylines{\bm{m}= \\ \bm{A}(\bm{r})=}$$
+
+- $\bm{A}$ of a _magnetic dipole_ is _proportional to the magnetic field_ of an _electric dipole_
+	- Follow from _Maxwell's equations_
+	- Substitute $c\bm{p}\to\bm{m}$
+- The _electric and magnetic fields_ are then:
+$$\begin{aligned}\bm{B}(\bm{r})&= \\ \bm{E}(\bm{r})&=\end{aligned}$$
+
+- The _time-averaged total power radiated_:
+
+- If the electric and magnetic dipoles carry _similar currents_, with _similar sizes_L
+
+- Therefore, _small magnetic dipoles are much less efficient_ than the _electric dipole_
+
+### Quadrupole term
+- Consider the _symmetric term_ of the $m=1$ contribution
+
+- $\bm{Q}(\bm{n})$ is a _contraction_ of the _quadrupole moment tensor_
+
+- The _angular distribution_:
+$$N(r,\theta,\phi)=$$
+
+- The quadrupole is a _very ineffective radiator_
+
+- The _oscillating lateral quadrupole_
+- The power distribution is _no longer cylindrically symmetric_
+- There is _no power emitted along_
+
+# Antennas
+- Antennas are devices designed to _emit or receive EM waves_
+	- Transmitting energy: electric/magnetic dipoles. quadrupoles
+
+## As radiators
+- Any antenna will _lose energy_ from whatever circuit it is _drawing power_ from
+- This is reflected as a _radiation resistance_ $R_r$
+$$R_r\equiv\mean{P}/\mean{I^2}=\mean{V^2}/\mean{P}$$
+- For [[#The Hertzian electric dipole]]:
+$$\displaylines{\mean{P}= \\ R_r=}$$
+
+- The _power gain_ $G(\theta,\phi)$ quantifies the _directionality_ of the emitred radiation:
+$$G(\theta,\phi)=$$
+
+- For the Hertzian dipole:
+
+## As receivers
+- When there is an _incident EM wave_, it induces a _voltage_
+- It can be treated as a _generator_ with voltage $V$ and _internal resistance_ $R_r$
+
+- Its _performance_ is quantified by the _power deluvered to the load_ $R_\text{load}$
+$$\displaylines{\mean{P}_\text{tot} \\ \mean{P}_\text{load}}$$
+- $\mean{P}_\text{load}$ is maximised for a _matched load_ $R_\text{load}=R_r$
+
+- The _effective area_ of the antenna, or the _absorption cross-section_ is:
+$$A_\text{eff}(\theta,\phi)=$$
+- One should then pick the _polarisation best-suited for reception_
+
+- For the _Hertzian dipole_
+- The _open circuit voltage_ is $V=Ed\sin\theta$
+
+- This is the _same angular dependence as the power gain_
+- It is also _independent of dipole size_
+	- It is _much larger than the actual geometrical area_
+
+- As the antenna _radiates_, a portion of the _incident power is re-radiated_
+
+- The _incident_ and _re-radiated_ fields can _interfere_, so the _Poynting flux turns back towards the antenna_, increasing its effective area
+
+## Relation between effective area and power gain
+- From the results for the Hertzian dipole above:
+$$A_\text{eff}(\theta,\phi)=\frac{\lambda^2}{4\pi}G(\theta,\phi)$$
+- This is _true for any antenna_
+
+- Consider _any antenna_ with a _matched load_ $R_r$, all in _thermal equilibrium_ at temperature $T$, in a _black-body_ environment with radiation _energy density_ $U(\nu)$
+- For $h\nu\ll k_BT$, it is given by the [[Thermal Radiation|Rayleigh-Jeans formula]]
+- The antenna only responds to _one polarisation_
+
+- The _effective incident energy flux_
+
+- The _power dissipated_ is
+
+- Thermal equilibrium requires that there is a _compensating backflow_ of _power_ into space
+	- Must apply for _all directions_
+- This arises from _Johnson noise_, given by the _Nyquist formula_
+
+- Equating the powers:
+
+- This gives:
+$$A_\text{eff}(\theta,\phi)=\frac{\lambda^2}{4\pi}G(\theta,\phi)$$
+- This is _independent of antenna construction_
+- A high _radiative efficiency_ will give a high _detection sensitivity_

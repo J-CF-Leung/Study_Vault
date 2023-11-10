@@ -131,7 +131,6 @@ $$\braket{m^{(0)}|\hat{H}^{(1)}|n^{(0)}}=0\;\;\;\text{   for } n\neq m$$
 - The original _degenerate eigenstates_, with _degeneracy_ $g$:
 $$\hat{H}^{(0)}\ket{n_j^{(0)}}=E_n^{(0)}\ket{n_j^{(0)}}\hspace{1.5cm}j=1,2,\dots g$$
 
-
 - Form a _new basis from the degnerate eigenstates_:
 $$\hat{H}^{(0)}(c_1\ket{n_j^{(0)}}+c_2\ket{n_k^{(0)}})=E_n^{(0)}(c_1\ket{n_j^{(0)}}+c_2\ket{n_k^{(0)}})$$
 - One should then make sure the _basis satisfies the condition_:

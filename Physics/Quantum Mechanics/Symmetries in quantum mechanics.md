@@ -46,10 +46,16 @@ $$\frac{d}{dt}\braket{\psi|\hat{H}|\psi}=\frac{i}{\hbar}\braket{\psi|[\hat{H},\h
 - Hence, the _generator is conserved_
 	- Conservation: _constant expectation value_
 
+## Degeneracy
 - For some _energy eigenstate_ $\ket{\psi}$:
 $$\hat{H}\ket{\psi'}=\hat{H}\hat{U}\ket{\psi}=\hat{U}\hat{H}\ket{\psi}=E\ket{\psi'}$$
-- Provided the states $\ket{\psi}$ and $ket{\psi'}$ are _distinct_, the _energy level_ must be _degenerate_
+- Provided the states $\ket{\psi}$ and $\ket{\psi'}$ are _distinct_, the _energy level_ must be _degenerate_
+	- For a _continuous symmetry_, _sets_ of the states are _distinct from other sets_
 
+- If there is _only one symmetry_ with operator $\hat{U}$, there is _no degeneracy_ as $\ket{\psi}$ are _simultaneous eigenstates_
+- However, if there are _two symmetries_, which _do not commute with each other_, then there _must be degeneracy_
+	- Example: $\hat{L}_x$, $\hat{L}_y$ and $\hat{L}_z$ for _central potentials_, where $[\hat{H},\hat{L}_\pm]=0$ so that $\ket{\psi_{nlm}}$ and $\ket{\psi_{nlm\pm1}}$ are degenerate
+	- For central potentials, the _Laplace-Runge-Lenz_ vector is also conserved
 # Time translation
 - The _time-translation operator_ shifts the _origin of the time coordinate_ by time $\tau$:
 $$\hat{U}(\tau)\ket{\psi(t)}=\ket{\psi(t+\tau)}$$
@@ -155,7 +161,7 @@ $$[\hat{\bm{J}},\hat{\bm{L}}\cdot\hat{\bm{S}}]=[\hat{\bm{J}}^2,\hat{\bm{L}}\cdot
 - With respect to $\hat{\bm{L}}$ and $\hat{\bm{S}}$, $\hat{\bm{L}}\cdot\hat{\bm{S}}$ is _not a scalar operator_
 	- This explains why in the [[The hydrogen atom|hydrogen atom fine structure]], the _relativistic and Darwin terms_ will _commute_ with the _uncoupled set_, while the _spin-orbit_ term commutes with the _coupled set_
 
-# The Wigner-Eckart Theorem
+# The Wigner-Eckart Theorem for scalars
 - Let $\hat{\bm{J}}$ be a _generic angular momentum operator_ satisfying:
 $$[\hat{J}_i,\hat{J}_j]=i\hbar\epsilon_{ijk}\hat{J}_k$$
 - Consider the _scalar operator_ $\hat{K}$, satisfying:
@@ -208,8 +214,20 @@ $$V_{+1}=-\frac{1}{\sqrt{2}}(V_1+iV_2)\hspace{1cm}V_{-1}=\frac{1}{\sqrt{2}}(V_1-
 >$\braket{\alpha''j''m''|\hat{V}|\alpha'j'm'}=\langle\alpha''j''||\hat{V}||\alpha'j'\rangle\braket{1m;j'm'|j''m''}$
 >where $m=-1,0,1$
 - The _reduced matrix element_ is _dependent on $\hat{V}$_, and _not_ on $m$
+	- It is seen as a _constant component_ of a _set of matrix elements_
 - The _Clebsch-Gordan coefficient_ is entirely _dependent_ on $m,m',m''$
+	- Encodes the _arbitrary dependence on choice of quantisation axis_
 
+## Selection rules
+- The Clebsch-Gordan coefficient _vanishes_ unless:
+$$\displaylines{j'+j''\geq1 \\ m''=m'+m \\ j''=\begin{cases} j',j'\pm1 &j'>0\\ 1 &j'=0\end{cases}}$$
+
+- Or _equivalently_, if the matrix elements are taken w.r.t. kets before and after a _transition_:
+$$0\centernot\longleftrightarrow0\hspace{1.5cm}\Delta j=0,\pm1 \hspace{1.5cm} \Delta m=0,\pm1$$
+
+- In particular, matrix elements of _zero angular momentum_ must then vanish:
+$$\braket{\alpha_100|\hat{\bm{V}}|\alpha_200}=0$$
+- Example: the _electric dipole moment_
 # Spatial inversion and parity
 - The _spatial inversion operation_ is:
 $$\hat{P}: \bm{r}\to-\bm{r}$$
@@ -217,3 +235,17 @@ $$\hat{P}: \bm{r}\to-\bm{r}$$
 $$\hat{P}\ket{\psi}=P\ket{\psi}$$
 - Applying parity _twice_ gives back the _original wave function_, hence:
 $$P=\pm1$$
+
+- Consider two parity eigenstates $\ket{\psi_1}$ and $\ket{\psi_2}$, each with parities $P_1$ and $P_2$:
+$$\ket{\psi_1(-\bm{r})}=P_1\ket{\psi_1(\bm{r})}\hspace{1.5cm}\ket{\psi_2(-\bm{r})}=P_2\ket{\psi_2(\bm{r})}$$
+- Taking the _matrix element_ of the _position oeprator_ $\bm{r}$, and _changing integration variable_ to $-\bm{r}$:
+$$\braket{\psi_1|\hat{\bm{r}}|\psi_2}=-P_1P_2\braket{\psi_1|\hat{\bm{r}}|\psi_2}$$
+- Hence, the _matrix elements_ of $\bm{r}$ _vanish for states of same parity_
+$$\braket{\psi_1|\hat{\bm{r}}|\psi_2}\neq0\hspace{0.5cm}\text{iff }P_1\neq P_2$$
+
+- For the _hydrogen atom_:
+$$\displaylines{\hat{P}\ket{nlm}=(-1)^l\ket{nlm} \\ \braket{n_1l_1m_1|\hat{\bm{r}}|n_2l_2m_2}=0\;\;\;\text{ for }\;\;l_1+l_2=2,4,\dots}$$
+
+- The _electromagnetic_ and _strong_ forces are _invariant under parity_: $[\hat{H}_\text{EM},\hat{P}]=0$
+- The _weak force_ is not parity-invariant
+

@@ -437,9 +437,42 @@ $$-e\frac{dx_\mu}{dt}A^\mu$$
 # Propagators and causality
 - The laws of physics are _causal_
 - One has to define a _direction in time_
+- Given some _force_ $m\phi(t)$, then the equation of motion for a _forced damped harmonic oscillator_ is:
+$$\ddot{x}+\gamma\dot{x}+\omega_0^2x=\phi(t)$$
 
 - Consider a _simple harmonic oscillator_, given an _impulse_ at $t=t'$
-	- There is _no loss of generality_ as _any force_ can be given as a _composition of delta functions_
-- The _equations of motion_:
-$$\ddot{x}+\gamma\dot{x}+\omega_0^2x=\delta(t-t')$$
+	- There is _no loss of generality_ as _any force_ can be given as a _composition of delta functions_:
+	$$F(t)=\int F(t')\delta(t-t')\,dt'$$
+- The _equations of motion_ for the impulse force:
+$$\ddot{G}+\gamma\dot{G}+\omega_0^2G=\delta(t-t')$$
 - This is the [[Green's Functions for ODEs|Green's Function]] for the system
+
+- The [[Fourier series and transforms|Fourier transform]] of the Green's function:
+$$\displaylines{G(t-t')=\int\frac{d\omega}{2\pi}G(\omega)\exp[i\omega (t-t')]
+ \\ G(\omega)=\frac{1}{(\omega_0^2-\omega^2)+i\gamma\omega}}$$
+- The Fourier transform has _poles_ on one side of the complex plane:
+$$\omega_{1,2}=-\frac{i\gamma}{2}\pm\sqrt{\omega_0^2-\frac{\gamma^2}{4}}$$
+![[Damped harmonic oscillator poles.png]]
+
+- Therefore, the [[Contour integration|cotour integral]] must close on one side _depending on the sign of_ $t-t'$:
+$$G(t-t')=\begin{cases}0&t<t' \\\int G(\omega)\exp[i\omega(t-t')](d\omega/2\pi) &t>t'\end{cases}$$
+- The system _obeys causality_
+- One can _solve for_ the response:
+$$G(t>t')=\oint$$
+
+- For the _undamped case_, the poles move _up to the real axis_
+- The Green's function in this case:
+$$G=A\sin[\omega(t-t')]+B\cos[\omega(t-t')]$$
+- _Causal boundary conditions_ require that the _derivative jumps_ by $1$, and that it _vanishes_ at $t=t'$:
+$$G(t-t')=\begin{cases}0&t<t' \\ \sin[\omega_0(t-t')]/\omega_0 &t>t'\end{cases}$$
+- This requires that in the _upper-half plane_, the _contour goes above the poles_
+- This can also be seen as a _limiting case_ of the _damped harmonic oscillator_
+
+- This reflects that for a Fourier transform to _exist_, it must be _square-integrable_
+- If the system is _not causal_, it _tends to infinity at_ $t<t'$
+
+# Linear response theory
+- Let there be some _dynamical variable_ $u(t)$, where _equilibrium_ is at $u=0$
+- Given some _conjugate force_ $f(t)$, the _perturbation_ to the _potential energy_ is $-u\cdot f$
+
+
