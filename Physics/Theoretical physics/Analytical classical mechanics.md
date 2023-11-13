@@ -474,5 +474,13 @@ $$G(t-t')=\begin{cases}0&t<t' \\ \sin[\omega_0(t-t')]/\omega_0 &t>t'\end{cases}$
 # Linear response theory
 - Let there be some _dynamical variable_ $u(t)$, where _equilibrium_ is at $u=0$
 - Given some _conjugate force_ $f(t)$, the _perturbation_ to the _potential energy_ is $-u\cdot f$
+	- Example: for a _spring_, $f=\kappa x$, and the perturbation to $V$ is $-xf$
+- The _equilibrium_ is then at 
+$$\mean{u}_f=\frac{f}{\kappa}=\alpha f$$
+- Here, $\alpha\equiv 1/\kappa$ is the _generalised susceptibility_
+![[Linear responses.png]]
 
-
+- For a general, _time-varying response_, add up the responses at each time where $f$ acts:
+$$\mean{u}_f=\int \alpha(t-t')f(t')\,dt'$$
+- In the _Fourier domain_:
+$$\mean{u(\omega)}_f=\alpha(\omega)f(\omega)$$

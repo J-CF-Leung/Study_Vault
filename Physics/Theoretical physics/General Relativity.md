@@ -150,6 +150,15 @@ $$\displaylines{V^\mu\partial_\mu=V^{\mu'}\partial_{\mu'}=V^{\mu'}\pd{x^\mu}{x^{
 - The _tangent vector_ to a curve $x^a(u)$ can then be defined:
 $$\frac{d}{du}=\frac{dx^\mu}{du}\pd{}{x^\mu}$$
 - These vectors are _contravariant_
+
+### The vector commutator
+- As vectors are thought of as _directional derivatives_, one can define a _commutator_, acting on some _function_:
+$$[X,Y](f)\equiv X(Y(f))-Y(X(f))$$
+- The _explicit expression_:
+$$[X,Y]^\mu=X^\lambda \partial_\lambda Y^\mu-Y^\lambda\partial_\lambda X^\mu$$
+- The partial derivative is _not a tensor_, but this can be resolved by _redefining_ the derivative used in the expression
+- The result is then a _vector_
+
 ### Covariant/dual vectors
 - One can define _covariant vectors_
 - For example, the _gradient_ of a _scalar field_:
@@ -493,6 +502,11 @@ $$(\text{curl }X)_{\mu\nu}=\nabla_\mu X_\nu-\nabla_\nu X_\mu=\partial_\mu X_\nu-
 
 - The _Laplacian operator_ is then:
 $$\nabla^2\phi=\nabla_\mu(g^{\mu\nu}\nabla_\nu\phi)=\frac{1}{\sqrt{|g|}}\partial_\mu(\sqrt{g}\,g^{\mu\nu}\partial_\nu\phi)$$
+### The commutator
+- Recall the [[#The vector commutator|commutator of two vectors]]
+- To make it a _vector_, redefine:
+$$[X,Y]^\mu=X^\lambda\nabla_\lambda Y^\mu-Y^\lambda \nabla_\lambda X^\mu$$
+- This is _only applicable to the metric connection_
 ## The intrinsic derivative along a curve
 - One often needs to take _derivatives of vectors along a curve_
 - Consider some vector $V(u)$ along some _curve_ $x^\mu(u)$
@@ -588,8 +602,10 @@ $$\partial_\mu g_{\nu\lambda}=0\Longrightarrow \frac{dx_\mu}{d\tau}=\text{const.
 	- _Covariant derivatives_ will _commute_
 	- Geodesics that are _initially parallel_ will _remain parallel_
 
+## The Riemann curvature tensor
 - On a curved space, the _change_ in a vector around a closed loop is related to _total curvature enclosed_
 - Then for _local curvature_, let there be an _infinitesimal loop_
+- This is an _intrinsic property_ of the surface, and has _nothing to do with embedding_
 
 - For vector $V^\rho$, around a loop with vectors $A^\mu$ and $B^\nu$, the _change in the vector_ should be _proportional_ to components $V^\sigma$, as well as $A^\mu$ and $B^\nu$
 - Therefore, define the _Riemann curvature tensor_:
@@ -606,4 +622,159 @@ $$[\nabla_\mu,\nabla_\nu]V^\rho=(\partial_\mu\Gamma^\rho_{\nu\sigma}-\nabla_\nu\
 - So, one can identify the _Riemann curvature tensor_:
 $$\tenscom{R}{\rho}{\mu\nu\sigma}=\partial_\mu\Gamma^\rho_{\nu\sigma}-\partial_\nu\Gamma^\rho_{\mu\sigma}+\Gamma^\rho_{\mu\lambda}\Gamma^\lambda_{\nu\sigma}-\Gamma^\rho_{\nu\lambda}\Gamma^\lambda_{\mu\sigma}$$
 - From this, the action of the commutator can be calculated for a _tensor of any rank_:
-$$[\nabla_\rho,\nabla_\sigma]\tenscom{X}{\mu_1\dots\mu_k}{\nu_1\dots\nu_k}$$
+$$\begin{aligned}\left[\nabla_\sigma, \nabla_\rho\right]\tenscom{X}{\mu_1\dots\mu_k}{\nu_1\dots\nu_k}=&+\tenscom{R}{\mu_1}{\sigma\rho\lambda}\tenscom{X}{\lambda\mu_2\dots\mu_k}{\nu_1\dots\nu_l}+\tenscom{R}{\mu_2}{\sigma\rho\lambda}\tenscom{X}{\mu_1\lambda\dots\mu_k}{\nu_1\dots\nu_l}+\dots \\ &-\tenscom{R}{\lambda}{\sigma\rho\nu_1}\tenscom{X}{\mu_1\dots\mu_k}{\lambda\nu_2\dots\nu_l}-\tenscom{R}{\lambda}{\sigma\rho\nu_2}\tenscom{X}{\mu_1\dots\mu_k}{\nu_1\lambda\dots\nu_l}-\dots  \\ &-\tenscom{T}{\lambda}{\sigma\rho}\tenscom{X}{\mu_1\dots\mu_k}{\nu_1\dots\nu_l}\end{aligned}$$
+
+### Interpreting curvature
+- As the curvature tensor is for _any connection_, intepret it as the [[#The metric connection|metric connection]]
+- The connection, as well as the _curvature_, are _derived from the metric itself_
+
+- Consider a _simple-connected region_ of a manifold
+- If a coordinate system exists such that the _components of the metric are constant_, then the Riemann curvature tensor will _always vanish_
+	- The _converse_ is true (if the Riemann tensor _vanishes_, one can _always construct_ a coordinate system where the _components of the metric are constant_)
+
+- For the components of the metric to be _constant everywhere_:
+	- The [[#The strong equivalence principle|equivalence principle]] requires that spacetime is _always locally Minkowski_
+$$g_{\mu\nu}=\eta_{\mu\nu}\hspace{1.5cm} \partial_\lambda g_{\mu\nu}=0$$
+- From this, the _metric connection is always zero_, and hence there is _zero curvature_
+
+- _Locally_, in an infinitesimal area, one can always make [[#Local Cartesian Coordinates on Riemannian manifolds|local Cartesian coordinates]]
+	- In accordance with the equivalence principle
+	- _Freedom_ to fix components and first derivative of metric tensor
+- However, the _second derivative of the metric_ cannot be made to vanish locally
+- This gives rise to _curvature_
+
+### Fermi-normal coordinates
+- One can construct coordinates along a _time-like geodesic_ such that 
+$$g_{\mu\nu}=\eta_{\mu\nu}\hspace{1.5cm} \partial_\lambda g_{\mu\nu}=0$$
+- Only _along the geodesic_
+
+- These are known as _Fermi-normal coordinates_, extending the idea of _locally_ Cartesian coordinates
+
+### Newtonian limit for free-falling
+- In the _absence_ of gravity, spacetime is _Minkowski_
+- For _weak field_, the metric is _close to Minkowski_ (locally curved)
+$$g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}\hspace{1cm}|h_{\mu\nu}|\ll1$$
+- Assume the gravitational field is _static_, hence $\partial h_{\mu\nu}/\partial x^0=0$
+- The particle is _slow-moving_ $(v\ll c)$, hence:
+$$|u^i|\ll u^0$$
+
+- In the [[#Geodesics, proper time, and affine parameters|geodesic equation]], ignore all $u^i$ terms relative to $u^0$:
+$$\frac{d^2x^\mu}{d\tau^2}+\Gamma^\mu_{00}\left(\frac{dx^0}{d\tau}\right)^2\approx 0$$
+- The relevant _connection coefficients_, to the _first order_:
+$$\displaylines{\Gamma^\mu_{00}=-\frac{1}{2}\eta^{\mu i}\pd{h_{00}}{x^i} \\ \Gamma^0_{00}=0\hspace{1.5cm}\Gamma^i_{00}=\frac{1}{2}\pd{h_{00}}{x_i}}$$
+- This gives:
+$$\frac{dx^0}{d\tau}=\text{const.}\hspace{1.5cm}\frac{d^2x^i}{d\tau^2}=-\frac{1}{2}\pd{h_{00}}{x_i}\left(\frac{dx^0}{d\tau}\right)^2$$
+- This resembles the form of the _Newtonian equation of motion_:
+$$\displaylines{\frac{d^2x^i}{dt^2}=-\pd{\Phi}{x_i} \\ g_{00}=\left(1+\frac{2\Phi}{c^2}\right)}$$
+- This gives a _small perturbation_ to the metric provided $\Phi/c^2\ll1$
+
+## Properties of the Riemann curvature tensor
+- Examine the curvature tensor with _all lower indices_:
+$$R_{\rho\sigma\mu\nu}=g_{\rho\lambda}\tenscom{R}{\lambda}{\sigma\mu\nu}$$
+
+- Using _local intertial coordinates_, one can prove its symmetry properties
+	- Use _local inertial coordinates_, where the _metric connection vanishes, but its derivative does not_
+
+- It is _symmetric in its first and second pairs of indices_
+$$R_{\rho\sigma\mu\nu}=-R_{\sigma\rho\mu\nu}=-R_{\rho\sigma\nu\mu}$$
+- _Swapping_ the first pair of indices with the second is also _symmetric_:
+$$R_{\rho\sigma\mu\nu}=R_{\mu\nu\rho\sigma}$$
+
+- The _sum of cyclic permutations of the last 3 indices_ vanishes:
+$$\displaylines{R_{\rho\sigma\mu\nu}+R_{\rho\nu\sigma\mu}+R_{\rho\mu\nu\sigma}=0 \\ R_{\rho[\sigma\mu\nu]}=0}$$
+
+- This then gives that the _total antisymmetric part_ of the tensor vanishes:
+$$R_{[\rho\sigma\mu\nu]}=0$$
+
+- One can then find that in $n$ dimensions, the _number of independent components_:
+$$\frac{n^2}{12}(n^2-1)$$
+
+- For the metric connection, it also obeys the _Bianchi identity_:
+$$\nabla_{[\lambda}R_{\rho\sigma]\mu\nu}=0$$
+## Ricci tensor, Ricci scalar, and the Einstein tensor
+- _Contractions_ of the Riemann tensor can be useful
+
+### Ricci tensor and scalar
+- Take a _contraction_ in the upper index, and the second lower index to form the _Ricci tensor_:
+$$R_{\mu\nu}=\tenscom{R}{\lambda}{\mu\lambda\nu}$$
+- For the _metric connection_, this is the _only independent contraction_
+- For this connection, it is also _symmetric_:
+$$R_{\mu\nu}=R_{\nu\mu}$$
+
+- The _contraction_ of the Ricci tensor is the _Ricci scalar_:
+$$R=\tenscom{R}{\mu}{\mu}=g^{\mu\nu}R_{\mu\nu}$$
+
+
+### Contracted Bianchi identity and Einstein tensor
+- _Contract_ the Bianchi identity _twice_:
+$$\begin{aligned}0&=g^{\nu\sigma}g^{\mu\lambda}(\nabla_\lambda R_{\rho\sigma\mu\nu}+\nabla_\rho R_{\sigma\lambda\mu\nu}+\nabla_\sigma R_{\lambda\rho\mu\nu}) \\ &=\nabla^\mu R_{\rho\mu}-\nabla_\rho R+\nabla^\nu R_{\rho\nu}\end{aligned}$$
+- Due to [[#The metric connection|metric compatibility]], the _indices on covariant derivatives_ can be _raised_
+
+- Define the _Einstein tensor_:
+$$G_{\mu\nu}=R_{\mu\nu}-\frac{1}{2}Rg_{\mu\nu}$$
+- Then the twice-contracted Bianchi identity leads to:
+$$\nabla^\mu G_{\mu\nu}=0$$
+- The Einstein tensor is _symmetric_, and _divergence-free_
+### Interpretation
+- The _curvature tensor_ contains _all required information_ for the curvature of the manifold
+- The _Ricci tensor/scalar_ could _vanish even if_ the curvature tensor is non-zero
+
+- The curvature tensor is an _intrinsic property_ of the manifold
+	- Example: a _1D manifold cannot_ be curved (e.g. circle)
+	- A _torus_ has no intrinsic curvature (a rolled-up square)
+
+- For a _2D manifold_ (e.g. 2-sphere), there is _1 independent component_, hence the _Ricci scalar_ contains the _full information_ about curvature
+
+## Geodesic deviation
+- In _Euclidean geometry_, if two lines are _initially parallel_, they will _always be parallel_
+- On a _curved space_, two _initially parallel geodesics_ will eventually _cross_
+
+- Consider a _family of geodesics_ $\gamma_s(t)$, each parametrised by an _affine parameter_ $t$, and _labelled_ by $s\in \mathbb{R}$
+- They then define a _smooth, two-dimensional surface_, with _coordinates_ $x^\mu(s,t)$ as long as the geodesics _do not cross_
+
+- From their definition, _all geodesics_ must [[#Geodesics, proper time, and affine parameters|satisfy]]:
+$$\frac{D}{Dt}\pd{x^\mu}{t}=0$$
+
+- The _tangent vectors_ to each geodesic:
+$$T^\mu=\pd{x^\mu}{t}$$
+- One can also define a _deviation vector_:
+$$S^\mu=\pd{x^\mu}{s}$$
+![[Geodesic deviation.png]]
+
+- Define a _relative velocity_ of geodesics:
+$$V^\mu=\frac{D}{Dt}S^\mu=T^\rho\nabla_\rho S^\mu$$
+- One then defines a _relative accleration_:
+$$A^\mu=\frac{D}{Dt}V^\mu=T^\rho\nabla_\rho V^\mu$$
+
+- As $S^\mu$ and $T^\mu$ are the _basis vectors_ for the surface:
+$$[S,T]=0\Longrightarrow S^\rho\nabla_\rho T^\mu=T^\rho\nabla_\rho S^\mu$$
+
+- By using definitions of the [[#The Riemann curvature tensor|curvature tensor]] and [[#Geodesics, proper time, and affine parameters|geodesics]], one can derive:
+$$A^\mu=\frac{D^2}{Dt^2}S^\mu=\tenscom{R}{\mu}{\nu\rho\sigma}T^\nu T^\rho S^\sigma$$
+
+- The _relative acceleration_ is then _proportional to the curvature_
+
+- This gives the _geodesic deviation_
+
+### Tidal effects
+- The geodesic deviation describes _relative acceleration of neighbouring free-falling particles_, due to _tidal effects_
+
+- Consider free-falling particles along geodesics $\bar{x}^\mu(\tau)$ and $x^\mu(\tau)$
+- The _connecting vector_ is then:
+$$S^\mu(\tau)=\bar{x}^\mu(\tau)-x^\mu(\tau)$$
+- One can derive the _tidal tensor_:
+$$\displaylines{A^\mu=\tenscom{S}{\mu}{\sigma}S^\sigma \\ \tenscom{S}{\mu}{\sigma}=\tenscom{R}{\mu}{\nu\rho\sigma}T^\nu T^\rho=\tenscom{R}{\mu}{\nu\rho\sigma}u^\nu u^\rho}$$
+- The _tangent vectors_ $T^\mu$ are the _4-velocities_ $u^\mu$
+
+- The tidal tensor $S_{\mu\nu}$ is _symmetric_
+
+- Given a _gravitational potential_ $\Phi$:
+$$\frac{d^2x^i}{dt^2}=-\pd{\Phi}{x^i}\Bigg|_{x}\hspace{1.5cm}\frac{d^2x^i}{dt^2}=-\pd{\Phi}{\bar{x}^i}\Bigg|_{\bar{x}}$$
+
+- Taking the _difference_, and _expanding in first order_:
+$$\frac{d^2 S^i}{dt^2}=-\pd{^2\Phi}{x^i\partial x^j}S^j$$
+- This give a form of the _tidal tensor_
+# Gravitation
+
+# The Schwarzchild solution
+

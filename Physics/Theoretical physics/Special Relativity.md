@@ -378,9 +378,8 @@ $$\frac{\gamma_u'}{\gamma_u}=\gamma(1-\beta\dot{x}_u^1)$$
 
 # Geodesics and kinetics in Minkowski space \[GR\]
 - For a _free particle_, it has _zero 4-acceleration_:
-$$\frac{du^\mu}{d\tau}=0$$
-- This derivative is _not a tensor_
-- In _global Cartesian coordinates_, as the [[General Relativity#The metric connection|metric connection]] vanishes
+$$\frac{Du^\mu}{D\tau}=0$$
+- In _global Cartesian coordinates_, as the [[General Relativity#The metric connection|metric connection]] vanishes, this reduces to $Du^\mu/D\tau=0$
 
 - The _derivative along the world-line_ (with $\tau$ as the _affine parameter_):
 $$\frac{Du^\mu}{D\tau}=0$$
@@ -397,6 +396,14 @@ $$F^\mu p_\mu=a^\mu u_\mu=0$$
 - Invariant hyperbolae
 
 # Derivatives
+- Directional derivative
+
+- Differentiation rules
+
+- d'Alembertian:
+$$\Box^2=\nabla_0^2-\nabla^2$$
+
+- Levi-Civita tensor
 
 # Stress-energy tensor
 - Recall the _energy-momentum_ 4-vector $\vec{p}$
@@ -405,6 +412,10 @@ $$\displaylines{p^\mu=(\gamma m,\gamma\bm{p}) \\ p^\mu p^\mu=m^2}$$
 - The _4-force_:
 $$f^\mu=\frac{d\vec{p}}{d\tau}=m\frac{d^2\vec{x}}{d\tau^2}$$
 # Electromgnetism
+- Electrodynamics is _inherently relativistic_
+	- The _speed of light_ is always in terms of _universal constants_
+
+## 4-potential and field tensor
 - Introduce the _4-potential_ $A_\mu$
 	- The _timelike_ component $A^0=\Phi$, the [[Electrodynamics and Optics#Electrodynamics and Maxwell's Equations|electric potential]]
 	- The _spacelike_ components $A^i=\bm{A}$, the [[Electrodynamics and Optics#The vector potential|magnetic vector potential]]
@@ -416,8 +427,19 @@ $$\displaylines{A_\mu\to A_\mu+\partial_\mu \lambda(x) \\ F_{\mu\nu}\to F_{\mu\n
 
 - _All physical quantities_ must be _gauge invariant_
 
+- The _components_ in a certain frame give:
+$$\displaylines{F^{i0}=E^i \hspace{1cm} F^{ij}=-\epsilon^{ijk}B^k \\ F^{\mu\nu}=\pmatrix{0&-E^1&-E^2&-E^3 \\ E^1&0&-B^3&B^2 \\ E^2&B^3&0&-B^1 \\ E^3&-B^2&B^1&0}}$$
+
+- Like 4-vectors, the field tensor also _Lorentz transforms_:
+$$F'^{\mu\nu}=\tenscom{\Lambda}{\mu'}{\mu}\tenscom{\Lambda}{\nu'}{\nu}F^{\mu\nu}$$
+
+- [[#The Lorentz force law]] is then expressed in terms of the field tensor:
+$$\frac{Dp^\mu}{D\tau}=qF^{\mu\nu}u_\nu$$
+- Writing out the components from above recreates the _classical result_
+
+## Maxwell's equations
 - The _antisymmetry_ of the field tensor can also be presented as:
-$$\partial_\mu F_{\nu\lambda}+\partial_\nu F_{\lambda\mu}+\partial_\lambda F_{\mu\nu}=0$$
+$$\displaylines{\partial_\mu F_{\nu\lambda}+\partial_\nu F_{\lambda\mu}+\partial_\lambda F_{\mu\nu}=0 \\ \partial_{[\mu}F_{\nu\lambda]}=0}$$
 - This _implies_:
 $$\displaylines{\epsilon^{ijk}\partial_j E_k+\partial_0 B^i=0 \\ \partial_i B^i=0}$$
 - These are _Faraday's Law_ and _Gauss' Law for magnetic fields_ from _Maxwell's equations_
@@ -425,3 +447,17 @@ $$\displaylines{\epsilon^{ijk}\partial_j E_k+\partial_0 B^i=0 \\ \partial_i B^i=
 - Introduce the _current 4-vector_ $\vec{J}$:
 	- The _timelike_ component $J^0=\rho$ is the _charge density_
 	- The _spacelike_ component $J^i=\bm{J}$, the _current density_
+- The 4-vector is _divergenceless_, giving the _continuity equation_:
+$$\partial_\mu J^\mu=0$$
+
+- From [[Classical Field Theory#Electromagnetic fields|the Euler-Lagrange equation for the relevant Lagrangian]]:
+$$\displaylines{\partial_\mu F^{\mu\nu}=J^\nu \\ \partial_\mu F^{\mu0}=\partial_i E^i=J^0=\rho \\ \partial_\mu F^{\mu j}=J^j \Longrightarrow \epsilon^{jik}\partial_i B_k=J^j+\partial_0 E^j}$$
+## Gauge
+- The [[Electrodynamics and Optics#Gauge transformations|Lorenz gauge]]:
+$$\partial_\mu A^\mu=0$$
+- In this gauge, the equation $\nabla_\mu F^{\mu\nu}=J^\nu$ can be _simplified_:
+$$\Box^2 A^\mu=0$$
+
+## In curved spacetime \[GR\]
+- In _curved spacetime_, convert to _covariant derivatives_:
+$$\displaylines{\nabla_\mu F_{\nu\lambda}+\nabla_\nu F_{\lambda\mu}+\nabla_\lambda F_{\mu\nu}=0 \\ \nabla_\mu F^{\mu\nu}=J^\nu}$$

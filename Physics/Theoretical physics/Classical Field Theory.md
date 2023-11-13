@@ -347,7 +347,7 @@ $$\partial_\lambda M^{\lambda\mu\nu}=\delta^\mu_\lambda T^{\lambda\nu}-\delta^\n
 $$J^{\mu\nu}=\int d^3\bm{r}M^{0\mu\nu}$$
 
 - The _total angular momentum_ includes both the _orbital_ and _intrinsic_ parts
-- In the _rest frame_ of an object, the _intrinsicangular momentum_ is known as the _spin_
+- In the _rest frame_ of an object, the _intrinsic angular momentum_ is known as the _spin_
 
 - The _spin 4-vector_:
 $$S^\mu=-\frac{1}{2}\epsilon^{\nu\alpha\beta}U_{\nu}J_{\alpha\beta}$$
@@ -374,6 +374,7 @@ $$\Ham=\pi^*\pi+m^2\varphi^*\varphi+\frac{\lambda}{2}(\varphi^*\varphi)^2$$
 - For a positive-definite, $\Ham$, $\lambda>0$
 - This also gives the _possibility_ that $m^2<0$
 - With $-m^2>0$, one _shifts_ the state of _minimum energy_
+	- The original equilibrium state is now an _unstable equilibrium_
 - There are then _infinitely many ground states_ given:
 $$\varphi_0^*\varphi_0=\frac{-m^2}{\lambda}$$
 
@@ -383,7 +384,7 @@ $$\varphi_0^*\varphi_0=\frac{-m^2}{\lambda}$$
 
 - Choose the state (and choose _sign convention_ such that $m^2>0$)
 $$\varphi_0=\sqrt{\frac{m^2}{\lambda}}$$
-- Given a _variation_ in the field:
+- Given a _complex variation_ in the field, dependent on the _new, real fields_ $\chi_1$ and $\chi_2$:
 $$\varphi=\varphi_0+\frac{1}{\sqrt{2}}(\chi_1+i\chi_2)$$
 - One can then write the Lagrangian and Hamiltonian as:
 $$\displaylines{\Lagr=\frac{1}{2}(\partial^\mu\chi_1)(\partial_\mu\chi_1)+\frac{1}{2}(\partial^\mu\chi_2)(\partial_\mu\chi_2)-V(\varphi_0)-m_1\chi_1^2+O(\chi^3) \\ \\ \Ham=}$$
