@@ -1,5 +1,5 @@
 
-- _emerge_ from [[Classical Thermodynamics|Thermodynamics]]
+- Main ideas _emerge_ from [[Classical Thermodynamics|Thermodynamics]]
 - It deals with _energy_ in _large, (non-)interacting systems_
 
 # Thermodynamics 
@@ -728,7 +728,7 @@ $$B_2=bkT-\varepsilon$$
 - _Quadrupolar_ order parameter
 	- Liquid crystal: _degree of alignment_ $\mean{3\cos^2\theta-1}/2$
 
-## Free energy of a binary mixture
+## The binary mixture
 - Let there be two species, $A$ and $B$:
 $$\displaylines{N=N_A+N_B \\ \phi_A=\frac{N_A}{N}\hspace{1.5cm}\phi_B=\frac{N_B}{N}=1-\phi_A}$$
 - The [[#Mixtures of an ideal gas|entropy of mixing]]:
@@ -752,7 +752,7 @@ $$\begin{aligned}\Delta F_\text{mix}&=\Delta U_\text{mix}-T\Delta S_\text{mix} \
 
 - For _large_ $\chi$, the mixture tends to _phase-separate_ as there are _multiple minima in free energy_:
 
-## The binodal and spinodal
+### The binodal and spinodal
 - Binodal/co-existence curve
 
 - Number of extrema:
@@ -772,7 +772,7 @@ $$\chi=\frac{1}{2\phi(1-\phi)}$$
 - The region _above the spinodal_ is _unstable_ and tends to phase separate
 	- The _final concentrations of phases_ are on the _binodal_
 
-## The T-c phase diagram
+### The T-c phase diagram
 - Use the fact that $T\sim 1/\chi$
 ![[Phase separation T-c.png]]
 - The region _below the spinodal_ is _unstable_ and will phase-separate
@@ -782,20 +782,99 @@ $$\chi=\frac{1}{2\phi(1-\phi)}$$
 
 - _Critical temperature_
 
-## Expansion of free energy
-- For a small perturbation in $\phi$, _expand_ the free energy from some _initial_ concentration $\phi_X$
+### Expansion of free energy from equilibrium
+- For a small perturbation in $\phi$, _expand_ the free energy from some _initial_ concentration $\phi_X$, where the system is in _equilibrium_
 $$\displaylines{F(\phi)=NkT[\phi\ln\phi+(1-\phi)\ln(1-\phi)+\chi\phi(1-\phi)] 
 \\ \rho=\phi-\phi_X \\ \frac{F(\phi)-F(\phi_X)}{NkT}\approx-\frac{1-2\chi\phi_X(1-\phi_X)}{2\phi_X(1-\phi_X)}\rho^2-\frac{1-2\phi_X}{6\phi_X^2(1-\phi_X)^2}\rho^3+\frac{1-3\phi_X+3\phi_X^2}{12\phi_X^3(1-\phi_X)^2}\rho^4}$$
 
 - There is _no linear term_
+	- At $F(\phi_X)$, the system is in _equilibrium_
 
 - For $\phi_X=1/2$, the _cubic term disappears_
 	- Determines the _symmetry_ of the expansion
 
-- The _sign_ of the _quadratic term_ can _change with $\chi$
+- The _sign and magnitude_ of the _quadratic term_ can _change with $\chi$
 - Its sign determines _stability_
 	- For a _positive_ term, it is _stable_
 	- For a _negative term_, the perturbation _grows_
 
 - The _quartic term_ is _always positive_
 	- Makes sure the perturbation _does not go to infinity_
+
+### From the critical point
+- At this _critical point_ $\phi_X=1/2$:
+$$\frac{F(\phi)-F(\phi_X)}{NkT}=(2-\chi)\rho^2+\frac{1}{6}\rho^4$$
+- Point where the system again reaches _equilibrium_ after the perturbation:
+$$\rho_\text{eq}=\sqrt{3(\chi-2)}$$
+- This _only exists for $\chi>2$_
+	- Phase separation _from the critical point_ is _possible_
+	- A _negative quadratic term_
+- There is a _continuous change in the equilibrium_
+	- Said to be _second order_
+
+- _Away_ from the critical point, there is a _discontinuous change_ in the equilibrium value
+	- Said to be _first order_
+
+## Landau theory
+- For any system, identify an _order parameter_
+	- Scalar: _density_
+	- Vector: _magnetisation_
+- Assume that _near a critical point_, the order parameter is _small_
+- One can then do a _Taylor expansion_ of free energy
+	- The coefficients are then dependent on _temperature_
+
+$$F=F_0+A\rho^2+B\rho^3+C\rho^4$$
+- In _equilibrium_, $F$ is a minimum, hence there is _no linear term_
+	- Unless there is some _external field_ (e.g. magnetic)
+
+- $A,B,C$ are _functions of temperature_
+- Considering the behaviour _near the critical point_, write the coefficients as:
+$$F=F_0+a(T-T_c)\rho^2-b\rho^3+c\rho^4$$
+
+### Second-order phase transitions
+- When there is _no cubic term_, the free energy describes a _second-order phase transition_ as the equilibrium values evolve _continuously across the transition_
+$$\Delta F=a(T-T_c)\rho^2+c\rho^4$$
+
+- At equilibrium, $\partial F/\partial \rho=0$:
+$$\rho_\text{eq}=\pm\sqrt{-\frac{a(T-T_c)}{2c}}$$
+- At $T<T_c$, it _branches into separate values_
+- At $T>T_c$, it _remains at zero_
+
+- One can find $F_\text{eq}$ and $S_\text{eq}$ as a function of $T<T_c$:
+$$F_\text{eq}=-\frac{a^2(T-T_c)^2}{4c}\hspace{1.5cm}S_\text{eq}=$$
+
+- There is a _discontinuity in heat capacity_ at $T=T_c$
+- The discontinuity in _second derivative of free energy_ classifies this as _second-order_
+
+### First-order phase transitions
+$$\Delta F=a(T-T_c)\rho^2-b\rho^3+c\rho^4$$
+- At some temperature $T_1>T_c$, separate _minima and maxima_ will develop for $F>F_0$ at some $\rho>0$
+- This minimum will then move _lower_, until $T=T^*$, where $\Delta F=0$ at that minmum
+- Then at $T=T_c$, the curve _flattens at $\rho=0$_
+- Then the "external" minimum becomes the _only stable equilibrium_ for $T<T_c$
+
+- Extrema of the free energy, for _non-zero_ $\rho$:
+$$\displaylines{4c\rho^2-3b\rho+2a(T-T_c)=0 \\ \rho_\pm=\frac{3b}{8c}\pm\frac{\sqrt{9b^2-32ac(T-T_c)}}{8c}}$$
+- This gives the _non-zero extrema_ as long as:
+$$T<T_1\hspace{1.5cm}9b^2=32ac(T_1-T_c)$$
+- At $T=T_c$, $\rho_-=0$, meaning the _maximum is at $\rho=0$_
+
+- At $T^*$, where $T_c<T^*<T_1$, $\Delta F(\rho_+)=0$
+- There is a _discontinuous jump in equilibrium order parameter_ at $T=T^*$
+- There is still a _metastable state_, as there is a _barrier_ to the new equilibrium
+	- The system is _supercooled_ for $T^*\leq T<T_c$
+
+- Plot the _most stable free energy_ as a function of $T$
+- There is a _jump in entropy_ (the first derivative)
+- Hence, it is a _first-order phase transition_
+	- Also features the _jump in order parameter_
+
+- The _accuracy_ of the expansion depends on the _magnitude of the jump_
+
+### Variations on the expansion
+- With an _external field_ (e.g. a _magnetic field_)
+$$\Delta F=-h\rho+a(T-T_c)\rho^2-b\rho^3+c\rho^4$$
+
+- A _negative quartic term_:
+$$\Delta F=a(T-T_c)\rho^2-c\rho^4+d\rho^6$$
+- This also creates a _first-order phase transition_ but with only _even powers_

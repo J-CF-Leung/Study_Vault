@@ -487,6 +487,8 @@ $$\displaylines{\partial_\rho g_{\mu\nu}=\Gamma^\lambda_{\rho\mu} g_{\lambda\nu}
 $$g^{\mu\nu}\partial_\rho g_{\mu\nu}=2\Gamma^\lambda_{\rho\lambda}$$
 - Using _Jacobi's formula_ $|\dunderline{M}|^{-1}\partial_\rho|\dunderline{M}|=\text{Tr}(\dunderline{M}^{-1}\partial_\rho\dunderline{M})$:
 $$\Gamma^\lambda_{\rho\lambda}=\frac{1}{2}g^{-1}\partial_\rho g=\frac{1}{\sqrt{|g|}}\partial_\rho \sqrt{|g|}$$
+
+- One can also obtain them from the [[#Geodesics, proper time, and affine parameters|geodesic equation]] with the Lagrangian method
 ### For local Cartesian coordinates
 - For _any metric_, one can make it [[#Local Cartesian Coordinates on Riemannian manifolds|locally Cartesian]]
 - As the _derivatives vanish_, one gets that _the metric connection vanishes_
@@ -562,6 +564,8 @@ $$\delta\tau=\frac{1}{2}\int\frac{1}{\sqrt{f}}\delta f\,du$$
 $$I=\frac{1}{2}\int f\,d\tau$$
 - By adding some _variation_ in $\delta x^\mu$, and _integrating by parts_, one recovers the _geodesic equation_ as:
 $$\displaylines{x^\mu\to x^\mu+\delta x^\mu \\ g_{\mu\nu}\to g_{\mu\nu}+(\partial_\sigma g_{\mu\nu})\delta x^\sigma \\ \frac{d^2x^\mu}{d\tau^2}+\Gamma^\mu_{\rho\sigma}\frac{dx^\rho}{d\tau}\frac{dx^\sigma}{d\tau}=0}$$
+- One can also use this method to _obtain the Christoffel symbols_ by extremising the path
+
 - Therefore, the geodesic equation can be _parametrised by proper time_
 - In fact, it can be parametrised with _any parameter_ $\lambda$ that _satisfies_:
 $$\tau\to\lambda=a\tau+b$$
