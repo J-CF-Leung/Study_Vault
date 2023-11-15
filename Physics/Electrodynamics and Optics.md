@@ -965,3 +965,102 @@ $$A_\text{eff}(\theta,\phi)=\frac{\lambda^2}{4\pi}G(\theta,\phi)$$
 $$A_\text{eff}(\theta,\phi)=\frac{\lambda^2}{4\pi}G(\theta,\phi)$$
 - This is _independent of antenna construction_
 - A high _radiative efficiency_ will give a high _detection sensitivity_
+
+## Centre-fed linear antenna
+- A _practical antenna_ has _finite size_
+
+- Example: an _open-ended_ transmission line, driven by an _oscillating voltage_
+- There are then _current nodes/voltage antinodes_ at the _end_ of the line
+
+- In the _far-field_ case, $r\gg L$:
+$$\mean{N(r,\theta)}=$$
+- As expected, there is _no $\phi$ dependence_
+
+- It has _resonant_ behaviour with $L$
+- The _half-wave_ antenna has $L=\lambda/2$, with gain:
+$$G_{\lambda/2}(\theta)=$$
+- It is _maximal_ in the _equatorial plane_, but is more _confined_
+- It has a bigger _radiation resistance_ than the Hertzian dipole
+	- More _efficient_, and more easily _matched_
+
+## Antenna arrays
+- Consider an _array of dipole antennas_, _oriented_ parallel to the $z-$axis and _arranged regularly_ along the $y-$axis with spacing $a$
+- They are driven _in phase_ at frequency $\omega$
+
+- The total $\bm{E}$ on the $xy-$plane $(\theta=\pi/2)$ is then affected by the _phase difference_ $ka\sin\phi$:
+$$\bm{E}\sim\sum_{j=1}^\infty \exp[-ika\sin\phi(j-1)]=\frac{1-\exp[-iNka\sin\phi]}{1-\exp[-ika\sin\phi]}$$
+
+- The Poynting flux has an _extra $\phi-$dependent factor_, similar to [[Optics#Diffraction|N-slit diffraction]]
+- The array produces _directed beams_
+	- The _width decreases_ as the _number of dipoles increases_
+	- The direction can be _controlled_ by modifying the _spacing_
+
+- As $A_\text{eff}(\theta,\phi)\sim G(\theta.\phi)$, they also act as _directional receivers_
+
+- Directional antennas can also be acheived with a _single dipole_ using a _conductive reflector_, and _spaced director elements_ (passive dipoles, _absorbing and re-emitting_ radiation)
+- This achieves a _highly directional output_
+- There is a _forward lobe_, much _stronger_ than the backward lobe
+
+# Light scattering
+- If electromagnetic radiation is incident on a _particle_, it is _scattered_ in different directions
+
+- Consider a _small particle_ with $a\ll\lambda$ so phase variations _across_ the particle are negligible
+- If it is _polarisable_, then it [[#Electrical dipole radiation term|radiates]] with power:
+$$\mean{P}=\frac{\mu_0\mean{\ddot{p}^2}}{6\pi c}$$
+- The _cross-section_ is the _ratio_ of $\mean{P}$ to the _incident flux_:
+$$\sigma=\frac{\mean{P}}{E_0^2/(2\mu_0c)}=\frac{\mu_0^2\mean{\ddot{p}^2}}{3\pi E_0^2}$$
+- It is typically _independent_ of $E_0$
+
+## Polarisation of scattered waves
+- When light is scattered, the _polarisation is altered_
+
+- Consider radiation _in the scattering plane_
+![[Scattering plane.png]]
+$$N_1=\frac{}{}\sin^2(\pi/2-\alpha)=\frac{}{}\cos^2(\alpha)$$
+
+- Then consider polarisation _perpendicular to the scattering plane_
+![[Scattering perpendicular.png]]
+$$N_2=\frac{}{}$$
+- For _unpolarised incoming radiation_ (an _incoherent equal superposition_):
+$$\mean{\ddot{p}_x^2}=\mean{\ddot{p}_z^2}=\frac{\mean{\ddot{\bm{p}}^2}}{2}$$
+
+- Write $N_2$ as $N_1+(N_2-N_1)$, as it is larger than $N_1$
+	- There are _two mutually incoherent fluxes_ of magnitude $N_1$, corresponding to one _unpolarised beam_ of intensity $2N_1$
+	- There is remaining _polarised flux_ of $N_2-N_1$
+- For _unpolarised light_, the _degree of polarisation_ after scattering:
+$$P=\frac{I_\text{pol}}{I_\text{tot}}=\frac{N_2-N_1}{N_2+N_1}=\frac{1-\cos^2\alpha}{1+\cos^2\alpha}$$
+
+- There is _no scattered flux parallel to the induced dipole moment_
+- This gives the [[#Boundary conditions|Brewster condition]], where the _reflected and refracted beams are perpendicular_
+
+## Rayleigh scattering
+- Rayleigh scattering comes from _small neutral particles_
+- For each particle, the dipole moment has _amplitude_ $p_0=\alpha E_0$
+- The scattering cross-section is:
+$$\sigma=\frac{\mu_0\omega^4p_o^2/(12\pi c)}{c\epsilon_0E_0^2/2}=\frac{\mu_0^2\omega^4\alpha^2}{6\pi}=\frac{8\pi^3}{3}\mu_0^2c^4\alpha^2\frac{1}{\lambda^4}$$
+- The $\lambda^{-4}$ dependence gives _stronger scattering for short wavelengths_
+
+## Thomson scattering
+- Consider $z-$polarised EM radiation incident on a _free electron_
+	- The _Lorentz force_ is typically much _weaker_ and is ignored
+- The equation of motion:
+$$\displaylines{\ddot{z}=-\frac{e}{m_e}E_0\exp(-i\omega t) \\ \ddot{p}=-e\ddot{z}=\frac{e^2}{m_e}E_0\exp(-i\omega t)=-\omega^2p_0\exp(-i\omega t)}$$
+- The _time-averaged scattered power_:
+$$\mean{P}=$$
+- The _Thomson cross-section_ is then:
+
+- For _high-frequency light_, one must consider _photon momentum_, leading to _Compton scattering_
+
+- Consider a _classical electron radius_ $r_e$ where the _electrical self-energy_ is equivalent to the _rest mass energy_:
+$$\frac{e^2}{4\pi\epsilon_0r_e}=m_ec^2$$
+- The Thompson scattering cross-section:
+$$\sigma_T=\frac{8\pi}{3}r_e^2$$
+
+## Dense media
+- Consider when _many scatterers are present_
+
+- Light scattered by one particle can then be _incoherently scattered by another particle_
+- For a medium where particles have cross-section $\sigma$, mean _separation_ $d$, with _linear dimension_ $L$
+- The chance of a _single scattering event_:
+$$\frac{N\sigma}{L}\sim\frac{\sigma L}{d^3}$$
+- When $\sigma L/d^3\ll1$, one can _ignore multiple scattering_

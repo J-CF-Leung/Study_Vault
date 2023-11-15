@@ -1,4 +1,5 @@
-emerge_ from [[Classical Thermodynamics|Thermodynamics]]
+
+- _emerge_ from [[Classical Thermodynamics|Thermodynamics]]
 - It deals with _energy_ in _large, (non-)interacting systems_
 
 # Thermodynamics 
@@ -463,11 +464,12 @@ $$\Phi=\sum_k\Phi_k$$
 - _Classical limit_, where $\beta(\varepsilon_k-\mu)\gg1$
 $$\Xi_k\approx 1+\exp[-\beta(\varepsilon_k-\mu)]$$
 
+## Quantum particles
 - Below the _quantum threshold_, where $N\lambda^3/V\gg1$, the effects of particles being _bosons_ and _fermions_ emerge
 - For _bosons_:
-$$\displaylines{\Xi_k=\sum_{n=0}^\infty\exp[-\beta(\varepsilon_k-\mu)n]=\frac{1}{1-\exp[-\beta(\varepsilon_k-\mu)]} \\ \Phi_k=kT\ln[1-\exp(-\beta\varepsilon_k+\beta\mu)] \\ \mean{n_k}=\pd{\Phi_k}{\mu}=\frac{1}{1-\exp[\beta(\varepsilon_k-\mu)]}}$$
+$$\displaylines{\Xi_k=\sum_{n=0}^\infty\exp[-\beta(\varepsilon_k-\mu)n]=\frac{1}{1-\exp[-\beta(\varepsilon_k-\mu)]} \\ \Phi_k=kT\ln[1-\exp(-\beta\varepsilon_k+\beta\mu)] \\ \mean{n_k}=\pd{\Phi_k}{\mu}=\frac{1}{\exp[\beta(\varepsilon_k-\mu)]-1}}$$
 - For _fermions_:
-$$\displaylines{\Xi_k=\sum_{n=0}^1\exp[-\beta(\varepsilon_k-\mu)n]=1+\exp[-\beta(\varepsilon_k-\mu)] \\ \Phi_k= \\ \mean{n_k}=\frac{1}{1+\exp[\beta(\varepsilon_k-\mu)]}}$$
+$$\displaylines{\Xi_k=\sum_{n=0}^1\exp[-\beta(\varepsilon_k-\mu)n]=1+\exp[-\beta(\varepsilon_k-\mu)] \\ \Phi_k= \\ \mean{n_k}=\frac{1}{\exp[\beta(\varepsilon_k-\mu)]+1}}$$
 
 - For _bosons_ at _low temperatures_, $\mean{n_k}$ can start to _diverge_
 	- This gives rise to the _Bose-Einstein condensate_
@@ -708,3 +710,92 @@ $$p=-\pd{F}{V}=\frac{NkT}{V-Nb}-\varepsilon\frac{N^2}{V^2}$$
 $$p\approx\frac{NkT}{V}+\frac{N^2}{V^2}(bkT-\varepsilon)$$
 - The second virial coefficient:
 $$B_2=bkT-\varepsilon$$
+
+# Phase equilibria and transitions
+- In a _van der Waals gas_, one can find _phase behaviour_ between _liquid and gas_
+	- One can draw a _phase diagram_
+	- Phase boundaries given by _Clausius-Clapeyron relation_
+
+- In Bose gases, there can be a _condensate phase_
+
+- One can characterise phases with an _order parameter_
+
+- _Scalar_ order parameters
+	- Liquid-gas: _difference in density_
+	- Binary mixture: _difference in concentration_
+- _Vector_ order parameter
+	- Array of magnetic dipoles: _magnetisation_
+- _Quadrupolar_ order parameter
+	- Liquid crystal: _degree of alignment_ $\mean{3\cos^2\theta-1}/2$
+
+## Free energy of a binary mixture
+- Let there be two species, $A$ and $B$:
+$$\displaylines{N=N_A+N_B \\ \phi_A=\frac{N_A}{N}\hspace{1.5cm}\phi_B=\frac{N_B}{N}=1-\phi_A}$$
+- The [[#Mixtures of an ideal gas|entropy of mixing]]:
+$$\Delta S_\text{mix}=-Nk_B[\phi\ln\phi+(1-\phi)\ln(1-\phi)]$$
+- Account for _pair interactions_, using the [[#Virial expansion|second virial coefficient]]
+	- Number of $A-A$ pairs: $N\phi_A^2/2$
+	- Number of $A-B$ pairs: $N\phi_A\phi_B$
+- The _difference in internal energy from mixing_:
+	- First collection of terms: pair interaction in _mixed state_
+	- Second collection of terms: pair interactions in the _phase-separated state_
+	- Factor of 2 accounted for in _interaction energy_
+$$\begin{aligned}\Delta U_\text{mix}&=N[\varepsilon_{AA}\phi^2+\varepsilon_{BB}(1-\phi)^2+2\varepsilon_{AB}\phi(1-\phi)] -N[\varepsilon_{AA}\phi+\varepsilon_{BB}(1-\phi)] \\ &=Nk_BT\chi\phi(1-\phi)\end{aligned}$$
+- Define the _Flory parameter_ $\chi$ quantifying the _differences in interaction energy_
+$$\chi=\frac{1}{k_BT}[2\varepsilon_{AB}-\varepsilon_{AA}-\varepsilon_{BB}]$$
+- A _positive_ parameter means the species are likely to _repel_ each other and _de-mix/phase separate_
+
+- The _difference in free energy_:
+$$\begin{aligned}\Delta F_\text{mix}&=\Delta U_\text{mix}-T\Delta S_\text{mix} \\ &=NkT[\phi\ln\phi+(1-\phi)\ln(1-\phi)+\chi\phi(1-\phi)]\end{aligned}$$
+![[Phase separation.png]]
+- As expected, for _small or negative_ $\chi$, it is favourable to _mix_
+
+- For _large_ $\chi$, the mixture tends to _phase-separate_ as there are _multiple minima in free energy_:
+
+## The binodal and spinodal
+- Binodal/co-existence curve
+
+- Number of extrema:
+$$\pd{F}{\phi}=\chi(1-2\phi)-\ln\left(\frac{1-\phi}{\phi}\right)=0$$
+- The _stability_ of the extrema:
+$$\pd{^2F}{\phi^2}=-2\chi+\frac{1}{\phi(1-\phi)}$$
+- For _large enough_ $\chi$, the extremum at $\phi=0.5$ will become _unstable_
+- At some point, it transitions to some _stable region_ near the minima
+![[Phase stability.png]]
+
+- The _line of inflection points_:
+$$\chi=\frac{1}{2\phi(1-\phi)}$$
+- The binodal and spinodal:
+![[Binodal and spinodal 1.png]]
+- They _touch_ at a _critical point_ at $\phi=1/2$
+
+- The region _above the spinodal_ is _unstable_ and tends to phase separate
+	- The _final concentrations of phases_ are on the _binodal_
+
+## The T-c phase diagram
+- Use the fact that $T\sim 1/\chi$
+![[Phase separation T-c.png]]
+- The region _below the spinodal_ is _unstable_ and will phase-separate
+	- The _final concentrations of phases_ are on the _binodal_
+- One can _change stability of the mixture_ by simply _raising/lowering the temperature_
+	- By _lowering temperature_, the entropy of mixing makes it _less favourable_
+
+- _Critical temperature_
+
+## Expansion of free energy
+- For a small perturbation in $\phi$, _expand_ the free energy from some _initial_ concentration $\phi_X$
+$$\displaylines{F(\phi)=NkT[\phi\ln\phi+(1-\phi)\ln(1-\phi)+\chi\phi(1-\phi)] 
+\\ \rho=\phi-\phi_X \\ \frac{F(\phi)-F(\phi_X)}{NkT}\approx-\frac{1-2\chi\phi_X(1-\phi_X)}{2\phi_X(1-\phi_X)}\rho^2-\frac{1-2\phi_X}{6\phi_X^2(1-\phi_X)^2}\rho^3+\frac{1-3\phi_X+3\phi_X^2}{12\phi_X^3(1-\phi_X)^2}\rho^4}$$
+
+- There is _no linear term_
+
+- For $\phi_X=1/2$, the _cubic term disappears_
+	- Determines the _symmetry_ of the expansion
+
+- The _sign_ of the _quadratic term_ can _change with $\chi$
+- Its sign determines _stability_
+	- For a _positive_ term, it is _stable_
+	- For a _negative term_, the perturbation _grows_
+
+- The _quartic term_ is _always positive_
+	- Makes sure the perturbation _does not go to infinity_
