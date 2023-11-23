@@ -238,7 +238,7 @@ $$\ket{\psi(t)}=\sum_{m_s}c_{m_s}\exp(im_s\omega_st)\ket{sm_s}$$
 $$\mean{\hat{\bm{S}}}=\Braket{\psi(t)|\hat{\bm{S}}|\psi(t)}=(A_{xy}\cos(\omega_st), B_{xy}\sin(\omega_st),m_s\hbar)$$
 - This matches _predictions from Ehrenfest's Theorem_
 
-## Magnetic moment of nuclei
+# Magnetic moment of nuclei
 - The _proton_ has a charge, while the _neutron_ is _neutral_, hence one might expect an _analogy_ with the electron, where the proton has a moment while the neutron doesn't
 - However, _both protons and neutrons have non-zero magnetic moments_
 - Introduce the _nuclear magneton_ $\mu_N$:

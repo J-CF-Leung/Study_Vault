@@ -49,30 +49,19 @@ $$\displaylines{\Delta F=0,\pm1\hspace{1cm}F_1+F_2\geq1\hspace{1cm}\Delta m_F=0,
 	- Between $j=0$ and $j=1$, _all transitions_ are allowed
 	- Between $j=1$ and $j=2$, 6 of the 15 possible transitions are _disallowed_ (e.g. $m_j=0\to2$)
 
-# Landé projection formula and magnetic moments
-
-## The projection formula
-- The [[Symmetries in quantum mechanics|Wigner-Eckart Theorem]] applied to operator $\hat{\bm{J}}$
-$$\braket{\alpha''j''m''|\hat{J}_m|\alpha'j'm'}=\langle\alpha''j''||\hat{\bm{J}}||\alpha' j'\rangle\braket{1m;j'm'|j''m''}$$
-- The LHS is only _non-zero_ for $j'=j''$
-- Setting $\alpha'=\alpha''$:
-$$\displaylines{\braket{\alpha'j'm''|\hat{V}_m|\alpha'j'm'}=\langle \alpha'j'||\hat{V}_m||\alpha'j'\rangle\braket{1m;j'm'|j'm''} \\ \braket{\alpha'j'm''|\hat{J}_m|\alpha'j'm'}=\langle \alpha'j'||\hat{J}_m||\alpha'j'\rangle\braket{1m;j'm'|j'm''}}$$
-- Simplifying notation, writing the _ratio_ of the reduced matrix elements as $C(\alpha j)$:
-$$\braket{\alpha jm'|\hat{\bm{V}}|\alpha jm}=C(\alpha j)\braket{\alpha jm'|\hat{\bm{J}}|\alpha jm}$$
-- Consider the _matrix element_:
-$$\begin{aligned}\braket{\alpha jm|\hat{\bm{V}}\cdot\hat{\bm{J}}|\alpha jm}&=\sum_k\braket{\alpha jm|\hat{V}_k\hat{J}_k|\alpha jm} \\ &=\sum_{k,m',j'}\braket{\alpha jm|\hat{V}_k|\alpha j'm'}\braket{\alpha j'm'|\hat{J}_k|\alpha jm}\end{aligned}$$
-- From the orthogonality of _eigenstates_, and using the relation above:
-$$\braket{\alpha jm|\hat{\bm{V}}\cdot\hat{\bm{J}}|\alpha jm}=C(\alpha j)\hbar^2j(j+1)$$
-
-- From this, one gets the _Landé projection formula_:
-$$\braket{\alpha jm'|\hat{\bm{V}}|\alpha jm}=\frac{\braket{\alpha jm|\hat{\bm{V}}\cdot\hat{\bm{J}}|\alpha jm}}{\hbar^2 j(j+1)}\braket{\alpha jm'|\hat{\bm{J}}|\alpha jm}$$
-
-- Taking the $z-$component:
-$$\braket{\alpha jm'|\hat{V}_z|\alpha jm}=\frac{\braket{\alpha jm|\hat{\bm{V}}\cdot\hat{\bm{J}}|\alpha jm}}{\hbar^2 j(j+1)}m\hbar\delta_{m'm}$$
-- This gives the fact that for a _given_ $j$, $\hat{V}_z$ is _diagonal_ w.r.t. $m_j$
-
-## Combining magnetic moments
-
 # The helium atom
+- Assume _no relativistic effects_, or _spin-orbit interactions_
+- Ignore _nuclear mass and spin_
+
+- Hamiltonian for the _electrons_:
+$$\displaylines{\hat{H}(\bm{r}_1,\bm{r}_2)=-\frac{\hbar^2}{2m_e}(\nabla_1^2+\nabla_2^2)-\frac{e^2}{4\pi\epsilon_0}\left(\frac{Z}{r_1}+\frac{Z}{r_2}-\frac{1}{r_{12}}\right) \\ r_{12}=|\bm{r}_1-\bm{r}_2|}$$
+- There is _no analytic solution_
+
+- Strategy:
+	- Assume $1/r_{12}$ _does not exist_ (the _zeroth-order_ helium atom)
+	- Apply the [[Approximation Methods#Variational method|variational method]]
+
+## The zeroth-order atom
+
 
 # Multi-electron atoms

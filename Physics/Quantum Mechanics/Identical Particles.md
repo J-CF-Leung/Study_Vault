@@ -82,14 +82,15 @@ $$\displaylines{\ket{a\uparrow}=\psi_a(\bm{r})\ket{\uparrow}\equiv\ket{a(\bm{r})
 - Therefore, they must occupy _different spin states_:
 $$\ket{\psi}=\ket{a}_1\ket{a}_2\otimes\frac{1}{\sqrt{2}}\left(\ket{\uparrow}_1\ket{\downarrow}_2-\ket{\uparrow}_2\ket{\downarrow}_1\right)$$
 - Their _total spin_ is then zero
+- Manifestation of the _Pauli exclusion principle_ (same spatial state _forces_ different spin states)
 
 - Suppose they are in _distinct spatial states_, $\ket{a(\bm{r})}$ and $\ket{b(\bm{r})}$
 - Take states with the _same spin_:
-$$\displaylines{\ket{\psi}_{\uparrow\uparrow}= \\ \ket{\psi}_{\downarrow\downarrow}=}$$
+$$\displaylines{\ket{\psi}_{\uparrow\uparrow}=\ket{a\uparrow}\ket{b\uparrow} \\ \ket{\psi}_{\downarrow\downarrow}=\ket{a\downarrow}\ket{b\downarrow}}$$
 - These have a _total spin_ of $S=1$, with $m_S=\pm1$
 
 - For states with _different spins_, form _linear combinations_ such that they are _eigenstates_ of [[Angular momentum in quantum mechanics#Addition of angular momenta|total spin]]:
-$$\displaylines{\ket{\psi}_-= \\ \ket{\psi}_+=}$$
+$$\displaylines{\ket{\psi}_-=\frac{1}{\sqrt{2}}\left[\ket{a\uparrow}\ket{b\downarrow}+\ket{a\downarrow}\ket{b\downarrow}\right] \\ \ket{\psi}_+=\frac{1}{\sqrt{2}}\left[\ket{a\uparrow}\ket{b\downarrow}-\ket{a\downarrow}\ket{b\downarrow}\right]}$$
 - The upper state has $S=1$, with $m_S=0$
 - The lower state has $S=0$, with $m_S=0$
 

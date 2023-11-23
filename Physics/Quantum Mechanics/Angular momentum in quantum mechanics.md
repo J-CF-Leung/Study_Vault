@@ -6,7 +6,6 @@
 
 - It is also convenient to define a _total angular momentum_ $\hat{\bm{J}}\equiv\hat{\bm{L}}+\hat{\bm{S}}$
 
-- [x] Start addition of angular momentum ⏫ 📅 2023-10-10 ✅ 2023-10-11
 # Orbital angular momentum
 - The _orbital_ angular momentum is _analagous to classical angular momentum_:
 $$\displaylines{\hat{\bm{L}}=\hat{\bm{X}}\wedge\hat{\bm{P}} \hspace{1cm} \hat{L}_i=\epsilon_{ijk}\hat{X}_j\hat{P}_k}$$
@@ -264,3 +263,98 @@ $$\ket{00}=\frac{1}{\sqrt{2}}\left(\ket{\uparrow}\ket{\downarrow}-\ket{\downarro
 $$\ket{jm}=\ket{00}\otimes\ket{jm}$$
 - This correspods to Clebsch-Gordan coefficients:
 $$\braket{00;jm|j'm'}=\delta_{jj'}\delta_{mm'}$$
+
+# Landé projection formula and magnetic moments
+
+## The projection formula
+- The [[Symmetries in quantum mechanics|Wigner-Eckart Theorem]] applied to operator $\hat{\bm{J}}$
+$$\braket{\alpha''j''m''|\hat{J}_m|\alpha'j'm'}=\langle\alpha''j''||\hat{\bm{J}}||\alpha' j'\rangle\braket{1m;j'm'|j''m''}$$
+- The LHS is only _non-zero_ for $j'=j''$
+- Setting $\alpha'=\alpha''$:
+$$\displaylines{\braket{\alpha'j'm''|\hat{V}_m|\alpha'j'm'}=\langle \alpha'j'||\hat{V}_m||\alpha'j'\rangle\braket{1m;j'm'|j'm''} \\ \braket{\alpha'j'm''|\hat{J}_m|\alpha'j'm'}=\langle \alpha'j'||\hat{J}_m||\alpha'j'\rangle\braket{1m;j'm'|j'm''}}$$
+- Simplifying notation, writing the _ratio_ of the reduced matrix elements as $C(\alpha j)$:
+$$\braket{\alpha jm'|\hat{\bm{V}}|\alpha jm}=C(\alpha j)\braket{\alpha jm'|\hat{\bm{J}}|\alpha jm}$$
+- Consider the _matrix element_:
+$$\begin{aligned}\braket{\alpha jm|\hat{\bm{V}}\cdot\hat{\bm{J}}|\alpha jm}&=\sum_k\braket{\alpha jm|\hat{V}_k\hat{J}_k|\alpha jm} \\ &=\sum_{k,m',j'}\braket{\alpha jm|\hat{V}_k|\alpha j'm'}\braket{\alpha j'm'|\hat{J}_k|\alpha jm}\end{aligned}$$
+- From the orthogonality of _eigenstates_, and using the relation above:
+$$\braket{\alpha jm|\hat{\bm{V}}\cdot\hat{\bm{J}}|\alpha jm}=C(\alpha j)\hbar^2j(j+1)$$
+
+- From this, one gets the _Landé projection formula_:
+$$\braket{\alpha jm'|\hat{\bm{V}}|\alpha jm}=\frac{\braket{\alpha jm|\hat{\bm{V}}\cdot\hat{\bm{J}}|\alpha jm}}{\hbar^2 j(j+1)}\braket{\alpha jm'|\hat{\bm{J}}|\alpha jm}$$
+
+- Taking the $z-$component:
+$$\braket{\alpha jm'|\hat{V}_z|\alpha jm}=\frac{\braket{\alpha jm|\hat{\bm{V}}\cdot\hat{\bm{J}}|\alpha jm}}{\hbar^2 j(j+1)}m\hbar\delta_{m'm}$$
+- This gives the fact that for a _given_ $j$, $\hat{V}_z$ is _diagonal_ w.r.t. $m_j$
+## Combining magnetic moments and the Lande g-factor
+- The projection formula allows one to _add different_ [[Charged Particles#Spin and the magnetic moment operator|magnetic moments]]
+	- Orbital and spin moments
+	- Spin moments for _protons and neutrons_ or _quarks_
+- In a magnetic field, the _Hamiltonian_ for evolution of a dipole:
+$$\displaylines{\hat{H}_B=-\hat{\bm{\mu}}\cdot\bm{B}=-\gamma_1\hat{\bm{J}}_1\cdot\bm{B}-\gamma_2\hat{\bm{J}}_2\cdot\bm{B} \\ \hat{\bm{\mu}}=\gamma_1\hat{\bm{\bm{J}}_1}+\gamma_2\hat{\bm{J}}_2}$$
+
+- If $\gamma_1=\gamma_2$, the magnetic moments are easily combined with the [[#Addition of angular momenta|total angular momentum operator]]:
+$$\displaylines{\hat{\bm{J}}=\hat{\bm{J}}_1+\hat{\bm{J}}_2 \\ \gamma=\gamma_1=\gamma_2\Longrightarrow \hat{\bm{\mu}}=\gamma\hat{\bm{J}}}$$
+- For $\gamma_1\neq\gamma_2$, they are _not proportional_
+
+- Using the [[#The projection formula|projection formula]]:
+$$\displaylines{\braket{\alpha jm'|\hat{\bm{\mu}}|\alpha jm}=\gamma_{\alpha j}\braket{\alpha jm'|\hat{\bm{J}}|\alpha jm} \\ \gamma_{\alpha j}=\frac{\braket{\alpha jm|\hat{\bm{\mu}}\cdot\hat{\bm{J}}|\alpha jm}}{\hbar^2 j(j+1)}}$$
+- To calculate $\hat{\bm{J}}_1\cdot\hat{\bm{J}}$:
+$$\displaylines{\hat{\bm{J}}_2^2=\hat{\bm{J}}^2+\hat{\bm{J}}_1^2-2\hat{\bm{J}}_1\cdot\hat{\bm{J}} \\ \braket{\alpha jm|\hat{\bm{J}}_1\cdot\hat{\bm{J}}|\alpha jm}=\frac{\hbar^2}{2}[j(j+1)+j_1(j_1+1)-j_2(j_2+1)]}$$
+- From this, the constant $\gamma_{\alpha j}$ is _independent_ of $\alpha$ and $m$:
+$$\displaylines{\gamma_{\alpha j}\equiv\gamma_j \\ \gamma_j=\gamma_1\frac{j(j+1)+j_1(j_1+1)-j_2(j_2+1)}{2j(j+1)}+\gamma_2\frac{j(j+1)+j_2(j_2+1)-j_1(j_1+1)}{2j(j+1)}}$$
+- Therefore the _dipole moments_ combine as:
+$$\braket{\alpha jm|\hat{\bm{\mu}}|\alpha jm}=\braket{\alpha jm|\gamma_1\hat{\bm{J}}_1+\gamma_2\hat{\bm{J}}_2|\alpha jm}=\gamma_j\braket{\alpha jm|\hat{\bm{J}}|\alpha jm}$$
+
+- Therefore, for a _given_ $j$, with the _effective gyromagnetic ratio_ $\gamma_j$:
+$$\hat{\bm{\mu}}=\gamma_j\hat{\bm{J}}$$
+
+- Alternatively, one can use the [[Charged Particles#Spin and the magnetic moment operator|g-factor]]
+$$\gamma_1=-g_1\frac{\mu_B}{\hbar}\hspace{1cm}\gamma_2=-g_2\frac{\mu_B}{\hbar} \Longrightarrow\gamma_j=-g_j\frac{\mu_B}{\hbar}$$
+
+- With the same kind of _magneton_, $g_j$ follows a _similar formula_ to $\gamma_j$:
+$$g_j=g_1\frac{j(j+1)+j_1(j_1+1)-j_2(j_2+1)}{2j(j+1)}+g_2\frac{j(j+1)+j_2(j_2+1)-j_1(j_1+1)}{2j(j+1)}$$
+
+### Special cases
+- For $\gamma_1=\gamma_2$, this reduces to:
+$$\gamma_j=\gamma_1=\gamma_2\hspace{1.5cm}g_j=g_1=g_2$$
+
+
+- For _two spin$-1/2$ particles_:
+$$j_1=j_2=1/2\hspace{1.5cm}j=0,1$$
+- For the _triplet_ case, $j=1$:
+$$g_{j=1}=\frac{1}{2}g_1+\frac{1}{2}g_2$$
+- The [[Charged Particles#Scalar magnetic moment|scalar magnetic moments]] then add _linearly_:
+$$\mu_j=\mu_1+\mu_2$$
+
+- For $j=0$, the [[Symmetries in quantum mechanics#The Wigner-Eckart Theorem for vector operators|Wigner-Eckart Theorem]] gives:
+$$\braket{\alpha00|\hat{\bm{\mu}}|\alpha00}=0$$
+- In a state with _zero angular momentum_, the total magnetic moment _vanishes_:
+$$\gamma_0=\mu_0=g_0=0$$
+- Even true when the moments have _very different magnitudes_
+	- Example: _proton_ and _electron_ magnetic moments can _combine_ to give _zero total magnetic moment_, despite the _difference in magnitude_
+
+## Example: Proton and neutron magnetic moment
+- Proton: $uud$
+	- 2 _up_ quarks and 1 _down_ quark
+- Neutron: $udd$
+
+- They carry _charges_:
+$$q_u=+\frac{2}{3}e\hspace{1.5cm}q_d=-\frac{1}{3}e$$
+
+- They are _spin-half_ and _pointlike_, hence their magnetic moments are predicred to be:
+$$\mu=\frac{q\hbar}{2m}\Longrightarrow \mu_u=\frac{2}{3}\frac{e\hbar}{2m_u}\hspace{1.5cm}\mu_d=-\frac{1}{3}\frac{e\hbar}{2m_d}$$
+
+- Combine the moments of the two _up quarks_, where the _stable_ configuration is to have _total spin_ $1$:
+$$g_{uu}=\frac{1}{2}g_u+\frac{1}{2}g_u=g_u$$
+
+- Add the _down quark_, for the _total magnetic moment_ of the _proton_, which in its stable configuration is _half_:
+$$\displaylines{j_{uu}=1\hspace{1cm}j_d=1/2\hspace{1cm}j=1/2 \\ g_p=\frac{4}{3}g_u-\frac{1}{3}g_d \\ \mu_p=\frac{4}{3}\mu_u-\frac{1}{3}\mu_d}$$
+
+- Similarly for the _neutron_:
+$$\mu_n=\frac{4}{3}\mu_d-\frac{1}{3}\mu_u$$
+
+- Taking their masses to be equal, the _ratio_ of their magnetic moments:
+$$\displaylines{\mu_u=-\mu_d\Longrightarrow\frac{\mu_p}{\mu_n}=-\frac{3}{2} \\ \mu_p=\frac{3}{2}\mu_u=\frac{m_p}{m_u}\mu_N\hspace{1cm}\mu_n=-\frac{2}{3}\mu_p=-\frac{2}{3}\frac{m_p}{m_u}\mu_N}$$
+
+- Assuming mass is _shared equally between quarks_:
+$$\mu_p=3\mu_N\hspace{1.5cm}\mu_n=-2\mu_N$$

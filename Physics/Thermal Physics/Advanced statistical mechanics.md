@@ -878,3 +878,191 @@ $$\Delta F=-h\rho+a(T-T_c)\rho^2-b\rho^3+c\rho^4$$
 - A _negative quartic term_:
 $$\Delta F=a(T-T_c)\rho^2-c\rho^4+d\rho^6$$
 - This also creates a _first-order phase transition_ but with only _even powers_
+
+## Ising model
+
+
+### Mean-field approximation
+### Critical behaviour
+
+# Fluctuations
+- Theories such as _Landau theory_ are based on some _order parameter_, which applies _throughout the medium_
+- It is a _mean field theory_, which neglects _fluctuations_ in equilibrium
+- Near a _critical point_, fluctuations should _grow_
+
+- In equilibrium, the system is presumed to be in the _most probable microstate_
+- Equilibrium is achieved by _fluctuations_, which _eventually tend toward equilibrium_ due to the energy landscape
+	- A _metastable state_ will need many fluctuations to achieve _true equilibrium_
+
+## From the Boltzmann distribution
+- Given some _thermodynamic variable_ $x$, $\mean{\Delta x}=0$
+- The _magnitude_ of fluctuations is measured by:
+$$\mean{\Delta x^2}=\mean{x^2}-\mean{x}^2=\frac{1}{Z}\sum_i x_i^2\exp\left(-\beta E_i\right)-\left[\frac{1}{Z}\sum_i x_i\exp\left(-\beta E_i\right)\right]^2$$
+- Let the [[#Thermodynamic variables|conjugate variable]] to $x$ be $f$:
+$$\Delta E_i=-f\cdot \Delta x_i$$
+- Writing the terms above as derivatives:
+$$\mean{\Delta x^2}=kT\pd{\mean{x}}{f}$$
+
+## As curvature of availability
+- Consider the _total entropy_ of a _system_ connected to a _reservoir_:
+$$\displaylines{S_\text{tot}(x,U_\text{tot})=k\ln\Omega(x,U_\text{tot}) \\ P(x)\propto\exp[S_\text{tot}/k]}$$
+- Using the definition of [[#Reservoir and availability|availability]]:
+$$P(x)\propto\exp\left[-\frac{A(x)-A(\mean{x})}{kT}\right]$$
+- By _Taylor expanding_ the availability:
+$$P(x)\propto\exp\left[-\frac{1}{2kT}\pd{^2A}{x^2}\Delta x^2\right]$$
+- The _variance_ is then:
+$$\mean{\Delta x^2}=\frac{kT}{|\partial
+^2 A/\partial x^2|_{x=\mean{x}}}$$
+- $A$ can be _replaced_ by some _thermodynamic potential_
+	- For _volume fluctuations_, use $A=F(T,V)$
+- For _thermodynamic potential_ $\Pi(x)$, where $d\Pi=f\,dx+\dots$
+$$\mean{\Delta x^2}=kT\left(\pd{x}{f}\right)_\mean{x}$$
+- Near a _critical point_, this _diverges_
+	- Gives rise to phase transition
+
+
+- Define some _linear response_ function where $x=\alpha f$:
+$$\mean{\Delta x^2}=kT\alpha$$
+- Example of the _fluctuation-dissipation theorem_
+
+## Example: Ising model
+- From [[#Ising model]]:
+$$\mean{M}=Nm\tanh\frac{mB}{kT}$$
+- Calculating the magnitude of fluctuations:
+$$\mean{\Delta M^2}=kT\pd{\mean{M}}{B}=Nm^2\frac{1}{\cosh^2(mB/k
+T)}$$
+- The _ratio_ of magnitude to the mean:
+$$\frac{\sqrt{\mean{\Delta M^2}}}{\mean{M}}\sim\frac{1}{\sqrt{N}}$$
+
+# Stochastic physics
+- If one considers the _particle motion_ in a medium, one must account for _random thermal motion_
+- Introduce the _Langevin equation_:
+$$m\frac{d\bm{v}}{dt}=-\gamma\bm{v}+\xi(t)$$
+- The $-\gamma\bm{v}$ term is a _kinetic friction_
+- $\xi(t)$ is a _stochastic force_:
+$$\displaylines{\mean{\xi(t)}=0 \\ \mean{\xi^2(t)}=\Gamma \\ \mean{\xi(t_1)\xi(t_2)}=\Gamma\delta(t_1-t_2)}$$
+- $\Gamma$ quantifies the _intensity_ of the force
+- It represents _thermal/white noise_
+
+- _Multiplying_ the equation by $v_0=v(t=0)$, and taking an _ensemble average_:
+$$\begin{aligned}\frac{d}{dt}\mean{v(t)v(0)}&=-\frac{\gamma}{m}\mean{v(t)v(0)} \\ \mean{v(t)v(0)}&=\mean{v(0)^2}\exp\left(-\frac{\gamma}{m}t\right)\end{aligned}$$
+- There is a _correlation decay time_ $\tau=m/\gamma$
+	- In a _fluid_, $\gamma$ is related to the _viscosity_ (e.g. _Stokes drag_)
+
+## Formal solution of Langevin equation
+- Add the _homogenous_ and _inhomogeneous_ terms:
+$$v(t)=v_0\exp\left(-\frac{t}{\tau}\right)+\int_0^\infty\exp\left(-\frac{t-t'}{\tau}\right)\frac{\xi(t')}{m}\,dt'$$
+- The _mean-square value_:
+$$\mean{v^2}=\mean{v_0^2}\exp\left(-\frac{2t}{\tau}\right)+\frac{\Gamma}{2m\gamma}\left[1-\exp\left(-\frac{2t}{\tau}\right)\right]$$
+- As the _relaxation time_ is _fast_, and using _equipartition_:
+$$\mean{\frac{mv^2}{2}}=\frac{\Gamma}{4\gamma}=\frac{1}{2}kT$$
+- This is the _fluctuation-dissipation theorem_:
+$$\Gamma=2\gamma kT$$
+- The _magnitude_ of the _stochastic force_ is related to _temperature_, and the _friction constant_
+
+## Diffusion
+- For $t\gg\tau$, the _inertial effects_ are _irrelevant_, and $\dot{v}$ is _averaged out_:
+$$0=-\gamma v+\xi(t)$$
+- This is the _overdamped_ limit
+
+- The _motion_ of the particle:
+$$\begin{aligned}x&=\int_0^t\frac{1}{\gamma}\xi(t')\,dt' \\ \mean{x^2}&=\frac{1}{\gamma^2}\int_0^t\int_0^t\mean{\xi(t_1)\xi(t_2)}\,dt_1\,dt_2 \\ \mean{x^2}&=\frac{\Gamma}{\gamma^2}t\end{aligned}$$
+- Define the _diffusion coefficient_ $D$:
+$$\displaylines{D=\frac{kT}{\gamma} \\ \mean{x^2}\equiv2Dt}$$
+- This is the _Einstein diffusion relation_
+- It _grows_, as there is _no energy restriction_
+
+- In 3 dimensions:
+$$\mean{r^2}=6Dt$$
+## Brownian particle in a potential well
+- Let the particle be in a _potential_:
+$$V(x)=\frac{1}{2}ax^2$$
+- The _overdamped Langevin equation_:
+$$\gamma\dot{x}=-ax+\xi(t)$$
+- Using a similar strategy as the [[#Formal solution of Langevin equation|above]]:
+$$\mean{x^2}=\frac{\Gamma}{2\gamma a}=\frac{kT}{a}$$
+- This matches the result from [[#As curvature of availability|thermodynamic fluctuations]]
+
+## Spectral analysis of the Langevin force
+- The _damped harmonic oscillator_:
+$$m\ddot{x}=-\gamma\dot{x}-\alpha x+f(t)$$
+- Using the Fourier transform:
+$$x_\omega=\frac{f_\omega}{-m\omega^2-i\gamma\omega+\alpha}=\chi_\omega f_\omega$$
+- Here, $\chi_\omega$ is the _linear response function_
+- In general, it is _complex:
+$$\chi_\omega=\chi_\omega'+i\chi_\omega''$$
+- From the fluctuation-dissipation theorem:
+$$\mean{x_\omega^2}=\frac{kT}{\alpha}=\chi'(\omega=0)kT$$
+- One can derive:
+$$\mean{\Delta x_\omega^2}=\frac{2kT}{\omega}\chi_\omega''=\frac{2kT\gamma}{(\alpha-m\omega^2)^2+\gamma^2\omega^2}$$
+- This can show _resonant behaviour_ (for light damping)
+
+- The _spectral content_ of the _Langevin force_:
+$$\mean{x_\omega^2}=|\chi_\omega|^2\mean{\xi_\omega^2}$$
+- Substituting in the results above:
+$$\mean{\xi_\omega^2}=2kT\gamma$$
+- This shows that it has a _flat power spectrum_, with intensity related to damping constant
+
+## Probability distributions
+- Finding probabilities $P(x,t)$ _of stochastic variables_
+- One can treat it as a _discrete random walk_
+
+### Kramers-Moyal expansion and Fokker-Planck equation
+$$\dot{x}=\frac{f(x)}{\gamma}+\frac{1}{\gamma}\xi(t)$$
+- The _infinitesimal_:
+$$dx=\frac{f(x)}{\gamma}\,dt+\sigma\,dW$$
+- Define $dW$ such that $\mean{dW^2}=1$, hence, $\sigma=\sqrt{2kT/\gamma}$
+- $\sigma\,dW$ is the _diffusion term_
+
+- Define the _propagator_ $G$, which _links_ probabilities between two positions:
+$$P(x,t+\Delta t)=\int G(x,t+\Delta t\big|y,t)P(y,t)\,dy$$
+- Changing variables to $\Delta x\equiv x-y$, and _shifting_ by $\Delta x$ such that $\tilde{x}=x-\Delta x$:
+$$P(x,t+\Delta t)=\int G(\tilde{x}+\Delta x,t+\Delta t\big|\tilde{x},t)P(\tilde{x},t)\,d(-\Delta x)$$
+- Using a _Taylor expansion_:
+$$\begin{aligned}P(x,t+\Delta t)&=\int d(\Delta x)\sum_{n=0}^\infty\frac{(-\Delta x)^n}{n!}\pd{}{\tilde{x}^n}G(\tilde{x}+\Delta x,t+\Delta t|\tilde{x},t)P(\tilde{x},t) \\ &=P(x,t)-\pd{}{x}(\mean{dx}P(x,t))+\frac{1}{2}\pd{^2}{x^2}\left(\mean{dx}^2P(x,t)\right)\end{aligned}$$
+- Substituting results _from the Langevin equation_:
+$$\pd{P(x,t)}{t}=-\pd{}{x}\left(\frac{f(x)}{\gamma}P(x,t\right)+\frac{\sigma^2}{2}\pd{^2P}{x^2}$$
+- This separates influences from an _external force_, and from _diffusion_:
+$$\frac{\sigma^2}{2}=\frac{kT}{\gamma}\equiv D$$
+- This is the _Fokker-Planck equation_
+
+### Free diffusion
+$$\pd{P}{t}=D\pd{^2P}{x^2}$$
+- This gives:
+
+- Replicates the result:
+
+### Equilibrium
+$$\pd{}{x}\left[\right]=0$$
+
+- This gives:
+$$P_\text{eq}\sim\exp\left(-\frac{V(x)}{kT}\right)$$
+### Probability current
+- The probability is a _conserved quantity_:
+$$\pd{P}{t}=-\text{div }J(x,t)$$
+- The _probability flux_:
+$$J=\frac{f(x)}{\gamma}P(x,t)-D\pd{P}{x}$$
+- This replicates _Fick's law_ for diffusion if $f(x)=0$
+
+- One can rewrite $J$ as:
+$$J=-D\exp(-\beta V(x))\pd{}{x}\left[\exp(\beta V(x))P(x,t)\right]$$
+
+### Kramers' Problem
+- Let there be a _metastable state_ $A$, with a _barrier_ of height $\Delta V$ to the truly stable state $B$
+- Find the _rate of escape_ in equilibrium, or the _mean first passage time_ to escape
+$$J=\text{const.}$$
+- By _integrating_:
+$$\frac{1}{D}\int_A^B\exp(\beta V(x))J\,dx=-\left[\exp(\beta V(x))P(x,t)\right]_A^B$$
+- By _approximating_ the potential as _parabolic_, paramatrised by $\kappa_C$
+$$\frac{J}{D}\exp(\beta\Delta V)\sqrt{\frac{\pi}{\kappa_C}kT}=P(x=A)$$
+- The term at $B$ is _approximated_ as zero if it is _deep_ enough
+$$J=D\sqrt{\frac{\kappa_C}{\pi kT}}P(x=A)\exp(-\beta\Delta V)$$
+- This gives the _Arrhenius law of thermal activation_
+- The _prefactor_ depends on the _rate of attempts_, and the _barrier shape_
+
+- The _number of particles around $A$_:
+$$dN_A=P(x_A)\exp(-\beta V(x))\,dx$$
+- Integrating _around_ $A$:
+$$N_A=P(x_A)\sqrt{\frac{\pi kT}{\kappa_A}}$$
+- The _rate of escape_:
+$$r=\frac{J}{N_A}=D\frac{\sqrt{\kappa_C\kappa_A}}{\pi kT}\exp(-\beta\Delta V)$$

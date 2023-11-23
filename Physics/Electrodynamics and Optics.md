@@ -885,7 +885,7 @@ $$\begin{aligned}\bm{B}(\bm{r})&= \\ \bm{E}(\bm{r})&=\end{aligned}$$
 
 - The _time-averaged total power radiated_:
 
-- If the electric and magnetic dipoles carry _similar currents_, with _similar sizes_L
+- If the electric and magnetic dipoles carry _similar currents_, with _similar sizes_
 
 - Therefore, _small magnetic dipoles are much less efficient_ than the _electric dipole_
 
@@ -1064,3 +1064,212 @@ $$\sigma_T=\frac{8\pi}{3}r_e^2$$
 - The chance of a _single scattering event_:
 $$\frac{N\sigma}{L}\sim\frac{\sigma L}{d^3}$$
 - When $\sigma L/d^3\ll1$, one can _ignore multiple scattering_
+
+- Let there be $N$ _identical scatterers_ at positions $\{\bm{r}_j\}$
+- Let it be illuminated by a _coherent_ wave with wavevector $\bm{k}_i$, with _resultant wavevector_ $\bm{k}_s$
+![[Scattering many particles.png]]
+- Define some _origin_, where the observed field is $\tilde{\bm{E}}\exp(-i\omega t)$
+- The _additional phase from each particle_ is $(\bm{k}_i-\bm{k}_s)\cdot\bm{r}_j$
+
+- Defining the _scattering wave-vector_ $\bm{q}$:
+$$\displaylines{\bm{q}\equiv\bm{k}_i-\bm{k}_s \\ \tilde{\bm{E}}_\text{tot}=\tilde{\bm{E}}\exp(-i\omega t)\sum_{j=1}^N\exp(i\bm{q}\cdot\bm{r}_j)}$$
+- The _total time-averaged radiated power_:
+$$\displaylines{P_\text{tot}=\frac{1}{2Z_0}|\tilde{\bm{E}}_\text{tot}|^2=P_1(\bm{q})\left|\sum_{j=1}^N\exp(i\bm{q}\cdot\bm{r}_j)\right|^2 \\ P_1(\bm{q})\equiv|\tilde{\bm{E}}^2|/(2Z_0)}$$
+- $P_1(\bm{q})$ is the _form factor_, the power resulting from a _single scatterer_ in the direction $\bm{k}_s=\bm{k}_i-\bm{q}$
+
+- Define $\mathcal{F}(\bm{q})$, the _structure factor_:
+$$\mathcal{F}(\bm{q})\equiv\left|\sum_{j=1}^N\exp(i\bm{q}\cdot\bm{r}_j)\right|^2\equiv\left|\text{FT}\left[\sum_{j=1}^N \delta(\bm{r}-\bm{r}_j)\right]\right|^2=\left|\text{FT}[n(\bm{r})]\right|^2=|\tilde{n}(\bm{q})|^2$$
+- Here, $n(\bm{r})$ is the _particle density_ of the scatterers
+- $\mathcal{F}(\bm{q})$ is the _Fourier transform squared_ of $n$
+	- It is said to depend on _positional correlations_
+	- Treat each term $\exp(i\bm{q}\cdot\bm{r}_j)$ as a _phasor_
+
+- For an _ideal gas_, there is _no correlation_ between positions:
+$$\mathcal{F}(\bm{q})=N\hspace{1.5cm}P_\text{tot}=NP_1$$
+- There are _no interference effects_, as the intensities simply _add_
+
+- For some spatial correlation (e.g. a _1D lattice_):
+$$n(r)=\sum_{j=-\infty}^\infty\delta(r-jL)\Longrightarrow \tilde{n}(q)=\sum_{j=-\infty}^\infty \delta\left(q-j\frac{2\pi}{L}\right)$$
+- One gets _strong scattering_ at $q=2\pi j/L$
+
+- Scattering is typically _strongest_ from _density variations_ on lengthscales _comparable to incident wavelength_
+
+- For a _general lattice_, the strongest peaks are given by $\bm{q}=\bm{G}$, the _reciprocal lattice vectors_, giving _Bragg's Law_:
+$$\bm{k}_s=\bm{k}_i-\bm{G}$$
+
+- For _transparent substances_, scattering can occur from _defects_ and _density fluctuations_
+	- They typically appear in _liquids_ close to _phase separation_
+	- For _phase separating liquids_, the _large density fluctuations_ lead to changes in _local refractive index_, which leads to _scattering_ and making the liquid appear _cloudy_
+
+# Relativistic electrodynamics
+- [[Special Relativity|Foundations of special relativity]]
+
+- The _4-divergence_ and _Laplacian/d'Alembertian_:
+$$\begin{aligned}\partial_\alpha A^\alpha&=\pd{A^0}{x^0}+\nabla\cdot\bm{A}  \\ \Box^2\equiv\partial_\alpha\partial^\alpha&=\pd{^2}{x_0^2}-\nabla^2\end{aligned}$$
+
+## The 4-current
+- From experiment, the _total charge_ in some _region_ of space-time is _Lorentz invariant_
+- Given some region, with _charge density_ $\rho_0$ in its _instantaneous rest frame_
+
+- Define the _4-current_:
+$$\vec{J}=(c\rho,\bm{J})=\rho_0\frac{d}{d\tau}(ct,\bm{r})$$
+- The _continuity equation_:
+$$\partial_\alpha J^\alpha=\pd{\rho}{t}+\div\bm{J}=0$$
+- Applying a _Lorentz transformation_:
+$$\begin{aligned}c\rho'&=\gamma(c\rho-\beta J_x) \\ J_x'&=\gamma(J_x-\beta c\rho) \\ J_y'&=J_y \\ J_z'&=J_z\end{aligned}$$
+
+- Writing components _parallel and perpendicular to the boost_:
+$$c\rho'=\gamma(c\rho-\beta\cdot\bm{J})\hspace{1.5cm}\bm{J}'=\gamma(\bm{J}_{||}-c\rho\bm{\beta})+\bm{J}_\perp$$
+## Maxwell's equations
+- Consider [[#Maxwell's equations in terms of potentials]]:
+$$\Box^2\phi=\frac{\rho}{\epsilon_0}\hspace{1.5cm}\Box^2\bm{A}=\mu_0\bm{J}$$
+- Then define the _4-potential_ $\vec{A}$ such that:
+$$\displaylines{\vec{A}=\left(\frac{\phi}{c},\bm{A}\right) \\ \Box^2\vec{A}=\mu_0\vec{J}}$$
+- $\Box^2$ is _Lorentz invariant_ and $\vec{J}$ is a 4-vector, hence $\vec{A}$ must be a _4-vector_
+
+- Introduce the _anti-symmetric field-strength tensor_:
+$$\displaylines{F^{\alpha\beta}=\partial^\alpha A^\beta-\partial^\beta A^\alpha \\ F^{i0}=E^i \hspace{1cm} F^{ij}=-\epsilon^{ijk}B^k \\ F^{\alpha\beta}=\pmatrix{0&-E_x/c&-E_y/c&-E_z/c \\ E_x/c&0&-B_z&B_y \\ E_y/c&B_z&0&-B_x \\ E_z/c&B_y&B_z&0}}$$
+
+- Maxwell's equations then become:
+$$\begin{aligned}\partial_\alpha F_{\beta\gamma}+\partial_\beta F_{\gamma\alpha}+\partial_\gamma F_{\alpha\beta}&=0 \\ \partial_\alpha F^{\alpha\beta}&=\mu_0 J^\beta\end{aligned}$$
+
+- Given _4-momentum_ $\vec{p}$, and _4-velocity_ $\vec{U}$, the _Lorentz force law_ is:
+$$\frac{dp^\alpha}{d\tau}=m\frac{dU^\alpha}{d\tau}=qF^{\alpha\beta}U_\beta$$
+
+## Gauge invariance
+- As the field tensor is a _physical quantity_, it must be _gauge invariant_:
+$$\displaylines{A_\alpha\to A_\alpha+\partial_\alpha \lambda(x) \\ F_{\alpha\beta}\to F_{\alpha\beta}}$$
+- The _divergence_ of the 4-potential must be _Lorentz invariant_
+- The _Lorenz gauge_ will _zero_ the _4-divergence_:
+$$\partial_\alpha A^\alpha=\frac{1}{c^2}\pd{\phi}{t}+\div\bm{A}=0$$
+
+## Transformations of fields
+- _Transforming_ the field strength tensor:
+$$\displaylines{F'^{\alpha\beta}=\tenscom{\Lambda}{\alpha}{\gamma}\tenscom{\Lambda}{\beta}{\delta}F^{\gamma\delta} \\ \tenscom{\Lambda}{\alpha}{\gamma}=\pmatrix{\gamma&-\beta\gamma&0
+&0\\-\beta\gamma&\gamma&0&0\\0&0&1&0\\0&0&0&1}}$$
+- One gets that the _fields along the boost direction_ are _unchanged_
+$$\begin{aligned}E_x'&=E_x\hspace{3.5cm}B_x'=B_x \\ E_y'&=\gamma(E_y-vB_z)\hspace{1.55cm}B_y'=\gamma(B_y+\frac{v}{c^2}E_z) \\ E_z'&=\gamma(E_z+vB_y)\hspace{1.55cm}B_z'=\gamma(B_z-\frac{v}{c^2}E_y) \end{aligned}$$
+- Writing in terms of _parallel and perpendicular components_:
+$$\begin{aligned}\bm{E}_{||}'&=\bm{E}_{||} \hspace{3.5cm} \bm{B}_{||}'=\bm{B}_{||} \\ \bm{E}_\perp'&=\gamma(\bm{E}_\perp+\bm{v}\times\bm{B}_\perp)\hspace{0.6cm}\bm{B}'_\perp=\gamma\left(\bm{B}_\perp-\frac{1}{c^2}\bm{v}\times\bm{E}_\perp\right)\end{aligned}$$
+- This reveals that the _electric and magnetic fields_ are part of the _same phenomenon_, depending on the _frame_
+
+## Magnetism as a relativistic effect
+- Consider a _wire_ carrying a _current_, wjhere the _charge carriers_ are moving at speed $V$
+- There is a _charge_ $q$ moving at speed $u$ _parallel_ to the wire
+![[Wire.png]]
+- The _positive charges_ give the _electrostatic force_:
+$$f_y^+=\frac{q}{2\pi\epsilon_0}\frac{neA}{r}$$
+- In the _instantaneous rest frame_ of the charges, $\rho_x'=\rho_x/\gamma_v$:
+- Force from the _negative charges_:
+$$(f_y^-)'=-\frac{1}{\gamma_v}\frac{q}{2\pi\epsilon_0}\frac{neA}{r}$$
+- Carrying a [[Special Relativity#Lorentz transformations|Lorentz transformation]]:
+$$f_y^-=\gamma_v\left(1-\frac{vu}{c^2}\right)(f_y^-)'$$
+- _Adding_ the forces:
+$$f_y=f_y^++f_y^-=-\frac{\mu_0I}{2\pi r}u$$
+- This is the Lorentz force given by _Ampere's law_
+
+- _Lorentz transformed electrostatic forces_ give a _magnetic_ force 
+
+### Spin-orbit coupling
+- Consider in an _atom_:
+$$\bm{B}'_\perp=\gamma\left(\bm{B}_\perp-\frac{1}{c^2}\bm{v}\times\bm{E}_\perp\right)$$
+- In the _rest frame_ of the _nucleus_, there is only an _electric field_
+- This generates a _magnetic field_ in the _electron frame_, which interacts with the _spin_
+
+- The [[The hydrogen atom#Spin-orbit correction|spin-orbit Hamiltonian]]:
+$$\displaylines{\bm{E}=-\frac{\bm{r}}{r}\frac{d\Phi}{dr} \\ \hat{H}_{SO}=-\frac{1}{2}\frac{g_Se}{2m}\hat{\bm{S}}\cdot\hat{\bm{B}}'=-\frac{g_Se}{4mc^2}\hat{\bm{S}}\cdot(\hat{\bm{v}}\times\frac{\hat{\bm{r}}}{r})\frac{d\Phi}{dr}=-\frac{g_Se}{4m^2c^2}\hat{\bm{S}}\cdot\hat{\bm{L}}\frac{1}{r}\frac{d\Phi}{dr}}$$
+- _Approximation_: $\gamma\approx 1$
+- Factor of $1/2$: _Thomas precession_ (Rotation of electron rest frame)
+
+# Radiation and relativistic electrodynamics
+
+## A uniformly moving charge
+![[Uniformly moving charge.png]]
+- In the frame $S'$, the field is _static_:
+$$\bm{E}'=\frac{q}{4\pi\epsilon_0}\left(\frac{x'}{r^3},\frac{y'}{r^3},0\right)$$
+- Carrying out the _Lorentz transformation_:
+
+- Taking the $x-$axis as the _polar axis_:
+
+- There is an _azimuthal magnetic field_
+- $\bm{E}$ has a $1/r^2$ dependence, hence the _Poynting flux_ $\bm{N}\sim 1/r^4$
+
+- $\bm{E}$ is _purely radial_, hence the field is _always directed away from the origin_
+	- $E_\perp/E_{||}=\sin\theta/\cos\theta$
+	- The _magnitude_ has an _angular dependence_
+- For $\gamma\sim 1$, it reduces to the _non-relativistic result_, where the field is _isotropic_
+
+- For $\gamma\gg1$, the field is _flattened_ to the plane _perpendicular to motion_:
+$$E_{||}\sim\frac{1}{\gamma^2}\frac{q}{4\pi\epsilon_0r^2}\hspace{1.5cm}E_\perp\sim\frac{\gamma q}{4\pi\epsilon_0r^2}$$
+![[Field of moving charge.png]]
+- $\bm{N}$ is _tangentially oriented_
+	- _Maximum_ at $\theta=\pi/2$, and _zero_ for $\theta=0$
+- As $\bm{N}\sim 1/r^4$, the charge _does not radiate_, and simply _moves energy along the charge_
+
+## Cherenkov radiation
+- In a _medium_ of refractive index $n=\sqrt{\epsilon(\omega)}$, it is possible for the _velocity of the charge to exceed the speed of light_:
+$$v>\frac{c}{n}$$
+- The medium is _moving_ in $S'$
+
+- The _solutions_ to Maxwell's equations are given using [[#Solving for the potentials|retarded potentials]]
+$$[\phi]=\phi\left(t-\frac{|\bm{r}-\bm{r}'|}{c/n}\right)$$
+
+- It is moving _faster than the propagation of information_
+- There is a region where the _potentials are zero_
+- There is a _growing cone_ of _non-zero field_, hence there must be _energy transfer_
+- The Huygens construction:
+![[Cherenkov radiation.png]]
+
+- The radiation is propagating in the _Cherenkov angle_:
+$$\cos\theta_C=\frac{cT/n}{vT}=\frac{c}{nv}=\frac{1}{\beta n}$$
+- Assume that the _rate of energy loss of the particle_ is _small_, hence the angle is _constant_
+- As $n=n(\omega)$, different _frequencies_ radiate in _different angles_
+
+### The fields
+- Solve for potentials using _Fourier transforms_:
+$$F(\bm{r},t)=\frac{1}{(2\pi)^2}\int\int \tilde{F}(\bm{k},\omega)\,d\bm{k}\,d\omega$$
+
+- The _plane wave solutions_
+
+- Arriving from _source terms_:
+
+- Maxwell's equations then become:
+$$\begin{aligned}\left(k^2-\epsilon(\omega)\frac{\omega^2}{c^2}\right)\tilde{\phi}(\bm{k},\omega)&=\frac{1}{\epsilon(\omega)\epsilon_0}\tilde{\rho}(\bm{k},\omega) \\ (\tilde{\bm{A}})&=\end{aligned}$$
+- The fields are then obtained by:
+
+- _Radiation_ is only emitted when $\epsilon(\omega)$ is real, and $\beta^2\epsilon(\omega)>1$, hence:
+$$v>\frac{c}{\sqrt{\epsilon(\omega)}}$$
+- For most materials, this _restricts_ radiation to a _high optical frequency band_
+- It is typically _blue_
+
+## An accelerating charge
+- A _uniformly moving charge_ can _never radiate in vacuum_
+	- Not in vacuum: Cherenkov condition
+- An _accelerating_ charge can radiate in _vacuum_
+
+- A _sudden deceleration_:
+![[Decelerating charge radiation.png]]
+- Electric field lines are _always continuous_ in a charge-free region
+
+- When the charge _abruptly decelerates_, for an observer _far away_, one still experiences _field as if from a uniformly moving charge_, from the position where it _would have been_
+- For a _near observer_, it emanates from the _true position_
+- Therefore, the field has a _transverse kink_
+
+- There is some _characteristic time_ $T=|\bm{u}|/|\bm{a}|$
+- This sets the _characteristic wavelength_ $\lambda\sim c|\bm{u}|/|\bm{a}|$
+
+### The Lienart-Wirchert potentials
+- Maths
+
+- The _solutions_ to the 4-potential are the _Lienard-Wiechert potentials_:
+$$A^\alpha(x^\mu)=\frac{\mu_0ec}{4\pi}\left[\frac{V^\alpha(\tau)}{V^\nu[x_\nu-r_\nu(\tau)]}\right]_{\tau=\tau_0}$$
+- The _light-cone condition_ implies:
+$$\displaylines{x_0-}$$
+
+### The fields
+
+- The first term for the fields gives the _velocity fields_, which are _dependent on acceleration_
+- They are _static_, and _do not radiate_
+- For a charge with _uniform velocity_, it reproduces the field for [[#A uniformly moving charge]]
+
+- The second term gives the _acceleration fields_, which drop off as $R^{-1}$, and are responsible for _radiation_

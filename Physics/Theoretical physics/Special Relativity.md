@@ -186,6 +186,9 @@ $$T^{\alpha\beta\gamma}=T_{\lambda\mu\nu}g^{\lambda\alpha}g^{\mu\beta}g^{\nu\gam
 $$T^{\alpha}_{\mu\nu}=T^{\alpha\beta\gamma}g_{\mu\beta}g_{\nu\gamma}=T_{\lambda\mu\nu}g^{\lambda\alpha}$$
 - The _mixed components of the metric_ are simply $g^\alpha_\beta=g_\alpha^\beta=\delta_{\alpha\beta}$
 
+- Special case: the _vector_:
+$$A^\alpha=(A^0,A^1,A^2,A^3)\hspace{1cm}A_\alpha=(A^0,-A^1,-A^2,-A^3)$$
+
 - The contravariant vomponents of an _outer product_ $\textbf{T}\otimes\textbf{S}$ is then $T^{\alpha\beta\gamma}S^{\mu\nu}$
 - From this, one can find formulas for the _inner product_ and _scalar output of a tensor_
 $$\vec{A}\cdot\vec{B}=A_\alpha B^\alpha=A^\alpha B_\alpha\hspace{1.5cm}\textbf{T}(\bm{A},\bm{B},\bm{C})=T_{\alpha\beta\gamma}A^\alpha B^\beta C^\gamma=T^{\alpha\beta\gamma}A_\alpha B_\beta C_\gamma$$
@@ -233,7 +236,7 @@ $$\bm{p}=m\bm{u}=\gamma m\bm{v}=\mathcal{E}\bm{v}$$
 - The 3+1 split of 4-momentum gives the _energy_ and _momentum_
 - From the _conservation of 4-momentum_, one gets the _conservations of 3-momentum and energy_:
 $$\sum_\bar{A}\bm{p}_\bar{A}=\sum_A\bm{p}_A\hspace{1.5cm}\sum_\bar{A}\mathcal{E}_\bar{A}=\sum_A\mathcal{E}_A$$
-- Energy and momentum are _frame-dependent_
+- Energy and momentum are _frame-dependent_ as they are simply _components_
 
 - Let there be a _particle_ with some 4-momentum $\vec{p}$, _observed_ by someone with 4-velocity $\vec{U}$
 - As the 4-velocity has components $U^0=1$ and $U^i=0$, the _measured energy_ is $p^0$ in the _observer's frame_, given by:
@@ -292,7 +295,7 @@ $$\eta_{\mu\nu}=\pd{x^\rho}{x^{\mu'}}\pd{x^\sigma}{x^{\nu'}}\eta_{\rho\sigma}$$
 - Stuff (check Weinberg)
 
 - The Lorentz transformations must then be _linear_, and _satisfy_:
-$$\displaylines{x^{\mu'}=\tenscom{\Lambda}{\mu'}{\nu}x^\nu+a^{\mu'} \\ \eta_{\mu\nu}=\tenscom{\Lambda}{\rho}{\mu}\tenscom{\Lambda}{\sigma}{\nu}\eta_{\rho\sigma}}$$
+$$\displaylines{x^{\mu'}=\tenscom{\Lambda}{\mu'}{\nu}x^\nu+a^{\mu'} \\ \eta_{\mu\nu}=\tenscom{\Lambda}{\rho}{\mu}\tenscom{\Lambda}{\sigma}{\nu}\eta_{\rho\sigma} \\ \tenscom{\Lambda}{\rho}{\mu}=\pd{x^\rho}{x^{\mu'}} }$$
 - With the _first condition_, the transformation _maps striaight lines onto straight lines_
 	- With _non-zero_ $a^{\mu'}$, the transformation is in the _inhomogeneous affine group_
 	- With $a^{\mu'}=0$, the transformation is in the _homogeneous affine group_
@@ -412,7 +415,7 @@ $$\displaylines{p^\mu=(\gamma m,\gamma\bm{p}) \\ p^\mu p^\mu=m^2}$$
 - The _4-force_:
 $$f^\mu=\frac{d\vec{p}}{d\tau}=m\frac{d^2\vec{x}}{d\tau^2}$$
 # Electromgnetism
-- Electrodynamics is _inherently relativistic_
+- [[Electrodynamics and Optics#Relativistic electrodynamics|Electrodynamics]] is _inherently relativistic_
 	- The _speed of light_ is always in terms of _universal constants_
 
 ## 4-potential and field tensor
@@ -447,6 +450,7 @@ $$\displaylines{\epsilon^{ijk}\partial_j E_k+\partial_0 B^i=0 \\ \partial_i B^i=
 - Introduce the _current 4-vector_ $\vec{J}$:
 	- The _timelike_ component $J^0=\rho$ is the _charge density_
 	- The _spacelike_ component $J^i=\bm{J}$, the _current density_
+	- Comes from the fact that _total charge in a region is Lorentz invariant_
 - The 4-vector is _divergenceless_, giving the _continuity equation_:
 $$\partial_\mu J^\mu=0$$
 
