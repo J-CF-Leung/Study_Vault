@@ -900,7 +900,7 @@ $$\Delta F=a(T-T_c)\rho^2-c\rho^4+d\rho^6$$
 $$\mean{\Delta x^2}=\mean{x^2}-\mean{x}^2=\frac{1}{Z}\sum_i x_i^2\exp\left(-\beta E_i\right)-\left[\frac{1}{Z}\sum_i x_i\exp\left(-\beta E_i\right)\right]^2$$
 - Let the [[#Thermodynamic variables|conjugate variable]] to $x$ be $f$:
 $$\Delta E_i=-f\cdot \Delta x_i$$
-- Writing the terms above as derivatives:
+- Writing the terms above as derivatives w.r.t. $f$:
 $$\mean{\Delta x^2}=kT\pd{\mean{x}}{f}$$
 
 ## As curvature of availability
@@ -951,7 +951,7 @@ $$\begin{aligned}\frac{d}{dt}\mean{v(t)v(0)}&=-\frac{\gamma}{m}\mean{v(t)v(0)} \
 
 ## Formal solution of Langevin equation
 - Add the _homogenous_ and _inhomogeneous_ terms:
-$$v(t)=v_0\exp\left(-\frac{t}{\tau}\right)+\int_0^\infty\exp\left(-\frac{t-t'}{\tau}\right)\frac{\xi(t')}{m}\,dt'$$
+$$v(t)=v_0\exp\left(-\frac{t}{\tau}\right)+\int_0^t\exp\left(-\frac{t-t'}{\tau}\right)\frac{\xi(t')}{m}\,dt'$$
 - The _mean-square value_:
 $$\mean{v^2}=\mean{v_0^2}\exp\left(-\frac{2t}{\tau}\right)+\frac{\Gamma}{2m\gamma}\left[1-\exp\left(-\frac{2t}{\tau}\right)\right]$$
 - As the _relaxation time_ is _fast_, and using _equipartition_:

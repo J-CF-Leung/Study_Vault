@@ -1242,7 +1242,7 @@ $$v>\frac{c}{\sqrt{\epsilon(\omega)}}$$
 - For most materials, this _restricts_ radiation to a _high optical frequency band_
 - It is typically _blue_
 
-## An accelerating charge
+## A general accelerating charge
 - A _uniformly moving charge_ can _never radiate in vacuum_
 	- Not in vacuum: Cherenkov condition
 - An _accelerating_ charge can radiate in _vacuum_
@@ -1265,11 +1265,95 @@ $$v>\frac{c}{\sqrt{\epsilon(\omega)}}$$
 $$A^\alpha(x^\mu)=\frac{\mu_0ec}{4\pi}\left[\frac{V^\alpha(\tau)}{V^\nu[x_\nu-r_\nu(\tau)]}\right]_{\tau=\tau_0}$$
 - The _light-cone condition_ implies:
 $$\displaylines{x_0-}$$
+- The potetials can then be written as:
 
 ### The fields
-
+$$\begin{aligned}\bm{E}(\bm{x},t)&= \\ \bm{B}(\bm{x},t)&=\end{aligned}$$
 - The first term for the fields gives the _velocity fields_, which are _dependent on acceleration_
 - They are _static_, and _do not radiate_
 - For a charge with _uniform velocity_, it reproduces the field for [[#A uniformly moving charge]]
 
 - The second term gives the _acceleration fields_, which drop off as $R^{-1}$, and are responsible for _radiation_
+
+### Larmor and Lienart formulae
+- Consider an _accelerating_ charge in the _non-relativistic_ limit, the _acceleration field_ is:
+$$\bm{E}_a=$$
+- The _power radiated per solid angle_:
+
+- The _total radiated power_ is then given by the _Larmor formula_:
+$$P=\frac{\mu_0e^2}{6\pi c}|\dot{\bm{v}}|^2$$
+- This can be interpreted as an _electric dipole_ with $p=ez$
+
+- In some _general frame_, where the charge is _relativistic_
+- The power radiated is a _Lorentz invariant_
+	- In the _instantaneous rest frame_, one expects a $\sin^2\theta$ dependence so there is _no net 3-momentum_, yet there is lost _4-momentum_ $dP'^\mu=(dE'/c,0,0,0)$
+	- Transforming to the _lab frame_, $dE=\gamma dE'$ and $dt=\gamma dt'$, hence _power loss is the same in all inertial frames_
+- Working in the instantaneous rest frame, the _4-acceleration_ is $(0,\bm{\alpha})$, where $\bm{\alpha}$ is the _proper acceleration_
+- From invariance of the inner product, $-\alpha^2=A^\mu A_\mu$
+- The _relativistic Larmor formula/Lienart formula_ is then:
+$$P=\frac{\mu_0e^2}{6\pi c}|\alpha|^2$$
+
+## Circular motion
+- Consider a particle moving in a _unifrm magnetic field_:
+$$\frac{d\bm{p}}{dt}=\frac{d(\gamma_um\bm{u})}{dt}=e(\bm{u}\times\bm{B})$$
+- The particle's _energy_ is _constant_
+- However, it must _radiate energy_
+	- Assume it is _small relative to kinetic energy_, or it is _maintained_ (e.g. particle accelerator)
+
+- Taking $u_z=0$, one finds:
+$$\omega_B=\frac{eB}{\gamma m}$$
+- With _radial acceleration_:
+$$a_\perp=\frac{evB}{\gamma m}$$
+- Substituting into the Lienard formula:
+$$P=\frac{\mu_0e^4\gamma^2B^2v^2}{6\pi cm^2}$$
+- The radiation is _not necessarily harmonic_
+	- Dependent on _wavelength_ and _orbital radius_
+
+### Cyclotron motion
+- For $v\ll c$, $\gamma\to1$, and the motion is _non-relativistic circular motion_:
+$$\lambda=\frac{2\pi c}{\omega_B}\gg\frac{v}{\omega_B}=R$$
+- Therefore, the [[#The Hertzian electric dipole|dipole approximation]] _applies_
+- It can be considered a _superposition of two perpendicular Hertzian dipoles_:
+$$\bm{p}(t)=$$
+- One expects _monochromatic_ radiation at angular frequency $\omega_B$
+
+- As they are _quadrature in phase_, the _time-averaged Poynting fluxes add_:
+$$\mean{P}=$$
+
+- The _polarisation_ of the radiation depeneds on the _direction of emission_
+	- In the _equatorial plane_, only
+
+### Synchotron radiation
+- For $v\to c$, $\gamma\gg1$, the motion is _highly relativistic_
+
+- The _characteristic wavelength_ is _much smaller_ than $R$, hence the _dipole approximation does not apply_
+- There is  _continuous chear_ in the field lines, hence there is a _continuum_ of frequencies
+
+- The _instantaneous_ radiated power is still given by the Lienard formula
+
+- The $Oz$ axis is now taken as the _direction of the speed of the particle_:
+![[synchotron geometry.png]]
+- The _angular distribution_ can be written as:
+$$G(\theta',\phi')=1-\sin^2\theta'\cos^2\phi'$$
+- Maths
+
+- The _power radiated per unit angle_, in the _particle frame_:
+$$\frac{dP(t')}{d\Omega}=$$
+- The angular distribution is _dependent on the relative orientations_ of $\bm{\beta}$ and $\dot{\bm{\beta}}$
+- The _denominator_ results in a _strong forward focusing_ of the radiation in direction $\bm{n}||\bm{\beta}$
+
+- For _circular motion_, where $\bm{\beta}\perp\dot{\bm{\beta}}$ the formula above becomes:
+$$\frac{dP(t')}{d\Omega}=$$
+![[Synchotron radiation distribution.png]]
+
+- As $\beta$ increases, the power becomes _more confined in the forward direction_
+	- The _rearward lobe_ becomes _weaker_
+- The _angle_ separating the lobes is $\sim 1/\gamma$
+	- A stationary observer only receives radiation when the line of sight is _almost tangential_ to the circular path
+![[Synchotron radiation pulse.png]]
+- The _duration_ of the pulse is:
+$$\Delta t=\frac{2R}{\gamma v}+\frac{1}{c}\left[d-\frac{R}{\gamma}-\left(d+\frac{R}{\gamma}\right)\right]\approx\frac{1}{\gamma^3\omega_B}$$
+- The radiation is then _spectrally broad_:
+$$\nu_s\sim\gamma^3\omega_B \hspace{1.5cm}\lambda_s\sim \frac{R}{\gamma^3}\ll R$$
+- Typical spectrum:
+![[synchotron spectrum.png]]

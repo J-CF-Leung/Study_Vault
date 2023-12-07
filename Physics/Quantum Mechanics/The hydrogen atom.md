@@ -181,6 +181,7 @@ $$\displaylines{(\Delta E)_R=\frac{3}{n}-\frac{4}{l+1/2}\hspace{1.5cm}(\Delta E)
 $$(\Delta E)_{FS}=\frac{Z^4}{4n^3}\left(\frac{3}{n}-\frac{4}{j+1/2}\right)\alpha^2R_\infty$$
 - It depends on $n$ and $j$, but _not_ $l$
 - Hence, the $n$th energy level _splits_ into $n$ separate energy levels
+	- The _lowest_ $j$ gives the _lowest energy_
 
 - States with the _same_ $j$ but _different_ $l$ will remain _degenerate in energy_
 ![[Hydrogen fine structure.png]]

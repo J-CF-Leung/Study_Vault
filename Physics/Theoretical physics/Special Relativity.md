@@ -381,11 +381,11 @@ $$\frac{\gamma_u'}{\gamma_u}=\gamma(1-\beta\dot{x}_u^1)$$
 
 # Geodesics and kinetics in Minkowski space \[GR\]
 - For a _free particle_, it has _zero 4-acceleration_:
-$$\frac{Du^\mu}{D\tau}=0$$
-- In _global Cartesian coordinates_, as the [[General Relativity#The metric connection|metric connection]] vanishes, this reduces to $Du^\mu/D\tau=0$
+$$\frac{DU^\mu}{D\tau}=0$$
+- In _global Cartesian coordinates_, as the [[General Relativity#The metric connection|metric connection]] vanishes, this reduces to $DU^\mu/D\tau=0$
 
 - The _derivative along the world-line_ (with $\tau$ as the _affine parameter_):
-$$\frac{Du^\mu}{D\tau}=0$$
+$$\frac{DU^\mu}{D\tau}=0$$
 - This means the _tangent vector of the world-line is parallel transported_
 
 - In other words, a _free particle in Minkowski spacetime moves along a [[General Relativity#Geodesics, proper time, and affine parameters|geodesic]]_
@@ -408,12 +408,50 @@ $$\Box^2=\nabla_0^2-\nabla^2$$
 
 - Levi-Civita tensor
 
-# Stress-energy tensor
+# Energy-momentum tensor
 - Recall the _energy-momentum_ 4-vector $\vec{p}$
 	- _Timelike_ component $p^0$ is _energy_ $E$
-$$\displaylines{p^\mu=(\gamma m,\gamma\bm{p}) \\ p^\mu p^\mu=m^2}$$
+$$\displaylines{p^\mu=(\gamma m,\gamma\bm{p}) \\ p_\mu p^\mu=m^2}$$
 - The _4-force_:
-$$f^\mu=\frac{d\vec{p}}{d\tau}=m\frac{d^2\vec{x}}{d\tau^2}$$
+$$f^\mu=\frac{dp^\mu}{d\tau}=m\frac{d^2x^\mu}{d\tau^2}$$
+
+- For some _collection of particles_, information on _energy and momentum_ is better conveyed using a _tensor_
+	- Example: The _stress_ and _energy density_ of some fluid
+	- Derived from [[Classical Field Theory#The energy-momentum tensor|Classical Field Theory]]
+
+- Introduce the _energy-momentum tensor_ $T^{\mu\nu}$, as the _flux_ of 4-momentum component $p^\mu$ on a _surface of constant_ $x^\nu$
+
+- The _rest frame energy density_ $\rho$ of the fluid is _flux of_ $p^0$ (energy) in the $x^0$ (time) direction, hence is $T^{00}$
+- Similarly, $T^{i0}=T^{0i}$ is the _momentum density_
+- The _spacelike components_ $T^{ij}$ are the _stress_ on the fluid
+	- $T^{ii}$ (no sum) gives the _pressure_ in the $i$th direction
+	- $T^{ij}$ where $i\neq j$ give the _shearing_ terms
+## Dust
+- _Dust_ is a _collection of non-interacting particles_, which are _at rest relative to each other_
+- The _rest energy density_ is $\rho_0$
+
+- Define the _number flux four-vector_ $N^\mu=nU^\mu$, where $n$ is the _number density as measured in the rest frame_
+	- $N^0$ is the _number density_, and $N^i$ is the _particle flux_ in the $x^i$ direction
+	- The _four-velocity_ field $U^\mu$ is _uniform by definition_
+- If each particle has _mass_ $m$, then $\rho_0=mn$
+
+- In the _rest frame_, $\rho_0=N^0p^0$
+
+- This motivates the expression for the _energy-momentum tensor for dust_:
+$$T^{\mu\nu}_\text{dust}=\rho_0U^\mu U^\nu$$
+- One can check that for some frame _moving relative to the dust_, $T^{00}=\gamma^2\rho_0$
+	- Due to _length contraction_ and _gain in energy_
+- In the _rest frame_, there is _no pressure_
+
+## Perfect fluid
+- A _perfect fluid_ in its _rest frame_ has some _energy density_ $\rho_0$ and _isotropic pressure_ $p$
+- This leads to the fact that it is _diagonal in its rest frame_: 
+$$T^{\mu\nu}=\pmatrix{\rho&0&0&0\\0&p&0&0\\0&0&p&0\\0&0&0&p}$$
+- One can derive the general expression:
+$$T^{\mu\nu}=(\rho+p)U^\mu U^\nu-p\eta^{\mu\nu}$$
+
+## Conservation
+p
 # Electromgnetism
 - [[Electrodynamics and Optics#Relativistic electrodynamics|Electrodynamics]] is _inherently relativistic_
 	- The _speed of light_ is always in terms of _universal constants_

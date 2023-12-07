@@ -536,7 +536,7 @@ $$\displaylines{\Ham=\pi\pd{\psi}{t}+\pd{\bar\psi}{t}\bar\pi-\Lagr \\ \pi=\pd{\L
 - Putting everything together:
 $$\displaylines{\Ham=\psi^\dagger(-i\bm{\alpha}\cdot\nabla+\beta m)\psi \\ \gamma^0=\beta\hspace{1cm}\gamma^i=\beta\alpha^i}$$
 - The Hamiltonian is _not Loentz invariant_
-## The energy-momentum tensor
+## Dirac energy-momentum tensor
 - Computing the tensor:
 $$T^{\mu\nu}=\pd{\Lagr}{(\partial_\mu\psi)}\partial^\nu\psi-\eta^{\mu\nu}\Lagr=i\bar\psi\gamma^\mu\partial^\nu\psi$$
 - It is _not symmetric in its indices_

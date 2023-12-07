@@ -780,5 +780,6 @@ $$\frac{d^2 S^i}{dt^2}=-\pd{^2\Phi}{x^i\partial x^j}S^j$$
 - This give a form of the _tidal tensor_
 # Gravitation
 
+
 # The Schwarzchild solution
 
