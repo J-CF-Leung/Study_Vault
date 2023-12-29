@@ -5,7 +5,8 @@
 	- Conversion: $\hbar c=0.2\,\text{GeV}\,\text{fm}$
 	- $[\text{T}]=[\text{E}]^{-1}=[\text{M}]^{-1}$
 
-- [x] Add bits from TP1 notes ⏫ 📅 2023-10-19 ✅ 2023-10-23
+- Convention for _Minkowski metric_:
+$$\eta_{\mu\nu}=\pmatrix{1&0&0&0\\0&-1&0&0\\0&0&-1&0\\0&0&0&-1}$$
 # Field theories in physics
 - The dynamics of a _point particle_ is a classical field theory
 	- The map: from a set in $\mathbb{R}$ (_time_) to a set in $\mathbb{R}^3$ (_space_)
@@ -31,7 +32,7 @@
 - Consider _longitudinal waves_ on an elastic rod, with density $\rho$ and some _elastic modulus_ $\kappa$
 - Let there be a _field_ $\varphi(x,t)$ describing the _displacement_
 - Set up the [[Analytical classical mechanics|Lagrangian]]:
-$$L=T-V=\int\frac{1}{2}\rho\left(\pd{\varphi}{t}\right)^2\,dx-\int\frac{1}{2}\kappa\left(\pd{\varphi}{x}\right)\,dx$$
+$$L=T-V=\int\frac{1}{2}\rho\left({\varphi}{t}\right)^2\,dx-\int\frac{1}{2}\kappa\left(\pd{\varphi}{x}\right)\,dx$$
 - The _action_ is then:
 $$S=\int L\,dt=\int\Lagr\,dt\,dx$$
 - $\Lagr$ is known as the _Lagrangian density_:
@@ -70,9 +71,13 @@ $$S=\int\Lagr\left(\varphi,\pd{\varphi}{t},\nabla\varphi,x^\mu\right)\,dt\,dx_1d
 - The Euler-Lagrange equation is then:
 $$\pd{\Lagr}{\varphi}=\pd{}{t}\left(\pd{\Lagr}{\dot{\varphi}}\right)+\nabla\cdot\left(\pd{\Lagr}{(\nabla\varphi)}\right)$$
 - The _conservation of canonical momentum_ is then:
-$$\pd{\pi}{t}+\nabla\cdot\bm{J}=0$$
+$$\pd{\pi}{t}+\nabla\cdot\boldsymbol{J}=0$$
+
+
 - As time and space are on _equal footing_, treat $t$ as _another coordinate variable_:
 $$\displaylines{\Lagr=\Lagr(\varphi,\partial_\mu\varphi) \\ \pd{\Lagr}{\varphi}=\partial_\mu\left(\pd{\Lagr}{[\partial_\mu\varphi]}\right)}$$
+- Define the 4-vector:
+$$J^\mu=\pd{\Lagr}{[\partial_\mu\varphi]}$$
 - Then if $\partial\Lagr/\partial\varphi=0$:
 $$\partial_\mu J^\mu=0$$
 
@@ -86,26 +91,27 @@ $$\partial_\mu J^\mu=0$$
 $$S=\int\Lagr\,dx^\mu$$
 - The spacetime element is _Lorentz invariant_
 
+### The relativistic Lagrangian density
 - One writes down the _most general_ Lagrangian, up to _second order terms_
 	- Dimension of $\Lagr$: $[M]^4$
-$$\Lagr=\alpha(\partial^\mu\varphi)(\partial_\mu\varphi)+\beta\partial^\mu\partial_\mu\varphi+\gamma\varphi\partial^\mu\partial_\mu\varphi+\delta\varphi+\epsilon\varphi^2$$
+$$\Lagr=\alpha(\partial^\mu\varphi)(\partial_\mu\varphi)+\beta\partial^\mu\partial_\mu\varphi+\gamma\varphi\partial^\mu\partial_\mu\varphi+\delta\varphi+\varepsilon\varphi^2$$
 - Impose the _boundary condition_ that $\varphi\to 0$ at _infinity_, and is _fixed_ for _two points in time_ (distant past and future)
 
 - One can _rewrite_ this as:
-$$\Lagr=(\alpha-\gamma)(\partial^\mu\varphi)(\partial_\mu\varphi)+\partial^\mu(\beta\partial_\mu\varphi+\gamma\varphi\partial_\mu\varphi)+\delta\varphi+\epsilon\varphi^2$$
+$$\Lagr=(\alpha-\gamma)(\partial^\mu\varphi)(\partial_\mu\varphi)+\partial^\mu(\beta\partial_\mu\varphi+\gamma\varphi\partial_\mu\varphi)+\delta\varphi+\varepsilon\varphi^2$$
 - _Integrating_ this over a 4D surface, the second term gives a _constant_, which _does not affect_ the equations of motion
 
 - One can then _define_ $\alpha-\gamma$ as $1/2$
 - This leads to the _equation of motion_:
-$$\partial^\mu\partial_\mu\varphi-\delta-2\epsilon\varphi=0$$
+$$\partial^\mu\partial_\mu\varphi-\delta-2\varepsilon\varphi=0$$
 	- _Lower_ the index using the metric, making the $(\partial_\mu\varphi)(\partial^\mu\varphi)$ term contribute _twice_
 - Then impose the boundary conditions to make $\delta$ _vanish_
 
-- Then redefine $\epsilon$ as $-m^2/2$, getting the Lagrangian density as:
+- Then redefine $\varepsilon$ as $-m^2/2$, getting the _Lagrangian density_ as:
 $$\Lagr=\frac{1}{2}(\partial^\mu\varphi)(\partial_\mu\varphi)-\frac{1}{2}m^2\varphi^2$$
 - Writing it out in more detail:
 $$\Lagr=\frac{1}{2c^2}\left(\pd{\varphi}{t}\right)^2-\frac{1}{2}(\nabla\varphi)^2-\frac{1}{2}m^2\varphi^2$$
-
+### Klein-Gordon equation
 - The equation of motion is then the _Klein-Gordon equation_:
 $$\partial^\mu\partial_\mu\varphi+m^2\varphi=0$$
 	- For a _different metric_, there is a _minus sign_
@@ -116,9 +122,9 @@ $$\pi=\pd{\Lagr}{\dot{\varphi}}=\frac{1}{c^2}\left(\pd{\varphi}{t}\right)$$
 $$\Ham=\frac{c^2\pi^2}{2}+\frac{1}{2}(\nabla\varphi)^2+\frac{1}{2}m^2\varphi^2$$
 - This can only be _positive-definite_ iff the $\varphi^2$ coefficient is _positive_
 	- Negative: one gets states with _arbitrary large negative energy_, hence the state has _no stable ground state_, which is _unphysical_
-	- This justifies $\epsilon=-m^2/2$
+	- This justifies $\varepsilon=-m^2/2$
 
-## Fourier analysis of Klein-Gordon equation
+## Fourier decomposition of field
 - For simplicity, take _one spatial dimension_
 - Let there be a _plane wave solution_ to the Klein-Gordon equation:
 $$\varphi=\exp[i(kx-\omega t)]$$
@@ -130,7 +136,7 @@ $$\varphi=\int\,dk\,N(k)\,\left[a(k)\exp[i(kx-\omega t)]+a^*(k)\exp[-i(kx-\omega
 - One can then try to write the Hamiltonian:
 $$H=\int\left(\frac{c^2\pi^2}{2}+\frac{1}{2}(\nabla\varphi)^2+\frac{1}{2}m^2\varphi^2\right)\,dx$$
 - Using:
-$$\int\,dx\exp[i(k\pm k')x]=2\pi\delta(k\pm k')\hspace{1.5cm} N(-k)=N(k)\hspace{1.5cm}\omega(-k)=\omega(k)$$
+$$\int\,dx\exp[i(k\pm k')x]=2\pi\delta(k\pm k')\hspace{1cm} N(-k)=N(k)\hspace{1cm}\omega(-k)=\omega(k)$$
 - One finds:
 $$H=2\pi\int\,dk\,[N(k)\omega(k)]^2[a(k)a^*(k)+a^*(k)a(k)]$$
 - The _explicit time dependence disappears_ as $\Lagr$ is _not explicitly dependent on time_
@@ -145,7 +151,7 @@ $$H=\int\,dk\,N(k)\frac{\omega(k)}{2}[a(k)a^
 $$H=\int\,dk\,N(k)\omega(k)|a(k)|^2$$
 - $N(k)$ can be interpreted as _number of modes_
 - $\omega(k)$ is the _energy of modes_
-- Each mode behaves as a _simple/quantum harmonic oscillator_
+- Each mode behaves as a _simple/quantum harmonic oscillator_ with amplitude $a(k)$
 	- Energy is _relativistic_
 
 - For _3 spatial dimensions_:
@@ -157,18 +163,34 @@ $$N(k)=\frac{1}{(2\pi)^3}\frac{1}{2\omega(k)}$$
 ## Complex scalar fields
 - Let there be a general _complex scalar field_ $\varphi(x^\mu)$
 - The Lagrangian must be _invariant_ with respect to adding a _phase_ to $\varphi$
+
+### Two fields
 - The most _general Lagrangian_:
 $$\Lagr=\partial_\mu\varphi(\partial^\mu\varphi^*)-m^2\varphi^*\varphi$$
-- Treating $\varphi$ and $\varphi^*$ as _independent_:
+- One can also get two _real fields_ $\varphi_i$ from considering:
+$$\varphi=\frac{1}{\sqrt{2}}(\varphi_1+i\varphi_2)$$
+- One can then _rewrite_ the Lagrangian as:
+$$\Lagr=\sum_{i=1,2}\frac{1}{2}\partial_\mu\varphi_i\partial^\mu\varphi_i-\frac{m^2}{2}\varphi_i\varphi_i$$
+- This shows that it is really _two independent fields_
+
+### Equation and Fourier decomposition
+- Treating $\varphi$ and $\varphi^*$ as _independent_, one gets _separate equations_ for both fields:
+$$\partial_\mu\partial^\mu\varphi+m^2\varphi=0\hspace{1.5cm}\partial_\mu\partial^\mu\varphi^*+m^2\varphi^*=0$$
+
+- Corresponding momentum densities:
 $$\pi=\pd{\Lagr}{\dot{\varphi}}=\dot{\varphi}^* \hspace{1.5cm} \pi^*=\pd{\Lagr}{\dot{\varphi^*}}=\dot{\varphi}$$
 - The _Hamiltonian density_:
 $$\Ham=\pi\dot{\varphi}+\pi^*\dot{\varphi^*}-\Lagr$$
-- One then gets _separate Klein-Gordon equations_ for $\varphi$ and $\varphi^*$
+
 
 - The Fourier decomposition:
 $$\varphi=\int\,dk\,N(k)[a(k)\exp(ikx-i\omega t)+b^*(k)\exp(-ikx+i\omega t)]$$
 - The Hamiltonian:
 $$H=\int\,dk\,N(k)\omega(k)[|a(k)|^2+|b(k)|^2]$$
+- In _three dimensions_, the Fourier decomposition:
+$$\varphi=\int\,dk N(k)[a(k)\exp(-ik\cdot x)+b^*(k)\exp(ik\cdot x)]$$
+- Here:
+$$k\cdot x=k^\mu x_\mu=\omega t-\bm{k}\cdot\bm{x}$$
 ## Electromagnetic fields
 - Consider a _field_ $A_\mu$ from spacetime $\mathbb{R}^4$ to $\mathbb{R}^4$
 - Physical quantities must be _gauge invariant_:
@@ -184,30 +206,32 @@ $$F_{\alpha\beta}=\partial_\alpha A_\beta-\partial_\beta A_\alpha$$
 - Writing out components:
 $$F_{\alpha\beta}=\pmatrix{0 & E_x/c & E_y/c & E_z/c \\-E_x/c &0 & -B_z & B_y \\-E_y/c & B_z & 0 & -B_x \\ -E_z/c & -B_y & B_x & 0}$$
 - Or, alternatively:
-$$F_{i0}=-F_{0i}=E_i \hspace{1.5cm} F_{ij}=\epsilon_{ijk}B_k$$
+$$F_{i0}=-F_{0i}=E_i \hspace{1.5cm} F_{ij}=\varepsilon_{ijk}B_k$$
 
 - Constructing the _general Lagrangian_ by only allowing _second-order_ terms:
 $$\Lagr= aF_{\alpha\beta}F^{\alpha\beta}-J^\mu A_\mu$$
 - where $J^\mu$ is some _4-current density_
 	- $J^0=\rho$
 	- $J^{i}=\bm{J}\cdot\hat{\bm{e}}_i$
-- Gauge-invariance _of the action_ requires that the current density is _divergenceless_ $(\partial_\mu J^\mu=0)$
+- _Gauge-invariance of the action_ requires that the current density is _divergenceless_ $(\partial_\mu J^\mu=0)$
 	- Otherwise, _boundary terms_ appear in the action (integrate $-J^\mu A_\mu$ _by parts_)
 	- $\Lagr$ is still _not gauge invariant_
+	- Gauge invariance leads to the [[#Local phase (gauge) symmetry|conservation]]
 
 - From the Euler-Lagrange equations:
 $$J^\alpha+4a\partial_\mu F^{\mu\alpha}=0$$
 - To make the Hamiltonian _positive-definite_:
 $$a=-\frac{1}{4\mu_0}$$
-- With natural units, treating $\mu_0=\epsilon_0=c=1$:
+- With natural units, treating $\mu_0=\varepsilon_0=c=1$:
 $$\displaylines{\Lagr=-\frac{1}{4}F_{\alpha\beta}F^{\alpha\beta}-J^\mu A_\mu \\ J^\alpha-\partial_\mu F^{\mu\alpha}=0}$$
 
 - With this constant, one recovers:
-$$\text{div }\bm{E}=\frac{\rho}{\epsilon_0} \hspace{1.5cm} \text{curl }\bm{B}=\epsilon_0\mu_0\pd{\bm{E}}{t}+\mu_0\bm{J}$$
+$$\text{div }\bm{E}=\frac{\rho}{\varepsilon_0} \hspace{1.5cm} \text{curl }\bm{B}=\varepsilon_0\mu_0\pd{\bm{E}}{t}+\mu_0\bm{J}$$
 - The _continuity equation_ can be recovered from $\partial_\mu J^\mu=0$
-- From the fact that $F_{\alpha\beta}$ is _anti-symmetric_:
+- From the fact that $F_{\alpha\beta}$ is _anti-symmetric_, the _Bianchi identity_ states:
 $$\partial_\lambda F_{\mu\nu}+\partial_\nu F_{\lambda\mu}+\partial_\mu F_{\nu\lambda}=0$$
 - One recovers the _other two Maxwell's equations_
+$$\text{div }\bm{B}=0\hspace{1.5cm}\text{curl }\bm{E}=-\pd{\bm{B}}{t}$$
 
 - One can _fix_ the gauge of $A^\mu$
 - The _Lorenz gauge_ is _Lorentz invariant_:
@@ -216,12 +240,15 @@ $$\partial_\mu A^\mu=0$$
 - From this, the _general Lagrangian_ for a _group of particles_ in an _external field_:
 $$S=\sum_\text{particles}\left\{-\int mc^2\,d\tau-\int eA_\mu\,dx^\mu(t)\right\}-\frac{1}{4}\int F_{\alpha\beta}F^{\alpha\beta}\,d^4x$$
 
+- The _free-field_ Lagrangian can be written as:
+$$-\frac{1}{4}F_{\alpha\beta}F^{\alpha\beta}=\frac{1}{2}(|\bm{E}|^2-|\bm{B}|^2)$$
+
 # Symmetries and conservation laws
 - The simplest conservation law from the Lagrangian is the _conservation of momentum density_ if $\Lagr$ does _not explicitly depend on_ $\varphi$:
 $$\pd{}{\varphi}\left(\pd{\varphi}{[\partial_\mu\varphi]}\right)=0$$
 - The momentum density is said to be a _conserved charge_
 
-## Noether's theorem
+## Noether's theorem and conserved charges
 - This links any _smooth, continuous symmetry_ to a _conserved charge_
 	- A _Lie group_ symmetry
 	- Example: translation, but not reflection
@@ -236,74 +263,145 @@ $$\delta\Lagr=\pd{}{x}\left(\pd{\Lagr}{\varphi'}\delta\varphi\right) + \pd{}{t}\
 - Then define the _charge and current_:
 $$\displaylines{\rho=\pd{\Lagr}{\dot{\varphi}}\delta\varphi\hspace{1.5cm}\bm{J}=\pd{\Lagr}{\varphi'}\delta\varphi \\ \pd{\rho}{t}+\pd{J}{x}=0}$$
 - _Generalise_ to arbitrary space dimensions, the _Noether current_ and its conservation:
-$$J^\mu=\pd{\Lagr}{(\partial_\mu\varphi)}\delta\varphi\hspace{1.5cm}\pd{\rho}{t}+\partial_\mu J^\mu=0$$
+$$J^\mu=\pd{\Lagr}{(\partial_\mu\varphi)}\delta\varphi\hspace{1.5cm}\partial_\mu J^\mu=0$$
 
 - For some _multi-component_ field, the Noether current _generalises_ to:
 $$J^\mu=\pd{\Lagr}{(\partial_\mu\varphi_j)}\delta\varphi_j$$
 - For multiple fields, the transformation can _mix_ them:
-$$\delta\varphi_j=\epsilon t_{jk}\varphi_k\Longrightarrow J^\mu=\pd{\Lagr}{(\partial_\mu\varphi_j)}t_{jk}\varphi_k$$
+$$\delta\varphi_j=\varepsilon t_{jk}\varphi_k\Longrightarrow J^\mu=\pd{\Lagr}{(\partial_\mu\varphi_j)}t_{jk}\varphi_k$$
 
-## Phase symmetry
+- Given the current, one can define the _conserved charge_:
+$$\displaylines{Q=\int_\text{all space} \rho\,d^3\bm{r}=\int J^0\,d^3\bm{r} \\ \frac{dQ}{dt}=\int\pd{\rho}{t}\,d^3\bm{r}=-\int\div\bm{J}\,d^3\bm{r}=-\int_{\infty\text{ sphere}}\bm{J}\cdot d\bm{S}=0}$$
+
+- The conservation law allows for some _freedom_ in the current:
+$$J^\mu\to J^\mu+\partial_\nu f^{\mu\nu}$$
+- Here, $f^{\mu\nu}$ is an _antisymmetric tensor_
+- This is _also conserved_ due to the antisymmetry 
+## Global phase symmetry
+$$\Lagr=(\partial_\mu\varphi)(\partial^\mu\varphi^*)-m^2\varphi\varphi^*$$
 - The Lagrangian is _invariant uder a global phase change_
+	- Global: the phase is _independent of coordinates_
+$$\begin{aligned}\varphi&\longrightarrow\exp(i\varepsilon)\varphi\simeq\varphi+i\varepsilon\varphi \\ \varphi^*&\longrightarrow \exp(-i\varepsilon)\varphi^*\simeq \varphi^*-i\varepsilon\varphi^*\end{aligned}$$
 - It is said to belong to the $U(1)$ symmetry group
 
+- The corresponding Noether _current_:
+$$J^\mu=\pd{\Lagr}{(\partial_\mu\varphi)}\delta\varphi+\pd{\Lagr}{(\partial_\mu\varphi^*)}\delta\varphi^*=i(\partial^\mu\varphi^*)\varphi-i\varphi^*(\partial^\mu\varphi)$$
+
+- The corresponding conserved charge:
+$$Q=i\int\left(\pd{\varphi^*}{t}\varphi-\varphi^*\pd{\varphi}{t}\right)\,d^3\bm{r}$$
+- Substitute the [[#Equation and Fourier decomposition|Fourier decomposition]]:
+$$\varphi=\int d^3\bm{k}\,N(k)\left[a(\bm{k})\exp(-ik\cdot x)+b^*(\bm{k})\exp(ik\cdot x)\right]$$
+- The charge is then found to be:
+$$Q=\int d^3\bm{k}\,N(k)\left[|a(\bm{k})|^2-|b(\bm{k})|^2\right]$$
+
 - The _positive_ and _negative_ Fourier components contribute _different signs_ to the conserved charge
-	- This represents _particles_ and _anti-particles_
-
-## Gauge symmetry
+	- This represents _particles_ and _anti-particles_ once the field is quantised
+## Local phase (gauge) symmetry
 - Suppose the _phase_ of the complex scalar field $\varphi$ is a _function of space-time coordinates_:
-$$\varphi\to \exp(-i\epsilon(x^\mu))\varphi \Longrightarrow \partial^\mu\varphi\to$$
+$$\varphi\to \exp(-i\varepsilon(x^\mu))\varphi \Longrightarrow \partial^\mu\varphi\to\exp(-i\varepsilon)[(\partial^\mu\varphi)-i(\partial^\mu\varepsilon)\varphi]$$
 - It is _not a symmetry_ of the Klein-Gordon Lagrangian
+	- The _extra term_ is proportional to the _Noether current_
+	- Could be cancelled out by some _interaction term_
 
-- Let the transformation instead be:
-$$\varphi\to \exp(-ie\epsilon(x^\mu))\varphi$$
-- The _constant_ gives the _representation_ of the $U(1)$ group
+### The gauge-invariant Lagrangian
+- Instead, simultaneously make the _gauge transformation_:
+$$A_\mu\to A_\mu+\frac{1}{e}\partial_\mu \varepsilon$$
+
+- The _constant_ $e$ gives the _representation_ of the $U(1)$ group
 	- $U(1)$ has _infinitely many_ irreducible represntations, characterised by a _constant_
 
-- Simultaneously make the _gauge transformation_:
-
 - Introduce the _covariant derivative_:
-$$D_\mu=\partial_\mu+ieA_\mu\Longrightarrow D_\mu\varphi\to\exp(-i\epsilon)D^\mu\varphi$$
-- The Lagrangian is then:
-$$\Lagr=(D_\mu\varphi^*) (D^\mu\varphi)-m^2\varphi^*\varphi-\frac{1}{4\mu_0}\dots$$
+$$D_\mu=\partial_\mu+ieA_\mu\Longrightarrow D_\mu\varphi\to\exp(-i\varepsilon)D^\mu\varphi$$
+- To make the complex scalar field Lagrangian _gauge-invariant_, replace with _covariant derivatives_
+
+- This implies a presence of an _electromagnetic field_, hence add the _free field term_
+	- $\Lagr_\text{KG}$: the _gauge-invariant Klein-Gordon Lagrangian_
+	- $\Lagr_\text{em}$: the [[#Electromagnetic fields| free electromagnetic field Lagrangian]] $-F_{\mu\nu}F^{\mu\nu}/4$
+$$\begin{aligned}\Lagr&=\Lagr_\text{KG}+\Lagr_\text{em}=\Lagr_\text{KG}-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\\&=(D_\mu\varphi)^* (D^\mu\varphi)-m^2\varphi^*\varphi-\frac{1}{4}F_{\mu\nu}F^{\mu\nu} \\ &=(\partial_\mu\varphi)^*(\partial^\mu\varphi)-m^2\varphi^*\varphi+ieA_\mu[(\partial^\mu\varphi^*)\varphi-\varphi^*(\partial^\mu\varphi)]+e^2A_\mu A^\mu\varphi^*\varphi-\frac{1}{4}F_{\mu\nu}F^{\mu\nu} \end{aligned}$$
+- The _field-current interaction terms_ are included _in the covariant derivative term_
+	- Extra term in current: see below
+	- The term _quadratic_ in potential is _required to preserve gauge invariance_, takes into account the coupling of the extra term in current
 - There is a $U(1)$ symmetry in the Lagrangian
-- The _conserved charge_ for _constant_ $\epsilon$:
-$$\delta\varphi=-ie\epsilon\varphi \hspace{1.5cm}\delta\varphi^*=ie\epsilon\varphi$$
-- This gives:
-$$J^\mu=-e\epsilon[\varphi D^\mu\varphi^*-\varphi^* D^\mu\varphi]$$
 
 - For the Lagrangian to be _invariant under a spacetime dependent phase transformation_, one _needs an electromagnetic field_
 - One must also introduce a _covariant derivative_
 	- It represents _mechanical momentum_
+### Conserved current
+- The gauge transformation:
+$$\varphi\to \varphi-i\varepsilon\varphi\hspace{1.5cm}A_\mu\to A_\mu+\frac{1}{e}\partial_\mu\varepsilon$$
+
+- This gives the _conserved current_:
+$$J^\mu=-i\pd{\Lagr}{(\partial_\mu\varphi)}\varepsilon\varphi+i\pd{\Lagr}{(\partial_\mu\varphi^*)}\varepsilon\varphi^*+\frac{1}{e}\pd{\Lagr}{(\partial_\mu A_\nu)}\partial_\nu\varepsilon$$
+
+- The first two terms give the _Klein-Gordon current_:
+$$J^\mu_\text{KG}=i[\varphi^*(D^\mu\varphi)-(D^\mu\varphi)\varphi^*]=i[\varphi^*(\partial^\mu\varphi)-(\partial^\mu\varphi)^*\varphi]-2e^2A^\mu\varphi^*\varphi$$
+- It is _modified in the presence of a field_, and this current is seen in the _two extra terms of $\Lagr_\text{KG}$
+
+- The third term only gets a contribution from $\Lagr_\text{em}$:
+$$J^\mu_\text{em}\propto -F^{\mu\nu}\partial_\nu\varepsilon=-\partial_\nu(F^{\mu\nu}\varepsilon)+(\partial_\nu F^{\mu\nu})\varepsilon$$
+- The first term _vanishes_, as a _total derivative cannot contribute to the conserved charge_, and fields _vanish_ on the surface of the integration region
+- The current is then:
+$$J^\mu_\text{em}=\partial_\nu F^{\mu\nu}$$
+- Conservation is automatic due to _antisymmetry of the field tensor_
 
 ## The energy-momentum tensor
-- Let the Lagrangian vary by some _total derivative_
-- Using the proof for Noether's theorem above:
+- Let the Lagrangian density vary by some _total derivative_
+- The _action_ then shifts _only at the boundary of spacetime_, and the _motion_ is _unaffected_
+
+- Using the proof for [[#Noether's theorem]], let the total derivative be:
 $$\delta\Lagr=\partial_\mu\left(\pd{\Lagr}{(\partial_\mu\varphi)}\delta\varphi\right)=\partial_\mu K^\mu$$
 - The _conserved quantity_ is then:
 $$\partial_\mu\left(\pd{\Lagr}{(\partial_\mu\varphi)}\delta\varphi-K^\mu\right)=0$$
+- $K^\mu$ is some _quantity_ depending on the _type of transformation_ causing the shift
+
+- Consider conservations in [[Analytical classical mechanics|classical mechanics]] due to _translations_
+	- Invariance after spatial translation: momentum
+	- Invariance after time translation: energy
+- This leads to the _energy-momentum tensor_
 
 - Given a _transformation_ in _space-time_:
-$$x^\mu\to x^\mu+\epsilon^\mu$$
+$$x^\mu\to x^\mu+\varepsilon^\mu$$
 - Then for a function of the coordinates, such as $\varphi$:
-$$\varphi\to\varphi+\epsilon^\mu\partial_\mu\varphi$$
+$$\varphi\to\varphi+\varepsilon^\mu\partial_\mu\varphi$$
 - Then provided that $\Lagr$ _does not depend explicitly_ on $x^\mu$:
-$$\Lagr\to \Lagr+\epsilon^\mu\partial_\mu\Lagr$$
+$$\displaylines{\Lagr=\Lagr(\varphi,\partial^\mu\varphi) \\ \Lagr(x^{\mu})\to \Lagr(x^{\mu}+\varepsilon^{\mu})=\mathcal{L}+\varepsilon^\mu\partial_\mu\Lagr}$$
 - _Explicit dependence_ will make it into a form that does not make the _conserved quantity_ above
 
-- Stuff stuff stuff
+- One can also expand $\delta \Lagr$ in terms of the fields:
+$$\delta\Lagr=\varepsilon^\nu\pd{\Lagr}{\varphi}\partial_\nu\varphi +\varepsilon^\nu\pd{\Lagr}{(\partial_\mu\varphi)}\partial_\nu\partial_\mu\varphi $$
 
-- One then gets:
-$$\partial^\nu\left(\pd{\Lagr}{(\partial^\nu\varphi)}\partial^\mu\varphi-\delta^\mu_\nu\Lagr\right)=0$$
+- By _equating the differentials_ and relabelling indices:
+$$\partial_\mu\left(\pd{\Lagr}{(\partial_\mu\varphi)}\partial_\nu\varphi-\delta^\mu_\nu\Lagr\right)=\partial_\mu \tenscom{T}{\mu}{\nu}=0$$
 - This gives the _energy-momentum tensor_ $\tenscom{T}{\mu}{\nu}$
 	- There is _no symmetry_ as $\mu$ and $\nu$ are _different types of indices_
 
+- One can _raise_ one of the indices to get:
+$$T^{\mu\nu}=\pd{\Lagr}{(\partial_\mu\varphi)}(\partial^\nu\varphi)-g^{\mu\nu}\Lagr$$
+- The conservation is then written as:
+$$\partial_\nu T^{\mu\nu}=0$$
+
+- Relates to the [[Special Relativity#Energy-momentum tensor|energy-momentum tensor in special relativity]]
+
+- For _multiicomponent fields_ (such as electromagnetic and complex fields):
+$$T^{\mu\nu}=\pd{\Lagr}{(\partial_\mu\varphi_\alpha)}(\partial^\nu\varphi_\alpha)-g^{\mu\nu}\Lagr$$
+
+- The _divergenceless_ condition gives some degree of _freedom_ to the tensor:
+$$T^{\mu\nu}\to T^{\mu\nu}+\partial_\lambda \Omega^{\lambda\mu\nu}$$
+- The tensor must be _antisymmetric_ w.r.t. indices $\mu,\lambda$
+- This is _automatically also conserved_ due to the antisymmetry
+- This also allows the energy-momentum to be _symmetric_ in $\mu,\nu$
 ### Longitudinal wave on an elastic rod
 - From a [[#The wave on an elastic rod|previous derivation]]:
-$$\Lagr=\frac{1}{2}\rho\dot{\varphi}^2-\frac{1}{2}\kappa\varphi^2$$
+$$\Lagr=\frac{1}{2}\rho\dot{\varphi}^2-\frac{1}{2}\kappa(\varphi')^2$$
 - From the formula for the energy-momentum tensor above:
-$$\displaylines{\tenscom{T}{0}{0}=\tenscom{T}{1}{1}=\frac{1}{2}\rho\dot{\varphi}^2+}$$
+$$\displaylines{\tenscom{T}{tt}{}=\tenscom{T}{xx}{}=\frac{1}{2}\rho\dot{\varphi}^2+\frac{1}{2}\kappa(\varphi')^2=\Ham \\ T^{tx}=-\rho\dot{\varphi}\varphi'\hspace{1.5cm}T^{xt}=-\kappa\dot{\varphi}\varphi'}$$
 - As the Lagrangian is _not Lorentz invariant_, $T$ is _not symmetric_
+
+- From the _conservation laws_ for $T^{\mu\nu}$:
+$$\displaylines{\pd{T^{tt}}{t}=-\pd{T^{xt}}{x} \\ \pd{T^{xx}}{x}=-\pd{T^{tx}}{x}}$$
+- These are verified using the [[#Lagrangian density|equations of motion]]
+- The first law relates the _rate of change of energy density_ $T^{tt}$ with the _flow of energy_ $T^{xt}$
+- The second relates the _momentum flow_ $T^{xx}$ with the _rate of change of momentum density_ $T^{tx}$
 
 ### Relativistic scalar field
 $$\Lagr=\frac{1}{2}(\partial^\mu\varphi)(\partial_\mu\varphi)-\frac{1}{2}\varphi^2$$
@@ -311,46 +409,71 @@ $$\Lagr=\frac{1}{2}(\partial^\mu\varphi)(\partial_\mu\varphi)-\frac{1}{2}\varphi
 $$T^{\mu\nu}=(\partial^\mu\varphi)(\partial^\nu\varphi)-g^{\mu\nu}\Lagr$$
 - From this, one gets that the tensor is _symmetric_
 
-### Electromagnetic field
-$$\Lagr=-\frac{1}{4}F_{\alpha\beta}F^{\alpha\beta}=-\frac{1}{4}g^{\alpha\gamma}g^{\beta\delta}$$
-- The tensor:
+### Free electromagnetic field
+$$\Lagr=-\frac{1}{4}F_{\alpha\beta}F^{\alpha\beta}=-\frac{1}{4}g^{\alpha\gamma}g^{\beta\delta}(\partial_\alpha A_\beta-\partial_\beta A_\alpha)(\partial_\gamma A_\delta-\partial_\delta A_\gamma)$$
+- The energy-momentum tensor:
+$$T^{\mu\nu}=-F^{\mu\lambda}(\partial^\nu A_\lambda)-g^{\mu\nu}\Lagr$$
 
 - The form of this tensor is _not gauge invariant_, and _not symmetric_
-- From the derivation, one can _freely add_ any tensor of the form:
-$$\partial_\lambda \Omega^{\lambda\mu\nu}\longrightarrow\partial$$
+	- Not gauge invariant as it expressed in terms of _potential_, not _field_
+- Use the freedom in adding an antisymmetric tensor:
+$$\displaylines{T^{\mu\nu}\to T^{\mu\nu}+\partial_\lambda \Omega^{\lambda\mu\nu} \\ \Omega^{\lambda\mu\nu}=-F^{\lambda\mu}A^\nu}$$
+- In a _free field_, the divergence of the field tensor vanishes, hence one gets:
+$$T^{\mu\nu}=\tenscom{F}{\mu}{\lambda}F^{\lambda\nu}-g^{\mu\nu}\Lagr$$
+- This is _gauge invariant_ as it expressed in terms of _field strengths_
+- It is also _symmetric_
+
+- Its elements are:
+$$\displaylines{\Lagr=\frac{1}{2}(|\bm{E}|^2-|\bm{B}|^2) \\ T^{00}=\Ham=\frac{1}{2}(|\bm{E}|^2+|\bm{B}|^2)\hspace{1cm}T^{i0}=T^{0i}=(\bm{E}\times\bm{B})_j}$$
+- As expected $T^{00}$ is the _energy density_
+- $T^{i0}$ is the [[Electromagnetism#Energy flow in electromagnetic waves|Poynting vector]], the energy/momentum _flow_
 
 ### In general relativity
 - In general relativity, the _invariant element of space-time_ is $\sqrt{-g}$, where $g=\text{det}(g_{\mu\nu})$, and $g_{\mu\nu}$ is the _metric tensor_
+	- For the _Minkowski metric_, $g=-1$
 - The _Einstein-Hilbert action_ is:
-$$S=\int\Lagr\sqrt{-g}\,d^4x$$
-- The term $\sqrt{-g}\, d^4x$ is some _volume element_
+$$S=\int\Lagr(g^{\mu\nu},\varphi_i,\partial_\mu\varphi_i)\sqrt{-g}\,d^4x$$
+- The term $\sqrt{-g}\, d^4x$ is some _volume element_ given the metric
 
 - One should replace derivatives with the _covariant derivatives_
-- After some _coordinate transformation_ $x^\mu\to x^\mu+\epsilon^\mu$:
-$$\delta S=\frac{1}{2}\int T_{\mu\nu}(\partial^\nu\epsilon^\mu+\partial^\mu\epsilon^\nu)$$
-- Comes from the fact that $T_{\mu\nu}$ is _symmetric_
+- From consideration of the [[General Relativity#Einstein's equation|Einstein field equation]]:
+$$\delta S=\frac{1}{2}\int T_{\mu\nu}\sqrt{ -g }\,\delta g^{\mu \nu}\,d^{4}x$$
+
+- $1/2$ comes from the fact that $T_{\mu\nu}$ is _symmetric_
 - The corresponding _shift in the metric_:
-$$\delta g^{\mu\nu}=\partial^\mu\epsilon^\nu+\partial^\nu\epsilon^\mu$$
+$$\delta g^{\mu\nu}=\partial^\mu\varepsilon^\nu+\partial^\nu\varepsilon^\mu$$
 - Symmetry requires that for _any coordinate transformation_:
-$$0=\frac{1}{2}\int(\partial^\mu\epsilon^\nu+\partial^\nu\epsilon^\mu)\left(\sqrt{-g}\,T_{\mu\nu}-2\frac{\delta S}{\delta g^{\mu\nu}}\right)$$
+$$0=\frac{1}{2}\int(\partial^\mu\varepsilon^\nu+\partial^\nu\varepsilon^\mu)\left(\sqrt{-g}\,T_{\mu\nu}-2\frac{\delta S}{\delta g^{\mu\nu}}\right)$$
 - The _energy-momentum tensor_ is then:
-$$T_{\mu\nu}=\frac{2}{\sqrt{-g}}\frac{\delta S}{g^{\mu\nu}}$$
+$$T_{\mu\nu}=\frac{2}{\sqrt{-g}}\frac{\delta S}{\delta g^{\mu\nu}}$$
+
+- By manipularing $\delta g_{\mu \nu}$, one can also obtain:
+$$T_{\mu \nu}=2\frac{\partial \mathcal{L}}{\partial g_{\mu \nu}}-g_{\mu \nu}\mathcal{L}$$
 ## Angular momentum
-- Define the tensor:
+- Define the antisymmetric tensor:
 $$M^{\lambda\mu\nu}=x^\mu T^{\lambda\nu}-x^\nu T^{\lambda\mu}$$
-- The _derivative_ w.r.t. $\lambda$:
+- The _derivative_ w.r.t. $\lambda$, using the fact that $\partial_\mu T^{\mu\nu}=0$:
 $$\partial_\lambda M^{\lambda\mu\nu}=\delta^\mu_\lambda T^{\lambda\nu}-\delta^\nu_\lambda T^{\lambda\mu}=0$$
 - This is valid as long as $T$ is _symmetric_
+- In other words, $M$ is also _conserved_
 
 - This _conserved quantity_ is linked to some _rotation_
-- Considering that $T^{0i}$ are the components of _momentum density_, define the _total angular momentum tensor_:
+- Considering that $T^{0i}$ are the components of _momentum density_, define the _total angular momentum tensor_ $J^{\mu\nu}$
+	- Example: $M^{012}=xT^{02}-yT^{01}$ gives the $z-$component of angular momentum density
 $$J^{\mu\nu}=\int d^3\bm{r}M^{0\mu\nu}$$
+- The familiar 3-angular momentum, from the antisymmetric nature of $J^{\mu\nu}$:
+$$J_{i}=\frac{1}{2}\varepsilon_{ijk}J^{jk}$$
+- The _other non-zero components_:
+$$J^{0j}=-J^{j0}=\int M^{00j} \, d^{3}\boldsymbol{r}=tP_{j}-R_{j}E $$
+- If this quantity is conserved in time:
+$$R_{j}=V_{j}t+\text{const.}$$
+- In other words, the _centre of mass_ moves at _constant speed_ $V_j=P_j/E$
 
 - The _total angular momentum_ includes both the _orbital_ and _intrinsic_ parts
 - In the _rest frame_ of an object, the _intrinsic angular momentum_ is known as the _spin_
 
 - The _spin 4-vector_:
-$$S^\mu=-\frac{1}{2}\epsilon^{\nu\alpha\beta}U_{\nu}J_{\alpha\beta}$$
+$$S^\mu=-\frac{1}{2}\varepsilon^{\mu\nu\alpha\beta}U_{\nu}J_{\alpha\beta}$$
 - In the _rest frame_, as $U_0=1$ and $U_i=0$, one gets $S^i=J^i$, giving the _intrinsic angular momentum_
 
 # Symmetry breaking
@@ -362,67 +485,93 @@ $$S^\mu=-\frac{1}{2}\epsilon^{\nu\alpha\beta}U_{\nu}J_{\alpha\beta}$$
 	- _Global symmetry_ (spacetime _invariant_)
 	- _Gauge symmetry_ (_dependent_ on spacetime coordinates)
 
-## Breaking of the U(1) symmetry
-- The _Klein-Gordon field_:
-$$\Lagr=\partial^\mu\varphi\partial_\mu\varphi-m^2\varphi^*\varphi$$
+## Breaking of the global U(1) symmetry
+- The [[#Complex scalar fields|complex Klein-Gordon field]]:
+$$\Lagr=(\partial^\mu\varphi^*)(\partial_\mu\varphi)-m^2\varphi^*\varphi$$
 - Consider adding an _additional term_ with _higher powers_ of the field
 	- Keep the _global symmetry_
-	- This is an _interaction term_
-$$\Lagr=\partial^\mu\varphi\partial_\mu\varphi-m^2\varphi^*\varphi-\frac{\lambda}{2}(\varphi^*\varphi)^2$$
+$$\displaylines{V(\varphi)=m^2\varphi^*\varphi+\frac{\lambda}{2}(\varphi^*\varphi)^2 \\ \Lagr=\partial^\mu\varphi\partial_\mu\varphi-m^2\varphi^*\varphi-\frac{\lambda}{2}(\varphi^*\varphi)^2}$$
+- The _equation of motion_:
+$$\partial_\mu \partial^\mu\varphi+m^2\varphi+\lambda(\varphi^*\varphi)\varphi=0$$
+- The term can be seen as a _self-interaction_ with _strength_ $\lambda$
+
 - The corresponding _Hamiltonian density_:
 $$\Ham=\pi^*\pi+m^2\varphi^*\varphi+\frac{\lambda}{2}(\varphi^*\varphi)^2$$
 - For a positive-definite, $\Ham$, $\lambda>0$
 - This also gives the _possibility_ that $m^2<0$
 - With $-m^2>0$, one _shifts_ the state of _minimum energy_
 	- The original equilibrium state is now an _unstable equilibrium_
+![[Mexican hat potential.png]]
 - There are then _infinitely many ground states_ given:
 $$\varphi_0^*\varphi_0=\frac{-m^2}{\lambda}$$
 
 - Each state _does not obey the symmetry on its own_, so the symmetry is said to be _spontaneously broken_
-	- The transformation _changes the state_
+	- The phase transformation _changes the state_
 	- The _phase_ of the state is _spontaneously chosen_ by the system, and can take _any value_
 
 - Choose the state (and choose _sign convention_ such that $m^2>0$)
+	- $V(\varphi)=-m^2(\varphi^*\varphi)+(\lambda/2)(\varphi^*\varphi)^2$
 $$\varphi_0=\sqrt{\frac{m^2}{\lambda}}$$
 - Given a _complex variation_ in the field, dependent on the _new, real fields_ $\chi_1$ and $\chi_2$:
 $$\varphi=\varphi_0+\frac{1}{\sqrt{2}}(\chi_1+i\chi_2)$$
-- One can then write the Lagrangian and Hamiltonian as:
-$$\displaylines{\Lagr=\frac{1}{2}(\partial^\mu\chi_1)(\partial_\mu\chi_1)+\frac{1}{2}(\partial^\mu\chi_2)(\partial_\mu\chi_2)-V(\varphi_0)-m_1\chi_1^2+O(\chi^3) \\ \\ \Ham=}$$
+- The fields are a _shift from equilibrium_, with directions _along_ and _perpendicular_ to the _line of minima_ respectively
 
-- By _inspecting_ the equation, one gets that for $\chi_1$, the _dispersion relation_ is:
+- One can then write the Lagrangian and Hamiltonian as:
+$$\displaylines{\Lagr=\frac{1}{2}(\partial^\mu\chi_1)(\partial_\mu\chi_1)+\frac{1}{2}(\partial^\mu\chi_2)(\partial_\mu\chi_2)-V(\varphi_0)-m_1\chi_1^2+O(\chi^3) \\ \\ \Ham=\frac{1}{2}\left(\pd{\chi_1}{t}\right)^2+\frac{1}{2}\left(\pd{\chi_2}{t}\right)^2+\frac{1}{2}\left|\nabla\chi_1\right|^2+\frac{1}{2}\left|\nabla\chi_2\right|^2+V(\varphi_0)+m_1\chi_1^2+O(\chi^3)}$$
+- The corresponding _Klein-Gordon equations_:
+$$\partial_\mu\partial^\mu\chi_1+2m^2\chi_1=0\hspace{1.5cm}\partial_\mu\partial^\mu\chi_2=0$$
+- There is _no term for the imaginary part_, while the real part has a _positive quadratic term_
+- This _asymmetry_ corresponds to the _energy cost_ in different directions of the potential energy function
+
+- By _inspecting_ the equations, one gets that for $\chi_1$, the _dispersion relation_ is:
 $$\omega=\pm\sqrt{k^2+2m^2}$$
 - For the field $\chi_2$, one gets that the particle is _massless_
+	- Corresponds to dispersion $\omega=k$
 	- It is known as the _Goldstone field_ (creating the Goldstone boson)
-- This asymmetry corresponds to the _energy cost_ in different directions of the potential energy function
 
-## Breaking gauge symmetry
+- _Goldstone's Theorem_ states that for _every spontaneously broken symmetry_, there will be a _field of massless quanta_
+
+## Breaking (local) gauge symmetry
 - For the _local gauge transformation_:
-$$\varphi\to\exp(i\epsilon(x^\mu))\varphi$$
-- The Lagrangian must have somne _coupling to an electromagnetic field_
+$$\varphi\to\exp(i\varepsilon(x^\mu))\varphi$$
+- The Lagrangian must have some _coupling to an electromagnetic field_
 - Also add the quartic term in the _potential_ above:
-$$\Lagr=\dots-V(\varphi)$$
+$$\Lagr=-\frac{1}{4}F_{\alpha\beta}F^{\alpha\beta}+(D_\mu\varphi)^*(D^\mu\varphi)-V(\varphi)$$
+- Once again, this _triggers_ spontaneous symmetry breaking and _non-zero_ $\varphi_{0}$
 
-- The _covariant derivative_ contributes an extra term:
+- With $\varphi_0\neq0$, the _covariant derivative_ contributes an extra term:
 $$(ieA_\mu\varphi_0)^*(ieA^\mu\varphi_0)=\frac{e^2m^2}{\lambda}A_\mu A^\mu$$
 - In the _Lorenz gauge_ where $\partial_\mu A^\mu=0$:
 $$\partial_\nu\partial^\nu A_\mu+\frac{2e^2m^2}{\lambda}A_\mu=0$$
 - The _dispersion relation_ for $A_\mu$ is then:
 $$\omega=\pm\sqrt{k^2+2e^2m^2/\lambda}$$
-- The field is said to _gain mass_ $em\sqrt{2/\lambda}$
+- The field $A_\mu$ is said to _gain mass_ $em\sqrt{2/\lambda}$
 
 ## Higgs mechanism
 - Write the perturbation:
 $$\varphi=\varphi_0+\frac{1}{\sqrt{2}}(\chi_1+i\chi_2)$$
-- The _covariant derivative_ becomes
+- The _covariant derivative_ becomes:
+$$D_{\mu}\varphi=\frac{1}{\sqrt{ 2 }}\left({\partial}_{\mu}\chi_{1}+i\partial_{\mu}\chi_{2} \right)+ie\varphi_{0}A_{\mu}+\dots$$
 
-- Then make the _gauge transformation_
+- Then make the _gauge transformation_:
+$$
+A_{\mu}\to A_{\mu}-\frac{1}{\sqrt{ 2 }e\varphi_{0}}\partial_{\mu }\chi_{2}
+$$
 
-- This _removes_ the $\chi_2$ terms ("eats" the Goldstone boson)
+- This _removes all_ $\chi_2$ terms ("eats" the Goldstone boson):
+$$
+\begin{aligned}
+\mathcal{L}&=-\frac{1}{4}F_{\mu \nu} F^{\mu \nu}+e^2\varphi_{0}^2A_{\mu}A^\mu+\frac{1}{2}(\partial_{\mu}\chi_{1})(\partial^{\mu}\chi_{1})-V(\varphi) \\ &=-\frac{1}{4}F_{\mu \nu} F^{\mu \nu}+\frac{e^2m^{2}}{\lambda}A_{\mu}A^\mu+\frac{1}{2}(\partial_{\mu}\chi_{1})(\partial^{\mu}\chi_{1})-m^{2}\chi_{1}^{2}-V(\varphi_{0})
+\end{aligned}
+$$
+- This is also equivalent to a _change of phase_ of the scalar field, making it _real_ and removing $\chi_2$
+	- For a _local phase change_, one can make a different change at every point to _remove $\chi_2$ at every point_
+- In summary, for a _local_ gauge symmetry broken, the _previously massless_ field will "eat" the Goldstone field then _gain mass_
 
 - The [[Rotations and Lie Algebra|Lie group]] works on an $\mathbb{R}^n$ manifold instead of a set
 - If symmetry is _broken_ into some _subgroup $H$_, that is on an $\mathbb{R}^m$ manifold
 - For _global symmetry_, there are $n-m$ _Goldstone bosons_
-- For _local gauge symmetry_, there are $m$ _massive particles_
+- For _local gauge symmetry_, there are $m$ _massive particles_ formed from originally massless quanta
 
 ## The standard model
 - In the _standard model_, the electromagnetic and weak interactions are given by the _Lie group_ $SU(2)\otimes U(1)$
@@ -451,13 +600,13 @@ $$G(x^\mu)=\int\,dp^\nu\frac{\exp(-ip_\mu x^\mu)}{p^\mu p_\mu-m^2}$$
 - The _poles_ arise when $p_0^2-p_i p^i=m^2$
 - On the $p_0$ _axis_, the poles are at $\pm\sqrt{p_i^2+m^2}$ 
 
-- One can use the $i\epsilon$ _prescription_, moving the poles _up the axis_:
-$$p^0\to p^0+i\epsilon$$
+- One can use the $i\varepsilon$ _prescription_, moving the poles _up the axis_:
+$$p^0\to p^0+i\varepsilon$$
 
 - Causality dictates that $G(x^\mu)$ _disappears outside the forward light cone_
 
 - In quantum fields, to preserve causality, use the _Feynman prescription_:
-$$G(x^\mu)=\int\,dp^\nu\frac{\exp(-ip_\mu x^\mu)}{p^\mu p_\mu-m^2+i\epsilon}$$
+$$G(x^\mu)=\int\,dp^\nu\frac{\exp(-ip_\mu x^\mu)}{p^\mu p_\mu-m^2+i\varepsilon}$$
 - This gives _one pole for each half-plane_
 - The Feynman propagator is _non-zero everywhere_
 - This corresponds to _having antiparticles travelling backwards in time_

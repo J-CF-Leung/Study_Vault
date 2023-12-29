@@ -76,6 +76,26 @@ $$m\ddot{x}_i=-\pd{V}{x_i}$$
 
 - One can also apply _constraints_ using _Lagrange multipliers_ (as long as they are _holonomic_)
 - One can also easily spot _symmetries_ in the system
+
+## d'Alembert's Principle
+- Consider the vector $\bm{F}-\dot{\bm{p}}$
+- If a particle travels along a path $\bm{x}(t)$, consider the _scalar product_ of that vector with displacement:
+$$\sum_i(F_i-\dot{p}_i)\,\delta x_i=0$$
+- Considering _all forces_, this is _trivially true_
+
+- Consider _forces of constraint_ (e.g. _normal_ forces) keeping the particle on track
+- They are typically _perpendicular_ to displacement
+- Hence, one gets:
+$$\sum_i (F_i^\text{internal}-\dot{p}_i)\,\delta x_i=0$$
+- Consider the first product:
+$$\sum_i F_i\,\delta x_i=\sum_{i,j}F_i\pd{x_i}{q_j}\,\delta q_j\equiv \sum_j Q_j\,\delta q_j=\sum_j-\pd{V}{q_j}\,\delta q_j$$
+- The second product, by considering _coordinate transformations_ like above:
+$$\sum_{i,j} m\dot{v}_i\pd{x_i}{q_j}\,\delta q_j=\sum_{i,j}m\left[\frac{d}{dt}\left(v_i\pd{v_i}{\dot{q}_j}\right)-v_i\pd{v_i}{q_j}\right]\,\delta q_j=\sum_j\left(\frac{d}{dt}\pd{T}{\dot{q}_j}-\pd{T}{q_j}\right)\,\delta q_j$$
+- From this, if _all external forces are due to velocity-independent potentials_ $V(\bm{q})$, one gets:
+$$\pd{}{q_j}(T-V)=\frac{d}{dt}\left[\pd{}{\dot{q}_j}(T-V)\right]$$
+- Therefore, one _derives the Euler-Lagrange equation_ for $L=T-V$
+	- Only works for _velocity-independent potentials_
+
 ## Generalised momentum and force conjugates
 - _Canonical momentum_ conjugate $p_i$:
 $$p_i=\pd{L}{\dot{q}_i}$$
@@ -120,7 +140,7 @@ $$\frac{\partial}{\partial s}L(Q_i(s,t),\dot{Q}_i(s,t),t)=0$$
 >For every symmetry of the action of a system, there is a corresponding conserved quantity
 
 - In the case of the one-parameter transformation, the conserved quantity is:
-$$\pd{L}{s}\Bigg{|}_{s=0}=\frac{d}{dt}\left(\sum_i\pd{L}{Q_i}\pd{Q_i}{s}\Bigg|_{s=0}\right)=0$$
+$$\pd{L}{s}\Bigg{|}_{s=0}=\frac{d}{dt}\left(\sum_i\pd{L}{\dot{Q}_{i}}\pd{Q_i}{s}\Bigg|_{s=0}\right)=0$$
 ### Example: Translations, homogeneity of space
 - Consider a system of $i$ particles, at positions $\bm{r}_i$ translated by vector $\bm{n}$
 $$\bm{r}_i(t) \rightarrow \bm{r}_i(t)+s \,\bm{n}$$
@@ -250,6 +270,17 @@ $$\PB{\omega}{q_i}=-\pd{\omega}{p_i}\;\;\;\;\PB{\omega}{p_i}=\pd{\omega}{q_i}$$
 $$\frac{d\mean{\hat{O}}}{dt}=\mean{\pd{\hat{O}}{t}}+\mean{[\hat{O},\hat{H}]}$$
 - This suggests the relation between them to be:
 $$\PB{A}{B}\longleftrightarrow\frac{1}{i\hbar}[\hat{A},\hat{B}]$$
+
+## Quantum variational principle
+- Using the _Einstein_ and _de Broglie relations_, one can write the _quantum mechanical action_:
+$$\frac{1}{\hbar}\int L\,dt=\frac{1}{\hbar}\int(\bm{p}\cdot\dot{\bm{q}}-H)\,dt=\int(\bm{k}\cdot d\bm{q}-\omega\,dt)$$
+- In other words, the _wave mechanical phase must be stationary_
+- This is a condition for _constructive interference_
+- _Away_ from the classical path, wave functions _destructively interfere_
+- As $\hbar\to0$, waves _destructively interfere rapidly away from the classical path_
+
+- This is a _"geometrical optics" approach_
+
 # Transformations
 - By transforming to another coordinate system, while the _values_ of $L$ and $H$ do not change, their _functional forms_ will 
 ## Point transformations
@@ -352,6 +383,8 @@ $$\phi\to\phi-\pd{f}{t}\hspace{1.5cm}\bm{A}\to\bm{A}+\nabla f$$
 $$\bm{n}\cdot\bm{A}=0$$
 - Due to the arbitrary gradient, one can also choose a _Coulomb gauge_:
 $$\nabla\cdot\bm{A}=0$$
+
+
 - Or the _Lorenz gauge_:
 $$\pd{\phi}{t}+\nabla\cdot\bm{A}=0$$
 - The latter still has some _ambiguity_ as one can use any $f$ that satisfies:
@@ -361,8 +394,8 @@ $$\pd{^2f}{t^2}-\nabla^2f=0$$
 $$V=e(\phi-\dot{x}_iA_i)=e\left(\frac{dt}{dt}\phi-\frac{dx_i}{dt}A_i\right)$$
 - One can see that the Lagrangian is also _Lorentz invariant_
 # Relativistic particle dynamics
-
-- Minkowski spacetime
+- Minkowski spacetime is a _flat spacetime_, where _the speed of light is constant_
+- Used in [[Special Relativity]]
 ## 4-vectors
 - A _Lorentz transformation_ is a transformation between _frames_ in _Minkowski spacetime_
 - _4-vectors_ are _Lorentz invariant_ objects
@@ -397,8 +430,10 @@ $$g_{\alpha\beta}={L^\bar\mu}_\alpha {L^\bar\nu}_\beta \,g_{\bar\mu\bar\nu}\hspa
 - The _action must be Lorentz invariant_
 - Hence, for a _free particle_, define the _action_ as the _proper time elapsed_:
 $$S=-mc^2\int d\tau=-mc\int\sqrt{dx_\mu dx^\mu}=-mc^2\int\sqrt{1-\frac{\dot{x}_i\dot{x}^i}{c^2}}\,dt$$
+- The sum $dx_\mu dx^\mu$ is a _frame-independent quantity_
+
 - Then one gets the _Lagrangian_:
-$$L=-mc^2\sqrt{1-\frac{\dot{x}_i\dot{x}^i}{c^2}}$$
+$$L=-mc^2\sqrt{1-\frac{\dot{x}_i\dot{x}^i}{c^2}}=-\frac{mc^2}{\gamma(v)}$$
 - For $\dot{x}_i\dot{x}^i<<c^2$, one can take the _non-relativistic limit_:
 $$L\approx-mc^2+\frac{1}{2}mv^2$$
 - The Lagrangian is _not Lorentz invariant_, but the _action_ is due to $\int\,dt$
@@ -412,7 +447,7 @@ $$H=\gamma mc^2$$
 - From the _symmetry w.r.t. translation_ of $L$:
 $$p_i=\text{const.}\Longrightarrow v_i=\text{const.}$$
 
-- The above formulation takes _time_ as the _independent variable_
+- The Hamiltonian formulation takes _time_ as the _independent variable_
 - From the point of relativity, this _compromises the symmetry_ of spacetime
 
 - Let there be a _parameter_ $\lambda$ parametrising _all components_ $x^\mu$
@@ -425,10 +460,18 @@ $$\lambda\to\lambda'(\lambda)$$
 ## The relativistic electromagnetic Lagrangian
 - Define a _contrvariant 4-vector_ such that:
 $$A^\mu=\left(\frac{\phi}{c},A^i\right)$$
-- From electrodynamics, it can be proven that this is _Lorentz invariant_
+- This is the [[Special Relativity#4-potential and field tensor|4-potential]]
 - Then let its contribution to the _Lagrangian_ be:
-$$-e\frac{dx_\mu}{dt}A^\mu$$
+$$L=-\frac{mc^2}{\gamma(v)}-e\frac{dx_\mu}{dt}A^\mu=-\frac{mc^2}{\gamma(v)}-e(\phi-\bm{v}\cdot\bm{A})$$
 
+- The _action_ is then:
+$$S=-mc\int d\tau-e\int A_\mu\,dx^\mu$$
+
+- The _canonical momenta_ then simply add:
+$$\bm{p}=\gamma m\bm{v}+e\bm{A}$$
+- The action can then be written as:
+$$\displaylines{S=-mc\int p_\mu^\text{canonical}\,dx^\mu \\ p_\mu^\text{canonical}=\gamma m\frac{dx_\mu}{dt}+eA_\mu}$$
+- As expected, $L$ is _not frame-invariant_, but $S$ is Lorentz invariant
 
 # Routhian mechanics
 
@@ -441,11 +484,11 @@ $$-e\frac{dx_\mu}{dt}A^\mu$$
 $$\ddot{x}+\gamma\dot{x}+\omega_0^2x=\phi(t)$$
 
 - Consider a _simple harmonic oscillator_, given an _impulse_ at $t=t'$
-	- There is _no loss of generality_ as _any force_ can be given as a _composition of delta functions_:
-	$$F(t)=\int F(t')\delta(t-t')\,dt'$$
+	- There is _no loss of generality_ as _any force_ can be given as a _composition of delta functions_: $$F(t)=\int F(t')\delta(t-t')\,dt'$$
 - The _equations of motion_ for the impulse force:
 $$\ddot{G}+\gamma\dot{G}+\omega_0^2G=\delta(t-t')$$
-- This is the [[Green's Functions for ODEs|Green's Function]] for the system
+- This is the [[Green's Functions for ODEs|Green's Function]] for the system:
+$$x(t)=\int G(t-t')\phi(t')\,dt'$$
 
 - The [[Fourier series and transforms|Fourier transform]] of the Green's function:
 $$\displaylines{G(t-t')=\int\frac{d\omega}{2\pi}G(\omega)\exp[i\omega (t-t')]
@@ -458,7 +501,8 @@ $$\omega_{1,2}=-\frac{i\gamma}{2}\pm\sqrt{\omega_0^2-\frac{\gamma^2}{4}}$$
 $$G(t-t')=\begin{cases}0&t<t' \\\int G(\omega)\exp[i\omega(t-t')](d\omega/2\pi) &t>t'\end{cases}$$
 - The system _obeys causality_
 - One can _solve for_ the response:
-$$G(t>t')=\oint$$
+$$\begin{aligned}G(t>t')&=\oint_{C_-}\frac{\exp[i\omega(t-t')]}{(\omega_0^2-\omega^2)+i\gamma\omega}\frac{d\omega}{2\pi}=-2\pi i\left[\res{} (\omega=\omega_1)+\res{} (\omega=\omega_2)\right]\\ &= \frac{1}{\sqrt{\omega_0^2-\gamma^2/4}}\exp\left[-\frac{\gamma}{2}|t-t'|\right]\sin\left[\sqrt{\omega_0^2-\gamma^2/4}|t-t'|\right]\end{aligned}$$
+- Hence, _oscillations_ will _decay over time_
 
 - For the _undamped case_, the poles move _up to the real axis_
 - The Green's function in this case:
@@ -478,9 +522,49 @@ $$G(t-t')=\begin{cases}0&t<t' \\ \sin[\omega_0(t-t')]/\omega_0 &t>t'\end{cases}$
 - The _equilibrium_ is then at 
 $$\mean{u}_f=\frac{f}{\kappa}=\alpha f$$
 - Here, $\alpha\equiv 1/\kappa$ is the _generalised susceptibility_
+	- It is necessarily _real_
 ![[Linear responses.png]]
 
 - For a general, _time-varying response_, add up the responses at each time where $f$ acts:
 $$\mean{u}_f=\int \alpha(t-t')f(t')\,dt'$$
 - In the _Fourier domain_:
 $$\mean{u(\omega)}_f=\alpha(\omega)f(\omega)$$
+
+- To obey _causality_, $\alpha(t-t')$ must be _zero_ for $t<t'$
+- This _constrains_ $\alpha(\omega)$, leading to the _Kramers-Kronig_ relations
+
+- Define an _antisymmetric_ function $v(t)$ such that:
+$$\displaylines{v(t)=\begin{cases}\alpha(t)&t>0 \\ -\alpha(-t) &t<0\end{cases} \\ \alpha(t)=v(t)\Theta(t)}$$
+- Here, $\Theta(t)$ is the _Heaviside step function_:
+![[Generalised susceptibility.png]]
+- Write $\alpha$ as _real_ and _imaginary_ parts:
+$$\alpha=\alpha'+i\alpha''$$
+
+- $\alpha(t)$ can be written as a _convolution_:
+$$\alpha(\omega)=\int_{-\infty}^\infty \Theta(\omega-\omega_1)v(\omega_1)\frac{d\omega_1}{2\pi}$$
+- [[Fourier series and transforms#Examples of Fourier transforms|Fourier transform of the step function]]:
+$$\Theta(\omega)=\lim_{\epsilon\to0}\int_0^\infty \exp(i\omega t-\epsilon t)\,dt=\pi\delta(\omega)+\frac{i}{\omega}$$
+- As $v(t)$ is antisymmetric, $v(\omega)$ is _imaginary_ and _antisymmetric_
+- Writing $\alpha$:
+$$\alpha(\omega)=\int_{-\infty}^{\infty}\left[\pi\delta(\omega-\omega_1)+\mathcal{P}\frac{i}{\omega-\omega_1}\right]v(\omega_1)\frac{d\omega_1}{2\pi}=\alpha'+i\alpha''$$
+- $\mathcal{P}$ is the _Cauchy principal value_:
+$$\mathcal{P}\int_{-\infty}^\infty f(x)\,dx=\lim_{\epsilon\to0}\left[\int_{-\infty}^{-\epsilon} f(x)\,dx+\int_\epsilon^\infty f(x)\,dx\right]$$
+
+- Then by comparing _real and imaginary parts_, one gets $v(\omega)=2i\alpha''$ and:
+$$\alpha'(\omega)=\mathcal{P}\int_{-\infty}^\infty\frac{\alpha''(\omega_1)}{\omega_1-\omega}\frac{d\omega_1}{\pi}$$
+- By having $v(t)$ be a _real, symmetric function_, one similarly obtains:
+$$\alpha''(\omega)=-\mathcal{P}\int_{-\infty}^\infty\frac{\alpha'(\omega_1)}{\omega_1-\omega}\,\frac{d\omega_1}{\pi}$$
+- These are the _Kramers-Kronig relations_, and are _completely general_
+	- Derived _only under the assumption of causality_
+
+- Use the fact that $\alpha(t)$ is _real_ to inspect the Fourier transforms:
+- One finds that the _dispersion_ part $\alpha'$ is _even under time reversal_:
+$$\alpha'(\omega)=\alpha'(-\omega)$$
+- For the _attenuation/dissipative_ part, it is _odd under time reversal_
+	- Corresponds to the fact that _energy dissipation is irreversible_
+$$\alpha''(\omega)=-\alpha''(-\omega)$$
+- Example: _attenuation_ of light in a medium depends on the _imaginary part of the refractive index_
+	- [[Electromagnetism#Waves in conducting media]]
+
+- The attenuation part is important for the [[Advanced statistical mechanics#Fluctuations|Fluctuation-dissipation Theorem]]
+

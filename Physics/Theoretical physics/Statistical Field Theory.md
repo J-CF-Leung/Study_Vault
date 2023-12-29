@@ -47,19 +47,25 @@ $$Z=\sum_{\{s_i\}}\exp[-\beta H(\{s_i\})] \hspace{1.5cm}\beta=\frac{1}{kT}$$
 
 ### Mean field theory
 - Make a _mean field approximation_: there is _no quadratic term_
-- Then one finds the Hamiltonian and partition function (with $b=\mu B$)
+- It is typically _valid_ when the _fluctuations_ are _small_ relative to the _average value_
+
+- In the case of _non-interacting spins_, one finds the Hamiltonian and partition function (with $b=\mu B$)
 $$\displaylines{H_0=-\mu\sum_i s_iB\hspace{1.5cm}Z_0=\left[\exp(\beta b)+\exp(-\beta b)\right]^N}$$
 - The _average spin_ on each site is then:
-$$s=\mean{s_i}=\frac{\mean{U}}{-Nb}=-\frac{1}{Nb}\pd{\ln Z}{\beta}=\tanh(\beta b)$$
+$$s=\mean{s_i}=\frac{\mean{U}}{-Nb}=\frac{1}{Nb}\pd{\ln Z}{\beta}=\tanh(\beta b)$$
 - This _asymptotically_ approaches $\pm1$ depending on the _direction_ of $b$
 - As $\beta\to\infty$, it approaches a _step function_
 
+- Then switch on the _interactions_
 - Then make the approximation such that the spin of _every site_ is _close to the average spin_:
 $$s_i=s+(s_i-s)=s+\delta s$$
 
-- Substituting this into the Hamiltonian, and _expanding in linear order_ while _neglecting constant terms_:
-$$H=-\frac{Js}{2}\sum_{i,\delta} s_i+s_{i,\delta}$$
-- Doing the sum, one finds there is then an _additional term acting as a field_
+- Substituting this into the _interaction Hamiltonian_, and _expanding in linear order_ while _neglecting constant terms_
+	- Constant term: $\propto s^2$, is a _constant_ and does _not_ involve $s_{i}$
+$$H=-\frac{Js}{2}\sum_{i,\delta} s_i+s_{i,\delta}=-2dJs \sum_{i}s_{i}$$
+- In ignoring second-order terms, all _surrounding spins_ effectively _have the mean spin_
+- Doing the sum, one finds there is then an _additional term acting as an effective field_:
+$$b_{\text{{eff}}}=b+2dJs$$
 
 - One then finds an equation like the previous form of $\mean{s}$, where one must find a _self-consistent solution_:
 $$s=\tanh[\beta (b+2dJs)]$$
@@ -123,17 +129,37 @@ $$\displaylines{M\propto|t|^\beta \\ \chi\propto|t|^\gamma \\ M(T_c)\propto B^{1
 
 ## Heisenberg model
 - Also consider a _square lattice of identical spins_
-- However, they are _free to rotate in three dimensions_ $\bm{s}_i=$
+- However, they are _free to rotate in three dimensions_ $\bm{s}_i=(\sin\theta\cos \phi,\sin \theta\sin \phi, \cos\theta)$
 	- Only realistic for $d=3$
 - The _Hamiltonian_ is then:
 $$H=-\frac{J}{2}\sum_{i,\delta}\bm{s}_i\cdot\bm{s}_\delta-B\sum_i\hat{z}\cdot\bm{s}_i$$
-- wlog, set $\mean{\bm{s}_i}=$
+- wlog, set $\mean{\bm{s}_i}\equiv\boldsymbol{s}=s\hat{z}$
 
-- In the _mean field approximation_, the Hamiltonian:
+- In the _mean field approximation_, with approximations $|\boldsymbol{s}_{i}-\boldsymbol{s} |\ll 1$, the Hamiltonian:
+$$H=-(2dJs+B)\sum_{i} \hat{z}\cdot \boldsymbol{s}_{i}$$
 
 - One then has to set the _partition function_ as:
-$$Z=\left[\right]$$
+$$\begin{aligned}
+Z&=\sum_{\{s_{i}\}}\exp[-\beta H(\{s_{i}\})]\approx\left[\int  \exp[(2d\beta Js+\beta B)\cos\theta]\,d\cos\theta\,d\phi  \right]^N \\ &=(2\pi)^N \left[\int_{-1}^1 \exp
+[(2d\beta Js+\beta B)x]dx \right]^N
+\end{aligned}$$
 
+- One can then get the _average spin_:
+$$\begin{aligned}
+\left<\boldsymbol{s}_{i}\cdot\hat{ z}\right> &=\frac{(2\pi)^N}{Z}\left[ \int_{-1}^1 \exp[(2d\beta Js+\beta B)x] \, dx  \right]^{N-1}\left[ \int_{-1}^1 x \exp[(2d\beta Js+\beta B)x]\, dx  \right] \\ &=\frac{\int  x \exp[(2d\beta Js+\beta B)x]\, dx }{\int \exp[(2d\beta Js+\beta B)x] \, dx }=-\frac{1}{\varepsilon+\beta B}+\coth(\varepsilon+\beta B) 
+\end{aligned}
+$$
+- Here, $\varepsilon=2d\beta Js$
+
+- One then gets the _self-consistent condition_:
+$$
+\varepsilon=2d\beta J\left[ -\frac{1}{\varepsilon+\beta B}+\coth(\varepsilon+\beta B) \right]
+$$
+
+- For $B=0$, using the same graphical technique, one finds:$$
+T_{c}=\frac{2dJ}{3k_{B}}
+$$
+- One can find _the same critical exponents as the Ising model_
 # Ginzburg-Landau theory
 - One must describe the _degrees of freedom_ in the system
 - Then specify the _symmetries_ and how they act upon the degrees of freedom
@@ -157,7 +183,7 @@ $$Z=\left[\right]$$
 
 ## The free energy for a second-order phase transition
 - Take some order parameter $m(\bm{x})\in\mathbb{R}$
-- There should be some _symmetry_ such that $m\to-m$, the systemis _invariant_
+- There should be some _symmetry_ such that $m\to-m$, the system is _invariant_
 
 - Around the _phase transition_, assume $m$ and its derivatives are _small_
 - Assume temperature is _near critical temperature_

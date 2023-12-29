@@ -232,6 +232,7 @@ $$\mathcal{E}\approx m+\frac{1}{2}m|\bm{v}|^2$$
 $$\bm{p}=m\bm{u}=\gamma m\bm{v}=\mathcal{E}\bm{v}$$
 - For a _photon_, $\mathcal{E}=\hbar\omega$, and since $|\vec{p}|^2=m^2=0$, $\bm{p}=\hbar\omega\hat{\bm{n}}$
 
+## The 3+1 split
 - This demonstrates that _every 4-vector_ can be _split_ in a "3+1" manner, as a _vector_ and a _scalar_
 - The 3+1 split of 4-momentum gives the _energy_ and _momentum_
 - From the _conservation of 4-momentum_, one gets the _conservations of 3-momentum and energy_:
@@ -451,7 +452,29 @@ $$T^{\mu\nu}=\pmatrix{\rho&0&0&0\\0&p&0&0\\0&0&p&0\\0&0&0&p}$$
 $$T^{\mu\nu}=(\rho+p)U^\mu U^\nu-p\eta^{\mu\nu}$$
 
 ## Conservation
-p
+- The energy-momentum tensor is _divergenceless_:
+$$\partial_\mu T^{\mu\nu}=0$$
+
+- Setting $\nu=0$ corresponds to _conservation of energy_
+- Setting $\nu=k$ corresponds to _conservation of momentum_
+
+- In _curved spacetime_, convert to the _covariant_ derivative:
+$$\nabla_\mu T^{\mu\nu}=0$$
+
+- For a _fluid_, using the identity:
+$$U_\nu\partial_\mu U^\nu=\frac{1}{2}\partial_\mu(U_\nu U^\nu)=0$$
+
+- _Project_ the conservation law _along the 4-velocity_:
+$$U^\nu\partial_\mu T^{\mu\nu}=\partial_\mu(\rho U^\mu)+p\partial_\mu U^\mu=0$$
+- For the _non-relativistic limit_:
+$$\displaylines{U^\mu=(1,v^i)\hspace{1.5cm}|v^i|\ll1\hspace{1.5cm}p\ll \rho \\ \partial_t\rho+\div(\rho \bm{v})=0}$$
+- This is the _continuity equation_
+
+- _Project_ the equation _perpendicular_ to the 4-velocity using the operator:
+$$\displaylines{\tenscom{P}{\sigma}{\nu}=\delta^\sigma_\nu-U^\sigma U_\nu \\ \tenscom{P}{\sigma}{\nu}\partial_\mu T^{\mu\nu}=(\rho+p)U^\mu\partial_\mu U^\sigma-\partial^\sigma p+U^\sigma U_\nu \partial^\nu p=0}$$
+
+- By setting $\sigma$ into _spatial_ components and in the _non-relativistic limit_, one gets _Euler's equation_:
+$$\rho[\partial_t \bm{v}+(\bm{v}\cdot\grad)\bm{v}]=-\nabla p$$
 # Electromgnetism
 - [[Electrodynamics and Optics#Relativistic electrodynamics|Electrodynamics]] is _inherently relativistic_
 	- The _speed of light_ is always in terms of _universal constants_

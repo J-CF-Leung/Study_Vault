@@ -362,7 +362,7 @@ $$\displaylines{\tenscom{T'}{\lambda}{\mu\nu}v'^\nu=\pd{x^{\lambda'}}{x^\lambda}
 - One can then use it to define an _inner product_ between vectors:
 $$g(a,b)=g_{\mu\nu}a^\mu b^\nu$$
 
-### Index kung-fu and the inverse
+### Index kung-fu and the inverse metric
 - It can also be used to _map vectors to co-vectors_:
 $$V_\mu\equiv g_{\mu\nu}V^\nu$$
 - This is known as _lowering the index_
@@ -551,7 +551,7 @@ $$\frac{D\tenscom{T}{\mu_1\mu_2\dots\mu_k}{\nu_1\nu_2\dots\nu_l}}{Du}=0$$
 $$\displaylines{\frac{Dt^\mu}{Du}=\frac{D}{Du}\frac{dx^\mu}{du}=0 \\ \frac{d^2x^\mu}{du^2}+\Gamma^\mu_{\rho\sigma}\frac{dx^\rho}{du}\frac{dx^\sigma}{du}=0}$$
 - This is the _geodesic equation_
 
-### Proper time and affine parameters
+### Extremising proper time
 - Geodesics are also paths of _maximum proper time_
 	- For _any timelike path_, one can construct a similar _null_ path with _zero path length_
 	- Therefore, the _extremised proper time_ must be a _maximum_
@@ -566,6 +566,11 @@ $$I=\frac{1}{2}\int f\,d\tau$$
 $$\displaylines{x^\mu\to x^\mu+\delta x^\mu \\ g_{\mu\nu}\to g_{\mu\nu}+(\partial_\sigma g_{\mu\nu})\delta x^\sigma \\ \frac{d^2x^\mu}{d\tau^2}+\Gamma^\mu_{\rho\sigma}\frac{dx^\rho}{d\tau}\frac{dx^\sigma}{d\tau}=0}$$
 - One can also use this method to _obtain the Christoffel symbols_ by extremising the path
 
+- In the derivation above, $f$ is the _Lagrangian_ of the variation:
+$$\Lagr=g_{\mu\nu}\frac{dx^\mu}{d\tau}\frac{dx^\nu}{d\tau}$$
+- By writing out the _Euler-Lagrange equation_ explicitly, and _lowering indices_, one can get an _alternative form_ of the geodesic equation:
+$$\frac{d^2x_\mu}{d\tau^2}=\frac{1}{2}\partial_\mu g_{\nu\lambda}\frac{dx^\nu}{d\tau}\frac{dx^\lambda}{d\tau}$$
+### Affine parameters
 - Therefore, the geodesic equation can be _parametrised by proper time_
 - In fact, it can be parametrised with _any parameter_ $\lambda$ that _satisfies_:
 $$\tau\to\lambda=a\tau+b$$
@@ -573,13 +578,13 @@ $$\tau\to\lambda=a\tau+b$$
 
 - For a _timelike path_, the geodesic equation in terms of the _4-velocity_ and _4-momentum_:
 $$U^\lambda\nabla_\lambda U^\mu=0 \hspace{1.5cm} p^\lambda\nabla_\lambda p^\mu=0$$
+
 - For a _null path_, $\tau$ is _not a proper affine parameter_
 	- If it is a geodesic for _some parameter_ $\lambda$, then $a\lambda+b$ is also an affine parameter
+- For a null path, one _normalises_ $\lambda$ such that:
+$$p^{\mu}=\frac{dx^{\mu}}{d\lambda}$$
 
-- In the derivation above, $f$ is the _Lagrangian_ of the variation:
-$$\Lagr=g_{\mu\nu}\frac{dx^\mu}{d\tau}\frac{dx^\nu}{d\tau}$$
-- By writing out the _Euler-Lagrange equation_ explicitly, and _lowering indices_, one can get an _alternative form_ of the geodesic equation:
-$$\frac{d^2x_\mu}{d\tau^2}=\frac{1}{2}\partial_\mu g_{\nu\lambda}\frac{dx^\nu}{d\tau}\frac{dx^\lambda}{d\tau}$$
+
 ### Particle kinetics and conserved quantities on a geodesic
 - A _freely-falling_ test particle (which _does not influence the geometry through which it moves_), will always _move along a geodesic_
 - It always _moves along the direction in which the 4-momentum is pointing_
@@ -624,7 +629,7 @@ $$[\nabla_\mu,\nabla_\nu]V^\rho=(\partial_\mu\Gamma^\rho_{\nu\sigma}-\nabla_\nu\
 - This is true for _any connection_
 
 - So, one can identify the _Riemann curvature tensor_:
-$$\tenscom{R}{\rho}{\mu\nu\sigma}=\partial_\mu\Gamma^\rho_{\nu\sigma}-\partial_\nu\Gamma^\rho_{\mu\sigma}+\Gamma^\rho_{\mu\lambda}\Gamma^\lambda_{\nu\sigma}-\Gamma^\rho_{\nu\lambda}\Gamma^\lambda_{\mu\sigma}$$
+$$\tenscom{R}{\rho}{\mu\nu\sigma}\equiv-\partial_\nu\Gamma^\rho_{\mu\sigma}+\partial_\sigma\Gamma^\rho_{\mu\nu}+\Gamma^\rho_{\sigma\lambda}\Gamma^\lambda_{\nu\mu}-\Gamma^\rho_{\nu\lambda}\Gamma^\lambda_{\mu\sigma}$$
 - From this, the action of the commutator can be calculated for a _tensor of any rank_:
 $$\begin{aligned}\left[\nabla_\sigma, \nabla_\rho\right]\tenscom{X}{\mu_1\dots\mu_k}{\nu_1\dots\nu_k}=&+\tenscom{R}{\mu_1}{\sigma\rho\lambda}\tenscom{X}{\lambda\mu_2\dots\mu_k}{\nu_1\dots\nu_l}+\tenscom{R}{\mu_2}{\sigma\rho\lambda}\tenscom{X}{\mu_1\lambda\dots\mu_k}{\nu_1\dots\nu_l}+\dots \\ &-\tenscom{R}{\lambda}{\sigma\rho\nu_1}\tenscom{X}{\mu_1\dots\mu_k}{\lambda\nu_2\dots\nu_l}-\tenscom{R}{\lambda}{\sigma\rho\nu_2}\tenscom{X}{\mu_1\dots\mu_k}{\nu_1\lambda\dots\nu_l}-\dots  \\ &-\tenscom{T}{\lambda}{\sigma\rho}\tenscom{X}{\mu_1\dots\mu_k}{\nu_1\dots\nu_l}\end{aligned}$$
 
@@ -668,7 +673,7 @@ $$\frac{d^2x^\mu}{d\tau^2}+\Gamma^\mu_{00}\left(\frac{dx^0}{d\tau}\right)^2\appr
 $$\displaylines{\Gamma^\mu_{00}=-\frac{1}{2}\eta^{\mu i}\pd{h_{00}}{x^i} \\ \Gamma^0_{00}=0\hspace{1.5cm}\Gamma^i_{00}=\frac{1}{2}\pd{h_{00}}{x_i}}$$
 - This gives:
 $$\frac{dx^0}{d\tau}=\text{const.}\hspace{1.5cm}\frac{d^2x^i}{d\tau^2}=-\frac{1}{2}\pd{h_{00}}{x_i}\left(\frac{dx^0}{d\tau}\right)^2$$
-- This resembles the form of the _Newtonian equation of motion_:
+- This gives the _Newtonian equation of motion_:
 $$\displaylines{\frac{d^2x^i}{dt^2}=-\pd{\Phi}{x_i} \\ g_{00}=\left(1+\frac{2\Phi}{c^2}\right)}$$
 - This gives a _small perturbation_ to the metric provided $\Phi/c^2\ll1$
 
@@ -679,7 +684,7 @@ $$R_{\rho\sigma\mu\nu}=g_{\rho\lambda}\tenscom{R}{\lambda}{\sigma\mu\nu}$$
 - Using _local intertial coordinates_, one can prove its symmetry properties
 	- Use _local inertial coordinates_, where the _metric connection vanishes, but its derivative does not_
 
-- It is _symmetric in its first and second pairs of indices_
+- It is _antisymmetric in its first and second pairs of indices_
 $$R_{\rho\sigma\mu\nu}=-R_{\sigma\rho\mu\nu}=-R_{\rho\sigma\nu\mu}$$
 - _Swapping_ the first pair of indices with the second is also _symmetric_:
 $$R_{\rho\sigma\mu\nu}=R_{\mu\nu\rho\sigma}$$
@@ -699,7 +704,7 @@ $$\nabla_{[\lambda}R_{\rho\sigma]\mu\nu}=0$$
 - _Contractions_ of the Riemann tensor can be useful
 
 ### Ricci tensor and scalar
-- Take a _contraction_ in the upper index, and the second lower index to form the _Ricci tensor_:
+- Take a _contraction_ in the _upper index, and the second lower index_ to form the _Ricci tensor_:
 $$R_{\mu\nu}=\tenscom{R}{\lambda}{\mu\lambda\nu}$$
 - For the _metric connection_, this is the _only independent contraction_
 - For this connection, it is also _symmetric_:
@@ -729,6 +734,104 @@ $$\nabla^\mu G_{\mu\nu}=0$$
 
 - For a _2D manifold_ (e.g. 2-sphere), there is _1 independent component_, hence the _Ricci scalar_ contains the _full information_ about curvature
 
+## Symmetries and Killing vectors (non-examinable)
+- Situations with _symmetry_ are simpler to deal with
+	- Easier to find solutions to [[#Einstein's equation]]
+	- Example: region outside a star is _spherically symmetric_
+
+### Symmetry
+- A manifold $M$ possesses a symmetry if the _geometry is invariant under a transformation, which maps $M$ to itself_ 
+	- Or, in other words, the _metric_ is the _same from one point to another_ determined by the transformation
+- Symmetries of the _metric_ are known as _isometries_
+
+- Example: Minkowski space
+$$ds^2=dt^2-dx^2-dy^2-dz^2$$
+- The metric is _invariant under any translations $x^\mu\to x^\mu+a^\mu$
+- It is also invariant under _Lorentz transformations_ $x^\mu\to \tenscom{\Lambda}{\mu}{\nu}x^\nu$
+
+- This is made obvious by the fact that _all components are coordinate-independent_ (taking $x^{\sigma*}$ as some direction):
+$$\partial_{\sigma*}g_{\mu\nu}=0$$
+- _If_ this is satisfied, then _translations along_ $x_{\sigma*}$ are _symmetries_
+
+- Independence of metric components _implies existence of an isometry_, but the _converse is not true_
+	- In 4-dimensions, there are _4 translations_ and _6 Lorentz transformations_, exceeding the total number of independent metric components
+
+### Conservation along geodesics
+- The [[#Geodesics, proper time, and affine parameters|geodesic equation]] in terms of 4-momentum, and using [[#The metric connection|metric compatibility]]:
+$$p^\lambda\nabla_\lambda p^\mu=0 \Longrightarrow p^\lambda\nabla_\lambda p_\mu=0$$
+- _Expanding_ the covariant derivative and writing out the _metric connection_ using symmetry between indices $\lambda$ and $\nu$:
+$$m\frac{dp_\mu}{d\tau}=\frac{1}{2}(\partial_\mu g_{\lambda\nu})p^\lambda p^\nu$$
+- Therefore, if _all metric coefficients are independent of coordinate_ $x^{\sigma*}$:
+$$\partial_{\sigma*}g_{\mu\nu}=0\Longrightarrow \frac{dp_{\sigma*}}{d\tau}=0$$
+- The _momentum along $x_{\sigma*}$_ is _conserved_
+- This holds along _any timelike geodesic_
+
+### Killing vectors and tensors, Killing's equation
+- If metric components are _independent of_ $x^{\sigma*}$, label the _vector_ $K$:
+$$\displaylines{K=\partial_{\sigma*} \\ K^\mu=(\partial_{\sigma*})^\mu=\delta^\mu_{\sigma*}\\ p_{\sigma*}=K^\nu p_\nu=K_\nu p^\nu}$$
+- It is said that $K$ _generates_ the isometry
+	- The _transformation_ under which geometry is invariant is expressed as an _infinitesimal motion along_ $K$
+
+- Conservation _along the geodesic_ implies:
+$$\frac{dp_{\sigma*}}{d\tau}=0\Longrightarrow p^\mu\nabla_\mu(K_\nu p^\nu)=0$$
+- Manifestation of [[Analytical classical mechanics#Symmetries and Noether's Theorem|Noether's Theorem]]
+
+- Expanding the equation above and using the [[#Conservation along geodesics|geodesic equation]]:
+$$p^\mu \nabla_\mu(K_\nu p^\nu)=p^\mu p^\nu(\nabla_\mu K_{\nu})=p^\mu p^\nu \nabla_{(\mu}K_{\nu)}=0$$
+
+- The last equality is _Killing's equation_, and $K$ is a _Killing vector_
+- _Any vector_ satisfying Killing's equation _guarantees_ that $K_\nu p^\nu$ is _conserved along a geodesic_:
+$$\nabla_{(\mu}K_{\nu)}=0\Longrightarrow p^\mu \nabla_\mu(K_\nu p^\nu)=0$$
+
+- It is _not strictly necessary_ for $K$ to be in the form of $\partial_{\sigma*}$
+- If a vector $K^\mu$ satisfies Killing's equation, one can _always find a coordinate system where_ $K=\partial_{\sigma*}$
+- In general, one _cannot_ find coordinates where _all Killing vectors_ are in that form
+
+- Killing's equation _generalises_ into tensors:
+$$\nabla_{(\mu}K_{\nu_1\dots\nu_l)}=0\Longrightarrow p^\mu\nabla_\mu(K_{\nu_1\dots\nu_l}p^{\nu_1}\dots p^{\nu_l})=0$$
+- An example of the Killing tensor is _the metric itself_, and _symmetrised tensor products of Killing vectors_
+
+- In $n\geq2$ dimensions, there can be _more Killing vectors than dimensions_
+- One can construct _linear combinations of Killing vectors with constant coefficients_ to make more Killing vectors
+- The _commutator_ of Killing vectors is also a Killing vector field
+### Interpretation
+- Killing vector fields _correspond to continuous symmetries of the metric on the manifold_
+- Every Killing vector _implies the existence of conserved quantities along a geodesic_
+	- As the metric is _unchanged_ in that direction, the _geometry_ is unchanged and a _free particle feels no forces_ in that direction, hence _momentum is conserved_
+
+### Relation to curvature
+- The _derivatives_ of the Killing vector is related to the Riemann tensor by:
+$$\displaylines{\nabla_\mu \nabla_\sigma K^\rho=\tenscom{R}{\rho}{\sigma\mu\nu}K^\nu \\ \nabla_\mu\nabla_\sigma K^\mu=R_{\sigma\nu}K^\nu \\ K^\lambda\nabla_\lambda R=0}$$
+- The last expression is proven using _Bianchi's identity_, Killing's equation and the second equation
+- It reflects that _geometry does not change along a Killing vector_
+### Conserved energy
+- With Killing vectors, one can establish a _conserved energy_
+- Construct a _current_ with the _energy-momentum tensor_:
+$$J^\mu_T=K_\nu T^{\mu\nu}$$
+- From _Killing's equation_ and the _vanishing divergence_ of $T^{\mu\nu}$, the current is _automatically conserved_:
+$$\nabla_\mu J^\mu_T=0$$
+
+- If $K_\nu$ is timelike, one can [[#Lengths and volumes|integrate]] _over a spacelike hypersurface_ $\Sigma$ to define total energy:
+$$E_T=\int_\Sigma J_T^\mu n_\mu\sqrt{\gamma}\,d^3x$$
+- Here, $\gamma_{ij}$ is the _induced metric_ on the hypersurface and $n_\mu$ is the _normal vector_ to $\Sigma$
+
+- $E_T$ is the _same when integrated over any spacelike surface_, and is _conserved_
+
+- For any _time-like Killing vector_, one can write the metric in a form _independent of the timelike coordinate_, and [[Analytical classical mechanics#Symmetries and Noether's Theorem|Noether's Theorem]] implies a _conserved energy_
+### Examples of Killing vectors
+- Consider the metric in $\mathbb{R}^3$:
+$$ds^2=dx^2+dy^2+dz^2$$
+- There are _three Killing vectors_
+$$X^\mu=(1,0,0)\hspace{1cm}Y^\mu=(0,1,0)\hspace{1cm}Z=(0,0,1)$$
+- For _rotational symmetries_, one can get a _vector field for each axis_
+	- $R=\partial_\phi$, representing a $z-$rotation, hence $R=-y\partial_x+x\partial_y$
+$$R^\mu=(-y,x,0)\hspace{1cm}S^\mu=(z,0,x)\hspace{1cm}T^\mu=(0,-z,y)$$
+
+- For the _2-sphere_ $S^2$:
+$$ds^2=d\theta^2+\sin^2\theta\,d\phi^2$$
+- The rotational symmetries in $\mathbb{R}^3$, with $r=1$ _represents symmetries on_ $S^2$
+- Transforming to spherical coordinates:
+$$\begin{aligned}R&=\partial_\phi \\ S&=\cos\phi\,\partial_\theta-\cot\theta\sin\phi\,\partial_\phi \\ T&=-\sin\phi\,\partial_\theta-\cot\theta\cos\phi\,\partial_\phi\end{aligned}$$
 ## Geodesic deviation
 - In _Euclidean geometry_, if two lines are _initially parallel_, they will _always be parallel_
 - On a _curved space_, two _initially parallel geodesics_ will eventually _cross_
@@ -778,8 +881,326 @@ $$\frac{d^2x^i}{dt^2}=-\pd{\Phi}{x^i}\Bigg|_{x}\hspace{1.5cm}\frac{d^2x^i}{dt^2}
 - Taking the _difference_, and _expanding in first order_:
 $$\frac{d^2 S^i}{dt^2}=-\pd{^2\Phi}{x^i\partial x^j}S^j$$
 - This give a form of the _tidal tensor_
+
 # Gravitation
+- In _Newtonian gravity_, acceleration depends on a _gravitational potential_ $\Phi$:
+$$\bm{a}=-\grad\Phi$$
+- The gravitational potential depends on _Poisson's equation_:
+$$\nabla^2\Phi=4\pi G\rho$$
+
+- Laws of physics in _flat spacetime_ can be converted to _tensorial_ form, and then are assumed to apply in _curved spacetime_
+	- Arising from the [[#The strong equivalence principle|equivalence principle]]
+- Example: a _free-falling_ particle follows the _geodesic equation_ with affine parameter $\tau$:
+$$\frac{d^2x^\mu}{d\tau^2}=0$$
+- A _slow_ free-falling particle gives the [[#Newtonian limit for free-falling]]
+
+- Example: the [[Special Relativity#Conservation|conservation]] in the energy-momentum tensor:
+$$\nabla_\mu T^{\mu\nu}=0$$
+
+## Einstein's equation
+- Einstein's equation determines the evolution of the _metric_
+
+- One can _generalise_ Poisson's equation to curved spacetime
+- Generalise _mass density_ as the _energy-momentum tensor_
+- Generalise the _potential_ as the _metric tensor_
+
+- The _second derivative_ of the metric is contained in the [[#Curvature|curvature tensor]]
+	- The _derivatives_ cannot be generalised into the d'Alembertian due to _metric compatibility_ making it zero
+- One must also _preserve_ conservation of $T^{\mu\nu}$
+
+- Write Einstein's equation in the form:
+$$K_{\mu\nu}=-\kappa T_{\mu\nu}$$
+- Here, $K^{\mu\nu}$ is some _symmetric_ type $(0,2)$ tensor following the _conservation_ law
+
+- Setting $K$ as the [[#Ricci tensor and scalar|Ricci tensor]], and using the [[#Contracted Bianchi identity and Einstein tensor|Bianchi identity]] implies that $\nabla_\mu T=0$, and is unphysical
+
+- From the Bianchi identity, identify $K$ as the [[#Contracted Bianchi identity and Einstein tensor|Einstein tensor]] instead:
+$$G_{\mu\nu}=R_{\mu\nu}-\frac{1}{2}Rg_{\mu\nu}=-\kappa T_{\mu\nu}$$
+- Taking the _trace_ of both sides implies:
+$$R=\kappa T$$
+- Then consider _dust_ in the _Newtonian limit_ to obtain $\kappa$
+	- Work in _first order_, such that $U^0=1$, $T=T_{00}=\rho$, and $R_{00}=\nabla^2 h_{00}/2$
+
+- This gives _Einstein's equation_:
+$$R_{\mu\nu}-\frac{1}{2}Rg_{\mu\nu}=-8\pi GT_{\mu\nu}$$
+
+- Taking the _trace_ $(R=8\pi GT)$ and rewriting the equation gives:
+$$R_{\mu\nu}=-8\pi G\left(T_{\mu\nu}-\frac{1}{2}Tg_{\mu\nu}\right)$$
 
 
+## Properties and interpretation of the Einstein equation
+- It can be interpreted as a _differential equation_ for the _$N(N+1)/2$ independent components_ of $g_{\mu\nu}$
+- The [[#Contracted Bianchi identity and Einstein tensor|Bianchi identity]] imposes $N$ constraints, hence there are _$N(N-1)/2$ independent equations_
+	- Constraint is from the fact that solutions must apply to _all coordinate systems_
+
+- In general, the equation states that the _energy-momentum tensor_ acts as a _source_ that generates _curvature_ in the metric, and hence a _gravitational field_
+- With _positive energy density and pressure_, gravity is an _attractive_ force
+	- Consider a _ball_ of free test particles along neighbouring timelike geodesics, and the _divergence_ of 4-velocities $\nabla_\mu U^\mu$
+	- _Pressure_ can cause an attractive force _with no gradient_ as only the _local value_ matters
+
+- The equation is also _non-linear_
+- As $T_{\mu\nu}$ often involves the metric, gravity is said to _couple to itself_
+	- Without the coupling, two particles _bound by gravity_ will have _different inertial and gravitational masses_ due to binding energy
+
+- In _vacuum_, the equation reduces to:
+$$R_{\mu\nu}=0$$
+- This _does not necessarily mean spacetime is flat_ (See [[#The Schwarzchild solution]])
+
+## Cosmological constant and vacuum energy
+- In _non-gravitational fields_, only _changes_ in energy are _measurable_
+- In gravity, energy must have a _definite value_ to generate the required _curvature_
+
+- Then, for a _vacuum_, one may expect a _vacuum energy density_
+- As it must be _Lorentz invariant_ and _isotropic_, for _locally inertial coordinates_:
+$$T_{\hat{\mu}\hat{\nu}}^\text{vac}=\rho_\text{vac}\eta_{\hat{\mu}\hat{\nu}}$$
+- So for _arbitrary coordinates_:
+$$T^{\text{vac}}_{\mu\nu}=\rho_\text{vac}g_{\mu\nu}$$
+- Comparing this to the [[Special Relativity#Perfect fluid|perfect fluid]], this gives the _pressure_ as _negative_:
+$$p_\text{vac}=-\rho_\text{vac}$$
+
+- Decompose $T_{\mu\nu}$ into _contributions_ from _matter_ and _vacuum_:
+$$R_{\mu\nu}-\frac{1}{2}Rg_{\mu\nu}=-8\pi G(T_{\mu\nu}^\text{M}+\rho_\text{vac}g_{\mu\nu})$$
+
+- This allows one to _rewrite_ Einstein's equation with a _cosmological constant_:
+$$\displaylines{R_{\mu\nu}-\frac{1}{2}Rg_{\mu\nu}+\Lambda g_{\mu\nu}=-8\pi GT_{\mu\nu}^\text{M} \\ \Lambda = 8\pi G\rho_{\mu\nu}}$$
+- This equation _satisfies_ that the equation is _divergence-free_ and constructed from the _metric_
+	- The _only other solution_ according to _Lovelock's Theorem_
+
+- This allows for a _static cosmology_
+- $\Lambda$ has the _observed value_:
+$$\Lambda=1.1\times 10^{-52}\,\text{m}^{-2}$$
+
+- In the _weak-field limit_, spacetime is _not locally flat_, and reproduces the force laws (for a _point mass_):
+$$\displaylines{\nabla^2\Phi=4\pi G\rho-\Lambda c^2 \\ -\nabla\Phi=-\frac{GM}{r^3}\bm{x}+\frac{\Lambda c^2}{3}\bm{x}}$$
+- It produces a _repulsion_
+
+- The _vacuum energy_ can be explained as _zero-point energy of a harmonic oscillator_ in field theories
 # The Schwarzchild solution
+- The _non-linearity_ of the Einstein field equation makes it hard to find _exact solutions_
+- For cases of _symmetry_, one can find certain simple exact solutions
+- One is often interested in _exterior solutions_ (i.e. empty space _surrounding a body_) as it is easier to understand _test particles outside_ the object
+	- Vacuum solution: $T^{\mu\nu}$ and $R^{\mu \nu}$ vanish
 
+- For a _spherically symmetric_ gravitational field in _vacuum_, use _spherical coordinates_ $\{t,r,\theta,\phi\}$
+- Let the _source_, and hence the gravitational field, be _static_
+	- Metric components _do not depend on time_
+	- There are _no time cross terms_ (time inversion $t\to -t$ does not affect metric)
+- The _Schwarzchild metric_ is then:
+$$ds^2=\left(1-\frac{2GM}{r}\right)dt^2-\left(1-\frac{2GM}{r}\right)^{-1}dr^2-r^2d\Omega^2$$
+- Here, $d\Omega^2$ is the _metric on the unit two-sphere_:
+$$d\Omega^2=d\theta^2+\sin^2\theta d\phi^2$$
+
+- The metric is _singular_ at $r=0$ and $r=2GM$
+	- At $r=0$, the [[#Ricci tensor and scalar|Ricci scalar]] becomes _infinite_
+	- $r=2GM$ describes the _event horizon_ of [[#Schwarzchild black holes]]
+- Only _valid_ for $r>2GM$ as expected
+
+- For $r\gg 2GM$, and expanding to the first order, this can reduce to the [[#Newtonian limit for free-falling]]
+## Deriving the metric
+- In _Minkowski space_, the metric in spherical coordinates:
+$$ds^2_\text{Minkowski}=dt^2-dr^2-r^2\,d\Omega^2$$
+- To preserve _spherical symmetry_ and the _signature_ (signs of components) of the metric:
+$$ds^2=\exp[2\alpha(r)]\,dt^2-\exp[2\beta(r)]\,dr^2-\exp{[2\gamma(r)]}r^2\,d\Omega^2$$
+- One can then _define a new radial coordinate_:
+$$\displaylines{\bar{r}=\exp[\gamma(r)]r \\ ds^2=\exp[2\alpha(r)]dt^2-\left(1+r\frac{d\gamma}{dr}\right)^{-2}\exp[2\gamma(r)-2\beta(r)]\,d\bar{r}^2-\bar{r}^2\,d\Omega^2}$$
+- Then _relabelling_ $\bar{r}\to r$ and the coefficient of $d\bar{r}^2$ as $\exp[2\beta(r)]$:
+$$ds^2=\exp[2\alpha(r)]dt^2-\exp[2\beta(r)]dr^2-r^2\,d\Omega^2$$
+- This is _still a general result_ as coordinates were simply _relabelled_
+
+- Then calculating the _Christoffel symbols_ as well as the _Ricci tensor_, one finds that _off-diagonal components vanish_:
+$$\begin{aligned}R_{tt}&=\exp[2(\alpha-\beta)]\left[-\alpha
+''+(\alpha')^2+\alpha'\beta'-\frac{2}{r}\alpha'\right] \\ R_{rr}&=\alpha''-(\alpha')^2-\alpha'\beta'-\frac{2}{r}\beta' \\ R_{\theta\theta}&=\exp[-2\beta][r(\alpha'-\beta')+1]-1 \\ R_{\phi\phi}&=\sin^2\theta \,R_{\theta\theta}\end{aligned}$$
+
+- As $R_{tt}$ and $R_{rr}$ vanish _independently_:
+$$0=\exp[2(\beta-\alpha)]R_{tt}+R_{rr}=-\frac{2}{r}(\alpha'+\beta')=0$$
+- This implies $\alpha=-\beta+c$, where $c$ is a constant, and by rescaling $t\to \exp(-c)t$:
+$$\alpha=-\beta$$
+- Then by solving $R_{\theta\theta}=0$:
+$$\exp(2\alpha)=1-\frac{R_S}{r}$$
+- Here, $R_S$ is an _undetermined constant_, known as the _Schwarzchild radius_
+
+- Comparing with the [[#Newtonian limit for free-falling|Newtonian limit]]:
+$$\displaylines{R_S=2GM \\ ds^2=\left(1-\frac{2GM}{r}\right)dt^2-\left(1-\frac{2GM}{r}\right)^{-1}dr^2-r^2d\Omega^2}$$
+
+- One can think of it as the _definition_ of $M$ as a _single Newtonian mass_
+- In the $M\to0$ and $r\to\infty$ limits, one recovers the _Minkowski metric_
+	- Known as _asymptotic flatness_
+
+### Birkhoff's Theorem
+- _Birkhoff's Theorem_ states that the Schwarzchild metric is _the unique vacuum solution for spherical symmetry_
+- There also _no time-independent solutions of this form_
+
+- Hence, _any spherically symmetric vacuum solutions_ must always be _static_ and _asymptotically flat_
+
+## Geodesics and conservation
+- The four geodesic equations are _coupled_
+
+- There is a _high degree of symmetry_ for the Schwarzchild metric
+- There must be four [[#Symmetries and Killing vectors (non-examinable)|Killing vectors]]
+	- 3 for _rotations_, 1 for _time translations_
+	- They are also _present in flat spacetime_
+
+- If $K^\mu$ is a Killing vector, then _along the geodesic_, when $\lambda$ is an affine parameter:
+$$K_\mu\frac{dx^\mu}{d\lambda}=\text{const.}$$
+- And from the _geodesic equation_, one gets that for a timelike geodesic, the _norm of the tangent vector_ is always _conserved_:
+$$\epsilon=g_{\mu \nu}\frac{dx^{\mu}}{d\lambda}\frac{dx^{\nu}}{d\lambda}$$
+- Here, $\lambda$ is any [[#Affine parameters|affine parameter]]
+	- For _timelike_ geodesics, it is $\tau$, and $\epsilon=+1$
+	- For _null_ geodesics, it is chosen such that $p^{\mu}=dx^{\mu}/d\lambda$
+- Also corresponds to the _normalisation_ of 4-velocity
+
+- _Two_ of the _rotation_ Killing vectors can be used to _fix_ the _direction_ of conserved angular momentum, and _orient_ the coordinate system such that the particle is _moving in the equatorial plane_:
+$$\theta=\frac{\pi}{2}$$
+- The _timelike_ Killing vector which fixes _energy_ is:
+$$
+K^{\mu}=\left(\partial_{t} \right)^{\mu}=(1,0,0,0)$$
+- The Killing vector conserving the _magnitude of angular momentum_ is:
+$$R^{\mu}=(\partial_{\phi })^{\mu}=(0,0,0,1)$$
+- _Lowering_ the indices:
+$$K_{\mu}=\left( \left( 1-\frac{2GM}{r} \right),0,0,0 \right)\hspace{1.5cm}R_{\mu}=(0,0,0,-r^{2}\sin^{2}\theta)$$
+- From this, with $\theta=\pi/2$ the _conserved quantities_ are:
+$$\displaylines{E=K_{\mu}\frac{dx^{\mu}}{d\lambda}=\left( 1-\frac{2GM}{r} \right)\frac{dt}{d\lambda} \\ L=-R_{\mu}\frac{dx^{\mu}}{d\lambda}=r^{2}\frac{d\phi}{d\lambda}}$$
+- For _massless_ particles, they are _conserved energy and angular momentum_
+- For _massive_ particles, they are _conserved energy and angular momentum per unit mass_
+	- It is _not the same_ as $p_\mu U^\mu$ ([[Special Relativity#The 3+1 split|here]]) as that gives _kinetic_ energy, and the above gives the _conserved_ energy
+	- $U^\mu$ is _normalised_ in a way that _does not solve_ Killing's equation
+
+## Orbits as geodesics
+- From the _conservation_ of $\epsilon$ above:
+$$\left( 1-\frac{2GM}{r} \right)\left( \frac{dt}{d\lambda} \right)^{2}-\left( 1-\frac{2GM}{r} \right)^{-1}\left( \frac{dr}{d\lambda}\right)^{2}-r^{2}\left( \frac{d\phi}{d\lambda} \right)^{2}=\epsilon$$
+- One can _rewrite_ this as:
+$$\displaylines{\frac{1}{2}\left( \frac{dr}{d\lambda} \right)^{2}+V(r)=\mathcal{E} \\ \mathcal{E}=\frac{1}{2}E^{2} \\ V(r)=\frac{\varepsilon}{2}-\varepsilon \frac{GM}{r}+\frac{L^{2}}{2r^{2}}-\frac{GML^{2}}{r^{3}}}$$
+- This is a version of _energy conservation_, where $V(r)$ is an _effective potential_
+	- First term is a _constant_, second term is the _gravitational_ potential, third is from conservation of $L$
+	- Last term is a _relativistic correction_
+- In general, the particle will _move outward_ until the _turning point_ where $V(r)=\mathcal{E}$
+
+### Newtonian case
+- For _Newtonian massive particles_, there are _elliptical_ orbits as long as the particle's energy is _bound_ in the _potential well_
+- [[Orbits|General Newtonian orbits]]
+- There are _circular_ orbits when:
+$$r_{c}=\frac{L^{2}}{\epsilon GM}$$
+- Hence for _massless_ particles, there are _no circular orbits_
+	- They move in a _straight line_, and $dr/d\lambda$ will _decrease_ near the object
+
+![[Newtonian orbit V.png]]
+
+### General relativistic case
+- In _general relativity_, the _effective potential_ has an _extra term_
+- It becomes significant at _small_ $r$, such that for $r\to0$, $V(r)$ goes to $-\infty$
+- At $r=2GM$, the potential is _always zero_
+	- Inside is the _black hole_
+
+![[GR orbit V.png]]
+
+#### Massless particle
+- For a _massless_ particle, $\epsilon=0$ and one _always has an unstable circular orbit_ at:
+$$r_{c}=3GM$$
+- For example, a _photon_ can orbit at $3GM$ until some _perturbation_ sends it towards either $r\to0$ or $r\to\infty$
+- If a photon moving _towards_ the body has a _high enough energy_, it will _spiral inwards_
+- If the energy is too low, it will _escape back to infinity_
+
+- Only the _ratio_ $L/E$ matters, as only the _direction_ in which the photon points matters
+- The gravitational effect is _achromatic_
+	- One can simply _rescale_ the affine parameter
+- The ratio can be interpreted as the _impact parameter_ $b$
+	- One can find $dr/d\phi$ from the conservation, then compare with the _straight-line path_ $r\sin\phi=b$ for large $r$
+
+#### Massive particle
+- For _massive_ particles, the circular orbits are at:
+$$r_{c}=\frac{L^{2}\pm \sqrt{ L^{4}-12G^{2}M^{2}L^{2} }}{2GM}$$
+- For _large_ $L$, there are two circular orbits, one _stable_ and one _unstable_:
+$$r_{\text{stable}}=\frac{L^{2}}{GM}\hspace{1.5cm}r_{\text{unstable}}=3GM$$
+
+- As $L$ decreases, the orbits _coincide_ at:
+$$L=\sqrt{ 12 }GM\Longrightarrow r_{c}=6GM$$
+- Hence, $6GM$ is the _smallest possible radius_ of a _stable circular orbit_ for this metric
+
+- Like the massless case, a particle with _sufficient energy_ can spiral into $r=0$, once it surpasses the _barrier_ at $r=3GM$
+	- This is only for _geodesics_, as a particle can _accelerate out_ as long as it does not reach $r=2GM$
+- For _circular orbits_, $3GM<r<6GM$ is _unstable_ while $r>6GM$ is _stable_
+
+- Like the Newtonian case, there are _unbound_ orbits
+- There are also _stable, circular_ orbits, but they are _not closed_
+	- They often _precess_
+
+- This behaviour leads to the phenomena of _accretion disks_
+- A particle moving in from large $r$ moves _inwards_, where it must _radiate energy_ to maintain a _bound orbit_
+
+# Experimental tests
+- Conserved quantities in the Schwarzchild solution:
+$$\displaylines{E=K_{\mu}\frac{dx^{\mu}}{d\lambda}=\left( 1-\frac{2GM}{r} \right)\frac{dt}{d\lambda} \\ L=-R_{\mu}\frac{dx^{\mu}}{d\lambda}=r^{2}\frac{d\phi}{d\lambda}}$$
+- Equation for orbits, from conservation of $\epsilon$, norm of tangent vector:
+$$\displaylines{\frac{1}{2}\left( \frac{dr}{d\lambda} \right)^{2}+V(r)=\mathcal{E} \\ \mathcal{E}=\frac{1}{2}E^{2} \hspace{1.5cm} V(r)=\frac{\varepsilon}{2}-\varepsilon \frac{GM}{r}+\frac{L^{2}}{2r^{2}}-\frac{GML^{2}}{r^{3}}}$$
+
+## Precession of orbits
+- For a _massive_ particle, by multiplying the equation above by $(d\phi/d\lambda)^2=r^2/L^2$, one gets an equation for the _orbit_:
+$$\left( \frac{dr}{d\phi} \right)^{2}+\frac{1}{L^{2}}r^{4}-\frac{2GM}{L^{2}}r^{3}+r^{2}-2GMr=\frac{2\mathcal{E}}{L^{2}}r^{4}$$
+
+- Defining the variable:
+$$x=\frac{L^{2}}{GMr}$$
+- For a _Newtonian circular orbit_, $x=1$
+- The equation of motion becomes:
+$$\left( \frac{dx}{d\phi} \right)^{2}+\frac{L^{2}}{G^{2}M^{2}}-2x+x^{2}-\frac{2G^{2}M^{2}}{L^{2}}x^{3}=\frac{2\mathcal{E}L^{2}}{G^{2}M^{2}}$$
+- Then, _differentiating_ w.r.t. $\phi$ gives:
+$$\frac{d^{2}x}{d\phi^{2}}-1+x=\frac{3G^{2}M^{2}}{L^{2}}x^{2}$$
+- For a _Newtonian_ orbit, the last term is _absent_, and the solution is:
+$$x_{0}=1+e\cos \phi$$
+- It is a _perfect ellipse_ with _eccentricity_ $e$
+
+- Expand $x$ into a _Newtonian solution_ $x_0$ and a _perturbation_ $x_1$:
+$$\frac{d^{2}x_{0}}{d\phi^{2}}-1+x_{0}=0\hspace{1.5cm}\frac{d^{2}x_{1}}{d\phi^{2}}+x_{1}=\frac{3G^{2}M^{2}}{L^{2}}x_{0}^{2}$$
+- Substituting the Newtonian solution into the equation for $x_1$:
+$$x_{1}=\frac{3G^{2}M^{2}}{L^{2}}\left[ \left( 1+\frac{1}{2}e^{2} \right)+e\phi \sin \phi-\frac{1}{6}e^{2}\cos 2\phi \right]$$
+- The first and third terms are _small deviations_ that are _constant_ or _average to zero_
+- The second term can _build up_
+
+- Therefore, one writes the solution:
+$$x=1+e\cos \phi+\frac{3G^{2}M^{2}e}{L^{2}}\phi \sin \phi$$
+- By writing the constant $\alpha=3G^{2}M^{2}/L^{2}$, the solution becomes:
+$$x=1+e\cos[(1-\alpha)\phi]$$
+
+- From this, in _each orbit_, one finds that the _perihelion_ shifts by angle:
+$$\Delta \phi=2\pi\alpha=\frac{6\pi G^{2}M^{2}}{L^{2}}$$
+![[Precessing ellipse.png]]
+- For a [[Orbits#A summary|Newtonian orbit]] with _semi-major axis_ $a$:
+$$L^{2}=GM(1-e^{2})a$$
+- Therefore, in terms of Newtonian orbit parameters, one can write:
+$$\Delta \phi=\frac{6\pi GM}{c^{2}(1-e^{2})a}$$
+- For _Mercury_, this is $0.103$ arcseconds per orbit, or $43$ arcseconds per century
+## Gravitational deflection of light
+- Using a similar procedure to the above derivation, one gets:
+$$\frac{d^{2}x}{d\phi^{2}}+x=\frac{3G^{2}M^{2}}{L^{2}}x^{2}$$
+- The _Newtonian_ solution, corresponding to a _straight line_, gives:
+$$L=b\hspace{1cm}r=\frac{b}{\sin \phi}\hspace{1cm}x=\frac{b}{GM}\sin \phi$$
+- Here, $b$ is the _impact parameter_
+![[Gravitational deflection.png]]
+
+- Again, with some perturbation $x_1$, which goes to _zero_ as $\phi\to\pi$:
+$$\displaylines{\frac{d^{2}x_{1}}{d\phi^{2}}+x_{1}=\frac{3G^{2}M^{2}}{L^{2}}x_{0}^{2} \\ x_{1}=\frac{3}{2}+\frac{1}{2}\cos 2\phi+2\cos \phi}$$
+- Requiring that $x\to 0$ as $\phi \to-\Delta \phi$, where $|\Delta \phi|\ll 1$:
+$$\Delta \phi \approx \frac{4GM}{c^{2}b}$$
+
+## Gravitational redshift
+- It is _independent_ from the [[Special Relativity#The Doppler Effect|effect of a moving observer]]
+- Hence consider a _stationary observer_ $U^i=0$
+- From the normalised 4-velocity, using the metric:
+$$U^{0}=\left( 1-\frac{2GM}{r} \right)^{-1/2}$$
+- From the [[Special Relativity#The 3+1 split|formula for energy relative to some observer]]:
+$$h\nu=g_{\mu \nu}U^{\mu}\frac{dx^{\nu}}{d\lambda}=\left( 1-\frac{2GM}{r} \right)^{1/2}\frac{dt}{d\lambda}=\left( 1-\frac{2GM}{r} \right)^{-1/2}E$$
+- Therefore, comparing observed frequencies at two radii:
+$$\frac{\nu_{2}}{\nu_{1}}=\left( \frac{1-2GM/r_{1}}{1-2GM/r_{2}} \right)^{1/2}$$
+- The _red-shift_ is the ratio of _received to emitted wavelengths_ (reciprocal to frequency):
+$$1+z=\left( \frac{\nu_{R}}{\nu_{E}} \right)^{{-1}}$$
+- For photons _observed at infinity_ $r_{2}\to\infty$:
+$$1+z_{\infty}=\left( 1-\frac{2GM}{r_{1}} \right)^{-1/2}$$
+- It _tends to infinity_ (it is _infinitely stretched out_) as $r_1\to2GM$
+
+- This can _generalise to any time-independent metric_
+	- The Killing vector for energy still leads to a conservation
+- The formula is generalised to:
+$$\frac{\nu_{R}}{\nu_{E}}=\sqrt{ \frac{g_{00}(E)}{g_{00}(R)} }$$
+
+# Schwarzchild black holes
+
+# Cosmology

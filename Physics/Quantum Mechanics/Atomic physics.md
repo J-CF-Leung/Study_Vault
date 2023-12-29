@@ -227,21 +227,187 @@ $$\displaylines{\hat{H}=\hat{H}_0'+\hat{H}_1' \\ \hat{H}_0'=\sum_{i=1}^N\left[-\
 - For $\hat{H}_0'$, it creates $N$ _separable single-particle wavefunctions_:
 $$\left[-\frac{\hbar^2}{2m}\nabla_i^2-\frac{Ze^2}{4\pi\epsilon_0r_i}+U_i(r_i)  \right]\Phi_i=E_i\Phi_i$$
 
-- The _eigenfunctions_ can be characterised as $\ket{nlm}$
-- 
- 
+- The _eigenfunctions_ can be characterised as $\ket{nlm_l}$
+	- Atoms can still be said to have _subshells_ and _orbitals_
+- However, states of _same_ $n$ and _different_ $l$ are _no longer degenerate_
+	- $\hat{H}_0'$ is _not purely_ $1/r$
+- States of _higher_ $l$ tend to be _further out_ and hence have _higher energy_
+
+### Self-consistent field approach
+- $U(r)$ depends on the _wave functions of all electrons_
+- One can make an _initial guess_ for $U(r)$ by taking a _smooth function_ between limits:
+$$U(r)\approx\begin{cases}0 &r\to0 \\ (Z-1)e^2/(4\pi\epsilon_0r)&r\to\infty \end{cases}$$
+- For $r\to0$, the other electrons effectively have an _isotropic_ repulsion around the electron
+- For $r\to\infty$, the other electrons are effectively _at the origin_
+
+- Then solve for:
+$$\hat{H}_0'\ket{nlm}=E_{nlm}\ket{nlm}$$
+- Estimate the _ground state_ by _filling levels with electrons_
+
+- Using this, obtain the _charge density_:
+$$\rho(\bm{r})=e\sum|\psi_{nlm}(\bm{r})|^2$$
+- Then use _Gauss' Theorem_ to obtain the _electric field_
+- Using that, obtain a _better estimate of $U(r)$
+
+- Repeat solving the Schrodinger equation then _iterate until convergence_
+
+### Hartree-Fock approach
+- Assume the overall wave-function is a [[Identical Particles#Slater determinants|Slater determinant]]:
+$$\psi=\frac{1}{\sqrt{N!}}\begin{vmatrix}\psi_1(\bm{r}_1)&\psi_1(\bm{r}_2)&\cdots&\psi_1(\bm{r}_N) \\ \psi_2(\bm{r}_1)&\psi_2(\bm{r}_2)&\cdots&\psi_2(\bm{r}_N) \\ \vdots &\vdots  &\ddots&\vdots \\ \psi_N(\bm{r}_1)&\psi_N(\bm{r}_2)&\cdots&\psi_N(\bm{r}_N) \end{vmatrix}$$
+- Here, $\psi_k(\bm{r}_i)$ denotes the wavefunction for electron $i$, with _set of quantum numbers_ $n,l.m$ denoted by $k$
+
+### Radial electron densities
+![[Electron densities.png]]
+- There are _wide peaks_ for contributions from each _shell_
+	- The _subshells_ have slightly _different peak positions_
+- Each _peak_ gets _further away from the core_ as $n$ increases
+
+### Energies
+- One finds that energies are ordered according to values of _increasing_ $n+l$
+- There is also a _large jump_ in energy for new values of $n$
+
+- This leads to the _Aufbau principle_:
+![[Aufbau principle.png]]
+
+- This sequence gives the _ground state configurations_ of multi-electron atoms
+	- There can be _exceptions_ (e.g. copper)
+- The _outermost electrons_ give rise to chemical activity
+	- Elements with _same number of outer electrons_ (groups) have _similar properties_
 ## Electron configurations
+- Only stating _subshell occupation_ will _not fully specify_ the ground state
+- The _orbital and spin_ angular momenta can _combine_ in different ways, and some are _forbidden_
+
+### Two electrons
+- For _two-electron configurations_ where the electrons are in _separate subshells_:
+	1. $L=l_1+l_2,l_1+l_2-1,\dots |l_1-l_2|$
+	2. $S=0,1$
+	3. $J=l_1+l_2+1,l_1+l_2,\dots |l_1-l_2-1|$
+- Example: $(2p)(3p)$:
+	1. $L=0,1,2$
+	2. $S=0,1$
+	3. $J=3,2,1,0$
+	- Term symbols: $$^1\text{S}_0\;\;^1\text{P}_1\;\;^1\text{D}_2\;\;^3\text{S}_1\;\;^3\text{P}_{0,1,2}\;\;^3\text{D}_{1,2,3}$$
+
+- For _two-electron configurations_ where the electrons are in _the same subshell_, there are _restrictions_ as the wavefunction is _overall antisymmetric_
+- For a _symmetric spin_ wavefunction, the _spatial wavefunction_ must be _antisymmetric_ and have an _odd_ value of $L$
+	- And vice versa
+
+- Example: $(2p)^2$:
+	- For $S=0$ (singlet, antisymmetric), $L=0,2$ hence $J=0,2$
+	- For $S=1$ (triplet, symmetric), $L=1$, hence $J=0,1,2$
+	- Term symbols:
+	$$^1\text{S}_0\;\;^1\text{D}_2\;\;^3\text{P}_{0,1,2}$$
+
+### More electrons
+- For _full subshells_, $S=L=J=0$
+- If there is _one vacancy_, as the other electrons have to obey the _Pauli exclusion principle_, it _acts as an electron_
+- For $m$ vacancies, it has the _same energy levels as $m$ electrons_
+- Example:
+	- $(2p)^5$: one electron, same as $(2p)^1$, term $^2\text{P}_{1/2,3/2}$
+	- $(2p)^4$: two electrons, same as $(2p)^2$
+
+- The most _general_ way to find energy levels is to _tabulate all possibilities_ that follow Pauli's Exclusion Principle and give _ladders_ of distinct $J$
+
+### Maximal spin states and half-filled shells
+- Often, only the state of _maximum spin_ is of interest
+- In this case, all electrons have the _same spin state_, hence must have _all different orbital angular momenta_
+
+- From this, one deduces that for _half-filled shells_, $L=0$
+- Example: $(2p)^3$
+	- $L=0$, $S=J=3/2$
+	- $^4\text{S}_{3/2}$
 
 ## Coupling schemes
+- The _coupling schemes_ of operators describes what _quantum numbers_ can describe the _system_
 
+- In $L-S$ (Russel-Saunders) coupling, states are described with numbers $L,S,J$
+- One _constructs total_ $L$ and $S$ from _individual_ $l$ and $s$ before computing $J$
+$$\hat{\bm{L}}=\sum_i\hat{\bm{L}}_i\hspace{1cm}\hat{\bm{S}}=\sum_i\hat{\bm{S}}_i\hspace{1cm}\hat{\bm{J}}=\hat{\bm{L}}+\hat{\bm{S}}$$
+- Alternatively, for the $j-j$ coupling scheme, one _constructs individual_ $j$ from $l$ and $s$ first:
+$$\hat{\bm{J}}_i=\hat{\bm{L}}_i+\hat{\bm{S}}_i\hspace{1.5cm}\hat{\bm{J}}=\sum_i\hat{\bm{J}}_i$$
+
+- Example: The [[#Two electrons|(2p)(3p) electron configuration]]:
+$$j_1=j_2=1\otimes\frac{1}{2}=\frac{1}{2},\frac{3}{2}\hspace{1.5cm}j=j_1\otimes j_2=0,1,2,3$$
+
+- The _accuracy_ of the coupling schemes depends on the _terms of the Hamiltonian_ which the quantum numbers _commute_ with
+
+### Commuting with interaction terms
+- Consider the _electron-electron repulsion term_:
+$$\hat{H}_1=\sum_{i>j}\frac{e^2}{4\pi\epsilon_0r_{ij}}$$
+- $r_{ij}$ is _not rotationally invariant_ w.r.t. $\hat{\bm{L}}_i$ and $\hat{\bm{L}}_j$
+- However, it is _rotationally invariant_ w.r.t. $\hat{\bm{L}}$, hence it must _commute_ with it
+
+- Consider the _spin-orbit term_:
+$$\hat{H}_2=\sum_i\xi_i(r_i)\hat{\bm{L}}_i\cdot\hat{\bm{S}}_i$$
+
+- Using the [[The hydrogen atom#Spin-orbit commutation relations|spin-orbit commutation relations]], for _single-electron operators_:
+$$\displaylines{[\hat{\bm{L}}_i\cdot\hat{\bm{S}}_i,\hat{\bm{L}}_i^2]=[\hat{\bm{L}}_i\cdot\hat{\bm{S}}_i,\hat{\bm{S}}_i^2]=[\hat{\bm{L}}_i\cdot\hat{\bm{S}}_i,\hat{\bm{J}}_i^2]=0 \\ [\hat{\bm{L}}_i\cdot\hat{\bm{S}}_i,\hat{\bm{L}}_i]=-[\hat{\bm{L}}_i\cdot\hat{\bm{S}}_i,\hat{\bm{S}}_i]\neq0 \hspace{1.5cm} [\hat{\bm{L}}_i\cdot\hat{\bm{S}}_i,\hat{\bm{J}}_i]=0}$$
+- Hence, the _spin-orbit term_ will _only commute_ with $\hat{\bm{L}}_i^2,\hat{\bm{S}}_i^2, \hat{\bm{J}}_i, \hat{\bm{J}}$
+
+![[Coupling scheme commutation.png]]
+
+### Light atoms
+- For _light_ atoms, $\mean{\hat{H}_1}\gg\mean{\hat{H}_2}$
+	- Example: [[#The helium atom]]
+- The energy correction due to _repulsion_ is much stronger than that due to _spin-orbit coupling_
+- Spin-orbit coupling is treated as a _perturbation_
+- For $\hat{H}_0+\hat{H}_1$, as $\hat{\bm{L}},\hat{\bm{S}},\hat{\bm{J}}$ _commute_, then $L,S,J$ are _good quantum numbers_
+- Hence, $L-S$ coupling is used
+
+### Heavy atoms
+- The energy from [[The hydrogen atom#Spin-orbit correction|spin-orbit coupling]] scales as:
+$$\mean{\hat{H}_2}\sim Z^4$$
+- Hence for _heavy atoms_, electron-electron _repulsion_ is the _perturbation_
+- In this case, the $j_i$ are _good quantum numbers_
+- Hence, $jj$ coupling is used
 ## Hund's rules
+- Assume $L-S$ coupling
+- Then _Hund's Rules_ give the _ordering of energy levels_ for a _given_ [[#Electron configurations|electron configuration]]
+	- They are _empirical_
 
+1. The _largest_ allowed value of $S$ gives the _lowest energy_
+2. For a _given_ $S$, the _largest_ $L$ gives the _lowest energy_
+3. For a _given_ $S$ and $L$:
+	- If a subshell is _less than half-full_, the _lowest_ $J$ is lowest in energy
+	- If a subshell is _more than half-full_, the _highest_ $J$ is lowest in energy
+
+- A _high_ $S$ gives a _highly symmetric spin wave-function_, hence a highly _antisymmetric spatial wave function_
+- On _average_, electrons are then _more far apart_
+
+- Similarly, _maximising_ $L$ also keeps electrons apart
+
+- The mini/maximising of $J$ originate from _fine structure_
+
+### Lande interval rule
+- From [[Symmetries in quantum mechanics#The Wigner-Eckart Theorem for scalars|the Wigner-Eckart Theorem]], one can get:
+$$\Braket{Jm_JLS|\sum_i\xi_i(r_i)\hat{\bm{L}}_i\cdot\hat{\bm{S}}_i|Jm_JLS}=\zeta(L,S)\Braket{Jm_JLS|\hat{\bm{L}}\cdot\hat{\bm{S}}|Jm_JLS}$$
+- The _sign_ of $\zeta(L,S)$ _flips_ depending on if the subshell is _more/less than half-filled_
+
+- From this, for _constant_ $L$ and $S$, one gets:
+$$E_J-E_{J-1}\propto J$$
+- This is the _Lande interval rule_
+
+### Exceptions
+- For _excited states_, the rules can occasionally be violated
+	- Mainly in the _ordering_ of $J$
+- In the $(2s)^1(2p)^1$ excited state of _helium_ has $J=2$ in the _ground state_
+	- Due to _"spin-other spin"_ and other such interactions $(\hat{\bm{S}}_1\cdot\hat{\bm{S}}_2,\hat{\bm{L}}_1\cdot\hat{\bm{S}}_2\dots)$
+
+- When a shell is _half full_, the ordering is _not always obeyed_
 ## jj coupling
+- The effect of _electron-electron repulsion_ as a _perturbation_ is to _split_ the levels
+	- Analagous to spin-orbit coupling in $L-S$ coupling
 
 # Atomic spectra
 
 # Zeeman effect
 - When an $N-$electron atom is placed in an _external magnetic field_ $\bm{B}$, the _contributions_ to the Hamiltonian:
-$$\hat{H}_B=\frac{e}{2m_e}(\hat{\bm{L}}+g_e\hat{\bm{S}})\cdot\bm{B}$$
+$$\hat{H}_B=-\hat{\bm{\mu}}_L\cdot\hat{\bm{L}}-\hat{\bm{\mu}}_S\cdot\hat{\bm{S}}=\frac{\mu_B}{\hbar}(\hat{\bm{L}}+g_e\hat{\bm{S}})\cdot\bm{B}$$
 - Here, $\hat{\bm{L}}$ and $\hat{\bm{S}}$ are the _total angular momenta_:
 $$\hat{\bm{L}}=\sum_{i=1}^N\hat{\bm{L}}_i\hspace{1.5cm}\hat{\bm{S}}=\sum_{i=1}^N\hat{\bm{S}}_i$$
+- Orienting $\bm{B}$ along the $z-$axis:
+$$\hat{H}_B=(g_L\hat{L}_z+g_S\hat{S}_z)B_z$$
+- The resulting energy correction is of the _order_ $6\times 10^{-5} (B/\text{T})\,\text{eV}$
+	- _Small_ relative to atomic binding energies, hence first-order perturbation theory applies
+
+
