@@ -246,6 +246,9 @@ $$(\Delta E)_{hf}\approx 5.87\times 10^{-6}\,\text{eV} \hspace{1cm}\Delta\nu=142
 - For _excited_ states, $(\Delta E)_{hf}\propto 1/n^3$
 
 ### The 21cm line
+- In hydrogen, the $n=1$ hyperfine split is of order $\Delta E\approx 5.87 \times 10^{-6}\text{ eV}$
+- This corresponds to a _temperature_ of $0.07\text{ K}$, and a _wavelength_ of $21\text{ cm}$
+- In space, the _upper state_ becomes _more populated_
 
 ## P,D,F states
 - Any _non-S state_ will also be _split into two separate levels_, $F=j\pm1/2$

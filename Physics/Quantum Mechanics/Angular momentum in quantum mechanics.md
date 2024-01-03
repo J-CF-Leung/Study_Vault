@@ -240,6 +240,7 @@ $$\braket{j_1m|j_2m}=0$$
 
 ![[Clebsch-Gordan coefficients.png]]
 
+## Adding equivalent angular momenta
 - For $j_1=j_2$, the _resultant_ eigenstate is either _symmetric or antisymmetric_ w.r.t. _particle exchange_:
 $$\ket{j_2m_2j_1m_1}=(-1)^{j-(j_1+j_2)}\ket{j_1m_1j_2m_2}$$
 ## Two spin-1/2 particles

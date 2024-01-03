@@ -291,6 +291,7 @@ $$\psi=\frac{1}{\sqrt{N!}}\begin{vmatrix}\psi_1(\bm{r}_1)&\psi_1(\bm{r}_2)&\cdot
 - For _two-electron configurations_ where the electrons are in _the same subshell_, there are _restrictions_ as the wavefunction is _overall antisymmetric_
 - For a _symmetric spin_ wavefunction, the _spatial wavefunction_ must be _antisymmetric_ and have an _odd_ value of $L$
 	- And vice versa
+	- [[Angular momentum in quantum mechanics#Adding equivalent angular momenta|Symmetry of angular momentum eigenstates]]
 
 - Example: $(2p)^2$:
 	- For $S=0$ (singlet, antisymmetric), $L=0,2$ hence $J=0,2$
@@ -319,6 +320,7 @@ $$\psi=\frac{1}{\sqrt{N!}}\begin{vmatrix}\psi_1(\bm{r}_1)&\psi_1(\bm{r}_2)&\cdot
 
 ## Coupling schemes
 - The _coupling schemes_ of operators describes what _quantum numbers_ can describe the _system_
+- _Neither_ coupling scheme is _completely accurate_
 
 - In $L-S$ (Russel-Saunders) coupling, states are described with numbers $L,S,J$
 - One _constructs total_ $L$ and $S$ from _individual_ $l$ and $s$ before computing $J$
@@ -394,11 +396,61 @@ $$E_J-E_{J-1}\propto J$$
 	- Due to _"spin-other spin"_ and other such interactions $(\hat{\bm{S}}_1\cdot\hat{\bm{S}}_2,\hat{\bm{L}}_1\cdot\hat{\bm{S}}_2\dots)$
 
 - When a shell is _half full_, the ordering is _not always obeyed_
-## jj coupling
+# jj coupling
 - The effect of _electron-electron repulsion_ as a _perturbation_ is to _split_ the levels
 	- Analagous to spin-orbit coupling in $L-S$ coupling
+- Example: the _shell model_ of nuclear structure
 
+- One _combines_ $l$ and $s$ for each electron:
+$$j_{i}=l_{i}\otimes s_{i}=l_{i}\pm \frac{1}{2}$$
+- Then combine $j$ for each electron:
+$$J=j_{1}\otimes j_{2}\otimes \dots \otimes j_{N}$$
+- The effect of _electron repulsion_ is to _split_ the $J$ levels for given $J$
+
+- If two electrons have the _same value_ of $j$, one must make sure the state has the required [[Identical Particles#Coupled angular momentum|antisymmetry]]
 # Atomic spectra
+- In multi-electron atoms, the dominant transitions are _electric dipole_ (E1) transitions
+	- [[#Hydrogen atom selection rules]]
+	- [[#E1 transitions in helium]]
+
+- Transition rate between states $\ket{\alpha}$ and $\ket{\beta}$:
+$$\Gamma \propto\omega^{3}|\braket{ \alpha | \hat{\boldsymbol{d}}|\beta } |^{2}\hspace{1cm}\hat{\boldsymbol{d}}=-e\sum_{i=1}^{N}\hat{\boldsymbol{r}}_{i}\hspace{1cm}\hbar \omega=\left|E_{\alpha}-E_{\beta}\right| $$
+
+## General selection rules from symmetry
+- From the [[Symmetries in quantum mechanics#The Wigner-Eckart Theorem for vector operators|Wigner-Eckart Theorem]], one gets that for _any_ E1 transition:
+$$\Delta J=0,\pm1\hspace{1cm}J_\alpha+J_\beta\geq1\hspace{1cm}\Delta m_J=0,\pm1$$
+- Under a _parity transformation_, $\hat{\boldsymbol{d}}$ _changes_ sign, giving the [[Symmetries in quantum mechanics#Spatial inversion and parity|selection rule]]:
+$$P_{\beta}=-P_{\alpha}$$
+- These are _exact_, regardless of [[#Coupling schemes|coupling scheme]]
+
+## LS coupling selection rules
+- In LS coupling, $L$ and $S$ are _good quantum numbers_
+	- It is _not exact_
+- As $\hat{\boldsymbol{d}}$ does not involve spin, one gets the same spin selection rule as helium:
+$$\Delta S=0\hspace{1.5cm}\Delta m_{S}=0$$
+- Combined with the general selection rules:
+$$\Delta L=0,\pm 1\hspace{1cm}L_{\alpha}+L_{\beta}\geq 1\hspace{1cm}\Delta m_{L}=0,\pm1$$
+
+- Almost all transitions are _single-electron_, which changes these rules to:
+$$\Delta l=0,\pm 1\hspace{1cm}\Delta m_{l}=0,\pm 1$$
+
+## Periodicity
+- Elements with _single valence electrons_ $(\text{Li},\text{Na},\dots)$ typically have _similar spectra_ to [[#Hydrogen atom selection rules|hydrogen]]
+- States with _different_ $l$ are _no longer_ approximately degenerate
+- As $n$ _increases_, the nuclear charge is _more effectively screened_
+- _Spin-orbit coupling_ also becomes more significant as it scales with $Z^4$
+
+- Elements with _two valence electrons_ $(\pu{Be},\pu{ Mg },\dots)$ also have similar spectra to [[#E1 transitions in helium|helium]]
+- They have two _separate spectra_ due to $\Delta S=0$
+- As $n$ increases, that starts to _break down_ as $LS$ coupling is no longer accurate
+
+## Emission and absorption
+- An _emission_ spectrum has atoms _excited to all levels_, then _decay_ into lower levels
+- _All transitions_ can be seen as _bright lines_
+
+- An _absorption_ spectrum has lines _irradiated_ with a spectrum of wavelengths
+- _Transitions from the ground state_ can be seen as missing lines
+- Transitions from _metastable states_ can also be seen
 
 # Zeeman effect
 - When an $N-$electron atom is placed in an _external magnetic field_ $\bm{B}$, the _contributions_ to the Hamiltonian:
@@ -406,8 +458,321 @@ $$\hat{H}_B=-\hat{\bm{\mu}}_L\cdot\hat{\bm{L}}-\hat{\bm{\mu}}_S\cdot\hat{\bm{S}}
 - Here, $\hat{\bm{L}}$ and $\hat{\bm{S}}$ are the _total angular momenta_:
 $$\hat{\bm{L}}=\sum_{i=1}^N\hat{\bm{L}}_i\hspace{1.5cm}\hat{\bm{S}}=\sum_{i=1}^N\hat{\bm{S}}_i$$
 - Orienting $\bm{B}$ along the $z-$axis:
-$$\hat{H}_B=(g_L\hat{L}_z+g_S\hat{S}_z)B_z$$
+$$\hat{H}_B=\left(g_L\hat{L}_z+g_S\hat{S}_z\right)\frac{\mu_{B}B_{z}}{\hbar}$$
 - The resulting energy correction is of the _order_ $6\times 10^{-5} (B/\text{T})\,\text{eV}$
 	- _Small_ relative to atomic binding energies, hence first-order perturbation theory applies
 
+- Atomic energy levels have a _degeneracy_ $2J+1$
+- Hence, [[Approximation Methods#Degenerate perturbation theory|degenerate perturbation theory]] applies
+- Works for any _general field strength_ $B$
 
+- To simplify, go to _extremes_ in the field strengths and consider splitting relative to the _fine structure_ splitting $(\Delta E_{\text{FS}})$
+- For _strong field strengths_, $\mu_{B}B\gg(\Delta E)_{\text{FS}}$, hence one can use an _uncoupled basis_ $\ket{L,m_{L},S,m_{S}}$
+- For _weak field strengths_, $\mu_{B}B\ll(\Delta E)_{FS}$, hence one can use a _coupled basis_ $\ket{J,m_{J},L,S}$
+
+## Strong-field Zeeman effect
+- For a _strong field_, splitting due to _fine structure_ can be _neglected_:
+$$\mu_{B}B\gg \left<\hat{H}_{2}\right> =\left<\xi(r)\hat{\boldsymbol{L}}\cdot\hat{\boldsymbol{S}}\right>$$
+
+- In this case, $\hat{H}_{B}$ is treated as the _perturbation_ and spin-orbit coupling is _neglected_:
+$$\hat{H}=(\hat{H}_{0}+\hat{H}_{1})+\hat{H}_{B}$$
+- Neglecting fine structure, states of same $J$ are _degenerate_ in energy
+	- Only the first two of [[#Hund's rules]] apply
+- The degeneracy is $g=(2L+1)(2S+1)$
+
+- As $\hat{H}_{B}$ is _diagonal_ with respect to $\hat{L}_{z}$ and $\hat{S}_{z}$, the _energy_ from first-order perturbation theory is:
+$$\begin{align}
+(\Delta E)_{B}&=(g_{L}m_{L}+g_{S}m_{S})\mu_{B}B_{z} \\ &\approx(m_{L}+2m_{S})\mu_{B}B_{z}
+\end{align}$$
+- This _lifts_ the degeneracy in $m_L$ and $m_S$
+
+- For $L=0$, it splits into $2S+1$ levels of spacing $2\mu_{B}B_{z}$
+- For $L>0$, it splits into $2(L+2S)+1$ levels of spacing $\mu_{B}B_{z}$
+
+- The [[#From LS coupling|selection rules from LS coupling]] still apply, hence $\Delta m_{S}$ still applies for _E1 transitions_ between the split levels
+
+## Weak-field Zeeman effect
+- For a _weak field_, energy corrections are much _smaller_ than that of fine structure:
+$$\mu_{B}B\ll \left<\hat{H}_{2}\right> =\left<\xi(r)\hat{\boldsymbol{L}}\cdot\hat{\boldsymbol{S}}\right>$$
+- The unperturbed Hamiltonian is then:
+$$\hat{H}=(\hat{H}_{0}+\hat{H}_{1}+\hat{H}_{2})+\hat{H}_{B}$$
+- The fine structure has levels _degenerate_ in $J$
+	- Ordering: [[#Hund's rules]]
+
+- The [[Angular momentum in quantum mechanics#The projection formula|projection formula]] gives that $\hat{H}_{B}$ is _diagonal_ w.r.t. the basis $\ket{\alpha Jm_{J}LS}$
+- Using the definition of the [[Angular momentum in quantum mechanics#Combining magnetic moments and the Lande g-factor|Lande g-factor]]:
+$$\displaylines{(\Delta E)_{B}=m_{J}g_{J}\mu_{B}B \\ g_J=g_L\frac{J(J+1)+L(L+1)-S(S+1)}{2J(J+1)}+g_S\frac{J(J+1)+S(S+1)-L(L+1)}{2J(J+1)}} $$
+
+- The original level _splits_ into $2J+1$ levels
+
+- Hence, in the weak limit:
+$$\hat{H}_{B}=-\hat{\boldsymbol{\mu}}_{J}\cdot \boldsymbol{B}\hspace{1.5cm}\hat{\boldsymbol{\mu}}_{J}=-g_{J}\frac{\mu_{B}}{\hbar}\hat{\boldsymbol{J}}$$
+- The dipoles _combine_ to become a single dipole, with g-factor:
+$$g_{J}\approx \frac{3}{2}+\frac{S(S+1)-L(L+1)}{2J(J+1)}$$
+
+- Transition between the levels are governed by the [[#General selection rules from symmetry|selection rule]]:
+$$\Delta m_{J}=0,\pm 1$$
+
+- Zeeman effect in sodium $D$ lines:
+![[D lines Zeeman effect.png]]
+
+![[D line Zeeman splitting.png]]
+## General field strength
+- In an _external field_, the atom is no longer _isolated_
+- The _total angular momentum_ is _no longer conserved_ ($J$ is not well defined)
+- Hence, by expanding the Hamiltonian, one finds:
+$$[\hat{H}_{B},\hat{J}_{x}]\;,\; [\hat{H}_{B},\hat{J}_{y}]\neq 0$$
+
+- However, the system still has _rotational symmetry_ about the direction of the field:
+$$[\hat{H}_{B},\hat{J}_{z}]=0$$
+
+- Hence, $m_J$ is _always a good quantum number_ even if $J$ is _not_
+
+- Considering the whole Hamiltonian for intermediate strengths, the _common basis_ of all terms must be found _numerically_
+	- Involves diagonalisation of a $6\times{6}$ matrix
+
+- _E1 transitions_ at _any field strength_ are governed by $\Delta m_{J}=0,\pm 1$
+
+## Zeeman effect for hyperfine splitting
+- Consider a magnetic field strength _small_ enough such that splitting is comparable to [[The hydrogen atom#Hyperfine structure|hyperfine splitting]] $(\Delta E)_{\text{HFS}}$
+$$\displaylines{\mu_{B}B\lesssim(\Delta E)_{\text{HFS}} \\ \hat{H}=(\hat{H}_{0}+\hat{H}_{1}+\hat{H}_{2}+\hat{H}_{\text{HF}})+\hat{H}_{B}}$$
+
+- In the _weak-field_ regime, the dipoles from $\hat{\boldsymbol{L}}$ and $\hat{\boldsymbol{S}}$ can already be combined:
+$$\displaylines{\hat{\boldsymbol{\mu}}_{B}=-\frac{\mu_{B}}{\hbar}(g_{J}\hat{\boldsymbol{J}}+g_{I}\hat{\boldsymbol{I}}) \\ \hat{H}_{B}=\frac{\mu_{B}B_{z}}{\hbar}(g_{J}\hat{J}_{z}+g_{I}\hat{I}_{z})}$$
+- Consider the _total angular momentum operator_:
+$$\hat{\boldsymbol{F}}=\hat{\boldsymbol{J}}+\hat{\boldsymbol{I}}$$
+
+-  As in the fine structure case, $m_F$ is _always a good quantum number_
+
+### Hyperfine weak field
+- Hyperfine weak field limit: splitting is much _smaller_ than hyperfine separation
+$$\mu_{B}B\ll \left<\hat{\boldsymbol{L}}\cdot\hat{\boldsymbol{I}} \right>$$
+- In this case, the dipoles _combine_ into a single $\hat{\boldsymbol{F}}$ dipole:
+$$\displaylines{\hat{H}_{B}=-\hat{\boldsymbol{\mu}}_{F}\cdot \boldsymbol{B} \hspace{1.5cm} \hat{\boldsymbol{\mu}}_{F}=-\frac{\mu_{B}}{\hbar}g_{F}\hat{\boldsymbol{F}} \\ g_F=g_J\frac{F(F+1)+J(J+1)-I(I+1)}{2F(F+1)}+g_{I}\frac{F(F+1)+I(I+1)-J(J+1)}{2F(F+1)}}$$
+- The _energy corrections_ are then:
+$$(\Delta E)_{B}=m_{F}g_{F}\mu_{B}B$$
+- Each hyperfine level $F$ splits into $2F+1$ levels
+
+- As _nuclear magnetic dipole moments_ are typically small:
+$$g_{I}\ll g_{J}\hspace{1.5cm}g_F\approx g_J\frac{F(F+1)+J(J+1)-I(I+1)}{2F(F+1)}$$
+
+### Hyperfine strong field
+- Analagous to the strong field fine structure case:
+$$(\Delta E)_{B}=(m_{J}g_{J}+m_{I}g_{I})\mu_{B}B\approx m_{J}g_{J}\mu_{B}B$$
+- Therefore, at high field, one expects $2J+1$ levels, like the fine weak field case
+
+- The _subdominant_ contribution _splits_ the $2J+1$ levels into $2I+1$ _closely spaced levels_
+
+### Hyperfine general field
+- For a general field, the total Hamiltonian:
+$$\hat{H}=\hat{H}_{\text{HF}}+(g_{J}\hat{J}_{z}+g_{I}\hat{I}_{z})\frac{\mu_{B}B_{z}}{\hbar}$$
+- The square matrix to diagonalise has dimensions $(2I+1)(2J+1)$
+
+- The general selection rule for transitions:
+$$\Delta m_{F}=0,\pm 1$$
+![[Hyperfine Zeeman splitting.png]]
+
+## Summary
+| Fine structure | Hyperfine structure |
+| :--: | :--: |
+| $\hat{\boldsymbol{\mu}}_{J}=\hat{\boldsymbol{\mu}}_{L}+\hat{\boldsymbol{\mu}}_{S}$ | $\hat{\boldsymbol{\mu}}_{F}=\hat{\boldsymbol{\mu}}_{J}+\hat{\boldsymbol{\mu}}_{I}$ |
+| $[\hat{H},\hat{J}_{z}]=0$ | $[\hat{H},\hat{F}_{z}]=0$ |
+| **Weak field** | < |
+| $(\Delta E)_{B}=m_{J}g_{J}\mu_{B}B$ | $(\Delta E)_{B}=m_{F}g_{F}\mu_{B}B$ |
+| $(2J+1)$ equally spaced levels | $(2F+1)$ equally spaced levels |
+| **Strong field** | < |
+| $(\Delta E)_{B}\approx(m_{L}+2m_{S})\mu_{B}B$ | $(\Delta E)_{B}\approx g_{J}m_{J}\mu_{B}B$ |
+| Spacing of $\mu_{B}B$ for $L>0$ | $(2J+1)$ widely spaced multiplets |
+| Spacing of $2\mu_{B}B$ for $L=0$ | Each level has $(2I+1)$ substructure |
+
+# Stark effect
+- Consider the effect of an _external electric field_ $\boldsymbol{E}$ on a _hydrogen atom_
+- wlog, let $\boldsymbol{E}=(0,0,\mathcal{E})$, hence $\phi=-q\mathcal{E}z$
+- The Hamiltonian is then:
+$$\hat{H}_{e}=e\mathcal{E}(z_{e}-z_{p})=e\boldsymbol{E}\cdot(\hat{\boldsymbol{r}}_{e}-\hat{\boldsymbol{r}}_{p})\equiv -\boldsymbol{E}\cdot \hat{\boldsymbol{d}}$$
+- Here, $\hat{\boldsymbol{d}}$ is the _electric dipole operator_ for the hydrogen atom $e(\hat{\boldsymbol{r}}_{p}-\hat{\boldsymbol{r}}_{e})$
+
+- One typically expects the atom's energy to _decrease_ as the dipole _aligns_ with the field
+
+- Assume an _infinite mass proton_:
+$$\hat{H}_{e}=e\mathcal{E}z=e\mathcal{E}r\cos\theta$$
+
+- Consider the eigenstates $\ket{njm_{j}ls}$, representing the level $n^{2S+1}L_{J}$
+	- The states are _degenerate_ w.r.t. $m_{j}$, with degenerate $2j+1$
+- Treating $\hat{H}_{E}$ as a perturbation, the first order energy correction is:
+$$\braket{ njm_{j}'l | z|njm_{j}l } $$
+- As $\hat{z}$ is _odd_ under spatial inversion, they _vanish_ for $l=l'$
+
+- Hence, the _first-order energy correction vanishes_
+- The [[Approximation Methods#Second-order perturbation theory|second-order energy correction]] leads to the _quadratic Stark effect_
+
+- However for _large field strengths_, energy levels of _different_ $l$ can become _degenerate_
+- In this case, the _first-order_ perturbation leads to the _linear Stark effect_
+
+## Quadratic Stark effect
+- Consider the _ground state_ of the hydrogen atom:
+$$\ket{nlm_{l}} =\ket{100} $$
+- An explicit calculation confirms that the _first-order energy correction vanishes_
+
+- The [[Approximation Methods#Second-order perturbation theory|second-order energy correction]]:
+$$\Delta E^{(2)}=\sum_{n>2,l,m}\frac{|\braket{ nlm |e\mathcal{E}\hat{z} |  100} |^{2}}{E_{1}^{(0)}-E_{n}^{(0)}}$$
+- The denominator makes sure it is _negative_
+
+- This can be evaluated _exactly_ as:
+$$(\Delta E)^{(2)}=-\frac{9}{4}(4\pi\epsilon_{0})\mathcal{E}^{2}a_{0}^{3}$$
+- The _classical_ definition of [[Electromagnetism#Dipoles|polarisability]] is:
+$$\Delta E=-\frac{1}{2}\boldsymbol{E}\cdot \boldsymbol{d}=-\frac{1}{2}\alpha \mathcal{E}^{2}$$
+- This gives the polarisability:
+$$\alpha=18\pi a_{0}^{3}$$
+
+## Linear Stark effect
+- Consider the $n=2$ states:
+$$\ket{nlm}=\ket{200}, \ket{210}, \ket{21\pm 1}     $$
+- For a _high enough_ electric field, with energy correction _much larger than fine structure_, they become _effectively degenerate_ with energy:
+$$E_{2}^{(0)}=-\frac{1}{4}R_{\infty}$$
+- Using [[Approximation Methods#Degenerate perturbation theory|degenerate perturbation theory]], this requires the calculation of _all matrix elements_
+$$\braket{ 2lm |\hat{z}|2l'm'} $$
+- From the [[Symmetries in quantum mechanics#The Wigner-Eckart Theorem for vector operators|Wigner-Eckart Theorem]], as well as [[Symmetries in quantum mechanics#Spatial inversion and parity|parity]], this is _only non-zero iff_:
+$$\Delta l=\pm 1\hspace{1.5cm}\Delta m_{l}=0$$
+- From this, the _only non-zero matrix elements_ are:
+$$\braket{ 200 |\hat{z}|210  }=\braket{ 210 |\hat{z} | 200 } =-3e\mathcal{E}a_{0} $$
+- The _zeroth-order eigenstates_ and _first-order energy shifts_:
+$$\ket{\psi_{\pm }}=\frac{1}{\sqrt{ 2 }}(\ket{200}\pm \ket{210}  )\hspace{1.5cm} (\Delta E)_{2}^{(1)}=\mp 3e\mathcal{E}a_{0}$$
+
+- The states $\ket{21\pm1}$ have _no energy correction_ and remain _degenerate_
+![[Linear Stark effect n2.png]]
+- To first order, the $n=2$ level splits into _3 equally spaced levels_
+
+- A similar analysis of the $n=3$ level:
+![[Linear Stark effect n3.png]]
+
+## General field strength
+- At general field strengths where the Stark correction is _comparable to fine structure_, the _total perturbation_ of the field, fine structure, and the Lamb shift must be _considered together_
+- This leads to the _diagonalisation_ of a $(2n^{2})\times(2n^{2})$ matrix
+- This must be done _numerically_
+
+- For $n=2$, the levels _asymptotically reach_ the 3 levels from the linear Stark effect
+![[Real stark effect n2.png]]
+
+- The remnants of _fine structure_ persist
+
+- Similarly for $n=3$:
+![[Real Stark effect n3.png]]
+
+# Molecular structure
+- A _molecule_ has a collection of $n$ _electrons_ and $N$ _nuclei_, in a _potential_ set up by all the other charges
+
+- As nuclei have a _much greater mass_ than electrons, they are treated _separately_:
+>[!info] The Born-Oppenheimer approximation
+>To study the eigenstates of electrons in a molecule, _nuclei_ can be treated as being in _fixed positions_
+>To study _nuclear motion_ such as rotations and vibrations, assume that electrons _respond instantly_ to changes in nuclear positions
+
+- The _complete_ Hamiltonian for a molecule is:
+$$\hat{H}=\sum_{i=1}^{n}\frac{\hat{\boldsymbol{p}}_{i}^{2}}{2m_{e}}+\sum_{I=1}^{N}\frac{\hat{\boldsymbol{p}}_{I}^{2}}{2m_{I}}+V(\{\boldsymbol{r}_{n}\},\{\boldsymbol{R}_{N}\})$$
+
+- In the B-O approximation, the Schrodinger equation is:
+$$\left[ -\frac{\hbar^{2}}{2m_{e}}\sum_{i=1}^{n}\nabla_{i}^{2}+V(\{\boldsymbol{r}_{n}\},\{\boldsymbol{R}_{N}\}) \right]\Psi(\{\boldsymbol{r}_{n}\},\{\boldsymbol{R}_{N}\})=E(\{\boldsymbol{R}_{N}\})\Psi(\{\boldsymbol{r}_{n}\},\{\boldsymbol{R}_{N}\})$$
+
+- As the _molecular conformation_ is varied (changing _nuclear positions_), one can _minimise_ the ground state energy to find the _equilibrium conformation_
+## The H2+ ion
+- The _simplest molecule_, with protons at $\boldsymbol{R}_{a},\boldsymbol{R}_{b}$ plus an electron at $\boldsymbol{r}$
+![[H2+ ion.png]]
+$$\boldsymbol{R}\equiv|\boldsymbol{R}_{a}-\boldsymbol{R}_{b}|\hspace{1cm}r_{a}\equiv|\boldsymbol{r}-\boldsymbol{R}_{a}|\hspace{1cm}r_{b}\equiv|\boldsymbol{r}-\boldsymbol{R}_{b}|$$
+- wlog, orient $\boldsymbol{R}_{a,b}$ along the z-axis, and let the _origin_ be at the _centre_ between the two nuclei
+$$\displaylines{\hat{H}=-\frac{\hbar^{2}}{2m_{e}}\nabla_{r}^{2}-\frac{e^{2}}{4\pi\epsilon_{0}}\left( \frac{1}{r_{a}}+\frac{1}{r_{b}}-\frac{1}{R} \right)  \\r_{a,b}=x^{2}+y^{2}+\left(z\pm \frac{R}{2} \right)^{2}}$$
+
+### Variational parameters
+- For the _approximate solution_, use the [[Approximation Methods#Rayleigh-Ritz method|Rayleigh-Ritz method]]:
+$$\displaylines{\psi_\text{trial}(\boldsymbol{r};R,Z')=\alpha_{a}\psi_{a}(\boldsymbol{r})+\alpha_{b}\psi_{b}(\boldsymbol{r}) \\ \psi_{a,b}(\boldsymbol{r})=\left( \frac{\beta^{3}}{\pi} \right)^{1/2}\exp(-\beta r_{a,b})\hspace{1.5cm}\beta\equiv \frac{Z'}{a_{0}}}$$
+- The _variational parameters_ are $\alpha_{a},\alpha_{b},Z',R$
+
+- For $Z'=1$, this is the [[Molecular quantum mechanics#Linear combination of atomic orbitals for diatomics|linear combination of atomic orbitals (LCAO)]] method
+
+- One can use the secular equations to find values of $\alpha_{a},\alpha_{b}$ to _minimise energy_ for a _given set_ of $R,Z'$
+	- An _analytical_ process
+- Then, _scan_ the ground state energy as functions of $R,Z'$ to find the _equilibrium configuration_
+	- A _numerical_ process
+### Rayleigh-Ritz method
+- The Hamiltonian and overlap matrices (noting the fact that $\psi_{a},\psi_{b}$ are not necessarily orthogonal):
+$$ \displaylines{S_{aa}=S_{bb}=1\hspace{1.5cm}S_{ab}=S_{ba}=\braket{ \psi_{a} |  \psi_{b}} \\ H_{aa}=H_{bb}=\braket{ \psi_{a} |\hat{H} | \psi_{a} } \hspace{1cm}H_{ab}=\braket{ \psi_{a} |\hat{H}|\psi_{b}  }  }$$
+- The secular equation:
+$$\begin{vmatrix}H_{aa}-E &H_{ab}-ES_{ab} \\ H_{ab}-ES_{ab} &H_{aa}-E \end{vmatrix}=0$$
+
+- The resulting eigenstates have $\alpha_{a}=\pm \alpha_{b}$
+	- Result: (anti)symmetry w.r.t. _exchange_ $a\leftrightarrow b$
+- The _even_ ("gerade") state:
+$$\psi_{g}=\frac{\psi_{a}+\psi_{b}}{\sqrt{ 2(1+S_{ab}) }}\hspace{1.5cm}E_{g}=\frac{H_{aa}+H_{ab}}{1+S_{ab}}$$
+- The _odd_ ("ungerade") state:
+$$\psi_{u}=\frac{\psi_{a}-\psi_{b}}{\sqrt{ 2(1-S_{ab}) }}\hspace{1.5cm}E_{u}=\frac{H_{aa}-H_{ab}}{1-S_{ab}}$$
+
+- For _all_ values of $R$ and $Z'$, the _even_ state $\psi_g$ has _lower energy_
+
+- These two states are _orthonormal_, and _diagonalise_ the Hamiltonian
+- For $\psi_{g}$, the wavefunctions interfere _constructively_ to give electron density _between the nuclei_, which _screens_ the proton charge, and hence is _bonding_
+- For $\psi_u$, the wavefunctions interfere _destructively_ and cannot screen the proton charge
+
+### Effective nuclear charge and internuclear separation
+- Evaluating $E_{g}(R,Z')$ _numerically_:
+![[H2+ energies.png]]
+
+- There is only one _stable minimum_:
+$$\displaylines{R=2.002a_{0}=106.0\,\text{pm}\hspace{1cm}Z'=1.238 \\ E_{0}\leq -1.173R_{\infty}=-15.96\,\text{eV}}$$
+
+- The _predicted value_ of $R$ is close to the _true value_
+- The true value of the energy is about $0.4\,\text{eV}$ _lower_
+
+![[H2+ binding energy.png]]
+
+- As $R\to\infty$, the system becomes a _hydrogen atom plus a proton_, with energy $-R_\infty$
+	- $E=0$ corresponds to _all three particles_ infinitely separated
+
+- The _molecular binding energy_ is defined as:
+$$E_{b}=-R_{\infty}-E_{0}(R)$$
+- For a _molecular bound state_, $E_b>0$
+	- In this case, it is $0.173R_{\infty}=2.354\,\text{eV}$
+
+## The H2 molecule
+- Geometry of the hydrogen molecule:
+![[H2 molecule.png]]
+- The full Hamiltonian:
+$$\hat{H}=-\frac{\hbar^{2}}{2m_{e}}\left(\nabla_{1}^{2}+\nabla_{2}^{2}\right)-\frac{e^{2}}{4\pi\epsilon_{0}}\left( \frac{1}{r_{a1}}+\frac{1}{r_{a2}}+\frac{1}{r_{b1}}+\frac{1}{r_{b2}}-\frac{1}{R}-\frac{1}{r_{12}} \right)$$
+- This is the _sum_ of two $\ce{H_{2}^{+}}$ Hamiltonians plus the term:
+$$\frac{e^{2}}{4\pi\epsilon_{0}}\left( \frac{1}{r_{12}}-\frac{1}{R} \right)$$
+- Hence, an _estimate_ of the electron _spatial states_:
+$$\psi_{g}(\boldsymbol{r}_{1})\psi_{g}(\boldsymbol{r}_{2})\;,\;\psi_{g}(\boldsymbol{r}_{1})\psi_{u}(\boldsymbol{r}_{2})\;,\;\psi_{u}(\boldsymbol{r}_{1})\psi_{g}(\boldsymbol{r}_{2})\;,\;\psi_{u}(\boldsymbol{r}_{1})\psi_{u}(\boldsymbol{r}_{2})$$
+
+### First estimate of ground state
+- The _ground state_ is deduced to be:
+$$\psi_{g}(\boldsymbol{r}_{1})\psi_{g}(\boldsymbol{r}_{2})=\frac{1}{2(1+S_{ab})}[\psi_{a}(\boldsymbol{r}_{1})+\psi_{b}(\boldsymbol{r}_{1})][\psi_{a}(\boldsymbol{r}_{2})+\psi_{b}(\boldsymbol{r}_{2})]$$
+- As this is _symmetric_ w.r.t. interchange, one must _pair_ it with the _spin singlet state_:
+$$\ket{\psi}=\psi_{g}(\boldsymbol{r}_{1})\psi_{g}(\boldsymbol{r}_{2})\otimes \frac{1}{\sqrt{ 2 }}(\ket{\uparrow}_{1}\ket{\downarrow}_{2}-\ket{\downarrow}_{1}\ket{\uparrow}_{2}    ) $$
+- The new _trial wave-function_ is then:
+$$\displaylines{\psi_{\text{trial}}=\frac{\beta^{3}/\pi}{2(1+S)}[\exp(-\beta r_{a1})+\exp(-\beta r_{b1})][\exp(-\beta r_{a2})+\exp(-\beta r_{b2})] \\ S=\left( 1+\beta R+\frac{1}{3}(\beta R)^{2} \right)\exp(-\beta R)\hspace{1.5cm}\beta\equiv \frac{Z'}{a_{0}}}$$
+- The _overlap_ $S$ comes from evaluation of $S_{ab}$ for the $\ce{H_{2}^{+}}$ ion
+
+- Using the variational method again gives:
+$$R=73.0\,\text{pm}\hspace{1.5cm}E_{b}\equiv-2R_{\infty}-E_{0}=3.49\,\text{eV}$$
+- However, the _real value_ of $E_b$ is around $4.75\,\text{eV}$
+
+###  The ionic contribution
+- Expanding the estimate for the ground state reveals:
+$$\begin{align}
+\psi_{g}(\boldsymbol{r}_{1})\psi_{g}(\boldsymbol{r}_{2})&\propto[\psi_{a}(\boldsymbol{r}_{1})+\psi_{b}(\boldsymbol{r}_{1})][\psi_{a}(\boldsymbol{r}_{2})+\psi_{b}(\boldsymbol{r}_{2})] \\ &=[\psi_{a}(\boldsymbol{r}_{1})\psi_{b}(\boldsymbol{r}_{2})+\psi_{b}(\boldsymbol{r}_{1})\psi_{a}(\boldsymbol{r}_{2})]+[\psi_{a}(\boldsymbol{r}_{1})\psi_{a}(\boldsymbol{r}_{2})+\psi_{b}(\boldsymbol{r}_{1})\psi_{b}(\boldsymbol{r}_{2})]
+\end{align}$$
+
+- The first two terms contribute to _covalent bonding_, where the electrons are _assigned to different protons_
+- The other two terms contribute to _ionic bonding_, where the electrons are _assigned to the same proton_
+
+- Having _equal contributions_ gives a likelihood that $\ce{H_{2}}$ dissociates into $\ce{H^{+}}$ and $\ce{H^{-}}$ instead of two atoms
+	- This is unlikely due to _electron-electron repulsion_
+
+- One can add a parameter to _tune_ the ionic contribution:
+$$[\psi_{a}(\boldsymbol{r}_{1})\psi_{b}(\boldsymbol{r}_{2})+\psi_{b}(\boldsymbol{r}_{1})\psi_{a}(\boldsymbol{r}_{2})]+\lambda[\psi_{a}(\boldsymbol{r}_{1})\psi_{a}(\boldsymbol{r}_{2})+\psi_{b}(\boldsymbol{r}_{1})\psi_{b}(\boldsymbol{r}_{2})]$$
+- The $\lambda=0$ approximation is known as the _valence bond approximation_
+
+- With the extra parameter, one finds equilibrium at:
+$$R=75.7\,\text{pm}\hspace{1cm}E_{b}=4.03\,\text{eV}\hspace{1cm}\lambda=0.26$$
+
+- This leads to the likelihood $\lambda^{2}=0.07$ of the molecule _ionising_
+
+![[H2 binding energy.png]]

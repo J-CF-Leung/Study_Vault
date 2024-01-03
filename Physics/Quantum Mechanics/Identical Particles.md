@@ -73,6 +73,13 @@ $$\ket{\psi}_A=\frac{1}{\sqrt{N!}}\begin{vmatrix}\ket{1,\alpha_1}&\ket{2,\alpha_
 $$\ket{\psi}_S=\frac{1}{\sqrt{N!}}\sum_\text{all permutations}\ket{i_1,\alpha_1}\ket{i_2,\alpha_2}\dots\ket{i_N,\alpha_N}$$
 
 # Two-electron systems
+- Depending on the system, one may be able to _separate_ Hamiltonians depending on spatial coordinates and spin
+
+- For _two identical bosons_, one can use the same procedure as fermions
+- For $N>2$, overall states _do not in general factorise into separate spatial and spin components_
+	- For large $N$, calculate [[Advanced statistical mechanics#Grand canonical ensemble|probability distribution functions for each state]]
+
+## Separable systems
 - Consider a _two-electron system_ occpying the _same spatial state_ $\ket{a(\bm{r})}$
 - There are _two available states_ due to _spin_:
 $$\displaylines{\ket{a\uparrow}=\psi_a(\bm{r})\ket{\uparrow}\equiv\ket{a(\bm{r})}\ket{\uparrow}\equiv\ket{a}\ket{\uparrow} \\ \ket{a\downarrow}\equiv\ket{a}\ket{\downarrow}}$$
@@ -99,9 +106,11 @@ $$\displaylines{\ket{\psi}_-=\frac{1}{\sqrt{2}}\left[\ket{a\uparrow}\ket{b\downa
 	- The _spin part_ is _symmetric_
 - There is another _singlet state_
 
-- For _two identical bosons_, one can use the same procedure
-- For $N>2$, overall states _do not in general factorise into separate spatial and spin components_
-	- For large $N$, calculate [[Advanced statistical mechanics#Grand canonical ensemble|probability distribution functions for each state]]
+## Coupled angular momentum
+- One can use _coupled states_ with a well-defined _total angular momentum_ $j$
+
+- If they have _equal_ $j$, the _symmetry_ w.r.t. particle exchange is:
+$$\ket{j_2m_2j_1m_1}=(-1)^{j-(j_1+j_2)}\ket{j_1m_1j_2m_2}$$
 
 # Exchange forces
 - Consider two _non-interacting particles_, each occupying _distinct, orthonormal states_ $\ket{a}$ and $\ket{b}$

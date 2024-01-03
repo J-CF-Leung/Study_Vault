@@ -175,13 +175,14 @@ $$E_\alpha\geq E_0$$
 - A type of the variational method, using a _trial wave fucntion_ of the form:
 $$\psi(\bm{r})=\sum_j\alpha_j\psi_j(\bm{r})$$
 - $\psi_j$ are a _linearly independent set_ of wavefunctions, which are _not necessarily complete or orthonormal_
-- Minimising energy algebra nightmare
+- The quantity to be _minimised_ according to the variational principle:
+$$\left<E\right>=\frac{\braket{ \psi |\hat{H} |\psi  }}{\braket{ \psi |\psi  } }=\frac{\sum_{j,k} \alpha_{j}\alpha_{k} H_{jk}}{\sum_{j,k}\alpha_{j}\alpha_{k}S_{jk}}  $$
 
 - Define the matrices ($S$ is the _overlap matrix_):
 $$H_{jk}=\braket{\psi_j|\hat{H}|\psi_k}=H_{kj}^* \hspace{1.5cm} S_{jk}=\braket{\psi_j|\psi_k}=S_{kj}^*$$
 - The basis set is _not necessarily orthonormal_, hence the matrix elements _are not diagonalised_
 
-- The minimum then corresponds to:
+- By _minimising_ the estimate of ground state energy, one gets:
 $$\sum_k\alpha_k(H_{jk}-ES_{jk})=0$$
 - One can represent this with a _matrix equation_:
 $$(\dunderline{H}-E\dunderline{S})\cdot\underline{\alpha}=0$$
@@ -189,3 +190,6 @@ $$(\dunderline{H}-E\dunderline{S})\cdot\underline{\alpha}=0$$
 $$\text{det}(\dunderline{H}-E\dunderline{S})=0$$
 - This is known as the _secular equation_
 - The _lowest solution_ for $E$ gives the _upper bound for ground state energy_
+
+# Time-dependent perturbation theory
+- Systems with a _time-varying perturbation_ can potentially induce _transitions between eigenstates_
