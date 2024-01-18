@@ -110,7 +110,7 @@ $$\hat{H}_D=-\frac{e\hbar^2}{8m_e^2c^2}(\nabla^2\phi)$$
 $$\frac{\mean{\hat{H}_R}}{\mean{\hat{H}_0}}\sim\frac{p^4/(8m_e^3c^2)}{p^2/(2m_e)}\sim\frac{v^2}{c^2}\ll1$$
 - This justifies the use of _first-order perturbation theory_
 ### Applying perturbation theory
-- As the _unperturbed_ energy levels are _degenerate_, one must use [[Approximation Methods#Degenerate perturbation theory|degenerate perturbation theory]]
+- As the _unperturbed_ energy levels are _degenerate_, one must use [[Time-Independent Approximation Methods#Degenerate perturbation theory|degenerate perturbation theory]]
 - One must find and _diagonalise_ a $2n^2\times 2n^2$ matrix with elements $\braket{n_j^{(0)}|\hat{H}'|n_k^{(0)}}$
 - This _breaks_ the degeneracy of each level, to give the _fine structure_
 

@@ -216,7 +216,7 @@ $$\Lagr= aF_{\alpha\beta}F^{\alpha\beta}-J^\mu A_\mu$$
 - _Gauge-invariance of the action_ requires that the current density is _divergenceless_ $(\partial_\mu J^\mu=0)$
 	- Otherwise, _boundary terms_ appear in the action (integrate $-J^\mu A_\mu$ _by parts_)
 	- $\Lagr$ is still _not gauge invariant_
-	- Gauge invariance leads to the [[#Local phase (gauge) symmetry|conservation]]
+	- Gauge invariance _must lead_ to a [[#Local phase (gauge) symmetry|conservation]], where $J^{\mu}$ is the conserved quantity
 
 - From the Euler-Lagrange equations:
 $$J^\alpha+4a\partial_\mu F^{\mu\alpha}=0$$
@@ -244,14 +244,17 @@ $$S=\sum_\text{particles}\left\{-\int mc^2\,d\tau-\int eA_\mu\,dx^\mu(t)\right\}
 $$-\frac{1}{4}F_{\alpha\beta}F^{\alpha\beta}=\frac{1}{2}(|\bm{E}|^2-|\bm{B}|^2)$$
 
 # Symmetries and conservation laws
-- The simplest conservation law from the Lagrangian is the _conservation of momentum density_ if $\Lagr$ does _not explicitly depend on_ $\varphi$:
+- The _simplest_ conservation law from the Lagrangian is the _conservation of momentum density_ if $\Lagr$ does _not explicitly depend on_ $\varphi$:
 $$\pd{}{\varphi}\left(\pd{\varphi}{[\partial_\mu\varphi]}\right)=0$$
 - The momentum density is said to be a _conserved charge_
 
-## Noether's theorem and conserved charges
-- This links any _smooth, continuous symmetry_ to a _conserved charge_
+## Noether charge and current
+- This links any _smooth, continuous symmetry of the field_ to a _conserved charge_
 	- A _Lie group_ symmetry
 	- Example: translation, but not reflection
+- This involves _no change in spacetime coordinates_, only the _field itself_
+	- A shift in spacetime results in a change in [[#The energy-momentum tensor|total derivative]]
+	- This gives _other conservations_, such as momentum
 
 - Do it in $1+1$ dimensions
 - Suppose the Lagrangian density $\Lagr$ is _invariant_ under the _infinitesimal_ change:
@@ -297,7 +300,7 @@ $$Q=\int d^3\bm{k}\,N(k)\left[|a(\bm{k})|^2-|b(\bm{k})|^2\right]$$
 - The _positive_ and _negative_ Fourier components contribute _different signs_ to the conserved charge
 	- This represents _particles_ and _anti-particles_ once the field is quantised
 ## Local phase (gauge) symmetry
-- Suppose the _phase_ of the complex scalar field $\varphi$ is a _function of space-time coordinates_:
+- Suppose the _phase_ of the complex scalar field $\varphi$ is a _function of space-time coordinates_
 $$\varphi\to \exp(-i\varepsilon(x^\mu))\varphi \Longrightarrow \partial^\mu\varphi\to\exp(-i\varepsilon)[(\partial^\mu\varphi)-i(\partial^\mu\varepsilon)\varphi]$$
 - It is _not a symmetry_ of the Klein-Gordon Lagrangian
 	- The _extra term_ is proportional to the _Noether current_
@@ -332,6 +335,7 @@ $$\varphi\to \varphi-i\varepsilon\varphi\hspace{1.5cm}A_\mu\to A_\mu+\frac{1}{e}
 
 - This gives the _conserved current_:
 $$J^\mu=-i\pd{\Lagr}{(\partial_\mu\varphi)}\varepsilon\varphi+i\pd{\Lagr}{(\partial_\mu\varphi^*)}\varepsilon\varphi^*+\frac{1}{e}\pd{\Lagr}{(\partial_\mu A_\nu)}\partial_\nu\varepsilon$$
+- This can be split into two contributions, which are _separately conserved_
 
 - The first two terms give the _Klein-Gordon current_:
 $$J^\mu_\text{KG}=i[\varphi^*(D^\mu\varphi)-(D^\mu\varphi)\varphi^*]=i[\varphi^*(\partial^\mu\varphi)-(\partial^\mu\varphi)^*\varphi]-2e^2A^\mu\varphi^*\varphi$$
@@ -344,22 +348,40 @@ $$J^\mu_\text{em}\propto -F^{\mu\nu}\partial_\nu\varepsilon=-\partial_\nu(F^{\mu
 $$J^\mu_\text{em}=\partial_\nu F^{\mu\nu}$$
 - Conservation is automatic due to _antisymmetry of the field tensor_
 
-## The energy-momentum tensor
+## Shifts in space-time and the energy-momentum tensor
 - Let the Lagrangian density vary by some _total derivative_
 - The _action_ then shifts _only at the boundary of spacetime_, and the _motion_ is _unaffected_
 
+### Lagrangian shift by total derivative
 - Using the proof for [[#Noether's theorem]], let the total derivative be:
 $$\delta\Lagr=\partial_\mu\left(\pd{\Lagr}{(\partial_\mu\varphi)}\delta\varphi\right)=\partial_\mu K^\mu$$
 - The _conserved quantity_ is then:
 $$\partial_\mu\left(\pd{\Lagr}{(\partial_\mu\varphi)}\delta\varphi-K^\mu\right)=0$$
 - $K^\mu$ is some _quantity_ depending on the _type of transformation_ causing the shift
 
+- The transformation can be _functions of the coordinates itself_
+
 - Consider conservations in [[Analytical classical mechanics|classical mechanics]] due to _translations_
 	- Invariance after spatial translation: momentum
 	- Invariance after time translation: energy
 - This leads to the _energy-momentum tensor_
 
-- Given a _transformation_ in _space-time_:
+### Noether current for scale invariance
+- Let there be some _scaling_ in coordinates, with an _accompanying_ scaling in the fields:
+$$\displaylines{x^{\mu}\to\lambda x^{\mu} \\ \varphi(x^{\mu})\to\lambda \varphi(\lambda x^{\mu})}$$
+- The Lagrangian:
+$$\mathcal{L}=\frac{1}{2}(\partial^{\mu}\varphi )(\partial_{\mu}\varphi)$$
+- In $1+1$ spacetime, the transformation is:
+$$\mathcal{L}(x^{\mu})\to \lambda^{4}\mathcal{L}(\lambda x^{\mu})$$
+- Let the dilatation be _infinitesimal_:
+$$\lambda\equiv 1+\epsilon$$
+- The shift in Lagrangian density:
+$$\delta \mathcal{L}=\lambda^{4}\mathcal{L}(x^{\mu}+\epsilon x^{\mu})-\mathcal{L}(x^{\mu})=4\epsilon \mathcal{L}+\epsilon x^{\mu}\partial_{\mu}\mathcal{L}=\epsilon\partial_{\mu}(x^{\mu}\mathcal{L})$$
+
+- From this, the _conserved current_ becomes:
+$$J^{\mu}=\frac{\partial \mathcal{L}}{\partial(\partial_{\mu}\varphi)}-x^{\mu}\mathcal{L}$$
+### Constant shift in space-time
+- Given a _transformation_ in _space-time_, where the shift is _constant_:
 $$x^\mu\to x^\mu+\varepsilon^\mu$$
 - Then for a function of the coordinates, such as $\varphi$:
 $$\varphi\to\varphi+\varepsilon^\mu\partial_\mu\varphi$$
@@ -449,6 +471,7 @@ $$T_{\mu\nu}=\frac{2}{\sqrt{-g}}\frac{\delta S}{\delta g^{\mu\nu}}$$
 
 - By manipularing $\delta g_{\mu \nu}$, one can also obtain:
 $$T_{\mu \nu}=2\frac{\partial \mathcal{L}}{\partial g_{\mu \nu}}-g_{\mu \nu}\mathcal{L}$$
+
 ## Angular momentum
 - Define the antisymmetric tensor:
 $$M^{\lambda\mu\nu}=x^\mu T^{\lambda\nu}-x^\nu T^{\lambda\mu}$$
@@ -458,10 +481,12 @@ $$\partial_\lambda M^{\lambda\mu\nu}=\delta^\mu_\lambda T^{\lambda\nu}-\delta^\n
 - In other words, $M$ is also _conserved_
 
 - This _conserved quantity_ is linked to some _rotation_
+
+### Total angular momentum tensor
 - Considering that $T^{0i}$ are the components of _momentum density_, define the _total angular momentum tensor_ $J^{\mu\nu}$
 	- Example: $M^{012}=xT^{02}-yT^{01}$ gives the $z-$component of angular momentum density
 $$J^{\mu\nu}=\int d^3\bm{r}M^{0\mu\nu}$$
-- The familiar 3-angular momentum, from the antisymmetric nature of $J^{\mu\nu}$:
+- The familiar _3-angular momentum_, from the antisymmetric nature of $J^{\mu\nu}$:
 $$J_{i}=\frac{1}{2}\varepsilon_{ijk}J^{jk}$$
 - The _other non-zero components_:
 $$J^{0j}=-J^{j0}=\int M^{00j} \, d^{3}\boldsymbol{r}=tP_{j}-R_{j}E $$
@@ -469,12 +494,81 @@ $$J^{0j}=-J^{j0}=\int M^{00j} \, d^{3}\boldsymbol{r}=tP_{j}-R_{j}E $$
 $$R_{j}=V_{j}t+\text{const.}$$
 - In other words, the _centre of mass_ moves at _constant speed_ $V_j=P_j/E$
 
+### Spin
 - The _total angular momentum_ includes both the _orbital_ and _intrinsic_ parts
 - In the _rest frame_ of an object, the _intrinsic angular momentum_ is known as the _spin_
 
 - The _spin 4-vector_:
 $$S^\mu=-\frac{1}{2}\varepsilon^{\mu\nu\alpha\beta}U_{\nu}J_{\alpha\beta}$$
-- In the _rest frame_, as $U_0=1$ and $U_i=0$, one gets $S^i=J^i$, giving the _intrinsic angular momentum_
+- In the _rest frame_, as $U_0=1$ and $U_i=0$, one gets $S^{0}=0,S^i=J^i$, giving the _intrinsic angular momentum_
+
+- $S^{\mu}$ is _always orthogonal_ to the 4-velocity, as $S^{\mu}U_{\mu}=0$, therefore it _only has 3 components_ in any frame
+
+- There is _no covariant way_ to separate orbital and spin angular momentum, as $J$ is a 4-tensor and $S$ is a 4-vector
+
+# Quantum fields
+- Transitioning from _classical_ to _quantum_ fields is known as _second quantisation_
+
+- _First quantisation_ is the process of _replacing_ classical variables with quantum _operators_:
+$$[\hat{q},\hat{p}]=i$$
+- Natural units: $\hbar=1$
+
+- _Second quantisation_ replaces the _field variable_ $\varphi(x,t)$ and and the _conjugate momentum density_ $\pi(x,t)$ by operators:
+$$[\hat{\varphi}(x,t),\hat{\pi}(x',t)]=i\delta(x-x')$$
+- $x$ and $x'$ are _not dynamical variables_ but are only _labels_ for _values_ of the fields
+
+## Fourier decomposition to second quantisation
+- The _field_ satisfying the Euler-Lagrange equation is replaced by an _operator_, and the [[#Fourier decomposition of field|Fourier expansion]] _coefficients_ are also _operators_:
+$$\hat{\varphi}(x,t)=\int  \, dk\,N(k)\Big[\hat{a}(k)\exp[i(kx-\omega t)]+\hat{a}^{\dagger}(k)\exp[-i(kx-\omega t)]\Big] $$
+- While $\hat{\varphi }$ is _Hermitian_, $\hat{a}$ is _not_
+
+- The _Hamiltonian_ is then:
+$$\hat{H}=\int  \, dk\,N(k) \frac{1}{2}\omega(k)\big[\hat{a}(k)\hat{a}^{\dagger}(k)+\hat{a}^{\dagger}(k)\hat{a}(k)\big] $$
+- Comparing with the [[Quantum Harmonic Oscillator]]:
+$$\hat{H}=\frac{1}{2}\omega(\hat{a}\hat{a}^{\dagger}+\hat{a}^{\dagger}\hat{a})$$
+- Hence, $\hat{a}(k)$ can be identified as the _annihilation operator_
+- $\hat{a}^{\dagger}(k)$ can be identified as the _creation operator_
+- They _add/remove_ one _quantum of excitation_ from the _mode_ $k$
+- The quanta can be interpreted as _particles_
+
+- Example: the _electromagnetic field_ can be [[Quantum electrodynamics|quantised]], with the particles being _photons_
+
+- The _ladder operators_ of the QHO satisfy:
+$$[\hat{a},\hat{a}^{\dagger}]=1$$
+- Analagously, the commutation relation for field ladder operators is:
+$$\begin{align}N(k)[\hat{a}(k),\hat{a}^{\dagger}(k')]&=\delta(k-k') \\ [\hat{a}(k),\hat{a}^{\dagger}(k')]&= (2\pi)\,2\omega(k)\,\delta(k-k')\end{align}$$
+
+- In 3 spatial dimensions:
+$$[\hat{a}(\boldsymbol{k}),\hat{a}^{\dagger}(\boldsymbol{k}')]=(2\pi)^{3}\,2\omega(\boldsymbol{k})\,\delta^{3}(\boldsymbol{k}-\boldsymbol{k}')$$
+- Trivially,
+$$[\hat{a}(\boldsymbol{k}),\hat{a}(\boldsymbol{k}')]=[\hat{a}^{\dagger}(\boldsymbol{k}),\hat{a}^{\dagger}(\boldsymbol{k}')]=0$$
+- By _expanding_ both $\hat{\varphi}$ and $\hat{\pi}$, one can derive:
+$$[\hat{\varphi}(\boldsymbol{r},t),\hat{\pi}(\boldsymbol{r},t)]=i\,\delta^{3}(\boldsymbol{r}-\boldsymbol{r}')$$
+- Other commutation relations:
+$$[\hat{\varphi}(\boldsymbol{r},t),\hat{\varphi}(\boldsymbol{r}',t)]=[\hat{\pi}(\boldsymbol{r},t),\hat{\pi}(\boldsymbol{r}',t)]=0$$
+
+## Intepretation
+- The _positive frequency_ term of the field is associated with _annihliation_:
+$$\hat{a}(\boldsymbol{k})\exp[i(\boldsymbol{k}\cdot \boldsymbol{r}-\omega t)]$$
+- Energy $\hbar\omega$ is _released_ in the annihilation process
+
+- Similarly, the _negative frequency_ term is associated with _creation_:
+$$\hat{a}^{\dagger}(\boldsymbol{k})\exp[-i(\boldsymbol{k}\cdot \boldsymbol{r}-\omega t)]$$
+- Energy $\hbar\omega$ is _absorbed_ in the creation process
+
+## Antiparticles
+- A _Hermitian_ field describes particles that are _identical to their antiparticles_
+
+- A _complex/non-Hermitian_ field describes particles with corresponding _antiparticles_
+- The [[#Global phase symmetry|conserved charge]] and Hamiltonian:
+$$\begin{align}\hat{Q}&=\int  \, d^{3}\boldsymbol{k}\,N(\boldsymbol{k})\Big[\hat{a}^{\dagger}(\boldsymbol{k})\hat{a}(\boldsymbol{k})-\hat{b}^{\dagger}(\boldsymbol{k})\hat{b}(\boldsymbol{k})\Big] \\ \hat{H}&=\int  \, d^{3}\boldsymbol{k}\,N(\boldsymbol{k})\omega(\boldsymbol{k})\Big[\hat{a}^{\dagger}(\boldsymbol{k})\hat{a}(\boldsymbol{k})+\hat{b}^{\dagger}(\boldsymbol{k})\hat{b}(\boldsymbol{k})\Big]\end{align}$$
+
+- Particles _created_ by $\hat{a}$ and $\hat{b}$ have the _same energy_, but _opposite charge_
+- Hence, in $\hat{\varphi}$:
+	- The _positive frequency_ part will _annihilate a particle_
+	- The _negative frequency_ part will _create an antiparticle_
+- The _opposite_ is true in $\hat{\varphi}^{\dagger}$ 
+	- _Create a particle_ and _annihilate an antiparticle_
 
 # Symmetry breaking
 - One breaks the symmetry of the _solutions/trajectories_, instead of the Lagrangian
@@ -580,6 +674,7 @@ $$
 ## The quantum particle
 - The _Lagrangian density_:
 
+
 - This produces the _non-relativistic, time-dependent Schrodinger equation_
 
 - With some _interaction/forcing term_:
@@ -590,6 +685,7 @@ $$\psi=\int\,dt'\int\,dx'G(x,t,x',t')\,F(x',t')$$
 - This gives:
 $$\displaylines{\left(E-\frac{p^2}{2m}\right)G(p,E)=1 \\ G(p,t,t')=\int\exp\left(-\frac{iE}{\hbar}(t-t')\right)\frac{1}{E-p^2/2m}\,\frac{dE}{2\pi\hbar}}$$
 - This gives _a pole on the real axis_:
+![[Quantum greens function pole.png|400]]
 
 - Fourier transforming back to the position representation:
 
@@ -600,18 +696,19 @@ $$G(x^\mu)=\int\,dp^\nu\frac{\exp(-ip_\mu x^\mu)}{p^\mu p_\mu-m^2}$$
 - The _poles_ arise when $p_0^2-p_i p^i=m^2$
 - On the $p_0$ _axis_, the poles are at $\pm\sqrt{p_i^2+m^2}$ 
 
-- One can use the $i\varepsilon$ _prescription_, moving the poles _up the axis_:
+- One can use the $i\varepsilon$ _prescription_, moving both poles _up the axis_:
 $$p^0\to p^0+i\varepsilon$$
 
 - Causality dictates that $G(x^\mu)$ _disappears outside the forward light cone_
 
+## Feynman prescription
 - In quantum fields, to preserve causality, use the _Feynman prescription_:
 $$G(x^\mu)=\int\,dp^\nu\frac{\exp(-ip_\mu x^\mu)}{p^\mu p_\mu-m^2+i\varepsilon}$$
 - This gives _one pole for each half-plane_
 - The Feynman propagator is _non-zero everywhere_
 - This corresponds to _having antiparticles travelling backwards in time_
 - This _does not affect causality of measurement_
-
+![[Feynman poles.png]]
 # The Dirac field
 - Spacetime is _Lorentz invariant_
 - The Lorentz transformation:

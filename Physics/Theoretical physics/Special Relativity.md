@@ -74,13 +74,20 @@ $$\displaylines{ds^2=ds'^2 \\ (\Delta s)^2=(\Delta s')^2}$$
 | $(\Delta s)^2>0$ | Timelike       |
 | $(\Delta s)^2=0$ | Null/lightlike |
 | $(\Delta s)^2<0$ | Spacelike               |
+### Light cone structure
+- Timelike and spacelike 4-vectors are _separated_ by the null vectors, which can be plotted as a _light cone_
+- In $1+1$ dimensional spacetime, it is given by $x=\pm t$
+
 ![[Lightcone structure.png]]
 
+- _Massive_ particles must travel _within_ the light cone, on _timelike curves_
+### Interval as a square length
 - From the _frame invariance_, one can _define_ the interval as the _square length_ of $\Delta\vec{x}$:
 $$(\Delta\vec{x})^2\equiv(\Delta s)^2=(\Delta s')^2$$
 - This can be _negative_ (for spacelike events)
 
 - Just as _Euclidean distance_ is fundamental to geometry in flat [[Geometric principles in Newtonian mechanics|3-space]], the interval is fundamental to the geometry of _spacetime, or Minkowski space_
+- It also gives rise to the concept of [[#Component-free particle kinetics|proper time]]
 
 ## Tensor algebra in Minkowski space
 - Many [[Geometric principles in Newtonian mechanics|definitions in 3-space]] still _apply_
@@ -101,15 +108,18 @@ $$\textbf{g}(\vec{A},\vec{B})=\vec{A}\cdot\vec{B}$$
 	- uniform compared to objects _at rest_
 - The time experienced by this clock $\tau$ is known as the _proper time_
 
+## Proper time
 - The particle's path through space-time, or the _world-line_, can be denoted by $\mathcal{P}(\tau)$
 	- As always, the curve through spacetime is _frame-independent_
 - The _inertial frame_ where the particle is _momentarily at rest_ is known as the _momentary co-moving/rest frame_
+
 - For an _interval in proper time_ $\Delta\tau$, that interval is _equal to coordinate time interval in the momentary rest frame_ $\Delta t$
 - From the definition of the momentary rest frame, $\Delta x^1=\Delta x^2=\Delta x^3=0$
 
 - From this, the _invariant interval_ is $(\Delta s)^2=(\Delta t)^2=(\Delta \tau)^2$
 - Therefore, the particle's _proper time_ $\tau$ is equal to $s$ _along the world-line_
 
+## 4-velocity
 - One then defines another _frame-independent_ 4-vector, known as the _4-velocity_:
 $$\vec{u}\equiv\frac{d\mathcal{P}}{d\tau}=\frac{d\vec{x}}{d\tau}$$
 ![[World-line.png|300]]
@@ -118,6 +128,7 @@ $$\vec{u}\equiv\frac{d\mathcal{P}}{d\tau}=\frac{d\vec{x}}{d\tau}$$
 $$|\vec{u}|^2=\frac{d\vec{x}\cdot d\vec{x}}{d\tau^2}=\frac{ds^2}{d\tau^2}=1$$
 - Therefore, it is _always a unit tangent along the world-line_
 
+## 4-momentum
 - One can then define the _4-momentum_ using the _rest mass_ $m$:
 $$\vec{p}\equiv m\vec{u}=m\frac{d\vec{x}}{d\tau}\equiv\frac{d\vec{x}}{d\zeta}$$
 - $\zeta$ is a _renormalised_ version of proper time, $\zeta\equiv\tau/m$
@@ -130,6 +141,7 @@ $$|\vec{p}|^2=m^2$$
 - From this, the _world-line of a zero rest mass particle is null_
 - By contrast, the world-line of a _finite rest-mass particle_ is _time-like_
 
+## 4-momentum conservation and 4-force
 - Similar to non-relativistic 3-space, there is a _law of conservation of 4-momentum_
 	- A relation between _geometric objects_ (4-vectors)
 ![[4-momentum conservation.png|350]]

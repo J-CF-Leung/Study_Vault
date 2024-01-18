@@ -24,7 +24,7 @@ $$\bm{E}=-\nabla\phi(\bm{r})$$
 $$\bm{B}=-\mu_0\nabla\phi_m(\bm{r})$$
 
 - This combined with the other Maxwell's equations give [[Electromagnetism#Laplace's and Poisson's equations|Poisson's equation]]:
-$$\nabla^2\phi=\frac{\rho_T}{\epsilon_0}$$
+$$\nabla^2\phi=-\frac{\rho_T}{\epsilon_0}$$
 - Similarly for the magnetic scalar potential:
 $$\nabla^2\phi_m=0$$
 - In the _static regime_, the two fields are _independent_
@@ -405,6 +405,7 @@ $$\alpha=\frac{I_\text{pol}}{I_\text{pol}+I_\text{unpol}}$$
 - Hence, _real_ sources can only be _quasi-monochromatic_
 
 - The _theory of coherence_ describes _non-monochromatic_ waves _quantitatively_
+- It quantifies the _correlation_ between the values of a wave in two positions and times
 ### Power spectra
 - Let there be some _time-dependent function_ $f(t)$
 - Take its [[Fourier series and transforms|Fourier transform]]:
@@ -415,7 +416,7 @@ $$P(\omega)\,d\omega=|F(\omega)|^2\,d\omega$$
 ### Light sources
 
 #### Laser
-- Light produced by _stimulated emission_
+- Light produced by [[Lasers|stimulated emission]]
 - It is (almost) a _pure harmonic wave_:
 $$\displaylines{f(t)\sim \cos(\omega t+\alpha) \\ F(\omega)\propto \exp(i\alpha)\delta(\omega-\omega_0)+\exp(-i\alpha)\delta(\omega+\omega_0)}$$
 - It is a _pair_ of delta functions at $\pm\omega_0$
@@ -472,7 +473,11 @@ $$\mean{g(t)}=\lim_{T\to\infty}\int_{-\infty}^\infty g(t)\,dt$$
 - The _resultant intensity_ of the interference pattern:
 $$I\sim \mean{(A_1+A_2)(A_1^*+A_2^*)}=\mean{|A_1|^2}+\mean{|A_2|^2}+\mean{A_1A_2^*}+\mean{A_1^*A_2}$$
 - The _cross terms_ determine _interference effects_
+	- If the sources at $A_1$ and $A_2$ are _perfectly coherent_, this gives _distinct fringes_
+	- If the sources are _incoherent_, there are _no fringes_
+- The _visibility_ of the fringes $V=(I_\text{max}-I_\text{min})/(I_\text{max}+I_\text{min})$ then quantifies the _mutual coherence_ of the points
 
+### Mutual coherence function
 - Suppose there are two measurements:
 	- $f_1$ at $\bm{r}_1$ at time $t$
 	- $f_2$ at $\bm{r}_2$ at time $t-\tau$
@@ -481,7 +486,7 @@ $$\Gamma(\bm{r}_1,\bm{r}_2,\tau)=\mean{f_1(\bm{r}_1,t)f_2^*(\bm{r}_2,t-\tau)}$$
 - This assumes there is _correlation_ in the behaviour after $\tau$ across time $t$
 
 - By _normalising intensity_, one gets the _degree of mutual coherence_:
-$$\displaylines{\gamma(\bm{r}_1,\bm{r}_2,\tau)=\frac{\Gamma(\bm{r}_1,\bm{r}_2,\tau)}{\sqrt{I_1I_2}} \\ I_i=\Gamma(\bm{r}_1,\bm{r}_1,0) \\ 0<\gamma<1}$$
+$$\displaylines{\gamma(\bm{r}_1,\bm{r}_2,\tau)=\frac{\Gamma(\bm{r}_1,\bm{r}_2,\tau)}{\sqrt{I_1I_2}} \\ I_i=\Gamma(\bm{r}_i,\bm{r}_i,0) \\ 0<\gamma<1}$$
 
 - This determines how _effectively_ the source waves can _interfere_
 - If $|\gamma|\sim 1$, this means $I$ can go _down to zero_ due to the _interference terms_, giving _good fringe contrast_
@@ -513,7 +518,8 @@ $$I(\tau)=2I_0+2|\Gamma(\tau)|\cos[\Delta(\tau)]$$
 $$\Gamma(\tau)=\mean{f(t)f^*(t-\tau)}\approx \exp(-i\omega_0\tau)=\exp(-2ik_0d)$$
 - The phase term _oscillates_ with change in $d$, on the _order of the wavelength_
 	- _Rapidly_ compared to variation in _amplitude_ (light is quasi-monochromatic)
-- One then observes _fringes_, with _contrast_ $V$:
+
+- One then observes _fringes_, with _visibility/contrast_ $V$:
 $$V(\tau)=\frac{I_\text{max}-I_\text{min}}{I_\text{max}+I_\text{min}}=\frac{|\Gamma(\tau)|}{I_0}=|\gamma(\tau)|$$
 - $\gamma(\tau)$ is the _degree of temporal coherence_
 	- The _normalised_ temporal coherence function
@@ -548,6 +554,24 @@ $$P(\omega)=\mathcal{F}[I_r(\tau)-1]$$
 	- The _signal-to-noise ratio_ is higher as the signal _continuously falls on the detector_
 	- The _spectral resolution_ is given by $\lambda/\delta\lambda\approx 2d/\lambda=m$, where $m$ is the _number of fringes recorded_
 
+### Summary
+- Given a _source_ outputting $f(t)$
+- Interfering sources with outputs $f(t)$ and $f(t-\tau)$, _divided_ from the _same point on the wavefront_ (division of amplitude)
+- If the division is achieved using _mirrors_ separated at distance $d$:
+$$\tau=\frac{2d}{c}$$
+
+- The _temporal coherence function_:
+$$\Gamma(\tau)=\langle f(t)f^{*}(t-\tau) \rangle $$
+- The _degree of mutual coherence_:
+$$\gamma(\tau)=\frac{\Gamma(\tau)}{I_{0}}$$
+- The _measured intensity_ is:
+$$I(\tau)=2I_{0}+2\mathrm{Re}[\Gamma(\tau)]$$
+- This gives _fringes_, which have _visibility_:
+$$V(\tau)=\frac{I_\text{max}-I_\text{min}}{I_\text{max}+I_\text{min}}=|\gamma(\tau)|$$
+- Then from the _Wiener-Kinchine Theorem_, the _power spectrum_:
+$$P(\omega)=\text{FT}[\gamma(\tau))]$$
+
+### Gaussian power spectrum
 - Suppose the power spectrum is _Gaussian_ due to [[#Spectral lines|broadening]]
 $$P(\omega)=C\exp\left(-\frac{(\omega-\omega_0)^2}{2\sigma^2}\right)$$
 - Find the temporal coherence function:
@@ -561,6 +585,7 @@ $$V(\tau)=\exp\left(-\frac{\sigma^2\tau^2}{2}\right)$$
 - The _modulation_ of the fringes gives the _broadening_
 - As $d$ increases, the beams become _gradually less coherent_
 
+### Coherence length and time
 - Define the _coherence length_ $l_c$ as the _path difference_ $2d$ where $V(\tau)=1/e$
 - This determines the _frequency bandwidth_ $\delta\omega\sim\sigma$
 - From the expression for $V(\tau)$:
@@ -583,6 +608,7 @@ $$\tau_c=\frac{l_c}{c}\propto\sigma^{-1}$$
 - Each _beam_ produces its own _fringes_, which are _offset from each other_
 - The _fringe contrast_ is then _degraded_
 
+### Coherence width
 - If the _angular width_ of the source is $\alpha$, then fringes are _offset_ by $\alpha D$
 - The _fringe spacing_ is $\lambda D/d$, hence one _loses contrast_ if:
 $$\alpha D>\frac{\lambda D}{d}\Longrightarrow d>\frac{\lambda}{\alpha}\approx w_c$$
@@ -590,20 +616,24 @@ $$\alpha D>\frac{\lambda D}{d}\Longrightarrow d>\frac{\lambda}{\alpha}\approx w_
 	- _Temporal coherence_ is _along_ the beam, or _longitudinal_
 - $w_c$ is known as the _coherence width_
 
+### Intensity profile
 - For the _two rays_:
 $$k(\rho_1+r_1-\rho_2-r_2)= kd(\sin\theta+\sin\chi)\approx kd\left(\frac{x}{L}+\frac{y}{D}\right)=2ks$$
-- Given some _intensity profile_ at the _source_, the _amplitude_ at $P$ is then:
+- Given some _intensity profile_ $I(x)$ at the _source_, the _amplitude_ at $P$ is then:
 $$\psi(y)\sim\sqrt{I(x)}\exp[ik(\rho+R)](e^{iks}+e^{-iks})=2\sqrt{I(x)}\exp[ik(\rho+R)]\cos(ks)$$
 
 - If the extended source is _incoherent_ (beams from different points are _uncorrelated_), then the _net intensity as a function of $d$_ is obtained by _summing intensities_:
 $$\begin{aligned}I_y(d)&=\int |\psi(y)|^2\,dx=4\int I(x)\cos^2(2ks)\,dx \\ &=2I_0+2\Re\left[\exp(-ikdy/D)\int I(x)\exp(-ikdx/L)\,dx\right]\end{aligned}$$
+- This is similar to the form from [[#Temporal coherence|division of amplitude]] for investigating temporal coherence
+
 - Then by _changing variables_, with $x=L\theta$, $y=d\chi$, and $I(x)\,dx=I(\theta)\,d\theta$, with $kd=u$:
 $$I_y(u)=2I_0+2I_0\Re[\exp(-iu\chi)\gamma(u)]$$
-- Defining $\gamma(u)$, as well as a phase $\beta$:
+- Defining $\gamma(u)$, as well as a phase $\beta$, using the _Fourier transform of the intensity profile_:
 $$\displaylines{\gamma(u)=\frac{1}{I_0}\int I(\theta)\,\exp(-iu\theta)\,d\theta=\frac{\mathcal{F}[I(\theta)]}{I_0}\equiv|\gamma(u)|\exp(-i\beta) \\ I_y(u)=2I_0+2I_0|\gamma(u)|\cos\left(\beta+\frac{kdy}{D}\right)}$$
 - There are $\cos^2$ fringes with _spacing_ determined by $kdy/D$
 - $|\gamma(u)|$ defines the _fringe contrast_ at point $y$
 - There is some _offset_ $\beta$, determined by the _angular profile_ $I(\theta)$
+
 
 - For a _symmetric source profile_ (about the axis):
 $$\beta=\begin{cases}0&\gamma(u)>0 \\ \pi&\gamma(u)<0\end{cases}$$
@@ -611,9 +641,12 @@ $$\beta=\begin{cases}0&\gamma(u)>0 \\ \pi&\gamma(u)<0\end{cases}$$
 $$V=\gamma(u=kd)$$
 - It can be _negative_ (if a minimum occurs where a _maximum_ is expected)
 
+### Degree of lateral coherence
 - The visibility gives the _intensity profile_ of the source 
-- Define $\gamma(u)$ as the _degree of lateral coherence_
-	- The _van Cittert-Zernike theorem_
+- Define $\gamma(u)$ as the _degree of lateral coherence_:
+$$\gamma(u)=\frac{\mathcal{F}[I(\theta)]}{I_{0}}$$
+- The _van Cittert-Zernike theorem_ states that the degree of lateral coherence is the _normalised Fourier transform of the intensity profile_
+
 - $\gamma(u)$ is determined by the _slit separation_ $d$, and can be used to define a _coherence width_
 
 ### Examples
@@ -733,7 +766,7 @@ $$\displaylines{\div(\curl\bm{E})=-\div\dot{\bm{B}}=0}$$
 - They contain _8 independent unknowns_
 	- 4 _independent components of fields_
 	- The _current and charge densities_
-
+ 
 - Writing the fields _in terms of potentials_:
 $$\mu\mu_0\bm{H}=\curl\bm{A}\hspace{1.5cm}\frac{\bm{D}}{\epsilon\epsilon_0}=-\dot{\bm{A}}-\grad\phi$$
 $$\div\bm{E}=-\pd{}{t}\div\bm{A}-\nabla^2\phi=\frac{\rho}{\epsilon\epsilon_0}$$
@@ -763,6 +796,8 @@ $$\phi(r,t)=\frac{1}{4\pi\epsilon_0}\frac{q(t-r/c)}{r}$$
 
 - For a source term with some _charge distribution_ $\rho(\bm{r},t)$, _superimpose_ the solutions:
 $$\phi(r,t)=\frac{1}{4\pi\epsilon_0}\int_\text{all space}\frac{\rho(\bm{r}',t-|\bm{r}-\bm{r}'|/c)}{|\bm{r}-\bm{r}'|}\,dV$$
+
+### Evaluating quantities at retarded time
 - The _retarded scalar potential_ allows for the _propagation of information_ at a _finite speed_ $c$
 - Denote _evaluating at retarded time_:
 $$\displaylines{\rho\left(\bm{r}',t-\frac{|\bm{r}-\bm{r}'|}{c}\right)\equiv[\rho(\bm{r}',\bm{r},t)]\equiv[\rho] \\ \phi=\frac{1}{4\pi\epsilon_0}\int_\text{all space}\frac{[\rho]}{|\bm{r}-\bm{r}'|}\,dV'}$$
@@ -771,7 +806,7 @@ $$\displaylines{\rho\left(\bm{r}',t-\frac{|\bm{r}-\bm{r}'|}{c}\right)\equiv[\rho
 $$\bm{A}=\frac{\mu_0}{4\pi}\int\frac{[\bm{J}]\,dV'}{|\bm{r}-\bm{r}'|}$$
 
 - The _differential_ of retarded quantities:
-$$\pd{}{r}[F]=-\frac{1}{c}[F']\hspace{1.5cm}\pd{}{t}[F]=[F']$$
+$$\pd{}{r}[F]=\frac{\partial}{\partial r}F\left( t-\frac{r}{c} \right)=-\frac{1}{c}[F']\hspace{1.5cm}\pd{}{t}[F]=[F']$$
 
 # Dipole radiation
 - _Moving charges_ will cause _time-varying fields_

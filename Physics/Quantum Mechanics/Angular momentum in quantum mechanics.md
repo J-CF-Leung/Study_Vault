@@ -217,7 +217,7 @@ $$\displaylines{\hat{J}^2\ket{jm}=\hbar^2j(j+1)\ket{jm}\hspace{1cm} \hat{J}_z\ke
 $$\displaylines{(\hat{J}_z'+\hat{J}_z'')\ket{jm}=(m'+m'')\hbar\ket{jm}\\ m=m'+m''}$$
 - In _general_, the eigenstate should b e written as a _linear combination_ of the original eigenstates:
 $$\ket{jm}=\sum_{m',m''}\left[\ket{j'm'}\otimes\ket{j''m''}\right]\braket{j'm';j''m''|jm}$$
-- The sum is over valus of $m'$ and $m''$ such that $m'+m''=m$
+- The sum is over values of $m'$ and $m''$ such that $m'+m''=m$
 	- Or one can treat the inner products as _zero_
 - The inner products are known as the _Clebsh-Gordan coefficients_, and give the _overlap_ between the states
 - The _matrix_ of coefficients is a _block-diagonal, unitary_ matrix

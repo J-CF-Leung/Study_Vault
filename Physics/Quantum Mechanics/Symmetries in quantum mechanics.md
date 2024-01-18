@@ -211,12 +211,17 @@ $$V_{+1}=-\frac{1}{\sqrt{2}}(V_1+iV_2)\hspace{1cm}V_{-1}=\frac{1}{\sqrt{2}}(V_1-
 - For operators $\hat{\bm{V}}$ and $\hat{\bm{J}}$ obeying the commutation relations above:
 >[!info] Wigner-Eckart Theorem
 >The _matrix elements_ of the _spherical components_ of a vector operator are given by:
->$\braket{\alpha''j''m''|\hat{V}|\alpha'j'm'}=\langle\alpha''j''||\hat{V}||\alpha'j'\rangle\braket{1m;j'm'|j''m''}$
+>$\braket{\alpha''j''m''|\hat{V}_{m}|\alpha'j'm'}=\langle\alpha''j''||\hat{V}||\alpha'j'\rangle\braket{1m;j'm'|j''m''}$
 >where $m=-1,0,1$
 - The _reduced matrix element_ is _dependent on $\hat{V}$_, and _not_ on $m$
 	- It is seen as a _constant component_ of a _set of matrix elements_
 - The _Clebsch-Gordan coefficient_ is entirely _dependent_ on $m,m',m''$
 	- Encodes the _arbitrary dependence on choice of quantisation axis_
+
+- From the expression above, one can also relate the $m=+1$ matrix element to the _conjugate element_ for $m=-1$
+$$\braket{ \alpha''j''m''|\hat{V}_{+1} |\alpha'j'm'  }^{\dagger}=-\braket{ \alpha'j'm' |\hat{V}_{-1}|\alpha''j''m''  }  $$
+- However, the reduced matrix elements are in general, _different_:
+$$(2J+1)\left| \braket{ \alpha J||\hat{\boldsymbol{V}}||\alpha'J'  }  \right|^{2}=(2J'+1)\left| \braket{ \alpha'J'||\hat{\boldsymbol{V}}||\alpha J  }  \right|^{2}  $$
 
 ## Selection rules
 - The Clebsch-Gordan coefficient _vanishes_ unless:

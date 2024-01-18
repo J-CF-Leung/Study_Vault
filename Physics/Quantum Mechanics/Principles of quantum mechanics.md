@@ -8,7 +8,6 @@
 >"I think I can safely say that nobody understand quantum mechanics"
 >-Richard Feynman
 
-- [x] Bosons and fermions 🔼 📅 2023-10-04 ✅ 2023-10-09
 # Notation
 - Generic vectors are denoted with _kets_ $\ket{V}$
 - Operators have capital letters and hats $\hat{\Omega}$
@@ -294,6 +293,7 @@ $$-\frac{\hbar^2}{2m}\nabla^2\psi_n(x)+V\psi_n(x)=E_n\psi_n(x)$$
 - Solving this thing: [[1D time-independent Hamiltonians]], [[3D time-independent Hamiltonians]]
 
 ## Time-dependent Hamiltonians: various methods
+- Time-dependent part enters via a _perturbation_: [[Time-Independent Approximation Methods#Time-dependent perturbation theory|time-dependent perturbation theory]]
 
 # Transition amplitude
 - Given two eigenkets, $\ket{b}$ at time $t$ and $\ket{a}$ at time $t=0$, the _transition amplitude_ between them is defined as:

@@ -201,6 +201,7 @@ $$\overline{m}=0\;\;\;\text{ or }\;\;\;\overline{m}=\pm\sqrt{-\alpha/\beta}$$
 - Expand functions in terms of $t=T/T_c-1$:
 $$\displaylines{\alpha(t)=at+\dots \\ \beta(t)=b+\dots \\ c(t)=c+\dots}$$
 - At $\alpha=0$, $T=T_c$, hence there is _no constant term_
+	- Constructed _such that_ the transition occurs at $T=T_{c}$
 
 - One then finds:
 $$\overline{m}=\pm\left(\frac{a}{b}\right)^{1/2}\sqrt{T_c-T}\;\;\;\text{ for }\;T<T_c$$

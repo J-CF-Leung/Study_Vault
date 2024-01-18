@@ -1021,10 +1021,11 @@ $$P(x,t+\Delta t)=\int G(\tilde{x}+\Delta x,t+\Delta t\big|\tilde{x},t)P(\tilde{
 - Using a _Taylor expansion_:
 $$\begin{aligned}P(x,t+\Delta t)&=\int d(\Delta x)\sum_{n=0}^\infty\frac{(-\Delta x)^n}{n!}\pd{}{\tilde{x}^n}G(\tilde{x}+\Delta x,t+\Delta t|\tilde{x},t)P(\tilde{x},t) \\ &=P(x,t)-\pd{}{x}(\mean{dx}P(x,t))+\frac{1}{2}\pd{^2}{x^2}\left(\mean{dx}^2P(x,t)\right)\end{aligned}$$
 - Substituting results _from the Langevin equation_:
-$$\pd{P(x,t)}{t}=-\pd{}{x}\left(\frac{f(x)}{\gamma}P(x,t\right)+\frac{\sigma^2}{2}\pd{^2P}{x^2}$$
+$$\pd{P(x,t)}{t}=-\pd{}{x}\left(\frac{f(x)}{\gamma}P(x,t)\right)+\frac{\sigma^2}{2}\pd{^2P}{x^2}$$
+- This is the _Fokker-Planck equation_
+
 - This separates influences from an _external force_, and from _diffusion_:
 $$\frac{\sigma^2}{2}=\frac{kT}{\gamma}\equiv D$$
-- This is the _Fokker-Planck equation_
 
 ### Free diffusion
 $$\pd{P}{t}=D\pd{^2P}{x^2}$$

@@ -77,6 +77,7 @@ $$\bm{F}=m_I\frac{d^2\bm{x}}{dt^2}$$
 	- The _spherical polar coordinates_ become _degenerate_ at the poles, so two coordinate patches are required
 
 - The _coordinates_ of a point on a manifold are _not unique_, and can be _transformed_ (e.g. denoted $x^a\to x'^a$)
+	- Analagous to the [[Special Relativity#Lorentz transformations|Lorentz transformations]] in special relativity
 	- The _point_ itself is unaffacted by transformations as it is a _geometric object_
 
 ### Coordinate transformations
@@ -205,7 +206,7 @@ $$\frac{d}{du}=\frac{dx^\mu}{du}\pd{}{x^\mu}$$
 $$g\left(\frac{d}{du},\frac{d}{du}\right)=g_{\mu\nu}\frac{dx^\mu}{du}\frac{dx^\nu}{du}$$
 - On a _pseudo-Riemannian manifold_:
 $$g\left(\frac{d}{du},\frac{d}{du}\right)=\begin{cases}>0&\text{ if timelike} \\ <0 &\text{ if spacelike} \\ =0&\text{ if null}\end{cases}$$
-- Therefore, a curve can be _classified_ as timelike, spacelike, or null based on the metric
+- Therefore, a curve can be _classified_ as [[Special Relativity#Light cone structure|timelike, null, or spacelike]] based on the metric
 - For a _non-null_ curve, the _length_ of the tangent vector is the _derivative_ of the _proper path length_ $s$ w.r.t. $u$:
 $$\left|\frac{ds}{du}\right|=\left|g_{\mu\nu}\frac{dx^\mu}{du}\frac{dx^\nu}{du}\right|$$
 ## Local geometry
@@ -273,7 +274,6 @@ $$dV=\sqrt{|g|}\,dx^1dx^2\dots dx^N$$
 - This condition corresponds to:
 $$\displaylines{g_{\mu\nu}(P)=\delta_{\mu\nu}\hspace{1.5cm}\pd{g_{\mu\nu}}{x^\rho}\Bigg|_P=0 \\ g_{\mu\nu}=\delta_{\mu\nu}+O[(x-x_P)^2]}$$
 - These are the _local Cartesian coordinates_ at point $P$
-- This corresponds to a _local intertial frame_
 
 - Consider the _Taylor expansion_ of the _coordinate transformation_
 - One can show that since $g_{\mu\nu}'$ has $N(N+1)/2$ _independent values_, and the _coordinates_ ${\partial x'^\rho}/{\partial x'^\sigma}$ has $N^2$ _degrees of freedom_, one can _fix_ $g'_{\mu\nu}$ and still have $N(N-1)/2$ degrees of freedom _remaining_
@@ -285,14 +285,22 @@ $$\displaylines{g_{\mu\nu}(P)=\delta_{\mu\nu}\hspace{1.5cm}\pd{g_{\mu\nu}}{x^\rh
 - This implies that the _eigenvalues_ of $g_{\mu\nu}$ can be _negative_
 
 - One can find _local coordinates_ such that at some point:
-$$g_{\mu\nu}(P)=\eta_{\mu\nu}\hspace{1.5cm}\pd{g_{\mu\nu}}{x^\rho}\Bigg|_P=0 $$
-- Where the matrix $\eta_{\mu\nu}$:
-$$\eta_{\mu\nu}=\text{diag}(\pm1,\pm1,\dots\pm1)$$
+$$\displaylines{g_{\mu\nu}(P)=\eta_{\mu\nu}=\text{diag}(\pm1,\pm1,\dots\pm1) \\ \pd{g_{\mu\nu}}{x^\rho}\Bigg|_P=0}$$
 - The _signature_ of the manifold is the number of _positive_ entries _minus_ the number of _negative_ entries
 
 - Example: _Minkowski spacetime_
 $$\displaylines{ds^2=c^2dt^2-dx^2-dy^2-dz^2 \\ g_{\mu\nu}=\text{diag}(+1,-1,-1,-1)}$$
 
+### Locally inertial coordinates
+- When the coordinates resemble $\eta_{\mu \nu}$ _locally_, where $\eta_{\mu \nu}$ is the _Minkowski metric_:
+$$\eta_{\mu \nu}=\text{diag}(+1,-1,-1,-1)$$
+
+- These are _locally inertial coordinates_
+- They correspond to some _inertial frame_ in special relativity
+
+- The metric is _invariant_ under any _change of basis corresponding to a Lorentz transformation
+	- Still only makes sense _locally_
+- Hence, it is _not unique_
 # Tensor algebra
 - At a given point $P$ on the manifold, one can define a _tensor_, a _multilinear map_
 - A $(k,l)$ tensor takes $k$ _contravariant_ vectors and $l$ _covariant_ vectors to produce a _scalar_
@@ -553,6 +561,7 @@ $$\displaylines{\frac{Dt^\mu}{Du}=\frac{D}{Du}\frac{dx^\mu}{du}=0 \\ \frac{d^2x^
 
 ### Extremising proper time
 - Geodesics are also paths of _maximum proper time_
+	- Proper time is an _invariant property_
 	- For _any timelike path_, one can construct a similar _null_ path with _zero path length_
 	- Therefore, the _extremised proper time_ must be a _maximum_
 - One can then _extremise_ the proper time:
@@ -681,7 +690,7 @@ $$\displaylines{\frac{d^2x^i}{dt^2}=-\pd{\Phi}{x_i} \\ g_{00}=\left(1+\frac{2\Ph
 - Examine the curvature tensor with _all lower indices_:
 $$R_{\rho\sigma\mu\nu}=g_{\rho\lambda}\tenscom{R}{\lambda}{\sigma\mu\nu}$$
 
-- Using _local intertial coordinates_, one can prove its symmetry properties
+- Using [[#Locally inertial coordinates]], one can prove its symmetry properties
 	- Use _local inertial coordinates_, where the _metric connection vanishes, but its derivative does not_
 
 - It is _antisymmetric in its first and second pairs of indices_
@@ -739,7 +748,7 @@ $$\nabla^\mu G_{\mu\nu}=0$$
 	- Easier to find solutions to [[#Einstein's equation]]
 	- Example: region outside a star is _spherically symmetric_
 
-### Symmetry
+### Symmetry and isometries
 - A manifold $M$ possesses a symmetry if the _geometry is invariant under a transformation, which maps $M$ to itself_ 
 	- Or, in other words, the _metric_ is the _same from one point to another_ determined by the transformation
 - Symmetries of the _metric_ are known as _isometries_
@@ -832,6 +841,36 @@ $$ds^2=d\theta^2+\sin^2\theta\,d\phi^2$$
 - The rotational symmetries in $\mathbb{R}^3$, with $r=1$ _represents symmetries on_ $S^2$
 - Transforming to spherical coordinates:
 $$\begin{aligned}R&=\partial_\phi \\ S&=\cos\phi\,\partial_\theta-\cot\theta\sin\phi\,\partial_\phi \\ T&=-\sin\phi\,\partial_\theta-\cot\theta\cos\phi\,\partial_\phi\end{aligned}$$
+
+## Maximally symmetric spaces
+- There can be spaces with the _highest possible degree of symmetry_
+
+- Consider the $n-$dimensional _Euclidean flat space_ $\mathbb{R}^{n}$
+- The [[#Symmetry|isometries]] are:
+	- $n(n-1)/2$ _rotations_ ($n$ axes can rotate into $n-1$ axes)
+	- $n$ _translations_
+- This gives $n(n+1)/2$ linearly independent [[#Killing vectors and tensors, Killing's equation|Killing vectors]]
+
+- Any $n-$dimensional manifold with $n(n+1)/2$ Killing vectors are known as _maximally symmetric spaces_
+	- Examples: $\mathbb{R}^{n}$ and $S^{n}$ ($n-$dimensional _spheres_)
+
+- If a space is _maximally symmetric_, the curvature is the _same everywhere_, ans the _same in every direction_
+	- Due to translation and rotation isometries respectively
+
+- Maximally symmetric spaces can be _classified_ by the _Ricci scalar_, the _dimensionality_, the _metric signature_, and the _global topology_
+
+### Riemann tensor for a maximally symmetric space
+- To construct a curvature tensor that is the _same everywhere in all directions_, choose [[#Locally inertial coordinates]]
+- Like the metric for locally inertial coordinates, the _curvature tensor_ must also be constant under some _Lorentz transformation_
+	- Any _change of basis_ that leaves the _metric_ $g_{\hat{\mu}\hat{\nu}}=\eta_{\hat{\mu}\hat{\nu}}$ _invariant_
+- To match the [[#Properties of the Riemann curvature tensor|symmetries]] of the Riemann tensor:
+$$R_{\hat{\rho}\hat{\sigma}\hat{\mu}\hat{\nu}}\propto g_{\hat{\rho}\hat{\mu}}g_{\hat{\sigma}\hat{\nu}}-g_{\hat{\rho}\hat{\nu}}g_{\hat{\sigma}\hat{\mu}}$$
+- As this is a _tensorial relation_, it applies _generally_
+- By _contracting_ both sides twice, one gets:
+$$R_{\rho\sigma \mu \nu}=\frac{R}{n(n-1)}(g_{\rho \mu}g_{\sigma \nu}-g_{\rho \nu}g_{\sigma \mu})$$
+
+- In general, if the Riemann tensor _satisfies_ this relation, with $R$ as a _constant over the manifold_, the metric is _maximally symmetric_
+
 ## Geodesic deviation
 - In _Euclidean geometry_, if two lines are _initially parallel_, they will _always be parallel_
 - On a _curved space_, two _initially parallel geodesics_ will eventually _cross_
@@ -951,7 +990,7 @@ $$R_{\mu\nu}=0$$
 - In gravity, energy must have a _definite value_ to generate the required _curvature_
 
 - Then, for a _vacuum_, one may expect a _vacuum energy density_
-- As it must be _Lorentz invariant_ and _isotropic_, for _locally inertial coordinates_:
+- As it must be _Lorentz invariant_ and _isotropic_, for [[#Locally inertial coordinates]]
 $$T_{\hat{\mu}\hat{\nu}}^\text{vac}=\rho_\text{vac}\eta_{\hat{\mu}\hat{\nu}}$$
 - So for _arbitrary coordinates_:
 $$T^{\text{vac}}_{\mu\nu}=\rho_\text{vac}g_{\mu\nu}$$
@@ -991,7 +1030,7 @@ $$ds^2=\left(1-\frac{2GM}{r}\right)dt^2-\left(1-\frac{2GM}{r}\right)^{-1}dr^2-r^
 $$d\Omega^2=d\theta^2+\sin^2\theta d\phi^2$$
 
 - The metric is _singular_ at $r=0$ and $r=2GM$
-	- At $r=0$, the [[#Ricci tensor and scalar|Ricci scalar]] becomes _infinite_
+	- At $r=0$, the scalar $R^{\mu \nu \rho \sigma}R_{\mu \nu \rho\sigma}$ becomes _infinite_
 	- $r=2GM$ describes the _event horizon_ of [[#Schwarzchild black holes]]
 - Only _valid_ for $r>2GM$ as expected
 
@@ -1127,7 +1166,7 @@ $$L=\sqrt{ 12 }GM\Longrightarrow r_{c}=6GM$$
 - This behaviour leads to the phenomena of _accretion disks_
 - A particle moving in from large $r$ moves _inwards_, where it must _radiate energy_ to maintain a _bound orbit_
 
-# Experimental tests
+# Experimental tests for Schwarzchild
 - Conserved quantities in the Schwarzchild solution:
 $$\displaylines{E=K_{\mu}\frac{dx^{\mu}}{d\lambda}=\left( 1-\frac{2GM}{r} \right)\frac{dt}{d\lambda} \\ L=-R_{\mu}\frac{dx^{\mu}}{d\lambda}=r^{2}\frac{d\phi}{d\lambda}}$$
 - Equation for orbits, from conservation of $\epsilon$, norm of tangent vector:
@@ -1202,5 +1241,227 @@ $$1+z_{\infty}=\left( 1-\frac{2GM}{r_{1}} \right)^{-1/2}$$
 $$\frac{\nu_{R}}{\nu_{E}}=\sqrt{ \frac{g_{00}(E)}{g_{00}(R)} }$$
 
 # Schwarzchild black holes
+- The Schwarzchild metric shows _singular behaciour_ at $r=0$ and $r=2GM$
+- The presence of singularities could be _coordinate-dependent_
+
+- From Einstein's equation, $R_{\mu \nu}=0$ and hence the Ricci scalar $R=0$
+- One can calculate another _coordinate-independent scalar_:
+$$R^{\mu \nu \rho\sigma}R_{\mu \nu \rho\sigma}=\frac{48G^{2}M^{2}}{r^{6}}$$
+- It is _singular_ at $r=0$
+
+- It is _regular_ at $r=2GM$, hence it is a _coordinate-dependent singularity_, and one can construct a _new coordinate system_ 
+
+## Inside the Schwarzchild radius
+- For $0<r<2GM$, the _signature_ of the metric changes
+- For $r>2GM$, $\boldsymbol{e}_{0}$ is _timelike_ and $\boldsymbol{e}_{i}$ are _spacelike_ vectors, as expected
+
+- For $0<r<2GM$, $\boldsymbol{e}_{0}$ is _spacelike_ and $\boldsymbol{e}_{i}$ are _timelike_ vectors
+- A particle _cannot stay fixed_ inside the region
+
+## Causal structure
+- The _causal structure_ is determined by the [[Special Relativity#Light cone structure|light cone structure]], given by the _collection of null geodesics_
+
+### Radial null geodesics
+- Consider the _radial null geodesics_:
+$$ds^{2}=0=\left( 1-\frac{2GM}{r} \right)dt^{2}-\left( 1-\frac{2GM}{r} \right)^{-1}dr^{2}$$
+- This gives the curves:
+$$\frac{dt}{dr}=\pm\left( 1-\frac{2GM}{r} \right)^{-1}$$
+- One can already observe that for $r\to 2GM$, this _tends to infinity_ 
+	- Movement in $r$ becomes _infinitely slow_ with respect to $t$
+
+- The plus solution:
+$$t=r+2GM \ln \left| \frac{r}{2GM}-1 \right| +\text{const.}$$
+- For $r>2GM$, it gives _outgoing geodesics_
+
+- The minus solution:
+$$t=-r-2GM \ln \left| \frac{r}{2GM}-1 \right| +\text{const.}$$
+- For $r<2GM$, it gives _ingoing geodesics_
+- The two solutions are related by _time-reversal_
+	- The metric is _symmetric under time-reversal_
+
+- The family of geodesics:
+![[Schwrazchild null geodesics.png|600]]
+- For $r\to \infty$, they approach the $t=\pm r$ geodesics of the _Minkowski metric_
+### Reaching r=2GM from infinity
+- As $r$ _approaches_ $2GM$, the light cones get more _steep_
+- It seems to take an _infinite amount of coordinate time_
+
+- Despite infinite coordinate time, there is a _finite change in the affine parameter_
+- The _radial geodesic equation_ gives:
+$$\frac{dr}{d\lambda}=\pm E$$
+- Therefore, _ingoing photons_ take a _finite interval in_ $\lambda$ to get to $r=2GM$ from the outside
+
+### Crossing r=2GM and the event horizon
+- As the photon starts outside,  $E>0$, and once _inside_, $dt/d\lambda$ is _negative_ (hence, $t$ _decreases_)
+	- Artifact of the _coordinate system_ behaving poorly (coordinate, instead of absolute singularity)
+- Any _light emitted_ from near the event horizon is also _infinitely_ [[#Gravitational redshift|red-shifted]] 
+
+- Once inside, _all future-pointing light-cones_ will point _inwards_
+	- To determine _orientation_, consider the direction of _timelike geodesics_
+- Hence, _any particle_ that goes past $r=2GM$ will _always fall towards the singularity_
+
+- The _hypersurface_ $r=2GM$ is an _event horizon_, as particles can only go _one way_
+
+### Outgoing geodesics
+- All _outgoing light_ seems to _originate from_ $r=2GM$ at $t=-\infty$
+- Like before, it takes a _finite interval_ in $\lambda$ to travel from $2GM$ to outside
+- The _forward light cone_ is always _outwards_
+
+- It is a _white hole_ that always _expels_ matter from $r=2GM$
+
+### Radially infalling massive particle
+- Consider a _radial, timelike_ [[#Orbits as geodesics|geodesic for a massive particle]]:
+$$\frac{1}{2}\dot{r}^{2}-\frac{GM}{r}=\frac{1}{2}(E^{2}-1)$$
+- Let the particle be _at rest at infinity_, giving $E=1$
+- An _infalling_ particle obeys:
+$$\displaylines{\dot{r}=-\sqrt{ \frac{2GM}{r} } \\ \tau-\tau_{0}=\frac{2}{3} \frac{1}{\sqrt{ 2GM }}(r_{0}^{3/2}-r^{3/2})}$$
+- It takes a _finite proper time_ to get to $r=0$
+
+- Calculating the _coordinate time_ as a function of radial distance:
+$$t-t_{0}=\frac{1}{\sqrt{ 2GM }}\left[ 2(2GM)^{3/2}\tanh^{-1}\left( \sqrt{ \frac{r}{2GM} } \right)-\frac{2}{3}r^{3/2}-4GM \sqrt{ r }\right]$$
+- The integral _diverges_ as $r\to 2GM$, indicating that it still takes an _infinite coordinate time_ to reach the event horizon:
+![[Infalling proper time.png|500]]
+
+- Once in the black hole, the worldlines can _only point inwards_:
+![[Timelike geodesic black hole.png|450]]
+## Eddington-Finkelstein coordinates
+- One can better describe the system with coordinates _not singular at_ $r=2GM$
+	- $dt/dr$ becomes _infinite_ at $r=2GM$
+- Use a coordinate system $(t,r^{*},\theta,\phi)$ where the _radial null curves_ are:
+$$t=\pm r^{*}+\text{const.}$$
+- The _tortoise coordinate_ $r^{*}$:
+$$r^{*}=r+2GM\ln \left| \frac{r}{2GM}-1 \right| $$
+- The Schwarzchild metric then becomes:
+$$ds^{2}=\left( 1-\frac{2GM}{r} \right)\left(dt^{2}-{dr^{*}}^{2}\right)-r^{2}d\Omega^{2}$$
+- Although the radial null curves are _constant_, $r=2GM$ is _pushed_ to $r^{*}=-\infty$
+
+- Then define the coordinates $u$ and $v$ such that:
+	- _Ingoing_ radial null geodesics satisfy $v=\text{const.}$
+	- _Outgoing_ radial null geodesics satisfy $u=\text{const.}$
+$$v=t+r^{*}\hspace{1.5cm}u=t-r^{*}$$
+- These are the _Eddington-Finkelstein coordinates_
+
+### Ingoing Eddington-Finkelstein coordinates
+- To describe an _infalling_ particle, replace $t$ with $v$:
+$$ds^{2}=\left( 1-\frac{2GM}{r} \right)dv^{2}-2dr dv-r^{2}d\Omega^{2}$$
+- The coordinates are _no longer singular_ at $r=2GM$
+
+- The _radial light cone_ satisfies:
+$$\frac{dv}{dr}=0\hspace{1.5cm} \frac{dv}{dr}=\frac{2}{1-2GM /r}$$
+- One branch of the light cone is _always along the geodesic_, on a surface of constant $v$
+- The other leg becomes _vertical_ at $r=2GM$
+![[Ingoing Eddington-Finkelstein light cones.png]]
+
+
+- _Alternatively_, define the coordinate $t^{*}$:
+$$\displaylines{t^{*}=v-r \\ ds^{2}=\left( 1-\frac{2GM}{r} \right){dt^{*}}^{2}-\frac{4GM}{r}dt^{*}dr-\left( 1+\frac{2GM}{r} \right)dr^{2}-r^{2}d\Omega^{2}}$$
+![[Ingoing Eddington-Finkelstein 1.png]]
+
+- If a photon is _outgoing_, they still appear to _originate_ from $t=-\infty$
+### Outgoing Eddington-Finkelstein coordinates
+- Similarly, replace $t$ with $u$:
+$$ds^{2}=\left( 1-\frac{2GM}{r} \right)du^{2}+2dr du-r^{2}d\Omega^{2}$$
+- Similarly, the coordinates are not singular at $r=2GM$
+
+- The _radial light cone_ then satisfies:
+$$\frac{du}{dr}=0 \hspace{1.5cm} \frac{du}{dr}=-\frac{2}{1-2GM /r}$$
+- Again, one branch of the light cone is along the geodesic, with _constant_ $u$
+- The other branch is vertical at $r=2GM$
+![[Outgoing Eddington-Finkelstein light cones.png]]
+![[Outgoing Eddington-Finkelstein.png]]
+
+- If a photon is _ingoing_, they still tend to $t=\infty$
+
+## Collapsing into a black hole
+- Black holes are formed when some _spherical object collapses_ such that its radius is _smaller_ than $2GM$
+	- The matter passes the event horizon, then must collapse into the singularity
+
+- One model is the _spherical collapse of dust_
+- As there is _no pressure_, they follow _timelike geodesics_
+
+- By [[#The Schwarzchild solution|Birkhoff's theorem]], the volume _outside_ the dust follows the Schwarzchild metric
+- Treat the _outermost_ dust particle as _free-falling_
+![[Freefalling dustr.png]]
+
+- Assume that the collapse starts from _infinity_, sych that $E=1$
+- Consider some _observer_ at distance $r\gg GM$, who receives _photons_ from the falling dust
+
+- The observer can only see light _emitted from_ $r>2\mu$, therefore never sees the dust go past $2\mu$
+	- Light emitted _after_ $r=2\mu$ ends up in the singularity
+- Light is also _increasingly redshifted_ as the dust approaches $2\mu$
+- The _arrival rate_ of photons also tends to zero, therefore the dust appears _red and dim_
+
+- Let a photon travel from $(t_{E},r_{E})$ at the edge to $(t_{R},r_{R})$
+- It follows the [[#Radial null geodesics|radial null geodesic]]:
+$$t_{E}-r_{E}-2GM\ln \left| \frac{r_{E}}{2GM}-1 \right|=t_{R}-r_{R}-2GM\ln \left| \frac{r_{R}}{2GM}-1 \right| $$
+- For a [[#Radially infalling massive particle|massive particle]], as $r\to 2GM$:
+$$t_{E}=2GM\ln \left| \frac{\sqrt{ r_{E}/(2GM) }-1}{\sqrt{ r_{E}/(2GM) }+1} \right|+\text{const.} $$
+- One can then substitute this in the formula for $t_R$ then _approximate_:
+$$t_{R}\approx-4GM\ln\left( \frac{r_{E}}{2GM}-1 \right)$$
+
+- One can then solve for $r_{E}(t_{R})$, with some constant $a$:
+$$r_{E}(t_{R})=2GM+a\exp\left( -\frac{t_{R}}{4GM} \right)$$
+- The _observed radius_ decreases _exponentially_ towards $2GM$, with some _characteristic time_ $4GM/c$
+
+- The _ratio of frequencies_ is calculated by:
+$$\frac{\nu_{R}}{\nu_{E}}=\frac{(p_{R})_{\mu}(U_{R})^{\mu}}{(p_{E})_{\mu}(U_{E})^{\mu}}$$
+- By substituting results for the _geodesics_ for each particle, one finds:
+$$\frac{\nu_{R}}{\nu_{E}}\approx \frac{1}{2}a\exp\left( -\frac{t_{R}}{4GM} \right)$$
+- The observed frequency _decays exponentially_
 
 # Cosmology
+- Cosmology concerns the _evolution_ of the universe on a _large scale_
+
+## Homogeneity and isotropy in space
+- On a _large scale_, one can adopt the principle that the universe is _homogeneous_ and _isotropic_
+- _Isotropy_ means that at some point on the manifold, space _looks the same_ no matter what direction one looks
+	- A manifold $M$ is isotropic about point $p$, if for any two vectors $V$ and $W$ in the _tangent space_ $T_{p}M$, there is an _isometry_ of $M$ such that the pushforward of $W$ under the isometry is _parallel_ to $V$ _before the pushforward_
+- _Homogeneity_ is the statement that the _metric is the same throughout the manifold_
+	- Given _any two points_ $p$ and $q$ in $M$, there is an _isometry_ that takes $p$ into $q$
+
+- A manifold can be _isotropic without being homogeneous_, or _vice versa_
+
+- However, if space is _isotropic everywhere_, then it is _also homogeneous_
+- If it is _isotropic about a point_, and _also homogeneous_, then it is _isotropic everywhere_
+
+- _Homogeneity and isotropy together_ implies that a space is [[#Maximally symmetric spaces|maximally symmetric]]
+	- They imply invariance in translations and rotations respectively
+
+- However, the universe is _only maximally symmetric in space_, and _not time_
+
+### Restriction on coordinates
+- Coordinates must _co-move_ with the universe for it to be _isotropic_
+	- Otherwise, a _relative 3-velocity_ with the universe _breaks_ the isotropy
+- Observers must be _free-falling_
+
+- If one considers the universe as a _fluid_, the _hypersurfaces_ of _constant proper density_ must be _orthogonal_ to the world-line of the observer
+- _Local measurements_ of density in instantaneous rest-space then reveals _no spatial gradients_, which _preserves isotropy_
+- Therefore, _local rest-spaces_ must be _tangent_ to hypersurfaces of constant proper density
+![[Co-moving worldlines.png]]
+
+- The hypersurfaces of _constant proper density_ can be labelled by _proper time_ as measured by the fundamental observer
+	- It is known as _synchronous time_ $x^{0}=t$
+## Robertson-Walker metrics
+- Any coordinates must follow the principles listed above
+
+### Co-moving coordinates
+- As the universe is _spatially_ homogeneous and isotropic, and _evolving in time_, consider spacetime to be $\mathbb{R}\times\Sigma$, where $\mathbb{R}$ represents _time_, and $\Sigma$ is a maximally symmetric _three-manifold_
+- The metric then takes the form:
+$$ds^{2}=dt^{2}-R^{2}(t)d\sigma^{2}$$
+- $R(t)$ is the _scale factor_
+- $d\sigma^{2}$ is the _metric_ on $\Sigma$
+$$d\sigma^{2}=\gamma_{ij}(u)du^{i}du^{j}$$
+- $(u^{1},u^{2},u^{3})$ are the _coordinates_ on $\Sigma$ and $\gamma_{ij}$ is the _maximally symmetric_ 3D metric
+- The scale factor gives _how big the spacelike slice_ $\Sigma$ is at the moment $t$
+
+- _Coordinates_ where the metric is _free of cross-terms_, and the coefficient for $dt^{2}$ is _independent of_ $u^{i}$ are the _co-moving coordinates_
+	- The coordinates _move with the fundamental observer_, and observes an isotropic universe
+
+### Deriving the metric
+- Given the _maximally symmetric three-dimensional metric_ $\gamma_{ij}$, the [[#Riemann tensor for a maximally symmetric space|Riemann tensor]] is
+	- It is _only_ associated with the 3-metric $\gamma_{ij}$ instead of all spacetime
+$$^{(3)}R_{ijkl}=K(\gamma_{ik}\gamma_{jl}-\gamma_{il}\gamma_{jk})$$
+- where $K$ is:
+$$K=\frac{R}{6}$$
+- The _Ricci tensor_ is:
+$$^{(3)}R_{jl}=2K\gamma_{jl}$$

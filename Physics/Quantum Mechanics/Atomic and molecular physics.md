@@ -7,7 +7,7 @@
 $$\ket{\alpha}\longleftrightarrow \ket{\beta}+\gamma$$
 ![[Atomic emission.png]]
 
-- For a _hydrogen atom_, the _rate_ of emission or absorption is proportional to:
+- For a _hydrogen atom_, the _rate_ of emission or absorption, given by [[Time-dependent quantum mechanics#Fermi's Golden Rule|Fermi's Golden Rule]], is proportional to:
 $$\Gamma\propto\omega^3|\braket{\alpha|\hat{\bm{d}}|\beta}|^2$$
 - Here, $\hat{\bm{d}}$ is the _electric dipole operator_:
 $$\hat{\bm{d}}=-e\hat{\bm{r}}$$
@@ -58,7 +58,7 @@ $$\displaylines{\hat{H}(\bm{r}_1,\bm{r}_2)=-\frac{\hbar^2}{2m_e}(\nabla_1^2+\nab
 
 - Strategy:
 	- Assume $1/r_{12}$ _does not exist_ (the _zeroth-order_ helium atom)
-	- Apply the [[Approximation Methods#Variational method|variational method]]
+	- Apply the [[Time-Independent Approximation Methods#Variational method|variational method]]
 
 ## The zeroth-order atom
 - _Neglect_ the electron-electron repulsion:
@@ -106,7 +106,7 @@ $$\text{He}^{**}\longrightarrow\text{He}^++\text{e}^-$$
 - Write the Hamiltonian as the _zeroth-order_ terms, and an _interaction term_:
 $$\displaylines{\hat{H}=\hat{H}_0+\hat{H'} \\ \hat{H}_0=-\frac{\hbar^2}{2m_e}(\nabla_1^2+\nabla_2^2)-\frac{e^2}{4\pi\epsilon_0}\left(\frac{Z}{r_1}+\frac{Z}{r_2}\right)\hspace{1cm}\hat{H}'=\frac{e^2}{4\pi\epsilon_0 r_{12}}}$$
 - The interaction term _cannot be treated as a small perturbation_
-- Hence, use the [[Approximation Methods#Variational method|variational method]]
+- Hence, use the [[Time-Independent Approximation Methods#Variational method|variational method]]
 - The _variational parameter_ will be some _effective nuclear charge_ $Z'$
 	- Expected: $1<Z'<2$
 - The _ground state wave function_ with the parameter:
@@ -126,7 +126,7 @@ $$\displaylines{Z'=Z-\frac{5}{16} \\ E(Z')=-2\left(Z-\frac{5}{16}\right)^2R_\inf
 $$\psi(s,t,u)=\exp\left(-\frac{k(r_1+r_2)}{2}\right)[1+c_1kr_{12}+c_2k^2(r_1-r_2)^2]$$
 
 ## Energy of excited states
-- Use [[Approximation Methods#Time-independent perturbation theory|time-independent perturbation theory]]
+- Use [[Time-Independent Approximation Methods#Time-independent perturbation theory|time-independent perturbation theory]]
 - The _spatial states_, for _para/orthohelium_:
 $$\ket{nlm^{(0)}}=\frac{1}{\sqrt{2}}[\ket{100(\bm{r}_1)}\ket{nlm(\bm{r}_2)}\pm\ket{nlm(\bm{r}_1)}\ket{100(\bm{r}_2)}]$$
 - The _first-order energy correction_:
@@ -144,7 +144,7 @@ $$J_{nl}>0$$
 - It _breaks_ the degeneracy in $S$
 	- For $S=1$, as the spatial state is _antisymmetric_, it is _zero_ at $\bm{r}_1=\bm{r}_2$
 	- They tend to be _further apart_, and have _less Coulomb repulsion_
-
+![[Helium energy levels.png]]
 ## E1 transitions in helium
 - The E1 transition:
 $$\ket{\alpha}\longleftrightarrow \ket{\beta}+\gamma$$
@@ -169,6 +169,7 @@ $$\Delta l=\pm1, \hspace{1.6cm}\Delta m_l=0,\pm1$$
 	- $S=0$, _two_ photons are emitted with timescale $\sim 20\,\text{ms}$
 	- $S=1$, it _violates_ the $\Delta S=0$ rule with timescale $\sim 8000s$
 
+
 ## Fine structure
 - For _parahelium_, there is _no fine structure splitting_ as $S=0$
 
@@ -183,6 +184,8 @@ $$\Delta J=\pm1\hspace{1cm}J_\alpha+J_\beta\geq1\hspace{1cm}\Delta m_J=0,\pm1$$
 - For $S=1$, the transition lines must be _multiplets_
 	- Transitions _to the lowest energy state_ are _triplets_
 	- _Other_ transitions are _sextuplets_ due to the selection rules
+
+
 
 # Multi-electron atoms
 - The _principal contributions_ to a Hamiltonian:
@@ -463,7 +466,7 @@ $$\hat{H}_B=\left(g_L\hat{L}_z+g_S\hat{S}_z\right)\frac{\mu_{B}B_{z}}{\hbar}$$
 	- _Small_ relative to atomic binding energies, hence first-order perturbation theory applies
 
 - Atomic energy levels have a _degeneracy_ $2J+1$
-- Hence, [[Approximation Methods#Degenerate perturbation theory|degenerate perturbation theory]] applies
+- Hence, [[Time-Independent Approximation Methods#Degenerate perturbation theory|degenerate perturbation theory]] applies
 - Works for any _general field strength_ $B$
 
 - To simplify, go to _extremes_ in the field strengths and consider splitting relative to the _fine structure_ splitting $(\Delta E_{\text{FS}})$
@@ -604,7 +607,7 @@ $$\braket{ njm_{j}'l | z|njm_{j}l } $$
 - As $\hat{z}$ is _odd_ under spatial inversion, they _vanish_ for $l=l'$
 
 - Hence, the _first-order energy correction vanishes_
-- The [[Approximation Methods#Second-order perturbation theory|second-order energy correction]] leads to the _quadratic Stark effect_
+- The [[Time-Independent Approximation Methods#Second-order perturbation theory|second-order energy correction]] leads to the _quadratic Stark effect_
 
 - However for _large field strengths_, energy levels of _different_ $l$ can become _degenerate_
 - In this case, the _first-order_ perturbation leads to the _linear Stark effect_
@@ -614,7 +617,7 @@ $$\braket{ njm_{j}'l | z|njm_{j}l } $$
 $$\ket{nlm_{l}} =\ket{100} $$
 - An explicit calculation confirms that the _first-order energy correction vanishes_
 
-- The [[Approximation Methods#Second-order perturbation theory|second-order energy correction]]:
+- The [[Time-Independent Approximation Methods#Second-order perturbation theory|second-order energy correction]]:
 $$\Delta E^{(2)}=\sum_{n>2,l,m}\frac{|\braket{ nlm |e\mathcal{E}\hat{z} |  100} |^{2}}{E_{1}^{(0)}-E_{n}^{(0)}}$$
 - The denominator makes sure it is _negative_
 
@@ -630,7 +633,7 @@ $$\alpha=18\pi a_{0}^{3}$$
 $$\ket{nlm}=\ket{200}, \ket{210}, \ket{21\pm 1}     $$
 - For a _high enough_ electric field, with energy correction _much larger than fine structure_, they become _effectively degenerate_ with energy:
 $$E_{2}^{(0)}=-\frac{1}{4}R_{\infty}$$
-- Using [[Approximation Methods#Degenerate perturbation theory|degenerate perturbation theory]], this requires the calculation of _all matrix elements_
+- Using [[Time-Independent Approximation Methods#Degenerate perturbation theory|degenerate perturbation theory]], this requires the calculation of _all matrix elements_
 $$\braket{ 2lm |\hat{z}|2l'm'} $$
 - From the [[Symmetries in quantum mechanics#The Wigner-Eckart Theorem for vector operators|Wigner-Eckart Theorem]], as well as [[Symmetries in quantum mechanics#Spatial inversion and parity|parity]], this is _only non-zero iff_:
 $$\Delta l=\pm 1\hspace{1.5cm}\Delta m_{l}=0$$
@@ -682,7 +685,7 @@ $$\boldsymbol{R}\equiv|\boldsymbol{R}_{a}-\boldsymbol{R}_{b}|\hspace{1cm}r_{a}\e
 $$\displaylines{\hat{H}=-\frac{\hbar^{2}}{2m_{e}}\nabla_{r}^{2}-\frac{e^{2}}{4\pi\epsilon_{0}}\left( \frac{1}{r_{a}}+\frac{1}{r_{b}}-\frac{1}{R} \right)  \\r_{a,b}=x^{2}+y^{2}+\left(z\pm \frac{R}{2} \right)^{2}}$$
 
 ### Variational parameters
-- For the _approximate solution_, use the [[Approximation Methods#Rayleigh-Ritz method|Rayleigh-Ritz method]]:
+- For the _approximate solution_, use the [[Time-Independent Approximation Methods#Rayleigh-Ritz method|Rayleigh-Ritz method]]:
 $$\displaylines{\psi_\text{trial}(\boldsymbol{r};R,Z')=\alpha_{a}\psi_{a}(\boldsymbol{r})+\alpha_{b}\psi_{b}(\boldsymbol{r}) \\ \psi_{a,b}(\boldsymbol{r})=\left( \frac{\beta^{3}}{\pi} \right)^{1/2}\exp(-\beta r_{a,b})\hspace{1.5cm}\beta\equiv \frac{Z'}{a_{0}}}$$
 - The _variational parameters_ are $\alpha_{a},\alpha_{b},Z',R$
 

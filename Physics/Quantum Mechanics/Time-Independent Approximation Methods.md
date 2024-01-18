@@ -46,6 +46,7 @@ $$\displaylines{\ket{n}\approx \ket{n^{(0)}}+\lambda\ket{n^{(1)}} \\ \ket{n}=\ke
 
 ## Second-order perturbation theory
 - For the $\lambda^2$ terms:
+$$\hat{H}^{(0)}\ket{n^{(2)}}+\hat{H}^{(1)}\ket{n^{(1)}}=E_{n}^{(0)}\ket{n^{(2)}} +E_{n}^{(1)}  \ket{n^{(1)}}+E_{n}^{(2)}\ket{n^{(0)}}  $$
 
 - Taking the inner product with $\ket{n^{(0)}}$, one gets:
 $$\braket{n^{(0)}|\hat{H}^{(1)}|n^{(1)}}=E_n^{(2)}$$
@@ -191,5 +192,3 @@ $$\text{det}(\dunderline{H}-E\dunderline{S})=0$$
 - This is known as the _secular equation_
 - The _lowest solution_ for $E$ gives the _upper bound for ground state energy_
 
-# Time-dependent perturbation theory
-- Systems with a _time-varying perturbation_ can potentially induce _transitions between eigenstates_
