@@ -1168,6 +1168,7 @@ $$\displaylines{F^{\alpha\beta}=\partial^\alpha A^\beta-\partial^\beta A^\alpha 
 - Maxwell's equations then become:
 $$\begin{aligned}\partial_\alpha F_{\beta\gamma}+\partial_\beta F_{\gamma\alpha}+\partial_\gamma F_{\alpha\beta}&=0 \\ \partial_\alpha F^{\alpha\beta}&=\mu_0 J^\beta\end{aligned}$$
 
+## Lorentz force law
 - Given _4-momentum_ $\vec{p}$, and _4-velocity_ $\vec{U}$, the _Lorentz force law_ is:
 $$\frac{dp^\alpha}{d\tau}=m\frac{dU^\alpha}{d\tau}=qF^{\alpha\beta}U_\beta$$
 
@@ -1186,8 +1187,7 @@ $$\displaylines{F'^{\alpha\beta}=\tenscom{\Lambda}{\alpha}{\gamma}\tenscom{\Lamb
 $$\begin{aligned}E_x'&=E_x\hspace{3.5cm}B_x'=B_x \\ E_y'&=\gamma(E_y-vB_z)\hspace{1.55cm}B_y'=\gamma(B_y+\frac{v}{c^2}E_z) \\ E_z'&=\gamma(E_z+vB_y)\hspace{1.55cm}B_z'=\gamma(B_z-\frac{v}{c^2}E_y) \end{aligned}$$
 - Writing in terms of _parallel and perpendicular components_:
 $$\begin{aligned}\bm{E}_{||}'&=\bm{E}_{||} \hspace{3.5cm} \bm{B}_{||}'=\bm{B}_{||} \\ \bm{E}_\perp'&=\gamma(\bm{E}_\perp+\bm{v}\times\bm{B}_\perp)\hspace{0.6cm}\bm{B}'_\perp=\gamma\left(\bm{B}_\perp-\frac{1}{c^2}\bm{v}\times\bm{E}_\perp\right)\end{aligned}$$
-- This reveals that the _electric and magnetic fields_ are part of the _same phenomenon_, depending on the _frame_
-
+- This reveals that the _electric and magnetic fields_ are part of the _same phenomenon_, depending on the _inertial frame_
 ## Magnetism as a relativistic effect
 - Consider a _wire_ carrying a _current_, wjhere the _charge carriers_ are moving at speed $V$
 - There is a _charge_ $q$ moving at speed $u$ _parallel_ to the wire
@@ -1216,24 +1216,29 @@ $$\displaylines{\bm{E}=-\frac{\bm{r}}{r}\frac{d\Phi}{dr} \\ \hat{H}_{SO}=-\frac{
 - _Approximation_: $\gamma\approx 1$
 - Factor of $1/2$: _Thomas precession_ (Rotation of electron rest frame)
 
-# Radiation and relativistic electrodynamics
+# Radiation
 
 ## A uniformly moving charge
 ![[Uniformly moving charge.png]]
 - In the frame $S'$, the field is _static_:
-$$\bm{E}'=\frac{q}{4\pi\epsilon_0}\left(\frac{x'}{r^3},\frac{y'}{r^3},0\right)$$
-- Carrying out the _Lorentz transformation_:
+$$\bm{E}'=\frac{q}{4\pi\epsilon_0}\left(\frac{x'}{r^3},\frac{y'}{r^3},0\right)\hspace{1.5cm}\boldsymbol{B}=(0,0,0)$$
+- Carrying out the [[#Transformations of fields|Lorentz transformation]]
+$$\displaylines{E_{x}=\frac{q}{4\pi\epsilon_{0}}\frac{x'}{r'^{3}}\hspace{1.5cm}E_{y}=\frac{q}{4\pi\epsilon_{0}}\frac{\gamma y'}{r'^{3}}\hspace{1.5cm}E_{z}=0 \\ B_{x}=0\hspace{1.5cm}B_{y}=0\hspace{1.5cm}B_{z}=\frac{\gamma v}{c^{2}}E_{y}'}$$
 
-- Taking the $x-$axis as the _polar axis_:
+- Taking the $x-$axis as the _polar axis_, with $x'=\gamma x$ and $y'=y$, _at_ $t=t'=0$
+$$r'^{2}=x'^{2}+y'^{2}=\gamma^{2}r^{2}\left( 1-\frac{v^{2}}{c^{2}}\sin^{2}\theta \right)$$
+- This gives the fields:
+$$\displaylines{E_{x}=\frac{1}{4\pi\epsilon_{0}}\frac{\cos\theta}{\gamma^{2}r^{2}(1-v^{2}\sin^{2}\theta/c^{2})^{3/2}}\hspace{1.5cm}E_{y}=\frac{1}{4\pi\epsilon_{0}}\frac{\sin\theta}{\gamma^{2}r^{2}(1-v^{2}\sin^{2}\theta/c^{2})^{3/2}} \\ B_{z}=\frac{v}{c^{2}}E_{y}}$$
+- With this geometry, $E_{x}$ is _parallel_ $(E_{//})$, $E_{y}$ is _perpendicular_ $(E_{\perp})$, and $\boldsymbol{B}$ is _azimuthal_
 
-- There is an _azimuthal magnetic field_
 - $\bm{E}$ has a $1/r^2$ dependence, hence the _Poynting flux_ $\bm{N}\sim 1/r^4$
 
 - $\bm{E}$ is _purely radial_, hence the field is _always directed away from the origin_
 	- $E_\perp/E_{||}=\sin\theta/\cos\theta$
 	- The _magnitude_ has an _angular dependence_
-- For $\gamma\sim 1$, it reduces to the _non-relativistic result_, where the field is _isotropic_
+	- It is evaluated at _retarded time_, but the _Lorentz transformation_ makes it less apparent
 
+- For $\gamma\sim 1$, it reduces to the _non-relativistic result_, where the field is _isotropic_
 - For $\gamma\gg1$, the field is _flattened_ to the plane _perpendicular to motion_:
 $$E_{||}\sim\frac{1}{\gamma^2}\frac{q}{4\pi\epsilon_0r^2}\hspace{1.5cm}E_\perp\sim\frac{\gamma q}{4\pi\epsilon_0r^2}$$
 ![[Field of moving charge.png]]

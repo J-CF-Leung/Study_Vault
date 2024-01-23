@@ -121,6 +121,7 @@ $$\displaylines{M\propto|t|^\beta \\ \chi\propto|t|^\gamma \\ M(T_c)\propto B^{1
 - Mean field theories are typically only accurate when a system has a _large number of neighbouring sites near each site_
 	- Typically more accurate for high $d$
 	- The _fluctuations become irrelevant_
+	- Also accurate for a _large extent_ and _long range interactions_
 
 - Systems with the _same set of critical exponents_ are said to be in the _same universality class_
 	- Example: Ising model and _liquid-gas transition_

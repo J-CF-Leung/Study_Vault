@@ -52,6 +52,8 @@ $$\ket{\alpha (t)}=\exp\left( -\frac{i\omega t}{2} \right)\Ket{\exp(-i\omega t)\
 $$\langle x \rangle(t) =A\sin(\omega t+\phi)\hspace{1.5cm}\langle p \rangle (t)=m\omega A\cos(\omega t+\phi)$$
 - The _width_ of the coherent state also remains _constant_
 
+- TP2 problem 1.5 (coherent state stays coherent)
+
 ## Coherent states of the EM field
 - The electromagnetic field can be [[Quantum electrodynamics|quantised]]
 - Each [[Quantum electrodynamics#Polarisation states|mode]] $(\boldsymbol{k},\lambda)$ of the EM field are their own _quantum harmonic oscillator_

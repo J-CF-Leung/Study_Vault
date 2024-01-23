@@ -1035,7 +1035,7 @@ $$d\Omega^2=d\theta^2+\sin^2\theta d\phi^2$$
 - Only _valid_ for $r>2GM$ as expected
 
 - For $r\gg 2GM$, and expanding to the first order, this can reduce to the [[#Newtonian limit for free-falling]]
-## Deriving the metric
+## Deriving the Schwarzchild metric
 - In _Minkowski space_, the metric in spherical coordinates:
 $$ds^2_\text{Minkowski}=dt^2-dr^2-r^2\,d\Omega^2$$
 - To preserve _spherical symmetry_ and the _signature_ (signs of components) of the metric:
@@ -1457,7 +1457,7 @@ $$d\sigma^{2}=\gamma_{ij}(u)du^{i}du^{j}$$
 - _Coordinates_ where the metric is _free of cross-terms_, and the coefficient for $dt^{2}$ is _independent of_ $u^{i}$ are the _co-moving coordinates_
 	- The coordinates _move with the fundamental observer_, and observes an isotropic universe
 
-### Deriving the metric
+### Deriving the Robertson-Walker metric
 - Given the _maximally symmetric three-dimensional metric_ $\gamma_{ij}$, the [[#Riemann tensor for a maximally symmetric space|Riemann tensor]] is
 	- It is _only_ associated with the 3-metric $\gamma_{ij}$ instead of all spacetime
 $$^{(3)}R_{ijkl}=K(\gamma_{ik}\gamma_{jl}-\gamma_{il}\gamma_{jk})$$
@@ -1465,3 +1465,11 @@ $$^{(3)}R_{ijkl}=K(\gamma_{ik}\gamma_{jl}-\gamma_{il}\gamma_{jk})$$
 $$K=\frac{R}{6}$$
 - The _Ricci tensor_ is:
 $$^{(3)}R_{jl}=2K\gamma_{jl}$$
+- If the 3-space is maximally symmetric, then it must be _spherically symmetric_ as well
+- From the [[#Deriving the Schwarzchild metric|Schwarzchild metric]], with $\bar{r}$ as the radial coordinate: 
+$$d\sigma^{2}=\gamma_{ij}du^{i}du^{j}=\exp(2\beta(\bar{r}))\,d \bar{r}^{2}+\bar{r}^{2}d\Omega^{2}$$
+- Calculating corresponding components of the _Ricci tensor_, and setting them as _proportional to the metric_:
+	- Same as derivation for Schwarzchild metric, but $\alpha=0$ and flipping spacelike signs
+$$d\sigma^{2}=\frac{d \bar{r}^{2}}{1-k \bar{r}^{2}}+\bar{r}^{2}\,d\Omega^{2}$$
+- One can _normalise_ $k$ such that $0<k<1$
+	- The _physical size_ of the manifold can be _absorbed_ into $R(t)$

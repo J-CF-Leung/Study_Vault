@@ -80,6 +80,7 @@ $$\displaylines{\Lagr=\Lagr(\varphi,\partial_\mu\varphi) \\ \pd{\Lagr}{\varphi}=
 $$J^\mu=\pd{\Lagr}{[\partial_\mu\varphi]}$$
 - Then if $\partial\Lagr/\partial\varphi=0$:
 $$\partial_\mu J^\mu=0$$
+- This gives rise to [[#Symmetries and conservation laws|Noether's Theorem]]
 
 ## Relativistic scalar field
 - For a relativistic theory, the field used must be _Lorentz invariant_
@@ -633,9 +634,10 @@ $$\varphi\to\exp(i\varepsilon(x^\mu))\varphi$$
 $$\Lagr=-\frac{1}{4}F_{\alpha\beta}F^{\alpha\beta}+(D_\mu\varphi)^*(D^\mu\varphi)-V(\varphi)$$
 - Once again, this _triggers_ spontaneous symmetry breaking and _non-zero_ $\varphi_{0}$
 
-- With $\varphi_0\neq0$, the _covariant derivative_ contributes an extra term:
+- With $\varphi_0\neq0$, the _covariant derivative_ contributes an extra term
 $$(ieA_\mu\varphi_0)^*(ieA^\mu\varphi_0)=\frac{e^2m^2}{\lambda}A_\mu A^\mu$$
-- In the _Lorenz gauge_ where $\partial_\mu A^\mu=0$:
+- In the _Lorenz gauge_ where $\partial_\mu A^\mu=0$
+	- E-L equation for the system _in the ground state_
 $$\partial_\nu\partial^\nu A_\mu+\frac{2e^2m^2}{\lambda}A_\mu=0$$
 - The _dispersion relation_ for $A_\mu$ is then:
 $$\omega=\pm\sqrt{k^2+2e^2m^2/\lambda}$$
@@ -664,8 +666,8 @@ $$
 
 - The [[Rotations and Lie Algebra|Lie group]] works on an $\mathbb{R}^n$ manifold instead of a set
 - If symmetry is _broken_ into some _subgroup $H$_, that is on an $\mathbb{R}^m$ manifold
-- For _global symmetry_, there are $n-m$ _Goldstone bosons_
-- For _local gauge symmetry_, there are $m$ _massive particles_ formed from originally massless quanta
+	- For _global symmetry_, there are $n-m$ _Goldstone bosons_
+	- For _local gauge symmetry_, there are $m$ _massive particles_ formed from originally massless quanta
 
 ## The standard model
 - In the _standard model_, the electromagnetic and weak interactions are given by the _Lie group_ $SU(2)\otimes U(1)$
@@ -686,9 +688,7 @@ $$\psi=\int\,dt'\int\,dx'G(x,t,x',t')\,F(x',t')$$
 $$\displaylines{\left(E-\frac{p^2}{2m}\right)G(p,E)=1 \\ G(p,t,t')=\int\exp\left(-\frac{iE}{\hbar}(t-t')\right)\frac{1}{E-p^2/2m}\,\frac{dE}{2\pi\hbar}}$$
 - This gives _a pole on the real axis_:
 ![[Quantum greens function pole.png|400]]
-
-- Fourier transforming back to the position representation:
-
+- From _causality_, the integration contour for $t>t'$ must pass _above_ the pole
 ## Klein-Gordon field
 - The Green's function:
 $$G(x^\mu)=\int\,dp^\nu\frac{\exp(-ip_\mu x^\mu)}{p^\mu p_\mu-m^2}$$
