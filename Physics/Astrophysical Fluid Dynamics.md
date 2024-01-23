@@ -102,6 +102,7 @@ $$\rho \frac{\partial \boldsymbol{u}}{\partial t}+\rho(\boldsymbol{u}\cdot \nabl
 - Hence one must use a _tensorial relation_:
 $$dF_{i}=\sigma_{ij}dS_{j}$$
 - An _isotropic pressure_ corresponds to $\sigma_{ij}=p\delta_{ij}$
+- It comes from _random thermal motion_
 
 - _Expand_ the Eulerian equation of motion to get _components of stress_ in different directions
 
@@ -117,8 +118,65 @@ $$\underline{\underline{\boldsymbol{\sigma}}}=p\underline{\underline{I}}+\rho \u
 
 - The bulk term gives the $x_{i}-$_directional momentum flux per second_, through a _surface of constant_ (normal to) $x_{j}$
 - It is also known as the _ram pressure_
+	- It can _strip gaess from galaxies_, which affects _stellar evolution_ in that galaxy
+- Example: a flow _only in the $y-$direction_ will only ram a surface normal to $y$:
+$$\sigma_{ij}=\begin{pmatrix}p&0&0\\0&p+\rho u^{2}&0\\0&0&p\end{pmatrix}$$
 
 - The _thermal pressure_ is _isotropic_ due to the _random motions_ of the molecules
 
 - The general equation of motion, given a stress tensor:
 $$\displaylines{\partial_{t}(\rho \underline{\boldsymbol{u}})=-\nabla\cdot \underline{\underline{\boldsymbol{\sigma}}}+\rho \underline{\boldsymbol{g}} \\ \partial_{t}(\rho u_{i})=-\partial_{j}(\sigma_{ij})+\rho g_{i}}$$
+
+# Gravitation
+- One can define a _gravitational potential_ $\Psi$ such that the _gravitational acceleration_ $\boldsymbol{g}$ is:
+$$\boldsymbol{g}=-\nabla \Psi$$
+- As it is a _gradient_, the force is _conservative_, and the _work done around a closed loop vanishes_
+- The _work done by gravity_ in taking _a unit mass_ from $\boldsymbol{r}_{a}$ to $\boldsymbol{r}_{b}$ is:
+$$\int _{a}^{b} \boldsymbol{g}\cdot d\boldsymbol{r}= \Psi(\boldsymbol{r}_{a})-\Psi(\boldsymbol{r}_{b})$$
+- The gravitational potential of a _point mass_ $M$ in position $\boldsymbol{r}'$ is:
+$$\Psi(\boldsymbol{r})=-\frac{GM}{\left| \boldsymbol{r}-\boldsymbol{r}' \right| }$$
+- For a _system of point masses_:
+$$\Psi(\boldsymbol{r})=-\sum_{i}\frac{GM_{i}}{\left| \boldsymbol{r}-\boldsymbol{r}'_{i} \right| }\implies \boldsymbol{g}(\boldsymbol{r})=-\sum_{i}GM_{i} \frac{\boldsymbol{r}-\boldsymbol{r}'}{|\boldsymbol{r}-\boldsymbol{r}'|^{3}}$$
+
+## Poisson's equation
+- For some _continuous mass distribution_:
+$$\boldsymbol{g}(\boldsymbol{r})=-G\int \rho(\boldsymbol{r}') \frac{\boldsymbol{r}-\boldsymbol{r}'}{|\boldsymbol{r}-\boldsymbol{r}'|^{3}} \, dV' $$
+- Taking the _divergence_ of both sides:
+$$\nabla_{\boldsymbol{r}}\cdot \boldsymbol{g}=-G\int \rho(\boldsymbol{r}')\nabla_{\boldsymbol{r}}\cdot\left( \frac{1}{|\boldsymbol{r}-\boldsymbol{r}|^{2}} \right) \, dx $$
+- This gives a _delta function_
+
+- This then gives _Poisson's equation_:
+$$\nabla\cdot \boldsymbol{g}=-\nabla^{2}\Psi=-4\pi G\rho$$
+- In the _integral form_, using the divergence theorem:
+$$\int \boldsymbol{g}\cdot \, d\boldsymbol{S}=-4\pi GM $$
+- For a _spherically symmetric mass distribution_, where the _mass enclosed_ at radius $r$ is $M(r)$:
+$$\boldsymbol{g}(r)=-\frac{GM(r)}{r^{2}}\hat{\boldsymbol{r}}$$
+- In _galaxies_, from measuring velocity from _Doppler shift_, one can infer the _mass distribution_
+	- Discovery of _dark matter_
+
+## Potential of a spherically symmetric system
+$$\boldsymbol{g}(r)=-\frac{G}{r^{2}}\int _{0}^{r}4\pi r'^{2}\rho(r') \, dr' =-\frac{d\Psi}{dr}$$
+- Assuming $\Psi(r\to \infty)=0$, this gives:
+$$\Psi(r)=\int_{\infty}^{r} \, dx $$
+- The integrating _by parts_, given $M(r)/r\to 0$ as $r\to \infty$
+$$\Psi(r)=-\frac{GM(r)}{r}+\int _{\infty}^{r}4\pi Gr'\rho(r') \, dr' $$
+- Hence, the potential _is also influenced by matter outside_ $r$
+
+## Gravitational potential energy
+- The _gravitational potential energy_ of a system is the energy required to _take all particles apart to_ $\infty$
+- This is given by:
+$$\Omega=-\frac{1}{2}\sum_{j\neq i}\sum_{i}=\frac{1}{2}\sum_{j}M_{j}\Psi_{j}$$
+- For a _continuous mass distribution_, this gives:
+$$\Omega=\frac{1}{2}\int \rho(\boldsymbol{r}) \Psi(\boldsymbol{r})\, dV $$
+
+- For a _spherically symmetric case_
+- Integration by parts
+$$\Omega=-G\int _{0}^{\infty}\frac{M(r)}{r} \, dM $$
+- This corresponds to _peeling_ the system in _shells_
+
+## Virial theorem
+- Consider a gravitating system of _many particles_
+- Consider the _second time derivative_ of the _moment of inertia_:
+$$\frac{1}{2}\frac{d^{2}}{dt^{2}}(m_{i}r_{i}^{2})=\boldsymbol{r}_{i}\cdot \boldsymbol{F}_{i}+m_{i}\left( \frac{d\boldsymbol{r}_{i}}{dt} \right)^{2}$$
+- By _summing over all masses_:
+$$\frac{1}{2}\frac{d^{2}I}{dt^{2}}=$$
