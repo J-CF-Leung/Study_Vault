@@ -577,6 +577,8 @@ $$\displaylines{x^\mu\to x^\mu+\delta x^\mu \\ g_{\mu\nu}\to g_{\mu\nu}+(\partia
 
 - In the derivation above, $f$ is the _Lagrangian_ of the variation:
 $$\Lagr=g_{\mu\nu}\frac{dx^\mu}{d\tau}\frac{dx^\nu}{d\tau}$$
+
+### Alternate form of geodesic equation
 - By writing out the _Euler-Lagrange equation_ explicitly, and _lowering indices_, one can get an _alternative form_ of the geodesic equation:
 $$\frac{d^2x_\mu}{d\tau^2}=\frac{1}{2}\partial_\mu g_{\nu\lambda}\frac{dx^\nu}{d\tau}\frac{dx^\lambda}{d\tau}$$
 ### Affine parameters
@@ -868,6 +870,7 @@ $$R_{\hat{\rho}\hat{\sigma}\hat{\mu}\hat{\nu}}\propto g_{\hat{\rho}\hat{\mu}}g_{
 - As this is a _tensorial relation_, it applies _generally_
 - By _contracting_ both sides twice, one gets:
 $$R_{\rho\sigma \mu \nu}=\frac{R}{n(n-1)}(g_{\rho \mu}g_{\sigma \nu}-g_{\rho \nu}g_{\sigma \mu})$$
+- The _Bianchi identity_ demands that $R$ is _constant_
 
 - In general, if the Riemann tensor _satisfies_ this relation, with $R$ as a _constant over the manifold_, the metric is _maximally symmetric_
 
@@ -933,7 +936,7 @@ $$\nabla^2\Phi=4\pi G\rho$$
 $$\frac{d^2x^\mu}{d\tau^2}=0$$
 - A _slow_ free-falling particle gives the [[#Newtonian limit for free-falling]]
 
-- Example: the [[Special Relativity#Conservation|conservation]] in the energy-momentum tensor:
+- Example: the [[Special Relativity#Conservation|conservation]] in the [[Special Relativity#Energy-momentum tensor|energy-momentum tensor]] still holds with the _covariant derivative_
 $$\nabla_\mu T^{\mu\nu}=0$$
 
 ## Einstein's equation
@@ -966,6 +969,7 @@ $$R_{\mu\nu}-\frac{1}{2}Rg_{\mu\nu}=-8\pi GT_{\mu\nu}$$
 - Taking the _trace_ $(R=8\pi GT)$ and rewriting the equation gives:
 $$R_{\mu\nu}=-8\pi G\left(T_{\mu\nu}-\frac{1}{2}Tg_{\mu\nu}\right)$$
 
+- The coefficient can also be written as $8\pi G/c^{4}$
 
 ## Properties and interpretation of the Einstein equation
 - It can be interpreted as a _differential equation_ for the _$N(N+1)/2$ independent components_ of $g_{\mu\nu}$
@@ -1001,7 +1005,7 @@ $$p_\text{vac}=-\rho_\text{vac}$$
 $$R_{\mu\nu}-\frac{1}{2}Rg_{\mu\nu}=-8\pi G(T_{\mu\nu}^\text{M}+\rho_\text{vac}g_{\mu\nu})$$
 
 - This allows one to _rewrite_ Einstein's equation with a _cosmological constant_:
-$$\displaylines{R_{\mu\nu}-\frac{1}{2}Rg_{\mu\nu}+\Lambda g_{\mu\nu}=-8\pi GT_{\mu\nu}^\text{M} \\ \Lambda = 8\pi G\rho_{\mu\nu}}$$
+$$\displaylines{R_{\mu\nu}-\frac{1}{2}Rg_{\mu\nu}+\Lambda g_{\mu\nu}=-8\pi GT_{\mu\nu}^\text{M} \\ \Lambda = 8\pi G\rho_\text{vac}}$$
 - This equation _satisfies_ that the equation is _divergence-free_ and constructed from the _metric_
 	- The _only other solution_ according to _Lovelock's Theorem_
 
@@ -1457,7 +1461,7 @@ $$d\sigma^{2}=\gamma_{ij}(u)du^{i}du^{j}$$
 - _Coordinates_ where the metric is _free of cross-terms_, and the coefficient for $dt^{2}$ is _independent of_ $u^{i}$ are the _co-moving coordinates_
 	- The coordinates _move with the fundamental observer_, and observes an isotropic universe
 
-### Deriving the Robertson-Walker metric
+### Form of the Robertson-Walker metric
 - Given the _maximally symmetric three-dimensional metric_ $\gamma_{ij}$, the [[#Riemann tensor for a maximally symmetric space|Riemann tensor]] is
 	- It is _only_ associated with the 3-metric $\gamma_{ij}$ instead of all spacetime
 $$^{(3)}R_{ijkl}=K(\gamma_{ik}\gamma_{jl}-\gamma_{il}\gamma_{jk})$$
@@ -1473,3 +1477,163 @@ $$d\sigma^{2}=\gamma_{ij}du^{i}du^{j}=\exp(2\beta(\bar{r}))\,d \bar{r}^{2}+\bar{
 $$d\sigma^{2}=\frac{d \bar{r}^{2}}{1-k \bar{r}^{2}}+\bar{r}^{2}\,d\Omega^{2}$$
 - One can _normalise_ $k$ such that $0<k<1$
 	- The _physical size_ of the manifold can be _absorbed_ into $R(t)$
+
+### Curvature of the 3-manifold
+- $k$ indicates _curvature_ of the 3-manifold
+	- The $k=-1$ case corresponds to _constant negative curvature_ on $\Sigma$
+	- The $k=0$ case corresponds to _no curvature_ on $\Sigma$
+	- The $k=+1$ case corresponds to _constant positive curvature_ on $\Sigma$
+
+- One can introduce a _new radial coordinate_:
+$$d\chi=\frac{d\bar{r}}{\sqrt{ 1-k\bar{r}^{2} }}$$
+- This can then be _integrated_ to obtain:
+$$\bar{r}=S_{k}(\chi)\equiv \begin{cases}\sin \chi &k=+1 \\ \chi&k=0\\ \sinh \chi&k=-1\end{cases}$$
+- This gives the _metric_:
+$$d\sigma^{2}=d\chi^{2}+S_{k}^{2}(\chi)d\Omega^{2}$$
+
+- For the _flat case_ $k=0$:
+$$d\sigma^{2}=d\chi^{2}+\chi^{2}d\Omega^{2}=dx^{2}+dy^{2}+dz^{2}$$
+- This is _flat 3-dimensional Euclidean space_
+	- _Globally_, it could describe $\mathbb{R}^{3}$ or the 3-torus $S^{1}\times S^{1}\times S^{1}$
+
+- For the _closed case_ $k=+1$:
+$$d\sigma^{2}=d\chi^{2}+\sin^{2}\chi \,d\Omega^{2}$$
+- This is the metric of a _three-sphere_
+
+- For the _open case_ $k=-1$:
+$$d\sigma^{2}=d\chi^{2}+\sinh^{2}\chi\,d\Omega^{2}$$
+- This is a metric for a 3-dimensional space of _constant negative curvature_
+	- Generalisation of the _hyperboloid_
+
+### Robertson-Walker metric with scale factor
+- The form of the metric:
+$$ds^{2}=dt^{2}-R^{2}(t)\left[\frac{d \bar{r}^{2}}{1-k \bar{r}^{2}}+\bar{r}^{2}\,d\Omega^{2}\right]$$
+- If one _scales_:
+$$R\to\lambda^{-1}R\hspace{1cm}\bar{r}\to\lambda \bar{r}\hspace{1cm}k\to\lambda^{-2}k$$
+- Therefore, one can _normalise_ $k$ such that $-1<k<-1$
+- This gives $R$ units of _distance_ and makes $\bar{r}$ _dimensionless_
+
+- Instead, one can use a _dimensionless scale factor_. with a radial coordinate of _dimensions of length_:
+$$a(t)=\frac{R(t)}{R_{0}}\hspace{1cm}r=R_{0}\bar{r}\hspace{1cm} \kappa=\frac{k}{R_{0}^{2}}$$
+
+- Here, $\kappa$ can take _any value_, giving the Robertson-Walker metric:
+$$ds^{2}=dt^{2}-a^{2}(t)\left[ \frac{dr^{2}}{1-\kappa r^{2}}+r^{2}d\Omega^{2} \right] $$
+### Connection and curvature tensor
+- Christoffel symbols:
+
+
+
+- Setting $\dot{a}\equiv da/dt$, one can also calculate the _Ricci scalar_:
+$$R=6\left[ \frac{\ddot{a}}{a}+\left( \frac{\dot{a}}{a} \right)^{2}+\frac{\kappa}{a^{2}} \right]$$
+
+
+## Behaviour of the scale factor
+- The Robertson-Walker metric is defined for _any behaviour_ of $a(t)$
+- It can then be substituted into [[#Einstein's equation]] to derive the _Friedmann equation_, which relates $a(t)$ to the _energy-momentum_ of the universe
+
+### Universe as a fluid and the equation of state
+- One can _model the universe as a fluid_
+
+- In _co-moving_ coordinates, the fluid is _at rest_, giving the 4-velocity:
+$$U^{\mu}=(1,0,0,0)$$
+- This gives the [[Special Relativity#Perfect fluid|energy-momentum tensor]]:
+$$T^{\mu \nu}=(\rho +p)U^{\mu}U^{\nu}-pg^{\mu \nu}$$
+- This has the _trace_:
+$${T^{\mu}}_{\mu}=\rho-3p$$
+
+- From its [[Special Relativity#Conservation|conservation]] in the $0-$component:
+$$\nabla_{\mu}T^{\mu 0}=\partial_{0}p+3 \frac{\dot{a}}{a}(\rho +p)$$
+- One can choose an _equation of state_ for the fluid:
+$$p=w\rho$$
+- In mose cases, $w$ is _constant_ and depends on the type of fluid
+	- The _null dominant energy condition_ allowing for _vacuum energy_, but not the _destabilisation_ of vacuum, gives $|w|\leq 1$
+- Conservation of energy becomes:
+$$\frac{\dot{\rho}}{\rho}=-3(1+w) \frac{\dot{a}}{a}$$
+- If $w$ is _constant_, this gives:
+$$\rho \propto a^{-3(1+w)}$$
+
+### Matter and radiation dominated universe
+- _Matter_ (Dust) is a set of _collisionless, nonrelativistic particles_, which essentially have _zero pressure_:
+$$p_{M}=0$$
+- Examples: _stars_ and _galaxies_
+- Hence, for a _matter-dominated universe_:
+$$\rho_{M}\propto a^{-3}$$
+- This gives a _decrease in number density_
+- The energy is _dominated by rest energy_
+
+- _Radiation_ describes _photons_, or particles _moving at ultrarelativistic speeds_
+- The [[Classical Field Theory#Free electromagnetic field|electromagnetic field tensor]]:
+$$T^{\mu \nu}={F^{\mu}}_{\lambda}F^{\lambda \nu}-\frac{1}{4}g^{\mu \nu}F_{\alpha\beta}F^{\alpha\beta}$$
+- The _trace_ is zero, giving:
+$$p_{R}=\frac{1}{3}\rho_{R}$$
+- Hence, for a _radiation-dominated universe_:
+$$\rho_{M}\propto a^{-4}$$
+- As the _number density_ falls off as $a^{-3}$, and the photons also undergo [[#Cosmological redshift]] $\lambda \propto a$
+
+- The _current universe_ has $\rho_{M}/\rho_{R}\sim 10^{3}$
+
+- As for [[#Cosmological constant and vacuum energy|vacuum energy]], $p_{\Lambda}=-\rho_{\Lambda}$, giving:
+$$\rho_{\Lambda}\propto a^{0}$$
+
+- As the universe _expands_, in the long term, it can become _vacuum-dominated_
+
+### The Friedmann equations
+- [[#Cosmological constant and vacuum energy|Einstein's equation with cosmological constant]]:
+$$R_{\mu \nu}-\frac{1}{2}Rg_{\mu \nu}+\Lambda g_{\mu \nu}=-8\pi GT_{\mu \nu}$$
+- By using components of the FRW [[#Connection and curvature tensor|curvature tensor]]:
+$$R_{00}=3 \frac{\ddot{a}}{a}\hspace{1.5cm}R_{ij}=$$
+- This gives the _Friedmann equations_:
+$$\displaylines{3 \frac{\ddot{a}}{a}=-4\pi G(\rho +3p)+\Lambda \\ \left( \frac{\dot{a}}{a} \right)^{2}+\frac{\kappa}{a^{2}}=\frac{8\pi G}{3}\rho+\frac{1}{3}\Lambda}$$
+
+### Parameters
+- The _rate of expansion_ in co-moving coordinates is characterised by the _Hubble parameter_:
+$$H=\frac{\dot{a}}{a}$$
+- The current value $H_{0}=(70\pm 10)\,\text{km/sec/Mpc}$
+- One can define the _Hubble length_ and _Hubble time_:
+$$d_{H}=H_{0}^{-1}c\hspace{1.5cm}t_{H}=H_{0}^{-1}$$
+- There is also the _
+## Redshifts and distances
+- For the FRW metric, there are _no timelike Killing tensors_
+- However, there is a [[#Killing vectors and tensors, Killing's equation|Killing tensor]]
+
+### Conserved quantity
+- A _co-moving observer_ has 4-velocity $U^{\mu}=(1,0,0,0)$
+- The _Killing tensor_ is:
+$$K_{\mu \nu}=-a^{2}(g_{\mu \nu}+U_{\mu}U_{\nu})\hspace{1.5cm}\nabla_{(\sigma}K_{\mu \nu)}=0$$
+- If some particle has _4-velocity_ $V^{\mu}=dx^{\mu}/d\lambda$, the [[#Killing vectors and tensors, Killing's equation|conserved quantity]] is:
+$$K^{2}=K_{\mu \nu}V^{\mu}V^{\nu}=-a^{2}[V_{\mu}V^{\mu}+(U_{\mu}V^{\mu})^{2}]$$
+- Substituing $U^{\mu}$, for a _massive particle_ where $V_{\mu}V^{\mu}=1$:
+$$|\boldsymbol{V}|=\sqrt{ V_{i}V^{i}}=\frac{K}{a}$$
+- Hence, the particle _slows down_ with respect to the _co-moving observer_
+	- A _gas_ of particles with _initially high_ relative velocities that _cools down_ eventually
+
+### Cosmological redshift
+- For _null geodesics_, where $V_{\mu}V^{\mu}=0$:
+$$U_{\mu}V^{\mu}=-\frac{K}{a}$$
+- This is the _frequency of the photon as measured by a co-moving observer_
+
+- This then gives:
+$$\frac{\omega _\text{obs}}{\omega _\text{em}}=\frac{a_\text{em}}{a_\text{obs}}$$
+- The _cosmological redshift_:
+$$z_\text{em}=\frac{\lambda _\text{obs}-\lambda _\text{em}}{\lambda _\text{em}}$$
+- If the observation is done _today_ with $a_\text{obs}=a_{0}=1$:
+$$a_\text{em}=\frac{1}{1+z_\text{em}}$$
+- This is _due to spatial expansion_ instead of relative velocities
+
+### Distances and Hubble's Law
+- If one observes objects over distances that are _small_ compared to _Hubble length_ $H_{0}^{-1}$ and _radius of spatial curvature_ $\kappa^{-1/2}$, expansion _is observed as a set of objects moving apart from each other_
+	- Leads to observations similar to the _conventional Doppler effect_:
+$$v=cz$$
+- Within this _small distance approximation_, the "distance" to an object is taken as the _instantaneous physical distance_ $d_{P}$ on the spatial hypersurface
+
+- Write the metric as:
+$$ds^{2}=dt^{2}-a^{2}(t)R_{0}^{2}\left[ d\chi^{2}+S_{k}^{2}(\chi)d\Omega^{2} \right] $$
+- The _instantaneous physical distance_ from the observer $\chi=0$, and an object at _co-moving radial distance_ $\chi$:
+$$d_{P}(t)=a(t)R_{0}\chi$$
+- As the observer and galaxy are _co-moving_, $\chi$ is _constant_
+- One then gets a _"velocity"_:
+$$v=\dot{d}_{P}=\frac{\dot{a}}{a}d_{P}=H_{0}d_{P}$$
+- This is _Hubble's Law_
+
+- $d_{P}$ is _not inherently observable_, as it is on the current _spatial hypersurface_, and _observations are events from the past light cone_
+- It also _ignores curvature of the hypersurface_ 

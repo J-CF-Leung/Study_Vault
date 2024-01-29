@@ -34,7 +34,7 @@ $$1=\braket{ \alpha | \alpha } =\sum_{n=0}^{n}\frac{|\alpha|^{2n}}{n!}\left| \br
 - One then gets a _spectrum of coherent states_, each characterised by _complex number_ $\alpha$
 $$\ket{\alpha}=\exp\left( -\frac{|\alpha|^{2}}{2} \right)\sum_{n=0}^{n}\frac{\alpha^{n}}{\sqrt{ n! }}\ket{n}  $$
 - It can also be written as:
-	$$\ket{\alpha}=\exp\left( -\frac{|\alpha|^{2}}{2} \right)\exp\left( \alpha \hat{a}^{\dagger} \right)\ket{0}  $$
+$$\ket{\alpha}=\exp\left( -\frac{|\alpha|^{2}}{2} \right)\exp\left( \alpha \hat{a}^{\dagger} \right)\ket{0}  $$
 
 ## Properties of the coherent state
 - The _probability_ of having $n$ quanta in the state $\ket{\alpha}$ is:

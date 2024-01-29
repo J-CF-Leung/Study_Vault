@@ -63,7 +63,8 @@ $$\hat{a}(t)=\exp(-i\omega t)\hat{a}(0)\hspace{1.5cm}\hat{a}^{\dagger}(t)=\exp\l
 $$\hat{H}=\hat{H}_{0}+\hat{V}$$
 - The _unitary transformation_:
 $$\hat{\mathcal{U}}=\exp\left( +i \frac{\hat{H}_{0}t}{\hbar} \right)$$
-- The time dependence _arises from the potential term_ $\hat{V}$
+- The _state ket_ time dependence _arises from the potential term_ $\hat{V}$
+- The _observable_ time dependence arises from $\hat{H}_{0}$
 
 # Time-dependent Hamiltonian
 - Have a general _time-dependent Hamiltonian_
@@ -101,3 +102,195 @@ $$\hat{U}(t)=\mathcal{T}\exp\left( -\frac{i}{\hbar}\int _{0}^{t}\hat{H}(t') \, d
 
 ## Driven harmonic oscillator and coherent states
 $$\hat{H}(t)=\frac{\hat{p}^{2}}{2m}+\frac{1}{2}m\omega^{2}\hat{x}^{2}-F(t)\hat{x}$$
+- Using the [[#Dynamics in the Heisenberg picture|Heisenberg equations of motion]]:
+$$\displaylines{\frac{d\hat{x}}{dt}=\frac{\hat{p}(t)}{m} \\ \frac{d\hat{p}}{dt}=-m\omega^{2}\hat{x}+F(t)}$$
+- The Hamiltonian can also be written as:
+$$\hat{H}(t)=\hbar \omega\left( \hat{a}^{\dagger}\hat{a}+\frac{1}{2} \right)-F(t)\sqrt{ \frac{\hbar}{2m\omega} }\left( \hat{a}+\hat{a}^{\dagger} \right)$$
+- This gives:
+$$\frac{d\hat{a}}{dt}=-i\omega \hat{a}+iF(t)\sqrt{ \frac{1}{2m\hbar\omega} }$$
+- One can _define_ the operator $\tilde{a}$:
+$$\displaylines{\tilde{a}=\exp(i\omega t)\hat{a} \implies \frac{d\tilde{a}}{dt}=+i \frac{F(t)\exp(i\omega t)}{\sqrt{ 2m\hbar \omega }}\\ \tilde{a}(t)=\tilde{a}(0)+\frac{i}{\sqrt{ 2m\hbar\omega }}\int_{0}^{t} F(t')\exp(i\omega t') \, dt' }$$
+- Similarly:
+$$\tilde{a}^{\dagger}(t)=\tilde{a}^{\dagger}(0)-\frac{i}{\sqrt{ 2m\hbar\omega }}\int_{0}^{t} F(t')\exp(-i\omega t') \, dt' $$
+- This matches the _classical evolution_ of position and momentum
+
+- Consider the _ground state_:
+$$\hat{a}\ket{0}=0 $$
+- Since $\hat{a}(t)=\hat{U}^{\dagger}(t)\hat{a}\hat{U}(t)$, $\hat{U}(t)\hat{a}(t)=\hat{a}\hat{U}(t)$:
+$$\hat{a}\hat{U}(t)\ket{0}= \frac{i}{\sqrt{ 2m\hbar\omega }}\int_{0}^{t}F(t')\exp[-i\omega (t-t')]  \, dt' \hat{U}(t)\ket{0} $$
+- Hence, $\hat{U}(t)\ket{0}$ is a [[Coherent states|coherent state]], with _eigenvalue_:
+$$\alpha=\frac{i}{\sqrt{ 2m\hbar \omega }}\int_{0}^{t}F(t')\exp[-i\omega(t-t')] \, dt' $$
+## Spin in a magnetic field
+- The _simplest quantum system_ is one with _two states_, e.g. spin $1/2$
+- The Hilbert space is _two-dimensional_, and all operators are $2\times2$ _matrices_
+	- Living in the $SU(2)$ group
+
+- Expressing some _spin-like_ variable with operator $\hat{\boldsymbol{S}}$, the _most general Hamiltonian_ is
+	- The addition of an _identity_ simply _shifts_ the energy
+$$\hat{H}(t)=\boldsymbol{h}(t)\cdot \hat{\boldsymbol{S}}$$
+- Here, $\boldsymbol{h}(t)$ is some _"magnetic field"_
+
+- Expressing everything in the _basis_ of $S_{z}$ and using [[Angular momentum in quantum mechanics#Spin 1/2|Pauli matrices]]:
+$$\hat{S}_{i}=\frac{1}{2}\sigma_{i}\hspace{1cm}\hat{H}(t)=\frac{1}{2}\begin{pmatrix}h_{z}(t)&h_x(t)-ih_{y}(t) \\ h_{x}(t)+ih_{y}(t)&-h_{z}(t)\end{pmatrix}\hspace{1cm}\ket{\Psi}=\begin{pmatrix}\psi_{\uparrow}\\ \psi_{\downarrow}\end{pmatrix} $$
+- Time-dependent Schrodinger equation:
+$$i\hbar \frac{d\ket{\Psi}}{dt}=\hat{H}(t)\ket{\Psi}  $$
+- The formal solution:
+$$\ket{\Psi(t)}=\hat{U}(t,t')\ket{\Psi(t')}  $$
+- In the _Heisenberg picture_, adding on the time-dependence, and using the _equation of motion_ (using commutation relations for the Pauli matrices):
+$$\displaylines{\hat{S}(t)= \\ \frac{d\hat{S}}{dt}=\frac{i}{\hbar}[]=\frac{1}{\hbar}\boldsymbol{h}(t)\times \hat{\boldsymbol{S}}}$$
+
+- Therefore, the spin [[Charged Particles#Precession of the spin-1/2 particle|precesses about the magnetic field]]
+- The solution can be expressed using some $3\times 3$ _rotation matrix_:
+	- The $SU(2)$ algebra and $SO(3)$ algebras are the _same locally_
+	- The rotation matrix and the _time-evolution operator_ contain the _same information_
+$$\boldsymbol{S}(t)=R(t)\boldsymbol{S}(0)$$
+- The rotation matrix can be expressed as:
+$$R(t)=$$
+- It is a _composition of infinitesimal rotation matrices_
+- $\Omega$ is some _instantaneous angular velocity_
+
+## Rabi oscillations
+- Given a _Rabi field_ $h_{R}$, consider the magetic field:
+$$\boldsymbol{h}(t)=\begin{pmatrix}h_{R}\cos(\omega t) \\ h_{R}\sin(\omega t) \\ h_{0}\end{pmatrix}$$
+- Express the Hamiltonian using the _ladder operators_:
+$$\hat{H}(t)=h_{0}\hat{S}_{z}+\frac{h_{R}}{2}\left[ \exp(-i\omega t)\hat{S}_{+}+\exp(i\omega t)\hat{S}_{-} \right]$$
+- Do a _time-dependent basis transformation_
+	- It is _unitary_, hence the motion is _unchanged_
+$$\hat{\mathcal{U}}(t)=\exp\left( i\omega t\hat{S}_{z} \right)\implies\ket{\Psi_{R}(t)}= \exp\left( i\omega t\hat{S}_{z} \right)\ket{\Psi(t)} $$
+- This corresponds to going into a _rotating frame_
+- The Hamiltonian becomes _time-independent_, as the transformed state obeys:
+$$\begin{align}i\hbar \frac{d}{dt}\ket{\Psi_{R}}&=i\hbar \hat{\mathcal{U}} \frac{d}{dt}\ket{\Psi}-\hbar\omega \hat{S}_{z}\ket{\Psi_{R}} \\&=\hat{\mathcal{U}}H(t)\ket{\Psi}-\hbar\omega \hat{S}_{z}\ket{\Psi_{R}} \\ &=\hat{\mathcal{U}}H(t)\hat{\mathcal{U}}^{\dagger}\ket{\Psi_{R}}-\hbar\omega S_{z}\ket{\Psi_{R}}  \\ &=\hat{H}_\text{Rabi}\ket{\Psi_{R}}   \end{align} $$
+- The new Hamiltonian:
+$$\begin{align}
+\hat{H}_\text{Rabi}&=\hat{\mathcal{U}}H(t)\hat{\mathcal{U}}^{\dagger}-\hbar\omega \hat{S}_{z}  \\ &=(h_{0}-\hbar\omega)\hat{S}_{z}+h_{R}\hat{S}_{z}
+\end{align}$$
+- This corresponds to _precession_ about the _axis_:
+$$\boldsymbol{h}_\text{Rabi}=\begin{pmatrix}h_{R} \\ 0 \\ h_{0}-\hbar\omega\end{pmatrix}$$
+- The state lies on a _spherical manifold_
+
+- The _precession frequency_:
+$$\omega_{R}=\frac{1}{\hbar}\sqrt{ (h_{0}-\hbar\omega)^{2}+h_{R}^{2} }$$
+- The _amplitude is at a maximum_ when $h_{0}=\hbar\omega$, which matches the _natural frequency_ where $h_{R}=0$
+
+# The adiabatic approximation
+- Corresponds to some _separation of time-scales_
+- Let the Hamiltonian _vary very slowly_
+- One can _solve_ for eigenstates at some time $t^{*}$, giving _instantaneous eigenstates_:
+$$\hat{H}(t)\ket{\pm}=E_{\pm}\ket{\pm}  $$
+
+- If the system _varies very slowly_ over time $\tau$:
+$$\frac{\Delta E\tau}{\hbar}\ll 1$$
+- There are _no transitions_ between levels of energy interval $\Delta E$, and the system _stays in the instantaneous eigenstate_
+
+- One can _expand_ the state at any time _in terms of instantaneous eigenstates_:
+$$\ket{\Psi(t)}=c_{+}(t)\ket{}  $$
+- Substitute into the time-dependent Schrodinger equation
+
+- Treat changes in the Hamiltonian as a [[Time-Independent Approximation Methods|time-independent perturbation]]
+	- $t$ is treated as a _parameter_
+- Each state changes by amount:
+
+- The coefficients then vary by:
+$$i\hbar \frac{d}{dt}\begin{pmatrix} c_{+} \\ c_{-}\end{pmatrix} = \begin{pmatrix} & \\ & \end{pmatrix} \begin{pmatrix}\end{pmatrix}$$
+- For a _slow enough variation_, the _off-diagonal terms vanish_
+
+- The solution is then:
+$$c_{\pm}(t)= \exp\left( \int  \, dt'  \right) c_{\pm}(0) $$
+- The amplitudes _evolve independently_, and there are _no transitions_ between the instantaneous eigenstates
+	- A _generalisation_ for $c_{n}(t)=\exp(-iE_{n}t/\hbar)c_{n}(0)$
+
+- The approximation is valid when:
+$$\hbar \left| \braket{ -_{t} |H|+_{t}  }  \right| \ll [E_{+}(t)-E_{-}(t)]^{2} $$
+
+- As expected, this corresponds to a _large splitting_
+
+- It is a _semiclassical_ approximation as it _improves_ with _smaller_ $\hbar$
+
+## Landau-Zener tunnelling
+- Consider the Hamiltonian:
+$$H=\begin{pmatrix} \beta t & \Delta \\ \Delta &-\beta t\end{pmatrix}$$
+- The _instantaneous eigenvalues_:
+$$E_{\pm}(t)=\pm\sqrt{ (\beta t)^{2}+\Delta^{2} }$$
+- As a _function_ of $t$, it shows an _avoided crossing_
+	- $\Delta$ acts like a _mass_
+- The _minimum splitting_ is $2\Delta$
+
+- Hence, for the _adiabatic approximation_ to hold, one must have:
+$$\frac{\hbar\beta}{\Delta^{2}}\ll 1$$
+- Instead, consider the limit:
+$$\frac{\hbar\beta}{\Delta^{2}}\gg 1$$
+- The state is _very likely to tunnel_
+
+- Take the _very small parameter_ $\Delta^{2}/\hbar\beta$ 
+- The _probability of transition_:
+$$P(\ket{-}_{t=-\infty}\to \ket{+}_{t=+\infty}  )=\frac{\pi\Delta^{2}}{\hbar\beta}$$
+
+# Berry's phase
+- States are a _ray_ in a vector space, and _phases do not affect motion_
+$$\psi\to \exp(i\theta)\psi$$
+- A _change_ to eigenstates:
+$$\delta \ket{+_{t}}= \frac{\braket{ -_{t}|\delta H |+_{t}  }}{E_{+}(t)-E_{-}(t)}\ket{-_{t}}  $$
+- It is _orthogonal_ to the original state
+	- A _parallel_ change is simply _dilation_ or adding a _phase_
+	- The phase is _local_
+
+- Let the Hamiltonian undergo a _closed path $\gamma$ in parameter space_
+	- It is a _field in parameter space_
+- Let the change be _cyclic_:
+$$H(T)=H(0)$$
+
+- The state can pick up a _global phase_, which _only depends on the path_
+$$\ket{\pm_{T}}= \ket{\pm_{0}}\exp\left( -\int  \, dt'  \right)\exp(i\theta_{B}[\gamma]) $$
+
+- Define the _instantaneous eigenstates_:
+$$\ket{+_{t}}\equiv\ket{H(t),+}  $$
+- The _perturbation_:
+$$\delta \ket{H(t),+}= \frac{\braket{  |  }}{}\ket{H(t),-}+\braket{ H| \delta H|   }\ket{H(t),+}     $$
+- In the _adiabatic regime_, the first term _vanishes_
+	- The second term is typically _neglected_ as it is a parallel change, but it has an effect for a _closed adiabatic change_ in Hamiltonian
+
+- Take a _derivative_ w.r.t. the _parameters_ of the Hamiltonian:
+	- $\delta \boldsymbol{H}$ is a _vector in parameter space_
+$$\delta H=\delta \boldsymbol{H}\cdot$$
+
+- The vector field:
+$$\boldsymbol{A}_{\pm}=$$
+
+- This is the _Berry potential_, or _Berry connection_
+- When it is _integrated over a closed path_, then it contributes a _global phase_ which _cannot be ignored_
+	- Similar to the [[Charged Particles#The Aharanov-Bohm Effect|Aharanov-Bohm Effect]]
+
+- With the adiabatic approximation:
+$$\delta \ket{H,+}=i\boldsymbol{A}_{+}(\boldsymbol{H})\cdot \dot{\boldsymbol{H}}\ket{H,+}  $$
+- The _solution_ to the coefficients:
+$$c_{\pm}(t)=\exp\left( - \frac{i}{\hbar}\int  \, dt'  \right)c_{\pm}(0)$$
+- There are _two contributions_
+	- A _dynamical phase_ from $E_{\pm}$, which _vanishes over a closed path_ (depending on _energy_, and the _amount of time taken_ in an open path)
+	- A _geometric phase_ from $\boldsymbol{A}_{\pm}$, which _depends on the path_
+- It also depends on the _manifold_ in parameter space and its _topology_
+
+- The geometric phase is _gauge invariant_
+- Let there be a _local gauge transformation_
+
+- The extra term _vanishes for a closed path_
+
+- This is analagous to the _vector potential_
+- One can then define an analagous _"magnetic field"_, known as the _Berry curvature_
+	- As expected, also _gauge invariant_
+
+- The _Berry phase_ is then a _surface integral_ of the Berry curvature (using Stokes Theorem)
+- It is _half the solid angle_ enclosed
+
+## Berry phase for a rotating magnetic field
+- Example: the _direction_ of a [[#Spin in a magnetic field|magnetic field]] lives on a _2-sphere_
+$$\boldsymbol{h}=h_{0}\hat{\boldsymbol{n}}$$
+
+- _Parallel transport_ takes place on the manifold
+- It depends on _movement over the equator_
+- Then for the _closed path_, there is a _geometric phase_, depending on the _solid angle enclosed_
+
+## Berry phase in crystalline systems
+- The _energy bands_ in a 2D material live in $k-$space
+- _Periodicity_ in $k_{x}$ and $k_{y}$ gives a _torus_
+
+- Integrating the _Berry curvature_ over a band gives the _Chern number_, a _topological invariant_

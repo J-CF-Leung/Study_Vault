@@ -520,6 +520,7 @@ $$\hbar k_F=()^{1/3}\left(\frac{}{}\right)^{1/3}$$
 $$P_F=\frac{2}{5}\frac{N}{V}\varepsilon_F$$
 ## Away from absolute zero
 - At $T>0$, the _chemical potential_ is _not equal_ to $\varepsilon_F$
+
 - One can do _Taylor expansions_ with $1/(\beta\varepsilon_F)$
 	- This is known as the _Sommerfeld expansion_
 - For the integral:
