@@ -1552,7 +1552,7 @@ $$\frac{\dot{\rho}}{\rho}=-3(1+w) \frac{\dot{a}}{a}$$
 - If $w$ is _constant_, this gives:
 $$\rho \propto a^{-3(1+w)}$$
 
-### Matter and radiation dominated universe
+### Matter and radiation dominated universes
 - _Matter_ (Dust) is a set of _collisionless, nonrelativistic particles_, which essentially have _zero pressure_:
 $$p_{M}=0$$
 - Examples: _stars_ and _galaxies_
@@ -1591,7 +1591,19 @@ $$H=\frac{\dot{a}}{a}$$
 - The current value $H_{0}=(70\pm 10)\,\text{km/sec/Mpc}$
 - One can define the _Hubble length_ and _Hubble time_:
 $$d_{H}=H_{0}^{-1}c\hspace{1.5cm}t_{H}=H_{0}^{-1}$$
-- There is also the _
+- There is also the _density parameter_:
+$$\Omega=\frac{8\pi G}{3H^{2}}\rho=\frac{\rho}{\rho _\text{crit}}$$
+- $\rho _\text{crit}$ is the _critical density_
+- The Friedmann equation for $\Lambda=0$ can be written as:
+$$\Omega-1=\frac{\kappa}{H^{2}a^{2}}$$
+- The _sign_ of $\kappa$ is determined by the magnitude of $\Omega$
+
+|         Density          | Density parameter | Curvature  | Universe geometry |
+|:------------------------:|:-----------------:|:----------:|:-----------------:|
+| $\rho<\rho _\text{crit}$ |    $\Omega<1$     | $\kappa<0$ |       Open        |
+| $\rho=\rho _\text{crit}$ |    $\Omega=1$     | $\kappa=0$ |       Flat        |
+| $\rho>\rho _\text{crit}$ |    $\Omega>1$     | $\kappa>0$ |      Closed       |
+- Hence, the density parameter gives the _curvature_ of the universe
 ## Redshifts and distances
 - For the FRW metric, there are _no timelike Killing tensors_
 - However, there is a [[#Killing vectors and tensors, Killing's equation|Killing tensor]]
@@ -1637,3 +1649,52 @@ $$v=\dot{d}_{P}=\frac{\dot{a}}{a}d_{P}=H_{0}d_{P}$$
 
 - $d_{P}$ is _not inherently observable_, as it is on the current _spatial hypersurface_, and _observations are events from the past light cone_
 - It also _ignores curvature of the hypersurface_ 
+
+## Evolution of the scale factor
+- Given a specification of _amounts of energy density_ $\rho_{i}$ for different _species_ $i$, with their _equation of state_ $p_{i}=p_{i}(\rho_{i})$, and the _spatial curvature_ $\kappa$, one can _solve_ [[#The Friedmann equations]]
+
+### General behaviour
+- The different components of energy density:
+$$\rho_{i}=\rho_{i 0} a^{-n_{i}}$$
+- Comparing to the [[#Universe as a fluid and the equation of state|equation of state]]:
+$$w_{i}=\frac{1}{3}n_{i}-1$$
+- Define a _fictitious energy density
+
+- Subtlety: $\ddot{a}$ and $\dot{H}$
+
+### Special cases
+- Consider $\Lambda=0$, with $\rho>0$ and $p\geq 0$:
+$$\frac{\ddot{a}}{a}=-\frac{4\pi G}{3}(\rho +3p)$$
+- This implies $\ddot{a}<0$, and $a=0$ at some time in the _past_
+- This is the _Big Bang_
+
+- As $\ddot{a}<0$, this implies that the _age of the universe_ is _smaller_ than the Hubble time:
+$$T_\text{uni}< \frac{a(t_{0})}{\dot{a}(t_{0})}=\frac{1}{H_{0}}$$
+![[Age of universe.png|250]]
+
+- In a _flat or open universe_ $(\kappa\leq0)$:
+$$H^{2}=\frac{8\pi G}{3}\rho-\frac{\kappa}{a^{2}}>0$$
+- The universe will _always be expanding_
+
+- In a _closed universe_ $(\kappa>0)$, there is a _scale factor_ $a_\text{max}$ where:
+$$\frac{8\pi G}{3}\rho =\frac{\kappa}{a_\text{max}^{2}}\implies H=0$$
+- The universe will _stop expanding_, and eventually _contract_ $(\ddot{a}<0)$
+
+### Einstein-de Sitter model
+- Consider a _flat universe_ with _vanishing_ $\Lambda$
+
+- For a _matter dominated universe_ $(p=0, \rho \propto a^{-3})$
+$$\left( \frac{\dot{a}}{a} \right)^{2}\propto \frac{1}{a^{3}} \implies a \propto t^{2/3} \hspace{1cm}H=\frac{2}{3t}$$
+- For a _radiation dominated universe_ $(\rho \propto a^{-4})$
+	- For _sufficiently early times_
+$$\left( \frac{\dot{a}}{a} \right)^{2}\propto \frac{1}{a^{4}} \implies a \propto t^{1/2} \hspace{1cm}H=\frac{1}{2t}$$
+
+### Large cosmological constant
+- For a _sufficiently large_ $\Lambda$, $\ddot{a}>0$
+
+- For a _flat universe_, at _late times_:
+$$H^{2}=\frac{8\pi G}{3}\rho +\frac{1}{3}\Lambda\to \frac{1}{3}\Lambda$$
+- The Hubble parameter _tends to a constant value_
+- The _asymptotic behaviour_ of the scale factor:
+$$a(t) \propto \exp\left( \sqrt{ \frac{\Lambda}{3} }t \right)$$
+- This is the _de Sitter universe_

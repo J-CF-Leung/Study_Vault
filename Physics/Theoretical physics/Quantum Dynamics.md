@@ -120,6 +120,9 @@ $$\hat{a}\ket{0}=0 $$
 $$\hat{a}\hat{U}(t)\ket{0}= \frac{i}{\sqrt{ 2m\hbar\omega }}\int_{0}^{t}F(t')\exp[-i\omega (t-t')]  \, dt' \hat{U}(t)\ket{0} $$
 - Hence, $\hat{U}(t)\ket{0}$ is a [[Coherent states|coherent state]], with _eigenvalue_:
 $$\alpha=\frac{i}{\sqrt{ 2m\hbar \omega }}\int_{0}^{t}F(t')\exp[-i\omega(t-t')] \, dt' $$
+
+- One can prove that if the system _starts in a coherent state_, it _stays coherent_:
+$$\displaylines{\hat{U}(t)\ket{\alpha}=\exp(i\phi)\ket{\alpha'} \\ \alpha'=\alpha \exp(-i\omega t)+\frac{i}{\sqrt{ 2m\hbar\omega }}\int _{0}^{t} F(t')\exp[i\omega(t-t')] \, dt' }  $$
 ## Spin in a magnetic field
 - The _simplest quantum system_ is one with _two states_, e.g. spin $1/2$
 - The Hilbert space is _two-dimensional_, and all operators are $2\times2$ _matrices_
@@ -136,8 +139,11 @@ $$\hat{S}_{i}=\frac{1}{2}\sigma_{i}\hspace{1cm}\hat{H}(t)=\frac{1}{2}\begin{pmat
 $$i\hbar \frac{d\ket{\Psi}}{dt}=\hat{H}(t)\ket{\Psi}  $$
 - The formal solution:
 $$\ket{\Psi(t)}=\hat{U}(t,t')\ket{\Psi(t')}  $$
+- $\hat{U}(t,t')$ represents some _rotation_ in Hilbert space, with $\hat{H}$ being an _angular velocity_
+- As rotations at different times _do not commute_, there is _no simple relation_ for $\hat{U}$
+
 - In the _Heisenberg picture_, adding on the time-dependence, and using the _equation of motion_ (using commutation relations for the Pauli matrices):
-$$\displaylines{\hat{S}(t)= \\ \frac{d\hat{S}}{dt}=\frac{i}{\hbar}[]=\frac{1}{\hbar}\boldsymbol{h}(t)\times \hat{\boldsymbol{S}}}$$
+$$\displaylines{\hat{S}(t)=\exp\left( i \frac{\hat{H}t}{\hbar} \right)\hat{S}\exp\left( -i \frac{\hat{H}t}{\hbar} \right) \\ \frac{d\hat{S}}{dt}=\frac{i}{\hbar}\left[ \hat{H},\hat{S} \right]=\frac{1}{\hbar}\boldsymbol{h}(t)\times \hat{\boldsymbol{S}}}$$
 
 - Therefore, the spin [[Charged Particles#Precession of the spin-1/2 particle|precesses about the magnetic field]]
 - The solution can be expressed using some $3\times 3$ _rotation matrix_:
@@ -145,9 +151,11 @@ $$\displaylines{\hat{S}(t)= \\ \frac{d\hat{S}}{dt}=\frac{i}{\hbar}[]=\frac{1}{\h
 	- The rotation matrix and the _time-evolution operator_ contain the _same information_
 $$\boldsymbol{S}(t)=R(t)\boldsymbol{S}(0)$$
 - The rotation matrix can be expressed as:
-$$R(t)=$$
+$$R(t,t')=\mathcal{T}\exp\left( \int_{t'}^{t} \Omega(t_{i}) \, dt_{i}  \right)$$
 - It is a _composition of infinitesimal rotation matrices_
-- $\Omega$ is some _instantaneous angular velocity_
+	- The rotations must be _applied in the correct order_, hence the _time ordering_
+- $\Omega$ is some _instantaneous angular velocity_:
+$$\Omega_{jk}(t)=-\frac{1}{\hbar}\epsilon_{ijk}h_{i}(t)$$
 
 ## Rabi oscillations
 - Given a _Rabi field_ $h_{R}$, consider the magetic field:
@@ -176,31 +184,33 @@ $$\omega_{R}=\frac{1}{\hbar}\sqrt{ (h_{0}-\hbar\omega)^{2}+h_{R}^{2} }$$
 - Corresponds to some _separation of time-scales_
 - Let the Hamiltonian _vary very slowly_
 - One can _solve_ for eigenstates at some time $t^{*}$, giving _instantaneous eigenstates_:
-$$\hat{H}(t)\ket{\pm}=E_{\pm}\ket{\pm}  $$
+$$\hat{H}(t)\ket{\pm_{t}}=E_{\pm}(t)\ket{\pm_{t}}  $$
 
 - If the system _varies very slowly_ over time $\tau$:
 $$\frac{\Delta E\tau}{\hbar}\ll 1$$
 - There are _no transitions_ between levels of energy interval $\Delta E$, and the system _stays in the instantaneous eigenstate_
 
+## Time evolution of wave function
 - One can _expand_ the state at any time _in terms of instantaneous eigenstates_:
-$$\ket{\Psi(t)}=c_{+}(t)\ket{}  $$
-- Substitute into the time-dependent Schrodinger equation
+$$\ket{\Psi(t)}=c_{+}(t)\ket{+_{t}}+c_{-}(t)\ket{-_{t}}   $$
 
 - Treat changes in the Hamiltonian as a [[Time-Independent Approximation Methods|time-independent perturbation]]
 	- $t$ is treated as a _parameter_
+	- One gets the _same result_ by substituting into the time-dependent Schrodinger equation and differentiating both sides
 - Each state changes by amount:
+$$\delta \ket{\pm_{t}}=\frac{\braket{ \mp_{t}|\delta H|\pm_{t}  }}{E_{\pm}(t)-E_{\mp}(t)}\ket{\mp_{t}}   $$
 
-- The coefficients then vary by:
-$$i\hbar \frac{d}{dt}\begin{pmatrix} c_{+} \\ c_{-}\end{pmatrix} = \begin{pmatrix} & \\ & \end{pmatrix} \begin{pmatrix}\end{pmatrix}$$
+- From the time-dependent Schrodinger equation, the coefficients then vary by:
+$$i\hbar \frac{d}{dt}\begin{pmatrix} c_{+} \\ c_{-}\end{pmatrix} = \begin{pmatrix} E_{+}(t)& i\hbar\frac{\braket{ +_{t}|\dot{H} | -_{t} }}{E_{+}-E_{-}}  \\i\hbar \frac{\braket{ -_{t}|\dot{H} | +_{t} }}{E_{-}-E_{+}}  &E_{-}(t) \end{pmatrix} \begin{pmatrix} c_{+} \\ c_{-}\end{pmatrix}$$
 - For a _slow enough variation_, the _off-diagonal terms vanish_
 
 - The solution is then:
-$$c_{\pm}(t)= \exp\left( \int  \, dt'  \right) c_{\pm}(0) $$
+$$c_{\pm}(t)= \exp\left(-\frac{i}{\hbar} \int E_{\pm}(t')  \, dt'  \right) c_{\pm}(0) $$
 - The amplitudes _evolve independently_, and there are _no transitions_ between the instantaneous eigenstates
 	- A _generalisation_ for $c_{n}(t)=\exp(-iE_{n}t/\hbar)c_{n}(0)$
 
 - The approximation is valid when:
-$$\hbar \left| \braket{ -_{t} |H|+_{t}  }  \right| \ll [E_{+}(t)-E_{-}(t)]^{2} $$
+$$\hbar \left| \braket{ -_{t} |\dot{H}|+_{t}  }  \right| \ll [E_{+}(t)-E_{-}(t)]^{2} $$
 
 - As expected, this corresponds to a _large splitting_
 
@@ -240,21 +250,21 @@ $$\delta \ket{+_{t}}= \frac{\braket{ -_{t}|\delta H |+_{t}  }}{E_{+}(t)-E_{-}(t)
 $$H(T)=H(0)$$
 
 - The state can pick up a _global phase_, which _only depends on the path_
-$$\ket{\pm_{T}}= \ket{\pm_{0}}\exp\left( -\int  \, dt'  \right)\exp(i\theta_{B}[\gamma]) $$
+$$\ket{\pm_{T}}= \ket{\pm_{0}}\exp(i\theta_{B}[\gamma]) $$
 
 - Define the _instantaneous eigenstates_:
 $$\ket{+_{t}}\equiv\ket{H(t),+}  $$
 - The _perturbation_:
-$$\delta \ket{H(t),+}= \frac{\braket{  |  }}{}\ket{H(t),-}+\braket{ H| \delta H|   }\ket{H(t),+}     $$
+$$\delta \ket{H(t),+}= \frac{\braket{  |  }}{}\ket{H(t),-}+\braket{ H,| \delta H|   }\ket{H(t),+}     $$
 - In the _adiabatic regime_, the first term _vanishes_
 	- The second term is typically _neglected_ as it is a parallel change, but it has an effect for a _closed adiabatic change_ in Hamiltonian
 
 - Take a _derivative_ w.r.t. the _parameters_ of the Hamiltonian:
 	- $\delta \boldsymbol{H}$ is a _vector in parameter space_
-$$\delta H=\delta \boldsymbol{H}\cdot$$
+$$\delta H=\delta \boldsymbol{H}\cdot \nabla_{H}$$
 
 - The vector field:
-$$\boldsymbol{A}_{\pm}=$$
+$$\boldsymbol{A}_{\pm}(\boldsymbol{H})\equiv -i\braket{H,\pm|\nabla_{\boldsymbol{H}}|H,\pm  } $$
 
 - This is the _Berry potential_, or _Berry connection_
 - When it is _integrated over a closed path_, then it contributes a _global phase_ which _cannot be ignored_

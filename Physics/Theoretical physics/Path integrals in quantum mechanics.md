@@ -1,11 +1,54 @@
+- In the [[Quantum Dynamics#Dynamics in the Schrodinger picture|Schrodinger picture]], the _wave function_ will _evolve in time_ with the operator $U$:
+$$\ket{\Psi(t)}=\hat{U}(t,t')\ket{\Psi(t')}  $$
+- In the [[Quantum Dynamics|Heisenberg picture]], the _state kets_ are _constant_ but the _operators_ will follow an _equation of motion_:
+$$\frac{d}{dt}\mathcal{O}(t)=\frac{i}{\hbar}[H(t),\mathcal{O}(t)]$$
+
+- The _path integral formalism_ includes consideration of _possible trajectories_ $\boldsymbol{r}(t)$ into the evolution of a quantum system
+
 # The propagator
-- Consider a position-space wave function at time $t$, evolved from $\ket{\Psi(t_0)}$:
-$$\begin{aligned}\Psi(x,t)=\braket{x|\Psi(t)}&=\sum_n\braket{x|E_n}\exp\left(-\frac{iE_n(t-t_0)}{\hbar}\right)\braket{E_n|\Psi(t_0)}\\ &= \int \sum_n\braket{x|E_n}\left(-\frac{iE_n(t-t_0)}{\hbar}\right)\braket{E_n|x'}\braket{x'|\Psi(t_0)}\,dx' \\
-&=\int K(x,t,x',t_0)\Psi(x',t_0)\,dx'\end{aligned}$$
-- The _kernel_ of the integral operator, $K(x,t,x',t_0)$ is known as the _propagator_, similar to the one in wave mechanics
-- It dictates the _time-evolution of a position-space wave function given an initial state_
-- The propagator is also equal to the _matrix elements of the time-evolution operator_ in the _position basis_:
-$$K(x,t,x',t_0)=\sum_n\braket{x|E_n}\exp\left(-\frac{iE_n(t-t_0)}{\hbar}\right)\braket{E_n|x'}=\braket{x|\teo(t,t_0)|x'}$$
+- Consider the _propagator_, a [[Principles of quantum mechanics#The wave function in different bases|position-space representation]] of the _time evolution operator_:
+$$K(\boldsymbol{r},t|\boldsymbol{r}',t')=\theta(t-t')\braket{ \boldsymbol{r}|U(t-t') |\boldsymbol{r}'  } $$
+- Here, $\theta$ is the _step function_:
+$$\theta(t-t')=\begin{cases} 1 &t>t' \\ 0&t<t'\end{cases}$$
+- This has a [[Analytical classical mechanics#Propagators and causality|classical analogue]]
+
+- Consider a position-space wave function at time $t$, evolved from $\ket{\Psi(t')}$:
+$$\begin{aligned}\Psi(\boldsymbol{r},t)=\braket{\boldsymbol{r}|\Psi(t)}&=\braket{ \boldsymbol{r}|U(t-t') |\Psi(t')  } \\ &= \int \, d^{3}\boldsymbol{r}' \braket{ \boldsymbol{r}|U(t-t') |\boldsymbol{r}'  } \braket{ \boldsymbol{r}' | \Psi(t') } \\ &= \int \, d^{3}\boldsymbol{r}'  K(\boldsymbol{r},t|\boldsymbol{r}',t') \Psi(\boldsymbol{r}',t') \end{aligned}$$
+
+## Properties of the propagator
+- _Equivalently_, it is the _fundamental solution_ to the time-dependent Schrodinger equation:
+	- Proof: consider $i\hbar (\partial/\partial t)K$
+$$\begin{aligned}\left[ i\hbar \frac{\partial}{\partial t}-H \right]K(\boldsymbol{r},t|\boldsymbol{r}',t')&=i\hbar \delta^{3}(\boldsymbol{r}-\boldsymbol{r}')\delta(t-t') \\ K(\boldsymbol{r},t|\boldsymbol{r}',t')&=0 \;\;\;\text{for }t<t'\end{aligned}$$
+- This makes the propagator a _Green's function_ for the equation
+
+- From the definition of $U$:
+$$U(t-t')=U(t-t'')U(t''-t)$$
+- This is also true for the _propagator_:
+$$K(\boldsymbol{r},t|\boldsymbol{r}',t')=K(\boldsymbol{r},t|\boldsymbol{r}'',t'')K(\boldsymbol{r}'',t''|\boldsymbol{r}',t')$$
+
+## Propagator of a free particle
+- Consider the propagator for the _heat equation_
+	- The heat equation is of a _similar form_ to the time-dependent Schrodinger equation
+$$\displaylines{\frac{\partial\Theta}{\partial t}=\mathcal{D}\nabla_{\boldsymbol{r}}^{2}\Theta \\ \Theta(\boldsymbol{r},t)=\int K_\text{heat}(\boldsymbol{r},t|\boldsymbol{r}',t')\Theta(\boldsymbol{r}',t') \, d^{3}\boldsymbol{r}'  \\ \left[ \frac{\partial}{\partial t}-\mathcal{D}\nabla_{\boldsymbol{r}}^{2} \right]K_\text{heat}(\boldsymbol{r},t|\boldsymbol{r}',t')=\delta(\boldsymbol{r}-\boldsymbol{r}')\delta(t-t') \\ K_\text{heat}(\boldsymbol{r},t|\boldsymbol{r}',t')=0 \;\;\text{for }t<t'}$$
+- It can be shown that the solution is:
+$$K()$$
+- For the _free particle_:
+$$\left[ \frac{\partial}{\partial t}+\frac{\hbar^{2}}{2m}\nabla_{\boldsymbol{r}}^{2} \right]\Psi(\boldsymbol{r},t)=0$$
+- Then make the _substitutions_ $t\to it$ and $\mathcal{D}\to \hbar/2m$:
+$$K_\text{free}()=$$
+
+### In momentum space
+- In _momentum space_, the Hamiltonian is _diagonal_, and _time independent_:
+$$\begin{align}K_\text{free}(\boldsymbol{p},t|\boldsymbol{p}',t')&=\theta(t-t')\braket{ \boldsymbol{p}|U(t-t') |\boldsymbol{p}'  } \\ &= \theta(t-t')\delta(\boldsymbol{p}-\boldsymbol{p}')\exp\left( -i \frac{\boldsymbol{p}^{2}}{2m} \frac{t-t'}{\hbar} \right)\end{align}$$
+- Using a _Fourier transform_, this can be verified to be the _same_ as the formula in position space
+
+
+
+
+
+
+
+
 ## The propagator as a transition amplitude
 - It can also be thought of as a _[[Principles of quantum mechanics#Transition amplitude|transition amplitude]]_ from the position eigenstate $\ket{x'}$ at time $t_0$ to the eigenstate $\ket{x}$ at time $t$:
 $$K(x,t,x',t_0)=\sum_n\bra{x}\exp\left(-i\frac{E_nt}{\hbar}\right)\ket{E_n}\bra{E_n}\exp\left(i\frac{E_nt_0}{\hbar}\right)\ket{x'}=\braket{x,t|x',t_0}$$

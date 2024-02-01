@@ -226,12 +226,15 @@ $$p=p(\rho,T)=nk_{B}T=\frac{k_{B}}{\mu m_{p}}\rho T$$
 - Here, $\mu$ is the _mean molecular mass_ in terms of proton mass
 - This introduces an _extra degree of freedom_ in the form of scalar field $T(\boldsymbol{r},t)$
 
+- The _internal energy_ for the ideal gas can be written as:
+$$\mathcal{E}=\frac{1}{\gamma-1} \frac{p}{\rho}$$
+- Here, $\gamma$ is the _adaibatic constant_, or the _ratio of heat capacities_
 ## Barotropic fluids
 - A _barotropic fluid_ is one where pressure is _purely dependent on density_:
 $$p=p(\rho)$$
 - Example: _electron degeneracy pressure_ $p\propto \rho^{5/3}$ (e.g. in _white dwarfs_)
 
-- Or, if a system is _isothermal_:
+- Or, for an _isothermal ideal gas_:
 $$p=\frac{k_{B}T}{\mu m_{p}}\rho=\text{const.}$$
 - Valid when a system has _strong heating and cooling processes_ keeping temperature in balance
 
@@ -313,3 +316,245 @@ $$-\nabla\cdot \boldsymbol{F}_\text{cond}=\kappa \nabla^{2}T$$
 - Given _radiation density_ $\epsilon _\text{rad}$, the _radiative flux_ is:
 $$\boldsymbol{F}_\text{rad}\propto-\nabla\epsilon _\text{rad}$$
 ![[star energy transport zones.png|400]]
+
+# Hydrostatic equilibrium
+- [[#Fluid equations|Conservation of mass and momentum]]:
+$$\displaylines{\frac{\partial \rho}{\partial t}+\nabla\cdot(\rho \boldsymbol{u})=0 \\ \rho \frac{D\boldsymbol{u}}{Dt}=-\nabla p+\rho \boldsymbol{g}}$$
+- [[#Gravitation|Poisson's Equation]]:
+$$\nabla^{2}\Psi=4\pi G\rho$$
+- The _total energy_ in a fluid:
+$$E=\rho\left( \frac{1}{2}u^{2}+\Psi+\mathcal{E} \right)$$
+- [[#Conservation of energy]]:
+$$\frac{\partial R}{\partial t}+\nabla\cdot[(E+p)\boldsymbol{u}]=\rho \frac{\partial \Psi}{\partial t}-\rho \dot{Q}_\text{cool}$$
+- The _equation of stater_ and _internal energy_ for an [[#Barotropic fluids|ideal gas]]:
+$$p=\frac{k_{B}}{\mu m_{p}}\rho T\hspace{1.5cm}\mathcal{E}=\frac{1}{\gamma-1} \frac{p}{\rho}$$
+## Condition of equilibrium
+- A fluid is in _hydrostatic equilibrium_ if:
+$$\boldsymbol{u}=0 \hspace{1.5cm}\frac{\partial f}{\partial t}=0\;,\;\forall f$$
+- From this, the _continuity equation_ is _automatically satisfied_
+
+- Conservation of momentum gives:
+$$\frac{1}{\rho}\nabla p=\boldsymbol{g}=-\nabla \Psi$$
+- Example: _isothermal atmosphere_ has $p\propto \rho$, and an _exponential profile_
+
+- If a system is _self-gravitating_ (no external field):
+$$\nabla^{2}\Psi=4\pi G\rho$$
+- This must be _solved along with_ the equation for hydrostatic equilibrium
+
+## Stars as self-gravitating polytropes
+- Consider a _star_ as a _spherically symmetric_, _self-gravitating_ system in _hydrostatic equilibrium_:
+$$\frac{dp}{dr}=-\rho \frac{d\Psi}{dr}$$
+- This gives:
+$$\rho=-\frac{dp}{d\Psi}$$
+- As $\rho>0$ for matter in a star, it is a _monotonic function of_ $\Psi$
+- One can also _invert_ $p=p(\Psi)$ to get that:
+$$p=p(\rho)$$
+- Therefore, _non-rotating stars_ are [[#Barotropic fluids|barotropes]]
+
+- A barotropic _equation of state_:
+$$p=K\rho^{1+1/n}$$
+- In general, $n=n(\rho)$
+- For $n$ _constant_, the fluid is _polytropic_, and the star is a _polytrope_
+	- Typically a good approximation for stars
+
+- $1+1/n \neq\gamma$, as the star _is not necessarily isentropic_
+	- _Convective motions_ means fluid elements are _not thermally isolated_
+
+## Lane-Emden equation
+- The equation of hydrostatic equilibrium then gives:
+$$-\nabla \Psi=(n+1)\nabla(K\rho^{1/n})\implies \rho=\left( \frac{\Psi_{T}-\Psi}{[n+1]K} \right)^{n}$$
+- Here, $\Psi_{T}\equiv \Psi$ on the _surface_, where $\rho=0$
+
+- Let there be a _central density_ $\rho_{c}$ and _central potential_ $\Psi_{c}$:
+$$\rho=\rho_{c}\left( \frac{\Psi_{T}-\Psi}{\Psi_{T}-\Psi_{c}} \right)^{n}\equiv \rho_{c}\theta^{n}$$
+- Feeding into _Poisson's equation_:
+$$\nabla^{2}\theta=\frac{1}{r^{2}} \frac{d}{dr}\left( r^{2} \frac{d\theta}{dr} \right)=-\frac{4\pi G\rho_{c}}{\Psi_{T}-\Psi_{c}}\theta^{n}$$
+ - Defining a _scaled radial coordinate_ $\xi=r\sqrt{ (4\pi G\rho_{c})/(\Psi_{T}-\Psi_{c}) }$:
+$$\frac{1}{\xi^{2}} \frac{d}{d\xi}\left( \xi^{2} \frac{d\theta}{d\xi} \right)=-\theta^{n}$$
+- This is the _Lane-Emden equation_ of index $n$
+
+- Typical boundary conditions have:
+$$\theta(\xi\to 0)=1 \hspace{1.5cm} \frac{d\theta}{d\xi}(\xi\to 0)=0$$
+- There is _zero force_, and _no enclosed mass_ as $\xi\to 0$
+
+- It can be solved _analytically_ for $n=0,1,5$
+
+### Constant density, incompressible
+- The _constant density_, _incompressible_ case corresponds to $n=0$:
+$$\frac{1}{\xi^{2}} \frac{d}{d\xi}\left( \xi^{2} \frac{d\theta}{d\xi} \right)=-1$$
+- With the _boundary conditions_:
+$$\theta=1-\frac{\xi^{2}}{6}$$
+## Isothermal sphere
+- The _isothermal_ case has $n\to \infty$:
+	- The Lane-Emden equation _cannot be applied_
+$$p=K\rho\implies \frac{d\Psi}{dr}=-\frac{K}{\rho} \frac{d\rho}{dr}$$
+- With the appropriate boundary conditions:
+$$\Psi-\Psi_{c}=-K\ln \frac{\rho}{\rho_{c}}$$
+- Using _Poisson's equation_:
+$$\frac{K}{r^{2}} \frac{d}{dr} \left( r^{2} \frac{1}{\rho} \frac{d\rho}{dr} \right)=-4\pi G\rho$$
+- By _defining_ $\Psi_{c}=0$:
+$$\rho=\rho_{c}\exp(-\Psi)$$
+- Set:
+$$r=a\xi \hspace{1cm}a=\sqrt{ \frac{K}{4\pi G\rho_{c}} }$$
+- One then gets:
+$$\frac{1}{\xi^{2}} \frac{d}{d\xi} \left( \xi^{2} \frac{d\Psi}{d\xi} \right)=\exp(-\Psi) $$
+- With the typical boundary conditions $\Psi=d\Psi/d\xi=0$ at $\xi=0$
+
+- At _large radii_, $\rho \propto r^{-2}$ and $M(r)\propto r$
+	- Therefore, one cannot have $\Psi(\xi\to \infty)=0$
+- _Physical solutions_ must be _truncated_ at a large radius, hence _confined_ by some finite external pressure
+- These are known as _Bonnor-Ebert spheres_, with density profile determined by $\xi _\text{cut}$
+
+## Scaling relations
+- One can consider _families_ of stars with a given _polytropic index_ $(n)$
+- For a _monoatomic ideal gas_, $n=3/2$
+
+### Polytropic stars
+- Consider a set of stars sharing index $n$ with given constant $K$
+- They then form a _one-parameter family_ characterised by $\rho_{c}$
+
+- Then _relating_ mass and radius with $\rho_{c}$ gives _scaling relations_
+
+- All stars with a _given_ $n$ have the same _profile_ $\theta(\xi)$ as they have the _same solution_ to the Lane-Emden equation
+
+- Relations
+
+- The surface
+- The mass:
+$$M=\int _{0}^{r_\text{max}}r\pi r^{2}\rho \, dr= $$
+- This gives:
+$$M\propto \rho_{c}^{(3/n-1)/2}$$
+- From the definition of $\xi$:
+$$r_{max} \propto \rho_{c}^{(1/n-1)/2}$$
+- Eliminating $\rho_{c}$:
+$$M\propto R^{(3-n)/(1-n)}$$
+- This is the _mass-radius relation for polytropic stars_
+
+- For $n=3/2$, this gives $M \propto R^{-3}$
+- So, _larger_ stars are smaller
+	- Seen in _smaller white dwarfs_
+- For more _massive_ white dwarfs, electrons on the _Fermi surface_ become _relativistic_, so that $p \propto \rho^{4/3}$, and mass is _independent of radius_
+	- This is the _Chandrasekar mass_
+	- Type-1a supernovae will _collapse at the Chandrasekar mass_
+
+### Main sequence stars
+- For most _main sequence_ stars, $M\propto R$
+- This is because they _do not have the same_ $K$
+- Using the ideal gas law:
+$$T_{c}=\frac{\mu K}{\mathcal{R}_{*}}\rho_{c}^{1/n}$$
+- _Nuclear reactions_ typically keep the temperature _constant_ regardless of $\rho_{c}$:
+	- Stars in the main sequence have _temperature sensitive_ thermonuclear reactions
+$$K\propto \rho^{1/n}$$
+- Substituting this into the mass relation:
+$$M \propto \rho_{c}^{-1/2} \hspace{1cm}R \propto \rho_{c}^{-1/2}\implies M\propto R$$
+
+### Relative timescales
+- Whether $K$ or $T_{c}$ are constant depends on the _relative timescales_, as _changes in mass_ causes re-adjustment of nuclear processes
+- _Hydrostatic_ equilibrium $(K=\text{const.})$ depends on the _sound-crossing timescale_:
+$$\tau _\text{sound}\sim \frac{R}{C_{s}}$$
+- The _energy_ of the core typically _re-adjusts_ after the addition of mass, with the _thermal timescale_ (with _luminosity_ $L$)
+$$\tau _\text{th}=\frac{GM^{2}}{RL}$$
+- For the _Sun_, it approaches $\tau _\text{sound}\approx 1\text{ day}$ and $\tau _\text{th}\approx 30\text{ Myr}$
+- Therefore, a _mass loss/gain_ is followed by _rapid hydrostatic equilibriation_ and thermal equilibrium takes a _long time_
+
+### Application: rotating spherical star
+- When _non-rotating mass_ is added to a _rotating polytropic star_ with angular velocity $\Omega$, on _less than thermal timescale_, from _conservation_ of angular momentum:
+$$\frac{\Delta\Omega}{\Omega}=-\frac{\Delta(MR^{2})}{MR^{2}}$$
+- Apply scaling relation
+
+### Application: close binary systems
+- Stars in _close binary systems_ can _lose mass_ to companions
+- If $\Delta M<0$
+- Radius can _increase_ for $1<n<3$
+- Then, _runaway mass transfer_ can occur
+	- Also depends on _orbital configuration_
+	- There is a _critical equipotential_
+- Example: X-ray binaries
+
+# Sound waves, supersonic flows, shock waves
+- _Disturbances_ often occur in a medium
+- They propagate via _waves_
+
+## Sound waves
+- Consider a _uniform medium_ with no gravitation
+
+- Start from the fluid equations:
+$$\displaylines{\frac{\partial \rho}{\partial t}+\nabla\cdot(\rho \boldsymbol{u})=0 \\ \frac{\partial \boldsymbol{u}}{\partial t}+(\boldsymbol{u}\cdot \nabla)\boldsymbol{u}=-\frac{1}{\rho}\nabla p}$$
+- Let there be a _perturbation_ around the state $\rho=\rho_{0}$, $p=p_{0}$, $\boldsymbol{u}=0$:
+$$\rho=\rho_{0}+\Delta \rho \hspace{1cm}p=p_{0}+\Delta p \hspace{1cm}\boldsymbol{u}=\Delta \boldsymbol{u}$$
+- It is a _Lagrangian perturbation_, as it _follows a fluid element_
+- It is related to the _Eulerian_ perturbation $\delta \rho$ by:
+	- $\boldsymbol{\xi}$ is the _fluid element displacement_
+$$\delta \rho=\Delta p-(\boldsymbol{\xi}\cdot \nabla)\rho_{0}$$
+- In this case, there is _no difference_
+
+- Introducing the perturbation into the continuity equation:
+$$\frac{\partial}{\partial t} (\Delta \rho)+\rho_{0}\nabla\cdot(\Delta \boldsymbol{u})=0$$
+- Similarly, the momentum equation, assuming a _barotropic_ equation of state:
+$$\frac{\partial}{\partial t}(\Delta u)=-\frac{dp}{d\rho}\Bigg|_{\rho=\rho_{0}} \frac{\nabla(\Delta \rho)}{\rho_{0}}$$
+- Taking a _time derivative_ of the first equation:
+$$\frac{\partial^{2}}{\partial t^{2}}(\Delta \rho)=\frac{dp}{d\rho}\Bigg|_{\rho=\rho_{0}}\nabla^{2}(\Delta \rho)$$
+- This admits _plane wave solutions_ of the form:
+$$\Delta \rho=\Delta \rho_{0}\exp[i(\boldsymbol{k}\cdot \boldsymbol{x}-\omega t)]\hspace{1.5cm}\omega^{2}= \frac{dp}{d\rho}\Bigg|_{\rho=\rho_{0}}k^{2}$$
+- The _phase speed_ of the wave:
+$$c_{s}=v_{p}=\sqrt{ \frac{dp}{d\rho}\Bigg|_{\rho=\rho_{0}} }$$
+- Substituting $\Delta u=\Delta u_{0}\exp[i(\boldsymbol{k}\cdot \boldsymbol{x}-\omega t)]$ into the continuity equation:
+$$\Delta u=c_{s}\frac{\Delta \rho}{\rho_{0}}$$
+- The disturbances are _in phase_
+
+- Disturbances travel at a _much higher speed than the individual fluid elements_ (for small perturbations):
+$$\Delta u\ll c_{s}$$
+- The propagation of sound waves is driven by _density perturbations_ giving rise to _pressure gradients_ and _acceleration_, which give rise to _more disturbances_ and propagation continues
+
+- The speed of sound depends on the _linear response_ of _pressure_ to changes in _density_
+	- If the material is _stiff_, propagation is _rapid_
+
+- For an _isothermal gas_ and _adiabatic gas_
+	- These waves are _non-dispersive_
+$$c_{s,I}=\sqrt{ \frac{R_{*}T}{\mu} }\hspace{1.5cm}c_{s,A}=\sqrt{ \frac{\gamma R_{*}T}{\mu} }$$
+- This is regarding the structure _of the perturbations_, which is _not necessarily the same as the background_
+	- One can have _adiabatic perturbations_ in an _isothermal background_
+
+## Sound waves in a stratified atmosphere
+- Consider sound waves in a medium with _background structure_
+- An _isothermal atmosphere_ with $\boldsymbol{g}=-g\hat{z}$
+- Any _horizontal_ sound waves are _unaffected_ by vertical background structure
+- The $z-$dependent terms:
+$$\displaylines{\rho}$$
+- The _background structure_:
+$$\displaylines{\rho_{0}(z)=\tilde{\rho}_{0}\exp\left( -\frac{z}{H} \right) \hspace{1cm} H\equiv \frac{R_{*}T}{g\mu}\\p_{0}(z)=}$$
+- Introduce the _perturbations_:
+$$\rho=$$
+- Relating to Eulerian perturbations:
+$$\delta \rho=$$
+- The perturbation in velocity:
+$$\Delta u=$$
+- Substitute into Eulerian continuity equation:
+$$\frac{\partial(\Delta \rho)}{\partial t}+\rho_{0}\frac{\partial(\Delta u_{z})}{\partial z}=0$$
+- Momentum equation:
+$$\frac{\partial}{\partial} \hspace{1cm}c_{u}^{2}\equiv\frac{\partial p}{\partial \rho}\Bigg|_{\rho_{0}}$$
+- The wave equation:
+$$\frac{\partial^{2}\Delta \rho}{\partial t^{2}}-\rho_{0}\frac{\partial}{\partial z}\left( \frac{c_{u}^{2}}{\rho_{0}}\frac{\partial\Delta \rho}{\partial z} \right)=0$$
+- For an _isothermal medium_, $c_{u}$ is _independent of height_, giving:
+$$\frac{\partial^{2}\Delta \rho}{\partial t^{2}}-c_{u}^{2}\frac{\partial^{2}\Delta \rho}{\partial z^{2}}+ \frac{c_{u}^{2}}{\rho_{0}}\frac{\partial \rho_{0}}{\partial z} \frac{\partial\Delta \rho}{\partial z}=0$$
+- There is an _extra term_ due to the stratification
+
+- For a _plane wave_ $\Delta \rho \propto \exp[i(kz-\omega t)]$:
+$$\omega^{2}=c_{u}^{2}\left( k^{2}-\frac{ik}{H} \right)$$
+- One can also solve for $k$:
+$$k=\frac{i}{2H}\pm \sqrt{ \frac{\omega^{2}}{c_{u}^{2}}-\frac{1}{4H^{2}} }$$
+- For $\omega>$
+- It is a _travelling wave of decaying amplitude_
+
+- Perturbed velocity and fractional density fluctuation _exponentially increases with height_
+- _Without dissipation_, kinetic energy flux thingymajig
+- It becomes a _shock wave_
+
+- For $\omega<$
+- $k$ is _purely imaginary_, and there is _no travelling wave_
+- It is _completely evanescent_, as the properties of the atmosphere _significantly change over one wavelength_
+- There are too many _reflections_
+
+## Sound transmission at interfaces
+- Consider two _non-dispersive media_ with a _boundary_ at $x=0$
+![[Wave at boundary.png|450]]

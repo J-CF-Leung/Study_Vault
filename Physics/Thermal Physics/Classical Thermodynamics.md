@@ -719,8 +719,17 @@ $$U=TS-pV+\mu N$$
 $$G=\mu N$$
 - Hence, the _chemical potential_ $\mu$ can be considered _Gibbs Energy per particle_
 
-## Thermodynamic derivatives
+## Gibbs-Duhem relation
+- From the formula for $U$, one gets:
+$$S\,dT-V\,dp+N\,d\mu=0$$
+- Defining the _entropy density_ $s$ and _number density_ $n$:
+$$dp=s\,dT+m\,d\mu$$
+- This is the _Gibbs-Duhem relation_
 
+## Thermodynamic derivatives
+- Heat capacity
+
+- Isothermal _compressibility_
 
 # Thermodynamic systems
 - The above discussion is _general_, applying to _all systems_
@@ -932,4 +941,5 @@ $$\frac{1}{V}\left(\pd{V}{T}\right)_p=\frac{1}{V}\left(\pd{S}{p}\right)_T\to0$$
 
 
 # Phase equilibrium and transitions
-
+- The _van der Waals gas_:
+$$\left( p+a \frac{N^{2}}{V^{2}} \right)(V-Nb)=Nk_{B}T$$

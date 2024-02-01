@@ -198,12 +198,14 @@ $$\frac{dN}{dt}=-\lambda N$$
 $$\exp(-\lambda \tau_{1/2})=\frac{1}{2}\implies \tau_{1/2}=0.693\tau$$
 
 - One often finds _decay chains_
-$$N_{1}\to$$
+$$N_{1}\xrightarrow{\lambda_{1}}N_{2}\xrightarrow{\lambda_{2}}N_{3}$$
 - Example: $\ce{ ^{235}U->^{231}Th->^{231}{Pa} }$
 - - The _activity_ of the daughter:
 $$A_{2}=\lambda_{2}N_{2}$$
 - The _rate of decay_:
 $$\frac{dN_{2}}{dt}=-\lambda_{2}N_{2}+\lambda_{1}N_{1}$$
+
+### Decay rates and lifetimes
 - A decay is a _transition_ from one quantum state into another
 - It is given by [[Time-dependent quantum mechanics#Fermi's Golden Rule|Fermi's Golden Rule]]:
 $$\Gamma(i\to f)=\lambda=2\pi|M_{fi}|^{2}\rho(E_{f})$$
@@ -212,29 +214,241 @@ $$\Gamma(i\to f)=\lambda=2\pi|M_{fi}|^{2}\rho(E_{f})$$
 	- $\lambda$ is the _transition rate_
 - $\rho(E_{f})$ is the _final density of state_
 
-- Derive exponential decay law
+- The probability that the particle _decays_ at time interval $t$ to $t+dt$ is $p(t)\lambda dt$, hence the probability that it _survives_ is $p(t+dt)=p(t)(1-\lambda dt)$
+- From this, one gets:
+$$p(t)=\exp(-\lambda t)$$
 
-- Average lifetime
+- The _average lifetime_ of a particle is then:
+$$\tau=\langle t \rangle =\int t\,\left(p(t) \lambda\,dt\right)=\frac{1}{\lambda} $$
 
+### Distribution of energies
 - A _finite lifetime_ gives an _uncertain energy_ $\Delta E$
 - Decaying states correspond to a _range of energies_:
-$$\tau\,\Delta E\sim \hbar$$
-- Consider a state _formed_ at $t=0$ with _energy_ $E_{0}$ and _mean lifetime_ $\tau$
+$$\tau\,\Delta E\sim \hbar=1$$
+- Consider a state _formed_ at $t=0$ with _energy_ $E_{0}$ and _mean lifetime_ $\tau$:
+$$|\psi(t)|^{2}=|\psi(0)|^{2}\exp\left( -\frac{t}{\tau} \right)\implies \psi(t)=\psi(0)\exp\left( -iE_{0}t \right)\exp\left( -\frac{t}{2\tau} \right)$$
 - The _frequencies_ in the wavefunction is given by the _Fourier transform_ of $\psi(t)$:
-$$f(\omega)=f(E)=$$
+$$f(\omega)=f(E)=\frac{i\psi(0)}{(E_{0}-E)-i/(2\tau)}$$
 - The _probability_ of finding a state in energy $E$ is then:
+$$p(E)=|f(E)|^{2}=\frac{|\psi(0)|^{2}}{(E_{0}-E)^{2}-1/4\tau^{2}}$$
 
 - This is a _Lorentzian shape_
+	- The _Breit-Wigner peak_
 - The _full-width at half maximum_ is simply $\Gamma=\lambda$:
 $$P(E=E_{0})=4\tau^{2}\hspace{1.5cm}P\left( E=E_{0}\pm\frac{\Gamma}{2} \right)=\frac{1}{2}(4\tau^{2})$$
+![[Breit-Wigner peak.png|300]]
 
 - Particles often decay with _more than one decay mode_
 	- Only one decay mode: $\ce{ \mu- ->e- + \bar{\nu}_{e}+\nu_{\mu} }$
-$$\ce{ Z-> }$$
+$$\ce{ Z-> e+e- or \mu+\mu-}$$
 
-- They all have _partial decay rates_
+- They all have _partial decay rates_:
+$$\lambda_{f}=2\pi|M_{fi}|^{2}\rho(E_{f})\hspace{1.5cm}\lambda=\sum_{f}\lambda_{f}$$
 
-- This determines an _average lifetime_
-- Although the probabilities have _different heights_, they _all have the same total width_
+- This determines an _average lifetime_:
+$$\tau=\frac{1}{\lambda}$$
+- The _total width_ of a particle state:
+$$\Gamma=\lambda=\sum_{f}\lambda_{f}=\sum_{f}\Gamma_{f}$$
+- The _proportion of decays_ to a particular mode is the _branching fraction_:
+$$B_{f}=\frac{\Gamma_{f}}{\Gamma}\hspace{1.5cm}\sum_{f} B_{f}=1$$
 
-- The _proportion of decays_ to a particular mode is the _branching fraction_
+## Reactions and cross-sections
+- An interaction between two particles is a case of _scattering_
+
+- _Elastic scattering_ has the _same particles_ in the initial state and final state
+	- Only their _momenta_ change
+$$\ce{ a + b -> a + b }$$
+- _Inelastic scattering_ has _different particles_ in the initial state and final state:
+$$\ce{ a +b -> c +d }$$
+
+### Reaction cross-section
+- The _strength_ of the reaction is specified by the _cross-section_
+- It is the _effective area_ presented to the _incoming particle_
+- Unit: _barn_
+$$1\sigma=10^{-28}\,\text{m}^{2}$$
+
+- It is the _reaction rate per target particle_ $\Gamma$, _per unit incident flux_ $\Phi$
+	- Flux: number of incoming particles _per unit area per second_
+$$\Gamma=\Phi\sigma$$
+
+### Beam attenuation
+- Consider a _beam_ of area $A$ with $N$ particles, on a _target_ of $n$ nuclei per unit volume, with _thickness_ $dx$
+![[Scattering beam to target.png|300]]
+- The _number of target nuclei_ is $N_{T}=nA\,dx$
+- The _effective area_ for absorption is $\sigma N_{T}$
+- The _incident flux_ is $N/A$
+- Therefore, the _number of particles scattered per unit time_ is:
+	- This can be used to _find_ $\sigma$
+$$-dN=\frac{N}{A} \sigma nA\,dx\implies \sigma=-\frac{dN}{nN\,dx}$$
+- One can _integrate_ to find the _beam attenuation_ in a target of thickness $L$:
+$$N=N_{0}\exp(-\sigma nL)$$
+- The beam attenuates _exponentially_
+
+- For a _thin target_, $N_{0}\sigma nL$ particles are _scattered_
+- The _mean free path_ between interactions is $1/n\sigma$
+	- Often referred to as the _interaction length_
+
+### Differential cross-section
+- The _angular distribution_ of the scattered particles is _not necessarily uniform_
+	- Can be considered in _position_ or _momentum space_
+- The _number of particles_ scattered in some _solid angle_ $d\Omega$ is:
+$$dN_{d\Omega}=d\sigma\, \Phi N_{T}$$
+- The _differential cross-section_ is then:
+$$\frac{d\sigma}{d\Omega}=\frac{dN_{d\Omega}}{\Phi N_{T}\times d\Omega}$$
+- This is the _number of particles scattered per unit time per unit angle_, divided by the _incident flux times the number of target particles_
+
+- This is _more feasible_ to measure as one does not have to _cover_ the $4\pi$ solid angle
+
+- It provides _more information_ about the reaction
+
+- For a set of particles, there can be _different final states_
+	- Example: $\ce{ e+e- -> \gamma }\text{ or }\ce{ Z }$
+- One can define _partial cross-sections_ for final state $i$:
+$$\sigma=\sum_{i}\sigma_{i}$$
+## Relativistic Born Approximation
+- Consider a _beam of relativistic particles_ scattering from a _fixed potential_ $V(\boldsymbol{r})$:
+	- [[Quantum scattering theory|Purely quantum case]]
+![[Particle scattering geometry.png|300]]
+- There is a _momentum transfer_
+	- Natural units: $\boldsymbol{p}=\boldsymbol{k}$
+$$\boldsymbol{q}=\boldsymbol{p}_{f}-\boldsymbol{p}_{i}$$
+- The _scattering rate_ is characterised by the _interaction cross-section_:
+	- The cross-section is _number of scattered particles per unit time_, divided by the _incident flux_
+$$\sigma=\frac{\Gamma}{\Phi}$$
+- The transition rate is given by [[Time-dependent quantum mechanics#Fermi's Golden Rule|Fermi's Golden Rule]]:
+$$\Gamma=2\pi|M_{fi}|^{2}\rho(E_{f})$$
+- _Approximate_ the _unperturbed_ wave function as a _normalised plane wave_:
+$$\psi_{\boldsymbol{k}}=\frac{1}{L^{3/2}}\exp[i(\boldsymbol{p}\cdot \boldsymbol{r}-Et)]$$
+- This gives the _matrix element_:
+$$M_{fi}=\braket{ \psi_{f}|V|\psi_{i}  }= \frac{1}{L^{3}}\int \exp(-i\boldsymbol{q}\cdot \boldsymbol{r}) \, dx  $$
+- The _incident flux_ for a beam with _number density_ $n$ and _velocity_ $v_{i}$:
+$$\Phi=nv_{i}=\frac{v_{i}}{L^{3}}$$
+- As for the _density of states_, consider the _particle in a box_ (neglecting spin):
+$$dN=\frac{1}{(2\pi/L)^{3}}d^{3}\boldsymbol{p}=\left( \frac{L}{2\pi} \right)^{3}p^{2}\,dp\,d\Omega$$
+- For a _relativistic particle_, $E^{2}=p^{2}+m^{2}$
+- This gives the _density of states in energy_:
+$$\rho(E)=\frac{dN}{dE}=\left( \frac{L}{2\pi} \right)^{3}pE\,d\Omega$$
+- The approximation is for an _ultra-relativistic particle_
+
+- This gives the _differential cross-section_:
+	- _Different_ from the [[Quantum scattering theory#The Born Approximation|quantum case]]
+$$\frac{d\sigma}{d\Omega}=\frac{1}{(2\pi)^{2}v_{i}}\left| \int \exp(-i\boldsymbol{q}\cdot \boldsymbol{r})V(\boldsymbol{r}) \, d^{3}\boldsymbol{r}  \right|^{2}p_{f}E_{f} $$
+- For _relativistic scattering_, $v_{i}\approx 1$ and $E\approx p$:
+$$\frac{d\sigma}{d\Omega}=\frac{E^{2}}{(2\pi)^{2}} \left| \int \exp(-i\boldsymbol{q}\cdot \boldsymbol{r})V(\boldsymbol{r}) \, d^{3}\boldsymbol{r}  \right|^{2}$$
+### Relativistic Rutherford scattering
+- Consider _relativistic Coulomb scattering_
+	- A special case of the _Yukawa potential_ $V(r)=g\exp(-mr)/r$ with $g=Z\alpha$ and $m=0$
+$$V(\boldsymbol{r})=-\frac{Ze^{2}}{4\pi\epsilon_{0}r}=-\frac{Z\alpha}{r}$$
+- For _scattering angle_ $\theta$, one can derive:
+$$q^{2}=4E^{2}\sin^{2}\left( \frac{\theta}{2} \right)$$
+- This gives the _differential cross-section_:
+$$\frac{d\sigma}{d\Omega}=\frac{Z^{2}\alpha^{2}}{4E^{2}\sin^{4}(\theta/2)}$$
+## Resonant scattering
+- Particle interactions can take place via a _resonant state_, which then _decays_:
+$$\ce{ a +b->Z^{*}->c +d }$$
+- This is a _two stage picture_:
+	- _Formation_ occurs when the _collision energy_ $E_\text{CM}$ is _approximately_ equal to the _natural frequency_ (mass) of $\ce{ Z^{*} }$ 
+	- _Decay_ is _independent_ of the mode of formation and depends _only_ on tha nature of $\ce{ Z^{*} }$, and there can be _multiple decay modes_
+
+- The _resonance cross-section_:
+$$d\sigma=\frac{1}{\Phi}2\pi |M_{fi}|^{2}\rho(E_{f})$$
+- The _density of states_ is _fixed_ by only _one particle_, as _energy conservation_ fixes the energy of the other:
+$$\rho(E_{f})=\left( \frac{L}{2\pi} \right)^{3}p^{2} \frac{E}{p}\,d\Omega=\left( \frac{L}{2\pi} \right)^{3} \frac{p_{f}^{2}}{v_{f}}\,d\Omega$$
+- This gives the differential cross-section:
+	- Redefine the matrix element in order to _cancel_ the $L^{3}$ factor
+$$\frac{d\sigma}{d\Omega}=\frac{p_{f}^{2}}{(2\pi)^{2}v_{i}v_{f}}\left| M_{fi} \right|^{2} $$
+- The matrix element is given by _second order perturbation theory_:
+	- The [[Time-dependent quantum mechanics#A general Hamiltonian|second order coefficient]]
+	- The effects are _large_ as $E-E_{Z}$ is _small_
+$$M_{fi}=\sum_{Z}\frac{M_{iZ}M_{Zf}}{E-E_{Z}}$$
+- The sum _runs over all intermediate states_
+	- Near _resonance_, only one state contributes _significantly_
+
+- Consider the _intermediate state_:
+$$\psi_{Z}(t)=\psi_{Z}(0)\exp(-iE_{0}t)\exp\left( -\frac{t}{2\tau} \right)=\psi_{Z}(0)\exp\left[ i\left( E_{0}-i\frac{\Gamma}{2} \right)t \right]$$
+- Therefore, the state has _energy_ $E_{0}-i\Gamma/2$, and the matrix element is:
+$$\left| M_{fi} \right|^{2}=\frac{|M_{iZ}|^{2}|M_{Zf}|^{2}}{(E-E_{0})^{2}+\Gamma^{2}/4} $$
+- The rates of _decay_ and _formation_:
+	- $\Gamma_{i\to Z}=\Gamma_{Z\to i}$
+$$\begin{align}\Gamma_{i\to Z}&=2\pi \left| M_{iZ} \right|^{2}\rho(E_{i})=|M_{iZ}|^{2} \frac{p_{i}^{2}}{\pi v_{i}} \\ \Gamma_{Z\to f}&= 2\pi|M_{Zf}|^{2} \rho(E_{f})=|M_{Zf}|^{2} \frac{p_{f}^{2}}{\pi v_{f}}\end{align}$$
+- This gives the _Breit-Wigner (resonance) cross-section_:
+$$\sigma=\frac{\pi g}{p_{i}^{2}} \frac{\Gamma_{i\to Z}\Gamma_{Z\to f}}{(E-E_{0})^{2}+\Gamma^{2}/4}$$
+- The factor $g$ accounts for _spin_:
+$$\ce{ a +b->Z^{*}->c +d }\hspace{1.25cm}g=\frac{2J_{Z}+1}{(2J_{a}+1)(2J_{b}+1)}$$
+- This the _ratio_ of the number of _$Z^{*}$ spin states_ to the _total number of $\ce{ a+b }$ spin states_
+	- Probability that $\ce{ a+b }$ collide in the _correct spin state_ to form $Z^{*}$
+
+- $\sigma$ is a _frame-independent quantity_
+	- $p_{i}$ must be calculated in the _centre of mass frame_
+	- If the target is _heavy_, $p_{i}$ is approximately the _lab momentum_
+- $E$ is the _total energy_, and $\Gamma$ is the _total decay rate_
+	- $\Gamma_{i\to Z}$ and $\Gamma_{Z\to f}$ are the _partial decay rates_
+
+- The _total cross-section_:
+$$\sigma _\text{tot}=\sum_{f} \sigma(i\to f)$$
+- The _total decay rate_ $\Gamma$ must be used for the denominator in the Breit-Wigner formula
+
+- The _elastic cross-section_:
+	- In this case, $\Gamma_{i}=\Gamma_{f}$
+$$\sigma _\text{el}=\sigma(i\to i)$$
+- At the _peak of resonance_:
+$$\displaylines{\sigma _\text{peak}=\frac{4\pi g\Gamma_{i}\Gamma_{f}}{p_{i}^{2}\Gamma^{2}} \\ \sigma _\text{el}=\frac{4\pi gB_{i}^{2}}{p_{i}^{2}} \hspace{1cm}\sigma _\text{tot}=\frac{4\pi gB_{i}}{p_{i}^{2}}\hspace{1cm}B_{i}=\frac{\Gamma_{i}}{\Gamma}=\frac{\sigma _\text{el}}{\sigma _\text{tot}}}$$
+- Hence, one can _cancel_ $B_{i}$ and _infer_ $g$, and the _spin_ of the _resonant state_
+
+- One can _produce the same resonance_ from _different initial states_:
+![[Resonances.png|500]]
+
+# Colliders
+- Consider the _collision_ of two particles
+- The _invariant quantity_:
+$$\begin{align}
+s=E_\text{CM}=(p_{1}+p_{2})^{2}=(E_{1}+E_{2})^{2}-(\boldsymbol{p}_{1}+) \\
+\end{align}$$
+- $\sqrt{ s }$ gives the _highest amount of energy available for particle collision_
+
+## Causing a collision
+- A _fixed target collision_ has a particle hitting another _stationary_ particle
+- For the _ultrarelativistic regime_ $E_{1}\gg m_{1},m_2$, this gives $\sqrt{ s }\sim \sqrt{  }$
+- A typical experiment gives a mass energy of $30\text{ GeV}$
+	- A lot of energy contributes to _momentum for the final state_
+
+- A _collider experiment_ has _moving particles collide head-on_
+- In the ultra-relativistic regime, $\sqrt{ s }\sim$
+- A typical experiment gives a mass energy of $900\text{ GeV}$
+- The final state can be relatively _stationary_
+
+- For high $E_\text{CM}$, one needs to _accelerate_ particles to high energy
+- One can use a _voltage_, but the geometry is _linear_ and wastes space
+- Instead, one can use _circular colliders_, with _magnetic fields_
+	- It is limited by [[Electrodynamics and Optics#Synchotron radiation|synchotron radiation emission]]
+
+## Particle detection
+- After the collision event, a _detector_ needs to be used to deduce the final state
+
+- _Trackers_ detect _ionisation_ using gas
+	- Only works for _charged particles_
+	- Example: cloud chambers
+- For a tracker _in a magnetic field_, the particles _bend_
+	- The _radius of curvature_ gives its _momentum_
+	- High momentum: high $R$, almost _straight_
+	- _Lower momentum_ particles are _easier to measure accurately_
+
+- _Calorimeters_ detect the _energy_ of the particle using _high-density absorbers_ and _scintillating material_ to collect energy
+	- The high density material initiates a _particle shower_
+	- It detects both _neutral and charged particles_
+- The length scale of _nuclear interactions_ is _longer_ than that of _radiation_
+- For _hadrons_, one needs _denser materials_ for the calorimeters
+	- Particles go through the _electromagnetic_ calorimeter before the _hadronic_ calorimeter
+- _Higher energy_ particles produce showers with _many particles_, giving _low uncertainty_
+	- $\sigma_{E}/E \propto \sqrt{ N }/E=1/\sqrt{ E }$
+
+- _Muons_ can typically move _through_ both detectors and calorimeters
+- _Neutrinos_ require _specialised detectors_
+![[Detector design.png]]
+
+- Types of signals:
+	- Hadrons: _charged_ ones leave tracks, all have heavy deposits in HCAL
+	- Muons leave _tracks_, with small CAL deposits, but still _penetrate_
+	- _Quarks_ manifest as _jets_ of hadrons due to _gluons_
+	- _Taus_ typically _decay_ within the beam
+![[Particle detection.png]]

@@ -19,7 +19,7 @@
 - Let there be a _single scattering target_ (test particle)
 - It is illuminated with a _mono-energetic_ beam of _infinite transverse extent_, and _uniform flux_ (a _plane wave_)
 - Consider scattered particles directed to an infinitesimal _solid angle element_ $d\Omega$, in the _direction_ $(\theta,\phi)$
-![[Scattering target.png]]
+![[Scattering target.png|500]]
 
 - The _incident flux_ $j$  is the _number of incoming particles, per unit time per unit transverse area_
 
@@ -34,6 +34,8 @@ $$\frac{d\sigma}{d\Omega}\equiv \frac{\text{no. of particles scattered/unit time
 
 - It is often written in terms of the _scattering amplitude_ $f(\theta,\phi)$
 $$\frac{d\sigma}{d\Omega}=|f(\theta,\Omega)|^{2}$$
+- This is often _useful_ to understand the reaction
+	- Example: [[Atomic transitions#Angular distribution of spontaneous decay|angular momentum conservation in spontaneous decay]]
 
 ## Total scattering cross-section
 - The _total scattering cross-section_ $\sigma$ characterises scattering rate _across all angles_

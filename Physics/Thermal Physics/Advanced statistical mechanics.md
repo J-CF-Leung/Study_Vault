@@ -9,7 +9,9 @@
 >Put mathematically: $$\Delta U=Q+W$$
 - $U$ is the _internal energy_ of the system
 - $Q$ is the _heat supplied_ to the system
+	- Typically due to _microscopic_ interactions
 - $W$ is the _work done on_ the system
+	- Typically due to _macroscopic_ interactions
 
 - _Detailed recap_:
 	![[Classical Thermodynamics#The first law, internal energy, and heat]]
@@ -44,9 +46,24 @@ $$\displaylines{\Pi=\Pi(x)\hspace{1cm}\frac{d\Pi}{dx}=Y \\ \Pi'=\Pi-Yx\hspace{1.
 $$U=U(S,V,N)$$
 - A _state function_ is one that _does not depend on the "history" of the system_, but _only its current parameters_
 
+## Internal energy
+- For a _reversible change_, $dQ_\text{rev}=TdS$ and $dW_\text{rev}=-pdV$
+- Accounting for the _addition of particles_, introduce the _chemical potential_ $\mu$
+	- Adding while _fixing entropy and volume_
+$$dU=T\,dS-p\,dV+\mu\,dN$$
+
+- Scaling argument
+$$U=TS-pV+\mu N$$
+- This gives the _Gibbs-Duhem equation_:
+$$S\,dT-V\,dp+N\,d\mu=0$$
+
 ## Equilibrium
 - A system at _equilibrium_ is one where there is no _"force"_, and hence _no change in any thermodynamic variable_
 - The _total entropy_ of the system $S$ is _unchanged_, or $\Delta S=0$
+
+- All systems also have an _equation of state_ specifying _equilibrium behaviour_:
+$$\Phi(p,T,V,\mathbf{N}\dots)=0$$
+- Example: the [[Classical Thermodynamics#Ideal gases|ideal gas]]
 
 ### The closed system
 - Let there be a _closed system at equilibrium_
@@ -74,7 +91,7 @@ $$dA=(T-T_R)\,dS-(p-p_R)\,dV+(\mu-\mu_R)\,dN$$
 - At _equilibrium_, $A$ is at a _minimum_, or $dA=0$, and the intensive variables are _equal_
 
 - Availability is linked to the _probability_ of a system to have some value $x$ of a variable
-$$\displaylines{S_\text{tot}(x)=k_B\ln\Omega(x) \\ P(x)\propto\exp\left(\frac{S_\text{tot}}{k_B}\right)=\exp\left(-\frac{S_\text{tot}}{k_BT}\right)}$$
+$$\displaylines{S_\text{tot}(x)=k_B\ln\Omega(x) \\ P(x)\propto\exp\left(\frac{S_\text{tot}}{k_B}\right)=\exp\left(-\frac{A(x)}{k_BT}\right)}$$
 ### Thermodynamic potentials
 - Consider a body with _constant $V$_ and $N$ 
 
