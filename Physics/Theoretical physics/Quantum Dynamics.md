@@ -245,7 +245,8 @@ $$\delta \ket{+_{t}}= \frac{\braket{ -_{t}|\delta H |+_{t}  }}{E_{+}(t)-E_{-}(t)
 	- The phase is _local_
 
 - Let the Hamiltonian undergo a _closed path $\gamma$ in parameter space_
-	- It is a _field in parameter space_
+	- It is a _field in parameter space_, which is _parametrised_ by vector $\boldsymbol{H}$
+	- Example: _magnetic field_
 - Let the change be _cyclic_:
 $$H(T)=H(0)$$
 
@@ -253,9 +254,10 @@ $$H(T)=H(0)$$
 $$\ket{\pm_{T}}= \ket{\pm_{0}}\exp(i\theta_{B}[\gamma]) $$
 
 - Define the _instantaneous eigenstates_:
-$$\ket{+_{t}}\equiv\ket{H(t),+}  $$
-- The _perturbation_:
-$$\delta \ket{H(t),+}= \frac{\braket{  |  }}{}\ket{H(t),-}+\braket{ H,| \delta H|   }\ket{H(t),+}     $$
+	- _Fix_ the phase of the eigenstates
+$$\ket{\pm_{t}}\equiv\ket{H(t),\pm}  $$
+- As $H(t)$ changes _smoothly_, the _perturbation_:
+$$\delta \ket{H(t),\pm}= \frac{\braket{  H(t),\mp|\delta H|H(t),\pm  }}{E_{\pm}-E_{\mp}}\ket{H(t),\mp}+\braket{ H,| \delta H|   }\ket{H(t),+}     $$
 - In the _adiabatic regime_, the first term _vanishes_
 	- The second term is typically _neglected_ as it is a parallel change, but it has an effect for a _closed adiabatic change_ in Hamiltonian
 

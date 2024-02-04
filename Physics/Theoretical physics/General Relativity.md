@@ -148,6 +148,9 @@ $$\partial_{\mu'}=\pd{x^\mu}{x^{\mu'}}\partial_\mu$$
 $$\displaylines{V^\mu\partial_\mu=V^{\mu'}\partial_{\mu'}=V^{\mu'}\pd{x^\mu}{x^{\mu'}}\partial_\mu \\ V^{\mu'}=\pd{x^{\mu'}}{x^\mu}V^\mu}$$
 - This transformation is _not necessarily linear_
 
+- The _components_ of basis vectors is as expected:
+$$\hat{e}_{\mu}=\frac{\partial}{\partial x^{\mu}}=\frac{\partial x^{\nu}}{\partial x^{\mu}} \frac{\partial}{\partial x^{\nu}} \implies \left( \hat{e}_{\mu} \right)^{\nu}=\delta_{\mu}^{\nu}$$
+
 - The _tangent vector_ to a curve $x^a(u)$ can then be defined:
 $$\frac{d}{du}=\frac{dx^\mu}{du}\pd{}{x^\mu}$$
 - These vectors are _contravariant_
@@ -414,6 +417,7 @@ $$\cos\theta=\frac{a_\mu b^\nu}{|a||b|}$$
 
 # Vector and tensor calculus on manifolds
 - On a _manifold_, as vectors and tensors inhibit _different tangent spaces_, there is _no unique way_ to _compare_ vectors/tensors at different points
+	- Due to _difference in basis_
 
 - For a _scalar field_, its _gradient_ $\partial\phi/\partial x^\mu$ is a [[#Covariant/dual vectors|covector]]
 	- It can be made into a vector by _raising the index_
@@ -428,6 +432,7 @@ $$\pd{V^{\mu'}}{x^{\nu'}}=\pd{x^\lambda}{x^{\nu'}}\pd{}{x^\lambda}\left(V^\mu\pd
 - The _first term_ is the transformation for a type $(1,1)$ tensor, but the _latter term_ is extra
 - Hence, this object is _not a tensor_
 
+- The second term is due to _change in the basis vector_
 ### Covariant derivative of a vector
 - One must create a _covariant derivative_ with the properties:
 	- For a type $(k,l)$ tensor $\tenscom{T}{\mu_1\dots\mu_k}{\nu_1\dots\nu_l}$, the covariant derivative $\nabla_\lambda \tenscom{T}{\mu_1\dots\mu_k}{\nu_1\dots\nu_l}$ must be a _type_ $(k,l+1)$ tensor
@@ -443,13 +448,18 @@ $$\nabla_\mu V^\nu=\partial_\mu V^\nu+\Gamma^\nu_{\mu\lambda}V^{\lambda}$$
 	- One matrix for each _direction_ $\mu$
 	- For an $n-$dimensional manifold, there are $n^3$ "components"
 - They are the _connection coefficients_
-	- They _connect_ different areas of the manifold
+	- They _connect_ different areas of the manifold, by accounting for the _change of basis_
+
 - From _transforming_ both sides of the equation, one sees that $\tenscom{(\Gamma_\mu)}{\nu}{\lambda}$ is _not a tensor_
 	- Purposeful, as the _extra terms_ make sure the transformation is valid
 $$\Gamma^{\nu'}_{\mu'\lambda'}=\pd{x^{\nu'}}{x^\nu}\pd{x^{\mu}}{x^{\mu'}} \pd{x^{\lambda}}{x^{\lambda'}}\Gamma^\nu_{\mu\lambda}+\pd{x^\mu}{x^{\mu'}}\pd{x^\lambda}{x^{\lambda'}}\pd{^2x^{\nu'}}{x^\mu\partial x^\lambda}$$
 - One can also see that the tensor is _not unique_ as it only has to satisfy the above
 	- The _difference_ of two connections $\Gamma$ and $\tilde{\Gamma}$, their _difference_ transforms as a type $(1,2)$ tensor
 	- Hence, it is _unique up to_ a type $(1,2)$ tensor
+
+- The covariant derivative can be interpreted as a _term for change in component_, and a _term for change in basis_
+	- The component is a _function_, hence only the _partial derivative_ is used
+$$\begin{align}\nabla_{\mu}\left( V^{\nu}\hat{e}_{\nu} \right)&=(\partial_{\mu}V^{\nu})\hat{e}_{\nu}+V^{\nu}\nabla_{\mu}\hat{e}_{\nu} \\ &= (\partial_{\mu}V^{\nu})\hat{e}_{\nu}+V^{\nu}\Gamma^{\lambda}_{\mu \nu}\hat{e}_{\lambda} \\ &=(\partial_{\mu}V^{\nu}+\Gamma^{\nu}_{\mu\lambda}V^{\lambda})\hat{e}_{\nu} \end{align}$$
 
 ### Generalising the covariant derivative
 - For _covectors_, there may be a _different connection_:

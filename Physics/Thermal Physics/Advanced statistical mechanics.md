@@ -71,7 +71,7 @@ $$\Phi(p,T,V,\mathbf{N}\dots)=0$$
 - From the fact that $dS=0$, $dS_1+dS_2=0$
 - For _any change_ in $1$, $2$ must have the _opposite_ $(dX_1=-dX_2)$
 - Using the _Master Equation_:
-$$\displaylines{dS=\frac{dU}{T}+\frac{p}{T}dV-\frac{\mu}{T}dN \\ dS_1+dS_2=\left(\frac{1}{T_1}+\frac{1}{T_2}\right)dU+\left(\frac{p_1}{T_1}+\frac{p_2}{T_2}\right)dV-\left(\frac{\mu_1}{T_1}+\frac{\mu_2}{T_2}\right)dN=0}$$
+$$\displaylines{dS=\frac{dU}{T}+\frac{p}{T}dV-\frac{\mu}{T}dN \\ dS_1+dS_2=\left(\frac{1}{T_1}-\frac{1}{T_2}\right)dU+\left(\frac{p_1}{T_1}-\frac{p_2}{T_2}\right)dV-\left(\frac{\mu_1}{T_1}-\frac{\mu_2}{T_2}\right)dN=0}$$
 
 - As the division is _arbitrary_, _all intensive variables_ must be _uniform_ throughout the system
 
@@ -474,6 +474,7 @@ $$\Xi=\sum_{n_1,n_2,\dots}\exp[-\beta(n_1\varepsilon_1+n_2\varepsilon_2+\dots)]\
 - The _total energy_ of the system:
 $$E=\sum_k n_k\varepsilon_k$$
 - Mathematics
+
 - Then the _total grand partition function_ is:
 $$\Xi=\prod_k\Xi_k$$
 - The _grand potential_ is then:
@@ -486,7 +487,7 @@ $$\Xi_k\approx 1+\exp[-\beta(\varepsilon_k-\mu)]$$
 - For _bosons_:
 $$\displaylines{\Xi_k=\sum_{n=0}^\infty\exp[-\beta(\varepsilon_k-\mu)n]=\frac{1}{1-\exp[-\beta(\varepsilon_k-\mu)]} \\ \Phi_k=kT\ln[1-\exp(-\beta\varepsilon_k+\beta\mu)] \\ \mean{n_k}=\pd{\Phi_k}{\mu}=\frac{1}{\exp[\beta(\varepsilon_k-\mu)]-1}}$$
 - For _fermions_:
-$$\displaylines{\Xi_k=\sum_{n=0}^1\exp[-\beta(\varepsilon_k-\mu)n]=1+\exp[-\beta(\varepsilon_k-\mu)] \\ \Phi_k= \\ \mean{n_k}=\frac{1}{\exp[\beta(\varepsilon_k-\mu)]+1}}$$
+$$\displaylines{\Xi_k=\sum_{n=0}^1\exp[-\beta(\varepsilon_k-\mu)n]=1+\exp[-\beta(\varepsilon_k-\mu)] \\ \Phi_k=kT\ln[1+\exp(-\beta\varepsilon_{k}+\beta \mu)] \\ \mean{n_k}=\frac{1}{\exp[\beta(\varepsilon_k-\mu)]+1}}$$
 
 - For _bosons_ at _low temperatures_, $\mean{n_k}$ can start to _diverge_
 	- This gives rise to the _Bose-Einstein condensate_
@@ -592,7 +593,7 @@ $$\frac{N\lambda^3}{V}\sim1$$
 $$\mu\approx-\frac{kT}{N}$$
 - One can find a _critical temperature_ for Bose-Einstein condensate formation
 
-- The _number of particles_ in the gas (_not the condensate_), since $\mu=0$:
+- The _number of particles_ in the gas (_not the condensate_), setting $\mu\approx 0$:
 $$N-N_c=V\int_0^\infty\frac{g(\varepsilon)\,d\varepsilon}{\exp(\beta\varepsilon)-1}$$
 
 - The condensation is a _second-order phase transition_

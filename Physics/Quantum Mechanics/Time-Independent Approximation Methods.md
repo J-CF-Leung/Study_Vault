@@ -40,7 +40,7 @@ $$\ket{n^{(1)}}=\sum_m\braket{m^{(0)}|n^{(1)}}\ket{m^{(0)}}$$
 $$E_m^{(0)}\braket{m^{(0)}|n^{(1)}}+\braket{m^{(0)}|\hat{H}^{(1)}|n^{(0)}}=E_n^{(0)}\braket{m^{(0)}|n^{(1)}}$$
 - Provided the unperturbed states are _non-degenerate_:
 $$\braket{m^{(0)}|n^{(1)}}=\frac{\braket{m^{(0)}|\hat{H}^{(1)}|n^{(0)}}}{E_n^{(0)}-E_m^{(0)}}$$
-- To the _first order_, the _perturbed eigenstate_ os:
+- To the _first order_, the _perturbed eigenstate_ is:
 $$\displaylines{\ket{n}\approx \ket{n^{(0)}}+\lambda\ket{n^{(1)}} \\ \ket{n}=\ket{n^{(0)}}+\sum_{E_m^{(0)}\neq E_n^{(0)}}\ket{m^{(0)}}\frac{\braket{m^{(0)}|\hat{H'}|n^{(0)}}}{E_n^{(0)}-E_m^{(0)}}}$$
 
 ## Second-order perturbation theory

@@ -231,4 +231,142 @@ $$R_{H}=\frac{E_{y}}{j_{x}B}=\frac{1}{nq}$$
 - At _low temperatures_, electron motion is typically _frozen_ as thermal energy is _not enough_ to excite them to higher energy states
 	- A _quantum_ effect
 
-- A correct description has electrons as a [[Sommerfeld model|Fermi gas]]
+- A correct description has electrons as a [[#Sommerfeld model|Fermi gas]]
+
+# Sommerfeld model
+- Typically, in _insulators_, electronic energy levels are of the order $\text{eV}$, corresponding to a _temperature_ of $\sim 10,000\text{ K}$
+- Hence, _electronic specific heat_ is only significant in very high temperatures
+
+- In _metals_, one can have _low energy excitations_ for a _small fraction of electrons_
+- Conduction electrons form a [[Advanced statistical mechanics#The Fermi gas|degenerate Fermi gas]]
+- A _fraction_ $\sim k_{B}T/E_{F}$ are close enough to $\mu$ to contribute to _heat capacity_
+
+- For electrons on the _Fermi surface_, most travel at _very high speeds_
+- Without external field, the _drift velocity_ $\left<v\right>$ is $0$
+
+## Free electron gas and the Fermi sphere
+- The _free electron gas_:
+$$-\frac{\hbar^{2}}{2m}\nabla^{2}\psi(\boldsymbol{r})=E\psi(\boldsymbol{r})$$
+- Introduce _eigenstates_
+$$\psi(\boldsymbol{r})$$
+
+- With _periodic boundary conditions_, the _allowed values_ of $\boldsymbol{k}$ are _discrete_:
+$$\boldsymbol{k}=$$
+- $n_i$ are _positive or negative integers_
+
+- At _zero temperature_, the _Fermi sphere_ is filled up to Fermi energy $E_{F}$
+- Each _triplet_ of $n_{i}$ corresponds to _2 states_ due to _spin degeneracy_
+- The _volume_ of a $\boldsymbol{k}-$state is $(2\pi/L)^{3}$
+
+- Writing out the _volume_ of the Fermi sphere in terms of $k_{F}$, one gets:
+$$N=2 \left( \frac{4}{3}\pi k_{F}^{3} \right)\left( \frac{2\pi}{L} \right)^{-3}\implies k_{F}=(3\pi^{2}n)^{1/3}$$
+- One then gets $E_{F}\propto n^{2/3}$
+
+- Define a _density of states_ w.r.t. $E_{F}$:
+$$g(E_{F})\equiv \frac{dn}{dE_{F}}=\frac{3}{2} \frac{n}{E_{F}}$$
+- The _density of states_ w.r.t. energy:
+$$g(E)\,dE=\frac{2(4\pi k^{2}\,dk)}{8\pi^{3}/V}$$
+- It is _proportional to volume_
+- One can define $g_{V}(E)$ as _number of states per energy per unit volume_ to remove the normalisation factor $V$:
+$$g_{V}(E)=\frac{1}{V}g(E)$$
+
+## Thermodynamic properties
+- The [[Advanced statistical mechanics#The Fermi gas|Fermi distribution]]:
+$$f(E)=\frac{1}{\exp[(E-\mu)/k_{B}T]+1}$$
+- At _zero temperature_, the _chemical potential_ $\mu=E_{F}$
+	- The distribution is a _step function_
+- At finite temperature, there is some _smearing_ $\sim k_{B}T$
+- At _room temperature_, $k_{B}T\approx 26 \text{ meV}$
+- For _metals_, $E_{F}\approx 1-10\,\text{eV}\gg k_{B}T_\text{room}$
+
+- The _number density_:
+$$n=\frac{1}{V}\sum_\text{states} f(E_{i})=\int  g(E)f(E) \, dE $$
+- The _internal energy density_:
+$$u=\frac{U}{V}=\int E\,g(E)\,f(E) \, dE $$
+- The _heat capacity at constant volume_:
+$$c_{V}=\frac{\partial u}{\partial T}\Bigg|_{V}=\int E \,g(E)\,\frac{\partial f(E)}{\partial T} \, dE $$
+- The derivative is _sharply peaked_ at the _chemical potential_ $\mu$
+- Hence, the _contributions_ are mainly from states _around_ $k_{B}T$ of $\mu$
+- Each state has specific heat $\sim k_{B}$, giving total specific heat:
+$$c_{V}\approx n \frac{k_{B}T}{E_{F}}k_{B}$$
+- One gets a more exact answer from the [[Advanced statistical mechanics#Away from absolute zero|Sommerfeld expansion]]:
+	- It is a _leading order term_ from the expansion of $\mu$ in powers of $(k_{B}T/E_{F})^{2}$
+$$c_{V}=\frac{\pi^{2}}{3}k_{B}^{2}Tg(E_{F})$$
+- Defining the _Fermi temperature_ $T_{F}=E_{F}/k_{B}$
+$$c_{V}=\frac{\pi^{2}}{2}\frac{T}{T_{F}}nk_{B}$$
+
+- Typically in _solids_, this is much smaller than the _lattice specific heat_ due to [[Phonons]]
+- It is more achieveable with a _mixture_ of $\ce{ ^{3}He }$ and $\ce{ ^{4}He }$ (Fermi gas of atoms)
+
+## Electrostatic screening
+- Consider adding some _positive charge_ to a solid
+- In a _metal_, _classically_, electrons can _move freely_, and _screen_ the positive charge, _cancelling out_ the electric field
+	- In a _dielectric_, the potential is _reduced_ by the dielectric constant $\epsilon$
+
+- _Quantum mechanically_, electrons are _waves_ and hence the electrons _cannot be aribitrarily close to the charge_
+	- Electrons _minimise_ the _potential and kinetic energies_
+- There is a _length scale_ over which the external charge is _screened_
+
+### Peturbing potential
+- The _charge density response_ of a free-electron gas to some _potential_ $V_{0}(\boldsymbol{r})$
+$$\nabla^{2}V_{0}(\boldsymbol{r})=-\frac{\rho_{0}(\boldsymbol{r})}{\epsilon_{0}}$$
+- Consider the _"jellium"_ model where the electron gas _balances the positive background charge_. such that $\rho_{0}(\boldsymbol{r})=0$
+	- Not including charges set up for the perturbing potential
+
+- In the presence of a _perturbing potential_ $V_\text{ext}(\boldsymbol{r})$, the _charge density redistributes_ to $\rho(\boldsymbol{r})=\rho_{0}(\boldsymbol{r})+\delta \rho(\boldsymbol{r})$
+- This then _changes the potential_ to $V(\boldsymbol{r})=V_{0}(\boldsymbol{r})+\delta V(\boldsymbol{r})$:
+	- The correction $\delta \rho$ is _independent_ of the _external_ charges which obey $\nabla^{2}V_\text{ext}=-\rho _\text{ext}/\epsilon_{0}$
+$$\nabla^{2}\delta V(\boldsymbol{r})=-\frac{\delta \rho(\boldsymbol{r})}{\epsilon_{0}}$$
+- Electrons experience the _total potential_ $V_\text{tot}=V_\text{ext}+\delta V$:
+$$-\frac{\hbar^{2}}{2m}\nabla^{2}\psi(\boldsymbol{r})+(-e)[\delta V(\boldsymbol{r})+V_\text{ext}(\boldsymbol{r})]\psi(\boldsymbol{r})=E\psi(\boldsymbol{r})$$
+
+### Thomas-Fermi approximation
+- Assume the perturbing potential is _slowly varying_, affecting _free energy levels_ as:
+	- It varies on a _lengthscale larger than_ $k_{F}$
+	- Equivalent to considering a _spatially varying Fermi energy_
+$$E(\boldsymbol{k},\boldsymbol{r})=\frac{\hbar^{2}k^{2}}{2m}-eV_\text{tot}(\boldsymbol{r})$$
+- The electrons are _filled up to constant chemical potential_ $\mu$
+- Therefore, the _local Fermi energy_ must be adjusted:
+$$\mu=E_{F}(\boldsymbol{r})-eV_\text{tot}(\boldsymbol{r})$$
+![[Fermi approximation shift.png]]
+- A shift in the _local_ Fermi energy leads to a _change in local electron number density_ $n$:
+	- Density of state is _normalised by volume_
+$$\delta n=g_{V}(E_{F})\delta E_{F}=eg_{V}(E_{F})V_\text{tot}=\frac{\delta \rho}{e}$$
+- Substitute back into _Poisson's equation_:
+$$\nabla^{2}\delta V(\boldsymbol{r})=\frac{e}{\epsilon_{0}}g_{V}(E_{F})(\delta V(\boldsymbol{r})+V_\text{ext}(\boldsymbol{r}))$$
+- Then using _Fourier decomposition_ with wave-vector $\boldsymbol{q}$, and defining the _Fermi wave-vector_:
+$$\displaylines{q_\text{TF}\equiv \sqrt{\frac{e}{\epsilon_{0}}g_{V}(E_{F})} \\ \delta V(\boldsymbol{q})=-\frac{q_\text{TF}^{2}}{q^{2}+q_\text{TF}^{2}}V_\text{ext}(\boldsymbol{q})}$$
+### Free electron gas
+- For the _3D free electron gas_:
+$$g_{V}(E)=\frac{1}{2\pi^{2}}\left( \frac{2m}{\hbar^{2}} \right)^{3/2}E^{1/2}\implies g_{V}(E_{F})=\frac{m}{\pi^{2}\hbar^{2}}k_{F}$$
+- This gives:
+$$q_{TF}^{2}=\frac{1}{\pi^{2}} \left( \frac{me^{2}}{\epsilon_{0}\hbar^{2}} \right)k_{F}=\frac{4}{\pi} \frac{k_{F}}{a_{0}}$$
+- Here, $a_{0}$ is the _Bohr radius_ $4\pi \hbar^{2}\epsilon_{0}/(me^{2})\approx 0.53\text{ Å}$
+- The _Thomas-Fermi screening length_ is $q_\text{TF}^{-1}$
+	- For copper, $n=8.5\times 10^{22}\text{ cm}^{-3}$, and $1/q_\text{TF}=0.055\text{ nm}$
+- Often comparable to the _Wigner-Seitz radius_ $r_{S}$:
+$$\frac{4\pi}{3}r_{s}^{3}=n^{-1}=\frac{3\pi^{2}}{k_{F}^{3}}$$
+
+- The _induced electron number density_, with a given $V_\text{ext}(\boldsymbol{q})$:
+$$n_\text{ind}(\boldsymbol{q})=\delta n(\boldsymbol{q})=\frac{\epsilon_{0}}{e}V_\text{ext}(\boldsymbol{q})\left( \frac{q^{2}}{q^{2}/q_\text{TF}^{2}+1} \right)$$
+### Thomas-Fermi dielectric function
+- The wave-vector dependent _dielectric function_ $\epsilon(\boldsymbol{q})$ relates the _electric displacement_ $\boldsymbol{D}$ and _electric field_ $\boldsymbol{E}$ by:
+$$\boldsymbol{D}(\boldsymbol{q})=\epsilon(\boldsymbol{q})\epsilon_{0}\boldsymbol{E}(\boldsymbol{q})$$
+- Given $\nabla V_\text{ext}=-\boldsymbol{D}/\epsilon_{0}$ and $\nabla V_\text{tot}=-\boldsymbol{E}$:
+$$V_\text{ext}(\boldsymbol{q})=\epsilon(\boldsymbol{q})V_\text{tot}(\boldsymbol{q})$$
+- One then gets the _Thomas-Fermi dielectric function_:
+$$\epsilon^\text{TF}(\boldsymbol{q})=1+\frac{q_\text{TF}^{2}}{q^{2}}$$
+### Thomas-Fermi screening
+- For _small_ $q$ (long distances), $\epsilon^{\text{TF}}\propto 1/q^{2}$
+- The _long range_ part of the _Coulomb potential_ is then  _exactly cancelled_
+
+- In _real space_, for a _long range Coulombic perturbing potential_:
+$$V_\text{ext}=\frac{Q}{r}$$
+- The _screened potential_, or the _Yukawa potential_ is then:
+$$V(r)=\frac{Q}{r}\exp(-q_\text{TF}r)$$
+- The exponential factor _reduces range_ of the Coulomb potential
+	- Screened over distances _comparable_ to inter-perticle spacing
+	- Metals: $r_{s}/a_{0}\sim 2-6$
+- A _mobile electron gas_ is _highly effective_ at _screening_ external charges
+	- Applies to the _resistivity_ of alloys, as _substitutional atoms_ can _add excess charge_
+- _Foreign_ atoms scatter _conduction electrons_ with interaction given by the _screened Coulomb potential_, hence scattering contributes to an _increase in resistivity_

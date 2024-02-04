@@ -695,7 +695,7 @@ $$\displaylines{\psi_\text{trial}(\boldsymbol{r};R,Z')=\alpha_{a}\psi_{a}(\bolds
 	- An _analytical_ process
 - Then, _scan_ the ground state energy as functions of $R,Z'$ to find the _equilibrium configuration_
 	- A _numerical_ process
-### Rayleigh-Ritz method
+### Rayleigh-Ritz method, bonding and antibonding
 - The Hamiltonian and overlap matrices (noting the fact that $\psi_{a},\psi_{b}$ are not necessarily orthogonal):
 $$ \displaylines{S_{aa}=S_{bb}=1\hspace{1.5cm}S_{ab}=S_{ba}=\braket{ \psi_{a} |  \psi_{b}} \\ H_{aa}=H_{bb}=\braket{ \psi_{a} |\hat{H} | \psi_{a} } \hspace{1cm}H_{ab}=\braket{ \psi_{a} |\hat{H}|\psi_{b}  }  }$$
 - The secular equation:
