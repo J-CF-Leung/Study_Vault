@@ -451,4 +451,95 @@ s=E_\text{CM}=(p_{1}+p_{2})^{2}=(E_{1}+E_{2})^{2}-(\boldsymbol{p}_{1}+) \\
 	- Muons leave _tracks_, with small CAL deposits, but still _penetrate_
 	- _Quarks_ manifest as _jets_ of hadrons due to _gluons_
 	- _Taus_ typically _decay_ within the beam
-![[Particle detection.png]]
+![[Particle detection.png|400]]
+
+# The standard model
+- Particles include [[#Matter Fermions|fermions]] in _matter_, the [[#Forces Bosons|spin-1 bosons]] providing _forces_, and the _Higgs boson_, with _spin-0_ and generating _mass_
+
+- The standard model is a collection of _gauge theories_ for _quantum fields_
+	- They must satisfy _local gauge invariance_
+
+ - _Quantum electrodynamics_ (QED) _quantises_ the electromagnetic fields
+ - _Electroweak unification_ combined _electromagnetism_ and the _weak force_
+ - _Quantum chromodynamics_ quantised the _strong force_
+
+- The time-independent _Schrodinger equation_ for a _free particle_:
+$$i \frac{\partial \psi}{\partial t}=-\frac{1}{2m}\nabla^{2}\psi$$
+- It is _not Lorentz invariant_
+
+- From special relativity:
+$$E^{2}=p^{2}+m^{2}$$
+- Substituting operators:
+$$-\frac{\partial^{2}\psi}{\partial t^{2}}=-\nabla^{2}\psi+m^{2}\psi$$
+- One can get _plane wave solutions_:
+$$\psi=$$
+- The _complete set_ of eigenstates gives _negative energy solutions_
+	- Gives rise to concept of _antimatter_
+
+- A _linear_ relativistic wave equation is the _Dirac equation_:
+$$i \frac{\partial \psi}{\partial t}=(-i\boldsymbol{\alpha}\cdot \nabla+\beta m)\psi$$
+- $\psi$ is a _spinor_ with four components
+- Two of the components still have _negative energy_
+
+## Antiparticles
+- A plane wave solution dictates time dependence $\exp(-iEt)$, which would indicate _negative energy states_ propagating _backwards in time_
+- However, making the simultaneous transformation $E\to -E$ and $t\to -t$:
+$$\exp[-iEt]\equiv\exp[-i(-E)(-t)]$$
+- This can simply be a _positive energy antiparticle_ travelling _forwards in time_
+
+![[Electron photon interactions.png]]
+- Emission of negative energy
+- Absorption of positive energy
+
+## Interaction via particle exchange
+- Consider two particles _fixed_ at $\boldsymbol{r}_{1}$ and $\boldsymbol{r}_{2}$ which _exchange_ a particle of mass $m$
+	- A _generic_ particle
+![[Interaction particle exchange.png]]
+
+- The _shift_ in energy of $i$ due to the exchange using _second order perturbation theory_:
+$$\Delta E_{i}=\sum_{j\neq i} \braket{  |  } $$
+- The sum is _over all possible momenta_
+
+- Consider the transition $i\to j$ by emission of $m$ at $\boldsymbol{r}_{1}$:
+$$\psi_{i}=\psi_{1}\psi_{2} \hspace{1.5cm}\psi_{j}=\psi_{1}\psi_{2}\psi_{3}$$
+- Here, $\psi_{3}$ represents a _free particle_ with 4-momentum
+
+- Let $g$ be the _probability_ of emitting $m$ at $\boldsymbol{r}_{1}$
+$$\braket{  |  }= $$
+- The factor $1/\sqrt{ 2E }$ is a _normalisation factor_
+
+- Integrate over all momenta
+
+- Using contour integration:
+$$\Delta E_{i}^{1\to 2}=-\frac{g^{2}}{8\pi} \frac{\exp(-mr)}{r}$$
+- Consider an exchange from $2$ to $1$:
+$$\Delta E_{i}^{2\to 1}=-\frac{g^{2}}{8\pi} \frac{\exp(-mr)}{r}$$
+- Therefore, the _total shift in energy_ due to particle exchange is given by the _Yukawa potential_:
+$$\Delta E_{i}=-\frac{g^{2}}{4\pi} \frac{\exp(-mr)}{r}$$
+- The _characteristic range_ is $1/m$
+	- The _Compton wavelength_ of the exchanged particle
+- For $m\to 0$, this gives the _Coulomb potential_
+
+## Scattering from the Yukawa potential
+- Consider _elastic scattering_ from the _Yukawa potential_
+$$V(r)=$$
+- The Born approximation:
+$$M_{fi}=$$
+- Consider a particle of _virtual mass_ with momentum 4-vector $q^{\mu}=$
+
+- _Virtual mass_
+$$M_{fi}=$$
+- Forces arise due to the _exchange of virtual particles_
+- They are _unobservable_ as the act of observation disrupts the absorption
+
+- The effective mass $q$
+- It is _not equal to the physical mass_ $m$
+
+- It can be _positive_, _negative_, or _imaginary_
+- A virtual particle of mass $\Delta m$ can exist for:
+$$\Delta t\sim\frac{1}{\Delta m}$$
+- The propagator is _inversely proportional_ to the virtual mass
+
+- Consider $\ce{ e- +\gamma -> e- + \gamma }$ in _vacuum_
+	- Different from _atomic transitions_
+- This happens via a _virtual electron_

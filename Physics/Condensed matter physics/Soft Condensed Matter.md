@@ -26,6 +26,8 @@ $$E=\frac{p}{\delta L/L}$$
 
 - The fluid obeys _conservation laws_
 
+- A _Newtonian fluid_ has _does not maintain shear_, but has _viscosity_, which is _constant_ and _independent of flow rate_
+
 ## Conservation laws
 - The _total mass_ within some volume $V$:
 $$M_{V}(t)=\int_{V} \, d^{3}\boldsymbol{r} \,\rho(\boldsymbol{r},t) $$
@@ -300,6 +302,9 @@ $$F\sim \int \eta(\partial_{r} v_{T}) \, dS \sim 4\pi \eta av_0 $$
 $$\boldsymbol{F}_\text{viscous}=4\pi \eta a\boldsymbol{v}_{0}\hspace{1.5cm}\boldsymbol{F}_\text{pressure}=2\pi \eta a\boldsymbol{v}_{0}$$
 
 # Elasticity
+- _Hookean solids_ respond _immediately_ to stresses and change shape _without dissipating energy_
+
+## Elastic strain tensor
 - Denote a point in some body as $\boldsymbol{x}$
 	- The _initial/reference state_
 - When the object is _deformed_, the point is _moved_ to $\boldsymbol{x}'$
@@ -320,12 +325,28 @@ $$dl'^{2}=dl^{2}+2\partial_{k}u_{i}dx_{i}dx_{k}$$
 $$d\boldsymbol{u}=\epsilon_{ik}dx_{k} \implies dl'^{2}=dl^{2}+2\epsilon_{ik}dx_{i}dx_{k}$$
 - This gives the definition:
 $$\epsilon_{ik}=\frac{1}{2}(\partial_{i}u_{k}+\partial_{k}u_{i})$$
-- It can be _diagonalised_:
-$$\underline{\underline{\epsilon}}=\begin{pmatrix}\epsilon_{11}&0&0 \\ 0&\epsilon_{22}&0 \\ 0&0&\epsilon_{33}\end{pmatrix}$$
+- An _antisymmetric_ combination gives _rotation_, which _does not change the shape_ of the object and does not require force
+	- Components of $\nabla\times \boldsymbol{u}$
 
-- One can relate it to the _stress tensor_ $\sigma_{ij}$:
+- The _diagonal_ terms indicate a _deformation along an axis_
+- The _off-diagonal_ terms indicate a _shear_
+![[Shear vs rotation.png|400]]
+
+- Common types of deformation:
+![[Deformation types.png|600]]
+
+- The strain can be _diagonalised_ for some point $\boldsymbol{x}$:
+$$\displaylines{\underline{\underline{\epsilon}}=\begin{pmatrix}\epsilon_{11}&0&0 \\ 0&\epsilon_{22}&0 \\ 0&0&\epsilon_{33}\end{pmatrix} \\ dx_{i}'=(1+\epsilon_{ii})\,dx_{i}}$$
+- The _volume change_, using only _linear terms_:
+$$dV'=dx_{1}'dx_{2}'dx_{3}'\approx dV(1+\epsilon_{ii})$$
+- Therefore, the _relative volume change_:
+$$\frac{dV'-dV}{dV}=\epsilon_{ii}=\text{Tr}(\underline{\underline{\epsilon}})=\nabla\cdot \boldsymbol{u}$$
+
+## Hooke's Law
+- One can relate the _force_ $F_{i}$ to the _stress tensor_ $\sigma_{ij}$:
 $$dF_{i}=\sigma_{ij}dS_{j}$$
-- The most _general_ relation:
+
+- The most _general_ relation, given by _Hooke's Law_:
 $$\sigma_{ij}=C_{ijkl}\epsilon_{kl}$$
 - $C$ is the _stiffness tensor_
 
@@ -337,6 +358,7 @@ $$\frac{U}{V}=\frac{1}{2}\sigma_{ij}\epsilon_{ij}=\frac{1}{2}C_{ijkl}\epsilon_{i
 $$C_{ijkl}=C_{klij}$$
 - In 3 dimensions, this gives 18 _independent components_
 
+## Elastic moduli
 - For a _uniaxial deformation_:
 $$\sigma_{x x}=E\epsilon_{x x}$$
 - This typically gives a _strain along perpendicular directions_
@@ -356,6 +378,8 @@ $$B=\frac{E}{3(1-2\nu)}$$
 $$\sigma_{xy}=2G\epsilon_{xy}$$
 - Can be written as:
 $$G=\frac{E}{2(1+\nu)}$$
+
+## Physical constraints
 - For $\nu\to 1/2$, the material is _incompressible_ as $B\to \infty$
 	- Accurate for many _fluids_
 - For $\nu\to-1$, the material is _maximally auxetic_ as $G\to \infty$
@@ -363,5 +387,95 @@ $$G=\frac{E}{2(1+\nu)}$$
 - One can show:
 $$\sigma_{ik}=\left( B-\frac{2}{3}G \right)\epsilon_{l l}\delta_{ik}+2G\epsilon_{ik}$$
 
+# Viscoelastic materials
 - Many materials act both like a _fluid_, and as an _elastic solid_
 - They are _viscoelastic_
+
+- For _incompressible materials_, all deformations are _shear_
+- The deformation leads to the material _storing energy_
+- Once the material _flows_, the viscosity leads to _energy dissipation_
+
+- _Viscosity_ can depend on _speed of flow_
+- Leads to shear _thickening/thinning_ ($\eta$ increasing/decreasing) as the _strain rate_ $\partial_{t}\epsilon$ increases
+	- Ketchup: shear thinning (due to disentanglement of polymer)
+	- Cornstarch: shear thickening (creation of structures when sheared)
+![[Viscoelastic behaviour.png]]
+
+- Bheaviour of the material is tested using _time-dependent stress and strains_
+![[Creep and stress relaxation.png]]
+
+## Complex modulus
+- The _viscoelastic behaviour_ of the solid is quantified by the _complex modulus_:
+$$G(\omega)=G'(\omega)+iG''(\omega)$$
+- where $G'$ and $G''$ are _real_
+
+- The stress and strain are functions of the _history_ of the material
+- It is a superposition of all _stress and strain increments_ from its history
+$$\sigma(t)=\int_{0}^{t} \, d\sigma(t')=\int G(t-t') \, dt'=\int G(t-t') \frac{d\epsilon(t)}{dt}\, dt $$
+- Due to _time translation invariance_, only the _interval_ $t-t'$ matters
+
+- For a _Hookean solid_:
+$$G(t-t')=G_{0}\implies \sigma(t)=G_{0}\epsilon(t)$$
+- For a _Newtonian fluid_:
+$$G(t-t')=\eta\,\delta(t-t')\implies \sigma(t)=\eta\,\dot{\epsilon}(t)$$
+
+- For a _constant strain rate_ $\dot{\epsilon}$:
+$$\sigma(t)=\dot{\epsilon}\int G(t-t') \, dt' $$
+- There is an _effective viscosity_ 
+
+- Consider an _oscillatory strain rate_:
+$$\epsilon(t)=\epsilon_{0}\exp(i\omega t)$$
+- Making the substitution $\tau=t-t'$, one gets:
+$$\sigma(t)=i\omega\epsilon_{0}\exp(i\omega t)\int_{0}^{\infty} G(\tau)\exp(-i\omega \tau) \, d\tau $$
+- Define:
+$$\displaylines{G^{*}(\omega)=i\omega \int _{0}^{\infty}G(\tau)\exp(-i\omega \tau) \, d\tau \\ \sigma(t)=\epsilon(t)G^{*}(\omega)} $$
+- From inspecting behaviour of the Hookean solid and Newtonian fluid:
+	- $\mathrm{Re}(G^{*})$ is an _effective modulus_
+	- $\mathrm{Im}(G^{*})/\omega$ is an _effective viscosity_
+
+## Models of viscoelasticity
+
+### Maxwell fluid
+- Consider a _spring_ and _dashpot_ in _series_, with stresses and strains $\sigma_{S},\epsilon_{S}$ and $\sigma_{D},\epsilon_{D}$ respectively
+- As they are connected in _series_:
+$$\sigma_{S}=\sigma_{D}=\sigma \hspace{1.5cm}\epsilon_{S}+\epsilon_{D}=\epsilon$$
+- The spring and dashpot behave as _Hookean solid_ and _Newtonian fluid_ respectively:
+$$\sigma=G_{0}\epsilon_{S} \hspace{1.5cm}\sigma_{D}=\eta\dot{\epsilon}_{D}$$
+- Using the above relations:
+$$\dot{\epsilon}=\frac{\dot{\sigma}}{G_{0}}+\frac{\sigma}{\eta}$$
+- Doing a _Fourier transform_:
+$$\sigma(\omega)=\frac{i\omega\epsilon_{0}\eta}{G_{0}+i\omega \eta}\epsilon(\omega)=G^{*}(\omega)\epsilon(\omega)$$
+- Rewrite as:
+
+$$G^{*}(\omega)=\frac{i\omega G_{0}}{G_{0}/\eta+i\omega}\epsilon(\omega)$$
+- Define the _relaxation time_ $\tau=\eta/G_{0}$
+- For timescales $t\ll \tau$, it behaves as a _Hookean solid_ with $G^{*}(\omega)\to G_{0}$
+- For timescales $t\gg \tau$, it behaces as a _Newtonian fluid_ with $G^{*}(\omega)\to i\omega \eta$
+
+- For a _constant strain_:
+$$\dot{\epsilon}=0 \implies \sigma=\sigma_{0}\exp\left( -\frac{t}{\tau} \right)$$
+- This is _stress relaxation_
+
+### Kelvin-Voigt solid
+- Have the spring and dashpot in _parallel_:
+$$\epsilon_{S}=\epsilon_{D}=\epsilon \hspace{1.5cm}\sigma_{S}+\sigma_{D}=\sigma$$
+- This gives:
+$$\sigma(\omega)=(G_{0}+i\omega \eta)\epsilon(\omega)$$
+- For $t\ll \tau$, it behaves as a _Newtonian fluid_
+- For $t\gg \tau$, it behaves as a _Hookean solid_
+
+- For a _constant stress_:
+$$\dot{\sigma}=0 \implies \epsilon=\frac{\sigma_{0}}{G_{0}}\left( 1-\exp\left( -\frac{t}{\tau} \right) \right)$$
+
+### Zener model/standard linear solid
+- Consider a _Maxwell fluid_ and a _Hookean solid_ in _parallel_
+	- Maxwell fluid has elastic modulus $G_{2}$
+	- The elastic solid has elastic modulus $G_{1}$
+- There are _two timescales_:
+$$\tau_{\sigma}=\frac{\eta}{G_{2}}\hspace{1.5cm}\tau_{\epsilon}=\eta \left( \frac{1}{G_{2}}+\frac{1}{G_{1}} \right)$$
+- Combining the stresses:
+$$\sigma(\omega)=\sigma _\text{solid}+\sigma _\text{Maxwell}=G_{1}\frac{1+i\omega \tau_{\epsilon}}{1+i\omega \tau_{\sigma}}\epsilon(\omega)$$
+- For $\omega\to 0$, it approaches the _elastic solid_ with $G_{1}$
+- For $\omega\gg \tau_{\sigma}^{-1}$, it approaches $G_{1}+G_{2}$
+
+- One gets the same result for an _elastic solid_ and _Kelvin-Voigt solid_ in _series_

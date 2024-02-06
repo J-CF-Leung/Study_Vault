@@ -186,11 +186,14 @@ $$\omega_{R}=\frac{1}{\hbar}\sqrt{ (h_{0}-\hbar\omega)^{2}+h_{R}^{2} }$$
 - One can _solve_ for eigenstates at some time $t^{*}$, giving _instantaneous eigenstates_:
 $$\hat{H}(t)\ket{\pm_{t}}=E_{\pm}(t)\ket{\pm_{t}}  $$
 
-- If the system _varies very slowly_ over time $\tau$:
+- If the system _varies very slowly_ over time $\tau$
+	- Compared to the _natural frequency_ of the states
 $$\frac{\Delta E\tau}{\hbar}\ll 1$$
 - There are _no transitions_ between levels of energy interval $\Delta E$, and the system _stays in the instantaneous eigenstate_
 
 ## Time evolution of wave function
+
+### For a two-state system
 - One can _expand_ the state at any time _in terms of instantaneous eigenstates_:
 $$\ket{\Psi(t)}=c_{+}(t)\ket{+_{t}}+c_{-}(t)\ket{-_{t}}   $$
 
@@ -215,6 +218,23 @@ $$\hbar \left| \braket{ -_{t} |\dot{H}|+_{t}  }  \right| \ll [E_{+}(t)-E_{-}(t)]
 - As expected, this corresponds to a _large splitting_
 
 - It is a _semiclassical_ approximation as it _improves_ with _smaller_ $\hbar$
+
+### General case
+- The _instantaneous energy eigenstates_:
+$$H(t)\ket{n;t}=E_{n}(t)\ket{n;t}  $$
+- The time-dependent Schrodinger equation:
+$$i\hbar \frac{\partial}{\partial t}\ket{\alpha;t}=H(t)\ket{\alpha;t}  $$
+- Writing the wave function as:
+$$\displaylines{\ket{\alpha;t}=\sum_{n} c_{n}(t)\exp[i\theta_{n}(t)]\ket{n;t} \\ \theta_{n}(t)\equiv-\frac{1}{\hbar}\int _{0}^{t}E_{n}(t')\, dt' } $$
+- _Substituting_ this into the time-independent Schrodinger equation and taking the _inner product_ with energy eigenbra $\bra{m;t}$
+$$\dot{c}_{m}=-\sum_{n}c_{n}(t)\exp[i(\theta_{n}-\theta_{m})]\Braket{ m;t|\frac{\partial}{\partial t} |n;t  } $$
+
+- By taking the _time derivative_ of the time-independent equation, one gets:
+$$\dot{c}_{n}=-c_{n}\Braket{n;t| \frac{\partial}{\partial t} | n;t }-\sum_{m\neq n} c_{m}(t)\exp[i(\theta_{n}-\theta_{m})] \frac{\braket{ n;t|\dot{H} |m;t  }}{E_{m}-E_{n}}  $$
+
+- In the _adiabatic approximation_:
+$$\frac{|\braket{ n;t|\dot{H} | m;t }|}{E_{m}-E_{n}}\equiv \frac{1}{\tau}\ll \Braket{ n;t|\frac{\partial}{\partial t} | n;t }  $$
+- The _timescale_ for change must be _very large_ compared to the _inverse natural frequency_ 
 
 ## Landau-Zener tunnelling
 - Consider the Hamiltonian:
