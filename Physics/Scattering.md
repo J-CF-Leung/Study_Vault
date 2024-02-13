@@ -1,4 +1,4 @@
-- _Scattering_ is a common phenomenon
+- _Scattering_ is a common phenomenon, where particles _approach each other from infinity_, _interact_ in close proximity, then _continue in an altered trajectory_
 	- [[Phonons#Phonon-phonon scattering|Phonon scattering]] is responsible for properties in solids
 	- [[Electrodynamics and Optics#Light scattering|Light scattering]] affects optical properties
 	- Also occurs in [[Quantum scattering theory|quantum systems]]

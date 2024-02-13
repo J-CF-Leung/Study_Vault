@@ -966,9 +966,9 @@ $$\displaylines{\mean{\xi(t)}=0 \\ \mean{\xi^2(t)}=\Gamma \\ \mean{\xi(t_1)\xi(t
 - _Multiplying_ the equation by $v_0=v(t=0)$, and taking an _ensemble average_:
 $$\begin{aligned}\frac{d}{dt}\mean{v(t)v(0)}&=-\frac{\gamma}{m}\mean{v(t)v(0)} \\ \mean{v(t)v(0)}&=\mean{v(0)^2}\exp\left(-\frac{\gamma}{m}t\right)\end{aligned}$$
 - There is a _correlation decay time_ $\tau=m/\gamma$
-	- In a _fluid_, $\gamma$ is related to the _viscosity_ (e.g. _Stokes drag_)
+	- In a _fluid_, $\gamma$ is related to the [[Soft Condensed Matter#Langevin equation|viscosity]] (e.g. _Stokes drag_)
 
-## Formal solution of Langevin equation
+## Formal solution and fluctuation-dissipation theorem
 - Add the _homogenous_ and _inhomogeneous_ terms:
 $$v(t)=v_0\exp\left(-\frac{t}{\tau}\right)+\int_0^t\exp\left(-\frac{t-t'}{\tau}\right)\frac{\xi(t')}{m}\,dt'$$
 - The _mean-square value_:
@@ -1086,3 +1086,10 @@ $$dN_A=P(x_A)\exp(-\beta V(x))\,dx$$
 $$N_A=P(x_A)\sqrt{\frac{\pi kT}{\kappa_A}}$$
 - The _rate of escape_:
 $$r=\frac{J}{N_A}=D\frac{\sqrt{\kappa_C\kappa_A}}{\pi kT}\exp(-\beta\Delta V)$$
+
+## Markov chains
+- Consider a system evolving in _discrete steps_
+- The behaviour at each step depends on the _local probability distribution_, but _not on the system's history_ (previous steps)
+
+- Diffusion equation: equal probabilities
+- In an external potential (Fokker-Planck equation): take the _drift velocity_ into account (from Langevin equation)

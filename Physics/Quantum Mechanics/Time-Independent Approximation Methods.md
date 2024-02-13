@@ -191,3 +191,82 @@ $$\text{det}(\dunderline{H}-E\dunderline{S})=0$$
 - This is known as the _secular equation_
 - The _lowest solution_ for $E$ gives the _upper bound for ground state energy_
 
+# JWKB method and stationary phase
+- A _semiclassical_ technique to obtain _approximate solutions_
+- Therefore, it can be characterised by a _position-dependent wavenumber_
+
+- From the 1D Schrodinger equation, for a _classical travelling wave regime_ $E>V$
+$$\displaylines{H\psi(x)=E\psi(x) \\ H=-\frac{\hbar^{2}}{2m} \frac{d^{2}}{dx^{2}}+V(x) \\ \psi''(x)+k^{2}(x)\psi(x)=0 \\ k(x)\equiv \sqrt{ \frac{2m(E-V(x))}{\hbar^{2}} }}$$
+- In the _semiclassical_ regime, the _potential_ on a lengthscale where there are _many wavelengths_ (slow-varying potential)
+	- The wavefunction is approximately _sinusoidal_, with _slowly varying_ amplitude and wavelength
+
+- Take the form:
+$$\psi(x)=\exp\left( \frac{iS}{\hbar} \right)$$
+- This gives:
+$$\left( \frac{iS''}{\hbar}-\frac{S'^{2}}{\hbar^{2}}+k^{2} \right)\exp(iS)=0$$
+- In the _semiclassical regime_, take $\hbar S''\ll S'^{2}$
+
+- This gives $S'=\pm \hbar k$
+
+- _Iterating_, one gets:
+$$S'\approx \pm \hbar k +\frac{i\hbar}{2} \frac{k'(x)}{k}$$
+- Integrating:
+$$\begin{align} S(x)&\approx \pm \int^{x} \hbar k(x') \, dx' +\frac{i\hbar}{2} \int ^{x} \frac{k'(x')}{k(x')} \, dx'+C \\ &=\pm \hbar \int ^{x}k(x') \, dx'+\frac{i\hbar}{2}\ln(k(x))+C   \end{align}$$
+
+- This gives the wave function:
+$$\psi(x)=\frac{C}{\sqrt{ k(x) }}\exp\left[ \pm i \int^{x}k(x')  \, dx'  \right]$$
+- Examining the formula, $S''\ll(S')^{2}$ holds
+
+- The _wavelength_ $\lambda \sim 1/k$ means $\lambda(dV/dx)\ll \hbar^{2}k^{2}/2m$, or the _potential energy slowly varies_ compared to _kinetic energy_
+- The _group velocity_ is much _smaller_ than
+
+- In the semiclassical approximation, $p\approx \hbar k$
+
+- The approximation _breaks down_ in the _classically forbidden_ region, where $E<V$
+- In this case, define $\kappa$ where $\kappa^{2}=-k^{2}$
+- This gives _exponentially growing_ or _decaying_ wave functions
+- Following the same derivation:
+$$\psi(x)=\frac{C}{\sqrt{ \kappa(x) }}\exp\left[ \pm i \int^{x} \kappa(x') \, dx'  \right]$$
+
+## Connection formulae
+- _Connect_ the classical and decaying regimes of the wave-function
+
+- At the _turning point_, _approximate_ the potential as _linear_, and $k^{2}(x)=0$
+- One can then find formulae to _connect_ the solutions between the semiclassical, and exponentially _decaying_ regions
+
+- One can then write:
+$$k^{2}=\frac{2m}{\hbar^{2}}\left( - \frac{dV}{dx} \right)\Bigg|_{x=a}(x-a)$$
+- Make the substitutions:
+$$z=\alpha(x-a)\hspace{1.5cm}\alpha^{3}=\frac{2m}{\hbar^{2}} \frac{dV}{dx}>0$$
+- This gives the _Airy equation_:
+$$f''-zf(z)=0$$
+- This gives a _well-behaved function_ which converges to the _limits_ of the semiclassical and classically forbidden regions
+
+### Airy equation
+- Note _symptotic behaviour_ for $|z| \to \infty$
+- _Fourier transform_ the Airy equation:
+$$\displaylines{if'(k)+k^{2}f(k)=0 \implies f(k)=A\exp\left( \frac{ik^{3}}{3} \right) \\ f(z)=\frac{1}{2\pi}\int \exp\left[ i\left( \frac{k^{3}}{3}+kz \right) \right] \, dk }$$
+- As the equation is _second order_, this must generate _two independent solutions_
+- This is dependent on the _integration contour_
+
+- Go to _large_ $|k|$ such that the $k^{3}$ term dominates in the phase
+- The integrand _vanishes_ when there is a _negative real part_ in the exponential
+	- This occurs in 3 _separate regions_ of angular width $\pi/3$
+
+- The function _falls off quickly_ when entering a region where the real part is _negative_
+- Hence, find the _stationary points of the region_
+	- From the [[Elementary Analysis#The Cauchy-Riemann equations|Cauchy-Riemann equations]], the _stationary/saddle points_ necessarily lead to the _maximisation_ of the real part
+
+- The _stationary points_ of the _exponent_ lie in:
+$$\displaylines{k_\text{sp}^{2}+z=0 \implies k_\text{sp}=\begin{cases}\pm i\sqrt{ z } &z>0 \\ \pm i\sqrt{ |z| } &z<0\end{cases} \\ \exp\left( i \frac{k_\text{sp}^{3}}{3}+ik_\text{sp}z \right)=\begin{cases}\exp\left( \mp \frac{2}{3}z^{3/2}\right) &z>0  \\ \exp\left( \mp i \frac{2}{3} |z|^{3/2}\right) &z<0\end{cases}}$$
+- For _large_ $|z|$, the _decay_ of the integrand becomes _quicker_
+- Method of _steepest descent_
+
+
+![[Airy integrate.png]]
+
+- Two different contours
+- Two different Airy functions
+
+- The _Airy function_ $\text{Ai}(z)$ _connects_ the wave-functions at the turning point
+![[Airy equation.png]]

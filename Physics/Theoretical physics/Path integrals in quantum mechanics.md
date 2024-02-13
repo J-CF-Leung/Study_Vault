@@ -34,7 +34,7 @@ $$K(\boldsymbol{r},t|\boldsymbol{r}',t')=\int\, d^{3}\boldsymbol{r}'' \,K(\bolds
 	- The heat equation is of a _similar form_ to the time-dependent Schrodinger equation
 $$\displaylines{\frac{\partial\Theta}{\partial t}=\mathcal{D}\nabla_{\boldsymbol{r}}^{2}\Theta \\ \Theta(\boldsymbol{r},t)=\int K_\text{heat}(\boldsymbol{r},t|\boldsymbol{r}',t')\Theta(\boldsymbol{r}',t') \, d^{3}\boldsymbol{r}'  \\ \left[ \frac{\partial}{\partial t}-\mathcal{D}\nabla_{\boldsymbol{r}}^{2} \right]K_\text{heat}(\boldsymbol{r},t|\boldsymbol{r}',t')=\delta(\boldsymbol{r}-\boldsymbol{r}')\delta(t-t') \\ K_\text{heat}(\boldsymbol{r},t|\boldsymbol{r}',t')=0 \;\;\text{for }t<t'}$$
 - It can be shown that the solution is:
-$$K()$$
+$$K_\text{heat}(\boldsymbol{r},t|\boldsymbol{r}',t')=\frac{\theta(t-t')}{[4\pi \mathcal{D}(t-t')]^{3/2}}\exp\left[ -\frac{|\boldsymbol{r}-\boldsymbol{r}|^{2}}{4\mathcal{D}(t-t')} \right]$$
 - For the _free particle_:
 $$\left[ \frac{\partial}{\partial t}+\frac{\hbar^{2}}{2m}\nabla_{\boldsymbol{r}}^{2} \right]\Psi(\boldsymbol{r},t)=0$$
 - Then make the _substitutions_ $t\to it$ and $\mathcal{D}\to \hbar/2m$:
@@ -83,22 +83,26 @@ $$\int  \,\mathcal{D}[\boldsymbol{r}(t)]=\left( \frac{m}{2i\pi \hbar\Delta t} \r
 
 - For the _classical limit_ $\hbar\to 0$, the integral is _dominated by the classical path_ where the action is at a _minimum_
 
-
+## Applications
 - For [[Classical Field Theory|classical fields]], one can define a _Lagrangian density_:
 $$S=\int \mathcal{L} \, d^{3}\boldsymbol{r}\,dt $$
 - For _quantum fields_, one can add _perturbations_ to the action
 
 - Also useful to evaluate _partition functions_ (weighted with a _temperature_ related factor instead)
 
-## Simple harmonic oscillator
+- The _topology_ of paths is also important
+	- e.g. _Aharonov-Bohm effect_
+
+## Quantum harmonic oscillator
 $$L_\text{SHO}(x,\dot{x})=\frac{1}{2}m\dot{x}^{2}-\frac{1}{2}m\omega^{2}x^{2}$$
 - The propagator:
 $$K(x,t|x',t')=\int \mathcal{D}[x(t)] \, \exp\left[ \frac{i}{\hbar}S_\text{SHO}[x(t)] \right] $$
 - _Split_ the path into the _classical path_ $x_{0}(t)$ and some _deviation_ $\eta(t)$:
 $$\displaylines{x(t)=x_{0}(t)+\eta(t) \\ \eta(t_{i})=\eta(t_{f})=0\\ \frac{d}{dt} \frac{\partial L}{\partial \dot{x}}\Bigg|_{x_{0}}=\frac{\partial L}{\partial x}\Bigg|_{x_{0}}}$$
 - The action is then evaluated as:
-$$S[x_{0}(t)+\eta(t)]$$
-- The _cross term_ is _eliminated_ as the _classical path_ obeys the _Euler-Lagrange equation_
+$$S[x_{0}(t)+\eta(t)]=S[x_{0}(t)]+S[\eta(t)]+\int_{t_{i}}^{t_{f}} [m\dot{x}_{0}\dot{\eta}-m\omega^{2}x_{0}\eta] \, dt $$
+- _Integrate_ the last term _by parts_,  it is _eliminated_ as the _classical path_ obeys the _Euler-Lagrange equation_
+- This works for _any quadratic potential_
 
 - The propagator is then written as:
 $$K(x_{f},t_{f}|x_{i},t_{i})=\exp\left[ \frac{i}{\hbar}S_\text{SHO}[x_{0}(t)] \right]\int  \,\mathcal{D}[\eta(t)] \exp\left[ \frac{i}{\hbar}S_\text{SHO}[\eta(t)] \right]  $$
@@ -107,12 +111,32 @@ $$K(x_{f},t_{f}|x_{i},t_{i})=\exp\left[ \frac{i}{\hbar}S_\text{SHO}[x_{0}(t)] \r
 - From the _boundary conditions_, one can expand $\eta(t)$ as a _Fourier expansion_:
 $$\eta(t)=\sum_{n} \eta_{n}\sin\left[ \frac{\pi n(t-t_{i})}{t_{f}-t_{i}} \right]$$
 - The _action_ is then:
-$$S_\text{SHO}[\eta(t)]=$$
+$$S_\text{SHO}[\eta(t)]=\frac{m(t_{f}-t_{i})}{4}\sum_{n=1}^{\infty}\left[ \frac{\pi^{2}n^{2}}{(t_{f}-t_{i})^{2}}-\omega^{2} \right]\eta_{n}^{2}$$
 - The path integral measure:
 $$\mathcal{D}[\eta(t)]\propto \prod d\eta_{n}$$
 - This is then a _product of Gaussian integrals_
 
-## The classical limit
-- $\hbar\to 0$
+- For $\omega\to 0$, it must approach the [[#Propagator of a free particle|free particle propagator]]
+- This gives the result:
+$$K(x,t|x',t')=\sqrt{ \frac{m}{2\pi i\hbar(t_{f}-t_{i})} }\exp\left( \frac{i}{\hbar}S_\text{SHO}[x_{0}(t)] \right)\prod_{n=1}^{\infty}\left( 1-\frac{\omega^{2}(t_{f}-t_{i})^{2}}{\pi^{2}n^{2}} \right)^{-1/2}$$
+- Using the product:
+$$\prod_{n=1}^{\infty}\left( 1-\frac{\omega^{2}(t_{f}-t_{i})^{2}}{\pi^{2}n^{2}} \right)=\frac{\sin[\omega(t_{f}-t_{i})]}{\omega(t_{f}-t_{i})}$$
+- This gives the _propagator for the quantum harmonic oscillator_:
+$$K(x,t|x',t')=\sqrt{ \frac{m\omega}{2\pi i\hbar \sin[\omega(t_{f}-t_{i})]} }\exp\left( \frac{i}{\hbar}S_\text{SHO}[x_{0}(t)] \right)$$
+## The semiclassical limit
+- The general propagator:
+$$K(\boldsymbol{r}_{f},t_{f}|\boldsymbol{r}_{i},t_{i})=\int  \, \mathcal{D}[\boldsymbol{r}(t)] \exp \left[ \frac{i}{\hbar}S \right] $$
+- For the _semiclassical limit_, take $\hbar\to 0$
+- The _maximum contribution_ to the _path integral_ comes from the path of _stationary phase_, where $S$ is _stationary_
+	- Also known as the _path of stationary phase_
+	- Analagous to [[Time-Independent Approximation Methods#JWKB method and stationary phase|JWKB Approximation]]
+$$\frac{\delta S}{\delta \boldsymbol{r}}\Bigg|_{\boldsymbol{r}=\boldsymbol{r}_\text{cl}}=0$$
 
-- Expansion of the action (second order)
+- This is simply the _classical path_
+	- The contributions _around the path_ begin to _oscillate quickly_, and _cancel out_
+
+- Expansion of the action:
+$$S[\boldsymbol{r}(t)]=S[\boldsymbol{r}_\text{cl}(t)+\eta(t)]=S[\boldsymbol{r}_\text{cl}(t)]+\frac{1}{2}\int \, dt \int  \, dt' \frac{\delta^{2}S}{\delta \boldsymbol{r}\delta \boldsymbol{r}'}\eta(\boldsymbol{r})\eta(\boldsymbol{r}') +\dots$$
+- Keeping _quadratic terms_ in the _semiclassical_ regime, this gives the _van Vleck propagator_
+$$K_\text{van Vleck}\sim (\text{Gaussian integral})\exp\left( \frac{i}{\hbar}S[\boldsymbol{r}_\text{cl}] \right)$$
+- It is _exact_ for the quantum harmonic oscillator

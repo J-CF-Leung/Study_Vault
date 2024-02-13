@@ -1,3 +1,4 @@
+.
 - A fluid is a _flowing continuous medium_
 - It has well-defined _macroscopic properties_:
 $$\boldsymbol{v}(\boldsymbol{r},t),\rho(\boldsymbol{r},t),p(\boldsymbol{r},t)$$
@@ -417,11 +418,12 @@ $$\frac{1}{\xi^{2}} \frac{d}{d\xi} \left( \xi^{2} \frac{d\Psi}{d\xi} \right)=\ex
 
 - All stars with a _given_ $n$ have the same _profile_ $\theta(\xi)$ as they have the _same solution_ to the Lane-Emden equation
 
-- Relations
+- Relations:
+$$\displaylines{ \rho=\left( \frac{\Psi_{T}-\Psi}{(n+1)K} \right)^{n} \implies \Psi_{T}-\Psi_{c}=K(n+1)\rho_{c}^{1/n} \\ \xi=\sqrt{ \frac{4\pi G\rho_{c}}{\Psi_{T}-\Psi_{c}} }r\implies \xi=\sqrt{ \frac{4\pi G\rho_{c}^{1-1/n}}{K(1+n)} }r \\ \rho=\rho_{c}\left( \frac{\Psi_{T}-\Psi}{\Psi_{T}-\Psi_{c}} \right)^{n}=\rho_{c}\theta^{n}}$$
+- The _surface_ of the polytrope has $\theta=0$, where $\xi=\xi _\text{max}$
 
-- The surface
 - The mass:
-$$M=\int _{0}^{r_\text{max}}r\pi r^{2}\rho \, dr= $$
+$$M=\int _{0}^{r_\text{max}}r\pi r^{2}\rho \, dr=4\pi \rho_{c}\left( \frac{4\pi G\rho_{c}^{1-1/n}}{K(n+1)} \right)\int _{0}^{\xi _\text{max}}\theta^{n}\xi^{2} \, d\xi  $$
 - This gives:
 $$M\propto \rho_{c}^{(3/n-1)/2}$$
 - From the definition of $\xi$:
@@ -460,7 +462,9 @@ $$\tau _\text{th}=\frac{GM^{2}}{RL}$$
 ### Application: rotating spherical star
 - When _non-rotating mass_ is added to a _rotating polytropic star_ with angular velocity $\Omega$, on _less than thermal timescale_, from _conservation_ of angular momentum:
 $$\frac{\Delta\Omega}{\Omega}=-\frac{\Delta(MR^{2})}{MR^{2}}$$
-- Apply scaling relation
+- Apply scaling relation to get:
+$$\frac{\Delta\Omega}{\Omega}\propto -\left( \frac{5-3n}{3-n} \right)\Delta M$$
+- For $\Delta M>0$, the rotation can _speed up or slow down_ depending on $n$
 
 ### Application: close binary systems
 - Stars in _close binary systems_ can _lose mass_ to companions
@@ -470,6 +474,7 @@ $$\frac{\Delta\Omega}{\Omega}=-\frac{\Delta(MR^{2})}{MR^{2}}$$
 	- Also depends on _orbital configuration_
 	- There is a _critical equipotential_
 - Example: X-ray binaries
+![[Roche lobe overflow.png|450]]
 
 # Sound waves, supersonic flows, shock waves
 - _Disturbances_ often occur in a medium
@@ -486,9 +491,9 @@ $$\rho=\rho_{0}+\Delta \rho \hspace{1cm}p=p_{0}+\Delta p \hspace{1cm}\boldsymbol
 - It is related to the _Eulerian_ perturbation $\delta \rho$ by:
 	- $\boldsymbol{\xi}$ is the _fluid element displacement_
 $$\delta \rho=\Delta p-(\boldsymbol{\xi}\cdot \nabla)\rho_{0}$$
-- In this case, there is _no difference_
+- In this case, there is _no difference_ between the two perturbations, as $\rho_{0}$ is _constant_
 
-- Introducing the perturbation into the continuity equation:
+- Introducing the perturbation into the continuity equation, one gets:
 $$\frac{\partial}{\partial t} (\Delta \rho)+\rho_{0}\nabla\cdot(\Delta \boldsymbol{u})=0$$
 - Similarly, the momentum equation, assuming a _barotropic_ equation of state:
 $$\frac{\partial}{\partial t}(\Delta u)=-\frac{dp}{d\rho}\Bigg|_{\rho=\rho_{0}} \frac{\nabla(\Delta \rho)}{\rho_{0}}$$
@@ -513,26 +518,27 @@ $$\Delta u\ll c_{s}$$
 	- These waves are _non-dispersive_
 $$c_{s,I}=\sqrt{ \frac{R_{*}T}{\mu} }\hspace{1.5cm}c_{s,A}=\sqrt{ \frac{\gamma R_{*}T}{\mu} }$$
 - This is regarding the structure _of the perturbations_, which is _not necessarily the same as the background_
-	- One can have _adiabatic perturbations_ in an _isothermal background_
+	- One can have _adiabatic perturbations_ in an _isothermal background_ (Earth's atmosphere)
 
 ## Sound waves in a stratified atmosphere
 - Consider sound waves in a medium with _background structure_
 - An _isothermal atmosphere_ with $\boldsymbol{g}=-g\hat{z}$
 - Any _horizontal_ sound waves are _unaffected_ by vertical background structure
-- The $z-$dependent terms:
-$$\displaylines{\rho}$$
+- Hence, only examine waves _travelling_ in the $z-$direction:
+$$\boldsymbol{u}=u\hat{z}$$
+
 - The _background structure_:
-$$\displaylines{\rho_{0}(z)=\tilde{\rho}_{0}\exp\left( -\frac{z}{H} \right) \hspace{1cm} H\equiv \frac{R_{*}T}{g\mu}\\p_{0}(z)=}$$
+$$\displaylines{\rho_{0}(z)=\tilde{\rho}\exp\left( -\frac{z}{H} \right) \hspace{1cm} H\equiv \frac{R_{*}T}{g\mu}\\p_{0}(z)=\tilde{p}\exp\left( -\frac{z}{H} \right)}$$
 - Introduce the _perturbations_:
-$$\rho=$$
+$$u=\Delta u\hspace{1cm}\rho=\rho_{0}+\Delta \rho \hspace{1cm}p=p_{0}+\Delta p$$
 - Relating to Eulerian perturbations:
-$$\delta \rho=$$
+$$\delta \rho=\Delta \rho-(\boldsymbol{\xi}\cdot \nabla)\rho_{0}$$
 - The perturbation in velocity:
-$$\Delta u=$$
+$$\Delta u=\frac{d\boldsymbol{\xi}}{dt}=\frac{\partial \boldsymbol{\xi}}{\partial t}+(\boldsymbol{u}\cdot \nabla)\boldsymbol{\xi}=\frac{\partial \boldsymbol{\xi}}{\partial t}$$
 - Substitute into Eulerian continuity equation:
 $$\frac{\partial(\Delta \rho)}{\partial t}+\rho_{0}\frac{\partial(\Delta u_{z})}{\partial z}=0$$
 - Momentum equation:
-$$\frac{\partial}{\partial} \hspace{1cm}c_{u}^{2}\equiv\frac{\partial p}{\partial \rho}\Bigg|_{\rho_{0}}$$
+$$\frac{\partial(\Delta u_{z})}{\partial t}=-\frac{c_{u}^{2}}{\rho_{0}}\frac{\partial(\Delta p)}{\partial z} \hspace{1cm}c_{u}^{2}\equiv\frac{\partial p}{\partial \rho}\Bigg|_{\rho_{0}}$$
 - The wave equation:
 $$\frac{\partial^{2}\Delta \rho}{\partial t^{2}}-\rho_{0}\frac{\partial}{\partial z}\left( \frac{c_{u}^{2}}{\rho_{0}}\frac{\partial\Delta \rho}{\partial z} \right)=0$$
 - For an _isothermal medium_, $c_{u}$ is _independent of height_, giving:
@@ -543,18 +549,181 @@ $$\frac{\partial^{2}\Delta \rho}{\partial t^{2}}-c_{u}^{2}\frac{\partial^{2}\Del
 $$\omega^{2}=c_{u}^{2}\left( k^{2}-\frac{ik}{H} \right)$$
 - One can also solve for $k$:
 $$k=\frac{i}{2H}\pm \sqrt{ \frac{\omega^{2}}{c_{u}^{2}}-\frac{1}{4H^{2}} }$$
-- For $\omega>$
+- For $\omega>c_{u}/(2H)$, $k$ is _real_
 - It is a _travelling wave of decaying amplitude_
+- The corresponding _velocity perturbation_:
+$$\Delta u=\frac{\Delta \rho}{\rho_{0}} \frac{\omega}{k}$$
 
 - Perturbed velocity and fractional density fluctuation _exponentially increases with height_
-- _Without dissipation_, kinetic energy flux thingymajig
+- _Without dissipation_, kinetic energy flux $\rho_{0}(\Delta u)^{2}\omega/k$ is _constant_, hence for lowering density, the perturbed velocity must _grow_
+- The _linear approximation_ starts to _break down_
 - It becomes a _shock wave_
 
-- For $\omega<$
-- $k$ is _purely imaginary_, and there is _no travelling wave_
+- For $\omega<c_{u}/(2H)$ $k$ is _purely imaginary_, and there is _no travelling wave_
 - It is _completely evanescent_, as the properties of the atmosphere _significantly change over one wavelength_
 - There are too many _reflections_
 
 ## Sound transmission at interfaces
 - Consider two _non-dispersive media_ with a _boundary_ at $x=0$
 ![[Wave at boundary.png|450]]
+
+## Shocks
+- _Shocks_ occur when a fluid is _compressed by a large factor_, or when it is _accelerated_ to velocities comparable to, or _exceeding_ $v_{s}$
+- The _linear_ theory of sound waves then _breaks down_
+
+- _Supersonic_ case: mach cone
+- The _mach number_ of a cone $M$ is given by the _ratio_ of _flow speed_ to the _speed of sound_
+
+- Sound waves are the _speed of information_ in the medium
+- The arrival of the shock causes a _discontinuity_ in properties of the medium
+
+## Rankine-Hugoniot jump conditions
+- Consider a fluid _entering a plane-parallel shock normally_
+- On _each side_, the properties are _uniform_
+
+- _Across_ the jump, $\rho$, $p$ and $v$ are _discontinuous_
+
+- Consider the shock front _in the frame of the shock_:
+![[Shock front.png]]
+
+- _Integrate_ the continuity equation _across_ the shock:
+$$\frac{\partial}{\partial t}\left( \int  \, dx  \right)-$$
+- Let $dx\to 0$, one gets:
+$$\rho_{1}u_{1}=\rho_{2}u_{2}$$
+
+- Similarly for conservation of momentum:
+$$\rho_{1}u_{1}^{2}+p_{1}=\rho_{2}u_{2}^{2}+p_{2}$$
+- The velocities _parallel_ to the shock front, $u_{y}$ and $u_{z}$ are _continuous_ across the front
+- The _thermal and ram pressures combined_ is _conserved_
+
+- For the conservation of _energy_, consider the _adiabatic_ case such that $\dot{Q}_\text{cool}=0$
+- Also take the _gravitational potential_ to have _no time dependence_, and $\Psi_{1}=\Psi_{2}$
+
+- Integrating the energy condition then gives:
+$$\frac{1}{2}u_{1}^{2}+\mathcal{E}_{1}+\frac{p_{1}}{\rho_{1}}=\frac{1}{2}u_{2}^{2}+\mathcal{E}_{2}+\frac{p_{2}}{\rho_{2}}$$
+- Kinetic energy is _converted_ into _enthalpy_
+### Adiabatic ideal gas
+- For the ideal gas:
+$$\mathcal{E}=\frac{1}{\gamma-1} \frac{p}{\rho}$$
+- The third R-H condition becomes:
+$$\frac{1}{2}u_{1}^{2}+\frac{c_{s,1}^{2}}{\gamma-1}=$$
+- Using all relations gives:
+$$\displaylines{\frac{\rho_{2}}{\rho_{1}}=\frac{u_{1}}{u_{2}}=\frac{(\gamma+1)p_{2}+(\gamma-1)p_{1}}{(\gamma+1)p_{1}+(\gamma-1)p_{2}} \\ \frac{p_{2}}{p_{1}}= \\ \frac{T_{2}}{T_{1}}=}$$
+- In the limit of _strong shocks_, $p_{2}\gg p_{1}$:
+$$\frac{\rho_{2}}{\rho_{1}}\approx\frac{\gamma+1}{\gamma-1}$$
+- For $\gamma=5/3$, this gives $\rho_{2} \approx 4\rho_{1}$
+- There is a _maximum possible density_ for an adiabatic shock
+	- As the shock gets _stronger_, the _pressure_ rises and _prevents further compression_
+
+- As $p_{2}\gg p_{1}$ and $\rho_{2}\leq 4\rho_{1}$, one gets:
+$$\frac{p_{2}}{\rho_{2}^{\gamma}}> \frac{p_{1}}{\rho_{1}^{\gamma}}$$
+- The _entropy increases across the shock_
+	- The fluid _jumps adiabats_
+- This determines the _direction_ of the jump
+	- It is an _irreversible change_ due to _viscous processes_ within the shock
+
+- For strong shocks, one also gets:
+$$k_{B}T_{2}=$$
+
+### Isothermal shocks
+- For _isothermal_ shocks, $\dot{Q}_\text{cool}\neq 0$
+	- There is a _strong cooling_ for the _post-shock_ gas to get it back to the _pre-shock temperature_
+![[Isothermal shock.png|400]]
+- The first two R-H relations are _unchanged_
+- However, the energetic relation is _replaced_ by $T_{1}=T_{2}$
+
+- For the _ideal gas_, this gives the _same speed of sound_ on both sides of the shock front:
+$$c_{s,1}=\sqrt{ \frac{\mathcal{R}_{*}T}{\mu} }=c_{s,2}=\sqrt{ \frac{p}{\rho} }$$
+- Using the second R-H condition then gives:
+$$c_{s}^{2}=u_{1}u_{2}$$
+- The post-shock compression:
+$$\frac{\rho_{2}}{\rho_{1}}=\frac{u_{1}}{u_{2}}=\left( \frac{u_{1}}{c_{s}} \right)^{2}=M_{1}^{2}$$
+- Here, $M_{1}$ is the _Mach number_ of the pre-shock gas
+- Therefore, _compression_ can be very large
+
+- Given that for a shock, $u_{1}>c_{s}$, $u_{2}<c_{s}$ (the _post-shock_ gas is _subsonic_)
+	- Consequence of _causality_
+
+## Supernova explosions
+- A _supernova_ deposits a large amount of _energy_ into the _interstellar medium_ (ISM) to generate _shocks_, to create _bubbles_ in the ISM
+
+### Formation of supernovae
+- As a _white dwarf_ approaches the _Chandrasekhar limit_, it starts to _collapse_ and _heat up_, undergoing _fusion_ with $\ce{ C }$ and $\ce{ O }$
+- Release of energy is in the order of $10^{44}\,\text{J}$
+
+- It can also occur as a _massive star_ reaches the end of life, and its _iron core_ becomes _unstable_
+- It becomes a _neutron star_ or _black hole_
+- The gravitational potential is of the order $10^{46}\,\text{J}$
+- Most energy is released as _neutrinos_, leaving $10^{44}\,\text{J}$ for the _surroundings_
+
+### Model for ISM
+- Consider a _uniform medium_ with constant density $\rho_{0}$
+- The explosion occurs at a _point_ with energy $E$
+- _Ignore_ the temperature of the interstellar medium $(T=0)$
+	- There is _no external pressure_ to confine the explosion
+
+- The energy _heats_ a small volume of ISM to high temperature and pressure
+- The high pressure region _expands_ and drives a _shock_ into surroundings
+- There is a _shell_ of shocked ISM sweeping outwards
+- The _speed of expansion_ is given using the R-H relations
+
+![[Supernova explosion.png]]
+
+### Kinematics of the shell
+- Without external pressure, assume the _mach number_ of the shock $M\to \infty$
+- Assuming an _adiabatic shock_ with mass in the shell with density $\rho_{1}$:
+$$\rho_{1}=\rho_{0} \frac{\gamma+1}{\gamma-1}$$
+
+- If _all mass_ is swept into the shell, assuming $D\ll R$:
+$$D=\frac{1}{3} \left( \frac{\gamma-1}{\gamma+1} \right)R$$
+
+- Assume _all gas in the shell_ has a _uniform velocity_ $u_{0}$ relative to the _shock_:
+$$\rho_{0}u_{0}=\rho_{1}u_{1} \implies u_{1}=\frac{\gamma+1}{\gamma-1}u_{0}$$
+- From this, _relative to the unshocked gas_, the _shocked gas_ moves with velocity $U$:
+$$U=u_{0}-u_{1}=\frac{2u_{0}}{\gamma+1}$$
+
+### Dynamics of the shell
+- The _rate of change of momentum of the shocked shell_ is then:
+$$\frac{d}{dt}\left[  \frac{4\pi}{3}\rho_{0}R^{3} \frac{2u_{0}}{\gamma+1} \right]$$
+- This is provided by the _pressure_ on the _inside surface_ of the shell, $p_\text{in}$, given by:
+$$p_\text{in}=\alpha p_{1}$$
+- Relate $p_{1}$ and $u_{0}$
+- Equate _rate of change of momentum_ to the _pressure force_
+
+- Consider _energy conservation_
+- Therefore $\alpha=1/2$
+$$ R \propto t^{2/5} \hspace{1cm} u_{0} \propto t^{-3/5} \hspace{1cm} p_{1} \propto t^{-6/5}$$
+### Similarity solutions
+- The _intrinsic variables_ to the problem are $E$ and $\rho_{0}$
+- Examining their dimensions, there is _no characteristic length/timescale to the problem_
+- So given time $t$, the _length scale_ is:
+$$\lambda=\left( \frac{Et^{2}}{\rho_{0}} \right)^{1/5}$$
+- The _dimensionless_ distance parameter:
+$$\xi\equiv\frac{r}{\lambda}=r\left( \frac{\rho_{0}}{Et^{2}} \right)^{1/5}$$
+- _Any variable_ can be written as a function of the _scaled distance_, with the same _shape_, and _scaled_ according to _time_:
+$$X=X_{1}(t)\tilde{X}(\xi)$$
+- $\xi$ is _not Lagrangian or Eulerian_, instead it is a _feature of the shock wave_ moving _through_ the fluid
+
+- For _supernovae_:
+$$R \approx 0.3t^{2/5}\text{ pc}\hspace{1cm}u_{0}\approx 10^{5}t^{-3/5}\text{ km s}^{-1}$$
+- The _initial velocity_ is _not suited to actual supernovae_, as there is no model for the _injection_
+
+- Model is typically valid for:
+$$100\text{ yrs}<t<10^{5}\text{ yrs}$$
+
+### Structure of the blast wave
+
+### Breakdown of similarity solution
+- The solution _breaks down_ when pressure in the ambient ISM is _comparable to that of the shock shell_, $p_{0}\sim p_{1}$
+$$u_{0}\sim c_{s}$$
+- The blast wave _weakens_ into a _sound wave_
+![[Supernova blast wave weakening.png]]
+
+$$ E\sim E_\text{init}$$
+- The blast wave propagates _until blast energy is comparable to energy in the sphere_
+
+- The time needed to reach this state is roughly the _sound crossing time_:
+$$t_{s}\sim \frac{R_\text{max}}{c_{s}}$$
+
+# Bernoulli's equation and transonic flows
+

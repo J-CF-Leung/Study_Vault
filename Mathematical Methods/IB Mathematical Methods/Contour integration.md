@@ -339,8 +339,3 @@ $$0=\int_{-R}^R \exp(-u^2)\,du-\int_{-R+i\,\text{Im }a}^{R+i\,\text{Im }a}\exp(-
 - Then as $R\to\infty$, one finds that for _any_ $a\in\mathbb{C}$:
 $$\int_{-\infty}^\infty \exp[-(u+a)^2]\,du=\sqrt{\pi}$$
 
-
-
-
-
- 

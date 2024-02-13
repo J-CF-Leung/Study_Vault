@@ -166,6 +166,7 @@ $$\{\boldsymbol{r}_{i}\}=$$
 	- _Generalise_ Fraunhofer diffraction from a grating
 - Consider the scattering of a _plane wave_ off a _basis_
 
+## Scattering from a lattice
 - The _incoming wave_ $\boldsymbol{k}_{0}$ incident on a _potential_ centred on $\boldsymbol{R}_{i}$
 - For _large distances_, the scattered wave is _circular_
 - The _scalar field_:
@@ -181,19 +182,65 @@ $$k_{0}\left| \boldsymbol{r}- \right| $$
 - The wave-form is then:
 $$\psi \propto \exp[-i]\left[  \right]  $$
 - The _effective scattering amplitude_ is:
-$$f(\theta)=$$
+$$f(\theta)=cf_{0}\exp(-i\boldsymbol{q}\cdot \boldsymbol{R}_{i})$$
 - _Sum over all identical lattice sites_ gives the _scattering amplitude of the lattice_
 	- _Multiply_ each term by the _phase of the incoming wave_ $\exp$
 	- _Cancels out_ the pre-factor
 - The [[Scattering#Differential cross-section|differential cross-section]]:
-$$\frac{d\sigma}{d\Omega}=|f(\theta)|^{2}=$$
+$$\frac{d\sigma}{d\Omega}=|f(\theta)|^{2}=\left| cf_{0}\sum_{i}  \right|^{2} $$
 - The addition _cancels out all phases_, unless the _Bragg condition_ is satisfied:
 $$\boldsymbol{q}\cdot \boldsymbol{R}_{i}=2\pi m_{i}$$
-- In this case, all the scattered waves _constructively interfere_
+- In this case, all the scattered waves _constructively interfere_ to give a clear diffracted beam
 
-- The vectors $\boldsymbol{q}\equiv\boldsymbol{G}$ satisfying this condition form a _reciprocal lattice_
+## Diffraction conditions
+- The vectors $\boldsymbol{q}\equiv\boldsymbol{G}$ satisfying the Bragg condition form a _reciprocal lattice_:
+	$$\boldsymbol{G}\cdot \boldsymbol{R}_{i}=2\pi m_{i}$$
 	- A _linear combination_ leads to another vector satisfying the Bragg condition
 
 - The _primitive vectors_ of the reciprocal lattice, in terms of _real space_ lattice vectors:
-$$\boldsymbol{b}_{1}=$$
+$$\boldsymbol{b}_{1}=2\pi \frac{\boldsymbol{a}_{2}\times \boldsymbol{a}_{3}}{\boldsymbol{a}_{1}\cdot(\boldsymbol{a}_{2}\times \boldsymbol{a}_{3})}$$
 
+- For _elastic scattering_, $|\boldsymbol{k}|=|\boldsymbol{k}_{0}|$
+- This, combined with the _Bragg condition_, dictates:
+$$\boldsymbol{k}_{0}\cdot \frac{\boldsymbol{G}}{2}=\left( \frac{\boldsymbol{G}}{2} \right)^{2}$$
+- This defines a _plane_ perpendicular to $\boldsymbol{G}$ which _intersects_ $\boldsymbol{G}$ at its _midpoint_, or its _perpendicular bisectors_
+
+- The _set of all such planes_ defines the incident wave-vectors $\boldsymbol{k}_{0}$ that _satisfy the Bragg condition_
+- The _Ewald construction_ in reciprocal space:
+![[Ewald construction.png]]
+- For a _given_ $\boldsymbol{k}_{0}$, give it an origin $a$ such that it _ends on a reciprocal lattice_
+- Draw a _sphere_ of radius $|\boldsymbol{k}_{0}|$ about $a$
+- If the sphere _intersects_ any _other_ reciprocal lattice point, a _diffracted beam forms_ with $\boldsymbol{k}$ going from $a$ to the intersection
+- $a$ lies on the _perpendicular bisector_ of $\boldsymbol{G}$
+
+- $\theta$ is the _Bragg angle_, giving:
+$$2|\boldsymbol{k}|\sin\theta=|\boldsymbol{G}|$$
+- This is the _von Laue condition_
+
+- The _spacing between parallel lattice planes_ in _real space_, perpendicular to $\boldsymbol{G}=$, is given by:
+$$d(hkl)=\frac{2\pi}{|\boldsymbol{G}|}$$
+- Then given $|\boldsymbol{k}|=2\pi/\lambda$:
+$$2d(hkl)\sin\theta=\lambda$$
+- Here, $\theta$ is the _angle_ between the _incident beam_ and the _crystal planes_, being _half_ the angle of deflection
+- The _indices_ defining a crystal plane may contain a _common factor_ $n$, generalising the equation to:
+$$2d\sin\theta=n\lambda$$
+
+- For a film of _thickness_ $t$ on some _substrate_, the _angular spacing_ between diffraction peaks $\Delta\theta$ is given by:
+$$2t\cos\theta \Delta\theta=\lambda$$
+
+## Diffraction and Brillouin zones
+- The _set_ of reciprocal space planes _satisfying the Bragg condition_ (Bragg planes) can be _constructed_ from the _perpendicular bisectors_ of $\boldsymbol{G}$
+- These planes will _divide_ reciprocal space up into _cells_
+	- Voronoi decomposition
+- The cell _closest to origin_ is the _first Brillouin zone_
+- The $n$th Brillouin zone consists of all fragments _exterior_ to the $(n-1)$th planes and _interior_ to the $n$th planes
+
+- The _first Brillouin zone_ is deduced to be the _Wigner-Seitz cell of the reciprocal lattice_
+- The _volume_ of each Brillouin zone is equal to the _volume of the primitive unit cell_ of the _reciprocal lattice_
+- Given the _real space volume_ $\Omega _\text{cell}$ of the primitive unit cell, the BZ volume is:
+$$V_\text{BZ}=\frac{(2\pi)^{3}}{\Omega _\text{cell}}$$
+
+- Example: fcc lattice
+	- Left: real space with primitive lattice vectors
+	- Right: reciprocal space with 1st BZ
+![[fcc lattice.png]]

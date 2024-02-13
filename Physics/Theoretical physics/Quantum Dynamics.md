@@ -226,6 +226,9 @@ $$H(t)\ket{n;t}=E_{n}(t)\ket{n;t}  $$
 $$i\hbar \frac{\partial}{\partial t}\ket{\alpha;t}=H(t)\ket{\alpha;t}  $$
 - Writing the wave function as:
 $$\displaylines{\ket{\alpha;t}=\sum_{n} c_{n}(t)\exp[i\theta_{n}(t)]\ket{n;t} \\ \theta_{n}(t)\equiv-\frac{1}{\hbar}\int _{0}^{t}E_{n}(t')\, dt' } $$
+- $\theta_{n}(t)$ is the _dynamical phase_
+	- _Independent_ of adiabaticity
+
 - _Substituting_ this into the time-independent Schrodinger equation and taking the _inner product_ with energy eigenbra $\bra{m;t}$
 $$\dot{c}_{m}=-\sum_{n}c_{n}(t)\exp[i(\theta_{n}-\theta_{m})]\Braket{ m;t|\frac{\partial}{\partial t} |n;t  } $$
 
@@ -236,6 +239,18 @@ $$\dot{c}_{n}=-c_{n}\Braket{n;t| \frac{\partial}{\partial t} | n;t }-\sum_{m\neq
 $$\frac{|\braket{ n;t|\dot{H} | m;t }|}{E_{m}-E_{n}}\equiv \frac{1}{\tau}\ll \Braket{ n;t|\frac{\partial}{\partial t} | n;t }  $$
 - The _timescale_ for change must be _very large_ compared to the _inverse natural frequency_ 
 
+- The coefficients are then:
+$$\displaylines{c_{n}(t)=\exp[i\gamma_{n}(t)]c_{n}(0) \\ \gamma_{n}(t)\equiv i \int_{0}^{t}  \bra{n;t'}\left[\frac{\partial}{\partial t'} \ket{  n;t' }\right]\, dt' }$$
+- If the energy eigenstates are _normalised_, then the integrand is purely _imaginary_ and the phase $\gamma_{n}$ is _real_
+
+- If a system is _initially_ in an energy eigenstate $\ket{n}$, it _stays_ there:
+$$\ket{\alpha^{(n)};t}=\exp[i\gamma_{n}(t)](\exp[i\theta_{n}(t)]\ket{n;t}) $$
+- $\theta_{n}(t)$ is the _dynamical phase_
+- $\gamma_{n}(t)$ is a _result of the adiabatic approximation_
+
+- For a _time-dependent_ Hamiltonian, one uncovers the expected result:
+$$\displaylines{\theta_{n}=-\frac{E_{n}t}{\hbar} \hspace{1cm}\gamma_{n}(t)=0 \hspace{1cm}\ket{n;t}=\ket{n} \hspace{1cm}c_{n}(t)=c_{n}(0) \\ \ket{\Psi}=\sum_{n}c_{n}(0)\exp\left( -i\frac{E_{n}t}{\hbar} \right)\ket{n}  }$$
+- The derivation only works when there is _no degeneracy_ or _level crossings_
 ## Landau-Zener tunnelling
 - Consider the Hamiltonian:
 $$H=\begin{pmatrix} \beta t & \Delta \\ \Delta &-\beta t\end{pmatrix}$$
@@ -256,9 +271,11 @@ $$\frac{\hbar\beta}{\Delta^{2}}\gg 1$$
 $$P(\ket{-}_{t=-\infty}\to \ket{+}_{t=+\infty}  )=\frac{\pi\Delta^{2}}{\hbar\beta}$$
 
 # Berry's phase
-- States are a _ray_ in a vector space, and _phases do not affect motion_
+- States are a _ray_ in a vector space, and _phases_ in the wavefunction _do not affect motion_
 $$\psi\to \exp(i\theta)\psi$$
-- A _change_ to eigenstates:
+- However, if the Hamiltonian _traverses a closed path in Hilbert space_, the wavefunction can _accumulate_ a _global_ phase which is _geometric_ (depending on the _closed path_ in Hilbert space)
+## Two-state system
+- A _change_ to eigenstates, with some _phase ambiguity_:
 $$\delta \ket{+_{t}}= \frac{\braket{ -_{t}|\delta H |+_{t}  }}{E_{+}(t)-E_{-}(t)}\ket{-_{t}}  $$
 - It is _orthogonal_ to the original state
 	- A _parallel_ change is simply _dilation_ or adding a _phase_
@@ -268,59 +285,82 @@ $$\delta \ket{+_{t}}= \frac{\braket{ -_{t}|\delta H |+_{t}  }}{E_{+}(t)-E_{-}(t)
 	- It is a _field in parameter space_, which is _parametrised_ by vector $\boldsymbol{H}$
 	- Example: _magnetic field_
 - Let the change be _cyclic_:
-$$H(T)=H(0)$$
+$$\boldsymbol{H}(T)=\boldsymbol{H}(0)$$
 
 - The state can pick up a _global phase_, which _only depends on the path_
-$$\ket{\pm_{T}}= \ket{\pm_{0}}\exp(i\theta_{B}[\gamma]) $$
+$$\ket{\pm_{T}}= \ket{\pm_{0}}\exp\left( -\frac{i}{\hbar} \int _{0}^{t}E_{\pm}(t') \, dt'  \right)\exp(i\theta_{B}[\gamma]) $$
 
 - Define the _instantaneous eigenstates_:
 	- _Fix_ the phase of the eigenstates
 $$\ket{\pm_{t}}\equiv\ket{H(t),\pm}  $$
-- As $H(t)$ changes _smoothly_, the _perturbation_:
-$$\delta \ket{H(t),\pm}= \frac{\braket{  H(t),\mp|\delta H|H(t),\pm  }}{E_{\pm}-E_{\mp}}\ket{H(t),\mp}+\braket{ H,| \delta H|   }\ket{H(t),+}     $$
+- As $H(t)$ changes _smoothly_, the _perturbation_ to the state:
+$$\delta \ket{H(t),\pm}= \frac{\braket{  H(t),\mp|\delta H|H(t),\pm  }}{E_{\pm}-E_{\mp}}\ket{H(t),\mp}+\braket{ H,\pm| \delta H| H,\pm  }\ket{H(t),\pm}     $$
 - In the _adiabatic regime_, the first term _vanishes_
 	- The second term is typically _neglected_ as it is a parallel change, but it has an effect for a _closed adiabatic change_ in Hamiltonian
 
 - Take a _derivative_ w.r.t. the _parameters_ of the Hamiltonian:
-	- $\delta \boldsymbol{H}$ is a _vector in parameter space_
+	- $\delta \boldsymbol{H}$ is a _differential vector in parameter space_
 $$\delta H=\delta \boldsymbol{H}\cdot \nabla_{H}$$
 
 - The vector field:
-$$\boldsymbol{A}_{\pm}(\boldsymbol{H})\equiv -i\braket{H,\pm|\nabla_{\boldsymbol{H}}|H,\pm  } $$
+$$\boldsymbol{A}_{\pm}(\boldsymbol{H})\equiv i\braket{H,\pm|\nabla_{\boldsymbol{H}}|H,\pm  } $$
 
 - This is the _Berry potential_, or _Berry connection_
 - When it is _integrated over a closed path_, then it contributes a _global phase_ which _cannot be ignored_
 	- Similar to the [[Charged Particles#The Aharanov-Bohm Effect|Aharanov-Bohm Effect]]
 
 - With the adiabatic approximation:
-$$\delta \ket{H,+}=i\boldsymbol{A}_{+}(\boldsymbol{H})\cdot \dot{\boldsymbol{H}}\ket{H,+}  $$
+$$\delta \ket{H,+}=-i\boldsymbol{A}_{+}(\boldsymbol{H})\cdot \dot{\boldsymbol{H}}\ket{H,+}  $$
 - The _solution_ to the coefficients:
-$$c_{\pm}(t)=\exp\left( - \frac{i}{\hbar}\int  \, dt'  \right)c_{\pm}(0)$$
+$$c_{\pm}(t)=\exp\left( - \frac{i}{\hbar}\int[E_{\pm}(t')+\hbar \boldsymbol{A}_{\pm}(\boldsymbol{H})\cdot \dot{\boldsymbol{H}}]  \, dt'  \right)c_{\pm}(0)$$
 - There are _two contributions_
 	- A _dynamical phase_ from $E_{\pm}$, which _vanishes over a closed path_ (depending on _energy_, and the _amount of time taken_ in an open path)
 	- A _geometric phase_ from $\boldsymbol{A}_{\pm}$, which _depends on the path_
 - It also depends on the _manifold_ in parameter space and its _topology_
 
-- The geometric phase is _gauge invariant_
-- Let there be a _local gauge transformation_
+## General case
+- From the adiabatic approximation for a general, non-degenerate Hamiltonian, the _phase term_ can be written as an _integral over parameter space_:
+$$\gamma_{n}(t)\equiv i \int _{0}^{t}\braket{ n;t'}\left[ \frac{\partial}{\partial t}\ket{n;t'}  \right]  \, dt' =i \int _{\boldsymbol{H}(0)}^{\boldsymbol{H}(t)} \braket{n;t | \nabla_{\boldsymbol{H}}|n;t } {}  \cdot d\boldsymbol{H} $$
+- It is a _function of the path_, and _not_ how it is traversed in time
 
-- The extra term _vanishes for a closed path_
+- For a _closed path_ $\mathcal{C}$:
+$$\gamma_{n}(\mathcal{C})=i \oint_{\mathcal{C}}\braket{ n;t|\nabla_{\boldsymbol{H}} | n;t }\cdot d\boldsymbol{H} =\oint_{\mathcal{C}} \boldsymbol{A}_{n}\cdot d\boldsymbol{H}$$
+- The vector field:
+$$\boldsymbol{A}_{n}(\boldsymbol{H})=i\braket{ n;t|\nabla_{\boldsymbol{H}} |n;t  } $$
 
-- This is analagous to the _vector potential_
+## Berry potential and curvature
+- The geometric phase $\gamma_{n}$ is a _gauge invariant quantity_
+- Let there be a _local gauge transformation_:
+$$\ket{n;t}\to \exp[i\delta(\boldsymbol{H})]\ket{n;t} \implies \boldsymbol{A}_{n}(\boldsymbol{H})\to \boldsymbol{A}_{n}(\boldsymbol{H})-\nabla_{\boldsymbol{R}}\delta(\boldsymbol{H})   $$
+- This leaves $\gamma_{n}$ _unchanged_
+- This reinforces the fact that $\gamma_{n}$ is a _geometric property_ of the path taken
+
+- $\boldsymbol{A}_{n}$ is analagous to the _vector potential_
 - One can then define an analagous _"magnetic field"_, known as the _Berry curvature_
 	- As expected, also _gauge invariant_
+$$\displaylines{\boldsymbol{B}_{n}(\boldsymbol{H})=i(\nabla_{\boldsymbol{H}}\bra{n;t})\times (\nabla_{\boldsymbol{H}}\ket{n;t} )  \\ \gamma_{n}(\mathcal{C})=\oint_{\mathcal{C}} \boldsymbol{A}_{n}\cdot d\boldsymbol{H}=\iint \boldsymbol{B}_{n}\cdot d\boldsymbol{S}}$$
+- It can also be defined as a _second-order tensor_:
+$$\Omega_{n,jk}(\boldsymbol{H})=\frac{\partial}{\partial H^{j}}A_{n,k}(\boldsymbol{H})-\frac{\partial}{\partial H^{k}}A_{n,j}(\boldsymbol{H})$$
 
-- The _Berry phase_ is then a _surface integral_ of the Berry curvature (using Stokes Theorem)
-- It is _half the solid angle_ enclosed
+- The _Berry phase_ is then a _surface integral_ of the Berry curvature
 
 ## Berry phase for a rotating magnetic field
 - Example: the _direction_ of a [[#Spin in a magnetic field|magnetic field]] lives on a _2-sphere_
-$$\boldsymbol{h}=h_{0}\hat{\boldsymbol{n}}$$
+$$\displaylines{\boldsymbol{h}=h_{0}\hat{\boldsymbol{n}} \hspace{1cm}\hat{\boldsymbol{n}}=\begin{pmatrix}\sin\theta \cos \phi \\ \sin\theta \sin \phi \\ \cos\theta\end{pmatrix} \\ H=\boldsymbol{h}\cdot \boldsymbol{S}=\frac{h_{0}}{2}\begin{pmatrix}
+\cos\theta & \sin\theta\, e^{-i\phi}\\ \sin\theta\, e^{i\phi}&\cos\theta\end{pmatrix} \\ E_{\pm}=\pm \frac{h_{0}}{2} \hspace{1cm}\ket{\boldsymbol{h},+}=\begin{pmatrix}\cos(\theta/2)\,e^{-i\phi/2} \\ \sin(\theta/2)e^{i\phi/2} \end{pmatrix} \hspace{1cm}\ket{\boldsymbol{h},-}=\begin{pmatrix}\sin(\theta/2)\,e^{-i\phi/2} \\ \cos(\theta/2)e^{i\phi/2} \end{pmatrix} }$$
+- The gradient in parameter space:
+$$\nabla_{h}=\frac{1}{h_{0}}\left( \frac{\partial}{\partial\theta}\hat{\theta}+\frac{1}{\sin\theta}\frac{\partial}{\partial \phi}\hat{\phi} \right)$$
+- This gives the _Berry potentials_:
+$$\boldsymbol{A}_{\pm}=\pm \frac{\cot\theta}{2h_{0}} \hat{\phi}$$
+- There are _singularities_, and is _not always well-behaved_
 
-- _Parallel transport_ takes place on the manifold
-- It depends on _movement over the equator_
-- Then for the _closed path_, there is a _geometric phase_, depending on the _solid angle enclosed_
+- The associated _Berry curvature_:
+$$\boldsymbol{B}_{\pm}(\boldsymbol{H})=\nabla_{\boldsymbol{H}}\times \boldsymbol{A}_{\pm}=\mp \frac{\hat{\boldsymbol{n}}}{2h_{0}^{2}}$$
+- This corresponds to a _magnetic monopole_ of charge $\mp 1/2$ at the _origin_
+- Also _gauge invariant_
 
+- From this, for a _closed path_, the Berry phase is _half the solid angle $\Omega$ enclosed_:
+$$\gamma_{\pm}(\mathcal{C})=\iint \boldsymbol{B}_{\pm}\cdot d\boldsymbol{S}=\mp \frac{\Omega}{2}$$
 ## Berry phase in crystalline systems
 - The _energy bands_ in a 2D material live in $k-$space
 - _Periodicity_ in $k_{x}$ and $k_{y}$ gives a _torus_

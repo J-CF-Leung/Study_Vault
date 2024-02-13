@@ -1,3 +1,5 @@
+- [ ] Revise using Ch. 1 and 2 of Perkins 🔼 
+
 - The study of _elementary particles_ and their interactions
 - Described using the _standard model_
 
@@ -122,7 +124,7 @@ $$\begin{pmatrix}u \\ d\end{pmatrix}=\begin{pmatrix}c\\s\end{pmatrix}=\begin{pma
 - In a _short time_, it is permissible by the _uncertainty principle_:
 $$\Delta E\Delta t\sim \hbar\implies c\Delta t\sim \hbar \frac{c}{\Delta E}$$
 - Hence, a _larger energy transfer_ has a _smaller range_
-
+![[Bosons.png]]
 - The _gluon_ is responsible for the _strong nuclear force_
 	- There are _8_ gluons due to the $SU(3)$ symmetry
 - The _photon_ is responsible for the _electromagnetic force_
@@ -200,7 +202,7 @@ $$\exp(-\lambda \tau_{1/2})=\frac{1}{2}\implies \tau_{1/2}=0.693\tau$$
 - One often finds _decay chains_
 $$N_{1}\xrightarrow{\lambda_{1}}N_{2}\xrightarrow{\lambda_{2}}N_{3}$$
 - Example: $\ce{ ^{235}U->^{231}Th->^{231}{Pa} }$
-- - The _activity_ of the daughter:
+- The _activity_ of the daughter:
 $$A_{2}=\lambda_{2}N_{2}$$
 - The _rate of decay_:
 $$\frac{dN_{2}}{dt}=-\lambda_{2}N_{2}+\lambda_{1}N_{1}$$
@@ -307,7 +309,7 @@ $$\frac{d\sigma}{d\Omega}=\frac{dN_{d\Omega}}{\Phi N_{T}\times d\Omega}$$
 $$\sigma=\sum_{i}\sigma_{i}$$
 ## Relativistic Born Approximation
 - Consider a _beam of relativistic particles_ scattering from a _fixed potential_ $V(\boldsymbol{r})$:
-	- [[Quantum scattering theory|Purely quantum case]]
+	- Different from the [[Quantum scattering theory|purely quantum case]]
 ![[Particle scattering geometry.png|300]]
 - There is a _momentum transfer_
 	- Natural units: $\boldsymbol{p}=\boldsymbol{k}$
@@ -320,7 +322,7 @@ $$\Gamma=2\pi|M_{fi}|^{2}\rho(E_{f})$$
 - _Approximate_ the _unperturbed_ wave function as a _normalised plane wave_:
 $$\psi_{\boldsymbol{k}}=\frac{1}{L^{3/2}}\exp[i(\boldsymbol{p}\cdot \boldsymbol{r}-Et)]$$
 - This gives the _matrix element_:
-$$M_{fi}=\braket{ \psi_{f}|V|\psi_{i}  }= \frac{1}{L^{3}}\int \exp(-i\boldsymbol{q}\cdot \boldsymbol{r}) \, dx  $$
+$$M_{fi}=\braket{ \psi_{f}|V|\psi_{i}  }= \frac{1}{L^{3}}\int \exp(-i\boldsymbol{q}\cdot \boldsymbol{r}) V(\boldsymbol{r})\, d^{3}\boldsymbol{r}  $$
 - The _incident flux_ for a beam with _number density_ $n$ and _velocity_ $v_{i}$:
 $$\Phi=nv_{i}=\frac{v_{i}}{L^{3}}$$
 - As for the _density of states_, consider the _particle in a box_ (neglecting spin):
@@ -430,6 +432,7 @@ s=E_\text{CM}=(p_{1}+p_{2})^{2}=(E_{1}+E_{2})^{2}-(\boldsymbol{p}_{1}+) \\
 	- Example: cloud chambers
 - For a tracker _in a magnetic field_, the particles _bend_
 	- The _radius of curvature_ gives its _momentum_
+	- Accuracy of detection $$\frac{\sigma_{p}}{p}\propto p$$
 	- High momentum: high $R$, almost _straight_
 	- _Lower momentum_ particles are _easier to measure accurately_
 
@@ -485,17 +488,27 @@ $$i \frac{\partial \psi}{\partial t}=(-i\boldsymbol{\alpha}\cdot \nabla+\beta m)
 - A plane wave solution dictates time dependence $\exp(-iEt)$, which would indicate _negative energy states_ propagating _backwards in time_
 - However, making the simultaneous transformation $E\to -E$ and $t\to -t$:
 $$\exp[-iEt]\equiv\exp[-i(-E)(-t)]$$
-- This can simply be a _positive energy antiparticle_ travelling _forwards in time_
+- Hence, a _negative energy particle_ corresponds to a _positive energy antiparticle_ travelling _forwards in time_
 
+- Example: consider $\ce{ e- +\gamma -> e- +\gamma }$
 ![[Electron photon interactions.png]]
-- Emission of negative energy
-- Absorption of positive energy
+- The former has a _positive energy electron_ emitted as the photon has _less energy_ than the original electron
+- The latter has the emission of a photon with _more energy_, and can be seen as:
+	- _Emission_ of a _negative_ energy $\ce{ e- }$ travelling _backwards in time_
+	- Or the _absorption_ of a _positive_ energy $\ce{ e+ }$ travelling _forwards in time_
 
-## Interaction via particle exchange
+## Interaction via particle exchange and the Yukawa potential
 - Consider two particles _fixed_ at $\boldsymbol{r}_{1}$ and $\boldsymbol{r}_{2}$ which _exchange_ a particle of mass $m$
 	- A _generic_ particle
 ![[Interaction particle exchange.png]]
 
+- Yukawa theory postulates that it is due to _exchange of massive quanta_
+- The _rate of momentum exchange_ then provides a _force_
+
+- As the quantum carries _energy_, its existence is _transient_, with time duration given by:
+$$\Delta E\Delta t\sim \hbar$$
+- It is said to be _virtual_
+### Using perturbation theory
 - The _shift_ in energy of $i$ due to the exchange using _second order perturbation theory_:
 $$\Delta E_{i}=\sum_{j\neq i} \braket{  |  } $$
 - The sum is _over all possible momenta_
@@ -520,26 +533,234 @@ $$\Delta E_{i}=-\frac{g^{2}}{4\pi} \frac{\exp(-mr)}{r}$$
 	- The _Compton wavelength_ of the exchanged particle
 - For $m\to 0$, this gives the _Coulomb potential_
 
+### From the Klein-Gordon equation
+- Describe the system using the _Klein-Gordon equation_:
+$$\frac{\partial^{2}\psi}{\partial t^{2}}=\nabla^{2}\psi-m^{2}\psi$$
+- Setting $m=0$, it is the _electromagnetic wave equation_ $(c=1)$
+- $\psi$ is interpreted as the _amplitude_ of the associated _photon_, or as a [[Electrodynamics and Optics#Maxwell's equations in terms of potentials|potential]] $V(\boldsymbol{r})$
+
+- To generalise, $m$ is the _mass of the boson_ responsible for the interaction
+	- $0$ for photons and gluons
+	- Non-zero for _gauge bosons_ $W^{\pm}$ and $Z$
+
+- For a _static, spherically symmetric system_, one can solve _Poisson's equation_:
+$$V(r)=-\frac{g^{2}}{4\pi} \frac{\exp(-mr)}{r}$$
+- Here, $-g^{2}$ is an _integration constant_ to match the formula from perturbation theory
+
 ## Scattering from the Yukawa potential
 - Consider _elastic scattering_ from the _Yukawa potential_
-$$V(r)=$$
-- The Born approximation:
-$$M_{fi}=$$
-- Consider a particle of _virtual mass_ with momentum 4-vector $q^{\mu}=$
+- The _source_ of the potential has _coupling strength_ $g_{0}$
+- The _scattered particle_ has coupling $g$, giving the potential:
+$$V(r)=-\frac{g_{0}g}{4\pi} \frac{\exp(-mr)}{r}$$
 
-- _Virtual mass_
-$$M_{fi}=$$
-- Forces arise due to the _exchange of virtual particles_
-- They are _unobservable_ as the act of observation disrupts the absorption
+- The _3-momentum transfer_ is $\boldsymbol{p}$, and for elastic scattering, there is _no energy transfer_
+- Define the _4-momentum transfer_ as:
+$$q^{\mu}=(\Delta E,\boldsymbol{p})=(0,\boldsymbol{p})$$
 
-- The effective mass $q$
-- It is _not equal to the physical mass_ $m$
+- The Born approximation gives:
+$$M_{fi}=-\frac{g_{0}g}{4\pi} \int \frac{1}{r}\exp(-mr-i\boldsymbol{p}\cdot \boldsymbol{r}) \, d^{3}\boldsymbol{r} $$
 
-- It can be _positive_, _negative_, or _imaginary_
-- A virtual particle of mass $\Delta m$ can exist for:
+- Evaluating the _contour integral_:
+$$M_{fi}=\frac{g^{2}}{q^{2}-m^{2}}$$
+- Here, $q$ is the _invariant mass_ of 4-vector $q^{\mu}$
+- It is interpreted as two _vertex factors_ $g_{0},g$, with the _propagator term_ $(q^{2}-m^{2})^{-1}$
+
+### Virtual mass
+- Forces arise due to the _exchange_ of the _virtual particle_ of mass $q$
+	- They are _unobservable_ as the act of observation disrupts the interaction
+
+- $q$ is known as the _virtual (off shell) mass_
+	- It can be _positive_, _negative_, or _imaginary_
+- It is _not necessarily equal to the physical (on shell) mass_ $m$
+
+- A virtual particle with an _off-mass shell_ of $\Delta m=|q-m|$ can exist for:
 $$\Delta t\sim\frac{1}{\Delta m}$$
-- The propagator is _inversely proportional_ to the virtual mass
+- If $q^{2}=m^{2}$, the particle is _real and observable_
 
-- Consider $\ce{ e- +\gamma -> e- + \gamma }$ in _vacuum_
-	- Different from _atomic transitions_
-- This happens via a _virtual electron_
+### The boson propagator
+- Given a _set_ of possible interactions, which may consist of _multiple scattering processes_, the _matrix elements add up_:
+$$M_{fi}=M_{1}+M_{2}+\dots=\sum_\text{interactions} \left( \prod g_{i} \right)\left( \prod \frac{1}{q^{2}-m^{2}} \right)$$
+
+- The propagators $(q^{2}-m^{2})^{-1}$ are roughly _inversely proportional_ to _how off-shell the virtual mass is_
+- The _more off-shell the virtual mass_, the more _difficult_ the probability of _creating the virtual state_, and the _smaller the contribution to the matrix element_
+# Feynman diagrams
+- Only the _initial and final states_ of a scattering process can be known
+- Calculations depend on the _time ordering_ of absorptions and emissions
+	- Using _time ordered perturbation theory_, dependent on the _reference frame_
+
+- A _Feynman diagram_ represents the _sum of all time orderings_
+- Each Feybman diagramn represents a _term in the perturbation theory expansion_
+- A _full matrix element_ contains an _infinite number of Feynman diagrams_:
+$$\displaylines{M_{fi}=M_{1}+M_{2}+\dots \\ \Gamma_{fi}=2\pi|M_{fi}|^{2}\rho (E)}$$
+
+- Each _vertex_ in a Feynman diagram contains a factor of $g$ from the [[#Interaction via particle exchange|Yukawa potential]]:
+![[Feynman g factors.png]]
+- The _approximate size_ of a matrix element is given by the _lowest order diagram_:
+$$M_{fi}\sim \frac{\prod g}{q^{2}-m^{2}}$$
+
+- Creation of _virtual particles_ must conserve mass and momentum
+	- If it _only_ has the _real mass_, it is _not conserved_
+
+## Pictoral representation of particles
+- The _topological features_ of the diagram are associated with _terms in the matrix element_
+
+- Representation of _particles_:
+![[Feynman diagram lines.png|400]]
+
+- _External_ lines for _real particles_:
+![[Feynman external particles.png|400]]
+- _Internal_ lines for _virtual particles_:
+![[Feynman internal lines.png|550]]
+
+## Vertices
+- Each interaction has _different_ $g$
+	- EM interaction: $g=Qe$
+	- Weak interaction: $g=g_{W}$
+	- Strong interaction: $g=\sqrt{ \alpha_{s} }$
+
+- Each vertex typically has _three lines_
+	- Examples: pair production, annihilation, emission
+
+- Conserved quantities:
+	- Energy
+	- Momentum and angular momentum
+	- Charge
+	- Lepton number $(L_{e}=+1)$, minus for antiparticles
+	- Baryon number $B=(n_{q}-n_{\bar{q}})/3$
+	- Strangeness $S=-(n_{s}-n_{\bar{s}})$
+	- Parity _except for weak interactions_
+
+- Due to the _relative strengths_ of the fundamental forces, an interaction takes place via the _strong force_ as the _priority_, followed by _electromagnetic_, followed by _weak_
+	- The stronger the interaction, the bigger the _contribution_ to the matrix element
+### Electromagnetic interactions
+- Vertices for _electromagnetic_ interactions must involve a _photon_ and _charged particles_
+- Coupling strength $Qe$, where $Q$ is the _charge_
+- One can have _triple gauge vertices_ involving _no fermions_ (from electroweak interaction)
+
+### Weak interactions
+- Vertices for _weak interactions_ must involve a _gauge vector boson_ $Z$ or $W^{\pm}$
+- _Neutrinos_ can _only appear in weak interactions_
+- Coupling strength $g_{W}$
+- $W^{\pm}$ can _change quark flavour_, and also _cross quark generations_ (not lepton)
+	- Same generation: Cabibbo favoured
+	- Cross generation: Cabibbo suppressed
+	- Cross two generations: Doubly Cabibbo suppressed
+- The $Z$ boson _cannot change flavour_, and only _pair produces_
+- From _lepton number conservation_, there are _no vertices connecting leptons to quarks_
+- One can have _triple/quadruple gauge vertices_ from _self-interaction_
+- There are often _spectator quarks_ as interactions happen in _hadrons_
+
+### Strong interactions
+- Vertices for _strong interactions_ must involve a _gluon_ $g$ and/or quark $q$
+	- Interact with _colour charge_
+	- Hence, _no interactions_ with neutrinos, photons, $Z$ and $W^{\pm}$ bosons
+- Coupling strength $\sqrt{ \alpha_{s} }$
+- Can also _self-interact_ to produce triple/quadruple gauge vertices
+
+![[Example feynman diagrams.png]]
+
+### s,t,u channels
+- $s-$channel diagrams: _annihilatiom/pair production_
+- $t-$channel diagrams: _exchanging_ virtual particles
+	- Special case - $u-$channel: _identical_ particles in the final state, hence the it is _indistinguishable_ which vertex they came form
+- Each case has _different propagators_ due to _differing virtual mass_
+
+- If there are _two channels of the same order_, the _matrix elements add_
+
+# Quantum electrodynamics
+- QED is the _gauge theory_ of electromagnetic interactions
+- A _non-relativistic_ charged particle in an EM field:
+$$\boldsymbol{F}=q(\boldsymbol{E}+\boldsymbol{v}\times \boldsymbol{B})$$
+- Vector and scalar potentials:
+$$\boldsymbol{E}=$$
+- The _Hamiltonian_:
+$$H=$$
+- The Schrodinger equation:
+$$\psi$$
+- The _local gauge transformation_:
+$$\psi\to \exp(iq\alpha)\psi \hspace{1cm}\boldsymbol{A}\to \boldsymbol{A}+\nabla\alpha \hspace{1cm}\varphi\to \varphi-\frac{\partial\alpha}{\partial t}$$
+- Requires the existence of a _physical gauge field_
+- There must also be a _conserved quantity_, given by _electric charge_
+
+## Processes in QED
+- The _standard electromagnetic vertex_:
+
+- The _coupling_ is _proportional_ to the _electric charge_
+- QED _never_ changes _particle type_ or _flavour_
+
+- Compton scattering:
+![[Compton scattering Feyman.png]]
+$$M \propto \frac{g^{2}}{q^{2}}\propto e^{2} \propto \alpha \implies \sigma \propto \alpha^{2}$$
+- _Bremsstrahlung_ and _pair production_ can only occur with the assistance of a _nucleus_
+	- It is _kinematically impossible_ in vacuum
+	- $M \propto Ze^{3}$
+
+- _Electron-positron_ annihilation:
+	- $M\propto Q_{q}e^{2}$
+- _Pion decay_:
+	- It _must_ occur via an electron/positron to _conserve angular momentum_
+	- $M\propto Q_{u}^{2}e^{2}$
+- $J/\psi$ decay:
+	- The $J/\psi$ has _spin 1_, therefore decays _directly_
+	- $M\propto Q_{c}e^{2}$
+
+## Scattering processes in QED
+
+### Electron-proton scattering
+- Consider _electron-proton scattering_ in the $t-$channel
+![[e-p scattering Feynman.png]]
+- From the formula for [[#Relativistic Born Approximation]]:
+$$\frac{d\sigma}{d\Omega}=\frac{E^{2}}{(2\pi)^{2}}|M|^{2}$$
+- The matrix element is given by:
+$$M=\frac{e^{2}}{q^{2}}=\frac{4\pi\alpha}{q^{2}}$$
+- $q$ represents the _4-momentum of the virtual photon_
+- _Neglecting_ electron mass, one gets:
+$$q^{2}=-2E_{i}E_{f}(1-\cos\theta)$$
+- Hence for _elastic scattering_:
+$$\frac{d\sigma}{d\Omega}=\frac{\alpha^{2}}{4E^{2}\sin^{4}\theta/2}$$
+
+- For _high_ $q$, results imply that the _scattering potential is not point-like_
+- The scattering potential _resolves_ the _structure_ of the proton
+
+### Electron-positron annihilation
+- Consider _electron-positron annihilation_
+![[e-e+ annihilation.png]]
+- In the _centre of mass frame_, one gets $q^{2}=(2E)^{2}=s$
+- This gives the cross-section:
+$$\frac{d\sigma}{d\Omega}=\frac{\alpha^{2}}{s}\implies \frac{d\sigma}{d\Omega}=\frac{4\pi\alpha^{2}}{s}$$
+- Taking the _spin states_ into account (to create a spin-1 photon):
+$$\frac{d\sigma}{d\Omega }=\frac{\alpha^{2}}{4s}(1+\cos^{2}\theta)$$
+## Experimental tests of QED
+- Example: _magnetic moments_ of the electron and muon:
+$$\boldsymbol{\mu}=\frac{ge}{2m}\boldsymbol{s}$$
+- Dirac equation predicts that $g=2$
+
+- However, _higher order terms_ introduce an _anomalous_ magnetic moment
+![[Magnetic moment diagrams.png]]
+- One must _sum over all possible diagrams for an order_
+	- Example: $72$ for $O(\alpha^{3})$, $12672$ for $O(\alpha^{4})$
+
+## Higher order diagrams
+- Higher order diagrams for electron-positron-annihilation (non-exhaustive)
+![[e+e- annihilation higher orders.png]]
+- The _cross-section_ of the matrix elements is _supressed_ by $\alpha^{2}\approx 1/137^{2}$ each time
+
+- Higher order contributions can interfere _constructively or destructively_
+	- Electron-proton scattering: $M\sim -e^{2}+e^{4}$
+	- Positron-proton scattering: $M\sim e^{2}+e^{4}$
+
+## Variation in interaction strength
+- $\alpha=e^{2}/4\pi$ specifies the _strength_ of electromagnetic interactions
+
+- However, it is _not a constant_
+- _Quantum fluctuations_ around charges create a _cloud_ of _virtual_ $e^{+}e^{-}$ pairs, which are then _polarised_, _screening_ the electric charge
+	- Similar to the _screening_ of charges in a _dielectric medium_
+![[Virtual particle charge screening.png]]
+- At _large distances_, the bare electron charge is _sceened_
+- For _shorter distances_, there is a _larger effective charge_ and hence larger $\alpha$
+
+- Example: measurement of $\alpha(q^{2})$ from $\ce{ e+e- -> \mu+\mu- }$
+	- $q^{2}\approx 0$: $\alpha\sim 1/137$
+	- $q^{2}\approx (100 \text{GeV})^{2}$: $\alpha\sim 1/128$
+
+- This is the _running_ of $\alpha$ with energy

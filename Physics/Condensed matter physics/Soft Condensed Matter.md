@@ -479,3 +479,143 @@ $$\sigma(\omega)=\sigma _\text{solid}+\sigma _\text{Maxwell}=G_{1}\frac{1+i\omeg
 - For $\omega\gg \tau_{\sigma}^{-1}$, it approaches $G_{1}+G_{2}$
 
 - One gets the same result for an _elastic solid_ and _Kelvin-Voigt solid_ in _series_
+
+## Brownian motion
+- Viscoelastic behaviour arises from _random motions_ of particles
+
+- For a particle in some solution to _undergo Brownian motion_, the _thermal motion_ must be sufficient to _overcome_ the _gravitational energy_:
+$$\frac{P(h)}{P_{0}}=\exp\left( -\frac{m_{b}h}{k_{B}T} \right)=\exp\left( -\frac{h}{\langle h \rangle } \right)$$
+- Here, $\langle h \rangle$ is the _average height_
+- Accounting for the Buoyant force, the _effective mass_ in the solution is:
+	- $\Delta \rho$ is the _density difference_ between the particle and the solvent
+$$m_{b}=\frac{4\pi}{3}r^{3}\Delta \rho$$
+- The particle is _suspended_ if $\langle h \rangle>r$, as it _does not stay in the bottom_ of a container
+- Example: _pollen_ in air, or _colloidal_ particles of micron width
+
+## Langevin equation
+- To account for the [[Advanced statistical mechanics#Stochastic physics|stochastic motion]] of the particle:
+$$m \frac{d\boldsymbol{v}}{dt}=-\gamma \boldsymbol{v}+\boldsymbol{\xi}(t)$$
+- $\gamma$ is the _drag coefficient_
+	- In the case of [[#Stokes drag force on a sphere|Stokes flow]], $\gamma=6\pi \eta v$
+
+- For _random motion_, as there is _no preferred direction_:
+$$\langle \boldsymbol{\xi}(t) \rangle=0 $$
+- As the motion is _uncorrelated_ at different times (_relaxation times_ are practically instantaneous):
+$$\langle \boldsymbol{\xi}(t)\cdot \boldsymbol{\xi}(t') \rangle=G\delta (t-t') $$
+- The [[Advanced statistical mechanics#Formal solution and fluctuation-dissipation theorem|formal solution]] to the Langevin equation:
+$$\displaylines{\boldsymbol{v}=\boldsymbol{v}_{0}\exp\left( -\frac{\gamma}{m}t \right)+ \int _{0}^{t} \frac{\boldsymbol{\xi}(t')}{m}\exp\left[ -\frac{\gamma}{m}(t-t') \right] \, dt'  \\ \langle \boldsymbol{v}(t) \rangle=\boldsymbol{v}_{0}\exp\left( -\frac{\gamma}{m}t \right) }$$
+- One can also derive:
+$$\langle v^{2}(t) \rangle=v_{0}^{2}\exp\left( -\frac{2\gamma}{m}t \right)+\frac{c}{2m\gamma}\left[ 1-\exp\left( -\frac{2\gamma}{m}t \right) \right] $$
+
+## Overdamped limit
+- The dimension of $\eta$ is such that $\eta \sim \gamma/L$, where $L$ is some _length scale_
+- Then by dimensional analysis, the _overdamped limit_ $\gamma t/m \to \infty$ corresponds to a _low_ [[#Reynolds number]]
+$$\left<v^{2}(t)\right> \approx \frac{c}{2m\gamma}=\frac{3k_{B}T}{m}$$
+- The latter comes from _equipartition_, giving:
+$$c=6\gamma k_{B}T$$
+- The damping is _independent of mass_, as expected (no inertial motion)
+- The _dissipation_ from $\gamma$ is linked to the _fluctuation_ $c$:
+$$\left<\boldsymbol{\xi}(t)\cdot \boldsymbol{\xi}(t')\right> = 6k_{B}T\gamma\delta(t-t')$$
+- This is the [[Advanced statistical mechanics#Formal solution and fluctuation-dissipation theorem|fluctuation-dissipation theorem]]
+
+- In the overdamped limit, the Langevin equation becomes:
+$$\gamma \boldsymbol{v}=\gamma \dot{\boldsymbol{x}}=\boldsymbol{\xi}(t)$$
+- One then gets:
+	- Can be given by integrating the _full solution_, then taking the limit in the solution
+$$\langle x^{2} \rangle=\frac{6k_{B}T}{\gamma}t \equiv 6Dt$$
+- The _diffusion constant_ (Einstein relation)
+$$D=\frac{k_{B}T}{\gamma}$$
+- Factor of 6 in solution from consideration of _diffusion equation_
+
+- The _Stokes-Einstein relation_, using formula for Stokes drag force:
+$$D=\frac{k_{B}T}{6\pi \eta r}$$
+
+- Define a _characteristic time_ for particles to diffuse distance $r$:
+$$\tau=\frac{r^{2}}{D}$$
+## Diffusion
+- Diffusion equation:
+$$\partial_{t}c=D\nabla^{2}c$$
+
+- One can have a _diffusion-limited processes_
+
+### Diffusion-limited cluster growth
+- Consider particles _attaching_ themselves to a _cluster_ of radius $a$
+	- The potential is _purely attractive_
+- $a$ is taken as a _constant_ as it changes on a _timescale much larger than diffusion time_
+- In the _steady state_, $\partial_{t}c=0$, giving _Laplace's equation_
+- Boundary condition $c(r=a)=0$:
+$$c=c_{\infty}\left( 1-\frac{a}{r} \right)$$
+- The spatial part of the diffusion equation can be written as a _flux_:
+$$\partial_{t}c=-\nabla\cdot \boldsymbol{J} \implies \boldsymbol{J}=-D\nabla c$$
+- In this case:
+$$\boldsymbol{J}=-Dc_{\infty} \frac{a}{r^{2}}\hat{r}$$
+- Then the _change in number of particles in the cluster_:
+$$\frac{dN}{dt}=-J(r=a)4\pi a^{2}=4\pi Dc_{\infty}a \sim \frac{d(a^{3})}{dt}$$
+- Therefore:
+$$a \sim \sqrt{ t }$$
+- This _ignores the structure of the cluster_
+
+## Diffusion in an external potential
+- In the _overdamped limit_, with some _external potential_:
+$$\gamma \boldsymbol{v}=-\nabla V+\boldsymbol{\xi}=-k\boldsymbol{x}+\boldsymbol{\xi}$$
+- In _analogy_ with the general case without potentiak:
+$$\left<x^{2}\right>_{k}=x_{0}^{2}\exp\left( -\frac{2k}{\gamma}t \right)+\frac{3k_{B}T}{k}\left( 1-\exp\left( -\frac{2k}{\gamma}t \right) \right)$$
+- The new _relaxation time_:
+$$\tau_{k}=\frac{\gamma}{k}$$
+- Over the relaxation time:
+$$\frac{1}{2}k\left<x^{2}\right> = \frac{3k_{B}T}{2}$$
+
+- From the consideration of a [[Advanced statistical mechanics#Markov chains|Markov process]], the general _diffusion equation_:
+$$\partial_{t}c=D\nabla^{2}c+\frac{1}{\gamma}\nabla\cdot(c\nabla U)=-\nabla\cdot \boldsymbol{J}$$
+### 1-dimensional potential barrier
+- Consider a system which is _metastable_ at $x=A$, separated by a barrier that _peaks_ at $P$, leading to _true equilibrium_ at $x=B$
+- In the _steady state_, $\partial_{t}c=\partial_{x}J=0$:
+$$J=-D\partial_{x}P-\frac{\partial_{x}U}{\gamma}P=-D\exp(-\beta U)\partial_{x}[\exp(\beta U)P]$$
+- The second equality is from the [[#Diffusion|Einstein relation]]
+- Then multiplying both sides by $\exp(\beta U)$ and _integrating_:
+$$J\int _{A}^{B}\exp(\beta U) \, dx=-D[\exp(\beta U)P]_{A}^{B} $$
+- For a _deep_ potential well, the RHS is $DP(A)$
+- From the method of _steepest descent_, the _dominant contribution_ is from where $U$ is _maximum_:
+$$U\approx U_{P}-\frac{1}{2}k(x-x_{P})^{2}$$
+- Combining this gives:
+$$J=D\exp(-\beta U_{P})\sqrt{ \frac{k}{2\pi k_{B}T} }P(A)\propto \exp(-\beta U_{P})$$
+- It is _proportional_ to the negative exponential of the _barrier height_
+- This is the _Arrhenius relation_
+
+### Reaction controlled processes
+- Let there be a _potential barrier_ for particles attaching to a [[#Diffusion-limited cluster growth|cluster]]
+- Write the _radial current_ as:
+$$J=\frac{\dot{N}}{4\pi r^{2}}=-D\left(  \frac{d}{dr} \frac{U}{k_{B}T}+\frac{d}{dr} \right)c(r)$$
+- Write the concentration as:
+$$c(r)=\Phi(r)\exp(-\beta U) \implies J=D\exp(-\beta U) \frac{d\Phi}{dr}$$
+- Then by _integrating_:
+$$\Phi(\infty)-\Phi(a)=\frac{\dot{N}}{4\pi D}\int _{a}^{\infty} \frac{\exp(\beta U)}{r^{2}} \, dr \equiv \frac{\dot{N}}{4\pi D\lambda} $$
+- Here, $\lambda$ is the _length scale_ of the process
+
+- This gives:
+$$c(a)=c_{\infty}\exp(-\beta U)\left( 1-\frac{k}{4\pi D\lambda } \right)$$
+- Defining the _reaction constant_:
+$$\dot{N}=kc_{\infty}$$
+- For a _purely diffusion controlled process_, $U=0$ and $\lambda=a$, hence $c(a)=0$
+- Adding the _reaction constants_:
+$$k^{-1}=k_\text{diff}^{-1}+k_\text{reac}^{-1}$$
+
+## Microrheology
+- _Tracer particle_ in a _viscoelastic fluid_
+
+- If it is in a _purely viscous fluid_, from the _Langevin_ equation:
+$$\left<x^{2}\right> = \frac{k_{B}T}{\pi \eta v}t$$
+- For a _purely elastic_ fluid:
+$$\left<x^{2}\right> =\frac{3k_{B}T}{k}$$
+- For a _time-dependent viscosity_, consider the _generalised Langevin equation_:
+$$m \frac{dv}{dt}=-\gamma \int _{0}^{\tau} \gamma(t-\tau)v(\tau) \, d\tau +\xi(t)$$
+- Consider the _Laplace transform_:
+$$\mathcal{L}[f]=\int _{0}^{\infty}f(t)\exp(-st) \, dt $$
+- From the _convolution theorem_ for $\mathcal{L}$:
+$$ms\hat{v}(s)-m\hat{v}(0)=-\gamma(s)v(s)+\xi(s)$$
+- Correlation:
+$$\left<\hat{v}(s)v(0)\right>$$
+- Mean square displacement:
+$$\mathcal{L}(\left<x^{2}\right>)$$
+
+# Polymers
