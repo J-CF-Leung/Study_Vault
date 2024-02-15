@@ -352,6 +352,7 @@ $$\rho=-\frac{dp}{d\Psi}$$
 $$p=p(\rho)$$
 - Therefore, _non-rotating stars_ are [[#Barotropic fluids|barotropes]]
 
+### Polytropic gas
 - A barotropic _equation of state_:
 $$p=K\rho^{1+1/n}$$
 - In general, $n=n(\rho)$
@@ -712,6 +713,15 @@ $$R \approx 0.3t^{2/5}\text{ pc}\hspace{1cm}u_{0}\approx 10^{5}t^{-3/5}\text{ km
 $$100\text{ yrs}<t<10^{5}\text{ yrs}$$
 
 ### Structure of the blast wave
+- Each variable written as _separated functions_ of $t$ and $\xi$
+- Substituting into _Eulerian dynamical equations_, time dependence often _cancels out_
+- Solution for $\gamma=7/5$:
+![[Supernova blast wave structure.png]]
+
+- Most mass is _swept up in a shell_, just _behind_ the shock
+- _Post-shock_ pressure is a multiple of $p_\text{in}$
+- Shell material _does not move in a uniform velocity_
+	- One can take a _weighted average_
 
 ### Breakdown of similarity solution
 - The solution _breaks down_ when pressure in the ambient ISM is _comparable to that of the shock shell_, $p_{0}\sim p_{1}$
@@ -727,3 +737,256 @@ $$t_{s}\sim \frac{R_\text{max}}{c_{s}}$$
 
 # Bernoulli's equation and transonic flows
 
+## Bernoulli's equation
+- Consider _steady_, _barotropic_ flows
+- Momentum equation:
+$$\frac{\partial \boldsymbol{u}}{\partial t}+(\boldsymbol{u}\cdot \nabla)\boldsymbol{u}=-\frac{1}{\rho}\nabla p-\nabla \Psi$$
+- For a _barotropic_ fluid, $p=p(\rho)$, and one can derive:
+$$\frac{1}{\rho}\nabla p=\nabla\left( \int \frac{1}{\rho} \, dp  \right)$$
+- Use the vector identity:
+$$(\boldsymbol{u}\cdot \nabla)\boldsymbol{u}=\nabla\left( \frac{1}{2}u^{2} \right)-\boldsymbol{u}\times \nabla\times \boldsymbol{u}$$
+- Define _vorticity_:
+$$\boldsymbol{w}=\nabla\times \boldsymbol{u}$$
+- For _steady flow_, one finds:
+$$\boldsymbol{u}\cdot \nabla\left[ \frac{1}{2}u^{2}+\int \, \frac{dp}{\rho}+\Psi  \right]=0$$
+
+- The quantity:
+$$H=\frac{1}{2}u^{2}+\int  \, \frac{dp}{\rho}+\Psi $$
+- It is _conserved along a streamline_
+
+- If $p=0$, it implies that _kinetic and potential energy_ is _constant_
+- If $p\neq 0$, it implies that _pressure differences_ are required to _accelerate_
+	- Also represents the _conversion_ of _kinetic energy_ to _random molecular motion_
+## Rotational and irrotational flows
+
+### Irrotational flows
+- An _irrotational flow_ is one where $\boldsymbol{w}=0$ _everywhere_
+- For a _steady irrotational flow_, the conservation along streamlines gives:
+$$\nabla H=0$$
+- $H$ is _constant everywhere_
+
+- An example is a _uniform flow_
+- From _Stokes Theorem_:
+$$\oint \boldsymbol{u}\cdot d\boldsymbol{l}=\iint \boldsymbol{w}\cdot d\boldsymbol{S}=0$$
+- In _general_, $\boldsymbol{u}=u(R)\hat{\phi}$ is typically _rotational_
+	- For $\boldsymbol{u}\propto 1/R \hat{\phi}$, $\nabla\times \boldsymbol{u}=0$, but the line integral is _non-zero_, as there is a _singularity_ that makes Stokes' Theorem invalid
+
+- For _zero vorticity_, one can write velocity as a _gradient_ of a _potential function_ $\Phi_{u}$:
+$$\boldsymbol{u}=-\nabla \Phi_{u}$$
+- If the flow is _incompressible_, this becomes _Laplace's equation_:
+$$\nabla^{2}\Phi_{u}=0$$
+
+### General flows
+- For a _general flow_:
+$$\frac{\partial \boldsymbol{u}}{\partial t}=-\nabla H+\boldsymbol{u}\times \boldsymbol{w}$$
+- Taking the _curl_ of both sides, one gets _Helmholtz's equation_:
+$$\frac{\partial \boldsymbol{w}}{\partial t}=\nabla\times(\boldsymbol{u}\times \boldsymbol{w})$$
+- If $\boldsymbol{w}=0$ everywhere _initially_, then it _stays zero_
+	- However, _viscous_ terms can _generate_ vorticity
+
+- Derivation:
+![[Circulation theorem derivation.png|350]]
+- _Kelvin's circulation theorem_:
+$$\frac{D}{Dt}\int \boldsymbol{w}\cdot \, d\boldsymbol{S}=0 $$
+- In other words, the _flux_ of vorticity is _conserved_, and _moves with the fluid_
+
+## De Laval Nozzle
+- Consider a _steady flow_ in the $z-$direction in a _tube_ of given _variable cross-section_ $A(z)$
+![[de Laval nozzle.png|600]]
+- The _mass flow_ is _constant_:
+$$\rho uA=\dot{M}=\text{const.}$$
+- From this, one gets:
+$$\frac{1}{\rho}\nabla \rho +\nabla \ln u+\nabla \ln A=0$$
+
+### Steady, irrotational flow and sonic transition
+- From the momentum equation, for _steady flow_, with _no gravity_, and assuming a [[#Barotropic fluids|barotropic equation of state]]:
+$$(\boldsymbol{u}\cdot \nabla)\boldsymbol{u}=-\frac{1}{\rho}\nabla \rho \frac{dp}{d\rho}=-\frac{c_{s}^{2}}{\rho}\nabla \rho$$
+- Here, $c_{s}$ is the _sound speed_
+- And for an _irrotational flow_, $(\boldsymbol{u}\cdot \nabla)\boldsymbol{u}=\nabla(u^{2}/2)=u^{2}\nabla (\ln u)$
+- This gives the equation for _flow across the nozzle_:
+$$(u^{2}-c_{s}^{2})\nabla \ln u=c_{s}^{2}\nabla \ln A$$
+- Therefore, a _minimum or maximum_ in $A$ means either:
+	- A _minimum or maximum_ in $u$
+	- $u=c_{s}$
+- Therefore, a gas can _only make a sonic transition_ (to/from supersonic flow) at a _maximum or minimum of cross-sectional area_
+
+- When there is _no gravity_, and the flow is _steady and irrotational_:
+$$\frac{1}{2}u^{2}+\int  \, \frac{dp}{\rho}=H=\text{const.} $$
+### Isothermal gas
+- The _isothermal equation of state_:
+$$p=\frac{\mathcal{R}_{*}}{\mu}\rho T $$
+- In this case:
+$$\int \, \frac{dp}{\rho}=\frac{\mathcal{R}_{*}T}{\mu}\ln \rho=c_{s}^{2}\ln \rho$$
+
+- Suppose there is a _sonic transition_ at $A=A_{m}$ (a minimum/maximum), then the conservation of $H$ and $\dot{M}$ gives:
+$$u^{2}=c_{s}^{2}\left[ 1+2\ln\left( \frac{\rho|_{A_{m}}}{\rho} \right) \right]=c_{s}^{2}\left[ 1+2\ln\left( \frac{uA}{c_{s}A_{m}} \right) \right]$$
+- From this, for a nozzle of $A(z)$, _given_ $\dot{M}$ and $c_{s}$, the _flow_ $u(z)$ and _density profile_ $\rho(z)$ are _completely deternined_
+
+### Polytropic gas
+- The general _polytropic equation of state_:
+$$p=K\rho^{1+1/n}\hspace{1.5cm} \int  \, \frac{dp}{\rho}=nc_{s}^{2}$$
+- Here, $c_{s}$ is a _function of density_:
+$$c_{s}^{2}=\left( \frac{n+1}{n} \right)K\rho^{1/n}$$
+- From conservation of mass flow:
+$$\rho|_{A_{m}}=\left[ \left( \frac{\dot{M}}{A_{m}} \right)^{2} \frac{n}{K(n+1)} \right]^{n/(2n+1)}$$
+- Then given $A_{m}$, $c_{s}|_{A_{m}}$ and $u|_{A_{m}}$ can also be determined using _Bernoulli's equation_:
+$$\frac{1}{2}\left( \frac{\dot{M}}{A\rho} \right)^{2}+(n+1)K\rho^{1/n}=\left( n+\frac{1}{2} \right)\left( \frac{n+1}{n} \right)K\rho_{A_{m}}^{1/n}$$
+### General flows
+- Equation for flow:
+$$(u^{2}-c_{s}^{2})\nabla \ln u=c_{s}^{2}\nabla \ln A$$
+- In the _subsonic regime_ $(u<c_{s})$, if $A$ _decreases_, then $u$ _increases_
+	- As the fluid is more _confined_, the speed _increases_
+- In the _supersonic regime_ $(u>c_{s})$, if $A$ _increases_, then $u$ _also increases_
+	- Supersonic flows are _very compressible_, so _both_ $A$ and $u$ must _increase_
+
+- Therefore, a nozzle can be made to _monotonically increase_ $u$ and _accelerate_ the flow _supersonically_:
+![[Supersonic acceleration.png|500]]
+
+- _Gas discs_ in the centre of some galaxies can _confine_ jets through pressure, such that they become _supersonic_
+
+- From the _momentum equation_:
+$$u^{2}\nabla \ln u=-c_{s}^{2}\nabla\ln \rho$$
+- If $u\ll c_{s}$, then $\nabla\ln u\gg \nabla \ln \rho$, implying that _accelerations_ are important, and _pressure changes_ are _small_, hence the fluid is _nearly incompressible_
+- If $u\gg c_{s}$, then $\nabla \ln u\ll \nabla \ln \rho$, implying that $u$ is approximately _constant_, and _pressure changes_ lead to _little acceleration_, and the fluid is _compressible_
+
+## Spherical accretion and winds
+- Consider the _spherically symmetric accretion_ of gas _onto a star_
+	- Assume that the _gas reservoir_ at $r\to \infty$ is at _rest_
+	- The star is treated as a _point mass_
+	- The flow is in _steady state_
+- At _large distances_, the inflow is _subsonic_
+	- $\Delta p$ has _significant effects_
+- When it _reaches_ the star, the gas is in _freefall_, where $\Delta p$ is _insignificant_, hence the inflow is _supersonic_
+- Therefore, there must be a _sonic point_ where the gas _transitions_
+	- Different to the nozzle as there is _gravity_, and there is _no confinement_
+
+### The sonic point
+- In the _steady state_, continuity dictates:
+	- $u$ is _inward pointing_
+$$4\pi r^{2}\rho u=\dot{M}\implies \frac{d\ln \rho}{dr}=-\frac{2}{r}-\frac{d\ln u}{dr}$$
+- The _momentum equation_ for steady flow gives:
+	- Assume the _self-gravity_ of the gas is _negligible_
+$$u^{2}\frac{d\ln u}{dr}=-c_{s}^{2} \frac{dp}{dr}-\frac{GM}{r^{2}}$$
+- This gives:
+$$(u^{2}-c_{s}^{2}) \frac{d\ln u}{dr}=\frac{2c_{s}^{2}}{r}\left( 1-\frac{GM}{2c_{s}^{2}r} \right)$$
+- Therefore, the _sonic point_ is given by:
+$$r_{s}\equiv \frac{GM}{2c_{s}^{2}}$$
+- Let the _density_ at the sonic point be $\rho_{s}$
+
+- Possible solutions for spherical accretion:
+![[Spherical accretion solutions.png|400]]
+
+- This is _not a shock_, as there is _no sudden acceleration/deceleration_
+### Isothermal case and Bondi accretion
+- In this case, $c_{s}$ is _constant_, and _temperature_ can _determine_ $r_{s}$
+- Typically, $M$ and $\rho_{s}$ are _unknown_, and mut be determined from _boundary conditions_ at _infinity_
+- From _Bernoulli's equation_:
+$$\frac{1}{2}u^{2}+c_{s}^{2}\ln \rho-\frac{GM}{r}=\frac{1}{2}c_{s}^{2}+c_{s}^{2}\ln \rho_{s}-\frac{GM}{r_{s}}$$
+- From the formula for $r_{s}$:
+$$u^{2}=2c_{s}^{2}\left[ \ln\left( \frac{\rho_{s}}{\rho} \right) -\frac{3}{2}\right]+\frac{2GM}{r}$$
+- At _small radii_, $u^{2}\approx 2GM/r$, and the gas is in _freefall_
+- At _large radii_, for $u\to 0$:
+$$\rho_{s}=\rho_{\infty}\exp(1.5)$$
+- Therefore, for a given $\rho_{\infty}$, $\rho_{s}$ is known, and the _accretion rate_ is:
+$$\dot{M}=4\pi r_{s}^{2}\rho_{s}c_{s}=\frac{\pi G^{2}M^{2}\rho_{\infty}e^{1.5}}{c_{s}^{3}}$$
+- It is _proportional_ to $M^{2}$, hence _larger stars accrete more gas_
+- As $\dot{M} \propto c_{s}^{-3}$, it is _very sensitive to temperature_, and accretion is _faster in colder medium_
+
+- For a _cool cloud_ in the Milky Way, the Sun accretes $\approx 1\%$ of its mass _over the age of the universe_
+- For _dense cores_ of molecular clouds, the _accretion timescale_ is typically short
+	- Here, _self-gravity_ becomes more important
+
+### Polytropic gas
+- Polytropic gas:
+$$p=K\rho^{1+1/n}\hspace{1cm} c_{s}^{2}=\left( \frac{n+1}{n} \right)K\rho^{1/n}\hspace{1cm}\int  \, \frac{dp}{\rho}=nc_{s}^{2} $$
+- From the equations for _mass flow_ and the _sonic point_:
+$$c_{s}^{2}=\left( \frac{GM}{2} \right)^{4/3}\left( \frac{4\pi \rho_{s}}{\dot{M}} \right)^{2/3}$$
+- Combining this with the formula for $c_{s}^{2}$ in terms of $K$ and $\rho$:
+$$\rho_{s}=\left( \frac{GM}{2} \right)^{4n/(3-2n)}\left( \frac{4\pi}{\dot{M}} \right)^{2n/(3-2n)}\left( \frac{n}{(n+1)K} \right)^{3n/(3-2n)}$$
+- Then from _Bernoulli's equation_:
+$$\frac{1}{2}u^{2}+K(n+1)\rho^{1/n}-\frac{GM}{r}=\left( n-\frac{3}{2} \right)c_{s}^{2}$$
+- From the formula for $\dot{M}$:
+$$\frac{1}{2}\left( \frac{\dot{M}}{4\pi r^{2}\rho} \right)^{2}+K(n+1)\rho^{1/n}-\frac{GM}{r}=\left( n-\frac{3}{2} \right)c_{s}^{2}$$
+
+- As the gas _starts from rest_, as $r\to \infty$, $u\to 0$
+$$\rho_{\infty}=\left[ \frac{(n-3/2)c_{s}^{2}}{(n+1)K} \right]^{n}=\left[ \frac{n-3/2}{n} \right]^{n}\rho_{s}\hspace{1.5cm}c_{s,\infty}^{2}=\frac{n-3/2}{n}c_{s}^{2}$$
+- Combining these, the _accretion rate_ is then:
+$$\dot{M}=\frac{\pi(GM)^{2}\rho_{\infty}}{c_{s,\infty}^{3}}\left( \frac{n}{n-3/2} \right)^{n-3/2}$$
+
+- If $n<3/2$, the above suggests that _Bernoulli's constant_ is less than zero
+- At $r\to \infty$, $\rho>0$ and the constant must be _positive_
+- Hence, the _sonic point_ is _never reached_
+	- The gas is _too incompressible_
+	- $\nabla p$, which is directed _outward_, will _retard_ the flow such that the gas is _always subsonic_, and it _never reaches freefall_
+
+- If $n=3/2$, the gas is _adiabatic_ and _monoatomic_
+- The equation for $c_{s,\infty}^{2}$ implies that as $n\to 3/2$ from _above_, $c_{s}$ at the sound point _tends to infinity_, and $r_{s}\to 0$
+	- As the star has _finite size_, it is actually _never reached_
+- The sound speed equation gives $c_{s}^{2}/\rho^{2/3}$ is _proportional_ to $K$
+- Hence, $\dot{M}$ can still be found
+
+# Fluid instabilities
+- A fluid in _equilibrium_/is _steady_ requires that $\partial Q/\partial t=0$ for all quantities $Q$
+	- Can be in equilibrium with $\boldsymbol{u}=0$
+- Introduce a _small perturbation_ into the flow
+- The perturbation can _decay_ or undergo _oscillations_, meaning it is _stable_
+- They can also _grow_, indicating _instability_
+
+## Convective instability
+- The instability of a _hydrostatic equilibrium_ in a _gravitational field_
+- Consider an _ideal gas_ in hydrostatic equilibrium, and _perturb_ a fluid element _upwards_
+	- The perturbation is _slow_ compared to $c_{s}$ such that the fluid element is in _pressure balance_
+	- It is _fast_ enough such that the fluid element _cannot exchange heat_ (adiabatic)
+![[Convective instability perturbation.png]]
+- Stability is dependent on the _new density_ $\rho^{*}$
+	- If $\rho^{*}<\rho'$, the perturbed element is _buoyant_, and _unstable_
+	- If $\rho^{*}>\rho'$, the perturbed element _sinks_, and is _stable_
+
+- Adiabatic change:
+$$K=\frac{p}{\rho^{\gamma}}=\frac{p'}{\rho^{{*}^{\gamma}}}$$
+- In the displaced fluid element, expanding perturbations to the _first order_:
+$$p'=p+\frac{dp}{dz}\delta z \implies \rho^{*}=$$
+- Background atmospheric density:
+$$\rho'=\rho+\frac{d\rho}{dz}\delta z$$
+- Hence, the gas is _unstable_ if:
+$$\implies\frac{dK}{dz}<0\;,\; \frac{d}{dz}\ln K=0$$
+- The system is _unstable if entropy decreases in the upwards direction_
+- It is the _Schwarzchild criterion_
+
+- Using the _equation of state_, this can be related to _temperature gradients_:
+$$K=p\rho^{-\gamma}\propto p^{1-\gamma}T^{\gamma}$$
+- The gas is _unstable if_:
+$$\frac{dT}{dz}<\left( 1-\frac{1}{\gamma} \right) \frac{T}{p} \frac{dp}{dz}$$
+- Hence, _positive temperature gradients are stable_
+	- Even for _negative_ temperature gradients, _small_ temperature gradient is still stable
+
+- If the atmosphere is _convectively stable_, the fluid element undergoes _oscillations_:
+$$\rho^{*} \frac{\partial^{2}\delta z}{\partial t^{2}}=-g(\rho^{*}-\rho)$$
+- There is a _simple harmonic motion_ with _angular frequency_ $N$:
+$$N^{2}=\frac{g}{T} \left[ \frac{dT}{dz}-\left( 1-\frac{1}{\gamma} \right) \frac{T}{p} \frac{dp}{dz} \right]$$
+
+## Jeans instability
+- The instability of a medium against _gravitational collapse_
+- Consider a uniform medium which is initially _static_, with a _barotropic gas_
+- The medium is _self-gravitating_
+
+- Introduce _perturbations_:
+	- $\rho_{0}$ and $\Psi_{0}$ being both _constant_ is _inconsistent_ (Jeans swindle) but more rigorous analyses give the same result
+$$p,\rho,\boldsymbol{u},\Psi$$
+- _Linearise_ the equations
+
+- Look for _plane wave solutions_ to the perturbations
+
+- Define the _Jeans wavenumber_:
+$$k_{J}^{2}=\frac{4\pi G\rho_{0}}{c_{s}^{2}}$$
+- The _dispersion relation_:
+$$\omega^{2}=c_{s}^{2}(k^{2}-k_{J}^{2})$$
+- For $k\gg k_{J}$, the sound waves are _dispersion-free_
+- For $k>k_{J}$, the waves are _dispersed_ but still travelling
+- For $k<k_{J}$, $\omega$ is imaginary, and there is a _growing instability_
+
+- The _maximum stable wavelength_ (Jeans length):
+$$\lambda_{J}=\frac{2\pi}{k_{J}}=$$
+- The associated _mass scale_:
+$$M_{J}\sim \rho_{0}\lambda_{J}^{3}$$
+- The system will undergo _gravitational collapse_ if its mass _exceeds_ the Jeans mass

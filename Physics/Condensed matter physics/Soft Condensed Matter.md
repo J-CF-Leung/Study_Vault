@@ -616,6 +616,55 @@ $$ms\hat{v}(s)-m\hat{v}(0)=-\gamma(s)v(s)+\xi(s)$$
 - Correlation:
 $$\left<\hat{v}(s)v(0)\right>$$
 - Mean square displacement:
-$$\mathcal{L}(\left<x^{2}\right>)$$
-
+$$\mathcal{L}(\left<x^{2}\right>)=\frac{6k_{B}T}{s^{2}\hat{\gamma}(s)}$$
+- This is the _generalised Einstein relation_
 # Polymers
+- _Polymers_ make up a large variety of materials
+	- They can be _naturally occuring_ or _synthetic_
+
+- They are often modelled as being on a _lattice_
+- Each _link_ on a lattice can represent a _monomer_ in the chain
+- The chain follows a _random walk_
+
+## The ideal chain
+- Let the chain have $N$ _monomers_
+- Let the _length_ of a monomer (lattice cell size) be $b$
+
+- Consider the _end-to-end displacement_ $\boldsymbol{R}$
+- On _average_, as the walk is _completely random_:
+$$\left<\boldsymbol{R}\right>=0$$
+- Let the vector for the $i-$th step be $\boldsymbol{U}_{i}$
+- As they are _random_, they are _uncorrelated_
+$$\boldsymbol{R}=\sum_{i=1}^{N}\boldsymbol{U}_{i}\hspace{1.5cm}\left<\boldsymbol{U}_{i}\cdot \boldsymbol{U}_{j}\right>=0$$
+- From this:
+$$\left<R^{2}\right>=Nb^{2}\implies R=\sqrt{ N }b\propto N^{1/2}$$
+- Analagous to _diffusion_, with $N$ in the role of _time_
+
+- Define the _exponent_ $\nu$:
+$$R\propto N^{\nu}$$
+- For the _ideal chain_, $\nu=1/2$
+
+### Differences to real chains
+- Typically, _real chains_ have $\nu>1/2$
+	- The _excluded volume_ of the polymer causes it to _swell_
+
+- $R$ also scales with some _natural length scale_
+- It is _not necessarily the size of a monomer_
+- For real chains, it is known as the _Kuhn length_ $b$
+
+## Freely jointed chain
+- Let monomers have a _fixed step size_ $b_{0}$, but also be able to _freely rotate_ around some _axis_
+- The axis is _fixed_ as there is a characteristic _bond angle_ $\theta$
+- The average end-to-end distance:
+$$\left<R^{2}\right>=\sum_{i=1}^{N}|\boldsymbol{U}_{i}|^{2}+2\sum_{i=1}^{N}\sum_{j=1}^{N}\left<\boldsymbol{U}_{i}\cdot \boldsymbol{U}_{j}\right>$$
+- To consider the second term, _project_ $\boldsymbol{U}_{i}$ along $\boldsymbol{U}_{i+1}$:
+$$\boldsymbol{U}_{i}=\frac{\boldsymbol{U}_{i}\cdot \boldsymbol{U}_{i+1}}{b_{0}^{2}}\boldsymbol{U}_{i+1}+\boldsymbol{U}_{i,\perp}=\cos\theta \boldsymbol{U}_{i+1}+\boldsymbol{U}_{i,\perp}$$
+- Then consider the _correlation_ to a monomer _two links away_:
+$$\left<\boldsymbol{U}_{i}\cdot \boldsymbol{U}_{i+2}\right>=\cos\theta \left<\boldsymbol{U}_{i+1}\cdot \boldsymbol{U}_{i_{+1}}\right>+\left<\boldsymbol{U}_{i,\perp}\cdot \boldsymbol{U}_{i+2}\right>=b^{2}_{0}\cos^{2}\theta$$
+- The second term _vanishes_ due to free rotation
+- From _recursion_:
+$$\left<\boldsymbol{U}_{i}\cdot \boldsymbol{U}_{j}\right>=b_{0}^{2}(\cos\theta)^{|j-i|}$$
+- Therefore, approximating $N$ as _infinity_:
+$$\left<R^{2}\right>=Nb_{0}^{2} \frac{1+\cos\theta}{1-\cos\theta}$$
+- The _scaling_ $\nu=1/2$ is retained, but the _effective length_ is now:
+$$b=b_{0}\sqrt{ \frac{1+\cos\theta}{1-\cos\theta} }$$

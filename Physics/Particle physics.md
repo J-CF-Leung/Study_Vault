@@ -669,18 +669,25 @@ $$M_{fi}\sim \frac{\prod g}{q^{2}-m^{2}}$$
 
 # Quantum electrodynamics
 - QED is the _gauge theory_ of electromagnetic interactions
+- The [[Quantum electrodynamics|quantisation]] of the _electromagnetic field_
+
 - A _non-relativistic_ charged particle in an EM field:
 $$\boldsymbol{F}=q(\boldsymbol{E}+\boldsymbol{v}\times \boldsymbol{B})$$
 - Vector and scalar potentials:
-$$\boldsymbol{E}=$$
+$$\boldsymbol{E}=-\nabla \varphi-\frac{\partial \boldsymbol{A}}{\partial t}\hspace{1.5cm}\boldsymbol{B}=\nabla\times \boldsymbol{A}$$
 - The _Hamiltonian_:
-$$H=$$
+$$H=\frac{1}{2m}\left| \boldsymbol{p}-q\boldsymbol{A} \right|^{2}+q\varphi $$
 - The Schrodinger equation:
-$$\psi$$
-- The _local gauge transformation_:
+$$H\psi=\left[ \frac{1}{2m}\left| \hat{\boldsymbol{p}}-q\boldsymbol{A} \right|^{2}+q\varphi(\boldsymbol{r},t)  \right]\psi(\boldsymbol{r},t)=E\psi(\boldsymbol{r},t)$$
+- The _local gauge transformation_ (a $U(1)$ transformation):
 $$\psi\to \exp(iq\alpha)\psi \hspace{1cm}\boldsymbol{A}\to \boldsymbol{A}+\nabla\alpha \hspace{1cm}\varphi\to \varphi-\frac{\partial\alpha}{\partial t}$$
 - Requires the existence of a _physical gauge field_
-- There must also be a _conserved quantity_, given by _electric charge_
+- There must also be a _conserved quantity_, given by _electric charge_ $q$
+	- Related to the transformation itself
+
+- The interaction is _quantised_ using massless _photons_
+- It _couples_ with the invariant electric charge
+- Each _vertex_ gives a _strength_ $\propto \sqrt{ \alpha }$
 
 ## Processes in QED
 - The _standard electromagnetic vertex_:
@@ -729,7 +736,16 @@ $$\frac{d\sigma}{d\Omega}=\frac{\alpha^{2}}{4E^{2}\sin^{4}\theta/2}$$
 - This gives the cross-section:
 $$\frac{d\sigma}{d\Omega}=\frac{\alpha^{2}}{s}\implies \frac{d\sigma}{d\Omega}=\frac{4\pi\alpha^{2}}{s}$$
 - Taking the _spin states_ into account (to create a spin-1 photon):
-$$\frac{d\sigma}{d\Omega }=\frac{\alpha^{2}}{4s}(1+\cos^{2}\theta)$$
+$$\frac{d\sigma}{d\Omega }=\frac{\alpha^{2}}{4s}(1+\cos^{2}\theta) \implies \sigma=\frac{4\pi\alpha^{2}}{3s}$$
+
+### Drell-Yan process
+- The _annihilation_ of $q\bar{q}$ within _hadrons_
+- Example: 
+$$\ce{ \pi- p -> \mu+\mu- + \text{hadrons} }$$
+![[p+pi Drell-Yan.png|500]]
+- The cross-section:
+$$\sigma \propto Q_{u}^{2}\alpha^{2}\propto Q_{u}^{2}e^{4} $$
+- One must also account for the presence of _two_ $u$ quarks
 ## Experimental tests of QED
 - Example: _magnetic moments_ of the electron and muon:
 $$\boldsymbol{\mu}=\frac{ge}{2m}\boldsymbol{s}$$
@@ -749,7 +765,7 @@ $$\boldsymbol{\mu}=\frac{ge}{2m}\boldsymbol{s}$$
 	- Electron-proton scattering: $M\sim -e^{2}+e^{4}$
 	- Positron-proton scattering: $M\sim e^{2}+e^{4}$
 
-## Variation in interaction strength
+## Running of QED interaction strength
 - $\alpha=e^{2}/4\pi$ specifies the _strength_ of electromagnetic interactions
 
 - However, it is _not a constant_
@@ -764,3 +780,125 @@ $$\boldsymbol{\mu}=\frac{ge}{2m}\boldsymbol{s}$$
 	- $q^{2}\approx (100 \text{GeV})^{2}$: $\alpha\sim 1/128$
 
 - This is the _running_ of $\alpha$ with energy
+
+# Quantum chromodynamics
+- QCD is the _gauge theory_ of the _strong interaction_
+- The _quantised_ unit is given by the _massless gluon_
+- They couple to the _strong charge_
+
+- The _gauge transformation_ in QCD:
+$$\psi\to \exp[ig\boldsymbol{\lambda}\cdot \boldsymbol{\Lambda}(\boldsymbol{r},t)]\psi$$
+- It is an $SU(3)$ transformation
+	- $\boldsymbol{\lambda}$ is eight $3\times 3$ matrices 
+- It represents a _locally determined rotation of the colour state_
+- The _invariance_ under $SU(3)$ gives _eight massless gauge bosons_ (gluons)
+- Gluons can also _self-couple_ (they have colour charge)
+
+
+- Only _quarks_ have the strong charge and can interact with the strong interaction
+- The _strength_ of interaction $\propto \sqrt{ \alpha_{s} }$
+- It is much _stronger_ than the [[#Quantum electrodynamics|electromagnetic interaction]]:
+$$\alpha =\frac{e^{2}}{4\pi}\sim \frac{1}{137}\hspace{1.5cm}\alpha_{s}=\frac{g_{s}^{2}}{\pi}\sim 1$$
+
+- A strong interaction vertex always _conserves_ energy, charge, momentum, angular momentum
+- It can _never change quark flavour_
+- It also _conserves parity_
+
+## Colour charge
+- The electromagnetic interaction has _electric charge_, a _conserved_ quantum number with a continuum of values
+- The _strong_ interaction has _colour charge_
+
+- It is a quantum number with _3 values_ labelled $\color{red}{\text{red}}$, $\color{blue}{\text{blue}}$ and $\color{green}{\text{green}}$ ($r,b,g$)
+- Quarks carry _colour_ $r,b,g$
+- _Anti-quarks_ carry _anti-colour_ $\bar{r},\bar{b},\bar{g}$
+
+- _Colourless_ particles are either:
+	- _Not made of quarks_ (e.g. leptons, $W,Z$ bosons)
+	- _Equal parts_ $r,b,g$, such as _mesons_ with $(r\bar{r}+b\bar{b}+g\bar{g})/\sqrt{ 3 }$ or _baryons_ with $rbg$
+- _Gluons_ do _not_ have equal parts of colour
+
+## Gluons
+- Gluons are _spin-1 massless bosons_, carrying a colour quantum number
+- Typically, one may expect _nine gluons_, as each _colour_ pairs with an _anti-colour_
+- However, as one can form _linear combinations_, one can form a _colourless_ gluon with colour $(r\bar{r}+b\bar{b} +g\bar{g})/\sqrt{ 3 }$
+- From _convention_, the coloured gluons are:
+$$r\bar{b}\;\;\; r\bar{g}\;\;\; g\bar{r}\;\;\; g\bar{b}\;\;\; b\bar{g}\;\;\; b\bar{r}\;\;\;\frac{1}{\sqrt{ 2 }}(r\bar{r}-b\bar{b})\;\;\;\; \frac{1}{\sqrt{ 6 }}(r\bar{r}+b\bar{b}-2g\bar{g})$$
+
+- Example: consider the _scattering_ of a $\color{red}{\text{red}}$ quark from a $\color{blue}{\text{blue}}$ quark
+- _Colour_ is exchanged at each _vertex_ and _overall_:
+![[Red blue quark scattering.png|500]]
+
+### Self-interactions
+- As gluons _themselves_ carry colour charge, they can interact with _other gluons_:
+![[Gluon self interaction.png|450]]
+- Example: _gluon scattering_ $gg\to gg$, with _colour flow_:
+$$\ce{ r\bar{g}+g\bar{b}-> r\bar{r}+r\bar{b} }$$
+![[Gluon gluon scattering.png]]
+
+## QCD potential and confinement
+
+### The colour factor
+- The QCD potential has the same _form_ to the QED potential, but with the _colour factor_:
+$$V_{QCD}=-C \frac{\alpha_{s}}{r}$$
+- For $q\bar{q}$ in a _colourless_ state in a _meson_, $C=4/3$
+- For $q\bar{q}$ in a _colourless_ state in a _baryon_, $C=2/3$
+
+- This arises as _more than one gluon_ can participate in the process $q\to qg$
+- The colour factor can be obtained from _averaging over initial colour states_, then _summing_ over intermediate/final colour states
+
+### Confinement
+- The gluon interaction is _strong_ enough such that _quarks/gluons are always confined within hadrons_, and are _never observed alone_
+![[QCD vs QED forces.png]]
+- _Self-interaction_ of the gluons _squeeze_ the lines of force into a _narrow tube/string_
+- It has an effective _tension_ which _stores energy_ as the quarks _separate_
+
+- The _energy stored per unit length_ is _constant_, hence $V(r)\propto r$
+- Therefore, the _energy_ required to _separate_ two quarks is _infinite_
+- They are always _confined_ into combinations of _zero net colour charge_
+
+### Quark and antiquark
+- Between _quarks and antiquarks_, the potential consists of a _short range Coulomb-like term_, and a _long range linear term_:
+$$V_{QCD}=-\frac{4}{3} \frac{\alpha_{s}}{r}+kr$$
+- With $k\sim 1\,\text{GeV}/\text{fm}$
+- At large $r$, $F\approx k$, approximately $1.6\times 10^{5}\,\text{N}$
+
+## Jets
+- Consider a $q\bar{q}$ pair _produced_ in $\ce{ e+e- -> q\bar{q} }$
+![[Quark production.png|600]]
+- As the quarks _separate_, the potential in the _colour field_ (string) _increases linearly_
+- When the energy stored _exceeds_ $2m_{q}$, _new pairs_ can be created
+- As energy _decreases_, the hadrons (mostly _mesons_) freeze out
+![[Jet production.png|500]]
+
+- As quarks _separate_ more, more $q\bar{q}$ pairs are _produced_
+- This is known as _hadronisation_
+- A pair of quarks can end as _narrowly collimated jets of hadrons_
+- Jets _follow_ the direction of the _original_ (anti)quark
+- Hence, detectors observe _pairs_ of back-to-back jets
+
+## Nucelon-nucleon interactions
+- _Bound_ $qqq$ states are _colourless_, or _singlet states_
+- They can only _emit/absorb another_ colour _singlet state_
+	- Simply from _conservation_
+
+- They typically interact by the _exchange of pions_
+	- Example: $pp$ scattering
+![[Proton-proton scattering.png|600]]
+- The nuclear potential is _Yukawa_:
+$$V(r)=-\frac{g^{2}}{4\pi} \frac{\exp(-m_{\pi}r)}{r}$$
+- It is a _short range force_, as $1/m_{\pi}=1.4\,\text{fm}$
+
+## Running of QCD interaction strength
+- Just like [[#Running of QED interaction strength|QED]], $\alpha_{s}$ which _specifies interaction strength_, is _not constant_ (dependent on energy)
+- In QCD, there is a _colour screening_ effect
+- Quantum _fluctuations_ lead to a _cloud_ of _virtual_ $q\bar{q}$ pairs
+![[Virtual quark pairs.png|300]]
+
+- As gluons can _self-interact_, there can also be a _cloud of virtual gluons_
+	- There is _no analogue_ in QED as photons _do not self interact_
+![[Virtual gluons.png|300]]
+- These self-interactions cause _colour charge_ to be _screened_ by both _virtual quarks and gluons_
+- As the cloud carries colour charge, the _effective colour charge_ tends to _decrease_ at smaller distances (high energy)
+	- Low energies: _large_ $\alpha_{s}$ (perturbation theory is less accurate)
+	- High energies: _small_ $\alpha_{s}$, hence _quarks_ can be treated as _free particles_ (asymptotic freedom, perturbation theory can be used)
+![[QED running vs QCD.png]]
