@@ -1180,7 +1180,129 @@ $$\varepsilon_{h}(\boldsymbol{k}_{h})=-\varepsilon_{e}(\boldsymbol{k}_{e})$$
 $$v_{h}=\boldsymbol{v}_{e}$$
 - Assuming a _parabolic dispersion_, the _effective mass_ is then:
 $$m^{*}_{h}=-m^{*}_{e}$$
-- The _effective charge_ is $+e$
 - Taking the [[#Wavepackets and equations of motion|equation of motion]] for an electron and flipping signs:
 $$\hbar \frac{d\boldsymbol{k}_{e}}{dt}=+e(\boldsymbol{E}+\boldsymbol{v}_{h}\times \boldsymbol{B})$$
 - The _current_ carried by the hole must be the _same_ as the missing current from the electron
+- The _effective charge_ is $+e$
+	- Consider the motion of the _valence electrons_ in moving the hole, under an electric field
+
+
+# Experimental probes of band structure
+
+## Photon absorption
+- The photon _excites_ an electron from an occupied state to an _empty state_
+- As $E=\hbar kc$, the transition is _nearly vertical_
+
+- In a _direct band gap_ conductor (e.g. $\ce{ GaAs }$), the _lowest energy available_ is at the _same wave-vector_, so the transition is _vertical_
+- For an _indirect band gap_ semiconductor (e.g. $\ce{ Si }$), the valence band maximum is at a _different wave-vector_ to the conduction band minimum
+	- A _phonon_ must be excited as the photon is absorbed
+	- A _second order_ process which is _much less likely_ than a direct transition
+
+![[Direct vs indirect band gaps 1.png|500]]
+
+- The initial and final electron states are related by:
+$$\epsilon_{f}=\epsilon_{i}+\hbar\omega$$
+- The _minimum_ for $\hbar\omega$ is $E_{g}$, above which there is a _spectrum of available transitions_
+
+### Form of transition rate
+- The _optical absorption coefficient_ is determined by a _quantum mechanical transition rate_, for _exciting_ the electron from $\psi_{i}$ to $\psi_{f}$ by absorption of $\hbar\omega$
+- From [[Time-dependent quantum mechanics#Fermi's Golden Rule|Fermi's Golden Rule]]:
+$$W_{i\to f}=\frac{2\pi}{\hbar}|M|^{2}g(\hbar\omega)$$
+- $g(\hbar\omega)$ is a _joint density of states_ as there can be _multiple_ transitions of $\hbar\omega$ at _different energies_
+
+- Matrix element: perturbation due to _electric dipole formation_
+	- $\boldsymbol{p}_{e}=-e\boldsymbol{r}$
+$$M=\braket{ \psi_{f}|\hat{H}' | \psi_{i} }  \hspace{1cm} \hat{H}'=-\boldsymbol{p}_{e}\cdot \boldsymbol{E}_{0}\exp(i\boldsymbol{k}\cdot \boldsymbol{r})$$
+- Electron states are [[#Bloch states|Bloch wave-functions]]
+$$\psi_{i/f}=\frac{1}{\sqrt{ V }} u_{i/f}\exp(i\boldsymbol{k}_{i/f}\cdot \boldsymbol{r})$$
+- The matrix element is then:
+$$M=\frac{e}{V} \int  \, dx $$
+- The _phase factor_ must be zero:
+$$\hbar(\boldsymbol{k}_{f}-\boldsymbol{k}_{i})=\hbar \boldsymbol{k}$$
+- $u_{f}$ and $u_{i}$ have the _periodicity of the lattice_, so the integral becomes a _sum over identical unit cells_:
+$$|M| \propto \int _\text{unit cell} u_{i}^{*}(\boldsymbol{r}) x u_{f}(\boldsymbol{r}) \, d^{3}\boldsymbol{r} $$
+- Assume the light is _polarised_ along the $x-$axos
+
+- The precise forms of $u$ depend on the _band_ and the material
+
+- Let $\boldsymbol{k}_{f}=\boldsymbol{k}_{i}$, valid for optical transitions
+
+### Example: GaAs
+- Direct band gap
+- $3$ valence bands, corresponding to $p$ bonding orbitals
+- Single conduction band due to $s$ antibonding orbitals
+	- Description strictly valid only at _zone centre_ $\Gamma$, as _atomic character_ tends to change away from $\Gamma$
+- There is then _one electron band_, and _three hole bands_
+![[GaAs band structure.png]]
+### Joint density of states
+- $g(\hbar\omega)$ is the _joint density of states_, as both initial and final states are in _continuous bands_
+- Take the example of $\ce{ GaAs }$, with _conduction, heavy-hole, light-hole, split-off hole_ bands
+![[GaAs bands.png|350]]
+
+- Quadratic dispersions:
+
+- In a _heavy or light hole transition_:
+$$\hbar \omega=E_{g}+\frac{\hbar^{2}k^{2}}{2m^{*}_{e}}+\frac{\hbar^{2}k^{2}}{2m^{*}_{h}}$$
+- Write the _reduced electron-hole mass_:
+$$\frac{1}{\mu}=\frac{1}{m_{e}^{*}}+\frac{1}{m_{h}^{*}}\implies \hbar\omega=E_{g}+\frac{\hbar^{2}k^{2}}{2\mu}$$
+- Joint density of states:
+$$\hbar\omega>E_{g}: g(\hbar\omega)=\dots \sqrt{ \hbar\omega-E_{g} }$$
+
+### Experimental results
+- In a material of _finite size_, the absorption follows _Beer's law_:
+$$I=I_{0}\exp(-\alpha z)$$
+- $\alpha$ is the _fraction of intensity absorbed per unit length_
+
+- For $\hbar\omega>E_{g}$, one expects $\alpha \propto \sqrt{ \hbar\omega -E_{g} }$
+	- Plot as $\alpha^{2} \propto \hbar\omega-E_{g}$
+- As $g(\hbar\omega) \propto \mu^{3/2}$, transitions with _larger reduced masses_ give rise to _stronger absorption_
+
+- This is only followed _approximately_
+- The electrons and holes have _Coulomb attraction_
+- They can form a _bound pair_, known as an _exciton_
+- These effects become more significant for _large band gap_, and _lower temperature_
+
+- Crystals may include _impurities_ and _defects_ with energies _within the band gap_
+- This gives _additional absorption_
+
+- The _parabolic_ approximation is only valid near $k=0$
+	- Joint DoS moves away from $\sqrt{ \hbar\omega-E_{g} }$
+	- The _full band structure_ must be calculated
+![[GaAs optical spectrum.png]]
+
+### Indirect semiconductor
+- Transition must involve a _phonon_ to conserve momentum
+
+- Consider an indirect transition from $(\epsilon_{1},k_{1})$ to $(\epsilon_{2},k_{2})$
+- Photon energy $\hbar\omega$, phonon energy $\hbar\Omega$
+
+- Conservation:
+$$\epsilon_{f}=\epsilon_{i}+\hbar\omega \pm \hbar\Omega \hspace{1.5cm} \hbar \boldsymbol{k}_{f}\approx \hbar \boldsymbol{k}_{i}+\hbar \boldsymbol{q}$$
+- Phonons can be _absorbed_ or _emitted_
+	- The former is only possible at _higher temperatures_
+
+- The absorption is _weaker_ due to it being a _second order process_
+![[Direct vs indirect absorption.png|400]]
+
+- A QM derivation gives $\alpha(\hbar\omega) \propto (\hbar\omega-E_{g} \mp \hbar\Omega)^{2}$
+- Frequency dependence _different from direct band gap conductors_
+
+- The _threshold_ is dependent on whether the phonon is _emitted or absorbed_
+	- There are often _contributions from both_, but the latter is only possible for _higher temperatures_
+
+### Excitons
+- There is often a _peak_ in the spectrum at _low temperatures_
+- An exciton is a _bound pair_ of electron and hole with _reduced mass_
+$$\frac{1}{\mu}=\frac{1}{m_{e}^{*}}+\frac{1}{m_{h}^{*}}$$
+- Modify equation for _energy of a hydrogen atom_:
+	- Change both _mass_, and _relative permittivity_
+$$E_{n}=-\frac{\mu^{*}}{m_{e}\epsilon^{2} } \frac{13.6\,\text{eV}}{n^{2}}\equiv -\frac{R_{x}}{n^{2}}$$
+- The energy of the exciton is equal to _energy required to create a pair_, _minus the binding energy_:
+$$\epsilon_{n}=E_{g}-\frac{R_{x}}{n^{2}}$$
+
+- Order of $\text{meV}$
+
+## Photoemission
+
+## Quantum oscillations
+
