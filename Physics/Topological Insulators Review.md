@@ -49,6 +49,12 @@ $$\boldsymbol{F}_{n,\mu \nu}=\frac{\partial}{\partial R^{\mu}}A_{n,\nu}-\frac{\p
 - _Bulk-boundary_ correspondence: relates _bulk_ topological invariants to the _boundary_ TIs
 
 - Chern number: Berry curvature over a _closed surface_
+
+# Concepts in topological band theory
+- Wilson loop
+
+# Electric polarisation
+
 # Quantum Hall Effect
 - (Ando, 2013)
 - TKNN invariant $\nu_{n}$: related to _Berry flux enclosed_ after _circling BZ boundary_:
@@ -59,7 +65,15 @@ $$\displaylines{\nu=\sum_{n}\nu_{n}=\sum_{n} -\frac{1}{2\pi}\gamma_{n}[\partial 
 $$\sigma_{xy}=\nu\frac{e^{2}}{h}$$
 - A _non-zero TKNN variant_ means the system has a _non-trivial topology_
 
+- Integer quantum Hall effect: skipping orbits
+
 - This system _breaks time reversal symmetry_
+
+- Use _perturbation theory_ to obtain new eigenstates
+	- Treat the _electric field_ as the perturbation, $V=-eEy$
+- Magnetic field in the $z-$direction
+- Calculate $\sigma$ using _Heisenberg's equation of motion_ to determine $\left<j\right>_{x}$
+
 # Z2 topological invariant
 - Time-reversal symmetry often given by _spin-orbit interaction_
 
@@ -71,8 +85,12 @@ $$\sigma_{xy}=\nu\frac{e^{2}}{h}$$
 
 - There is a $\mathbb{Z}^{2}$ _topological invariant_
 
-# BHZ model
+## Time reversal symmetry
 
+## Inversion symmetry
+
+# BHZ model
+- Motivated by the $\ce{ CdTe/HgTe/CdTe }$ quantum well, where the $s-$ and $p-$bands _invert_ at $\boldsymbol{k}=0$
 
 # Types of topological materials
 
@@ -81,6 +99,13 @@ $$\sigma_{xy}=\nu\frac{e^{2}}{h}$$
 ## 3D Materials
 
 ## Topological semimetals
+
+- Weyl semimetal:
+	- Weyl fermions are _massless_ and _chiral_
+	- Two-component Dirac equation
+- When TRS is broken in an _inversion-symmetric_ solid
+- Weyl points come in _pairs_
+- They give rise to an _arc of zero-energy excitation_ (Fermi arc) in the projected surface BZ
 
 # New developments in theory
 - Multi-band braiding? (Euler class instead of Berry flux)

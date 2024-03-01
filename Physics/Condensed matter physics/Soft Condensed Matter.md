@@ -361,11 +361,21 @@ $$C_{ijkl}=C_{klij}$$
 ## Elastic moduli
 - For a _uniaxial deformation_:
 $$\sigma_{x x}=E\epsilon_{x x}$$
+- $E$ is the _Young's modulus_
+
+### Poisson's ratio
 - This typically gives a _strain along perpendicular directions_
 - Define _Poisson's ratio_:
 $$\nu=-\frac{\epsilon_{yy}}{\epsilon_{x x}}$$
 - It is typically _positive_, but can be _negative_ (auxetic materials)
+- In the case of _uniaxial deformation_:
+$$E\epsilon_{x x}=\sigma_{x x}\hspace{1cm}E\epsilon_{yy}=-\nu\sigma_{x x}\hspace{1cm}E\epsilon_{zz}=-\nu \sigma_{x x}$$
+- For a _general deformation_:
+$$\begin{align}E\epsilon_{x x}&=+\sigma_{x x}-\nu\sigma_{yy}-\nu\sigma_{zz} \\ E\epsilon_{yy}&=-\nu\sigma_{x x}+\sigma_{yy}-\nu\sigma_{zz} \\ E\epsilon_{zz}&=-\nu\sigma_{xx}-\nu\sigma_{yy}+\sigma_{zz}\end{align}$$
+- This can be _solved_ to get:
+$$\sigma_{x x}=\frac{E}{(1+\nu)(1-2\nu)}[(1-\nu)\epsilon_{x x}+\nu\epsilon_{yy}+\nu\epsilon_{zz}]$$
 
+### Bulk modulus
 - The _volumetric deformation_ of a material:
 $$\epsilon_{x x}+\epsilon_{yy}+\epsilon_{zz}=\text{Tr}(\epsilon)$$
 - For an isotropic _pressure_:
@@ -374,6 +384,7 @@ $$-p=\text{Tr}(\sigma)$$
 $$B=-\frac{p}{\text{Tr}(\epsilon)}$$
 - This can be written as:
 $$B=\frac{E}{3(1-2\nu)}$$
+### Shear modulus
 - The _shear modulus_:
 $$\sigma_{xy}=2G\epsilon_{xy}$$
 - Can be written as:
@@ -558,7 +569,7 @@ $$a \sim \sqrt{ t }$$
 ## Diffusion in an external potential
 - In the _overdamped limit_, with some _external potential_:
 $$\gamma \boldsymbol{v}=-\nabla V+\boldsymbol{\xi}=-k\boldsymbol{x}+\boldsymbol{\xi}$$
-- In _analogy_ with the general case without potentiak:
+- In _analogy_ with the general case without potential:
 $$\left<x^{2}\right>_{k}=x_{0}^{2}\exp\left( -\frac{2k}{\gamma}t \right)+\frac{3k_{B}T}{k}\left( 1-\exp\left( -\frac{2k}{\gamma}t \right) \right)$$
 - The new _relaxation time_:
 $$\tau_{k}=\frac{\gamma}{k}$$
@@ -626,7 +637,8 @@ $$\mathcal{L}(\left<x^{2}\right>)=\frac{6k_{B}T}{s^{2}\hat{\gamma}(s)}$$
 - Each _link_ on a lattice can represent a _monomer_ in the chain
 - The chain follows a _random walk_
 
-## The ideal chain
+## Chains
+### The ideal chain
 - Let the chain have $N$ _monomers_
 - Let the _length_ of a monomer (lattice cell size) be $b$
 
@@ -644,7 +656,7 @@ $$\left<R^{2}\right>=Nb^{2}\implies R=\sqrt{ N }b\propto N^{1/2}$$
 $$R\propto N^{\nu}$$
 - For the _ideal chain_, $\nu=1/2$
 
-### Differences to real chains
+### Real chains and Kuhn length
 - Typically, _real chains_ have $\nu>1/2$
 	- The _excluded volume_ of the polymer causes it to _swell_
 
@@ -652,7 +664,7 @@ $$R\propto N^{\nu}$$
 - It is _not necessarily the size of a monomer_
 - For real chains, it is known as the _Kuhn length_ $b$
 
-## Freely jointed chain
+### Freely jointed chain
 - Let monomers have a _fixed step size_ $b_{0}$, but also be able to _freely rotate_ around some _axis_
 - The axis is _fixed_ as there is a characteristic _bond angle_ $\theta$
 - The average end-to-end distance:
@@ -666,5 +678,355 @@ $$\left<\boldsymbol{U}_{i}\cdot \boldsymbol{U}_{i+2}\right>=\cos\theta \left<\bo
 $$\left<\boldsymbol{U}_{i}\cdot \boldsymbol{U}_{j}\right>=b_{0}^{2}(\cos\theta)^{|j-i|}$$
 - Therefore, approximating $N$ as _infinity_:
 $$\left<R^{2}\right>=Nb_{0}^{2} \frac{1+\cos\theta}{1-\cos\theta}$$
-- The _scaling_ $\nu=1/2$ is retained, but the _effective length_ is now:
+- The _scaling_ $\nu=1/2$ is retained, but the _Kuhn length_ is now:
 $$b=b_{0}\sqrt{ \frac{1+\cos\theta}{1-\cos\theta} }$$
+### Bead-spring model
+- A model which lends itself to _statistical analysis_
+- Describe a chain as a _series of beads_, connected by _springs_ with spring constant $\kappa$
+- Let the _natural lengths_ be zero
+	- Good model for _high temperatures_
+
+- The potential of the chain:
+$$U=\sum_{i=1}^{N-1} \frac{1}{2}\kappa \left| \boldsymbol{r}_{i+1}-\boldsymbol{r}_{i} \right|^{2} $$
+- The [[Advanced statistical mechanics#Canonical ensemble and the partition function|partition function]]:
+$$Z(R)=\prod_{i=1}^{N-1}\int\, d^{3}\boldsymbol{r}_{i} \exp\left[ -\frac{\kappa}{2k_{B}T}\left(|\boldsymbol{r}_{0}-\boldsymbol{r}_{1}|^{2}+\dots|\boldsymbol{r}_{N-1}-\boldsymbol{r}_{N}|^{2} \right)  \right]$$
+- Integrating over an _intermediate degree of freedom_:
+$$\int  \, d^{3}\boldsymbol{r}_{1}\exp[-\alpha|\boldsymbol{r}_{0}-\boldsymbol{r}_{1}|^{2}-\alpha|\boldsymbol{r}_{1}-\boldsymbol{r}_{2}|^{2}]=\sqrt{ \frac{\pi}{2\alpha} }\exp(-\alpha|\boldsymbol{r}_{0}-\boldsymbol{r}_{2}|^{2}) $$
+- From this:
+$$\displaylines{Z(R)\propto \exp\left( -\frac{\kappa R^{2}}{2k_{B}TN} \right) \\ \left<R^{2}\right>= \frac{\int Z(R)R^{2} \, d^{3}R}{\int Z(R) \, d^{3}R } =\frac{3k_{B}T}{\kappa}N}$$
+- The _effective Kuhn length_ is now a _thermodynamic quantity_:
+$$b^{2}=\frac{3k_{B}T}{\kappa}$$
+
+- The _end-to-end distance_ in the chain then follows _Gaussian statistics_:
+$$P(R)=G(\boldsymbol{R},N)=\left( \frac{3}{2\pi Nb^{2}} \right)^{3/2}\exp\left[ -\frac{3}{2} \frac{|\boldsymbol{r}_{0}-\boldsymbol{r}_{N}|^{2}}{Nb^{2}} \right]$$
+- Here, $G$ is the _correlation function_ of the entire _chain_
+### Segment correlation in an ideal chain
+- Two random beads _within_ a polymer are typically _correlated as if they are the two ends_ of a shorter polymer
+- Define a _correlation function_ using the _Gaussian statistics_ of the ideal chain:
+$$G(\boldsymbol{r}_{m}-\boldsymbol{r}_{n},m-n)=\left[ \frac{3}{2\pi|m-n|b^{2}} \right]^{3/2}\exp\left[ -\frac{3}{2} \frac{|\boldsymbol{r}_{0}-\boldsymbol{r}_{N}|^{2}}{|m-n|b^{2}} \right]$$
+- It is the _probability density_ for $\boldsymbol{r}_{n}$ for a _given_ $\boldsymbol{r}_{m}$
+- As expected, it _convolves_, indicating the _joining_ of two chains
+$$\int G(\boldsymbol{r}_{m}-\boldsymbol{r}_{k},m-k)G(\boldsymbol{r}_{k}-\boldsymbol{r}_{n},k-n) \, d^{3}\boldsymbol{r}_{k}=G(\boldsymbol{r}_{m}-\boldsymbol{r}_{n},m-n) $$
+
+- The form of $G$ is _identical_ to the solution to a _diffusion equation_
+	- The _random walk_ of a polymer can be modelled as _diffusion_, with $n$ acting as _time_ and $b^{2}/6$ as the _effective diffusion constant_
+$$\left( \partial_{n}-\frac{b_{0}^{2}}{6}\nabla^{2} \right)G(\boldsymbol{r}_{m}-\boldsymbol{r}_{n},m-n)=\delta(\boldsymbol{r}_{m}-\boldsymbol{r}_{n})\delta_{mn}$$
+### Semi-flexible polymers
+- Account for the _stiffness_ of joints
+- Let the polymer of _fixed length_ $l$ be described by some _curve_, with some _tangent angle_ $\theta$ at each point
+
+- Label points on the chain by $s$, with a _quadratic potential_ to penalise _bending_:
+$$U=\frac{C_{B}}{2}\int _{0}^{l}[\partial_{s}\theta(s)]^{2} \, ds $$
+- $C_{B}$ quantifies _rigidity_ of the polymer
+- Suitable for modelling polymers where the _bending length scale_ is on the order of the _chain size_ (e.g. DNA)
+
+- The _equipartition theorem_ yields:
+	- For a _short polymer_ so the approximation of $d\theta/ds \sim \theta/b_{0}$ applies
+$$\left<\left( \frac{d\theta}{ds} \right)^{2}\right>=\frac{2k_{B}T}{C_{B}b_{0}}$$
+- The _persistence length_ is the _characteristic length scale_ of the system:
+$$l_{p}=\frac{C_{B}}{k_{B}T}=\frac{b_{0}}{2}$$
+- The _end-to-end distance_:
+$$\left<R^{2}\right>=\left<\int_{0}^{l}  \, \frac{d\boldsymbol{r}}{ds}ds\cdot \int _{0}^{l} \frac{d\boldsymbol{r}}{ds'} \, ds'\right> =  $$
+### Entropy of the ideal chain
+- The probability distribution for the ideal chain:
+$$P(\boldsymbol{R},N)=\left[ \frac{3}{2\pi Nb_{0}^{2}} \right]^{3/2}\exp\left( -\frac{3R^{2}}{2Nb_{0}^{2}} \right)$$
+- The _entropy_ of the chain:
+$$S=k_{B}\ln\Omega=-k_{B} \frac{3}{2}\frac{R^{2}}{Nb_{0}^{2}}+S(0)$$
+- The _free energy_:
+	- There is _zero_ internal energy as the monomers _do not interact_ with each other
+$$F=U-TS=k_{B}T \frac{3}{2} \frac{R^{2}}{Nb_{0}^{2}}+F(0)$$
+- As expected for a _Hookean spring_
+- The _spring constant_ is _proportional to temperature_
+
+- Entropy is _higher_ for _lower_ $R^{2}$ as it is _more likely_
+
+### Lattice random walk
+- For a polymer on a _1D lattice_, let it undergo _steps_ to the left and right, with $N_{-}$ and $N_{+}$ steps respectively
+- The _length_ $x$ is given by $(N_{+}-N_{-})b_{0}=\Delta Nb_{0}$
+
+- The entropy is:
+$$S=k_{B}\ln W=k_{B}\ln \begin{pmatrix}N\\N_{+}\end{pmatrix}\approx N\ln 2-\frac{(\Delta N)^{2}}{2N}$$
+- This gives the probability:
+$$P \propto \exp\left[ -\frac{(\Delta N)^{2}}{2N} \right]\propto \exp\left[ -\frac{x^{2}}{2Nb_{0}^{2}} \right]$$
+
+## Polymer interactions
+- _interactions_ of the chain with _itself_
+
+- For a random walk, it may _self-intersect_
+- As lattice sites can only be singly occupied, this leads to a _repulsive_ effect
+
+- The polymer can be modelled as being in a _solvent_
+- A _repulsion_ from itself can be considered as being _attractive_ to the solvent
+
+### Flory-Huggins free energy
+- Let the _monomer fraction_ in the solution be $\Phi_{A}$, with $\Phi_{B}=1-\Phi_{A}$
+- Let the _total number of sites_ be $M$
+- The entropy of the solution is then:
+$$S_{S}=k_{B}\ln W=k_{B}\ln \frac{M!}{N_{A}!N_{B}!}=-k_{B}M[\Phi_{A}\ln \Phi_{A}+\Phi_{B}\ln \Phi_{B}]$$
+- Ignoring _additive constants_:
+$$S_{P}=-k_{B}M \left[ \frac{\Phi}{N}\ln \Phi+(1-\Phi)\ln(1-\Phi) \right]$$
+- The factor of $1/N$ corresponds to _reduced translational entropy_ as monomers occupy adjacent sites
+- The second term corresponds to contributions from the _solvent_
+
+- The _internal energy_, accounting for _monomer-monomer interactions_ $\chi_{MM}$, _monomer-solvent_ interactions $\chi_{MS}$, and _solvent-solvent interactions_ $\chi_{SS}$:
+$$\frac{E}{Mk_{B}}=\frac{T}{2}\chi_{MM}(T)\Phi^{2}+T\chi_{MS}\Phi(1-\Phi)+\frac{T}{2}\chi_{SS}(1-\Phi)^{2}$$
+- Thsi can be written as:
+$$\displaylines{\frac{E}{M}=\chi k_{B}T\Phi(1-\Phi) \\ \chi=\chi_{MS}-\frac{1}{2}(\chi_{MM}+\chi_{SS})}$$
+- $\chi$ is known as the _Flory parameter_
+
+- The _free energy upon mixing_ is then:
+$$f=\frac{F}{M}=k_{B}T\left[ \frac{\Phi}{N}\ln \Phi+(1-\Phi)\ln(1-\Phi)+\chi \Phi (1-\Phi) \right]$$
+- For _small_ $\Phi$:
+$$f\approx k_{B}T\left[ \frac{\Phi}{N}\ln \Phi+\frac{1}{2}\Phi^{2}(1-2\chi)+\frac{\Phi^{3}}{6} \right]$$
+- The second term acts as a [[Advanced statistical mechanics#Virial expansion|second virial coefficient]]
+
+- If $1-2\chi<0$, there is an _attractive force_, and there is a _coil to globule transition_, and:
+$$R \sim N^{1/3}$$
+- If $1-2\chi=0$ (the $\theta$ point), it is an _ideal chain_:
+$$R \sim N^{1/2}$$
+- If $1-2\chi>0$, there is a _swollen chain_ (the chain tends to be attracted to the _solvent_)
+$$R \sim N^{3/5}$$
+### Excluded volume interaction and swelling
+- The free energy can also be written in terms of a _repulsive term_ and the _entropic term_
+- The repulsion term goes like $V\Phi^{2} \propto N^{2}/V$
+- The free energy:
+$$\frac{F}{k_{B}T}\sim \nu \frac{N^{2}}{V}+\frac{R^{2}}{Nb_{0}^{2}}\sim \nu \frac{N^{2}}{R^{3}}+ \frac{R^{2}}{Nb_{0}^{2}}$$
+- Finding the _minimum_:
+$$R^{5} \sim \nu b_{0}^{2}N^{3}$$
+- For an excluded volume interaction, $\nu\sim b_{0}^{3}$, giving:
+$$R \sim b_{0}N^{3/5}$$
+- This gives the scaling relation for the _swollen chain_
+
+### Osmotic pressure
+- The _osmotic pressure_:
+$$\Pi=- \frac{\partial F}{\partial V}\Bigg|_{N_{A}}=\frac{k_{B}T}{b_{0}^{3}}\left[ \frac{\Phi}{N}+ \frac{1}{2}(1-2\chi)\Phi^{2} \right]$$
+### Polymer melt
+- Let the _solvent_ be another polymer of _identical polymer_, with different _degree of polymerisation_
+$$f\approx k_{B}T\left[ \frac{\Phi}{N}\ln \Phi+\frac{1}{2}\Phi^{2}\left( \frac{1}{N_{2}}-2\chi \right)+\frac{\Phi^{3}}{6} \right]$$
+- For _high_ $N_{2}$, and since they are the _same polymer_, $\chi\to 0$, the _second virial coefficient vanishes_
+- The $\theta$ point is _always reached_
+- As there is _no relative interaction_ between chain and "solvent", the excluded volume interaction is "screened"
+
+### Variation of Flory parameter
+- Typically, the Flory parameter _increases with temperature_
+- At high temperature, there tends to be a _coil in solution_
+	- The _high entropy case_
+- The _coil to globule transition_ happens for a _decreasing temperature_
+
+- There are _temperature-responsive poiymers_, with _sharp coil-to-globule transitions_ at _high temperatures_
+
+### Semi-dilute solutions
+- For _low-concentration_ solutions, chains typically _do not overlap_
+	- They have an _effective radius_ which is _smaller_ than average distance between chains
+- At some concentration $c^{*}$, there is an _onset_ where chains start to _overlap_
+- Above that concentration, there is a _semi-diulute_ solution where chains start to _interact with each other_
+
+- At the onset, the _overall concentration_ is roughly equal to _concentration of segments in a single polymer_ (in a good solvent):
+$$\Phi^{*}\sim \frac{Nb_{0}^{3}}{(\sqrt{ R^{2} })^{3}}\sim N^{-4/5}$$
+
+## Polymer applications
+
+### Brushes
+- Let a surface be _grafted_ with polymers a spacing $D$ apart
+- The _grafting density_ is $\sigma=1/D^{2}$
+
+- The _mushroom_ regime has $D\gg R$, and they barely interact
+- If $D\sim R$, they start to _overlap_ and act roughly as in a _solution_, $D\sim R\sim b_{0}N^{3/5}$
+
+- For $D\ll R$, it is a polymer _brush_
+- Let it be of height $h$
+- The [[#Entropy of the ideal chain|entropic]] part of the free energy scales as $h^{2}/(Nb_{0})$
+	- Due to _stretching_ of the polymer
+- From [[#Excluded volume interaction and swelling|excluded volume]], free energy scales as $b_{0}^{3}N^{2}/V=b_{0}^{3}N^{2}\sigma/h$
+- The _total free energy_:
+$$\displaylines{F=k_{B}T \frac{h^{2}}{b_{0}N}+k_{B}T \frac{b_{0}^{3}N^{2}\sigma}{h} \\ \frac{\partial F}{\partial h}=0 \implies h \sim (b_{0}^{5}\sigma)^{1/3}N}$$
+- The polymers are _fully stretched_, compared to in solution
+
+- Grafted polymers can be used in _colloidal suspensions_
+- They can also be used to _reduce friction_ as long as the timescale of the motion is _slower than relaxation time_
+
+### Rubber elasticity
+- Rubbers can be modelled as a _dense polymer melt_, with _cross-linking_ between polymers
+- Let there be a _number density_ of crosslinks $n/V$
+
+- Assume the _affine network model_, where there is _uniform shear_ of the polymers
+- Let the _original_ end-to-end distances in each direction be $R^{0}_{x,y,z}$
+- The _shear_:
+$$R_{x,y,z}=\lambda_{x,y,z}R^{0}_{x,y,z}$$
+- The [[#Entropy of the ideal chain|free energy]] difference when _stretching_:
+$$\frac{\Delta F}{n}=\frac{3k_{B}T}{2Nb_{0}^{2}}\sum_{x,y,z}(R_{i}^{0})^{2}(\lambda_{i}^{2}-1)$$
+- For the _ideal chain_:
+$$(R^{0}_{x})^{2}=(R^{0}_{y})^{2}=(R^{0}_{z})^{2}=\frac{Nb_{0}^{2}}{3}$$
+- This gives:
+$$\Delta F=\frac{nk_{B}T}{2}(\lambda_{x}^{2}+\lambda_{y}^{2}+\lambda_{z}^{2}-3)$$
+
+- Let there be a _uniaxial stretch_, for an _incompressible rubber_:
+$$\lambda_{x}\lambda_{y}\lambda_{z}=1 \implies \lambda_{y}=\lambda_{z}=\frac{1}{\sqrt{ \lambda_{x} }}\equiv \frac{1}{\sqrt{ \lambda }}$$
+- The difference in free energy:
+$$\Delta{F}=\frac{nk_{B}T}{2}\left( \lambda^{2}+\frac{2}{\lambda }-3 \right)$$
+- The _force_ required is $f_{x}=\partial(\Delta F)/\partial(\lambda_{x}L_{0})$
+- The _stress_ is then:
+$$\sigma_{x}=\frac{f_{x}}{\lambda_{y}\lambda_{z}L_{0}^{2}}=\frac{nk_{B}T}{V}\lambda\left( \lambda-\frac{1}{\lambda^{2}} \right)$$
+- The elasticity is _non-linear_
+- Assuming $\lambda$ is _small_, such that $\lambda=1+\epsilon_{x}$:
+$$\sigma_{x}=3 \frac{n}{V}k_{B}T\epsilon_{x}=E\epsilon_{x x}$$
+- This gives the _Young's modulus_:
+$$E=3 \frac{n}{V}k_{B}T$$
+- Given the material is _incompressible_, $\nu=1/2$, and $G=E/3$
+- The _shear modulus_ is:
+$$G=\frac{n}{V} k_{B}T$$
+- The rubber becomes _stiffer_ as temperature _increases_
+	- Also increases _linearly_ with crosslink density
+- The elasticity is _entropic_
+	- Corresponds to the [[#Entropy of the ideal chain|entropy of the chain]] itself due to stretching
+
+## Rouse model of polymer dynamics
+- Use [[#Overdamped limit|overdamped Langevin dynamics]] for the Gaussian chain
+$$\gamma\frac{d\boldsymbol{R}_{n}}{dt}=\kappa(\boldsymbol{R}_{n+1}+\boldsymbol{R}_{n-1}-2\boldsymbol{R}_{n})+\boldsymbol{\xi}_{n}(t)$$
+- Applicable for _low Reynolds numbers_
+- Ignores _hydrodynamics_, or _solvent interactions_
+- Works for _dense polymer solutions_
+
+- In the _continuum limit_:
+$$\gamma\frac{ d\boldsymbol{R}}{dt}=u \frac{\partial^{2}\boldsymbol{R}}{\partial \eta^{2}}+\boldsymbol{\xi}(t)$$
+- _Fourier transform_
+
+- The _cnetre of mass_ undergoes _diffusion_:
+$$N\gamma \frac{dX_{0}}{dt}=\boldsymbol{\xi}_{0}(t)$$
+- The effective _diffusion constant_ is
+$$D_\text{eff}=\frac{k_{B}T}{\gamma N}$$
+- The other Fourier modes:
+$$2N\gamma \frac{d\boldsymbol{X}_{p}}{dt}=-k_{p}X_{p}+\xi_{p}(t)$$
+- The _spring constant in Fourier space_:
+$$k_{p}=$$
+- Define a _relaxation time_:
+$$\tau_{p}=\frac{N\gamma}{k_{p}}$$
+- The _slowest relaxation time_ is the _Rouse time_ $\tau_{1}$
+
+- The _correlation_:
+$$\left<X_{q}^{i}(t)X_{q'}^{j}(t)\right>= \frac{k_{B}T}{k_{p}} \delta_{qq'} \delta_{ij} \exp\left[ - \frac{|t-t'|}{\tau_{p}} \right]$$
+- The _stress_ from this is:
+$$\sigma_{ij}=\frac{\epsilon c}{N}\sum_{p}k_{p} \left<X_{p}^{i}X_{p}^{j}\right> \sim \frac{\epsilon c}{N} \sum_{p} k_{p}T \exp\left( -\frac{t}{\tau_{p}} \right)=G(t)\epsilon$$
+- $c$ is the _chain concentration_
+- The shear modulus can be written as:
+$$G(t)=c \frac{k_{B}T}{N} \sum_{p} \exp\left( -\frac{p^{2}t}{\tau_{1}} \right)$$
+- For _long timescales_, it behaves as a [[#Maxwell fluid]]
+$$G(t)\approx c \frac{k_{B}T}{N} \exp\left( -\frac{t}{\tau_{1}} \right)$$
+- For _short timescales_:
+$$G \sim \int \exp\left( -\frac{p^{2}t}{\tau_{1}} \right) \, dp\sim \sqrt{ \frac{\tau_{1}}{t} } $$
+## Helix to coil transition
+- Many polymers can undergo a transition from a _disordered globule_ to a _helical state_
+	- Driving force includes _hydrogen bonding_
+- Let the helical state have some _energy_ $-\epsilon$
+
+- Model it as a _two-state system_:
+$$Z_{1}=1+\exp(-\beta\epsilon) \implies f_\text{helix}= \frac{\exp(-\beta\epsilon)}{1+\exp(-\beta\epsilon)}$$
+- It is a _gradual transition_
+
+- Alternatively, consider an _on-off model_:
+$$Z_{1}=1+ \exp(-\beta N\epsilon) \implies f_\text{helix}= \frac{\exp(-\beta N\epsilon)}{1+ \exp(-\beta N\epsilon)}$$
+- This gives a much _sharper_ transition
+
+- Or, the _Zimm-Bragg model_
+- The _nearest neighbour_ interactions are parametrised with $\sigma$
+
+$$f_\text{helix}= \frac{1}{2}\left( 1+ \frac{s-1}{\sqrt{ (1-s)^{2}+4\sigma s }} \right)$$
+# Molecular self-assembly
+- The formation of _structures_ from purely _inter-molecular forces_
+- Molecules can assemble into _different structutes_, such as _spherical/cylindrical micelles_, or _lamellae_
+	- Can be quantified using _shape/packing parameters_
+- Proteins (biopolymers) can self-assemble into _filaments_ and _microtubules_
+
+## Forces
+- _Hydrogen bonding_, where _dipole moments_ in molecules interact
+- _Hydrophobicity_, where an _entropic force_ makes hydrophobic/phillic parts of molecules stick to each other
+	- _Amphiphillic_ molecules have _hydrophilic_ and _hydrophobic_ parts
+- _Electrostatics_, where charged parts of molecules interact
+	- From _screening_, it typically _decays exponentially_
+	- The length scale is typically _short_
+
+## Critical concentration
+- Often, there is a _critical concentration_ above which the molecules will self-assemble
+- _At_ the critical concentration, for a _cluister_ of size $\alpha$ made out of monomer $I$:
+$$\mu_{\alpha}=\mu_{I}$$
+- Assume the clusters _do not interact with each other_
+
+- The partition function is then:
+$$Z= \prod_{\alpha=1}^{\infty} \frac{1}{n_{\alpha}!} \left( \frac{Vz_{\alpha}}{\Lambda_{\alpha}^{3}} \right)^{n_{\alpha}}$$
+- This is the [[Advanced statistical mechanics#The ideal gas in the canonical ensemble|partition function for the ideal gas]], with some characteristic length scale $\Lambda_{\alpha}$
+- The _internal degrees of freedom_ are represented by $z_{\alpha}$
+
+- Working out free energy and chemical potential:
+$$\displaylines{F=-k_{B}T\ln Z \\ \mu_{a}= \frac{k_{B}T}{\alpha}\ln \frac{n_{\alpha}\Lambda_{\alpha}^{3}}{V} + \frac{f_{\alpha}}{\alpha}}$$
+
+- For a _spherical micelle_ of radius $R$ from molecules of volume $v$:
+$$\displaylines{\alpha^{*}= \frac{4\pi}{3} \frac{R^{3}}{v} \\ \mu_{\alpha}= \frac{k_{B}T}{\alpha}\ln\left( \frac{c_{\alpha}}{\alpha} \right)+
+\epsilon_{\alpha}=k_{B}T\ln c_{1}+\epsilon_{1}}$$
+- Here, $c_{1}$ and $\epsilon_{1}$ characterise a system of _monomers_
+
+- The concentration then evolves as:
+$$c_{\alpha}=\alpha^{*} \left[ c_{1}\exp\left( \frac{\epsilon_{1}-\epsilon_{\alpha^{*}}}{k_{B}T} \right) \right]^{\alpha^{*}}$$
+- If $\epsilon_{\alpha}>\epsilon_{1}$, then there is _no micelle formation_
+
+## Micellar shape
+- For a _spherical micelle_:
+$$V_{\alpha}=\alpha v=\frac{4}{3}\pi R^{3} \hspace{1.5cm}A_{\alpha}=\alpha a_{0}=4\pi R^{2}$$
+- The _packing parameter_
+
+- For a _cylindrical micelle_:
+
+![[Micellar shapes.png]]
+
+## Polymer filament self-assembly
+- Consider _linear polymerisation_:
+$$\ce{ m + X_{n} <=> X_{n+1}   }$$
+- For all values of $n$, the _equilibrium constant_ is $K$
+
+- From this:
+$$\displaylines{c_{i}=K^{-1}(Kc_{1})^{i} \\ c_\text{tot}=\sum_{i=1}^{\infty} ic_{i}=\frac{c_{1}}{(1-Kc_{1})^{2}}}$$
+
+# Self-assembled structures
+
+## Membranes and lipid bilayers
+- One of the most common self-assembled structures is the _lipid membrane_
+- It acts as a _barrier_ surrounding a cell
+- The _membrane composition_ controls its properties
+
+- A _lipid bilayer_ is made of _amphiphilic molecules_
+- There is a _hydrophilic head group_, and a _hydrophobic tail_
+	- The head group is usually _polar_ due to _charged atoms_
+	- There is typically a _range_ of head groups, tail length, shape, and chemical composition
+
+- They form due to the _entropic hydrophobic force_ in water
+### Membrane shape
+- Lipid bilayers can have _phases_ dependeing on water content
+	- Shapes with increasing water content:
+	- _Hexagonal_: low water content $(\sim 1\%)$
+	- _Layer, cubic_: medium water content
+	- _Vesicles_: high water content $(\sim 99\%)$
+![[Lipid bilayer shapes.png]]
+
+- The _geometry_ of amphiphillic molecules:
+	- _Effective_ area $a_{0}$ given by _head group interactions_
+	- _Length_ of the hydrophobic tail $l_{c}$
+	- _Volume_ of the lipid $v$
+
+- _Shapes_:
+	- Cone
+	- Truncated (inverted) cone
+	- Cylindrical
+
+### Forces
+- The can be _attractive forces_ at an interface
+	- Hydrophobic effect, leads to _tight packing_
+- The hydrophobic effect also leads to _interfacial energy_:
+	- $a$ is the effective head group area
+	- $\gamma$ is the _surface tension_
+$$E \sim \gamma a$$
+- The head groups can also lead to _electrostatic repulsion_
+- _Size_ of the head groups also give _steric effects_ $\sim a^{-1}$
+
+- The _phenomenological model_ of interfacial energy:
+$$\varepsilon=\gamma a+\frac{K}{a}$$
+- The _minimum_ is at:
+$$a_{0}=\sqrt{ \frac{K}{\gamma} }$$

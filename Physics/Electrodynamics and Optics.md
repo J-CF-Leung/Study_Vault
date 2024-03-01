@@ -843,10 +843,10 @@ $$\begin{aligned}\phi&=\frac{1}{4\pi\epsilon_0}\left[\frac{q(t-r_+/c)}{r_+}-\fra
 - Writing the distance $r_+-r_-$ as $d\cos\theta$ and doing the derivative:
 $$\phi=\frac{\cos\theta}{4\pi\epsilon_0}\left\{\frac{[p]}{r^2}+\frac{[\dot{p}]}{rc}\right\}$$
 - Calculating the _components_ by $\bm{E}=-\dot{\bm{A}}-\grad\phi$:
-$$\displaylines{E_\phi=0\\ E_r=\frac{2\cos\theta}{4\pi\epsilon_0}\left\{\frac{}{}+\frac{}{}\right\} \\ E_\theta=\frac{\sin\theta}{4\pi\epsilon_0}\left\{\right\}}$$
+$$\displaylines{E_\phi=0\\ E_r=\frac{2\cos\theta}{4\pi\epsilon_0}\left\{\frac{[p]}{r^{3}}+\frac{[\dot{p}]}{r^{2}c}\right\} \\ E_\theta=\frac{\sin\theta}{4\pi\epsilon_0}\left\{\frac{[p]}{r^{3}}+\frac{[\dot{p}]}{r^{2}c}+\frac{[\ddot{p}]}{rc^{2}}\right\}}$$
 ### Behaviour of the field
 - The _non-zero components_:
-$$\begin{aligned}B_\phi&= \\ E_\phi&= \\ E_r&=\end{aligned}$$
+$$\begin{aligned}B_\phi&= {\mu_0}{4\pi}\sin\theta\left(\frac{[\dot{p}]}{r^2}+\frac{[\ddot{p}]}{rc}\right)\\ E_\theta&=\frac{\sin\theta}{4\pi\epsilon_0}\left\{\frac{[p]}{r^{3}}+\frac{[\dot{p}]}{r^{2}c}+\frac{[\ddot{p}]}{rc^{2}}\right\} \\ E_r&=\frac{2\cos\theta}{4\pi\epsilon_0}\left\{\frac{[p]}{r^{3}}+\frac{[\dot{p}]}{r^{2}c}\right\}\end{aligned}$$
 - The terms varying as $1/r^3$ correspond to a _static dipole_, but according to the _retarded dipole moment_
 
 - The _dipole term_ $\propto1/r^3$ will _dominate for small distances_ $r\ll\lambda$
@@ -858,8 +858,7 @@ $$\begin{aligned}B_\phi&= \\ E_\phi&= \\ E_r&=\end{aligned}$$
 	- They circulate in _different directions_
 
 - In the _far field region_, only the _radiation fields_ remain:
-
-
+$$E_{\theta}=\frac{\sin\theta}{4\pi\epsilon_{0}} \frac{[\ddot{p}]}{rc^{2}}\hspace{1.5cm}B_{\phi}=\frac{\mu_{0}\sin\theta}{4\pi} \frac{[\ddot{p}]}{rc}$$
 	- The fields are _in phase_ with one another (with $[\ddot{p}]$)
 	- The field components are _proportional_ to each other as $E_\theta=cB_\phi$, as expected for _electromagnetic waves_
 	- The fields are _orthogonal in space_
@@ -889,50 +888,63 @@ $$\displaylines{\mean{N(r,\theta,\phi)}=\frac{\mu_0\omega^4p_0^2}{32\pi^2c}\frac
 
 ## Multipole expansion
 - Let there be some _system_ of _charges and currents sinusoidally varying in time_:
-$$\rho()=\hspace{1cm}\bm{J}()=$$
+$$\rho(\boldsymbol{r},t)=\rho(\boldsymbol{r})\exp(-i\omega t)\hspace{1cm}\bm{J}(\boldsymbol{r},t)=\boldsymbol{J}(\boldsymbol{r})\exp(-i\omega t)$$
 
 - In the _far field_:
-$$\bm{A}(\bm{r}.t)=$$
+$$\bm{A}(\bm{r}.t)=\frac{\mu_{0}}{4\pi}\int \frac{[\boldsymbol{J}]\,dV'}{|\boldsymbol{r}-\boldsymbol{r}'|} \equiv \boldsymbol{A}(\boldsymbol{r})\exp(-i\omega t) $$
 - Writing $|\bm{r}-\bm{r}'|\approx r-\bm{n}\cdot\bm{r}'$, where $\bm{n}$ is _in the direction of $\bm{r}$_:
-$$\bm{A}(\bm{r})=\frac{\mu_0}{4\pi}\frac{}{}$$
+$$\bm{A}(\bm{r})=\frac{\mu_0}{4\pi}\frac{\exp(ikr)}{r} \int \boldsymbol{J}(\boldsymbol{r}') \exp(-ik\boldsymbol{n}\cdot \boldsymbol{r}')\, dV' $$
 
 - Then, expand in _powers of_ $m$:
-$$\bm{A}(\bm{r})=$$
+$$\bm{A}(\bm{r})=\frac{\mu_{0}}{4\pi} \frac{\exp(ikr)}{r} \sum_{m}  \frac{(-ik)^{m}}{m!} \int \boldsymbol{J}(\boldsymbol{r}')(\boldsymbol{n}\cdot \boldsymbol{r}')^{m} \, dV' $$
 - If the _source dimension_ $d$ is _small compared to wavelength_ $(kd\ll1)$, then terms with $m>1$ will _fall off rapidly_
 
 ### Electrical dipole radiation term
-- Using _integration by parts_
+- Using _integration by parts_:
+$$\boldsymbol{A}(\boldsymbol{r})=\frac{\mu_{0}}{4\pi} \frac{\exp(ikr)}{r} \int \boldsymbol{J}(\boldsymbol{r}') \, dV'=-\frac{\mu_{0}}{4\pi} \frac{\exp(ikr)}{r} \int \boldsymbol{r}' (\nabla'\cdot \boldsymbol{J})\, dV'  $$
 
-- Using _continuity_:
-$$\bm{A}(\bm{r})==$$
-
+- Using _continuity_ $\nabla\cdot \boldsymbol{J}=i\omega \rho$
+$$\bm{A}(\bm{r})=\frac{i\omega \mu_{0}}{4\pi} \frac{\exp(ikr)}{r} \int \boldsymbol{r}'\rho(\boldsymbol{r}') \, dV' =- \frac{i\omega \mu_{0}}{4\pi} \frac{\exp(ikr)}{r}\boldsymbol{p}$$
+- This corresponds to the _electric dipole radiation_
 ### Magnetic dipole radiation term
-- This can be _split_ into contributions, which are _symmetric_ and _antisymmetric_:
-$$(\bm{n}\cdot\bm{r}')\bm{J}=\frac{1}{2}[]+\frac{1}{2}$$
+- This can be _split_ into contributions, which are _symmetric_ and _antisymmetric_ in $\boldsymbol{J}$ and $\boldsymbol{r}'$
+$$(\bm{n}\cdot\bm{r}')\bm{J}=\frac{1}{2}[(\boldsymbol{n}\cdot \boldsymbol{r}')\boldsymbol{J}+(\boldsymbol{n}\cdot \boldsymbol{J})\boldsymbol{r}']+\frac{1}{2}(\boldsymbol{r}'\times \boldsymbol{J})\times \boldsymbol{n}$$
 - The _antisymmetric term_ is dependent on the _magnetic dipole moment_:
-$$\displaylines{\bm{m}= \\ \bm{A}(\bm{r})=}$$
+$$\displaylines{\bm{m}=\frac{1}{2}\int (\boldsymbol{r}\times \boldsymbol{J}) \, dV  \\ \bm{A}(\bm{r})=\frac{ik\mu_{0}}{4\pi}(\boldsymbol{n}\times \boldsymbol{m}) \frac{\exp(ikr)}{r}}$$
+- This is the _magnetic dipole radiation term_
 
-- $\bm{A}$ of a _magnetic dipole_ is _proportional to the magnetic field_ of an _electric dipole_
+- $\bm{A}$ of a _magnetic dipole_ is _proportional to_ the [[#Magnetic field|magnetic field of an electric dipole]]
 	- Follow from _Maxwell's equations_
 	- Substitute $c\bm{p}\to\bm{m}$
 - The _electric and magnetic fields_ are then:
-$$\begin{aligned}\bm{B}(\bm{r})&= \\ \bm{E}(\bm{r})&=\end{aligned}$$
+$$\begin{aligned}\bm{B}(\bm{r})&=\frac{\mu_{0}k^{2}}{4\pi} [(\boldsymbol{n}\times \boldsymbol{m})\times \boldsymbol{n}] \frac{\exp(ikr)}{r} \\ \bm{E}(\bm{r})&=-\frac{Z_{0}k^{2}}{4\pi}(\boldsymbol{n}\times \boldsymbol{m}) \frac{\exp(ikr)}{r}\end{aligned}$$
 
-- The _time-averaged total power radiated_:
+- The _time-averaged total power radiated_
+	- Analagous to the [[#Power radiated|electric dipole]]
+$$\left<P^{\text{MD}}\right> = \frac{\mu_{0}\omega^{4}m_{0}^{2}}{12\pi c^{3}}$$
 
-- If the electric and magnetic dipoles carry _similar currents_, with _similar sizes_
+- If the electric and magnetic dipoles carry _similar currents_, with _similar sizes_:
+$$\displaylines{p_{0} \sim \frac{I_{0}a}{\omega}\hspace{1.5cm}m_{0}\sim I_{0}a^{2} \\ \frac{\left<P^{\text{MD}}\right>}{\left<P^{\text{ED}}\right> }=\frac{m_{0}^{2}}{c^{2}p_{0}^{2}} \sim \left( \frac{2\pi a}{\lambda} \right)^{2}\ll 1}$$
 
 - Therefore, _small magnetic dipoles are much less efficient_ than the _electric dipole_
 
 ### Quadrupole term
 - Consider the _symmetric term_ of the $m=1$ contribution
-
-- $\bm{Q}(\bm{n})$ is a _contraction_ of the _quadrupole moment tensor_
+- Using _integration by parts_:
+$$\displaylines{\int \frac{1}{2}[(\boldsymbol{n}\cdot \boldsymbol{r}')\boldsymbol{J}+(\boldsymbol{n}\cdot \boldsymbol{J})\boldsymbol{r}'] \, dV'=-\frac{i\omega}{2} \int \boldsymbol{r}'(\boldsymbol{n}\cdot \boldsymbol{r}')\rho(\boldsymbol{r}') \, dV' \\ \boldsymbol{A}(\boldsymbol{r})= -\frac{\mu_{0}ck^{2}}{8\pi} \frac{\exp(ikr)}{r} \int \boldsymbol{r}'(\boldsymbol{n}\cdot \boldsymbol{r}')\rho(\boldsymbol{r}') \, dV' }  $$
+- The fields are:
+$$\begin{align}
+\boldsymbol{B} &= ik\boldsymbol{n}\times \boldsymbol{A}=-\frac{ick^{3}\mu_{0}}{24\pi} \frac{\exp(ikr)}{r} \boldsymbol{n}\times \boldsymbol{Q}(\boldsymbol{n}) \\ \boldsymbol{E}&= \frac{ikZ_{0}}{\mu_{0}}(\boldsymbol{n}\times \boldsymbol{A})\times \boldsymbol{n}
+\end{align}$$
+- $\bm{Q}(\bm{n})$ is a _contraction_ of the _quadrupole moment tensor_:
+$$\displaylines{\boldsymbol{Q}(\boldsymbol{n})=3\int \boldsymbol{r}'(\boldsymbol{n}\cdot \boldsymbol{r}')\rho(\boldsymbol{r}') \, dV'\\ Q_{\alpha}=Q_{\alpha\beta}n_{\beta} \\ Q_{\alpha\beta}=\int (3x_{\alpha}x_{\beta}-r^{2}\delta_{\alpha\beta}) \rho(\boldsymbol{r}')\,dV  }$$
 
 - The _angular distribution_:
-$$N(r,\theta,\phi)=$$
-
-- The quadrupole is a _very ineffective radiator_
+$$N(r,\theta,\phi)=\frac{\mu_{0}\omega^{6}}{1152\pi^{2}c^{3}} \frac{1}{r^{2}} \left| (\boldsymbol{n}\times \boldsymbol{Q}(\boldsymbol{n}))\times \boldsymbol{n} \right|^{2} $$
+- The _total instantaneous power radiated_:
+$$\left<P\right>^{\text{EQ}}=\frac{\mu_{0}\omega^{6}}{1440\pi c^{3}} \sum_{\alpha\beta}|Q_{\alpha\beta}|^{2}$$
+- The quadrupole is a _very ineffective radiator_ than the corresponding _electric_ dipole with $ka\ll 1$
+- It also has a _different power law dependence_ to $\omega$
 
 - The _oscillating lateral quadrupole_
 - The power distribution is _no longer cylindrically symmetric_
@@ -1299,7 +1311,12 @@ $$v>\frac{c}{\sqrt{\epsilon(\omega)}}$$
 - This sets the _characteristic wavelength_ $\lambda\sim c|\bm{u}|/|\bm{a}|$
 
 ### The Lienart-Wirchert potentials
-- Maths
+- Potentials from 4-current, evaluated at [[#Solving for the potentials|retarded time]]:
+$$\begin{align}
+\phi(r,t)&=\frac{1}{4\pi\epsilon_0}\int_\text{all space}\frac{\rho(\bm{r}',t-|\bm{r}-\bm{r}'|/c)}{|\bm{r}-\bm{r}'|}\,dV \\ \boldsymbol{A}(r,t)&=\frac{\mu_{0}}{4\pi}\int_\text{all space}\frac{\boldsymbol{J}(\bm{r}',t-|\bm{r}-\bm{r}'|/c)}{|\bm{r}-\bm{r}'|}\,dV
+\end{align}$$
+- Evaluation at retarded time can also be written in _covariant form_:
+$$A^{\alpha}(x^{\mu})= \frac{\mu_{0}}{4\pi} \int \frac{\theta(x_{0}-x_{0}')}{|\boldsymbol{r}-\boldsymbol{r}'|} \delta(x_{0}-x_{0}'-|\boldsymbol{r}-\boldsymbol{r}'|)J^{\alpha}(x'^{\mu}) \, d^{4}x' $$
 
 - The _solutions_ to the 4-potential are the _Lienard-Wiechert potentials_:
 $$A^\alpha(x^\mu)=\frac{\mu_0ec}{4\pi}\left[\frac{V^\alpha(\tau)}{V^\nu[x_\nu-r_\nu(\tau)]}\right]_{\tau=\tau_0}$$

@@ -1,4 +1,3 @@
-
 - Main ideas _emerge_ from [[Classical Thermodynamics|Thermodynamics]]
 - It deals with _energy_ in _large, (non-)interacting systems_
 
@@ -52,9 +51,15 @@ $$U=U(S,V,N)$$
 	- Adding while _fixing entropy and volume_
 $$dU=T\,dS-p\,dV+\mu\,dN$$
 
-- Scaling argument
+## Scaling and Gibbs-Duhem relation
+- $U,S,V,N$ are all _extensive quantities_, while $T,p,\mu$ are all _intensive_
+- If one _scales_ $S,V,N$ by $\lambda$, while keeping $T,p,\mu$ _fixed_, $U$ also _scales_ by $\lambda$:
+$$U(\lambda S,\lambda V,\lambda N)=\lambda U(S,V,N)$$
+- One can write:
+$$\begin{align}U(S,V,N)&=\frac{\partial(\lambda U(S,V,N))}{\partial\lambda}=\frac{\partial}{\partial\lambda}U(\lambda S,\lambda V,\lambda N) \\ &=\frac{\partial U(\lambda S,\lambda V,\lambda N)}{\partial(\lambda S)}S+\frac{\partial U(\lambda S,\lambda V,\lambda N)}{\partial(\lambda V)}V+\frac{\partial U(\lambda S,\lambda V,\lambda N)}{\partial(\lambda N)}N\end{align}$$
+- As this is _true for all_ $\lambda$, set it to $1$ and using the definitions of $T,p,\mu$:
 $$U=TS-pV+\mu N$$
-- This gives the _Gibbs-Duhem equation_:
+- By examining the _total differential_, one obtains the _Gibbs-Duhem equation_:
 $$S\,dT-V\,dp+N\,d\mu=0$$
 
 ## Equilibrium
@@ -62,7 +67,7 @@ $$S\,dT-V\,dp+N\,d\mu=0$$
 - The _total entropy_ of the system $S$ is _unchanged_, or $\Delta S=0$
 
 - All systems also have an _equation of state_ specifying _equilibrium behaviour_:
-$$\Phi(p,T,V,\mathbf{N}\dots)=0$$
+$$f(p,T,V,N\dots)=0$$
 - Example: the [[Classical Thermodynamics#Ideal gases|ideal gas]]
 
 ### The closed system
@@ -72,7 +77,7 @@ $$\Phi(p,T,V,\mathbf{N}\dots)=0$$
 - For _any change_ in $1$, $2$ must have the _opposite_ $(dX_1=-dX_2)$
 - Using the _Master Equation_:
 $$\displaylines{dS=\frac{dU}{T}+\frac{p}{T}dV-\frac{\mu}{T}dN \\ dS_1+dS_2=\left(\frac{1}{T_1}-\frac{1}{T_2}\right)dU+\left(\frac{p_1}{T_1}-\frac{p_2}{T_2}\right)dV-\left(\frac{\mu_1}{T_1}-\frac{\mu_2}{T_2}\right)dN=0}$$
-
+ 
 - As the division is _arbitrary_, _all intensive variables_ must be _uniform_ throughout the system
 
 ### Reservoir and availability
@@ -82,6 +87,9 @@ $$dS_\text{tot}=dS+dS_R=dS+\frac{dU_R}{T}+\frac{p_R}{T_R}dV_R-\frac{\mu_R}{T_R}d
 $$-T_R\,dS_\text{tot}=dU-T_R\,dS+p_R\,dV-\mu_R\,dN$$
 - Define the _availability_ $A$:
 $$dA=dU-T_R\,dS+p_R\,dV-\mu_R\,dN$$
+- As the parameters of the reservoir are _constant_, integrate to get:
+$$A=U-T_{R}S+p_{R}V-\mu_{R}N$$
+
 - All the "forces" are that of the _reservoir_ while the "displacements" are that of the _system_
 - The availability quantifies how the reservoir can _influence the system_
 	- Therefore, it is a function of _both_ the system and the reservoir
@@ -89,13 +97,128 @@ $$dA=dU-T_R\,dS+p_R\,dV-\mu_R\,dN$$
 $$dA=(T-T_R)\,dS-(p-p_R)\,dV+(\mu-\mu_R)\,dN$$
 - Any _difference in force/intensive variables_ between the _system_ and _reservoir_ will produce some _change in the system_
 - At _equilibrium_, $A$ is at a _minimum_, or $dA=0$, and the intensive variables are _equal_
+	- It is at a minimum as this is where $dS_\text{tot}$ is at _maximum
+$$dA\leq 0$$
 
 - Availability is linked to the _probability_ of a system to have some value $x$ of a variable
 $$\displaylines{S_\text{tot}(x)=k_B\ln\Omega(x) \\ P(x)\propto\exp\left(\frac{S_\text{tot}}{k_B}\right)=\exp\left(-\frac{A(x)}{k_BT}\right)}$$
+
+- Consider the case where work is _extracted_ from the system and reservoir, such that $dU\neq dU_{R}$
+	- The second equality is from writing $U$ in terms of $A$
+$$-dW_\text{extr}=dU+dU_{R}=dA+T_{R}d(S+S_{R})$$
+- From this, $W_\text{extr}$ matches a _decrease in availability_
+$$\Delta W_\text{extr}=-\Delta A$$
+- $-\Delta A$ is the _maximum useful work_ from a system
+
+### Legendre transforms and availability
+- At _equilibrium_, $T=T_{R},p=p_{R},\mu=\mu_{R}$
+- For this to be true, $S,V,N$ (the _natural variables_) must have their _equilibrium values_ $S_\text{eq},V_\text{eq},N_\text{eq}$, as _dictated_ by $T_{R},\mu_{R},p_{R}$
+- $T_{R},p_{R},\mu_{R}$ correspond to the _values at equilibrium_ ($S=S_\text{eq},V=V_\text{eq},N=N_\text{eq}$)
+- They can be considered _variables_ to describe the combined system
+
+- This is an application for _Legendre transformations_
+- For a function $f(x)$, consider the function $g(x,y)=f(x)-yx$:
+$$dg=f'dx-ydx-xdy$$
+- The _minimum_ of $g$ w.r.t. has $f'=y$
+- Define $g_{0}$ as the _value of $g$ at its minimum_ w.r.t. $x$, for a _given_ $y$:
+$$g_{0}(y)=\text{min}_{x}g(x,y)=g(x_{0},y)\implies dg_{0}=-x_{0}\,dy$$
+- This is useful for describing systems _in terms of other variables_
+
+- Consider the internal energy $U(S,V,N)$, and do a Legendre transform w.r.t. $S$:
+$$\displaylines{F(S,V,N,T_{R})=U(S,V,N)-T_{R}S \\ dF=(T-T_{R})dS-S\,dT_{R}-p\,dV+\mu\,dN}$$
+- The _minimum_ w.r.t. $S$ has $T=T_{R}$, _fixing_ the equilibrium entropy at $S=S_\text{eq}$
+- Redefining all properties as their _equilibrium values_, one gets the expression for _Helmholtz free energy_
+$$\displaylines{F(T,V,N)=U-TS\\dF=-S\,dT-p\,dV+\mu\,dN}$$
+
+- When the Legendre transform is performed on all three variables, one gets _availability_
+$$A=U-T_{R}S+p_{R}V-\mu_{R}N$$
+- At _equilibrium_, the differential is:
+$$dA=-S_\text{eq}\,dT_{R}+V_\text{eq}\,dp_{R}-N_\text{eq}\,d\mu_{R}$$
+- In equilibrium, $A=0$, simply because _one cannot obtain any more work_
+	- Also from $U-TS+pV-\mu N=0$
+- However, there _are not always so many constrained variables_ as $T,p,\mu$
+- This generates _other thermodynamic potentials_
 ### Thermodynamic potentials
-- Consider a body with _constant $V$_ and $N$ 
+- For a _system_ connected to some _reservoir_, $U_\text{sys}$ is _insufficient_ to determine the _equilibrium state_
+- Energy must be _conserved for both the system and the reservoir_
+- This is dependent on what _restrictions_ the reservoir places
+	- _Only_ exchanging _energy_: constant $T$ due to reservoir, constant $V,N$ as properties of the system
+
+- When work is _done_ on the system, energy is _stored in/removed from_ the reservoir
+- Consider the _reversible work done_ on an _isothermal system_:
+$$dW=dU-TdS=d(U-TS)_{T}\equiv(dF)_{T}$$
+- Here, $F$ is the _Helmholtz free energy_:
+$$F=U-TS$$
+- In this case, for a system with a _fixed temperature_ $T$, $dF=0$ in _equilibrium_
+	- No more work can be extracted for the _combined_ system 
+
+- It is an example of a _thermodynamic potential_
+	- It is a property which takes _global energy conservation_ into account
+	- For given _external conditions_, there is a potential to be _minimised at equilibrium_
+	- Also given as a _Legendre transform_ w.r.t. $S$
+
+- Depending on the nature of the _reservoir_, and constraints in consideration, the other _thermodynamic potentials_ are:
+
+| Name                  | Potential       | Differential         |
+| --------------------- | --------------- | -------------------- |
+| Internal energy       | $U=TS-pV+\mu N$ | $dU=TdS-pdV+\mu dN$  |
+| Enthalpy              | $H=U+pV$        | $dH=TdS+Vdp+\mu dN$  |
+| Helmholtz free energy | $F=U-TS$        | $dF=-SdT-pdV+\mu dN$ |
+| Gibbs free energy     | $G=U-TS+pV$     | $dG=-SdT+Vdp+\mu dN$ |
+| Grand/Landau potential                      | $\Phi=F-\mu N$                | $d\Phi=-SdT-pdV-Nd\mu$                     |
+- If one knows a potential as a _function of its natural variables_, one has _complete thermodynamic information_ about the system
+	- e.g. knowing $F(T,V,N)$ is sufficient, $F(T,V,p)$ is not
 
 ### Minimising potentials
+- For a completely _isolated_ system, it must have _constant_ $S,V,N$
+- Any _work extracted_ will _decrease_ $U$
+	- $(dA)_{S,V,N}=(dU)_{S,V,N}$
+- At equilibrium, $U$ is _minimised_
+
+- For a system held at _constant pressure_, $S,p.N$ are fixed:
+$$(dA)_{S,p,N}=d(U+pV)_{S,p,N}=d(H)_{S,p,N}$$
+- $H=U+pV$, the _enthalpy_, is _minimised in equilibrium_ 
+- The _heat_ transferred in constant pressure is equal to the _change in enthalpy_
+$$(d\hspace{-0.04em}\bar{}\hspace{0.1em}Q)_{p}=(dH)_{p}$$
+- This is important for _flow processes_ (e.g. fluids), and _phase transitions_
+
+
+- For a system held at _constant temperature_, $T,V,N$ are fixed:
+$$(dA)_{T,V,N}=d(U-TS)_{T,V,N}=d(F)_{T,V,N}$$
+- $F=U-TS$, the _Helmholtz free energy_, is _minimised in equilibrium_
+- $\Delta F$ is the _work done_ for a system at _constant temperature_
+
+
+- For a system held at _constant temperature and pressure_, $T,p,N$ are fixed:
+$$(dA)_{T,p,N}=d(U-TS+pV)_{T,p,N}=d(H-TS)_{T,p,N}=d(G)_{T,p,N}$$
+- $G=U+pV-TS$, the _Gibbs free energy_, is _minimised in equilibrium_
+- Useful for _chemical and phase equilibria_
+- In a _pure phase_, $G=\mu N$, and $\mu$ is the _Gibbs energy per particle_
+	- Can also be used to derive the [[#Scaling and Gibbs-Duhem relation|Gibbs-Duhem relation]]
+
+
+- For a system held at _constant temperature and chemical potential_, $T,V,\mu$ are fixed:
+$$(dA)_{T,V,\mu}=d(U-TS-\mu N)_{T,V,\mu}=d(\Phi)_{T,V,\mu}$$
+- $\Phi=F-\mu N$, the _grand potential_, is _minimised in equilibrium_
+
+### Summary
+- For _fixed temperature_:
+
+| Name                      | Helmholtz Free Energy  | Gibbs Free Energy | Grand potential    |
+| ------------------------- | ---------------------- | ----------------- | ------------------ |
+| Formula                   | $F=U-TS$               | $G=U+pV-TS=\mu N$ | $\Phi=F-\mu N=-pV$ |
+| Differential              | $-SdT-pdV+\mu dN$      | $-SdT+Vdp+\mu dN$ | $-SdT-pdV-Nd\mu$   |
+| Minimised for constraints | $T,V,N$                | $T,p,N$           | $T,V,\mu$          |
+| Significance              | Mechanical equilibrium | Phase equilibrium | Fermions, bosons   |
+
+- For _thermally isolated_ systems:
+
+| Name                      | Internal Energy  | Enthalpy         |
+| ------------------------- | ---------------- | ---------------- |
+| Formula                   | $U=TS-pV+\mu N$  | $H=U+pV$         |
+| Differential              | $TdS-pdV+\mu dN$ | $TdS+Vdp+\mu dN$ |
+| Minimised for constraints | $V,N$            | $p,N$            |
+| Significance              | Isolated systems | Flow processes   |
 
 # Statistics
 - The "state" of a system specifies its _configuration_
@@ -242,11 +365,12 @@ $$\pd{}{p_i}\left(-\sum_k p_k\ln p_k-\lambda \sum_k p_k-\beta\sum_k p_kE_k-\gamm
 $$p_i=\frac{1}{Y}\exp[-\beta (E_i-pV_i)]$$
 - From the partition function $Y$, one can derive _thermodynamic potential_ $G(T,p,N)$
 
-### Conclusions
+### Conclusions and summary
 - For each ensemble, one can derive some _partition function_, and the corresponding _thermodynamic potential_
 - Each potential must depend on both _intensive and extensive variables_
 	- One would not be able to define a partition function or potential for _fixed_ $(T,p,\mu)$
 
+| Ensemble | Fixed variables | Partition function |
 ## Examples
 ### The two-level system
 - At _high temperature_, the particles are _evenly distributed across both levels_
@@ -301,8 +425,6 @@ $$Z=\sum_{n=0}^\infty \exp\left[-\frac{\hbar\omega}{kT}\left(n+\frac{1}{2}\right
 - Doing the required derivative, one gets the _internal energy_:
 $$U=\frac{\hbar\omega}{2}\coth\left(\frac{\hbar\omega}{2kT}\right)$$
 - One can also get that at _high temperature_, the _heat capacity_ is _constant_
-
-
 
 # The ideal gas in the canonical ensemble
 - Let there be a gas of _volume_ $V$, _temperature_ $T$, with _number of particles_ $N$

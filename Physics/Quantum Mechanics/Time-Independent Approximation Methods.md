@@ -270,3 +270,5 @@ $$\displaylines{k_\text{sp}^{2}+z=0 \implies k_\text{sp}=\begin{cases}\pm i\sqrt
 
 - The _Airy function_ $\text{Ai}(z)$ _connects_ the wave-functions at the turning point
 ![[Airy equation.png]]
+
+- Bohr-Sommerfeld quantisation condition

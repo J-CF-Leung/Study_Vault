@@ -91,7 +91,7 @@ $$U_\text{el}=\int_0^\infty \varepsilon g(\varepsilon)p_F(\varepsilon)\,d\vareps
 $$C_\text{el}=\frac{\pi^2}{2}Nk_B\frac{T}{T_F}$$
 - The _Fermi temperature_ is given by:
 $$T_F=\frac{E_F}{k_B}$$
-- The heat capacity is _linear in temperature_, in contrast to [[Phonons|heat capacity of phonons]], which have a _cubic dependence_
+- The heat capacity is _linear in temperature_, in contrast to [[Phonons (IB)|heat capacity of phonons]], which have a _cubic dependence_
 
 ### An intuitive derivation
 ![[Electronic heat capacity.png]]
@@ -226,7 +226,7 @@ $$\frac{1}{\tau}=\frac{1}{\tau_\text{phonon}}+\frac{1}{\tau_\text{defect}}$$
 - This is known as _Matthiessens' rule_
 
 ### Electron thermal conductivity
-- For _electron thermal conductivity_, it is _analagous_ to [[Phonons#Thermal conductivity in insulators|phonons]]:
+- For _electron thermal conductivity_, it is _analagous_ to [[Phonons (IB)#Thermal conductivity in insulators|phonons]]:
 $$\kappa_\text{el}=\frac{1}{3}C_\text{el}\mean{c}l$$
 - As only electrons near the _Fermi level_ are excited, let $\mean{c}\approx v_F$, and $l\approx v_F\tau$
 - $\kappa_\text{el}$ then becomes:

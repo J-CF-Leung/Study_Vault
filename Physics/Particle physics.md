@@ -1,5 +1,8 @@
 - [ ] Revise using Ch. 1 and 2 of Perkins 🔼 
 
+
+
+
 - The study of _elementary particles_ and their interactions
 - Described using the _standard model_
 
@@ -152,6 +155,14 @@ $$c\Delta t\sim \hbar \frac{c}{\Delta E}\sim \frac{\hbar}{mc}$$
 - _Gauge invariance_ leads to _charge conservation_
 	- Charges: electric, colour, weak charges
 
+## Parity
+- Consider _parity operator_, which performs _spatial inversion_:
+$$\hat{P}\ket{\psi(\boldsymbol{r},t)}=\ket{\psi(-\boldsymbol{r},t)}  $$
+- The eigenvalue is known as _parity_:
+$$P=\pm 1$$
+- If the _Hamiltonian_ for the interaction _commutes_ with $\hat{P}$, parity is _conserved_:
+$$\left[ \hat{P},\hat{H} \right]=0$$
+- Parity is _conserved_ in QED and QCD, but _violated_ for the _weak force_
 # Particle kinematics
 - In _nuclear reactions_, they are typically of _low kinetic energy_ $\sim 10\text{ MeV}\ll m_\text{nucleon}$
 	- Exception: _beta decay_
@@ -897,8 +908,192 @@ $$V(r)=-\frac{g^{2}}{4\pi} \frac{\exp(-m_{\pi}r)}{r}$$
 - As gluons can _self-interact_, there can also be a _cloud of virtual gluons_
 	- There is _no analogue_ in QED as photons _do not self interact_
 ![[Virtual gluons.png|300]]
-- These self-interactions cause _colour charge_ to be _screened_ by both _virtual quarks and gluons_
-- As the cloud carries colour charge, the _effective colour charge_ tends to _decrease_ at smaller distances (high energy)
+- These gluon self-interactions cause _bare colour charge_ to be _screened_ by both _virtual quarks and gluons_
+- As the cloud _carries colour charge_, the _effective colour charge_ tends to _decrease_ at smaller distances (high energy)
 	- Low energies: _large_ $\alpha_{s}$ (perturbation theory is less accurate)
 	- High energies: _small_ $\alpha_{s}$, hence _quarks_ can be treated as _free particles_ (asymptotic freedom, perturbation theory can be used)
+- This is known as _colour anti-screening_
 ![[QED running vs QCD.png]]
+
+## Evidence for QCD
+
+### Scattering experiments
+- Consider high-energy _proton-proton scattering_
+![[Proton proton scattering.png|500]]
+- From the formula for _elastic cross-section_ for Rutherford scattering, $\alpha_{s}$ can be calculated
+
+- Compare $\ce{ pp }$ and $\ce{ \pi+p }$ scattering:
+![[pp or pip.png|600]]
+- QCD _does not distinguish between flavour_, only _colour_ is relevant
+- At _high energy_, the _ratio_ of cross sections depends on the _number of possible quark-quark combinations_:
+$$\frac{\sigma(\pi p)}{\sigma(pp)}= \frac{2}{3}$$
+- Consider $\ce{ e+e- }$ annihilation at high energy:
+![[ee annihilation comparison.png]]
+- Consider the _ratio_:
+$$R=\frac{\sigma(\ce{ e- e+ -> \text{hadrons} })}{\sigma(\ce{ e- e+ -> \mu+ \mu- })}$$
+- This must be _summed_ over all _flavours and colours_:
+$$R=3\sum_\text{flavours} Q^{2}$$
+- As the _centre of mass increases_, the number of _kinetically accessible quarks_ increases
+- $R$ starts to _increase in steps_, as _heavier bound states_ are formed
+	- Common bound atates: _quarkoniums_ $(q\bar{q})$
+
+### Other evidence for colour
+- The $\Omega^{-}$ is a _spin-_$3/2$ baryon consisting of $sss$ quarks
+- As they have _identical spin and flavour_, and quarks are _fermions_, there must be an _additional quantum number_ (colour)
+- It is an _antisymmetric superposition_ of $rgb$
+
+- In the _Drell-Yan process_, the cross-section is _suppressed_ by $N_\text{colour}^{-2}$, as quarks of _matching colour_ must annihilate to form photons
+
+### Evidence for gluons
+- Like the radiation of _photons_ in QED, _gluons_ can be _radiated_ in QCD
+$$\ce{ e+e- -> q\bar{q}g }$$
+![[Gluon radiation.png|400]]
+- The matrix element is now:
+$$M \sim \frac{Q_{q}}{q^{2}}\sqrt{ \alpha }\sqrt{ \alpha }\sqrt{ \alpha_{s} }$$
+- in QCD, gluons are _confined_
+- They can be detected in _3-jet events_ such as the above
+
+- The _angular distribution_ in jets gives that gluons are _spin-1_
+
+### Evidence for gluon self-interactions
+- Consider _4-jet events_
+![[4 jet events.png|500]]
+- The angular distribution is sensitive to _triple gluon vertices_
+	- Due to a different combination of _spins_
+
+# Hadrons
+- Hadrons are _composite particles_ of multiple quarks
+
+- The magnetic moments of protons and neutrons are _not of point-like particles_
+	- Point-like: $e\hbar/2m_{p}$ and $0$ respectively
+- At _high_ $q^{2}$, scattering _deviates from Rutherford scattering_
+- Hadron _jets_ are observed in electron and proton scattering
+## Hadron wavefunctions
+- Quarks are always confined in _colourless states_ (colour _singlets_)
+- _Mesons_ have a quark and antiquark
+- _Baryons_ have three quarks
+
+- Treat quarks as _identical fermions_ with the composite wavefunction:
+$$\psi=\psi _\text{space}\psi _\text{flavour}\psi _\text{spin}\psi _\text{colour}$$
+### Colour wave-functions
+- They must form _singlets_
+- Mesons:
+$$\psi^{q\bar{q}}_\text{colour}=\frac{1}{\sqrt{ 3 }}(r\bar{r}+g\bar{g}+b\bar{b})$$
+- Baryons:
+$$\psi^{qqq}_\text{colour}=\frac{1}{\sqrt{ 6 }}(rg b+gbr+brg-rbg-grb-bgr)$$
+### Parity
+- A composite system of two particles with _orbital angular momentum_ $L$:
+$$P=P_{1}P_{2}(-1)^{L}$$
+- $P_{1,2}$ are _intrinsic parities_
+
+- Fermions and their antiparticles have _opposite parity_
+- Bosons and their antiparticles have _same parity_
+
+- Quarks and leptons have $P_{q/l}=+1$
+- _Gauge bosons_ have $P_{\gamma}=-1$ and $J^{P}=1^{-}$
+
+- For _mesons_, $S=0,1$
+	- $S=0$: pseudoscalar mesons
+	- $S=1$: vector mesons
+- For $L=0$, mesons have parity $-1$
+
+- From considering _quark flavours_, there is a _psueodscalar nonet_ and _vector nonet_ of mesons
+
+### Isospin and strangeness
+- Isospin and strangeness of quarks:
+$$I=\frac{1}{2}(n_{u}-n_{d}-n_{\bar{u}}+n_{\bar{d}})\hspace{1.5cm}s=\frac{1}{2}(n_{s}-n_{\bar{s}})$$
+![[Quark isospin strangeness.png]]
+
+## Light mesons
+- Mesons of $I=s=0$ _mix_ to form $\pi^{0},\eta,\eta'$
+- Mesons of $I=\pm 1$ and $s=0$ _mix_ to form $\pi^{\pm}$
+- There is an _isospin triplet_ for the pions
+- The $\eta$ particles form a _singlet_
+![[Light meson nonets.png]]
+- Isospin doublet: kaons with $I=\pm 1/2$
+	- $K^{+}, K^{0}$ and $K^{-},\bar{K}^{0}$
+
+### Zero flavour mesons
+- The states $u\bar{u},d\bar{d},s\bar{s}$ have _zero flavour_, and can _mix_
+	- Can form pseudoscalar or vector mesons
+![[Zero flavour mesons.png]]
+- Determine mixing coefficients from _masses_ and _decays_
+- Example: decay of $\rho^{0}=(u\bar{u}-d\bar{d})/\sqrt{ 2 }$ at $J^{P}=1^{-}$
+$$M(\rho^{0}\to e^{+}e^{-})\sim \frac{e}{q^{2}}\left[ \frac{1}{\sqrt{ 2 }} (Q_{u}e-Q_{d}e)\right]$$
+### Meson masses
+- Meson masses are only _partly from constituent quark masses_
+	- $m(K)>m(\pi)$ suggests $m_{s}>m_{u},m_{d}$
+	- $m(\rho)>m(\pi)$ despite having the same quarks
+
+- Analagous to _hyperfine splitting_ in hydrogen
+	- Due to magnetic field of the proton
+- In QCD, there is a _colour magnetic interaction_:
+$$M_{q\bar{q}}=m_{1}+m_{2}+A \frac{\boldsymbol{S}_{1}}{m_{1}}\cdot \frac{\boldsymbol{S}_{2}}{m_{2}}$$
+- For spin:
+$$\boldsymbol{S}_{1}\cdot \boldsymbol{S}_{2}=\frac{1}{2}(S^{2}-S_{1}^{2}-S_{2}^{2})=\frac{1}{2}S^{2}- \frac{3}{4}$$
+- From this, $J^{P}=0^{-}$ mesons are _lighter_
+
+![[Meson masses.png]]
+
+## Baryons
+- Made from three _indistinguishable quarks_
+	- Flavour can simply be treated as another quantum number
+- It must be _antisymmetric_ under interchange of _any_ 2 quarks
+- Example: $\Omega^{-}(sss)$ has $L=0,J=3/2$ must have antisymmetric $\psi _\text{colour}$
+
+- Consider only _ground states_ of $L=0$, therefore with a _symmetric $\psi _\text{space}$_
+- As all hadrons are _colour singlets_ (antisymmetric), $\psi _\text{spin}\psi _\text{flavour}$ must be _symmetric_
+
+### Spin wavefunctions
+- Build up the _three particle_ spin function by _adding_ one spin to a two-spin wave function
+![[Three quark spin wavefunctions.png]]
+
+- Consider all quarks having the _same flavour_ $(\ce{ uuu,ddd,sss })$
+- The spin must be _symmetric under any interchange_
+
+- Two quarks of the same flavour
+
+- All different flavours
+
+- Baryons come in an _octet_ and _decuplet_
+![[Quarks.png]]
+
+- Masses
+
+### Baryon magnetic moment
+- The [[Charged Particles#Spin and the magnetic moment operator|magnetic moment]] arises from _orbital motion_ of charged quarks, as well as their _intrinsic spin-related magnetic moments_
+
+ $$\hat{\mu}_{L} \hspace{1.5cm} \hat{\mu}_{S}$$
+
+- The _scalar magnetic moment_ is the _maximum measurable component_ of the operator
+- The _Bohr magneton_:
+$$\mu_{B}= \frac{e\hbar}{2m_{e}}$$
+- _Higher order corrections_:
+$$\mu_{s}=-\mu_{B}\left[ 1+\frac{\alpha}{} +O(\alpha^{2}) \right]$$
+
+- If the _proton and nuetron_ were point-like:
+$$\mu_{L}= \hspace{1.5cm}\mu_{s}=$$
+- $e\hbar/2m_{p}=\mu_{N}$ is the _nuclear magneton_
+
+- The _observed_ $g-$factors are _different from that of point-like particles_
+
+- Assume that the _bound quarks_ act as _point-like_ particles with _fractional charge_:
+$$\mu_{u}= \frac{2}{3} \frac{e\hbar}{2m_{u}} \hspace{1cm}\mu_{d}= -\frac{1}{3} \frac{e\hbar}{2m_{d}} \hspace{1cm} \mu_{s}=-\frac{1}{3} \frac{e\hbar}{2m_{s}}$$
+
+- For an $L=0$ barypn, the baryon magnetic moment is the _expectation value_ of the _sum_ of individual quark magnetic moments:
+$$\hat{\mu}_\text{baryon}=\frac{q_{1}}{m_{1}} \hat{S}_{1z}+ \frac{q_{2}}{m_{2}} \hat{S}_{2z} + \frac{q_{3}}{m_{3}} \hat{S}_{3z}$$
+
+## Hadron decays
+- Hadrons decay via the _strong interaction_ to _lighter mass states_ if energetically possible
+	- Examples: $\ce{ \rho^{0} -> \pi+\pi- }$ and $\ce{ \Delta^{++} -> p\pi+ }$
+- _Angular momentum_ and _parity_ must be conserved
+
+- They can also decay into _identical particles_
+	- Examples: $\ce{ \omega^{0} -> \pi^{0}\pi^{0} }$ and $\omega^{0} \to \pi^+\pi^-\pi^{0}$
+
+- They can also decay via the _electromagnetic interaction_, as a particle changes into a counterpart of _different spin_ by emitting a _photon_ 
+	- Examples: $\ce{ \rho^{0} -> \pi^{0}\gamma }$ and $\Sigma^{0} \to \Lambda^{0}\gamma$
+- _Angular momentum_ and _parity_ must be conserved
+
+- The _lightest mass states_ such as $p,n,K^{\pm}$ must decay via the _weak_ interaction to change flavour
+- _Parity_ is violated

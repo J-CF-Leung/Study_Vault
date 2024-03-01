@@ -1,4 +1,3 @@
-.
 - A fluid is a _flowing continuous medium_
 - It has well-defined _macroscopic properties_:
 $$\boldsymbol{v}(\boldsymbol{r},t),\rho(\boldsymbol{r},t),p(\boldsymbol{r},t)$$
@@ -327,7 +326,7 @@ $$\nabla^{2}\Psi=4\pi G\rho$$
 $$E=\rho\left( \frac{1}{2}u^{2}+\Psi+\mathcal{E} \right)$$
 - [[#Conservation of energy]]:
 $$\frac{\partial R}{\partial t}+\nabla\cdot[(E+p)\boldsymbol{u}]=\rho \frac{\partial \Psi}{\partial t}-\rho \dot{Q}_\text{cool}$$
-- The _equation of stater_ and _internal energy_ for an [[#Barotropic fluids|ideal gas]]:
+- The _equation of state_ and _internal energy_ for an [[#Barotropic fluids|ideal gas]]:
 $$p=\frac{k_{B}}{\mu m_{p}}\rho T\hspace{1.5cm}\mathcal{E}=\frac{1}{\gamma-1} \frac{p}{\rho}$$
 ## Condition of equilibrium
 - A fluid is in _hydrostatic equilibrium_ if:
@@ -578,8 +577,15 @@ $$\Delta u=\frac{\Delta \rho}{\rho_{0}} \frac{\omega}{k}$$
 - Sound waves are the _speed of information_ in the medium
 - The arrival of the shock causes a _discontinuity_ in properties of the medium
 
+- The _Mach cone_
+
+- Definition of the _Mach number_:
+$$M=\frac{v}{c_{s}}$$
+
 ## Rankine-Hugoniot jump conditions
 - Consider a fluid _entering a plane-parallel shock normally_
+	- _Pre-shock_: the gas is _supersonic_
+	- _Post-shock_: the gas moves _away_ from the shock sub-sonically
 - On _each side_, the properties are _uniform_
 
 - _Across_ the jump, $\rho$, $p$ and $v$ are _discontinuous_
@@ -588,7 +594,7 @@ $$\Delta u=\frac{\Delta \rho}{\rho_{0}} \frac{\omega}{k}$$
 ![[Shock front.png]]
 
 - _Integrate_ the continuity equation _across_ the shock:
-$$\frac{\partial}{\partial t}\left( \int  \, dx  \right)-$$
+$$\frac{\partial}{\partial t}\left( \int \rho \, dx  \right)+\rho u_{x} \Big|^{dx/2}_{-dx/2}=0$$
 - Let $dx\to 0$, one gets:
 $$\rho_{1}u_{1}=\rho_{2}u_{2}$$
 
@@ -605,11 +611,11 @@ $$\frac{1}{2}u_{1}^{2}+\mathcal{E}_{1}+\frac{p_{1}}{\rho_{1}}=\frac{1}{2}u_{2}^{
 - Kinetic energy is _converted_ into _enthalpy_
 ### Adiabatic ideal gas
 - For the ideal gas:
-$$\mathcal{E}=\frac{1}{\gamma-1} \frac{p}{\rho}$$
+$$\mathcal{E}=\frac{1}{\gamma-1} \frac{p}{\rho}\hspace{1.5cm} c_{s}=\frac{\gamma p}{\rho}$$
 - The third R-H condition becomes:
-$$\frac{1}{2}u_{1}^{2}+\frac{c_{s,1}^{2}}{\gamma-1}=$$
+$$\frac{1}{2}u_{1}^{2}+\frac{c_{s,1}^{2}}{\gamma-1}= \frac{1}{2}u_{2}^{2} + \frac{c_{s,2}^{2}}{\gamma-1}$$
 - Using all relations gives:
-$$\displaylines{\frac{\rho_{2}}{\rho_{1}}=\frac{u_{1}}{u_{2}}=\frac{(\gamma+1)p_{2}+(\gamma-1)p_{1}}{(\gamma+1)p_{1}+(\gamma-1)p_{2}} \\ \frac{p_{2}}{p_{1}}= \\ \frac{T_{2}}{T_{1}}=}$$
+$$\displaylines{\frac{\rho_{2}}{\rho_{1}}=\frac{u_{1}}{u_{2}}=\frac{(\gamma+1)p_{2}+(\gamma-1)p_{1}}{(\gamma+1)p_{1}+(\gamma-1)p_{2}}=\frac{(\gamma+1)M_{1}^{2}}{(\gamma-1)M_{1}^{2}+2} \\ \frac{p_{2}}{p_{1}}= \frac{2\gamma M_{1}^{2}-(\gamma-1)}{\gamma+1}\\ \frac{T_{2}}{T_{1}}=\frac{((\gamma-1)M_{1}^{2}+2)(2\gamma M_{1}^{2}-(\gamma-1))}{(\gamma+1)^{2}M_{1}^{2}}}$$
 - In the limit of _strong shocks_, $p_{2}\gg p_{1}$:
 $$\frac{\rho_{2}}{\rho_{1}}\approx\frac{\gamma+1}{\gamma-1}$$
 - For $\gamma=5/3$, this gives $\rho_{2} \approx 4\rho_{1}$
@@ -624,7 +630,7 @@ $$\frac{p_{2}}{\rho_{2}^{\gamma}}> \frac{p_{1}}{\rho_{1}^{\gamma}}$$
 	- It is an _irreversible change_ due to _viscous processes_ within the shock
 
 - For strong shocks, one also gets:
-$$k_{B}T_{2}=$$
+$$k_{B}T_{2}=\frac{4(\gamma-1)}{(\gamma+1)^{2}}\left( \frac{1}{2}\mu m_{p}u_{1}^{2} \right)$$
 
 ### Isothermal shocks
 - For _isothermal_ shocks, $\dot{Q}_\text{cool}\neq 0$
@@ -945,10 +951,10 @@ $$\dot{M}=\frac{\pi(GM)^{2}\rho_{\infty}}{c_{s,\infty}^{3}}\left( \frac{n}{n-3/2
 - Adiabatic change:
 $$K=\frac{p}{\rho^{\gamma}}=\frac{p'}{\rho^{{*}^{\gamma}}}$$
 - In the displaced fluid element, expanding perturbations to the _first order_:
-$$p'=p+\frac{dp}{dz}\delta z \implies \rho^{*}=$$
+$$p'=p+\frac{dp}{dz}\delta z \implies \rho^{*}=\rho+ \frac{\rho}{\gamma p}\, \frac{dp}{dz}\delta z$$
 - Background atmospheric density:
 $$\rho'=\rho+\frac{d\rho}{dz}\delta z$$
-- Hence, the gas is _unstable_ if:
+- From this, the gas is _unstable_ if:
 $$\implies\frac{dK}{dz}<0\;,\; \frac{d}{dz}\ln K=0$$
 - The system is _unstable if entropy decreases in the upwards direction_
 - It is the _Schwarzchild criterion_
@@ -960,11 +966,13 @@ $$\frac{dT}{dz}<\left( 1-\frac{1}{\gamma} \right) \frac{T}{p} \frac{dp}{dz}$$
 - Hence, _positive temperature gradients are stable_
 	- Even for _negative_ temperature gradients, _small_ temperature gradient is still stable
 
+- Boussinesq approximation?
+
 - If the atmosphere is _convectively stable_, the fluid element undergoes _oscillations_:
 $$\rho^{*} \frac{\partial^{2}\delta z}{\partial t^{2}}=-g(\rho^{*}-\rho)$$
 - There is a _simple harmonic motion_ with _angular frequency_ $N$:
 $$N^{2}=\frac{g}{T} \left[ \frac{dT}{dz}-\left( 1-\frac{1}{\gamma} \right) \frac{T}{p} \frac{dp}{dz} \right]$$
-
+- This is the _Brunt-Vaisala frequency_
 ## Jeans instability
 - The instability of a medium against _gravitational collapse_
 - Consider a uniform medium which is initially _static_, with a _barotropic gas_
@@ -990,3 +998,233 @@ $$\lambda_{J}=\frac{2\pi}{k_{J}}=$$
 - The associated _mass scale_:
 $$M_{J}\sim \rho_{0}\lambda_{J}^{3}$$
 - The system will undergo _gravitational collapse_ if its mass _exceeds_ the Jeans mass
+
+## Rayleigh-Taylor and Kelvin-Helmholtz instability
+- Instability at an _interface_ with _discontinuous_ change in density or tangential velocity
+![[Instability at fluid interface.png]]
+
+- Assume it is under _constant gravity_
+- It is a _2-dimensional_ ideal fluid
+- The flow is _irrotational and incompressible_, hence $\boldsymbol{u}=-\nabla \Phi$ and $\nabla^{2}\Phi=0$
+
+### Dispersion relation
+- Writing the momentum equation for _either fluid_, with the above ansatz, one gets:
+$$\nabla \left[ -\frac{\partial \Phi}{\partial t}+\frac{1}{2}u^{2}+\frac{p}{\rho}+\Psi \right]=0 \implies -\frac{\partial \Phi}{\partial t}+\frac{1}{2}u^{2}+\frac{p}{\rho}+\Psi=F(t)$$
+- Let the fluids have _unperturbed velocities_ $U$ and $U'$
+- Then write the perturbed _velocity potentials_ as:
+$$\displaylines{\Phi _\text{low}=-Ux+\phi \hspace{1cm}\Phi _\text{high}=-U'x+\phi' \\ \nabla^{2}\phi=\nabla^{2}\phi'=0}$$
+- The additional potentials are caused by the _perturbation_
+- Given a perturbed position at the interface $\xi$:
+$$u_{z}=\frac{D\xi}{Dt}$$
+- This gives equations for $\phi$ and $\phi'$:
+
+- Plane wave solutions
+
+- _Pressure balance_ across the interface, with equality at $z=0$
+
+- Perturbation vanishes for $|z|\to \infty$ at all times
+
+- This dispersion relation:
+$$\rho(kU-\omega)^{2}+\rho'(kU'-\omega)^{2}=kg(\rho-\rho')$$
+### Surface waves
+- Let the two fluids be at _rest_ $(U=U'=0)$, with $\rho'<\rho$ (_heavy_ fluid on the bottom)
+$$\omega^{2}=k \frac{g(\rho'-\rho)}{\rho + \rho'}$$
+- This represents _surface gravity waves_
+- Phase and group velocity:
+
+- Limit of $\rho'\ll \rho$:
+
+### Static stratified fluid
+- Fluids at _rest_, with the heavy fluid on _top_ $(\rho'>\rho)$
+
+- The solutions _exponentially grow_
+- This is the _Rayleigh-Taylor instability_
+
+### Fluids in motion
+- Have the fluids in _motion_
+- $\rho'<\rho$ to prevent Rayleigh-Taylor instability
+
+- Solve for $\omega/k$
+
+- The configuration is _unstable_ if
+$$\frac{g}{k} \frac{\rho-\rho'}{\rho+\rho'} - \frac{\rho \rho'(U-U')^{2}}{(\rho + \rho')^{2}}<0$$
+- This is the _Kelvin-Helmholtz instability_
+- If $g=0$, the fluid is _always unstable_
+
+- If $g\neq 0$, then there are _unstable modes_ with
+$$k>$$
+- Gravity is a _stabilising influence_ for lower wavenumbers
+
+## Thermal instability
+- Examine the stability of a medium in _thermal equilibrium_, with _perturbation in temperature_
+- Assume it is an _ideal gas_, under _no gravitational field_
+- It is originally _static_, in _thermal equilibrium_ with uniform density $\rho_{0}$ and pressure $p_{0}$:
+$$\boldsymbol{u}_{0}=0,\dot{Q}_{0}=0,\nabla K_{0}=0 \hspace{1cm}K=p\rho^{-\gamma}$$
+### Alternative energy equation
+- The [[#Conservation of energy|energy equation]]:
+$$\frac{\partial E}{\partial t}+\nabla\cdot[(E+\rho)\boldsymbol{u}]=\rho \frac{\partial \Psi}{\partial t}-\rho \dot{Q}_\text{cool}$$
+- To link to _entropy_, use $K=p\rho^{-\gamma}$:
+$$dK=\rho^{-\gamma}\,dp-\gamma p\rho^{-\gamma-1}\,d\rho$$
+
+- For an _ideal gas_:
+$$dQ= \frac{\mathcal{R}_{*}}{\mu(\gamma-1)}dT+ p \,d\left( \frac{1}{\rho} \right)$$
+- Combining:
+$$\frac{1}{K} \frac{DK}{Dt}=-(\gamma-1) \frac{\rho \dot{Q}}{p}$$
+- This is the _entropic form_ of the energy equation
+
+### Solutions
+- Linearise the equations
+
+$$\displaylines{\frac{\partial\Delta K}{\partial t}=-A^{*}\Delta p-B^{*}\Delta \rho \\ A^{*}=\frac{\gamma-1}{\rho_{0}^{\gamma-1}} \frac{\partial \dot{Q}}{\partial p}\Bigg|_{\rho}\hspace{1.5cm}B^{*}=\frac{\gamma-1}{\rho_{0}^{\gamma-1}} \frac{\partial \dot{Q}}{\partial \rho}\Bigg|_{p}}$$
+
+- Seek solutions of the form:
+$$\Delta p=p_{1}\exp[i\boldsymbol{k}\cdot \boldsymbol{x}-qt]$$
+- These are _not plane wave solutions_
+- The configuration is _unstable_ if $\mathrm{Re}(q)>0$
+
+- One then gets a _cubic equation_:
+$$q^{3}+A^{*}\rho_{0}^{\gamma}q^{2}+k^{2}\gamma \frac{p_{0}}{\rho_{0}} q-B^{*}k^{2}\rho_{0}^\gamma=0$$
+- This must have _at least one real root_
+- The system is _unstable_ if the root is _positive_, which happens if $B^{*}>0$
+
+- Using the ideal gas equation, the system is _unstable_ if it fulfills the _Field criterion_:
+$$\frac{\partial \dot{Q}}{\partial T}\Bigg|_{p}<0$$
+- If _net cooling decreases_ for a _positive fluctuation_, the system is _unstable_
+	- Full analysis indicates only the change at _constant pressure_ is important
+- If the system is field unstable, _all modes_ $\boldsymbol{k}$ are unstable
+
+- Example: [[#Cooling by radiation|Radiation cooling]]
+$$\displaylines{\dot{Q}=A\rho T^{\alpha}-H \\ \frac{\partial \dot{Q}}{\partial T}\Bigg|_{p}=(\alpha-1) \frac{A\mu p}{\mathcal{R_{*}}}T^{\alpha-2}}$$
+- The system is _field unstable_ if $\alpha<1$
+	- Bremsstrahlung: $\alpha=0.5$
+
+# Viscous flows
+- For fluids with a _finite mean free path_, momentum can _diffuse_ through a fluid
+- This leads to _viscosity_
+
+- This happens when there is a _velocity gradient_
+
+## Momentum diffusion
+- Consider a _linear shear flow_
+![[Linear shear flow.png|400]]
+- The _flux_ of momentum in the $i-$direction, towards the $j-$direction is $\rho u_{i}u_{j}$
+- The typical _thermal velocity_ is $\alpha \sqrt{ kT/m }$, where $\alpha\sim 1$
+
+- The _net momentum flux_ across distance $\delta l$ can be written as:
+$$-\rho(\partial_{j}u_{i})\delta l\alpha \sqrt{ \frac{kT}{m} }$$
+- $\delta l$ can be treated as the _mean free path_
+$$\delta l\sim \lambda\sim \frac{1}{n\sigma}$$
+- The _shear viscosity_ is then:
+$$\eta=\frac{\alpha}{\sigma}\sqrt{ mkT }$$
+- Suitable for _hard sphere collisions_
+
+- $\eta$ is _independent of density_, and scales as $\sqrt{ T }$
+	- For fully ionised plasmas, $\lambda \propto T^{2}$ and $\eta \propto T^{5/2}$
+## Modification of fluid equations
+- _Continuity_ is unchanged:
+$$\frac{\partial \rho}{\partial t}+\nabla\cdot(\rho \boldsymbol{u})=0$$
+- The momentum equation in terms of the _stress tensor_:
+$$\frac{\partial}{\partial t}(\rho u_{i})=-\partial_{j}\sigma_{ij}+\rho g_{i}$$
+- The _stress tensor_ must be modified to include _viscous stress_
+$$\sigma_{ij}=p\delta_{ij}+\rho u_{i}u_{j}-\sigma'_{ij}$$
+- The _most general $\sigma_{ij}'$ possible_ must be
+	- _Galilean invariant_ (viscous stresses cannot be introduced via frame transformations)
+	- Linear in velocity gradients
+	- Isotropic
+$$\sigma_{ij}'=\eta\left( \partial_{j}u_{i}+\partial_{i}u_{j}-\frac{2}{3}\delta_{ij}\partial_{k}u_{k} \right)+\zeta\delta_{ij}\partial_{k}u_{k}$$
+- Here, $\eta$ and $\zeta$ are _independent of velocity_
+	- The terms with $\eta$ are associated with _shears_ (it has _zero trace_)
+	- The terms with $\zeta$ are associated with _bulk compression_ viscosity
+
+- Plugging into the momentum equation, one gets the _most general Navier-Stokes equation_:
+$$\rho\left( \frac{\partial u_{i}}{\partial t}+u_{j}\partial_{j}u_{i} \right)=-\partial_{j}p\delta_{ij}+\partial_{j}\left[\eta\left( \partial_{j}u_{i}+\partial_{i}u_{j}-\frac{2}{3}\delta_{ij}\partial_{k}u_{k} \right)+\zeta\delta_{ij}\partial_{k}u_{k}\right]+\rho g_{i}$$
+- Outside of _shocks_, and for an _isothermal fluid_, $\zeta\approx 0$ and $\eta$ is approximately _uniform_:
+$$\frac{D\boldsymbol{u}}{Dt}=- \frac{1}{\rho}\nabla p+ \boldsymbol{g}+\frac{\eta}{\rho} \left[ \nabla ^{2}\boldsymbol{u}+\frac{1}{3}\nabla(\nabla\cdot \boldsymbol{u}) \right]$$
+- $\nu\equiv\eta/\rho$ is the _kinematic viscosity_
+## Vorticity in viscous flow
+- Vorticity:
+$$\omega=\nabla\times \boldsymbol{u}$$
+- By taking the _curl_ of the Navier-Stokes equation, and assuming a _barotropic fluid_ $p=p(\rho)$, as well as assuming _uniform density_ (hence uniform $\nu$)
+$$\frac{\partial \boldsymbol{\omega}}{\partial t}=\nabla\times(\boldsymbol{u}\times \boldsymbol{\omega})+\frac{\eta}{\rho}\nabla^{2}\boldsymbol{\omega}$$
+- Vorticity is _carried_ with the flow, but also _diffuses_ throughout the fluid due to _viscosity_
+
+## Energy dissipation
+- Viscosity leads to the _dissipation_ of kinetic energy into _heat_
+- Restrict to _incompressible flows_
+	- So there is no _expansion work_
+- Kinetic energy:
+$$E_\text{kin}=\frac{1}{2}\int \rho u^{2} \, dV $$
+
+- For an _incompressible flow_, by expanding the _momentum equation_:
+$$\frac{\partial E_\text{kin}}{\partial t}=-\oint \left( \rho \boldsymbol{u}\left[ \frac{1}{2}u^{2}+\frac{p}{\rho} \right] -\boldsymbol{u}\cdot \underline{\underline{\boldsymbol{\sigma}}}'\right)\cdot d\boldsymbol{S}-\int \sigma_{ij}'\partial_{j}u_{i} \, dV $$
+- The first term is an _energy flux into_ the volume
+	- Including _work done_ by the viscous forces
+- The second term is due to _viscous dissipation_
+
+- Take the volume to be the _whole fluid_
+
+$$\frac{\partial E_\text{kin}}{\partial t}=-\frac{1}{2} \int \eta (\partial_{j}u_{i}+\partial_{i}u_{j})^{2} \, dV $$
+- Heat _dissipation_ due to viscosity corresponds to the second law
+- $\eta>0$ at _everywhere at all times_
+
+## Steady flow in a pipe
+- Let a flow in a _circular_ pipe be _steady_, with a _uniform, incompressible_ fluid
+- Ignore gravity
+
+- The Navier-Stokes equation for this case becomes:
+$$\nu \nabla^{2}\boldsymbol{u}=\frac{1}{\rho}\nabla p$$
+- By _symmetry_, $u_{R}=u_{\phi}=0$
+- Take the $z$ component, and rewrite $\nabla p$ in terms of global pressure gradient:
+$$\nu \frac{1}{R} \frac{\partial}{\partial R}\left( R \frac{\partial u_{z}}{\partial R} \right)=-\frac{1}{\rho} \frac{\Delta p}{l}$$
+
+- Integrating:
+$$u=-\frac{\Delta p}{4\rho \nu l} R^{2}+a\ln R+b$$
+- At $R=0$, $u$ is _finite_, hence $a=0$
+- At $R=R_{0}$, the fluid must _not slip_, hence
+$$u=\frac{\Delta p}{4\rho \nu l}(R_{0}^{2}-R^{2})$$
+- The flow is _parabolic_
+
+- The _mass flow rate_:
+$$Q= \int _{0}^{R_{0}} u 2\pi R \, dR=\frac{\pi}{8} \frac{\Delta p}{\nu l} R_{0}^{4} $$
+### Reynolds number
+$$\text{Re}= \frac{uR_{0}}{\nu}$$
+- The _comparison_ of inertial forces and viscous forces
+- For _high_ Reynolds numbers, flow can become _turbulent_
+	- More _irregular_ in space and time
+
+## Accretion disks
+- _Accretion disks_ are _circular shear flows_
+- For gas with a _given angular momentum_ around the star
+	- It will settle into a _plane_ defined by the angular momentum vector
+	- _Residual_ motions in other directions are _damped out_ on the free-fall timescale
+- As energy is _dissipated_, the disk settles into a _circular shape_
+- Then, the _centrifugal force_ from rotation prevents further free-falling:
+	- For most stars, the _gravitational force_ dominates
+$$\Omega^{2}R=\frac{GM}{R^{2}} \implies \Omega=\sqrt{ \frac{GM}{R^{3}} }$$
+- In the _vertical direction_, pressure gradients balance the gravitational force
+
+- As $d\Omega/dR \neq 0$, this is a _shear flow_ 
+- _Viscosity_ transports angular momentum from the inner, fast material towards the outside
+- So, the _inner fluid elements drift inwards_
+
+### Viscous evolution equations in accretion disks
+- Let the fluid velocity be:
+$$\boldsymbol{u}=u_{R} \hat{\boldsymbol{R}}+ u_{\phi} \hat{\boldsymbol{\phi}}$$
+- $u_{\phi}$ is _close to_ the _Keplerian_ velocity, $u_{R}$ is _small_ and set by viscosity
+	- The _bulk viscosity_ is zero
+- Let the system be _axisymmetric_, hence $\partial/\partial \phi=0$
+
+- The _continuity equation_:
+$$\frac{\partial \rho}{\partial t}+ \frac{1}{R} \frac{\partial}{\partial R}(R\rho u_{R})=0$$
+- Define the _surface density_ $\Sigma$:
+$$\Sigma=\int _{-\infty}^{\infty} \rho \, dz $$
+- Integrating the continuity equation:
+$$\frac{\partial\Sigma}{\partial t}+\frac{1}{R} \frac{\partial}{\partial R}(R\Sigma u_{R})=0$$
+- This is also given by considering _mass flux in and out of an annulus_
+
+- Consider the _Navier-Stokes equation_, or considering the _rate of change of angular momentum_ in the annulus:
+	- Change in angular momentum: _mass flux_ and _viscous torque_
+$$\frac{\partial}{\partial t}(R\Sigma u_{\phi})+ \frac{1}{R} \frac{\partial }{\partial R}(\Sigma R^{2}u_{\phi}u_{R})=\frac{1}{R} \frac{\partial}{\partial R}\left( \nu\Sigma R^{3} \frac{d\Omega}{dR} \right)$$
+- Substituting the _Keplerian_ value of $u_{\phi}$:
+$$\frac{\partial\Sigma}{\partial t}=\frac{3}{R} \frac{\partial}{\partial R}\left[ R^{1/2} \frac{\partial}{\partial R}(\nu\Sigma R^{1/2}) \right]$$
+- Surface density obeys a _diffusion-like equation_

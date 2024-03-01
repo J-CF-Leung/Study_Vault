@@ -227,7 +227,7 @@ $$\hbar\bm{q}_3=\hbar\bm{q}_1+\hbar\bm{q}_2 \hspace{2cm} \hbar\omega_3=\hbar\ome
 - One can calculate the _energy stored in a crystal_ via its phonons
 - Then, one can calculate its _contribution to the crystal's heat capacity_
 
-- Only the energy of _atoms_ are included, in the form of [[Phonons|lattice vibrations]], with many _modes_ of different frequencies $\omega$
+- Only the energy of _atoms_ are included, in the form of [[Phonons (IB)|lattice vibrations]], with many _modes_ of different frequencies $\omega$
 $$E_n=\left(n+\frac{1}{2}\right)\hbar\omega$$
 
 - As temperature increases, more _modes_ are excited, hence energy increases
@@ -366,7 +366,7 @@ $$\frac{1}{l}=\sum_i\frac{1}{l_i}$$
 - The scattering can be _geometric_, from sample _boundaries_ or _impurities_
 - This gives a _temperature-independent_ mean free path
 
-- Scattering can also [[Phonons#Phonon-phonon scattering|occur between phonons]]
+- Scattering can also [[Phonons (IB)#Phonon-phonon scattering|occur between phonons]]
 - At _lower temperatures_, this is _less significant_ as there are _fewer phonons_
 	- Typically, _higher temperatures_ are required for _Umklapp scattering_ which actually _randomises_ directions in order to lower conductivity significantly
 

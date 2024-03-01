@@ -967,7 +967,7 @@ $$\Delta\bm{k}=\bm{k}_f-\bm{k}_i\approx 0$$
 
 - For some materials, the _lowest energy separation_ also has a _difference in $\bm{k}$
 - These are _indirect band gaps_
-- The difference in $\bm{k}$ are provided by _lattice vibrations_ known as [[Phonons]]
+- The difference in $\bm{k}$ are provided by _lattice vibrations_ known as [[Phonons (IB)]]
 
 - A typical phonon has energy $\sim k_BT$
 	- Typically _much smaller_ than band gap $(\approx \,25\text{meV})$
