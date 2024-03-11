@@ -287,6 +287,17 @@ $$S=k\ln\Omega=k[N\ln N-N-\sum_i(N_i\ln N_i-N_i)]$$
 $$S=-Nk\sum_i\frac{N_i}{N}\ln\frac{N_i}{N}=-Nk\sum_i p_i\ln p_i$$
 - This is the _Gibbs entropy_
 
+### Microscopic effect of heat and work
+- From considering Gibbs entropy, and the _Boltzmann distribution_, using $\sum_{i} dP_{i}=0$ as the sum of $P_{i}$ is fixed:
+$$dS=-k_{B}\sum_{i} d(P_{i}\ln P_{i})=k_{B}\sum_{i} \frac{E_{i}\,dP_{i}}{k_{B}T}$$
+- One gets:
+$$T\,dS=\sum_{i}E_{i}\,dP_{i}$$
+- This is the _reversible heat flow_
+- Then using the first law:
+$$d\hspace{-0.04em}\bar{}\hspace{0.1em}W_\text{rev}=\sum_{i} P_{i}\,dE_{i}$$
+- Heat _changes the probability distribution_ (but not the energies)
+- Work _changes the energy levels_ (but not the probabilities)
+
 ## Ensembles
 - As mentioned above, a _statistical ensemble_ is a set of _replicas_ of the system, covering _all possible configurations_
 
@@ -322,6 +333,7 @@ $$\displaylines{\sum_\text{states} \exp(-\beta E_i)=\sum_\text{microstates}\Omeg
 - From the definition of _entropy_, one can get that:
 $$\beta=\frac{1}{kT}$$
 - From the _partition function_, one can get the _internal energy_ and the _free energy_:
+	- Derived from definitions of $U$, and the [[#Gibbs Entropy]]
 $$U=-\pd{}{\beta}\ln Z\hspace{1.5cm} F=-kT\ln Z$$
 
 - One can express the partition function as:
@@ -330,11 +342,18 @@ $$Z=\sum_\text{microstates} \exp\left(-\frac{E_i-TS_i}{kT}\right)$$
 - One can then make an _approximation_ of the _equilibrium values_ using the minimum:
 $$\text{min}(E_i-TS_i)\approx U-TS=F$$
 - This is one method to obtain the _expression_ for $F$
-
+- $F$ is only defined for the _equilibrium macrostate_
+- From there, one obtains $S$ and $p$ as _functions_ of $T$ and $V$
+ 
 - The above expressions give $U$ and $F$ as _functions of $T$_
 - $T$ is only the _proper variable for the latter_
 - However, $\partial U/\partial T$ still gives _heat capacity_
 - One must perform [[#Thermodynamic potentials|transformations]] to get _other useful quantities_ from $U$
+
+- One can also check the _probability for a microstate of energy_ $E$:
+$$P(E_{i})\propto \Omega(E)\exp(-\beta E)=\exp[-\beta(E-k_{B}T\ln\Omega(E))]$$
+- As expected, this is _maximised_ for $E-TS(E)$ is minimised
+	- Minimised at _equilibrium_
 
 ### Grand canonical ensemble
 - A set of _open systems_, able to _exchange energy and number of particles_ with a _reservoir_
@@ -346,14 +365,18 @@ $$\pd{}{p_i}\left(-\sum_k p_k\ln p_k-\lambda \sum_k p_k-\beta\sum_k p_kE_k-\kapp
 - One then gets:
 $$p_i=\exp[-(\lambda+1)-\beta E_i-\kappa N_i]$$
 - Defining $\kappa$ as $-\mu/kT$:
-$$p_i=\frac{1}{\Xi}\exp(-\beta E_i+\beta\mu N_i)$$
+$$p_i=\frac{1}{\Xi}\exp[-\beta (E_i-\mu N_i)]$$
 - Define the _grand partition function_:
 $$\Xi=\sum_i\sum_{N_i}\exp[-\beta(E_i[N_i]-\mu N_i)]$$
 - One must sum over both _energy microstates_, as well as _all possible numbers of particles_
+	- Exponential term known as the _Gibbs factor_
+	- Energy eigenstates are, in general, _different for each particle number_
 
-- Taking into account the _degeneracy_ of each microstate:
+- Taking into account the _degeneracy_ $\Omega(E_{i})$ of each microstate, $\Xi$ can be written as:
 $$\Xi=\sum_\text{microstates}\exp[-\beta(E_i-TS_i)]\exp(\beta\mu N_i)=\sum_{N_i}Z(N_i)\exp(\beta\mu N_i)$$
-- Using the definition of entropy:
+
+- Using the definition of [[#Gibbs Entropy]]
+	- Or deduce that the _maximum probability_ is when $E-TS(E,N)-\mu N$ is _minimised_, and in equilibrium, $\Xi \approx \exp(-\beta \Phi)$
 $$-kT\ln\Xi=F-\mu N=\Phi(T,V,\mu)$$
 - $\Phi$ is known as the _grand potential_
 
@@ -370,7 +393,6 @@ $$p_i=\frac{1}{Y}\exp[-\beta (E_i-pV_i)]$$
 - Each potential must depend on both _intensive and extensive variables_
 	- One would not be able to define a partition function or potential for _fixed_ $(T,p,\mu)$
 
-| Ensemble | Fixed variables | Partition function |
 ## Examples
 ### The two-level system
 - At _high temperature_, the particles are _evenly distributed across both levels_
@@ -438,7 +460,7 @@ $$U=\frac{\hbar\omega}{2}\coth\left(\frac{\hbar\omega}{2kT}\right)$$
 $$\Delta x\Delta p\sim 2\pi\hbar$$
 	- Another approach is from considering _particle in a box_ wave-functions, with _periodic boundary conditions_, and considering some _shell_ in $k-$space
 
-- A _factor_ in $Z$ only adds a _constant_ to entropy or energy4
+- A _factor_ in $Z$ only adds a _constant_ to entropy or energy
 	- Aside from the $1/2\pi\hbar$, the partition function is still _entirely classical_
 	- The factor _embeds "quantumness"_
 - Therefore, the partition function is:
@@ -472,13 +494,14 @@ $$\displaylines{E=\frac{p^2}{2m}+\phi\Longrightarrow Z=\frac{V}{\lambda^3}\exp\l
 ### Diatomic
 - For a _diatomic molecule_, there are [[#The many-level system|vibrational]] and _rotational_ degrees of freedom
 	- Vibrational: [[#The many-level system|quantum harmonic oscillator]] (many-level system)
-	- Rotationa;: _Rigid rotor_, characterised by quantum number $J$ with _degeneracy_ $2J+1$
+	- Rotational: _Rigid rotor_, characterised by quantum number $J$ with _degeneracy_ $2J+1$
 $$\displaylines{Z_\text{osc}=\frac{1}{2\sinh(\beta\hbar\omega/2)} \\ Z_\text{rot}=\sum_{J}(2J+1)\exp\left(-\frac{\beta\hbar^2J(J+1)}{2I}\right)}$$
 - One can take a _low and high temperature limits_ for $Z_\text{rot}$:
 $$\displaylines{Z_\text{rot}(T\to 0)=1 \\ Z_\text{rot}(T\to\infty)\approx \int_0^\infty(2J+1)\exp\left(-\frac{\beta\hbar^2J(J+1)}{2I}\right)\,dJ=\frac{I}{\hbar^2\beta}}$$
 - The internal energy is then:
 $$\displaylines{U(T\to0)=\frac{3}{2}kT+\coth\frac{\beta\hbar\omega}{2}+\frac{3\hbar^2}{I}\exp\left(\frac{\beta\hbar^2}{I}\right) \\ U(T\to\infty)=\frac{3}{2}kT+\coth\frac{\beta\hbar\omega}{2}+kT}$$
 - At _high temperature_, as there are _2 rotational degrees of freedom_, $U_\text{rot}\approx kT$
+![[Diatomic heat capacities.png]]
 
 ## N particles in a box
 - For a gas of $N$ _indistinguishable particles_, one must add a factor:
@@ -493,13 +516,15 @@ $$F=-\pd{F}{V}=\frac{NkT}{V}$$
 - As for _entropy_:
 $$\begin{aligned}S=-\pd{F}{T}&=-Nk\ln\left(\frac{N}{V}\frac{\lambda^3}{eZ_\text{int}}\right)+\frac{3}{2}Nk \\ &=\frac{3}{2}Nk+\frac{5}{2}Nk\ln T-Nk\ln p+S_0\end{aligned}$$
 - $S_0$ takes care of the _internal degrees of freedom and extra factors_
-
-- The _Sackur-Tetrode formula_:
+	- the _Sackur-Tetrode formula_
 $$\begin{aligned}S&=C_p\ln T-Nk\ln p+S_0 \\ &=C_V\ln T+Nk\ln V+\tilde{S}_0\end{aligned}$$
+- For the _ideal gas_ with _no internal degrees of freedom_, the Sackur-Tetrode formula gives:
+$$S=-\frac{\partial F_\text{ideal}}{\partial T}=\frac{5}{2}Nk_{B}+Nk_{B}\ln\left( \frac{V}{N\lambda^{3}} \right)$$
+
 - The _chemical potential_:
 $$\mu=\pd{F}{N}=kT\ln\left(\frac{N\lambda^3}{V}\right)+\mu_0$$
 - Like above, $\mu_0$ takes care of the _internal degrees of freedom_ and _extra factors_
-- Example: with the external potential
+- Example: with the external potential,
 $$\mu=kT\ln\left(\frac{N\lambda^3}{V}\right)+\phi$$
 - $N\lambda^3$ can be interpreted as the _volume fraction_ in the box, hence:
 $$\mu=kT\ln c+\phi$$
@@ -508,7 +533,7 @@ $$\mu=kT\ln c+\phi$$
 - For $N\lambda^3/V\ll1$, it is the _classical limit_ where the particles can be interpreted as _"pointlike"_, and the _wave-functions do not overlap_
 	- Can be reached by _low temperature_ or _low $N$_
 	- Here, one gets $\mu\ll0$
-- For $N\lambda^3/V\gg1$, _quantum effects_ start to interfere
+- For $N\lambda^3/V\gg1$, [[#Classical to quantum|quantum effects]] start to interfere
 
 # The ideal gas in the grand canonical ensemble
 - Consider the _ideal gas_, with _variable energy and particle number_, and _fixed_ $T$ and $\mu$
@@ -525,7 +550,7 @@ $$p=-\pd{\Phi}{V}=\frac{kT}{\lambda^3}e^{\beta\mu}\hspace{1.5cm}N=-\pd{\Phi}{\mu
 - From this, one can get the _ideal gas law_ $pV=NkT$
 - One can also _invert_ the relation for $N$ above to get:
 $$\mu=kT\ln\left(\frac{N\lambda^3}{V}\right)$$
-- Once again, one can define a _classical limit_ where $\mu\ll0$
+- Once again, one can define a [[#Classical to quantum|classical limit]] where $\mu\ll0$
 
 ## Langmuir isotherm
 - Let the _3D gas_ at temperature $T$ be able to be _adsorbed_ onto a _2D surface_
@@ -534,7 +559,7 @@ $$\mu=kT\ln\left(\frac{N\lambda^3}{V}\right)$$
 - One can consider it as a _single system_ in _equilibrium_, where $T_1=T_2$, $\mu_1=\mu_2$, and $p_1=p_2$
 - One can also consider the _adsorbing layer_ as a system _connected to a reservoir_
 
-# Mixtures of an ideal gas
+## Mixtures of an ideal gas
 - Let there be a _total particle number_ $N$ and _total pressure_ $p$
 - $N_i$ and $p_i$ of each _subsystem_ are _additive_:
 $$\sum_i N_i=N\hspace{1.5cm}\sum_i p_i=p$$
@@ -551,7 +576,7 @@ $$\displaylines{c_B=1-c_A\equiv 1-c \\ \Delta S_\text{mix}=Nk[c\ln c+(1-c)\ln(1-
 - This has a _maximum_ at $c=0.5$
 - At $c=0$ or $c=1$, $d(\Delta S_\text{mix})/dc=\pm\infty$
 
-# Chemical reactions
+## Chemical reactions
 - Let a _chemical reaction_ happen at _constant_ $T$ and $p$
 - The _total change in Gibbs Free Energy_ $G$:
 $$dG(p,T)=\sum_\text{species}\mu_i dN_i$$
@@ -571,7 +596,7 @@ $$\displaylines{A+B\longrightarrow C \\ K_N=\frac{N_AN_B}{N_C}=\frac{Z_1(A)Z_1(B
 $$K_N=\frac{V^2}{\lambda_A^3\lambda_B^3}\frac{\lambda_C^3}{V}\sim\frac{V}{\lambda^3}\gg1$$
 - Therefore, the reaction does not occur _unless the reaction has some potential energy advantage_
 
-# The high-temperature limit
+## The high-temperature limit
 - For the [[#The many-level system|quantum harmonic oscillator]], at _high temperatures_:
 $$Z=\frac{1}{2\sinh(\beta\hbar\omega/2)}\approx\frac{kT}{\hbar\omega}$$
 - However, treating it as a _continuous system_:
@@ -580,7 +605,7 @@ $$Z=\int\frac{dx\,dp}{2\pi\hbar}\exp\left(-\frac{p^2}{2mkT}-\frac{\kappa x^2}{2k
 - However, at the _high temperature limit_ where $\kappa L^2\ll kT$:
 $$Z\approx\frac{L}{\lambda}$$
 
-# Classical to quantum
+# Classical to quantum crossover
 - Consider the ratio:
 $$\frac{N\lambda^3}{V}$$
 - If this quantity $\gg1$, the _wave functions of the particles_ start to _overlap_

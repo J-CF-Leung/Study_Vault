@@ -607,6 +607,8 @@ $$\varphi_0^*\varphi_0=\frac{-m^2}{\lambda}$$
 - Choose the state (and choose _sign convention_ such that $m^2>0$)
 	- $V(\varphi)=-m^2(\varphi^*\varphi)+(\lambda/2)(\varphi^*\varphi)^2$
 $$\varphi_0=\sqrt{\frac{m^2}{\lambda}}$$
+
+### Goldstone's Theorem
 - Given a _complex variation_ in the field, dependent on the _new, real fields_ $\chi_1$ and $\chi_2$:
 $$\varphi=\varphi_0+\frac{1}{\sqrt{2}}(\chi_1+i\chi_2)$$
 - The fields are a _shift from equilibrium_, with directions _along_ and _perpendicular_ to the _line of minima_ respectively

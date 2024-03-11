@@ -1030,3 +1030,148 @@ $$E \sim \gamma a$$
 $$\varepsilon=\gamma a+\frac{K}{a}$$
 - The _minimum_ is at:
 $$a_{0}=\sqrt{ \frac{K}{\gamma} }$$
+- One can then write the energy as:
+$$\varepsilon_{N}=2\gamma a_{0}+\frac{\gamma}{a}(a-a_{0})^{2}$$
+
+### Shape of aggregates
+- Assume the _hydrophobic tails_ remain _fluid_ and _incompressible_
+	- Both the _head group_ and _tails_ will influence the shape
+- Let the lipids have _parameters_ $a_{0}$, $l_{c}$, and $v$
+
+- Due to _entropy_, the system favours _smaller aggregates_
+
+- Example: _spherical micelles_ of radius $R$
+- From _area_, the _number of lipids_ $M$ is:
+	- Assuming _dense packing_
+$$M=\frac{4\pi R^{2}}{a_{0}}=\frac{4\pi R^{3}}{3v} \implies R=\frac{3v}{a_{0}}$$
+- Considering the _length_ of the hydrocarbon tails:
+$$R\leq l_{c} \implies \frac{v}{a_{0}l_{c}}\leq \frac{1}{3}$$
+
+- Lipids with _different_ $a_{0},l_{c},v$ will form _different aggregates_
+	- The _microscopic_ effect of the lipids affecting the _macroscopic_ structure
+
+- Consider _cylinders_:
+$$\frac{1}{3}\leq \frac{v}{l_{c}a_{0}}\leq \frac{1}{2}$$
+- Consider _bilayers_:
+$$ \frac{v}{l_{C}a_{0}}> \frac{1}{2}$$
+- Bilayers are typically _planar_ on the _length scale of the lipids_
+	- Possible to be _gently curved_ as well
+	- Forms if the _water-lipid ratio_ is _divergent_
+![[Lipid aggregate shapes.png|650]]
+
+- They can also _pack_ to form _crystals_
+![[Micelle phase diagram.png|500]]
+
+## Phase transitions in planar lipid bilayers
+- _Phase transitions_ can occur between aggregate structures, at certain _temperatures_
+- Typically from a _fluidic_ membrane, where lipids can _move around_, into _quasi-crystalline phases_, where the lipids are _frozen_
+![[Bilayer phases.png|400]]
+
+- It indicates a _loss in chain and lattice order_:
+![[Loss of lipid bilayer order.png|500]]
+
+
+- Typically investigated using _differential scanning calorimetry_ (DSC)
+	- A _buffer solution_, with a _low concentration_ (forming bilayers), is put into a _sample cell_, compared to a _reference cell_ of only water
+	- At [[Advanced statistical mechanics#Phase equilibria and transitions|phase transitions]], the _heat capacity_ experiences a _discontinuity_
+	- Hence, _heat capacities_ of both cells are measured
+	- As the cells are _open_, it is $\Delta C_{p}$ that is measured
+
+![[DSC results.png|400]]
+- The peaks indicate _melting temperature_ $T_{m}$, where the _phase transition_ occurs
+	- Temperature rise: from _crystalline_ to _fluidic_
+
+- From DSC results, $T_{m}$ must depend on $l_{c}$, as well as the _head group_
+![[Chain length DSC.png|600]]
+- For some chain lengths, there may also be _no phase transition at all_
+
+- One can also often identify _pre-transitions_, and a _ripple phase_
+![[DSC phases.png|500]]
+### Thermodynamic quantities
+- As the phase transition takes place at _constant pressure_, consider the _Gibbs Free Energy_
+$$G=H-TS=U+pV-TS\hspace{1cm}dG=dH-T\,dS-S\,dT$$
+
+- As there are _multiple components_:
+$$dH=T\,dS+V\,dp+\sum_{j=1}^{m}\mu_{j}\,dN_{j}$$
+- In _equilibrium_, assume $p,T,N_{j}$ are all _constant_
+	- For DSC, heating must be _slow_
+- This then gives $dH=T\,dS$
+
+- As $dH$ is the _heat for constant pressure_, given $\Delta C_{p}(T)$:
+$$\Delta H=\int _{T_{0}}^{T_{1}} \Delta C_{p}\, dT \hspace{1.5cm} \Delta S=\int _{T_{0}}^{T_{1}} \frac{\Delta C_{p}}{T}\, dT $$
+- For _sharp transitions_, $\Delta C_{p}(T)$ is a _delta function_:
+$$\Delta S=\frac{\Delta H}{T_{m}}$$
+- $\Delta C_{p}$ can be _linked to microscopic properties_ of the bilayer
+
+### Compressibility of the bilayer
+- For a _sharp transition_, taking place at _pressure_ $p_{0}$:
+$$T_{m}=\frac{\Delta H_{0}}{\Delta S}=\frac{\Delta E+p_{0}\Delta V}{\Delta S}$$
+- Let there be a _change in pressure_ $\Delta p$:
+$$\Delta(\Delta H)=\Delta p\,\Delta V$$
+- This gives a _change in melting temperature_:
+$$\frac{\Delta T_{m}}{T_{m}}=\frac{\Delta p\Delta V}{\Delta H_{0}}$$
+- This can be rewritten as:
+$$\Delta V=\frac{\Delta T_{m}}{T_{m}}\,\frac{\Delta H_{0}}{\Delta p}$$
+- This gives a way to _experimentally measure_ $\Delta V$
+- Typical value: $\Delta V \sim 1\%$ (_almost incompressible_)
+
+## Soft membranes
+- Lipid bilayers are often seen to _fluctuate_, and can be considered _soft_
+- _Cells_ often have phospholipid bilayers as barriers
+	- _Organelles_ also have membranes
+	- _Plants_ have _cell walls_ for additional stability
+	- They often contain _many types of phospholipids_
+
+- Membrane stiffness plays roles in:
+	- _Cell motion_ through membrane deformation
+	- _Material transport_ as vesicles fuse with other cells
+	- _Macrophages_ taking up ("eating") blood cells
+
+- Let a soft membrane have length/width $L\gg d$, where $d$ is the _thickness_
+	- $L \sim \mu \text{m}$, $d\sim \text{nm}$
+- It undergoes _fluctuations_ of energy $\sim k_{B}T$
+- They are controlled by some _bending modulus_ $\kappa$
+	- Typically quite difficult to _measure directly_ (due to disruption of the membrane in said measurement)
+
+- Assume the membrane is a _quasi-2D liquid_, with a _vanishing shear modulus_, and _finite shear viscosity_
+- Assume _bending_ is the dominant deformation, and _does not induce a phase change_ (far away from $T_{m}$)
+
+- The lipids stay _close_ such that $a_{0}$ is _constant_
+- They remain _incompressible_ ($v$ is constant)
+- Thus, the bending comes from the _tilting_ and _splaying_ of the lipids themselves
+	- _Holes_ in the membrane are not allowed_
+
+![[Membrane curvature.png]]
+- The _area_ of the membrane is $A=L^{2}$
+- Let the _curvature_ along $x$ and $y$ be $c_{1}$ and $c_{2}$
+- Let $h=h(x,y)$ with $h_{x}=\partial h/\partial x$
+
+- Let there be a _point_ $P$, with neighbouring points $P_{x}$ and $P_{y}$, which are $dx$ and $dy$ away
+$$\vec{PP_{x}}= \pmatrix{1\\0\\h_{x}}\,dx\hspace{1.5cm}\vec{PP_{y}}= \pmatrix{0\\1\\h_{y}}\,dy$$
+- The _infinitesimal area_:
+$$dA=\vec{PP_{x}}\times \vec{PP_{y}}=\left( 1+ \frac{1}{2}(\nabla h)^{2} \right)\,dx\,dy$$
+
+- The _energy_ has contributions from _stretching_ and _bending_:
+	- Characterised by $\alpha$ and $\kappa$ respectively
+$$\delta E=\frac{1}{2}\alpha \int (\nabla h)^{2} \, dx\,dy+\frac{1}{2}\kappa \int (\nabla^{2}h)^{2} \, dx\,dy  $$
+- Go to _Fourier space_:
+$$h(x,y)=L^{2} \int  \, \frac{d^{2}q}{(2\pi)^{2}} \tilde{h}(q) \exp(i\boldsymbol{q}\cdot \boldsymbol{r}) $$
+- Substitute in
+
+- Use _equipartition_
+	- Each mode gets $k_{B}T/2$, and only depend on the _modulus_ of $q$
+$$\langle \tilde{h} (q)^{2}\rangle = \frac{k_{B}T}{A} \frac{1}{\alpha q^{2}+\kappa q^{4}} $$
+- For _large_ $q$ (small wavelength), _bending_ dominates
+- For _small_ $q$, _stretching_ dominates
+
+- The _minimum_ and _maximum_ $q$ are given by the dimensions of the membrane:
+$$q_\text{min}=\frac{2\pi}{L}\hspace{1.5cm}q_\text{max}=\frac{2\pi}{d}$$
+- _Sum over_ individual modes:
+$$\langle h^{2} \rangle = \frac{k_{B}T}{A} \int  2\pi q\, dq  $$
+- A _typical value_ of $\kappa$ is $20k_{B}T$, leading to a _fluctuation_ of $L/100$
+
+## Other self-assembled structures
+- _Viruses_ contain an _outer coat_ of _proteins_ (the _capsid_)
+- It can be _reversibly self-assembled_
+
+- _DNA_ is also a _self-assembled_ structure from its bases

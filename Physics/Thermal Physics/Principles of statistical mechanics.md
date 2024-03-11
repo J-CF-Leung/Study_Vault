@@ -141,7 +141,7 @@ $$\rho=\text{const}\cdot\delta(E-E_0)$$
 	- For an uncertainty smaller than the energy level gap, and extremely long $\Delta t$ is needed
 
 ## The statistical matrix
-- To describe an ensemble of particles in a range of states, one must use the [[Density matrix|density matrix]]
+- To describe an ensemble of particles in a range of states, one must use the [[Density matrices|density matrix]]
 - It allows one to calculate means and probabilities of measuring a certain value
 - In statistical mechanics, the density matrix of the energy representation, also known as the _statistical matrix_, is used
 - For a statistical matrix $\hat{w}$, the mean of a physical quantity $\Omega$ is:

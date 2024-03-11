@@ -1187,7 +1187,7 @@ $$\hbar \frac{d\boldsymbol{k}_{e}}{dt}=+e(\boldsymbol{E}+\boldsymbol{v}_{h}\time
 	- Consider the motion of the _valence electrons_ in moving the hole, under an electric field
 
 
-# Experimental probes of band structure
+# Experimental probes of Fermi surface
 
 ## Photon absorption
 - The photon _excites_ an electron from an occupied state to an _empty state_
@@ -1300,9 +1300,280 @@ $$E_{n}=-\frac{\mu^{*}}{m_{e}\epsilon^{2} } \frac{13.6\,\text{eV}}{n^{2}}\equiv 
 - The energy of the exciton is equal to _energy required to create a pair_, _minus the binding energy_:
 $$\epsilon_{n}=E_{g}-\frac{R_{x}}{n^{2}}$$
 
-- Order of $\text{meV}$
+- Typically on the order of $\text{meV}$
 
 ## Photoemission
+- Photons are _incident_ on a sample, electrons are then _excited_
 
+- The excited electron _leaves_ the crystal
+
+- The incident photon has _very little momentum_, so the momentum of the electron _parallel_ to the surface is approximately that of its _original state_ in the solid
+	- The _perpendicular_ momentum is not conserved as the electron _escapes_
+![[Electron photoemission.png|250]]
+- Relating energies:
+	- $E_{F}$ is relative to the _vacuum_ state, $E_{i}$ is relative to the _Fermi energy_
+$$E_{f}=\frac{\hbar^{2}k_{f}^{2}}{2m}=E_{i}+\hbar\omega-\phi \hspace{1cm}k_{i, ||}=k_{f, ||}$$
+
+- Use _detector angle_ to find $k_{||}$
+	- If the sample is _rough_
+
+- Can only be used to probe _occupied states_
+- Typically easiest to interpret when there is _little dispersion_ perpendicular to the surface
+	- _Anisotropic_ layered materials
+- There is often _thermal broadening_ 
 ## Quantum oscillations
+- Many material properties tend to _oscillate_ with magnetic field
+- The _form_ of the oscillations can be used to infer the Fermi surface
 
+- Use a _semiclassical treatment_ using the _Bohr-Sommerfeld quantisation condition_ for electron orbits:
+$$\oint \boldsymbol{p}\cdot d\boldsymbol{r}=\left( n+\frac{1}{2} \right)2\pi \hbar$$
+- $\boldsymbol{p}$ is the _canonical momentum_:
+$$\boldsymbol{p}=\hbar \boldsymbol{k}+q\boldsymbol{A}$$
+- The Lorentz force:
+$$m\dot{\boldsymbol{v}}=q \dot{\boldsymbol{r}}\times \boldsymbol{B} \implies m\boldsymbol{v}_{\perp}=q\boldsymbol{r}\times \boldsymbol{B}$$
+- Around a _loop_, the integral of $\boldsymbol{v}_{||}\cdot d\boldsymbol{r}$ is zero
+- Using _Stokes theorem_, and the fact that the integral of $\boldsymbol{r}\cdot d\boldsymbol{r}$ is twice the area:
+$$\oint\boldsymbol{p}\cdot d\boldsymbol{r}=-qBA_{r}=-q\Phi=\left( n+\frac{1}{2} \right)2\pi \hbar$$
+- Hence, the flux is _quantised_:
+$$\Phi_{n}=A_{r}^{n}B=\left( n+\frac{1}{2} \right) \frac{h}{e}$$
+- From the de Broglie relation:
+$$\hbar \boldsymbol{k}_{\perp}=q\boldsymbol{r}\times \boldsymbol{B}$$
+- The $k-$space orbit is _stretched_ by factor $Bq/\hbar$, and is _rotated_ by $90^{\circ}$
+- The _area enclosed_ in $k-$space is:
+$$A_{k}=\left( \frac{eB}{\hbar} \right)^{2}A_{r}^{n}= \frac{2\pi e}{\hbar}B\left( n+\frac{1}{2} \right)$$
+- Hence, orbits in $k-$space are _quantised_
+
+- In a magnetic field, the _allowed_ $k-$states _no longer form a lattice_
+- They live in _Landau tubes_, which _cut_ the Fermi surface
+![[Landau tubews.png]]
+
+- A _slice_ $\perp \boldsymbol{B}$, with area $A$, through Fermi surface only contributes to $g(E_{F})$ only if it _matches the Landau tube_
+- Consider _varying_ $\boldsymbol{B}$ for this slice, then the _contribution_ to $g(E_{F})$ will _oscillate_
+- Field values where the considition is _satisfied_ follow the Osanger relation:
+$$\Delta\left( \frac{1}{B} \right)=\frac{2\pi e}{\hbar} \frac{1}{A_{k}}$$
+- It links the _period of quantum oscillations_ to the area of the Fermi slice
+
+- The energy of the band electrons are quantised into [[Charged Particles#Landau levels|Landau levels]] perpendicular to $\boldsymbol{B}$
+	- Motion _parallel_ is unconstrained
+- Hence, each Landau level has a $1D$ _density of states_ superimposed on it
+- _Sharp peaks_ in the DoS move _through_ the chemical potential, such that there is a _modulation_ in density of states and 
+
+## Tunnelling
+- Through a _potential barrier_
+- Maintain _electrical bias_
+
+$$I= \int _{\mu+eV}^{\mu} g_{1}(\omega)g_{2}(\omega)T(\omega) \, d\omega $$
+
+- _Differential conductivity_
+
+- STM
+	- Tunnelling probability is an _exponential function_ of barrier thickness
+	- Spatial resolution
+	- Constant current
+
+## Cyclotron resonance
+- _Direct measurement_ of the cyclotron resonance frequency:
+$$\omega_{c}=\frac{eB}{m^{*}}$$
+- Measurement of the _effective mass_ by exciting _transitions between Landau levels_
+- For _semiconductors_, with _lower carrier density_, the radiation _easily penetrates samples_
+
+- Measurements made by _transmission_, and radiation is detected using a _bolometer_
+- _Linewidth_ gives information about the _scattering rate_
+- In _lightly doped_ samples, carriers
+
+![[Cyclotron resonances.png]]
+
+# Transport properties
+
+## Scattering in metals
+- Consider the effect of scattering in a metal with _isotropic bands_, characterised by $m^{*}$ and a _spherical Fermi surface_
+- In the _relaxation time approximation_:
+$$\sigma=\frac{ne^{2}\tau_{\sigma}}{m^{*}}$$
+- The _thermal conductivity_ $\kappa$, defined by the _heat flux_
+$$\boldsymbol{J}_{q}=-\kappa \nabla T$$
+- From kinetic theory:
+$$\kappa=\frac{1}{3}\langle v^{2} \rangle \tau_{\kappa}C_\text{el} $$
+- $C_\text{el}$ is the _electronic heat capacity_:
+$$C_\text{el}=\frac{1}{2}n\pi^{2} \frac{k_{B}T}{E_{F}}$$
+- Assume that they move at the _Fermi velocity_, and assuming $E_{F}=m^{*}v_{F}^{2}/2$:
+$$L=\frac{\kappa}{\sigma T}=\frac{\pi^{2}k_{B}^{2}}{3e^{2}} \frac{\tau_{\kappa}}{\tau_{\sigma}}$$
+- If one _assumes_ $\tau_{\kappa}=\tau_{\sigma}$, one gets the _Wiedemann-Franz Law_
+- $L_{0}$ is the _ideal Lorenz number_:
+$$L_{0}=\frac{\pi^{2}k_{B}^{2}}{3e^{2}}$$
+- Therefore, one can _estimate_ $\kappa$ from $\sigma$
+
+- For _lower temperatures_, $\tau_{\kappa}\approx \tau_{\sigma}$ _no longer holds_
+
+### Electron transport in metals
+- Electron velocities are _perpendicular_ to surfaces of constant energy:
+$$\boldsymbol{v}_{g}=\frac{1}{\hbar}\nabla_{\boldsymbol{k}}E(\boldsymbol{k})$$
+- When an _electric field_ is applied, the Fermi surface is _shifted_ by a small amount:
+$$\delta k=\frac{1}{\hbar}m^{*}v_{d}$$
+- $v_{d}$ is the _drift velocity_, with $v_{d}\ll v_{F}$
+- $\tau_{\sigma}$ is the time taken to _randomise_ an electron's velocity, as they get _scattered_
+
+### Thermal transport in metals
+- When there is a _temperature gradient_, molecules travelling in one direction will have _more energy_ than molecules travelling in the other
+- The Fermi-Dirac distribution will be more _smeared_ in one direction
+
+- At _low temperatures_, scattering
+
+### Matthiessen's rule
+- Scattering rates are _additive_:
+$$\frac{1}{\tau}=\frac{1}{\tau_{1}}+\frac{1}{\tau_{2}}+\frac{1}{\tau_{3}}+\dots$$
+- Scattering processes with the _shortest scattering time_ will _dominate_
+- There are _ranges of temperature_ where only _one scattering process_ dominates
+	- At _high temperature_, _phonon_ scattering dominates
+
+- Matthiessen's rule _fails_ when scattering rate is _direction-dependent_, or when _scattering processes interfere with each other_
+
+## Phonon emission and absorption
+- Phonons can _scatter off electrons_ either _elastically_ or _inelastically_
+	- Elastic: both particles _change momentum and energy_, constrained by the conservation of both
+	- Inelastic: the phonon is _emitted or absorbed by the electron_
+- This results as _mobile electrons can distort the lattice_
+
+- Phonons behave as _massless bosons_, similar to _photons_
+- They have a _black-body distribution_ with $\hbar\omega \sim k_{B}T$
+- Hence, scattered electrons are distributed within $\pm k_{B}T$ of the _Fermi energy_
+	- Must be scattered into an _unoccupied state_, so only $\sim k_{B}T$ of energy can be emitted in the form of phonons
+
+- The _most energetic phonons_ have energy of roughly $\hbar\omega \sim k_{B}\theta_{D}$
+- They have wave-vectors _comparable_ to the width of the BZ $q\sim k_{F}$
+- Therefore, phonons can _scatter an electron to the other side_ of the Fermi surface
+- At room temperature, $\tau_{\sigma}\approx \tau_{\kappa}$, and are _proportional_ to the number of phonons with $\hbar\omega \sim k_{B}T$
+
+- At _low temperatures_ $T\ll\theta_{D}$, phonons have energies $k_{B}T\ll k_{B}\theta_{D}$, so $q\ll k_{F}$
+- Difference in scattering rates
+- Weighting factor:
+$$1-\cos\theta\sim \propto T^{2}$$
+- Therefore:
+$$\tau_{\sigma}^{-1} \propto T^{5},\tau_{\kappa}^{-1} \propto T^{3} \implies \tau_{\sigma}^{-1}\ll \tau_{\kappa}^{-1}$$
+
+- Fermi surface close to BZ boundary: _Umklapp scattering_ occurs
+- $\boldsymbol{k}$ is scattered into an _adjacent BZ_
+
+- For _very low temperatures_: _impurity_ and _defect_ scattering
+- They can cause _large angle scattering_, such that $\tau_{\kappa}\approx \tau_{\sigma}$, and Wiedemann-Franz law holds
+
+## Electron-electron scattering
+- For both _energy and momentum_ to be conserved, electron-electron scattering _within the Fermi surface_ is typically unlikely for _simple Fermi surfaces_
+	- e.g. A _roughly spherical_ Fermi surface has very few electron-electron scattering events
+- For more complicated Fermi surfaces, and _high initial and final density of states_ (high $m^{*}$), it becomes more important
+
+- For a _filled Fermi sphere_ with a _single excited electron_ of $\epsilon_{1}>E_{F}$
+- It must _scatter_ with an electron of $\epsilon_{2}<E_{F}$ to give electrons of $\epsilon_{3},\epsilon_{4}$ (all _within_ $k_{B}T$)
+- From energy conservation, $\epsilon_{1}+\epsilon_{2}=\epsilon_{3}+\epsilon_{4}$
+- If $\epsilon_{1}=E_{F}$, then $\epsilon_{2}=\epsilon_{3}=\epsilon_{4}=E_{F}$, giving _zero_ allowed $k-$space volume, and an _infinite scattering lifetime_ at $T=0$
+
+- When $\epsilon_{1}\neq E_{F}$, there is _finite phase space available_ within a shell of thickness $|\epsilon_{1}-E_{F}|$
+- The scattering rate $\propto(\epsilon_{1}-E_{F})^{2}$
+	- There is _no freedom_ for $\epsilon_{4}$ due to conservation
+- Due to the _thermal distribution_, there is _additional choice in energy_, leading to the _total scattering rate_:
+$$\tau^{-1}=\alpha(\epsilon_{1}-E_{F})^{2}+\beta(k_{B}T)^{2}$$
+- At _finite temperature_, $\epsilon_{1}-E_{F} \propto k_{B}T$, hence $\tau \propto T^{-2}$
+
+# Semiconductors
+- In semiconductors, the _band gap_ becomes _small_ enough that _thermal excitation_ of carriers is significant
+- The _chemical potential_ is typically _mid-gap_
+
+- The _conduction band_:
+$$\epsilon_{c}(k)=\epsilon_{c}+ \hspace{1.5cm}g_{e}(\epsilon)=$$
+- The _valence band_:
+$$\epsilon_{v}(k)=\epsilon_{v}+ \hspace{1.5cm}g_{h}(\epsilon)=$$
+
+## Carrier density
+- For a known $\mu$, the _carrier density_ in the conduction band:
+$$n=\int _{\epsilon_{c}}^{\infty}g_{e}(\epsilon)f(\epsilon) \, d\epsilon $$
+- Here, $f(\epsilon)$ is the _Fermi-Dirac distribution_
+- For a _non-degenerate gas_, make the approximation $\epsilon-\mu\gg k_{B}T$:
+$$f(\epsilon)\approx \exp\left[ -\frac{\epsilon-\mu}{k_{B}T} \right]$$
+- From this, the _electron density_:
+$$n=2\left( \frac{m_{e}^{*}k_{B}T}{2\pi \hbar^{2}} \right)^{3/2}\exp\left[ -\frac{\epsilon_{c}-\mu}{k_{B}T} \right]$$
+- Similarly, the _hole density_:
+$$p\approx 2\left( \frac{m_{h}^{*}k_{B}T}{2\pi \hbar^{2}} \right)^{3/2}\exp\left[ -\frac{\mu-\epsilon_{v}}{k_{B}T} \right]$$
+- Define _temperature-dependent concentrations_ for the number of states within $k_{B}T$ of the band edge:
+$$\displaylines{n_{c}(T)= \hspace{1.5cm}p_{v}(T)= \\ n=n_{c}(T)\exp\left[ -\frac{\epsilon_{c}-\mu}{k_{B}T} \right]\hspace{1.5cm}p=}$$
+### Law of mass action
+- From this, get:
+$$np=n_{c}(T)n_{p}(T)\exp\left( -\frac{\epsilon_{g}}{k_{B}T} \right)\hspace{1cm}\epsilon_{g}=\epsilon_{c}-\epsilon_{v}$$
+- $\epsilon_{g}$ is the _band gap_
+- This is the _law of mass action_
+	- Independent of $\mu$
+
+- This applies for _all carriers_, including _extrinsic_ ones (impurities, dopants)
+
+- This can be argued thermodynamically:
+	- Suppose the equilibrium population is maintained by _blackbody radiation_
+	- Photons generate _electron-hole pairs_ at rate $A(T)$
+	- The rate of _recombination_ is $B(T)np$
+	- At _equilibrium_, $np=A(T)/B(T)$
+
+- If one introduces _impurities_, $n$ or $p$ may _increase_, then as $np$ is _constant_, the other intrinsic carrier has _lower concentration_
+- One can then _reduce_ the _total carrier concentration_ $n+p$ in an impure crytal
+
+### Intrinsic semiconductors
+- In an _intrinsic semiconductor_, holes come from unoccupied electron levels, hence:
+$$n_{i}=p_{i}=\sqrt{ n_{c}(T)n_{v}(T) }\exp\left( -\frac{\epsilon_{g}}{2k_{B}T} \right)$$
+- As the creation of an electron also creates a _hole_, the "gap" is $\epsilon_{g}/2$
+
+- If one substitutes the formulae for $n_{c}(T)$ and $n_{p}(T)$, and setting $n=p$:
+$$\mu=\epsilon_{v}+\frac{1}{2}\epsilon_{g}+\frac{3}{4}k_{B}T\ln\left( \frac{m_{h}^{*}}{m_{e}^{*}} \right)$$
+- If $m_{h}^{*}=m_{e}^{*}$, or $T=0$. then $\mu$ lies in the _middle of the bandgap_
+- Otherwise, it _drifts_ in the direction of _higher effective mass_
+
+## Doped semiconductors
+- When _impurity atoms_ are added, this produces _extrinsic carriers_
+
+### Donor and acceptor levels
+- Example: replace the $\ce{ Ga }$ in $\ce{ GaAs }$ with $\ce{ Si }$, which is an _electron donor_
+- The _donated electron_ is still _attracted_ to $\ce{ Si }$
+- The _donor energy levels_ are approximately _hydrogenic_
+	- Account for _screening_ in the dielectric constant
+	- Use the _effective mass_
+$$\Delta_{d}=\frac{m_{e}^{*}}{m_{e}} \frac{1}{\epsilon^{2}} \frac{13.6\,\text{eV}}{n^{2}}$$
+- For $\ce{ GaAs }$, $\Delta_{d}(\text{1s})= 5.3\,\text{meV}$, compared to the _band gap_ of $1.4\,\text{eV}$
+
+- At _room temperature_, all donors are likely to be _ionised_
+- This gives a _constant carrier density_
+
+- The energy is _relative to the bottom of the conduction band_
+- When ionised, the donor electrons go _into the conduction band_
+![[Donor levels.png]]
+
+- Similarly, impurities can _accept_ electrons, adding a _hole_
+- The _acceptor levels_ are also _hydrogenic_, and _sit above the valence band maximum_ (the holes are _ionised_ into the valence band)
+
+### Carrier densities
+- Even for _low densities_, the low donor/acceptor energies mean that _impurities are the main source of carriers_, even in _room temperature_
+- If _donors_ dominate, the material is _n-type_
+- If _acceptors_ dominate, the material is _p-type_
+
+- Materials can have _both_ types of purities
+	- In $\ce{ GaAs }$, $\ce{ Si }$ can be both donor and acceptor based on the _site_
+- Dominant carrier probed by _Hall effect_
+
+- The law of mass action _holds as long as_ donor/acceptor concentration are _low_ enough such that $\mu$ is _in the band gap_
+- Given $N_{D}$ and $N_{A}$, use the law of mass action, and $n-p=N_{D}-N_{A}$ to find $n,p$
+
+![[Carrier density.png]]
+- At _intermediate temperature_, all donors are _ionised_, in the _saturation range_ where $n$ is _constant_
+	- The _intrinsic contribution_ is negligible
+- At _low temperature_, extrinsic electrrons _freeze out_, and gradient is _dependent on saturation energy_
+- At _high temperature_, the _intrinsic contribution_ becomes larger, with gradient _dependent on band gap_
+
+### Electrical conductivity
+- Electrical conductivity is a _sum of contributions from carrier tyoes_:
+	- Typically dominated by _electrons and havy holes_
+$$\sigma=ne\mu_{e}+pe\mu_{hh}$$
+- The mobilities:
+$$\mu=$$
+- Contribution from different scattering
+- Impurity scattering: cross-section varies as $\epsilon^{-2}$, hence
+- Impurity scattering
+- Phonon scattering
+
+- At _low temperatures_
+
+### Hall effect
+\

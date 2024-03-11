@@ -260,11 +260,14 @@ $$f(\theta,\phi)=-\frac{m}{2\pi \hbar^{2}} \int  \, d^{3}\boldsymbol{r}'\,V(\bol
 $$\frac{d\sigma}{d\Omega}\Bigg|_\text{Born}=\left| \frac{m}{2\pi \hbar^{2}} \int  \, d^{3}\boldsymbol{r}'\, V(\boldsymbol{r}')\exp(-i\boldsymbol{q}\cdot \boldsymbol{r}')  \right|^{2} $$
 - This can also be derived using [[#Calculating the scattering cross-section|Fermi's Golden Rule]]
 
+- Example: _spherical potential_:
+$$\displaylines{V(\boldsymbol{r})=\begin{cases}V_{0}& |\boldsymbol{r}|<a_{\circ} \\ 0 & |\boldsymbol{r}|>a_{\circ}\end{cases} \\ f(\theta)=\frac{2mV_{0}}{\hbar^{2}q^{3}} (\sin qa_{\circ}-qa_{\circ}\cos qa_{\circ})}$$
+
 - Its _validity_ depends on the _range_ of interaction $r_{c}$ and the "typical" energy $V_{c}$
 - The approximation holds when the interaction is comapratively _weak_ in the range of interaction, so for _low energies_:
 	- For an _attractive potential_, this means it is _too weak_ to form a bound state
 $$\frac{f}{r_{c}}\ll 1 \implies V_{c}\ll \frac{\hbar^{2}}{mr_{c}^{2}}$$
-- At _high energies_, $kr_{c}\gg 1$ and the wave _oscilaltes in the interaction region_, leading to the condition:
+- At _high energies_, $kr_{c}\gg 1$ and the wave _oscillates in the interaction region_, leading to the condition:
 $$V_{c}\ll kr_{c} \frac{\hbar^{2}}{mr_{c}^{2}}$$
 ## Partial wave analysis
 - For a 1D potential, one can define [[#Channels and phase shifts|channels]] due to symmetry (such as parity), where waves in each channel only get _phase shifts_
@@ -282,17 +285,27 @@ $$\Psi(\boldsymbol{r})= \sum_{l=0}^{\infty} \sum_{m=-l}^{l} c_{lm}Y_{lm}(\theta,
 - The radial part must obey the equation:
 $$\frac{d^{2}R_{l}}{dr^{2}}+ \frac{2}{r} \frac{dR_{l}}{dr} + \left[ k^{2}- \frac{l(l+1)}{r^{2}} \right]R_{l}= \frac{2mV(r)}{\hbar^{2}}R_{l}$$
 
+- In _general_, this gives the _complete solution_ for the radial wave-function
+- _Continuity_ must still hold everywhere, including at the boundary of the potential
+
 ### Wave function when far away
 - _Beyond_ the interaction region, the particle is _free_, hence $V(r)=0$
 - In this case, writing the equation as $R_{l}(r)=r_{l}(\rho)$ where $\rho=kr$:
 $$\rho^{2} \frac{d^{2}r_{l}}{d\rho^{2}}+ 2\rho\frac{ dr_{l}}{d\rho}+ [\rho^{2}-l(l+1)]r_{l}=0$$
 - The solutions are the _spherical Bessel functions_ $j_{l}(\rho)$ and the _spherical Neumann functions_ $n_{l}(\rho)$:
 $$r_{l}(\rho)=Aj_{l}(\rho)+Bn_{l}(\rho)$$
-- The _limiting behaviour_ of these functions:
-$$j_{l}(\rho)\to \frac{1}{\rho}\sin\left( \rho-\frac{l\pi}{2} \right)\hspace{1.5cm}n_{l}(\rho)\to -\frac{1}{\rho}\cos\left( \rho-\frac{l\pi}{2} \right)$$
-- Each _partial wave_ is a _channel_ of conserved angular momentum
+
+- Each _partial wave_ is a _channel_ of conserved angular momentum given by $l$
 - They each have their own _phase shift_
 
+- Can be more neatly packaged into the _spherical Hankel functions_:
+$$h_{l}^{(1)}(\rho)=j_{l}(\rho)+in_{l}(\rho)\hspace{1.5cm}h_{l}^{(2)}(\rho)=[h_{l}^{(1)}(\rho)]^{*}$$
+
+- Formulae for the functions:
+$$j_{0}(\rho)=\frac{\sin \rho}{\rho}\hspace{1cm}n_{0}(\rho)=-\frac{\cos \rho}{\rho}\hspace{1cm}h_{0}^{(1)}(\rho )=\frac{\exp(i\rho)}{i\rho}$$
+$$j_{l}(\rho)=(-\rho)^{l}\left( \frac{1}{\rho} \frac{d}{d\rho} \right)^{l}\frac{\sin \rho}{\rho}\hspace{1cm}n_{l}(\rho)=-(-\rho)^{l}\left( \frac{1}{\rho} \frac{d}{d\rho} \right)^{l} \frac{\cos \rho}{\rho}$$
+- Limits at _small_ and _large_ arguments:
+$$\displaylines{j_{l}(\rho)\xrightarrow{\rho\to 0}\frac{\rho^{l}}{(2l+1)!!} \hspace{1.5cm} n_{l}(\rho)\xrightarrow{\rho\to 0} -\frac{(2l-1)!!}{\rho^{l+1}} \\ j_{l}(\rho)\xrightarrow{\rho\to \infty} \frac{1}{\rho}\sin\left( \rho-\frac{l\pi}{2} \right)\hspace{1.5cm}n_{l}(\rho)\xrightarrow{\rho\to \infty} -\frac{1}{\rho}\cos\left( \rho-\frac{l\pi}{2} \right)}$$
 ### Expanding to the plane wave
 - Connect to the formula:
 $$\Psi_{k}(r)=\exp(ikz)+ \frac{f(\theta,\phi)}{r}\exp(ikr)$$
@@ -303,17 +316,35 @@ $$\Psi_{k}(r)=\exp(ikz)+ \frac{f(\theta,\phi)}{r}\exp(ikr)$$
 $$\exp(ikz)=\exp(ikr\cos\theta)=\sum_{l=0}^{\infty} i^{l}(2l+1)j_{l}(kr)P_{l}(\cos\theta)$$
 - Here, $P_{l}$ are the _Legendre polynomials_
 
-- Taking $kr\to \infty$, using the limit of the _spherical Bessel functions_:
+- Taking $kr\to \infty$, using the limit of the _spherical Bessel function_:
 	- Can be achieved using the _Hankel functions_
 $$\exp(ikz)=\sum_{l=0}^{\infty} i^{l}(2l+1)P_{l}(\cos\theta) \left[  \frac{\exp[i(kr-l\pi/2)]}{2ikr}-\frac{\exp[-i(kr-l\pi/2)]}{2ikr} \right]$$
 - This is the _exact wave-function_ in terms of the _channels_ for $V(r)=0$ everywhere
 - The second term corresponds to some _incoming wave_
 
-### Finding the differential cross-section
+### Final wave-function and phase shifts
 - After scattering, the _first term_ (outgoing wave) experiences _phase shift_ described by $S_{l}$
 $$\displaylines{\begin{align}\Psi_{k}(\boldsymbol{r})&=\sum_{l=0}^{\infty} i^{l}(2l+1)P_{l}(\cos\theta) \left[ S_{l} \frac{\exp[i(kr-l\pi/2)]}{2ikr}-\frac{\exp[-i(kr-l\pi/2)]}{2ikr} \right] \\ &=\exp(ikz)+ \frac{f(\theta,\phi)}{r}\exp(ikr) \end{align}\\ S_{l}=\exp(2i\delta_{l})}$$
-- From this, one gets:
+
+- The phase-shifted wave function can be written in terms of:
+$$\Psi_{k}(\boldsymbol{r})=\sum_{l=0}^{\infty}i^{l}(2l+1)P_{l}(\cos\theta)\exp(i\delta_{l})[j_{l}(kr)\cos\delta_{l}-n_{l}(kr)\sin\delta_{l}]$$
+- The _radial part_ can be expressed as:
+$$R_{l}(kr)=\exp(i\delta_{l})\cos(\delta_{l})[j_{l}(kr)-n_{l}(kr)\tan(\delta_{l})]$$
+- Compare to the [[#Wave function when far away|solution to Schrodinger's equation]] when far away:
+$$R_{l}(kr)=Aj_{l}(kr)+Bn_{l}(kr)$$
+- Comparing:
+$$\tan(\delta_{l})=-\frac{B}{A}$$
+
+- Let the _boundary_ of the potential be $r=a$, and set the wave function in the potential as $Cj_{l}(k'r)$, defining:
+$$\gamma=\frac{R_{l}'(a)}{R_{l}(a)}$$
+- Marching _boundary conditions_, one gets:
+$$\tan\delta_{l}=\frac{kj_{l}'(ka)-\gamma j_{l}(ka)}{kn_{l}'(ka)-\gamma n_{l}(ka)}$$
+- For $k\to 0$, $\delta_{l}$ scales as $k^{2l+1}$
+
+### Differential cross-section
+- From the form of the wave function, one gets:
 $$\begin{align}f(\theta)&= \frac{1}{2ik} \sum_{l=0}^{\infty} (2l+1) [\exp(2i\delta_{l})-1]P_{l}(\cos\theta) \\ &= \frac{1}{k}\sum_{l=0}^{\infty} (2l+1)\exp(i\delta_{l})\sin\delta_{l}P_{l}(\cos\theta)\end{align}$$
+
 - Using the _orthogonality_ of the Legendre polynomials:
 $$\sigma _\text{tot}=\int |f(\theta)|^{2} \, \sin\theta\,d\theta\,d\phi= \frac{4\pi}{k^{2}}\sum_{l=0}^{\infty}(2l+1)\sin^{2}\delta_{l} $$
 - From this, each _partial wave_ has a _limited scattering cross-section_:
@@ -326,8 +357,32 @@ $$\mathrm{Im}[f(\theta=0)]=\frac{1}{k}\sum_{l=0}^{\infty} (2l+1)\sin^{2}\delta_{
 - This connects to the [[#Optical theorem]]
 	- The contribution to the probability density "going through" is _proportional_ to the _total cross-section_
 
+### Example: spherical potentials
+- [[#Finding phase shifts|Radial part]] of the wave-function, _far away_ from the scatterer:
+$$R_{l}(kr)=\exp(i\delta_{l})\cos(\delta_{l})[j_{l}(kr)-n_{l}(kr)\tan(\delta_{l})]$$
+- The _hard-sphere_ potential:
+$$V(\boldsymbol{r})=\begin{cases}\infty& |\boldsymbol{r}|<a_{\circ} \\ 0 & |\boldsymbol{r}|>a_{\circ}\end{cases} $$
+- The radial part must _vanish_ at the boundary of the potential, giving:
+$$\tan(\delta_{l})=\frac{j_{l}(ka_{\circ})}{n_{l}(ka_{\circ})}$$
+- For $l=0$, the phase shift is exactly:
+$$\delta_{0}=-ka_{\circ}$$
+- For _small_ $k$, using the [[#Wave function when far away|limits]] of the functions:
+$$\delta_{l}(k) \to -\frac{(ka_{\circ})^{2l+1}}{(2l+1)[(2l-1)!!]^{2}}$$
+- Then one finds that the low $k$ limit of $\sigma _\text{tot}$ is:
+$$\sigma _\text{tot}(k\to 0)=4\pi a_{\circ}^{2}$$
+- It is four times the _projected geometrical area_ of the sphere
 
+- Take a weaker spherical potential:
+$$V(\boldsymbol{r})=\begin{cases}V_{0}& |\boldsymbol{r}|<a_{\circ} \\ 0 & |\boldsymbol{r}|>a_{\circ}\end{cases}$$
+- From the _Schrodinger equation_, $r_{0}$ inside and outside:
+$$r_{0}=\begin{cases}Cj_{0}(k'r) & r<a_{\circ} \\ D\exp(i\delta_{0})\cos(\delta_{0})[j_{0}(kr)-n_{0}(kr)]\tan\delta_{0} &r>a_{\circ}\end{cases}$$
+- The wavenumber:
+$$k'^{2}=k^{2}-\frac{2mV_{0}}{\hbar^{2}}\implies k'=\frac{\sqrt{ 2m(E-V_{0}) }}{\hbar}$$
+- The phase shift for $l=0$:
+$$\delta_{0}(k)=\arctan\left( \frac{k}{k'}\,\tan k'a_{\circ} \right)-ka_{\circ}$$
 ## Low energy scattering
+- From above, one sees that at _low energies_, the $s-$wave dominates
+
 - Consider the [[#Partial wave analysis|radial equation]] again:
 $$\frac{d^{2}R_{l}}{dr^{2}}+ \frac{2}{r} \frac{dR_{l}}{dr} + \left[ k^{2}- \frac{l(l+1)}{r^{2}} \right]R_{l}= \frac{2mV(r)}{\hbar^{2}}R_{l}$$
 - Define $R_{l}\equiv u_{l}/r$:
@@ -337,7 +392,7 @@ $$\left[ -\frac{d^{2}}{dr^{2}}+ \frac{l(l+1)}{r^{2}}+ \frac{2m}{\hbar^{2}}V(r) \
 - Compare with the length scale for the _potential_, $r_{c}$
 
 - For big $l$, the _centrifugal term_ becomes _too strong_ for the particle to _experiencing_ $V(r)$
-- For _low energies_, only $l=0$ is _significant_ in terms of _scattering_
+- For _low energies_, only $l=0$ is _significant_ in terms of _scattering_, as expected
 
 - The _total cross section_ is _dominated_ by the $l=0$ channel:
 $$\sigma _\text{tot} \to \frac{4\pi}{k^{2}}\sin^{2}\delta_{0}$$

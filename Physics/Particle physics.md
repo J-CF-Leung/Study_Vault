@@ -1,8 +1,5 @@
 - [ ] Revise using Ch. 1 and 2 of Perkins 🔼 
 
-
-
-
 - The study of _elementary particles_ and their interactions
 - Described using the _standard model_
 
@@ -1097,3 +1094,254 @@ $$\hat{\mu}_\text{baryon}=\frac{q_{1}}{m_{1}} \hat{S}_{1z}+ \frac{q_{2}}{m_{2}} 
 
 - The _lightest mass states_ such as $p,n,K^{\pm}$ must decay via the _weak_ interaction to change flavour
 - _Parity_ is violated
+
+## Quarkoniums
+
+# The weak force
+- The weak force accounts for _particle decays_
+- Characterised by _long lifetimes_, and _small interaction cross-sections_
+![[Lifetimes.png]]
+
+- The weak interaction has two _types_, both mediated by _vector bosons_
+	- The _charged current_, mediated by $W^{\pm}$ bosons $(m_{W}=80\,\text{GeV})$
+	- The _neutral current_, mediated by $Z$ bosons $(m_{Z}=91\,\text{GeV})$
+- They can produce _pairs_, which are _not particle/antiparticle_
+
+- The $W^{\pm}$ and $Z$ bosons carry _weak charge_, and the former can carry _electric charge_
+- This gives rise to _self interactions_
+	- Triple and _quartic_ gauge vertices
+
+## Fermi theory
+- The weak interaction is taken as a _4-fermion contact interaction_
+- There is _no propagator_
+- The coupling strength is given by the _Fermi constant_ $G_{F}$
+	- $G_{F}=1.166\times 10^{-5}\,\text{GeV}^{-2}$
+
+
+- Example: beta decay
+![[Fermi theory decay.png]]
+- Example: neutrino scattering
+![[Neutrino scattering Fermi.png]]
+- From Fermi theory, the _cross-section_ is:
+$$d\sigma=2\pi|M_{fi}|^{2} \frac{dN}{dE}=8\pi G_{F}^{2} \frac{E_{e}^{2}}{(2\pi)^{3}}\,d\Omega$$
+- From this, with _high enough centre-of-mass energy_, the cross-section _grows without bound_, eventually _violating probability conservation_
+	- Probability conservation: the [[Quantum scattering theory#Differential cross-section|unitarity limit]]
+
+- From this, Fermi theory _breaks down at high energies_
+- It is an _effective field theory_ for _low energies_ $(q^{2}\ll m_{W}^{2})$
+## Weak charged current
+- At lower energy, interactions are mediated by _charged_ $W^{\pm}$ bosons
+	- Due to the _high invariant mass_ of $W^{\pm}$, it gives a _small propagator_
+![[Fermi theory vs standard model.png|550]]
+
+- At _low energies_ $(q^{2}\ll m_{W}^{2})$, the propagator _approaches_ $1/(-m_{W}^{2})$
+- This appears as the _point-like_ interaction of Fermi theory
+
+- This gives a _range_ for the interaction:
+$$\frac{1}{m_{W}}\sim 0.002\,\text{fm} $$
+
+- The _charged current_ interaction is the _only interaction_ that can:
+	- _Change flavour_
+	- _Violate parity conservation_
+
+- From the definitions of $g_{W}$ and $G_{F}$, at _low energies_:
+$$\frac{g_{W}^{2}}{8m_{W}^{2}} \to \frac{G_{F}}{\sqrt{ 2 }}$$
+- From measurements:
+$$g_{W}=0.65 \implies \alpha_{W}=\frac{g_{W}^{2}}{4\pi}\sim \frac{1}{30} > \alpha$$
+- The weak interaction is _intrinsically stronger_ than the electromagnetic interaction
+- At _low energies_, it appears weak due to the _massive propagator_
+
+- Consider _neutrino scattering_:
+$$\displaylines{\frac{d\sigma _\text{Fermi}}{d\Omega}=2\pi G_{F}^{2} \frac{E_{e}^{3}}{(2\pi)^{3}} \\ \frac{d\sigma}{d\Omega}=2\pi G_{F}^{2} \frac{E_{e}}{(2\pi)^{3}} \left( \frac{m_{W}^{2}}{m_{W}^{2}-q^{2}} \right)^{2}}$$
+- Integrating, the _standard model_ cross-section is:
+$$\sigma= \begin{cases}
+G_{F}^{2}s/\pi &s\ll m_{W}^{2} \\ G_{F}^{2}m_{W}^{2}/\pi & s\gg m_{W}^{2}
+\end{cases}$$
+- The cross-section is _well-behaved_ at high energies
+
+## Helicity and parity violation
+- The _total angular momentum_ $\boldsymbol{J}=\boldsymbol{L}+\boldsymbol{S}$ is _conserved_
+	- The _orbital_ angular momentum $\boldsymbol{L}$ is _perpendicular_ to $\boldsymbol{p}$
+	- The _spin_ angular momentum $\boldsymbol{S}$ can be in _any direction_
+- The _value_ of $\boldsymbol{S}$ _along_ $\boldsymbol{p}$ is always _constant_
+
+- The _sign_ of the component of spin _along_ $\boldsymbol{p}$ is the _helicity_:
+$$h=\boldsymbol{S}\cdot \frac{\boldsymbol{p}}{|\boldsymbol{p}|}$$
+- A _positive(negative)_ helicity corresponds to _right(left)-handed_ particles
+![[Right vs left helicity.png|450]]
+
+- Wu experiment: the $\beta$ _decay_ of cold $\ce{ ^{60}Co }$ in a _magnetic field_
+![[Wu experiment.png|400]]
+- $\ce{ e- }$ is _always left-handed_, and $\ce{ \bar{\nu} }$ is _always right-handed_
+- _Left-handed_ $\ce{ \nu }$ are _never observed_
+- This is a _violation of parity_
+
+- The weak interaction will _couple preferentially_ to _left-handed particles_, as well as _right-handed antiparticles_
+- For a particle of $\pm$ helicity state, the _coupling_ to the _weak interaction_ is:
+$$\frac{1}{2}\left[ 1\mp \frac{v}{c} \right]\;\text{ for leptons} \hspace{1cm}\frac{1}{2}\left[ 1 \pm \frac{v}{c} \right]\;\text{ for anti-leptons}$$
+- From this: _right-handed_ $\nu$ and _left-handed_ $\bar{\nu}$ _do not exist_
+
+- The weak force _does not always conserve parity_
+	- The _only force_ that can violate it, QED and QCD _always conserve parity_
+### Charge conjugation
+- C-symmetry states that _physical laws_ must be _identical_ for _oppositely-charged particles_
+	- Followed in QED and QCD
+- Parity violation also leads to the _maximal breaking of C-symmetry_ by the weak force
+![[C symmetry violation.png|500]]
+
+## Weak vertices
+- _All_ weak charged current interactions are described by the _weak vertex_, with the $W^{\pm}$ _boson propagator_:
+![[Weak vertex.png|400]]
+- $W$ bosons only _couple_ to leptons and neutrinos _in the same generation_
+	- e.g. no $\ce{ W^{\pm}e^{\pm}\nu_{\mu} }$ coupling
+
+![[Weak vertices examples.png]]
+
+### Muon decay
+- The _electromagnetic decay_ $\ce{ \mu- -> e- \gamma }$ is _impossible_
+	- Electromagnetic interaction _cannot change flavour_
+- The _weak charged current_ can change lepton type, but only _within a generation_
+	- _Lepton number_ must still always be _conserved_
+- Example:
+![[Muon decay.png]]
+- As $m_{\mu}\ll m_{W}$, [[#Fermi theory]] can be used as an approximation
+
+- Fermi theory gives _Sargent's Rule_:
+$$\Gamma_{\mu}=\frac{1}{\tau_{\mu}}=\frac{G_{F}^{2}}{192\pi^{3}}m_{\mu}^{5} \propto m_{\mu}^{5}$$
+### Tau decay and lepton universality
+- As $m_{\tau}>m_{\mu},m_{e},m_{p}\dots$ it has _several decay modes_
+![[Tau decay modes.png]]
+
+- One can hold _measurements_ of $g_{W}$ for both muon and tau decays
+- The _coupling constant_ $g_{W}$ is _constant for all decays_
+- This is known as _lepton universality_
+
+- However, from measurement of decays to _hadrons_, $G_{F}$ is _different for quarks_
+
+## Weak interactions for quarks
+- It has been observed that _weak interactions_ with _quarks_ can _cross generations_
+![[Kaon decay.png|450]]
+
+### Quark mixing
+- From this, _alter_ the generations:
+$$\displaylines{\text{Leptons: }\begin{pmatrix}\ce{ e- } \\ \ce{ \nu_{e} }\end{pmatrix}\begin{pmatrix}\ce{ \mu- } \\ \ce{ \nu_{\mu} }\end{pmatrix} \hspace{1.5cm}\text{Quarks: }\begin{pmatrix}\ce{ u }\\ \ce{ d' }\end{pmatrix}\begin{pmatrix}\ce{ c} \\ \ce{ s' }\end{pmatrix} \\ \begin{align}
+d' &= d\cos\theta_{C}+s\sin\theta_{C} \\ s'&= s\cos\theta_{C}-d\sin\theta_{C}
+\end{align}}$$
+
+- The "down-type" quarks in the weak interactions are _linear combinations_ of down and strange
+	- The _weak eigenstates_ $(d',s')$ are _superpositions_ of the _mass eigenstates_ $(d,s)$
+$$\begin{pmatrix}d'\\ s' \end{pmatrix}=\begin{pmatrix}\cos\theta_{C} & \sin\theta_{C} \\ -\sin\theta_{C} & \cos\theta_{C}\end{pmatrix}\begin{pmatrix}d \\ s\end{pmatrix}$$
+
+- Weak coupling to quarks is then:
+![[Weak coupling to quarks.png]]
+
+- From this, _compare_ muon decay and nuclear $\beta$ decay:
+![[Muon vs beta decay.png]]
+- The _ratio_ of $G_F$:
+$$\frac{G_{F}^{\beta}}{G_{F}^{\mu}}=\cos\theta_{C}=0.974$$
+- This is a _measurement_ of the Cabbibo angle, which is found to be $13^{\circ}$
+
+### CKM matrix
+- _Extend_ quark mixing to _three generations_
+- The _approximate form_ of the matrix:
+$$\displaylines{\pmatrix{d'\\s'\\b'}=V_\text{CKM}\pmatrix{d\\s\\b} \\ V_\text{CKM}=\pmatrix{V_\text{ud}&V_\text{us}&V_\text{ub} \\ V_\text{cd}&V_\text{cs}&V_\text{cb} \\ V_\text{td}&V_\text{ts}&V_\text{tb}} \sim \pmatrix{\cos\theta_{C}&\sin\theta_{C}&\sin^{3}\theta_{C}\exp(-i\delta) \\ -\sin\theta_{C}&\cos\theta_{C}& \sin^{2}\theta_{C} \\ \sin^{3}\theta_{C}\exp(-i\delta) &-\sin^{2}\theta_{C}&1}}$$
+- The matrix is _unitary_
+- The _mixing angle_ is still $13^{\circ}$, and the _C-P violating phase_ is $\delta\sim 69^{\circ}$:
+	- A _hierarchy_ of values determined by "how off-diagonal" the term is
+$$V_\text{CKM} \sim \pmatrix{0.975 & 0.220 & 0.01 \\ -0.220 & 0.975 & 0.05 \\ 0.01 & -0.05 & 1}$$
+- Interactions in the _same family_ are _Cabbibo allowed_
+- Interactions _differing by one family_ are _Cabbibo suppressed_
+- Interactions _differing by two families_ are _doubly Cabbibo suppressed_
+
+# Electroweak unification
+- $W^{\pm}$ bosons _mediate_ the _weak charged current_, while also _coupling_ to $\gamma$
+- Consider $\ce{ e- e+ -> W+ W- }$
+![[Electron to W.png|550]]
+- The cross-section for these diagrams _diverge_ at high energy
+
+- Introduce the $Z$ boson
+![[Z boson.png|350]]
+- The $\gamma,W^{\pm}, Z$ couplings must be _related_
+- This is _electroweak unification_
+
+## Electroweak gauge theory
+- Weak force from under the [[Classical Field Theory#Local phase (gauge) symmetry|gauge transformation]]:
+$$\psi \to \psi'=\exp[ig\boldsymbol{\sigma}\cdot \boldsymbol{\Lambda}(\boldsymbol{r},t)]\psi$$
+- It is an $SU(2)$ transformation
+
+- The state is characterised by _weak isospin_
+	- A _rotation_ of the isospin state
+- The invariance under $SU(2)$ gives _three massless gauge bosons_
+
+- The gauge bosons have _well-specified couplings_, as well as _self couplings_
+- This predicts that $W$ and $Z$ have the _same couplings_
+	- _Experimental_ results say otherwise
+
+- Instead, to _unify_ [[#Quantum electrodynamics|QED]] and the weak force, with a $SU(2)\otimes U(1)$ transformation
+	- $U(1)$ operates on the _weak hypercharge_ $Y=2(Q-I_{3})$
+	- $SU(2)$ operates on _weak isospin_ $I$
+
+- The invariance gives _four massless gauge bosons_:
+$$W^{+}, W^{-},W_{3},B$$
+- The _neutral bosons_ $W_{3}$ and $B$ then _mix_ to form $Z$ and $\gamma$
+
+- The _photon coupling_ must be the same as predicted in QED
+- This enables _prediction_ of $Z$ coupling in terms of $g_{W}$ and $\gamma$
+
+- $W^{\pm}$ and $Z$ can _gain mass_ from the _Higgs mechanism_
+
+## GWS model
+- The EM and weak interactions are _manifestations of a unified electroweak force_
+- The _mixing_ of neutral bosons:
+$$\pmatrix{W^{+} \\ W_{3} \\ W^{-}}\;;\;B \to \pmatrix{W^{+} \\ Z \\ W^{-}} \;;\; \gamma$$
+- Denoting the _field_ for the photon as $A$:
+$$\begin{align}Z&= W_{3}\cos\theta_{W}-B\,\sin\theta_{W} \\ A&=B\cos\theta_{W}+W_{3}\sin\theta_{W} \end{align}$$
+- $\theta_{W}$ is the _weak mixing angle_
+
+- It makes _exact predictions_ of $W^{\pm}$ and $Z$ masses, with their _coupling parameters_
+	- There are only _three given parameters_ $G_{F}$,$\alpha _\text{EM}$, $\theta_{W}$, which are _experimentally determined_
+$$\alpha_{EM}=\frac{g_{EM}^{2}}{4\pi}=\frac{e^{2}}{4\pi}\hspace{1cm} g_{W}=\frac{e}{\sin\theta_{W}}\hspace{1cm}g_{Z}=\frac{e}{\sin\theta_{W}\cos\theta_{W}}=\frac{g_{W}}{\cos\theta_{W}}$$
+
+- The _masses_ given by Fermi theory and the Higgs mechanism:
+$$\frac{G_{F}}{\sqrt{ 2 }}=\frac{g_{W}^{2}}{8m_{W}^{2}}\implies m_{W}=\sqrt{ \frac{\sqrt{ 2 }e^{2}}{8G_{F}\sin^{2}\theta_{W}} }\hspace{1cm}m_{Z}=\frac{m_{W}}{\sin\theta_{W}}$$
+
+- Calculation of $Z$ coupling:
+
+
+- The _discovery_ of neutral currents in $\ce{ \bar{\nu}_{\mu}e- -> \bar{\nu}_{\mu}e- }$ was _indirect evidence_ for $Z$
+- The first _direct observation_ of $Z$ was in $p\bar{p}$ collisions, with the _decay products_ of $Z$
+
+## Weak neutral current vertices
+- $Z$ can _never_ change the _particle type, or quark/lepton flavour_
+- It is a _mix_ of EM and weak couplings, therefore _depend_ on $\sin^{2}\theta_{W}$
+	- $\theta_{W} \sim 29^{\circ}$
+
+![[Neutral current vertices.png]]
+
+- All standard model vertices with matter:
+![[ST vertices with matter.png]]
+## Z resonance
+- Consider $\ce{ e+ e- -> q\bar{q} }$
+- At _small energies_, the only contribution is the _photon propagator_
+- At _higher energies_, the $Z$ boson also contributes
+
+- At $\sqrt{ s }\sim m_{Z}$, the _Breit-Wigner resonance_ means that the $Z$ diagram dominates
+	- $E_{CM}=\sqrt{ s }$, and $s=4E_{e}^{2}$
+	- With $J_{Z}=1$ and $J_{e}=1/2$, $g=3/4$
+$$\sigma(\ce{ e+e- -> Z -> f\bar{\text{f}} })= \frac{g\pi}{E_{e}^{2}} \frac{\Gamma_{ee}\Gamma_{f\bar{f}}}{(E_{CM}-E_{Z})^{2}+\Gamma^{2}/4}$$
+- The _total decay width_:
+$$\Gamma_{Z}=\Gamma_{ee}+\Gamma_{\mu \bar{\mu}}+\Gamma_{\tau \bar{\tau}}+\Gamma_{q\bar{q}}+\Gamma_{\nu \bar{\nu}}$$
+- At the _peak of resonance_:
+$$\sigma=\frac{12\pi}{m_{Z}^{2}} \frac{\Gamma_{ee}\Gamma_{f\bar{f}}}{\Gamma_{Z}^{2}}$$
+- _Sum over_ all fermion/anti-fermion pairs ($\Gamma_{f\bar{f}}=\Gamma_{Z}$)
+$$\sigma=\frac{12\pi}{m_{Z}^{2}} \frac{\Gamma_{ee}}{\Gamma_{Z}}$$
+- Compare to the _QED cross-section_:
+$$\frac{\sigma_{Z}}{\sigma_{QED}}=\frac{\sigma_{Z}}{4\pi\alpha^{2}/(3s)}\sim5700$$
+- Therefore, $Z$ processes _dominate_ over QED processes at resonance
+
+### Evidence for number of generations
+- $\Gamma_{Z}$ includes partial widths for _all fermions_ with $m_{f}<m_{Z}/2$
+- For a _fourth_ generation, the neutrino would be _light_, and also be produced at $Z$ resonance
+	- Not observed directly, but will affect the _resonance curve_, by _increasing_ $\Gamma_{Z}$
+
+- From _universality_ of lepton couplings, $\Gamma_{\nu \bar{\nu}}$ is _constant_ for each generation

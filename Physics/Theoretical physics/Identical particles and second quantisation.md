@@ -252,10 +252,11 @@ $$\left<H_\text{int}\right>= \frac{1}{2} \int d\boldsymbol{r} \, d\boldsymbol{r}
 
 - Model for a _lattice_, where a particle can _hop_ along the lattice
 $$\hat{H}=-J \sum_{<i,j>} \left( \hat{a}^{\dagger} _{i}\hat{a}_{j}+\hat{a}_{j}^{\dagger}\hat{a}_{i}\right) +\frac{U}{2} \sum_{i} \hat{n}_{i}\left( \hat{n}_{i}-1 \right)$$
-- There is a _hopping kinetic energy_ (sum over _all neighbouring sites_) and an _interaction term_
+- There is a _hopping kinetic energy_ and an _interaction term_ depending on _number of particles_ $\hat{n}_{i}=\hat{a}_{i}^{\dagger}\hat{a}_{i}$ at the site
+- In the _tight binding_ approximation, kinetic energies are _summed over nearest neighbours_
 
 - The operators $\hat{a}_{i}$ _create/annihilate_ particles at _site_ $i$
-	- Positions: _Wannier states_
+	- Position wave functions: _Wannier state_ orbitals $\varphi_{i}(\boldsymbol{x})$
 
 - The limit $J\gg U$ has the _kinetic energy_ dominate
 - The states are effectively _plane waves_ (momentum eigenstates)
@@ -306,8 +307,13 @@ $$\hat{H}=$$
 - The _Bogoliubov transformation_:
 $$\alpha_{k}=$$
 - Gauge symmetry
+	- Goldstone mode
 
 ## Interference of Bose-Einstein condensates
+- The wave-function for a _Bose condensate_ of ground state $\varphi_{0}(\boldsymbol{r})$
+$$\ket{\Psi}=\frac{1}{\sqrt{ N! }} \left( \hat{a}_{0}^{\dagger} \right)^{N} \ket{\text{VAC}}  $$
+
+
 - Let there be a Bose-Einstein condensate initially in a _trap_
 - Let the trap be _released_
 
