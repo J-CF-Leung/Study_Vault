@@ -530,15 +530,19 @@ $$\mu=kT\ln\left(\frac{N\lambda^3}{V}\right)+\phi$$
 $$\mu=kT\ln c+\phi$$
 - $c$ can be interpreted as a _concentration_
 
+## Classical to quantum crossover
 - For $N\lambda^3/V\ll1$, it is the _classical limit_ where the particles can be interpreted as _"pointlike"_, and the _wave-functions do not overlap_
 	- Can be reached by _low temperature_ or _low $N$_
 	- Here, one gets $\mu\ll0$
-- For $N\lambda^3/V\gg1$, [[#Classical to quantum|quantum effects]] start to interfere
+- For $N\lambda^3/V\gg1$, _quantum effects_ start to interfere (wave-functions overlap)
+- The _classical particle_ becomes a _bad approximation_, and one can only speak of _states_
 
 # The ideal gas in the grand canonical ensemble
 - Consider the _ideal gas_, with _variable energy and particle number_, and _fixed_ $T$ and $\mu$
+
+## Using the partition function
 - The [[#Grand canonical ensemble|grand partition function]]:
-$$\Xi=\sum_{N_i=0}^\infty\sum_\text{states}\exp[-\beta(E_i-\mu N_i)]=\sum_{N_i=0}^\infty \frac{1}{N_i!}Z_1^{N_i}\exp(\beta\mu N_i)$$
+$$\Xi=\sum_{N_i=0}^\infty\sum_\text{states}\exp[-\beta(E_i[N_{i}]-\mu N_i)]=\sum_{N_i=0}^\infty \frac{1}{N_i!}Z_1^{N_i}\exp(\beta\mu N_i)$$
 - This can then be rewritten as:
 $$\Xi=\exp\left(Z_1e^{\beta\mu}\right)=\exp\left(\frac{V}{\lambda^3}Z_\text{int}e^{\beta\mu}\right)$$
 - One then gets the _grand potential_:
@@ -549,8 +553,8 @@ $$\Phi=-kT\ln\Xi=-kT\frac{V}{\lambda^3}Z_\text{int}e^{\beta\mu}$$
 $$p=-\pd{\Phi}{V}=\frac{kT}{\lambda^3}e^{\beta\mu}\hspace{1.5cm}N=-\pd{\Phi}{\mu}=\frac{V}{\lambda^3}e^{\beta\mu}$$
 - From this, one can get the _ideal gas law_ $pV=NkT$
 - One can also _invert_ the relation for $N$ above to get:
-$$\mu=kT\ln\left(\frac{N\lambda^3}{V}\right)$$
-- Once again, one can define a [[#Classical to quantum|classical limit]] where $\mu\ll0$
+$$\beta\mu=\ln\left(\frac{N\lambda^3}{V}\right)$$
+- Once again, one can define a [[#Classical to quantum crossover|classical limit]] where $\mu\ll0$
 
 ## Langmuir isotherm
 - Let the _3D gas_ at temperature $T$ be able to be _adsorbed_ onto a _2D surface_
@@ -605,30 +609,43 @@ $$Z=\int\frac{dx\,dp}{2\pi\hbar}\exp\left(-\frac{p^2}{2mkT}-\frac{\kappa x^2}{2k
 - However, at the _high temperature limit_ where $\kappa L^2\ll kT$:
 $$Z\approx\frac{L}{\lambda}$$
 
-# Classical to quantum crossover
-- Consider the ratio:
-$$\frac{N\lambda^3}{V}$$
-- If this quantity $\gg1$, the _wave functions of the particles_ start to _overlap_
-- The _classical particle_ becomes a _bad approximation_, and one can only speak of _states_
-
-- For a system with _energy levels_ $\varepsilon_i$ each with occupation number $n_i$, with _total number of particles_ $N$ and _total energy_ $E$, denote some _microstate_ by $(N,E)$:
-$$Z(N)=\sum_{n_1,n_2,\dots}\exp[-\beta(n_1\varepsilon_1+n_2\varepsilon_2+\dots)]$$
-- If there is _no fixed particle number_:
-$$\Xi=\sum_{n_1,n_2,\dots}\exp[-\beta(n_1\varepsilon_1+n_2\varepsilon_2+\dots)]\exp(\beta\mu N)$$
-
-# Grand canonical ensemble
+# Grand partition function and grand potential
 - Characterise a system by _energy levels_ $\varepsilon_k$, each with _occupation number_ $n_k$
 - The _total energy_ of the system:
 $$E=\sum_k n_k\varepsilon_k$$
-- Mathematics
+- With _total number of particles_ $N$ and _total energy_ $E$, denote some _microstate_ by $(N,E)$, with _partition function_:
+$$\displaylines{Z(T,V,N)=\sum_{n_1,n_2,\dots}\exp[-\beta(n_1\varepsilon_1+n_2\varepsilon_2+\dots)] \\ N=n_{1}+n_{2}+\dots}$$
+- For _fermions_, the occupation number of each level must be $0$ or $1$
+
+- If there is _no fixed particle number_, consider the _grand partition function_:
+$$\begin{align}
+\Xi(T,V,\mu)&=\sum_{N=0}^{\infty}Z(T,V,N)\exp(\beta\mu N) \\ &=\sum_{N=0}^{\infty}\sum_{n_{1},n_{2},\dots}^{N} \exp[-\beta(n_{1}\varepsilon_{1}+n_{2}\varepsilon_{2}+\dots)+\beta\mu(n_{1}+n_{2}+\dots)]
+\end{align}$$
+- The second sum has the _constraint_ that $n_{1}+n_{2}+\dots=N$
+- However, as $N$ is _summed over_, the total sum is:
+$$\begin{align}
+\Xi(T,V,\mu)&=\sum_{n_{1},n_{2},\dots} \exp[-\beta(n_{1}\varepsilon_{1}+n_{2}\varepsilon_{2}+\dots)+\beta\mu(n_{1}+n_{2}+\dots)] \\ &=\sum_{n_{1},n_{2},\dots} \exp[-\beta(\varepsilon_{1}-\mu)n_{1}]\exp[-\beta(\varepsilon_{2}-\mu)n_{2}]\dots \\ &= \left[ \sum_{n_{1}} \exp[-\beta(\varepsilon_{1}-\mu)n_{1}] \right]\left[ \sum_{n_{2}} \exp[-\beta(\varepsilon_{2}-\mu)n_{2}] \right]\dots
+\end{align}$$
 
 - Then the _total grand partition function_ is:
 $$\Xi=\prod_k\Xi_k$$
-- The _grand potential_ is then:
-$$\Phi=\sum_k\Phi_k$$
-- _Classical limit_, where $\beta(\varepsilon_k-\mu)\gg1$
-$$\Xi_k\approx 1+\exp[-\beta(\varepsilon_k-\mu)]$$
+- The total grand partition is a _product_ of grand partition functions _of the individual energy levels_
 
+- The [[#Grand canonical ensemble|grand potential]] is then:
+$$\Phi=\sum_k\Phi_k$$
+
+## Classical limit
+- Let $\beta(\varepsilon_k-\mu)\gg1$
+	- Different from the _high energy/low temperature limit_
+$$\Xi_k=\sum_{n}(\exp[-\beta(\varepsilon_{k}-\mu)])^{n}\approx 1+\exp[-\beta(\varepsilon_k-\mu)]\equiv \Xi_{k}^{\text{cl}}$$
+- If this is _valid for all energy levels_, then one gets a _classical gas_
+- This should be valid for a _large, negative_ $\mu$, corresponding to the [[#Classical to quantum crossover|classical limit]]
+	- In the _ideal classical gas_, $\beta \mu=\ln(N\lambda^{3}/V)$
+
+- Take the _grand potential_, expanding the logarithm to the _lowest order_:
+$$\Phi_{k}^{\text{cl}}=-k_{B}T\ln \Xi_{k}^{\text{cl}}\approx -k_{B}T\exp[-\beta(\varepsilon_{k}-\mu)]$$
+- The _average occupancy_ is then:
+$$\langle n_{k} \rangle =-\left( \frac{\partial \Phi_{k}}{\partial \mu} \right)_{T,V}\approx \exp[-\beta(\varepsilon_{k}-\mu)] $$
 ## Quantum particles
 - Below the _quantum threshold_, where $N\lambda^3/V\gg1$, the effects of particles being _bosons_ and _fermions_ emerge
 - For _bosons_:
@@ -719,7 +736,7 @@ $$\Phi=-\frac{2}{3}V\exp(\beta\mu)\int_0^\infty\frac{}{}$$
 $$\Phi=\Phi_\text{ideal}(1-0.2\exp(\beta\mu)+\dots)$$
 
 # The Bose gas
-$$\displaylines{\Xi_k=\sum_{n=0}^\infty\exp[-\beta(\varepsilon_k-\mu)n]=\frac{1}{1-\exp[-\beta(\varepsilon_k-\mu)]} \\ \Phi_k=kT\ln[1-\exp(-\beta\varepsilon_k+\beta\mu)] \\ \mean{n_k}=\pd{\Phi_k}{\mu}=\frac{1}{1-\exp[\beta(\varepsilon_k-\mu)]}}$$
+$$\displaylines{\Xi_k=\sum_{n=0}^\infty\exp[-\beta(\varepsilon_k-\mu)n]=\frac{1}{1-\exp[-\beta(\varepsilon_k-\mu)]} \\ \Phi_k=kT\ln[1-\exp(-\beta\varepsilon_k+\beta\mu)] \\ \mean{n_k}=\pd{\Phi_k}{\mu}=\frac{1}{\exp[\beta(\varepsilon_k-\mu)]-1}}$$
 - The _total grand potential_:
 $$\begin{aligned}\Phi&=\int\frac{d^3x\,d^3p}{(2\pi\hbar)^3}kT\ln[1-\exp[-\beta(\varepsilon_k-\mu)]] \\ &=-\frac{2}{3}U\end{aligned}$$
 - The occupation number distribution above _diverges_ when $\varepsilon_k=\mu$
@@ -1067,7 +1084,7 @@ $$\mean{\Delta x^2}=\mean{x^2}-\mean{x}^2=\frac{1}{Z}\sum_i x_i^2\exp\left(-\bet
 - Let the [[#Thermodynamic variables|conjugate variable]] to $x$ be $f$:
 $$\Delta E_i=-f\cdot \Delta x_i$$
 - Writing the terms above as derivatives w.r.t. $f$:
-$$\mean{\Delta x^2}=kT\pd{\mean{x}}{f}$$
+$$\displaylines{\langle x \rangle =\frac{1}{\beta Z}\left( \frac{\partial Z}{\partial f} \right) \\ \langle x^{2} \rangle =\frac{1}{Z\beta^{2}} \frac{\partial^{2}Z}{\partial f^{2}} \\ \mean{\Delta x^2}=kT\pd{\mean{x}}{f}}$$
 
 ## As curvature of availability
 - Consider the _total entropy_ of a _system_ connected to a _reservoir_:

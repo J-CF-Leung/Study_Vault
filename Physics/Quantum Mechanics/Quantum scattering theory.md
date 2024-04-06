@@ -269,6 +269,12 @@ $$\displaylines{V(\boldsymbol{r})=\begin{cases}V_{0}& |\boldsymbol{r}|<a_{\circ}
 $$\frac{f}{r_{c}}\ll 1 \implies V_{c}\ll \frac{\hbar^{2}}{mr_{c}^{2}}$$
 - At _high energies_, $kr_{c}\gg 1$ and the wave _oscillates in the interaction region_, leading to the condition:
 $$V_{c}\ll kr_{c} \frac{\hbar^{2}}{mr_{c}^{2}}$$
+## Second Born approximation
+- By _iterating_ the [[#3D Lippmann-Schwinger equation|Lippmann-Schwinger equation]] a second time, the _second correction_ to the scattered wave is:
+$$\psi_{\boldsymbol{k}}^{(2)}(\boldsymbol{r})=\left( \frac{m}{2\pi \hbar^{2}} \right)^{2} \int  \, d^{3}\boldsymbol{r}_{1}\,d^{3}\boldsymbol{r}_{2} \frac{\exp\left[ ik|\boldsymbol{r}-\boldsymbol{r}_{1}|\right]}{|\boldsymbol{r}-\boldsymbol{r}_{1}|}V(\boldsymbol{r}_{1})\frac{\exp\left[ ik|\boldsymbol{r}_{1}-\boldsymbol{r}_{2}|\right]}{|\boldsymbol{r}_{1}-\boldsymbol{r}_{2}|}V(\boldsymbol{r}_{2})\exp(i\boldsymbol{k}\cdot \boldsymbol{r}_{2}) $$
+- This gives a contribution to the _scattering amplitude_:
+$$f^{(2)}=\left( \frac{m}{2\pi \hbar^{2}} \right)^{2} \int  \, d^{3}\boldsymbol{r}_{1}\,d^{3}\boldsymbol{r}_{2} \exp[-i\boldsymbol{k}_{f}\cdot \boldsymbol{r}_{1}]V(\boldsymbol{r}_{1})\frac{\exp\left[ ik|\boldsymbol{r}_{1}-\boldsymbol{r}_{2}|\right]}{|\boldsymbol{r}_{1}-\boldsymbol{r}_{2}|}V(\boldsymbol{r}_{2})\exp(i\boldsymbol{k}\cdot \boldsymbol{r}_{2}) $$
+
 ## Partial wave analysis
 - For a 1D potential, one can define [[#Channels and phase shifts|channels]] due to symmetry (such as parity), where waves in each channel only get _phase shifts_
 - In 3D, let there be a _spherically symmetric potential_ (rotational symmetry)

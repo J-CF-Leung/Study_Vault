@@ -720,43 +720,50 @@ $$E(\boldsymbol{Q})=\varepsilon(\boldsymbol{k}')-\varepsilon(\boldsymbol{k})$$
 
 ![[Inelastic neutron scattering.png]]
 
-# Density of states and heat capacity
+## Density of states and heat capacity
 - For a _1D chain_ of $N$ atoms, there must be $N$ _modes_
 - The allowed _density of states_, with _periodic boundary conditions_, are then:
 	- There is a _maximum momentum_ on the _Brullouin zone boundary_ (due to the _discreteness_ of the atomic chain)
-$$k_{n}=\frac{2\pi}{L}n \hspace{1cm}n=[]$$
-- Here, $a=L/N$ and $<k<$
+$$k_{n}=\frac{2\pi}{L}n \hspace{1cm}n=\left(-\frac{N}{2}+1,-\frac{N}{2}+2,\dots,\frac{N}{2}\right]$$
+- Here, $a=L/N$ and $-\pi/a<k<\pi/a$
 - In 3 dimensions, each _branch_ has $N=L^{3}/\Omega _\text{cell}$ states
 - The volume for each $k-$state is $(2\pi)^{3}/L^{3}$
 
+### Einstein and Debye models
 - The _Einstein model_ assumes a _flat dispersion_ $\omega(\boldsymbol{k})=\omega_{0}$
-- The _density of states_ per branch is then $D_{E}(\omega)=$
+- The _density of states_ per branch is then:
+$$D_{E}(\omega)=N\delta(\omega-\omega_{0})$$
 - This is suitable for _optical branches_
 
 - For _acoustic modes_, with _linear dispersion_, use $\omega=vk$
-- Density of states
-- This _fails at the zone boundary_
-- _Cut off_ at the Debye frequency
+- The density of states in the _Debye model_:
+$$D_{D}(\omega)=\frac{4\pi k^{2}}{(2\pi/L)^{3}} \frac{dk}{d\omega}=\frac{V\omega^{2}}{2\pi^{2}v^{3}}$$
+- This _fails at the zone boundary_, hence implement a _cut off_ at the Debye frequency
 - _Count_ the number of states and cut off at $N$:
-$$\int _{0}^{\omega_{D}}D_{D}(\omega) \, dx $$
+$$\int _{0}^{\omega_{D}}D_{D}(\omega) \, d\omega=N \implies \omega_{D}^{3}=6\pi^{2}v^{3} \frac{N}{V}$$
 - _Replacing_ the Brillouin zone with a _sphere_ of radius $k_{D}=\omega_{D}/v$
 
-- Einstein: phonons obey [[Advanced statistical mechanics#The Bose gas|Bose-Einstein distribution]]
+### Lattice specific heat
+- Phonons obey the [[Advanced statistical mechanics#The Bose gas|Bose-Einstein distribution]]
 - As their _number is not conserved_, $\mu=0$:
-$$n(\omega)=\frac{1}{\exp()}$$
-- For $k_{B}T<\hbar\omega$
-- For $k_{B}T>\hbar\omega$
+$$n(\omega)=\frac{1}{\exp(\hbar\omega/k_{B}T)-1}$$
+- For $k_{B}T<\hbar\omega$, $n(\omega) \to \exp(-\hbar\omega/k_{B}T)$
+- For $k_{B}T>\hbar\omega$, $n(\omega)\to k_{B}T/\hbar\omega$
 
-- The _internal energy_:
-$$U=\int  D(\omega)n(\omega)\hbar\omega \, d\omega =$$
+- The _internal energy_ in the _Einstein_ model:
+$$U_{E}=\int  D_{E}(\omega)n(\omega)\hbar\omega \, d\omega =\frac{\hbar\omega_{0}}{\exp(\hbar\omega_{0}/k_{B}T)-1}$$
 - The _heat capacity_:
-$$C_{V}=$$
-- At _low temperatures_
-- Dulong-Petit
-- _Characteristic temperature_
+$$C_{V}=\left( \frac{\partial U}{\partial T} \right)_{V}=Nk_{B}\left( \frac{\hbar\omega_{0}}{k_{B}T} \right)^{2} \frac{\exp(\hbar\omega_{0}/k_{B}T)}{[\exp(\hbar\omega_{0}/k_{B}T)-1]^{2}}$$
+- At _low temperatures_, this varies as $\exp(-\hbar\omega_{0}/k_{B}T)$
+- It _saturates_ above the _characteristic temperature_ $\theta_{E}=\hbar\omega_{0}/k_{B}$
+- It satisfies the _Dulong-Petit law_ such that $C_{V}(T>\theta_{E}) \to Nk_{B}$
 
-- Debye model
 - At _low temperatures_, the contribution of _optical modes_ is _small_
+- In the _Debye model_:
+$$U_{D}=\int D_{D}(\omega)n(\omega)\hbar\omega \, d\omega=\int _{0}^{\omega_{D}} \frac{V\omega^{2}}{2\pi^{2}v^{3}} \frac{\hbar\omega}{\exp(\hbar\omega/k_{B}T)-1} \, d\omega  $$
+- Define the _Debye temperature_:
+$$\theta_{D}=\frac{\hbar\omega_{D}}{k_{B}}$$
+
 - Debye temperature
 - Substitution: $x=\hbar\omega/k_{B}T$
 - Factor of $3$ for different modes

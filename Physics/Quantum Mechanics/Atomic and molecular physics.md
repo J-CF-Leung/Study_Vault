@@ -477,7 +477,7 @@ $$\hat{H}_B=\left(g_L\hat{L}_z+g_S\hat{S}_z\right)\frac{\mu_{B}B_{z}}{\hbar}$$
 - For a _strong field_, splitting due to _fine structure_ can be _neglected_:
 $$\mu_{B}B\gg \left<\hat{H}_{2}\right> =\left<\xi(r)\hat{\boldsymbol{L}}\cdot\hat{\boldsymbol{S}}\right>$$
 
-- In this case, $\hat{H}_{B}$ is treated as the _perturbation_ and spin-orbit coupling is _neglected_:
+- In this case, $\hat{H}_{B}$ is treated as the _perturbation_ and spin-orbit coupling $\hat{H}_{2}$ is _neglected_:
 $$\hat{H}=(\hat{H}_{0}+\hat{H}_{1})+\hat{H}_{B}$$
 - Neglecting fine structure, states of same $J$ are _degenerate_ in energy
 	- Only the first two of [[#Hund's rules]] apply
@@ -602,7 +602,7 @@ $$\hat{H}_{e}=e\mathcal{E}z=e\mathcal{E}r\cos\theta$$
 
 - Consider the eigenstates $\ket{njm_{j}ls}$, representing the level $n^{2S+1}L_{J}$
 	- The states are _degenerate_ w.r.t. $m_{j}$, with degenerate $2j+1$
-- Treating $\hat{H}_{E}$ as a perturbation, the first order energy correction is:
+- Treating $\hat{H}_{E}$ as a perturbation, the first order energy correction from [[Time-Independent Approximation Methods#Degenerate perturbation theory|degenerate perturbation theory]] is:
 $$\braket{ njm_{j}'l | z|njm_{j}l } $$
 - As $\hat{z}$ is _odd_ under spatial inversion, they _vanish_ for $l=l'$
 

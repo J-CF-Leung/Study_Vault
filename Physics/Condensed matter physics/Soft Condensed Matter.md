@@ -738,7 +738,7 @@ $$F=U-TS=k_{B}T \frac{3}{2} \frac{R^{2}}{Nb_{0}^{2}}+F(0)$$
 - As expected for a _Hookean spring_
 - The _spring constant_ is _proportional to temperature_
 
-- Entropy is _higher_ for _lower_ $R^{2}$ as it is _more likely_
+- Entropy is _higher_ for _lower_ $R^{2}$ as it is _more likely_ for the chain to be more coiled up
 
 ### Lattice random walk
 - For a polymer on a _1D lattice_, let it undergo _steps_ to the left and right, with $N_{-}$ and $N_{+}$ steps respectively
@@ -787,8 +787,12 @@ $$R \sim N^{1/2}$$
 - If $1-2\chi>0$, there is a _swollen chain_ (the chain tends to be attracted to the _solvent_)
 $$R \sim N^{3/5}$$
 ### Excluded volume interaction and swelling
-- The free energy can also be written in terms of a _repulsive term_ and the _entropic term_
+- Polymers _cannot self intersect_
+- This is the _excluded volume interaction_
+- It is an _entropic effect_ as there are _fewer sites available_
+
 - The repulsion term goes like $V\Phi^{2} \propto N^{2}/V$
+	- Typically _stronger_ when there is a smaller [[#Semi-flexible polymers|persistence length]]
 - The free energy:
 $$\frac{F}{k_{B}T}\sim \nu \frac{N^{2}}{V}+\frac{R^{2}}{Nb_{0}^{2}}\sim \nu \frac{N^{2}}{R^{3}}+ \frac{R^{2}}{Nb_{0}^{2}}$$
 - Finding the _minimum_:
@@ -939,8 +943,13 @@ $$f_\text{helix}= \frac{1}{2}\left( 1+ \frac{s-1}{\sqrt{ (1-s)^{2}+4\sigma s }} 
 
 ## Forces
 - _Hydrogen bonding_, where _dipole moments_ in molecules interact
+
 - _Hydrophobicity_, where an _entropic force_ makes hydrophobic/phillic parts of molecules stick to each other
 	- _Amphiphillic_ molecules have _hydrophilic_ and _hydrophobic_ parts
+- The _hydrogen bond network_ of water molecules _around hydrophobic molecules_ will end up _decreasing_ entropy of an even solution
+- This leads to the entropic force making _hydrophobic_ parts stick together
+- For a _higher temperature_ solution, hydrogen bonding interactions matter _less_
+
 - _Electrostatics_, where charged parts of molecules interact
 	- From _screening_, it typically _decays exponentially_
 	- The length scale is typically _short_

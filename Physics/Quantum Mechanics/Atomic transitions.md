@@ -215,7 +215,8 @@ $$g_{1}B_{12}=g_{2}B_{21}\hspace{1.5cm}A_{21}=\frac{\hbar\omega^{3}}{\pi^{2}c^{3
 $$\displaylines{N_{2}[A_{21}+B_{21}u(\omega)]=N_{1}B_{12}u(\omega) \\ \frac{N_{1}}{N_{2}}=\frac{g_{1}}{g_{2}}\exp\left( \frac{\hbar\omega}{k_{B}T} \right)}$$
 - Substitute [[Thermal Radiation|Planck radiation law]]:
 $$u(\omega)=\frac{\hbar\omega^{3}}{\pi^{2}c^{3}} \frac{1}{\exp(\hbar\omega/k_{B}T)-1}$$
-
+- $A_{21}$ must be _independent of temperature_
+- From this, one recovers the relations between the coefficients
 ## Spontaneous decay lifetimes
 - For _spontaneous decay_ $2\to 1$, the _occupancy_ of the upper level _decays exponentially_:
 $$\dot{N}_{2}(t)=-A_{21}N_{2}\Longrightarrow N_{2}(t)=N_{2}(0)\exp\left( -\frac{t}{\tau_{2}} \right)$$

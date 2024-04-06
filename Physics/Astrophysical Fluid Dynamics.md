@@ -1,3 +1,4 @@
+- [ ] Instabilities 📅 2024-04-06 ⏫ 
 - A fluid is a _flowing continuous medium_
 - It has well-defined _macroscopic properties_:
 $$\boldsymbol{v}(\boldsymbol{r},t),\rho(\boldsymbol{r},t),p(\boldsymbol{r},t)$$
@@ -954,13 +955,13 @@ $$K=\frac{p}{\rho^{\gamma}}=\frac{p'}{\rho^{{*}^{\gamma}}}$$
 $$p'=p+\frac{dp}{dz}\delta z \implies \rho^{*}=\rho+ \frac{\rho}{\gamma p}\, \frac{dp}{dz}\delta z$$
 - Background atmospheric density:
 $$\rho'=\rho+\frac{d\rho}{dz}\delta z$$
-- From this, the gas is _unstable_ if:
-$$\implies\frac{dK}{dz}<0\;,\; \frac{d}{dz}\ln K=0$$
-- The system is _unstable if entropy decreases in the upwards direction_
+- The gas is only stable if:
+$$\frac{\partial \rho}{\partial p}\Bigg|_\text{ad}<\frac{\partial \rho}{\partial p}\Bigg|_\text{atmos}$$
+
 - It is the _Schwarzchild criterion_
 
-- Using the _equation of state_, this can be related to _temperature gradients_:
-$$K=p\rho^{-\gamma}\propto p^{1-\gamma}T^{\gamma}$$
+- Writing pressure as:
+$$p=A\rho T$$
 - The gas is _unstable if_:
 $$\frac{dT}{dz}<\left( 1-\frac{1}{\gamma} \right) \frac{T}{p} \frac{dp}{dz}$$
 - Hence, _positive temperature gradients are stable_
@@ -1204,7 +1205,8 @@ $$\Omega^{2}R=\frac{GM}{R^{2}} \implies \Omega=\sqrt{ \frac{GM}{R^{3}} }$$
 - In the _vertical direction_, pressure gradients balance the gravitational force
 
 - As $d\Omega/dR \neq 0$, this is a _shear flow_ 
-- _Viscosity_ transports angular momentum from the inner, fast material towards the outside
+- _Viscosity_ transports angular momentum _from the inner, fast material towards the outside_
+	- Angular momentum per unit mass: $J/m=\sqrt{ GMR }$
 - So, the _inner fluid elements drift inwards_
 
 ### Viscous evolution equations in accretion disks
@@ -1223,8 +1225,211 @@ $$\frac{\partial\Sigma}{\partial t}+\frac{1}{R} \frac{\partial}{\partial R}(R\Si
 - This is also given by considering _mass flux in and out of an annulus_
 
 - Consider the _Navier-Stokes equation_, or considering the _rate of change of angular momentum_ in the annulus:
-	- Change in angular momentum: _mass flux_ and _viscous torque_
+	- Consider _angular momentum of incoming/outgoing mass_ and _viscous torque_
 $$\frac{\partial}{\partial t}(R\Sigma u_{\phi})+ \frac{1}{R} \frac{\partial }{\partial R}(\Sigma R^{2}u_{\phi}u_{R})=\frac{1}{R} \frac{\partial}{\partial R}\left( \nu\Sigma R^{3} \frac{d\Omega}{dR} \right)$$
-- Substituting the _Keplerian_ value of $u_{\phi}$:
-$$\frac{\partial\Sigma}{\partial t}=\frac{3}{R} \frac{\partial}{\partial R}\left[ R^{1/2} \frac{\partial}{\partial R}(\nu\Sigma R^{1/2}) \right]$$
+- Substituting the _Keplerian_ value of $u_{\phi}=\sqrt{ GM/R }$:
+$$\displaylines{u_{R}= \frac{\frac{\partial}{\partial R}\left( \Sigma \nu R^{3}\frac{d\Omega}{dR} \right)}{R\Sigma \frac{\partial}{\partial R}(Ru_{\phi})} \\ \frac{\partial\Sigma}{\partial t}=\frac{3}{R} \frac{\partial}{\partial R}\left[ R^{1/2} \frac{\partial}{\partial R}(\nu\Sigma R^{1/2}) \right]}$$
 - Surface density obeys a _diffusion-like equation_
+
+- In general, $\nu=\nu(R,\Sigma)$, making it _non-linear_ in $\Sigma$
+	- Becomes linear when $\nu=\nu(R)$
+- Solutions show the initial name _broadening_ then going _inwards_
+![[Accretion disc viscous evolution.png]]
+
+- Timescale for evolution from the diffusion equation:
+$$t_{\nu}\sim \frac{R^{2}}{\nu}=\Omega^{-1}\text{Re}$$
+- For _thermal motion_ of particles, $\text{Re} \sim 10^{14}$, such that $t_{\nu}\gg$ the age of the universe
+	- There is an extra _effective viscosity_ due to _magnetohydrodynamic turbulence_
+
+### Steady-state thin disks
+- Let $\partial\Sigma/\partial t=0$, then:
+$$R\Sigma u_{R}=C=-\frac{\dot{m}}{2\pi}$$
+- $\dot{m}=-2\pi R\Sigma u_{R} >0$ is the _steady-state mass inflow rate_ and is _constant_
+- Then using the formula for $u_{R}$ for a _Keplerian orbit_, letting the boundary condition be $\nu\Sigma(R=R_{*})=0$
+	- Corresponding to _zero viscous torque_ at $R_{*}$
+	- Could be at the _surface_ of the accreting star, or the _innermost circular orbit_
+$$\nu\Sigma=\frac{\dot{m}}{3\pi}\left( 1-\sqrt{ \frac{R_{*}}{R} } \right)$$
+
+- The _viscous dissipation per unit surface area_:
+	- Ignoring $p\,dV$ work and bulk viscosity
+$$\begin{align}
+F_\text{diss}&=\int \sigma_{ij}'\partial_{j}u_{i} \, \frac{dV}{2\pi R\,dR\,d\phi}=\frac{1}{2}\int \eta(\partial_{j}u_{i}+\partial_{i}u_{j})^{2} \, dz  \\
+&=\int \eta R^{2}\left( \frac{d\Omega}{dR} \right)^{2} \, dz=\nu\Sigma R^{2}\left( \frac{d\Omega}{dR} \right)^{2} 
+\end{align} $$
+
+- Therefore, for a _Keplerian orbit_:
+$$F_\text{diss}=\frac{3GM\dot{m}}{4\pi R^{3}}\left( 1-\sqrt{ \frac{R_{*}}{R} } \right)$$
+- The _total energy emitted_:
+$$L=\int F_\text{diss} \, 2\pi R\,dR=\frac{GM\dot{m}}{2R_{*}} $$
+- The rate of _gravitational energy loss_ is $GM\dot{m}/R$, and _half_ is dissipated
+	- The other half is _kinetic energy_, which is _dissipated_ in the _boundary layer_ on the surface, or absorbed into the black hole
+
+- For $R\gg R_{*}$:
+$$F_\text{diss}=\frac{3GM\dot{m}}{4\pi R^{3}}$$
+- From loss of gravitational energy loss in an annulus, there is a _factor of_ $3$ _missing_
+	- Factor from _transport of momentum by viscous torques_
+
+- If the disk is _optically thick_, the radiation is _thermal_, and the disk is a _black-body_
+	- It radiates from both _top and bottom_
+$$2\sigma T_\text{eff}^{4}=F_\text{diss}$$
+- This gives the _effective temperature_:
+$$T_\text{eff}=\left[ \frac{3GM\dot{m}}{8\pi\sigma R^{3}} \left( 1-\sqrt{ \frac{R_{*}}{R} } \right)\right]^{1/4}$$
+- When _far away_, $T_\text{eff} \propto R^{-3/4}$
+- The radiation emited at _frequency_ $f$:
+$$F_{f}=\int_{R_{*}}^{\infty} \frac{2h}{c^{2}} \frac{f^{3}}{\exp(hf/k_{B}T_{\text{eff}})-1} \, 2\pi R\,dR $$
+
+- Observables from a _steady-state_ disk are _independent_ of $\nu$
+	- Provided it is large enough to provide _momentum transport_
+	- Constraining $\nu$ requires studying _non steady-state_ disks
+# Magneto-hydrodynamics
+- Many astrophysical fluids are _plasmas_, consisting of _charged particles_ influenced by electromagnetic fields
+- Consider _fully ionised_ plasmas
+	- e.g. _hydrogen_, with protons and electrons
+## MHD equations
+### Mass and charge conservation
+- The _proton_ and _electron fluids_ each obey their own _continuity_ equation
+$$\frac{\partial n^{+}}{\partial t}+\nabla\cdot(n^{+}\boldsymbol{u}^{+})=\frac{\partial n^{-}}{\partial t}+\nabla\cdot(n^{-}\boldsymbol{u}^{-})=0$$
+- Define the _total mass density_ and _centre-of-mass velocity_:
+$$\displaylines{\rho=m^{+}n^{+}+m^{-}n^{-} \\ \boldsymbol{u}=\frac{m^{+}n^{+}\boldsymbol{u}^{+}+m^{-}n^{-}\boldsymbol{u}^{-}}{m^{+}n^{+}+m^{-}n^{-}}}$$
+- Then the continuity equation becomes:
+$$\frac{\partial \rho}{\partial t}+\nabla\cdot(\rho \boldsymbol{u})=0$$
+- Similarly, define the _charge density_ and _current density_:
+$$\displaylines{q=n^{+}e^{+}+n^{-}e^{-} \\ \boldsymbol{j}=n^{+}e^{+}\boldsymbol{u}^{+}+n^{-}e^{-}\boldsymbol{u}^{-}}$$
+- Continuity then gives _charge conservation_:
+$$\frac{\partial q}{\partial t}+\nabla\cdot \boldsymbol{j}=0$$
+
+- Treat the plasma _adiabatically_, hence:
+
+
+### Electric and magnetic fields
+- [[Electromagnetism#Maxwell's equations|Maxwell's equations]]:
+$$\displaylines{\nabla\cdot\bm{E}=\frac{q}{\epsilon_0} \\ \nabla\times\bm{E}=-\pd{\bm{B}}{t}\\\nabla\cdot\bm{B}=0\\\nabla\times\bm{B}=\mu_0\bm{j}+\frac{1}{c^{2}}\pd{\bm{E}}{t}}$$
+- Accounting for the _Lorentz force_ in each fluid, and that the pressure gradient _acts differently to each species_:
+$$\begin{align}
+m^{+}n^{+}\left( \frac{\partial \boldsymbol{u}^{+}}{\partial t}+(\boldsymbol{u}\cdot \nabla)\boldsymbol{u}^{+} \right) &= e^{+}n^{+}(\boldsymbol{E}+\boldsymbol{u}^{+}\times \boldsymbol{B})-f^{+}\nabla p \\
+m^{-}n^{-}\left( \frac{\partial \boldsymbol{u}^{-}}{\partial t}+(\boldsymbol{u}\cdot \nabla)\boldsymbol{u}^{-} \right) &= e^{-}n^{-}(\boldsymbol{E}+\boldsymbol{u}^{-}\times \boldsymbol{B})-f^{-}\nabla p
+\end{align}$$
+- Summing these equations gives:
+$$\rho\left( \frac{\partial \boldsymbol{u}}{\partial t}+(\boldsymbol{u}\cdot \nabla)\boldsymbol{u} \right)=q\boldsymbol{E}+\boldsymbol{j}\times \boldsymbol{B}-\nabla p$$
+- From _Ohm's law_, with electrical conductivity $\sigma$:
+$$\boldsymbol{j}=\sigma(\boldsymbol{E}+\boldsymbol{u}\times \boldsymbol{B})$$
+### Simplifcations
+- Consider a _non-relativistic_, _highly conducting_ plasma
+- Suppose it has _length and timescales_ $l$ and $\tau$
+$$\displaylines{\nabla\times \boldsymbol{E}=-\frac{\partial \boldsymbol{B}}{\partial t} \implies \frac{E}{B}\sim \frac{l}{\tau} \sim u\ll c \\ \frac{1}{c^{2}} \frac{|\partial \boldsymbol{E}/\partial t|}{|\nabla\times \boldsymbol{B}|}\sim \frac{u^{2}}{c^{2}} \ll 1 \\ \frac{|q\boldsymbol{E}|}{|\boldsymbol{j}\times \boldsymbol{B}|}\sim \frac{q}{j} \frac{E}{B} \sim \frac{\epsilon_{0}E/l}{B/\mu_{0}l} \frac{E}{B}\sim \frac{u^{2}}{c^{2}}\ll 1}$$
+- The _displacement current_ can be _neglected_
+- The _strength_ of $qE$ also means that _charge neutrality is conserved_
+	- If there is a _charge imbalance_, it will _oscillate_ with the _plasma frequency_
+
+- From neglecting displacement current and taking the _curl_ of Ampere's Law:
+$$\displaylines{\nabla\times(\nabla\times \boldsymbol{B})=-\nabla^{2}\boldsymbol{B}=\mu_{0}\sigma\left( -\frac{\partial \boldsymbol{B}}{\partial t}+\nabla\times(\boldsymbol{u}\times \boldsymbol{B}) \right)}$$
+- For the _limit_ of $\sigma\to \infty$:
+$$\frac{\partial \boldsymbol{B}}{\partial t}\approx \nabla\times(\boldsymbol{u}\times \boldsymbol{B})$$
+- It is _analagous_ to the [[#General flows|Helmholtz equation]]
+- From this analogy, the _magnetic flux_ is _frozen into_ the fluid:
+$$\int_{S} \boldsymbol{B}\cdot \, d\boldsymbol{S}=\text{const.} $$
+
+- From _Ohm's law_ for $\sigma\to \infty$:
+$$\boldsymbol{E}+\boldsymbol{u}\times \boldsymbol{B} \approx 0 \implies \boldsymbol{E}\cdot \boldsymbol{B}=0\;,\; \boldsymbol{E}\perp \boldsymbol{B}$$
+
+- Full set of equations for a _charge neutral, non-relativistic, perfectly conducting plasma_:
+$$\displaylines{\frac{\partial \rho}{\partial t}+\nabla\cdot(\rho \boldsymbol{u})=0 \hspace{1.5cm} \frac{\partial q}{\partial t}+\nabla\cdot \boldsymbol{j}=0 \\ \rho\left( \frac{\partial \boldsymbol{u}}{\partial t}+(\boldsymbol{u}\cdot \nabla)\boldsymbol{u} \right)=q\boldsymbol{E}+\boldsymbol{j}\times \boldsymbol{B}-\nabla p \\ p=K\rho^{\gamma} \\ \\ \nabla\cdot \boldsymbol{B}=0 \\ \frac{\partial \boldsymbol{B}}{\partial t}=\nabla\times(\boldsymbol{u}\times \boldsymbol{B}) \\ \nabla\times \boldsymbol{B}=\mu_{0}\boldsymbol{j}}$$
+## Magnetic forces
+- The _magnetic force density_ from the above equations, using _vector identities_:
+$$\boldsymbol{f}_\text{mag}=\boldsymbol{j}\times \boldsymbol{B}=\frac{1}{\mu_{0}}\left[ -\nabla\left( \frac{B^{2}}{2} \right) +(\boldsymbol{B}\cdot \nabla)\boldsymbol{B} \right]$$
+- The first term is the _magnetic pressure_
+- The second term is the _magnetic tension_ term
+	- Vanishes for _straight field lines_
+
+## Waves in plasma
+- Consider a perturbation in a _static plasma_ $(\boldsymbol{u}_{0}=0)$ with intially _uniform_ density $\rho_{0}$, pressure $p_{0}$, and _magnetic field_ $\boldsymbol{B}_{0}$
+
+- Introducing _perturbations_ to the ideal MHD equations and _linearising_: 
+$$\displaylines{\frac{\partial\delta \rho}{\partial t}+\rho_{0}\nabla\cdot(\delta \boldsymbol{u})=0\\ \rho_{0}\frac{\partial \delta\boldsymbol{u}}{\partial t}=\frac{1}{\mu_{0}}(\nabla\times \delta B)\times \boldsymbol{B}_{0}-c_{s}^{2}\nabla (\delta \rho)  \\ \nabla\cdot \delta\boldsymbol{B}=0 \\ \frac{\partial\delta \boldsymbol{B}}{\partial t}=\nabla\times(\delta\boldsymbol{u}\times \boldsymbol{B}_{0}) =-\boldsymbol{B}_{0}(\nabla\cdot\delta \boldsymbol{u})+(\boldsymbol{B}_{0}\cdot \nabla)\delta \boldsymbol{u}}$$
+- Use the _plane wave form_ for perturbations:
+$$\delta \rho=\delta \rho_{1}\exp[i(\boldsymbol{k}\cdot \boldsymbol{r}-\omega t)]\dots$$
+- From the above equations:
+$$\displaylines{\omega\delta \rho=\rho_{0}\boldsymbol{k}\cdot\delta \boldsymbol{u} \\ \omega \rho_{0}\delta \boldsymbol{u}=\frac{1}{\mu_{0}}[(\boldsymbol{B}_{0}\cdot\delta \boldsymbol{B})\boldsymbol{k}-(\boldsymbol{B}_{0}\cdot \boldsymbol{k})\delta \boldsymbol{B}]+c_{s}^{2}\delta \rho \boldsymbol{k} \\ \omega\delta \boldsymbol{B}=\boldsymbol{B}_{0}(\boldsymbol{k}\cdot\delta \boldsymbol{u})-(\boldsymbol{B}_{0}\cdot \boldsymbol{k})\delta \boldsymbol{u}}$$
+
+### Orthogonal to magnetic field
+- The special case $\boldsymbol{k}\perp \boldsymbol{B}_{0}$:
+$$\displaylines{\omega\delta \rho=\rho_{0}\boldsymbol{k}\cdot\delta \boldsymbol{u} \\ \omega \rho_{0}\delta \boldsymbol{u}=\frac{1}{\mu_{0}}(\boldsymbol{B}_{0}\cdot\delta \boldsymbol{B})\boldsymbol{k}+c_{s}^{2}\delta \rho \boldsymbol{k} \\ \omega\delta \boldsymbol{B}=\boldsymbol{B}_{0}(\boldsymbol{k}\cdot\delta \boldsymbol{u})}$$
+- $\delta \boldsymbol{u}$ is _parallel_ to $\boldsymbol{k}$, giving _longitudinal modes_
+- Eliminating $\delta \rho$ and $\delta \boldsymbol{B}$:
+$$\omega^{2}\rho_{0}\delta \boldsymbol{u}=\frac{1}{\mu_{0}}B_{0}^{2}(\boldsymbol{k}\cdot\delta \boldsymbol{u})\boldsymbol{k}+c_{s}^{2}\rho_{0}(\boldsymbol{k}\cdot\delta \boldsymbol{u})\boldsymbol{k}$$
+- Taking a dot product with $\boldsymbol{k}$:
+$$\omega^{2}=(c_{s}^{2}+v_{A}^{2})k^{2}$$
+- The _Alfven speed_:
+$$v_{A}^{2}=\frac{B_{0}^{2}}{\mu_{0}\rho_{0}}$$
+- The longitudinal waves are _dispersion free_ with phase speed $\sqrt{ c_{s}^{2}+v_{A}^{2} }$
+	- Driven by both _gas pressure_ and _magnetic force_
+- These are _fast magnetosonic waves_
+![[Fast magnetosonic waves.png]]
+
+### Parallel to magnetic field
+- The special case $\boldsymbol{k}//\boldsymbol{B}_{0}$
+$$\displaylines{\omega\delta \rho=\rho_{0}\boldsymbol{k}\cdot\delta \boldsymbol{u} \\ \omega \rho_{0}\delta \boldsymbol{u}=-\frac{1}{\mu_{0}}(\boldsymbol{B}_{0}\cdot \boldsymbol{k})\delta \boldsymbol{B}+c_{s}^{2}\delta \rho \boldsymbol{k} \\ \omega\delta \boldsymbol{B}=\boldsymbol{B}_{0}(\boldsymbol{k}\cdot\delta \boldsymbol{u})-(\boldsymbol{B}_{0}\cdot \boldsymbol{k})\delta \boldsymbol{u}}$$
+- Eliminating $\delta \rho$ and $\delta \boldsymbol{B}$:
+$$\omega^{2}\rho_{0}\delta \boldsymbol{u}=\frac{1}{\mu_{0}}\left[B_{0}^{2}k^{2}\delta \boldsymbol{u}-(\boldsymbol{B}_{0}\cdot\delta \boldsymbol{u})B_{0}k\boldsymbol{k}\right]+c_{s}^{2}\rho_{0}(\boldsymbol{k}\cdot\delta \boldsymbol{u})\boldsymbol{k}$$
+- This has both _longitudinal and transverse modes_
+
+- For the _longitudinal mode_, taking the _dot product_ with $\boldsymbol{k}$:
+$$\omega^{2}=c_{s}^{2}k^{2}$$
+- As $\delta \boldsymbol{u} / /\boldsymbol{B}_{0}$, the _magnetic field does not affect_ the motion
+![[Magnetic longitudinal waves.png]]
+
+- For the _transverse mode_, taking the _cross product_ with $\boldsymbol{k}$:
+$$\omega^{2}=v_{A}^{2}k^{2}$$
+- They are _transverse magnetic waves_ due to _magnetic tension_
+- Known as _Alfven waves_
+![[Alfven waves.png]]
+
+## Instabilities in plasma
+- Consider the [[#Rayleigh-Taylor and Kelvin-Helmholtz instability|Rayleigh-Taylor instability]] with a magnetic field _parallel to the interface_:
+![[RT instability with magnetic field.png]]
+- The new dispersion relation:
+$$\omega^{2}=-kg\frac{\rho_{1}-\rho_{2}}{\rho_{1}+\rho_{2}}+\frac{2}{\mu_{0}}\frac{(\boldsymbol{k}\cdot \boldsymbol{B})^{2}}{\rho_{1}+\rho_{2}}$$
+- For a _sufficiently small wavelength_, the configuration is _stable_
+- It gives _Alfven waves_
+
+- Magnetic tension _stabilises_ R-T instabilities
+
+## Magnetorotational instability
+- Consider plasma _in orbit_ around a massive body
+	- Example: _accretion disks_
+- Consider a small _patch_ of fluid at $R=R_{0}$, in the _co-rotating reference frame_
+	- Let $\hat{\boldsymbol{z}}$ point _upwards_ and $\hat{\boldsymbol{x}}$ point _outwards_
+
+- In the _Lagrangian picture_, with _centrifugal and Coriolis_ forces and _gravity_:
+$$\frac{D\boldsymbol{u}}{Dt}=- \frac{1}{\rho}\nabla p+\frac{1}{\rho\mu_{0}}(\nabla\times \boldsymbol{B})\times \boldsymbol{B}+2\boldsymbol{u}\times \boldsymbol{\Omega}-\boldsymbol{\Omega}\times(\boldsymbol{\Omega}\times \boldsymbol{r})-R\Omega^{2}\hat{\boldsymbol{R}}$$
+- Assume the flow is _cold_ such that _pressure forces are insignificant_
+- Introducing _plane wave perturbations_:
+$$-i\omega\Delta \boldsymbol{u}-2\Delta \boldsymbol{u}\times \boldsymbol{\Omega}=\frac{i}{\mu_{0}\rho}B_{0}k\Delta \boldsymbol{B}-\Delta xR\frac{d\Omega^{2}}{dR}\hat{\boldsymbol{R}}$$
+- Where:
+$$\frac{D\Delta x}{Dt}=\Delta u_{x}\implies \Delta x=\frac{i\Delta u_{x}}{\omega}$$
+
+- From electromagnetic induction:
+$$\Delta \boldsymbol{B}=-\frac{kB_{0}}{\omega}\Delta \boldsymbol{u}$$
+- Combining all of the above in terms of $\Delta u_{x}$ and $\Delta u_{y}$, writing in _matrix form_:
+$$\begin{vmatrix}
+\omega^{2}-(kv_{A})^{2}-\frac{d\Omega^{2}}{d(\ln R)} & -2i\omega\Omega  \\
+2i\omega\Omega & \omega^{2}-(kv_{A})^{2}
+\end{vmatrix}=0$$
+- _Without magnetic forces_, $v_{A}=0$
+$$\omega^{2}=4\Omega^{2}+\frac{d\Omega^{2}}{d\ln R}=\frac{1}{R^{3}} \frac{d}{dR}(R^{4}\Omega^{2})\equiv\kappa_{R}^{2}$$
+- For a _Keplerian profile_, $\omega^{2}=\Omega^{2}$
+- As long as $d(R^{4}\Omega^{2})/dR>0$, the fluid _oscillates_ with frequency $\kappa_{R}$
+
+- With _magnetic forces_, the _instability_ occurs when:
+$$(kv_{A})^{2}+\frac{d\Omega^{2}}{d\ln R}<0$$
+- This is the _magnetorotational instability_ (MRI)
+- For _weak_ $B$ or _long wavelength_, MRI occurs when $\Omega$ _decreases_ with radius
+
+- Magnetic tension _stabilises_ modes with $k>k_\text{crit}$:
+$$(k_\text{crit}v_{A})^{2}<-\frac{d\Omega^{2}}{d\ln R}$$
+- For _Keplerian_ orbits, $(k_\text{crit}v_{A})^{2}=3\Omega^{2}$
+- The _fastest growing_ mode has $|\omega _\text{max}|=3\Omega/2$ and $k_\text{max}v_{A}=\Omega$
+
+- The growth rate is _independent of magnetic field_
+- When $B_{0}\to 0$, $k_\text{max}\to \infty$, so _finite_ viscosity and conductivity will _"kill" the MRI_
+- MRI is responsible for [[#Viscous evolution equations in accretion disks|momentum transport in accretion disks]]

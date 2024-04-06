@@ -1616,6 +1616,7 @@ $$\Omega-1=\frac{\kappa}{H^{2}a^{2}}$$
 - Hence, the density parameter gives the _curvature_ of the universe
 ## Redshifts and distances
 - For the FRW metric, there are _no timelike Killing tensors_
+	- Therefore, the method from the [[#Gravitational redshift|Schwarzchild metric]] does not apply
 - However, there is a [[#Killing vectors and tensors, Killing's equation|Killing tensor]]
 
 ### Conserved quantity
@@ -1629,6 +1630,10 @@ $$|\boldsymbol{V}|=\sqrt{ V_{i}V^{i}}=\frac{K}{a}$$
 - Hence, the particle _slows down_ with respect to the _co-moving observer_
 	- A _gas_ of particles with _initially high_ relative velocities that _cools down_ eventually
 
+- Alternatively, use the [[#Alternate form of geodesic equation|alternate form]] of the geodesic equation:
+$$\frac{d^2x_\mu}{d\tau^2}=\frac{1}{2}\partial_\mu g_{\nu\lambda}\frac{dx^\nu}{d\tau}\frac{dx^\lambda}{d\tau}$$
+- For a particle travelling _radially_:
+$$p_{\mu}=(p_{0},p_{1},0,0) \implies p_{1}=\text{const.}$$
 ### Cosmological redshift
 - For _null geodesics_, where $V_{\mu}V^{\mu}=0$:
 $$U_{\mu}V^{\mu}=-\frac{K}{a}$$
@@ -1642,6 +1647,8 @@ $$z_\text{em}=\frac{\lambda _\text{obs}-\lambda _\text{em}}{\lambda _\text{em}}$
 $$a_\text{em}=\frac{1}{1+z_\text{em}}$$
 - This is _due to spatial expansion_ instead of relative velocities
 
+- Alternatively, considering that $p_{1}$ is _constant_ for radial motion, for a _null geodesic_:
+$$p_{0}=\frac{p_1}{a}=U_{\mu}V^{\mu}\implies p_{0}a=\omega a=\text{const.}$$
 ### Distances and Hubble's Law
 - If one observes objects over distances that are _small_ compared to _Hubble length_ $H_{0}^{-1}$ and _radius of spatial curvature_ $\kappa^{-1/2}$, expansion _is observed as a set of objects moving apart from each other_
 	- Leads to observations similar to the _conventional Doppler effect_:

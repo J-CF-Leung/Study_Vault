@@ -16,7 +16,7 @@ $$\rho=\sum_{i} p_{i}\ket{\psi_{i}} \bra{\psi_{i}} $$
 - Consider the quantity:
 	- Order is insignificant as the _trace_ is _cyclic_
 $$\mathrm{Tr}(A\rho)=\sum_{i,j}p_{i}\braket{ \psi_{j} | A |\psi_{i}}\braket{ \psi_{i} |\psi_{j}  }=\sum_{j}p_{j}\braket{ \psi_{j}|A |\psi_{j}  }  =\overline{\left<A\right>} $$
-
+- Therefore, the _classical average_ of a quantity $A$ is given by $\mathrm{Tr}(A\rho)$
 ## Properties
 - From its definition, $\rho$ is _Hermitian_:
 $$\rho=\rho ^{\dagger}$$

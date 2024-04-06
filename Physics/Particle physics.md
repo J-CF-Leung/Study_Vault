@@ -1116,7 +1116,8 @@ $$\hat{\mu}_\text{baryon}=\frac{q_{1}}{m_{1}} \hat{S}_{1z}+ \frac{q_{2}}{m_{2}} 
 - There is _no propagator_
 - The coupling strength is given by the _Fermi constant_ $G_{F}$
 	- $G_{F}=1.166\times 10^{-5}\,\text{GeV}^{-2}$
-
+- As the transition involves the _singlet states_, and _triplet states_:
+$$|M_{fi}|^{2}=4(G_{F}^{2})$$
 
 - Example: beta decay
 ![[Fermi theory decay.png]]
@@ -1197,6 +1198,8 @@ $$\frac{1}{2}\left[ 1\mp \frac{v}{c} \right]\;\text{ for leptons} \hspace{1cm}\f
 
 ![[Weak vertices examples.png]]
 
+- There are possible _triple/quadruple gauge vertices_:
+![[Triple gauge vertices weak.png]]
 ### Muon decay
 - The _electromagnetic decay_ $\ce{ \mu- -> e- \gamma }$ is _impossible_
 	- Electromagnetic interaction _cannot change flavour_

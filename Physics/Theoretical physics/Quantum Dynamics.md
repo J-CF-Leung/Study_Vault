@@ -357,10 +357,15 @@ $$\boldsymbol{A}_{\pm}=\pm \frac{\cot\theta}{2h_{0}} \hat{\phi}$$
 - The associated _Berry curvature_:
 $$\boldsymbol{B}_{\pm}(\boldsymbol{H})=\nabla_{\boldsymbol{H}}\times \boldsymbol{A}_{\pm}=\mp \frac{\hat{\boldsymbol{n}}}{2h_{0}^{2}}$$
 - This corresponds to a _magnetic monopole_ of charge $\mp 1/2$ at the _origin_
-- Also _gauge invariant_
+	- Also _gauge invariant_
 
 - From this, for a _closed path_, the Berry phase is _half the solid angle $\Omega$ enclosed_:
 $$\gamma_{\pm}(\mathcal{C})=\iint \boldsymbol{B}_{\pm}\cdot d\boldsymbol{S}=\mp \frac{\Omega}{2}$$
+
+- When integrating over the _whole surface_, one gets $\mp 2\pi$
+	- For a _spin_$-s$ particle, one gets $4\pi s$
+	- This is from the _Chern theorem_
+	- Indicates the space is _topologically non-trivial_
 ## Berry phase in crystalline systems
 - The _energy bands_ in a 2D material live in $k-$space
 - _Periodicity_ in $k_{x}$ and $k_{y}$ gives a _torus_

@@ -97,6 +97,13 @@ $$\gamma= \oint_{-\pi/a}^{\pi/a} \braket{ u_{k}|i\partial_{k} |u_{k}  } \,dk$$
 ## Topology
 - _Cohomology_: what quantities (integrals over path/surface) are _invariant to smooth changes of path_, but are _sensitive to topology_
 - _Homotopy_: an _equivalence relation_, which states that curves/surfaces are _homotopic_ if they can be _smoothly distorted_ into each other
+
+## Chern Theorem
+$$\oint \Omega_{\mu \nu}\cdot ds_{\mu}\times ds_{\nu}=2\pi C$$
+- $C$ is the _Chern number_
+- If it is _zero_, the space has _trivial topology_
+	- One can have a _smooth gauge everywhere_
+- If it is _non-zero_, there is a _topological obstruction_ that stops there from being a _smooth gauge_
 # Why is topology important?
 - (Ando, 2013)
 
@@ -153,6 +160,12 @@ $$\sigma_{xy}=\frac{I_{x}}{V_{y}}=\nu\frac{e^{2}}{h}$$
 - Magnetic field in the $z-$direction
 - Calculate $\sigma$ using _Heisenberg's equation of motion_ to determine $\left<j\right>_{x}$
 
+- Bulk band structure: _Landau levels_
+	- Unit cells are defined as areas enclosing a _flux quantum_, such that Bloch's theorem applies and $\boldsymbol{k}$ is a good quantum number
+- Explanation of _edge states_: _boundary_ between two topologically distinct states
+	- Cited in Kane and Bernevig
+
+- Over entire band structure: Chern number 0?
 # Z2 topological invariant
 - Time-reversal symmetry often given by _spin-orbit interaction_
 
@@ -176,11 +189,30 @@ $$\sigma_{xy}=\frac{I_{x}}{V_{y}}=\nu\frac{e^{2}}{h}$$
 - However, as both $\boldsymbol{L}$ and $\boldsymbol{S}$ are _odd_ under time reversal, the interaction is _even_
 - It can also _very on the scale of a unit cell_
 
+- The _charge current_ is cancelled out, but there is a _spin current_
+
+- Kramers pairs _cannot mix_ (why?)
+- For an _even number_ of Kramers pairs, _time-reversal-invariant backscattering_ will go to _zero_ pairs
+- First TI!
+
 ## Inversion symmetry
 
-# BHZ model
-- Motivated by the $\ce{ CdTe/HgTe/CdTe }$ quantum well, where the $s-$ and $p-$bands _invert_ at $\boldsymbol{k}=0$
+# 3D topological insulators
+- Experimental techniques for surface state: ARPES
+	- First: $\ce{ Bi }_{1-x}\ce{ Sb }_{x}$
+	- _Spin sensitivity_: distribution of spin orientations on Fermi surface
+- Surface states _cannot be reduced_ into a _quantum spin Hall state_
+	- Spin and linear momentum are _locked_ (1 to 1)
+	- 2D Fermi surface carries a _non-trivial_ Berry's phase $(\pi)$
+	- _Odd number_ of states carrying non-trivial Berry's phase
 
+- A layered QSH insulator is a _weak 3D TI_
+	- Even number of Dirac cones, net Berry phase of $0$ or $2\pi$
+	- Not robust against disorder
+
+- 4 $\mathbb{Z}_{2}$ invariants $(\nu_{0};\nu_{1}\nu_{2}\nu_{3})$
+	- 4 Dirac points at the TRIM $\Gamma_{1},\Gamma_{2},\Gamma_{3},\Gamma_{4}$
+	- Depending on how they are _connected_ by surface states (even or odd), it may be a _weak_ or _strong_ TI
 # Types of topological materials
 
 ## 2D Materials
@@ -194,7 +226,31 @@ $$\sigma_{xy}=\frac{I_{x}}{V_{y}}=\nu\frac{e^{2}}{h}$$
 	- Two-component Dirac equation
 - When TRS is broken in an _inversion-symmetric_ solid
 - Weyl points come in _pairs_
+	- A _source_ and _sink_ of Berry curvature
+	- Nielsen-Ninomiya theorem
 - They give rise to an _arc of zero-energy excitation_ (Fermi arc) in the projected surface BZ
+	- Another example of _bulk-boundary correspondence_
+
+- Dirac point: two Weyl points
+
+- Existence of degeneracies: only in 3 dimensions, with either $\mathcal{P}$ or $\mathcal{T}$ broken
+- Then describes by _generic Hamiltonian_:
+$$H(\boldsymbol{k})=f_{0}(\boldsymbol{k})\mathbb{I}+f_{1}(\boldsymbol{k})\sigma_{1}+f_{2}(\boldsymbol{k})\sigma_{2}+f_{3}(\boldsymbol{k})\sigma_{3}$$
+- Around the degeneracy, _Taylor expand_
 
 # New developments in theory
 - Multi-band braiding? (Euler class instead of Berry flux)
+	- Example: ZrTe
+
+
+Order: 
+- Introduction
+- TIs --> Weyl -- > Multi-band
+- (Only what is needed for final part)
+
+
+Scientific content (explanation) + how "well"? (how it was done, what was reviwed, etc.) + report + viva
+
+20-40 papers
+
+Important papers: bring up to date (last year-ish)

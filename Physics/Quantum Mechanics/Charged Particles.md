@@ -73,7 +73,7 @@ $$\psi_{D,\chi}=\psi_{A,0}\exp\left[i\frac{q}{\hbar}\int_A\bm{A}(\bm{s})\cdot d\
 - As $A-B$ is a _loop_ around the solenoid:
 $$|\psi_{D,\chi}|^2=\left|\psi_{A,0}\exp\left[i\frac{q\Phi}{\hbar}\right]+\psi_{B,0}\right|^2$$
 - This effect on the interference pattern is _detectable_
-- Physical reasoning: the potential affects the _phase_ of each beam
+	- Physical reasoning: the potential affects the _phase_ of each beam
 - The total _phase difference_ $\delta$:
 $$|\delta|=\frac{e\Phi}{\hbar}=2\pi\frac{\Phi}{\Phi_0}\hspace{1.5cm}\Phi_0\equiv\frac{h}{e}\approx 4.1\times 10^{-15}\,\text{T m}^2$$
 - $\Phi_0$ is the _flux quantum_

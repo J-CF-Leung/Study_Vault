@@ -380,7 +380,8 @@ $$\vec{a}=(\gamma^4|\bm{v}||\bm{a}|,\gamma^4|\bm{v}||\bm{a}|\bm{v}+\gamma^2\bm{a
 - One can _verify_ that $\vec{v}\cdot\vec{a}=0$
 	- Still a _component-free_ result
 
-- One can _transform_ to the instantaneous rest frame of the particle to get the _proper acceleration_ $\bm{\alpha}$
+- One can _transform_ to the instantaneous rest frame of the particle to get the _proper acceleration_ $\bm{\alpha}$, where:
+$$a^{\mu}=(0,\boldsymbol{\alpha})$$
 
 - Given that a frame $\{\vec{e}_\bar\mu\}$ has some _acceleration_ $a(t)$ as observed by $\{\vec{e}_\alpha\}$, and $v(t=0)=0$, the _rapidity_ of the Lorentz transformation is given by:
 $$\psi=\int a(t)\,dt$$

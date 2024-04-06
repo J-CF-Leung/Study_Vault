@@ -254,6 +254,8 @@ $$\displaylines{\hat{P}\ket{nlm}=(-1)^l\ket{nlm} \\ \braket{n_1l_1m_1|\hat{\bm{r
 - The _electromagnetic_ and _strong_ forces are _invariant under parity_: $[\hat{H}_\text{EM},\hat{P}]=0$
 - The _weak force_ is not parity-invariant
 
+# Lattice translation
+- [[Solids#Bloch's Theorem|Bloch's Theorem]]
 # Time reversal symmetry
 
 ## Kramers degeneracy

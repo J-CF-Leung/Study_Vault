@@ -1,4 +1,5 @@
-
+- [ ] Antennae ⏫📅 2024-03-22 
+- [x] Wtf is spatial coherence anyway ⏫ 📅 2024-03-22 ✅ 2024-03-23
 # Electrodynamics and Maxwell's Equations
 
 ## Fields and charges
@@ -174,7 +175,7 @@ $$\displaylines{\text{General elliptical polarisation:}\pmatrix{a\\ b\exp(i\delt
 - Example: combine _right-handed_ and _left-handed_ polarisations:
 $$\frac{1}{\sqrt{2}}\pmatrix{1\\i}+\frac{1}{\sqrt{2}}\pmatrix{1\\-i}=\sqrt{2}\pmatrix{1\\0}$$
 
-## Anisotropic media
+## Anisotropic media and Jones matrices
 - A _dichroic material_ will _absorb_ light polarised in _one direction more than others_
 	- A _wire grid_ will absorb electric fields _parallel_ to the wires due to _energy dissipation_
 	- Typical _polaroid films_ have _aligned conducting polymeric chains_
@@ -399,6 +400,7 @@ $$\alpha=\frac{I_\text{pol}}{I_\text{pol}+I_\text{unpol}}$$
 ## Coherence
 - For simplicity, consider _scalar_ waves
 - Interference relies on a _well-defined phase difference_ between the wavelets, such that there is a well-defined sum
+	- Then given $f(\boldsymbol{r}_{1},t_{1})$, one can _deduce_ $f(\boldsymbol{r}_{2},t_{2})$ given the wave is _coherent_ in that region
 - This can only be true for _purely monochromatic waves_
 
 - From _Fourier analysis_, purely monochromatic waves must have _infinite spatial and temporal extent_
@@ -568,7 +570,7 @@ $$\gamma(\tau)=\frac{\Gamma(\tau)}{I_{0}}$$
 $$I(\tau)=2I_{0}+2\mathrm{Re}[\Gamma(\tau)]$$
 - This gives _fringes_, which have _visibility_:
 $$V(\tau)=\frac{I_\text{max}-I_\text{min}}{I_\text{max}+I_\text{min}}=|\gamma(\tau)|$$
-- Then from the _Wiener-Kinchine Theorem_, the _power spectrum_:
+- Then from the [[#Auto-correlation|Wiener-Kinchine Theorem]], the _power spectrum_:
 $$P(\omega)=\text{FT}[\gamma(\tau))]$$
 
 ### Gaussian power spectrum
@@ -623,7 +625,7 @@ $$k(\rho_1+r_1-\rho_2-r_2)= kd(\sin\theta+\sin\chi)\approx kd\left(\frac{x}{L}+\
 $$\psi(y)\sim\sqrt{I(x)}\exp[ik(\rho+R)](e^{iks}+e^{-iks})=2\sqrt{I(x)}\exp[ik(\rho+R)]\cos(ks)$$
 
 - If the extended source is _incoherent_ (beams from different points are _uncorrelated_), then the _net intensity as a function of $d$_ is obtained by _summing intensities_:
-$$\begin{aligned}I_y(d)&=\int |\psi(y)|^2\,dx=4\int I(x)\cos^2(2ks)\,dx \\ &=2I_0+2\Re\left[\exp(-ikdy/D)\int I(x)\exp(-ikdx/L)\,dx\right]\end{aligned}$$
+$$\begin{aligned}I_y(d)&=\int |\psi(y)|^2\,dx=4\int I(x)\cos^2(ks)\,dx \\ &=2I_0+2\Re\left[\exp(-ikdy/D)\int I(x)\exp(-ikdx/L)\,dx\right]\end{aligned}$$
 - This is similar to the form from [[#Temporal coherence|division of amplitude]] for investigating temporal coherence
 
 - Then by _changing variables_, with $x=L\theta$, $y=d\chi$, and $I(x)\,dx=I(\theta)\,d\theta$, with $kd=u$:
@@ -635,16 +637,16 @@ $$\displaylines{\gamma(u)=\frac{1}{I_0}\int I(\theta)\,\exp(-iu\theta)\,d\theta=
 - There is some _offset_ $\beta$, determined by the _angular profile_ $I(\theta)$
 
 
-- For a _symmetric source profile_ (about the axis):
+- For a _symmetric source profile_ (about the axis), $\gamma (u)$ is _real_ and:
 $$\beta=\begin{cases}0&\gamma(u)>0 \\ \pi&\gamma(u)<0\end{cases}$$
-- The _visibility_ of the fringes is defined by:
-$$V=\gamma(u=kd)$$
+- The _visibility_ of the fringes is then:
+$$V=\gamma(u\equiv kd)$$
 - It can be _negative_ (if a minimum occurs where a _maximum_ is expected)
 
 ### Degree of lateral coherence
 - The visibility gives the _intensity profile_ of the source 
 - Define $\gamma(u)$ as the _degree of lateral coherence_:
-$$\gamma(u)=\frac{\mathcal{F}[I(\theta)]}{I_{0}}$$
+$$\gamma(u)\equiv\gamma(kd)=\frac{\mathcal{F}[I(\theta)]}{I_{0}}$$
 - The _van Cittert-Zernike theorem_ states that the degree of lateral coherence is the _normalised Fourier transform of the intensity profile_
 
 - $\gamma(u)$ is determined by the _slit separation_ $d$, and can be used to define a _coherence width_
@@ -677,6 +679,8 @@ $$\gamma(u)=\frac{2J_1(u\alpha/2)}{u\alpha/2}\longrightarrow w_c=\frac{1.22\lamb
 $$w_c\sim\frac{\lambda}{\alpha}\sim5\times 10^{-5}\,\text{m}\hspace{1.5cm} l_c\sim\frac{\lambda^2}{\delta\lambda}\sim 500\,\text{nm}$$
 - These are _very small scales_ when compared to every day objects
 - Hence, one needs _filtered light_ to make measurements
+
+### Michelson interferometer
 
 # Electrodynamics
 - A _conservative field_, such as the _electrostatic_ one, is described by a _scalar potential_ $\phi$:
@@ -948,7 +952,7 @@ $$\left<P\right>^{\text{EQ}}=\frac{\mu_{0}\omega^{6}}{1440\pi c^{3}} \sum_{\alph
 
 - The _oscillating lateral quadrupole_
 - The power distribution is _no longer cylindrically symmetric_
-- There is _no power emitted along_
+- There is _no power emitted along_ 
 
 # Antennas
 - Antennas are devices designed to _emit or receive EM waves_
@@ -958,20 +962,21 @@ $$\left<P\right>^{\text{EQ}}=\frac{\mu_{0}\omega^{6}}{1440\pi c^{3}} \sum_{\alph
 - Any antenna will _lose energy_ from whatever circuit it is _drawing power_ from
 - This is reflected as a _radiation resistance_ $R_r$
 $$R_r\equiv\mean{P}/\mean{I^2}=\mean{V^2}/\mean{P}$$
-- For [[#The Hertzian electric dipole]]:
-$$\displaylines{\mean{P}= \\ R_r=}$$
+- For [[#Power radiated|the Hertzian electric dipole]] with $\dot{p}=Id$
+$$\displaylines{\mean{P}=\frac{\mu_0\omega^4p_0^2}{12\pi c}=\frac{\mu_{0}\omega^{2}\langle \dot{p}^{2} \rangle}{6\pi c}  \\ R_r=\frac{\mu_{0}\omega^{2}}{6\pi c}d^{2}=\frac{2\pi}{c}Z_{0}\left( \frac{d}{\lambda} \right)^{2}}$$
+- This is valid for $d\ll\lambda$ (approximation usually made for Hertzian dipole)
 
-- The _power gain_ $G(\theta,\phi)$ quantifies the _directionality_ of the emitred radiation:
-$$G(\theta,\phi)=$$
+- The _power gain_ $G(\theta,\phi)$ quantifies the _directionality_ of the emitted radiation:
+$$G(\theta,\phi)=\frac{N(\theta,\phi)}{(4\pi)^{-1}\int N \, d\Omega }$$
 
 - For the Hertzian dipole:
-
+$$G^{\text{ED}}(\theta,\phi)=\frac{3}{2}\sin^{2}\theta$$
 ## As receivers
 - When there is an _incident EM wave_, it induces a _voltage_
 - It can be treated as a _generator_ with voltage $V$ and _internal resistance_ $R_r$
-
-- Its _performance_ is quantified by the _power deluvered to the load_ $R_\text{load}$
-$$\displaylines{\mean{P}_\text{tot} \\ \mean{P}_\text{load}}$$
+![[Antenna receiver circuit.png]]
+- Its _performance_ is quantified by the _power delivered to the load_ $R_\text{load}$
+$$\displaylines{\mean{P}_\text{tot}=(R_{r}+R_\text{load})\langle I^{2} \rangle  \\ \mean{P}_\text{load}}$$
 - $\mean{P}_\text{load}$ is maximised for a _matched load_ $R_\text{load}=R_r$
 
 - The _effective area_ of the antenna, or the _absorption cross-section_ is:
