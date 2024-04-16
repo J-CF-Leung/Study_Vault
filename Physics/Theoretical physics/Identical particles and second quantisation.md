@@ -286,7 +286,7 @@ $$\left<H_\text{int}\right>= \frac{1}{2} \int d\boldsymbol{r} \, d\boldsymbol{r}
 $$\begin{align}
 H= &\int  \, d\boldsymbol{r}\left[ \frac{\hbar^{2}}{2m}\nabla\psi ^{\dagger}(\boldsymbol{r})\cdot\nabla\psi(\boldsymbol{r})+V(\boldsymbol{r})\psi ^{\dagger}(\boldsymbol{r})\psi(\boldsymbol{r}) \right] \\ &+ \frac{1}{2}\int  \, d\boldsymbol{r}\,d\boldsymbol{r}' \psi ^{\dagger}(\boldsymbol{r})\psi ^{\dagger}(\boldsymbol{r}')U(\boldsymbol{r}-\boldsymbol{r}')\psi(\boldsymbol{r}')\psi(\boldsymbol{r})
 \end{align}$$
-## Bose-Hubbard model
+# Bose-Hubbard model
 - Model for a _lattice_, where a particle can _hop_ along the lattice
 $$\hat{H}=-J \sum_{<i,j>} \left( a^{\dagger} _{i}a_{j}+a_{j}^{\dagger}a_{i}\right) +\frac{U}{2} \sum_{i} \hat{n}_{i}\left( \hat{n}_{i}-1 \right)$$
 - There is a _hopping kinetic energy_ and an _interaction term_ depending on _number of particles_ $\hat{n}_{i}=a_{i}^{\dagger}a_{i}$ at the site
@@ -305,59 +305,77 @@ $$a_{i}^{\dagger}=\int \varphi_{i}(x)\psi ^{\dagger}(x) \, dx \hspace{1.5cm}[a_{
 - The _phase transition_ is a function of the _ratio_ $J/U$
 
 ### Bose-Einstein condensation
-- Go to the limit $J\gg U$, the states are approximately _plane waves_ 
+- Go to the limit $J\gg U$, the particles approximately act as _plane waves_ 
+	- Effectively treat $U=0$
 	- _Delocalised_ in real space, localised in momentum space
-- _Plane wave basis_ (from [[#Field operators|change of basis]])
-$$\hat{\tilde{a}}_{k}=\frac{1}{\sqrt{ N }} \sum_{j=1}^{N} \exp(ika_{j}) a_{j}$$
-- Inserting a _delta function_
+- _Plane wave basis_ (a [[#Field operators|change of basis]] from the _localised Wannier states_)
+	- Fourier transform of the Wannier operators
+$$\tilde{a}_{k}=\frac{1}{\sqrt{ N }} \sum_{j=1}^{N} \exp(ikx_{j}) a_{j}$$
+- The hopping from site $i$ to $i+1$:
+$$\sum_{i}a^{\dagger}_{i+1}a_{i}=\frac{1}{N} \sum_{k,k',i} e^{i(k-k')x_{i}} e^{ik\Delta x}a_{k}^{\dagger}a_{k}=\sum_{k}e^{ik\Delta x}a_{k}^{\dagger}a_{k}$$
 
-- The Hamiltonian becomes:
-$$\hat{H}=\sum_{k}\varepsilon_{k}\hat{\tilde{a}}_{k}^{\dagger}\hat{\tilde{a}}_{k}$$
+- Summing over all nearest neighbours, the Hamiltonian becomes:
+$$\displaylines{\hat{H}=\sum_{k}\varepsilon_{k}\hat{\tilde{a}}_{k}^{\dagger}\hat{\tilde{a}}_{k} \\ \varepsilon_{k}=-2J\cos(k\Delta x)}$$
+- It is _diagonal_ in momentum space
+
 - The _dispersion relation_ has a _minimum_
+	- [[#Density-density correlations and Wick's Theorem|Bunching]] leads to _all bosons_ being in the ground state
 - There is a _Bose-Einstein condensate_ formed at that minimum energy
 $$\ket{\psi _\text{BEC}}=\frac{1}{\sqrt{ N! }} \left( \hat{\tilde{a}}^{\dagger}_{k=0} \right)^{N}\ket{\text{VAC}}  $$
-- Consider the [[#Single particle density matrix]]
-- It _plateaus_ into a finite value at $|\boldsymbol{r}-\boldsymbol{r}'| \to \infty$
-- It has _long range order_
-
-$$g(i,j)=\left<a_{i}^{\dagger}a_{j}\right> = \frac{1}{N!} \braket{  |  } $$
+- Consider the [[#Single particle density matrix]] $g(\boldsymbol{r},\boldsymbol{r}')$
+	- It should _plateau_ into a finite value at $|\boldsymbol{r}-\boldsymbol{r}'| \to \infty$
+$$g(i,j)=\left<a_{i}^{\dagger}a_{j}\right> = \frac{1}{N!} \braket{\text{VAC}|(\tilde{a}_{0})^{N}a_i^{\dagger}a_{j}(\tilde{a}_0^{\dagger})^{N}  | \text{VAC} } $$
 - Commutation relations:
-$$\left[ \hat{\tilde{a}}_{i},\hat{\tilde{a}}_{i}^{\dagger} \right]=\frac{1}{\sqrt{ N }} \implies \left[ a_{i} \right]$$
-- This gives $g$ as _constant_ in the limit
-
+$$\left[ a_{i},\tilde{a}_{0}^{\dagger} \right]=\frac{1}{\sqrt{ N }} \implies \left[ a_{i} ,\tilde{a}_{0}^{\dagger}\right]=\sqrt{ N }(\tilde{a}_{0})^{N-1}$$
+- This gives
+$$g(i,j)\to 1$$
+- Unlike _non-degenerate_ gases, where it _falls off_
 ### Mott insulator
 - Go to the limit $J\ll U$
 - Particles are _localised_ in position space
-
 $$\ket{\text{Mott}}= \prod_{i=1}^{N} a_{i}^{\dagger} \ket{\text{VAC}}  $$
+- There is _no long range order_ due to the localisation
 $$g(i,j)=\delta_{ij}=n_{0}$$
-## Bogoliubov Theory
+# Bogoliubov Theory
 - Take the $J\gg U$ limit, then use _perturbation theory_ using the momentum eigenstates
+	- $U$ is still _finite_
 
-- The Hamiltonian:
-$$\hat{H}=\sum_{k}\varepsilon_{k}a_{k}^{\dagger}a_{k} + \frac{U}{2N}\sum_{p,q}$$
+- The Hamiltonian, written entirely in terms of the _plane wave basis_:
+$$\hat{H}=\sum_{k}\varepsilon_{k}a_{k}^{\dagger}a_{k} + \frac{U}{2N}\sum_{p,q} \tilde{a}_{k+q}^{\dagger}\tilde{a}^{\dagger}_{p-q}\tilde{a}_{p}\tilde{a}_{k}$$
+- Use _mean field theory_, with perturbations _about the coherent state_
 - Make a _coherent state_ from the Bose-Einstein condensate:
 $$\ket{\text{BEC}} \propto \exp\left( \sqrt{ N }\hat{\tilde{a}}_{0}^{\dagger} \right)\ket{\text{VAC}}  $$
 - The _particle number_ is _indefinite_, but with an _expectation value_ of $N$
 
-- The Hamiltonian has $U(1)$ _gauge symmetry_
+- The Hamiltonian has $U(1)$ _gauge symmetry_:
+	- The ground state is a _spontaneously broken symmetry_
+$$\ket{\text{BEC}}\propto \exp(\sqrt{ N }\tilde{a}_{0}^{\dagger})\exp(i\theta)\ket{\text{VAC}}  $$
 
-- To make it a _mean field theory_, take an average:
-$$\hat{H}=$$
-- The _Bogoliubov transformation_:
-$$\alpha_{k}=$$
-- Gauge symmetry
-	- Goldstone mode
+- To make it a _mean field theory_, make the perturbative term _quadratic_ by taking an average, and neglecting higher order terms:
+$$\hat{H}=\sum_{k}\varepsilon_{k}a_{k}^{\dagger}a_{k}+\frac{U}{2N}\sum_{k}a_{k}a_{-k}+a_{k}^{\dagger}a_{-k}^{\dagger}$$
+- Given a Hamiltonian of the form below, use the _Bogoliubov transformation_:
+	- It _retains commutation relations_
+$$\displaylines{h=\epsilon[a_{1}^{\dagger}a_{1}+a_{2}^{\dagger}a_{2}]+\delta[a_{1}^{\dagger}a_{2}^{\dagger}+a_{1}a_{2}] \\\alpha_{1}=a_{1}\cosh\kappa-a_{2}^{\dagger}\sinh\kappa \\ \alpha_{2}=a_{2}\cosh\kappa-a_{1}^{\dagger}\sinh\kappa \\ \tanh2\kappa=\frac{\delta}{\epsilon} \hspace{ 1cm}\Omega=\sqrt{ \epsilon^{2}-\delta^{2} } \\ h=\Omega[\alpha_{1}^{\dagger}\alpha_{1}+\alpha_{2}^{\dagger}\alpha_{2}]+(\Omega-\epsilon)}$$
+- In this case, the Hamiltonian has the form:
+$$\displaylines{\hat{H}=\sum\hbar\omega_{k}\alpha_{k}^{\dagger}\alpha_{k} \\ \omega_{k}=\sqrt{ \left( \frac{k^{2}}{2m}+nU_{0} \right)^{2}-(nU_{0})^{2} }}$$
+- This gives _quasi-particles_
+	- They are [[Classical Field Theory#Goldstone's Theorem|Goldstone modes]] due to broken gauge symmetry
 
 ## Interference of Bose-Einstein condensates
 - The wave-function for a _Bose condensate_ of ground state $\varphi_{0}(\boldsymbol{r})$
 $$\ket{\Psi}=\frac{1}{\sqrt{ N! }} \left( a_{0}^{\dagger} \right)^{N} \ket{\text{VAC}}  $$
+- Let there be a Bose-Einstein condensate initially in a _localised trap_
+- Let the trap be _released_, and the condensate has some _momentum distribution_
 
-
-- Let there be a Bose-Einstein condensate initially in a _trap_
-- Let the trap be _released_
-
-- Dispersion: Gaussian
-
-- Long times: linearly growing width
+- The mean density:
+$$\langle \rho(\boldsymbol{r},t) \rangle = N|\varphi_{0}(\boldsymbol{r},t)|^{2}$$
+- Let the state disperse as a _Gaussian_ of initial width $R_{0}$
+	- Initial _momentum distribution_ is a Gaussian of width $\hbar/R_{0}$
+$$\displaylines{\varphi(\boldsymbol{r},t)=\frac{1}{(\pi R_{t}^{2})^{3/4}}\exp\left[ -\frac{|\boldsymbol{r}|^{2}(1-i\hbar t/mR_{0}^{2})}{2R_{t}^{2}} \right] \\ R_{t}^{2}=R_{0}^{2}+\left( \frac{\hbar t}{mR_{0}} \right)^{2}}$$
+- At long times, $R_{t} \sim \hbar t/mR_{0}$, and:
+$$|\varphi(\boldsymbol{r},t\to \infty)|^{2} \propto \exp\left[ -\left( \frac{mR_{0}}{\hbar t}|\boldsymbol{r}| \right)^{2} \right]$$
 ### Double well
+- Let there be two wells separated by displacement $\boldsymbol{d}$
+- Let the condensates in the wells have _relative phase_ $\theta$, and population $N_{L},N_{R}$
+- The initial state:
+$$$$

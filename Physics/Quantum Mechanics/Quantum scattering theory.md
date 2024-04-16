@@ -173,6 +173,7 @@ $$G_{k}^{+}(x,x')=-\frac{im}{\hbar^{2}k}\exp(ik\left| x-x' \right| )$$
 - Let the _incoming wave_ be along the $z-$axis
 - Let it be _scattered_ by angle $\theta$
 - Same ansatz as the Lippmann-Schwinger equation:
+	- Only for $r\to \infty$, where $(\nabla^{2}+k^{2})\Psi_{\boldsymbol{k}}\sim r^{-3}$
 $$\Psi_{k}(\boldsymbol{r})\xrightarrow{r\to \infty}\exp(ikz)+\frac{f(\theta,\phi)}{r}\exp(ikr)$$
 - There is an _outgoing_ scattered wave
 - $f(\theta,\phi)$ is the _scattering amplitude_
@@ -311,7 +312,7 @@ $$h_{l}^{(1)}(\rho)=j_{l}(\rho)+in_{l}(\rho)\hspace{1.5cm}h_{l}^{(2)}(\rho)=[h_{
 $$j_{0}(\rho)=\frac{\sin \rho}{\rho}\hspace{1cm}n_{0}(\rho)=-\frac{\cos \rho}{\rho}\hspace{1cm}h_{0}^{(1)}(\rho )=\frac{\exp(i\rho)}{i\rho}$$
 $$j_{l}(\rho)=(-\rho)^{l}\left( \frac{1}{\rho} \frac{d}{d\rho} \right)^{l}\frac{\sin \rho}{\rho}\hspace{1cm}n_{l}(\rho)=-(-\rho)^{l}\left( \frac{1}{\rho} \frac{d}{d\rho} \right)^{l} \frac{\cos \rho}{\rho}$$
 - Limits at _small_ and _large_ arguments:
-$$\displaylines{j_{l}(\rho)\xrightarrow{\rho\to 0}\frac{\rho^{l}}{(2l+1)!!} \hspace{1.5cm} n_{l}(\rho)\xrightarrow{\rho\to 0} -\frac{(2l-1)!!}{\rho^{l+1}} \\ j_{l}(\rho)\xrightarrow{\rho\to \infty} \frac{1}{\rho}\sin\left( \rho-\frac{l\pi}{2} \right)\hspace{1.5cm}n_{l}(\rho)\xrightarrow{\rho\to \infty} -\frac{1}{\rho}\cos\left( \rho-\frac{l\pi}{2} \right)}$$
+$$\displaylines{j_{l}(\rho)\xrightarrow{\rho\to 0}\frac{\rho^{l}}{(2l+1)!!} \hspace{1.5cm} n_{l}(\rho)\xrightarrow{\rho\to 0} -\frac{(2l-1)!!}{\rho^{l+1}} \\ j_{l}(\rho)\xrightarrow{\rho\to \infty} \frac{1}{\rho}\sin\left( \rho-\frac{l\pi}{2} \right)\hspace{1.5cm}n_{l}(\rho)\xrightarrow{\rho\to \infty} -\frac{1}{\rho}\cos\left( \rho-\frac{l\pi}{2} \right) \\ h_{l}(\rho)\xrightarrow{\rho\to \infty} -\frac{i}{\rho}\exp\left[ i\left( \rho-\frac{l\pi}{2} \right) \right]}$$
 ### Expanding to the plane wave
 - Connect to the formula:
 $$\Psi_{k}(r)=\exp(ikz)+ \frac{f(\theta,\phi)}{r}\exp(ikr)$$
@@ -334,18 +335,6 @@ $$\displaylines{\begin{align}\Psi_{k}(\boldsymbol{r})&=\sum_{l=0}^{\infty} i^{l}
 
 - The phase-shifted wave function can be written in terms of:
 $$\Psi_{k}(\boldsymbol{r})=\sum_{l=0}^{\infty}i^{l}(2l+1)P_{l}(\cos\theta)\exp(i\delta_{l})[j_{l}(kr)\cos\delta_{l}-n_{l}(kr)\sin\delta_{l}]$$
-- The _radial part_ can be expressed as:
-$$R_{l}(kr)=\exp(i\delta_{l})\cos(\delta_{l})[j_{l}(kr)-n_{l}(kr)\tan(\delta_{l})]$$
-- Compare to the [[#Wave function when far away|solution to Schrodinger's equation]] when far away:
-$$R_{l}(kr)=Aj_{l}(kr)+Bn_{l}(kr)$$
-- Comparing:
-$$\tan(\delta_{l})=-\frac{B}{A}$$
-
-- Let the _boundary_ of the potential be $r=a$, and set the wave function in the potential as $Cj_{l}(k'r)$, defining:
-$$\gamma=\frac{R_{l}'(a)}{R_{l}(a)}$$
-- Marching _boundary conditions_, one gets:
-$$\tan\delta_{l}=\frac{kj_{l}'(ka)-\gamma j_{l}(ka)}{kn_{l}'(ka)-\gamma n_{l}(ka)}$$
-- For $k\to 0$, $\delta_{l}$ scales as $k^{2l+1}$
 
 ### Differential cross-section
 - From the form of the wave function, one gets:
@@ -363,9 +352,21 @@ $$\mathrm{Im}[f(\theta=0)]=\frac{1}{k}\sum_{l=0}^{\infty} (2l+1)\sin^{2}\delta_{
 - This connects to the [[#Optical theorem]]
 	- The contribution to the probability density "going through" is _proportional_ to the _total cross-section_
 
-### Example: spherical potentials
-- [[#Finding phase shifts|Radial part]] of the wave-function, _far away_ from the scatterer:
+### Phase shifts
+- The _radial part_ can be expressed as:
 $$R_{l}(kr)=\exp(i\delta_{l})\cos(\delta_{l})[j_{l}(kr)-n_{l}(kr)\tan(\delta_{l})]$$
+- Compare to the [[#Wave function when far away|solution to Schrodinger's equation]] when far away:
+$$R_{l}(kr)=Aj_{l}(kr)+Bn_{l}(kr)$$
+- Comparing:
+$$\tan(\delta_{l})=-\frac{B}{A}$$
+
+- Let the _boundary_ of the potential be $r=a$, and set the wave function in the potential as $Cj_{l}(k'r)$, defining:
+$$\gamma=\frac{R_{l}'(a)}{R_{l}(a)}$$
+- Marching _boundary conditions_, one gets:
+$$\tan\delta_{l}=\frac{kj_{l}'(ka)-\gamma j_{l}(ka)}{kn_{l}'(ka)-\gamma n_{l}(ka)}$$
+- For $k\to 0$, $\delta_{l}$ scales as $k^{2l+1}$
+
+#### Example: spherical potentials
 - The _hard-sphere_ potential:
 $$V(\boldsymbol{r})=\begin{cases}\infty& |\boldsymbol{r}|<a_{\circ} \\ 0 & |\boldsymbol{r}|>a_{\circ}\end{cases} $$
 - The radial part must _vanish_ at the boundary of the potential, giving:
@@ -388,6 +389,9 @@ $$k'^{2}=k^{2}-\frac{2mV_{0}}{\hbar^{2}}\implies k'=\frac{\sqrt{ 2m(E-V_{0}) }}{
 $$\delta_{0}(k)=\arctan\left( \frac{k}{k'}\,\tan k'a_{\circ} \right)-ka_{\circ}$$
 ## Low energy scattering
 - From above, one sees that at _low energies_, the $s-$wave dominates
+	- Unlike the [[#First Born approximation|Born approximation]], where the interaction is _weak_
+	- It is also _isotropic_, unlike the Born approximation
+	- Unlike the Born approximation, it is _not perturbative_ in $V_0$
 
 - Consider the [[#Partial wave analysis|radial equation]] again:
 $$\frac{d^{2}R_{l}}{dr^{2}}+ \frac{2}{r} \frac{dR_{l}}{dr} + \left[ k^{2}- \frac{l(l+1)}{r^{2}} \right]R_{l}= \frac{2mV(r)}{\hbar^{2}}R_{l}$$

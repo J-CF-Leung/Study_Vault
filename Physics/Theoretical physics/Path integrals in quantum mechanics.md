@@ -116,7 +116,8 @@ $$S_\text{SHO}[\eta(t)]=\frac{m(t_{f}-t_{i})}{4}\sum_{n=1}^{\infty}\left[ \frac{
 $$\mathcal{D}[\eta(t)]\propto \prod d\eta_{n}$$
 - This is then a _product of Gaussian integrals_
 
-- For $\omega\to 0$, it must approach the [[#Propagator of a free particle|free particle propagator]]
+- For $\omega\to 0$, it must approach the [[#Propagator of a free particle|free particle propagator]]:
+$$K_\text{free}(x,t|x',t')=\theta(t-t')\left( \frac{m}{2i\pi \hbar(t-t')} \right)^{1/2}\exp\left[ -\frac{m\left( x-x' \right)^{2}}{2i\hbar(t-t')}  \right]$$
 - This gives the result:
 $$K(x,t|x',t')=\sqrt{ \frac{m}{2\pi i\hbar(t_{f}-t_{i})} }\exp\left( \frac{i}{\hbar}S_\text{SHO}[x_{0}(t)] \right)\prod_{n=1}^{\infty}\left( 1-\frac{\omega^{2}(t_{f}-t_{i})^{2}}{\pi^{2}n^{2}} \right)^{-1/2}$$
 - Using the product:

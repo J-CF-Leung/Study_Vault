@@ -337,7 +337,7 @@ $$\alpha=\frac{\Delta\phi}{2d}=\frac{\omega}{2c}(n_L-n_R)$$
 - If $n_L<n_R,\;\alpha<0$, the medium is _levorotatory (l-rotatory)_
 	- The wave rotates _anti-clockwise_
 
-### The Faraday Effect
+### The Faraday Effect 
 - _Electric field_ can induce _birefringence_
 - Similarly, a _magnetic field_ can induce _chirality_
 - An example is an [[Electromagnetism#Waves in plasmas|EM wave in plasma]], with $\bm{B}_0||\bm{k}$ (known as the _Faraday geometry_)

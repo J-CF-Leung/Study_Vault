@@ -190,6 +190,7 @@ $$\hat{H}(t)\ket{\pm_{t}}=E_{\pm}(t)\ket{\pm_{t}}  $$
 	- Compared to the _natural frequency_ of the states
 $$\frac{\Delta E\tau}{\hbar}\ll 1$$
 - There are _no transitions_ between levels of energy interval $\Delta E$, and the system _stays in the instantaneous eigenstate_
+	- Requires that _off-diagonal_ elements of $\dot{H}$ are _small_
 
 ## Time evolution of wave function
 
