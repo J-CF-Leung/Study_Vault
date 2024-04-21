@@ -329,7 +329,7 @@ $$\exp(ikz)=\sum_{l=0}^{\infty} i^{l}(2l+1)P_{l}(\cos\theta) \left[  \frac{\exp[
 - This is the _exact wave-function_ in terms of the _channels_ for $V(r)=0$ everywhere
 - The second term corresponds to some _incoming wave_
 
-### Final wave-function and phase shifts
+### Final wave-function
 - After scattering, the _first term_ (outgoing wave) experiences _phase shift_ described by $S_{l}$
 $$\displaylines{\begin{align}\Psi_{k}(\boldsymbol{r})&=\sum_{l=0}^{\infty} i^{l}(2l+1)P_{l}(\cos\theta) \left[ S_{l} \frac{\exp[i(kr-l\pi/2)]}{2ikr}-\frac{\exp[-i(kr-l\pi/2)]}{2ikr} \right] \\ &=\exp(ikz)+ \frac{f(\theta,\phi)}{r}\exp(ikr) \end{align}\\ S_{l}=\exp(2i\delta_{l})}$$
 
@@ -353,7 +353,7 @@ $$\mathrm{Im}[f(\theta=0)]=\frac{1}{k}\sum_{l=0}^{\infty} (2l+1)\sin^{2}\delta_{
 	- The contribution to the probability density "going through" is _proportional_ to the _total cross-section_
 
 ### Phase shifts
-- The _radial part_ can be expressed as:
+- The _radial part_ can be [[#Final wave-function and phase shifts|expressed as]]:
 $$R_{l}(kr)=\exp(i\delta_{l})\cos(\delta_{l})[j_{l}(kr)-n_{l}(kr)\tan(\delta_{l})]$$
 - Compare to the [[#Wave function when far away|solution to Schrodinger's equation]] when far away:
 $$R_{l}(kr)=Aj_{l}(kr)+Bn_{l}(kr)$$
@@ -401,7 +401,7 @@ $$\left[ -\frac{d^{2}}{dr^{2}}+ \frac{l(l+1)}{r^{2}}+ \frac{2m}{\hbar^{2}}V(r) \
 - The _centrifugal term_ $l(l+1)/r^2$ has a _length scale_ $\sqrt{ l(l+1) }/k$
 - Compare with the length scale for the _potential_, $r_{c}$
 
-- For big $l$, the _centrifugal term_ becomes _too strong_ for the particle to _experiencing_ $V(r)$
+- For big $l$, the _centrifugal term_ becomes _too strong_ for the particle to _experience_ $V(r)$
 - For _low energies_, only $l=0$ is _significant_ in terms of _scattering_, as expected
 
 - The _total cross section_ is _dominated_ by the $l=0$ channel:

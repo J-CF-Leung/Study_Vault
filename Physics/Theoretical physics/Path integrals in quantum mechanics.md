@@ -124,6 +124,13 @@ $$K(x,t|x',t')=\sqrt{ \frac{m}{2\pi i\hbar(t_{f}-t_{i})} }\exp\left( \frac{i}{\h
 $$\prod_{n=1}^{\infty}\left( 1-\frac{\omega^{2}(t_{f}-t_{i})^{2}}{\pi^{2}n^{2}} \right)=\frac{\sin[\omega(t_{f}-t_{i})]}{\omega(t_{f}-t_{i})}$$
 - This gives the _propagator for the quantum harmonic oscillator_:
 $$K(x,t|x',t')=\sqrt{ \frac{m\omega}{2\pi i\hbar \sin[\omega(t_{f}-t_{i})]} }\exp\left( \frac{i}{\hbar}S_\text{SHO}[x_{0}(t)] \right)$$
+
+## Quadratic potentials
+- The above derivation is applicable to _all actions up to quadratic terms_
+- Write propagators as:
+$$K(x,t|x',t') \propto \exp\left( \frac{i}{\hbar}S_\text{cl} \right)$$
+- The proportionality factor can be obtained by comparing to the _free particle propagator_
+
 ## The semiclassical limit
 - The general propagator:
 $$K(\boldsymbol{r}_{f},t_{f}|\boldsymbol{r}_{i},t_{i})=\int  \, \mathcal{D}[\boldsymbol{r}(t)] \exp \left[ \frac{i}{\hbar}S \right] $$

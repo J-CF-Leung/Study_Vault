@@ -247,7 +247,7 @@ $$\alpha=\beta,\gamma=\delta \hspace{1cm}\text{ or }\hspace{1cm}\alpha=\delta,\b
 
 - _Wick's Theorem_:
 $$\begin{align}
-\left<\rho(\boldsymbol{r})\rho(\boldsymbol{r})'\right> &= \sum_{\alpha,\gamma} |\varphi_{\alpha}(\boldsymbol{r})|^{2}|\varphi_{\gamma}(\boldsymbol{r}')|^{2} N_{\alpha}N_{\gamma} \\ &+ \sum_{\alpha,\gamma} \left(\varphi_{\alpha}^{*}(\boldsymbol{r})\varphi_{\alpha}(\boldsymbol{r}')\right)\left(\varphi_{\gamma}(\boldsymbol{r})\varphi_{\gamma}^{*}(\boldsymbol{r}')\right) N_{\alpha}(1\pm N_{\gamma})
+\left<\rho(\boldsymbol{r})\rho(\boldsymbol{r}')\right> &= \sum_{\alpha,\gamma} |\varphi_{\alpha}(\boldsymbol{r})|^{2}|\varphi_{\gamma}(\boldsymbol{r}')|^{2} N_{\alpha}N_{\gamma} \\ &+ \sum_{\alpha,\gamma} \left(\varphi_{\alpha}^{*}(\boldsymbol{r})\varphi_{\alpha}(\boldsymbol{r}')\right)\left(\varphi_{\gamma}(\boldsymbol{r})\varphi_{\gamma}^{*}(\boldsymbol{r}')\right) N_{\alpha}(1\pm N_{\gamma})
 \end{align}$$
 - The $N_{\alpha}$ term originates from the _self-correlation_
 - Using the completeness relation for the _position eigenstates_:
@@ -358,10 +358,12 @@ $$\hat{H}=\sum_{k}\varepsilon_{k}a_{k}^{\dagger}a_{k}+\frac{U}{2N}\sum_{k}a_{k}a
 $$\displaylines{h=\epsilon[a_{1}^{\dagger}a_{1}+a_{2}^{\dagger}a_{2}]+\delta[a_{1}^{\dagger}a_{2}^{\dagger}+a_{1}a_{2}] \\\alpha_{1}=a_{1}\cosh\kappa-a_{2}^{\dagger}\sinh\kappa \\ \alpha_{2}=a_{2}\cosh\kappa-a_{1}^{\dagger}\sinh\kappa \\ \tanh2\kappa=\frac{\delta}{\epsilon} \hspace{ 1cm}\Omega=\sqrt{ \epsilon^{2}-\delta^{2} } \\ h=\Omega[\alpha_{1}^{\dagger}\alpha_{1}+\alpha_{2}^{\dagger}\alpha_{2}]+(\Omega-\epsilon)}$$
 - In this case, the Hamiltonian has the form:
 $$\displaylines{\hat{H}=\sum\hbar\omega_{k}\alpha_{k}^{\dagger}\alpha_{k} \\ \omega_{k}=\sqrt{ \left( \frac{k^{2}}{2m}+nU_{0} \right)^{2}-(nU_{0})^{2} }}$$
+- It is _linear_ in small $k$
+
 - This gives _quasi-particles_
 	- They are [[Classical Field Theory#Goldstone's Theorem|Goldstone modes]] due to broken gauge symmetry
 
-## Interference of Bose-Einstein condensates
+# Interference of Bose-Einstein condensates
 - The wave-function for a _Bose condensate_ of ground state $\varphi_{0}(\boldsymbol{r})$
 $$\ket{\Psi}=\frac{1}{\sqrt{ N! }} \left( a_{0}^{\dagger} \right)^{N} \ket{\text{VAC}}  $$
 - Let there be a Bose-Einstein condensate initially in a _localised trap_
@@ -374,8 +376,51 @@ $$\langle \rho(\boldsymbol{r},t) \rangle = N|\varphi_{0}(\boldsymbol{r},t)|^{2}$
 $$\displaylines{\varphi(\boldsymbol{r},t)=\frac{1}{(\pi R_{t}^{2})^{3/4}}\exp\left[ -\frac{|\boldsymbol{r}|^{2}(1-i\hbar t/mR_{0}^{2})}{2R_{t}^{2}} \right] \\ R_{t}^{2}=R_{0}^{2}+\left( \frac{\hbar t}{mR_{0}} \right)^{2}}$$
 - At long times, $R_{t} \sim \hbar t/mR_{0}$, and:
 $$|\varphi(\boldsymbol{r},t\to \infty)|^{2} \propto \exp\left[ -\left( \frac{mR_{0}}{\hbar t}|\boldsymbol{r}| \right)^{2} \right]$$
-### Double well
+## Double well with relative phase
 - Let there be two wells separated by displacement $\boldsymbol{d}$
 - Let the condensates in the wells have _relative phase_ $\theta$, and population $N_{L},N_{R}$
+	- Can be accomplished by _adiabatically separating_ one well
+- They separately evolve as:
+$$\displaylines{\varphi_{L/R}(\boldsymbol{r},t)=\frac{1}{(\pi R_{t}^{2})^{3/4}}\exp\left[ -\frac{|\boldsymbol{r}\pm \boldsymbol{d}/2|^{2}(1-i\hbar t/mR_{0}^{2})}{2R_{t}^{2}} \right] \\ |\varphi_{L/R}(\boldsymbol{r},t\to \infty)|^{2} \propto \exp\left[ -\left( \frac{mR_{0}}{\hbar t}|\boldsymbol{r}\pm \boldsymbol{d}/2| \right)^{2} \right]}$$
+
 - The initial state:
-$$$$
+$$\ket{N_{L},N_{R}}_{\theta}=\frac{1}{\sqrt{ N! }}\left[ \sqrt{ \frac{N_{L}}{N} }\exp\left( -\frac{i\theta}{2} \right)a_{L}^{\dagger}+\sqrt{ \frac{N_{R}}{N} }\exp\left( \frac{i\theta}{2} \right)a_{R}^{\dagger} \right]^{N}\ket{\text{VAC}}  $$
+- Single particle density:
+$$\displaylines{\rho(\boldsymbol{r})=\psi ^{\dagger}(\boldsymbol{r})\psi(\boldsymbol{r}) \hspace{1cm} \psi(\boldsymbol{r})=\varphi_{L}(\boldsymbol{r})a_{L} +\varphi_{R}(\boldsymbol{r})a_{R}\\ \begin{align}
+\langle \rho(\boldsymbol{r},t) \rangle_{\theta}&=N_{L}|\varphi_{L}(\boldsymbol{r},t)|^{2}+N_{R}|\varphi_{R}(\boldsymbol{r},t)|^{2}+2\sqrt{ N_{L}N_{R} }\mathrm{Re}[e^{i\theta}\varphi_{L}^{*}(\boldsymbol{r},t)\varphi_{R}(\boldsymbol{r},t)] \\ &=N_{L}|\varphi_{L}(\boldsymbol{r},t)|^{2}+N_{R}|\varphi_{R}(\boldsymbol{r},t)|^{2}+\rho_{\text{int}}(\boldsymbol{r},t)
+\end{align}} $$
+- As the condenstaes _overlap_, the latter term indicates _interference_, dependent on the _relative phase_
+$$\displaylines{\rho_{\text{int}}(\boldsymbol{r},t)=A(\boldsymbol{r},t)\cos\left[ \theta+\frac{\hbar \boldsymbol{r}\cdot \boldsymbol{d}}{mR_{0}^{2}R_{t}^{2}}t \right] \\ A(\boldsymbol{r},t)=\frac{2\sqrt{ N_{L}N_{R} }}{\pi^{3/2}R_{t}^{3}}\exp\left( -\frac{\boldsymbol{r}^{2}+\boldsymbol{d}^{2}/4}{R_{t}^{2}} \right)}$$
+- At _long times_, the interference fringes have separation $2\pi \hbar t/md$
+
+## Double well with Fock states
+- Let the two wells have _no phase relation_ to each other
+	- Made up of _Fock states_
+$$\ket{N_{L},N_{R}}_{F} = \frac{1}{\sqrt{ N_{L}!N_{R}!}} (a_{L}^{\dagger})^{N_{L}}(a_{R}^{\dagger})^{N_{R}}\ket{\text{VAC}}  $$
+- In this case:
+$$\langle \rho(\boldsymbol{r},t) \rangle_{F}=N_{L}|\varphi_{L}(\boldsymbol{r},t)|^{2}+N_{R}|\varphi_{R}(\boldsymbol{r},t)|^{2} $$
+- However, the _correlation_ shows interference fringes which _depend on the correlation distance_
+$$\begin{align}
+\langle :\rho(\boldsymbol{r})\rho(\boldsymbol{r}') :\rangle = &\langle \rho (\boldsymbol{r}) \rangle_{F} \langle \rho(\boldsymbol{r}') \rangle_{F} + N_{L}N_{R} \varphi_{L}^{*}(\boldsymbol{r})\varphi_{R}^{*}(\boldsymbol{r}')\varphi_{L}(\boldsymbol{r}')\varphi_{R}(\boldsymbol{r}')  \\
+ &+N_{L}N_{R}  \varphi_{R}^{*}(\boldsymbol{r})\varphi_{L}^{*}(\boldsymbol{r}')\varphi_{R}(\boldsymbol{r}')\varphi_{L}(\boldsymbol{r}')  
+\end{align}$$
+
+- _Measurements_ for a system of a Fock state are identical to a _relative phase state after averaging_
+$$\displaylines{\begin{align}
+\rho&=\int \, \frac{d\theta}{2\pi} \ket{N_{L},N_{R}}_{\theta}\bra{N_{L},N_{R}}_{\theta} \\ &= \frac{1}{ N! } \sum_{n} \ket{n,N-n} \bra{n,N-n} 
+\end{align} \\ \ket{n,N-n}=\pmatrix{N \\ n} (a_{L}^{\dagger})^{n}(a_{R}^{\dagger})^{N-n}\ket{\text{VAC}}  }  $$
+## Distinguishing between momentum distributions
+- Distinguish between the _Bose-Einstein condensate_ (sharp in momenta) and the _Mott insulator_ (sharp in position)
+- The single particle density:
+$$\displaylines{\hat{\psi}(x,t)=\frac{1}{\sqrt{ N }}\sum_{j=1}^{N} \varphi_{j}(x,t)a_{j} \\ \rho(x,t)=\psi ^{\dagger}(x,t)\psi(x,t) \\ \langle  \rho(x,t)\rangle = \frac{1}{N}\sum_{j,k} \varphi_{j}^{*}\varphi_{k}\langle a_{j}^{\dagger}a_{k} \rangle }$$
+
+- In the far field, this evolves as
+$$\varphi_{j}^{*}\varphi_{k} \sim\exp\left( \frac{(x_{j}-x_{k})x_{0}\alpha}{\hbar t} \right)$$
+- For a _Bose-Einstein condensate_, $\langle a_{j}^{\dagger}a_{k} \rangle \sim N/L$ (long range order)
+- There is _interference_ between different sites
+- There is a _narrow peak_ in momentum space distribution
+
+- For a _Mott insulator_, $\langle a_{j}^{\dagger}a_{k} \rangle = (N/L)\delta_{jk}$
+- They are _localised_ in position space
+
+# Hanbury Brown and Twiss effect

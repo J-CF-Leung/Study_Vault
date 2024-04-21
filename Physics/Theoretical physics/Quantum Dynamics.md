@@ -63,8 +63,10 @@ $$\hat{a}(t)=\exp(-i\omega t)\hat{a}(0)\hspace{1.5cm}\hat{a}^{\dagger}(t)=\exp\l
 $$\hat{H}=\hat{H}_{0}+\hat{V}$$
 - The _unitary transformation_:
 $$\hat{\mathcal{U}}=\exp\left( +i \frac{\hat{H}_{0}t}{\hbar} \right)$$
-- The _state ket_ time dependence _arises from the potential term_ $\hat{V}$
-- The _observable_ time dependence arises from $\hat{H}_{0}$
+- The _state ket_ time dependence _arises from the potential term_ $\hat{V}$:
+$$i\hbar \frac{d}{dt}\ket{\psi}=\hat{V}\ket{\psi}  $$
+- The _observable_ time dependence arises from $\hat{H}_{0}$:
+$$i\hbar \frac{d}{dt}\hat{A}(t)=\left[ \hat{A}(t),\hat{H}_{0} \right]$$
 
 # Time-dependent Hamiltonian
 - Have a general _time-dependent Hamiltonian_
