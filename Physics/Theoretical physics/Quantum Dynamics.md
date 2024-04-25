@@ -89,6 +89,7 @@ $$\lim_{ \delta t \to 0 } \left[ \hat{H}(t),\hat{H}(t+\delta t) \right]=0$$
 - One can then _split_ the evolution into many _infinitesimal stages_:
 $$\hat{U}(t)=\lim_{ \Delta t \to 0 } \exp\left( -\frac{i\hat{H}(t-\Delta t)\Delta t}{\hbar} \right)\exp\left( -\frac{i\hat{H}(t-2\Delta t)\Delta t}{\hbar} \right)\dots\exp\left( -\frac{i\hat{H}(0)\Delta t}{\hbar} \right)$$
 - Here, $\hat{H}$ are _evaluated at each time_ $t-\Delta t,t-2\Delta t\dots 0$
+
 - By using a _Taylor expansion_ then _multiplying all terms_, one gets:
 $$\begin{align}\hat{U}(t)&=1-\frac{i}{\hbar}\int _{0}^{t} dt_{1}\,\hat{H}(t_{1})-\frac{1}{\hbar^{2}}\int_{0}^{t}\, dt_{2}\int _{0}^{t_{2}}\, dt_{1}\hat{H}(t_{2})\hat{H}(t_{1})+\dots  \\ &=1+\sum_{n=1}^{\infty}\left( -\frac{i}{\hbar} \right)^{n}\int _{0}^{t} \, dt_{n}\int _{0}^{t_{n}} \, dt_{n-1}\dots \int_{0}^{t_{2}}  \, dt_{1}\hat{H}(t_{n})\hat{H}(t_{n-1})\dots \hat{H}(t_{1})\end{align}$$
 - This is the _Dyson series_
@@ -218,7 +219,7 @@ $$c_{\pm}(t)= \exp\left(-\frac{i}{\hbar} \int E_{\pm}(t')  \, dt'  \right) c_{\p
 - The approximation is valid when:
 $$\hbar \left| \braket{ -_{t} |\dot{H}|+_{t}  }  \right| \ll [E_{+}(t)-E_{-}(t)]^{2} $$
 
-- As expected, this corresponds to a _large splitting_
+- As expected, this corresponds to a _large splitting_ compared to the _transition rate_
 
 - It is a _semiclassical_ approximation as it _improves_ with _smaller_ $\hbar$
 

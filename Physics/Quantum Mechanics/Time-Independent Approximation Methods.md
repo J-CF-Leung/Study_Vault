@@ -207,6 +207,7 @@ $$\left( \frac{iS''}{\hbar}-\frac{S'^{2}}{\hbar^{2}}+k^{2} \right)\exp(iS)=0$$
 - In the _semiclassical regime_, take $\hbar S''\ll S'^{2}$
 
 - This gives $S'=\pm \hbar k$
+	- As expected, in comparison to the _classical wave_
 
 - _Iterating_, one gets:
 $$S'\approx \pm \hbar k +\frac{i\hbar}{2} \frac{k'(x)}{k}$$
@@ -218,7 +219,6 @@ $$\psi(x)=\frac{C}{\sqrt{ k(x) }}\exp\left[ \pm i \int^{x}k(x')  \, dx'  \right]
 - Examining the formula, $S''\ll(S')^{2}$ holds
 
 - The _wavelength_ $\lambda \sim 1/k$ means $\lambda(dV/dx)\ll \hbar^{2}k^{2}/2m$, or the _potential energy slowly varies_ compared to _kinetic energy_
-- The _group velocity_ is much _smaller_ than
 
 - In the semiclassical approximation, $p\approx \hbar k$
 
@@ -226,7 +226,7 @@ $$\psi(x)=\frac{C}{\sqrt{ k(x) }}\exp\left[ \pm i \int^{x}k(x')  \, dx'  \right]
 - In this case, define $\kappa$ where $\kappa^{2}=-k^{2}$
 - This gives _exponentially growing_ or _decaying_ wave functions
 - Following the same derivation:
-$$\psi(x)=\frac{C}{\sqrt{ \kappa(x) }}\exp\left[ \pm i \int^{x} \kappa(x') \, dx'  \right]$$
+$$\psi(x)=\frac{C}{\sqrt{ \kappa(x) }}\exp\left[ \pm \int^{x} \kappa(x') \, dx'  \right]$$
 
 ## Connection formulae
 - _Connect_ the classical and decaying regimes of the wave-function

@@ -133,7 +133,7 @@ $$U=\frac{1}{\sqrt{ 2 }}\begin{pmatrix}1&1\\1&-1\end{pmatrix}$$
 
 - Take the _linear combination_ of even and odd eigenstates:
 $$\displaylines{\Psi_{k}(|x|\gg 0)=c_\text{even}\cos(k|x|+\delta _\text{even})+\text{sgn}(x)c_\text{odd}\sin(k|x|+\delta _\text{odd}) \\ c_\text{even,odd}=\frac{1}{\sqrt{ 2 }}c^{\text{in}}_\text{even,odd}\exp(i\delta _\text{even,odd})}$$
-
+- The $2\delta$ comes from both the $\exp(i\delta)$ _factor_ as well as in $\cos(k|x|+\delta)$
 ## 1D Lippmann-Schwinger equation
 - The time-independent Schrodinger equation:
 $$-\frac{\hbar^{2}}{2m}\frac{\partial^{2}}{\partial x^{2}}\Psi(x)+V(x)\Psi(x)=E\Psi(x)$$
@@ -156,7 +156,7 @@ $$\begin{align}\Psi_{k}(x)&=\exp(ikx)+\int  \, dx' G_{k}^{+}(x,x')V(x')\exp(ikx'
 - With only _first order terms_, this is the [[#The Born Approximation|Born Approximation]]
 
 ### Green's function via Fourier transform
-- _Fourier transform_ of the retarded Green's function:
+- Using the _Fourier transform_ of the retarded Green's function:
 $$G_{k}^{+}(x,x')=\frac{1}{2\pi}\int_{-\infty}^{\infty}  \, dq \frac{\exp[iq(x-x')]}{E_{k}-\hbar^{2}q^{2}/2m} $$
 - There are _poles_ on the _real axis_
 - Due to [[Analytical classical mechanics#Propagators and causality|causality]], the negative pole is moved _down_ and the other is moved _up_
@@ -388,7 +388,7 @@ $$k'^{2}=k^{2}-\frac{2mV_{0}}{\hbar^{2}}\implies k'=\frac{\sqrt{ 2m(E-V_{0}) }}{
 - The phase shift for $l=0$:
 $$\delta_{0}(k)=\arctan\left( \frac{k}{k'}\,\tan k'a_{\circ} \right)-ka_{\circ}$$
 ## Low energy scattering
-- From above, one sees that at _low energies_, the $s-$wave dominates
+- From above, one sees that at _low energies_$(k\to 0)$, the $s-$wave dominates
 	- Unlike the [[#First Born approximation|Born approximation]], where the interaction is _weak_
 	- It is also _isotropic_, unlike the Born approximation
 	- Unlike the Born approximation, it is _not perturbative_ in $V_0$

@@ -1184,3 +1184,11 @@ $$\langle h^{2} \rangle = \frac{k_{B}T}{A} \int  2\pi q\, dq  $$
 - It can be _reversibly self-assembled_
 
 - _DNA_ is also a _self-assembled_ structure from its bases
+
+# Surface Energy (incomplete)
+- There are _van der Waals_ interactions between _molecules of the same species_
+	- They are typically _attractive_
+- Interactions between molecules of _different species_ can be _unfavourable_
+	- Example: _water and oil_ are _immiscible_
+
+- The creation of an _interface_ between immiscible liquids leads to an _energy penalty_
