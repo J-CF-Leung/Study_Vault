@@ -1189,6 +1189,98 @@ $$\langle h^{2} \rangle = \frac{k_{B}T}{A} \int  2\pi q\, dq  $$
 - There are _van der Waals_ interactions between _molecules of the same species_
 	- They are typically _attractive_
 - Interactions between molecules of _different species_ can be _unfavourable_
-	- Example: _water and oil_ are _immiscible_
+	- Example: _water and oil_ are _immiscible_ and form an _interface_
 
 - The creation of an _interface_ between immiscible liquids leads to an _energy penalty_
+	- When in the _bulk_, molecules have more _favourable interactions_ with surroundings
+	- Hence, liquids will _minimise surface area_ if possible
+
+- To form an _additional surface area_ $\delta A$ gives a penalty of $\delta E$ given _surface tension_ $\gamma$
+$$\delta E=\gamma\delta A$$
+- $\gamma$ is determined by _the materials in contact_
+	- Water-air: $72\times 10^{-3}\,\text{N/m}$
+	- Water-oil: $30\times 10^{-3}\,\text{N/m}$
+
+- Surface tension can be _reduced_ via the addition of _surfactants_, such as _amphiphilic molecules_
+	- The amphiphilic molecules create a _2D film between the unlike molecules_
+	- It will also naturally be quite low when there are _similar co-existing compositions_ (e.g. near phase transitions)
+- It can be _measured_ by _measuring forces near moving interfaces_
+
+## Surface tension in 2D films
+
+# Colloids
+- A colloid consists of particles within size range of $10^{-3}-10^{-7}\,\text{cm}$
+	- _Larger_ than ordinary molecules, but still _invisible to naked eye_
+	- They may exist as _dispersions_ of one substance in another
+- Colloids are typically _stabilised_ by van der Waals interactions
+
+- Examples: 
+	- _Suspensions_ formed from silica, metals, or polymers
+	- _Viruses_
+- They can have _many shapes_, such as spheres or rods
+
+- In a _suspension_, the _distribution_ is Boltzmann-like due to _gravity_:
+$$P(h)\propto\exp\left( -\frac{mgh}{k_{B}T} \right) $$
+- In a colloid, $\langle h \rangle$ is _larger than the particle size_
+- For a spherical particle:
+$$\langle h \rangle = \frac{k_{B}T}{4\pi R^{3}\rho g/3} \sim R$$
+- For a typical colloidal particle, $R\approx 1\,\mu\text{m}$
+
+- Typically, colloids will _[[#Diffusion|diffuse]] over an experimental time-scale_ $2Dt_\text{exp} \sim R^{2}$
+- A particle with $R\sim 1 \,\mu \text{m}$ will diffuse in water over $1\,\text{s}$
+
+- Colloids are typically understood _without details about atomic constitution_
+## Interactions between colloidal particles
+- Relevant interactions:
+	- _Excluded volume_ (no overlap)
+	- _Dispersion forces_ (van der Waals interactions)
+	- _Coulomb interactions_ (for charged particles)
+	- _Depletion interactions_ (non point-like particles)
+	- _Steric repulsion_ (if coated in polymers to prevent aggregation)
+
+### Excluded volume interaction
+- One model is the _hard sphere potential_
+- Let $r$ be the separation between particles of radius $a$
+$$V(r)=\begin{cases}
+0&r<2a \\ \infty &r>2a
+\end{cases}$$
+### Dispersion forces
+- Interactions between _uncharged_ particles
+	- They generally _repel_ when they are close, and _attract_ each other at intermediate distances
+	- There is an _equilibrium distance_
+
+- Let there be a _pair potential_ $u(r)$, where $r$ is separation
+$$F(r)=-\frac{du(r)}{dr}$$
+- If $u(r) \sim r^{-1}$, it is _long ranged_
+	- Example: Coulomb between point charges, gravity
+- Van der Waals forces are _short ranged_ with $r^{-6}$
+	- Can be modelled as _hard spheres_
+
+- Coulomb interactions can become _short-ranged_ with more complex charge distributions such as _dipoles_ formed from _polarisable molecules_
+
+- For a particle with _polarisability_ $\alpha$, the _induced dipole moment_ is
+$$\mu=\alpha E$$
+- Force _experienced by a dipole_:
+$$F(r)=-q\left[ E\left( r-\frac{\Delta r}{2} \right)-E\left( r+\frac{\Delta r}{2} \right) \right]\approx q\Delta r \frac{dE}{dr}=\mu \frac{dE}{dr}$$
+- If the electric field is caused by a _charged molecule_ $Q$:
+$$\displaylines{F(r)=-2\alpha\left( \frac{Q}{4\pi\epsilon_{0}\epsilon_{r}} \right)^{2} \frac{1}{r^{5}} \\ u(r)=-\frac{\alpha}{2}\left( \frac{Q}{4\pi\epsilon_{0}\epsilon_{r}} \right)^{2} \frac{1}{r^{4}} }$$
+- These interactions are _always attractive_, and is very _short ranged_
+	- Also _proportional_ to $\alpha$
+
+- Between _two polarisable atoms_:
+$$V_\text{atom-atom}(r)=-\frac{B}{r^{6}}$$
+- Here, $B$ is the _interaction parameter_
+- It can be derived [[Time-Independent Approximation Methods#Van der Waals interaction|quantum mechanically]] for two atoms with characteristic frequency $\nu$
+$$V_\text{two dipoles}(r)=-\frac{2\alpha^{2}h\nu}{(4\pi\epsilon_{0})^{2}} \frac{1}{r^{6}}$$
+
+- For larger bodies, one can _approximate_ by summing over _interaction potentials between all pairs_, which _increases_ the range of interaction
+$$\begin{align}
+V_\text{atom-solid}(r)&=-\frac{\pi B\rho}{6r^{3}} \\ V_\text{solid-solid}(r)&=-\frac{A}{12\pi r^{2}} \\ V_\text{sphere-sphere}(r)&=-\frac{\pi^{2}B\rho^{2}R}{12r}\;,\;r\ll R
+\end{align}$$
+- $\rho$ is the _density of atoms_
+- $A(B,\rho)$ is the [[#Surface tension in 2D films|Hamaker constant]]
+
+- Dispersion interactions are almost always _attractive_, leading to _aggregation_ and _destabilisation_ of the colloidal system
+	- Tends to _weaken_ when the _solvent_ has the _same polarisability_ as the colloid
+- In cases where $A<0$, atoms _maximise interactions with the environment_
+	- Example: liquid helium

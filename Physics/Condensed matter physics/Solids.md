@@ -1485,9 +1485,9 @@ $$\tau^{-1}=\alpha(\epsilon_{1}-E_{F})^{2}+\beta(k_{B}T)^{2}$$
 - The _chemical potential_ is typically _mid-gap_
 
 - The _conduction band_:
-$$\epsilon_{c}(k)=\epsilon_{c}+ \hspace{1.5cm}g_{e}(\epsilon)=$$
+$$\varepsilon_{c}(k)=\varepsilon_{c}+\frac{\hbar^{2}k^{2}}{2m_{e}^{*}} \hspace{1.5cm}g_{e}(\varepsilon)=\frac{1}{2\pi^{2}}\left( \frac{2m_{e}^{*}}{\hbar^{2}} \right)^{3/2}\sqrt{ \varepsilon-\varepsilon_{c} }$$
 - The _valence band_:
-$$\epsilon_{v}(k)=\epsilon_{v}+ \hspace{1.5cm}g_{h}(\epsilon)=$$
+$$\varepsilon_{v}(k)=\varepsilon_{v}-\frac{\hbar^{2}k^{2}}{2m_{h}^{*}} \hspace{1.5cm}g_{e}(\varepsilon)=\frac{1}{2\pi^{2}}\left( \frac{2m_{h}^{*}}{\hbar^{2}} \right)^{3/2}\sqrt{ \varepsilon_{v}-\varepsilon_{c} }$$
 
 ## Carrier density
 - For a known $\mu$, the _carrier density_ in the conduction band:
@@ -1500,9 +1500,9 @@ $$n=2\left( \frac{m_{e}^{*}k_{B}T}{2\pi \hbar^{2}} \right)^{3/2}\exp\left[ -\fra
 - Similarly, the _hole density_:
 $$p\approx 2\left( \frac{m_{h}^{*}k_{B}T}{2\pi \hbar^{2}} \right)^{3/2}\exp\left[ -\frac{\mu-\epsilon_{v}}{k_{B}T} \right]$$
 - Define _temperature-dependent concentrations_ for the number of states within $k_{B}T$ of the band edge:
-$$\displaylines{n_{c}(T)= \hspace{1.5cm}p_{v}(T)= \\ n=n_{c}(T)\exp\left[ -\frac{\epsilon_{c}-\mu}{k_{B}T} \right]\hspace{1.5cm}p=}$$
+$$\displaylines{n_{c}(T)=2\left( \frac{m_{e}^{*}k_{B}T}{2\pi \hbar^{2}} \right)^{3/2} \hspace{1.5cm}p_{v}(T)= 2\left( \frac{m_{h}^{*}k_{B}T}{2\pi \hbar^{2}} \right)^{3/2}\\ n=n_{c}(T)\exp\left[ -\frac{\varepsilon_{c}-\mu}{k_{B}T} \right]\hspace{1.5cm}p=p_{v}(T)\exp\left[ -\frac{\mu-\varepsilon_{v}}{k_{B}T} \right]}$$
 ### Law of mass action
-- From this, get:
+- From this, get that $np$ is _only dependent on temperature_
 $$np=n_{c}(T)n_{p}(T)\exp\left( -\frac{\epsilon_{g}}{k_{B}T} \right)\hspace{1cm}\epsilon_{g}=\epsilon_{c}-\epsilon_{v}$$
 - $\epsilon_{g}$ is the _band gap_
 - This is the _law of mass action_
@@ -1517,7 +1517,7 @@ $$np=n_{c}(T)n_{p}(T)\exp\left( -\frac{\epsilon_{g}}{k_{B}T} \right)\hspace{1cm}
 	- At _equilibrium_, $np=A(T)/B(T)$
 
 - If one introduces _impurities_, $n$ or $p$ may _increase_, then as $np$ is _constant_, the other intrinsic carrier has _lower concentration_
-- One can then _reduce_ the _total carrier concentration_ $n+p$ in an impure crytal
+- One can then _reduce_ the _total carrier concentration_ $n+p$ in an impure crystal
 
 ### Intrinsic semiconductors
 - In an _intrinsic semiconductor_, holes come from unoccupied electron levels, hence:
@@ -1574,13 +1574,45 @@ $$\Delta_{d}=\frac{m_{e}^{*}}{m_{e}} \frac{1}{\epsilon^{2}} \frac{13.6\,\text{eV
 	- Typically dominated by _electrons and havy holes_
 $$\sigma=ne\mu_{e}+pe\mu_{hh}$$
 - The mobilities:
-$$\mu=$$
-- Contribution from different scattering
-- Impurity scattering: cross-section varies as $\epsilon^{-2}$, hence
-- Impurity scattering
-- Phonon scattering
+$$\mu_{e}=\frac{e \tau_{e}}{m_{e}^{*}} \hspace{1.5cm}\mu_{hh}=\frac{e \tau_{hh}}{m_{hh}^{*}}$$
+- _Temperature dependence_ is dependent on _scattering times_ of different processes
+- Impurity scattering: _cross-section_ varies as $\epsilon^{-2} \propto T^{-2}$, so $\lambda \propto T^{2}$
+- The _carrier speed_ $v \propto \epsilon^{1/2}\propto T^{1/2}$, such that $\tau _\text{imp}=\lambda/v\propto T^{3/2}$
 
-- At _low temperatures_
+- Phonon scattering: the _number of phonons_ $\propto T$, hence $\lambda \propto T^{-1}$ and $\tau _\text{pho}\propto T^{-3/2}$
 
-### Hall effect
-\
+- At _low temperatures_, impurity scattering dominates
+- At _high temperatures_, phonon scattering dominates
+- There is a _peak in mobility_ at an intermediate temperature
+
+### Hall effect with two carrier types (incomplete)
+
+# Semiconductor devices
+- _Inhomogenous_ systems of semiconductors
+- Dependent on the _interfaces_ between semiconductors
+
+- A _semiclassical treatment_ of electrons:
+$$H=E_{n}(\boldsymbol{k})-e\phi(\boldsymbol{r})$$
+- They have momentum $\boldsymbol{p}=\hbar \boldsymbol{k}$ and experience electrostatic potential $\phi(\boldsymbol{r})$
+- The potential can arise from _external fields_, _doping_, or changes in _composition_
+
+- For an _isolated solid_, the difference between $\mu$ and the _vacuum level_ (free space) is the _work function_ $\Phi$
+- Two _isolated materials_ with different $\Phi$ have different $\mu$
+- This must _equalise_ when _placed in contact_
+	- Electrons _flow towards_ the more _electronegative_ material to equalise $\mu$
+	- This generates _internal inhomogenous electric fields_
+
+## Metal-semiconductor contact (incomplete)
+
+
+## p-n junctions (incomplete)
+
+## LEDs (incomplete)
+
+## Photovoltaic cells (incomplete)
+
+## Field-effect transistors
+
+### Junction field-effect transistor (JFET)
+
+### Metal oxide semiconductor field-effect transistor (MOSFET)
