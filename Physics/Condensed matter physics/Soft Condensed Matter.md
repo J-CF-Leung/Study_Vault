@@ -884,7 +884,7 @@ $$G=\frac{n}{V} k_{B}T$$
 - The elasticity is _entropic_
 	- Corresponds to the [[#Entropy of the ideal chain|entropy of the chain]] itself due to stretching
 
-## Rouse model of polymer dynamics
+## Rouse model of polymer dynamics (incomplete)
 - Use [[#Overdamped limit|overdamped Langevin dynamics]] for the Gaussian chain
 $$\gamma\frac{d\boldsymbol{R}_{n}}{dt}=\kappa(\boldsymbol{R}_{n+1}+\boldsymbol{R}_{n-1}-2\boldsymbol{R}_{n})+\boldsymbol{\xi}_{n}(t)$$
 - Applicable for _low Reynolds numbers_
@@ -918,7 +918,7 @@ $$G(t)=c \frac{k_{B}T}{N} \sum_{p} \exp\left( -\frac{p^{2}t}{\tau_{1}} \right)$$
 $$G(t)\approx c \frac{k_{B}T}{N} \exp\left( -\frac{t}{\tau_{1}} \right)$$
 - For _short timescales_:
 $$G \sim \int \exp\left( -\frac{p^{2}t}{\tau_{1}} \right) \, dp\sim \sqrt{ \frac{\tau_{1}}{t} } $$
-## Helix to coil transition
+## Helix to coil transition (incomplete)
 - Many polymers can undergo a transition from a _disordered globule_ to a _helical state_
 	- Driving force includes _hydrogen bonding_
 - Let the helical state have some _energy_ $-\epsilon$
@@ -935,7 +935,7 @@ $$Z_{1}=1+ \exp(-\beta N\epsilon) \implies f_\text{helix}= \frac{\exp(-\beta N\e
 - The _nearest neighbour_ interactions are parametrised with $\sigma$
 
 $$f_\text{helix}= \frac{1}{2}\left( 1+ \frac{s-1}{\sqrt{ (1-s)^{2}+4\sigma s }} \right)$$
-# Molecular self-assembly
+# Molecular self-assembly (incomplete)
 - The formation of _structures_ from purely _inter-molecular forces_
 - Molecules can assemble into _different structutes_, such as _spherical/cylindrical micelles_, or _lamellae_
 	- Can be quantified using _shape/packing parameters_
@@ -946,6 +946,7 @@ $$f_\text{helix}= \frac{1}{2}\left( 1+ \frac{s-1}{\sqrt{ (1-s)^{2}+4\sigma s }} 
 
 - _Hydrophobicity_, where an _entropic force_ makes hydrophobic/phillic parts of molecules stick to each other
 	- _Amphiphillic_ molecules have _hydrophilic_ and _hydrophobic_ parts
+
 - The _hydrogen bond network_ of water molecules _around hydrophobic molecules_ will end up _decreasing_ entropy of an even solution
 - This leads to the entropic force making _hydrophobic_ parts stick together
 - For a _higher temperature_ solution, hydrogen bonding interactions matter _less_
@@ -1194,6 +1195,7 @@ $$\langle h^{2} \rangle = \frac{k_{B}T}{A} \int  2\pi q\, dq  $$
 - The creation of an _interface_ between immiscible liquids leads to an _energy penalty_
 	- When in the _bulk_, molecules have more _favourable interactions_ with surroundings
 	- Hence, liquids will _minimise surface area_ if possible
+	- This usually leads to _spherical droplets_
 
 - To form an _additional surface area_ $\delta A$ gives a penalty of $\delta E$ given _surface tension_ $\gamma$
 $$\delta E=\gamma\delta A$$
@@ -1206,8 +1208,133 @@ $$\delta E=\gamma\delta A$$
 	- It will also naturally be quite low when there are _similar co-existing compositions_ (e.g. near phase transitions)
 - It can be _measured_ by _measuring forces near moving interfaces_
 
-## Surface tension in 2D films
+- Thermodynamic variables accounting for surface energy:
+$$\displaylines{dU=T\,dS-p\,dV+\sum_{i}\mu_{i}\,dN_{i}+\gamma\,dA \\ \gamma=\left( \frac{\partial U}{\partial A} \right)_{S,V,N_{i}}=\left( \frac{\partial F}{\partial A} \right)_{T,V,N_{i}}=\left( \frac{\partial G}{\partial A} \right)_{T,p,N_{i}}}$$
+## Geometries
 
+### 2D films
+- Consider an applied force $f$ to change the _area_ of a 2D film
+![[2D film surface tension.png]]
+$$f\,dx=\gamma\,dA=\gamma L\,dx \implies \gamma=\frac{f}{L}$$
+- It is a _force per unit length_
+
+- Measurement: depends on measuring the _tension_ as a function of the _surface area_
+![[Surface tension measurement.png]]
+- As the _number of lipids_ increases, the surface tension increases _faster_
+
+### Link to van der Waals interactions
+- $\gamma$ can be linked to _van der Waals interactions_
+
+- Let there be a _slab_ of liquid be _split_ with separation $h$
+- The force _between the halves_:
+$$f(h)=\frac{A}{6\pi h^{3}}$$
+- $A$ is the [[#Dipole interactions|Hamaker constant]]
+	- Typical values: $A\sim 10^{-20}\,\text{J}$
+- Calculating surface energy per unit area, given $a$ as _half the average distance between molecules_
+$$\gamma=\frac{1}{2}\int _{a}^{\infty} f(h) \, dh=\frac{A}{24\pi a^{2}} $$
+
+- This operates on the assumption that the system is _static_
+- However, $A$ is _frequency dependent_
+	- As it is an _electromagnetic_ interaction, it is mediated by _photons_ which will _radiate_
+
+### Bubbles and droplets
+- Let a _droplet_ of radius $R$ have _pressure difference_ $\Delta p$ across the surface
+![[Droplet surface.png]]
+- _Work done_ by $\Delta p$ is used to expand the surface:
+$$\gamma\,\Delta A=\gamma(8\pi R\Delta R)=\Delta p(4\pi R^{2}\Delta R)$$
+- The pressure difference due to _surface tension_:
+$$\Delta p=\frac{2\gamma}{R}$$
+- It is _positive_ due to _higher internal pressure_
+
+- In a _bubble_, there are both _inner_ and _outer surfaces_:
+$$\Delta p=\frac{4\gamma}{R}$$
+
+- For _non-spherical drops_, two radii must be taken into account:
+$$\Delta p=\gamma\left( \frac{1}{R_{1}}+\frac{1}{R_{2}} \right)$$
+### Capillary rise
+- The _rise_ of a water column in a capillary leads to _increased pressure_ at the _meniscus_:
+![[Capillary rise.png|150]]
+- The additional _hydrostatic pressure_ must _balance_ the pressure from _surface tension_:
+$$\rho gh=\gamma\left( \frac{1}{R_{1}}+\frac{1}{R_{2}} \right)$$
+- For a _rotationally symmetrical meniscus_:
+$$\gamma=\frac{\rho ghR}{2}$$
+- It is valid for _uniform curvature_, for a liquid with _low viscosity_
+- Assume _complete wetting_, independent of _wetting angle_
+
+- The _capillary length_ to compare surface tension and gravitational force:
+$$l_{c}=\sqrt{ \frac{\gamma}{\rho g} }$$
+- For water, $l_{c}\approx 2.7\,\text{mm}$
+- Droplets with $R<l_{c}$ adopt a _near-spherical shape_, which is _not influenced by gravity_
+- For _small capillaries_, gravity _does not change the shape_ of the meniscus, and the formula for $\gamma$ holds
+
+## Amphiphiles
+- Amphiphiles have both _hydrophilic_ and _hydrophobic_ groups
+- They are attracted to _water/oil_ or _water/air_ interfaces
+
+- Amphiphiles can be _permanently adsorbed_ to a surface, and be _insoluble_
+	- Concentration on the _surface_ can be _uncorrelated with bulk concentration_
+	- There can also be _zero bulk concentration_
+
+### Insoluble surfactants
+- The surfactants are treated as _molecules_ of size $a$ _confined to a plane_ of area $A$
+- The plane has _pure surface tension_ (no surfactants) $\gamma_{0}$
+- The _energy gain_ by moving a surfactant _from bulk to interface_ is $u_{0}$
+
+- The _free energy per site_ from the above, plus excluded volume, similar to the [[#Flory-Huggins free energy]]
+$$f=k_{B}T(\phi \ln \phi+(1-\phi)\ln(1-\phi))+(\gamma_{0}a^{2}-u_{0}\phi)$$
+- The _area fraction_ is $\phi=A_\text{surfactant}/A$
+
+- The surface tension is then:
+$$\gamma=\frac{\partial F}{\partial A}=\gamma_{0}+k_{B}T\ln(1-\phi)$$
+
+- For a _low surfactant average_, the _reduction_ in surface tension is the _ideal gas pressure of a 2D gas_
+	- The dilute molecules have an _osmotic pressure_ same as that of a 2D gas
+	- Can be considered a _correction_ to the ideal gas law in 2D
+- The _degree of hydrophobicity_ determined $u_{0}$, which in turn has _no role_ in surface tension
+
+### Soluble surfactants
+- For _soluble_ surfactants, the _adsorbed concentration_ will be in _equilibrium_ with the _bulk concentration_
+- The _Gibbs Free Energy_ for the whole system:
+$$dG=V\,dP-S\,dT+\sum_{i}\mu_{i}\,dN_{i}+\gamma \,dA$$
+- In _equilibrium_, $dP=dT=0$, using the [[Advanced statistical mechanics#Scaling and Gibbs-Duhem relation|Gibbs-Duhem relation]]: 
+$$\sum_{i}N_{i}\,d\mu_{i}+A\,d\gamma=0$$
+- Let there be 2 species (1: solvent, 2: solute)
+$$-d\gamma=\frac{n_{1}}{A}d\mu_{1}+\frac{n_{2}}{A}d\mu_{2}$$
+- $n_{i}/A$ are the _surface excess quantities_, and $n_{1}/A$ can be set to zero
+- The bulk [[Advanced statistical mechanics#Chemical reactions|chemical potential]] in terms of concentration $c$, for a _bulk dilute solution_:
+$$\mu_{2}=\mu_{0}+k_{B}T\ln c$$
+- This leads to:
+$$\frac{n}{A}=-\frac{1}{k_{B}T} \frac{d\gamma}{d(\ln c)}$$
+- This is the _Gibbs adsorption isotherm_
+
+- It holds _up to_ the [[#Critical concentration|critical micelle concentration]] (CMC)
+	- Above this concentration, _monomer concentration does not increase_, which _stops reducing surface tension_
+	- A way to _measure_ the CMC
+
+![[Surface tension measurements.png|450]]
+
+## Wetting
+- The _composition_ of a surface determines the _interactions with water_
+- The _surface and its energies_ influence the _shape_ of the surface
+![[Pasted image 20240427184402.png]]
+- The relevant surface energies: _liquid-vapour_, _liquid-surface_, _surface-vapour_
+- The _balance_ of forces gives _Young's equation_
+![[Young's equation.png]]
+$$\gamma_{SV}=\gamma_{SL}+\gamma_{LV}\cos\Theta$$
+- One can define a _wetting parameter_:
+$$S=\gamma_{SV}-(\gamma_{SL}+\gamma_{LV})$$
+- For $S>0$, there is _complete wetting_ as it lowers energy
+$$\cos\Theta=\frac{\gamma_{SV}-\gamma_{SL}}{\gamma_{LV}}$$
+- For $-1<\cos\Theta<1$, there is _partial wetting_ at some angle
+- For $\cos\Theta<-1$, a _completely spherical droplet_ forms
+
+- Typically, _aqueous_ liquids _spead_ on _highly polarisable_ surfaces
+- Otherwise, it depends on _relative polarisability_ of the liquid and surface
+- _Contamination_ of a surface can change wetting to have a _range_ of contact angles
+
+- Contact angle may be determined by _surface structure_
+	- The presence of _pillars_ on plants will _increase_ contact angle, as water is _far_ from the surface and _cannot reduce energy_ by wetting
+![[Hydrophobic surfaces.png|500]]
 # Colloids
 - A colloid consists of particles within size range of $10^{-3}-10^{-7}\,\text{cm}$
 	- _Larger_ than ordinary molecules, but still _invisible to naked eye_
@@ -1238,17 +1365,18 @@ $$\langle h \rangle = \frac{k_{B}T}{4\pi R^{3}\rho g/3} \sim R$$
 	- _Depletion interactions_ (non point-like particles)
 	- _Steric repulsion_ (if coated in polymers to prevent aggregation)
 
-### Excluded volume interaction
+## Excluded volume interaction
 - One model is the _hard sphere potential_
 - Let $r$ be the separation between particles of radius $a$
 $$V(r)=\begin{cases}
 0&r<2a \\ \infty &r>2a
 \end{cases}$$
-### Dispersion forces
+## Dispersion forces
 - Interactions between _uncharged_ particles
 	- They generally _repel_ when they are close, and _attract_ each other at intermediate distances
 	- There is an _equilibrium distance_
 
+### Pair potential and length scales
 - Let there be a _pair potential_ $u(r)$, where $r$ is separation
 $$F(r)=-\frac{du(r)}{dr}$$
 - If $u(r) \sim r^{-1}$, it is _long ranged_
@@ -1256,8 +1384,11 @@ $$F(r)=-\frac{du(r)}{dr}$$
 - Van der Waals forces are _short ranged_ with $r^{-6}$
 	- Can be modelled as _hard spheres_
 
+![[pair interactio.png|450]]
+
 - Coulomb interactions can become _short-ranged_ with more complex charge distributions such as _dipoles_ formed from _polarisable molecules_
 
+### Dipole interactions
 - For a particle with _polarisability_ $\alpha$, the _induced dipole moment_ is
 $$\mu=\alpha E$$
 - Force _experienced by a dipole_:
@@ -1270,17 +1401,67 @@ $$\displaylines{F(r)=-2\alpha\left( \frac{Q}{4\pi\epsilon_{0}\epsilon_{r}} \righ
 - Between _two polarisable atoms_:
 $$V_\text{atom-atom}(r)=-\frac{B}{r^{6}}$$
 - Here, $B$ is the _interaction parameter_
+	- Typically, $B>0$, making an _attractive_ potential
 - It can be derived [[Time-Independent Approximation Methods#Van der Waals interaction|quantum mechanically]] for two atoms with characteristic frequency $\nu$
 $$V_\text{two dipoles}(r)=-\frac{2\alpha^{2}h\nu}{(4\pi\epsilon_{0})^{2}} \frac{1}{r^{6}}$$
 
 - For larger bodies, one can _approximate_ by summing over _interaction potentials between all pairs_, which _increases_ the range of interaction
+![[vdW wit solids.png|500]]
 $$\begin{align}
-V_\text{atom-solid}(r)&=-\frac{\pi B\rho}{6r^{3}} \\ V_\text{solid-solid}(r)&=-\frac{A}{12\pi r^{2}} \\ V_\text{sphere-sphere}(r)&=-\frac{\pi^{2}B\rho^{2}R}{12r}\;,\;r\ll R
+V_\text{atom-solid}(r)&=-\frac{\pi B\rho}{6r^{3}} \\ V_\text{solid-solid}(h)&=-\frac{A}{12\pi h^{2}}\text{ per unit area} \\ V_\text{sphere-sphere}(r)&=-\frac{\pi^{2}B\rho^{2}R}{12r}\;,\;r\ll R
 \end{align}$$
 - $\rho$ is the _density of atoms_
 - $A(B,\rho)$ is the [[#Surface tension in 2D films|Hamaker constant]]
 
 - Dispersion interactions are almost always _attractive_, leading to _aggregation_ and _destabilisation_ of the colloidal system
 	- Tends to _weaken_ when the _solvent_ has the _same polarisability_ as the colloid
+![[vdW gellation.png|600]]
+
 - In cases where $A<0$, atoms _maximise interactions with the environment_
 	- Example: liquid helium
+
+## Coulomb interactions preventing aggregation
+- In _dilute electrolyte solutions_, the presence of _charged surfaces_ can prevent aggregation
+	- Electrolytes: ion solutions
+- The ions are _surrounded_ by solvent molecules which provide _electrostatic screening_
+- _Charge neutrality_ dictates that for a collection of ions with charge $z_{i}e$ and density $n_{i}$
+$$\sum z_{i}n_{i}=0$$
+
+### Bjerrum length
+- _Thermal energy_ dictates a _length-scale_ known as the _Bjerrum length_ when _Coulomb interactions_ are present:
+$$\frac{z_{i}z_{j}e^{2}}{4\pi\epsilon_{0}\epsilon_{r}} \frac{1}{l_{B}}=k_{B}T\hspace{1cm}l_{B}=\frac{z_{i}z_{j}e^{2}}{4\pi\epsilon_{0}\epsilon_{r}}$$
+- At _room temperature water_, $l_{B}\sim0.7\,\text{nm}$
+- If molecules aggregate _closer_ than the Bjerrum length, they start to _fall out of solution_
+- $l_{B}$ is _only dependent on the solution itself_
+
+### Charged surfaces
+- Consider a _charged surface_, with _counter-ions_ of opposite charge
+	- There are also _co-ions_ with the same charge as the surface
+- The counter-ions provide _screening_
+
+- The _distribution_ of counter-ions is determined by the _Poisson equation_:
+$$\nabla^{2} \phi(\boldsymbol{r})=\frac{\rho(\boldsymbol{r})}{\epsilon_{0}\epsilon_{r}}\hspace{1.5cm}\rho(\boldsymbol{r})=\sum_{i}ez_{i}n_{i}(\boldsymbol{r})$$
+- The ions also follow a _Boltzmann distribution_:
+	- For $\boldsymbol{r}\to \infty$ in the _bulk_, $n_{i}=n_{0}$
+$$n_{i}(\boldsymbol{r})=n_{i0}\exp\left( -\frac{z_{i}e\phi(\boldsymbol{r})}{k_{B}T} \right)$$
+- For an _infinite plane_, it is a 1D problem:
+$$\frac{\partial^{2}}{\partial x^{2}}\phi(x)=-\frac{e}{\epsilon_{0}\epsilon_{r}}\sum_{i}z_{i}n_{i0}\exp\left( -\frac{ez_{i}\phi(x)}{k_{B}T} \right)$$
+- This is the _Poisson-Boltzmann equation_
+	- It is _non-linear_
+
+- For $\phi(x)\ll k_{B}T$, the equation can be _linearised_ to get the _Debye-Huckel equation_:
+	- The constant term from the exponential _cancels out_ due to _charge neutrality_
+$$\begin{align}
+\frac{\partial^{2}}{\partial x^{2}}\phi(x)&\approx \sum_{i} \frac{e^{2}z_{i}^{2}n_{i0}}{\epsilon_{0}\epsilon_{r}k_{B}T}\phi(x) \\ &=\kappa^{2}\phi(x)
+\end{align}$$
+- $1/\kappa\equiv\lambda_{D}$ is the _Debye screening length_:
+	- Unlike $l_{B}$, it is _dependent_ on the bulk distribution of ions
+$$\kappa^{2}=\frac{e^{2}}{\epsilon_{0}\epsilon_{r}k_{B}T}\sum_{i}z_{i}^{2}n_{i0} \hspace{1.5cm}l_{D}=\lambda_{D}\equiv \frac{1}{\kappa}$$
+
+- Solution to the Debye-Huckel equation:
+$$\phi(x)=\phi(0)\exp(-\kappa x)$$
+- From _boundary conditions_ due to surface charge density $\sigma$:
+$$-\kappa \phi(0)=-\frac{\sigma}{\epsilon_{0}\epsilon_{r}}$$
+- This gives the solution:
+$$\phi(x)=\frac{\lambda_{D}\sigma}{\epsilon_{0}\epsilon_{r}}\exp(-\kappa x)$$
+- The _surface potential_ $\phi(0)$ is _dependent on ion concentrations_

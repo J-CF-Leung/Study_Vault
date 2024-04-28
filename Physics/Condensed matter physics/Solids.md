@@ -200,27 +200,30 @@ $$\epsilon_{\omega}=\epsilon_{\infty}+\frac{i\sigma_\omega}{\epsilon_{0}\omega}=
 - Scattering: other particles (phonons, lattice defects)
 	- Scattering _between electrons_: the _total electron momentum_ is conserved, to give _little effect on conductivity_
 
-## Transport in electric and magnetic fields
+## Transport with magnetic fields and the Hall effect
 - In the _relaxation time approximation_:
 $$\frac{d\boldsymbol{j}(t)}{dt}=-\frac{\boldsymbol{j}(t)}{\tau}+ \frac{nq^{2}}{m}\boldsymbol{E}+\frac{q}{m}(\boldsymbol{j}\times \boldsymbol{B})$$
 
 - wlog, take $\boldsymbol{B}=B\hat{z}$
-- In the _steady state_ $d\boldsymbol{j}/dt=0$
+- In the _steady state_ $d\boldsymbol{j}/dt=0$:
+	- The dimensionless constant $\beta=qB\tau/m=\omega_{c}\tau$, where $\omega_{c}$ is the _cyclotron frequency_
+$$\begin{align}
+j_{x}&=qn\left( \frac{q\tau}{m}E_{x}+\beta v_{y} \right) \\ j_{y}&=qn\left( \frac{q\tau}{m}E_{y}-\beta v_{x} \right) \\ j_{z}&=\frac{nq^{2}\tau}{m}E_{z}
+\end{align}$$
 
-- Eventually, for a material with _finite extent_, there is a _charge build-up_, leading to a _transverse field_ and _confining_ the current to the $x-$direction
+- Eventually, for a material with _finite extent_, there is a _charge build-up_, leading to a _transverse field_ and _confining_ the current to the $x-$direction ($v_{y}=0$):
+$$\boldsymbol{E}=-\boldsymbol{v}\times \boldsymbol{B}$$
+- This is the _Hall effect_, with a measurable _Hall voltage_
 
 - The _Hall coefficient_:
 $$R_{H}=\frac{E_{y}}{j_{x}B}=\frac{1}{nq}$$
 - This gives _carrier density_, and the _sign of charge_
 
-- _Cyclotron frequency_
-
 - Drude theory predicts that $R_{H}$ is _independent_ of $B$ and $\tau$
-- However, _experiments_ confirm that
-
+- However, _experiments_ confirm that it can vary with both
 - $R_{H}$ can also _change sign_
 
-- Scanning Hall probe microscopy
+- Scanning Hall probe microscopy: using a _Hall bar_ to measure _local magnetic field_
 
 ## Incorrect predictions of Drude theory
 - The Drude model predicts _heat capacity_ to be constant at $3nk_{B}/2$
@@ -1365,7 +1368,7 @@ $$\Delta\left( \frac{1}{B} \right)=\frac{2\pi e}{\hbar} \frac{1}{A_{k}}$$
 - Hence, each Landau level has a $1D$ _density of states_ superimposed on it
 - _Sharp peaks_ in the DoS move _through_ the chemical potential, such that there is a _modulation_ in density of states and 
 
-## Tunnelling
+## Tunnelling (incomplete)
 - Through a _potential barrier_
 - Maintain _electrical bias_
 
@@ -1586,7 +1589,28 @@ $$\mu_{e}=\frac{e \tau_{e}}{m_{e}^{*}} \hspace{1.5cm}\mu_{hh}=\frac{e \tau_{hh}}
 - There is a _peak in mobility_ at an intermediate temperature
 
 ### Hall effect with two carrier types (incomplete)
+- [[#Relaxation time approximation]]:
+$$\frac{d\boldsymbol{j}}{dt}=-\frac{1}{\tau}\boldsymbol{j} +\frac{ne^{2}}{m}(\boldsymbol{E}+\boldsymbol{v}\times \boldsymbol{B})$$
+- In the _steady state_, for electrons, using [[#Relaxation time approximation|mobility]] $\mu_{e}=e \tau/m$
+$$\boldsymbol{j}=n_{e}e\mu_{e}(\boldsymbol{E}+\boldsymbol{v}_{e}\times \boldsymbol{B})$$
+- If there are both _electrons and holes_:
+$$\boldsymbol{j}=ne\mu_{e}(\boldsymbol{E}+\boldsymbol{v}_{e}\times \boldsymbol{B})+pe\mu_{h}(\boldsymbol{E}+\boldsymbol{v}_{h}\times \boldsymbol{B})$$
 
+- After the charge build-up, let the current be _confined_ in the $x-$direction, with $\boldsymbol{B}=B\hat{z}$
+- Then, $v_{h}^{x}$ and $v_{e}^{x}$ have _opposite directions_
+- Using $\mu=v/E$:
+$$\displaylines{j_{x}=eE_{x}(n\mu_{e}+p\mu_{h}) \\ 0=eE_{y}(n\mu_{e}+p\mu_{h})-eBE_{x}(n\mu_{e}^{2}-p\mu_{h}^{2})}$$
+- From this: 
+$$\displaylines{E_{y}=\frac{j_{x}B(n\mu_{e}^{2}-p\mu_{h}^{2})}{e(n\mu_{e}+p\mu_{h})^{2}} \\R_{H}=\frac{E_{y}}{j_{x}B}=\frac{n\mu_{e}^{2}-p\mu_{h}^{2}}{e(n\mu_{e}+p\mu_{h})^{2}}}$$
+- In the $p\to 0$ limit, $R_{H}\to -1/ne$
+- For _high mobility_, a _minority carrier_ can determine the _sign_ of $R_{H}$
+![[InSb Hall effect.png]]
+- Example: $\ce{ InSb }$ with $\mu_{e}/\mu_{h}\sim 100$
+- At _high temperature_, the _intrinsic carriers dominate_, and the _slope_ of the graph can be used to determine the _band gap_
+	- $R_{H}\approx -1/ne$ remains _negative_
+- At _low temperatures_, the _intrinsic carriers freeze out_
+	- With donors: $R_{H}$ remains constant, dependent on _extrinsic electron concentration_
+	- With acceptors: $R_{H}$ _changes sign_, as _holes_ begin to dominate
 # Semiconductor devices
 - _Inhomogenous_ systems of semiconductors
 - Dependent on the _interfaces_ between semiconductors
@@ -1616,3 +1640,71 @@ $$H=E_{n}(\boldsymbol{k})-e\phi(\boldsymbol{r})$$
 ### Junction field-effect transistor (JFET)
 
 ### Metal oxide semiconductor field-effect transistor (MOSFET)
+
+## Bandstructure engineering
+- The _confinement_ of electrons can be achieved by _spatial control_ of band structure
+- Crystal growth techniques: molecular-beam epitaxy (MBE) and metal-organic chemical vapour deposition (MOCVD), to grow _monolayers_ one by one
+	 - Allows layer-by-layer control of _heterostructures_
+	 - _High purity_ materials must be used
+	 - Electron beam lithography: length-scale of $20-100\,\text{nm}$
+	- _Heating_ the substrate allows _lateral motion_ of atoms before incorporation, leading to smoother layers
+
+- The _surface structures_ of a growing crytal can be monitored using _reflection high-energy electron diffraction_ (RHEED), or _transmission electron microscopy_ (TEM)
+![[RHEED.png]]
+
+### Two-dimensional electron gas
+- The manufacture of a _two-dimensional electron gas_ (2DEG)
+	- _Spacers_ prevent positive carriers from scattering with the 2DEG
+![[2DEG.png|700]]
+- Electrons inhabit a _potential well_ in the $z-$direction
+
+- The _density of states_ in 2D is _independent_ of energy
+$$g(E)=\frac{m}{\pi \hbar^{2}}$$
+- With a _perpendicular magnetic field_, the density of states splits into _spin-split pairs_ of [[Charged Particles#Landau levels|Landau levels]]
+$$E_{i}=\left( i+\frac{1}{2} \right)\hbar\omega_{c} \hspace{1.5cm}\omega_{c}=\omega_{L}=\frac{eB}{m}$$
+- The _spin splitting_ is determined by the $g-$factor:
+$$\Delta E_{s}=g\mu_{B}B$$
+- The original states will _condense_ into Landau levels
+
+- Let the _occupancy_ of a Landau level _per unit area_ be $n_{L}$
+
+- Derivation (considering DoS or fluxes)
+$$n_{L}=\frac{eB}{h}$$
+
+- For $\nu$ occupied Landau levels at $B_{1}$:
+$$n_{e}=\frac{\nu eB_{1}}{h}$$
+- If the field is _increased_, the highest level can be _depopulated_, so that electrons are _redistributed_
+$$n_{e}=\frac{e}{h}\left( \frac{1}{B_{1}}-\frac{1}{B_{2}} \right)^{-1}$$
+- The depopulation of Landau levels is _periodic_ in $1/B$
+	- Similar to the [[#Quantum oscillations|de Haas van Alphen effect]]
+
+- If the Fermi level is _inside_ a Landau level, the 2DEG behaves as a _conductor_ 
+	- Electrons can _backscatter_
+- If the Fermi level is inside a _gap_, the 2DEG behaves as an _insulator_ in the _bulk_
+	- Except for _edge states_
+- At _low temperatures_ $k_{B}T\ll \hbar\omega_{c}$, depopulation affects the _resistance_, making it _oscillate_
+	- The Shubnikov-de Haas effect
+![[Shubnikov-de Haas.png|400]]
+
+### Quantum Hall effect
+- Measuring the _Hall effect_ for Shubnikov-de Haas oscillations:
+$$R_{H}=\frac{V}{I}=\frac{B}{n_{e}e}$$
+- The Hall voltage forms _plateaus_ when there are _full Landau levels_
+![[Quantum Hall effect.png|500]]
+- This is the _integer quantum Hall effect_
+$$G=\frac{dI}{dV}=\frac{\nu e^{2}}{h}\hspace{1.5cm}\nu \in\mathbb{N}$$
+- Electrons travel in _edge states_ within bulk gaps:
+![[IQHE edge states.png]]
+
+### Fractional quantum Hall effect
+![[Fractional quantum Hall effect.png]]
+- Electrons form _composite fermions_ as _quasi-particles_ with a _fractional effective magnetic field_
+	- Example: two flux quanta $h/e$ captured by each electron, so effectively $\nu=1/2$
+- Observed for _very high mobility_ samples
+
+### Lithography
+![[Lithography.png]]
+- Metals are coated with a _polymer "resist"_
+	- Polymer is broken into _shorter units_ using UV light
+
+
