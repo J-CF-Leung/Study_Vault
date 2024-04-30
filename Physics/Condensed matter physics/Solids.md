@@ -1553,7 +1553,7 @@ $$\Delta_{d}=\frac{m_{e}^{*}}{m_{e}} \frac{1}{\epsilon^{2}} \frac{13.6\,\text{eV
 
 - Similarly, impurities can _accept_ electrons, adding a _hole_
 - The _acceptor levels_ are also _hydrogenic_, and _sit above the valence band maximum_ (the holes are _ionised_ into the valence band)
-
+![[Physics/Images/Donor and acceptor levels.png|400]]
 ### Carrier densities
 - Even for _low densities_, the low donor/acceptor energies mean that _impurities are the main source of carriers_, even in _room temperature_
 - If _donors_ dominate, the material is _n-type_
@@ -1626,11 +1626,33 @@ $$H=E_{n}(\boldsymbol{k})-e\phi(\boldsymbol{r})$$
 	- Electrons _flow towards_ the more _electronegative_ material to equalise $\mu$
 	- This generates _internal inhomogenous electric fields_
 
-## Metal-semiconductor contact (incomplete)
+## Metal-semiconductor contact
+![[Metal semiconductor contact.png]]
+- Consider an _ideal metal_ in contact with an _n-type semiconductor_
+	- Known as a _Schottky diode_
+- The chemical potentials must then be _equalised_ as electrons _go into the metal_, producing the potential $\phi(x)$
+	- _Deep inside_ the semiconductor, $\phi(x)\to 0$
+	- The _electro-chemical_ potential: $\mu+e\phi(x)$
+- Relative to $\mu$, the bands in the semi-conductor _bend upwards_
+- The _donor levels near the interface_ are _emptied_, leaving a _depletion region_
 
+- The _Schottsky barrier_ $\Phi_{b}$ will _inhibit current flow_ between metal and semiconductor
+	- An electron must _tunnel through_ (common for low $T$), or be _thermally excited_ (thermionic emission)
+- With a large enough bias, the junction acts as a _rectifier_ as the _chemical potentials_ of the two materials _shift_ 
 
+- With a _+ve bias to the metal_ , the barrier is _lowered_ and current flows more freely
+	- For a large enough bias, the barrier _disappears_
+- With a _-ve bias to the metal_, the barrier is _raised_ as the _depletion region grows in width_, and current remains small
+	- Eventually, _breakdown_ occurs
 ## p-n junctions (incomplete)
+- A _p-n junction_ is formed when [[#Doped semiconductors|p-type and n-type semiconductors]] come into _contact_
+	- An _inhomogeneous doping_ of the material
+![[Physics/Images/p-n junction.png]]
+- _Electrons flow from n-type to p-type_ in order to fill the holes, until $\mu$ is _equalised_
+- This creates a _depletion region_ with no carriers
 
+- Relative to $\mu$, the bands _bend_ according to $\phi(z)$, determined by _Poisson's equation_:
+$$\nabla^{2}\phi=\frac{\partial^{2}\phi}{\partial z^{2}}=-\frac{\rho}{\epsilon\epsilon_{0}}$$
 ## LEDs (incomplete)
 
 ## Photovoltaic cells (incomplete)
@@ -1673,6 +1695,7 @@ $$n_{L}=\frac{eB}{h}$$
 
 - For $\nu$ occupied Landau levels at $B_{1}$:
 $$n_{e}=\frac{\nu eB_{1}}{h}$$
+### Shubnikov-de Haas effect
 - If the field is _increased_, the highest level can be _depopulated_, so that electrons are _redistributed_
 $$n_{e}=\frac{e}{h}\left( \frac{1}{B_{1}}-\frac{1}{B_{2}} \right)^{-1}$$
 - The depopulation of Landau levels is _periodic_ in $1/B$
@@ -1702,9 +1725,78 @@ $$G=\frac{dI}{dV}=\frac{\nu e^{2}}{h}\hspace{1.5cm}\nu \in\mathbb{N}$$
 	- Example: two flux quanta $h/e$ captured by each electron, so effectively $\nu=1/2$
 - Observed for _very high mobility_ samples
 
-### Lithography
+## Quantum semiconductor devices
+### Creation: lithography
 ![[Lithography.png]]
 - Metals are coated with a _polymer "resist"_
 	- Polymer is broken into _shorter units_ using UV light
+- Metal is _deposited_ on the surface after evaporation
+- The resist is _dissolved_ so the metal on it _lifts off_
 
+- Can be used to create _1D channels_ from split gates, as the _negative voltage_ on metal gates can be used to _repel electrons_
+	- _Arbitrary patterns_ are possible
+![[Split gate.png|500]]
+### 1D quantum wires
+- Like waveguides, _standing waves_ tend to form across the wire, with _quantised energies_
+- There are _sub-bands_ for each energy as the electron is a _free particle along the wire_
+	- The $z-$direction is already quantised
+	- The gate voltage can be made more _steep_ to "squeeze" the sub-bands and _increase energy spacing_
+![[Sub-band squeezing.png]]
+- Each sub-band has the _same conductance_
+	- There is _no scattering_ between each sub-band
+- This creates a _quantised conductance_
+- Using the _density of states_ in 1D $n=$
+![[1D quantised conductance.png]]
+$$\Delta I= \int  \, dx $$
+- For $\nu$ sub-bands, and 2 _spin orientations_:
+$$G=\frac{2\nu e^{2}}{h}$$
+### Anti-dots
+- A _potential hill_ (anti-dot) in the middle has _circulating edge states_
+![[Anti-dot.png]]
+- _Each trajectory_ has a set of _standing waves_ with its own energy levels
+	- From the [[Charged Particles#The Aharanov-Bohm Effect|Aharonov-Bohm effect]], states must enclose _multiples_ of $e/h$ in magnetic flux
+![[Antidot oscillations.png|400]]
+- Resistance will _oscillate_ as there is an _additional phase_ of $2\pi$ around the loop
 
+### 0D quantum dots
+- Confine a _fixed number_ of electrons _between tunnel barriers_
+- Due to the confinement, there are _quantised energies_
+- The energy required to _charge up_ the dot is typically large $(\gg k_{B}T)$
+![[Quantum dot.png|400]]
+
+- For a _small voltage_, current only flows when the _net charge_ on the dot is $\pm e/2$
+- The conductance _peaks_ as electrons are loaded into the dot
+	- _Coulomb blockade_ oscillations
+![[Coulomb blockade.png]]
+
+### Single electron pump
+- A _pump_ can _transfer one electron per cycle_
+- Can make a _quantised current_
+![[Single electron pump.png|400]]
+- Mechanism: raising barriers
+![[Electron pump mechanism.png]]
+- There will be some _tunneling rate_ back to the source
+- The _quantised energy levels_ can be made so there is a _large separation in tunneling rates_
+
+### Single photon sources
+- An _electron-hole pair_ (exciton) using a _self-assembled quantum dot_
+	- Made from $\ce{ GaAs }$ and $\ce{ InAs }$, by molecular-beam epitaxy
+	- Electrons and holes are _trapped_ in the band gap
+ ![[Single photon source.png|500]]
+ ![[Single photon source structure.png|500]]
+ - It can be tested using a [[Identical particles and second quantisation#Hanbury Brown and Twiss effect|Hanbury Brown and Twiss]] setup for _photon pair correlation_
+![[Single photon HBT.png|500]]
+- There can be _polarisation entangled_ pair photon sources
+
+### Quantum cascade lasers
+- Semiconductor lasers: _forward biased p-n junctions_, such that _electrons recombine with holes_
+- Quantum cascade laser: _inter-subband transitions_ in _quantum wells_
+- Pumping: by electrical _biasing_
+![[Quantum cascade laser.png|350]]
+- The _lowest level_ of one well is the _highest level_ of the next, such that electrons can _tunnel between wells_
+- The transition from $\ket{1}$ to $\ket{0}$ is _phonon assisted_, making it _faster_ than $\ket{2}$ to $\ket{1}$ which _emits_ the photon
+- Each electron emits up to $\sim 80$ photons
+	- Conventional diode lasers: 1 photon per electron
+- Wavelength: $\sim 1\,\mu\text{m}$ (infrared)
+
+- The _terahertz_ regime: between infrared and visible light, done using cascade lasers

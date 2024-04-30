@@ -834,7 +834,7 @@ $$a_0=\frac{4\pi\hbar^2}{e^2}\frac{\epsilon_0}{m_e}\to a_{0,\text{eff}}=a_0\frac
 - To model te acceptor levels, similar to the donor levels, assume the _acceptor atoms are hydrogen-like_
 - The zero energy is defined as _relative to the top of the valence band_:
 $$E_n=+\frac{R_{H,\text{eff}}}{n^2}$$
-![[Donor and acceptor levels.png]]
+![[Chemistry/Images/Donor and acceptor levels.png]]
 
 ### Fermi energy
 - In [[#Intrinsic semiconductors]], the _Fermi level_ is near the _middle of the band gap_
@@ -888,7 +888,7 @@ $$\sigma\propto\exp\left(-\frac{E_c-E_d}{2k_BT}\right)$$
 - If there is a _reverse bias_, _current cannot flow through the junction_ as the electrons and holes _stay_ on their respective sides
 
 - If an _AC current_ is applied, it is _rectified_ as only one direction of current flow is _allowed_
-![[p-n junction.png]]
+![[Chemistry/Images/p-n junction.png]]
 
 ### Electron bands in a p-n junction
 - The Fermi energy can be approximated by the _chemical potential_

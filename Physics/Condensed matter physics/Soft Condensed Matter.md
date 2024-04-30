@@ -1026,7 +1026,7 @@ $$\displaylines{c_{i}=K^{-1}(Kc_{1})^{i} \\ c_\text{tot}=\sum_{i=1}^{\infty} ic_
 	- Truncated (inverted) cone
 	- Cylindrical
 
-### Forces
+### Forces, energy, and effective area
 - The can be _attractive forces_ at an interface
 	- Hydrophobic effect, leads to _tight packing_
 - The hydrophobic effect also leads to _interfacial energy_:
@@ -1040,13 +1040,16 @@ $$E \sim \gamma a$$
 $$\varepsilon=\gamma a+\frac{K}{a}$$
 - The _minimum_ is at:
 $$a_{0}=\sqrt{ \frac{K}{\gamma} }$$
+- This is the _optimal head group area_
+
 - One can then write the energy as:
 $$\varepsilon_{N}=2\gamma a_{0}+\frac{\gamma}{a}(a-a_{0})^{2}$$
 
 ### Shape of aggregates
 - Assume the _hydrophobic tails_ remain _fluid_ and _incompressible_
 	- Both the _head group_ and _tails_ will influence the shape
-- Let the lipids have _parameters_ $a_{0}$, $l_{c}$, and $v$
+- Let the lipids have _optimal head group area_ $a_{0}$, with _volume_ $v$
+- Let the _critical chain length_ (where the molecule is _fully extended_) be $l_{c}$
 
 - Due to _entropy_, the system favours _smaller aggregates_
 
@@ -1054,7 +1057,7 @@ $$\varepsilon_{N}=2\gamma a_{0}+\frac{\gamma}{a}(a-a_{0})^{2}$$
 - From _area_, the _number of lipids_ $M$ is:
 	- Assuming _dense packing_
 $$M=\frac{4\pi R^{2}}{a_{0}}=\frac{4\pi R^{3}}{3v} \implies R=\frac{3v}{a_{0}}$$
-- Considering the _length_ of the hydrocarbon tails:
+- In order to form the micelle:
 $$R\leq l_{c} \implies \frac{v}{a_{0}l_{c}}\leq \frac{1}{3}$$
 
 - Lipids with _different_ $a_{0},l_{c},v$ will form _different aggregates_
@@ -1063,9 +1066,10 @@ $$R\leq l_{c} \implies \frac{v}{a_{0}l_{c}}\leq \frac{1}{3}$$
 - Consider _cylinders_:
 $$\frac{1}{3}\leq \frac{v}{l_{c}a_{0}}\leq \frac{1}{2}$$
 - Consider _bilayers_:
-$$ \frac{v}{l_{C}a_{0}}> \frac{1}{2}$$
+$$ \frac{v}{l_{c}a_{0}}> \frac{1}{2}$$
 - Bilayers are typically _planar_ on the _length scale of the lipids_
-	- Possible to be _gently curved_ as well
+	- Formed for a _large volume_ and _small critical length_
+	- Possible to be _gently curved_ as well at an energetic cost
 	- Forms if the _water-lipid ratio_ is _divergent_
 ![[Lipid aggregate shapes.png|650]]
 
@@ -1140,16 +1144,16 @@ $$\Delta V=\frac{\Delta T_{m}}{T_{m}}\,\frac{\Delta H_{0}}{\Delta p}$$
 - Let a soft membrane have length/width $L\gg d$, where $d$ is the _thickness_
 	- $L \sim \mu \text{m}$, $d\sim \text{nm}$
 - It undergoes _fluctuations_ of energy $\sim k_{B}T$
-- They are controlled by some _bending modulus_ $\kappa$
+- This includes _stretching_, controlled by modulus $\sigma$, and _bending_, with modulus $\kappa$
 	- Typically quite difficult to _measure directly_ (due to disruption of the membrane in said measurement)
-
+### Membrane stretching
 - Assume the membrane is a _quasi-2D liquid_, with a _vanishing shear modulus_, and _finite shear viscosity_
-- Assume _bending_ is the dominant deformation, and _does not induce a phase change_ (far away from $T_{m}$)
+- Assume _bending/stretching_ is the dominant deformation, and _does not induce a phase change_ (far away from $T_{m}$)
 
 - The lipids stay _close_ such that $a_{0}$ is _constant_
 - They remain _incompressible_ ($v$ is constant)
-- Thus, the bending comes from the _tilting_ and _splaying_ of the lipids themselves
-	- _Holes_ in the membrane are not allowed_
+- Thus, the stretching comes from the _tilting_ and _splaying_ of the lipids themselves
+	- _Holes_ in the membrane are _not allowed_
 
 ![[Membrane curvature.png]]
 - The _area_ of the membrane is $A=L^{2}$
@@ -1158,27 +1162,43 @@ $$\Delta V=\frac{\Delta T_{m}}{T_{m}}\,\frac{\Delta H_{0}}{\Delta p}$$
 
 - Let there be a _point_ $P$, with neighbouring points $P_{x}$ and $P_{y}$, which are $dx$ and $dy$ away
 $$\vec{PP_{x}}= \pmatrix{1\\0\\h_{x}}\,dx\hspace{1.5cm}\vec{PP_{y}}= \pmatrix{0\\1\\h_{y}}\,dy$$
-- The _infinitesimal area_:
+- The _infinitesimal area_ (small $\Delta h$)
 $$dA=\vec{PP_{x}}\times \vec{PP_{y}}=\left( 1+ \frac{1}{2}(\nabla h)^{2} \right)\,dx\,dy$$
+- The _actual increase in area_:
+$$dA-dx\,dy=\frac{1}{2}(\nabla h)^{2}dx\,dy$$
 
+### Membrane bending
+- The _curvature_ $H$ in 1D is defined by the reciprocal of the _radius of curvature_: 
+$$H=\frac{1}{r}=\frac{f''(x)}{[1+f'(x)^{2}]^{3/2}}=\left[ \frac{f'}{\sqrt{ 1+f'^{2} }} \right]'\approx f''(x)$$
+- Generalise to 2D:
+	- Formally, one needs to consider _mean_ and _Gaussian_ curvature along 2 directions
+	- 2 directions: normal of plane, normal of curve
+$$H=\frac{1}{2}\nabla\cdot\left( \frac{\nabla h}{\sqrt{ 1+|\nabla h|^{2} }} \right)\approx \frac{1}{2}\nabla^{2}h$$
+### Spectrum of deformations
 - The _energy_ has contributions from _stretching_ and _bending_:
-	- Characterised by $\alpha$ and $\kappa$ respectively
-$$\delta E=\frac{1}{2}\alpha \int (\nabla h)^{2} \, dx\,dy+\frac{1}{2}\kappa \int (\nabla^{2}h)^{2} \, dx\,dy  $$
+	- Characterised by $\sigma$ and $\kappa$ respectively
+$$\delta E=\frac{1}{2}\sigma \int |\nabla h|^{2} \, dx\,dy+\frac{1}{2}\kappa \int (\nabla^{2}h)^{2} \, dx\,dy  $$
+
 - Go to _Fourier space_:
 $$h(x,y)=L^{2} \int  \, \frac{d^{2}q}{(2\pi)^{2}} \tilde{h}(q) \exp(i\boldsymbol{q}\cdot \boldsymbol{r}) $$
-- Substitute in
+- Substitute the above into the formula for energy, and using that $h(\boldsymbol{q})=h^{*}(-\boldsymbol{q})$ 
+	- $h(\boldsymbol{r})$ is _real_
+$$\delta E=\frac{L^{2}}{2(2\pi)^{2}}\int  d^{2}q \,(\sigma q^{2}+\kappa q^{4})\tilde{h}(q)^{2}$$
 
-- Use _equipartition_
-	- Each mode gets $k_{B}T/2$, and only depend on the _modulus_ of $q$
-$$\langle \tilde{h} (q)^{2}\rangle = \frac{k_{B}T}{A} \frac{1}{\alpha q^{2}+\kappa q^{4}} $$
+- Use _equipartition_ for each $q$ mode
+	- Each mode gets $k_{B}T/2$, as it only depends on the _modulus_ of $q$ (one DOF)
+$$\langle \tilde{h} (q)^{2}\rangle = \frac{k_{B}T}{A} \frac{1}{\sigma q^{2}+\kappa q^{4}} $$
 - For _large_ $q$ (small wavelength), _bending_ dominates
 - For _small_ $q$, _stretching_ dominates
+- One can define $q_\text{crossover}=\sqrt{ \sigma/\kappa }$
 
-- The _minimum_ and _maximum_ $q$ are given by the dimensions of the membrane:
+- The _minimum_ and _maximum_ $q$ are given by the _dimensions_ of the membrane:
 $$q_\text{min}=\frac{2\pi}{L}\hspace{1.5cm}q_\text{max}=\frac{2\pi}{d}$$
 - _Sum over_ individual modes:
-$$\langle h^{2} \rangle = \frac{k_{B}T}{A} \int  2\pi q\, dq  $$
-- A _typical value_ of $\kappa$ is $20k_{B}T$, leading to a _fluctuation_ of $L/100$
+$$\begin{align}
+\langle h^{2} \rangle &= \frac{k_{B}T}{A} \int  2\pi q\, dq \, \frac{1}{\sigma q^{2}+\kappa q^{4}} \\ &= \frac{k_{B}T}{4\pi\sigma} \,\ln\left( \frac{q^{2}}{\sigma+\kappa q^{2}} \right)\Bigg|_{q_\text{min}}^{q_\text{max}} \\ &\xrightarrow{\sigma\to0} \frac{k_{B}T}{16\pi^{3}\kappa}A
+\end{align}$$
+- A _typical value_ of $\kappa$ is $20k_{B}T$, leading to a _fluctuation_ $\sqrt{ \langle h^{2} \rangle }$ of $L/100$
 
 ## Other self-assembled structures
 - _Viruses_ contain an _outer coat_ of _proteins_ (the _capsid_)
@@ -1186,7 +1206,7 @@ $$\langle h^{2} \rangle = \frac{k_{B}T}{A} \int  2\pi q\, dq  $$
 
 - _DNA_ is also a _self-assembled_ structure from its bases
 
-# Surface Energy (incomplete)
+# Surface Energy
 - There are _van der Waals_ interactions between _molecules of the same species_
 	- They are typically _attractive_
 - Interactions between molecules of _different species_ can be _unfavourable_
@@ -1306,6 +1326,7 @@ $$\mu_{2}=\mu_{0}+k_{B}T\ln c$$
 - This leads to:
 $$\frac{n}{A}=-\frac{1}{k_{B}T} \frac{d\gamma}{d(\ln c)}$$
 - This is the _Gibbs adsorption isotherm_
+- It is derived from the _balance_ of _bulk entropy_ and _surface energy_
 
 - It holds _up to_ the [[#Critical concentration|critical micelle concentration]] (CMC)
 	- Above this concentration, _monomer concentration does not increase_, which _stops reducing surface tension_
@@ -1313,7 +1334,7 @@ $$\frac{n}{A}=-\frac{1}{k_{B}T} \frac{d\gamma}{d(\ln c)}$$
 
 ![[Surface tension measurements.png|450]]
 
-## Wetting
+## Wetting and contact angle
 - The _composition_ of a surface determines the _interactions with water_
 - The _surface and its energies_ influence the _shape_ of the surface
 ![[Pasted image 20240427184402.png]]
@@ -1357,7 +1378,8 @@ $$\langle h \rangle = \frac{k_{B}T}{4\pi R^{3}\rho g/3} \sim R$$
 - A particle with $R\sim 1 \,\mu \text{m}$ will diffuse in water over $1\,\text{s}$
 
 - Colloids are typically understood _without details about atomic constitution_
-## Interactions between colloidal particles
+
+![[Colloid interactions.png|350]]
 - Relevant interactions:
 	- _Excluded volume_ (no overlap)
 	- _Dispersion forces_ (van der Waals interactions)
@@ -1455,13 +1477,95 @@ $$\begin{align}
 \frac{\partial^{2}}{\partial x^{2}}\phi(x)&\approx \sum_{i} \frac{e^{2}z_{i}^{2}n_{i0}}{\epsilon_{0}\epsilon_{r}k_{B}T}\phi(x) \\ &=\kappa^{2}\phi(x)
 \end{align}$$
 - $1/\kappa\equiv\lambda_{D}$ is the _Debye screening length_:
-	- Unlike $l_{B}$, it is _dependent_ on the bulk distribution of ions
+	- Unlike $l_{B}$, it is _dependent_ on the _bulk distribution_ of ions
 $$\kappa^{2}=\frac{e^{2}}{\epsilon_{0}\epsilon_{r}k_{B}T}\sum_{i}z_{i}^{2}n_{i0} \hspace{1.5cm}l_{D}=\lambda_{D}\equiv \frac{1}{\kappa}$$
-
+![[Screening layer.png]]
 - Solution to the Debye-Huckel equation:
 $$\phi(x)=\phi(0)\exp(-\kappa x)$$
 - From _boundary conditions_ due to surface charge density $\sigma$:
 $$-\kappa \phi(0)=-\frac{\sigma}{\epsilon_{0}\epsilon_{r}}$$
 - This gives the solution:
-$$\phi(x)=\frac{\lambda_{D}\sigma}{\epsilon_{0}\epsilon_{r}}\exp(-\kappa x)$$
+$$\phi(x)=\frac{\lambda_{D}\sigma}{\epsilon_{0}\epsilon_{r}}\exp\left( -\frac{x}{\lambda_{D}} \right)$$
 - The _surface potential_ $\phi(0)$ is _dependent on ion concentrations_
+
+### Rewrite
+- The ion concentrations:
+$$n_{i}(x)=n_{i0}\exp\left( -\frac{z_{i}e\phi(x)}{k_{B}T} \right)$$
+- In the _linear_ regime:
+$$n_{i}(x)=n_{i0}\left[ 1-\frac{z_{i}e}{k_{B}T}\phi_{0}\exp\left( -\frac{x}{\lambda_{D}} \right) \right]$$
+- Monovalent ions:
+$$n_{\pm}(x)=n_{0}\left[ 1\mp \frac{e}{k_{B}T}\phi_{0}\exp\left( -\frac{x}{\lambda_{D}} \right) \right]$$
+- There is a _counter-ion accumulation_ around the surface to screen the charge
+- At the same time, there is a _co-ion depletion_
+- This forms an _electric double layer_ at the surface
+
+- The _net charge density_ in the layer, using the above:
+	- _Integrating_ gives the charge of the layer, as expected
+$$\rho(x)=-\frac{\sigma}{\lambda_{D}}\exp\left( -\frac{x}{\lambda_{D}} \right)$$
+### Charged parallel plates (rewrite)
+- Let there be two _semi-infinite_ parallel plates
+- Let them be immersed in a solution of two _monovalent_ ions
+
+### Other geometries
+- Let there be a _spherical colloidal particle_ with charge $Q$ and radius $a$:
+- In spherical polars, the Debye-Huckel equation:
+$$\frac{1}{r^{2}} \frac{\partial}{\partial r}\left( r^{2}\frac{\partial \phi}{\partial r} \right)=\kappa^{2}\phi(r)$$
+- This gives the solution:
+$$\phi(r)=\frac{Q}{4\pi\epsilon_{r}\epsilon_{0}r(1+\kappa a)}\exp[-\kappa(r-a)]$$
+- As expected, the _surface charge_ is _screened_
+
+- Let there be _two spherical charged particles_ a distance $d$ apart
+	- Size: $a\approx 500\,\text{nm}$
+	- Typical $\lambda_{D}\approx 1\,\text{nm}$
+- As $\lambda_{D}\ll a$, the _curvature_ can be neglected
+
+- Let $d\ll a$, so the system can be treated as _two semi-infinite parallel plates_
+- The _osmotic pressure_ of the counter-ions tend to _push the particles apart_
+- Charge density:
+$$\displaylines{n(x)=\sum_{i}n_{i}\exp\left( -\frac{z_{i}e\phi(x)}{k_{B}T} \right) \\ \frac{\partial n}{\partial x}=-\frac{\epsilon_{0}}{k_{B}T}\frac{\partial^{2}\phi}{\partial x^{2}} \frac{\partial \phi}{\partial x}=\frac{\epsilon_{0}}{2k_{B}T}\frac{\partial}{\partial x}\left( \frac{\partial \phi}{\partial x} \right)^{2}}$$
+- _Integrating_, recognising $E(x)=-\partial \phi/\partial x$, and multiplying by $k_{B}T$
+$$k_{B}T\,n(x)-\frac{1}{2}\epsilon_{0}[E(x)]^{2}=\text{const.}\,k_{B}T$$
+- The two terms represent _pressure_ on the plates
+$$\Pi _\text{wall}=k_{B}T\left[ n\left( x=\frac{d}{2} \right)-n_{0} \right]$$
+- _Excess counter-ions_ will create _osmotic pressure_
+	- If $n(x=d/2)=n_{0}$, there is _no pressure_
+
+- From the solution to the Debye-Huckel equation:
+$$\Pi _\text{wall}=\frac{\sigma^{2}}{\epsilon_{r}\epsilon_{0}}\exp\left( -\frac{d}{\lambda_{D}} \right)$$
+### High surface charge
+
+## DLVO Theory
+
+
+
+## Other interactions
+- DLVO: accounts for _dispersion, Coulomb, hard core repulsion_ interactions
+
+### Steric interactions
+- Colloids can be _coated_ in [[#Brushes|polymer brushes]] to enhance _steric interactions_
+	- There is _osmotic pressure_ from _pressing_ the polymer layer
+	- The brush can be _extended_ into regions where _dispersion_ is negligible
+	- The brush itself is [[#Excluded volume interaction and swelling|swollen]] and dilute, hence _does not contribute to dispersion_
+- Example: _casein_ layer outside _fat_ in milk
+
+### Depletion interaction
+- _Entropic_ in origin, for solutions with _small particles_ between _larger objects_
+- If there is a _small gap_ between the large objects, there are _fewer small particles_, and are _depleted_ from the gapped region
+- The large objects are subject to an _osmotic pressure_ from the outside, and hence are _attracted to each other_
+
+- The _range_ is the _diameter_ of the small particles
+	- Most effective when there are _no small particles at all_ in the gap
+- Interaction _potential_ is set by the _osmotic pressure_, which depends on _concentration_
+- Effectively, a _square well potential_, with a _depth_ of $k_{B}T$
+
+- For a _dilute solution_ of _non-interacting_ particles or _polymers_, the _osmotic pressure_ is given by the _ideal gas law_, with $N$ polymers and _total solution volume_ $V$
+$$P_\text{osm}=\frac{N}{V}k_{B}T$$
+- The _interaction potential_ is then:
+$$U_\text{dep}=-P_\text{osm}V_\text{dep}$$
+- $V_\text{dep}$ is the _exclusion volume_
+- For two particles of _radius_ $a$ and _separation_ $r$, given a _depletion layer thickness_:
+$$V_\text{dep}=\frac{4\pi}{3}(a+L)^{2}\left[ 1-\frac{3r}{4(a+L)}+\frac{r^{3}}{16(a+L)^{3}} \right]$$
+
+- An _increase_ in _number density_ will increase the _attraction_, leading to _aggregation_
+
+## Phase diagram of colloidal suspensions
