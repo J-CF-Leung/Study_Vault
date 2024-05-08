@@ -70,7 +70,7 @@ $$p_F(\varepsilon)=\frac{1}{\exp[(\varepsilon-\mu)/k_BT]+1}$$
 	- The states are _filled up to_ energy $\mu$
 
 - At a _finite temperature_, it is _smeared out_ with order $k_BT$
-![[Physics/Images/Fermi-Dirac distribution.png]]
+![[Physics/Zimages/Fermi-Dirac distribution.png]]
 
 - The _density of occupied electron states_ is given by $g(\varepsilon)p_F(\varepsilon)$
 - It is the _graph of_ $g(\varepsilon)$ _smeared out_ at the step

@@ -481,10 +481,10 @@ $$U=-\pd{}{\beta}\ln Z=\frac{3}{2}kT$$
 - Therefore, $Z$ is the _number of possible configurations of the particle in a box_
 - The above result means that this is given by the number of _packets_ of size $\lambda^3$ in $V$
 
-## Internal degrees of freedom
+## Internal degrees of freedom and external potentials
 - The gas can have _internal degrees of freedom_
 - This gives the _partition function_:
-$$Z=Z_1Z_\text{int}=\left(\frac{V}{\lambda^3}\right)^NZ_\text{int}$$
+$$Z=Z_1Z_\text{int}=\left(\frac{V}{\lambda^3}\right)Z_\text{int}$$
 
 ### External potential
 - There can be some _external potential_:
@@ -503,7 +503,7 @@ $$\displaylines{U(T\to0)=\frac{3}{2}kT+\coth\frac{\beta\hbar\omega}{2}+\frac{3\h
 - At _high temperature_, as there are _2 rotational degrees of freedom_, $U_\text{rot}\approx kT$
 ![[Diatomic heat capacities.png]]
 
-## N particles in a box
+## Thermodynamics of N particles in a box
 - For a gas of $N$ _indistinguishable particles_, one must add a factor:
 $$Z_N=\frac{Z_1^N}{N!}=\frac{1}{N!}\left(\frac{V}{\lambda^3}\right)^NZ_\text{int}^N$$
 - The _internal energy_:
@@ -537,37 +537,175 @@ $$\mu=kT\ln c+\phi$$
 - For $N\lambda^3/V\gg1$, _quantum effects_ start to interfere (wave-functions overlap)
 - The _classical particle_ becomes a _bad approximation_, and one can only speak of _states_
 
+## Equipartition
+- The classical gas displays _equipartition_
+- For any system with a _separable, quadratic Hamiltonian_, it is trivial to show that the _probability distributions for each coordinate are independent of other coordinates_
+
+- Then for each coordinate $q$:
+$$\displaylines{H(q)=Aq^{2} \\ \langle Aq^{2} \rangle = \frac{\int Aq^{2}\exp(-\beta Aq^{2}) \, dq}{\int \exp(-\beta Aq^{2}) \, dq } = \frac{1}{2}k_{B}T  }$$
+- For each _degree of freedom present in_ $H$, there is $k_{B}T/2$ of energy
+- In the _ideal gas_, the DoF are $p_{x},p_{y},p_{z}$
+
+- Valid for the _classical limit_
+# Grand partition function and grand potential
+- Characterise a system by _energy levels_ $\varepsilon_k$, each with _occupation number_ $n_k$
+- The _total energy_ of the system:
+$$E=\sum_k n_k\varepsilon_k$$
+- With _total number of particles_ $N$ and _total energy_ $E$, denote some _microstate_ by $(N,E)$, with _partition function_:
+$$\displaylines{Z(T,V,N)=\sum_{n_1,n_2,\dots}\exp[-\beta(n_1\varepsilon_1+n_2\varepsilon_2+\dots)] \\ \text{satisfying }\, N=n_{1}+n_{2}+\dots}$$
+- For _fermions_, the occupation number of each level must be $0$ or $1$
+
+- If there is _no fixed particle number_, consider the _grand partition function_:
+$$\begin{align}
+\Xi(T,V,\mu)&=\sum_{N=0}^{\infty}Z(T,V,N)\exp(\beta\mu N) \\ &=\sum_{N=0}^{\infty}\sum_{n_{1},n_{2},\dots}^{N} \exp[-\beta(n_{1}\varepsilon_{1}+n_{2}\varepsilon_{2}+\dots)+\beta\mu(n_{1}+n_{2}+\dots)]
+\end{align}$$
+- The second sum has the _constraint_ that $n_{1}+n_{2}+\dots=N$
+- However, as $N$ is _summed over_, the total sum is:
+$$\begin{align}
+\Xi(T,V,\mu)&=\sum_{n_{1},n_{2},\dots} \exp[-\beta(n_{1}\varepsilon_{1}+n_{2}\varepsilon_{2}+\dots)+\beta\mu(n_{1}+n_{2}+\dots)] \\ &=\sum_{n_{1},n_{2},\dots} \exp[-\beta(\varepsilon_{1}-\mu)n_{1}]\exp[-\beta(\varepsilon_{2}-\mu)n_{2}]\dots \\ &= \left[ \sum_{n_{1}} \exp[-\beta(\varepsilon_{1}-\mu)n_{1}] \right]\left[ \sum_{n_{2}} \exp[-\beta(\varepsilon_{2}-\mu)n_{2}] \right]\dots
+\end{align}$$
+
+- Then the _total grand partition function_ is:
+$$\Xi=\prod_k\Xi_k$$
+- The total grand partition function $\Xi$ is a _product_ of grand partition functions _of the individual energy levels_ $\Xi_{k}$
+
+- The [[#Grand canonical ensemble|grand potential]] is then:
+$$\Phi=\sum_k\Phi_k$$
+
+## Classical limit
+- For a _single energy level_ of energy $\varepsilon_{k}$:
+$$\Xi_k=\sum_{n}\exp[-\beta(n\varepsilon_{k}-n\mu)]=\sum_{n}\left[\exp[-\beta(\varepsilon_{k}-\mu)]\right]^{n}$$
+- For _fermions_, the occupation number of each level must be $0$ or $1$
+
+- Let $\beta(\varepsilon_k-\mu)\gg1$
+	- Different from the _high energy/low temperature limit_
+$$\Xi_k=\sum_{n}(\exp[-\beta(\varepsilon_{k}-\mu)])^{n}\approx 1+\exp[-\beta(\varepsilon_k-\mu)]\equiv \Xi_{k}^{\text{cl}}$$
+- If this is _valid for all energy levels_, then one gets a _classical gas_, as _fermionic/bosonic nature is irrelevant_
+- This can only be valid for a _large, negative_ $\mu$, also corresponding to the [[#Classical to quantum crossover|classical limit]]
+	- In the _ideal classical gas_, $\beta \mu=\ln(N\lambda^{3}/V)$
+
+- Take the _grand potential_, expanding the logarithm to the _lowest order_:
+$$\Phi_{k}^{\text{cl}}=-k_{B}T\ln \Xi_{k}^{\text{cl}}\approx -k_{B}T\exp[-\beta(\varepsilon_{k}-\mu)]$$
+- The _average occupancy_ is then:
+$$\langle n_{k} \rangle =-\left( \frac{\partial \Phi_{k}}{\partial \mu} \right)_{T,V}\approx \exp[-\beta(\varepsilon_{k}-\mu)] $$
+- This is simply the _Maxwell-Boltzmann distribution_
+	- For the _classical gas_, $\langle n_{k} \rangle$ is _always small_, including for $k=0$
+## Quantum particles
+- Below the _quantum threshold_, where $N\lambda^3/V\gg1$, the effects of particles being _bosons_ and _fermions_ emerge
+- For _bosons_:
+$$\displaylines{\Xi_k=\sum_{n=0}^\infty\exp[-\beta(\varepsilon_k-\mu)n]=\frac{1}{1-\exp[-\beta(\varepsilon_k-\mu)]} \\ \Phi_k=kT\ln[1-\exp(-\beta\varepsilon_k+\beta\mu)] \\ \mean{n_k}=\pd{\Phi_k}{\mu}=\frac{1}{\exp[\beta(\varepsilon_k-\mu)]-1}}$$
+- The _Bose-Einstein distribution_
+
+- For _fermions_:
+$$\displaylines{\Xi_k=\sum_{n=0}^1\exp[-\beta(\varepsilon_k-\mu)n]=1+\exp[-\beta(\varepsilon_k-\mu)] \\ \Phi_k=kT\ln[1+\exp(-\beta\varepsilon_{k}+\beta \mu)] \\ \mean{n_k}=\frac{1}{\exp[\beta(\varepsilon_k-\mu)]+1}}$$
+- The _Fermi-Dirac distribution_
+
+- For _bosons_ at _low temperatures_, $\mean{n_k}$ can start to _diverge_
+	- This gives rise to the _Bose-Einstein condensate_
+
+- For _fermions_ at _low temperatures_, $\mean{n_k}$ becomes _constant_ at _lower levels_ until the _Fermi energy_ $\varepsilon_F$ where it _drops off quickly_
+	- The _chemical potential_ can be _approximated_ by $\varepsilon_F$ as it is the _energy gained by adding one particle_
+
+## Accounting for spin
+- Quantum particles all have _spin_ $s$
+- _Without external field_, spin _does not affect energy_, and there is a _degeneracy_:
+$$\sigma\equiv 2s+1$$
 # The ideal gas in the grand canonical ensemble
 - Consider the _ideal gas_, with _variable energy and particle number_, and _fixed_ $T$ and $\mu$
-
-## Using the partition function
+- Let the particles also have _spin degeneracy_ $\sigma$
+- The single particle partition function:
+$$Z_{1}=\frac{\sigma V}{\lambda^{3}}$$
+## Evaluating the grand partition function
 - The [[#Grand canonical ensemble|grand partition function]]:
 $$\Xi=\sum_{N_i=0}^\infty\sum_\text{states}\exp[-\beta(E_i[N_{i}]-\mu N_i)]=\sum_{N_i=0}^\infty \frac{1}{N_i!}Z_1^{N_i}\exp(\beta\mu N_i)$$
 - This can then be rewritten as:
-$$\Xi=\exp\left(Z_1e^{\beta\mu}\right)=\exp\left(\frac{V}{\lambda^3}Z_\text{int}e^{\beta\mu}\right)$$
+$$\Xi=\exp\left(Z_1e^{\beta\mu}\right)=\exp\left(\frac{\sigma V}{\lambda^3}e^{\beta\mu}\right)$$
+### Thermodynamic quantities
 - One then gets the _grand potential_:
-$$\Phi=-kT\ln\Xi=-kT\frac{V}{\lambda^3}Z_\text{int}e^{\beta\mu}$$
+$$\Phi=-kT\ln\Xi=-kT\frac{\sigma V}{\lambda^3}e^{\beta\mu}$$
 
-- Assume $Z_\text{int}=1$
-- The _pressure_ of the gas:
-$$p=-\pd{\Phi}{V}=\frac{kT}{\lambda^3}e^{\beta\mu}\hspace{1.5cm}N=-\pd{\Phi}{\mu}=\frac{V}{\lambda^3}e^{\beta\mu}$$
+- The _pressure_ of the gas, and the _equilibrium number of particles_ given $\mu$:
+$$p=-\pd{\Phi}{V}=\frac{k_{B}T\sigma}{\lambda^3}e^{\beta\mu}\hspace{1.5cm}N=-\pd{\Phi}{\mu}=\frac{\sigma V}{\lambda^3}e^{\beta\mu}$$
 - From this, one can get the _ideal gas law_ $pV=NkT$
 - One can also _invert_ the relation for $N$ above to get:
-$$\beta\mu=\ln\left(\frac{N\lambda^3}{V}\right)$$
+$$\beta\mu=\ln\left(\frac{N\lambda^3}{\sigma V}\right)=\ln\left( \frac{N}{Z_{1}} \right)$$
 - Once again, one can define a [[#Classical to quantum crossover|classical limit]] where $\mu\ll0$
 
+- The entropy is given by:
+$$S=-\left( \frac{\partial \Phi}{\partial T} \right)_{\mu,V}=k_{B} \frac{\sigma V}{\lambda^{3}}\exp(\beta \mu )\left[ \frac{5}{2}-\frac{\mu}{k_{B}T} \right]$$
+- This gives the [[#Thermodynamics of N particles in a box|Sackur-Tetrode formula]]:
+$$S=Nk_{B}\ln\left[ e^{5/2} \frac{\sigma V}{N}\left( \frac{mk_{B}T}{2\pi \hbar^{2}} \right)^{3/2} \right]$$
+
+### Alternative: direct integration
+- The _grand potential_ is:
+$$\Phi=\sum\Phi_{k}=-k_{B}T \int  \, \Phi (\varepsilon) \frac{\sigma\,d^{3}x\,d^{3}p}{(2\pi \hbar)^{3}} $$
+
+- Expression for $\Phi_{k}$ in the _classical limit_:
+$$\Phi_{k}^{\text{cl}}=-k_{B}T\ln \Xi_{k}^{\text{cl}}\approx -k_{B}T\exp[-\beta(\varepsilon_{k}-\mu)]$$
+- One can _sum over all states_, either in _phase space_ or using the _density of states_ in $\varepsilon$
+	- The latter expression can be obtained via _quantisation_, or using $d^{3}p=4\pi p^{2}\,dp$
+	- The density of states is for _single particles_
+$$\displaylines{\int  \, \frac{\sigma\,d^{3}x\,d^{3}p}{(2\pi \hbar)^{3}} \longrightarrow \int_{0}^{\infty} g(\varepsilon) \, d\varepsilon  \\ g(\varepsilon)=\frac{\sigma V}{4\pi^{2}} \left( \frac{2m}{\hbar^{2}} \right)^{3/2}\sqrt{ \varepsilon }}$$
+- Final expression for the grand potential, same as considering $Z$:
+$$\Phi=-k_{B}T \frac{\sigma V}{\lambda^{3}}\exp(\beta \mu)$$
+### Maxwell-Boltzmann distribution
+- The number of _energy levels_ within $\varepsilon\to\varepsilon+d\varepsilon$ is $g(\varepsilon)\,d\varepsilon$
+- The probability of _finding_ a particle in that energy interval is $\langle n_{k} \rangle/N$
+- Then, the _probability of finding a particle in the box with energy_ $\varepsilon$ is $P(\varepsilon)$
+$$P(\varepsilon)\,d\varepsilon=\frac{\langle n_{k} \rangle}{N}g(\varepsilon)\,d\varepsilon$$
+- Substituting expressions for $\langle n_{k} \rangle$, $\mu$, and $g(\varepsilon)$, and using $\varepsilon=mv^{2}/2$, one obtains the _Maxwell distribution of speeds_:
+$$P(v)\,dv=\left( \frac{m}{2\pi k_{B}T} \right)^{3/2}\exp(-\beta mv^{2}/2)\,4\pi v^{2}\,dv$$
+
+## Internal degrees of freedom and external potentials
+- Extend to particles with _internal degrees of freedom_, or subject to an _external potential_
+- Let energy be in the form:
+$$\varepsilon=\varepsilon_{\boldsymbol{k}}+\varepsilon _\text{int}+\varepsilon _\text{ext}$$
+- For a _diatomic molecule_, with _vibrational_ and _rotational_ energy:
+$$\varepsilon _\text{int}=\left( n+\frac{1}{2} \right)\hbar\omega_{0}+\frac{\hbar^{2}J(J+1)}{2I}$$
+- External energy: can be _gravitational_ or _electrical_
+- The _grand partition function/potential_ for a _single energy level_ $\varepsilon_{\boldsymbol{k}}$, in the [[#Classical limit]]
+$$\displaylines{\Xi_{\boldsymbol{k}}=1+\sum_\text{int}\exp[-\beta(\varepsilon_{\boldsymbol{k}}+\varepsilon _\text{int}+\varepsilon _\text{ext}-\mu)]=1+Z_\text{int}Z_\text{ext}\exp[-\beta(\varepsilon_{\boldsymbol{k}}-\mu)] \\ \Phi_{\boldsymbol{k}}\approx -k_{B}TZ_\text{int}Z_\text{ext}\exp[-\beta(\varepsilon_{\boldsymbol{k}}-\mu)]}$$
+- For a _particle number_ $N$, the chemical potential is then:
+$$\mu=k_{B}T\left[ \ln\left( \frac{N\lambda^{3}}{\sigma V} \right)-\ln Z_\text{int}-\ln Z_\text{ext} \right]$$
+
+- Example: _gravitational potential energy_:
+$$\varepsilon=mgh \implies -k_{B}T\ln Z_\text{ext}=mgh$$
+- $Z_\text{int}$ and $\mu$ must _both be independent of height_
+$$N(h)=N(0)\exp\left( -\frac{mgh}{k_{B}T} \right)$$
+
 ## Langmuir isotherm
-- Let the _3D gas_ at temperature $T$ be able to be _adsorbed_ onto a _2D surface_
-- There is some _energy change_ $-\Delta<0$ when _adsorbed_
+- Let the _3D gas_ at temperature $T$ be able to be _adsorbed_ onto a _2D surface_ with $N_{s}$ sites
+- There is some _energy change_ $-\epsilon<0$ when _adsorbed_
+- Consider _no internal degrees of freedom_ in the _vapour_
+- On the _surface_, it can _vibrate_ against the surface, with _partition function_ $z_{s}(T)$
 
-- One can consider it as a _single system_ in _equilibrium_, where $T_1=T_2$, $\mu_1=\mu_2$, and $p_1=p_2$
-- One can also consider the _adsorbing layer_ as a system _connected to a reservoir_
+- For a given _vapour pressure_ $p$, there is a _fraction of surface sites occupied_ $\theta=N_{s}/N$
 
+- In _equilibrium_, the _chemical potentials_ of the sites $(\mu_{s})$ and the _vapour_ $\mu_{v}$ are the same
+$$\mu_{s}=\mu_{v}$$
+### Chemical potential of surface
+- Use the _canonical ensemble_ to obtain $\mu$ for a _fixed_ $N$
+$$\displaylines{Z_{N}=\frac{N_{s}!}{(N_{s}-N)!N!}z_{s}^{N}\exp\left( \frac{N\epsilon}{k_{B}T} \right) \\ F=-k_{B}T\ln Z_{N} \\ \mu=\frac{\partial F}{\partial N}=-\varepsilon+k_{B}T\ln \frac{N}{(N_{s}-N)z_{s}}=-\varepsilon+k_{B}T\ln\left( \frac{\theta}{(1-\theta)z_{s}} \right)}$$
+- Alternatively, consider the _grand canonical ensemble for a single site_
+	- All sites are _independent_, consider one site as the system with _average occupation number_ $\theta$
+	- Sites have _two states_, with occupancy $0$ or $1$
+$$\displaylines{\Xi=\sum_\text{states}\exp[-\beta(E_{i}-\mu_{s}N_{i})]Z_\text{int}^{(i)}=1+z_{s}\exp[\beta(\epsilon+\mu_{s})] \\ \theta=-\left( \frac{\partial \Phi}{\partial \mu_{s}} \right)_{T,V}=\frac{z_{s}\exp[\beta(\epsilon+\mu_{s})]}{1+z_{s}\exp[\beta(\epsilon+\mu_{s})]}\\ \mu_{s}=-\varepsilon+k_{B}T\ln\left( \frac{\theta}{(1-\theta)z_{s}}\right)}$$
+### The adsorption isotherm
+- Chemical potential of an [[#Thermodynamic quantities|ideal gas]]
+$$\mu_{v}=k_{B}T\ln\left( \frac{N\lambda^{3}}{V} \right)=k_{B}T\ln\left( \frac{p}{k_{B}T}\lambda^{3} \right)$$
+- _Equating_ the chemical potentials:
+$$p=\frac{\theta}{1-\theta} \frac{k_{B}T}{z_{s}\lambda^{3}}\exp(-\beta\epsilon)$$
+### Kinetic argument
+- Consider the _rates_ of _adsorption_ and _desorption_:
+$$r_\text{ads}=k_{a}p(1-\theta)\hspace{1.5cm}r_\text{des}=-k_{d}\theta$$
+- Equating:
+$$p=\frac{\theta}{1-\theta} \frac{k_{d}}{k_{a}}$$
+![[Langmuir isotherm.png]]
 ## Mixtures of an ideal gas
 - Let there be a _total particle number_ $N$ and _total pressure_ $p$
 - $N_i$ and $p_i$ of each _subsystem_ are _additive_:
 $$\sum_i N_i=N\hspace{1.5cm}\sum_i p_i=p$$
-- The entropy of _each contribution_:
+- The [[#Thermodynamics of N particles in a box|ideal gas entropy]] of _each contribution_:
 $$S_i=C_{p_i}\ln T-N_ik\ln p_i+S_{0i}$$
 - Calculate an _entropy of mixing_:
 $$\Delta S_\text{mix}=S_\text{mixed}-S_\text{pure}=-k\sum_i N_i\ln p_i+kN\ln p_0=-k\sum_i N_i\ln\frac{p_i}{p_0}$$
@@ -609,67 +747,23 @@ $$Z=\int\frac{dx\,dp}{2\pi\hbar}\exp\left(-\frac{p^2}{2mkT}-\frac{\kappa x^2}{2k
 - However, at the _high temperature limit_ where $\kappa L^2\ll kT$:
 $$Z\approx\frac{L}{\lambda}$$
 
-# Grand partition function and grand potential
-- Characterise a system by _energy levels_ $\varepsilon_k$, each with _occupation number_ $n_k$
-- The _total energy_ of the system:
-$$E=\sum_k n_k\varepsilon_k$$
-- With _total number of particles_ $N$ and _total energy_ $E$, denote some _microstate_ by $(N,E)$, with _partition function_:
-$$\displaylines{Z(T,V,N)=\sum_{n_1,n_2,\dots}\exp[-\beta(n_1\varepsilon_1+n_2\varepsilon_2+\dots)] \\ N=n_{1}+n_{2}+\dots}$$
-- For _fermions_, the occupation number of each level must be $0$ or $1$
-
-- If there is _no fixed particle number_, consider the _grand partition function_:
-$$\begin{align}
-\Xi(T,V,\mu)&=\sum_{N=0}^{\infty}Z(T,V,N)\exp(\beta\mu N) \\ &=\sum_{N=0}^{\infty}\sum_{n_{1},n_{2},\dots}^{N} \exp[-\beta(n_{1}\varepsilon_{1}+n_{2}\varepsilon_{2}+\dots)+\beta\mu(n_{1}+n_{2}+\dots)]
-\end{align}$$
-- The second sum has the _constraint_ that $n_{1}+n_{2}+\dots=N$
-- However, as $N$ is _summed over_, the total sum is:
-$$\begin{align}
-\Xi(T,V,\mu)&=\sum_{n_{1},n_{2},\dots} \exp[-\beta(n_{1}\varepsilon_{1}+n_{2}\varepsilon_{2}+\dots)+\beta\mu(n_{1}+n_{2}+\dots)] \\ &=\sum_{n_{1},n_{2},\dots} \exp[-\beta(\varepsilon_{1}-\mu)n_{1}]\exp[-\beta(\varepsilon_{2}-\mu)n_{2}]\dots \\ &= \left[ \sum_{n_{1}} \exp[-\beta(\varepsilon_{1}-\mu)n_{1}] \right]\left[ \sum_{n_{2}} \exp[-\beta(\varepsilon_{2}-\mu)n_{2}] \right]\dots
-\end{align}$$
-
-- Then the _total grand partition function_ is:
-$$\Xi=\prod_k\Xi_k$$
-- The total grand partition is a _product_ of grand partition functions _of the individual energy levels_
-
-- The [[#Grand canonical ensemble|grand potential]] is then:
-$$\Phi=\sum_k\Phi_k$$
-
-## Classical limit
-- Let $\beta(\varepsilon_k-\mu)\gg1$
-	- Different from the _high energy/low temperature limit_
-$$\Xi_k=\sum_{n}(\exp[-\beta(\varepsilon_{k}-\mu)])^{n}\approx 1+\exp[-\beta(\varepsilon_k-\mu)]\equiv \Xi_{k}^{\text{cl}}$$
-- If this is _valid for all energy levels_, then one gets a _classical gas_
-- This should be valid for a _large, negative_ $\mu$, corresponding to the [[#Classical to quantum crossover|classical limit]]
-	- In the _ideal classical gas_, $\beta \mu=\ln(N\lambda^{3}/V)$
-
-- Take the _grand potential_, expanding the logarithm to the _lowest order_:
-$$\Phi_{k}^{\text{cl}}=-k_{B}T\ln \Xi_{k}^{\text{cl}}\approx -k_{B}T\exp[-\beta(\varepsilon_{k}-\mu)]$$
-- The _average occupancy_ is then:
-$$\langle n_{k} \rangle =-\left( \frac{\partial \Phi_{k}}{\partial \mu} \right)_{T,V}\approx \exp[-\beta(\varepsilon_{k}-\mu)] $$
-## Quantum particles
-- Below the _quantum threshold_, where $N\lambda^3/V\gg1$, the effects of particles being _bosons_ and _fermions_ emerge
-- For _bosons_:
-$$\displaylines{\Xi_k=\sum_{n=0}^\infty\exp[-\beta(\varepsilon_k-\mu)n]=\frac{1}{1-\exp[-\beta(\varepsilon_k-\mu)]} \\ \Phi_k=kT\ln[1-\exp(-\beta\varepsilon_k+\beta\mu)] \\ \mean{n_k}=\pd{\Phi_k}{\mu}=\frac{1}{\exp[\beta(\varepsilon_k-\mu)]-1}}$$
-- For _fermions_:
-$$\displaylines{\Xi_k=\sum_{n=0}^1\exp[-\beta(\varepsilon_k-\mu)n]=1+\exp[-\beta(\varepsilon_k-\mu)] \\ \Phi_k=kT\ln[1+\exp(-\beta\varepsilon_{k}+\beta \mu)] \\ \mean{n_k}=\frac{1}{\exp[\beta(\varepsilon_k-\mu)]+1}}$$
-
-- For _bosons_ at _low temperatures_, $\mean{n_k}$ can start to _diverge_
-	- This gives rise to the _Bose-Einstein condensate_
-
-- For _fermions_ at _low temperatures_, $\mean{n_k}$ becomes _constant_ at _lower levels_ until the _Fermi energy_ $\varepsilon_F$ where it _drops off quickly_
-	- The _chemical potential_ can be _approximated_ by $\varepsilon_F$ as it is the _energy gained by adding one particle_
-
-## Accounting for spin
-- Quantum particles all have _spin_ $s$
-- _Without external field_, spin _does not affect energy_, and there is a _degeneracy_:
-$$\sigma\equiv 2s+1$$
-
 # The Fermi gas
 - Given the _energy distribution_ $\varepsilon_k$:
-$$\mean{n_k}=\frac{1}{1+\exp[\beta(\varepsilon_k-\mu)]}$$
-- The _total number of particles_:
-$$N=\sum_k\mean{n_k}=\int\frac{d^3x\,d^3p}{(2\pi\hbar)^3}\frac{1}{1+\exp[\beta(\varepsilon_k-\mu)]}$$
+$$\displaylines{\Xi_k=\sum_{n=0}^1\exp[-\beta(\varepsilon_k-\mu)n]=1+\exp[-\beta(\varepsilon_k-\mu)] \\ \Phi_k=kT\ln[1+\exp(-\beta\varepsilon_{k}+\beta \mu)] \\ \mean{n_k}=\frac{1}{\exp[\beta(\varepsilon_k-\mu)]+1}}$$
+- At _absolute zero_:
+$$\langle n_{\boldsymbol{k}} \rangle = \begin{cases}
+1 &\varepsilon_{\boldsymbol{k}}<\mu \\ 0&\varepsilon_{\boldsymbol{k}}>\mu
+\end{cases} $$
 
+- The _entropy_ at _each level_:
+$$S_{\boldsymbol{k}}(T,\mu)=-\left( \frac{\partial \Phi_{\boldsymbol{k}}}{\partial T} \right)_{V,\mu}=-k_{B}[\langle n_{k} \rangle \ln \langle n_{k} \rangle +(1-\langle n_{k} \rangle )\ln(1-\langle n_{k} \rangle ) ]$$
+- It comes from _partially filled levels_
+![[Fermi Dirac distribution.png|400]]
+
+- The _total number of particles_:
+$$N=\sum_k\mean{n_k}=\int\frac{\sigma\,d^3x\,d^3p}{(2\pi\hbar)^3}\frac{1}{1+\exp[\beta(\varepsilon_k-\mu)]}=\int  \, \frac{\sigma\, g(\varepsilon)\,d\varepsilon}{1+\exp[\beta(\varepsilon_{k}-\mu)]} $$
+- There is often _no closed-form expression_ for $\mu$
+- Its value must be _adjusted_ so the integral _always_ gives $N$
 ## At absolute zero
 - Writing the _density of states_ $g(\varepsilon)$:
 $$N=V\int_0^\infty g(\varepsilon)n(\varepsilon)\,d\varepsilon$$

@@ -1498,19 +1498,22 @@ $$n_{\pm}(x)=n_{0}\left[ 1\mp \frac{e}{k_{B}T}\phi_{0}\exp\left( -\frac{x}{\lamb
 - There is a _counter-ion accumulation_ around the surface to screen the charge
 - At the same time, there is a _co-ion depletion_
 - This forms an _electric double layer_ at the surface
+	- Typical thickness: $\lambda_{D} \approx 0.5\,\text{nm}$
 
 - The _net charge density_ in the layer, using the above:
 	- _Integrating_ gives the charge of the layer, as expected
 $$\rho(x)=-\frac{\sigma}{\lambda_{D}}\exp\left( -\frac{x}{\lambda_{D}} \right)$$
-### Charged parallel plates (rewrite)
+### Charged parallel plates in monovalent salt(rewrite)
 - Let there be two _semi-infinite_ parallel plates
 - Let them be immersed in a solution of two _monovalent_ ions
+
+
 
 ### Other geometries
 - Let there be a _spherical colloidal particle_ with charge $Q$ and radius $a$:
 - In spherical polars, the Debye-Huckel equation:
-$$\frac{1}{r^{2}} \frac{\partial}{\partial r}\left( r^{2}\frac{\partial \phi}{\partial r} \right)=\kappa^{2}\phi(r)$$
-- This gives the solution:
+$$\frac{1}{r^{2}} \frac{\partial}{\partial r}\left( r^{2}\frac{\partial \phi}{\partial r} \right)=\frac{1}{r} \frac{\partial^{2}}{\partial r^{2}}(r\phi)=\kappa^{2}\phi(r)$$
+- With boundary conditions, this gives the solution:
 $$\phi(r)=\frac{Q}{4\pi\epsilon_{r}\epsilon_{0}r(1+\kappa a)}\exp[-\kappa(r-a)]$$
 - As expected, the _surface charge_ is _screened_
 
@@ -1521,6 +1524,7 @@ $$\phi(r)=\frac{Q}{4\pi\epsilon_{r}\epsilon_{0}r(1+\kappa a)}\exp[-\kappa(r-a)]$
 
 - Let $d\ll a$, so the system can be treated as _two semi-infinite parallel plates_
 - The _osmotic pressure_ of the counter-ions tend to _push the particles apart_
+	- The counter-ions _accumulate_ to be _more concentrated than the bulk_
 - Charge density:
 $$\displaylines{n(x)=\sum_{i}n_{i}\exp\left( -\frac{z_{i}e\phi(x)}{k_{B}T} \right) \\ \frac{\partial n}{\partial x}=-\frac{\epsilon_{0}}{k_{B}T}\frac{\partial^{2}\phi}{\partial x^{2}} \frac{\partial \phi}{\partial x}=\frac{\epsilon_{0}}{2k_{B}T}\frac{\partial}{\partial x}\left( \frac{\partial \phi}{\partial x} \right)^{2}}$$
 - _Integrating_, recognising $E(x)=-\partial \phi/\partial x$, and multiplying by $k_{B}T$
@@ -1535,9 +1539,31 @@ $$\Pi _\text{wall}=\frac{\sigma^{2}}{\epsilon_{r}\epsilon_{0}}\exp\left( -\frac{
 ### High surface charge
 
 ## DLVO Theory
+- The description of _interactions between charged particles in colloids_ by Derjaguin, Landau, Verwey and Overbeek
+	- _Attraction_ due to van der Waals forces
+	- _Repulsion_ due to electrostatics
 
+![[DLVO potential.png|450]]
+- The _functional forms_ of interactions in DLVO theory, for particles of radius $R$ and charge $Q$, a distance $r$ apart:
+	- $U_{e}$ is _repulsive_ and $U_\text{vdW}$ is _attractive_
+	- Ignoring hard core potential for _longer distances_
+$$\displaylines{U(r)=U_{e}+U_\text{vdW} \\ U_{e}=\left( \frac{Q\exp(\kappa R)}{1+\kappa R} \right)^{2}\frac{\exp(-\kappa r)}{\epsilon_{0}\epsilon_{r}r} \\ U_\text{vdW}=-\frac{\mathcal{B}}{6}\left[ \frac{2R^{2}}{r^{2}-4R^{2}}+\frac{2R^{2}}{r^{2}}+\ln\left( \frac{r^{2}-4R^{2}}{r^{2}} \right) \right]}$$
+- $\mathcal{B}$ is analagous to the [[#Dipole interactions|Hamaker constant]]
+- $U_\text{vdW}$ is the more accurate form for $r>R$
+	- The _Hamaker summation_
+	- For $r=2R+h$, with $h\ll R$, reduces to $\propto h^{-1}$ as [[#Dipole interactions|expected]]
 
+- The _decay_ of $U_\text{vdW}$ is _slower_ than two semi-infinite planes $(h^{-2})$ 
+	- For spheres, changes in separation matter _less_
 
+- There are some conditions under which $U(r)$ is _repulsive overall_, which _prevents aggregation_
+	- High _surface charge_
+	- Low _bulk ionic strength_ or _colloid concentration_
+- There may also be _metastable minima at large distances_
+	- Gives rise to _Bragg scattering_ and _self-assembling photonic crystals_
+
+- Typically, for _long time-scales_ and _finite concentrations_, aggregation is _most favourable_
+	- Example: gold nanoparticles coated with charge
 ## Other interactions
 - DLVO: accounts for _dispersion, Coulomb, hard core repulsion_ interactions
 
@@ -1568,4 +1594,53 @@ $$V_\text{dep}=\frac{4\pi}{3}(a+L)^{2}\left[ 1-\frac{3r}{4(a+L)}+\frac{r^{3}}{16
 
 - An _increase_ in _number density_ will increase the _attraction_, leading to _aggregation_
 
-## Phase diagram of colloidal suspensions
+## Phase diagram of colloidal suspensions (incomplete)
+
+# Electrokinetic phenomena
+- Pulling a system _out of equilibrium_ using _electric fields_
+
+- Electro-osmosis and electro-phoresis: opposites
+- Streaming potential
+## Electro-osmotic flow
+- The _movement_ of a liquid _over an immobilised_ (semi-infinite) _charged surface_, with a _parallel electric field_
+![[EOF.png]]
+- The profile of _ion concentration perpendicular_ to the surface is given by the [[#Charged surfaces|Poisson-Boltzmann equation]]
+- The motion _parallel_ to the surface is given by the [[#Navier-Stokes equation]]
+- The system is _separable_ along the two directions
+### Movement of ions
+- Let there be a _constant electric field_ $\boldsymbol{E}=E\hat{x}$
+- The _force_ on ions:
+$$F_\text{el}=z_{i}eE=-z_{i}e \frac{\partial \psi}{\partial x}$$
+
+- At _low_ [[#Reynolds number]], there is _no inertia_, and $F_\text{el}$ is _balanced_ by _drag_
+$$F_\text{el}+F_\text{drag}=z_{i}eE-\xi v=0 \implies v_\text{ion}=\frac{F_\text{el}}{\xi}$$
+- Model it as _Stokes drag_, where $\xi=6\pi \eta a$, with $\eta$ being the _viscosity_
+
+- The ions will _transfer momentum_ to water, leading to bulk _water flow_
+- The [[#Charged surfaces|Debye-Huckel length]] for _monovalent ions_ of density $n$:
+	- In water: $\epsilon_{w}=\epsilon_{r}\epsilon_{0}$
+	- Applies for $e\phi(x)\ll k_{B}T$
+$$\lambda _{D}=\sqrt{ \frac{\epsilon_{w}k_{B}T}{2e^{2}n} }$$
+- Solution for potential, along with the electric field:
+$$\displaylines{\phi(x,y)=\frac{\lambda_{D}\sigma}{\epsilon_{0}\epsilon_{r}}\exp\left( -\frac{y}{\lambda_{D}} \right)-Ex \\ \rho=-\frac{1}{\epsilon_{w}}\nabla^{2}\phi=\rho(y)}$$
+### Velocity profile
+- Let the fluid be _incompressible_, hence the Navier-Stokes equation becomes:
+$$\rho(\boldsymbol{r})\boldsymbol{E}+\eta \nabla^{2}\boldsymbol{v}=0$$
+- Parallel flow:
+$$\displaylines{\boldsymbol{v}=v_{x}(y)\hat{x} \\ -\epsilon_{w}\frac{\partial^{2}\phi}{\partial y^{2}}E+\eta \frac{\partial^{2}v_{x}}{\partial y^{2}}=0}$$
+- Integrating twice, with the _no-slip_ boundary condition:
+$$v_{x}(y=0)=0$$
+
+- Full solution derivation
+
+- Assume _far away_ from the plate (_thin Debye layer_ limit)
+- Helmholtz-Smoluchowski equation for _counter-ions_:
+$$v_\text{eo}=-\frac{\epsilon_{w}}{\eta}\phi_{0}E$$
+- $\phi_{0}$ is the _zeta-potential_ at the plate
+- In this limit, counter-ions and co-ions have _equal and opposite velocities_
+
+## Streaming potential
+- Using a _pressure gradient_ to drive flow in a _charged channel_
+- It can be used to _generate power_
+
+![[EOF vs pressure.png]]

@@ -45,7 +45,7 @@ $$\psi_0(\bm{r})=\psi_\chi(\bm{r})\exp\left[-i\frac{q}{\hbar}\chi\right]$$
 - Absorbing a _constant phase factor_, one can rewrite the above:
 $$\psi_\chi(\bm{r})=\psi_0(\bm{r})\exp\left[i\frac{q}{\hbar}\int_{\bm{r}_0}^\bm{r}\bm{A}(\bm{s})\cdot d\bm{s}\right]$$
 - One can then _solve for_ $\psi_0(\bm{r})$ in the _gauge_ $\bm{A}=0$ to get $\psi_\chi$
-# The Aharanov-Bohm Effect
+# The Aharonov-Bohm Effect
 - In _classical physics_, it is _only the fields_ which have physical significance
 - In _quantum mechanics_, the potential $\bm{A}$ has significance
 

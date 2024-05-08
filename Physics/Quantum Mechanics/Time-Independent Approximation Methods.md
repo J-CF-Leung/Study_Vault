@@ -112,18 +112,24 @@ $$V(x)=\frac{1}{2}m\omega^2\left(x+\frac{\epsilon}{2m\omega^2}\right)^2 -\frac{\
 
 ### Van der Waals interaction
 ![[van der Waals.png]]
-$$\displaylines{\hat{H}=\hat{H}_0+V \\ \hat{H}_0= \\ V=\frac{e^2}{4\pi\epsilon_0}\left(\frac{1}{r}+\right)}$$
+$$\displaylines{\hat{H}=\hat{H}_0+V \\ \hat{H}_0=-\frac{\hbar^{2}}{2m_{e}}(\nabla_{1}^{2}+\nabla_{2}^{2})-\frac{e^{2}}{4\pi\epsilon_{0}r_{1}}-\frac{e^{2}}{4\pi\epsilon_{0}r_{2}} \\ V=\frac{e^2}{4\pi\epsilon_0}\left(\frac{1}{r}+ \frac{1}{|\boldsymbol{r}+\boldsymbol{r}_{2}-\boldsymbol{r}_{1}|} -\frac{1}{|\boldsymbol{r}-\boldsymbol{r}_{2}|}-\frac{1}{|\boldsymbol{r}-\boldsymbol{r}_{1}|}\right)}$$
+- If $r$ is _large_ enough, $V$ is treated as a _perturbation_
 
 - The _perturbed ground state_ is the _product_ of two [[3D time-independent Hamiltonians#The hydrogen-like atom|hydrogen atom ground states]] $\ket{nlm}=\ket{100}$:
+$$\ket{0^{(0)}} =\ket{100(\boldsymbol{r}_{1})}\ket{100(\boldsymbol{r}_{2})} \hspace{1.5cm} \hat{H}_{0}\ket{0^{(0)}} =-2R_{\infty}\ket{0^{(0)}}    $$
 
+- For $r\gg a_0$, one can use a _multipole expansion_ for $V$, in _powers_ of $r_{i}/r$
+$$V=\frac{e^{2}}{4\pi\epsilon_{0}r^{3}}(x_{1}x_{2}+y_{1}y_{2}-2z_{1}z_{2})+\mathcal{O}\left( \frac{1}{r^{4}} \right)$$
+- To leading order, this corresponds to an _interaction between two electric dipoles_ $e\boldsymbol{r}_{1},e\boldsymbol{r}_{2}$
 
-- For $r\gg a_0$, one can use a _multipole expansion_ for $V$
+- The _first order correction vanishes_ by _symmetry_:
+$$\displaylines{\braket{ 100|x_{1,2} | 100 } = \braket{ 100|y_{1,2} | 100 } = \braket{ 100|z_{1,2} | 100 } =0 \\ \Delta E_{0}^{(1)}=\braket{ 0^{(0)}|V |0^{(0)}  }=0 }$$
 
-- The _first order correction vanishes_
 - The _second order energy correction_:
-
+$$\Delta E^{(2)}(r)=\left( \frac{e^{2}}{4\pi\epsilon_{0}} \frac{1}{r^{3}} \right)^{2}\sum_{k\neq 0} \frac{|\braket{ k^{(0)}|(x_{1}x_{2}+y_{1}y_{2}-2z_{1}z_{2}) | 0^{(0)} }|^{2}}{E_{0}^{(0)}-E_{k}^{(0)}} $$
 - It _varies as_ $1/r^6$, and is _attractive_ since the energy correction is _negative_
-
+	- Negative: $E_{0}^{(0)}<E_{k}^{(0)}$
+- This gives the _van der Waals' potential_
 ## Degenerate perturbation theory
 - If a pair of _zeroth order eigenstates_ are _degenerate in energy_:
 $$\braket{m^{(0)}|\hat{H}^{(1)}|n^{(0)}}=0\;\;\;\text{   for } n\neq m$$
@@ -150,14 +156,17 @@ $$\Delta E_{n,\alpha}^{(1)}=\braket{n_\alpha^{(0)}|\hat{H}'|n_\alpha^{(0)}}=E'_{
 ![[Degenerate perturbation.png]]
 
 ### Example: 2D square well
-
+- A well of _width_ $2a$
+- The _unperturbed energies_:
+$$E_{n_{x},n_{y}}^{(0)}=(n_{x}^{2}+n_{y}^{2})E_{0}$$
+- All states with $n_{x}\neq n_{y}$ are _degenerate_ with $g=2$
 - Consider the _first excited state_, which has _degenerate eigenvectors_ $\ket{1,2}$ and $\ket{2,1}$
+- Apply _perturbation_:
+$$H'=\epsilon xy$$
 
 - Diagonalising:
-
-
 ![[degenerate square well.png]]
-- where $A=$
+$$A=\epsilon a^{2}\left( \frac{32}{9\pi^{2}} \right)^{2}$$
 # Variational method
 - The _variational method_ gives an _upper bound_ of eigenstate energies for _any_ $\hat{H}$
 - The method relies on _guessing and optimising trial wavefunctions_ $\psi_\text{trial}(\alpha_i)$, depending on some _variational parameters_ $\alpha_i$
@@ -168,7 +177,7 @@ $$\hat{H}\ket{n}=E_n\ket{n}$$
 - Introdced some _normalised trial state_ $\ket{\psi(\alpha)}$:
 $$\ket{\psi(\alpha)}=\sum_n a_n(\alpha)\ket{\alpha}\hspace{1.5cm}\sum_n|a_n(\alpha)|^2=1$$
 - The _expectation value_ is then:
-$$E_\alpha\equiv\braket{\psi(\alpha)|\hat{H}|\psi(\alpha)}=\sum_n$$
+$$E_\alpha\equiv\braket{\psi(\alpha)|\hat{H}|\psi(\alpha)}=\sum_n E_{n}|c_{n}|^{2}\geq E_{0}\sum_{n}|c_{n}|^{2}$$
 - Therefore:
 $$E_\alpha\geq E_0$$
 # Rayleigh-Ritz method
@@ -182,7 +191,7 @@ $$\left<E\right>=\frac{\braket{ \psi |\hat{H} |\psi  }}{\braket{ \psi |\psi  } }
 $$H_{jk}=\braket{\psi_j|\hat{H}|\psi_k}=H_{kj}^* \hspace{1.5cm} S_{jk}=\braket{\psi_j|\psi_k}=S_{kj}^*$$
 - The basis set is _not necessarily orthonormal_, hence the matrix elements _are not diagonalised_
 
-- By _minimising_ the estimate of ground state energy, one gets:
+- By _minimising_ the estimate of ground state energy w.r.t. $\alpha_{j}$, one gets:
 $$\sum_k\alpha_k(H_{jk}-ES_{jk})=0$$
 - One can represent this with a _matrix equation_:
 $$(\dunderline{H}-E\dunderline{S})\cdot\underline{\alpha}=0$$

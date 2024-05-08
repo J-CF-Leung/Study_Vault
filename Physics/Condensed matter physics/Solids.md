@@ -134,7 +134,6 @@ $$\epsilon_{\omega}^{-1}=\frac{\omega^{2}+i\omega\gamma}{\omega^{2}-\omega_{p}^{
 - The _probability_ an electron has a collision in unit time is $\tau^{-1}$, the _scattering rate_
 - Through these collisions, electrons achieve _equilibrium_
 
-
 - Setting $\omega_{T}\to 0$ gives an _arbitrary offset_ in displacement as they _no longer oscillate_
 - _Scattering_ also means that electrons _do not all have the same velocity_
 	- They follow a _statistical distribution_
@@ -1343,8 +1342,8 @@ $$\boldsymbol{p}=\hbar \boldsymbol{k}+q\boldsymbol{A}$$
 $$m\dot{\boldsymbol{v}}=q \dot{\boldsymbol{r}}\times \boldsymbol{B} \implies m\boldsymbol{v}_{\perp}=q\boldsymbol{r}\times \boldsymbol{B}$$
 - Around a _loop_, the integral of $\boldsymbol{v}_{||}\cdot d\boldsymbol{r}$ is zero
 - Using _Stokes theorem_, and the fact that the integral of $\boldsymbol{r}\cdot d\boldsymbol{r}$ is twice the area:
-$$\oint\boldsymbol{p}\cdot d\boldsymbol{r}=-qBA_{r}=-q\Phi=\left( n+\frac{1}{2} \right)2\pi \hbar$$
-- Hence, the flux is _quantised_:
+$$\oint\boldsymbol{p}\cdot d\boldsymbol{r}=-q\Phi=\left( n+\frac{1}{2} \right)2\pi \hbar$$
+- Hence, electron orbits must _enclose a quantised flux_:
 $$\Phi_{n}=A_{r}^{n}B=\left( n+\frac{1}{2} \right) \frac{h}{e}$$
 - From the de Broglie relation:
 $$\hbar \boldsymbol{k}_{\perp}=q\boldsymbol{r}\times \boldsymbol{B}$$
@@ -1538,7 +1537,7 @@ $$\mu=\epsilon_{v}+\frac{1}{2}\epsilon_{g}+\frac{3}{4}k_{B}T\ln\left( \frac{m_{h
 ### Donor and acceptor levels
 - Example: replace the $\ce{ Ga }$ in $\ce{ GaAs }$ with $\ce{ Si }$, which is an _electron donor_
 - The _donated electron_ is still _attracted_ to $\ce{ Si }$
-- The _donor energy levels_ are approximately _hydrogenic_
+- The _donor energy levels_ are approximately [[The hydrogen atom|hydrogenic]]
 	- Account for _screening_ in the dielectric constant
 	- Use the _effective mass_
 $$\Delta_{d}=\frac{m_{e}^{*}}{m_{e}} \frac{1}{\epsilon^{2}} \frac{13.6\,\text{eV}}{n^{2}}$$
@@ -1553,7 +1552,8 @@ $$\Delta_{d}=\frac{m_{e}^{*}}{m_{e}} \frac{1}{\epsilon^{2}} \frac{13.6\,\text{eV
 
 - Similarly, impurities can _accept_ electrons, adding a _hole_
 - The _acceptor levels_ are also _hydrogenic_, and _sit above the valence band maximum_ (the holes are _ionised_ into the valence band)
-![[Physics/Images/Donor and acceptor levels.png|400]]
+- The _chemical potentials_ for doped semiconductors lie _between_ the donor/acceptor levels, and the conduction/valence bands
+![[Physics/Zimages/Donor and acceptor levels.png|400]]
 ### Carrier densities
 - Even for _low densities_, the low donor/acceptor energies mean that _impurities are the main source of carriers_, even in _room temperature_
 - If _donors_ dominate, the material is _n-type_
@@ -1588,7 +1588,7 @@ $$\mu_{e}=\frac{e \tau_{e}}{m_{e}^{*}} \hspace{1.5cm}\mu_{hh}=\frac{e \tau_{hh}}
 - At _high temperatures_, phonon scattering dominates
 - There is a _peak in mobility_ at an intermediate temperature
 
-### Hall effect with two carrier types (incomplete)
+### Hall effect with two carrier types
 - [[#Relaxation time approximation]]:
 $$\frac{d\boldsymbol{j}}{dt}=-\frac{1}{\tau}\boldsymbol{j} +\frac{ne^{2}}{m}(\boldsymbol{E}+\boldsymbol{v}\times \boldsymbol{B})$$
 - In the _steady state_, for electrons, using [[#Relaxation time approximation|mobility]] $\mu_{e}=e \tau/m$
@@ -1637,7 +1637,7 @@ $$H=E_{n}(\boldsymbol{k})-e\phi(\boldsymbol{r})$$
 - The _donor levels near the interface_ are _emptied_, leaving a _depletion region_
 
 - The _Schottsky barrier_ $\Phi_{b}$ will _inhibit current flow_ between metal and semiconductor
-	- An electron must _tunnel through_ (common for low $T$), or be _thermally excited_ (thermionic emission)
+	- An electron must _tunnel through_ (common for low $T$), or be _thermally excited_ (thermionic emission) into the _conduction band_
 - With a large enough bias, the junction acts as a _rectifier_ as the _chemical potentials_ of the two materials _shift_ 
 
 - With a _+ve bias to the metal_ , the barrier is _lowered_ and current flows more freely
@@ -1647,21 +1647,123 @@ $$H=E_{n}(\boldsymbol{k})-e\phi(\boldsymbol{r})$$
 ## p-n junctions (incomplete)
 - A _p-n junction_ is formed when [[#Doped semiconductors|p-type and n-type semiconductors]] come into _contact_
 	- An _inhomogeneous doping_ of the material
-![[Physics/Images/p-n junction.png]]
+![[Physics/Zimages/p-n junction.png]]
 - _Electrons flow from n-type to p-type_ in order to fill the holes, until $\mu$ is _equalised_
-- This creates a _depletion region_ with no carriers
+	- _Deep inside_ the semiconductors, the $\mu$ must lie _close to_ the conduction/valence bands (between donor/acceptor levels and the bands)
+- This creates a _depletion region_ with no carriers, where there is also an _electric field_
 
 - Relative to $\mu$, the bands _bend_ according to $\phi(z)$, determined by _Poisson's equation_:
 $$\nabla^{2}\phi=\frac{\partial^{2}\phi}{\partial z^{2}}=-\frac{\rho}{\epsilon\epsilon_{0}}$$
-## LEDs (incomplete)
+- The _junction potential_ $\phi_{j}$ is defined by:
+$$e\phi_{j}=E_{g}=\mu_{n}-\mu_{p}$$
+- Given _donor/acceptor densities_ $N_{D/A}$, and _widths of depletion regions_ $w_{n/p}$, overall _charge neutrality_ of the system dictates:
+$$N_{D}w_{n}=N_{A}w_{p}$$
+- In 1D, when there is _net charge_, $\phi$ (and the bands) will _curve_
+- When there is _no net charge_ in 1D, $\phi$ is either _linear_ or _constant_:
+$$\displaylines{\phi_{j}=\frac{e}{2\epsilon\epsilon_{0}}(N_{A}w_{p}^{2}+N_{D}w_{n}^{2}) \\ N_{(A,D)}w_{(p,n)}=\sqrt{ \frac{2\epsilon\epsilon_{0}\phi_{j}}{e} \frac{N_{A}N_{D}}{N_{A}+N_{D}}} \\ w_{n}+w_{p}=\sqrt{ \frac{2\epsilon\epsilon_{0}\phi_{j}}{e} \frac{N_{A}+N_{D}}{N_{A}N_{D}}}}$$
+- On both sides, there are both _majority_ and _minority carriers_ from the [[#Law of mass action]]
+![[p-n junction contact.png]]
+### Rectification
+- A $p-n$ junction behaves as a _diode_, allowing current to _flow much more readily in one direction_ than the other
+- Let there be some _electrical bias_, where a _positive voltage_ corresponds to applying towards the p-side
+![[p-n junction bias.png|400]]
+- A charge _experiences_ the potential $\phi_{j}-V$ _across the depletion layer_
 
-## Photovoltaic cells (incomplete)
+- With _no voltage bias_, there will be _no net current flow_ across the diode
+- The _minority carriers_ tend to get _swept by the in-junction electric field_ into the other side, making a _generation current_ $-J^\text{gen}$ from $n$ to $p$
+	- Minority carriers are continuously _thermally generated_
+	- The current is _independent of bias_, only depending on $E_g$ and $T$
+- The _majority carriers_ may be _thermally excited up_ the potential barrier, then _recombine_, creating a _recombination current_ $J^{\text{rec}}$ from $p$ to $n$
+	- The _activation energy_ is dependent on $V$:
+$$J^\text{rec}\propto \exp\left[ -\frac{e(\phi_{b}-V)}{k_{B}T} \right]$$
 
+![[Drift and generation current.png]]
+- Considering that there is _no current at zero bias_, the current takes the form:
+$$I=I_\text{sat}\left[ \exp\left( \frac{eV}{k_{B}T} \right)-1 \right]$$
+- The saturation current is the combination of _generation currents_ from minority carriers, proportional to $n_{i}^{2}/N_{D}$, and hence _activated_ by $\exp(-E_{g}/k_{B}T)$
+- If _reverse bias_ is too large, the _majority carriers tunnel across_ the depletion region, and _breakdown_ occurs
+![[Diode I-V.png]]
+
+## LEDs
+- _Recombination_ of electrons and holes can be used to _generate light_
+- With a _bias_, electrons (holes) can be _injected_ into the n(p)-type region to _continuously_ generate photons
+- The process is _not efficient_ for _indirect band gap_ materials
+![[LED operation.png|400]]
+
+## Photovoltaic cells
+- If _light_ shines on a p-n junction (wihout bias), an _electron-hole pair_ can be created
+- The _carriers_ will _diffuse towards_ the junction, and are pulled in _opposite directions_ by the electric field
+	- Must be _fast enough_ to reach the junction _before recombining_
+- This results in a current _in the same direction as the generation current_ ($n\to p$)
+- The _separation of charges_ generates its own _electrical bias_
+	- Analagous to a _capacitor_
+- The _photo-voltaic effect_ described above can be used to make _power cells_
+![[Solar cell.png|420]]
+
+- It can be modelled as a _diode_ in _parallel_ with a _current source_
+- For _zero load_ resistance and _infinite load_ resistance, there is _zero power extracted_
+	- Zero load resistance: $V=0$
+	- Infinite load resistance: $I_\text{load}=0$
+![[Solar cell equivalent circuit.png|450]]
+- The _open circuit_ $V_{d}$ has an _upper limit_ $E_{g}$
+	- If $V_{d}>\phi_{j}$, the _junction field vanishes_, and there is _no photo-generated current_
+- There is a _dark current_ $I(V_\text{load})$, with _photo-current_ $I_\text{ph}$ for a certain amount of light
+- The _maximum power_ extracted is then $\sim I_\text{ph}E_{g}/e$
+
+### Shockley-Queisser limit
+- The _optimisation_ of solar cells by _tuning_ the bandgap
+- Involves _matching_ the _bandgap_ with the _intensity spectrum_ of sunlight
+- Only photons with _energy_ $\hbar\omega>E_{g}$ can be _captured_
+	- Power _extracted_ in the current is then $E_{g}$
+	- Carriers in _excited states_ away from band edges then _lose energy_ by _decaying_ to lower lying states
+- For _intensity spectrum_ $I(\omega)$, the efficiency is:
+$$\frac{\int_{E_{g}}^{\infty} I(\omega)E_{g}\,d\omega}{\int_{0}^{\infty} I(\omega)\hbar\omega \, d\omega } $$
+- The typical _optimum efficiency_ is $33\%$ for a band-gap of $1.2\,\text{eV}$
 ## Field-effect transistors
+- Transistors _manipulate carrier density_ in a _channel between two electrodes_, using a _controlling voltage_ applied to a third electrode
+	- Controlling electrode: the _gate_
+	- The carriers travel from the _source_ electrode to the _drain_ electrode
 
 ### Junction field-effect transistor (JFET)
+- $p-n$ junctions are used to control the _width_ of a _conducting channel_
+- There is an $n-$type conductor _between source and drain_, with _high conductivity_
+- Adding $p-$type regions connected to _gate electrodes_ allow control over the _depletion region widths_, adjusting _conducting width_
+	- A _positive gate voltage_ will _shrink the depletion region_, and _increase current_
+	- A _negative gate voltage_ then _reduces the current_
+	- There is always some _small current across_ the depletion region
+![[JFET operation.png]]
+- With _increasing_ source-drain voltage $V_{DS}$, the _drain-source current_ $I_{D}$ will initially _rise linearly_
+	- _Rate_ of increase determined by _gate-source_ voltage $V_{GS}$
+- Eventually, the _depletion regions meet_ at some _pinch-off voltage_ $V_{DS}=V_{P}$, and increases in $V_{DS}$ are counterbalanced by the _depletion regions expanding towards the drain_
+- This is the _saturation region_, where $I_{D}$ _does not increase_
+- If $V_{DS}$ is too high, the _breakdown region_ is entered, and $I_{D}$ increases _rapidly_
 
+- The _value_ of _saturation_ $I_{D}$ is _controlled_ by $V_{GS}$
+	- JFET acts as an _amplifier_, as saturation current is _constant for a range of_ $V_{DS}$
+- JFETs have _high gain and high input impedance_ compared to the MOSFET
+	- Used in low-noise op-amps
+![[JFET I-V.png]]
 ### Metal oxide semiconductor field-effect transistor (MOSFET)
+- The _width_ of the conducting channel is controlled by an _electric field_ using the _gate electrode_
+- The _gate_ is _separated_ from the rest of the device by an _insulating layer_, ensuring _no current flow from the gate electrode_ (unlike the JFET)
+![[MOSFET structure.png]]
+
+- Applying a voltage will _pull electrons into the depleted region_ to create a _conducting channel_ between source and drain
+- Changing $V_{GS}$ will _vary resistance_ of the channel
+![[MOSFET operation.png]]
+- Left: _enhancement_ mode, _positive_ voltage _pulls minority carriers towards surface_, to form a high conductivity _inversion layer channel_
+	- Right: I-V characteristic, still with _pinch-off_ at high $V_{DS}$
+- Middle: _depletion-enhancement_ mode, a _negative_ voltage _depletes the channel_ to _increase resistance_
+	- Similarly, _positive_ voltage will _enhance_ the channel and _decrease resistance_
+
+#### Inversion layer
+- Applying a _positive voltage_ to the gate will create an _electric field across the oxide layer_
+- The field will _penetrate into_ the semiconductor
+- This causes [[#Metal-semiconductor contact|band bending]]
+
+- If the band bending is _larger_ than the band-gap $E_{g}$, the _conduction band edge falls below $\mu$_, forming an _inversion layer_
+- The _width_ of the inversion layer is _controlled_ by $V_{GS}$
+	- Typically _narrow_ enough so _quantisation_ is observed
 
 ## Bandstructure engineering
 - The _confinement_ of electrons can be achieved by _spatial control_ of band structure
@@ -1680,17 +1782,21 @@ $$\nabla^{2}\phi=\frac{\partial^{2}\phi}{\partial z^{2}}=-\frac{\rho}{\epsilon\e
 ![[2DEG.png|700]]
 - Electrons inhabit a _potential well_ in the $z-$direction
 
-- The _density of states_ in 2D is _independent_ of energy
-$$g(E)=\frac{m}{\pi \hbar^{2}}$$
 - With a _perpendicular magnetic field_, the density of states splits into _spin-split pairs_ of [[Charged Particles#Landau levels|Landau levels]]
 $$E_{i}=\left( i+\frac{1}{2} \right)\hbar\omega_{c} \hspace{1.5cm}\omega_{c}=\omega_{L}=\frac{eB}{m}$$
 - The _spin splitting_ is determined by the $g-$factor:
 $$\Delta E_{s}=g\mu_{B}B$$
-- The original states will _condense_ into Landau levels
+- The original states will _condense_ into nearest Landau level
+	- As $B$ increases, the highest Landau levels become _depopulated_
 
-- Let the _occupancy_ of a Landau level _per unit area_ be $n_{L}$
+- Each Landau level has the _same degeneracy_
+- Let the _occupancy_ of a Landau level _per unit area per spin_ be $n_{L}$
+- The _average density of states_ must be _equal_ to the one in the $B\to 0$ case
+	- In 2D, $g(E)=\frac{m}{\pi \hbar^{2}}$
+- Therefore, the _degeneracy of a single Landau level per unit area_ is:
+$$g(E)=\frac{2n_{L}}{\hbar\omega_{c}} \implies n_{L}=\frac{m\omega_{c}}{2\pi \hbar}=\frac{eB}{h}$$
 
-- Derivation (considering DoS or fluxes)
+- _Alternatively_, consider that each $h/e$ of flux _enclosed_ gives _one state_ (the [[Charged Particles#The Aharanov-Bohm Effect|Aharonov-Bohm Effect]]), then the number of states per unit area is $BA$ divided by $Ah/e$:
 $$n_{L}=\frac{eB}{h}$$
 
 - For $\nu$ occupied Landau levels at $B_{1}$:
@@ -1800,3 +1906,352 @@ $$G=\frac{2\nu e^{2}}{h}$$
 - Wavelength: $\sim 1\,\mu\text{m}$ (infrared)
 
 - The _terahertz_ regime: between infrared and visible light, done using cascade lasers
+
+# Collective phenomena
+- Accounting for _interactions_ between particles, including _summing over_ interactions between _all pairs of electrons and ions_
+	- Order of magnitude: $\sim 10^{23}$ particles
+	- _Approximations_ have to be made
+
+- Interactions give rise to _collective phenomena_
+- _Symmetry breaking_ will give _quasi-particles_
+	- Crystal structure breaks _translational invariance_, giving _phonons_
+	- Electrons and holes: Fermi liquids
+	- Composite fermions: [[#Fractional quantum Hall effect]]
+	- Spin waves: _magnetism_
+	- Cooper pairs: _super-conductivity_
+
+## Electronic instabilities
+- Most solids have complicated structures
+- _Close-packed_ structures are relatively _rare_
+
+- Typically, chemical potential is in a _gap_
+	- Occupied states are _lowered_ in energy, unoccupied states go up
+- Like in the [[#Nearly-free electron approximation]], this occurs at _BZ boundaries_
+
+- The _Peierls transition_ occurs for a _1D chain of atoms_
+- Lattice constant $a$, with $k_{F}$ in the middle of a band
+- It becomes an _insulator_ when an _external potential_ is applied, with periodicity $2\pi/Q$ where $Q=2k_{F}$, as there is an _energy gap_ on the Fermi surface
+
+- The _same effect_ occurs with a _periodic lattice distortion_ with the same periodicity:
+	- Assume the _amplitude_ $u_{0}\ll a$
+$$R_{n}=na+u_{0}\cos(Qna)$$
+- The generated _Fourier component_:
+	- $g_{Q}$ is an _electron-phonon coupling_ constant
+$$V_{Q}=g_{Q}u_{0}$$
+
+- Overall, there is an _energy lowering_
+$$E_\text{elec}=$$
+![[Peierls distortion.png|500]]
+- This results in an _electric charge modulation_, known as a _charge density wave_
+- For total energy, model interactions as _springs_:
+$$E_\text{tot}=$$
+- There is a _minimum_ at non-zero displacement, so the system _lowers energy_
+
+- This is a [[Classical Field Theory#Symmetry breaking|spontaneous symmetry breaking]]
+
+- Metals with _strongly anisotropic structures_ are prone to forming charge density waves
+- Transition occurs at _lower temperatures_
+- Can be measured with _Bragg scattering_
+	- _Widely spaced_ peaks from unit cell
+	- Less intense peaks from charge density waves
+- The two periods are _unrelated_ (determined by $a$ vs $k_{F}$)
+
+- Onset can be determined using _phonon spectra_
+- There will be an _acoustic branch_ that has _zero stiffness at_ $q=2k_{F}$
+	- Takes _no energy_ to distort lattice (already distorted)
+
+## Magnetism
+- _Classically_, materials _cannot be magnetic at thermal equilibrium_
+	- Bohr-van Leeuwen theorem
+- Materials are magnetic due to _discrete orbital/spin angular momenta_ in particles
+- Materials can be _diamagnetic, paramagnetic, or magnetically ordered_
+
+- Diamagnetic: $\chi<0$, induced magnetism is _opposite to applied field_, $|\chi| \sim 10^{-5}$ 
+	- _Superconductors_ are _perfect diamagnets_ with $\chi=-1$
+	- Diamagnets can be _levitated_ in a stable equilibrium
+
+- Paramagnetic: $\chi>0$, induced magnetism _aligns with applied field_, $10^{-6}<\chi<10^{-1}$
+- Below a _critical temperature_, magnetic dipoles will be _aligned_
+
+- Ferromagnetic: dipoles _aligned_ to give a _permanent magnetic field_
+- Anti-ferromagnetic: dipoles _anti-aligned_
+
+![[Magnetism types.png]]
+### Paramagnetism
+
+#### Semiclassical case
+- A _semiclassical description_: _no discrete states_
+- Let a magnetic moment $\boldsymbol{\mu}$ be at an angle $\theta$ relative to the applied field
+$$E=-\boldsymbol{\mu}\cdot \boldsymbol{B}=-\mu B\cos \theta$$
+- The _probability_ of it being in angle $\theta\to\theta+d\theta$
+$$P(\theta)d\theta \propto\exp\left( \frac{\mu B\cos\theta}{k_{B}T} \right) \frac{2\pi \sin\theta\,d\theta}{4\pi}$$
+- _Normalising_, the _average magnetic moment_ is given by the _Langevin function_:
+	- $y=\mu B/k_{B}T$
+$$\frac{\langle \mu_{z} \rangle}{\mu}=\coth y-\frac{1}{y}=\frac{M}{M_{s}}$$
+- There is a _saturation magnetisation_ $n\mu$ where $n$ is the number of dipoles
+- Magnetisation as $y\gg 1$
+
+- As $y\to 0$, $M/M_{s} \to y/3$
+- From this:
+$$\chi=\frac{n\mu_{0}\mu^{2}}{k_{B}T}$$
+- The _Curie law_: proportional to _inverse temperature_
+
+#### Quantum case
+- Quantum system: $J=1/2$
+- Magnetic moments $\pm \mu_{B}$
+$$\langle g\mu_{B}m_{J} \rangle = \mu_{B}\tanh\left( \frac{\mu_{B}B}{k_{B}T} \right) \implies \frac{M}{M_{s}}=$$
+- For _small fields_
+
+#### General solution
+- The _Brillouin function_:
+$$\frac{M}{M_{s}}=B_{J}(y)=$$
+- Can be used to _measure_ $J$
+
+### Magnetism in materials
+- Typically, there is _finite magnetism_ when applied fields are absent
+- Interaction energy between _two dipoles_:
+$$U_\text{dipole}\approx \frac{\mu_{0}m^{2}}{4\pi r^{3}}$$
+- A typical value for $a\approx 0.2\,\text{nm}$ and $m=\mu_{B}$ gives $40\,\mu \text{eV}$, corresponding to $T<1\,\text{K}$
+- _Real materials_ have much higher $T$
+- Explanation comes from _Pauli exclusion_
+
+### Role of exchange interaction
+- Consider two electrons in _orthogonal orbitals_ $\ket{a},\ket{b}$
+- They are _indistinguishable_, and are fermions:
+$$\Psi(\boldsymbol{r}_{1},\boldsymbol{r}_{2})=-\Psi(\boldsymbol{r}_{2},\boldsymbol{r}_{1})$$
+- Either:
+	- _Symmetric_ spatial function with spin _singlet_
+	- _Anti-symmetric_ spatial function with spin _triplet_
+- The electron _Hamiltonian_, with _interaction part_ $H_{1,2}=V(\boldsymbol{r}_{1}-\boldsymbol{r}_2)$
+$$H=H_{0}+H_{1,2}$$
+- Denoting energies as:
+$$\displaylines{E_{0}=\braket{ ab | H|ab } =E_{a}+E_{b}+E_\text{Coul} \\ E_\text{Coul}=\braket{ ab|H_{12} | ab }\hspace{1.6cm} E_\text{ex}=\braket{ ba|H_{12} | ab } }$$
+- $E_\text{ex}$ is the _exchange term_
+- For _short range interactions_ $V\to \delta(\boldsymbol{r}_{1}-\boldsymbol{r}_{2})$, $E_\text{Coul}\to E_\text{Ex}$
+- The _singlet_ and _triplet_ energies:
+$$\displaylines{E_{s}=\frac{1}{2}\braket{ ab+ba|H | ab+ba }=E_{0}+E_\text{ex} \\ E_{t}=\frac{1}{2}\braket{ ab-ba|H | ab-ba }=E_{0}-E_\text{ex} } $$
+
+- For $n$ particles, the _anti-symmetric_ spatial wave-function has _nodes_ when $\boldsymbol{r}_{i}=\boldsymbol{r}_{j}$
+- On _average_, the particles are _further apart_ from each other, hence experience _less repulsion_, and are _lower in energy_
+
+- When orbitals are _orthogonal_, $E_\text{ex}>0$, so the _triplet_ is lower in energy
+- If the orbitals are _not orthogonal_, $E_\text{ex}$ _can be negative_, so the _singlet_ is lower in energy
+	- Not orthogonal when they belong to _different atoms_ (e.g. molecular hydrogen)
+
+- This means _higher ordering temperatures_ in ferromagnetism
+
+### Heisenberg Hamiltonian
+- The _spin interaction_ between two electrons can be written as $\boldsymbol{S}_{1}\cdot \boldsymbol{S}_{2}$:
+$$\displaylines{\boldsymbol{S}_{1}\cdot \boldsymbol{S}_{2}=\frac{1}{2}(S^{2}-S_{1}^{2}-S_{2}^{2})=\frac{1}{2}S^{2}-\frac{3}{4}\hbar^{2} \\ (\boldsymbol{S}_{1}\cdot \boldsymbol{S}_{2})_{s}=-\frac{3}{4}\hbar^{2}\hspace{1.5cm}(\boldsymbol{S}_{1}\cdot \boldsymbol{S}_{2})_{t}=\frac{1}{4}\hbar^{2}}$$
+- The _spin Hamiltonian_ can be written as:
+$$H_\text{spin}=\frac{1}{4}(E_{s}+3E_{t})-(E_{s}-E_{t}) \frac{\boldsymbol{S}_{1}\cdot \boldsymbol{S}_{2}}{\hbar^{2}}$$
+- Defining $J=(E_{s}-E_{t})/2$, and shifting the _zero_ of energy:
+$$H_{2}=-2J \frac{\boldsymbol{S}_{1}\cdot \boldsymbol{S}_{2}}{\hbar^{2}}$$
+- It favours _parallel spins_ for $J>0$, and _antiparallel spins_ for $J<0$
+
+- Extending to a _collection of spins_, summing over _nearest neighbours_ $\braket{  i,j  }$
+$$H_\text{Heisenberg}=-\sum_{\braket{  i,j  } }J_{ij} \frac{\boldsymbol{S}_{i}\cdot \boldsymbol{S}_{j}}{\hbar^{2}}$$
+- This only depends on the _relative orientation_ of the spins
+	- Unless there is coupling to _orbital angular momentum_
+
+### Super-exchange
+- Let the magnetic moments in a solid be _separated_ by insulator ions
+	- Example: $\ce{ MnO }$, with $\ce{ O^{2-} }$ being the _insulator_
+
+- Explanation
+- Favouring _anti-alignments_
+![[Superexchange.png]]
+- From _second order perturbation theory_, the exchange is of order
+$$J\sim -\frac{t^{2}}{U}<0$$
+- $t$ is the _hopping element_ between the magnetic and non-magnetic ions
+- $U$ is the _Coulomb repulsion energy_ for the moment
+
+- On a _lattice_, it favours an _anti-ferromagnetic_ state
+- Magnitude: $10^{0}-10^{2}\,\text{K}$
+- There can be a _phase transition_ from ordered states to a _paramagnetic disordered_ state
+![[MnO transition.png]]
+- When spins are _anti-aligned_, there is a _magnetic unit cell_ which is _twice the size_ of the crystal unit cell
+- This is _detectable_ with _neutron diffraction_
+	- The _neutron magnetic moments_ can _couple_ to atomic magnetic moments
+
+### Band magnetism
+- Electron _bands_ can respond to magnetic fields (_Pauli paramagnetism_)
+- Let there be a _Fermi gas_ with dispersion $\epsilon_{\boldsymbol{k}}$ in a magnetic field $B_{a}=\mu_{0}H$
+- The _spin-up_ and _spin-down_ electrons will be split by [[Atomic and molecular physics#Zeeman effect|Zeeman energy]] with $g_{s}=2$
+$$\epsilon_{\boldsymbol{k}\uparrow}=\epsilon_{\boldsymbol{k}}-\mu_{B}B_{a}\hspace{1.5cm}$$
+- The _chemical potential_ is the _same_ for both spins, so there is a _transfer of carriers_ between bands
+- There is a _population imbalance_:
+	- $g_{V}$ is for _both spins_
+	- Assume the splitting is _small_ so the DoS is _constant_
+$$n_{\uparrow}-n_{\downarrow}=2\mu_{B}B_{a}\left( \frac{1}{2}g_{V}(E_{F}) \right)=\mu_{B}B_{a}g_{V}(E_{F})$$
+- The _magnetisation_ $M$ is given by:
+$$M=\mu_{B}(n_{\uparrow}-n_{\downarrow})$$
+- This gives the _spin susceptibility_:
+$$\frac{M}{H}=\chi_{\sigma}=\mu_{0}\mu_{B}^{2}g_{V}(E_{F})$$
+- Unlike the [[#Semiclassical case|Curie law]], it is _temperature-independent_
+	- For _higher temperatures_, the _broadening_ of the Fermi distribution starts to be significant
+- Energy scales:
+### Band magnetism with interactions
+- Consider the _Stoner-Hubbard model_, where there is an _energy penalty_ for lattice sites which are _doubly occupied_ (with both up and down electrons)
+$$H_\text{int}=\sum_{i}Un_{i\uparrow}n_{i\downarrow}$$
+- Let there be _average occupancies per atom_ $\bar{n}_{i\uparrow}$ and $\bar{n}_{i\downarrow}$
+- With the _mean-field approximation_:
+$$\epsilon_{\boldsymbol{k}\uparrow}=\epsilon_{\boldsymbol{k}}+U\bar{n}_{\downarrow}-\mu_{0}\mu_{B}H\hspace{1.5cm}$$
+- It is _analagous to a magnetic field_, known as an _exchange field_
+	- "Book-keeping" to account for _Coulomb interactions_
+
+- The average spin density:
+$$\frac{N}{V}(\bar{n}_{\uparrow}-\bar{n}_{\downarrow})=[U(\bar{n}_{\uparrow}-\bar{n}_{\downarrow})+]$$
+- Using the _density of states oer atom_ $g_{V}=(N/V)g$:
+$$\chi_{\sigma}=$$
+- The susceptibility will _diverge_ if the _Stoner criterion_ is satisfied:
+	- Onset of _ferro-magnetism_
+$$\frac{Ug(E_{F})}{2}>1$$
+- The density of states is of order $E_{F}$
+- Kinetic energy
+
+### Local moment magnetism
+- $d-$ or $f-$band metals
+- There are _localised electrons_ from the _tightly-bound_ orbitals, with _itinerant/delocalised_ electrons from the $sp$ bands
+- The itinerant bands are _weakly spin-polarised_ due to _large kinetic energies_
+- They have an _induced spin polarisation_ due to interaction with _core spins_
+- This is then _transmitted_ to other ions which will attempt to _align_
+
+- This creates _Friedel oscillations_ in _spin density_, which _decay in distance_ and _oscillate_ with period $\pi/k_{F}$
+	- The _RKKY interaction_
+
+### Magnetic order and the Weiss exchange field
+- A _phenomenological equation of state_:
+	- _Ignore_ the _vector nature_ of the fields
+$$H=aM+bM^{3}$$
+- $a$ is the _inverse susceptibility_
+$$a=\chi^{-1}=$$
+- $b$ ensures magnetisation _tends towards saturation_ for high fields
+
+- A _ferro-magnetic_ interaction needs a _non-zero_ $M$ for _zero_ $H$
+- Only possible for _negative_ $a$
+
+# Fermi liquid theory
+- The above treatment of _conduction electrons_ treats them as a _degenerate_ [[Advanced statistical mechanics#The Fermi gas|Fermi gas]]
+- The many-particle problem is _separated_ into _single-particle_ states, as the wave-function is written as a _Slater determinant_ of single-particle wavefunctions
+- This _ignores electron-electron correlations_
+- i.e. it is assumed that $\langle \boldsymbol{r}_{1} \boldsymbol{r}_{2}\rangle = \langle \boldsymbol{r}_{1} \rangle\langle \boldsymbol{r}_{2} \rangle$
+
+## Problems with the Fermi gas
+- With _strong electron-electron interactions_, the electron motion must be _correlated_
+	- Example: [[#Thomas-Fermi screening]], where electrons move to _screen_ charged impurities
+- For any given electron, _other electrons must execute a correlated screening motion_, which _reduces_ the particle density _near the first electron_
+- Thia also _reduces_ the effective range of the _Coulomb potential_, implying _correlated motions_ between electrons
+- Becomes significant in _extreme conditions_ (Example: $\ce{ ^{3}He }$)
+
+- In most cases, _single particle theories_ (e.g. band structures) are still _successful_
+### Helium 3
+- $\ce{ ^{3}He }$ is a _fermionic particle_ which _does not solidify at zero temperature_ at _atmospheric_ pressure
+	- _Low mass_ of the particles boosts _zero-point_ motion, to a point that the _weak inter-atomic interactions_ cannot cause freezing
+- An _uncharged analogue_ of electrons in solids as a _quantum fluid_
+- Due to _hard core repulsion_ and _weak van der Waals interaction_, helium atoms at _low temperature_ act as a _close-packed array_ of hard spheres
+- _Not solid_, but atoms are _strongly correlated_
+
+- _Heat capacity per mole_ [[Advanced statistical mechanics#Away from absolute zero|at low temperatures]] behaves as:
+$$\frac{C_{m}}{T}\approx \frac{\pi^{2}}{2} \frac{R}{T_{F}}\hspace{1.5cm} T_{F}=\frac{E_{F}}{k_{B}}=\frac{\hbar^{2}}{2mk_{B}}(3\pi^{2}n)^{2/3}$$
+- There is a _predicted increase_ in $T_{F}$ as _pressure rises_
+- For $\ce{ ^{3}He }$, $C_{m}/T$ is still _constant w.r.t._ $T$ is a _reduction_ in $T_{F}$
+![[3He heat cap.png|300]]
+- This is due to a _rise in effective mass_, due to _stronger interactions_ as pressure rises
+- _Fermi gas relations hold_, but with a _renormalisation of parameters_
+
+## Collective excitations and the Fermi liquid
+- Consider _deviations_ of a many-particle system from the _ground state_
+- Example: _phonons_ as _collective deformations_ of a lattice, forming a _Bose gas_
+	- _Normal modes_ labelled with $\boldsymbol{k}$ with corresponding $\omega(\boldsymbol{k})$
+	- _Harmonic oscillations_ can be [[Quantum Harmonic Oscillator|created and annihilated]]
+	- $a,a^{\dagger}$ for phonons follow _Bose statistics_, so there can be _multiple excitations_ of the same $\boldsymbol{k}$ state
+	- A _collection_ of atoms (fermions or bosons) will form a _Bose gas_
+
+- Analagous to phonons, the _collective excitations_ in a _liquid_ of _strongly interacting fermions_ will behave like a _weakly interacting Fermi gas_
+- Hence, the _single particle description_ still _applies_, but requires _modifications_ for collective fermionic excitations
+
+### Adiabatic continuity
+- Let there be a collection of _non-interacting electrons_, forming a _Fermi gas_, and at its _ground state_ (filled up to the Fermi surface)
+- _Interactions_ are _gradually_ turned on
+- _Adiabatic continuity_ dictates that the _energy eigenstates_ can still retain their original _labels_
+	- Assuming _no energy crossings_
+- Therefore, _excitations_ in the Fermi liquid _follow the same laws as the Fermi gas_
+![[Adiabatic continuity.png|400]]
+- The _one-to-one_ correspondence between the two systems guarantees that the _volume of the Fermi surface is unchanged_ (Luttinger's Theorem)
+- The theorem _fails_ if _energy levels do not cross_
+
+- _Not all_ interacting Fermi systems can be treated as _Fermi liquids_
+
+### Landau Fermi liquid
+- Label _excited states_ of the _interacting_ system using _quantum numbers of the non-interacting system_ ($\boldsymbol{k}$, spin, band index, etc.)
+- This is referred to as a _quasi-particle_
+- It resides _outside the Fermi surface_, leaving behind _quasi-holes inside_ the Fermi surface 
+- The _total energy_ of the interacting system can be expressed as a _functional_ of the occupation numbers of all states
+- At _low temperatures_ with few excitations, this can be _approximated_:
+$$E[n_{\boldsymbol{k}}]=\sum_{\boldsymbol{k}}n(\boldsymbol{k})\epsilon(\boldsymbol{k})+\frac{1}{2}\sum_{\boldsymbol{k},\boldsymbol{k}'}f(\boldsymbol{k},\boldsymbol{k}')n(\boldsymbol{k})n(\boldsymbol{k}')$$
+- $\epsilon(\boldsymbol{k})$ is the _energy of quasiparticles_ for wavenumber $\boldsymbol{k}$
+- $f(\boldsymbol{k},\boldsymbol{k}')$ is the _interaction function_
+
+## Quasi-particle scattering
+- Quasi-particles _outside_ the Fermi surface can _scatter_ by creating an _electron-hole pair_
+![[Quasi-particle scattering.png]]
+- From _Pauli's exclusion principle_, $\epsilon_{1},\epsilon_{2}>0$
+- The energy required to _excite_ the hole is $-\epsilon_{3}>0$
+	- Measured _downwards from_ $E_{F}$
+- By _conservation of energy_:
+$$\epsilon=\epsilon_{1}+\epsilon_{2}-\epsilon_{3}$$
+- $\epsilon_{1}$ and $\epsilon_{2}$ are _chosen freely_ from $0$ to $\epsilon$, which fixes $\epsilon_{3}$
+- The number of _available final states_ is then $\propto\epsilon^{2}$, so the _scattering rate_ $\Gamma$:
+$$\Gamma \propto\epsilon^{2}$$
+
+- Therefore, _quasi-particles close to the Fermi surface_ $(\epsilon\to 0)$ will _scatter extremely rarely_, and be able to travel _long distances_
+	- Despite _strong interactions_ with other particles
+	- _Protection_ by Pauli exclusion (very few empty states to scatter to)
+- Example: _high mean free path_ in low temperature copper
+	- _Current_ is carried by a _collective mode_ of the Fermi system
+	- The quasi-particle is a _dressed excitation_, involving a _correlated motion_ of the added electron in a _many-particle background_
+
+- When $\Gamma > \epsilon/\hbar$, quasi-particles are _no longer well-defined_, as they _scatter before_ the wave-function undergoes a _full oscillation_
+- They are _over-damped_
+- Fermi liquid theory is only for _low-energy excitations_, and $k_{B}T\ll E_{F}$
+	- Typically, $E_{F}/k_{B}\sim 10^{3}\,\text{K}$
+
+## Near the Fermi surface
+- _Fermi liquid quasiparticles_ only defined _close to the Fermi surface_, where they have a _large enough lifetime_
+- The quasiparticles are _labelled_ by $\boldsymbol{k}$
+- There is a _vacuum ground state_, where low energy excitations are _fermionic particles and holes_, on _either side_ of a boundary surface in $\boldsymbol{k}-$space
+	- Comparison to _Fermi gas_, which has a _filled Fermi sphere_
+![[Fermi gas vs liquid.png|420]]
+
+## Quasiparticle spectral function
+- Consider the _response_ of the addition/removal of a quasi-particle
+
+- In a _non-interacting system_, for a particle in _eigenstate_ $\epsilon(\boldsymbol{k})$, the wave-function is:
+$$\psi_{\boldsymbol{k}}(\boldsymbol{r},t)=\psi_{\boldsymbol{k}}(\boldsymbol{r})\exp\left( -\frac{i\epsilon_{\boldsymbol{k}}t}{\hbar} \right)$$
+- $\psi_{\boldsymbol{k}}$ is the _Bloch wavefunction_, with _time-dependent factor_ $\exp(-i\omega_{\boldsymbol{k}}t)$
+- In _Fourier space_:
+$$\psi_{\boldsymbol{k}}(\boldsymbol{r},\omega)=2\pi \psi_{\boldsymbol{k}}(\boldsymbol{r})\delta(\omega-\epsilon_{\boldsymbol{k}}/\hbar)$$
+- It has _non-zero spectral weight_ at $\omega=\epsilon_{\boldsymbol{k}}/\hbar$, given by the _electron spectral function_:
+$$A(\boldsymbol{k},\omega)=\delta(\omega-\epsilon_{\boldsymbol{k}}/\hbar)$$
+
+- In an _interacting system_, _scattering_ will cause $A(\boldsymbol{k},\omega)$ to _spread out_ in energy
+- Due to interactions, _replace_ $\epsilon_{\boldsymbol{k}}$ to a _renormalised_ $\tilde{\epsilon}_{\boldsymbol{k}}$
+- _Mass renormalisation_:
+$$\frac{m^{*}}{m}=\frac{\epsilon_{\boldsymbol{k}}}{\tilde{\epsilon}_{\boldsymbol{k}}}$$
+- _Quasi-particles_ can _scatter_ from other quasi-particles, or create _electron-hole pairs_
+- The _probability amplitude_ of finding a quasi-particle of momentum $\boldsymbol{k}$ at time $t$ will then _decay exponentially_ with $\Gamma_{\boldsymbol{k}}$
+$$\displaylines{\psi_{\boldsymbol{k}}(\boldsymbol{r},t)=\psi_{\boldsymbol{k}}(\boldsymbol{r})\exp\left( -\frac{i\tilde{\epsilon}_{\boldsymbol{k}}t}{\hbar}-\Gamma_{\boldsymbol{k}}t \right) \\ A(\boldsymbol{k},\omega)=-\frac{1}{\pi}\mathrm{Im}\left[ \frac{1}{\omega-\tilde{\epsilon}_{\boldsymbol{k}}/\hbar+i\Gamma_{\boldsymbol{k}}} \right]=\frac{1}{\pi} \frac{\Gamma_{\boldsymbol{k}}}{(\omega-\tilde{\epsilon}_{\boldsymbol{k}}/\hbar)^{2}+\Gamma_{\boldsymbol{k}}^{2}}}$$
+- This is the _quasi-particle spectral function_ with _dispersion relation_ $\tilde{\epsilon}_{\boldsymbol{k}}$ and _decay rate_ $\Gamma_{\boldsymbol{k}}$
+	- For _long lifetime_ $\Gamma_{\boldsymbol{k}}\to 0$, $A(\boldsymbol{k},\omega) \to \delta(\boldsymbol{\omega}-\epsilon_{\boldsymbol{k}}/\hbar)$
+
+- Let there be a _chemical potential_ $\mu$
+- In _equilibrium_ (or $T=0$), one _cannot add fermionic excitations_ at energy $\hbar\omega<\mu$
+- For $\hbar\omega>\mu$, $A(\boldsymbol{k},\omega)$ is for _particle-like_ excitations
+- For $\hbar\omega<\mu$, $A(\boldsymbol{k},\omega)$ is for _hole-like_ excitations
+![[Quasi-particle spectrum.png]]
+- For small $\Gamma_{\boldsymbol{k}}$, a _quasi-particle resonance_ at $\hbar\omega=\tilde{\epsilon}_{\boldsymbol{k}}$ has _peak width_ $2\Gamma_{\boldsymbol{k}}$
+	- They are _well-defined_ when near the _central frequency_
+- There is a _quality factor_ $\tilde{\epsilon}_{\boldsymbol{k}}/\Gamma _\boldsymbol{k}\propto 1/\tilde{\epsilon}_{\boldsymbol{k}}$
+	- _Diverges_ as $\epsilon\to 0$
+- Quasi-particles are _over-damped_ at high energies

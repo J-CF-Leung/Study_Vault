@@ -110,7 +110,7 @@ $$\displaylines{\hat{H}=\hat{H}_0+\hat{H'} \\ \hat{H}_0=-\frac{\hbar^2}{2m_e}(\n
 - The _variational parameter_ will be some _effective nuclear charge_ $Z'$
 	- Expected: $1<Z'<2$
 - The _ground state wave function_ with the parameter:
-$$\ket{\psi_\text{trial}(Z')}=\frac{Z'^3}{\pi a_0^3}\exp\left(-\frac{Z'(r_!+r_2)}{a_0}\right)=\ket{\psi_{100}'(Z',r_1)}\ket{\psi_{100}'(Z',r_2)}$$
+$$\ket{\psi_\text{trial}(Z')}=\frac{Z'^3}{\pi a_0^3}\exp\left(-\frac{Z'(r_1+r_2)}{a_0}\right)=\ket{\psi_{100}'(Z',r_1)}\ket{\psi_{100}'(Z',r_2)}$$
 
 - From the zeroth-order Hamiltonian:
 $$E_1=E_2=\braket{\psi_{100}'|\hat{H}_0|\psi_{100}'}=(Z^2-2ZZ')R_\infty$$
@@ -184,8 +184,6 @@ $$\Delta J=\pm1\hspace{1cm}J_\alpha+J_\beta\geq1\hspace{1cm}\Delta m_J=0,\pm1$$
 - For $S=1$, the transition lines must be _multiplets_
 	- Transitions _to the lowest energy state_ are _triplets_
 	- _Other_ transitions are _sextuplets_ due to the selection rules
-
-
 
 # Multi-electron atoms
 - The _principal contributions_ to a Hamiltonian:

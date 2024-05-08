@@ -325,7 +325,7 @@ $$s(t)=x(t)c(t) \iff \tilde{S}(\nu)=\frac{1}{\sqrt{2\pi}}\tilde{X}(\nu)*C(\nu)$$
 - If the noise and the signal have _non-overlapping spectra_, it is very easy to filter via a _step function_ (or an approximation to one)
 
 - The more complicated case is if the noise is _wide-spectrum_:
-![[Physics/Images/Phase sensitive detection.png]]
+![[Phase sensitive detection.png]]
 - This sort of filtering is known as _phase-sensitive detection_
 - This requires a filter with _small $\Delta\nu$_, ideally _similar to intrinsic width of the signal_
 

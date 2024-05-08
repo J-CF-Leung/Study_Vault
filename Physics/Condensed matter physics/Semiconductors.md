@@ -158,7 +158,7 @@ $$I=I_0\left[\exp\left(\frac{eV}{k_BT}\right)-1\right]$$
 - Emission requires the _creation or annihilation_ of a [[Phonons (IB)|phonon]]
 - As energy is _dissipated as heat_, this is an _inefficient emission process_
 
-![[Physics/Images/Direct vs indirect band gaps.png]]
+![[Physics/Zimages/Direct vs indirect band gaps.png]]
 
 ## Semiconductor laser
 - In a _laser_, all photons are _coherent_ (have the same phase)
