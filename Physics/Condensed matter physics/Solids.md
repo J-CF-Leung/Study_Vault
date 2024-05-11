@@ -1776,12 +1776,16 @@ $$\frac{\int_{E_{g}}^{\infty} I(\omega)E_{g}\,d\omega}{\int_{0}^{\infty} I(\omeg
 - The _surface structures_ of a growing crytal can be monitored using _reflection high-energy electron diffraction_ (RHEED), or _transmission electron microscopy_ (TEM)
 ![[RHEED.png]]
 
-### Two-dimensional electron gas
+### Two-dimensional electron gas (2DEG)
 - The manufacture of a _two-dimensional electron gas_ (2DEG)
 	- _Spacers_ prevent positive carriers from scattering with the 2DEG
 ![[2DEG.png|700]]
-- Electrons inhabit a _potential well_ in the $z-$direction
+- Electrons inhabit a _potential well_ in the $z-$direction, and hence the wave-functions are of the form:
+$$\Phi(\boldsymbol{r},z)=\phi_{n}(z)\exp(i\boldsymbol{k}\cdot \boldsymbol{r})$$
+- Where $\boldsymbol{k}$ and $\boldsymbol{r}$ are _two-dimensional_
+- States in the $z$ direction are _sub-bands_
 
+### 2DEG in a magnetic field
 - With a _perpendicular magnetic field_, the density of states splits into _spin-split pairs_ of [[Charged Particles#Landau levels|Landau levels]]
 $$E_{i}=\left( i+\frac{1}{2} \right)\hbar\omega_{c} \hspace{1.5cm}\omega_{c}=\omega_{L}=\frac{eB}{m}$$
 - The _spin splitting_ is determined by the $g-$factor:
@@ -2217,14 +2221,14 @@ $$\Gamma \propto\epsilon^{2}$$
 - Fermi liquid theory is only for _low-energy excitations_, and $k_{B}T\ll E_{F}$
 	- Typically, $E_{F}/k_{B}\sim 10^{3}\,\text{K}$
 
-## Near the Fermi surface
+### Near the Fermi surface
 - _Fermi liquid quasiparticles_ only defined _close to the Fermi surface_, where they have a _large enough lifetime_
 - The quasiparticles are _labelled_ by $\boldsymbol{k}$
 - There is a _vacuum ground state_, where low energy excitations are _fermionic particles and holes_, on _either side_ of a boundary surface in $\boldsymbol{k}-$space
 	- Comparison to _Fermi gas_, which has a _filled Fermi sphere_
 ![[Fermi gas vs liquid.png|420]]
 
-## Quasiparticle spectral function
+### Quasiparticle spectral function
 - Consider the _response_ of the addition/removal of a quasi-particle
 
 - In a _non-interacting system_, for a particle in _eigenstate_ $\epsilon(\boldsymbol{k})$, the wave-function is:
@@ -2255,3 +2259,59 @@ $$\displaylines{\psi_{\boldsymbol{k}}(\boldsymbol{r},t)=\psi_{\boldsymbol{k}}(\b
 - There is a _quality factor_ $\tilde{\epsilon}_{\boldsymbol{k}}/\Gamma _\boldsymbol{k}\propto 1/\tilde{\epsilon}_{\boldsymbol{k}}$
 	- _Diverges_ as $\epsilon\to 0$
 - Quasi-particles are _over-damped_ at high energies
+
+### Tunability of the quasiparticle interaction
+- The _interaction term_ causes _change_ in quasi-particle properties w.r.t. the _free electron_
+$$\frac{1}{2}\sum_{\boldsymbol{k},\boldsymbol{k}'}f(\boldsymbol{k},\boldsymbol{k}')n(\boldsymbol{k})n(\boldsymbol{k}')$$
+- The _effective mass_ $m^{*}$ can be _orders of magnitude_ larger than $m$
+- It is _not necessarily_ only Coulomb repulsion
+	- Can be _spin-dependent_
+
+- An example of _tunability_ of correlated electron systems
+- The effective interaction can be _tuned_ over a wide range by _doping_, or using _electromagnetic fields_
+
+## Heavy fermions
+- _Strong interactions_ cause a _high effective mass_
+- _Heavy fermion materials_ suggest a high effective mass via coefficients in [[#Heat capacity|heat capacity]], or [[#Magnetism|magnetic susceptibility]], as predicted by Fermi liquid theory
+- Typically, $m^{*}\sim 10^{3}m$
+- Usual heavy atoms: $\ce{ Ce,Yb, U }$ with _partially filled_ $f$ _orbitals_
+- The $f$ states are more _localised_ compared to the other _valence orbitals_, leading to very _narrow bands_
+- _Coulomb_ repilsion will _prevent double occupancy_ of the states
+
+- Example: $\ce{ CeCu_{6} }$ heat capacity
+![[CeCu6.png|350]]
+- Comparing to _copper_, the _low-temperature heat capacity_ is boosted by $\approx 150$
+- Consider the _density of states_:
+$$g(E_{F}) \propto \frac{1}{v_{F}}\hspace{1.5cm}m^{*}v_{F}=\hbar k_{F}$$
+- Increase in $m^{*}$ reflects increase in $g(E_{F})$
+- The _heavy fermion state_ only develops at _low temperatures_
+
+- Example: $\ce{ UPt_{3} }$ magnetic susceptibility
+![[UPt3.png|350]]
+- At _high temperatures_, the susceptibility roughly follows _Curie's law_, as the $f$ electrons act as _local magnetic moments_
+- At _low temperatures_, Curie susceptibility tends to a _constant value_
+	- _Free spins_ bind to conduction electrons to make heavy fermions
+
+### Renormalised bands
+- Consider the _hybridisation_ of $f$ bands with the $s,p,d$ bands, which are more _extended_
+	- $f$ orbitals lie _inside_ the $s,p,d$ orbitals
+- There is _little_ $f-f$ hybridisation, resulting in a _flat band_
+
+- In the _single electron_ scheme, the $f$ orbitals are _completely full_, and there would be _no heavy fermion behaviour_
+![[f bands.png|400]]
+- Typically, due to _Coulomb repulsion_, only _one electron_ occupies the $f$ band
+- Energy is _re-normalised_, with an _anti-crossing_ once hybridisation is considered
+- $dE/dk$ is _much flatter_ at $k_{F}$ to give a _higher effective mass_
+- $k_{F}$ also becomes _larger_ than without hybridisation
+
+### Detection by de Haas-van Alphen
+- There are different _Fermi surface sheets_, with different _contributions_ to heat capacity
+- _Volume_ enclosed by the sheets is used to determine if the electrons act as a Fermi liquid
+- _Temperature dependence_ of the _amplitude_ of de Haas-van Alphen measurements will give the _effective mass_ and its contribution to heat capacity
+![[Heavy fermion surface sheets.png|400]]
+### Tuning the interaction
+- The _effective_ interaction can be _tuned_ to determine interactions at _low temperatures_
+	- Except the _Coulomb_ interaction
+- This gives rise to different _phases_ depending on the ground state
+- The ground states can be tuned to be _magnetic_ or _superconducting_
+![[Heavy fermion phases.png]]

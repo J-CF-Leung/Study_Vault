@@ -762,31 +762,42 @@ $$S_{\boldsymbol{k}}(T,\mu)=-\left( \frac{\partial \Phi_{\boldsymbol{k}}}{\parti
 
 - The _total number of particles_:
 $$N=\sum_k\mean{n_k}=\int\frac{\sigma\,d^3x\,d^3p}{(2\pi\hbar)^3}\frac{1}{1+\exp[\beta(\varepsilon_k-\mu)]}=\int  \, \frac{\sigma\, g(\varepsilon)\,d\varepsilon}{1+\exp[\beta(\varepsilon_{k}-\mu)]} $$
+## At absolute zero
+
+### Chemical potential
 - There is often _no closed-form expression_ for $\mu$
 - Its value must be _adjusted_ so the integral _always_ gives $N$
-## At absolute zero
+- At $T=0$, $\mu$ is defined as the _Fermi energy_
+
 - Writing the _density of states_ $g(\varepsilon)$:
 $$N=V\int_0^\infty g(\varepsilon)n(\varepsilon)\,d\varepsilon$$
-- One can then use the _distribution at absolute zero_:
-$$N=V\int_0^{\varepsilon_F}$$
+- One can then use the _distribution at absolute zero_, up to the _Fermi energy_:
+$$N=\frac{\sigma V}{4\pi^{2}} \left( \frac{2m}{\hbar^{2}} \right)^{3/2}\int_0^{\varepsilon_F} \sqrt{ \varepsilon}\,d\varepsilon=\frac{\sigma V}{4\pi^{2}} \left( \frac{2m}{\hbar^{2}} \right)^{3/2} \frac{2\varepsilon_{F}^{3/2}}{3}$$
 - One then finds that the _Fermi energy_ is:
-$$\varepsilon_F=\left[\left(\frac{}{}\right)\frac{N}{V}\right]^{2/3}$$
+$$\mu(T\to 0)\equiv\varepsilon_F=\frac{\hbar^{2}}{2m}\left[ \left(\frac{6\pi^{2}}{\sigma}\right)\frac{N}{V} \right]^{2/3}$$
+- As _temperature_ increases, and _higher energy_ states have higher $g(\varepsilon)$, $\mu$ _shifts to be lower_, eventually becoming _negative_
+- Then in the [[#Classical limit]], it tends to the _Maxwell-Boltzmann_ distribution
+$$n(\varepsilon)=\frac{1}{\exp[\beta(\varepsilon-\mu)]-1 }\longrightarrow \exp[-\beta(\varepsilon-\mu)]$$
+![[Quantum gas mu.png]]
 
+### Internal energy
 - The _internal energy_ of the gas:
-$$U=\sum_k\varepsilon_k\mean{n_k}=V\int_0^\infty g(\varepsilon)\,d\varepsilon\frac{\epsilon}{1+\exp[]}$$
+$$U=\sum_k\varepsilon_k\mean{n_k}=V\int_0^\infty g(\varepsilon)\,d\varepsilon\frac{\varepsilon}{1+\exp[\beta(\varepsilon-\mu)]}$$
 - At _absolute zero_:
 $$U|_{T=0}=V\left(\frac{}{}\right)\left(\frac{N}{V}\right)^{5/3}$$
 - This is _not a function of temperature_, as it is _evaulated_ at $T=0$
 	- The _zero-temperature limit_ is _purely quantum_ as $N\lambda^3/V\to\infty$
 
+### Fermi pressure
 - When one _compresses_ the gas, due to the _Pauli principle_, the energies are _raised_, giving the _Fermi pressure_:
 $$p_F=-\pd{U}{V}=(\dots)\frac{\hbar^2}{m}\left(\frac{N}{V}\right)^{5/3}$$
 - This is _not the actual pressure_, as $U|_{T=0}$ is _not a thermodynamic variable_
 
+### Grand potential
 - The _grand potential_ of the Fermi gas, using _integration by parts_ for the second equality:
 $$\begin{aligned}\Phi&=V\int_0^\infty -kT\ln(1+\exp[-\beta(\varepsilon_k-\mu)])\,g(\varepsilon)\,d\varepsilon  \\ &=-V\int_0^\infty N(\varepsilon)g(\varepsilon)\,d\varepsilon\end{aligned}$$
 
-## Momentum representation
+### Momentum representation
 - Rewrite integrals in terms of _momentum_
 $$N=\sigma V\int_0^{\varepsilon_F}\frac{p^2\,dp}{2\pi^2\hbar^3}=\sigma V\frac{k_F^3}{6\pi^2}$$
 $$U=\sigma V\int_0^{\varepsilon_F}\frac{p^4\,dp}{2\pi^2(2m)\hbar^3}=$$
@@ -837,7 +848,7 @@ $$\begin{aligned}\Phi&=\int\frac{d^3x\,d^3p}{(2\pi\hbar)^3}kT\ln[1-\exp[-\beta(\
 - Compare with the Fermi gas:
 ![[Fermi and Bose distributions.png]]
 
-## Low tempature 
+## Low temperature 
 - Take:
 $$\frac{N\lambda^3}{V}\sim1$$
 - For _bosons_, multiple particles can _occupy the same quantum state_

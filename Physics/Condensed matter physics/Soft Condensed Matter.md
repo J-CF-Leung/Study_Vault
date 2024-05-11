@@ -1456,7 +1456,7 @@ $$\frac{z_{i}z_{j}e^{2}}{4\pi\epsilon_{0}\epsilon_{r}} \frac{1}{l_{B}}=k_{B}T\hs
 - If molecules aggregate _closer_ than the Bjerrum length, they start to _fall out of solution_
 - $l_{B}$ is _only dependent on the solution itself_
 
-### Charged surfaces
+### Charged surfaces and the Poisson-Boltzmann equation
 - Consider a _charged surface_, with _counter-ions_ of opposite charge
 	- There are also _co-ions_ with the same charge as the surface
 - The counter-ions provide _screening_
@@ -1499,6 +1499,7 @@ $$n_{\pm}(x)=n_{0}\left[ 1\mp \frac{e}{k_{B}T}\phi_{0}\exp\left( -\frac{x}{\lamb
 - At the same time, there is a _co-ion depletion_
 - This forms an _electric double layer_ at the surface
 	- Typical thickness: $\lambda_{D} \approx 0.5\,\text{nm}$
+	- The potential of the double layer is the _$\zeta-$potential_
 
 - The _net charge density_ in the layer, using the above:
 	- _Integrating_ gives the charge of the layer, as expected
@@ -1596,11 +1597,14 @@ $$V_\text{dep}=\frac{4\pi}{3}(a+L)^{2}\left[ 1-\frac{3r}{4(a+L)}+\frac{r^{3}}{16
 
 ## Phase diagram of colloidal suspensions (incomplete)
 
+![[Colloid phase diagram.png]]
+
 # Electrokinetic phenomena
 - Pulling a system _out of equilibrium_ using _electric fields_
 
 - Electro-osmosis and electro-phoresis: opposites
-- Streaming potential
+- Streaming potential: _pressure-driven_
+![[EKP.png]]
 ## Electro-osmotic flow
 - The _movement_ of a liquid _over an immobilised_ (semi-infinite) _charged surface_, with a _parallel electric field_
 ![[EOF.png]]
@@ -1630,17 +1634,41 @@ $$\rho(\boldsymbol{r})\boldsymbol{E}+\eta \nabla^{2}\boldsymbol{v}=0$$
 $$\displaylines{\boldsymbol{v}=v_{x}(y)\hat{x} \\ -\epsilon_{w}\frac{\partial^{2}\phi}{\partial y^{2}}E+\eta \frac{\partial^{2}v_{x}}{\partial y^{2}}=0}$$
 - Integrating twice, with the _no-slip_ boundary condition:
 $$v_{x}(y=0)=0$$
+- Also assume _far away_ from the plate (_thin Debye layer_ limit), where 
+$$\frac{\partial \phi}{\partial y}\Bigg|_{y\gg\lambda_{D}}=0$$
+- The full solution:
+$$v_{x}(y)=\frac{\epsilon_{w}}{\eta }[\phi(y)-\phi_{0}]E$$
 
-- Full solution derivation
-
-- Assume _far away_ from the plate (_thin Debye layer_ limit)
-- Helmholtz-Smoluchowski equation for _counter-ions_:
-$$v_\text{eo}=-\frac{\epsilon_{w}}{\eta}\phi_{0}E$$
-- $\phi_{0}$ is the _zeta-potential_ at the plate
+- _Helmholtz-Smoluchowski equation_ for _counter-ions_ in the centre:
+$$v_\text{eo}=-\frac{\epsilon_{w}}{\eta}\zeta E$$
+- $\zeta=\phi_{0}$ is the _zeta-potential_ at the plate
+- One can define the _electrophoretic mobility_ of the ions:
+$$\mu _\text{eo}=-\frac{\epsilon_{w}}{\eta}\zeta$$
 - In this limit, counter-ions and co-ions have _equal and opposite velocities_
 
+- This does not take the _surface conduction_ close to the surface, or the _polarisation_ of the electric double layer into account
+
+### Testing the Helmholtz-Smoluchowski equation
+- A _single colloidal particle_ in an _optical trap_
+![[Optical tweezers.png|450]]
+- The _optical tweezers_ can exert a _restoring force_ $-\kappa\Delta x$
+- The _electrophoretic mobility_ $\mu$ can be measured by:
+	- The particle is taken to be in _equilibrium_ at all times
+$$v_\text{eff}(t)=-\frac{\kappa\Delta x(t)}{6\pi \eta r}+u_{e}E(t)$$
+- If $E(t)$ _oscillates_ with frequency $f$, and the _maximum amplitude_ is $\Delta X$, the _average_ velocity over a period is $4\Delta Xf$, and one can _measure_ $|u_{e}|$
+$$|u_{e}|=\frac{4\Delta Xf}{E}+\frac{\kappa\Delta X}{6\pi \eta rE}$$
+- 
 ## Streaming potential
 - Using a _pressure gradient_ to drive flow in a _charged channel_
+- This leads to _charge separation_ and hence a _current_
 - It can be used to _generate power_
 
+- Total current through a _cross-section_ of width $w$ and height $h$:
+	- Ignoring _sidewall_ effects as $w\gg h$
+$$I_\text{str}=w\int _{h/2}^{h/2} \rho(x)v(x) \, dx $$
+- Typical flow profile: [[#Pressure-driven flow in a channel|Poiseuille flow]] with no-slip conditions
+- Expected to increase _linearly_ with pressure
+
 ![[EOF vs pressure.png]]
+![[EOF vs streaming.png|350]]
+## Electrophoresis

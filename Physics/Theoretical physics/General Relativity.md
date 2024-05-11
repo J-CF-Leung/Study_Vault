@@ -1187,6 +1187,8 @@ $$\displaylines{E=K_{\mu}\frac{dx^{\mu}}{d\lambda}=\left( 1-\frac{2GM}{r} \right
 $$\displaylines{\frac{1}{2}\left( \frac{dr}{d\lambda} \right)^{2}+V(r)=\mathcal{E} \\ \mathcal{E}=\frac{1}{2}E^{2} \hspace{1.5cm} V(r)=\frac{\varepsilon}{2}-\varepsilon \frac{GM}{r}+\frac{L^{2}}{2r^{2}}-\frac{GML^{2}}{r^{3}}}$$
 
 ## Precession of orbits
+
+### Shape equation
 - For a _massive_ particle, by multiplying the equation above by $(d\phi/d\lambda)^2=r^2/L^2$, one gets an equation for the _orbit_:
 $$\left( \frac{dr}{d\phi} \right)^{2}+\frac{1}{L^{2}}r^{4}-\frac{2GM}{L^{2}}r^{3}+r^{2}-2GMr=\frac{2\mathcal{E}}{L^{2}}r^{4}$$
 
@@ -1197,10 +1199,13 @@ $$x=\frac{L^{2}}{GMr}$$
 $$\left( \frac{dx}{d\phi} \right)^{2}+\frac{L^{2}}{G^{2}M^{2}}-2x+x^{2}-\frac{2G^{2}M^{2}}{L^{2}}x^{3}=\frac{2\mathcal{E}L^{2}}{G^{2}M^{2}}$$
 - Then, _differentiating_ w.r.t. $\phi$ gives:
 $$\frac{d^{2}x}{d\phi^{2}}-1+x=\frac{3G^{2}M^{2}}{L^{2}}x^{2}$$
+- This is the _shape equation_
+
 - For a _Newtonian_ orbit, the last term is _absent_, and the solution is:
 $$x_{0}=1+e\cos \phi$$
 - It is a _perfect ellipse_ with _eccentricity_ $e$
 
+### Perturbation in orbit
 - Expand $x$ into a _Newtonian solution_ $x_0$ and a _perturbation_ $x_1$:
 $$\frac{d^{2}x_{0}}{d\phi^{2}}-1+x_{0}=0\hspace{1.5cm}\frac{d^{2}x_{1}}{d\phi^{2}}+x_{1}=\frac{3G^{2}M^{2}}{L^{2}}x_{0}^{2}$$
 - Substituting the Newtonian solution into the equation for $x_1$:
