@@ -782,21 +782,18 @@ $$n(\varepsilon)=\frac{1}{\exp[\beta(\varepsilon-\mu)]-1 }\longrightarrow \exp[-
 
 ### Internal energy
 - The _internal energy_ of the gas:
-$$U=\sum_k\varepsilon_k\mean{n_k}=V\int_0^\infty g(\varepsilon)\,d\varepsilon\frac{\varepsilon}{1+\exp[\beta(\varepsilon-\mu)]}$$
-- At _absolute zero_:
-$$U|_{T=0}=V\left(\frac{}{}\right)\left(\frac{N}{V}\right)^{5/3}$$
+$$\begin{align}
+U=\sum_k\varepsilon_k\mean{n_k}&=\sigma\int_0^\infty g(\varepsilon)\,d\varepsilon\frac{\varepsilon}{1+\exp[\beta(\varepsilon-\mu)]} \\ &= \frac{\sigma V}{4\pi^{2}} \left( \frac{2m}{\hbar^{2}} \right)^{3/2} \int _{0}^{\infty} \frac{\varepsilon^{3/2}\, d\varepsilon}{1+\exp[\beta(\varepsilon-\mu)]} 
+\end{align}$$
+- At _absolute zero_, evaluating the integral:
+$$U|_{T=0}\propto V\left(\frac{N}{V}\right)^{5/3}$$
 - This is _not a function of temperature_, as it is _evaulated_ at $T=0$
 	- The _zero-temperature limit_ is _purely quantum_ as $N\lambda^3/V\to\infty$
 
 ### Fermi pressure
 - When one _compresses_ the gas, due to the _Pauli principle_, the energies are _raised_, giving the _Fermi pressure_:
-$$p_F=-\pd{U}{V}=(\dots)\frac{\hbar^2}{m}\left(\frac{N}{V}\right)^{5/3}$$
+$$p_F=-\pd{U}{V}=(\text{const.} \sim 1)\frac{\hbar^2}{2m}\left(\frac{N}{V}\right)^{5/3}=-\frac{2}{3} \frac{U}{V}$$
 - This is _not the actual pressure_, as $U|_{T=0}$ is _not a thermodynamic variable_
-
-### Grand potential
-- The _grand potential_ of the Fermi gas, using _integration by parts_ for the second equality:
-$$\begin{aligned}\Phi&=V\int_0^\infty -kT\ln(1+\exp[-\beta(\varepsilon_k-\mu)])\,g(\varepsilon)\,d\varepsilon  \\ &=-V\int_0^\infty N(\varepsilon)g(\varepsilon)\,d\varepsilon\end{aligned}$$
-
 ### Momentum representation
 - Rewrite integrals in terms of _momentum_
 $$N=\sigma V\int_0^{\varepsilon_F}\frac{p^2\,dp}{2\pi^2\hbar^3}=\sigma V\frac{k_F^3}{6\pi^2}$$
@@ -804,89 +801,180 @@ $$U=\sigma V\int_0^{\varepsilon_F}\frac{p^4\,dp}{2\pi^2(2m)\hbar^3}=$$
 - One then also gets that the _momentum at the Fermi level_:
 $$\hbar k_F=()^{1/3}\left(\frac{}{}\right)^{1/3}$$
 - The _Fermi pressure_:
-$$P_F=\frac{2}{5}\frac{N}{V}\varepsilon_F$$
+$$p_F=\frac{2}{5}\frac{N}{V}\varepsilon_F$$
 ## Away from absolute zero
 - At $T>0$, the _chemical potential_ is _not equal_ to $\varepsilon_F$
 
+### Grand potential and equation of state
+- The _grand potential_ of the Fermi gas, using _integration by parts_ for the second equality:
+$$\begin{aligned}\Phi&=V\int_0^\infty -k_{B}T\ln(1+\exp[-\beta(\varepsilon_k-\mu)])\,g(\varepsilon)\,d\varepsilon \\ &= -\frac{2}{3} \frac{\sigma V}{4\pi^{2}} \left( \frac{2m}{\hbar^{2}} \right)^{3/2} \int _{0}^{\infty} \frac{\varepsilon^{3/2}\, d\varepsilon}{1+\exp[\beta(\varepsilon-\mu)]}  \\ &=-\frac{2}{3}U\end{aligned}$$
+- Using the formula $\Phi=-pV$
+$$p= \frac{2}{3} \frac{\sigma }{4\pi^{2}} \left( \frac{2m}{\hbar^{2}} \right)^{3/2} \int _{0}^{\infty} \frac{\varepsilon^{3/2}\, d\varepsilon}{1+\exp[\beta(\varepsilon-\mu)]}$$
+- This gives the _equation of state_ for the Fermi gas
+### Sommerfeld expansion
 - One can do _Taylor expansions_ with $1/(\beta\varepsilon_F)$
 	- This is known as the _Sommerfeld expansion_
 - For the integral:
 $$\int_0^\infty \frac{A(\varepsilon)\,d\varepsilon}{\exp[\beta(\varepsilon-\mu)]+1}=\int_0^\mu A(\varepsilon)\,d\varepsilon+\frac{\pi^2}{6}(kT)^2A'(\mu)+\dots$$
 
 - Applying this to _internal energy_:
-$$\int_0^\infty\frac{\varepsilon\,g(\varepsilon)\,d\varepsilon}{\exp[]}=\int_0^\mu\,\varepsilon g(\varepsilon)\,d\varepsilon+\frac{\pi^2}{6}(kT)^2[g(\mu)+\mu g'(\mu)]$$
+$$\int_0^\infty\frac{\varepsilon\,g(\varepsilon)\,d\varepsilon}{\exp[\beta(\varepsilon-\mu)]+1}=\int_0^\mu\,\varepsilon g(\varepsilon)\,d\varepsilon+\frac{\pi^2}{6}(kT)^2[g(\mu)+\mu g'(\mu)]$$
 - The _first term_ can be _expanded_:
 $$\int_0^{\varepsilon_F}\varepsilon g(\varepsilon)\,d\varepsilon+(\mu-\varepsilon_F)\varepsilon_F\,g(\varepsilon_F)+\dots$$
 - Expand $U$ with _correction terms_:
-$$U=U(T=0)+\dots$$
+$$U=U(T=0)+\mathcal{O}(T)^{2}$$
+
+### Correction terms
 - Looking at _total number of particles_:
-$$\displaylines{N=\int_0^\infty  \\ \frac{dN}{dT}=0=\frac{d\mu}{dT}g(\mu)+\frac{\pi^2}{3}k^2Tg'(\mu)=0}$$
+$$\displaylines{N=\int_0^\infty \frac{g(\varepsilon)}{\exp[\beta(\varepsilon-\mu )]+1}\,d\varepsilon \\ \frac{dN}{dT}=0=\frac{d\mu}{dT}g(\mu)+\frac{\pi^2}{3}k^2Tg'(\mu)=0}$$
 - One then gets an _expression_ for $\mu$:
-$$\mu=\varepsilon_F-\frac{\pi^2}{6}(kT)^2\frac{g'}{g}$$
+$$\mu(T)=\varepsilon_F-\frac{\pi^2}{6}(k_{B}T)^2\frac{g'(\varepsilon_{F})}{g(\varepsilon_{F})}$$
 - Substituting in the corrections:
-$$U(T)=U(T=0)+\frac{\pi^2}{6}(kT)^2g(\varepsilon_F)$$
+$$U(T)=U(T=0)+\frac{\pi^2}{6}(kT)^2g(\varepsilon_F)+\mathcal{O}(T^{4})$$
 - This then gives the _heat capacity_:
 $$C=\pd{U}{T}=\frac{\pi^2}{3}k^2g(\varepsilon_F)T$$
+
+- Alternatively, consider the _grand potential_:
+$$\Phi=-\frac{2}{3}U=\Phi(0)-\frac{\sigma V}{24}(k_{B}T)^{2} \left( \frac{2m}{\hbar^{2}} \right)^{3/2}\varepsilon_{F}^{1/2}$$
+- The _entropy_ is then:
+$$S=-\left( \frac{\partial \Phi}{\partial T} \right)_{\mu,V}=\frac{k_{B}^{2}T}{3} \frac{V}{2} \left( \frac{2m}{\hbar^{2}} \right)^{3/2} \sqrt{ \varepsilon_{F} }=\frac{\pi^{2}}{3}g(\varepsilon_{F})k_{B}^{2}T$$
+- The heat capacity formula can also be obtained from $T(\partial S/\partial T)$
+- Application: [[Solids#Heat capacity|heat capacity of electrons in metals]]
+
 ## At high temperatures
-- The _classical limit_:
+- [[#Classical limit]]:
 $$\frac{N\lambda^3}{V}\ll1 \hspace{1.5cm}\mu=kT\ln\frac{N\lambda^3}{V}$$
 - The _grand potential_:
-$$\Phi=-\frac{2}{3}U=$$
-- The _leading term_ of this expansion is 
-- This allows one to write:
-$$\Phi=-\frac{2}{3}V\exp(\beta\mu)\int_0^\infty\frac{}{}$$
-- This leads to the result for the [[#The ideal gas in the grand canonical ensemble|classical ideal gas]]
+$$\Phi=-\frac{2}{3}U=-\frac{2}{3}\sigma\int _{0}^{\infty} \frac{\varepsilon g(\varepsilon)\, d\varepsilon}{\exp(\beta\varepsilon)+\exp(\beta \mu)}\exp(\beta \mu) $$
+- _Ignore_ the $\exp(\beta \mu)$ in the denominator (leading order term)
+- Making the substitution $x=\beta\varepsilon$
+$$\Phi=-\frac{2\sigma}{3}V\exp(\beta\mu) \frac{\sqrt{ 2 }m^{3/2}}{\pi^{2}\hbar^{3}}I \hspace{1cm}I=\int _{0}^{\infty} \frac{x^{3/2} \, dx}{e^{x}} =\frac{3\sqrt{ \pi }}{4}$$
+- This leads to the result for the [[#The ideal gas in the grand canonical ensemble|classical ideal gas]]:
+$$\Phi=-kT \frac{V}{\lambda^{3}} \exp(\beta \mu) \hspace{1.5cm}pV=NkT$$
 
 - Considering the _first order term_ as well
 $$\Phi=\Phi_\text{ideal}(1-0.2\exp(\beta\mu)+\dots)$$
-
+- There is a _quantum correction_ to the ideal gas law
+	- Derived from the [[Density matrices#Quantum corrections to the ideal gas law|density matrix formalism]]
+	- Correction $\sim N\lambda^{3}/V$
+$$p=\frac{NkT}{V}\left( 1+\frac{\pi^{3/2}}{4} \frac{N\hbar^{3}}{V(mk_{B}T)^{3/2}} \right)$$
 # The Bose gas
 $$\displaylines{\Xi_k=\sum_{n=0}^\infty\exp[-\beta(\varepsilon_k-\mu)n]=\frac{1}{1-\exp[-\beta(\varepsilon_k-\mu)]} \\ \Phi_k=kT\ln[1-\exp(-\beta\varepsilon_k+\beta\mu)] \\ \mean{n_k}=\pd{\Phi_k}{\mu}=\frac{1}{\exp[\beta(\varepsilon_k-\mu)]-1}}$$
-- The _total grand potential_:
-$$\begin{aligned}\Phi&=\int\frac{d^3x\,d^3p}{(2\pi\hbar)^3}kT\ln[1-\exp[-\beta(\varepsilon_k-\mu)]] \\ &=-\frac{2}{3}U\end{aligned}$$
-- The occupation number distribution above _diverges_ when $\varepsilon_k=\mu$
-- Compare with the Fermi gas:
-![[Fermi and Bose distributions.png]]
+- Number of particles in a _real gas_:
+	- For some _elementary excitations_, $\mu(T)=0$ and $N$ can vary
+$$N=\int _{0}^{\infty} n(\varepsilon)g(\varepsilon) \, d\varepsilon =\frac{\sigma V}{4\pi^{2}} \left( \frac{2m}{\hbar^{2}} \right)^{3/2} \int _{0}^{\infty}  \frac{\sqrt{ \varepsilon }\, d\varepsilon}{\exp[\beta(\varepsilon-\mu)]-1} $$
 
-## Low temperature 
-- Take:
+- The _total grand potential_, similar to the _Fermi gas_:
+$$\begin{aligned}\Phi&=-\int\frac{d^3x\,d^3p}{(2\pi\hbar)^3}k_{B}T\ln[1-\exp[-\beta(\varepsilon_k-\mu)]] \\ &=-\frac{2}{3}U\end{aligned}$$
+
+- Entropy for each level:
+$$S_{\boldsymbol{k}}=-\left( \frac{\partial \Phi_{\boldsymbol{k}}}{\partial T} \right)_{\mu,V}=-k_{B}[\langle n_{\boldsymbol{k}} \rangle \ln \langle n_{\boldsymbol{k}} \rangle -(1+\langle n_{\boldsymbol{k}} \rangle )\ln(1+\langle n_{\boldsymbol{k}} \rangle ) ]$$
+
+- Compare with the Fermi gas:
+	- They both _tend to_ the Maxwell-Boltzmann distribution at high energies
+![[Fermi and Bose distributions.png]]
+- The Bose gas occupation number will always _diverge_ at $\varepsilon=\mu$
+- For $N$ to be _well-defined and finite_, $\mu$ must always _remain negative_
+	- _Classical limit_: $\beta \mu$ is large and _negative_
+- As temperature _decreases_, $\mu$ must then be _less negative_ to preserve $N$
+
+## Bose-Einstein condensation at low temperatures
+- Take the quantum limit:
 $$\frac{N\lambda^3}{V}\sim1$$
 - For _bosons_, multiple particles can _occupy the same quantum state_
 - Therefore there are _many particles in the $\varepsilon=0$ state_, where they can form a _condensate_
 	- The rest of the particles are said to be _excited_
+	- For a _isolated system of bosons_, $T,p,\mu$ are _uniform
 
-- For a _isolated system of bosons_, $T,p,\mu$ are _uniform
-- At the _condensate_, $\mu\approx0$, hence $\mu\approx0$ _everywhere in the gas_
+- At some _low temperature_, even if $\mu$ is _adjusted_, the _area_ under $\langle n_{\boldsymbol{k}} \rangle$ _cannot be conserved_, so _particles_ must then be _condensing_ into the _ground state_
+	- Cannot be conserved without making $\mu$ _positive_
 
-- In the _low temperature limit:
+- At $T=0$, all particles must be in the ground state:
+$$\lim_{ T \to 0} n_{\varepsilon=0}=\lim_{ T \to 0 } \frac{1}{\exp(-\beta \mu)-1}=N $$
+- In the _low temperature limit_, one gets:
 $$\mu\approx-\frac{kT}{N}$$
-- One can find a _critical temperature_ for Bose-Einstein condensate formation
+- As expected, $\mu\approx 0$ for low temperatures, then becomes _large and negative at high temperatures_ (Classical limit)
+![[Bose chemical potential.png|250]]
+- _Separate_ the system into the condensate and the excited levels, it takes _zero energy_ to move particles _between_ the subsystems
+- Hence $\mu=0$ throughout the gas _when there is a condensate_
 
-- The _number of particles_ in the gas (_not the condensate_), setting $\mu\approx 0$:
-$$N-N_c=V\int_0^\infty\frac{g(\varepsilon)\,d\varepsilon}{\exp(\beta\varepsilon)-1}$$
-
+- The _number of particles_ in the excited gas (_not the condensate_), setting $\mu=0$:
+$$N-N_c=\frac{\sigma V}{4\pi^{2}} \left( \frac{2mk_{B}T}{\hbar^{2}} \right)^{3/2} \int _{0}^{\infty}\frac{\sqrt{ x } \, dx}{e^{x}-1}=2.612 \frac{\sigma V}{\lambda^{3}}\equiv N\left( \frac{T}{T_{0}} \right)^{3/2} $$
+- There is a _critical temperature_ $T_{0}$, above which there is _no condensation_
+![[Condensation.png|400]]
 - The condensation is a _second-order phase transition_
-## In two dimensions
-- Integral diverging (logarithmic divergence)
+
+### In two dimensions
+- In _two dimensions_, $g(\varepsilon)$ is _constant_
+$$N-N_{c}=\frac{Am}{2\pi \hbar^{2}} \int _{0}^{\infty} \, \frac{d\varepsilon}{\exp(\beta\varepsilon)-1} $$
+- The integrand _diverges_ as $\varepsilon\to 0$
 - The _critical temperature_ $T_c=0$
 
 - One _can only have Bose-Einstein condensates for_ dimensions $d\geq3$
+- There _cannot be an ordered phase_
+	- The _Landau-Peierls instability_
 
 - In 2D, the gas is also _sensitive to perturbations_
 - One can have _potential traps_ of depth $\Delta$ in a 2D gas, which form a _condensate_ with $T_c\neq0$ and $\mu=-\Delta$
 
+## Energy and heat capacity
+- Only the _excited atoms_ will contribute to energy
+$$U=\int _{0}^{\infty} \frac{\varepsilon g(\varepsilon)\, d\varepsilon}{\exp[\beta(\varepsilon-\mu)]-1} = \frac{\sigma V}{4\pi^{2}}  \left( \frac{2m}{\hbar^{2}} \right)^{3/2} \int_{0}^{\infty} \frac{\varepsilon^{3/2}  \, d\varepsilon}{\exp[\beta(\varepsilon-\mu)]-1}  $$
+- _Below_ the critical temperature, $\mu=0$ and substituting for a dimensionless integral:
+$$U\approx \frac{2\sigma V}{\lambda^{3}} k_{B}T\propto T^{5/2} \hspace{1.5cm}C_{V}\propto T^{3/2}$$
+- At $T\gg T_{0}$, it approaches the _classical regime_ of $C_{V}=3Nk_{B}/2$
+- Example: $\ce{ ^4He }$
+	- Also has _inter-atomic_ forces not accounted for in this model
+![[4-He heat capacity.png]]
+## Blackbody radiation
+- Photons have _integer angular momentum_, hence will obey _Bose statistics_
+
+- Photons are _non-interacting_, and can be _absorbed/emitted_ by a reservoir, changing $N$
+- Absorption/emission takes place _until thermal equilibrium is reached_, where $F$ is _minimised_ at some value of $N$:
+$$\left( \frac{\partial F}{\partial N} \right)_{T,V}=0$$
+- Hence, $\mu=0$ for photons
+
+- The Bose-Einstein distribution becomes the _Planck distribution_
+$$\langle n_{\boldsymbol{k}} \rangle = \frac{1}{\exp(\beta \hbar\omega_{\boldsymbol{k}})-1} $$
+- Photons obey the _dispersion relation_ $\omega=ck$
+- The _phase space element_, accounting for $2$ available _polarisations_:
+$$g(\varepsilon)\,d\varepsilon=\frac{2V}{8\pi^{3}} 4\pi k^{2}\,dk=\frac{V}{\pi^{2}c^{3}}\omega^{2}\,d\omega$$
+- Differs from real gas due to $m=0$
+	- Makes it so that _classical limit is impossible_ since $\lambda \to 0$
+
+- The _energy distribution_ of black-body radiation:
+$$E_{\omega}\,d\omega=\frac{V}{\pi^{2}c^{3}} \frac{\hbar\omega^{3}\,d\omega}{\exp(\beta \hbar\omega)-1}$$
+- The _Planck distribution law_:
+![[Planck distribution.png|400]]
+- The _total energy density_ is then:
+$$u=\frac{U}{V}=\frac{1}{V}\int _{0}^{\infty}E_{\omega} \, d\omega=\frac{\pi^{2}k_{B}^{4}}{15\hbar^{3}c^{3}}T^{4} $$
+- The _Stefan-Boltzmann law_
+- As $T\to 0$, the _number of photons_ in the cavity also goes to zero
+
+- The _mean number of photons_ in a frequency interval:
+$$N(\omega)\,d\omega=\frac{V}{\pi^{2}c^{3}} \frac{\omega^{2}\,d\omega}{\exp(\beta \hbar\omega)-1}$$
+
 ## Elementary excitations
+- For _interacting systems_, one can describe _excitations_ from the ground state as some _non-interacting quasi-particles_, arising as _collective behaviour_
+	- Example: [[Solids#Fermi liquid theory|Fermi liquids]]
 
-### Blackbody radiation
-- Dispersion relation
+- _Elementary excitations_ are characterised by _zero rest mass_
+	- Hence $\lambda\to 0$, always in quantum regime
 
-- Debye law
+### Phonons
+- _Interatomic interactions_ can be approximated as _harmonic_ for small displacements
+- _Eigenstates_ of a lattice are _plane waves_ called [[Solids#One-dimensional models|phonons]]
+	- Dispersion relation: _linear_ for small wave-number, _flattens off_ at the edge of the BZ
 
-- Spectral density of energy
-
-- Stefan-Boltzmann law
-
+- The _Debye model_ assumes a _linear dispersion_:
+$$\omega=ck$$
+- The "average" speed of sound:
+$$\frac{3}{c^{2}}=\frac{1}{c_{L}^{2}}+\frac{2}{c_{T}^{2}}$$
+- Up to some _cut-off_ such that there are $3N$ modes for $N$ atoms
 ### Spin waves
+- Dispersion relation:
+$$\varepsilon_{\boldsymbol{k}}=\alpha k^{2}$$
+- Similar to the _classical gas_, but following the _Bose distribution_
 # Non-ideal gases and liquids
 - Stay purely in the _classical regime_
 
@@ -909,12 +997,19 @@ $$P_2(\bm{r}_1,\bm{r}_2)=\frac{N(N-1)}{Z_\phi}\int\exp\left(\sum_{j>i}-\beta\phi
 - The probability has a _dimensionality_ $n^2=(N/V)^2$, where $n$ is _number density_
 
 - For _low densities_, due to _long range of interactions_:
+	- Numerator integral: particles $3\dots N$ are _far away_ from each other, and $1,2$ such that $\phi \approx 0$ apart from $\phi(r_{12})$
+	- $Z_{\phi}$: all particles are _far away_ from each other
 $$P_2(\bm{r}_1,\bm{r}_2)\approx\frac{N^2}{V^2}\exp[-\beta\phi(r_{12})]$$
 
 - Define the _radial distribution function_ (which is _dimensionless_)
 $$g(r_{12})=\frac{V^2}{N^2}P_2(\bm{r}_1,\bm{r}_2)\approx\exp[-\beta\phi(r_{12})]$$
-- _Forms_ of $g(r)$
-
+- _Forms_ of $g(r)$ in different substances:
+	- Example: _Lennard-Jones potential_
+![[Radial distribution functions.png|400]]
+- For all materials, $g(r\ll\sigma)$ will be zero due to _hard core repulsion_
+- For _liquids and gases_, there will be an _initial peak_ due to _nearest neighbours_
+	- Gases: then _evens out_ as there is _no correlation_ between far-away particles
+	- Liquids: also a _second peak_ due to a _second shell_ of particles
 ## Internal energy with pair interactions
 - $T,V,N$ are _not natural variables_ of $U$
 - Hence, one _does not have enough thermodynamic information_ from the above
@@ -930,6 +1025,7 @@ $$-\pd{}{\beta}\ln Z_\phi=\frac{N(N-1)}{2Z_\phi}\int\phi(r_{12})\exp[-\beta\phi(
 $$U=\frac{3}{2}NkT+\frac{1}{2}\frac{N^2}{V}\int_0^\infty\phi(r)g(r)\,4\pi r^2\,dr$$
 - This is an _expansion_ of $U$ in _powers of density_ $N/V$, accounting for _pair interactions_
 	- _Higher order terms_ will need to account for _more interactions_
+
 - Any expansion in powers of density is known as a _virial expansion_
 ## Virial Theorem
 - Given particles of position $\bm{r}_i$ and forces $\bm{f}_i$, the _virial_ of the system is defined as:
@@ -938,15 +1034,16 @@ $$\mathcal{V}=\sum_i-\frac{1}{2}\bm{r}_i\cdot\bm{f}_i$$
 $$\mathcal{V}=\sum_i-\frac{1}{2}\bm{r}_i\cdot \left(m_i\frac{d\bm{v}_i}{dt}\right)=-\frac{1}{2}\sum_im
 _i\frac{d}{dt}(\bm{r}_i\cdot\bm{v}_i)+\frac{1}{2}\sum_im_iv_i^2$$
 - By _averaging_ the virial, one gets rid of the time derivative due to _fluctuations_:
-$$\mean{\mathcal{V}}=\frac{1}{2}\sum_im_i\mean{v_i^2}=\frac{3}{2}NkT$$
+$$\mean{\mathcal{V}}=\frac{1}{2}\sum_im_i\mean{v_i^2}=\frac{3}{2}NkT=\langle T \rangle $$
+- This is the _virial theorem_
 
 - The virial can be due to _external forces_, which could be the _forces from a wall_:
-$$\mean{\mathcal{V}_\text{ext}}=-\frac{1}{2}\sum_i\mean{\bm{r}_i\cdot\bm{f}_i}=\frac{1}{2}\oint p\bm{r}\cdot\,d\bm{A}=\frac{p}{2}\int\div\bm{r}\,dV=\frac{3}{2}pV$$
+$$\mean{\mathcal{V}_\text{ext}}=-\frac{1}{2}\sum_i\mean{\bm{r}_i\cdot\bm{f}_i}=\frac{1}{2}\oint \bm{r}\cdot\,(p\,d\bm{A})=\frac{p}{2}\int\div\bm{r}\,dV=\frac{3}{2}pV$$
 - For an _ideal gas_, by equating the virials, one recovers the _ideal gas law_
 
 ### Accounting for pair interactions
 - The _internal virial_, using the fact that $f_{ij}=-f_{ji}$
-$$\mean{\mathcal{V}_\text{int}}_{ij}=-\frac{1}{2}\mean{r_if_{ij}+r_jf_{ji}}=\frac{1}{2}(r_i-r_j)\pd{\phi}{(r_i-r_j)}$$
+$$\mean{\mathcal{V}_\text{int}}_{ij}=-\frac{1}{2}\mean{r_if_{ij}+r_jf_{ji}}=\frac{1}{2}(r_i-r_j)\pd{\phi_{ij}}{(r_i-r_j)}$$
 - The _average_ is then written as:
 $$\mean{\mathcal{V}_\text{int}}=\frac{1}{2}\sum_{i\neq j}\mean{r_{ij}\pd{\phi}{r_{ij}}}=\frac{N}{2}\frac{1}{2}\int$$
 - The final result:
@@ -1195,7 +1292,7 @@ $$\displaylines{\langle x \rangle =\frac{1}{\beta Z}\left( \frac{\partial Z}{\pa
 - Consider the _total entropy_ of a _system_ connected to a _reservoir_:
 $$\displaylines{S_\text{tot}(x,U_\text{tot})=k\ln\Omega(x,U_\text{tot}) \\ P(x)\propto\exp[S_\text{tot}/k]}$$
 - Using the definition of [[#Reservoir and availability|availability]]:
-$$P(x)\propto\exp\left[-\frac{A(x)-A(\mean{x})}{kT}\right]$$
+$$\displaylines{dA=-T\,dS_\text{tot} \\ P(x)\propto\exp\left[-\frac{A(x)-A(\mean{x})}{kT}\right]}$$
 - By _Taylor expanding_ the availability:
 $$P(x)\propto\exp\left[-\frac{1}{2kT}\pd{^2A}{x^2}\Delta x^2\right]$$
 - The _variance_ is then:

@@ -1488,8 +1488,8 @@ $$\tau^{-1}=\alpha(\epsilon_{1}-E_{F})^{2}+\beta(k_{B}T)^{2}$$
 
 - The _conduction band_:
 $$\varepsilon_{c}(k)=\varepsilon_{c}+\frac{\hbar^{2}k^{2}}{2m_{e}^{*}} \hspace{1.5cm}g_{e}(\varepsilon)=\frac{1}{2\pi^{2}}\left( \frac{2m_{e}^{*}}{\hbar^{2}} \right)^{3/2}\sqrt{ \varepsilon-\varepsilon_{c} }$$
-- The _valence band_:
-$$\varepsilon_{v}(k)=\varepsilon_{v}-\frac{\hbar^{2}k^{2}}{2m_{h}^{*}} \hspace{1.5cm}g_{e}(\varepsilon)=\frac{1}{2\pi^{2}}\left( \frac{2m_{h}^{*}}{\hbar^{2}} \right)^{3/2}\sqrt{ \varepsilon_{v}-\varepsilon_{c} }$$
+- The _valence band_, occupied by _holes_:
+$$\varepsilon_{v}(k)=\varepsilon_{v}-\frac{\hbar^{2}k^{2}}{2m_{h}^{*}} \hspace{1.5cm}g_{e}(\varepsilon)=\frac{1}{2\pi^{2}}\left( \frac{2m_{h}^{*}}{\hbar^{2}} \right)^{3/2}\sqrt{ \varepsilon_{v}-\varepsilon }$$
 
 ## Carrier density
 - For a known $\mu$, the _carrier density_ in the conduction band:
@@ -1644,7 +1644,7 @@ $$H=E_{n}(\boldsymbol{k})-e\phi(\boldsymbol{r})$$
 	- For a large enough bias, the barrier _disappears_
 - With a _-ve bias to the metal_, the barrier is _raised_ as the _depletion region grows in width_, and current remains small
 	- Eventually, _breakdown_ occurs
-## p-n junctions (incomplete)
+## p-n junctions
 - A _p-n junction_ is formed when [[#Doped semiconductors|p-type and n-type semiconductors]] come into _contact_
 	- An _inhomogeneous doping_ of the material
 ![[Physics/Zimages/p-n junction.png]]

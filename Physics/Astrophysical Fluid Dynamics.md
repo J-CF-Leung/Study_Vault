@@ -1137,6 +1137,7 @@ $$\sigma_{ij}'=\eta\left( \partial_{j}u_{i}+\partial_{i}u_{j}-\frac{2}{3}\delta_
 	- The terms with $\eta$ are associated with _shears_ (it has _zero trace_)
 	- The terms with $\zeta$ are associated with _bulk compression_ viscosity
 
+### Navier-Stokes equation
 - Plugging into the momentum equation, one gets the _most general Navier-Stokes equation_:
 $$\rho\left( \frac{\partial u_{i}}{\partial t}+u_{j}\partial_{j}u_{i} \right)=-\partial_{j}p\delta_{ij}+\partial_{j}\left[\eta\left( \partial_{j}u_{i}+\partial_{i}u_{j}-\frac{2}{3}\delta_{ij}\partial_{k}u_{k} \right)+\zeta\delta_{ij}\partial_{k}u_{k}\right]+\rho g_{i}$$
 - Outside of _shocks_, and for an _isothermal fluid_, $\zeta\approx 0$ and $\eta$ is approximately _uniform_:
@@ -1224,7 +1225,7 @@ $$\Sigma=\int _{-\infty}^{\infty} \rho \, dz $$
 $$\frac{\partial\Sigma}{\partial t}+\frac{1}{R} \frac{\partial}{\partial R}(R\Sigma u_{R})=0$$
 - This is also given by considering _mass flux in and out of an annulus_
 
-- Consider the _Navier-Stokes equation_, or considering the _rate of change of angular momentum_ in the annulus:
+- Consider the $\phi$ _component_ of the _Navier-Stokes equation_, or considering the _rate of change of angular momentum_ in the annulus:
 	- Consider _angular momentum of incoming/outgoing mass_ and _viscous torque_
 $$\frac{\partial}{\partial t}(R\Sigma u_{\phi})+ \frac{1}{R} \frac{\partial }{\partial R}(\Sigma R^{2}u_{\phi}u_{R})=\frac{1}{R} \frac{\partial}{\partial R}\left( \nu\Sigma R^{3} \frac{d\Omega}{dR} \right)$$
 - Substituting the _Keplerian_ value of $u_{\phi}=\sqrt{ GM/R }$:
@@ -1297,9 +1298,6 @@ $$\frac{\partial \rho}{\partial t}+\nabla\cdot(\rho \boldsymbol{u})=0$$
 $$\displaylines{q=n^{+}e^{+}+n^{-}e^{-} \\ \boldsymbol{j}=n^{+}e^{+}\boldsymbol{u}^{+}+n^{-}e^{-}\boldsymbol{u}^{-}}$$
 - Continuity then gives _charge conservation_:
 $$\frac{\partial q}{\partial t}+\nabla\cdot \boldsymbol{j}=0$$
-
-- Treat the plasma _adiabatically_, hence:
-
 
 ### Electric and magnetic fields
 - [[Electromagnetism#Maxwell's equations|Maxwell's equations]]:

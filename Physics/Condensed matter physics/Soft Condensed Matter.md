@@ -1653,11 +1653,12 @@ $$\mu _\text{eo}=-\frac{\epsilon_{w}}{\eta}\zeta$$
 ![[Optical tweezers.png|450]]
 - The _optical tweezers_ can exert a _restoring force_ $-\kappa\Delta x$
 - The _electrophoretic mobility_ $\mu$ can be measured by:
-	- The particle is taken to be in _equilibrium_ at all times
+	- The particle is taken to be in _equilibrium_ at all times as it is in the _low Reynolds number_ regime
 $$v_\text{eff}(t)=-\frac{\kappa\Delta x(t)}{6\pi \eta r}+u_{e}E(t)$$
 - If $E(t)$ _oscillates_ with frequency $f$, and the _maximum amplitude_ is $\Delta X$, the _average_ velocity over a period is $4\Delta Xf$, and one can _measure_ $|u_{e}|$
 $$|u_{e}|=\frac{4\Delta Xf}{E}+\frac{\kappa\Delta X}{6\pi \eta rE}$$
-- 
+- The _zeta-potential_ can also be _extracted_ as:
+$$\zeta=\frac{\eta}{\epsilon_{w}}u_{e}$$
 ## Streaming potential
 - Using a _pressure gradient_ to drive flow in a _charged channel_
 - This leads to _charge separation_ and hence a _current_
@@ -1671,4 +1672,5 @@ $$I_\text{str}=w\int _{h/2}^{h/2} \rho(x)v(x) \, dx $$
 
 ![[EOF vs pressure.png]]
 ![[EOF vs streaming.png|350]]
-## Electrophoresis
+## Zeta-potential and the atomic double layer
+
