@@ -566,7 +566,7 @@ $$\tau=\frac{2d}{c}$$
 $$\Gamma(\tau)=\langle f(t)f^{*}(t-\tau) \rangle $$
 - The _degree of mutual coherence_:
 $$\gamma(\tau)=\frac{\Gamma(\tau)}{I_{0}}$$
-- The _measured intensity_ is:
+- The _measured intensity_ given $\tau$, _averaged_ over $t$ is:
 $$I(\tau)=2I_{0}+2\mathrm{Re}[\Gamma(\tau)]$$
 - This gives _fringes_, which have _visibility_:
 $$V(\tau)=\frac{I_\text{max}-I_\text{min}}{I_\text{max}+I_\text{min}}=|\gamma(\tau)|$$

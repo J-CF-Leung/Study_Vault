@@ -722,8 +722,7 @@ $$\displaylines{c_B=1-c_A\equiv 1-c \\ \Delta S_\text{mix}=Nk[c\ln c+(1-c)\ln(1-
 - Let a _chemical reaction_ happen at _constant_ $T$ and $p$
 - The _total change in Gibbs Free Energy_ $G$:
 $$dG(p,T)=\sum_\text{species}\mu_i dN_i$$
-- Incorporating _reaction coefficients_ $\nu_i$ such that:
-$$\sum_i \nu_i c_i=0$$
+- Incorporate _reaction coefficients_ $\nu_i$ 
 - At _equilibrium_:
 $$dG=\sum_i \nu_i\mu_i\,dN_0=0\Longrightarrow \sum_i\nu_i\mu_i=0$$
 - Then writing the _chemical potential_ in the [[#The ideal gas in the grand canonical ensemble|grand canonical ensemble]]:
@@ -898,6 +897,8 @@ $$\mu\approx-\frac{kT}{N}$$
 - _Separate_ the system into the condensate and the excited levels, it takes _zero energy_ to move particles _between_ the subsystems
 - Hence $\mu=0$ throughout the gas _when there is a condensate_
 
+- If the _dispersion relation_ goes to _negative energies_, it is _unphysical_, so particles _pile up_ at $\varepsilon=0$ instead
+
 - The _number of particles_ in the excited gas (_not the condensate_), setting $\mu=0$:
 $$N-N_c=\frac{\sigma V}{4\pi^{2}} \left( \frac{2mk_{B}T}{\hbar^{2}} \right)^{3/2} \int _{0}^{\infty}\frac{\sqrt{ x } \, dx}{e^{x}-1}=2.612 \frac{\sigma V}{\lambda^{3}}\equiv N\left( \frac{T}{T_{0}} \right)^{3/2} $$
 - There is a _critical temperature_ $T_{0}$, above which there is _no condensation_
@@ -917,7 +918,8 @@ $$N-N_{c}=\frac{Am}{2\pi \hbar^{2}} \int _{0}^{\infty} \, \frac{d\varepsilon}{\e
 - In 2D, the gas is also _sensitive to perturbations_
 - One can have _potential traps_ of depth $\Delta$ in a 2D gas, which form a _condensate_ with $T_c\neq0$ and $\mu=-\Delta$
 
-## Energy and heat capacity
+## Experimental signatures of Bose-Einstein condensation
+### Energy and heat capacity
 - Only the _excited atoms_ will contribute to energy
 $$U=\int _{0}^{\infty} \frac{\varepsilon g(\varepsilon)\, d\varepsilon}{\exp[\beta(\varepsilon-\mu)]-1} = \frac{\sigma V}{4\pi^{2}}  \left( \frac{2m}{\hbar^{2}} \right)^{3/2} \int_{0}^{\infty} \frac{\varepsilon^{3/2}  \, d\varepsilon}{\exp[\beta(\varepsilon-\mu)]-1}  $$
 - _Below_ the critical temperature, $\mu=0$ and substituting for a dimensionless integral:
@@ -926,6 +928,10 @@ $$U\approx \frac{2\sigma V}{\lambda^{3}} k_{B}T\propto T^{5/2} \hspace{1.5cm}C_{
 - Example: $\ce{ ^4He }$
 	- Also has _inter-atomic_ forces not accounted for in this model
 ![[4-He heat capacity.png]]
+
+### Momentum distribution
+- The _ground state_ atoms have $k=0$
+- There is a _sharp peak_ in the _momentum distribution_ where $k=0$
 ## Blackbody radiation
 - Photons have _integer angular momentum_, hence will obey _Bose statistics_
 
@@ -1034,7 +1040,7 @@ $$\mathcal{V}=\sum_i-\frac{1}{2}\bm{r}_i\cdot\bm{f}_i$$
 $$\mathcal{V}=\sum_i-\frac{1}{2}\bm{r}_i\cdot \left(m_i\frac{d\bm{v}_i}{dt}\right)=-\frac{1}{2}\sum_im
 _i\frac{d}{dt}(\bm{r}_i\cdot\bm{v}_i)+\frac{1}{2}\sum_im_iv_i^2$$
 - By _averaging_ the virial, one gets rid of the time derivative due to _fluctuations_:
-$$\mean{\mathcal{V}}=\frac{1}{2}\sum_im_i\mean{v_i^2}=\frac{3}{2}NkT=\langle T \rangle $$
+$$\mean{\mathcal{V}}=\frac{1}{2}\sum_im_i\mean{v_i^2}=\frac{3}{2}NkT=\langle \mathcal{T} \rangle $$
 - This is the _virial theorem_
 
 - The virial can be due to _external forces_, which could be the _forces from a wall_:
@@ -1042,14 +1048,16 @@ $$\mean{\mathcal{V}_\text{ext}}=-\frac{1}{2}\sum_i\mean{\bm{r}_i\cdot\bm{f}_i}=\
 - For an _ideal gas_, by equating the virials, one recovers the _ideal gas law_
 
 ### Accounting for pair interactions
-- The _internal virial_, using the fact that $f_{ij}=-f_{ji}$
+- The _internal virial_ from pair $i,j$, using the fact that $f_{ij}=-f_{ji}$
 $$\mean{\mathcal{V}_\text{int}}_{ij}=-\frac{1}{2}\mean{r_if_{ij}+r_jf_{ji}}=\frac{1}{2}(r_i-r_j)\pd{\phi_{ij}}{(r_i-r_j)}$$
-- The _average_ is then written as:
-$$\mean{\mathcal{V}_\text{int}}=\frac{1}{2}\sum_{i\neq j}\mean{r_{ij}\pd{\phi}{r_{ij}}}=\frac{N}{2}\frac{1}{2}\int$$
+- The _average_ contribution from _particle_ $i$ is then written as:
+$$\mean{\mathcal{V}_\text{i}}=\frac{1}{2}\sum_{i\neq j}\mean{r_{ij}\pd{\phi}{r_{ij}}}=\frac{1}{2}\int r \frac{\partial \phi}{\partial r}ng(r)\,4\pi r^{2}\,dr$$
+- For the _whole_ gas, it is multiplied by $N/2$ to avoid _double counting_
 - The final result:
 $$\mean{\mathcal{V}_\text{int}}=\frac{N^2}{4V}\int_0^\infty g(r)\,r\pd{\phi}{r}\,4\pi r^2\,dr$$
-- One then recovers:
+- Adding back the _external virial_ from the _container_:
 $$\mean{\mathcal{V}}=\frac{3}{2}NkT=\frac{3}{2}pV+\frac{N^2}{4V}\int_0^\infty g(r)\,r\pd{\phi}{r}\,4\pi r^2\,dr$$
+### Virial equation of state
 - One then gets the _virial equation of state_:
 $$p=\frac{NkT}{V}-\frac{N^2}{6V^2}\int g(r)\pd{\phi}{r}\,4\pi r^3\,dr$$
 - This _cannot be obtained from_ $U$, and must be derived _independently_
@@ -1062,19 +1070,27 @@ $$p=B_1(T)n+B_2(T)n^2+\dots$$
 - From the expansion above:
 $$\displaylines{B_1=kT \\ B_2=-\frac{1}{6}\int_0^\infty r\,g(r)\pd{\phi}{r}\,4\pi r^2\,dr}$$
 - Substituting $g=\exp(-\beta\phi)$, and integrating _by parts_
-$$B_2=\frac{1}{2}kT\int_0^\infty [1-\exp(-\beta\phi)]4\pi r^2\,dr$$
+	- By parts: convert interval term to integral over $r$ from $0$ to $\infty$
+$$B_2=\frac{1}{2}\int_0^\infty [1-\exp(-\beta\phi)]4\pi r^2\,dr$$
 
 - Modelling $\phi$ as a _hard sphere_:
-$$\displaylines{\phi(r)=\begin{cases}\infty&r<R \\ 0&r>R\end{cases}\\ B_2=}$$
+$$\displaylines{\phi(r)=\begin{cases}\infty&r<R \\ 0&r>R\end{cases}\\ B_2=\frac{1}{2}\left(\frac{4\pi}{3}R^{3} \right)}$$
 - If the potential is a _well_
 	- In the _repulsive part_, there is a _positive contribution_ to $B_2$
 	- In the _attractive part_, there is a _negative contribution_ to $B_2$
-
-- At _low temperatures_
-- At _high temperatures_
+- Example: Lennard-Jones
+![[B2(T).png|400]]
+- At _low temperatures_, the gas is _easier_ to compress due to _long-range attractions_
+- At _high temperatures_, the gas is _harder_ to compress due to _short-range repulsion_
 
 - At the _Boyle temperature_ $T_b$, $B_2(T=T_b)=0$
+- The gas resembles an _ideal gas_ as the _attractions and repulsions cancel out_
 
+### (Poor) approximation of pair interaction energy
+- Simply _sum over_ interacting pairs, using an _average pair potential_
+$$U_\text{pair}=\sum_{i>j}\phi(r_{ij})\approx \frac{N^{2}}{2}\left[ \frac{1}{V}\int \phi(r) \, d^{3}r  \right]$$
+- In the _limit_ $\beta \phi\ll 1$:
+$$U_\text{pair}\approx \frac{N^{2}}{V}k_{B}TB_{2}(T)$$
 ## Van der Waals gas
 - Due to _fluctuations_ in the _dipole moments_ of each particle, the pair interaction is:
 $$\phi\sim-\frac{A}{r^6}$$
@@ -1083,10 +1099,10 @@ $$\sum_{i,j}\frac{1}{2}\phi(r_{ij})=\frac{N(N-1)}{2}\frac{1}{V}\int_R^\infty \ph
 
 - The _excluded volume effect_:
 $$Z(N)=\frac{1}{N!}\left(\frac{1}{\lambda^3}\right)^N\prod_i\int d^3r_i\exp\left(-\beta\sum\phi_{ij}\right)$$
-- Extracting the total potential energy, and taking into account the _excluded volume_ $b$ for each particle:
+- Extracting the _total potential energy_, and taking into account the _excluded volume_ $b$ for each particle:
 $$Z(N)=\frac{1}{N!}\left(\frac{1}{\lambda^3}\right)^N\exp\left(\beta\frac{\varepsilon N^2}{V}\right)(V-Nb)^N$$
 - The _free energy_:
-$$F=$$
+$$F=-k_{B}T\ln\left[ \frac{1}{N!} \frac{1}{\lambda^{3N}} \right]-Nk_{B}T\ln(V-Nb)-\frac{N^{2}}{V}\varepsilon$$
 - This gives the pressure:
 $$p=-\pd{F}{V}=\frac{NkT}{V-Nb}-\varepsilon\frac{N^2}{V^2}$$
 - This is the _Van der Waals equation of state_
@@ -1118,30 +1134,34 @@ $$B_2=bkT-\varepsilon$$
 $$\displaylines{N=N_A+N_B \\ \phi_A=\frac{N_A}{N}\hspace{1.5cm}\phi_B=\frac{N_B}{N}=1-\phi_A}$$
 - The [[#Mixtures of an ideal gas|entropy of mixing]]:
 $$\Delta S_\text{mix}=-Nk_B[\phi\ln\phi+(1-\phi)\ln(1-\phi)]$$
-- Account for _pair interactions_, using the [[#Virial expansion|second virial coefficient]]
-	- Number of $A-A$ pairs: $N\phi_A^2/2$
-	- Number of $A-B$ pairs: $N\phi_A\phi_B$
+- Account for _pair interactions_, using the [[#(Poor) approximation of pair interaction energy|second virial coefficient]]
+	- Same particle: they are _indistinguishable_, giving factor of $1/2$
+	- The $\varepsilon$ parameter accounts for _coordination number_ as well
+$$\displaylines{U_{AA}\approx \frac{N_{A}^{2}}{V}k_{B}TB_{2}(AA)\approx N\varepsilon_{AA}\phi^{2} \\ U_{BB}\approx N\varepsilon_{BB}(1-\phi)^{2} \\ U_{AB}=2N\varepsilon_{AB}\phi(1-\phi)}$$
 - The _difference in internal energy from mixing_:
 	- First collection of terms: pair interaction in _mixed state_
-	- Second collection of terms: pair interactions in the _phase-separated state_
+	- Second collection of terms: pair interactions in the _phase-separated state_ (number of neighbours of $A$ does not depend on $\phi$ anymore)
 	- Factor of 2 accounted for in _interaction energy_
+	- Use a _mean-field_ approximation for a uniform value of $\phi$
 $$\begin{aligned}\Delta U_\text{mix}&=N[\varepsilon_{AA}\phi^2+\varepsilon_{BB}(1-\phi)^2+2\varepsilon_{AB}\phi(1-\phi)] -N[\varepsilon_{AA}\phi+\varepsilon_{BB}(1-\phi)] \\ &=Nk_BT\chi\phi(1-\phi)\end{aligned}$$
 - Define the _Flory parameter_ $\chi$ quantifying the _differences in interaction energy_
 $$\chi=\frac{1}{k_BT}[2\varepsilon_{AB}-\varepsilon_{AA}-\varepsilon_{BB}]$$
-- A _positive_ parameter means the species are likely to _repel_ each other and _de-mix/phase separate_
+- A _positive_ parameter means $A$ and $B$ are likely to _repel_ each other and _de-mix/phase separate_
 
 - The _difference in free energy_:
 $$\begin{aligned}\Delta F_\text{mix}&=\Delta U_\text{mix}-T\Delta S_\text{mix} \\ &=NkT[\phi\ln\phi+(1-\phi)\ln(1-\phi)+\chi\phi(1-\phi)]\end{aligned}$$
 ![[Phase separation.png]]
 - As expected, for _small or negative_ $\chi$, it is favourable to _mix_
 
-- For _large_ $\chi$, the mixture tends to _phase-separate_ as there are _multiple minima in free energy_:
+- For _large_ $\chi$, the mixture tends to _phase-separate_ as there are _multiple minima in free energy_
 
 ### The binodal and spinodal
-- Binodal/co-existence curve
-
-- Number of extrema:
+- Number of _extrema in free energy_:
 $$\pd{F}{\phi}=\chi(1-2\phi)-\ln\left(\frac{1-\phi}{\phi}\right)=0$$
+- For _large_ $\chi$, there is a _maximum_ at $\phi=1/2$, and _two minima_
+- For _small_ $\chi$, there is only a _minimum_ at $\phi=1/2$
+- The _locus_ of _minima_ $\phi^{*}(\chi)$ form the _binodal line_ (often plotted as $\chi(\phi^{*})$)
+
 - The _stability_ of the extrema:
 $$\pd{^2F}{\phi^2}=-2\chi+\frac{1}{\phi(1-\phi)}$$
 - For _large enough_ $\chi$, the extremum at $\phi=0.5$ will become _unstable_
@@ -1150,12 +1170,16 @@ $$\pd{^2F}{\phi^2}=-2\chi+\frac{1}{\phi(1-\phi)}$$
 
 - The _line of inflection points_:
 $$\chi=\frac{1}{2\phi(1-\phi)}$$
+- This forms the _spinodal_
+
 - The binodal and spinodal:
 ![[Binodal and spinodal 1.png]]
-- They _touch_ at a _critical point_ at $\phi=1/2$
+- They _touch_ at a _critical point_ at $\phi=1/2, \chi=2$
 
+- The region _below the binodal_ is _stable_
 - The region _above the spinodal_ is _unstable_ and tends to phase separate
 	- The _final concentrations of phases_ are on the _binodal_
+	- The region _between_ is _metastable_ due to an _energy barrier_
 
 ### The T-c phase diagram
 - Use the fact that $T\sim 1/\chi$
@@ -1253,6 +1277,7 @@ $$T<T_1\hspace{1.5cm}9b^2=32ac(T_1-T_c)$$
 - There is a _jump in entropy_ (the first derivative)
 - Hence, it is a _first-order phase transition_
 	- Also features the _jump in order parameter_
+	- There is a _latent heat_ $L=T\Delta S$
 
 - The _accuracy_ of the expansion depends on the _magnitude of the jump_
 
@@ -1372,7 +1397,7 @@ $$\mean{x^2}=\frac{\Gamma}{2\gamma a}=\frac{kT}{a}$$
 - The _damped harmonic oscillator_:
 $$m\ddot{x}=-\gamma\dot{x}-\alpha x+f(t)$$
 - Using the Fourier transform:
-$$x_\omega=\frac{f_\omega}{-m\omega^2-i\gamma\omega+\alpha}=\chi_\omega f_\omega$$
+$$x_\omega=\frac{f_\omega}{-m\omega^2-i\gamma\omega+\alpha}\equiv\chi_\omega f_\omega$$
 - Here, $\chi_\omega$ is the _linear response function_
 - In general, it is _complex:
 $$\chi_\omega=\chi_\omega'+i\chi_\omega''$$
@@ -1382,7 +1407,7 @@ $$\mean{x_\omega^2}=\frac{kT}{\alpha}=\chi'(\omega=0)kT$$
 $$\mean{\Delta x_\omega^2}=\frac{2kT}{\omega}\chi_\omega''=\frac{2kT\gamma}{(\alpha-m\omega^2)^2+\gamma^2\omega^2}$$
 - This can show _resonant behaviour_ (for light damping)
 
-- The _spectral content_ of the _Langevin force_:
+- The _spectral content_ of the _Langevin force_ $(f_{\omega}=\xi_{\omega})$:
 $$\mean{x_\omega^2}=|\chi_\omega|^2\mean{\xi_\omega^2}$$
 - Substituting in the results above:
 $$\mean{\xi_\omega^2}=2kT\gamma$$
@@ -1393,6 +1418,7 @@ $$\mean{\xi_\omega^2}=2kT\gamma$$
 - One can treat it as a _discrete random walk_
 
 ### Kramers-Moyal expansion and Fokker-Planck equation
+- The _over-damped limit_, with force $f(x)$:
 $$\dot{x}=\frac{f(x)}{\gamma}+\frac{1}{\gamma}\xi(t)$$
 - The _infinitesimal_:
 $$dx=\frac{f(x)}{\gamma}\,dt+\sigma\,dW$$
@@ -1404,22 +1430,26 @@ $$P(x,t+\Delta t)=\int G(x,t+\Delta t\big|y,t)P(y,t)\,dy$$
 - Changing variables to $\Delta x\equiv x-y$, and _shifting_ by $\Delta x$ such that $\tilde{x}=x-\Delta x$:
 $$P(x,t+\Delta t)=\int G(\tilde{x}+\Delta x,t+\Delta t\big|\tilde{x},t)P(\tilde{x},t)\,d(-\Delta x)$$
 - Using a _Taylor expansion_:
-$$\begin{aligned}P(x,t+\Delta t)&=\int d(\Delta x)\sum_{n=0}^\infty\frac{(-\Delta x)^n}{n!}\pd{}{\tilde{x}^n}G(\tilde{x}+\Delta x,t+\Delta t|\tilde{x},t)P(\tilde{x},t) \\ &=P(x,t)-\pd{}{x}(\mean{dx}P(x,t))+\frac{1}{2}\pd{^2}{x^2}\left(\mean{dx}^2P(x,t)\right)\end{aligned}$$
+$$\begin{aligned}P(x,t+\Delta t)&=\int d(\Delta x)\sum_{n=0}^\infty\frac{(-\Delta x)^n}{n!}\pd{}{\tilde{x}^n}G(\tilde{x}+\Delta x,t+\Delta t|\tilde{x},t)P(\tilde{x},t) \\ &\approx P(x,t)-\pd{}{x}(\mean{dx}P(x,t))+\frac{1}{2}\pd{^2}{x^2}\left(\mean{dx}^2P(x,t)\right)\end{aligned}$$
+
 - Substituting results _from the Langevin equation_:
 $$\pd{P(x,t)}{t}=-\pd{}{x}\left(\frac{f(x)}{\gamma}P(x,t)\right)+\frac{\sigma^2}{2}\pd{^2P}{x^2}$$
 - This is the _Fokker-Planck equation_
 
 - This separates influences from an _external force_, and from _diffusion_:
 $$\frac{\sigma^2}{2}=\frac{kT}{\gamma}\equiv D$$
-
+$$\frac{\partial P(x,t)}{\partial t}=-\frac{\partial }{\partial x}\left( \frac{1}{\gamma}f(x)P(x,t) \right)+D \frac{\partial^{2}P(x,t)}{\partial x^{2}}$$
 ### Free diffusion
 $$\pd{P}{t}=D\pd{^2P}{x^2}$$
 - This gives:
+$$P(x,t)=\frac{1}{\sqrt{ 4\pi Dt }}\exp\left( -\frac{x^{2}}{4Dt} \right)$$
 
 - Replicates the result:
+$$\langle x^{2} \rangle = 2Dt $$
 
 ### Equilibrium
-$$\pd{}{x}\left[\right]=0$$
+- A _steady state_:
+$$\pd{}{x}\left[ - \frac{f(x)}{\gamma}P+D \frac{\partial P}{\partial x}\right]=0$$
 
 - This gives:
 $$P_\text{eq}\sim\exp\left(-\frac{V(x)}{kT}\right)$$
@@ -1453,9 +1483,36 @@ $$N_A=P(x_A)\sqrt{\frac{\pi kT}{\kappa_A}}$$
 - The _rate of escape_:
 $$r=\frac{J}{N_A}=D\frac{\sqrt{\kappa_C\kappa_A}}{\pi kT}\exp(-\beta\Delta V)$$
 
-## Markov chains
+## Discrete random walks and Markov chains
 - Consider a system evolving in _discrete steps_
 - The behaviour at each step depends on the _local probability distribution_, but _not on the system's history_ (previous steps)
-
-- Diffusion equation: equal probabilities
-- In an external potential (Fokker-Planck equation): take the _drift velocity_ into account (from Langevin equation)
+### 1D Random walk
+- Let there be a particle along _1 dimension_, which can go to the _left or right_ by length $a$
+- Within $N$ _steps_, it has $N_{-}$ to the _left_ and $N_{+}$ to the _right_
+$$x=a(N_{+}-N_{-})=a(N-2N_{-})=a(2N_{+}-N)$$
+- The _probability_ for finding a value of $N_{+}$ _given_ $N$
+$$P(N_{+}|N)=\pmatrix{N_{+}\\N}\left( \frac{1}{2} \right)^{N}=\frac{N!}{N_{+}!(N-N_{+})!}\left( \frac{1}{2} \right)^{N}$$
+- Using _Stirling's approximation_ $N!\approx \sqrt{ 2\pi N }N^{N}\exp(-N)$, keeping terms _up to the second order_:
+$$P(N_{+},N)=\sqrt{ \frac{2}{\pi N} }\sqrt{ \frac{1}{1-(x/aN)^{2}} }\exp\left( -\frac{x^{2}}{2a^{2}N} \right)$$
+- Going into the _continuous description_, let each step take _time_ $\tau$, and letting $D=a^{2}/2\tau$
+$$P(x,t)=\frac{P(N_{+},N)}{2a}=\sqrt{ \frac{1}{4\pi Dt} }\exp\left( -\frac{x^{2}}{4Dt} \right)$$
+- This recreates _diffusion_
+### Fokker-Planck from random walks
+- Let the _probability_ of the particle being in _position_ $m$ after $N+1$ steps be $P(m,N+1)$
+- It can arrive from either the _left_ or _right_, with separate _probabilities_:
+$$P(m,N+1)=w(m,m-1)P(m-1,N)+w(m,m+1)P(m+1,N)$$
+- Let there be some _bias_ provided by an _external force_:
+	- Biased to move _downwards_
+$$w(m,m-1)=\frac{1}{2}-\epsilon \hspace{1.5cm}w(m,m+1)=\frac{1}{2}+\epsilon$$
+- From this:
+$$\begin{align}
+\frac{P(m,N+1)-P(m,N)}{\tau}&=\frac{1}{2\tau}[(1-2\epsilon)P(m-1,N)+(1+2\epsilon)P(m+1,N)-2P(m,N)] \\ &=\frac{1}{2\tau}\left[ \frac{\partial^{2}P}{\partial m^{2}}+2\epsilon \frac{\partial P}{\partial m} \right]
+\end{align}$$
+- Converting to position, using $D=a^{2}/2\tau$, and letting $C=\epsilon a/\tau$
+$$\frac{\partial P(x,t)}{\partial t}=D\frac{\partial^{2}P(x,t)}{\partial x^{2}}+C\frac{\partial P(x,t)}{\partial x}$$
+- At _equilibrium_, recalling the _Boltzmann distribution_:
+$$P(t\to \infty)\propto \exp\left( -\frac{Cx}{D} \right)=\exp\left( -\frac{V(x)}{k_{B}T} \right)$$
+- Using the [[#Diffusion|Einstein relation]] $D=k_{B}T/\gamma$, and for a _linear potential_:
+$$C=\frac{1}{\gamma }\left( \frac{dV}{dx} \right)\equiv-\frac{f(x)}{\gamma}$$
+- Then, one re-derives the [[#Kramers-Moyal expansion and Fokker-Planck equation|Fokker-Planck equation]]:
+$$\frac{\partial P(x,t)}{\partial t}=-\frac{\partial }{\partial x}\left( \frac{1}{\gamma}f(x)P(x,t) \right)+D \frac{\partial^{2}P(x,t)}{\partial x^{2}}$$

@@ -422,7 +422,7 @@ $$G(\omega)=G'(\omega)+iG''(\omega)$$
 
 - The stress and strain are functions of the _history_ of the material
 - It is a superposition of all _stress and strain increments_ from its history
-$$\sigma(t)=\int_{0}^{t} \, d\sigma(t')=\int G(t-t') \, dt'=\int G(t-t') \frac{d\epsilon(t)}{dt}\, dt $$
+$$\sigma(t)=\int_{0}^{t} \, d\sigma(t')=\int G(t-t') \, d\epsilon(t')=\int G(t-t') \frac{d\epsilon(t')}{dt'}\, dt' $$
 - Due to _time translation invariance_, only the _interval_ $t-t'$ matters
 
 - For a _Hookean solid_:
@@ -1673,4 +1673,35 @@ $$I_\text{str}=w\int _{h/2}^{h/2} \rho(x)v(x) \, dx $$
 ![[EOF vs pressure.png]]
 ![[EOF vs streaming.png|350]]
 ## Zeta-potential and the atomic double layer
+- The $\zeta-$potential denotes the potential at the _no-slip plane_ $d^{\text{ek}}$ from the surface with _surface charge_ $\sigma_{0}$ and _surface potential_ $\Psi^{0}$
+- The $\zeta-$potential is always _smaller than the bare surface potential_
+- Assumptions:
+	- There is a _thin layer without charges_ due to an _absorbed water layer_, known as the _inner Helmholtz plane_ (IHP), with potential $\Psi^{i}<\Psi^{0}$
+	- The potential is _further reduced_ by the _adsorbed ions_ in the _outer Helmholtz plane_ with $\Psi^{d}<\Psi^{i}$
+	- There is then another _charge-free layer_, hence $\zeta<\Phi^{d}$, at the _no-slip plane_
+	- Further than $d^{ek}$, the water and ions are _in motion_
 
+- The IHP and OHP are collectively known as the _Stern layer_
+![[EDL.png|450]]
+- The exact _position_ of the no-slip plane is often _not known_, depending on the _type and valency_ of counter-ions, salt _concentrations_, and the _geometry_ of the system
+	- _Defined_ by the fluid motion, and details of measurements
+![[EDL molecules.png|450]]
+### Double layer capacitance
+- The _split charges_ in the double layer lead to a _measurable capacitance_, and is used to _probe the thickness of Helmholtz planes_
+	- In the limit of _high salt concentrations_ where the Debye length is _short_
+- The _differential capacitance_, given some _AC voltage_ $V(t)$
+$$C_\text{diff}=\frac{dQ}{dV}$$
+- The _current_ through the capacitor:
+$$I_{C}=C_\text{diff}\,\frac{dV}{dt}$$
+- The EDL can be approximated as a _double plate capacitor_
+- For a _Debye length_ of $\approx 0.2\,\text{nm}$, $\epsilon\epsilon_{0}/d\approx 350\,\mu \text{F cm}^{-2}$, which is an _over-estimation_ compared to the _experimental value_ by a factor of $\approx7$
+- There is practically a _reduction_ in $\epsilon$ as the water molecules are _frozen_ on the surface and _less polarisable_
+
+- It can be modelled as _two capacitors in series_, as $\epsilon$ _changes across the layer_
+- Model as a layer of _dipoles_, along with the IHP-OHP
+	- $a$: diameters of _water molecules_ and _counter-ions_ respectively
+	- Valid for _Debye length close to_ width of IHP/OHP 
+$$\frac{1}{C_\text{Stern}}=\frac{1}{C_\text{dipole}}+\frac{1}{C_\text{IHP-OHP}}=\frac{a_\ce{ H_{2}O }}{\epsilon_\text{dipole}}+\frac{a/2}{\epsilon _\text{IHP}}$$
+- For a _thick Debye screening layer_, there needs to be a _third term_
+
+## Gel electrophoresis

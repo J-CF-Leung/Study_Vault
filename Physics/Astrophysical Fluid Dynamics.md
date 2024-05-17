@@ -1,4 +1,4 @@
-- [ ] Instabilities 📅 2024-04-06 ⏫ 
+- [x] Instabilities ⏫ 📅 2024-04-06 ✅ 2024-05-14
 - A fluid is a _flowing continuous medium_
 - It has well-defined _macroscopic properties_:
 $$\boldsymbol{v}(\boldsymbol{r},t),\rho(\boldsymbol{r},t),p(\boldsymbol{r},t)$$
@@ -363,7 +363,7 @@ $$p=K\rho^{1+1/n}$$
 	- _Convective motions_ means fluid elements are _not thermally isolated_
 
 ## Lane-Emden equation
-- The equation of hydrostatic equilibrium then gives:
+- The equation of _hydrostatic equilibrium_ then gives:
 $$-\nabla \Psi=(n+1)\nabla(K\rho^{1/n})\implies \rho=\left( \frac{\Psi_{T}-\Psi}{[n+1]K} \right)^{n}$$
 - Here, $\Psi_{T}\equiv \Psi$ on the _surface_, where $\rho=0$
 
@@ -484,6 +484,7 @@ $$\frac{\Delta\Omega}{\Omega}\propto -\left( \frac{5-3n}{3-n} \right)\Delta M$$
 ## Sound waves
 - Consider a _uniform medium_ with no gravitation
 
+### Perturbations from equilibrium
 - Start from the fluid equations:
 $$\displaylines{\frac{\partial \rho}{\partial t}+\nabla\cdot(\rho \boldsymbol{u})=0 \\ \frac{\partial \boldsymbol{u}}{\partial t}+(\boldsymbol{u}\cdot \nabla)\boldsymbol{u}=-\frac{1}{\rho}\nabla p}$$
 - Let there be a _perturbation_ around the state $\rho=\rho_{0}$, $p=p_{0}$, $\boldsymbol{u}=0$:
@@ -500,6 +501,8 @@ $$\frac{\partial}{\partial t} (\Delta \rho)+\rho_{0}\nabla\cdot(\Delta \boldsymb
 $$\frac{\partial}{\partial t}(\Delta u)=-\frac{dp}{d\rho}\Bigg|_{\rho=\rho_{0}} \frac{\nabla(\Delta \rho)}{\rho_{0}}$$
 - Taking a _time derivative_ of the first equation:
 $$\frac{\partial^{2}}{\partial t^{2}}(\Delta \rho)=\frac{dp}{d\rho}\Bigg|_{\rho=\rho_{0}}\nabla^{2}(\Delta \rho)$$
+
+### Plane waves
 - This admits _plane wave solutions_ of the form:
 $$\Delta \rho=\Delta \rho_{0}\exp[i(\boldsymbol{k}\cdot \boldsymbol{x}-\omega t)]\hspace{1.5cm}\omega^{2}= \frac{dp}{d\rho}\Bigg|_{\rho=\rho_{0}}k^{2}$$
 - The _phase speed_ of the wave:
@@ -515,6 +518,7 @@ $$\Delta u\ll c_{s}$$
 - The speed of sound depends on the _linear response_ of _pressure_ to changes in _density_
 	- If the material is _stiff_, propagation is _rapid_
 
+### Ideal gas
 - For an _isothermal gas_ and _adiabatic gas_
 	- These waves are _non-dispersive_
 $$c_{s,I}=\sqrt{ \frac{R_{*}T}{\mu} }\hspace{1.5cm}c_{s,A}=\sqrt{ \frac{\gamma R_{*}T}{\mu} }$$
@@ -599,7 +603,7 @@ $$\frac{\partial}{\partial t}\left( \int \rho \, dx  \right)+\rho u_{x} \Big|^{d
 - Let $dx\to 0$, one gets:
 $$\rho_{1}u_{1}=\rho_{2}u_{2}$$
 
-- Similarly for conservation of momentum:
+- Similarly for conservation of momentum, using the [[#Stress tensor and ram pressure|stress tensor]]:
 $$\rho_{1}u_{1}^{2}+p_{1}=\rho_{2}u_{2}^{2}+p_{2}$$
 - The velocities _parallel_ to the shock front, $u_{y}$ and $u_{z}$ are _continuous_ across the front
 - The _thermal and ram pressures combined_ is _conserved_
@@ -607,16 +611,19 @@ $$\rho_{1}u_{1}^{2}+p_{1}=\rho_{2}u_{2}^{2}+p_{2}$$
 - For the conservation of _energy_, consider the _adiabatic_ case such that $\dot{Q}_\text{cool}=0$
 - Also take the _gravitational potential_ to have _no time dependence_, and $\Psi_{1}=\Psi_{2}$
 
-- Integrating the energy condition then gives:
+- Integrating the [[#Conservation of energy|energy equation]] then gives:
 $$\frac{1}{2}u_{1}^{2}+\mathcal{E}_{1}+\frac{p_{1}}{\rho_{1}}=\frac{1}{2}u_{2}^{2}+\mathcal{E}_{2}+\frac{p_{2}}{\rho_{2}}$$
 - Kinetic energy is _converted_ into _enthalpy_
 ### Adiabatic ideal gas
-- For the ideal gas:
+- For the _adiabatic ideal gas_:
 $$\mathcal{E}=\frac{1}{\gamma-1} \frac{p}{\rho}\hspace{1.5cm} c_{s}=\frac{\gamma p}{\rho}$$
 - The third R-H condition becomes:
 $$\frac{1}{2}u_{1}^{2}+\frac{c_{s,1}^{2}}{\gamma-1}= \frac{1}{2}u_{2}^{2} + \frac{c_{s,2}^{2}}{\gamma-1}$$
 - Using all relations gives:
+	- Strategy: set $\rho_{1}u_{1}=j$, substitute into RH2 to get $j^{2}$, then substitute into RH3
 $$\displaylines{\frac{\rho_{2}}{\rho_{1}}=\frac{u_{1}}{u_{2}}=\frac{(\gamma+1)p_{2}+(\gamma-1)p_{1}}{(\gamma+1)p_{1}+(\gamma-1)p_{2}}=\frac{(\gamma+1)M_{1}^{2}}{(\gamma-1)M_{1}^{2}+2} \\ \frac{p_{2}}{p_{1}}= \frac{2\gamma M_{1}^{2}-(\gamma-1)}{\gamma+1}\\ \frac{T_{2}}{T_{1}}=\frac{((\gamma-1)M_{1}^{2}+2)(2\gamma M_{1}^{2}-(\gamma-1))}{(\gamma+1)^{2}M_{1}^{2}}}$$
+
+### Strong shocks
 - In the limit of _strong shocks_, $p_{2}\gg p_{1}$:
 $$\frac{\rho_{2}}{\rho_{1}}\approx\frac{\gamma+1}{\gamma-1}$$
 - For $\gamma=5/3$, this gives $\rho_{2} \approx 4\rho_{1}$
@@ -634,15 +641,15 @@ $$\frac{p_{2}}{\rho_{2}^{\gamma}}> \frac{p_{1}}{\rho_{1}^{\gamma}}$$
 $$k_{B}T_{2}=\frac{4(\gamma-1)}{(\gamma+1)^{2}}\left( \frac{1}{2}\mu m_{p}u_{1}^{2} \right)$$
 
 ### Isothermal shocks
-- For _isothermal_ shocks, $\dot{Q}_\text{cool}\neq 0$
-	- There is a _strong cooling_ for the _post-shock_ gas to get it back to the _pre-shock temperature_
+- There is a _strong cooling_ $(\dot{Q}_\text{cool}\neq 0)$ for the _post-shock_ gas to get it back to the _pre-shock temperature_
 ![[Isothermal shock.png|400]]
-- The first two R-H relations are _unchanged_
-- However, the energetic relation is _replaced_ by $T_{1}=T_{2}$
+- The first two R-H relations are _unchanged across the shock_, even _after cooling_
+- However, the energetic relation is _replaced_ by $T_{1}=T_{2}$ when considering isothermal regions
 
-- For the _ideal gas_, this gives the _same speed of sound_ on both sides of the shock front:
+- For the _ideal gas_, this gives the _same isothermal sound speed_ on both sides of the shock front:
 $$c_{s,1}=\sqrt{ \frac{\mathcal{R}_{*}T}{\mu} }=c_{s,2}=\sqrt{ \frac{p}{\rho} }$$
 - Using the second R-H condition then gives:
+	- The equation leads to $(u_{2}-u_{1})c_{s}^{2}=u_{1}u_{2}(u_{2}-u_{1})$
 $$c_{s}^{2}=u_{1}u_{2}$$
 - The post-shock compression:
 $$\frac{\rho_{2}}{\rho_{1}}=\frac{u_{1}}{u_{2}}=\left( \frac{u_{1}}{c_{s}} \right)^{2}=M_{1}^{2}$$
@@ -650,7 +657,7 @@ $$\frac{\rho_{2}}{\rho_{1}}=\frac{u_{1}}{u_{2}}=\left( \frac{u_{1}}{c_{s}} \righ
 - Therefore, _compression_ can be very large
 
 - Given that for a shock, $u_{1}>c_{s}$, $u_{2}<c_{s}$ (the _post-shock_ gas is _subsonic_)
-	- Consequence of _causality_
+	- Consequence of _causality_, as the post-shock gas must _"communicate"_ with the front to know the mass flow rate, and can only do so sub-sonically
 
 ## Supernova explosions
 - A _supernova_ deposits a large amount of _energy_ into the _interstellar medium_ (ISM) to generate _shocks_, to create _bubbles_ in the ISM
@@ -694,11 +701,18 @@ $$U=u_{0}-u_{1}=\frac{2u_{0}}{\gamma+1}$$
 - The _rate of change of momentum of the shocked shell_ is then:
 $$\frac{d}{dt}\left[  \frac{4\pi}{3}\rho_{0}R^{3} \frac{2u_{0}}{\gamma+1} \right]$$
 - This is provided by the _pressure_ on the _inside surface_ of the shell, $p_\text{in}$, given by:
+	- _Assume_ the pressure _within_ the shell scales _linearly_ with pressure _of the shell_
 $$p_\text{in}=\alpha p_{1}$$
-- Relate $p_{1}$ and $u_{0}$
-- Equate _rate of change of momentum_ to the _pressure force_
+- For a _strong shock_, from the RH conditions:
+$$p_{1}=\frac{2}{\gamma+1}\rho_{0}u_{0}^{2}$$
+- Equate _rate of change of momentum_ to the _pressure force_, one gets:
+$$\frac{d}{dt}(R^{3}u_{0})=\frac{d}{dt}(R^{3}\dot{R})=3\alpha R^{2}\dot{R}^{2}$$
+- From the nature of the ODE. use ansatz:
+$$R\propto t^{b}\implies b=\frac{1}{4-3\alpha}$$
 
 - Consider _energy conservation_
+	- Assume that _most internal energy_ is in the _cavity_, since the shell is very _thin_
+$$E=\frac{4\pi}{3}R^{3}\left[ \frac{1}{2}\rho_{0}U^{2}+\frac{\alpha p_{1}}{\gamma-1} \right]\propto R^{3}u_{0}^{2}\propto t^{0}$$
 - Therefore $\alpha=1/2$
 $$ R \propto t^{2/5} \hspace{1cm} u_{0} \propto t^{-3/5} \hspace{1cm} p_{1} \propto t^{-6/5}$$
 ### Similarity solutions
@@ -710,7 +724,8 @@ $$\lambda=\left( \frac{Et^{2}}{\rho_{0}} \right)^{1/5}$$
 $$\xi\equiv\frac{r}{\lambda}=r\left( \frac{\rho_{0}}{Et^{2}} \right)^{1/5}$$
 - _Any variable_ can be written as a function of the _scaled distance_, with the same _shape_, and _scaled_ according to _time_:
 $$X=X_{1}(t)\tilde{X}(\xi)$$
-- $\xi$ is _not Lagrangian or Eulerian_, instead it is a _feature of the shock wave_ moving _through_ the fluid
+- $\xi$ is _not Lagrangian or Eulerian_, instead it is a _feature of the shock wave_ moving _through_ the fluid, hence:
+$$R_\text{shock}\sim \left( \frac{Et^{2}}{\rho_{0}} \right)^{1/5}$$
 
 - For _supernovae_:
 $$R \approx 0.3t^{2/5}\text{ pc}\hspace{1cm}u_{0}\approx 10^{5}t^{-3/5}\text{ km s}^{-1}$$
@@ -967,13 +982,11 @@ $$\frac{dT}{dz}<\left( 1-\frac{1}{\gamma} \right) \frac{T}{p} \frac{dp}{dz}$$
 - Hence, _positive temperature gradients are stable_
 	- Even for _negative_ temperature gradients, _small_ temperature gradient is still stable
 
-- Boussinesq approximation?
-
 - If the atmosphere is _convectively stable_, the fluid element undergoes _oscillations_:
 $$\rho^{*} \frac{\partial^{2}\delta z}{\partial t^{2}}=-g(\rho^{*}-\rho)$$
 - There is a _simple harmonic motion_ with _angular frequency_ $N$:
 $$N^{2}=\frac{g}{T} \left[ \frac{dT}{dz}-\left( 1-\frac{1}{\gamma} \right) \frac{T}{p} \frac{dp}{dz} \right]$$
-- This is the _Brunt-Vaisala frequency_
+- This is the _Brunt-Vaisala frequency_, for _internal gravity waves_
 ## Jeans instability
 - The instability of a medium against _gravitational collapse_
 - Consider a uniform medium which is initially _static_, with a _barotropic gas_
@@ -981,24 +994,31 @@ $$N^{2}=\frac{g}{T} \left[ \frac{dT}{dz}-\left( 1-\frac{1}{\gamma} \right) \frac
 
 - Introduce _perturbations_:
 	- $\rho_{0}$ and $\Psi_{0}$ being both _constant_ is _inconsistent_ (Jeans swindle) but more rigorous analyses give the same result
-$$p,\rho,\boldsymbol{u},\Psi$$
-- _Linearise_ the equations
-
-- Look for _plane wave solutions_ to the perturbations
+$$p+\Delta p,\rho+ \Delta \rho,\Delta \boldsymbol{u},\Psi+\Delta \Psi$$
+- _Linearise_ the fluid equations, and the Poisson equation:
+$$\displaylines{\frac{\partial(\Delta \rho)}{\partial t}+\rho_{0}\nabla\cdot(\Delta \boldsymbol{u})=0 \\ \frac{\partial(\Delta \boldsymbol{u})}{\partial t}=-\frac{dp}{d\rho} \frac{\nabla(\Delta \rho)}{\rho_{0}}-\nabla(\Delta \Psi)=-c_{s}^{2}\frac{\nabla(\Delta \rho)}{\rho_{0}}-\nabla(\Delta \Psi) \\ \nabla^{2}(\Delta \Psi)=4\pi G\Delta \rho}$$
+- Look for _plane wave solutions_ to the perturbations:
+$$\begin{align}
+\Delta \rho&=\rho_{1}\exp[i(\boldsymbol{k}\cdot \boldsymbol{x}-\omega t)] \\ \Delta \boldsymbol{u}&=\boldsymbol{u}_{1}\exp[i(\boldsymbol{k}\cdot \boldsymbol{x}-\omega t)] \\ \Delta \Psi&=\Psi_{1}\exp[i(\boldsymbol{k}\cdot \boldsymbol{x}-\omega t)]
+\end{align}$$
 
 - Define the _Jeans wavenumber_:
 $$k_{J}^{2}=\frac{4\pi G\rho_{0}}{c_{s}^{2}}$$
-- The _dispersion relation_:
+- The _dispersion relation_ is then:
 $$\omega^{2}=c_{s}^{2}(k^{2}-k_{J}^{2})$$
 - For $k\gg k_{J}$, the sound waves are _dispersion-free_
 - For $k>k_{J}$, the waves are _dispersed_ but still travelling
 - For $k<k_{J}$, $\omega$ is imaginary, and there is a _growing instability_
 
 - The _maximum stable wavelength_ (Jeans length):
-$$\lambda_{J}=\frac{2\pi}{k_{J}}=$$
+$$\lambda_{J}=\frac{2\pi}{k_{J}}=\left( \frac{\pi c_{s}^{2}}{G\rho_{0}} \right)^{2}$$
 - The associated _mass scale_:
 $$M_{J}\sim \rho_{0}\lambda_{J}^{3}$$
 - The system will undergo _gravitational collapse_ if its mass _exceeds_ the Jeans mass
+
+- In general, the wave is _isothermal_
+- $\lambda _J$ is also the length-scale where the _free-fall time_ is the same as the _sound-crossing time_
+	- The medium _does not respond fast enough_ to the _collapse_
 
 ## Rayleigh-Taylor and Kelvin-Helmholtz instability
 - Instability at an _interface_ with _discontinuous_ change in density or tangential velocity
@@ -1008,39 +1028,59 @@ $$M_{J}\sim \rho_{0}\lambda_{J}^{3}$$
 - It is a _2-dimensional_ ideal fluid
 - The flow is _irrotational and incompressible_, hence $\boldsymbol{u}=-\nabla \Phi$ and $\nabla^{2}\Phi=0$
 
-### Dispersion relation
 - Writing the momentum equation for _either fluid_, with the above ansatz, one gets:
 $$\nabla \left[ -\frac{\partial \Phi}{\partial t}+\frac{1}{2}u^{2}+\frac{p}{\rho}+\Psi \right]=0 \implies -\frac{\partial \Phi}{\partial t}+\frac{1}{2}u^{2}+\frac{p}{\rho}+\Psi=F(t)$$
+### Setup
+
+#### Velocity potentials
 - Let the fluids have _unperturbed velocities_ $U$ and $U'$
 - Then write the perturbed _velocity potentials_ as:
 $$\displaylines{\Phi _\text{low}=-Ux+\phi \hspace{1cm}\Phi _\text{high}=-U'x+\phi' \\ \nabla^{2}\phi=\nabla^{2}\phi'=0}$$
-- The additional potentials are caused by the _perturbation_
+- The additional potentials $\phi,\phi'$ are caused by the _perturbation_
 - Given a perturbed position at the interface $\xi$:
-$$u_{z}=\frac{D\xi}{Dt}$$
+$$u_{z}=\frac{D\xi}{Dt}=-\frac{\partial \phi}{\partial z}$$
 - This gives equations for $\phi$ and $\phi'$:
+$$-\frac{\partial \phi }{\partial z}=\frac{\partial \xi}{\partial t}+U\frac{\partial \xi}{\partial x} \hspace{1.5cm}-\frac{\partial \phi '}{\partial z}=\frac{\partial \xi}{\partial t}+U'\frac{\partial \xi}{\partial x}$$
+#### Pressure balance
+- There must be _pressure balance_ across the interface, with equality at $z=0$
+- Finding $p$ with the _integrated momentum equation_, quantities at $z=0$ satisfy:
+$$\displaylines{\rho\left( -\frac{\partial \phi}{\partial t}+\frac{u^{2}}{2}+g\xi \right)-\rho'\left( -\frac{\partial \phi '}{\partial t}+ \frac{u'^{2}}{2}+g\xi\right)=\rho F(t)-\rho'F'(t)}$$
 
-- Plane wave solutions
+- Perturbations _vanish_ for $|z|\to \infty$ at all times, and the RHS is a _function of time_, hence use the _unperturbed values_ for $\phi,u,\xi,\phi',u',\xi'$ to get:
+$$\rho F-\rho'F'=\frac{1}{2}\rho U^{2}-\frac{1}{2}\rho'U'^{2}$$
 
-- _Pressure balance_ across the interface, with equality at $z=0$
+- The _velocities_ from the potentials
+$$u^{2}=|U\hat{x}-\nabla \phi|^{2}=U^{2}-2U\frac{\partial \phi}{\partial x}$$
+- The above then gives:
+$$\rho\left( -\frac{\partial \phi}{\partial t}-U\frac{\partial \phi}{\partial x}+g\xi \right)=\rho'\left( -\frac{\partial \phi'}{\partial t}-U\frac{\partial \phi'}{\partial x}+g\xi \right)$$
+#### Plane waves
+- _Plane wave_ solutions
+	- $\phi$ must _decay deep into the fluid_
+$$\displaylines{\xi=A\exp[i(kx-\omega t)] \\ \phi=C\exp[i(kx-\omega t)+kz]\hspace{1.5cm}\phi'=C'\exp[i(kx-\omega t)-kz]}$$
+- Using the equations linking [[#Velocity potentials|derivatives of the potentials]], and velocities:
+$$\displaylines{i(kU-\omega)A=-kC\\i(kU'-\omega )A=kC\\ \rho[-i(kU-\omega)C+gA]=\rho'[-i(kU'-\omega)C'+gA]}$$
 
-- Perturbation vanishes for $|z|\to \infty$ at all times
-
-- This dispersion relation:
+- The _dispersion relation_:
 $$\rho(kU-\omega)^{2}+\rho'(kU'-\omega)^{2}=kg(\rho-\rho')$$
-### Surface waves
+### Surface gravity waves
 - Let the two fluids be at _rest_ $(U=U'=0)$, with $\rho'<\rho$ (_heavy_ fluid on the bottom)
-$$\omega^{2}=k \frac{g(\rho'-\rho)}{\rho + \rho'}$$
+$$\omega^{2}=k \frac{g(\rho-\rho')}{\rho + \rho'}$$
 - This represents _surface gravity waves_
-- Phase and group velocity:
+	- For _real_ $k$, $\omega$ is also _real_
+- The waves are _dispersive_
 
 - Limit of $\rho'\ll \rho$:
-
-### Static stratified fluid
+$$\omega=\pm \sqrt{ gk }$$
+### Static stratified fluid under gravity
 - Fluids at _rest_, with the heavy fluid on _top_ $(\rho'>\rho)$
+$$\omega=\pm ik\sqrt{ \frac{g}{k} \frac{\rho'-\rho}{\rho'+\rho} }$$
+- It is _imaginary_ for real $k$
 
 - The solutions _exponentially grow_
 - This is the _Rayleigh-Taylor instability_
 
+- It occurs in _supernova explosions_
+	- The _dense shell_ is "on top" of the less dense gas outside
 ### Fluids in motion
 - Have the fluids in _motion_
 - $\rho'<\rho$ to prevent Rayleigh-Taylor instability
@@ -1053,7 +1093,7 @@ $$\frac{g}{k} \frac{\rho-\rho'}{\rho+\rho'} - \frac{\rho \rho'(U-U')^{2}}{(\rho 
 - If $g=0$, the fluid is _always unstable_
 
 - If $g\neq 0$, then there are _unstable modes_ with
-$$k>$$
+$$k>\frac{(\rho^{2}-\rho'^{2})g}{\rho \rho'(U-U')^{2}}$$
 - Gravity is a _stabilising influence_ for lower wavenumbers
 
 ## Thermal instability
@@ -1079,26 +1119,43 @@ $$\frac{1}{K} \frac{DK}{Dt}=-(\gamma-1) \frac{\rho \dot{Q}}{p}$$
 $$\displaylines{\frac{\partial\Delta K}{\partial t}=-A^{*}\Delta p-B^{*}\Delta \rho \\ A^{*}=\frac{\gamma-1}{\rho_{0}^{\gamma-1}} \frac{\partial \dot{Q}}{\partial p}\Bigg|_{\rho}\hspace{1.5cm}B^{*}=\frac{\gamma-1}{\rho_{0}^{\gamma-1}} \frac{\partial \dot{Q}}{\partial \rho}\Bigg|_{p}}$$
 
 - Seek solutions of the form:
-$$\Delta p=p_{1}\exp[i\boldsymbol{k}\cdot \boldsymbol{x}-qt]$$
+$$\Delta p=p_{1}\exp[i\boldsymbol{k}\cdot \boldsymbol{x}+qt]$$
 - These are _not plane wave solutions_
 - The configuration is _unstable_ if $\mathrm{Re}(q)>0$
 
+- _Linearise_ the equations
 - One then gets a _cubic equation_:
 $$q^{3}+A^{*}\rho_{0}^{\gamma}q^{2}+k^{2}\gamma \frac{p_{0}}{\rho_{0}} q-B^{*}k^{2}\rho_{0}^\gamma=0$$
 - This must have _at least one real root_
 - The system is _unstable_ if the root is _positive_, which happens if $B^{*}>0$
 
+### Field criterion
 - Using the ideal gas equation, the system is _unstable_ if it fulfills the _Field criterion_:
+	- Derived from $B^{*}>0$
+	- Necessary: _constant pressure_
 $$\frac{\partial \dot{Q}}{\partial T}\Bigg|_{p}<0$$
 - If _net cooling decreases_ for a _positive fluctuation_, the system is _unstable_
 	- Full analysis indicates only the change at _constant pressure_ is important
 - If the system is field unstable, _all modes_ $\boldsymbol{k}$ are unstable
+
+- If a system is Field stable, it can also be unstable for $A^{*}<0$, where $\partial \dot{Q}/\partial T|_{\rho}<0$, but _only for long wavelength modes_
+- _Short wavelength_ perturbations are brought into equilibrium via _sound waves_, so instabilities develop at _constant pressure_
+- For _long wavelength_ perturbations, there is _insufficient time_ for sound waves to travel, hence instabilities develop at _constant density_
 
 - Example: [[#Cooling by radiation|Radiation cooling]]
 $$\displaylines{\dot{Q}=A\rho T^{\alpha}-H \\ \frac{\partial \dot{Q}}{\partial T}\Bigg|_{p}=(\alpha-1) \frac{A\mu p}{\mathcal{R_{*}}}T^{\alpha-2}}$$
 - The system is _field unstable_ if $\alpha<1$
 	- Bremsstrahlung: $\alpha=0.5$
 
+## General strategy
+- Setup the _equilibrium_, then add _small Lagrangian perturbations_
+- Relate to the _Eulerian perturbations_
+- _Linearise_ the _fluid/energy/gravitational_ equations in terms of the _Eulerian_ perturbations
+- Substitute _expressions_ for the Eulerian perturbations into the _fluid equations_
+
+- Write all perturbations in the form of $\exp[i(\boldsymbol{k}\cdot \boldsymbol{x})+qt]$
+- End up with a _dispersion relation_
+- Instability occurs for $\mathrm{Re}(q)>0$
 # Viscous flows
 - For fluids with a _finite mean free path_, momentum can _diffuse_ through a fluid
 - This leads to _viscosity_
@@ -1318,6 +1375,7 @@ $$\displaylines{\nabla\times \boldsymbol{E}=-\frac{\partial \boldsymbol{B}}{\par
 - The _displacement current_ can be _neglected_
 - The _strength_ of $qE$ also means that _charge neutrality is conserved_
 	- If there is a _charge imbalance_, it will _oscillate_ with the _plasma frequency_
+$$\omega_{p}^{2}=\frac{ne^{2}}{\epsilon_{0}m_{e}}$$
 
 - From neglecting displacement current and taking the _curl_ of Ampere's Law:
 $$\displaylines{\nabla\times(\nabla\times \boldsymbol{B})=-\nabla^{2}\boldsymbol{B}=\mu_{0}\sigma\left( -\frac{\partial \boldsymbol{B}}{\partial t}+\nabla\times(\boldsymbol{u}\times \boldsymbol{B}) \right)}$$
@@ -1331,7 +1389,7 @@ $$\int_{S} \boldsymbol{B}\cdot \, d\boldsymbol{S}=\text{const.} $$
 $$\boldsymbol{E}+\boldsymbol{u}\times \boldsymbol{B} \approx 0 \implies \boldsymbol{E}\cdot \boldsymbol{B}=0\;,\; \boldsymbol{E}\perp \boldsymbol{B}$$
 
 - Full set of equations for a _charge neutral, non-relativistic, perfectly conducting plasma_:
-$$\displaylines{\frac{\partial \rho}{\partial t}+\nabla\cdot(\rho \boldsymbol{u})=0 \hspace{1.5cm} \frac{\partial q}{\partial t}+\nabla\cdot \boldsymbol{j}=0 \\ \rho\left( \frac{\partial \boldsymbol{u}}{\partial t}+(\boldsymbol{u}\cdot \nabla)\boldsymbol{u} \right)=q\boldsymbol{E}+\boldsymbol{j}\times \boldsymbol{B}-\nabla p \\ p=K\rho^{\gamma} \\ \\ \nabla\cdot \boldsymbol{B}=0 \\ \frac{\partial \boldsymbol{B}}{\partial t}=\nabla\times(\boldsymbol{u}\times \boldsymbol{B}) \\ \nabla\times \boldsymbol{B}=\mu_{0}\boldsymbol{j}}$$
+$$\displaylines{\frac{\partial \rho}{\partial t}+\nabla\cdot(\rho \boldsymbol{u})=0  \\ \rho\left( \frac{\partial \boldsymbol{u}}{\partial t}+(\boldsymbol{u}\cdot \nabla)\boldsymbol{u} \right)=\boldsymbol{j}\times \boldsymbol{B}-\nabla p \\ p=K\rho^{\gamma} \\ \\ \nabla\cdot \boldsymbol{B}=0 \\ \frac{\partial \boldsymbol{B}}{\partial t}=\nabla\times(\boldsymbol{u}\times \boldsymbol{B}) \\ \nabla\times \boldsymbol{B}=\mu_{0}\boldsymbol{j}}$$
 ## Magnetic forces
 - The _magnetic force density_ from the above equations, using _vector identities_:
 $$\boldsymbol{f}_\text{mag}=\boldsymbol{j}\times \boldsymbol{B}=\frac{1}{\mu_{0}}\left[ -\nabla\left( \frac{B^{2}}{2} \right) +(\boldsymbol{B}\cdot \nabla)\boldsymbol{B} \right]$$
@@ -1339,6 +1397,8 @@ $$\boldsymbol{f}_\text{mag}=\boldsymbol{j}\times \boldsymbol{B}=\frac{1}{\mu_{0}
 - The second term is the _magnetic tension_ term
 	- Vanishes for _straight field lines_
 
+- The _momentum equation_ can then be _re-written_ as:
+$$\displaylines{\rho\left( \frac{\partial \boldsymbol{u}}{\partial t}+(\boldsymbol{u}\cdot \nabla)\boldsymbol{u} \right)=\frac{1}{\mu_{0}}(\boldsymbol{B}\cdot \nabla)\boldsymbol{B}-\nabla p_\text{tot} \\ p_\text{tot}=p+\frac{B^{2}}{2\mu_{0}}}$$
 ## Waves in plasma
 - Consider a perturbation in a _static plasma_ $(\boldsymbol{u}_{0}=0)$ with intially _uniform_ density $\rho_{0}$, pressure $p_{0}$, and _magnetic field_ $\boldsymbol{B}_{0}$
 
