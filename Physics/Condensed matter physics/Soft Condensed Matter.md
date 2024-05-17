@@ -518,7 +518,7 @@ $$\displaylines{\boldsymbol{v}=\boldsymbol{v}_{0}\exp\left( -\frac{\gamma}{m}t \
 - One can also derive:
 $$\langle v^{2}(t) \rangle=v_{0}^{2}\exp\left( -\frac{2\gamma}{m}t \right)+\frac{c}{2m\gamma}\left[ 1-\exp\left( -\frac{2\gamma}{m}t \right) \right] $$
 
-## Overdamped limit
+### Overdamped limit
 - The dimension of $\eta$ is such that $\eta \sim \gamma/L$, where $L$ is some _length scale_
 - Then by dimensional analysis, the _overdamped limit_ $\gamma t/m \to \infty$ corresponds to a _low_ [[#Reynolds number]]
 $$\left<v^{2}(t)\right> \approx \frac{c}{2m\gamma}=\frac{3k_{B}T}{m}$$
@@ -637,17 +637,28 @@ $$\mathcal{L}(\left<x^{2}\right>)=\frac{6k_{B}T}{s^{2}\hat{\gamma}(s)}$$
 - Each _link_ on a lattice can represent a _monomer_ in the chain
 - The chain follows a _random walk_
 
-## Chains
-### The ideal chain
+- A _homopolymer_ has $N$ _identical monomers_
+- The _degree of polymerisation_ is defined as $N$
+- The _molar mass_ of the polymer is:
+$$M=NM_\text{mono}$$
+
+- A sample often has a _molar mass distribution_ $n(M)$
+- The _number average_ and _mass average_:
+$$\displaylines{\langle M \rangle_{n}=\frac{ \int Mn(M) \, dM}{\int n(M) \, dM } \hspace{1.5cm}\langle M \rangle_{w}=\frac{ \int M^{2}n(M) \, dM}{\int Mn(M) \, dM } \\\langle M \rangle_{n}\leq \langle M \rangle_{w}  }$$
+- The equality is only satisfied when the polymer is _monodispersed_
+## Ideal, non-interacting chains
+- Ideal chains _have no volume_, and monomers _do not interact with other monomers_
+### The freely jointed chain
 - Let the chain have $N$ _monomers_
 - Let the _length_ of a monomer (lattice cell size) be $b$
 
 - Consider the _end-to-end displacement_ $\boldsymbol{R}$
 - On _average_, as the walk is _completely random_:
+	- Average: _ensemble average_
 $$\left<\boldsymbol{R}\right>=0$$
 - Let the vector for the $i-$th step be $\boldsymbol{U}_{i}$
 - As they are _random_, they are _uncorrelated_
-$$\boldsymbol{R}=\sum_{i=1}^{N}\boldsymbol{U}_{i}\hspace{1.5cm}\left<\boldsymbol{U}_{i}\cdot \boldsymbol{U}_{j}\right>=0$$
+$$\boldsymbol{R}=\sum_{i=1}^{N}\boldsymbol{U}_{i}\hspace{1.5cm}\left<\boldsymbol{U}_{i}\cdot \boldsymbol{U}_{j}\right>=b^{2}\delta_{ij}$$
 - From this:
 $$\left<R^{2}\right>=Nb^{2}\implies R=\sqrt{ N }b\propto N^{1/2}$$
 - Analagous to _diffusion_, with $N$ in the role of _time_
@@ -664,16 +675,16 @@ $$R\propto N^{\nu}$$
 - It is _not necessarily the size of a monomer_
 - For real chains, it is known as the _Kuhn length_ $b$
 
-### Freely jointed chain
+### Freely rotating chain
 - Let monomers have a _fixed step size_ $b_{0}$, but also be able to _freely rotate_ around some _axis_
 - The axis is _fixed_ as there is a characteristic _bond angle_ $\theta$
 - The average end-to-end distance:
-$$\left<R^{2}\right>=\sum_{i=1}^{N}|\boldsymbol{U}_{i}|^{2}+2\sum_{i=1}^{N}\sum_{j=1}^{N}\left<\boldsymbol{U}_{i}\cdot \boldsymbol{U}_{j}\right>$$
+$$\left<R^{2}\right>=\sum_{i=1}^{N}|\boldsymbol{U}_{i}|^{2}+2\sum_{i=1}^{N}\sum_{j=i+1}^{N}\left<\boldsymbol{U}_{i}\cdot \boldsymbol{U}_{j}\right>$$
 - To consider the second term, _project_ $\boldsymbol{U}_{i}$ along $\boldsymbol{U}_{i+1}$:
 $$\boldsymbol{U}_{i}=\frac{\boldsymbol{U}_{i}\cdot \boldsymbol{U}_{i+1}}{b_{0}^{2}}\boldsymbol{U}_{i+1}+\boldsymbol{U}_{i,\perp}=\cos\theta \boldsymbol{U}_{i+1}+\boldsymbol{U}_{i,\perp}$$
 - Then consider the _correlation_ to a monomer _two links away_:
-$$\left<\boldsymbol{U}_{i}\cdot \boldsymbol{U}_{i+2}\right>=\cos\theta \left<\boldsymbol{U}_{i+1}\cdot \boldsymbol{U}_{i_{+1}}\right>+\left<\boldsymbol{U}_{i,\perp}\cdot \boldsymbol{U}_{i+2}\right>=b^{2}_{0}\cos^{2}\theta$$
-- The second term _vanishes_ due to free rotation
+$$\left<\boldsymbol{U}_{i}\cdot \boldsymbol{U}_{i+2}\right>=\cos\theta \left<\boldsymbol{U}_{i+1}\cdot \boldsymbol{U}_{i+2}\right>+\left<\boldsymbol{U}_{i,\perp}\cdot \boldsymbol{U}_{i+2}\right>=b^{2}_{0}\cos^{2}\theta$$
+- The second term _vanishes_ due to free rotation of the second link
 - From _recursion_:
 $$\left<\boldsymbol{U}_{i}\cdot \boldsymbol{U}_{j}\right>=b_{0}^{2}(\cos\theta)^{|j-i|}$$
 - Therefore, approximating $N$ as _infinity_:
@@ -691,7 +702,7 @@ $$U=\sum_{i=1}^{N-1} \frac{1}{2}\kappa \left| \boldsymbol{r}_{i+1}-\boldsymbol{r
 - The [[Advanced statistical mechanics#Canonical ensemble and the partition function|partition function]]:
 $$Z(R)=\prod_{i=1}^{N-1}\int\, d^{3}\boldsymbol{r}_{i} \exp\left[ -\frac{\kappa}{2k_{B}T}\left(|\boldsymbol{r}_{0}-\boldsymbol{r}_{1}|^{2}+\dots|\boldsymbol{r}_{N-1}-\boldsymbol{r}_{N}|^{2} \right)  \right]$$
 - Integrating over an _intermediate degree of freedom_:
-$$\int  \, d^{3}\boldsymbol{r}_{1}\exp[-\alpha|\boldsymbol{r}_{0}-\boldsymbol{r}_{1}|^{2}-\alpha|\boldsymbol{r}_{1}-\boldsymbol{r}_{2}|^{2}]=\sqrt{ \frac{\pi}{2\alpha} }\exp(-\alpha|\boldsymbol{r}_{0}-\boldsymbol{r}_{2}|^{2}) $$
+$$\int  \, d^{3}\boldsymbol{r}_{1}\exp[-\alpha|\boldsymbol{r}_{0}-\boldsymbol{r}_{1}|^{2}-\alpha|\boldsymbol{r}_{1}-\boldsymbol{r}_{2}|^{2}]=\sqrt{ \frac{\pi}{2\alpha} }\exp\left( -\frac{\alpha}{2}|\boldsymbol{r}_{0}-\boldsymbol{r}_{2}|^{2} \right) $$
 - From this:
 $$\displaylines{Z(R)\propto \exp\left( -\frac{\kappa R^{2}}{2k_{B}TN} \right) \\ \left<R^{2}\right>= \frac{\int Z(R)R^{2} \, d^{3}R}{\int Z(R) \, d^{3}R } =\frac{3k_{B}T}{\kappa}N}$$
 - The _effective Kuhn length_ is now a _thermodynamic quantity_:
@@ -711,10 +722,16 @@ $$\int G(\boldsymbol{r}_{m}-\boldsymbol{r}_{k},m-k)G(\boldsymbol{r}_{k}-\boldsym
 - The form of $G$ is _identical_ to the solution to a _diffusion equation_
 	- The _random walk_ of a polymer can be modelled as _diffusion_, with $n$ acting as _time_ and $b^{2}/6$ as the _effective diffusion constant_
 $$\left( \partial_{n}-\frac{b_{0}^{2}}{6}\nabla^{2} \right)G(\boldsymbol{r}_{m}-\boldsymbol{r}_{n},m-n)=\delta(\boldsymbol{r}_{m}-\boldsymbol{r}_{n})\delta_{mn}$$
-### Semi-flexible polymers
-- Account for the _stiffness_ of joints
-- Let the polymer of _fixed length_ $l$ be described by some _curve_, with some _tangent angle_ $\theta$ at each point
+### Worm-like chain and persistence length
 
+#### Persistence length
+- Let the polymer of _fixed length_ $l$ be described by some _curve_, with some _tangent angle_ $\theta$ at each point
+- The chain is said to retain _memory_ of how it bent before, up to a significant _persistence length_, defined as the _mean value_ of $\boldsymbol{R}$ over the _first segment_
+$$l_{p}\equiv \left\langle  \boldsymbol{R}\cdot \frac{\boldsymbol{u}_{0}}{b_{0}} \right\rangle =b_{0}\sum(\cos\theta)^{i}=\frac{b_{0}}{1-\cos\theta}\approx \frac{2b_{0}}{\theta^{2}}$$
+- The _correlation_ between different segments $s_{1}$ and $s_{2}$ is then:
+$$\displaylines{(\cos\theta)^{m}\approx \left( 1-\frac{\theta^{2}}{2} \right)^{m}\approx \exp\left( -\frac{m\theta^{2}}{2} \right)\approx \exp\left( -\frac{mb_{0}}{l_{p}} \right) \\ \langle \boldsymbol{t}(s_{1})\cdot \boldsymbol{t}(s_{2}) \rangle\approx \exp\left( -\frac{|s_{1}-s_{2}|}{l_{p}} \right) }$$
+#### Energy of the worm-like chain
+- Account for the _stiffness_ of joints, for some _small bending_
 - Label points on the chain by $s$, with a _quadratic potential_ to penalise _bending_:
 $$U=\frac{C_{B}}{2}\int _{0}^{l}[\partial_{s}\theta(s)]^{2} \, ds $$
 - $C_{B}$ quantifies _rigidity_ of the polymer
@@ -723,10 +740,22 @@ $$U=\frac{C_{B}}{2}\int _{0}^{l}[\partial_{s}\theta(s)]^{2} \, ds $$
 - The _equipartition theorem_ yields:
 	- For a _short polymer_ so the approximation of $d\theta/ds \sim \theta/b_{0}$ applies
 $$\left<\left( \frac{d\theta}{ds} \right)^{2}\right>=\frac{2k_{B}T}{C_{B}b_{0}}$$
-- The _persistence length_ is the _characteristic length scale_ of the system:
-$$l_{p}=\frac{C_{B}}{k_{B}T}=\frac{b_{0}}{2}$$
-- The _end-to-end distance_:
-$$\left<R^{2}\right>=\left<\int_{0}^{l}  \, \frac{d\boldsymbol{r}}{ds}ds\cdot \int _{0}^{l} \frac{d\boldsymbol{r}}{ds'} \, ds'\right> =  $$
+- The _persistence length_ is the _characteristic length scale_ of the system, dependent on _temperature_:
+$$l_{p}=\frac{C_{B}}{k_{B}T}$$
+
+#### Relating to Kuhn length
+- The _end-to-end distance_, introducing $s$ as the _contour length_:
+$$\begin{align}
+\left<R^{2}\right>&=\left<\int_{0}^{l}  \, \frac{d\boldsymbol{r}}{ds}ds\cdot \int _{0}^{l} \frac{d\boldsymbol{r}}{ds'} \, ds'\right> =\int _{0}^{l} \, ds \int _{0}^{l} \, ds' \langle \boldsymbol{t}(s)\cdot \boldsymbol{t}(s') \rangle  \\   &=\int _{0}^{l} \, ds \int _{0}^{l} \, ds' \exp\left( -\frac{|s-s'|}{l_{p}} \right) 
+\end{align}$$
+- By letting $s>s'$, with the _limit_ of the second integral changed:
+$$\langle R^{2} \rangle = 2\int _{0}^{l} \, ds \int _{0}^{s} \, ds' \exp\left( -\frac{s-s'}{l_{p}} \right)   $$
+- With the _total contour length_ $L$:
+$$\langle R^{2} \rangle =2l_{p}^{2}\left[ \exp\left( -\frac{L}{l_{p}} \right)-1+\frac{L}{l_{p}} \right] $$
+- For $L\gg l_{p}$
+$$\langle R^{2} \rangle =2l_{p}L  $$
+- The _effective Kuhn length_ is $2l_{p}$
+	- Effective _number of segments_ is $L/2l_{p}$
 ### Entropy of the ideal chain
 - The probability distribution for the ideal chain:
 $$P(\boldsymbol{R},N)=\left[ \frac{3}{2\pi Nb_{0}^{2}} \right]^{3/2}\exp\left( -\frac{3R^{2}}{2Nb_{0}^{2}} \right)$$
@@ -748,7 +777,7 @@ $$F=U-TS=k_{B}T \frac{3}{2} \frac{R^{2}}{Nb_{0}^{2}}+F(0)$$
 $$S=k_{B}\ln W=k_{B}\ln \begin{pmatrix}N\\N_{+}\end{pmatrix}\approx N\ln 2-\frac{(\Delta N)^{2}}{2N}$$
 - This gives the probability:
 $$P \propto \exp\left[ -\frac{(\Delta N)^{2}}{2N} \right]\propto \exp\left[ -\frac{x^{2}}{2Nb_{0}^{2}} \right]$$
-
+- In 3D, this recreates the formula from the [[#Bead-spring model|partition function]]
 ## Polymer interactions
 - _interactions_ of the chain with _itself_
 
@@ -757,6 +786,35 @@ $$P \propto \exp\left[ -\frac{(\Delta N)^{2}}{2N} \right]\propto \exp\left[ -\fr
 
 - The polymer can be modelled as being in a _solvent_
 - A _repulsion_ from itself can be considered as being _attractive_ to the solvent
+### Excluded volume interaction and swelling
+- Polymers _cannot self intersect_
+- This is the _excluded volume interaction_
+- It is an _entropic effect_ as there are _fewer sites available_
+
+- The repulsion term goes like $V\Phi^{2} \propto N^{2}/V$
+	- Typically _stronger_ when there is a smaller [[#Semi-flexible polymers|persistence length]]
+- The free energy:
+$$\frac{F}{k_{B}T}\sim \nu \frac{N^{2}}{V}+\frac{R^{2}}{Nb_{0}^{2}}\sim \nu \frac{N^{2}}{R^{3}}+ \frac{R^{2}}{Nb_{0}^{2}}$$
+- Finding the _minimum_:
+$$R^{5} \sim \nu b_{0}^{2}N^{3}$$
+- For an excluded volume interaction, $\nu\sim b_{0}^{3}$, giving:
+$$R \sim b_{0}N^{3/5}$$
+- This gives the scaling relation for the _swollen chain_
+### Polymer melt
+- Let the _solvent_ be another polymer of _identical polymer_, with different _degree of polymerisation_
+$$f\approx k_{B}T\left[ \frac{\Phi}{N}\ln \Phi+\frac{1}{2}\Phi^{2}\left( \frac{1}{N_{2}}-2\chi \right)+\frac{\Phi^{3}}{6} \right]$$
+- For _high_ $N_{2}$, and since they are the _same polymer_, $\chi\to 0$, the _second virial coefficient vanishes_
+- The $\theta$ point is _always reached_
+- As there is _no relative interaction_ between chain and "solvent", the excluded volume interaction is "screened"
+
+### Variation of Flory parameter
+- Typically, the Flory parameter _increases with temperature_
+- At high temperature, there tends to be a _coil in solution_
+	- The _high entropy case_
+- The _coil to globule transition_ happens for a _decreasing temperature_
+
+- There are _temperature-responsive poiymers_, with _sharp coil-to-globule transitions_ at _high temperatures_
+
 
 ### Flory-Huggins free energy
 - Let the _monomer fraction_ in the solution be $\Phi_{A}$, with $\Phi_{B}=1-\Phi_{A}$
@@ -774,11 +832,13 @@ $$\frac{E}{Mk_{B}}=\frac{T}{2}\chi_{MM}(T)\Phi^{2}+T\chi_{MS}\Phi(1-\Phi)+\frac{
 $$\displaylines{\frac{E}{M}=\chi k_{B}T\Phi(1-\Phi) \\ \chi=\chi_{MS}-\frac{1}{2}(\chi_{MM}+\chi_{SS})}$$
 - $\chi$ is known as the _Flory parameter_
 
-- The _free energy upon mixing_ is then:
-$$f=\frac{F}{M}=k_{B}T\left[ \frac{\Phi}{N}\ln \Phi+(1-\Phi)\ln(1-\Phi)+\chi \Phi (1-\Phi) \right]$$
+- The _free energy per lattice site upon mixing_ is then:
+	- Effectively the same as the formula for [[Advanced statistical mechanics#The binary mixture|binary mixtures]] but accounting for _polymerisation_
+$$f_\text{min}=\frac{F}{M}=k_{B}T\left[ \frac{\Phi}{N}\ln \Phi+(1-\Phi)\ln(1-\Phi)+\chi \Phi (1-\Phi) \right]$$
 - For _small_ $\Phi$:
-$$f\approx k_{B}T\left[ \frac{\Phi}{N}\ln \Phi+\frac{1}{2}\Phi^{2}(1-2\chi)+\frac{\Phi^{3}}{6} \right]$$
+$$f\approx k_{B}T\left[ \frac{\Phi}{N}\ln \Phi+(\chi-1)\Phi+\frac{1}{2}\Phi^{2}(1-2\chi)+\frac{\Phi^{3}}{6} \right]$$
 - The second term acts as a [[Advanced statistical mechanics#Virial expansion|second virial coefficient]]
+- The last term ensures _stability_
 
 - If $1-2\chi<0$, there is an _attractive force_, and there is a _coil to globule transition_, and:
 $$R \sim N^{1/3}$$
@@ -786,39 +846,24 @@ $$R \sim N^{1/3}$$
 $$R \sim N^{1/2}$$
 - If $1-2\chi>0$, there is a _swollen chain_ (the chain tends to be attracted to the _solvent_)
 $$R \sim N^{3/5}$$
-### Excluded volume interaction and swelling
-- Polymers _cannot self intersect_
-- This is the _excluded volume interaction_
-- It is an _entropic effect_ as there are _fewer sites available_
+### Osmotic pressure and chemical potential
+- The free energy above is _per lattice site_, with _volume fraction_ $\Phi=N_{A}/M$
+	- $M$: _number of_ lattice sites
+- The _osmotic pressure_, from changing the _volume of the system_:
+	- The $N_{A}$ constraint makes $M(\partial/\partial M)=-\Phi(\partial/\partial \Phi)$
+$$\Pi=- \frac{\partial F}{\partial V}\Bigg|_{N_{A}}=-\frac{1}{b_{0}^{3}} \frac{\partial(Mf)}{\partial M}=-\frac{1}{b_{0}^{3}}\left( f+M\frac{\partial f}{\partial M} \right)=-\frac{1}{b_{0}^{3}}\left( f-\Phi \frac{\partial f}{\partial \Phi} \right)$$
+- Using the _polynomial expansion_ of $f$:
+$$\Pi=\frac{k_{B}T}{b_{0}^{3}}\left[ \frac{\Phi}{N}+ \frac{1}{2}(1-2\chi)\Phi^{2} \right]$$
 
-- The repulsion term goes like $V\Phi^{2} \propto N^{2}/V$
-	- Typically _stronger_ when there is a smaller [[#Semi-flexible polymers|persistence length]]
-- The free energy:
-$$\frac{F}{k_{B}T}\sim \nu \frac{N^{2}}{V}+\frac{R^{2}}{Nb_{0}^{2}}\sim \nu \frac{N^{2}}{R^{3}}+ \frac{R^{2}}{Nb_{0}^{2}}$$
-- Finding the _minimum_:
-$$R^{5} \sim \nu b_{0}^{2}N^{3}$$
-- For an excluded volume interaction, $\nu\sim b_{0}^{3}$, giving:
-$$R \sim b_{0}N^{3/5}$$
-- This gives the scaling relation for the _swollen chain_
-
-### Osmotic pressure
-- The _osmotic pressure_:
-$$\Pi=- \frac{\partial F}{\partial V}\Bigg|_{N_{A}}=\frac{k_{B}T}{b_{0}^{3}}\left[ \frac{\Phi}{N}+ \frac{1}{2}(1-2\chi)\Phi^{2} \right]$$
-### Polymer melt
-- Let the _solvent_ be another polymer of _identical polymer_, with different _degree of polymerisation_
-$$f\approx k_{B}T\left[ \frac{\Phi}{N}\ln \Phi+\frac{1}{2}\Phi^{2}\left( \frac{1}{N_{2}}-2\chi \right)+\frac{\Phi^{3}}{6} \right]$$
-- For _high_ $N_{2}$, and since they are the _same polymer_, $\chi\to 0$, the _second virial coefficient vanishes_
-- The $\theta$ point is _always reached_
-- As there is _no relative interaction_ between chain and "solvent", the excluded volume interaction is "screened"
-
-### Variation of Flory parameter
-- Typically, the Flory parameter _increases with temperature_
-- At high temperature, there tends to be a _coil in solution_
-	- The _high entropy case_
-- The _coil to globule transition_ happens for a _decreasing temperature_
-
-- There are _temperature-responsive poiymers_, with _sharp coil-to-globule transitions_ at _high temperatures_
-
+- The _chemical potential_ is given by:
+$$\mu=\frac{\partial F}{\partial N_{A}}=M\frac{\partial f}{\partial(M\Phi)}=\frac{\partial f}{\partial \Phi}$$
+- The osmotic pressure can then be written as:
+$$\Pi=-\frac{f-\Phi \mu}{b_{0}^{3}}$$
+- In $\Pi$, the first term obeys the _ideal gas law_, while the latter term is the _second term_ of the [[Advanced statistical mechanics#Virial equation of state|virial expansion]]
+$$B_{2}=\frac{1}{2}(1-2\chi)$$
+- When $\chi=1/2$, the chain has _ideal behaviour_
+- The _excluded volume parameter_ can also be written as:
+$$v(T)=b_{0}^{3}(1-2\chi)$$
 ### Semi-dilute solutions
 - For _low-concentration_ solutions, chains typically _do not overlap_
 	- They have an _effective radius_ which is _smaller_ than average distance between chains

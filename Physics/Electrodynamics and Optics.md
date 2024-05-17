@@ -883,7 +883,7 @@ $$G(\theta,\phi)\propto\sin^2\theta$$
 - It has _cylindrical symmetry_, with the _maximum radiated power_ in the _equatorial plane_, and _zero along the polar axes_
 
 - The _instantaneous total radiated power_:
-$$P-\int\bm{N}\cdot d\bm{S}=\frac{\mu_0}{6\pi c}[\ddot{p}]^2$$
+$$P=\int\bm{N}\cdot d\bm{S}=\frac{\mu_0}{6\pi c}[\ddot{p}]^2$$
 - It is _independent of $r$_, so there is _no accumulation in energy_
 	- All energy is simply _radiated outwards_
 
@@ -963,7 +963,7 @@ $$\left<P\right>^{\text{EQ}}=\frac{\mu_{0}\omega^{6}}{1440\pi c^{3}} \sum_{\alph
 - This is reflected as a _radiation resistance_ $R_r$
 $$R_r\equiv\mean{P}/\mean{I^2}=\mean{V^2}/\mean{P}$$
 - For [[#Power radiated|the Hertzian electric dipole]] with $\dot{p}=Id$
-$$\displaylines{\mean{P}=\frac{\mu_0\omega^4p_0^2}{12\pi c}=\frac{\mu_{0}\omega^{2}\langle \dot{p}^{2} \rangle}{6\pi c}  \\ R_r=\frac{\mu_{0}\omega^{2}}{6\pi c}d^{2}=\frac{2\pi}{c}Z_{0}\left( \frac{d}{\lambda} \right)^{2}}$$
+$$\displaylines{\mean{P}=\frac{\mu_0\omega^4p_0^2}{12\pi c}=\frac{\mu_{0}\omega^{2}\langle \dot{p}^{2} \rangle}{6\pi c}  \\ R_r=\frac{\mu_{0}\omega^{2}}{6\pi c}d^{2}=\frac{2\pi}{3}Z_{0}\left( \frac{d}{\lambda} \right)^{2}}$$
 - This is valid for $d\ll\lambda$ (approximation usually made for Hertzian dipole)
 
 - The _power gain_ $G(\theta,\phi)$ quantifies the _directionality_ of the emitted radiation:
@@ -976,22 +976,24 @@ $$G^{\text{ED}}(\theta,\phi)=\frac{3}{2}\sin^{2}\theta$$
 - It can be treated as a _generator_ with voltage $V$ and _internal resistance_ $R_r$
 ![[Antenna receiver circuit.png]]
 - Its _performance_ is quantified by the _power delivered to the load_ $R_\text{load}$
-$$\displaylines{\mean{P}_\text{tot}=(R_{r}+R_\text{load})\langle I^{2} \rangle  \\ \mean{P}_\text{load}}$$
-- $\mean{P}_\text{load}$ is maximised for a _matched load_ $R_\text{load}=R_r$
+$$\displaylines{\mean{P}_\text{tot}=(R_{r}+R_\text{load})\langle I^{2} \rangle =\frac{ \langle V^{2} \rangle}{R_\text{r}+R_\text{load}}   \\ \mean{P}_\text{load}=\langle I^{2} \rangle R_\text{load}=\langle V^{2} \rangle \frac{R_\text{load}}{(R_\text{r}+R_\text{load})^{2}} }$$
+- $\mean{P}_\text{load}$ is maximised for a _matched load_ $R_\text{load}=R_r$:
+$$\langle P \rangle_\text{load,max}= \frac{\langle V^{2} \rangle}{4R_{r}} $$
 
 - The _effective area_ of the antenna, or the _absorption cross-section_ is:
-$$A_\text{eff}(\theta,\phi)=$$
+$$A_\text{eff}(\theta,\phi)=\frac{\langle P \rangle_\text{load}}{\langle N_\text{incident} \rangle } $$
 - One should then pick the _polarisation best-suited for reception_
 
-- For the _Hertzian dipole_
-- The _open circuit voltage_ is $V=Ed\sin\theta$
+- For the [[#The Hertzian electric dipole|Hertzian dipole]]
+- The _open circuit voltage_ is $V=Ed\sin\theta$, hence:
+$$\langle P_\text{load} \rangle =  \frac{\langle E^{2} \rangle d^{2}\sin^{2}\theta }{4\langle R _{r}\rangle }=\frac{3\lambda^{2}\sin^{2}\theta}{8\pi} \frac{\langle E^{2} \rangle}{Z_{0}}=\frac{3\lambda^{2}\sin^{2}\theta}{8\pi}\langle N_\text{incident} \rangle  $$
 
 - This is the _same angular dependence as the power gain_
 - It is also _independent of dipole size_
 	- It is _much larger than the actual geometrical area_
 
 - As the antenna _radiates_, a portion of the _incident power is re-radiated_
-
+![[Dipole re-radiation.png]]
 - The _incident_ and _re-radiated_ fields can _interfere_, so the _Poynting flux turns back towards the antenna_, increasing its effective area
 
 ## Relation between effective area and power gain
@@ -1025,7 +1027,7 @@ $$A_\text{eff}(\theta,\phi)=\frac{\lambda^2}{4\pi}G(\theta,\phi)$$
 - There are then _current nodes/voltage antinodes_ at the _end_ of the line
 
 - In the _far-field_ case, $r\gg L$:
-$$\mean{N(r,\theta)}=$$
+$$\mean{N(r,\theta)}=\frac{\mu_{0}cI_{0}^{2}}{8\pi^{2}r^{2}\sin^{2}\theta}\left[ \cos\left( \frac{kL}{2} \right)-\cos\left( \frac{kL\cos\theta}{2} \right) \right]^{2}$$
 - As expected, there is _no $\phi$ dependence_
 
 - It has _resonant_ behaviour with $L$
@@ -1068,11 +1070,11 @@ $$\sigma=\frac{\mean{P}}{E_0^2/(2\mu_0c)}=\frac{\mu_0^2\mean{\ddot{p}^2}}{3\pi E
 
 - Consider radiation _in the scattering plane_
 ![[Scattering plane.png]]
-$$N_1=\frac{}{}\sin^2(\pi/2-\alpha)=\frac{}{}\cos^2(\alpha)$$
+$$N_1=\frac{\mu_{0}\langle \ddot{p}_{z}^{2} \rangle }{16\pi^{2}r^{2}c}\sin^2(\pi/2-\alpha)=\frac{\mu_{0}\langle \ddot{p}_{z}^{2} \rangle }{16\pi^{2}r^{2}c}\cos^2(\alpha)$$
 
 - Then consider polarisation _perpendicular to the scattering plane_
 ![[Scattering perpendicular.png]]
-$$N_2=\frac{}{}$$
+$$N_2=\frac{\mu_{0}\langle \ddot{p}_{x}^{2} \rangle }{16\pi^{2}r^{2}c}$$
 - For _unpolarised incoming radiation_ (an _incoherent equal superposition_):
 $$\mean{\ddot{p}_x^2}=\mean{\ddot{p}_z^2}=\frac{\mean{\ddot{\bm{p}}^2}}{2}$$
 
