@@ -15,7 +15,7 @@ $$m \ddot{u}+m\gamma\dot{u}+m\omega_{T}^{2}u=qE$$
 	- It is in a _trap_ due to the nucleus
 - $\gamma$ gives _damping_
 - Consider an _oscillating electric field_ $E=E_{\omega}\exp(-i\omega t)$
-- This results in _displacement_ $u=u_{\omega}\exp(i\omega t)$
+- This results in _displacement_ $u=u_{\omega}\exp(-i\omega t)$
 - This results in _dipole moment per atom_:
 $$p_{\omega}=qu_{\omega}$$
 - This gives some _polarisation_ $\boldsymbol{P}$
@@ -637,7 +637,7 @@ $$\boldsymbol{k}=\sum_{j=1}^{3}\frac{m_{j}}{N_{j}}\boldsymbol{b}_{j}$$
 $$\frac{1}{N}\boldsymbol{b}_{1}\cdot(\boldsymbol{b}_{2}\times \boldsymbol{b}_{3})$$
 - Hence, each _Brillouin zone_ contains $N$ $k-$states
 
-# One-dimensional models
+# One-dimensional models of phonons
 
 ## Identical atoms
 - Simplest model: row of _identical atoms_
@@ -690,8 +690,6 @@ $$\begin{align} m_{A}\frac{\partial^{2}u_{n,A}}{\partial t^{2}}&= K(u_{n,B}-u_{n
 	- Optical branch: finite frequency as $q\to 0$, often _interacts with light_
 - The optical branch frequency is _largely independent of_ $q$
 ![[Diatomic dispersion curve.png|500]]
-- Atomic displacements:
-![[Acoustic optical displacements.png]]
 ### Same springs, different masses
 - In the limit of the _same spring constant_
 - With lattice constant $a$, travelling wave solutions lead to:
@@ -700,7 +698,8 @@ $$\begin{align}u_{n,A}&= \\ u_{n,B}&=\end{align}$$
 - Limiting results:
 ![[Acoustic optical phonons.png|500]]
 - The branches _split_ such that there are _no solutions_ between $\sqrt{ 2K/m_{A} }$ or $\sqrt{ 2K/m_{B} }$
-
+- Atomic displacements:
+![[Acoustic optical displacements.png]]
 
 # Real phonons
 
@@ -786,7 +785,7 @@ $$C_{V}=$$
 	- _Branches_ of the phonon spectrum
 	- van Hove singularities: the dispersion is _flat_, giving an _infinite_ density of states
 
-# Heat capacity
+# Heat capacity and conductivity
 - For _heat flux_ $\boldsymbol{J}_{q}$ (energy per unit area per unit time)
 $$\boldsymbol{J}_{q}=-\kappa \nabla T$$
 - Kinetic theory:
@@ -1425,7 +1424,8 @@ $$\delta k=\frac{1}{\hbar}m^{*}v_{d}$$
 - When there is a _temperature gradient_, molecules travelling in one direction will have _more energy_ than molecules travelling in the other
 - The Fermi-Dirac distribution will be more _smeared_ in one direction
 
-- At _low temperatures_, scattering
+- At _low temperatures_, scattering will only affect _thermal conduction_ as it _cannot change_ the _direction_ of electrons (imsufficient energy)
+- At _high temperatures_, it will affect _both electrical and thermal conduction_
 
 ### Matthiessen's rule
 - Scattering rates are _additive_:
@@ -1442,6 +1442,7 @@ $$\frac{1}{\tau}=\frac{1}{\tau_{1}}+\frac{1}{\tau_{2}}+\frac{1}{\tau_{3}}+\dots$
 	- Inelastic: the phonon is _emitted or absorbed by the electron_
 - This results as _mobile electrons can distort the lattice_
 
+### Room temperature
 - Phonons behave as _massless bosons_, similar to _photons_
 - They have a _black-body distribution_ with $\hbar\omega \sim k_{B}T$
 - Hence, scattered electrons are distributed within $\pm k_{B}T$ of the _Fermi energy_
@@ -1452,10 +1453,12 @@ $$\frac{1}{\tau}=\frac{1}{\tau_{1}}+\frac{1}{\tau_{2}}+\frac{1}{\tau_{3}}+\dots$
 - Therefore, phonons can _scatter an electron to the other side_ of the Fermi surface
 - At room temperature, $\tau_{\sigma}\approx \tau_{\kappa}$, and are _proportional_ to the number of phonons with $\hbar\omega \sim k_{B}T$
 
+### Low temperatures
 - At _low temperatures_ $T\ll\theta_{D}$, phonons have energies $k_{B}T\ll k_{B}\theta_{D}$, so $q\ll k_{F}$
-- Difference in scattering rates
-- Weighting factor:
-$$1-\cos\theta\sim \propto T^{2}$$
+- _Inelastic scattering_ changes electron energy by $k_{B}T$, so the _thermal scattering rate_ $\tau_{\kappa}^{-1} \propto T^{3}$
+	- From _Debye theory_, that gives number of phonons with $\hbar\omega\sim k_{B}T$
+- Weighting factor for $\tau_{\sigma}$, to account for the _small angle_ by which $\boldsymbol{k}$ can change along the Fermi surface:
+$$1-\cos\theta\sim \frac{\theta^{2}}{2}\propto \frac{q^{2}}{k_{F}^{2}}\propto T^{2}$$
 - Therefore:
 $$\tau_{\sigma}^{-1} \propto T^{5},\tau_{\kappa}^{-1} \propto T^{3} \implies \tau_{\sigma}^{-1}\ll \tau_{\kappa}^{-1}$$
 
@@ -1464,7 +1467,7 @@ $$\tau_{\sigma}^{-1} \propto T^{5},\tau_{\kappa}^{-1} \propto T^{3} \implies \ta
 
 - For _very low temperatures_: _impurity_ and _defect_ scattering
 - They can cause _large angle scattering_, such that $\tau_{\kappa}\approx \tau_{\sigma}$, and Wiedemann-Franz law holds
-
+![[Metal conductivities.png]]
 ## Electron-electron scattering
 - For both _energy and momentum_ to be conserved, electron-electron scattering _within the Fermi surface_ is typically unlikely for _simple Fermi surfaces_
 	- e.g. A _roughly spherical_ Fermi surface has very few electron-electron scattering events

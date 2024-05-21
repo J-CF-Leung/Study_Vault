@@ -1225,7 +1225,7 @@ $$\rho_\text{eq}=\sqrt{3(\chi-2)}$$
 	- Said to be _first order_
 
 ## Landau theory
-- For any system, identify an _order parameter_
+- For any system, identify an _order parameter_, a _macroscopic quantity_ which will _change value_ at a phase transition
 	- Scalar: _density_
 	- Vector: _magnetisation_
 - Assume that _near a critical point_, the order parameter is _small_

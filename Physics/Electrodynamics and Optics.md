@@ -200,6 +200,7 @@ $$J_\theta J_{\theta+\pi/2}=0$$
 - Here, the permittivity can be a _second-rank tensor_:
 $$\bm{D}=\epsilon_0\dunderline{\epsilon}\cdot\bm{E}\hspace{2cm}D_i=\epsilon_0\epsilon_{ij}E_j$$
 - From _energy conservation_, $\dunderline{\epsilon}$ must be _Hermitian_:
+	- Proof: consider $\frac{d}{dt}(\boldsymbol{E}\cdot \boldsymbol{D}+\boldsymbol{B}\cdot \boldsymbol{H})$
 $$\epsilon_{ij}=\epsilon_{ji}^*$$
 - It therefore is _diagonalisable_ and has _real, orthogonal eigenvectors_
 - For _lossless media_, it is _real_ and therefore _symmetric_
@@ -239,7 +240,7 @@ $$\epsilon_0\bm{D}\cdot\bm{E}=\bm{D}\epsilon^{-1}\bm{D}=1$$
 $$\frac{D_x^2}{\epsilon_1}+\frac{D_y^2}{\epsilon_2}+\frac{D_z^2}{\epsilon_3}=1$$
 
 - For a given $\bm{D}$, the corresponding $\bm{E}$ can be shown to be _normal to the ellipsoid surface_ at the tip of $\bm{D}$
-
+![[Optical indicatrix.png]]
 - From Maxwell's equations, $\bm{k}\times\bm{k}\times\bm{E}=-\mu_0\omega^2\bm{D}$
 - Letting the angle between $\bm{E}$ and the plane _perpendicular to_ $\bm{k}$ be $\alpha$, $|\bm{k}\times\bm{k}\times\bm{E}|=k^2E\cos\alpha$, and $\epsilon_0ED\cos\alpha=\epsilon_0\bm{E}\cdot\bm{D}=1$
 - From this, calculate the _refractive index_:
@@ -247,6 +248,7 @@ $$n^2=c^2\frac{k^2}{\omega^2}=\frac{c^2}{\omega^2}\frac{\mu_0\omega^2D}{E\cos\al
 - Hence, the _radius vector of the ellipsoid_ in direction of $\bm{D}$ is the _refractive index_
 
 - One can represent this in terms of _Huygens wavelets_
+![[Optics huygens wavelets.png]]
 
 - For $\bm{D}\perp\hat{\bm{e}}_3$, $v=c/n_o$, making a _spherical wavelet_, independent of direction in the plane
 - For _other polarisations_, for some $\bm{D}$ with angle $\theta$ to $\hat{\bm{e}}_3$, it travels with _effective refractive index_ $n_b$:
@@ -260,7 +262,7 @@ $$\frac{(n_b\cos\theta)^2}{n_o^2}+\frac{(n_b\sin\theta)^2}{n_e^2}=1$$
 
 - If $\bm{D}\perp\hat{\bm{e}}_3$, $\bm{D}||\bm{E}$, and _spherical wavelets_ are formed
 - This is an _ordinary ray_
-
+![[Extraordinary ray.png|450]]
 - If $\bm{D}$ has some _component_ parallel to $\hat{\bm{e}}_3$, the wavelets are _ellipsoidal_
 - This creates an _extraordinary ray_, which is _laterally shifted_ before exiting the crystal
 
@@ -318,7 +320,7 @@ $$\Delta n=\lambda_0KE_0^2$$
 - Some materials have _chirality_ at the _molecular level_
 	- The _mirror image_ is _unable to be superimposed_ onto the original molecule
 - The material is _optically active_, or _circularly birefringent_
-- It _responds differently_ to _left and right-handed circularly polarised waves_
+- It _responds differently_ to _left and right-handed [[#Polarised light and the Jones representation|circularly polarised waves]]_
 	- Circular polarised waves are said to be the _characteristic waves_
 - It has _different refractive indices_ for the waves, denoted $n_L$ and $n_R$
 	- Effectively a [[#Waveplates|waveplate]] but for circularly polarised waves
@@ -330,6 +332,7 @@ $$\bm{L}_x=\pmatrix{1\\0}=\frac{\bm{C}_L+\bm{C}_R}{\sqrt{2}}$$
 $$\bm{L}_x\longrightarrow\pmatrix{\cos(\Delta\phi/2)\\-\sin(\Delta\phi/2)}$$
 - This gives _another plane-polarised wave_, but rotated _clockwise_ 
 	- Looking _towards_ the source
+
 - The _specific rotatory power_ is the _rotation per unit length_:
 $$\alpha=\frac{\Delta\phi}{2d}=\frac{\omega}{2c}(n_L-n_R)$$
 - If $n_L>n_R,\;\alpha>0$, the medium is _dextrorotatory (d-rotatory)_
@@ -350,7 +353,7 @@ $$\bm{E}=\pmatrix{E_x\\E_y}\exp(-i\omega t) \hspace{1.5cm}\bm{r}=\pmatrix{x_0\\y
 $$\omega_c=\frac{eB_0}{m}$$
 - Then to find the _response to circularly polarised wave_:
 $$\displaylines{-\omega^2(x_0+iy_0)=-\frac{e}{m}(E_x+iE_y)+\omega\omega_c(x_0+iy_0) \\ -\omega^2(x_0-iy_0)=-\frac{e}{m}(E_x-iE_y)+\omega\omega_c(x_0-iy_0)}$$
-- For $E_x=E_y=|\bm{E}|$, they correspond to _LCP_ and _RCP_, with some _displacement_ $a\pmatrix{1&i}^T$ as the _response_
+- For $E_x=E_y=|\bm{E}|$, with $|x_{0}|=|y_{0}|=a$, they correspond to _RCP_ and _LCP_ respectively, with some _displacement_ $a\pmatrix{1&\mp i}^T$ as the _response_
 - With some _electron number density_ $n$, the _circular polarisation field_:
 $$P_L=-ena\pmatrix{1\\i}=\epsilon_0\chi_LE\pmatrix{1\\i}$$
 - The _effective susceptibility_ is then:
@@ -510,7 +513,7 @@ $$\displaylines{\gamma(\bm{r}_1,\bm{r}_2,\tau)=\frac{\Gamma(\bm{r}_1,\bm{r}_2,\t
 - Take the divided amplitudes to be _equal_, $A_1=f(t)$, and $A_2=f(t-\tau)$
 
 - The output intensity:
-$$\displaylines{I(\tau)=\mean{(A_1+A_2)(A_1^*+A_2^*)}=2I_0+2\Re{[(\Gamma(\tau)]} \\ \Gamma(\tau)=\mean{f(t)f^*(t-\tau)}}$$
+$$\displaylines{I(\tau)=\mean{(A_1+A_2)(A_1^*+A_2^*)}=2I_0+2\Re[\Gamma(\tau)] \\ \Gamma(\tau)=\mean{f(t)f^*(t-\tau)}}$$
 - $\Gamma$ in this is the _temporal coherence function_, _quantified_ by $I$
 
 - Write $\Gamma$ as $|\Gamma(\tau)|\exp[i\Delta(\tau)]$
@@ -762,7 +765,7 @@ $$\bm{A}(\bm{r})=\frac{\mu_0}{4\pi}\left[\oint_L\frac{I}{2}\bm{r}'\times d\bm{r}
 $$\bm{m}=IS\hat{\bm{n}}$$
 - $\bm{m}$ is the _magnetic dipole_
 
-## Maxwell's equations in terms of potentials
+
 - Maxwell's equations feature _redundancy_:
 $$\displaylines{\div(\curl\bm{E})=-\div\dot{\bm{B}}=0}$$
 - This is already given by $\div\bm{B}=0$
@@ -862,12 +865,13 @@ $$\begin{aligned}B_\phi&= {\mu_0}{4\pi}\sin\theta\left(\frac{[\dot{p}]}{r^2}+\fr
 	- They circulate in _different directions_
 
 - In the _far field region_, only the _radiation fields_ remain:
+![[Dipole radiation fields.png|400]]
 $$E_{\theta}=\frac{\sin\theta}{4\pi\epsilon_{0}} \frac{[\ddot{p}]}{rc^{2}}\hspace{1.5cm}B_{\phi}=\frac{\mu_{0}\sin\theta}{4\pi} \frac{[\ddot{p}]}{rc}$$
 	- The fields are _in phase_ with one another (with $[\ddot{p}]$)
 	- The field components are _proportional_ to each other as $E_\theta=cB_\phi$, as expected for _electromagnetic waves_
 	- The fields are _orthogonal in space_
 	- There is a _radially outward Poynting flux_
-	- The radiation is _polarised_
+	- The radiation is _linearly polarised_ in the direction of $E_{\theta}$ (_vertical_ for $\theta=\pi/2$)
 
 ### Power radiated
 - One can typically ignore the _induction fields_
@@ -1075,7 +1079,7 @@ $$N_1=\frac{\mu_{0}\langle \ddot{p}_{z}^{2} \rangle }{16\pi^{2}r^{2}c}\sin^2(\pi
 - Then consider polarisation _perpendicular to the scattering plane_
 ![[Scattering perpendicular.png]]
 $$N_2=\frac{\mu_{0}\langle \ddot{p}_{x}^{2} \rangle }{16\pi^{2}r^{2}c}$$
-- For _unpolarised incoming radiation_ (an _incoherent equal superposition_):
+- For _unpolarised incoming radiation_ (an _incoherent equal superposition_ of the above cases):
 $$\mean{\ddot{p}_x^2}=\mean{\ddot{p}_z^2}=\frac{\mean{\ddot{\bm{p}}^2}}{2}$$
 
 - Write $N_2$ as $N_1+(N_2-N_1)$, as it is larger than $N_1$
@@ -1087,22 +1091,22 @@ $$P=\frac{I_\text{pol}}{I_\text{tot}}=\frac{N_2-N_1}{N_2+N_1}=\frac{1-\cos^2\alp
 - There is _no scattered flux parallel to the induced dipole moment_
 - This gives the [[#Boundary conditions|Brewster condition]], where the _reflected and refracted beams are perpendicular_
 
-## Rayleigh scattering
+## Rayleigh scattering of neutral particles
 - Rayleigh scattering comes from _small neutral particles_
 - For each particle, the dipole moment has _amplitude_ $p_0=\alpha E_0$
 - The scattering cross-section is:
 $$\sigma=\frac{\mu_0\omega^4p_o^2/(12\pi c)}{c\epsilon_0E_0^2/2}=\frac{\mu_0^2\omega^4\alpha^2}{6\pi}=\frac{8\pi^3}{3}\mu_0^2c^4\alpha^2\frac{1}{\lambda^4}$$
 - The $\lambda^{-4}$ dependence gives _stronger scattering for short wavelengths_
 
-## Thomson scattering
+## Thomson scattering of electrons
 - Consider $z-$polarised EM radiation incident on a _free electron_
 	- The _Lorentz force_ is typically much _weaker_ and is ignored
 - The equation of motion:
 $$\displaylines{\ddot{z}=-\frac{e}{m_e}E_0\exp(-i\omega t) \\ \ddot{p}=-e\ddot{z}=\frac{e^2}{m_e}E_0\exp(-i\omega t)=-\omega^2p_0\exp(-i\omega t)}$$
 - The _time-averaged scattered power_:
-$$\mean{P}=$$
+$$\mean{P}=\frac{\mu_{0}\omega^{4}p_{0}^{2}}{12\pi c}=\frac{\mu_{0}e^{4}E_{0}^{2}}{12\pi cm_{e}^{2}}$$
 - The _Thomson cross-section_ is then:
-
+$$\sigma _{T}=\frac{\mu_{0}^{2}e^{4}}{6\pi m_{e}^{2}}$$
 - For _high-frequency light_, one must consider _photon momentum_, leading to _Compton scattering_
 
 - Consider a _classical electron radius_ $r_e$ where the _electrical self-energy_ is equivalent to the _rest mass energy_:
@@ -1213,7 +1217,7 @@ $$\begin{aligned}\bm{E}_{||}'&=\bm{E}_{||} \hspace{3.5cm} \bm{B}_{||}'=\bm{B}_{|
 ![[Wire.png]]
 - The _positive charges_ give the _electrostatic force_:
 $$f_y^+=\frac{q}{2\pi\epsilon_0}\frac{neA}{r}$$
-- In the _instantaneous rest frame_ of the charges, $\rho_x'=\rho_x/\gamma_v$:
+- In the _instantaneous rest frame_ of the _charge carriers_, $\rho_x'=\rho_x/\gamma_v$
 - Force from the _negative charges_:
 $$(f_y^-)'=-\frac{1}{\gamma_v}\frac{q}{2\pi\epsilon_0}\frac{neA}{r}$$
 - Carrying a [[Special Relativity#Lorentz transformations|Lorentz transformation]]:
@@ -1323,16 +1327,35 @@ $$\begin{align}
 \phi(r,t)&=\frac{1}{4\pi\epsilon_0}\int_\text{all space}\frac{\rho(\bm{r}',t-|\bm{r}-\bm{r}'|/c)}{|\bm{r}-\bm{r}'|}\,dV \\ \boldsymbol{A}(r,t)&=\frac{\mu_{0}}{4\pi}\int_\text{all space}\frac{\boldsymbol{J}(\bm{r}',t-|\bm{r}-\bm{r}'|/c)}{|\bm{r}-\bm{r}'|}\,dV
 \end{align}$$
 - Evaluation at retarded time can also be written in _covariant form_:
+	- _Delta function_: to ensure evaluation at _retarded time_
+	- Step function: ensure the _source_ is _earlier in time_
 $$A^{\alpha}(x^{\mu})= \frac{\mu_{0}}{4\pi} \int \frac{\theta(x_{0}-x_{0}')}{|\boldsymbol{r}-\boldsymbol{r}'|} \delta(x_{0}-x_{0}'-|\boldsymbol{r}-\boldsymbol{r}'|)J^{\alpha}(x'^{\mu}) \, d^{4}x' $$
+- Property of the Delta function using $\delta(\alpha x)=\delta(x)/|\alpha|$
+$$\begin{align}
+\delta[|\vec{x}|^{2}]&=\delta[(x_{0}-x_{0}')^{2}-|\boldsymbol{r}-\boldsymbol{r}'|^{2}] \\ &=\delta[(x_{0}-x_{0}'-|\boldsymbol{r}-\boldsymbol{r}'|)(x_{0}-x_{0}'+|\boldsymbol{r}-\boldsymbol{r}'|)] \\ &=\frac{1}{2|\boldsymbol{r}-\boldsymbol{r}'|}[\delta(x_{0}-x_{0}'-|\boldsymbol{r}-\boldsymbol{r}'|)+\delta(x_{0}-x_{0}'+|\boldsymbol{r}-\boldsymbol{r}'|)]
+\end{align}$$
+- Re-write the integral as:
+$$A^{\alpha}(x^{\mu})=\frac{\mu_{0}}{2\pi}\int \theta(x_{0}-x_{0}')\delta[|\vec{x}|^{2}]J^{\alpha}(x^{\mu}) \, dx $$
+- The 4-current for a _moving charge_:
+	- $V^{\alpha}$ is the _4-velocity_ $(\gamma c,\gamma \boldsymbol{v})$ of the moving charge
+	- $r^{\mu}(\tau)$ is the _4-position_ of the particle
+$$J^{\alpha}(x^{\mu})=ec\int  \, d\tau\,V^{\alpha}(\tau)\delta^{4}[x'^{\mu}-r^{\mu}(\tau)] $$
+
+- Integrate over $d^{4}x'$
+
+- The only _contribution_ is from particle proper time $\tau=\tau_{0}$, defined by the _light cone condition_:
+$$|\vec{x}-\vec{r}(\tau_{0})|^{2}=0$$
 
 - The _solutions_ to the 4-potential are the _Lienard-Wiechert potentials_:
 $$A^\alpha(x^\mu)=\frac{\mu_0ec}{4\pi}\left[\frac{V^\alpha(\tau)}{V^\nu[x_\nu-r_\nu(\tau)]}\right]_{\tau=\tau_0}$$
 - The _light-cone condition_ implies:
-$$\displaylines{x_0-}$$
+	- $\boldsymbol{n}$ is a _unit vector_ in the direction of $\boldsymbol{x}-\boldsymbol{r}(\tau_{0})$
+$$\displaylines{x_0-r_{0}(\tau_{0})=|\boldsymbol{x}-\boldsymbol{r}(\tau_{0})|\equiv R \\ V_{\nu}(x^{\nu}-r^{\nu})=\gamma cR(1-\boldsymbol{\beta}\cdot \boldsymbol{n})}$$
 - The potetials can then be written as:
+$$\Phi(\boldsymbol{x},t)=\frac{1}{4\pi\epsilon_{0}}\left[ \frac{e}{(1-\boldsymbol{\beta} \cdot \boldsymbol{n})R} \right]_\text{ret}\hspace{1.5cm}\boldsymbol{A}(\boldsymbol{x},t)=\frac{\mu_{0}}{4\pi}\left[ \frac{e\boldsymbol{v}}{(1-\boldsymbol{\beta}\cdot \boldsymbol{n})R} \right]_\text{ret}$$
 
 ### The fields
-$$\begin{aligned}\bm{E}(\bm{x},t)&= \\ \bm{B}(\bm{x},t)&=\end{aligned}$$
+$$\begin{aligned}\bm{E}(\bm{x},t)&=\frac{e}{4\pi\epsilon_{0}}\left\{\left[ \frac{\boldsymbol{n}-\boldsymbol{\beta}}{\gamma^{2}(1-\boldsymbol{\beta}\cdot \boldsymbol{n})^{3}R^{2}} \right]_\text{ret}+\left[ \frac{\boldsymbol{n}\times((\boldsymbol{n}-\boldsymbol{\beta})\times \dot{\boldsymbol{\beta}})}{c(1-\boldsymbol{\beta}\cdot \boldsymbol{n})^{3}R} \right]_\text{ret}\right\} \\ \bm{B}(\bm{x},t)&=\frac{1}{c}[\boldsymbol{n}\times \boldsymbol{E}]_\text{ret}\end{aligned}$$
 - The first term for the fields gives the _velocity fields_, which are _dependent on acceleration_
 - They are _static_, and _do not radiate_
 - For a charge with _uniform velocity_, it reproduces the field for [[#A uniformly moving charge]]
@@ -1341,9 +1364,10 @@ $$\begin{aligned}\bm{E}(\bm{x},t)&= \\ \bm{B}(\bm{x},t)&=\end{aligned}$$
 
 ### Larmor and Lienart formulae
 - Consider an _accelerating_ charge in the _non-relativistic_ limit, the _acceleration field_ is:
-$$\bm{E}_a=$$
-- The _power radiated per solid angle_:
-
+$$\bm{E}_a=\frac{r}{4\pi\epsilon_{0}c}\left[ \frac{\boldsymbol{n}\times(\boldsymbol{n}\times\dot{\boldsymbol{\beta}})}{R} \right]_\text{ret}$$
+- The _power radiated per solid angle_, from $\boldsymbol{N}=(1/\mu_{0}c)|\boldsymbol{E}_{a}|^{2}\boldsymbol{n}$
+	- $\theta$ is the angle _between_ the acceleration $\dot{\boldsymbol{v}}$ and $\boldsymbol{n}$
+$$\frac{dP}{d\Omega}=\frac{1}{\mu_{0}c}|R\boldsymbol{E}_{a}|^{2}=\frac{e^{2}}{16\pi^{2}\epsilon_{0}^{2}\mu_{0}c^{3}}=\frac{\mu_{0}e^{2}}{16\pi^{2}c}|\dot{\boldsymbol{v}}|\sin^{2}\theta$$
 - The _total radiated power_ is then given by the _Larmor formula_:
 $$P=\frac{\mu_0e^2}{6\pi c}|\dot{\bm{v}}|^2$$
 - This can be interpreted as an _electric dipole_ with $p=ez$
@@ -1356,7 +1380,8 @@ $$P=\frac{\mu_0e^2}{6\pi c}|\dot{\bm{v}}|^2$$
 - From invariance of the inner product, $-\alpha^2=A^\mu A_\mu$
 - The _relativistic Larmor formula/Lienart formula_ is then:
 $$P=\frac{\mu_0e^2}{6\pi c}|\alpha|^2$$
-
+- In terms of the _acceleration_ $\boldsymbol{a}$ in frame $S$, with components _parallel_ and _perpendicular_ to velocity $\boldsymbol{u}$:
+$$P=\frac{\mu_{0}e^{2}}{6\pi c}(\gamma^{6}a_{||}^{2}+\gamma^{4}a_{\perp}^{2})$$
 ## Circular motion
 - Consider a particle moving in a _unifrm magnetic field_:
 $$\frac{d\bm{p}}{dt}=\frac{d(\gamma_um\bm{u})}{dt}=e(\bm{u}\times\bm{B})$$
@@ -1377,12 +1402,12 @@ $$P=\frac{\mu_0e^4\gamma^2B^2v^2}{6\pi cm^2}$$
 - For $v\ll c$, $\gamma\to1$, and the motion is _non-relativistic circular motion_:
 $$\lambda=\frac{2\pi c}{\omega_B}\gg\frac{v}{\omega_B}=R$$
 - Therefore, the [[#The Hertzian electric dipole|dipole approximation]] _applies_
-- It can be considered a _superposition of two perpendicular Hertzian dipoles_:
-$$\bm{p}(t)=$$
+- It can be considered a _superposition of two perpendicular Hertzian dipoles_ with $p_{0}=eR$
+$$\bm{p}(t)=\hat{x}p_{0}\cos(\omega_{B}t)+\hat{y}p_{0}\sin(\omega_{B}t)$$
 - One expects _monochromatic_ radiation at angular frequency $\omega_B$
 
 - As they are _quadrature in phase_, the _time-averaged Poynting fluxes add_:
-$$\mean{P}=$$
+$$\mean{P}=2\left( \frac{\omega_{B}^{4}p_{0}^{2}}{12\pi\epsilon_{0}c^{3}} \right)$$
 
 - The _polarisation_ of the radiation depeneds on the _direction of emission_
 	- In the _equatorial plane_, only

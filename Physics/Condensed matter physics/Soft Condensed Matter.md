@@ -714,7 +714,7 @@ $$P(R)=G(\boldsymbol{R},N)=\left( \frac{3}{2\pi Nb^{2}} \right)^{3/2}\exp\left[ 
 ### Segment correlation in an ideal chain
 - Two random beads _within_ a polymer are typically _correlated as if they are the two ends_ of a shorter polymer
 - Define a _correlation function_ using the _Gaussian statistics_ of the ideal chain:
-$$G(\boldsymbol{r}_{m}-\boldsymbol{r}_{n},m-n)=\left[ \frac{3}{2\pi|m-n|b^{2}} \right]^{3/2}\exp\left[ -\frac{3}{2} \frac{|\boldsymbol{r}_{0}-\boldsymbol{r}_{N}|^{2}}{|m-n|b^{2}} \right]$$
+$$G(\boldsymbol{r}_{m}-\boldsymbol{r}_{n},m-n)=\left[ \frac{3}{2\pi|m-n|b^{2}} \right]^{3/2}\exp\left[ -\frac{3}{2} \frac{|\boldsymbol{r}_{m}-\boldsymbol{r}_{n}|^{2}}{|m-n|b^{2}} \right]$$
 - It is the _probability density_ for $\boldsymbol{r}_{n}$ for a _given_ $\boldsymbol{r}_{m}$
 - As expected, it _convolves_, indicating the _joining_ of two chains
 $$\int G(\boldsymbol{r}_{m}-\boldsymbol{r}_{k},m-k)G(\boldsymbol{r}_{k}-\boldsymbol{r}_{n},k-n) \, d^{3}\boldsymbol{r}_{k}=G(\boldsymbol{r}_{m}-\boldsymbol{r}_{n},m-n) $$
@@ -791,6 +791,7 @@ $$P \propto \exp\left[ -\frac{(\Delta N)^{2}}{2N} \right]\propto \exp\left[ -\fr
 - This is the _excluded volume interaction_
 - It is an _entropic effect_ as there are _fewer sites available_
 
+#### Scaling
 - The repulsion term goes like $V\Phi^{2} \propto N^{2}/V$
 	- Typically _stronger_ when there is a smaller [[#Semi-flexible polymers|persistence length]]
 - The free energy:
@@ -800,6 +801,9 @@ $$R^{5} \sim \nu b_{0}^{2}N^{3}$$
 - For an excluded volume interaction, $\nu\sim b_{0}^{3}$, giving:
 $$R \sim b_{0}N^{3/5}$$
 - This gives the scaling relation for the _swollen chain_
+
+#### Reduction in entropy
+
 ### Polymer melt
 - Let the _solvent_ be another polymer of _identical polymer_, with different _degree of polymerisation_
 $$f\approx k_{B}T\left[ \frac{\Phi}{N}\ln \Phi+\frac{1}{2}\Phi^{2}\left( \frac{1}{N_{2}}-2\chi \right)+\frac{\Phi^{3}}{6} \right]$$
@@ -872,7 +876,7 @@ $$v(T)=b_{0}^{3}(1-2\chi)$$
 
 - At the onset, the _overall concentration_ is roughly equal to _concentration of segments in a single polymer_ (in a good solvent):
 $$\Phi^{*}\sim \frac{Nb_{0}^{3}}{(\sqrt{ R^{2} })^{3}}\sim N^{-4/5}$$
-
+### Summary of scaling relations
 ## Polymer applications
 
 ### Brushes

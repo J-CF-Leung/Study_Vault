@@ -921,7 +921,7 @@ $$A^\mu=\frac{D^2}{Dt^2}S^\mu=\tenscom{R}{\mu}{\nu\rho\sigma}T^\nu T^\rho S^\sig
 - Consider free-falling particles along geodesics $\bar{x}^\mu(\tau)$ and $x^\mu(\tau)$
 - The _connecting vector_ is then:
 $$S^\mu(\tau)=\bar{x}^\mu(\tau)-x^\mu(\tau)$$
-- One can derive the _tidal tensor_:
+- One can derive the _tidal tensor_ from the equation for $A^{\mu}$:
 $$\displaylines{A^\mu=\tenscom{S}{\mu}{\sigma}S^\sigma \\ \tenscom{S}{\mu}{\sigma}=\tenscom{R}{\mu}{\nu\rho\sigma}T^\nu T^\rho=\tenscom{R}{\mu}{\nu\rho\sigma}u^\nu u^\rho}$$
 - The _tangent vectors_ $T^\mu$ are the _4-velocities_ $u^\mu$
 
@@ -1260,7 +1260,7 @@ $$1+z_{\infty}=\left( 1-\frac{2GM}{r_{1}} \right)^{-1/2}$$
 $$\frac{\nu_{R}}{\nu_{E}}=\sqrt{ \frac{g_{00}(E)}{g_{00}(R)} }$$
 
 # Schwarzchild black holes
-- The Schwarzchild metric shows _singular behaciour_ at $r=0$ and $r=2GM$
+- The Schwarzchild metric shows _singular behaviour_ at $r=0$ and $r=2GM$
 - The presence of singularities could be _coordinate-dependent_
 
 - From Einstein's equation, $R_{\mu \nu}=0$ and hence the Ricci scalar $R=0$
