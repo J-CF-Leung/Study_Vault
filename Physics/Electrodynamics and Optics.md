@@ -446,7 +446,7 @@ $$\displaylines{f(t)\sim \cos(\omega t+\alpha) \\ F(\omega)\propto \exp(i\alpha)
 	$$2.36\sigma=2.36\,\omega_0\left(\frac{k_BT}{mc^2}\right)^{1/2}$$
 	- The _width scales with temperature_
 
-- _Pressire_ broadening:
+- _Pressure_ broadening:
 	- Atoms are subject to _collisions_ with other atoms
 	- This _perturbs_ the _phase correlation_
 	- The _mean time_ $\tau_1$ is:
@@ -843,11 +843,11 @@ $$\int[\bm{J}]\,dV'=\dot{q}(t-r/c)d\,\hat{\bm{z}}=[\dot{\bm{p}}]$$
 - This gives the potential:
 $$\bm{A}(\bm{r},t)=\frac{\mu_0}{4\pi r}[\dot{\bm{p}}]=A\hat{z}$$
 - Decomposing $\bm{A}$ into _components in polar coordinates_, and using $\bm{B}=\nabla\times\bm{A}$:
-$$\displaylines{B_r=B_\phi=0 \\ B_\phi=-\sin\theta\pd{A}{r}=\frac{\mu_0}{4\pi}\sin\theta\left(\frac{[\dot{p}]}{r^2}+\frac{[\ddot{p}]}{rc}\right)}$$
+$$\displaylines{B_r=B_{\theta}=0 \\ B_\phi=-\sin\theta\pd{A}{r}=\frac{\mu_0}{4\pi}\sin\theta\left(\frac{[\dot{p}]}{r^2}+\frac{[\ddot{p}]}{rc}\right)}$$
 ### Electric field
 - The _scalar potential_:
 $$\begin{aligned}\phi&=\frac{1}{4\pi\epsilon_0}\left[\frac{q(t-r_+/c)}{r_+}-\frac{q(t-r_-/c)}{r_-}\right] \\ &=\frac{1}{4\pi\epsilon_0}(r_+-r_-)\pd{}{r}\left[\frac{q(t-r/c)}{r}\right]\end{aligned}$$
-- Writing the distance $r_+-r_-$ as $d\cos\theta$ and doing the derivative:
+- Writing the distance $r_+-r_-$ as $-d\cos\theta$ and doing the derivative:
 $$\phi=\frac{\cos\theta}{4\pi\epsilon_0}\left\{\frac{[p]}{r^2}+\frac{[\dot{p}]}{rc}\right\}$$
 - Calculating the _components_ by $\bm{E}=-\dot{\bm{A}}-\grad\phi$:
 $$\displaylines{E_\phi=0\\ E_r=\frac{2\cos\theta}{4\pi\epsilon_0}\left\{\frac{[p]}{r^{3}}+\frac{[\dot{p}]}{r^{2}c}\right\} \\ E_\theta=\frac{\sin\theta}{4\pi\epsilon_0}\left\{\frac{[p]}{r^{3}}+\frac{[\dot{p}]}{r^{2}c}+\frac{[\ddot{p}]}{rc^{2}}\right\}}$$
@@ -1007,19 +1007,22 @@ $$A_\text{eff}(\theta,\phi)=\frac{\lambda^2}{4\pi}G(\theta,\phi)$$
 
 - Consider _any antenna_ with a _matched load_ $R_r$, all in _thermal equilibrium_ at temperature $T$, in a _black-body_ environment with radiation _energy density_ $U(\nu)$
 - For $h\nu\ll k_BT$, it is given by the [[Thermal Radiation|Rayleigh-Jeans formula]]
-- The antenna only responds to _one polarisation_
+$$U(\nu)=\frac{8\pi \nu^{2}}{c^{3}}k_{B}T$$
+- The antenna only responds to _one polarisation_, which _halves_ $U(\nu)$
 
-- The _effective incident energy flux_
+- The _effective incident energy flux_ in range $\nu\to \nu+d\nu$
+$$dW=\frac{1}{2}cU(\nu)d\nu \frac{d\Omega}{4\pi}=\frac{\nu^{2}}{c^{2}}k_{B}Td\Omega d\nu$$
 
-- The _power dissipated_ is
+- The _power dissipated_ in the _matched load_, after _absorption_ by the antenna:
+$$P_\text{abs}=A_\text{eff}(\theta,\phi)\,dW$$
 
 - Thermal equilibrium requires that there is a _compensating backflow_ of _power_ into space
 	- Must apply for _all directions_
 - This arises from _Johnson noise_, given by the _Nyquist formula_
-
-- Equating the powers:
-
-- This gives:
+$$\langle V^{2} \rangle =4k_{B}TR_{r}\,d\nu \implies \langle I^{2} \rangle =\frac{k_{B}T}{R_{r}}d\nu  $$
+- Definition of power gain:
+$$P_\text{rad}=\left\langle  I^{2}  \right\rangle\,R_{r}\,\frac{G(\theta,\phi)d\Omega}{4\pi} $$
+- _Equating_ the powers, this gives:
 $$A_\text{eff}(\theta,\phi)=\frac{\lambda^2}{4\pi}G(\theta,\phi)$$
 - This is _independent of antenna construction_
 - A high _radiative efficiency_ will give a high _detection sensitivity_
@@ -1167,6 +1170,7 @@ $$\begin{aligned}\partial_\alpha A^\alpha&=\pd{A^0}{x^0}+\nabla\cdot\bm{A}  \\ \
 
 ## The 4-current
 - From experiment, the _total charge_ in some _region_ of space-time is _Lorentz invariant_
+	- Proof: atoms remain _neutral_
 - Given some region, with _charge density_ $\rho_0$ in its _instantaneous rest frame_
 
 - Define the _4-current_:

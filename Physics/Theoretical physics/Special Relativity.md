@@ -514,6 +514,8 @@ $$F'^{\mu\nu}=\tenscom{\Lambda}{\mu'}{\mu}\tenscom{\Lambda}{\nu'}{\nu}F^{\mu\nu}
 $$\frac{Dp^\mu}{D\tau}=qF^{\mu\nu}u_\nu$$
 - Writing out the components from above recreates the _classical result_
 
+- The _Lorentz invariant quantities_ are:
+$$\boldsymbol{E}^{2}-\boldsymbol{B}^{2}\propto F_{\mu \nu}F^{\mu \nu}\hspace{1.5cm}\boldsymbol{E}\cdot \boldsymbol{B}\propto\epsilon_{\mu \nu \rho\sigma}F^{\mu \nu}F^{\rho\sigma}$$
 ## Maxwell's equations
 - The _antisymmetry_ of the field tensor can also be presented as:
 $$\displaylines{\partial_\mu F_{\nu\lambda}+\partial_\nu F_{\lambda\mu}+\partial_\lambda F_{\mu\nu}=0 \\ \partial_{[\mu}F_{\nu\lambda]}=0}$$

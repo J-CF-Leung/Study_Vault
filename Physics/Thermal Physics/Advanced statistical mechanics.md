@@ -1291,8 +1291,10 @@ $$\Delta F=a(T-T_c)\rho^2-c\rho^4+d\rho^6$$
 
 ## Ising model
 
-
 ### Mean-field approximation
+$$H=-m_{0}B\sum_{i}\sigma_{i}-J\sum_{<ij>}\sigma_{i}\sigma_{j}$$
+- Mean field:
+$$H=-m_{0}B\sum_{i}\sigma_{i}-J\sum_{<ij>}(\braket{ \sigma } +\delta\sigma_{i})(\braket{ \sigma } +\delta\sigma_{j})$$
 ### Critical behaviour
 
 # Fluctuations

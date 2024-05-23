@@ -891,38 +891,48 @@ $$R_{\rho\sigma \mu \nu}=\frac{R}{n(n-1)}(g_{\rho \mu}g_{\sigma \nu}-g_{\rho \nu
 - Consider a _family of geodesics_ $\gamma_s(t)$, each parametrised by an _affine parameter_ $t$, and _labelled_ by $s\in \mathbb{R}$
 - They then define a _smooth, two-dimensional surface_, with _coordinates_ $x^\mu(s,t)$ as long as the geodesics _do not cross_
 
+### Deviations
 - From their definition, _all geodesics_ must [[#Geodesics, proper time, and affine parameters|satisfy]]:
-$$\frac{D}{Dt}\pd{x^\mu}{t}=0$$
+$$\frac{D}{D\tau}\pd{x^\mu}{\tau}=0$$
 
 - The _tangent vectors_ to each geodesic:
-$$T^\mu=\pd{x^\mu}{t}$$
+$$T^\mu=\pd{x^\mu}{\tau}$$
 - One can also define a _deviation vector_:
-$$S^\mu=\pd{x^\mu}{s}$$
+$$\xi^\mu=\pd{x^\mu}{s}$$
 ![[Geodesic deviation.png]]
 
 - Define a _relative velocity_ of geodesics:
-$$V^\mu=\frac{D}{Dt}S^\mu=T^\rho\nabla_\rho S^\mu$$
+$$V^\mu=\frac{D}{D\tau}\xi^\mu=T^\rho\nabla_\rho \xi^\mu$$
 - One then defines a _relative accleration_:
-$$A^\mu=\frac{D}{Dt}V^\mu=T^\rho\nabla_\rho V^\mu$$
+$$A^\mu=\frac{D}{D\tau}V^\mu=T^\rho\nabla_\rho V^\mu$$
 
-- As $S^\mu$ and $T^\mu$ are the _basis vectors_ for the surface:
-$$[S,T]=0\Longrightarrow S^\rho\nabla_\rho T^\mu=T^\rho\nabla_\rho S^\mu$$
-
+### Geodesic deviation equation
+- As $\xi^\mu$ and $T^\mu$ are the _basis vectors_ for the surface:
+$$[\xi,T]=0\Longrightarrow \xi^\rho\nabla_\rho T^\mu=T^\rho\nabla_\rho \xi^\mu$$
 - By using definitions of the [[#The Riemann curvature tensor|curvature tensor]] and [[#Geodesics, proper time, and affine parameters|geodesics]], one can derive:
-$$A^\mu=\frac{D^2}{Dt^2}S^\mu=\tenscom{R}{\mu}{\nu\rho\sigma}T^\nu T^\rho S^\sigma$$
+$$A^\mu=\frac{D^2}{D\tau^2}\xi^\mu=\tenscom{R}{\mu}{\nu\rho\sigma}T^\nu T^\rho \xi^\sigma$$
 
 - The _relative acceleration_ is then _proportional to the curvature_
 
 - This gives the _geodesic deviation_
 
+- _Alternatively_, write let the geodesics $\mathcal{C}$ and $\bar{\mathcal{C}}$ be given by $x(\tau)$ and $\bar{x}(\tau)$, _infinitesimally_ close to each other, defining the _deviation_ $\xi$:
+$$\xi^{\mu}(\tau)=\bar{x}^{\mu}(\tau)-x^{\mu}(\tau)$$
+- They must _obey_ the _geodesic equations_ along their own paths:
+	- $\bar{\Gamma}$ is a Christoffel symbol _evaluated_ along $\bar{x}^{\mu}(\tau)$
+$$\frac{d^{2}x^{\mu}}{d\tau^{2}}+\Gamma^{\mu}_{\nu\lambda} \frac{dx^{\nu}}{d\tau} \frac{dx^{\lambda}}{d\tau}=0\hspace{1.5cm}\frac{d^{2}\bar{x}^{\mu}}{d\tau^{2}}+\bar{\Gamma}^{\mu}_{\nu\lambda} \frac{d\bar{x}^{\nu}}{d\tau} \frac{d\bar{x}^{\lambda}}{d\tau}=0$$
+- From this, taking the _difference_ of the equations and _expanding_ $\bar{\Gamma}$ to _first order_ in $\xi$
+$$\frac{d^{2}\xi^{\mu}}{d\tau^{2}}+2\Gamma^{\mu}_{\nu\lambda} \frac{dx^{\nu}}{d\tau} \frac{dx^{\lambda}}{d\tau}+(\partial_{\rho}\Gamma^{\mu}_{\nu\lambda}) \frac{dx^{\nu}}{d\tau} \frac{dx^{\lambda}}{d\tau}\xi^{\rho}=0$$
+- Then, _evalutating_ $A^{\mu}$, _substituting_ the geodesic equation gives the same answer as above:
+$$A^\mu=\frac{D^2}{D\tau^2}\xi^\mu=\tenscom{R}{\mu}{\nu\rho\sigma} \frac{dx^{\nu}}{d\tau} \frac{dx^\rho}{d\tau} \xi^\sigma$$
 ### Tidal effects
 - The geodesic deviation describes _relative acceleration of neighbouring free-falling particles_, due to _tidal effects_
 
 - Consider free-falling particles along geodesics $\bar{x}^\mu(\tau)$ and $x^\mu(\tau)$
 - The _connecting vector_ is then:
-$$S^\mu(\tau)=\bar{x}^\mu(\tau)-x^\mu(\tau)$$
+$$\xi^\mu(\tau)=\bar{x}^\mu(\tau)-x^\mu(\tau)$$
 - One can derive the _tidal tensor_ from the equation for $A^{\mu}$:
-$$\displaylines{A^\mu=\tenscom{S}{\mu}{\sigma}S^\sigma \\ \tenscom{S}{\mu}{\sigma}=\tenscom{R}{\mu}{\nu\rho\sigma}T^\nu T^\rho=\tenscom{R}{\mu}{\nu\rho\sigma}u^\nu u^\rho}$$
+$$\displaylines{A^\mu=\tenscom{S}{\mu}{\sigma}\xi^\sigma \\ \tenscom{S}{\mu}{\sigma}=\tenscom{R}{\mu}{\nu\rho\sigma}T^\nu T^\rho=\tenscom{R}{\mu}{\nu\rho\sigma}u^\nu u^\rho}$$
 - The _tangent vectors_ $T^\mu$ are the _4-velocities_ $u^\mu$
 
 - The tidal tensor $S_{\mu\nu}$ is _symmetric_
@@ -1255,7 +1265,7 @@ $$1+z_{\infty}=\left( 1-\frac{2GM}{r_{1}} \right)^{-1/2}$$
 - It _tends to infinity_ (it is _infinitely stretched out_) as $r_1\to2GM$
 
 - This can _generalise to any time-independent metric_
-	- The Killing vector for energy still leads to a conservation
+	- The Killing vector for energy still leads to _a conservation_
 - The formula is generalised to:
 $$\frac{\nu_{R}}{\nu_{E}}=\sqrt{ \frac{g_{00}(E)}{g_{00}(R)} }$$
 
@@ -1373,7 +1383,7 @@ $$\frac{dv}{dr}=0\hspace{1.5cm} \frac{dv}{dr}=\frac{2}{1-2GM /r}$$
 
 
 - _Alternatively_, define the coordinate $t^{*}$:
-$$\displaylines{t^{*}=v-r \\ ds^{2}=\left( 1-\frac{2GM}{r} \right){dt^{*}}^{2}-\frac{4GM}{r}dt^{*}dr-\left( 1+\frac{2GM}{r} \right)dr^{2}-r^{2}d\Omega^{2}}$$
+$$\displaylines{t^{*}=v-r=t+2GM\ln\left|\frac{r}{2GM}-1\right| \\ ds^{2}=\left( 1-\frac{2GM}{r} \right){dt^{*}}^{2}-\frac{4GM}{r}dt^{*}dr-\left( 1+\frac{2GM}{r} \right)dr^{2}-r^{2}d\Omega^{2}}$$
 ![[Ingoing Eddington-Finkelstein 1.png]]
 
 - If a photon is _outgoing_, they still appear to _originate_ from $t=-\infty$
