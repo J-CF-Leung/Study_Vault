@@ -134,7 +134,7 @@ $$\psi(\bm{r})=\exp(ik_xx)\chi(y)$$
 - Assuming that the _extent_ of $\chi$ is much _smaller_ than $L_y$:
 $$|y_0|<\frac{L_y}{2}\Longrightarrow |k_x|<\frac{eBL_y}{2\hbar}$$
 - Hence the _number of available states per Landau level_ is:
-$$N_L=\frac{2|k_{x,\text{max}}|}{\pi/L_x}=\frac{2eBh}{h}=\frac{2\Phi}{\Phi_0}$$
+$$N_L=\frac{2|k_{x,\text{max}}|}{\pi/L_x}=\frac{2eBh}{h}L_{x}L_{y}=\frac{2\Phi}{\Phi_0}$$
 - where $\Phi_0$ is the [[#The Aharanov-Bohm Effect|flux quantum]]
 - Hence, the _number of states per unit area per level_ is $n=2B/\Phi_0$
 - Each Landau level is _highly degenerate_

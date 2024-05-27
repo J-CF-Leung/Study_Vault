@@ -12,7 +12,7 @@ $$\ket{\psi} =\sum_{j}c_{j}(t)\exp(-i\omega_{j}t)\ket{j} $$
 $$i\hbar \frac{dc_{j}}{dt}=\sum_{k}c_{k}(t)\exp[i(\omega_{j}-\omega_{k})t]H'_{jk}(t)$$
 - Here, $H'_{jk}$ are the _matrix elements_ of the perturbation:
 $$H'_{jk}(t)=\braket{ j|\hat{H}'(t) | k } $$
-
+ 
 ## Harmonic perturbations in two-state systems
 - Let there be _two eigenstates_ of the unperturbed Hamiltonian $\hat{H}_{0}$, with some _energy difference_ $E_{2}-E_{1}=\hbar\omega_{0}$
 $$\displaylines{\hat{H}_{0}\ket{\psi_{i}}=E_{i}\ket{\psi_{i}} \hspace{1.5cm}i=1,2  \\ \omega_{0}=\omega_{2}-\omega_{1}}$$
@@ -85,7 +85,7 @@ $$\displaylines{\hat{H}(t)=-\hat{\boldsymbol{\mu}}\cdot \boldsymbol{B}=\hat{H}_{
 - Eigenstates of the _time-independent_ Hamiltonian:
 $$\displaylines{\ket{\psi_{1}}=\ket{\uparrow}\;,\;\ket{\psi_{2}}=\ket{\downarrow}  \hspace{1cm}E_{1}=-\frac{\hbar\gamma B_{z}}{2}\;\,\;E_{2}=\frac{\hbar\gamma B_{z}}{2} \\ \omega_{0}=\gamma B_{z}}$$
 
-- The constant $\omega'$:
+- The constant $\omega'$ (twice the Rabi frequency):
 $$\omega'=\frac{1}{\hbar}\braket{ \uparrow | \hat{H}'|\downarrow }=-\frac{\gamma B_{x}}{2\hbar}\Braket{ \uparrow|\hat{S}_{+} +\hat{S}_{-} | \downarrow }=-\frac{\gamma B_{x}}{2}  $$
 
 - The _resonant transitions_ occur at

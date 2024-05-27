@@ -1,4 +1,3 @@
-- [x] Instabilities ⏫ 📅 2024-04-06 ✅ 2024-05-14
 - A fluid is a _flowing continuous medium_
 - It has well-defined _macroscopic properties_:
 $$\boldsymbol{v}(\boldsymbol{r},t),\rho(\boldsymbol{r},t),p(\boldsymbol{r},t)$$
@@ -611,7 +610,7 @@ $$\rho_{1}u_{1}^{2}+p_{1}=\rho_{2}u_{2}^{2}+p_{2}$$
 - For the conservation of _energy_, consider the _adiabatic_ case such that $\dot{Q}_\text{cool}=0$
 - Also take the _gravitational potential_ to have _no time dependence_, and $\Psi_{1}=\Psi_{2}$
 
-- Integrating the [[#Conservation of energy|energy equation]] then gives:
+- Integrating the [[#Conservation of energy|energy equation]] then gives that $(E+p)u$ is _constant_, hence:
 $$\frac{1}{2}u_{1}^{2}+\mathcal{E}_{1}+\frac{p_{1}}{\rho_{1}}=\frac{1}{2}u_{2}^{2}+\mathcal{E}_{2}+\frac{p_{2}}{\rho_{2}}$$
 - Kinetic energy is _converted_ into _enthalpy_
 ### Adiabatic ideal gas
@@ -993,7 +992,7 @@ $$N^{2}=\frac{g}{T} \left[ \frac{dT}{dz}-\left( 1-\frac{1}{\gamma} \right) \frac
 - The medium is _self-gravitating_
 
 - Introduce _perturbations_:
-	- $\rho_{0}$ and $\Psi_{0}$ being both _constant_ is _inconsistent_ (Jeans swindle) but more rigorous analyses give the same result
+	- The system initially having a _constant pressure_ $p_{0}$, leads to constant $\Psi_{0}$, implying that $\rho_{0}=0$, however taking all of them to be _non-zero_ (the (_Jeans swindle_) still yields correct results
 $$p+\Delta p,\rho+ \Delta \rho,\Delta \boldsymbol{u},\Psi+\Delta \Psi$$
 - _Linearise_ the fluid equations, and the Poisson equation:
 $$\displaylines{\frac{\partial(\Delta \rho)}{\partial t}+\rho_{0}\nabla\cdot(\Delta \boldsymbol{u})=0 \\ \frac{\partial(\Delta \boldsymbol{u})}{\partial t}=-\frac{dp}{d\rho} \frac{\nabla(\Delta \rho)}{\rho_{0}}-\nabla(\Delta \Psi)=-c_{s}^{2}\frac{\nabla(\Delta \rho)}{\rho_{0}}-\nabla(\Delta \Psi) \\ \nabla^{2}(\Delta \Psi)=4\pi G\Delta \rho}$$
@@ -1133,7 +1132,7 @@ $$q^{3}+A^{*}\rho_{0}^{\gamma}q^{2}+k^{2}\gamma \frac{p_{0}}{\rho_{0}} q-B^{*}k^
 - Using the ideal gas equation, the system is _unstable_ if it fulfills the _Field criterion_:
 	- Derived from $B^{*}>0$
 	- Necessary: _constant pressure_
-$$\frac{\partial \dot{Q}}{\partial T}\Bigg|_{p}<0$$
+$$\frac{\partial \dot{Q}_\text{cool}}{\partial T}\Bigg|_{p}<0$$
 - If _net cooling decreases_ for a _positive fluctuation_, the system is _unstable_
 	- Full analysis indicates only the change at _constant pressure_ is important
 - If the system is field unstable, _all modes_ $\boldsymbol{k}$ are unstable

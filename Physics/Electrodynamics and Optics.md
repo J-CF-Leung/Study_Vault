@@ -1,5 +1,3 @@
-- [ ] Antennae ⏫📅 2024-03-22 
-- [x] Wtf is spatial coherence anyway ⏫ 📅 2024-03-22 ✅ 2024-03-23
 # Electrodynamics and Maxwell's Equations
 
 ## Fields and charges
@@ -328,7 +326,7 @@ $$\Delta n=\lambda_0KE_0^2$$
 - Consider the fact that a _linearly_ polarised wave is a _sum_ of two circularly polarised waves:
 $$\bm{L}_x=\pmatrix{1\\0}=\frac{\bm{C}_L+\bm{C}_R}{\sqrt{2}}$$
 - The chiral plate of thickness $d$ then gives _additional phases_ of $\exp(i\omega n_{L/R}d/c)$
-- Defining $\Delta\phi=\omega(n_L-n_R)d/c$:
+- Defining $\Delta\phi=\omega(n_L-n_R)d/c$, $L_{x}$ will become:
 $$\bm{L}_x\longrightarrow\pmatrix{\cos(\Delta\phi/2)\\-\sin(\Delta\phi/2)}$$
 - This gives _another plane-polarised wave_, but rotated _clockwise_ 
 	- Looking _towards_ the source
@@ -683,8 +681,12 @@ $$w_c\sim\frac{\lambda}{\alpha}\sim5\times 10^{-5}\,\text{m}\hspace{1.5cm} l_c\s
 - These are _very small scales_ when compared to every day objects
 - Hence, one needs _filtered light_ to make measurements
 
-### Michelson interferometer
-
+### Michelson stellar interferometer
+- For _stars_, $\alpha$ is very _small_, so _measuring_ $V(\tau)$ is difficult as $w_{c}$ is up to several $\text{m}$
+- For a _large_ spacing between slits, there would be a _small fringe spacing_
+- From this, light is _collected_ using _far away movable mirrors_, with _fixed slits_
+![[Stellar interferometer.png]]
+- Visibility is measured as a _function_ of $D$ to produce _well-spaced fringes_ despite large $D$
 # Electrodynamics
 - A _conservative field_, such as the _electrostatic_ one, is described by a _scalar potential_ $\phi$:
 $$\bm{E}=-\nabla\phi$$
@@ -764,7 +766,7 @@ $$\bm{A}(\bm{r})=\frac{\mu_0}{4\pi}\left[\oint_L\frac{I}{2}\bm{r}'\times d\bm{r}
 - For a _planar loop_, the integral is $IS\hat{\bm{n}}$, where $S\hat{\bm{n}}$ is the _vector area_:
 $$\bm{m}=IS\hat{\bm{n}}$$
 - $\bm{m}$ is the _magnetic dipole_
-
+- This is _analagous_ to the _electric dipole_
 
 - Maxwell's equations feature _redundancy_:
 $$\displaylines{\div(\curl\bm{E})=-\div\dot{\bm{B}}=0}$$
@@ -892,7 +894,7 @@ $$P=\int\bm{N}\cdot d\bm{S}=\frac{\mu_0}{6\pi c}[\ddot{p}]^2$$
 	- All energy is simply _radiated outwards_
 
 - Taking _time averages_:
-$$\displaylines{\mean{N(r,\theta,\phi)}=\frac{\mu_0\omega^4p_0^2}{32\pi^2c}\frac{\sin^2\theta}{r^2} \\ \mean{P}=\frac{\mu_0\omega^4p_0^2}{12\pi c}=\frac{\omega^4p_0^2}{12\pi\epsilon_0c^3}}$$
+$$\displaylines{\mean{N(r,\theta,\phi)}=\frac{\mu_0\omega^4p_0^2}{32\pi^2c}\frac{\sin^2\theta}{r^2} \\ \mean{P}=\frac{\mu_0\omega^4p_0^2}{12\pi c}=\frac{\omega^4p_0^2}{12\pi\epsilon_0c^3}\propto\frac{\omega^{4}p_{0}^{2}}{\epsilon_{0}c^{3}}}$$
 
 ## Multipole expansion
 - Let there be some _system_ of _charges and currents sinusoidally varying in time_:
@@ -994,11 +996,13 @@ $$\langle P_\text{load} \rangle =  \frac{\langle E^{2} \rangle d^{2}\sin^{2}\the
 
 - This is the _same angular dependence as the power gain_
 - It is also _independent of dipole size_
-	- It is _much larger than the actual geometrical area_
+	- It is _much larger than the actual geometrical area_ $(A_\text{eff}\sim\lambda^{2}\gg d^{2})$
 
-- As the antenna _radiates_, a portion of the _incident power is re-radiated_
+- As the antenna _radiates_ due to current, a portion of the _incident power is re-radiated_
 ![[Dipole re-radiation.png]]
 - The _incident_ and _re-radiated_ fields can _interfere_, so the _Poynting flux turns back towards the antenna_, increasing its effective area
+- For a _matched load_, the _re-radiated power_ $\langle P_\text{rad} \rangle$ is:
+$$\langle P_\text{rad} \rangle = \langle P_\text{tot} \rangle -\langle P_\text{load} \rangle = \frac{\langle V^{2} \rangle}{2R_{r}}-\frac{\langle V^{2} \rangle}{4R_{r}}=\frac{\langle V^{2} \rangle}{4R_{r}}   $$
 
 ## Relation between effective area and power gain
 - From the results for the Hertzian dipole above:
@@ -1030,8 +1034,9 @@ $$A_\text{eff}(\theta,\phi)=\frac{\lambda^2}{4\pi}G(\theta,\phi)$$
 ## Centre-fed linear antenna
 - A _practical antenna_ has _finite size_
 
-- Example: an _open-ended_ transmission line, driven by an _oscillating voltage_
+- Example: an _open-ended_ transmission line, driven by an _oscillating voltage_ to create a _standing sinusoidal current wave_
 - There are then _current nodes/voltage antinodes_ at the _end_ of the line
+![[Open-ended transmission lines.png]]
 
 - In the _far-field_ case, $r\gg L$:
 $$\mean{N(r,\theta)}=\frac{\mu_{0}cI_{0}^{2}}{8\pi^{2}r^{2}\sin^{2}\theta}\left[ \cos\left( \frac{kL}{2} \right)-\cos\left( \frac{kL\cos\theta}{2} \right) \right]^{2}$$
@@ -1123,7 +1128,7 @@ $$\sigma_T=\frac{8\pi}{3}r_e^2$$
 - Light scattered by one particle can then be _incoherently scattered by another particle_
 - For a medium where particles have cross-section $\sigma$, mean _separation_ $d$, with _linear dimension_ $L$
 - The chance of a _single scattering event_:
-$$\frac{N\sigma}{L}\sim\frac{\sigma L}{d^3}$$
+$$\frac{N\sigma}{L^{2}}\sim\frac{\sigma L}{d^3}$$
 - When $\sigma L/d^3\ll1$, one can _ignore multiple scattering_
 
 - Let there be $N$ _identical scatterers_ at positions $\{\bm{r}_j\}$
@@ -1222,6 +1227,7 @@ $$\begin{aligned}\bm{E}_{||}'&=\bm{E}_{||} \hspace{3.5cm} \bm{B}_{||}'=\bm{B}_{|
 - The _positive charges_ give the _electrostatic force_:
 $$f_y^+=\frac{q}{2\pi\epsilon_0}\frac{neA}{r}$$
 - In the _instantaneous rest frame_ of the _charge carriers_, $\rho_x'=\rho_x/\gamma_v$
+	- Maintain _charge neutrality_ in $S$
 - Force from the _negative charges_:
 $$(f_y^-)'=-\frac{1}{\gamma_v}\frac{q}{2\pi\epsilon_0}\frac{neA}{r}$$
 - Carrying a [[Special Relativity#Lorentz transformations|Lorentz transformation]]:
@@ -1320,7 +1326,7 @@ $$v>\frac{c}{\sqrt{\epsilon(\omega)}}$$
 
 - When the charge _abruptly decelerates_, for an observer _far away_, one still experiences _field as if from a uniformly moving charge_, from the position where it _would have been_
 - For a _near observer_, it emanates from the _true position_
-- Therefore, the field has a _transverse kink_
+- Therefore, the field has a _transverse kink_, corresponding to a _radiative field_
 
 - There is some _characteristic time_ $T=|\bm{u}|/|\bm{a}|$
 - This sets the _characteristic wavelength_ $\lambda\sim c|\bm{u}|/|\bm{a}|$
@@ -1387,16 +1393,20 @@ $$P=\frac{\mu_0e^2}{6\pi c}|\alpha|^2$$
 - In terms of the _acceleration_ $\boldsymbol{a}$ in frame $S$, with components _parallel_ and _perpendicular_ to velocity $\boldsymbol{u}$:
 $$P=\frac{\mu_{0}e^{2}}{6\pi c}(\gamma^{6}a_{||}^{2}+\gamma^{4}a_{\perp}^{2})$$
 ## Circular motion
-- Consider a particle moving in a _unifrm magnetic field_:
-$$\frac{d\bm{p}}{dt}=\frac{d(\gamma_um\bm{u})}{dt}=e(\bm{u}\times\bm{B})$$
+- Consider a particle moving in a _uniform magnetic field_ $\boldsymbol{B}=B\hat{z}$:
+$$\frac{d\bm{p}}{dt}=\frac{d(\gamma_um\bm{v})}{dt}=e(\bm{u}\times\bm{B})$$
 - The particle's _energy_ is _constant_
 - However, it must _radiate energy_
-	- Assume it is _small relative to kinetic energy_, or it is _maintained_ (e.g. particle accelerator)
+- Assume it is _small relative to kinetic energy_, or it is _maintained_ (e.g. particle accelerator)
+- Therefore, take $\gamma$ as _constant_:
+$$\gamma m\boldsymbol{\dot{v}}=eB\boldsymbol{v}\times \hat{z}$$
 
 - Taking $u_z=0$, one finds:
 $$\omega_B=\frac{eB}{\gamma m}$$
 - With _radial acceleration_:
+	- In lab frame, it is _circular_ and hence _oscillatory_, but it is _continuous_ in the IRF
 $$a_\perp=\frac{evB}{\gamma m}$$
+- The _orbital radius_ is $R=v/\omega_{B}$
 - Substituting into the Lienard formula:
 $$P=\frac{\mu_0e^4\gamma^2B^2v^2}{6\pi cm^2}$$
 - The radiation is _not necessarily harmonic_
@@ -1411,32 +1421,36 @@ $$\bm{p}(t)=\hat{x}p_{0}\cos(\omega_{B}t)+\hat{y}p_{0}\sin(\omega_{B}t)$$
 - One expects _monochromatic_ radiation at angular frequency $\omega_B$
 
 - As they are _quadrature in phase_, the _time-averaged Poynting fluxes add_:
-$$\mean{P}=2\left( \frac{\omega_{B}^{4}p_{0}^{2}}{12\pi\epsilon_{0}c^{3}} \right)$$
+$$\mean{P}=2\left( \frac{\omega_{B}^{4}p_{0}^{2}}{12\pi\epsilon_{0}c^{3}} \right)=\frac{\omega_{B}^{2}e^{2}v^{2}}{6\pi\epsilon_{0}c^{3}}$$
 
 - The _polarisation_ of the radiation depeneds on the _direction of emission_
-	- In the _equatorial plane_, only
+	- In the _equatorial plane_, only _one component_ of the dipole is _active_, so the radiation is _plane polarised_
+	- In the _polar directions_, _both dipoles_ will contribute but be $\pi/2$ out of phase, hence be _circularly polarised_
+	- In general, it is _elliptically polarised_
 
 ### Synchotron radiation
 - For $v\to c$, $\gamma\gg1$, the motion is _highly relativistic_
 
-- The _characteristic wavelength_ is _much smaller_ than $R$, hence the _dipole approximation does not apply_
-- There is  _continuous chear_ in the field lines, hence there is a _continuum_ of frequencies
+- The _characteristic wavelength_ $\lambda_{s}$ is _much smaller_ than $R$, hence the _dipole approximation does not apply_
+$$\lambda_{s}\ll R\sim \frac{c}{\omega_{B}}$$
+- There is _continuous chear_ in the field lines, hence there is a _continuum_ of frequencies
 
 - The _instantaneous_ radiated power is still given by the Lienard formula
+$$P=\frac{\mu_{0}e^{2}|\alpha|^{2}}{6\pi c}$$
 
 - The $Oz$ axis is now taken as the _direction of the speed of the particle_:
 ![[synchotron geometry.png]]
-- The _angular distribution_ can be written as:
+- The _angular distribution_ in the _ultra-relativistic limit_, in the IRF can be written as:
 $$G(\theta',\phi')=1-\sin^2\theta'\cos^2\phi'$$
 - Maths
 
-- The _power radiated per unit angle_, in the _particle frame_:
-$$\frac{dP(t')}{d\Omega}=$$
+- The _power radiated per unit angle_, in the _particle's time_:
+$$\frac{dP(t')}{d\Omega}=\frac{e^{2}\mu_{0}c}{16\pi^{2}}\left[ \frac{|\boldsymbol{n}\times((\boldsymbol{n}-\boldsymbol{\beta})\times \boldsymbol{\dot{\beta}})|^{2}}{(1-\boldsymbol{\beta}\cdot \boldsymbol{n})^{5}} \right]_\text{ret}$$
 - The angular distribution is _dependent on the relative orientations_ of $\bm{\beta}$ and $\dot{\bm{\beta}}$
 - The _denominator_ results in a _strong forward focusing_ of the radiation in direction $\bm{n}||\bm{\beta}$
 
 - For _circular motion_, where $\bm{\beta}\perp\dot{\bm{\beta}}$ the formula above becomes:
-$$\frac{dP(t')}{d\Omega}=$$
+$$\frac{dP(t')}{d\Omega}=\frac{e^{2}\mu_{0}}{16\pi^{2}c} \frac{|\dot{v}|^{2}}{(1-\beta \cos\theta)^{3}}\left( 1-\frac{\sin^{2}\theta \cos^{2}\phi}{\gamma^{2}(1-\beta \cos\theta)^{2}} \right)$$
 ![[Synchotron radiation distribution.png]]
 
 - As $\beta$ increases, the power becomes _more confined in the forward direction_

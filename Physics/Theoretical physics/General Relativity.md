@@ -1165,9 +1165,11 @@ $$r_{c}=3GM$$
 
 - Only the _ratio_ $L/E$ matters, as only the _direction_ in which the photon points matters
 - The gravitational effect is _achromatic_
-	- One can simply _rescale_ the affine parameter
+	- One can simply _rescale_ the affine parameter for a different value of $k$
 - The ratio can be interpreted as the _impact parameter_ $b$
+$$b=\frac{L}{E}$$
 	- One can find $dr/d\phi$ from the conservation, then compare with the _straight-line path_ $r\sin\phi=b$ for large $r$
+	- See the [[#Shape equation]]
 
 #### Massive particle
 - For _massive_ particles, the circular orbits are at:
