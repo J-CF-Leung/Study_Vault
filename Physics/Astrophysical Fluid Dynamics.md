@@ -570,7 +570,17 @@ $$\Delta u=\frac{\Delta \rho}{\rho_{0}} \frac{\omega}{k}$$
 ## Sound transmission at interfaces
 - Consider two _non-dispersive media_ with a _boundary_ at $x=0$
 ![[Wave at boundary.png|450]]
-
+- The _frequencies_ must match:
+$$\omega_{1}=\omega_{2}=\omega_{3}=\omega$$
+- Reflected wave travels in the opposite direction:
+$$k_{3}=-k_{1}$$
+- From _continuity_ of the disturbance and the derivative:
+$$\displaylines{1+r=t \\ k_{1}(1-r)=k_{2}t}$$
+- From this:
+$$t=\frac{2k_{1}}{k_{1}+k_{2}}\hspace{1.5cm}r=\frac{k_{1}-k_{2}}{k_{1}+k_{2}}$$
+- If $c_{s,2}>c_{s,1}$, then the reflected wave is _in phase_ with the incident wave
+- If $c_{s,2}<c_{s,1}$, then the reflected wave has a $\pi$ phase shift
+- If $c_{s,2}\ll c_{s,1}$, then $k_{2}\gg k_{1}$, hence $t\ll 1$ and the wave is _almost completely reflected_
 ## Shocks
 - _Shocks_ occur when a fluid is _compressed by a large factor_, or when it is _accelerated_ to velocities comparable to, or _exceeding_ $v_{s}$
 - The _linear_ theory of sound waves then _breaks down_
@@ -582,10 +592,11 @@ $$\Delta u=\frac{\Delta \rho}{\rho_{0}} \frac{\omega}{k}$$
 - The arrival of the shock causes a _discontinuity_ in properties of the medium
 
 - The _Mach cone_
-
+![[Mach cone.png]]
 - Definition of the _Mach number_:
 $$M=\frac{v}{c_{s}}$$
-
+- Opening of Mach cone:
+$$\sin\alpha=\frac{1}{M}$$
 ## Rankine-Hugoniot jump conditions
 - Consider a fluid _entering a plane-parallel shock normally_
 	- _Pre-shock_: the gas is _supersonic_
@@ -620,6 +631,7 @@ $$\mathcal{E}=\frac{1}{\gamma-1} \frac{p}{\rho}\hspace{1.5cm} c_{s}=\frac{\gamma
 $$\frac{1}{2}u_{1}^{2}+\frac{c_{s,1}^{2}}{\gamma-1}= \frac{1}{2}u_{2}^{2} + \frac{c_{s,2}^{2}}{\gamma-1}$$
 - Using all relations gives:
 	- Strategy: set $\rho_{1}u_{1}=j$, substitute into RH2 to get $j^{2}$, then substitute into RH3
+	- Express $M_{1}$ in terms of $j,\rho_{1},c_{s,1}$ then use the first expression for $\rho_{2}/\rho_{1}$
 $$\displaylines{\frac{\rho_{2}}{\rho_{1}}=\frac{u_{1}}{u_{2}}=\frac{(\gamma+1)p_{2}+(\gamma-1)p_{1}}{(\gamma+1)p_{1}+(\gamma-1)p_{2}}=\frac{(\gamma+1)M_{1}^{2}}{(\gamma-1)M_{1}^{2}+2} \\ \frac{p_{2}}{p_{1}}= \frac{2\gamma M_{1}^{2}-(\gamma-1)}{\gamma+1}\\ \frac{T_{2}}{T_{1}}=\frac{((\gamma-1)M_{1}^{2}+2)(2\gamma M_{1}^{2}-(\gamma-1))}{(\gamma+1)^{2}M_{1}^{2}}}$$
 
 ### Strong shocks
@@ -746,12 +758,13 @@ $$100\text{ yrs}<t<10^{5}\text{ yrs}$$
 
 ### Breakdown of similarity solution
 - The solution _breaks down_ when pressure in the ambient ISM is _comparable to that of the shock shell_, $p_{0}\sim p_{1}$
+- From the jump conditions in strong shock:
 $$u_{0}\sim c_{s}$$
 - The blast wave _weakens_ into a _sound wave_
 ![[Supernova blast wave weakening.png]]
 
-$$ E\sim E_\text{init}$$
-- The blast wave propagates _until blast energy is comparable to energy in the sphere_
+$$ E\sim E_\text{init}=\frac{4\pi}{3}R_\text{max}^{3} \frac{p_{0}}{\gamma-1}$$
+- The blast wave propagates _until blast energy is comparable_ to the energy _already in the sphere_
 
 - The time needed to reach this state is roughly the _sound crossing time_:
 $$t_{s}\sim \frac{R_\text{max}}{c_{s}}$$
@@ -807,6 +820,8 @@ $$\frac{\partial \boldsymbol{w}}{\partial t}=\nabla\times(\boldsymbol{u}\times \
 
 - Derivation:
 ![[Circulation theorem derivation.png|350]]
+- The _change in area element_:
+$$\frac{D}{Dt}\delta \boldsymbol{S}=\oint\boldsymbol{u}\times d\boldsymbol{l}$$
 - _Kelvin's circulation theorem_:
 $$\frac{D}{Dt}\int \boldsymbol{w}\cdot \, d\boldsymbol{S}=0 $$
 - In other words, the _flux_ of vorticity is _conserved_, and _moves with the fluid_
@@ -841,7 +856,7 @@ $$\int \, \frac{dp}{\rho}=\frac{\mathcal{R}_{*}T}{\mu}\ln \rho=c_{s}^{2}\ln \rho
 
 - Suppose there is a _sonic transition_ at $A=A_{m}$ (a minimum/maximum), then the conservation of $H$ and $\dot{M}$ gives:
 $$u^{2}=c_{s}^{2}\left[ 1+2\ln\left( \frac{\rho|_{A_{m}}}{\rho} \right) \right]=c_{s}^{2}\left[ 1+2\ln\left( \frac{uA}{c_{s}A_{m}} \right) \right]$$
-- From this, for a nozzle of $A(z)$, _given_ $\dot{M}$ and $c_{s}$, the _flow_ $u(z)$ and _density profile_ $\rho(z)$ are _completely deternined_
+- From this, for a nozzle of $A(z)$, _given_ $\dot{M}$ and $c_{s}$, the _flow_ $u(z)$ and _density profile_ $\rho(z)$ are _completely determined_
 
 ### Polytropic gas
 - The general _polytropic equation of state_:
@@ -1043,7 +1058,7 @@ $$-\frac{\partial \phi }{\partial z}=\frac{\partial \xi}{\partial t}+U\frac{\par
 #### Pressure balance
 - There must be _pressure balance_ across the interface, with equality at $z=0$
 - Finding $p$ with the _integrated momentum equation_, quantities at $z=0$ satisfy:
-$$\displaylines{\rho\left( -\frac{\partial \phi}{\partial t}+\frac{u^{2}}{2}+g\xi \right)-\rho'\left( -\frac{\partial \phi '}{\partial t}+ \frac{u'^{2}}{2}+g\xi\right)=\rho F(t)-\rho'F'(t)}$$
+$$\displaylines{\rho\left( -\frac{\partial \phi}{\partial t}+\frac{u^{2}}{2}+g\xi \right)-\rho'\left( -\frac{\partial \phi '}{\partial t}+ \frac{u'^{2}}{2}+g\xi\right)\equiv\rho F(t)-\rho'F'(t)}$$
 
 - Perturbations _vanish_ for $|z|\to \infty$ at all times, and the RHS is a _function of time_, hence use the _unperturbed values_ for $\phi,u,\xi,\phi',u',\xi'$ to get:
 $$\rho F-\rho'F'=\frac{1}{2}\rho U^{2}-\frac{1}{2}\rho'U'^{2}$$
@@ -1114,7 +1129,6 @@ $$\frac{1}{K} \frac{DK}{Dt}=-(\gamma-1) \frac{\rho \dot{Q}}{p}$$
 
 ### Solutions
 - Linearise the equations
-
 $$\displaylines{\frac{\partial\Delta K}{\partial t}=-A^{*}\Delta p-B^{*}\Delta \rho \\ A^{*}=\frac{\gamma-1}{\rho_{0}^{\gamma-1}} \frac{\partial \dot{Q}}{\partial p}\Bigg|_{\rho}\hspace{1.5cm}B^{*}=\frac{\gamma-1}{\rho_{0}^{\gamma-1}} \frac{\partial \dot{Q}}{\partial \rho}\Bigg|_{p}}$$
 
 - Seek solutions of the form:
@@ -1326,6 +1340,7 @@ $$F_\text{diss}=\frac{3GM\dot{m}}{4\pi R^{3}}$$
 - From loss of gravitational energy loss in an annulus, there is a _factor of_ $3$ _missing_
 	- Factor from _transport of momentum by viscous torques_
 
+### Temperature profile
 - If the disk is _optically thick_, the radiation is _thermal_, and the disk is a _black-body_
 	- It radiates from both _top and bottom_
 $$2\sigma T_\text{eff}^{4}=F_\text{diss}$$
