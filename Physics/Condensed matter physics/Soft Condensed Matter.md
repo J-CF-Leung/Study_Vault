@@ -577,6 +577,7 @@ $$\tau_{k}=\frac{\gamma}{k}$$
 $$\frac{1}{2}k\left<x^{2}\right> = \frac{3k_{B}T}{2}$$
 
 - From the consideration of a [[Advanced statistical mechanics#Markov chains|Markov process]], the general _diffusion equation_:
+	- The [[Advanced statistical mechanics#Fokker-Planck from random walks|Fokker-Planck equation]]
 $$\partial_{t}c=D\nabla^{2}c+\frac{1}{\gamma}\nabla\cdot(c\nabla U)=-\nabla\cdot \boldsymbol{J}$$
 ### 1-dimensional potential barrier
 - Consider a system which is _metastable_ at $x=A$, separated by a barrier that _peaks_ at $P$, leading to _true equilibrium_ at $x=B$
@@ -684,7 +685,7 @@ $$\left<R^{2}\right>=\sum_{i=1}^{N}|\boldsymbol{U}_{i}|^{2}+2\sum_{i=1}^{N}\sum_
 $$\boldsymbol{U}_{i}=\frac{\boldsymbol{U}_{i}\cdot \boldsymbol{U}_{i+1}}{b_{0}^{2}}\boldsymbol{U}_{i+1}+\boldsymbol{U}_{i,\perp}=\cos\theta \boldsymbol{U}_{i+1}+\boldsymbol{U}_{i,\perp}$$
 - Then consider the _correlation_ to a monomer _two links away_:
 $$\left<\boldsymbol{U}_{i}\cdot \boldsymbol{U}_{i+2}\right>=\cos\theta \left<\boldsymbol{U}_{i+1}\cdot \boldsymbol{U}_{i+2}\right>+\left<\boldsymbol{U}_{i,\perp}\cdot \boldsymbol{U}_{i+2}\right>=b^{2}_{0}\cos^{2}\theta$$
-- The second term _vanishes_ due to free rotation of the second link
+- The second term _vanishes_ due to free rotation of the second link w.r.t. $i$
 - From _recursion_:
 $$\left<\boldsymbol{U}_{i}\cdot \boldsymbol{U}_{j}\right>=b_{0}^{2}(\cos\theta)^{|j-i|}$$
 - Therefore, approximating $N$ as _infinity_:
@@ -727,6 +728,7 @@ $$\left( \partial_{n}-\frac{b_{0}^{2}}{6}\nabla^{2} \right)G(\boldsymbol{r}_{m}-
 #### Persistence length
 - Let the polymer of _fixed length_ $l$ be described by some _curve_, with some _tangent angle_ $\theta$ at each point
 - The chain is said to retain _memory_ of how it bent before, up to a significant _persistence length_, defined as the _mean value_ of $\boldsymbol{R}$ over the _first segment_
+	- From later analysis, it is _half_ the Kuhn length
 $$l_{p}\equiv \left\langle  \boldsymbol{R}\cdot \frac{\boldsymbol{u}_{0}}{b_{0}} \right\rangle =b_{0}\sum(\cos\theta)^{i}=\frac{b_{0}}{1-\cos\theta}\approx \frac{2b_{0}}{\theta^{2}}$$
 - The _correlation_ between different segments $s_{1}$ and $s_{2}$ is then:
 $$\displaylines{(\cos\theta)^{m}\approx \left( 1-\frac{\theta^{2}}{2} \right)^{m}\approx \exp\left( -\frac{m\theta^{2}}{2} \right)\approx \exp\left( -\frac{mb_{0}}{l_{p}} \right) \\ \langle \boldsymbol{t}(s_{1})\cdot \boldsymbol{t}(s_{2}) \rangle\approx \exp\left( -\frac{|s_{1}-s_{2}|}{l_{p}} \right) }$$
@@ -803,22 +805,36 @@ $$R \sim b_{0}N^{3/5}$$
 - This gives the scaling relation for the _swollen chain_
 
 #### Reduction in entropy
+- The _excluded volume effect_ will lead to a _decrease in number of available configurations_
 
-### Polymer melt
-- Let the _solvent_ be another polymer of _identical polymer_, with different _degree of polymerisation_
-$$f\approx k_{B}T\left[ \frac{\Phi}{N}\ln \Phi+\frac{1}{2}\Phi^{2}\left( \frac{1}{N_{2}}-2\chi \right)+\frac{\Phi^{3}}{6} \right]$$
-- For _high_ $N_{2}$, and since they are the _same polymer_, $\chi\to 0$, the _second virial coefficient vanishes_
-- The $\theta$ point is _always reached_
-- As there is _no relative interaction_ between chain and "solvent", the excluded volume interaction is "screened"
+- Let there be a _lattice_ where each cell has the volume of a solute, $v$
+	- With _no excluded volume_, number of states $W_\text{id}=(V/v)^{N}/N!$
+	- With excluded volume, $W_\text{ex}=\pmatrix{V/v \\ N}$ 
+- Then comparing $S_\text{id}$ and $S_\text{ex}$:
+$$S_\text{ex}-S_\text{id}=-k_{B} \frac{N^{2}v}{V}$$
+- This then leads to the expression seen in the previous section
 
-### Variation of Flory parameter
-- Typically, the Flory parameter _increases with temperature_
-- At high temperature, there tends to be a _coil in solution_
-	- The _high entropy case_
-- The _coil to globule transition_ happens for a _decreasing temperature_
+### Coil-to-globule transition
+- The _swollen chain_ occurs when the _excluded volume parameter_ $v>0$
+- For an _attractive potential_ $\Phi_{ij}$, the total attractive energy is:
+	- $n(\boldsymbol{r})$ is the _local density_
+$$U=\frac{1}{2}\int  \, d^{3}r\,d^{3}r'\,n(\boldsymbol{r})n(\boldsymbol{r}')\Phi(\boldsymbol{r}-\boldsymbol{r}') $$
+- Within a _mean field_ theory, $n\approx N/R^{3}$
+$$U=\frac{1}{2}\left( \frac{N}{R^{3}} \right)^{2}\int  \, d^{3}(\boldsymbol{r}-\boldsymbol{r}')\,d^{3}\boldsymbol{r}\,\Phi(\boldsymbol{r}-\boldsymbol{r'})=-Van^{2} $$
+- $a$ is a _parameter_ determining the strength of the interaction
 
-- There are _temperature-responsive poiymers_, with _sharp coil-to-globule transitions_ at _high temperatures_
+- Also including the _excluded volume_ interaction:
+$$\displaylines{\frac{F_\text{int}}{V}=k_{B}Tv(T)n^{2} \\ v(T)=v_{0}-\frac{a}{k_{B}T}}$$
+- Introduce the _Flory parameter_:
+$$\displaylines{\chi(T)=\frac{1}{2}\left( 1- \frac{v(T)}{v_{0}} \right) \\ \frac{F_\text{int}}{V}=k_{B}Tv_{0}(1-2\chi(T))n^{2}}$$
 
+- At some _temperature_ $\theta=a/(v_{0}k_{B})$, the excluded volume interaction is _cancelled out_, and _ideal scaling_ $R\sim \sqrt{ N }$ is regained
+- Both $v_{0}$ and $a$ can be temperature-dependent, but often
+$$\chi\sim T^{-1}$$
+
+- For a _high temperature_ $(\chi<1/2)$, the polymer is _swollen_ and is said to be in a _good solvent_, with $R \sim N^{3/5}$
+- For a _low temperature_ $(\chi>1/2)$, the polymer is _collapsed_ into a _globule_, and is said to be in a _bad solvent_
+- As the polymer _collapses together_, $V\sim N$, hence $R\sim N^{1/3}$
 
 ### Flory-Huggins free energy
 - Let the _monomer fraction_ in the solution be $\Phi_{A}$, with $\Phi_{B}=1-\Phi_{A}$
@@ -838,18 +854,21 @@ $$\displaylines{\frac{E}{M}=\chi k_{B}T\Phi(1-\Phi) \\ \chi=\chi_{MS}-\frac{1}{2
 
 - The _free energy per lattice site upon mixing_ is then:
 	- Effectively the same as the formula for [[Advanced statistical mechanics#The binary mixture|binary mixtures]] but accounting for _polymerisation_
-$$f_\text{min}=\frac{F}{M}=k_{B}T\left[ \frac{\Phi}{N}\ln \Phi+(1-\Phi)\ln(1-\Phi)+\chi \Phi (1-\Phi) \right]$$
+$$f_\text{mix}=\frac{F}{M}=k_{B}T\left[ \frac{\Phi}{N}\ln \Phi+(1-\Phi)\ln(1-\Phi)+\chi \Phi (1-\Phi) \right]$$
 - For _small_ $\Phi$:
 $$f\approx k_{B}T\left[ \frac{\Phi}{N}\ln \Phi+(\chi-1)\Phi+\frac{1}{2}\Phi^{2}(1-2\chi)+\frac{\Phi^{3}}{6} \right]$$
 - The second term acts as a [[Advanced statistical mechanics#Virial expansion|second virial coefficient]]
 - The last term ensures _stability_
 
-- If $1-2\chi<0$, there is an _attractive force_, and there is a _coil to globule transition_, and:
-$$R \sim N^{1/3}$$
-- If $1-2\chi=0$ (the $\theta$ point), it is an _ideal chain_:
-$$R \sim N^{1/2}$$
-- If $1-2\chi>0$, there is a _swollen chain_ (the chain tends to be attracted to the _solvent_)
-$$R \sim N^{3/5}$$
+### Variation of Flory parameter
+- Typically, the Flory parameter _increases with temperature_
+$$\chi\sim T^{-1}$$
+- At high temperature, there tends to be a _coil in solution_
+	- The _high entropy case_
+- The _coil to globule transition_ happens for a _decreasing temperature_
+
+- There are _temperature-responsive poiymers_, with _sharp coil-to-globule transitions_ at _high temperatures_
+
 ### Osmotic pressure and chemical potential
 - The free energy above is _per lattice site_, with _volume fraction_ $\Phi=N_{A}/M$
 	- $M$: _number of_ lattice sites
@@ -863,36 +882,82 @@ $$\Pi=\frac{k_{B}T}{b_{0}^{3}}\left[ \frac{\Phi}{N}+ \frac{1}{2}(1-2\chi)\Phi^{2
 $$\mu=\frac{\partial F}{\partial N_{A}}=M\frac{\partial f}{\partial(M\Phi)}=\frac{\partial f}{\partial \Phi}$$
 - The osmotic pressure can then be written as:
 $$\Pi=-\frac{f-\Phi \mu}{b_{0}^{3}}$$
+### Virial expansion
 - In $\Pi$, the first term obeys the _ideal gas law_, while the latter term is the _second term_ of the [[Advanced statistical mechanics#Virial equation of state|virial expansion]]
 $$B_{2}=\frac{1}{2}(1-2\chi)$$
+
 - When $\chi=1/2$, the chain has _ideal behaviour_
 - The _excluded volume parameter_ can also be written as:
 $$v(T)=b_{0}^{3}(1-2\chi)$$
+- This resembles the parameter when considering [[#Coil-to-globule transition|polymer interactions]]
+- If $1-2\chi<0$, there is an _attractive force_, and there is a _coil to globule transition_, and:
+$$R \sim N^{1/3}$$
+- If $1-2\chi=0$ (the $\theta$ point), it is an _ideal chain_:
+$$R \sim N^{1/2}$$
+- If $1-2\chi>0$, there is a _swollen chain_ (the chain tends to be attracted to the _solvent_)
+$$R \sim N^{3/5}$$
+
+### Polymer melt
+- Let the _solvent_ be another polymer of _identical polymer_, with different _degree of polymerisation_
+- This _reduces_ the _translational entropy of the solvent_:
+$$\displaylines{\Delta S=k_{B}M\left[ \frac{\Phi}{N}\ln \Phi+\frac{1-\Phi}{N_{2}}\ln(1-\Phi) \right] \\ f\approx k_{B}T\left[ \frac{\Phi}{N}\ln \Phi+\frac{1}{2}\Phi^{2}\left( \frac{1}{N_{2}}-2\chi \right)+\frac{\Phi^{3}}{6} \right] \\ v=b_{0}^{3}\left( \frac{1}{N_{2}}-2\chi \right)}$$
+- As they are the _same polymer_, $\chi=0$
+
+- There is simply an _extra entropic term_ $v=b_{0}^{3}/N_{2}$, which _vanishes_ in the limit of a _long chain solvent_ $(N_{2}\gg 0)$
+
+- The $\theta$ point is then _always reached for long-chain polymer melts_
+- As there is _no relative interaction_ between chain and "solvent", the excluded volume interaction is "screened"
+	- The polymer _cannot distinguish_ between contacts with _itself_ and contacts with _surrounding chains_
+
 ### Semi-dilute solutions
 - For _low-concentration_ solutions, chains typically _do not overlap_
 	- They have an _effective radius_ which is _smaller_ than average distance between chains
 - At some concentration $c^{*}$, there is an _onset_ where chains start to _overlap_
-- Above that concentration, there is a _semi-diulute_ solution where chains start to _interact with each other_
-
-- At the onset, the _overall concentration_ is roughly equal to _concentration of segments in a single polymer_ (in a good solvent):
+- This is a _semi-dilute solution_
+![[Polymer overlap.png]]
+- At the onset of _overlap_, the _overall concentration_ is roughly equal to _concentration of segments in a single polymer_ (in a good solvent):
 $$\Phi^{*}\sim \frac{Nb_{0}^{3}}{(\sqrt{ R^{2} })^{3}}\sim N^{-4/5}$$
-### Summary of scaling relations
+### Phase diagram for polymers
+- Flory-Huggins free energy:
+$$f=\frac{F}{M}=k_{B}T\left[ \frac{\Phi}{N}\ln \Phi+(1-\Phi)\ln(1-\Phi)+\chi \Phi (1-\Phi) \right]$$
+- Investigate its _stability_ w.r.t. _phase separation_ into phases $\Phi'=\Phi+\delta \Phi$ and $\Phi''=\Phi-\delta \Phi$
+- Let both phases occupy _half_ of the lattice:
+$$\Delta F=M\left[ \frac{f(\Phi+\delta \Phi,\chi)+f(\Phi-\delta \Phi ,\chi)}{2}-f(\Phi,\chi) \right]$$
+- For some small change $\delta \Phi$, this yields:
+$$\Delta F=\frac{M}{2} \frac{\partial^{2}f(\Phi,\chi)}{\partial \Phi^{2}}\delta \Phi^{2}$$
+- For a _homogeneous solution_ to be _stable_, $\partial_{\Phi}^{2}f>0$
+
+- The _spinodal curve_ separates regions of _stability_, with the curve defined by:
+$$\frac{\partial^{2}f}{\partial \Phi^{2}}=0\implies \chi^{*}(\Phi)=\frac{1}{2}\left( \frac{1}{N\Phi}+\frac{1}{1-\Phi} \right)$$
+- For $\chi>\chi^{*}$, the solution is _unstable_, and the polymer _phase separates_
+	- It is a _bad solvent_ at that concentration
+	- Corresponds to _low temperature_
+
+- The spinodal has a _minimum_ in the $(\Phi,\chi)$ plane where _instability first emerges_ with increasing $\chi$
+- By minimising $\chi^{*}(\Phi)$:
+$$\Phi_{c}=\frac{1}{\sqrt{ N }+1}\hspace{1.5cm}\chi_{c}=\frac{1}{2}+\frac{1}{\sqrt{ N }}+\frac{1}{2N}\approx \frac{1}{2}+\frac{1}{\sqrt{ N }}$$
+- $T_{c}$ is the corresponding _critical temperature_
+- Depending on the _sign_ of the [[#Coil-to-globule transition|interaction parameter]], either _high_ or _low_ temperatures can be stable
+	- For most polymers, _high temperatures_ yield stable homogeneous solutions
+
 ## Polymer applications
+- Polymers can be _adsorbed_ onto surfaces
+	- A _temperature-dependent_ process
 
 ### Brushes
 - Let a surface be _grafted_ with polymers a spacing $D$ apart
 - The _grafting density_ is $\sigma=1/D^{2}$
 
-- The _mushroom_ regime has $D\gg R$, and they barely interact
+- The _mushroom_ regime has $D\gg R$, and they _barely interact_
 - If $D\sim R$, they start to _overlap_ and act roughly as in a _solution_, $D\sim R\sim b_{0}N^{3/5}$
 
-- For $D\ll R$, it is a polymer _brush_
+- For $D\ll R$, the chains interact, and are _stretched_, making a polymer _brush_
 - Let it be of height $h$
 - The [[#Entropy of the ideal chain|entropic]] part of the free energy scales as $h^{2}/(Nb_{0})$
 	- Due to _stretching_ of the polymer
 - From [[#Excluded volume interaction and swelling|excluded volume]], free energy scales as $b_{0}^{3}N^{2}/V=b_{0}^{3}N^{2}\sigma/h$
 - The _total free energy_:
-$$\displaylines{F=k_{B}T \frac{h^{2}}{b_{0}N}+k_{B}T \frac{b_{0}^{3}N^{2}\sigma}{h} \\ \frac{\partial F}{\partial h}=0 \implies h \sim (b_{0}^{5}\sigma)^{1/3}N}$$
+$$\displaylines{F=k_{B}T \frac{h^{2}}{b_{0}N}+k_{B}T \frac{b_{0}^{3}N^{2}\sigma}{h} \\ \frac{\partial F}{\partial h}=0 \implies \langle h \rangle  \sim (b_{0}^{5}\sigma)^{1/3}N}$$
 - The polymers are _fully stretched_, compared to in solution
 
 - Grafted polymers can be used in _colloidal suspensions_
@@ -933,60 +998,115 @@ $$G=\frac{n}{V} k_{B}T$$
 - The elasticity is _entropic_
 	- Corresponds to the [[#Entropy of the ideal chain|entropy of the chain]] itself due to stretching
 
-## Rouse model of polymer dynamics (incomplete)
+## Rouse model of polymer dynamics
 - Use [[#Overdamped limit|overdamped Langevin dynamics]] for the Gaussian chain
-$$\gamma\frac{d\boldsymbol{R}_{n}}{dt}=\kappa(\boldsymbol{R}_{n+1}+\boldsymbol{R}_{n-1}-2\boldsymbol{R}_{n})+\boldsymbol{\xi}_{n}(t)$$
+$$\gamma\frac{d\boldsymbol{R}_{n}}{dt}=\kappa(\boldsymbol{R}_{n+1}+\boldsymbol{R}_{n-1}-2\boldsymbol{R}_{n})+\boldsymbol{\xi}(n,t)$$
+- $\kappa=3k_{B}T/b_{0}^{2}$ is the [[#Bead-spring model|spring constant]] of the Gaussian chain
+- Random noise, from the [[#Langevin equation|fluctuation-dissipation theorem]]:
+$$\langle \xi_{i}(n,t)\xi_{j}(m,t') \rangle =2\gamma k_{B}T\delta_{mn}\delta(t-t')\delta_{ij} $$
 - Applicable for _low Reynolds numbers_
 - Ignores _hydrodynamics_, or _solvent interactions_
 - Works for _dense polymer solutions_
 
-- In the _continuum limit_:
-$$\gamma\frac{ d\boldsymbol{R}}{dt}=u \frac{\partial^{2}\boldsymbol{R}}{\partial \eta^{2}}+\boldsymbol{\xi}(t)$$
-- _Fourier transform_
+- In the _continuum limit_, the _Rouse equation_ gives:
+$$\gamma\frac{ d\boldsymbol{R}_{n}}{dt}=\kappa \frac{\partial^{2}\boldsymbol{R}}{\partial n^{2}}+\boldsymbol{\xi}(n,t)$$
+
+### Motion of normal modes
+- _Fourier transform_ into _modes_:
+$$\displaylines{\boldsymbol{R}_{n}=\boldsymbol{X}_{0}(t)+2\sum_{p=1}^{\infty}\boldsymbol{X}_{p}(t)\cos\left( \frac{p\pi n}{N} \right) \\ \boldsymbol{X}_{p}(t)=\frac{1}{N}\int_{0}^{N} \boldsymbol{R}(n,t)\cos\left( \frac{p\pi n}{N} \right) \, dn }$$
+- Only _cosine modes_, due to the boundary conditions:
+$$\frac{\partial R}{\partial n}\Bigg|_{n=0}=\frac{\partial R}{\partial n}\Bigg|_{n=N}=0$$
 
 - The _cnetre of mass_ undergoes _diffusion_:
 $$N\gamma \frac{dX_{0}}{dt}=\boldsymbol{\xi}_{0}(t)$$
 - The effective _diffusion constant_ is
 $$D_\text{eff}=\frac{k_{B}T}{\gamma N}$$
-- The other Fourier modes:
-$$2N\gamma \frac{d\boldsymbol{X}_{p}}{dt}=-k_{p}X_{p}+\xi_{p}(t)$$
-- The _spring constant in Fourier space_:
-$$k_{p}=$$
-- Define a _relaxation time_:
-$$\tau_{p}=\frac{N\gamma}{k_{p}}$$
-- The _slowest relaxation time_ is the _Rouse time_ $\tau_{1}$
 
-- The _correlation_:
+- The equation of motion for each mode $p\geq 1$:
+$$\displaylines{2N\gamma \frac{d\boldsymbol{X}_{p}}{dt}=-k_{p}\boldsymbol{X}_{p}+\boldsymbol{\xi}_{p}(t) \\ k_{p}=\frac{6k_{B}T\pi^{2}p^{2}}{Nb_{0}^{2}}}$$
+
+- Define a _relaxation time_ for each mode, which is _shorter_ for _higher modes_
+$$\tau_{p}=\frac{N\gamma}{k_{p}}=\frac{\gamma N^{2}b_{0}^{2}}{6\pi^{2}k_{B}T} \frac{1}{p^{2}}$$
+- The _slowest relaxation time_ is the _Rouse time_ $\tau_{1}$
+- It is time for relaxation of the _overall shape_ of the molecule
+
+- The _correlation_ between mode amplitudes:
 $$\left<X_{q}^{i}(t)X_{q'}^{j}(t)\right>= \frac{k_{B}T}{k_{p}} \delta_{qq'} \delta_{ij} \exp\left[ - \frac{|t-t'|}{\tau_{p}} \right]$$
-- The _stress_ from this is:
-$$\sigma_{ij}=\frac{\epsilon c}{N}\sum_{p}k_{p} \left<X_{p}^{i}X_{p}^{j}\right> \sim \frac{\epsilon c}{N} \sum_{p} k_{p}T \exp\left( -\frac{t}{\tau_{p}} \right)=G(t)\epsilon$$
-- $c$ is the _chain concentration_
+
+### Viscoelastic behaviour
+- Compute the _stress tensor_ to get viscoelastic behaviour
+- Consider a _cube_ of polymer with length $L$, with _concentration_ $c=\Phi/b_{0}^{3}$ of segments
+
+- For _sub-chains_ of length $\tilde{N}$, there are $(c/\tilde{N})L^{3}$ within the cube
+- The _probability_ that the end-to-end vector $\boldsymbol{R}$ _cuts_ the $j-$plane in the cube is $R_{j}/L$
+- The $i-$component of _force_ transmitted by the chain across the plane is $F_{i}=\kappa R_{i}/\tilde{N}$
+- Combining the above:
+$$\sigma_{ij}=\frac{3k_{B}Tc}{\tilde{N}^{2}b_{0}^{2}}\langle R_{i}R_{j} \rangle = \frac{3k_{B}Tc}{b_{0}^{2}} \left\langle  \frac{\partial R_{i}}{\partial n} \frac{\partial R_{j}}{\partial n}  \right\rangle  $$
+- From the Rouse model:
+$$\sigma_{ij}=\frac{c}{N}\sum_{p}k_{p}\langle X_{p}^{i}X_{p}^{j} \rangle $$
+- Apply a _shear strain_ such that:
+$$X_{p}^{x}(t)=X_{p}^{x}(0)+\epsilon X_{p}^{y}(0)$$
+- The stress component $\sigma_{xy}$ is then:
+$$\sigma_{xy}=\frac{\epsilon c}{N}\sum_{p}k_{p} \left<X_{p}^{x}(t)X_{p}^{y}(0)\right> \sim \frac{\epsilon c}{N} \sum_{p} k_{p}T \exp\left( -\frac{t}{\tau_{p}} \right)=G(t)\epsilon$$
+
 - The shear modulus can be written as:
 $$G(t)=c \frac{k_{B}T}{N} \sum_{p} \exp\left( -\frac{p^{2}t}{\tau_{1}} \right)$$
+- Each _un-relaxed_ mode then contributes $ck_{B}T$ to the modulus, behaving like a Maxwell fluid
+
 - For _long timescales_, it behaves as a [[#Maxwell fluid]]
 $$G(t)\approx c \frac{k_{B}T}{N} \exp\left( -\frac{t}{\tau_{1}} \right)$$
 - For _short timescales_:
 $$G \sim \int \exp\left( -\frac{p^{2}t}{\tau_{1}} \right) \, dp\sim \sqrt{ \frac{\tau_{1}}{t} } $$
-## Helix to coil transition (incomplete)
-- Many polymers can undergo a transition from a _disordered globule_ to a _helical state_
+## Helix to coil transition
+- Many polymers can undergo a transition from a _disordered globule_ to an _ordered helical state_
 	- Driving force includes _hydrogen bonding_
+- Model it as a _two-state system_, where each _segment_ can be in either the helical or coil state
+- There may be varying degrees of _cooperativity_, as each segment has a different _tendency_ to be in a given state _depending on the state of its neighbours_
+
 - Let the helical state have some _energy_ $-\epsilon$
 
-- Model it as a _two-state system_:
-$$Z_{1}=1+\exp(-\beta\epsilon) \implies f_\text{helix}= \frac{\exp(-\beta\epsilon)}{1+\exp(-\beta\epsilon)}$$
-- It is a _gradual transition_
+### Non-cooperative model
+- Each segment as a _two-state system_:
+$$Z_{1}=1+\exp(-\beta\epsilon)$$
+- For a polymer of $N$ segments:
+$$Z=z_{1}^{N}$$
+- The _proportion of the chain in a helical state_:
+$$f_\text{helix}=\frac{\langle i \rangle}{N}=-\frac{1}{N} \frac{\partial \ln Z}{\partial\beta}=\frac{s}{1+s} \hspace{1cm}s\equiv \exp(-\beta\epsilon) $$
+- It is a _gradual transition_ with temperature
 
+### Fully cooperative model
 - Alternatively, consider an _on-off model_:
-$$Z_{1}=1+ \exp(-\beta N\epsilon) \implies f_\text{helix}= \frac{\exp(-\beta N\epsilon)}{1+ \exp(-\beta N\epsilon)}$$
-- This gives a much _sharper_ transition
+$$Z=1+ \exp(-\beta N\epsilon) \implies f_\text{helix}= \frac{\exp(-\beta N\epsilon)}{1+ \exp(-\beta N\epsilon)}$$
+- This gives a much _sharper_ transition for large $N$
 
-- Or, the _Zimm-Bragg model_
+### Zimm-Bragg model
 - The _nearest neighbour_ interactions are parametrised with $\sigma$
+- Statistical weights of each case:
+	- Coil $(C)$ with $C$ neighbour: $1$
+	- Helix $(H)$ with $H$ neighbour: $s$
+	- $H$ following $C$: $\sigma s$
+	- $C$ following $H$: $1$
+	- $H$ is the first unit: $\sigma s$
 
+- The weights for the first segment can be written as a _vector_:
+$$\boldsymbol{q}_{1}=\pmatrix{1\\\sigma s} \hspace{1.5cm}Z_{1}=\pmatrix{1&1}\pmatrix{1\\\sigma s}$$
+- The _second segment_:
+$$\boldsymbol{q}_{2}=\pmatrix{C-C&C-H\\H-C&H-H}\boldsymbol{q}_{1}=G\boldsymbol{q}_{1}$$
+- $G$ is the _transfer matrix_
+
+- For $N$ segments:
+$$Z_{N}=\pmatrix{1&1}G^{N-1}\pmatrix{1\\\sigma s}$$
+- The partition function is a _linear combination_ of the two _eigenvalues_ of $G$:
+$$\lambda_{\pm}=\frac{1+s\pm\alpha}{2} \hspace{1.5cm}\alpha=\sqrt{ (1-s)^{2}+4\sigma s }$$
+- For $N\gg 1$, the _larger eigenvalue_ will dominate:
+$$Z_{N}\approx \lambda_{+}^{N-1}$$
+- From this, one gets:
 $$f_\text{helix}= \frac{1}{2}\left( 1+ \frac{s-1}{\sqrt{ (1-s)^{2}+4\sigma s }} \right)$$
+- For $\sigma=1$, the result of the _non-cooperative model_ is regained
+
 # Molecular self-assembly (incomplete)
 - The formation of _structures_ from purely _inter-molecular forces_
-- Molecules can assemble into _different structutes_, such as _spherical/cylindrical micelles_, or _lamellae_
+- Molecules can assemble into _different structures_, such as _spherical/cylindrical micelles_, or _lamellae_
 	- Can be quantified using _shape/packing parameters_
 - Proteins (biopolymers) can self-assemble into _filaments_ and _microtubules_
 
@@ -1006,29 +1126,58 @@ $$f_\text{helix}= \frac{1}{2}\left( 1+ \frac{s-1}{\sqrt{ (1-s)^{2}+4\sigma s }} 
 
 ## Critical concentration
 - Often, there is a _critical concentration_ above which the molecules will self-assemble
-- _At_ the critical concentration, for a _cluister_ of size $\alpha$ made out of monomer $I$:
+- _At_ the critical concentration, for a _cluster_ of size $\alpha$ made out of monomer $I$:
 $$\mu_{\alpha}=\mu_{I}$$
+- Let there be a solution of $N_{T}$ molecules, forming $n_{\alpha}$ _clusters_ of $\alpha$ monomers, such that there are $N_{\alpha}$ molecules used to construct those clusters:
+$$N_{\alpha}=\alpha n_{\alpha}\hspace{1.5cm}\sum_{\alpha=1}^{N}N_{\alpha}=N_{T}$$
+### Chemical potential of a cluster
 - Assume the clusters _do not interact with each other_
-
-- The partition function is then:
+	- Valid for _low concentration_
+- The partition function for all clusters is then:
 $$Z= \prod_{\alpha=1}^{\infty} \frac{1}{n_{\alpha}!} \left( \frac{Vz_{\alpha}}{\Lambda_{\alpha}^{3}} \right)^{n_{\alpha}}$$
 - This is the [[Advanced statistical mechanics#The ideal gas in the canonical ensemble|partition function for the ideal gas]], with some characteristic length scale $\Lambda_{\alpha}$
 - The _internal degrees of freedom_ are represented by $z_{\alpha}$
 
 - Working out free energy and chemical potential:
 $$\displaylines{F=-k_{B}T\ln Z \\ \mu_{a}= \frac{k_{B}T}{\alpha}\ln \frac{n_{\alpha}\Lambda_{\alpha}^{3}}{V} + \frac{f_{\alpha}}{\alpha}}$$
+- $f_{\alpha}$ is the _internal free energy per monomer_ belonging to an aggregate of size $\alpha$
 
-- For a _spherical micelle_ of radius $R$ from molecules of volume $v$:
-$$\displaylines{\alpha^{*}= \frac{4\pi}{3} \frac{R^{3}}{v} \\ \mu_{\alpha}= \frac{k_{B}T}{\alpha}\ln\left( \frac{c_{\alpha}}{\alpha} \right)+
-\epsilon_{\alpha}=k_{B}T\ln c_{1}+\epsilon_{1}}$$
+- Write in terms of the _mass concentration_:
+$$c_{\alpha}=\frac{N_{\alpha}}{V}=\frac{n_{\alpha}\alpha}{V}$$
+- Then write the chemical potential as:
+	- $\epsilon_{\alpha}=f_{\alpha}/\alpha+(k_{B}T/\alpha)\ln(\Lambda_{\alpha}^{3})$
+$$\mu_{\alpha}=\frac{k_{B}T}{\alpha}\ln\left( \frac{c_{\alpha}}{\alpha} \right)+\epsilon_{\alpha}$$
+
+### Cluster formation
+- Equilibrium:
+$$\frac{k_{B}T}{\alpha}\ln\left( \frac{c_{\alpha}}{\alpha} \right)+\epsilon_{\alpha}=k_{B}T\ln c_{1}+\epsilon_{1}$$
 - Here, $c_{1}$ and $\epsilon_{1}$ characterise a system of _monomers_
 
 - The concentration then evolves as:
-$$c_{\alpha}=\alpha^{*} \left[ c_{1}\exp\left( \frac{\epsilon_{1}-\epsilon_{\alpha^{*}}}{k_{B}T} \right) \right]^{\alpha^{*}}$$
+$$c_{\alpha}=\alpha \left[ c_{1}\exp\left( \frac{\epsilon_{1}-\epsilon_{\alpha}}{k_{B}T} \right) \right]^{\alpha}$$
 - If $\epsilon_{\alpha}>\epsilon_{1}$, then there is _no micelle formation_
+- If $\epsilon_{\alpha}<\epsilon_{1}$, then _most monomers_ will form into a _micelle_
 
-## Micellar shape
-- For a _spherical micelle_:
+- There is often an _optimum number_ $\alpha^{*}$ for the size of a micelle
+$$c_{\alpha^{*}}=\alpha^{*}\left[ c_{1}\exp\left( -\frac{\Delta\epsilon}{k_{B}T} \right) \right]^{\alpha^{*}}\hspace{1cm}\Delta\epsilon=\epsilon_{\alpha}^{*}-\epsilon_{1}$$
+- If $c_{1}<\exp(\Delta\epsilon/k_{B}T)$, then _micellar concentration_ becomes very _small_
+- Above the _critical micellar concentration_, most new amphiphiles are _integrated into micelles_
+## Micelles
+- One form of self-assembly is the organisation of _surfactant molecules_ into _micelles_
+
+### Surfactants
+- _Surfactants_ are _asymmetric molecules_ with a _hydrophobic_ and a _hydrophilic_ part
+- It is an _amphiphile_
+ 
+- The _hydrophobic_ parts tend to phase separate, while the _hydrophilic_ parts prefer to _stay in solution_
+- _Microscopic_ phase separation occurs
+
+- The hydrophilic head is typically a _charged group_, which can be _cationic, anionic, or zwitterionic_
+![[Head groups.png]]
+- The _hydrophobic tail_ is typically a _hydrocarbon chain_
+
+### Micellar shape
+- For a _spherical micelle_ formed from $\alpha$ surfactant molecules:
 $$V_{\alpha}=\alpha v=\frac{4}{3}\pi R^{3} \hspace{1.5cm}A_{\alpha}=\alpha a_{0}=4\pi R^{2}$$
 - The _packing parameter_
 
@@ -1037,13 +1186,23 @@ $$V_{\alpha}=\alpha v=\frac{4}{3}\pi R^{3} \hspace{1.5cm}A_{\alpha}=\alpha a_{0}
 ![[Micellar shapes.png]]
 
 ## Polymer filament self-assembly
+- The _polymerisation_ of _identical protein molecules_ into _filaments_
+- Examples: microtubules, actin fibrils
+
 - Consider _linear polymerisation_:
 $$\ce{ m + X_{n} <=> X_{n+1}   }$$
 - For all values of $n$, the _equilibrium constant_ is $K$
 
+- Let $c_{i}$ denote the _concentration_ of a filament with $i$ monomers
+- There is a _total concentration_ $c_\text{tot}$
 - From this:
 $$\displaylines{c_{i}=K^{-1}(Kc_{1})^{i} \\ c_\text{tot}=\sum_{i=1}^{\infty} ic_{i}=\frac{c_{1}}{(1-Kc_{1})^{2}}}$$
+- For a given $c_\text{tot}$, the _free monomer concentration_ is:
+$$c_{1}=\frac{1+2Kc_\text{tot}-\sqrt{ 4Kc_\text{tot}+1 }}{2K^{2}c_\text{tot}}$$
 
+- For a _small_ $c_\text{tot}$, $c_{1}\approx c_\text{tot}$, and most proteins _remain as monomers_
+- For $c_\text{tot}>K^{-1}$, the concentration of monomers is _approximately constant_, and most proteins exist as _filaments_
+- $K^{-1}$ is analagous to the _critical micellar concentration_
 # Self-assembled structures
 
 ## Membranes and lipid bilayers
