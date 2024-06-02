@@ -477,7 +477,7 @@ $$\sigma(\omega)=(G_{0}+i\omega \eta)\epsilon(\omega)$$
 
 - For a _constant stress_:
 $$\dot{\sigma}=0 \implies \epsilon=\frac{\sigma_{0}}{G_{0}}\left( 1-\exp\left( -\frac{t}{\tau} \right) \right)$$
-
+- The model _does not exhibit stress relaxation_
 ### Zener model/standard linear solid
 - Consider a _Maxwell fluid_ and a _Hookean solid_ in _parallel_
 	- Maxwell fluid has elastic modulus $G_{2}$
@@ -1104,7 +1104,7 @@ $$Z_{N}\approx \lambda_{+}^{N-1}$$
 $$f_\text{helix}= \frac{1}{2}\left( 1+ \frac{s-1}{\sqrt{ (1-s)^{2}+4\sigma s }} \right)$$
 - For $\sigma=1$, the result of the _non-cooperative model_ is regained
 
-# Molecular self-assembly (incomplete)
+# Molecular self-assembly
 - The formation of _structures_ from purely _inter-molecular forces_
 - Molecules can assemble into _different structures_, such as _spherical/cylindrical micelles_, or _lamellae_
 	- Can be quantified using _shape/packing parameters_
@@ -1679,6 +1679,7 @@ $$\frac{\partial^{2}}{\partial x^{2}}\phi(x)=-\frac{e}{\epsilon_{0}\epsilon_{r}}
 - This is the _Poisson-Boltzmann equation_
 	- It is _non-linear_
 
+### Debye-Huckel approximation and potential
 - For $\phi(x)\ll k_{B}T$, the equation can be _linearised_ to get the _Debye-Huckel equation_:
 	- The constant term from the exponential _cancels out_ due to _charge neutrality_
 $$\begin{align}
@@ -1696,7 +1697,7 @@ $$-\kappa \phi(0)=-\frac{\sigma}{\epsilon_{0}\epsilon_{r}}$$
 $$\phi(x)=\frac{\lambda_{D}\sigma}{\epsilon_{0}\epsilon_{r}}\exp\left( -\frac{x}{\lambda_{D}} \right)$$
 - The _surface potential_ $\phi(0)$ is _dependent on ion concentrations_
 
-### Rewrite
+### Charge density
 - The ion concentrations:
 $$n_{i}(x)=n_{i0}\exp\left( -\frac{z_{i}e\phi(x)}{k_{B}T} \right)$$
 - In the _linear_ regime:
@@ -1710,14 +1711,8 @@ $$n_{\pm}(x)=n_{0}\left[ 1\mp \frac{e}{k_{B}T}\phi_{0}\exp\left( -\frac{x}{\lamb
 	- The potential of the double layer is the _$\zeta-$potential_
 
 - The _net charge density_ in the layer, using the above:
-	- _Integrating_ gives the charge of the layer, as expected
+	- _Integrating_ gives the _charge of the original layer_, as expected from neutrality
 $$\rho(x)=-\frac{\sigma}{\lambda_{D}}\exp\left( -\frac{x}{\lambda_{D}} \right)$$
-### Charged parallel plates in monovalent salt(rewrite)
-- Let there be two _semi-infinite_ parallel plates
-- Let them be immersed in a solution of two _monovalent_ ions
-
-
-
 ### Other geometries
 - Let there be a _spherical colloidal particle_ with charge $Q$ and radius $a$:
 - In spherical polars, the Debye-Huckel equation:
@@ -1746,6 +1741,21 @@ $$\Pi _\text{wall}=k_{B}T\left[ n\left( x=\frac{d}{2} \right)-n_{0} \right]$$
 - From the solution to the Debye-Huckel equation:
 $$\Pi _\text{wall}=\frac{\sigma^{2}}{\epsilon_{r}\epsilon_{0}}\exp\left( -\frac{d}{\lambda_{D}} \right)$$
 ### High surface charge
+- The _full_ Poisson-Boltzmann equation, for a _high charge density_:
+$$\frac{d^{2}\phi}{dx^{2}}=\frac{2en_{0}}{\epsilon_{w}}\sinh\left( \frac{e\phi}{k_{B}T} \right)$$
+
+- For a _semi-infinite geometry_:
+$$\phi(x)=\frac{2k_{B}T}{e}\ln\left( \frac{1+\gamma \exp(-x/\lambda)}{1-\gamma \exp(-x/\lambda)} \right)$$
+- Here, introducing the _Gouy-Chapman length_ $\lambda _\text{GC}$:
+$$\lambda _\text{GC}=\frac{2k_{B}T\epsilon_{w}}{e|\sigma|}\hspace{1.5cm}\gamma=-\frac{\lambda _\text{GC}}{\lambda}+\sqrt{ 1+\left( \frac{\lambda _\text{GC}}{\lambda} \right)^{2} }$$
+- For low values of $\sigma$, the Debye-Huckel result is recovered
+![[High surface charge screening.png|500]]
+- For large $\sigma$, the potential _far from the surface_ becomes _independent_ of $\sigma$
+- All _additional screening charge_ is located _close to the charged surface_
+
+- _Screening_ a _highly charged_ surface:
+	- There is a _diffuse layer_ a few Debye lengths wide, with _symmetric distributions_ of excess counter-ions and missing co-ions
+	- A more _compact layer_ of mostly _counter-ions_
 
 ## DLVO Theory
 - The description of _interactions between charged particles in colloids_ by Derjaguin, Landau, Verwey and Overbeek
@@ -1803,10 +1813,10 @@ $$V_\text{dep}=\frac{4\pi}{3}(a+L)^{2}\left[ 1-\frac{3r}{4(a+L)}+\frac{r^{3}}{16
 
 - An _increase_ in _number density_ will increase the _attraction_, leading to _aggregation_
 
-## Phase diagram of colloidal suspensions (incomplete)
+## Phase diagram of colloidal suspensions
 
 ![[Colloid phase diagram.png]]
-
+- There are _ordered_ and _disordered_ phases
 # Electrokinetic phenomena
 - Pulling a system _out of equilibrium_ using _electric fields_
 
@@ -1913,3 +1923,69 @@ $$\frac{1}{C_\text{Stern}}=\frac{1}{C_\text{dipole}}+\frac{1}{C_\text{IHP-OHP}}=
 - For a _thick Debye screening layer_, there needs to be a _third term_
 
 ## Gel electrophoresis
+- Driving charged molecules through a _dense network of cross-linked polymers_, using an _electric field_
+- Factors include _polymer dynamics_, _electro-osmosis_, and interactions between the _DNA and the gel matrix_
+
+- Long DNA is treated as _free-draining_, as solvent molecules can _fow past_ each segment
+- It behaves as a _solid particle_ rather than a _colloid_
+	- The particle radius is the _radius of gyration_
+	- They themselves can be described by a $\zeta-$potential depending on charge density
+	- Therefore, mobility is _independent_ from their length
+- Therefore, _separation of free-draining polymers by length_ is impossible in a solvent
+
+- Separation is accomplished using a _gel matrix_, as _interactions_ between gel and DNA is dependent on the length of the latter
+- Similar to a _concentrated polymer solution_, with _electrophoretic mobility_ controlled by the _effective pore diameter_ of the gel
+- Typically, _agarose_ is used for the gel
+	- Easy to control _pore diameter_
+![[Agarose gel.png|500]]
+
+### Rouse model for diffusion
+- Use the [[#Rouse model of polymer dynamics|Rouse model]]
+	- Each monomer also has a _friction coefficient_ $\gamma$ independent of position in the chain
+	- There are _no hydrodynamic interactions_, hence the polymer is _free-draining_
+- The _centre of mass diffusion coefficient_:
+$$D_{R}=\frac{k_{B}T}{N\gamma}$$
+- Define the _Rouse time_ $\tau_{R}$, where the polymer _diffuses its end-to-end distance_
+- For the _ideal chain_:
+$$\tau_{R}=\frac{R_{N}^{2}}{D_{R}}=\frac{\gamma b_{0}^{2}}{k_{B}T}N^{1+2\nu}=\tau_{0}N^{2}$$
+- $\tau_{0}$ is the time taken for a _monomer_ to diffuse if _not linked_ to the chain
+
+- _Approximate_ $\gamma\approx \eta b_{0}$:
+$$\tau_{R}=\left( \frac{\eta b_{0}^{3}}{k_{B}T} \right)N^{2}$$
+- For $t\ll \tau_{0}$, the polymer chain appears _static_ and responds _elastically_
+- For $t\gg \tau_{R}$, the polymer _diffuses_
+- In the  _intermediate_ regime, it behaves _visco-elastically_
+
+### Zimm model of polymer hydrodynamics
+- The Zimm model defines a _no-slip condition_ on the chain, hence it is _not free-draining_
+- A more _realistic_ model of hydro-dynamic interactions, especially in _dilute solutions_
+- The _Zimm diffusion coefficient_:
+	- $R$ is the _radius of gyration_
+$$D_{Z}=\frac{k_{B}T}{\eta R}=\frac{k_{B}T}{\eta bN^{\nu}}$$
+- The _Zimm relaxation time_:
+$$\tau_{Z}=\frac{R^{2}}{D_{Z}}=\frac{\eta b^{3}}{k_{B}T}N^{3\nu}\equiv \tau_{0}N^{3\nu}$$
+- It has a _weaker_ $N$ dependence compared to $\tau_{R}\sim N^{2}$
+
+### Reptation
+- In the Zimm and Rouse models, chain segments still _move independently_ from one another
+- For polymer _melts_, there are entangled chains which _overlap_ and _cannot cross_
+
+- The _reptation model_ assumes that the chain moves in a _tube_ defined by the surrounding chains
+- The _diameter_ of the tube is given by $r_{t}\approx b\sqrt{ N_{e} }$
+	- $N_{e}$ is the _average number of monomers between two entanglements_
+	- The diameter is also known as the _entanglement length_
+
+- The _coarse-grained chain length_ is $R_{0}=r_{t}\sqrt{ N/N_{e} }=b\sqrt{ N }$
+- There is also a _coarse-grained contour length_
+$$\langle L \rangle \approx r_{t} \frac{N}{N_{e}}=\frac{bN}{\sqrt{ N_{e} }}$$
+
+- _Diffusive motion_ in the tube is known as _reptation_, with the _Rouse diffusion coefficient_
+$$D_{c}=\frac{k_{B}T}{N\gamma}$$
+
+- The _reptation time_ is the time taken to _diffuse along the tube length_
+$$\tau _\text{rep}=\frac{\langle L \rangle^{2}}{D_{c}}=\frac{\gamma b_{0}^{2}N^{3}}{k_{B}TN_{e}} =\frac{\gamma b_{0}^{2}}{k_{B}T}N_{e}^{2}\left( \frac{N}{N_{e}} \right)^{3} $$
+- The _lower limit_ has $N=N_{e}$
+
+- It can be shown that through reptation, given a _force per Kuhn segment_ $f$, for a polymer with $N$ Kuhn segments, the _drift velocity_ $v_{d}$ is:
+$$v_{d}=\frac{f}{\eta bN}$$
+### Tether force

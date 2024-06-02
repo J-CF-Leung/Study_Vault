@@ -200,7 +200,7 @@ $$\epsilon_{\omega}=\epsilon_{\infty}+\frac{i\sigma_\omega}{\epsilon_{0}\omega}=
 	- Scattering _between electrons_: the _total electron momentum_ is conserved, to give _little effect on conductivity_
 
 ## Transport with magnetic fields and the Hall effect
-- In the _relaxation time approximation_:
+- In the _relaxation time approximation_, from the equation of motion:
 $$\frac{d\boldsymbol{j}(t)}{dt}=-\frac{\boldsymbol{j}(t)}{\tau}+ \frac{nq^{2}}{m}\boldsymbol{E}+\frac{q}{m}(\boldsymbol{j}\times \boldsymbol{B})$$
 
 - wlog, take $\boldsymbol{B}=B\hat{z}$
@@ -547,24 +547,25 @@ $$\{\boldsymbol{r}_{i}\}=$$
 - The _incoming wave_ $\boldsymbol{k}_{0}$ incident on a _potential_ centred on $\boldsymbol{R}_{i}$
 - For _large distances_, the scattered wave is _circular_
 - The _scalar field_:
-$$\psi \propto \exp[i\boldsymbol{k}_{0}\cdot(\boldsymbol{r}-\boldsymbol{R}_{i})]+cf_{0} \frac{\exp[ik_{0}|\boldsymbol{r}-\boldsymbol{R}_{i}]}{}$$
+$$\psi \propto \exp[i\boldsymbol{k}_{0}\cdot(\boldsymbol{r}-\boldsymbol{R}_{i})]+cf_{0} \frac{\exp[ik_{0}|\boldsymbol{r}-\boldsymbol{R}_{i}|]}{|\boldsymbol{r}-\boldsymbol{R}_{i}|}$$
 - The _angular dependence_ from the _basis_ is determined by the _form factor_ $f_{0}$
 	- Depends on scattering _angle_, type of atom, and their arrangement
 - The _total scattered intensity_ determined by $c$ is assumed _small_
 
 - At a _large distance_ from the scattering centre:
-$$k_{0}\left| \boldsymbol{r}- \right| $$
+$$k_{0}\left| \boldsymbol{r}- \boldsymbol{R}_{i}\right| \approx k_{0}r-k_{0} \frac{\boldsymbol{r}\cdot \boldsymbol{R}_{i}}{r} $$
 - Here, $\boldsymbol{k}$ is the _scattered wave-vector_ $\boldsymbol{k}\equiv k_{0}\boldsymbol{r}/r$
 - The _momentum transferred_ is $\boldsymbol{q}=\boldsymbol{k}-\boldsymbol{k}_{0}$
 - The wave-form is then:
-$$\psi \propto \exp[-i]\left[  \right]  $$
+$$\psi \propto \exp(-i\boldsymbol{k}_{0}\cdot \boldsymbol{R}_i)\left[ \exp(i\boldsymbol{k}_{0}\cdot \boldsymbol{r})+c\exp(ik_{0}r)f_{0} \frac{\exp(-i\boldsymbol{q}\cdot \boldsymbol{R}_{i})}{r} \right]  $$
 - The _effective scattering amplitude_ is:
 $$f(\theta)=cf_{0}\exp(-i\boldsymbol{q}\cdot \boldsymbol{R}_{i})$$
 - _Sum over all identical lattice sites_ gives the _scattering amplitude of the lattice_
 	- _Multiply_ each term by the _phase of the incoming wave_ $\exp$
 	- _Cancels out_ the pre-factor
-- The [[Scattering#Differential cross-section|differential cross-section]]:
-$$\frac{d\sigma}{d\Omega}=|f(\theta)|^{2}=\left| cf_{0}\sum_{i}  \right|^{2} $$
+$$\psi \propto \exp(i\boldsymbol{k}_{0}\cdot \boldsymbol{r})+c\exp(ik_{0}r)\sum_{i}f_{0}\left( \hat{\boldsymbol{r}} \right) \frac{\exp(-i\boldsymbol{q}\cdot \boldsymbol{R}_{i})}{r}$$
+- The [[Scattering#Differential cross-section|differential cross-section]] for identical atoms:
+$$\frac{d\sigma}{d\Omega}=|f(\theta)|^{2}=\left| cf_{0}\sum_{i} \exp(-i\boldsymbol{q}\cdot \boldsymbol{R}_{i}) \right|^{2} $$
 - The addition _cancels out all phases_, unless the _Bragg condition_ is satisfied:
 $$\boldsymbol{q}\cdot \boldsymbol{R}_{i}=2\pi m_{i}$$
 - In this case, all the scattered waves _constructively interfere_ to give a clear diffracted beam
@@ -693,7 +694,7 @@ $$\begin{align} m_{A}\frac{\partial^{2}u_{n,A}}{\partial t^{2}}&= K(u_{n,B}-u_{n
 ### Same springs, different masses
 - In the limit of the _same spring constant_
 - With lattice constant $a$, travelling wave solutions lead to:
-$$\begin{align}u_{n,A}&= \\ u_{n,B}&=\end{align}$$
+$$\begin{align}u_{n,A}&=\alpha \exp(inka)\exp(-i\omega t) \\ u_{n,B}&=\beta \exp(inka)\exp(-i\omega t)\end{align}$$
 
 - Limiting results:
 ![[Acoustic optical phonons.png|500]]
@@ -777,7 +778,7 @@ $$C_{V}=$$
 - Low temperature: $\propto T^{3}$
 
 - Phonons and electrons:
-$$C_{V}=$$
+$$C_{V}=\alpha T+\beta T^{3}$$
 - Straight line plot
 
 - At _low temperatures_, it is difficult to _thermally excite_ optical modes, giving the _Einstein model_ a _low heat capacity_
@@ -800,7 +801,7 @@ $$\kappa=\frac{1}{3}C_{B}lv=\frac{1}{3}C_{V}v^{2}\tau$$
 	- Point defects
 	- Sample boundaries
 	- Crystal dislocations
-$$\tau^{-1}=\sum \tau^{-1}=$$
+$$\tau^{-1}=\sum \tau^{-1}=\tau _\text{ph}^{-1}+\tau _\text{def}^{-1}+\tau _\text{boun}^{-1}+\tau _\text{dis}^{-1}$$
 - Low temperature: large $l$, $\tau$ given by _sample boundaries_ (constant w.r.t. $\tau$), giving $\kappa \propto T^{3}$
 - Middle range: $\kappa$ often _peaks_, dominated by _impurity scattering_
 - Beyond $\theta_{D}$, phonon _numbers_ increase, Umklapp scattering becomes important, $\kappa$ _decreases_ rapidly
@@ -982,9 +983,19 @@ $$\ket{\psi}=\sum_{n}\exp(i\boldsymbol{k}\cdot \boldsymbol{R}_{n})\ket{n}  $$
 $$E_{\boldsymbol{k}}=\tilde{E}_{0}+2t\cos(k_{x}a)+2t\cos(k_{y}a)+2t\cos(k_{z}a)$$
 
 ### Multiple bands
-
+- One can combine _multiple orbitals per site_:
+$$\ket{\psi}=\sum_{n}\exp(i\boldsymbol{k}\cdot \boldsymbol{R}_{n})(\alpha_{\boldsymbol{k}}\ket{a_{n}} +\beta_{\boldsymbol{k}}\ket{b_{n}} ) $$
+- Get simultaneous equations
 ## Comparison with nearly free electron model
+- Both use a _combination of basis functions_, with the coefficients determined by an _eigenvalue equation_
+- For an _exact eigenstate_, one needs a _complete (infinite) basis set_
 
+- In the NFE, the set of all plane wave states $\ket{\boldsymbol{k}-\boldsymbol{G}}$ are required
+- The _diagonal terms_ are _kinetic energy_, while potential is stored in the _off-diagonal terms_
+- The _perturbation_ from potential energy is expected to be _weak_
+
+- In tight binding, potential energy is _diagonal_, while the _off-diagonal terms_ represent _hopping_, analagous to _kinetic energy_
+- The potential is expected to be _strong_ compared to kinetic energy
 
 ## Psuedopotentials
 - The nearly free electron and tight-binding models can have _parameters fit to experiment_
@@ -1219,22 +1230,21 @@ $$W_{i\to f}=\frac{2\pi}{\hbar}|M|^{2}g(\hbar\omega)$$
 - $g(\hbar\omega)$ is a _joint density of states_ as there can be _multiple_ transitions of $\hbar\omega$ at _different energies_
 
 - Matrix element: perturbation due to _electric dipole formation_
-	- $\boldsymbol{p}_{e}=-e\boldsymbol{r}$
+	- Electron dipole moment $\boldsymbol{p}_{e}=-e\boldsymbol{r}$
 $$M=\braket{ \psi_{f}|\hat{H}' | \psi_{i} }  \hspace{1cm} \hat{H}'=-\boldsymbol{p}_{e}\cdot \boldsymbol{E}_{0}\exp(i\boldsymbol{k}\cdot \boldsymbol{r})$$
 - Electron states are [[#Bloch states|Bloch wave-functions]]
 $$\psi_{i/f}=\frac{1}{\sqrt{ V }} u_{i/f}\exp(i\boldsymbol{k}_{i/f}\cdot \boldsymbol{r})$$
 - The matrix element is then:
-$$M=\frac{e}{V} \int  \, dx $$
-- The _phase factor_ must be zero:
+$$M=\frac{e}{V} \int  u_{f}^{*}(\boldsymbol{r})u_{i}(\boldsymbol{r})\exp[-i(\boldsymbol{k}_{f}-\boldsymbol{k}_{i})\cdot \boldsymbol{r}]\boldsymbol{E}_{0}\cdot \boldsymbol{r}\exp(i\boldsymbol{k}\cdot \boldsymbol{r})\, d^{3}\boldsymbol{r} $$
+- The _phase factor_ must be zero due to _conservation of momentum_:
 $$\hbar(\boldsymbol{k}_{f}-\boldsymbol{k}_{i})=\hbar \boldsymbol{k}$$
 - $u_{f}$ and $u_{i}$ have the _periodicity of the lattice_, so the integral becomes a _sum over identical unit cells_:
+	- Assume the light is _polarised_ along the $x-$axis
 $$|M| \propto \int _\text{unit cell} u_{i}^{*}(\boldsymbol{r}) x u_{f}(\boldsymbol{r}) \, d^{3}\boldsymbol{r} $$
-- Assume the light is _polarised_ along the $x-$axos
+- Let $\boldsymbol{k}_{f}=\boldsymbol{k}_{i}$, valid for _optical transitions_
 
 - The precise forms of $u$ depend on the _band_ and the material
-
-- Let $\boldsymbol{k}_{f}=\boldsymbol{k}_{i}$, valid for optical transitions
-
+- Not all transitions are _electric dipole allowed_
 ### Example: GaAs
 - Direct band gap
 - $3$ valence bands, corresponding to $p$ bonding orbitals
@@ -1248,13 +1258,14 @@ $$|M| \propto \int _\text{unit cell} u_{i}^{*}(\boldsymbol{r}) x u_{f}(\boldsymb
 ![[GaAs bands.png|350]]
 
 - Quadratic dispersions:
-
+$$\varepsilon_{c}(k)=E_{g}+\frac{\hbar^{2}k^{2}}{2m_{e}^{*}}\hspace{1cm}\varepsilon_{\text{hh/lh/so}}(k)=-\frac{\hbar^{2}k^{2}}{2m^{*}}$$
 - In a _heavy or light hole transition_:
 $$\hbar \omega=E_{g}+\frac{\hbar^{2}k^{2}}{2m^{*}_{e}}+\frac{\hbar^{2}k^{2}}{2m^{*}_{h}}$$
 - Write the _reduced electron-hole mass_:
 $$\frac{1}{\mu}=\frac{1}{m_{e}^{*}}+\frac{1}{m_{h}^{*}}\implies \hbar\omega=E_{g}+\frac{\hbar^{2}k^{2}}{2\mu}$$
 - Joint density of states:
-$$\hbar\omega>E_{g}: g(\hbar\omega)=\dots \sqrt{ \hbar\omega-E_{g} }$$
+	- For $\hbar\omega<E_{g}$, $g(\hbar\omega)=0$
+$$\hbar\omega>E_{g}: g(\hbar\omega)=\left( \frac{1}{2\pi^{2}} \right)\left( \frac{2\mu}{\hbar^{2}} \right)^{3/2}\sqrt{ \hbar\omega-E_{g} }$$
 
 ### Experimental results
 - In a material of _finite size_, the absorption follows _Beer's law_:
@@ -1311,9 +1322,7 @@ $$\epsilon_{n}=E_{g}-\frac{R_{x}}{n^{2}}$$
 - Typically on the order of $\text{meV}$
 
 ## Photoemission
-- Photons are _incident_ on a sample, electrons are then _excited_
-
-- The excited electron _leaves_ the crystal
+- Photons are _incident_ on a sample, electrons are then _excited_ into _plane-wave states_ which are _above vacuum energy_
 
 - The incident photon has _very little momentum_, so the momentum of the electron _parallel_ to the surface is approximately that of its _original state_ in the solid
 	- The _perpendicular_ momentum is not conserved as the electron _escapes_
@@ -1323,12 +1332,16 @@ $$\epsilon_{n}=E_{g}-\frac{R_{x}}{n^{2}}$$
 $$E_{f}=\frac{\hbar^{2}k_{f}^{2}}{2m}=E_{i}+\hbar\omega-\phi \hspace{1cm}k_{i, ||}=k_{f, ||}$$
 
 - Use _detector angle_ to find $k_{||}$
-	- If the sample is _rough_
+	- If the sample is _rough_, then momentum parallel to the surface is _unchanged_
 
 - Can only be used to probe _occupied states_
 - Typically easiest to interpret when there is _little dispersion_ perpendicular to the surface
 	- _Anisotropic_ layered materials
 - There is often _thermal broadening_ 
+
+- Integrating over _all angles_ then gives a spectrum which is _proportional to the total density of states_
+- Photo-emission peaks will _disappear_ when the band _crosses the Fermi energy_
+![[ARPES.png]]
 ## Quantum oscillations
 - Many material properties tend to _oscillate_ with magnetic field
 - The _form_ of the oscillations can be used to infer the Fermi surface
@@ -1355,24 +1368,30 @@ $$A_{k}=\left( \frac{eB}{\hbar} \right)^{2}A_{r}^{n}= \frac{2\pi e}{\hbar}B\left
 - They live in _Landau tubes_, which _cut_ the Fermi surface
 ![[Landau tubews.png]]
 
-- A _slice_ $\perp \boldsymbol{B}$, with area $A$, through Fermi surface only contributes to $g(E_{F})$ only if it _matches the Landau tube_
+- A _slice_ $\perp \boldsymbol{B}$, with area $A$, through the Fermi surface only contributes to $g(E_{F})$ only if it _matches the Landau tube_
 - Consider _varying_ $\boldsymbol{B}$ for this slice, then the _contribution_ to $g(E_{F})$ will _oscillate_
 - Field values where the considition is _satisfied_ follow the Osanger relation:
 $$\Delta\left( \frac{1}{B} \right)=\frac{2\pi e}{\hbar} \frac{1}{A_{k}}$$
 - It links the _period of quantum oscillations_ to the area of the Fermi slice
+- Measurements: in _magnetic susceptibility_
+
+- Typically, only _extremal orbits_ contribute
+- The Landau tube _touches_ rather than cuts through the Fermi surface
+	- The _close-lying orbits_ with similar cross-section add _coherently_ to the oscillations
 
 - The energy of the band electrons are quantised into [[Charged Particles#Landau levels|Landau levels]] perpendicular to $\boldsymbol{B}$
 	- Motion _parallel_ is unconstrained
 - Hence, each Landau level has a $1D$ _density of states_ superimposed on it
 - _Sharp peaks_ in the DoS move _through_ the chemical potential, such that there is a _modulation_ in density of states and 
 
-## Tunnelling (incomplete)
+## Tunnelling
 - Through a _potential barrier_
 - Maintain _electrical bias_
 
 $$I= \int _{\mu+eV}^{\mu} g_{1}(\omega)g_{2}(\omega)T(\omega) \, d\omega $$
 
-- _Differential conductivity_
+- _Differential conductivity_ is proportional to the _density of states_:
+$$\frac{dI}{dV}\propto g(\mu+eV)$$
 
 - STM
 	- Tunnelling probability is an _exponential function_ of barrier thickness
@@ -1397,12 +1416,18 @@ $$\omega_{c}=\frac{eB}{m^{*}}$$
 - Consider the effect of scattering in a metal with _isotropic bands_, characterised by $m^{*}$ and a _spherical Fermi surface_
 - In the _relaxation time approximation_:
 $$\sigma=\frac{ne^{2}\tau_{\sigma}}{m^{*}}$$
+- It has an _electrical scattering rate_ $1/\tau_{\sigma}$
+
 - The _thermal conductivity_ $\kappa$, defined by the _heat flux_
 $$\boldsymbol{J}_{q}=-\kappa \nabla T$$
 - From kinetic theory:
 $$\kappa=\frac{1}{3}\langle v^{2} \rangle \tau_{\kappa}C_\text{el} $$
+- It has _thermal scattering rate_ $1/\tau_{\kappa}$
+
 - $C_\text{el}$ is the _electronic heat capacity_:
 $$C_\text{el}=\frac{1}{2}n\pi^{2} \frac{k_{B}T}{E_{F}}$$
+
+### Wiedemann-Franz law
 - Assume that they move at the _Fermi velocity_, and assuming $E_{F}=m^{*}v_{F}^{2}/2$:
 $$L=\frac{\kappa}{\sigma T}=\frac{\pi^{2}k_{B}^{2}}{3e^{2}} \frac{\tau_{\kappa}}{\tau_{\sigma}}$$
 - If one _assumes_ $\tau_{\kappa}=\tau_{\sigma}$, one gets the _Wiedemann-Franz Law_
@@ -1426,7 +1451,7 @@ $$\delta k=\frac{1}{\hbar}m^{*}v_{d}$$
 
 - At _low temperatures_, scattering will only affect _thermal conduction_ as it _cannot change_ the _direction_ of electrons (imsufficient energy)
 - At _high temperatures_, it will affect _both electrical and thermal conduction_
-
+![[Scattering for thermal transport.png]]
 ### Matthiessen's rule
 - Scattering rates are _additive_:
 $$\frac{1}{\tau}=\frac{1}{\tau_{1}}+\frac{1}{\tau_{2}}+\frac{1}{\tau_{3}}+\dots$$
@@ -1455,19 +1480,31 @@ $$\frac{1}{\tau}=\frac{1}{\tau_{1}}+\frac{1}{\tau_{2}}+\frac{1}{\tau_{3}}+\dots$
 
 ### Low temperatures
 - At _low temperatures_ $T\ll\theta_{D}$, phonons have energies $k_{B}T\ll k_{B}\theta_{D}$, so $q\ll k_{F}$
-- _Inelastic scattering_ changes electron energy by $k_{B}T$, so the _thermal scattering rate_ $\tau_{\kappa}^{-1} \propto T^{3}$
-	- From _Debye theory_, that gives number of phonons with $\hbar\omega\sim k_{B}T$
+- _Inelastic scattering_ changes electron energy by $k_{B}T$, and the _thermal scattering rate_ is proportional to the _number of phonons_ with $\hbar\omega\approx k_{B}T$, hence $\tau_{\kappa}^{-1} \propto T^{3}$
+
 - Weighting factor for $\tau_{\sigma}$, to account for the _small angle_ by which $\boldsymbol{k}$ can change along the Fermi surface:
 $$1-\cos\theta\sim \frac{\theta^{2}}{2}\propto \frac{q^{2}}{k_{F}^{2}}\propto T^{2}$$
+- There is _little randomisation_ of _direction_ required for _electrical scattering_
+
 - Therefore:
 $$\tau_{\sigma}^{-1} \propto T^{5},\tau_{\kappa}^{-1} \propto T^{3} \implies \tau_{\sigma}^{-1}\ll \tau_{\kappa}^{-1}$$
 
-- Fermi surface close to BZ boundary: _Umklapp scattering_ occurs
+- Fermi surface close to BZ boundary: _Umklapp scattering_ occurs, so the $T^{5}$ dependence is _not always obeyed_
 - $\boldsymbol{k}$ is scattered into an _adjacent BZ_
 
-- For _very low temperatures_: _impurity_ and _defect_ scattering
+### Very low temperatures
+- For _very low temperatures_: _impurity_ and _defect_ scattering become dominant
 - They can cause _large angle scattering_, such that $\tau_{\kappa}\approx \tau_{\sigma}$, and Wiedemann-Franz law holds
 ![[Metal conductivities.png]]
+
+### Temp. dependence of resistivity and thermal conductivity
+- At _low temperatures_, $\sigma$ is _constant_, hence $\rho$ is also _constant_
+- At _room temperature_, $\sigma\sim T^{-1}$, hence $\rho \propto T$
+
+- In metals, $\kappa$ rises _linearly_ with $T$ before reaching a _peak_, and then becoming _independent_ of $T$
+- At very low $T$, _impurity scattering_ dominates, so $\kappa \propto C_\text{el}\propto T$
+- At low $T$, _phonon scattering_ dominates, so $\kappa \propto CT^{-3}\propto T^{-2}$
+
 ## Electron-electron scattering
 - For both _energy and momentum_ to be conserved, electron-electron scattering _within the Fermi surface_ is typically unlikely for _simple Fermi surfaces_
 	- e.g. A _roughly spherical_ Fermi surface has very few electron-electron scattering events
@@ -1575,7 +1612,7 @@ $$\Delta_{d}=\frac{m_{e}^{*}}{m_{e}} \frac{1}{\epsilon^{2}} \frac{13.6\,\text{eV
 - At _low temperature_, extrinsic electrrons _freeze out_, and gradient is _dependent on saturation energy_
 - At _high temperature_, the _intrinsic contribution_ becomes larger, with gradient _dependent on band gap_
 
-### Electrical conductivity
+### Electrical conductivity with two carrier types
 - Electrical conductivity is a _sum of contributions from carrier tyoes_:
 	- Typically dominated by _electrons and havy holes_
 $$\sigma=ne\mu_{e}+pe\mu_{hh}$$
@@ -1754,17 +1791,17 @@ $$\frac{\int_{E_{g}}^{\infty} I(\omega)E_{g}\,d\omega}{\int_{0}^{\infty} I(\omeg
 - Applying a voltage will _pull electrons into the depleted region_ to create a _conducting channel_ between source and drain
 - Changing $V_{GS}$ will _vary resistance_ of the channel
 ![[MOSFET operation.png]]
-- Left: _enhancement_ mode, _positive_ voltage _pulls minority carriers towards surface_, to form a high conductivity _inversion layer channel_
+- Left: _enhancement_ mode, _positive_ voltage _pulls minority carriers towards surface_, to form a _high conductivity inversion layer channel_
 	- Right: I-V characteristic, still with _pinch-off_ at high $V_{DS}$
 - Middle: _depletion-enhancement_ mode, a _negative_ voltage _depletes the channel_ to _increase resistance_
 	- Similarly, _positive_ voltage will _enhance_ the channel and _decrease resistance_
 
-#### Inversion layer
+#### Inversion layer formation
 - Applying a _positive voltage_ to the gate will create an _electric field across the oxide layer_
 - The field will _penetrate into_ the semiconductor
 - This causes [[#Metal-semiconductor contact|band bending]]
-
-- If the band bending is _larger_ than the band-gap $E_{g}$, the _conduction band edge falls below $\mu$_, forming an _inversion layer_
+![[Inversion layer.png]]
+- If the band bending is _larger_ than the band-gap $E_{g}$, the _conduction band edge falls below $\mu$_, forming an _inversion layer_ with _high conductivity_
 - The _width_ of the inversion layer is _controlled_ by $V_{GS}$
 	- Typically _narrow_ enough so _quantisation_ is observed
 
@@ -1947,11 +1984,11 @@ $$R_{n}=na+u_{0}\cos(Qna)$$
 $$V_{Q}=g_{Q}u_{0}$$
 
 - Overall, there is an _energy lowering_
-$$E_\text{elec}=$$
+$$E_\text{elec}=A(u_{0}/a)\ln|u_{0}/a|$$
 ![[Peierls distortion.png|500]]
 - This results in an _electric charge modulation_, known as a _charge density wave_
 - For total energy, model interactions as _springs_:
-$$E_\text{tot}=$$
+$$E_\text{tot}=K(u_{0}/a)^{2}$$
 - There is a _minimum_ at non-zero displacement, so the system _lowers energy_
 
 - This is a [[Classical Field Theory#Symmetry breaking|spontaneous symmetry breaking]]
@@ -2006,12 +2043,12 @@ $$\chi=\frac{n\mu_{0}\mu^{2}}{k_{B}T}$$
 #### Quantum case
 - Quantum system: $J=1/2$
 - Magnetic moments $\pm \mu_{B}$
-$$\langle g\mu_{B}m_{J} \rangle = \mu_{B}\tanh\left( \frac{\mu_{B}B}{k_{B}T} \right) \implies \frac{M}{M_{s}}=$$
+$$\langle g\mu_{B}m_{J} \rangle = \mu_{B}\tanh\left( \frac{\mu_{B}B}{k_{B}T} \right) \implies \frac{M}{M_{s}}=\tanh (y)$$
 - For _small fields_
 
 #### General solution
 - The _Brillouin function_:
-$$\frac{M}{M_{s}}=B_{J}(y)=$$
+$$\frac{M}{M_{s}}=B_{J}(y)=\frac{2J+1}{2J}\coth\left( \frac{2J+1}{2J}y \right)-\frac{1}{2J}\coth\left( \frac{y}{2J} \right)$$
 - Can be used to _measure_ $J$
 
 ### Magnetism in materials
@@ -2064,9 +2101,10 @@ $$H_\text{Heisenberg}=-\sum_{\braket{  i,j  } }J_{ij} \frac{\boldsymbol{S}_{i}\c
 ### Super-exchange
 - Let the magnetic moments in a solid be _separated_ by insulator ions
 	- Example: $\ce{ MnO }$, with $\ce{ O^{2-} }$ being the _insulator_
+	- Direct exchange becomes _insignificant_
 
-- Explanation
-- Favouring _anti-alignments_
+- If, in the ground state, the spins are _anti-parallel_, then electrons can be exchanged from $\ce{ O^{2-}}$ onto one ion, then be replaced by the other ion
+- This is magnetic _super-exchange_, which favours _anti-alignments_
 ![[Superexchange.png]]
 - From _second order perturbation theory_, the exchange is of order
 $$J\sim -\frac{t^{2}}{U}<0$$
@@ -2097,7 +2135,7 @@ $$M=\mu_{B}(n_{\uparrow}-n_{\downarrow})$$
 $$\frac{M}{H}=\chi_{\sigma}=\mu_{0}\mu_{B}^{2}g_{V}(E_{F})$$
 - Unlike the [[#Semiclassical case|Curie law]], it is _temperature-independent_
 	- For _higher temperatures_, the _broadening_ of the Fermi distribution starts to be significant
-- Energy scales:
+
 ### Band magnetism with interactions
 - Consider the _Stoner-Hubbard model_, where there is an _energy penalty_ for lattice sites which are _doubly occupied_ (with both up and down electrons)
 $$H_\text{int}=\sum_{i}Un_{i\uparrow}n_{i\downarrow}$$
@@ -2110,12 +2148,12 @@ $$\epsilon_{\boldsymbol{k}\uparrow}=\epsilon_{\boldsymbol{k}}+U\bar{n}_{\downarr
 - The average spin density:
 $$\frac{N}{V}(\bar{n}_{\uparrow}-\bar{n}_{\downarrow})=[U(\bar{n}_{\uparrow}-\bar{n}_{\downarrow})+]$$
 - Using the _density of states oer atom_ $g_{V}=(N/V)g$:
-$$\chi_{\sigma}=$$
+$$\chi_{\sigma}=\mu_{0} \frac{\mu_{B}^{2}g(E_{F})}{1-\frac{Ug(E_{F})}{2}}$$
 - The susceptibility will _diverge_ if the _Stoner criterion_ is satisfied:
 	- Onset of _ferro-magnetism_
 $$\frac{Ug(E_{F})}{2}>1$$
 - The density of states is of order $E_{F}$
-- Kinetic energy
+- Competition between _kinetic energy_ and _magnetic energy_
 
 ### Local moment magnetism
 - $d-$ or $f-$band metals
@@ -2132,12 +2170,18 @@ $$\frac{Ug(E_{F})}{2}>1$$
 	- _Ignore_ the _vector nature_ of the fields
 $$H=aM+bM^{3}$$
 - $a$ is the _inverse susceptibility_
-$$a=\chi^{-1}=$$
+$$a=\chi^{-1}=\frac{dH}{dM}$$
 - $b$ ensures magnetisation _tends towards saturation_ for high fields
 
 - A _ferro-magnetic_ interaction needs a _non-zero_ $M$ for _zero_ $H$
 - Only possible for _negative_ $a$
 
+- Introduce the _exchange field_:
+$$H+h=aM+bM^{3}$$
+- It is the _mean field_ representation of the _exchange interaction_
+- Assume $h=\lambda M$
+$$H=(a-\lambda)M+bM^{3}$$
+- Then, a saturation magnetisation is _possible_
 # Fermi liquid theory
 - The above treatment of _conduction electrons_ treats them as a _degenerate_ [[Advanced statistical mechanics#The Fermi gas|Fermi gas]]
 - The many-particle problem is _separated_ into _single-particle_ states, as the wave-function is written as a _Slater determinant_ of single-particle wavefunctions
