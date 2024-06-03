@@ -457,7 +457,6 @@ $$\dot{\epsilon}=\frac{\dot{\sigma}}{G_{0}}+\frac{\sigma}{\eta}$$
 - Doing a _Fourier transform_:
 $$\sigma(\omega)=\frac{i\omega\epsilon_{0}\eta}{G_{0}+i\omega \eta}\epsilon(\omega)=G^{*}(\omega)\epsilon(\omega)$$
 - Rewrite as:
-
 $$G^{*}(\omega)=\frac{i\omega G_{0}}{G_{0}/\eta+i\omega}\epsilon(\omega)$$
 - Define the _relaxation time_ $\tau=\eta/G_{0}$
 - For timescales $t\ll \tau$, it behaves as a _Hookean solid_ with $G^{*}(\omega)\to G_{0}$
@@ -507,7 +506,7 @@ $$m_{b}=\frac{4\pi}{3}r^{3}\Delta \rho$$
 - To account for the [[Advanced statistical mechanics#Stochastic physics|stochastic motion]] of the particle:
 $$m \frac{d\boldsymbol{v}}{dt}=-\gamma \boldsymbol{v}+\boldsymbol{\xi}(t)$$
 - $\gamma$ is the _drag coefficient_
-	- In the case of [[#Stokes drag force on a sphere|Stokes flow]], $\gamma=6\pi \eta v$
+	- In the case of [[#Stokes drag force on a sphere|Stokes flow]], $\gamma=6\pi \eta r$
 
 - For _random motion_, as there is _no preferred direction_:
 $$\langle \boldsymbol{\xi}(t) \rangle=0 $$
@@ -578,6 +577,7 @@ $$\frac{1}{2}k\left<x^{2}\right> = \frac{3k_{B}T}{2}$$
 
 - From the consideration of a [[Advanced statistical mechanics#Markov chains|Markov process]], the general _diffusion equation_:
 	- The [[Advanced statistical mechanics#Fokker-Planck from random walks|Fokker-Planck equation]]
+	- In the context of diffusion, it is also known as the _Smoluchowski equation_
 $$\partial_{t}c=D\nabla^{2}c+\frac{1}{\gamma}\nabla\cdot(c\nabla U)=-\nabla\cdot \boldsymbol{J}$$
 ### 1-dimensional potential barrier
 - Consider a system which is _metastable_ at $x=A$, separated by a barrier that _peaks_ at $P$, leading to _true equilibrium_ at $x=B$
@@ -647,6 +647,7 @@ $$M=NM_\text{mono}$$
 - The _number average_ and _mass average_:
 $$\displaylines{\langle M \rangle_{n}=\frac{ \int Mn(M) \, dM}{\int n(M) \, dM } \hspace{1.5cm}\langle M \rangle_{w}=\frac{ \int M^{2}n(M) \, dM}{\int Mn(M) \, dM } \\\langle M \rangle_{n}\leq \langle M \rangle_{w}  }$$
 - The equality is only satisfied when the polymer is _monodispersed_
+- Otherwise, it is _poly-dispersed_
 ## Ideal, non-interacting chains
 - Ideal chains _have no volume_, and monomers _do not interact with other monomers_
 ### The freely jointed chain
@@ -1511,6 +1512,7 @@ $$l_{c}=\sqrt{ \frac{\gamma}{\rho g} }$$
 - The _free energy per site_ from the above, plus excluded volume, similar to the [[#Flory-Huggins free energy]]
 $$f=k_{B}T(\phi \ln \phi+(1-\phi)\ln(1-\phi))+(\gamma_{0}a^{2}-u_{0}\phi)$$
 - The _area fraction_ is $\phi=A_\text{surfactant}/A$
+- There are a total of $A/a^{2}$ sites
 
 - The surface tension is then:
 $$\gamma=\frac{\partial F}{\partial A}=\gamma_{0}+k_{B}T\ln(1-\phi)$$
