@@ -1,5 +1,6 @@
 - The _most general_ description of a quantum system
 - A _pure state_ is simply described by a _single vector_
+	- It is _coherent_ as there is a _constant phase relation_ between eigenstates
 
 - The _density matrix_ formalism encodes _classical probabilities_
 # The density operator
