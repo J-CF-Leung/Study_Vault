@@ -1,4 +1,4 @@
-- - Consider rotations as _acting on the observer_, a.k.a. changing the _axes_
+- Consider rotations as _acting on the observer_, a.k.a. changing the _axes_
 
 ## Vectors and the rotation matrix
 - Let there be _two sets of Cartesian axes_, which _share an origin_, but with rotated angle $\theta$

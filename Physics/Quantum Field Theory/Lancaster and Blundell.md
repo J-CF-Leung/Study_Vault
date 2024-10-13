@@ -2,7 +2,7 @@
 
 - Elementary particles are [[Identical Particles|identical]] as they are _excitations of the same field_
 - Permutation groups are _constrained_, leading to Fermi-Dirac/Bose-Einstein statistics
-- Particles are [[Identical particles and second quantisation#Creation and annihilation operators|created and annihilated]]
+- Particles are [[Second quantisation#Creation and annihilation operators|created and annihilated]]
 
 - A _field_ takes a _point in space-time_, then outputs some _object_ (scalar, vector, tensor etc.)
 
@@ -56,7 +56,7 @@ $$\frac{\partial \mathcal{L}}{\partial \phi}-\partial_{\mu}\left( \frac{\partial
 - Paths of _non-extremal action_ will _cancel out_ to give the _classical path_
 
 # Second quantisation
-- A more complete treatment: [[Identical particles and second quantisation]]
+- A more complete treatment: [[Second quantisation]]
 
 - _First quantisation_ is the description of _particles_ as _wave functions_
 - _Second quantisation_: _wave-like_ phenomena can _behave like particles_
@@ -314,3 +314,28 @@ $$\mathcal{L}=(\partial^{\mu}\psi ^{\dagger})(\partial_{\mu}\psi)-m^{2}\psi ^{\d
 - It is still _invariant to rotations_:
 $$\psi\to \psi \exp(i\alpha)\hspace{1.5cm}\psi ^{\dagger}\to \psi ^{\dagger}\exp(-i\alpha)$$
 - It is a $U(1)$ symmetry, which is _isomorphic_ to $SO(2)$
+
+# Non-relativistic quantum mechanics
+
+- Time-evolution operator, propagator
+
+- Heisenberg picture
+
+## The problem with single particle physics
+- Single particle quantum physics:
+	- Klein-Gordon equation: $E_{p}=\sqrt{ p^{2}+m^{2} }$ with eigenstates $\ket{\boldsymbol{p}}$
+	- Integral below: use spherical polars + residue theorem (see [[Classical Field Theory#The propagator|propagators]]) 
+	- Violates relativity
+$$\braket{ \boldsymbol{x}|\exp(-iHt) | \boldsymbol{x=0} } \neq 0\;\;\text{ for }|\boldsymbol{x}|>t$$
+
+- Solution: use _fields_
+	- Classically: electromagnetic fields are relativistic
+- The fields are _operator valued_
+- For space-time points $x$ and $y$, where they have _spacelike separation_ $|x-y|^{2}<0$, they must _commute_ such that _measurements do not affect each other_ 
+$$\left[ \hat{O}(x),\hat{O}(y) \right]=0\;\;\text{ for }|x-y|^{2}<0$$
+
+- Intuitive explanation:
+	- Confining a particle in an arbitrarily small space produces large $\Delta p$
+	- Large enough to produce _particle-antiparticle pairs_
+	- Hence, single particle quantum mechanics is _insufficient_
+

@@ -1934,7 +1934,7 @@ $$G=\frac{2\nu e^{2}}{h}$$
 	- Electrons and holes are _trapped_ in the band gap
  ![[Single photon source.png|500]]
  ![[Single photon source structure.png|500]]
- - It can be tested using a [[Identical particles and second quantisation#Hanbury Brown and Twiss effect|Hanbury Brown and Twiss]] setup for _photon pair correlation_
+ - It can be tested using a [[Second quantisation#Hanbury Brown and Twiss effect|Hanbury Brown and Twiss]] setup for _photon pair correlation_
 ![[Single photon HBT.png|500]]
 - There can be _polarisation entangled_ pair photon sources
 

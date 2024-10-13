@@ -5,6 +5,7 @@ $$V(\boldsymbol{r})=V(-\boldsymbol{r})$$
 $$V(\boldsymbol{r})=V(|\boldsymbol{r}|)$$
 - Sets of symmetries must form a [[Foundations of Group Theory|group]]
 
+## Unitarity and anti-unitarity
 - Let a _transformation_ take states $\ket{\Psi}$ to $\ket{\Psi'}$
 - For it to be a _symmetry_, for _any two states_ $\ket{\Psi}$ and $\ket{\Phi}$:
 $$\left| \braket{ \Psi | \Phi }  \right|^{2} = \left| \braket{ \Psi' | \Phi' }  \right|^{2} $$
@@ -34,7 +35,8 @@ $$\frac{d}{d\boldsymbol{a}}\mathcal{U}_{T}(\boldsymbol{a})=-\nabla \mathcal{U}_{
 $$\boldsymbol{D}=-i\nabla$$
 - The operator can be written as:
 $$\mathcal{U}_{T}(\boldsymbol{a})=\exp(-i\boldsymbol{a}\cdot \boldsymbol{D})$$
-- $\boldsymbol{D}$ is the _generator of translations_
+- $\boldsymbol{D}$ is the _generator of spatial translations_
+	- $-i\hbar\nabla$ is _momentum_
 
 ## General Lie groups
 - In _general_, a Lie group can be characterised by $n$ parameters:
@@ -47,6 +49,7 @@ $$g(a_{1},a_{2},\dots a_{n})=\exp\left( -i\sum_{j} a_{j}X_{j}\right)$$
 $$[X_{j},X_{k}]=i\sum_{\alpha}^{n}f_{jk\alpha}X_{\alpha}$$
 - $f_{jk\alpha}$ are the _structure constants_
 - Example: Pauli spin matrices
+$$[\sigma_{i},\sigma_{j}]=i\varepsilon_{ijk}\sigma_{k}$$
 
 - The _subgroup_ of generators that _commute_ with each other is the _rank_ of the Lie group
 

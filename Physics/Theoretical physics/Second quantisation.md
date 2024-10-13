@@ -9,7 +9,7 @@ $$\hat{P}_{12}\Psi(\boldsymbol{r}_{1},\boldsymbol{r}_{2})=\Psi(\boldsymbol{r}_{2
 $$P_{12}^{2}=1$$
 - The system is also _exchange symmetric_:
 $$\left[ \hat{P}_{12},\hat{H} \right]=0$$
-- In 2D, there can be an _arbitrary phase_
+- In 2D, there can be an _arbitrary phase_ (anyons)
 ## Fermions and bosons
 - In 3D, if $P_{12}=+1$, the particles are _bosons_, if $P_{12}=-1$, they are _fermions_
 
@@ -20,11 +20,12 @@ $$\braket{ \phi_{i} | \phi_{j} }=\delta_{ij} $$
 $$\psi(\boldsymbol{r}_{1},\boldsymbol{r}_{2})=\frac{1}{\sqrt{ 2 }}[\phi_{1}(\boldsymbol{r}_{1})\phi_{2}(\boldsymbol{r}_{2})\pm \phi_{1}(\boldsymbol{r}_{2})\phi_{2}(\boldsymbol{r}_{1})] $$
 - The sign depends on whether the particles are _fermions_ or _bosons_
 - For a product state:
+	- Interference
 $$\braket{ \psi | \psi } \neq \braket{ \phi_{1} | \phi_{1} }+\braket{ \phi_{2} | \phi_{2} }  $$
 - For _fermions_, $\psi(\boldsymbol{r},\boldsymbol{r})=0$
 - This is the _Pauli exclusion principle_
 
-- For _bosons_, $|\psi(\boldsymbol{r},\boldsymbol{r})|^{2}=2|\phi_{1}(\boldsymbol{r})|^{2}|\phi(\boldsymbol{r})|^{2}$
+- For _bosons_, $|\psi(\boldsymbol{r},\boldsymbol{r})|^{2}=2|\phi_{1}(\boldsymbol{r})|^{2}|\phi_{2}(\boldsymbol{r})|^{2}$
 - Bosons like to _occupy the same state_
 
 ## Hong-Ou-Mandel effect
@@ -45,19 +46,22 @@ $$\displaylines{\ket{\Psi _\text{in}}= \frac{1}{\sqrt{ 2 }}[\ket{A,\text{in} }_{
 - The photons must _both come out of the same channel_
 	- The _choice_ of channel is still _random_
 
-## More particles
+## More (non-interacting) particles
 - For many particles, a swap between _any two particles_ must still maintain probability density
 - Following the same arguments as above:
 $$\hat{P}_{ij}\Psi(\boldsymbol{r}_{1},\dots \boldsymbol{r}_{i},\dots\boldsymbol{r}_{j},\dots \boldsymbol{r}_{N})=\pm \Psi(\boldsymbol{r}_{1},\dots \boldsymbol{r}_{j},\dots\boldsymbol{r}_{i},\dots \boldsymbol{r}_{N})$$
-- The _product states_ are formed as long as:
+- The _product states_ are formed as long as the particles are _non-interacting_:
 $$\hat{H}=\sum_{i=1}^{N}\left[ -\frac{\hbar^{2}}{2m}\nabla_{i}^{2}+V_{i}(\boldsymbol{r}_{i}) \right]$$
+
 - Label the _states_ by _quantum numbers_ $\{\alpha_{i}\}$
 - Given each state may have some _occupation number_ $N_{\alpha}$
 	- Significant for _bosons_
 $$E=\sum_{\alpha} N_{\alpha}E_{\alpha}$$
 - Let the _symmetrising_ operator $\mathcal{S}$ and the _antisymmetrising_ operator $\mathcal{P}$ be:
+	- $P$ is a _permutation_ of $N$ particles
 $$\mathcal{S}= \frac{1}{N!}\sum_{P} P\hspace{1.5cm}\mathcal{A}=\frac{1}{N!}\sum_{P}\mathrm{sgn}(P)P$$
-- The _product states_ for fermions and bosons:
+- The _normalised product states_ for fermions and bosons:
+	- Check: do inner product, use orthonormality (for bosons, each permutation has extra contributions due to $N_\alpha>1$)
 $$\displaylines{\ket{\Psi^{S}_{\alpha_{1}\alpha_{2}\dots\alpha_{N}}}=\sqrt{ \frac{N!}{\prod_{\alpha}N_{\alpha}!}}\mathcal{S}[\phi_{\alpha_{1}}(\boldsymbol{r}_{1})\phi_{\alpha_{2}}(\boldsymbol{r}_{2})\dots \phi_{\alpha_{N}}(\boldsymbol{r}_{N})] \\ \ket{\Psi^{A}_{\alpha_{1}\alpha_{2}\dots\alpha_{N}}}=\sqrt{ N! }\mathcal{A}[\phi_{\alpha_{1}}(\boldsymbol{r}_{1})\phi_{\alpha_{2}}(\boldsymbol{r}_{2})\dots \phi_{\alpha_{N}}(\boldsymbol{r}_{N})]  } $$
 - The _denominator_ for the bosonic state takes into account states $\alpha$ that are _occupied by multiple particles_
 
@@ -65,11 +69,60 @@ $$\displaylines{\ket{\Psi^{S}_{\alpha_{1}\alpha_{2}\dots\alpha_{N}}}=\sqrt{ \fra
 $$\ket{\Psi^{A}_{\alpha_{1}\alpha_{2}\dots\alpha_{N}}}=\begin{vmatrix}
 \phi _{\alpha_{1}}(\boldsymbol{r}_{1})& \phi _{\alpha_{1}}(\boldsymbol{r}_{2}) &\dots & \phi_{\alpha_{1}}(\boldsymbol{r}_{N}) \\ \phi_{\alpha_{2}}(\boldsymbol{r}_{1}) & \phi_{\alpha_{2}}(\boldsymbol{r}_{2})& \dots & \phi_{\alpha_{2}}(\boldsymbol{r}_{N}) \\ \vdots & \vdots& \ddots & \vdots \\ \phi_{\alpha_{N}}(\boldsymbol{r}_{1}) & \phi_{\alpha_{N}}(\boldsymbol{r}_{2}) & \dots & \phi_{\alpha_{N}}(\boldsymbol{r}_{N})
 \end{vmatrix} $$
+
+### Example: Free particles on a ring
+- Ring: circumfrence $L$, no potential
+- Eigenstates:
+$$\phi_{n}(x)=\frac{1}{\sqrt{ L }}\exp(ik_{n}x)$$
+- Boundary conditions:
+$$k_{n}=\frac{2\pi n}{L} \qquad E_{n}=\frac{\hbar^{2}k_{n}^{2}}{2m}$$
+
+- Bosons: all in _ground state_, such that $N_{0}=N$
+$$\Psi_{0}^{S}(x_{1},x_{2},\dots x_{N})=\frac{1}{L^{N/2}}$$
+
+- Fermions: each level with _one particle_
+	- $N$ odd: filled symmetrically from $-(N-1)/2$ to $0$ to $(N-1)/2$ 
+	- $N$ even: last particle either at $\pm N/2$
+	- Last filled: at _Fermi wave-vector_ $k_F$ and _Fermi energy_ $E_F$
+
+- $z_{i}=\exp(2\pi ix_{i}/L)$
+- Slater determinant:
+$$\Psi^A_0(x_1,\ldots, x_N)=\begin{vmatrix}
+    z_{1}^{-(N-1)/2} &  z_{2}^{-(N-1)/2} & \cdots & z_{N}^{-(N-1)/2} \\
+    z_{1}^{-(N-3)/2} &  \cdots & \cdots & \cdots  \\
+    \cdots & \cdots & \cdots & \cdots  \\
+    z_{1}^{(N-1)/2} &  \cdots & \cdots & z_{N}^{(N-1)/2}
+\end{vmatrix}$$
+
+- $N=3$ fermion case, from evaluating the determinant and _factorising_:
+$$\Psi_{0}\propto \sin\left[ \frac{\pi(x_{1}-x_{2})}{L} \right]\sin\left[ \frac{\pi(x_{1}-x_{3})}{L} \right]\sin\left[ \frac{\pi(x_{2}-x_{3})}{L} \right]$$
+
+- Generalisation:
+	- Using _Vandermonde determinant_
+$$\Psi_{0}(x_{1},\dots x_{N})\propto \prod_{i<j}^{N}\sin\left[ \frac{\pi(x_{i}-x_{j})}{L} \right]$$
+## Densities and pair correlations
+- Define the _one particle density_:
+$$\rho_1(x_1) = N \int dx_2\ldots dx_N \,\lvert\Psi(x_1,x_2,\ldots,x_N)\rvert^2$$
+- Normalisation gives:
+$$\int \rho_{1}(x_{1}) \, dx_{1}=N $$
+- It is the _expectation value_ of the _density operator_:
+$$\rho(x)=\sum_{j}\delta(x-x_{j}) \qquad \rho_{1}(x)=\braket{ \Psi|\rho(x) |\Psi  } $$
+
+- The _single particle density matrix_:
+	- $g(x,x)=\rho(x)$
+$$g(x,y) \equiv N\int dx_2\ldots dx_N \,\Psi^{}(x,x_2,\ldots,x_N)\Psi^{*}(y,x_2,\ldots,x_N)$$
+
+- For the _ground state_ of the _Fermi gas on a ring_:
+	- $n\equiv k_{F}/\pi$ is the _number density_
+$$g_{0}(x,y)=\frac{N}{L}\sum_{|k|<k_{F}} \exp[ik(x-y)]\approx \int _{-k_{F}}^{k_{F}} \, \frac{dk}{2\pi}\,\exp[ik(x-y)]=n \sinc[k_{F}(x-y)] $$
+
+
 # Second quantisation
 - Represent states by their _occupation number_ instead of some quantum number
 - An $N-$particle state is written as:
 $$\ket{\{N_{\alpha}\}} $$
 - The set $\{N_{\alpha}\}$ are the _occupation numbers_ of states
+	- For _fermions_, to fix the _sign_ of the wavefunction, one must choose an _order_ for the occupation
 
 - The _space_ of states with _all possible particle numbers_ is known as _Fock space_
 	- The _direct sum_ of spaces of zero particles, one particle, ...
