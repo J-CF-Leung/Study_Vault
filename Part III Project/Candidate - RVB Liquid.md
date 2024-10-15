@@ -6,14 +6,33 @@ In this project the student should try and extend Poilblanc's work taking advant
 - What is an RVB?
 	- Alternative model to Neel antiferromagnet (anti-parallel spins)
 	- Spins are _valence bond paired_ into _singlets_
-	- The singlets _resonate quantum mechanically_ amongst different _pairing configurations_, which _compensates_ for the _partial loss of antiferromagnetic energy_
+	- The singlets _resonate quantum mechanically_ (superposition between all possible states) amongst different _pairing configurations_, which _compensates_ for the _partial loss of antiferromagnetic energy_
+	- Analogy: resonant bonds in chemistry lowering energy
 
 - High-temperature superconductivity _may be underpinned by spin-charge separation of strongly correlated electrons in an RVB liquid phase_
+	- Spin-charge separation in the material (fractionalisation into two quasiparticles)
 	- Strongly correlated: interactions >> free kinetic energy
+	- The _charge_ can act as a _boson_ and _condense_, leading to a superconducting phase
 
 - Proposal of RVB led to development of _spin liquids_
 
-- Paper - demonstrates that for a _large $U$ Hubbard model_, on a lattice of _corner-sharing tetrahedra_, with _half-filling_, can exhibit _spin-charge separation and RVB behaviour_
+- Paper - demonstrates that _doping a large $U$ Hubbard model_, on a lattice of _corner-sharing tetrahedra_, with _half-filling_, can exhibit _spin-charge separation and RVB behaviour_
+	- Large $U$ Hubbard model (Coulomb energy): Mott insulator --> Doped Mott insulator
 	- Lattice: planar checkerboard, or 3D pyrochlore lattice
-- Reliant on _kinematic spin correlations_, set by _frustrated hopping_
+- Reliant on _kinematic spin correlations_, set by _frustrated hopping_ (kinetic energy frustration)
+	- The _ground state_ is shown to be exactly an RVB liquid
+	- Exact for single hole and two holes
 	- Instance of _counter-Nagaoka effect_
+	- frustrated quantum hole hopping leads to antiferromagnetic correlations in a Mott insulator near half-filling
+
+- Compute correlations (exactly/numerically/statistically sampling)
+- Statistical properties
+
+- If fermions: pairing (maybe similar to BCS with phonon mediation?)
+- Poilblanc: interactions lead to pairing
+	- 2D checkerboard
+- Interactions as perturbation
+
+- Work in 2D or 3D
+	- 2D: perturbative interactions can lead to conventional order
+	- Antiferromagnetic exchange leads to RVB plaquette solid (liquid), only in 2D

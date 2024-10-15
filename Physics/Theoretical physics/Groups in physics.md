@@ -1,23 +1,121 @@
+## Groups
+- Definition of a [[Foundations of Group Theory|group]]- a _set_ of elements $g_{1},g_{2},\dots \in G$ with _group product_ $g_{1}g_{2}$\
+- They must satisfy-
+	1. _Closure_: The result of taking a _product_ between any two elements of the group must _also be an element_ of the group $$g_1\in G \hspace{1cm} g_2\in G \Longrightarrow g_1g_2\in G$$
+	2. _Identity_: There must exist a single _identity element_, denoted by $I$, such that, for _every element_ $g\in G$ $$Ig=g \hspace{1cm} gI=g$$
+	3. _Inverse_: For every element $g\in G$, there must exist an _inverse_ of that element $g^{-1}\in G$ such that $$gg^{-1}=I=g^{-1}g$$
+	4. _Associativity_: For any 3 elements $g_1,g_2,g_3\in G$, $$(g_1g_2)g_3=g_1(g_2g_3)$$
+- A group is _commutative_, or _Abelian_ if:
+$$g_{1}g_{2}=g_{2}g_{1}$$
+
+# Symmetries in physics
 - Systems often have _symmetries_: transformations that _leave the physical laws unchanged_
 - There can be _discrete_ symmetries like _parity_:
 $$V(\boldsymbol{r})=V(-\boldsymbol{r})$$
 - They can also be _continuous_, like _rotational symmetry_:
 $$V(\boldsymbol{r})=V(|\boldsymbol{r}|)$$
 - Sets of symmetries must form a [[Foundations of Group Theory|group]]
-
-## Unitarity and anti-unitarity
-- Let a _transformation_ take states $\ket{\Psi}$ to $\ket{\Psi'}$
-- For it to be a _symmetry_, for _any two states_ $\ket{\Psi}$ and $\ket{\Phi}$:
-$$\left| \braket{ \Psi | \Phi }  \right|^{2} = \left| \braket{ \Psi' | \Phi' }  \right|^{2} $$
-- This is satisfied when the transformation is _unitary_:
+\
+## In classical mechanics
+- Symmetries often lead to _conserved quantities_
+- Example: in _classical mechanics_, space-time translation leading to conservation of momentum and energy
+	- _Noether's Theorem_: for each symmetry, there is a _conserved quantity_
+	![[Analytical classical mechanics#Symmetries and Noether's Theorem]]
+## In quantum mechanics
+- In _quantum mechanics_, let a _transformation_ $\mathcal{U}$ take states $\ket{\Psi}$ to $\ket{\Psi'}$
+- For it to be a _symmetry_, for _any two states_ $\ket{\Psi}$ and $\ket{\Phi}$, the _inner product_ must be _preserved_, up to a _phase_, meaning:
+$$\begin{align}
+\ket{\Psi'}&=\exp[i\theta(\Psi)]\ket{\Psi}  \\
+\left| \braket{ \Psi | \Phi }  \right|^{2} &= \left| \braket{ \Psi' | \Phi' }  \right|^{2} 
+\end{align}$$
+>[!Wigner's Theorem]
+>_Symmetry operators_ are either:
+>1. _Linear_ and _unitary_
+>2. _Anti-linear_ and _anti-unitary_
+### Unitarity and anti-unitarity
+- _Unitary_ operator:
 $$\mathcal{U}^{\dagger}\mathcal{U}=1$$
-- It can also be _anti-unitary_ (e.g. _time reversal_)
+- An _anti-unitary_ and _anti-linear_ operator (e.g. _time reversal_):
+$$\begin{align}
+UU^{\dagger}&=1 \\
+U(\alpha \ket{\Psi}+\beta \ket{\Phi}  )&=\alpha^{*}U\ket{\Psi}+\beta^{*}U\ket{\Phi}  \\
+\braket{ U\Psi | U\Phi }&=\braket{ \Psi |\Phi  } ^{*}
+\end{align}$$
 
+- For a _time-independent_ Hamiltonian $H$:
+$$\ket{\Psi(t)}=\exp(-iHt)\ket{\Psi(0)}  $$
+- The wave function $U\ket{\Psi(t)}$ must remain _normalised_, and one gets:
+$$[U, H]=0$$
+- Analagous to classical mechanics:
+	- If $[p,H]=0$, then $[x,H]\neq 0$: momentum is _conserved_, and $H$ _cannot be only explicitly dependent on position_, or in other words, it is _invariant under translation_, with translation operator $\exp(ipa)$
+	- If $H$ is _rotationally symmetric_, then _angular momentum_ is conserved
 # Lie groups
+- _Manifold_: space which _looks like Euclidean $\mathbb{R}^{n}$_ in a _small neighbourhood_
+- _Differentiable manifold_: satisfies smoothness conditions
+
+- _Lie group_: a _differentiable manifold_ $G$, along with a _binary operation_ $\cdot$, such that the _group axioms hold_, and $\cdot$ is a _smooth operation_
+
 - Lie groups describe _continuous symmetries_
 	- The transformations depend on a _continuous parameter_
 - Examples: _translations_, and _rotations_
 
+## The general linear group
+- Take the _general linear group_ $GL(n,\mathbb{F})$, the group of _invertible_ $n\times n$ matrices over field $\mathbb{F}=\mathbb{R}$ or $\mathbb{C}$, with the _operation_ of _matrix multiplication_
+$$GL(n,\mathbb{F})=\{M \in \mathrm{Mat}_{n}(\mathbb{F}) | \det M\neq0\}$$
+- The _dimension_ of $GL(n,\mathbb{R})$ is $n^{2}$
+	- The requirement of $\det M\neq 0$ does not restrict dimensionality
+- For $GL(n,\mathbb{C})$, the _real dimension_ is $2n^{2}$ (real and imaginary arguments), while the _complex dimension_ is said to be $n^{2}$
+
+- The _subgroups_ of $GL(n,\mathbb{F})$:
+	- The _special linear group_, which has dimensionality $n^{2}-1$: $$SL(n,\mathbb{F})=\{M\in GL(n,\mathbb{F})| \det M=1\}$$
+	- The _orthogonal group_, where $\det M=\pm{1}$$$O(n)=\{M \in GL(n,\mathbb{R})|M^{T}M=\mathbb{I}\}$$
+	- The _special orthogonal group_: $$SO(n)=\{M \in O(n)|\det M=1\}$$
+	- The _pseudo-orthogonal group_: define an $(n+m)\times(n+m)$ metric matrix: $$\eta=\pmatrix{I_{n}&0\\0&-I_{m}}$$ $$O(n,m)=\{M \in GL(n+m,\mathbb{R})|M^{T}\eta M=\eta\}$$
+	- One can also define $SO(n,m)$ with $\det M=1$
+	- The _unitary group_:$$U(n)=\{M\in GL(n,\mathbb{C})|M^{\dagger}M=\mathbb{I}\}$$
+	- The _pseudo-unitary group_:$$U(n,m)=\{M \in GL(n+m,\mathbb{C})|M^{T}\eta M=\eta\}$$
+	- The _symplectic group_: define a fixed, anti-symmetric $2n\times{2}n$ matrix $$\Omega=\pmatrix{0&I_{n}\\-I_{n}&0}$$ $$Sp(2n,\mathbb{R})=\{M\in GL(2n,\mathbb{R})|M^{T}\Omega M=\Omega\}$$
+	- One can show that $\det(M)=1$ in $Sp(2n,\mathbb{R})$ using the _Pfaffian_ of $\Omega$ $$\mathrm{Pf}(A)=\frac{1}{2^{n}n!}\varepsilon_{i_{1}i_{2}\dots i_n}A_{i_{1}i_{2}}A_{i_{3}i_{4}}\dots A_{i_{2n-1}i_{2n}}$$
+## Groups as transformations
+- Define _actions_ of a group element $g \in G$ on a set $X$
+	- $X$ might be $G$ itself, or vectors in a vector space
+
+- The _left action_ of $G$ on $X$ is the map:
+	- Compact notation - $\forall g \in G$, associate a map $g:X\to X$ such that $g(x)=gx$
+$$L: G\cdot X \to X$$
+- For the identity of $G$, $e$:
+$$L(e, x)=x$$
+- Composition:
+$$L(g_{2},L(g_{1},x))=L(g_{2}g_{1},x) \quad \forall x \in X \quad \forall g_{1},g_{2} \in G$$
+
+
+- The _right action_ of $G$ on $X$ is defined by $g:X\to X$ such that $g(x)=xg^{-1}$, $\forall g \in G$ and $\forall x \in X$
+- The inverse preserves composition:
+$$g_{2}(g_{1}(x))=xg_{1}^{-1}g_{2}^{-1}=(g_{2}g_{1})(x)$$
+
+- Define _composition_ by $G$ on $X$ as the action:
+$$g(x)=gxg^{-1} \quad \forall g\in G \quad \forall x \in X$$
+
+- Given a group $G$ and set $X$, an _orbit_ of an element $x \in X$ is the _set formed by_ elements of $X$ which are in the image of an action of $G$ on $x$
+- If the action is _left_, the _orbit_ of $x \in X$ is $$Gx=\{ gx |g \in G\}$$
+- It can be shown that the _set of orbits_ under $G$ will _partition_ $X$
+
+
+- Orthogonal group $O(n)$ represents _reflections and rotations_ on $\mathbb{R}^{n}$
+	- It _preserves inner products_ $(v_{2},v_{1})=v_{2}^{T}v_{1}$
+$$R\in O(n): (Rv_{2},Rv_{1})=v_{2}^{T}R^{T}Rv_{1}=v_{2}^{T}v_{1}$$
+- Over a complex field, $U(n)$ has similar properties
+
+- Example: the $SO(2)$ group
+$$SO(2)= \Bigg\{ R(\theta)=\pmatrix{\cos\theta&-\sin\theta\\ \sin\theta &\cos\theta} \Bigg| \theta \in [0, 2\pi)\Bigg\}$$
+$$R(\theta_{1})R(\theta_{2})=R(\theta_{1}+\theta_{2})$$
+
+
+- Example: the $SO(3)$ group, representing rotations of vectors in $\mathbb{R}^{3}$
+	- The _axes of rotation_ spanned by a unit vector $\hat{n}$ on the 2-sphere
+	- Due to freedom to orientate $\hat{n} \to -\hat{n}$, define $\theta \in [0,\pi]$
+	- One can depict the _manifold_ of $SO(3)$ as a _ball_ of radius $\pi$ in $\mathbb{R}^{3}$
+		- The antipodal points must be _identified_: $\pi \hat{n}=-\pi \hat{n}$
 ## Translation group
 - Translations:
 $$\Psi'(\boldsymbol{r},t)=\Psi(\boldsymbol{r}+\boldsymbol{a},t)=\mathcal{U}_{T}(\boldsymbol{a})\Psi(\boldsymbol{r},t)$$

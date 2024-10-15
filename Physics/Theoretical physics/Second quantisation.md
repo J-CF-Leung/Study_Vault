@@ -100,7 +100,18 @@ $$\Psi_{0}\propto \sin\left[ \frac{\pi(x_{1}-x_{2})}{L} \right]\sin\left[ \frac{
 - Generalisation:
 	- Using _Vandermonde determinant_
 $$\Psi_{0}(x_{1},\dots x_{N})\propto \prod_{i<j}^{N}\sin\left[ \frac{\pi(x_{i}-x_{j})}{L} \right]$$
+
+### Example: impenetrable Bose Gas
+$$H=-\frac{\hbar^{2}}{2m} \sum_{j}\frac{\partial^{2}}{\partial x_{j}^{2}}+c\sum_{j>k}\delta(x_{j}-x_{k})$$
+- A _pair interaction_ modelled by delta function
+- All energy is _kinetic_, with the delta function _imposing boundary conditions_
+
+- For _fermions_, the interaction _has no effect_ as it requires bunching
+- For _bosons_ with $c\to \infty$, eigen-energies _coincide with that of fermions_, and eigenstates are _modulus of fermion eigenstates_
 ## Densities and pair correlations
+- _Distributions_ and _correlations_ as a function of a _small number of coordinates_ to give _information_ about the system
+
+### Single particle density (matrix)
 - Define the _one particle density_:
 $$\rho_1(x_1) = N \int dx_2\ldots dx_N \,\lvert\Psi(x_1,x_2,\ldots,x_N)\rvert^2$$
 - Normalisation gives:
@@ -113,10 +124,19 @@ $$\rho(x)=\sum_{j}\delta(x-x_{j}) \qquad \rho_{1}(x)=\braket{ \Psi|\rho(x) |\Psi
 $$g(x,y) \equiv N\int dx_2\ldots dx_N \,\Psi^{}(x,x_2,\ldots,x_N)\Psi^{*}(y,x_2,\ldots,x_N)$$
 
 - For the _ground state_ of the _Fermi gas on a ring_:
-	- $n\equiv k_{F}/\pi$ is the _number density_
+	- Start from explicit antisymmetrised wavefunctions instead of determinant
+	- $n\equiv N/L = k_{F}/\pi$ is the _number density_
 $$g_{0}(x,y)=\frac{N}{L}\sum_{|k|<k_{F}} \exp[ik(x-y)]\approx \int _{-k_{F}}^{k_{F}} \, \frac{dk}{2\pi}\,\exp[ik(x-y)]=n \sinc[k_{F}(x-y)] $$
+### Pair distribution
+- Distribution for a _pair_ of particles
+$$\rho_2(x_1,x_{2}) = N(N-1) \int dx_3\ldots dx_N \,\lvert\Psi(x_1,x_2,\ldots,x_N)\rvert^2$$
+- Explicitly writing out _in terms of single particle eigenstates_, one can find:
+$$\rho_{2}(x_{1},x_{2})=\rho_{1}(x_{1})\rho_{2}(x_{2})-g(x_{1},x_{2})g(x_{2},x_{1})$$
 
-
+- For the _ground state_ of the _Fermi gas on a ring_:
+	- _Anti-bunching_: zero at $x_{1}=x_{2}$
+	- Further away, there are _Friedel oscillations_
+$$\rho_{2}(x_{1},x_{2})=n^{2}[1-\sinc^{2}[k_{F}(x_{1}-x_{2})]]$$
 # Second quantisation
 - Represent states by their _occupation number_ instead of some quantum number
 - An $N-$particle state is written as:

@@ -158,6 +158,7 @@ $$\pd{L}{s}=\frac{d}{dt}\left(\sum_i\bm{p}_i\cdot\bm{n} \right)=0$$
 - _Time-translation_ invariance
 - Moving the system in _time_ does not affect its evolution
 - Lagrangian _cannot explicitly depend on time_
+	- Dependent implicitly: $L=L(\{q_{i}(t)\},\{p_{i}(t)\})$
 - Total change in value of Lagrangian:
 $$\frac{dL}{dt}=\frac{d}{dt}\left(\sum_i\pd{L}{\dot{q}_i}\dot{q}_i\right)+\pd{L}{t}$$
 - Introduce the _Hamiltonian_:
