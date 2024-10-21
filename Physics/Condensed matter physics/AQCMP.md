@@ -52,3 +52,64 @@ $$H=-\sum_{i}\frac{p_{i}^{2}}{2m}+\sum_{i}\frac{P_{i}^{2}}{2M_{i}}-\sum_{i,j} \f
 
 - Interactions:
 ![[All interactions Hamiltonian.png]]
+
+# Independent Electron Theory
+
+## Lattices
+- Bravais lattice vectors: $\boldsymbol{a}_{1},\boldsymbol{a}_{2},\boldsymbol{a}_{3}$
+- _Basis_ vectors: $\boldsymbol{\beta}_{i}$
+
+- _Translational_ symmetries define the _Bravais lattice_
+![[Bravais lattices 1.png]]
+- Crystals also have _point group_ symmetries associated with _rotations, inversions and reflections_, that keep the translational symmetry
+
+- The crystal _space group_ is the _combination_ of all symmetries
+	- Lattices are not necessarily _compatible_ with all point groups
+	- There are 230 space groups
+
+## Reciprocal lattice
+- For a lattice vector $\boldsymbol{R}$, any _reciprocal lattice vector_ $\boldsymbol{G}$ must satisfy:
+$$\exp(i\boldsymbol{G}\cdot \boldsymbol{R})=1$$
+- Reciprocal lattice vectors:
+$$\boldsymbol{b}_{1}=2\pi  \frac{\boldsymbol{a}_{2}\times \boldsymbol{a}_{3}}{\boldsymbol{a}_{1}\cdot(\boldsymbol{a}_{2}\times \boldsymbol{a}_{3})}$$
+
+- The _Wigner-Seitz cell_ is a _primitive cell_ resulting from _Voronoi decomposition_
+
+- The Wigner-Seitz cell of the reciprocal lattice is the _first Brillouin zone_
+
+## Independent electrons
+- With the _Born-Oppenheimer approximation_, assuming _no ionic motion_:
+$$H_\text{el}=\sum_{i=1}^{N} \left[ \frac{p_{i}^{2}}{2m}-\sum_{k=1}^{M} \frac{Z_{k}e^{2}}{4\pi\epsilon_{0}|\boldsymbol{r}_{i}-\boldsymbol{R}_{k}|} \right] + \sum_{i<j} \frac{e^{2}}{4\pi\epsilon_{0} |\boldsymbol{r}_{i}-\boldsymbol{r}_{j}|}$$
+- Then applying the _independent electron approximation_, the last term
+
+- Bloch's Theorem
+
+- Crystal momentum
+
+- Bands
+- Electron filling
+- Types of materials
+
+## Breakdown of approximation
+- Experimental evidence
+	- _Hund's rule_ results from repulsive interaction between electrons
+	- _Magnetism_ results from coupling of electrons and parallel spins
+	- _Plasmons_ are collective _longitudinal electron density fluctuations_
+	- _Friedel oscillations_ from screening of charges
+	- _Heavy fermions_ in Fermi liquids
+	- _One dimensional_ systems with interacting fermions form _Luttinger liquids_
+
+# Hartree-Fock Theory
+- In _general_, the electron wave-function is a _super-position of product states_
+
+- In the _Hartree-Fock_ approximation, _assume_ the ground state is a single _Slater determinant_
+
+- Then, use _variational calculus_ to find the _best fit spin-orbital wave functions_, by _minimising_ the estimated ground state energy
+
+## The ground state energy
+
+### Single particle energy
+
+
+### Interaction energy
+- Split into the _Hartree energy_ and the _exchange energy_

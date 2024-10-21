@@ -133,6 +133,9 @@ $$\rho_2(x_1,x_{2}) = N(N-1) \int dx_3\ldots dx_N \,\lvert\Psi(x_1,x_2,\ldots,x_
 - Explicitly writing out _in terms of single particle eigenstates_, one can find:
 $$\rho_{2}(x_{1},x_{2})=\rho_{1}(x_{1})\rho_{2}(x_{2})-g(x_{1},x_{2})g(x_{2},x_{1})$$
 
+- One can also prove:
+$$\rho_{2}(x_{1},x_{2})=\braket{ \Psi|\rho(x_{1})\rho(x_{2}) | \Psi } -\rho_{1}(x)\delta(x-x')$$
+
 - For the _ground state_ of the _Fermi gas on a ring_:
 	- _Anti-bunching_: zero at $x_{1}=x_{2}$
 	- Further away, there are _Friedel oscillations_

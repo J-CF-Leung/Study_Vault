@@ -254,8 +254,9 @@ $$\pd{}{\varphi}\left(\pd{\varphi}{[\partial_\mu\varphi]}\right)=0$$
 	- A _Lie group_ symmetry
 	- Example: translation, but not reflection
 - This involves _no change in spacetime coordinates_, only the _field itself_
+	- Also known as an _internal symmetry_
 	- A shift in spacetime results in a change in [[#The energy-momentum tensor|total derivative]]
-	- This gives _other conservations_, such as momentum
+	- Nother's theorem still gives _other conservations_, such as momentum
 
 - Do it in $1+1$ dimensions
 - Suppose the Lagrangian density $\Lagr$ is _invariant_ under the _infinitesimal_ change:

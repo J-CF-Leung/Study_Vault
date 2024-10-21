@@ -15,7 +15,7 @@ $$V(\boldsymbol{r})=V(-\boldsymbol{r})$$
 - They can also be _continuous_, like _rotational symmetry_:
 $$V(\boldsymbol{r})=V(|\boldsymbol{r}|)$$
 - Sets of symmetries must form a [[Foundations of Group Theory|group]]
-\
+
 ## In classical mechanics
 - Symmetries often lead to _conserved quantities_
 - Example: in _classical mechanics_, space-time translation leading to conservation of momentum and energy
@@ -66,16 +66,22 @@ $$GL(n,\mathbb{F})=\{M \in \mathrm{Mat}_{n}(\mathbb{F}) | \det M\neq0\}$$
 	- The requirement of $\det M\neq 0$ does not restrict dimensionality
 - For $GL(n,\mathbb{C})$, the _real dimension_ is $2n^{2}$ (real and imaginary arguments), while the _complex dimension_ is said to be $n^{2}$
 
+### Subgroups
 - The _subgroups_ of $GL(n,\mathbb{F})$:
-	- The _special linear group_, which has dimensionality $n^{2}-1$: $$SL(n,\mathbb{F})=\{M\in GL(n,\mathbb{F})| \det M=1\}$$
-	- The _orthogonal group_, where $\det M=\pm{1}$$$O(n)=\{M \in GL(n,\mathbb{R})|M^{T}M=\mathbb{I}\}$$
-	- The _special orthogonal group_: $$SO(n)=\{M \in O(n)|\det M=1\}$$
-	- The _pseudo-orthogonal group_: define an $(n+m)\times(n+m)$ metric matrix: $$\eta=\pmatrix{I_{n}&0\\0&-I_{m}}$$ $$O(n,m)=\{M \in GL(n+m,\mathbb{R})|M^{T}\eta M=\eta\}$$
-	- One can also define $SO(n,m)$ with $\det M=1$
-	- The _unitary group_:$$U(n)=\{M\in GL(n,\mathbb{C})|M^{\dagger}M=\mathbb{I}\}$$
-	- The _pseudo-unitary group_:$$U(n,m)=\{M \in GL(n+m,\mathbb{C})|M^{T}\eta M=\eta\}$$
-	- The _symplectic group_: define a fixed, anti-symmetric $2n\times{2}n$ matrix $$\Omega=\pmatrix{0&I_{n}\\-I_{n}&0}$$ $$Sp(2n,\mathbb{R})=\{M\in GL(2n,\mathbb{R})|M^{T}\Omega M=\Omega\}$$
-	- One can show that $\det(M)=1$ in $Sp(2n,\mathbb{R})$ using the _Pfaffian_ of $\Omega$ $$\mathrm{Pf}(A)=\frac{1}{2^{n}n!}\varepsilon_{i_{1}i_{2}\dots i_n}A_{i_{1}i_{2}}A_{i_{3}i_{4}}\dots A_{i_{2n-1}i_{2n}}$$
+- The _special linear group_, which has dimensionality $n^{2}-1$: $$SL(n,\mathbb{F})=\{M\in GL(n,\mathbb{F})| \det M=1\}$$
+- The _orthogonal group_, where $\det M=\pm{1}$$$O(n)=\{M \in GL(n,\mathbb{R})|M^{T}M=\mathbb{I}\}$$
+- The _special orthogonal group_: $$SO(n)=\{M \in O(n)|\det M=1\}$$
+- The _pseudo-orthogonal group_: define an $(n+m)\times(n+m)$ metric matrix: 
+$$\displaylines{\eta=\pmatrix{I_{n}&0\\0&-I_{m}} \\
+O(n,m)=\{M \in GL(n+m,\mathbb{R})|M^{T}\eta M=\eta\}}$$
+- One can also define $SO(n,m)$ with $\det M=1$
+- From the definition of the metric, one sees that these matrices _preserve the scalar product_ $v_{2}^{T}\eta v_{1}$ for $v_{1},v_{2} \in \mathbb{R}^{n+m}$
+	- Example: in _special relativity_, $O(1,3)$ is the _Lorentz group_, with $M$ describing _boosts_ and _rotations_
+
+- The _unitary group_:$$U(n)=\{M\in GL(n,\mathbb{C})|M^{\dagger}M=\mathbb{I}\}$$
+- The _pseudo-unitary group_:$$U(n,m)=\{M \in GL(n+m,\mathbb{C})|M^{T}\eta M=\eta\}$$
+- The _symplectic group_: define a fixed, anti-symmetric $2n\times{2}n$ matrix $$\Omega=\pmatrix{0&I_{n}\\-I_{n}&0}$$ $$Sp(2n,\mathbb{R})=\{M\in GL(2n,\mathbb{R})|M^{T}\Omega M=\Omega\}$$
+- One can show that $\det(M)=1$ in $Sp(2n,\mathbb{R})$ using the _Pfaffian_ of $\Omega$ $$\mathrm{Pf}(A)=\frac{1}{2^{n}n!}\varepsilon_{i_{1}i_{2}\dots i_n}A_{i_{1}i_{2}}A_{i_{3}i_{4}}\dots A_{i_{2n-1}i_{2n}}$$
 ## Groups as transformations
 - Define _actions_ of a group element $g \in G$ on a set $X$
 	- $X$ might be $G$ itself, or vectors in a vector space
@@ -110,13 +116,49 @@ $$R\in O(n): (Rv_{2},Rv_{1})=v_{2}^{T}R^{T}Rv_{1}=v_{2}^{T}v_{1}$$
 $$SO(2)= \Bigg\{ R(\theta)=\pmatrix{\cos\theta&-\sin\theta\\ \sin\theta &\cos\theta} \Bigg| \theta \in [0, 2\pi)\Bigg\}$$
 $$R(\theta_{1})R(\theta_{2})=R(\theta_{1}+\theta_{2})$$
 
-
 - Example: the $SO(3)$ group, representing rotations of vectors in $\mathbb{R}^{3}$
 	- The _axes of rotation_ spanned by a unit vector $\hat{n}$ on the 2-sphere
 	- Due to freedom to orientate $\hat{n} \to -\hat{n}$, define $\theta \in [0,\pi]$
 	- One can depict the _manifold_ of $SO(3)$ as a _ball_ of radius $\pi$ in $\mathbb{R}^{3}$
 		- The antipodal points must be _identified_: $\pi \hat{n}=-\pi \hat{n}$
-## Translation group
+
+## Parametrisation of Lie groups
+- In _small neighbourhoods_ of a manifold, one should be able to _assign coordinates_
+	- One may need to _change_ coordinates at different points, but not in the "neighbourhood"
+- For an $n-$dimensional manifold:
+$$\boldsymbol{x}:= (x^{1},\dots,x^{n}) \in \mathbb{R}^{n}$$
+- Such that for a Lie group $G$, one can _label_ group elements, and they obey _closure_:
+$$g(x) \in G \qquad g(x)g(y)=g(z) \;\;\forall x,y,z \in \mathbb{R}^{n}$$
+
+- For the manifold to be _smooth_, components $z^r$ of $z$ must be _continuously differentiable_ functions of $x,y$
+$$z^{r}=\varphi^{r}(x,y)$$
+- One must also choose a _coordinate origin_ such that for identity element $e$:
+$$g(0)=e \implies g(0)g(x)=g(x)$$
+- For all $x$, there must be an _inverse_ $\bar{x}$ such that
+$$g(x)g(\bar{x})=g(0)$$
+- _Associativity_:
+$$[g(z)g(y)]g(x)=g(z)[g(y)g(x)]$$
+
+## Lie algebras
+- A _Lie algebra_ is determined by:
+$$[X_{j},X_{k}]=i\sum_{\alpha}^{n}f_{jk\alpha}X_{\alpha}$$
+- $f_{jk\alpha}$ are the _structure constants_
+- Example: Pauli spin matrices
+$$[\sigma_{i},\sigma_{j}]=i\varepsilon_{ijk}\sigma_{k}$$
+
+- The _subgroup_ of generators that _commute_ with each other is the _rank_ of the Lie group
+
+
+
+
+
+## General Lie groups
+- In _general_, a Lie group can be characterised by $n$ parameters:
+$$g(a_{1},a_{2},\dots a_{n})=\exp\left( -i\sum_{j} a_{j}X_{j}\right)$$
+- It has $n$ _generators_ $X_{j}$
+- It is a _Lie group of dimension_ $n$
+
+## Example: Translation group
 - Translations:
 $$\Psi'(\boldsymbol{r},t)=\Psi(\boldsymbol{r}+\boldsymbol{a},t)=\mathcal{U}_{T}(\boldsymbol{a})\Psi(\boldsymbol{r},t)$$
 - It satisfies _composition_:
@@ -135,21 +177,6 @@ $$\boldsymbol{D}=-i\nabla$$
 $$\mathcal{U}_{T}(\boldsymbol{a})=\exp(-i\boldsymbol{a}\cdot \boldsymbol{D})$$
 - $\boldsymbol{D}$ is the _generator of spatial translations_
 	- $-i\hbar\nabla$ is _momentum_
-
-## General Lie groups
-- In _general_, a Lie group can be characterised by $n$ parameters:
-$$g(a_{1},a_{2},\dots a_{n})=\exp\left( -i\sum_{j} a_{j}X_{j}\right)$$
-- It has $n$ _generators_ $X_{j}$
-- It is a _Lie group of dimension_ $n$
-
-## Lie algebras
-- A _Lie algebra_ is determined by:
-$$[X_{j},X_{k}]=i\sum_{\alpha}^{n}f_{jk\alpha}X_{\alpha}$$
-- $f_{jk\alpha}$ are the _structure constants_
-- Example: Pauli spin matrices
-$$[\sigma_{i},\sigma_{j}]=i\varepsilon_{ijk}\sigma_{k}$$
-
-- The _subgroup_ of generators that _commute_ with each other is the _rank_ of the Lie group
 
 # Constants of motion
 - Let a symmetry $g$ leave a system's _time dependence unchanged_:
