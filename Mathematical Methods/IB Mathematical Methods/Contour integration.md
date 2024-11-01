@@ -1,4 +1,3 @@
-
 - Heavily relies on results in [[Elementary Analysis#Analytic functions of a complex variable|complex analysis]]
 
 # Results from analysis

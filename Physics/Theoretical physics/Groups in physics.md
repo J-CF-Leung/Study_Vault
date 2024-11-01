@@ -49,7 +49,7 @@ $$[U, H]=0$$
 - Analagous to classical mechanics:
 	- If $[p,H]=0$, then $[x,H]\neq 0$: momentum is _conserved_, and $H$ _cannot be only explicitly dependent on position_, or in other words, it is _invariant under translation_, with translation operator $\exp(ipa)$
 	- If $H$ is _rotationally symmetric_, then _angular momentum_ is conserved
-# Lie groups
+# Lie groups and Lie algebras
 - _Manifold_: space which _looks like Euclidean $\mathbb{R}^{n}$_ in a _small neighbourhood_
 - _Differentiable manifold_: satisfies smoothness conditions
 
@@ -140,25 +140,235 @@ $$g(x)g(\bar{x})=g(0)$$
 $$[g(z)g(y)]g(x)=g(z)[g(y)g(x)]$$
 
 ## Lie algebras
-- A _Lie algebra_ is determined by:
-$$[X_{j},X_{k}]=i\sum_{\alpha}^{n}f_{jk\alpha}X_{\alpha}$$
-- $f_{jk\alpha}$ are the _structure constants_
-- Example: Pauli spin matrices
-$$[\sigma_{i},\sigma_{j}]=i\varepsilon_{ijk}\sigma_{k}$$
+- A Lie group is _homogeneous_, as any _neighbourhood_ can be _mapped to_ any _other_ neighbourhood
+	- If $\varepsilon$ is "close" to $g_{1}$, then $g_{2}g_{1}^{-1}\varepsilon$ is "close" to $g_{2}$
 
-- The _subgroup_ of generators that _commute_ with each other is the _rank_ of the Lie group
+- Therefore, _linearise_ the Lie group _near the identity_
+- This gives rise to its _Lie algebra_
+### Algebras
+- A Lie algebra is a _vector space_ $\mathbb{V}$, which additionally has a _vector product_, the _Lie bracket_:
+$$[\cdot,\cdot]: \mathbb{V}\times \mathbb{V}\to \mathbb{V}$$
+- For $X,Y,Z \in \mathbb{V}$, the Lie bracket must have the properties:
+1. Antisymmetry $$[X,Y]=-[Y,X]$$
+2. The _Jacobi identity_: $$[X,[Y,Z]]+[Y,[Z,X]]+[Z,[X,Y]]=0$$
+3. _Linearity_: for $\alpha,\beta \in \mathbb{F}$
+$$[\alpha X+\beta Y,Z]=\alpha[X,Z]+\beta[Y,Z]$$
+
+- In fact, _any_ vector space with vector product $*$ can be made into a _Lie algebra_ with bracket $[x,y]=x*y-y*x$
+
+### Generators and structure constants
+- One can then choose a _basis_ for $\mathbb{V}$, $\{T_{a}\}$ with $a=1,\dots \mathrm{dim} \,\mathbb{V}$
+- These basis vectors are the _generators_ of the Lie algebra
+
+- A _Lie algebra_ is then determined by:
+$$[T_{a},T_{b}]={f^{c}}_{ab}T_{c}$$
+- ${f^{c}}_{ab}$ are the _structure constants_
+	- In general, they are _basis dependent_
+- They must then obey _anti-symmetry_ and _Jacobi's identity_:
+$$\displaylines{{f^{c}}_{ab}=-{f^{c}}_{ba} \\ {f^{e}}_{ad}{f^{d}}_{bc}+{f^{e}}_{bd}{f^{d}}_{ca}+{f^{e}}_{cd}{f^{d}}_{ab}=0}$$
+
+- _General elements_ of Lie algebras are _linear combinations_ of $\{T_{a}\}$:
+$$\displaylines{X \in \mathbb{V} \implies X=X^{a}T_{a} \quad, \quad X^{a} \in \mathbb{F} \\ [X,Y]=X^{a}Y^{b}{f^{c}}_{ab}T_{c}}$$
+
+## Examples of Lie algebras
+
+### Rotation groups
+- Group elements: _rotation matrices_
+
+- $SO(2)$: a _one-dimensional maifold_ $\theta$
+$$g(\theta)=\pmatrix{\cos\theta & -\sin\theta \\ \sin\theta & \cos\theta}$$
+- The _generator_ is an _antisymmetric matrix_
+$$\displaylines{g(\theta)=I+\theta \frac{dg(\theta)}{d\theta}\Bigg|_{\theta=0}+O(\theta^{2}) \\ T=\pmatrix{0&-1\\1&0}}$$
+- The generator is the _tangent_ to the manifold
+- $SO(2)$ has a _one dimensional Lie algebra_
+
+- For $SO(n)$, the Lie algebra has dimension $d=n(n-1)/2$ and require $d$ coordinates on the manifold
+
+- Consider a _single parameter family_ of $SO(n)$ elements:
+$$M(t):= M(x(t)) \in SO(n) \qquad M(0)=I_{n}$$
+- From _orthogonality_:
+$$0=\frac{d}{dt}(M^{T}M)=M^{T} \frac{dM}{dt}+ \frac{dM^{T}}{dt}M$$
+- At $t=0$, one gets:
+$$\frac{dM}{dt}=\sum_{i=1}^{d} \frac{\partial M}{\partial x^{i}} \frac{d x^{i}}{d t}=-\frac{dM^{T}}{dt}$$
+- Therefore, the _tangent spaces_ of the $SO(n)$ Lie algebras always consist of _antisymmetric matrices_ 
+	- They must also then be _traceless_
+	- The tangent spaces of $O(n)$ are also the same, given that curves passing through $I_{n}$ must also have $\det M=1$
+	- For $O(n)$, there are matrices _disconnected_ from the identity
+
+### Unitary groups
+- For $M \in SU(n)$, expand:
+$$\displaylines{M(t)=I+tX+O(t^{2}) \\ I=MM^{\dagger}=I+t(X+X^{\dagger})+O(t^{2})}$$
+- Therefore, the _tangent space_ consists of _anti-Hermitian matrices_:
+$$X=-X^{\dagger}$$
+- One can prove that $\mathrm{Tr}\, X=0$ for $SU(n)$
+	- Not true in general for $U(n)$
+	- Prove: only linear term in $\det M=1$ comes from diagonal terms
+
+## Connecting Lie groups to their algebras
+- The _Lie algebra_ of a group is the _tangent space_ to the group at identity element $e$
+### From commutators to brackets
+- Consider two curves through identity $e$, for some Lie group $G$:
+$$g_{1}(x(t)), g_{2}(y(t)) \in G \qquad X_{1}=\dot{g}_{1}|_{0}\,,\, X_{2}=\dot{g}_{2}|_{0} \in T(G)$$
+- Let there be a _product_ $g_{3}$, one finds that its derivative at $t=0$ is _still in the tangent space_:
+$$g_{3}(z(t))=g_{1}g_{2} \qquad \dot{g}_{3}|_{0}=X_{1}+X_{2} \in T(G)$$
+- Define the _group commutator_ of $g_{1}, g_{2} \in G$ as:
+$$[g_{1},g_{2}]_{G}:=g_{1}^{-1}g_{2}^{-1}g_{1}g_{2}=:h \in G$$
+
+- With $g_{1}(t)$ and $g_{2}(t)$ as curves through the identity:
+$$\displaylines{g_{i}(t)=e+tX_{i}+t^{2}W_{i}+O(t^{3}) \\ g_{1}g_{2}=e+t(X_{1}+X_{2})+t^{2}(X_{1}X_{2}+W_{1}+W_{2})}$$
+- The _group commutator_ is then:
+$$h=e+t^{2}(X_{1}X_{2}-X_{2}X_{1}):=e+t^{2}[X_{1},X_{2}]$$
+- Therefore, the _tangent_ to $h$ at $e$ is $[X_{1},X_{2}] \in L(G)$
+
+- There is _closure under the Lie bracket_ 
+### Tangent spaces and the exponential map
+- Examine the _tangent space_ to Lie group $G < GL(n, \mathbb{F})$, at some _general element_ $p$, denoted $T_{p}(G)$
+	- _Subgroup_ of the general linear group
+
+- Let $g(t)$ be some _curve_ through the manifold through $p$ with $g(t_{0})=p$
+- For some small interval $\varepsilon$, define $h_{p}(\varepsilon) \in G$ such that:
+$$\displaylines{g(t_{0}+\varepsilon)=g(t_{0})+\varepsilon \dot{g}(t_{0})=g(t_{0})h_{p}(\varepsilon) \\ h_{p}(\varepsilon)=e+\varepsilon X_{p}+O(\varepsilon^{2}) ,\quad X_{p} \in L(G)=T_{e}(G)}$$
+- Applying $p^{-1}$ to both sides, one gets:
+$$X_{p}=g(t_{0})^{-1}\dot{g}(t_{0})$$
+- $\dot{g}(t_{0})$ is _not_ in the Lie algebra, but it can be _mapped_ into the Lie algebra
+- The Lie algebra is _homogeneous_
+
+- Conversely, for $X \in L(G)$, there exists a _unique curve_ $g(t)$ with $g(t)^{-1}\dot{g}(t)=X$ and $g(0)=g_{0}$
+- A consequence of the _uniqueness_ of solutions to the ODE, given by:
+$$g(t)=g_{0}\exp(Xt)$$
+### One parameter subgroups
+- Given $X \in L(G)$, the curve:
+$$g_{X}(t)=\exp(tX)$$
+- Forms an _Abelian subgroup_ of $G$, "generated" by $X$
+	- Satisfies closure, associativity, commutativity
+
+- It is _isomorphic_ to the group of _reals_ $(\mathbb{R},+)$ if $g_{X}(0)=e$
+- If $g_{X}(t_{0}\neq 0)=e$, it is _periodic_ and isomorphic to the _circle_ $S^{1}$
+
+## Lie groups from Lie algebras
+- Given a Lie algebra $L(G)$ of a Lie group $G$, define the _exponential map_
+$$\exp: L(G)\to G$$
+- For matrix Lie groups:
+$$X \to \exp X =\sum_{k=0}^{\infty} \frac{X^{k}}{k!}$$
+- _Locally_, the map is _bijective_ (1 to 1)
+- _Globally_, the map is generally not 1 to 1
+	- Example: $U(1)=\{\exp(i\theta)| \theta \in [0,2\pi)]\}$ and its Lie algebra $L(U(1))=\{ix|x \in \mathbb{R}\}$, where $L(U(1))\to U(1)$ is a _many-to-one_ map
+
+- Example: the _orthogonal group_ $O(n)$, with _skew-symmetric matrices_ as _generators_:
+$$\displaylines{M=\exp(tX), \quad X^{T}=-X\implies M^{T}=\exp(-tX) \\ MM^{T}=I, \quad M \in O(n)}$$
+- Since $\mathrm{Tr}(X)=0$, let $\lambda_{i}$ be the eigenvalues of $X$:
+$$\displaylines{\sum_{i} \lambda_{i}=0 \\ \det M=\det(\exp tX)=\exp\left( \sum_{i}t\lambda_{i} \right)=1 \implies M \in SO(n)}$$
+- Elements in $O(n)$ but not $SO(n)$ are _not in the image of the exponential map_
+	- $O(n)$ is a _disconnected manifold_, corresponding to _proper_ and _improper_ rotations
+
+- _Any_ skew-symmetric matrix (in $\mathrm{Skew}_{n}$) can _generate_ an element of $SO(n)$
+- Therefore, $L(SO(n))$ contains all elements of $\mathrm{Skew}_{n}$
+
+## Lie brackets to the group product
+- The Baker-Campbell-Hausdorff formula, for $X,Y \in L(G)$
+$$\displaylines{\exp(tX)\exp(tY)=\exp(tZ) \\ Z=X+Y+\frac{t}{2}[X,Y]+\frac{t^{2}}{12}([X,[X,Y]]+[Y,[X,Y]])+O(t^{3})}$$
+- As $L(G)$ is [[#From commutators to brackets|closed under the Lie bracket]], $Z \in L(G)$
+# Representations
+- Groups are _transformations_ under which things are invariant
+- _Representations_ are _how groups transform vectors_ in a vector space
+
+- $GL(n,\mathbb{F})$ is a group of _invertible matrices_, acting as _linear maps_ on the vector space $\mathbb{F}^{n}$:
+$$GL(n,\mathbb{F}): \mathbb{F}^{n}\to \mathbb{F}^{n}$$
+- _Generalise_ to any other vector space $\mathbb{V}$
+
+## Representations of Lie groups
+- A representation $D$ of a group $G$ is a _smooth group homomorphism_ from $G$ to the _group of linear automorphisms_ on some vector space $\mathbb{V}$, the _representation space_ associated with $D$
+$$D: G \to GL(\mathbb{V})$$
+- In other words, $\forall g \in G$, $D(g): \mathbb{V} \to \mathbb{V}$ is an invertible, linear map such that:
+$$v \to D(g)v\quad \forall v \in \mathbb{V}$$
+- _Linearity_:
+$$D(g)(\alpha v_{1}+\beta v_{2})=\alpha D(g)v_{1}+\beta D(g)v_{2} \qquad \forall \alpha,\beta \in \mathbb{F},\quad v_{1},v_{2} \in \mathbb{V}$$
+- For the homomorphism to hold:
+$$D(g_{2}g_{1})=D(g_{2})D(g_{1})$$
+- This implies:
+$$\displaylines{D(e)=\mathrm{id}_{\mathbb{V}} \\ D(g)^{-1}=D(g^{-1})}$$
+
+- The _dimension_ of the representation is the _dimension of_ the associated _vector space_ $\mathbb{V}$
+	- If $\mathbb{V}$ is _finite dimensional_ with $\mathrm{dim} \,\mathbb{V}=N$, then $GL(\mathbb{V})$ is isomorphic to $GL(N,\mathbb{F})$
+	- The isomorphism can be identified by choosing a basis for $\mathbb{V}$
+
+- The _kernel_ of a map $D:G \to GL(\mathbb{V})$ consists of the _elements of_ $G$ which map to the _identity_ $\mathrm{id}_{\mathbb{V}}$
+- A representation $D$ is said to be _faithful_ if $D(g_{0})=\mathrm{id}_{\mathbb{V}}$ only for $g_{0}=e$, or if $\mathrm{ker}\,D =\{e\}$
+
+- _Faithfulness_ implies that $D$ is _injective_:
+$$D(g_{1})=D(g_{2}) \implies g_{1}=g_{2}$$
+### Example: representations of the reals
+- Group:
+$$G=(\mathbb{R},+)$$
+- For some fixed $k \in \mathbb{R}$, $D(\alpha)=\exp(k\alpha) \,\forall \alpha \in \mathbb{R}$ is a _one-dimensional representation_
+	- Group homomorphism: $D(\alpha)D(\beta)=D(\alpha+\beta)$
+	- For $k\neq 0$, it is a _faithful representation_
+	- For $k=0$, $\mathrm{ker }\,D=G$, which is a _trivial representation_
+
+- Or, one can have $D(\alpha)=\exp(ik\alpha)$, another 1D representation, which is _not faithful_
+	- $\mathrm{ker}\,D=\{0,2\pi\dots\}$
+
+- Or, a _two-dimensional representation_
+$$D(\alpha)=\pmatrix{\cos\alpha & -\sin\alpha \\ \sin\alpha & \cos\alpha}$$
+
+- Or, an _infinite-dimensional representation_
+	- The representation is _faithful_
+$$\displaylines{\mathbb{V}=\{\text{space of all real functions }f(x)\} \\ D(\alpha)f(x)=f(x-\alpha)}$$
+### More on representations
+- The _trvial representation_ $D_{0}$ is where:
+$$D_{0}(g)=1\quad \forall g \in G$$
+- By definition, it is _not faithful_, and _one dimensional_
+
+- Quantities which are _invariant_ under group transformations is a _trivial representation_
+	- Known as a _singlet_
+- One can form _trivial representations of any dimension_ $M$, with $D_{0}(g)=\mathbb{I}_{M}$
+	- It is a _reducible representation_
+ 
+
+- If $G$ is a _matrix Lie group_, then the _fundamental representation_ $D_{f}$ is given by:
+$$D_{f}(g)=g\quad \forall g \in G$$
+- It is _faithful_ as only $D_{f}(e)=e$
+- If $G < GL(n,\mathbb{F})$, then $\mathrm{dim}\,D_{f}=n$
+
+- If $G$ is a matrix Lie group and consider tge case where the _Lie algebra is a vector space_ $\mathbb{V}=L(G)$
+- The _adjoint representation_ $D^{\text{adj}}:=\mathrm{Ad}$ is the map
+$$\displaylines{\mathrm{Ad}: G \to GL(L(G)) \quad \text{ such that }\forall g \in G, \mathrm{Ad}_{g}: L(G) \to L(G) \\\text{ with }\mathrm{Ad}_{g}\,X = gXg^{-1}}$$
+- The action of $\mathrm{Ad}_{g}$ is [[#Groups as transformations|conjugation]]
+- It is a _linearised_ version of the action of a group _on itself_ by _conjugation_
+- One can check that the adjoint representation satisfies _closure_ 
+
+## Representations of Lie algebras
+- A representation $d$ of the Lie algebra $L(G)$ is a _map_ from $L(G)$ to a _set_ of linear maps within $gl(V)$, where $gl(v)$ is the _Lie algebra of_ $GL(V)$, or $L(GL(V))$, and where the _Lie bracket is preserved_
 
 
+- In other words, for each $X \in L(G)$:
+$$d(X): V\to V\qquad \text{ such that }\forall v \in V, v\to d(X)v$$
+- It is _linear_:
+$$d(\alpha X+\beta Y)=\alpha d(X)+\beta d(Y)$$
+- It preserves Lie brackets:
+$$d([X,Y])=[d(X),d(Y)]$$
 
+- The _dimension_ of the Lie algebra is that of the vector space $V$
 
+- The _trivial representation_ $d_{0}$ of a Lie algebra maps each $X \in L(G)$ to the _zero element_
+$$\displaylines{d_{0}(X)=0 \qquad \forall X \in L(G) \\ d_{0}(X)v=\vec{0} \qquad \forall X \in L(G),\forall v \in V}$$
 
-## General Lie groups
-- In _general_, a Lie group can be characterised by $n$ parameters:
-$$g(a_{1},a_{2},\dots a_{n})=\exp\left( -i\sum_{j} a_{j}X_{j}\right)$$
-- It has $n$ _generators_ $X_{j}$
-- It is a _Lie group of dimension_ $n$
+- Considering a _matrix Lie group_ $G\leq GL(n,\mathbb{F})$, the _fundamental representation_ of $L(G)$ is $d_{f}:L(G) \to \mathrm{Mat}_{n}(\mathbb{F})$ with:
+$$d_{f}(X)=X\qquad \forall X \in L(G)$$
+- The _dimension_ of $d_{f}$ is $n$
 
-## Example: Translation group
+- The _adjoint representation_ $\mathrm{ad}:L(G)\to gl(L(G))$, $\forall X \in L(G)$:
+$$\mathrm{ad}_{X}:L(G)\to L(G), \quad \mathrm{ad}_{X}Y=[X,Y]$$
+- The action of an [[#More on representations|adjoint representation]] of a Lie group has _conjugation_
+- The action of an adjoint representattion of a Lie algebra is the _Lie bracket_
+
+- The _dimension_ $\mathrm{ad}$ is that of $L(G)$
+## Algebra representations from group representations
+- Consider _tangents_ to curves in the group manifold, passing through $e$:
+$$g(t)=e+tX+\dots \in G$$
+- Here, $X \in L(G)$
+
+# OLD Example: Translation group
 - Translations:
 $$\Psi'(\boldsymbol{r},t)=\Psi(\boldsymbol{r}+\boldsymbol{a},t)=\mathcal{U}_{T}(\boldsymbol{a})\Psi(\boldsymbol{r},t)$$
 - It satisfies _composition_:
@@ -178,7 +388,7 @@ $$\mathcal{U}_{T}(\boldsymbol{a})=\exp(-i\boldsymbol{a}\cdot \boldsymbol{D})$$
 - $\boldsymbol{D}$ is the _generator of spatial translations_
 	- $-i\hbar\nabla$ is _momentum_
 
-# Constants of motion
+# OLD: Constants of motion
 - Let a symmetry $g$ leave a system's _time dependence unchanged_:
 $$g^{-1}\exp\left( -\frac{iHt}{\hbar} \right)g\ket{\psi}=\exp\left( -\frac{iHt}{\hbar} \right)\ket{\psi}  $$
 - This means $H$ and $g$ _commute_:
@@ -213,7 +423,7 @@ $$[X_{j},X_{k}]=i\varepsilon_{jk\alpha}X_{\alpha}$$
 - Its _Lie algebra_ is _isomorphic_ to $SU(2)$, as the latter has the _same commutation relation_
 	- Spin-1/2 particle: $SU(2)$ Hamiltonian, spin described by $SO(3)$ matrix
 
-# Representations
+# OLD: Representations
 - Representations matrices that _fulfill composition_:
 $$U(R_{1})U(R_{2})=U(R_{1}R_{2})$$
 - They must also _satisfy_ the _group algebra_

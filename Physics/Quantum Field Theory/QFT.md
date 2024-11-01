@@ -205,7 +205,7 @@ $$|\boldsymbol{k}|^{2}=\omega^{2}-m^{2} \implies \omega\equiv \sqrt{ k^{2}+m^{2}
 $$\phi(\boldsymbol{x},t)=\int  \frac{d^3 k}{(2\pi)^{3}}[a(\boldsymbol{k})e^{i(\boldsymbol{k}\cdot \boldsymbol{x}-\omega t)}+b(\boldsymbol{k})e^{i(\boldsymbol{k}\cdot \boldsymbol{x}+\omega t)}]$$
 - $\phi$ is constrained to be _real_, so the most general $a$ and $b$ are:
 $$a^{*}(-\boldsymbol{k})=b(\boldsymbol{k}) \qquad b^{*}(-\boldsymbol{k})=a(\boldsymbol{k})$$
-- Then, along with a _normalisation factor_:
+- Then, along with a [[#Relativistic normalisation|normalisation factor]]:
 $$\phi(x^{\mu})=\int  \frac{d^{3}k}{(2\pi)^{3}} \frac{1}{\sqrt{ 2\omega(\boldsymbol{k}) }}\big[a(\boldsymbol{k})\exp(-ik_{\mu}x^{\mu})+a^{*}(\boldsymbol{k})\exp(ik_{\mu}x^{\mu})\big] $$
 - One can also find the _canonical momentum_:
 $$\pi(x^{\mu})=\dot{\phi}=\int  \frac{d^3k}{(2\pi)^{3}} \frac{1}{i}\sqrt{ \frac{\omega}{2} } \big[ a(\boldsymbol{k})e(-ik_{\mu}x^{\mu})-a^{*}(\boldsymbol{k})\exp(ik_{\mu}x^{\mu}) \big]$$
@@ -240,10 +240,191 @@ $$H=\int  \frac{d^3p}{(2\pi)^{3}}\omega \,a_{p}^{\dagger}a_{p}+\int  \frac{d^3p}
 - To focus on _energy differences_, introduce _normal ordering_ of operators, which puts _all creation operators on the left_
 $$:H:=\int  \frac{d^3 p}{(2\pi)^{3}} \omega\,a_{p}^{\dagger}a_{p}$$
 ## Fock space
+
+### One-particle states
 - Given the _vacuum state_ $\ket{0}$, construct _excited states_
 - The creation and annihilation operators _raise_ and _lower_ energy respectively
 $$[H,a_{p}^{\dagger}]=\omega_{p}a_{p}^{\dagger} \qquad[H,a_{p}]=-\omega_{p}a_{p}$$
+- Let the _single particle state_ $\ket{p}$ be:
+$$\ket{p}=a^{\dagger}_{p}\ket{0}  $$
+- An eigenstate of the _Hamiltonian_:
+$$H\ket{p}=\omega_{p}\ket{p}  \qquad \omega_{p}^{2}=p^{2}+m^{2}$$
+- Consider the _momenta_ from the [[#Local symmetry energy-momentum tensor|energy-momentum tensor]]:
+$$\boldsymbol{P}=: \int  d^{3}x\,\pi \,\nabla \phi: = \int  \frac{d^3 k}{(2\pi)^{3}}\,\boldsymbol{k}\,a_{k}^{\dagger}a_{k}\implies  \boldsymbol{P}\ket{p}=\boldsymbol{p}\ket{p}  $$
+- One can also consider _angular momentum_:
+$$J^{i}\ket{p}=0 $$
+- This is a particle of _spin_ $0$
 
+### n-particle states and the Fock space
+- Then, construct an $n-$particle state
+	- The creation operators _commute_
+$$\ket{p_{1}\dots p_{n}}=a^{\dagger}(p_{1})\dots a^{\dagger}(p_{n})\ket{0}  $$
+- The _Fock space_ of the particle is formed by all combinations of $a^{\dagger}$ acting on $\ket{0}$
+
+- The _number operator_:
+$$\displaylines{N=\int  \frac{d^3p}{(2\pi)^{3}} a_{p}^{\dagger}a_{p}\qquad [N,H]=0  \\ N\ket{p_{1}.,,p_{n}}=n\ket{p_{1}\dots p_{n}}  }$$
+- The Fock space is:
+$$\oplus \sum_{n} \mathcal{H}_{n}$$
+
+### Relativistic normalisation
+- Normalised vacuum state:
+$$\braket{ 0 | 0 }=1$$
+- For $\ket{p}=a_{p}^{\dagger}\ket{0}$, from the commutation relation, one might get:
+$$\braket{ p | q }\neq(2\pi)^{3} \delta^{3}(p-q)$$
+- This relation should be _Lorentz invariant_
+
+- If one applies a _unitary transformation_ $U(\Lambda) \ket{p}$, the _normalisation should not change_
+
+- Normal construction of the identity (Lorentz invariant) must be _constructed by Lorentz invariant quantities_
+	- Neither the measure or the kets are Lorentz invariant
+$$\mathbb{I}\neq\int  \frac{d^3p}{(2\pi)^{3}}\ket{p} \bra{p}  $$
+
+- Instead, consider the Lorentz invariant integral:
+	- Consider Lorentz transformations _continuously connected to the identity_, hence the step function $\Theta$
+$$\int  d^{4}p\,\delta^{4}(p_{0}^{2}-\boldsymbol{p}^{2}-m^{2})\Theta(p^{0}) =\int  \frac{d^3p}{2\sqrt{ p^{2}+m^{2} }}=\int  \frac{d^3p}{2\omega_{p}}  $$
+- From this:
+$$\mathbb{I}=\int  \frac{d^3p}{(2\pi)^{3}} \frac{1}{2\omega_{p}} \ket{p}\bra{p}   $$
+- The _normalised one particle state_ is then:
+$$\ket{p}=\sqrt{ 2\omega_{p} } a^{\dagger}_{p}\ket{0}  $$
+- Normalisation:
+$$\braket{ p | q }=(2\pi)^{3}2\omega_{p}\delta^{3} (p-q)$$
 ## Causality
+- From the principle of _causality_, _measurements_ which have _spacelike_ separation _should not influence each other_
+
+- In other words, if $x$ and $y$ are _spacelike separated_:
+$$\Delta(x-y)=[\phi(x),\phi(y)]=0\quad \forall (x-y)^{2}<0$$
+- It _does not vanish_ for timelike separations $(x-y)^{2}>0$
+	- Prove for one timelike vector, then _Lorentz invariance_ means it is true for all timelike vectors
+- Measurements with _timelike interval_ (within the _light cone_) _can influence each other_
+
+- It _vanishes_ for _spacelike_ separations $(x-y)^{2}<0$
+	- Prove for one spacelike vector, then use Lorentz invariance
 
 ## Propagators
+- Consider the quantity:
+$$\braket{ 0|\phi(x)\phi(y) | 0 } =\int  \frac{d^3p}{(2\pi)^{3}} \frac{1}{2\omega_{p}} \exp[-ip\cdot(x-y)]\equiv D(x-y) $$
+- For _spacelike_ events:
+$$\displaylines{D(x-y)\sim \exp[-m(x-y)]\neq 0 \\ [\phi(x),\phi(y)]=D(x-y)-D(y-x)=0}$$
+### The Feynman propagator
+$$\Delta _{F}(x-y)=\braket{ 0|T\phi(x)\phi(y) |0  } \equiv \begin{cases} 
+D(x-y)& x^{0}> y^{0} \\
+D(y-x) &y^{0}>x^{0}
+\end{cases}$$
+- $T$ is the _time ordering operator_, making sure the _amplitude_ is in the correct order (past to future)
+
+- Time ordering can be implemented with a _step function_:
+$$\braket{ 0|T\phi(x)\phi(y) | 0 }=\braket{ 0|\phi(x)\phi(y) |0  }\Theta(x^{0}-y^{0})+ \braket{ 0|\phi(y)\phi(x) |0  }\Theta(y^{0}-x^{0})  $$
+- Making the _expansion_, one can prove that it is equal to the expression below, with $\epsilon\to 0$
+$$\Delta_{F}(x-y)=\int  \frac{d^4p}{(2\pi)^{4}} \frac{i}{p^{2}-m^{2}+i\epsilon} \exp[-ip(x-y)]$$
+
+- It is also the _Greens function_ for the Klein-Gorfon equation:
+$$(\partial_{\mu}\partial^{\mu}+m^{2})\Delta_{F}(x-y)=-i\delta^{4}(x-y)$$
+
+### Wick's Theorem
+- Time ordering is equivalent to:
+$$T\phi(x)\phi(y)=:\phi(x)\phi(y):+\Delta_{F}(x-y)$$
+- Proof: split the field into $\phi^{+}$ and $\phi^{-}$ and _expand_ $T[\phi(x)\phi(y)]$
+$$\displaylines{\phi=\phi^{+}+\phi ^{-} \\ \phi^{+}=\int  \frac{d^3p}{(2\pi)^{3}}\,\frac{1}{\sqrt{ 2\omega_{p} }} a_{p} \exp(-ipx) \qquad \phi^{-}=\int  \frac{d^3p}{(2\pi)^{3}}\,\frac{1}{\sqrt{ 2\omega_{p} }} a_{p}^{\dagger} \exp(ipx)\\ [\phi^{+}(x),\phi^{-}(y)]=D(x-y) \\T[\phi(x)\phi(y)]=\,:\phi(x)\phi(y):+D(x-y)}$$
+
+- _Wick's Theorem_ for $N$ fields:
+$$T[\phi(x_{1})\dots \phi(x_{N})]=:\phi(x_{1})\dots \phi(x_{N}):+\text{ all possible contractions}$$
+- The _contractions_ are all possible combination of _propagators_:
+$$\overbrace {\phi_{i}\phi_{j}}=\Delta_{F}(x_{i}-x_{j})$$
+- Example:
+$$\begin{align}
+T(\phi(x_{1})\phi(x_{2})\phi(x_{3})\phi(x_{4}))&=\,:\phi(x_{1})\phi(x_{2})\phi(x_{3})\phi(x_{4}):  \\
+&+\overbrace{ \phi(x_{1})\phi(x_{2}) }:\phi(x_{3})\phi(x_{4}):+\overbrace{ \phi(x_{1})\phi(x_{3}) }:\phi(x_{2})\phi(x_{4}): \\
+&+ \text{ 4 other combinations} \\
+&+\overbrace{ \phi(x_{1})\phi(x_{2}) }\overbrace{ \phi(x_{3})\phi(x_{4}) }+\overbrace{ \phi(x_{1})\phi(x_{3}) }\overbrace{ \phi(x_{2})\phi(x_{4}) } \\
+&+\overbrace{ \phi(x_{1})\phi(x_{4}) }\overbrace{ \phi(x_{2})\phi(x_{3}) }
+\end{align}$$
+# Interacting fields
+- For _free theories_, one can _construct_ the _Fock space explicitly_
+
+- Consider _more general Lagrangians_, where the _equation of motion might not be solved_
+- Then, _one may not construct the Hilbert/Fock space_
+
+- Instead, a _perturbative approach_:
+$$\mathcal{L}=\mathcal{L}_{0}+\mathcal{L}_\text{int}$$
+- Example:
+$$\begin{align}
+\mathcal{L}_{0}&=\frac{1}{2}(\partial_{\mu}\phi)(\partial^{\mu}\phi)-\frac{1}{2}m^{2}\phi^{2} \\ \mathcal{L}_\text{int}&=-\sum_{n=3} \frac{\lambda^{n}}{n!}\phi^{n}
+\end{align}$$
+## Couplings
+- From the fact that $[S]=[\hbar]=1$, the units of the Lagrangian are $[\mathcal{L}]=[M]^{4}$
+- From this:
+$$[\lambda_{n}]=4-n$$
+- For some _energy scale_ $E$ of the system, check the _dimensionless quantity_:
+$$\frac{\lambda_{n}}{E^{4-n}}$$
+
+- For $n=3$, the coupling is _relevant_ at _low energies_ $(\lambda_{n}\gg E)$
+
+- For $n=4$, the coupling is _marginal_ if  $\lambda_{n}\ll 1$
+
+- For $n\geq 5$, the coupling is _small at low energies_, hence it is _irrelevant_
+
+- _Quantum_ corrections can _change_ the nature of the perturbation term
+
+## LSZ reduction formula
+- Let there be some _scattering process_
+	- Number of particles can _change_ (e.g. decays)
+
+- The _in_ and _out_ states are related by the $S-$matrix (scattering matrix)
+	- They are _asymptotic_ states, far away/long time after the scattering
+
+- In the _Schrodinger_ or _Heisenberg_ picture:
+$$\braket{ \text{final},t_{f} | \text{initial} ,t_{i}}_{S}=\braket{ f|S |i  }_{H}  $$
+
+- Let $\ket{\Omega}$ be the _vacuum state_
+	- _Different_ from the vaccum of the _free theory_, $\ket{0}$
+- A perturbative approach:
+$$\displaylines{H=H_{0}+H_\text{int} \\ \mathcal{L}=\mathcal{L}_{0}+\mathcal{L}_\text{int}}$$
+
+- Working in the _Heisenberg picture_, assume time evolution:
+$$\displaylines{i\partial_{t}\phi=[\phi,H] \\ i\partial_{t}\mathcal{O}=[\mathcal{O},H]}$$
+
+- Assume that at _some point_ $t=t_{0}$ before the scattering, one can _match_ the Hilbert space of $H_{0}$ to that of $H$:
+$$a_{p}(t)=\exp[iH(t-t_{0})]a_{p}^{0}\exp[-iH(t-t_{0})]$$
+- Then the field:
+$$\phi _\text{int}(x)=\int  \frac{d^3p}{(2\pi)^{3}} \frac{1}{\sqrt{ 2\omega_{p} }} \big(a_{p}(t)e^{-ipx}+a_{p}^{\dagger}(t)e^{ipx}\big) $$
+
+- Then write the states as:
+	- 2 particles in, 2 particles out (can be generalised easily)
+$$\begin{align}
+\ket{\text{initial},t_{i}}&=\sqrt{ 2\omega_{1} }\sqrt{ 2\omega_{2} }a_{p_{1}}^{\dagger}(t_{i})a_{p_{2}}^{^{\dagger}}(t_{i})\ket{\Omega}  \\
+\ket{\text{final},t_{f}}&=\sqrt{ 2\omega_{3} }\sqrt{ 2\omega_{4} }a_{p_{3}}^{\dagger}(t_{i})a_{p_{4}}^{^{\dagger}}(t_{i})\ket{\Omega}
+\end{align}$$
+- The _asymptotic states_, where there are _no interactions_ as $t_{i}\to -\infty$ and $t_{f}\to \infty$
+$$\lim_{ t \to \pm\infty } a_{p}^{\dagger}(t)={a_{p}^{0}}^{\dagger}$$
+
+- Then _relating_ the states, taking care to _time order_ the product:
+$$\braket{ f|S | i } =\left[ \prod_{i}\sqrt{ 2\omega_{i} } \right]\braket{ \Omega |T[a_{p_{3}}(\infty) a_{p_{4}}(\infty)a_{p_{1}}^{\dagger}(-\infty)a_{p_{2}}^{\dagger}(-\infty)]|\Omega } $$
+- Consider this integral at _asymptotic times_:
+$$\begin{align}
+i\int  d^4 x\,\exp(ipx)(\Box+m^{2})\phi(x)&=i \int  d^4 x\,e^{ipx}\,(\partial_{t}^{2}+\omega_{p}^{2})\phi(x) \\
+&=\int  dt\,\partial_{t}[e^{i\omega_{p}t}\int  d^3x\,e^{-i\boldsymbol{p}\cdot \boldsymbol{x}}(i\partial_{t}+\omega_{p})\phi(x) ] 
+\end{align}$$
+- This is a _total derivative_, therefore it _only depends on the boundaries_
+- Then _expanding_ $\phi$, and using that $a_{\boldsymbol{p}}(t)$ is _constant_ at $t\to \pm \infty$:
+$$\begin{align}
+i\int  d^4 x\,\exp(ipx)(\Box+m^{2})\phi(x)&=\sqrt{ 2\omega_{p} }[a_{p}(\infty)-a_{p}(-\infty)]\\
+-i\int  d^4 x\,\exp(-ipx)(\Box+m^{2})\phi(x)&=\sqrt{ 2\omega_{p} }[a_{p}^{\dagger}(\infty)-a_{p}^{\dagger}(-\infty)]
+\end{align}$$
+- Due to _time ordering_, and $\ket{\Omega}$ being the _vacuum state_, one can re-write the formula as:
+$$\begin{align}
+\braket{ f|S | i } =\left[ \prod_{i}\sqrt{ 2\omega_{i} } \right] \langle \Omega |&T\{[a_{p_{3}}(\infty)-a_{p_{3}}(-\infty)][a_{p_{4}}(\infty)-a_{p_{4}}(-\infty)]\\ 
+&\times[a^{\dagger}_{p_{1}}(-\infty)-a^{\dagger}_{p_{1}}(\infty)][a^{\dagger}_{p_{2}}(-\infty)-a^{\dagger}_{p_{2}}(\infty)]\} |\Omega\rangle
+\end{align}$$
+
+- Then using the identity, one gets the _LSZ reduction formula_:
+$$\begin{align}
+\braket{ f|S | i } =\left[\prod_{j} i\int  d^4x_{j} \right] &[\exp(-ip_{1}x_{1})(\Box_{1}+m_{1}^{2})]\dots[\exp(ip_{4}x_{4})(\Box_{4}+m_{4}^{2})] \\
+&\times\braket{ \Omega|T\{\phi(x_{3})\phi(x_{4})\phi(x_{1})\phi(x_{2})\} | \Omega } 
+\end{align} $$
+- It is a _product_ of operators, as well as an _$n-$point correlation function_ for $n$ total particles
+- $\exp(-ipx)(\Box+m^{2})$ is _pulled out_ of the inner product
+	- This leads to _contact terms_ which are physically irrelevant
+
+- One then gets a _Lorentz invariant_ $S-$matrix
+
+## Schwinger-Dyson equation

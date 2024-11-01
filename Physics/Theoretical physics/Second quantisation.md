@@ -69,7 +69,12 @@ $$\displaylines{\ket{\Psi^{S}_{\alpha_{1}\alpha_{2}\dots\alpha_{N}}}=\sqrt{ \fra
 $$\ket{\Psi^{A}_{\alpha_{1}\alpha_{2}\dots\alpha_{N}}}=\begin{vmatrix}
 \phi _{\alpha_{1}}(\boldsymbol{r}_{1})& \phi _{\alpha_{1}}(\boldsymbol{r}_{2}) &\dots & \phi_{\alpha_{1}}(\boldsymbol{r}_{N}) \\ \phi_{\alpha_{2}}(\boldsymbol{r}_{1}) & \phi_{\alpha_{2}}(\boldsymbol{r}_{2})& \dots & \phi_{\alpha_{2}}(\boldsymbol{r}_{N}) \\ \vdots & \vdots& \ddots & \vdots \\ \phi_{\alpha_{N}}(\boldsymbol{r}_{1}) & \phi_{\alpha_{N}}(\boldsymbol{r}_{2}) & \dots & \phi_{\alpha_{N}}(\boldsymbol{r}_{N})
 \end{vmatrix} $$
+- An _inner product_ between two _boson states_ $\ket{\Psi}$ and $\ket{\Phi}$, one gets (ignoring normalisation):
+$$\braket{ \Psi | \Phi }=\sum_{P} \prod_{n=1}^{N} \braket{ \psi_{n} |\phi_{P(n)}  } =\mathrm{perm} \braket{ \psi_{m} |\phi_{n}  }  $$
+- The _permanent_ of the matrix: determinant without signs
 
+- Similarly for _fermion product states_:
+$$\braket{ \Psi | \Phi }=\sum_{P} (-1)^{P} \prod_{n=1}^{N} \braket{ \psi_{n} |\phi_{P(n)}  } =\mathrm{det} \braket{ \psi_{m} |\phi_{n}  }  $$
 ### Example: Free particles on a ring
 - Ring: circumfrence $L$, no potential
 - Eigenstates:
@@ -153,30 +158,44 @@ $$\ket{\{N_{\alpha}\}} $$
 $$\braket{ N_{1}N_{2}\dots | N_{1}'N_{2}'\dots }=\delta_{N_{1}N_{1}'}\delta_{N_{2}N_{2}'}\dots $$
 ## Creation and annihilation operators
 - Introduce _creation and annihilation operators_, which _add and subtract quanta_
-$$\displaylines{a_{\alpha}^{\dagger}\ket{\Psi_{\alpha_{1}\alpha_{2}\dots\alpha_{N}}}=\sqrt{ N+1 }\ket{\phi_{\alpha}}\ket{\Psi_{\alpha_{1}\alpha_{2}\dots\alpha_{N}}}  }$$
+$$\displaylines{a^{\dagger}(\psi_{\alpha})\ket{\Psi_{\alpha_{1}\alpha_{2}\dots\alpha_{N}}}=\sqrt{ N+1 }\ket{\psi_{\alpha}}\ket{\Psi_{\alpha_{1}\alpha_{2}\dots\alpha_{N}}}  }$$
+- _Motivation_: a _linear_ operator $a^{\dagger}(\psi)$ which takes some _vacuum state_ $\ket{\text{VAC}}$ to $\ket{\psi}$
+	- Must preserve _inner product_ $\braket{ \psi | \phi  }$, so $a$ must be some _annihilation operator_
 
 ### Bosons
 - For _bosons_:
-$$a_{\alpha}^{\dagger}\ket{\Psi^{S}_{\alpha_{1}\alpha_{2}\dots\alpha_{N}}}=\sqrt{ N+1 }\mathcal{S}\left\{\ket{\phi_{\alpha}}\ket{\Psi^{S}_{\alpha_{1}\alpha_{2}\dots\alpha_{N}}}\right\}$$
+$$a^{\dagger}(\psi_{\alpha})\ket{\Psi^{S}_{\alpha_{1}\alpha_{2}\dots\alpha_{N}}}=\sqrt{ N+1 }\mathcal{S}\left\{\ket{\psi_{\alpha}}\ket{\Psi^{S}_{\alpha_{1}\alpha_{2}\dots\alpha_{N}}}\right\}$$
 - Labelling by _occupation number_, the above becomes:
 $$\displaylines{a^{\dagger}_{\alpha}\ket{N_{1}N_{2}\dots N_{\alpha}\dots N_{N}}=\sqrt{ N_{\alpha}+1 }\ket{N_{1}N_{2}\dots N_{\alpha}+1\dots N_{N}}\\a_{\alpha}\ket{N_{1}N_{2}\dots N_{\alpha}\dots N_{N}}=\sqrt{ N_{\alpha} }\ket{N_{1}N_{2}\dots N_{\alpha}-1\dots N_{N}}  }$$
-- From this, one can show:
-$$\left[ a_{\alpha},a_{\beta}^{\dagger} \right]=\delta_{\alpha\beta} \hspace{1cm}\left[ a_{\alpha},a_{\beta} \right]=\left[ a_{\alpha}^{\dagger}, a_{\beta}^{\dagger} \right]=0$$
+- From the _symmetry_ of the state:
+$$\left[ a(\psi_\alpha),a(\psi_{\beta}) \right]=\left[ a^{\dagger}(\psi_{\alpha}), a^{\dagger}(\psi_{\beta}) \right]=0$$
+- To _preserve inner products_
+	- This _recreates_ the [[#Fermions and bosons|inner product of product states]] using the _permanent_ of the below
+$$[a(\psi_{\alpha}),a^{\dagger}(\psi_{\beta})]=\braket{ \psi_{\alpha} |\psi_{\beta}  } $$
+- One can always _choose an orthonormal basis_ such that:
+$$\displaylines{a^{\dagger}(\psi_{\alpha})\equiv a^{\dagger}_{\alpha} \qquad a(\psi_{\beta})\equiv a_{\beta} \\ [a_{\alpha},a_{\beta}^{\dagger}]=\delta_{\alpha\beta}}$$
+
 - Then define the _number operator_:
 $$\displaylines{\hat{N}_{\alpha}=a^{\dagger}_{\alpha}a_{\alpha} \\ \left[ a_{\alpha},\hat{N}_{\alpha} \right]=a_{\alpha}\hspace{1.5cm}\left[ a_{\alpha}^{\dagger} ,\hat{N}_{\alpha}\right]=-a_{\alpha}^{\dagger}}$$
+
 - The _normalised state_ can then be written as:
-$$\ket{N_{1}N_{2},\dots N_{N}} =\prod_{\alpha} \frac{\left( a^{\dagger}_{\alpha} \right)^{N_{\alpha}}}{\sqrt{ N_{\alpha}! }}\ket{00\dots0} $$
-- $\ket{00\dots{0}}$ is the _vacuum state_, and represents _no quanta in any state_:
-$$\ket{\text{VAC}}=\ket{00\dots0}  $$
+$$\ket{N_{1}N_{2},\dots N_{N}} =\prod_{\alpha} \frac{\left( a^{\dagger}_{\alpha} \right)^{N_{\alpha}}}{\sqrt{ N_{\alpha}! }}\ket{\text{VAC}} $$
+- $\ket{\text{VAC}}$ is the _vacuum state_, and represents _no quanta in any state_:
 
 - This is an _identical algebra_ to the [[Quantum Harmonic Oscillator]]
 - Example: _photons_ and the [[Quantum electrodynamics|EM field]]
 
 ### Fermions
-$$a_{\alpha}^{\dagger}\ket{\Psi^{A}_{\alpha_{1}\alpha_{2}\dots\alpha_{N}}}=\sqrt{ N+1 }\mathcal{A}\left\{\ket{\phi_{\alpha}}\ket{\Psi^{A}_{\alpha_{1}\alpha_{2}\dots\alpha_{N}}}\right\}$$
-- They obey _anticommutation relations_
-$$\left\{ a_{\alpha},a_{\beta}^{\dagger} \right\}=\delta_{\alpha\beta} \hspace{1cm}\left\{ a_{\alpha},a_{\beta} \right\}=\left\{ a_{\alpha}^{\dagger},a_{\beta}^{\dagger} \right\}=0$$
+$$a^{\dagger}(\psi_{\alpha})\ket{\Psi^{A}_{\alpha_{1}\alpha_{2}\dots\alpha_{N}}}=\sqrt{ N+1 }\mathcal{A}\left\{\ket{\psi_{\alpha}}\ket{\Psi^{A}_{\alpha_{1}\alpha_{2}\dots\alpha_{N}}}\right\}$$
+- From _antisymmetry_:
+$$\left\{ a(\psi_{\alpha}),a(\psi_{\beta}) \right\}=\left\{ a^{\dagger}(\psi_{\alpha}),a^{\dagger}(\psi_{\beta})\right\}=0$$
 - One _cannot create two fermions in the same state_
+
+- Then to _preserve inner products_
+	- This _recreates_ the [[#Fermions and bosons|inner product of product states]] using the _determinant_ of the below
+$$\{a(\psi_{\alpha}),a^{\dagger}(\psi_{\beta})\}=\braket{ \psi_{\alpha} | \psi _{\beta} } $$
+- Use an _orthonormal basis_:
+$$\displaylines{a^{\dagger}(\psi_{\alpha})\equiv a^{\dagger}_{\alpha} \qquad a(\psi_{\beta})\equiv a_{\beta} \\ \left\{a_{\alpha},a_{\beta}^{\dagger}\right\}=\delta_{\alpha\beta}}$$
 
 - Building up a general state:
 $$\ket{N_{0}N_{1}\dots N_{N}}=\prod_{\alpha} \left( a^{\dagger}_{\alpha} \right)^{N_{\alpha}}\ket{\text{VAC}} $$
@@ -217,6 +236,34 @@ $$H=\frac{p^{2}}{2m}$$
 $$\braket{ \boldsymbol{k} | \boldsymbol{r} }=\exp(-i\boldsymbol{k}\cdot \boldsymbol{r}) $$
 - The field operators:
 $$\psi^{\dagger}(\boldsymbol{r})=\sum_{\boldsymbol{k}} \exp(-i\boldsymbol{k}\cdot \boldsymbol{r}) a_{\boldsymbol{k}}^{\dagger}\hspace{1cm}\psi(\boldsymbol{r})=\sum_{\boldsymbol{k}} \exp(i\boldsymbol{k}\cdot \boldsymbol{r}) a_{\boldsymbol{k}}$$
+### Explicit form and Jordan-Wigner representation
+- Consider a _one particle bosonic state_ $\psi_{\alpha}$
+- In the _basis_ $\{\ket{N_{\alpha}}\}$, the _explicit form_ of $a_{\alpha}$ has _non-zero entries in one off-diagonal_
+$$a_{\alpha}=\pmatrix{0&1&0&\dots&0 \\ 0&0&\sqrt{ 2 }&\dots&0 \\ \vdots}$$
+- For _two states_ $\alpha$ and $\beta$, the operators _act separately in their own subspace_
+$$\begin{align}
+a^{\dagger}\ket{N_{a}}_{a}\ket{N_{b}}_{b}&=\sqrt{ N_{a}+1 }\ket{N_{a}+1}_{a}\ket{N_{b}}_{b}  \\
+b\ket{N_{a}}_{a}\ket{N_{b}}_{b}&=\sqrt{ N_{b}}\ket{N_{a}+1}_{a}\ket{N_{b}-1}_{b}
+\end{align}$$
+
+
+- For a _one particle bosonic state_ $\psi_{\alpha}$, $N_{\alpha}=0,1$
+- Therefore:
+$$a^{\dagger}=\pmatrix{0&0\\1&0}$$
+- It resembles the _Pauli matrices_:
+$$\{a,a^{\dagger}\}=1 \longleftrightarrow \{\sigma^{+},\sigma^{-}\}=1$$
+- For _two states_, to satisfy the _anti-commutation relations_:
+$$\{a^{\dagger},b^{\dagger}\}=0$$
+- The operators _cannot act independently on their own subspace_ (the order at which one creates particles matters)
+$$a^{\dagger}=\pmatrix{0&0\\1&0}_{a}\otimes \mathbb{I}_{b} \qquad b^{\dagger}=\pmatrix{1&0\\0&-1}_{a}\otimes  \pmatrix{0&0\\1&0}_{b}$$
+- One can then _generalise_, into the _Jordan-Wigner string_:
+$$\begin{align}
+a^{\dagger}&=\pmatrix{0&0\\1&0}_{a}\otimes \mathbb{I}_{b}\otimes \mathbb{I}_{c} \otimes \dots\\ b^{\dagger}&= \pmatrix{1&0\\0&-1}_{a}\otimes  \pmatrix{0&0\\1&0}_{b}\otimes \mathbb{I}_{c} \otimes \dots \\ c^{\dagger}&= \pmatrix{1&0\\0&-1}_{a}\otimes \pmatrix{1&0\\0&-1}_{b}\otimes \pmatrix{0&0\\1&0}_{c}\otimes \dots
+\end{align}$$
+- There is a _mapping_ between spin $1/2$ operators and fermions:
+$$[s_{j}^{a},s^{b}_{k}]=i\varepsilon^{abc}s_{j}^{b}s_{k}^{c}$$
+- It is a _nonlocal mapping_
+- One can then _map_ [[Theories of Quantum Matter#Spin models|spin models]] onto a _collection of fermions_
 ## Representation of operators
 
 ### One particle operators
@@ -239,6 +286,9 @@ $$\ket{\psi}=\sum_{\alpha} a_{\alpha} \ket{\varphi_{\alpha}} \implies \left<a\ri
 
 - _Every_ single particle operator $A$ has a _second quantised counterpart_ $\hat{A}$, which is _formally identical_ to the _expectation value_ of $A$
 
+- The _matrix element_ between two _product states_ $\ket{\boldsymbol{N}}$ and $\ket{\boldsymbol{N}'}$
+- This _vanishes_ unless $N_{\alpha}'=N_{\alpha}-1$ and $N_{\beta}'=N_{\beta}-1$
+$$\langle{\mathbf{N}}\rvert \hat A \lvert \mathbf{N'} \rangle = A_{\alpha\beta} \sqrt{N_\alpha N'_\beta}$$
 ### Hamiltonian
 - Example: the _Hamiltonian_
 $$\hat{H}\equiv \sum_{\alpha,\beta}H_{\alpha\beta} a_{\alpha}^{\dagger}a_{\beta} $$
@@ -248,15 +298,19 @@ $$\hat{H}= \sum_{\alpha} E_{\alpha}a_{\alpha}^{\dagger}a_{\alpha}=\sum_{\alpha}E
 $$\begin{align}
 \hat{H}&=\int  \, d\boldsymbol{r}\left[ -\frac{\hbar^{2}}{2m}\psi ^{\dagger}(\boldsymbol{r})\nabla^{2}\psi(\boldsymbol{r})+V(\boldsymbol{r})\psi ^{\dagger}(\boldsymbol{r})\psi(\boldsymbol{r}) \right] \\ &= \int  \, d\boldsymbol{r}\left[ \frac{\hbar^{2}}{2m}\nabla\psi ^{\dagger}(\boldsymbol{r})\cdot\nabla\psi(\boldsymbol{r})+V(\boldsymbol{r})\psi ^{\dagger}(\boldsymbol{r})\psi(\boldsymbol{r}) \right]
 \end{align}$$
-- From the [[Quantum Dynamics#Dynamics in the Heisenberg picture|Heisenberg equation of motion]]:
+- Using the [[Quantum Dynamics#Dynamics in the Heisenberg picture|Heisenberg equation of motion]] for the _field operator_:
 $$i\hbar \frac{\partial }{\partial t}\psi(\boldsymbol{r},t)=-\left[ \hat{H} ,\psi(\boldsymbol{r},t)\right]=-\frac{\hbar^{2}}{2m}\nabla^{2}\psi(\boldsymbol{r},t)+V(\boldsymbol{r})\psi(\boldsymbol{r},t)$$
 - This is the _time-dependent Schrodinger equation_ for the _field operator_
 
 ### Probability current
 - Similarly, one can define the _probability current_:
 $$\hat{j}(\boldsymbol{r})=-\frac{i\hbar}{2m}[\psi ^{\dagger}(\boldsymbol{r})\nabla \psi(\boldsymbol{r})-\psi(\boldsymbol{r})\nabla \psi ^{\dagger}(\boldsymbol{r})]$$
+
+- The _Fourier components_:
+$$\hat{\boldsymbol{j}}_{\boldsymbol{q}}\equiv \int  d^{3}\boldsymbol{r}\, \hat{\boldsymbol{j}} \,e^{-i\boldsymbol{q}\cdot \boldsymbol{r}}=\sum_{\boldsymbol{k}} \frac{\boldsymbol{k}}{m}a^{\dagger}_{\boldsymbol{k}-\boldsymbol{q}/2} a_{\boldsymbol{k}+\boldsymbol{q}/2} $$
+- The $\boldsymbol{q}=0$ mode is the _total momentum_ $\times 1/m$
 ### Single particle density
-- The _density_ of particles:
+- The [[#Single particle density (matrix)|single particle density]]:
 $$\rho(\boldsymbol{x})=\sum_{i} \delta(\boldsymbol{x}-\boldsymbol{r}_{i})$$
 - It is _diagonal_ in the position basis
 - Single particle: the _expectation value_ is simply the _probability density_ in position space
@@ -271,16 +325,21 @@ $$\int  \, d\boldsymbol{x} \,\psi^{\dagger}(\boldsymbol{x}) \psi(\boldsymbol{x})
 - _Expectation value_ for some state:
 $$\left\langle  \hat{\rho}(\boldsymbol{x})  \right\rangle = \braket{ N_{0}N_{1}\dots |\hat{\rho}(\boldsymbol{x}) |N_{0}N_{1}\dots  }=\sum_{\alpha}N_{\alpha} \left| \varphi_{\alpha}(\boldsymbol{x}) \right|^{2} $$
 - The _number of particles_ in each state is _weighted_ by the probability density
+
+- The _Fourier mode_:
+$$\hat\rho_{\mathbf{q}}\equiv\int d\mathbf{r}\, \hat\rho(\mathbf{r})e^{-i\mathbf{q}\cdot \mathbf{r}}=\sum_{\mathbf{k}} a^\dagger_{\mathbf{k}-\mathbf{q}/2}a^{\vphantom{\dagger}}_{\mathbf{k}+\mathbf{q}/2}$$
 ### Single particle density matrix
-- Define the _single particle density matrix_
-	- _Generalisation_ of the single particle density, involving two positions
+- The _first quantised_ form of the [[#Single particle density (matrix)|single particle density matrix]]:
+$$g(x,y) \equiv N\int dx_2\ldots dx_N \,\Psi^{}(x,x_2,\ldots,x_N)\Psi^{*}(y,x_2,\ldots,x_N)$$
+
+- The second quantised form:
 $$g(\boldsymbol{r},\boldsymbol{r}')=\left<\psi^{\dagger}(\boldsymbol{r})\psi(\boldsymbol{r}')\right>$$
 - To check:
 $$g(\boldsymbol{r},\boldsymbol{r})=\left<\psi^{\dagger}(\boldsymbol{r})\psi(\boldsymbol{r})\right>=\left<\hat{\rho}(\boldsymbol{r})\right>$$
 - For the state $\ket{N_{0}N_{1}\dots}$:
 $$g(\boldsymbol{r},\boldsymbol{r}')=\sum_{\alpha}N_{\alpha}\varphi_{\alpha}^{*}(\boldsymbol{r})\varphi_{\alpha}(\boldsymbol{r}')$$
 
-- For the _Fermi gas_, in its _ground state_:
+- For the [[#Example Free particles on a ring|Fermi gas]], in its _ground state_:
 $$\begin{align}
 g(\boldsymbol{r},\boldsymbol{r}')&=\frac{1}{V} \sum_{|\boldsymbol{k}|<k_{F}}\exp[-i\boldsymbol{k}\cdot(\boldsymbol{r}-\boldsymbol{r}')] \\ &= \frac{k_{F}^{3}}{2\pi^{2}} \left[ \frac{\sin(k_{F}|\boldsymbol{r}-\boldsymbol{r}'|)}{(k_{F}|\boldsymbol{r}-\boldsymbol{r}'|)^{3}} -  \frac{\cos(k_{F}|\boldsymbol{r}-\boldsymbol{r}'|)}{(k_{F}|\boldsymbol{r}-\boldsymbol{r}'|)^{2}} \right]
 \end{align}$$
@@ -298,7 +357,6 @@ $$g(\boldsymbol{r},\boldsymbol{r}')=\sum_{\boldsymbol{k}} \frac{\exp(-E_{k}/k_{B
 - Consider the _density-density correlation_:
 $$\left<\rho(\boldsymbol{r})\rho(\boldsymbol{r}')\right> = \left<\psi^{\dagger}(\boldsymbol{r})\psi(\boldsymbol{r})\psi^{\dagger}(\boldsymbol{r}') \psi(\boldsymbol{r}')\right>$$
 - Qualitatively, one expects different behaviour for _fermions and bosons_
-- They have _different_ [[#Field operators|commutation relations]]
 	- For _bosons/fermions_, field operators of different positions _commute/anticommute_
 - It describes the _probability_ that $\boldsymbol{r}$ and $\boldsymbol{r}'$ are _both occupied_ by a particle
 
@@ -310,18 +368,21 @@ $$\left<\rho(\boldsymbol{r})\rho(\boldsymbol{r}')\right>=\left<\psi^{\dagger}(\b
 - Use _normal ordering_: all _creation operators_ to the _left_, annihilation operators on the right, including the _signature_ of the permutation:
 	- To maintain the _sign_, it must be an _even permutation_
 $$\displaylines{a_{\alpha}a_{\beta}^{\dagger}=\delta_{\alpha\beta}\pm a_{\beta}^{\dagger}a_{\alpha}\hspace{1.5cm} :a_{\alpha}^{\dagger}a_{\beta}:=\pm a_{\beta}^{\dagger}a_{\alpha} \\ \left<\rho(\boldsymbol{r})\rho(\boldsymbol{r}')\right>= \left<:\rho(\boldsymbol{r})\rho(\boldsymbol{r}'):\right>+\delta(\boldsymbol{r}-\boldsymbol{r}')\langle \rho(\boldsymbol{r}) \rangle }$$
+
+
 - The proper _density-density correlation_:
 $$C_{\rho}(\boldsymbol{r},\boldsymbol{r}')=\left<:\rho(\boldsymbol{r})\rho(\boldsymbol{r}'):\right>$$
 - It describes a _joint_ probability density of finding particles at $\boldsymbol{r}$ and $\boldsymbol{r}'$, but _removing_ the _mean density_
 	- _Normal ordering_ effectively _removes_ particles at $\boldsymbol{r}$ and $\boldsymbol{r}'$ by applying $\psi(\boldsymbol{r})\psi(\boldsymbol{r}')$
+- It is the _second quantised form_ of the [[#Pair distribution|pair distribution function]]
 
 - Go to the _energy representation_:
 $$\left<\rho(\boldsymbol{r})\rho(\boldsymbol{r}')\right>=\sum_{\alpha,\beta,\gamma,\delta} \varphi_{\alpha}^{*}(\boldsymbol{r})\varphi_{\beta}(\boldsymbol{r})\varphi_{\gamma}^{*}(\boldsymbol{r}')\varphi_{\delta}(\boldsymbol{r}') \left\langle a_{\alpha}^{\dagger}a_{\beta}a_{\gamma}^{\dagger}a_{\delta} \right\rangle  $$
 - For a state of form $\ket{N_{0}N_{1}\dots}$, the sum is _non-zero_ for:
 $$\alpha=\beta,\gamma=\delta \hspace{1cm}\text{ or }\hspace{1cm}\alpha=\delta,\beta=\gamma$$
-- _Ignore_ the case $\alpha=\beta=\gamma=\delta$ (does not matter for _large particle number_)
+- _Ignore_ the case $\alpha=\beta=\gamma=\delta$ (does not matter for _large particle number/thermodynamic limit_)
 
-- _Wick's Theorem_:
+- A version of [[QFT#Wick's Theorem|Wick's Theorem]]:
 $$\begin{align}
 \left<\rho(\boldsymbol{r})\rho(\boldsymbol{r}')\right> &= \sum_{\alpha,\gamma} |\varphi_{\alpha}(\boldsymbol{r})|^{2}|\varphi_{\gamma}(\boldsymbol{r}')|^{2} N_{\alpha}N_{\gamma} \\ &+ \sum_{\alpha,\gamma} \left(\varphi_{\alpha}^{*}(\boldsymbol{r})\varphi_{\alpha}(\boldsymbol{r}')\right)\left(\varphi_{\gamma}(\boldsymbol{r})\varphi_{\gamma}^{*}(\boldsymbol{r}')\right) N_{\alpha}(1\pm N_{\gamma})
 \end{align}$$
@@ -337,10 +398,22 @@ $$C_{\rho}(\boldsymbol{r},\boldsymbol{r}')= \left<\rho(\boldsymbol{r})\right>\le
 
 ### Two body operators
 - A _two-particle_ operator consists of a _sum of terms_ that act between _pairs of particles_
+- The _first quantised_ form, for some _two particle state_ $\ket{\varphi_{\alpha}}_{1}\ket{\varphi_{\beta}}_{2}$
+$$\begin{align}
+B_{\alpha\beta,\gamma\delta} &= \langle{\varphi_\alpha}\rvert\langle{\varphi_\beta}\rvert B_{12} \lvert{\varphi_\gamma}\rangle\lvert{\varphi_\delta}\rangle \\
+&=\int d\mathbf{r}d\mathbf{r}' \varphi_\alpha^*(\mathbf{r})\varphi_\beta^*(\mathbf{r}')B_{12}\varphi_\gamma(\mathbf{r})\varphi_\delta(\mathbf{r}')
+\end{align}$$
 
-- In _general_, it can be written as:
-$$\hat{A}_{2}=\frac{1}{2}\sum_{i,j,k,l}A_{ijkl}a^{\dagger}_{i}a^{\dagger}_{j}a_{k}a_{l}$$
-- $A_{ijkl}$ is some _two-body matrix element_
+- The _second quantised_ form can be written as:
+$$\hat{B}_{2}=\frac{1}{2}\sum_{i,j,k,l}B_{ijkl}a^{\dagger}_{i}a^{\dagger}_{j}a_{k}a_{l}$$
+- $B_{ijkl}$ is some _two-body matrix element_
+
+- Matrix elements of _product states_:
+- Vanishes unless $N_{\gamma,\delta}=N'_{\gamma,\delta}-1$ and $N_{\alpha,\beta}=N_{\alpha,\beta}+1$
+$$\langle{\mathbf{N}}\rvert \hat B \lvert \mathbf{N'} \rangle =\left[B_{\alpha\beta,\gamma\delta}\pm B_{\alpha\beta,\delta\gamma}\right] \sqrt{N_\alpha N_\beta N'_\gamma N'_\delta}$$
+- This is _not accurate_ for the case of $\alpha=\beta$ or $\gamma=\delta$
+	- In the _thermodynamic limit_, there is a _vanishing conribution_ when the sim over states is replaced with an integral
+	- When a large fraction of particles are in _one state_ (e.g. Bose-Einstein condensate), $N_{\alpha}-1\approx N_{\alpha}$
 
 - Example: the _interaction Hamiltonian_, summing over potential energy of _pairs_
 $$H_\text{int}=\frac{1}{2}\sum_{i\neq j} U(\boldsymbol{r}_{i}-\boldsymbol{r}_{j})=\sum_{i<j}U(\boldsymbol{r}_{i}-\boldsymbol{r}_{j})$$
@@ -353,6 +426,10 @@ $$\frac{1}{2}\int  \, d\boldsymbol{r} d\boldsymbol{r}' \rho(\boldsymbol{r}) U(\b
 $$\begin{align}
 H_\text{int}&= \frac{1}{2} \int  \, d\boldsymbol{r}\,d\boldsymbol{r}' :\rho(\boldsymbol{r})U(\boldsymbol{r}-\boldsymbol{r}')\rho(\boldsymbol{r}'):\\&=\frac{1}{2}\int  \, d\boldsymbol{r}\,d\boldsymbol{r}' \psi ^{\dagger}(\boldsymbol{r})\psi ^{\dagger}(\boldsymbol{r}')U(\boldsymbol{r}-\boldsymbol{r}')\psi(\boldsymbol{r}')\psi(\boldsymbol{r}) 
 \end{align} $$
+
+- Example: the [[#Example impenetrable Bose Gas|impenetrable Bose gas]]
+$$H = \int dx \left[\frac{1}{2}\partial_x\psi^\dagger(x)\partial_x\psi^{\vphantom{\dagger}}(x) + \frac{c}{2}\psi^\dagger(x)\psi^\dagger(x)\psi^{\vphantom{\dagger}}(x)\psi^{\vphantom{\dagger}}(x)\right]$$
+
 - The _expectation value_, using [[#Density-density correlations and Wick's Theorem|Wick's Theorem]]:
 $$\left<H_\text{int}\right>= \frac{1}{2} \int d\boldsymbol{r} \, d\boldsymbol{r}' \left<\rho(\boldsymbol{r})\right>U(\boldsymbol{r}-\boldsymbol{r}') \left<\rho(\boldsymbol{r}')\right> \pm \frac{1}{2}\int d\boldsymbol{r}  \, d\boldsymbol{r}' U(\boldsymbol{r}-\boldsymbol{r}')g(\boldsymbol{r},\boldsymbol{r}')g(\boldsymbol{r}',\boldsymbol{r})  $$
 - The first term is the _Hartree_ term
