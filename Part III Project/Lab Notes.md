@@ -31,3 +31,7 @@
 
 # 30/10/24
 - Literature review: [[QM in an Evolving Hilbert Space]]
+
+# 31/10/24
+- Looked for sources on Floquet physics, found multiple on arXiv
+- See: [[Floquet theory]]
