@@ -369,12 +369,14 @@ $$\partial_\mu\left(\pd{\Lagr}{(\partial_\mu\varphi)}\delta\varphi-K^\mu\right)=
 - This leads to the _energy-momentum tensor_
 
 ### Noether current for scale invariance
-- Let there be some _scaling_ in coordinates, with an _accompanying_ scaling in the fields:
-$$\displaylines{x^{\mu}\to\lambda x^{\mu} \\ \varphi(x^{\mu})\to\lambda \varphi(\lambda x^{\mu})}$$
-- The Lagrangian:
-$$\mathcal{L}=\frac{1}{2}(\partial^{\mu}\varphi )(\partial_{\mu}\varphi)$$
-- In $1+1$ spacetime, the transformation is:
-$$\mathcal{L}(x^{\mu})\to \lambda^{4}\mathcal{L}(\lambda x^{\mu})$$
+- Let there be some _active scaling_, to transform the field with _scaling dimension_ $D$:
+$$\phi(x)\to \lambda^{-D}\phi(\lambda^{-1}x)$$
+- The Lagrangian and action in $n$ spacetime dimensions:
+$$\mathcal{L}=\frac{1}{2}(\partial^{\mu}\varphi )(\partial_{\mu}\varphi)-\frac{1}{p!}\phi^{p} \qquad S=\int  d^nx\,\mathcal{L} $$
+- For the action to be _scale invariant_, one finds:
+$$D=\frac{n-2}{2}$$
+
+
 - Let the dilatation be _infinitesimal_:
 $$\lambda\equiv 1+\epsilon$$
 - The shift in Lagrangian density:
@@ -410,6 +412,7 @@ $$\partial_\nu T^{\mu\nu}=0$$
 $$T^{\mu\nu}=\pd{\Lagr}{(\partial_\mu\varphi_\alpha)}(\partial^\nu\varphi_\alpha)-g^{\mu\nu}\Lagr$$
 
 - The _divergenceless_ condition gives some degree of _freedom_ to the tensor:
+	- One can always add $\partial_{\nu}B^{\mu \nu}$ to the _Noether current_, for $B^{\mu \nu}=-B^{\nu \mu}$
 $$T^{\mu\nu}\to T^{\mu\nu}+\partial_\lambda \Omega^{\lambda\mu\nu}$$
 - The tensor must be _antisymmetric_ w.r.t. indices $\mu,\lambda$
 - This is _automatically also conserved_ due to the antisymmetry
@@ -446,6 +449,7 @@ $$\displaylines{T^{\mu\nu}\to T^{\mu\nu}+\partial_\lambda \Omega^{\lambda\mu\nu}
 $$T^{\mu\nu}=\tenscom{F}{\mu}{\lambda}F^{\lambda\nu}-g^{\mu\nu}\Lagr$$
 - This is _gauge invariant_ as it expressed in terms of _field strengths_
 - It is also _symmetric_
+- It is also _massless_ ($T^{\mu \nu}$ is traceless)
 
 - Its elements are:
 $$\displaylines{\Lagr=\frac{1}{2}(|\bm{E}|^2-|\bm{B}|^2) \\ T^{00}=\Ham=\frac{1}{2}(|\bm{E}|^2+|\bm{B}|^2)\hspace{1cm}T^{i0}=T^{0i}=(\bm{E}\times\bm{B})_j}$$

@@ -250,7 +250,7 @@ $$\int  d\boldsymbol{x}\,\Psi_{n}^{*}(\boldsymbol{x})\Psi_{m}(\boldsymbol{x})=[\
 - This gives $N^{2}$ _Lagrange multipliers_ $\varepsilon_{n,m}$
 $$L[\{\Psi_{n}\}]=E_{0}[\{\Psi_{n}\}]-\sum_{n,m} \varepsilon_{n,m}\big([\Psi_{n}^{\dagger}\Psi_{m}]-\delta_{nm}\big)$$
 - _Without loss of generality_, assume states are already orthonormal:
-$$L[\{\Psi_{n}\}]=E_{0}[\{\Psi_{n}\}]-\sum_{n=1}^{N}([\Psi_{n}^{\dagger}\Psi_{n}]-1)$$
+$$L[\{\Psi_{n}\}]=E_{0}[\{\Psi_{n}\}]-\sum_{n=1}^{N}\varepsilon_{n}([\Psi_{n}^{\dagger}\Psi_{n}]-1)$$
 - Varying the functions, one gets:
 $$\begin{align}
 \delta L[\{\Psi_{i}\}]&=\Bigg(\sum_{n=1}^{N} [\delta \Psi_{n}^{\dagger}\Psi_{n}|h]+\sum_{n,m=1}^{N} ([\delta \Psi_{n}^{\dagger}\Psi_{n}|g|\Psi_{m}^{\dagger}\Psi_{m}]-[\delta \Psi_{n}^{\dagger}\Psi_{m}|g|\Psi_{m}^{\dagger}\Psi_{n}]) \\ 
@@ -315,7 +315,7 @@ $$\Psi_{\boldsymbol{k},\lambda}(\boldsymbol{r},\sigma)=\frac{1}{\sqrt{ V }}\exp(
 $$\begin{align}
 -\frac{\hbar^{2}}{2m}\nabla_{r}^{2}\Psi_{\boldsymbol{k}}&=\frac{\hbar^{2}k^{2}}{2m}\Psi_{\boldsymbol{k}} \\
 U_{H}\Psi_{\boldsymbol{k}}&=\frac{N}{V} \left(\int  d^3\boldsymbol{r}' \frac{e^{2}}{4\pi\epsilon_{0}r'} \right)\Psi_{\boldsymbol{k}} \\
-U_\text{ion}\Psi_{\boldsymbol{k}}&=-{N}{V} \left(\int  d^3\boldsymbol{r}' \frac{e^{2}}{4\pi\epsilon_{0}r'} \right)\Psi_{\boldsymbol{k}} \\
+U_\text{ion}\Psi_{\boldsymbol{k}}&=-\frac{N}{V} \left(\int  d^3\boldsymbol{r}' \frac{e^{2}}{4\pi\epsilon_{0}r'} \right)\Psi_{\boldsymbol{k}} \\
 -U_{E}\Psi_{\boldsymbol{k}}&=-\frac{e^{2}}{\epsilon_{0}} \left( \int_{|k|<k_{F}}  \frac{d^{3}\boldsymbol{k}'}{(2\pi)^{3}}  \frac{1}{|\boldsymbol{k}-\boldsymbol{k}'|^{2}}\right) \Psi_{\boldsymbol{k}}
 \end{align}$$
 - The _Hartree_ and _ion_ energies _cancel_
@@ -330,7 +330,30 @@ $$\displaylines{\varepsilon_{\boldsymbol{k},\lambda}=\frac{\hbar^{2}k^{2}}{2m}-\
 - Comparing to _free electrons_, the _exchange energy_ between _parallel spins_ will _lower_ the electron energy:
 ![[Jellium Hartree Fock.png|400]]
 
-## Ground state energy in metals
+### Jellium ground state energy
+- Then contrast the addition energies with the _ground state energy_ $E_{0}$
+$$\begin{align}
+E_{0}^{\text{HF}}=&\sum_{n} \left[ \Psi_{n}^{\dagger}\Psi_{n}\Bigg|-\frac{\hbar^{2}}{2m}\nabla^{2}+U_\text{e-ion} \right]+U_\text{ion-ion} \\
+&+ \frac{1}{2}\sum_{n,m}\{[\Psi_{n}^{\dagger}\Psi_{n}|g|\Psi_{m}^{\dagger}\Psi_{m}]-[\Psi_{n}^{\dagger}\Psi_{m}|g|\Psi_{m}^{\dagger}\Psi_{n}]\}
+\end{align}$$
+- In the case of jellium, $E_\text{e-e}+E_\text{e-ion}+E_\text{ion-ion}=0$, leaving behind _kinetic_ and _exchange_ energy
+
+- Evaluating the sum gives:
+$$E_{0}^\text{HF}=\left( \frac{2.21}{r_{s}^{2}}-\frac{0.916}{r_{s}} \right)\text{ Ry}$$
+- $r_{s}$ is the _Wigner-Seitz radius_, which on average contains _one electron_, measured in the _Bohr radius_:
+$$\frac{1}{\rho}=\frac{V}{N}=\frac{4\pi}{3}(r_{s}a_{B})^{3}$$
+- One can compare the _Coulomb_ and _kinetic energy_:
+$$U\sim\frac{e^{2}}{4\pi\epsilon_{0}(a_{B}r_{s})} \quad K=\frac{\hbar^{2}k_{F}^{2}}{2m}\implies \frac{U}{K}\sim 0.9r_{s}$$
+- In _real materials_, typical value is $r_{s}\sim 2-6$
+
+![[Jellium ground state energy.png|500]]
+- For _low_ $r_{s}$, _kinetic energy dominates_
+- For _high_ $r_{s}$ (low density), _exchange energy_ dominates
+
+- A more precise _expansion_ of ground state energy:
+$$E_{0}=\left( \frac{2.21}{r_{s}^{2}}-\frac{0.916}{r_{s}}+\underbrace{ 0.0622\ln r_{s}-0.096+\mathcal{O}(r_{s}\ln r_{s})O }_\text{Correlation energy} \right)\text{ Ry}$$
+
+
 
 # Density Functional Theory
 - Based around the _electron density_, the _probability density_ of finding the $N$ electrons
@@ -364,7 +387,7 @@ $$n(\boldsymbol{r})>0\,\,\forall \boldsymbol{r} \qquad \lim_{ |\boldsymbol{r}| \
 - As $V_\text{Ne}$ determines the _Hamiltonian_, $n(\boldsymbol{r})$ then _determines all physical properties_ of the system
 
 ### The Hohenberg-Kohn density functional
-- The _total energy functional_, along with _external potential_:
+- The _total energy functional_, along with _external potential_ $V_\text{Ne}$:
 $$\begin{align}
 E_{0}[n(\boldsymbol{r})]&=T[n]+E_\text{Ne}[n]+E_\text{ee}[n]  \\
 &=\int  d^3\boldsymbol{r}\,n(\boldsymbol{r})V_\text{Ne}(\boldsymbol{r})+F_\text{H-K}[n] 
@@ -394,6 +417,7 @@ $$E_\text{ee}[n]=\frac{1}{2}\iint  d^{3}\boldsymbol{r}\,d^{3}\boldsymbol{r}' \fr
 - Meanwhile, $T[n]$ can also be separated
 - Let $T_{S}[n]$ be the _exact kinetic energy_ of a _non-interacing reference system_ with the _same elecronic density_ $n(\boldsymbol{r})$ as the interacting system
 	- The two systems can have the _same density_ as the Hamiltonians differ in _not just_ the external potential
+
 - Let the _reference system_ have eigenstates $\Psi_{i}(\boldsymbol{r},\sigma)=\phi_{i}(\boldsymbol{r})\chi_{i}(\sigma)$, with the wave function being a _single Slater determinant_:
 $$\displaylines{n_{S}(\boldsymbol{r})=\sum_{i=1}^{N}|\phi_{i}(\boldsymbol{r})|^{2}=n(\boldsymbol{r}) \\ T_{S}=\sum_{i=1}^{N}\int  d^3\boldsymbol{r}\, \Psi_{i}^{\dagger}(\boldsymbol{r}) \frac{p^{2}}{2m}\Psi_{i}(\boldsymbol{r})}$$
 
@@ -401,14 +425,56 @@ $$\displaylines{n_{S}(\boldsymbol{r})=\sum_{i=1}^{N}|\phi_{i}(\boldsymbol{r})|^{
 $$\displaylines{F_\text{HK}[n]=T_{S}[n]+J[n]+E_\text{XC}[n] \\ E_\text{XC}[n]=(T[n]-T_{S}[n])+(E_\text{ee}[n]-J[n])}$$
 - $E_\text{XC}$ is the _exchange correlation energy_
 
-- From this, using definitions from the [[#The ground state energy|Hartree-Fock approximation]], write $E_{0}$ in terms of the _eigenstates of the reference system_:
+- From this, using definitions from the [[#The ground state energy|Hartree-Fock approximation]], write $E_{0}$ in terms of the _eigenstates of the reference system_
+	- Including the _electron self-interaction_ $i=j$
 $$E_{0}[n]=\sum_{i=1}^{N}[\Psi_{i}^{\dagger}\Psi _{i}|h]+\frac{1}{2}\sum_{i,j=1}^{N}[\Psi_{i}^{\dagger}\Psi_{i}|g|\Psi_{j}^{\dagger}\Psi_{j}]+E_\text{XC}[n]$$
 ### Minimisation
-
-
+- Use _calculus of variations_ to derive the eigenstates _of the reference system_
+- Assuming that $\Psi_{i}$ are orthogonal:
+$$L[\{\Psi_{i}\}]=E_{0}[\{\Psi_{i}\}]-\sum_{i=1}^{N}\varepsilon_{i}([\Psi_{i}^{\dagger}\Psi_{i}]-1)$$
+- Doing the minimisation:
+$$\displaylines{\sum_{i=1}^{N}\int  d\boldsymbol{x}\,\delta \Psi_{i}^{\dagger}\left( h(\boldsymbol{x})\Psi_{i}(\boldsymbol{x})+U_{H}\Psi_{i}(\boldsymbol{x})+\frac{\delta E_\text{XC}}{\delta n(\boldsymbol{r})}\Psi_{i}(\boldsymbol{x})-\varepsilon_{i}\Psi_{i}(\boldsymbol{x}) \right)+\text{h.c.}=0 \\ U_{H}=\sum_{m=1}^{N}\int  d\boldsymbol{y}\,\Psi_{m}^{\dagger}(\boldsymbol{y})g(\boldsymbol{x}-\boldsymbol{y})\Psi_{m}(\boldsymbol{y}) }$$
+- Here, a _functional derivative_ is required to minimise $E_\text{XC}$
+$$\delta E_\text{XC}=E_\text{XC}[n+\delta n]-E_\text{XC}[n]\equiv \int  d^3\boldsymbol{r} \,\delta n(\boldsymbol{r}) \frac{\delta E_\text{XC}}{\delta n(\boldsymbol{r})}$$
+- Then, define the _exchange correlation potential_:
+$$V_\text{XC}(\boldsymbol{r})=\frac{\delta E_\text{XC}}{\delta n(\boldsymbol{r})}$$
+- One then gets the _Kohn-Sham equation_:
+$$\left( -\frac{\hbar^{2}}{2m}\nabla ^{2}+V_\text{Ne}(\boldsymbol{r})+U_{H}(\boldsymbol{r})+V_\text{XC}(\boldsymbol{r}) \right)\Psi_{i}(\boldsymbol{x})=\varepsilon_{i}\Psi_{i}(\boldsymbol{x})$$
+- $U_{H}$ and $V_\text{XC}$ are _local_ operators dependent on $n(\boldsymbol{r})$
 ### Local density approximation
+- For regions where $n$ is _slowly varying_, $E_\text{XC}$ can be _approximated_ by the value for a _locally uniform electron gas_ of the same charge density:
+$$E_\text{XC}[n]=\int \varepsilon _\text{XC}(n)n(\boldsymbol{r})\,d^{3}\boldsymbol{r} $$
+- Or, the _local spin density approximation_:
+$$E_\text{XC}[n_{\uparrow},n_{\downarrow}]=\int  \varepsilon _\text{XC}(n_{\uparrow},n_{\downarrow})n(\boldsymbol{r})\,d^{3}\boldsymbol{r} $$
+- They are typically used in DFT codes, but tend to _underpredict atomic ground state and ionisation energies_, while _overpredicting binding energies_
 
+- It can be improved by adding _gradient corrections_ $\varepsilon _\text{XC}(n_{\uparrow},n_{\downarrow},\nabla n_{\uparrow},\nabla n_{\downarrow})$
+
+- LDA exchange-correlation potentials can be found using _quantum Monte Carlo_
+	- The first term is the [[#Jellium ground state energy|jellium exchange energy]]
+$$\displaylines{E_\text{XC}^{\text{LDA}}[n(\boldsymbol{r})]=\int  d^3\boldsymbol{r}\,\varepsilon _\text{XC}(n)n(\boldsymbol{r}) \\ \varepsilon _\text{XC}(\boldsymbol{r}_{s})=\begin{cases}
+-\frac{0.9164}{r_{s}}-\frac{0.2846}{1+1.0529\sqrt{ r_{s} }+0.3334r_{s}} &r_{s}>1 \\ -\frac{0.9164}{r_{s}}+0.0622\ln r_{s}-0.096-0.0232r_{s}+0.004r_{s}\ln r_{s}&r_{s}\leq 1
+\end{cases} \\ \frac{1}{n}=\frac{4\pi}{3}(r_{s}a_{B})^{3} }$$
 ### Solving the Kohn-Sham equations
+$$\left( -\frac{\hbar^{2}}{2m}\nabla ^{2}+V_\text{Ne}(\boldsymbol{r})+U_{H}(\boldsymbol{r})+V_\text{XC}(\boldsymbol{r}) \right)\Psi_{i}(\boldsymbol{x})=\varepsilon_{i}\Psi_{i}(\boldsymbol{x})$$
+- The Kohn-Sham equations can be _solved iteratively_ like the [[#Solving the Hartree-Fock Equation|Hartree-Fock equation]]
+- The Hartree potential:
+$$U_{H}(\boldsymbol{r})=\sum_{i=1}^{N}\int  d\boldsymbol{x}' \frac{e^{2}|\Psi_{i}(\boldsymbol{x}')|^{2}}{4\pi\epsilon_{0}|\boldsymbol{r}-\boldsymbol{r}'|}=\int  d^3\boldsymbol{r} \frac{e^{2}n(\boldsymbol{r}')}{4\pi\epsilon_{0}|\boldsymbol{r}-\boldsymbol{r}'|}$$
+- The _initial guess_ for the Kohn-Sham orbitals are typically from _setting_ $U_{H}$ and $V_\text{XC}$ to $0$
+- Then, _solve iteratively_
+
+### Kohn-Sham eigenvalues and orbitals
+- The _sum of Kohn-Sham eigenvalues_, from the equations:
+$$\sum_{i=1}^{N}\varepsilon_{i}-E_{0}=\frac{1}{2}\frac{e^{2}}{4\pi\epsilon_{0}}\iint  d^{3}\boldsymbol{r}\,d^{3}\boldsymbol{r}'\,\frac{n(\boldsymbol{r})n(\boldsymbol{r}')}{|\boldsymbol{r}-\boldsymbol{r}'|}-E_\text{XC}[n]+\int  d^3\boldsymbol{r}\,V_\text{XC}(\boldsymbol{r})\,n(\boldsymbol{r})  $$
+- The eigenvalues _do not have significance as single-particle energies_
+
+- The Kohn-Sham orbitals are mainly useful for _calculating physical properies from density_
+
+## DFT-based molecular dynamics
+- Use the _Born-Oppenheimer approximation_
+- The motion of _nuclei_ can be treated _classically_ on the _ground-state electronic surface_
+$$M_{I}\ddot{\boldsymbol{R}}_{I}=-\nabla_{I}(\underbrace{ E_{0}(\boldsymbol{R}_{1}\dots \boldsymbol{R}_{N}) }_{ \text{DFT} }+\underbrace{ V_\text{N-N}(\boldsymbol{R}_{1}\dots \boldsymbol{R}_{N}) }_{ \text{Coulomb} })$$
+- At _each step_, the forces are calculated by _minimising the Kohn-Sham energy_ for the _current nuclear configuration_
 # Electronic response theory
 - In the _independent electron_ model, the only _elementary excitations_ are _electron-hole pairs_, from _electron transitions_ between levels
 
@@ -610,7 +676,8 @@ $$\frac{1}{\tau(\boldsymbol{p})}\propto \frac{\pi^{2}(k_{B}T)^{2}+(\varepsilon_{
 	- $|\varepsilon_{\lambda}(\boldsymbol{p})-\mu|\gg k_{B}T$: there is _no thermal broadening_, $\tau^{-1}\sim \varepsilon^{2}$
 
 ### Quasiparticle excitation and effective energy
-- For a _distribution of quasiparticles_ $n_{\lambda}(\boldsymbol{p})$, one can quantify the "amount of excitation" with the _quasiparticle excitation_:
+- For a _distribution of quasiparticles_ $n_{\lambda}(\boldsymbol{p})$, one can quantify the "amount of excitation" with the _quasiparticle excitation distribution_
+	- Distribution in the _new, interacting eigenstate_ of the system
 $$\delta n_{\lambda}(\boldsymbol{p})=n_{\lambda}(\boldsymbol{p})-n_{\lambda}^{0}(\boldsymbol{p})$$
 - Here, $n^{0}_{\lambda}(\boldsymbol{p})$ is the _ground state distribution_, treated as a _step function_ at $\mu$
  
@@ -633,4 +700,295 @@ F=F_{0}&+\sum_{\boldsymbol{p},\lambda}[\varepsilon_{\lambda}(\boldsymbol{p})-\mu
 	- It is both a _relativistic effect_, and a result of the _exchange interaction_
 	- In _metals_, the latter is typically $\sim 10^{1}$ larger than other contributions to interaction energy
 
+- If spin is _conserved_ (accounting for _only the exchange interaction_), the interaction parameter can be split into _spin-symmetric_ and _spin-antisymmetric_ parts:
+$$\displaylines{f_{\lambda,\lambda'}(\boldsymbol{p},\boldsymbol{p}')=f^{(s)}(\cos \xi)+\gamma_{\lambda,\lambda'}f^{(a)}(\cos \xi) \\ \gamma_{\lambda,\lambda'}=\begin{cases}
+1&\lambda=\lambda' \\ -1 &\lambda\neq\lambda'
+\end{cases} \qquad \boldsymbol{p}\cdot \boldsymbol{p}'=pp'\cos \xi}$$
+- The parameters can then be written as a _multipole expansion_:
+$$f^{(s/a)}(\cos \xi)=\sum_{l=0}^{\infty}f_{l}^{(s/a)}P_{l}(\cos \xi)$$
+- The _coefficients_ define the dimensionless _Landau parameters_:
+$$F_{l}^{(\alpha)}=g_{V}(0)f_{l}^{(\alpha)}=\frac{m^{*}p_{F}}{\pi^{2}\hbar^{3}}f_{l}^{(\alpha)}$$
+
+- Write in terms of the _polar angles_ of $\boldsymbol{p}$ and $\boldsymbol{p}'$, using a property of $P_{l}$
+$$\displaylines{P_{l}(\cos \xi)=\frac{4\pi}{2l+1}\sum_{m=-l}^{l}Y_{l,m}(\theta,\phi)Y^{*}_{l,m}(\theta',\phi') \\ f^{(\alpha)}(\cos \xi)=\sum_{l=0}^{\infty} \sum_{m=-l}^{l} \frac{4\pi}{2l+1}f_{l}^{(\alpha)}Y_{l,m}(\theta,\phi)Y^{*}_{l,m}(\theta',\phi')}$$
 ### Local properties
+- Consider a normal Fermi liquid with pre-existing quasiparticle distribution $\delta n_{\lambda}(\boldsymbol{p})$
+- When _adding_ another particle at momentum $\boldsymbol{p}$, due to _interactions_, it will have some _effective energy_ $\tilde{\varepsilon}_{\lambda}(\boldsymbol{p})-\mu$, given by the _first variational derivative_
+$$\tilde{\varepsilon}_{\lambda}(\boldsymbol{p})-\mu=\frac{\delta F}{\delta n_{\lambda}(\boldsymbol{p})}$$
+- Using the [[#Quasiparticle excitation and effective energy|formula]] for $\delta F$:
+	- It is also defined for an _inhomogeneous_ system with $\delta n_{\lambda}(\boldsymbol{p},\boldsymbol{r})$
+$$\tilde{\varepsilon}_{\lambda}(\boldsymbol{p})-\mu=(\varepsilon_{\lambda}(\boldsymbol{p})-\mu)+\frac{1}{V}\sum_{\boldsymbol{p}',\lambda'}f_{\lambda,\lambda'}(\boldsymbol{p},\boldsymbol{p}')\delta n_{\lambda'}(\boldsymbol{p}')$$
+- $\varepsilon_{\lambda}(\boldsymbol{p})-\mu$ is known as the _local quasiparticle excitation energy_
+
+- Its _gradient_ in ordinary space represents the _average force exerted_ by the _surrounding medium_ on the quasiparticle $\boldsymbol{p}$
+$$\nabla_{\boldsymbol{r}}\tilde{\varepsilon}_{\lambda}(\boldsymbol{p},\boldsymbol{r})=\nabla_{\boldsymbol{r}}\left( \frac{1}{2V} \sum_{\boldsymbol{p}',\lambda'}f_{\lambda,\lambda'}(\boldsymbol{p},\boldsymbol{p}')\delta n_{\lambda'}(\boldsymbol{p}')\right)$$
+- Define the _local quasiparticle excitation distribution_
+	- As opposed to the [[#Quasiparticle excitation and effective energy|quasiparticle excitation distribution]] $\delta n_{\lambda}(\boldsymbol{p})=n_{\lambda}(\boldsymbol{p})-n_{\lambda}^{0}(\boldsymbol{p})=n_{\lambda}(\boldsymbol{p})-n^{0}(\varepsilon_{\lambda}(\boldsymbol{p})-\mu)$
+	- This quantifies the _departure from equilibrium_
+$$\displaylines{\delta \tilde{n}_{\lambda}(\boldsymbol{p})=n_{\lambda}(\boldsymbol{p})-\tilde{n}_{\lambda}^{0}(\boldsymbol{p}) \\ \tilde{n}_{\lambda}^{0}(\boldsymbol{p})=n^{0}(\tilde{\varepsilon}_{\lambda}(\boldsymbol{p})-\mu)}$$
+- It quantifies the _depature from local equilibrium_ in the Fermi liquid
+# Magnetism
+- Only arises due to _inter-particle interactions_
+	- Unaccounted for by the independent electron model
+- _Magnetic ordering_ is a _spontaneous symmetry breaking_ for the system of spins
+
+## Fermionic Hubbard model
+- A version of the [[Theories of Quantum Matter#Hubbard model|Hubbard model]]
+- Consider a _lattice_ with orbitals $\{\Psi_{i}(\boldsymbol{r}-\boldsymbol{R}_{i})\}$, _centred_ around lattice sites $\boldsymbol{R}_{i}$
+
+- Account for the _energy at the site_, as well as _hopping_ between sites, and an _intra-site Coulomb interaction_ when _both_ $\uparrow$ and $\downarrow$ electrons occupy the _same site_:
+$$H=\sum_{i,\lambda}\varepsilon_{i}c^{\dagger}_{i}c_{i}- \sum_{\langle ij \rangle ,\lambda} t_{i,j} [c_{i,\lambda}^{\dagger} c_{j,\lambda}+c^{\dagger}_{j,\lambda}c_{i,\lambda}] +U \sum_{i}c^{\dagger}_{i,\uparrow}c_{i,\uparrow}c^{\dagger}_{j,\downarrow}c_{j,\downarrow} $$
+- The _hopping term_ is related to the _overlap integral_ between orbitals $i$ and $j$
+- Assume it is _only non-zero for nearest neighbours_
+- Also assume _no inter-site Coulomb interaction_
+
+- _Fermion statistics_ will _prevent_ sites from being _doubly occupied_ by particles of the _same spin_
+
+### Example: two electrons on two sites
+- The _orbital wavefunctions_ are defined relative to the _site Hamiltonians_: 
+$$H_{L/R}=\frac{p^{2}}{2m^{*}}+V_{L/R}\qquad H_{L/R}\Psi_{L/R}=\varepsilon_{L/R}\Psi_{L/R}$$
+- The _single particle Hamiltonian_:
+$$H_{LR}=\frac{p^{2}}{2m^{*}}+V_{L}+V_{R}$$
+- One has to _approximate_ the matrix elements:
+$$\displaylines{\braket{ \Psi_{R}|H_{LR} |\Psi_{L}  }=\Braket{ \Psi_{L}|H_{L}+H_{R}-\frac{p^{2}}{2m} | \Psi_{R} }\approx-\Braket{ \Psi_{L}|\frac{p^{2}}{2m} | \Psi_{R} }=-t_{LR}   \\ \braket{ \Psi_{L/R}|H_{LR} | \Psi_{R} } \approx\varepsilon_{L/R
+}}$$
+- _Set_ $\varepsilon_{L}=\varepsilon_{R}=0$ to simplify the calculation
+
+- There are _six_ basis states:
+$$\ket{\uparrow,\uparrow}\quad\ket{\uparrow,\downarrow}\quad\ket{\downarrow,\uparrow} \quad\ket{\downarrow,\downarrow}\quad\ket{\uparrow\downarrow,0}\quad\ket{0,\uparrow\downarrow}     $$
+- In this basis:
+$$H=\pmatrix{0&0&0&0&0&0 \\ 0&0&0&0&-t_{LR}&t_{LR}\\0&0&0&0&0&0 \\0&-t_{LR}&t_{LR}&0&U&0 \\ 0&-t_{LR}&t_{LR}&0&0&U }$$
+- The _lower energy states_ consist of the _triplet_ and _singlet_
+
+## Origin of exchange interactions
+
+## Mean-field theory
+- For a _ferromagnet_ $J>0$, with an _external field_ $B$, the _Heisenberg ferromagnet_ is:
+$$H=-J\sum_{\langle i,j \rangle }\boldsymbol{S}_{i}\cdot \boldsymbol{S}_{j}-g\mu_{B}\sum_{i}\boldsymbol{S}_{i}\cdot \boldsymbol{B}$$
+- _Effective molecular field_
+
+- The _mean field_ Hamiltonian
+
+- Partition function and _magnetisation_
+
+- $B=0$: _spontaneous magnetisation_ 
+
+## Measuring magnetic order
+- _Neutron scattering_ is used to study magnetic materials
+
+- _Thermal neutrons_ have $\lambda$ on the order of _atomic spacings_
+- They _couple_ to _atomic magnetic moments_
+
+## Magnons
+- A _broken rotational symmetry_ of the Heisenberg Hamiltonian
+- Leads to _gapless, low-energy collective excitations_
+
+- See: [[Theories of Quantum Matter#Heisenberg ferromagnetic chain| Properties of the Heisenberg ferromagnetic chain]]
+$$\omega(q)=J(1-\cos qa)$$
+- It is _quadratic_ at low $q$
+
+- As a magnon state _lowers_ spin by $1$, it is a _boson_ with _spin_ $1$
+
+- A _generalisation_ to 3 dimensions:
+
+### Bloch law
+- The _magnon density of states_:
+$$g(\omega)\,d\omega \propto \sqrt{ \omega }\,d\omega$$
+- The _number of magnon excitations_, using the _Bose distribution_
+$$n_\text{magonon}\propto T^{3/2}$$
+- As magnons _reduce_ spin:
+$$\frac{M(T)}{M(0)}=1-aT^{3/2}$$
+- Similarly, for _magnon energy_:
+$$E \propto T^{5/2} \qquad C_{V}\propto T^{3/2}$$
+
+### Lower dimensions
+- 1D and 2D: _infinitely many_ magnons
+- They _destroy_ any magnetic ordering
+
+## Magnetic interactions
+
+### Direct coupling
+- The _dipolar interaction energy_:
+$$E_\text{int}\approx \mathcal{O}(1\text{ K})$$
+- _Direct coupling_ is _too weak_ to explain _ferromagnetism_
+	- Still affects _domain structure_
+
+### Direct exchange
+- Meanwhile, _direct exchange_ is only important when there is _sufficient wavefunction overlap_
+	- In many materials, the $4f$ or $3d$ orbitals _do not extend sufficiently far_ from the nucleus to give exchange coupling
+
+### Superexchange
+- Consider the _anti-ferromagnetism_ of $\ce{ MnO }$
+	- An $\ce{ NaCl }$ structure, with _little to no overlap_ between $\ce{ Mn^{2}+ }$ ions
+	- The oxygen facilitates anti-ferromagnetism by _superexchange_
+
+- Model it using a system of 2 $\ce{ Mn^{2+} }$ ions and one $\ce{ O ^{2-}}$ ion
+- There are 4 electrons on 6 _spin-orbital sites_, therefore 15 basis states
+
+- Consider the _basis of parallel_ $d$ spins:
+![[Superexchange parallel.png]]
+- The _off-diagonal_ elements give _possible hopping mechanisms_, with the _only one possible_ being:
+![[Superexchange hoppinh.png]]
+- For _antiparallel_ $d$ electrons, the hoppinh mechanisms:
+![[Superexchange antiparalle.png]]
+
+### Itinerant band ferromagnetism
+- Consider _transition metals_ with _partially filled_ $d-$bands
+
+- The _Hubbard interaction_
+
+- Doing a _Fourier transform_:
+$$H_\text{int}=\frac{U}{2N}\sum \sum$$
+- Use _Wick's Theorem_
+
+### RKKY Interaction
+- _Coupling_ between _magnetic ions_, _mediated_ by a _sea of conductive electrons_
+
+- The localised magnetic moments will _spin polarise_ the conduction electrons, which then _propagate_ the spin to other moments
+- The effective interaction is _long range_
+- The _sign_ of the exchange parameter _varies periodically with distance_
+	- Periodicity due to _Friedel oscillations_
+
+# Weak electron-photon interactions
+- Use [[#Electronic response theory]] to look at _interactions_ between electrons and light
+
+- At _low light intensities_, _photons_ can be used to _probe electronic properties_
+	- Both _ground_ and _excited states_
+	- In this regime, the photons can be considered to _not modify the states themselves_
+- At _high intensities_, the electric field is sufficient to _change the quantum state_
+	- Optical effects are _non-linear_
+
+## Classical oscillator model
+- The _Lorentz oscillator_ wih _damping_:
+$$m^{*} \dots=eE(t)$$
+- The _steady state_ with _oscillations_
+$$y(\omega)=$$
+- Polarisation and _susceptibility_
+
+- Separate the dielectric constant into _real_ and _imaginary_ parts
+
+### Optical properties
+- The _complex refractive index_
+$$n=\sqrt{ \varepsilon }$$
+- The _reflection coefficient_
+
+- For _intensity absorption_, _Beer's Law_:
+
+### Relationships between properties
+- Use the [[#Kramers-Kronig relations]]:
+
+
+## Quantum mechanical response function
+- There are responses based on if the field is _longitudinal_ or _transerse_
+
+### Transverse field response
+- Terms correspond to _absorption_ and _emission_
+- Transition rates given by [[Time-dependent quantum mechanics#Fermi's Golden Rule|Fermi's Golden Rule]]
+
+- The _power absorbed_ is then given by:
+$$\begin{align}
+P(\boldsymbol{q},\omega)&=
+\end{align}$$
+- Analagous to the derivation for the [[#Longitudinal response function for an electron gas]]
+
+- Then use Kramers-Kronig
+
+### Transverse dielectric response in semiconductors
+- Apply the above formula to _Bloch states_
+
+- Only take _vertical transitions_
+- Bloch states _orthogonal_
+
+- Sum over _conduction_ and _valence_ bands that _can contribute to vertical transitions_
+- The _number of pairs_ which _fulfill_ this condition is given by the _joint density of states_ (JDOS):
+$$J_{c\nu}(\omega)=$$
+- Two _parabolic bands_: same as expression for _density of states_ in $3D$
+
+- _Critical points_ are where the bands are _parallel_,  leading to _van Hove singularities_ in the JDOS
+- The _band separation energy_ can then be written _parabolically_
+$$E_{b}(\boldsymbol{k})=$$
+
+- In $3\text{D}$, there are 4 types of critical points based on the _sign_ of the coefficients
+![[van Hove singularity.png]]
+- The nature of the _singularities_ give the nature of the _critical points_
+	- Example: $\ce{ Ge }$
+![[Ge spectrum.png|400]]
+### Indirect band gap semiconductors
+- In $\ce{ Si }$ and $\ce{ Ge }$, there are _indirect band gaps_, where _phonons_ are required to _conserve momentum_
+
+# Excitons
+
+
+## Potential Bose-Einstein condensation
+- There is a _critical temperature_ for Bose-Einstein condensation
+$$T_{c} \propto \frac{1}{m}n^{2/3}$$
+- For a BEC in an electronic system, _exciton lifetime_ must be _longer_ than the _time taken to reach thermodynamic equilibrium_
+	- Equilibrium after _generation_ using lasers
+	- Thermalisation typically takes _picoseconds_, around exciton lifetime
+
+- Example: $\ce{ Cu_{2}O }$ has an excitonic BEC due to _symmetry forbidden transitions_ resulting in _long lifetimes_
+
+## Polaritons
+- A _superposition_ of a _photon_ and an _exciton_
+- Band structure:
+	- _Exciton-like_
+	- _Photon-like_
+
+# Electron-phonon interactions
+
+## Phonons in crystals
+- Let _ions_ of mass $M$ in the lattice have _equilibrium positions_ $\{\boldsymbol{R}_{n}\}$
+- They are _displaced_ by vector $\{s_{n}(t)\}$
+
+- The _potential energy_ due to the ion lattice:
+	- The _first order_ term _vanishes in equilibrium_
+	- $D$ includes _direct interactions_, as well as _self-consistent changes_ in _electron density_
+$$U_\text{harm}=\frac{1}{2}\sum_{n,m=1}^{N}\boldsymbol{s}_{n}\cdot D(\boldsymbol{R}_n-\boldsymbol{R}_{m})\cdot \boldsymbol{s}_{m}$$
+- With the _conjugate momentum_ $\boldsymbol{P}_{n}$
+$$H=$$
+- The matrices $D$ follow:
+$$D$$
+
+### Many-phonon Hamiltonian
+- A _sum_ of $3N$ independent harmonic oscillators
+
+### Branches
+- Acoustic and optical
+
+
+
+## Manifestation of e-ph interactions
+### Resistivity
+- _Resistivity_ is commonly caused by the e-ph interaction
+	- Not ph related: _impurity scattering_
+- _Temperature dependence_
+
+- e-ph scattering contributes to _relaxation processes_ that bring the crystal to _equilibrium_
+- There is an associated _relaxation time_
+
+### Conventional superconductivity
+- Phonons _mediate_ an _effective attractive force_ between _electron pairs_, within a _Debye energy from the Fermi surface_
+
+### Polarons
+- Quasiparticle formed by an _electron_ plus its _polarisation cloud_
+
+- There are _large_ and _small polarons_ depending on the _extent_ of the _lattice distortion_
+## e-ph Hamiltonian
+
+
+- Take the _rigid ion model_, where vibrations _do not change the form of the potential_
+
+- Final form:
+$$H_\text{e-ph}=\sum_{\boldsymbol{k},\boldsymbol{k}',\lambda}\sum_{\boldsymbol{q},\nu}$$
+
+## Boltzmann theory
+
+## Phonon mediation of e-e interactions
+- The e-ph interaction results in _scattering of electrons_ via phonon emission or absorption
+- There are also _second order_ processes involving a phonon being _emitted_ by one electron before being _absorbed by another_ electron
+
+# Quantum Transport
+
+## Landauer formalism
+- Conductance of a _general 2D quantum system_ with an _effective potential_ $V(x,y)$
+- Consider the system _sandwiched between two infinite quasi-1D systems_, which act as _conducting leads for particles_

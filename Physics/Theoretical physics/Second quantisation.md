@@ -264,6 +264,7 @@ a^{\dagger}&=\pmatrix{0&0\\1&0}_{a}\otimes \mathbb{I}_{b}\otimes \mathbb{I}_{c} 
 $$[s_{j}^{a},s^{b}_{k}]=i\varepsilon^{abc}s_{j}^{b}s_{k}^{c}$$
 - It is a _nonlocal mapping_
 - One can then _map_ [[Theories of Quantum Matter#Spin models|spin models]] onto a _collection of fermions_
+
 ## Representation of operators
 
 ### One particle operators
@@ -392,6 +393,7 @@ $$C_{\rho}(\boldsymbol{r},\boldsymbol{r}')= \left<\rho(\boldsymbol{r})\right>\le
 
 - For _fermions_, as $\boldsymbol{r}\to \boldsymbol{r}'$, the density correlation tends to _zero_
 - This is an _anti-bunching effect_
+- There are also _Friedel oscillations_ as $|\boldsymbol{r}-\boldsymbol{r}'|$ increases
 ![[Fermion density correlation.png]]
 - For _bosons_, there is a _bunching effect_
 	- Starts at a finite value, then drops off and plateaus to _half_ the value
@@ -529,7 +531,8 @@ $$\langle \rho(\boldsymbol{r},t) \rangle = N|\varphi_{0}(\boldsymbol{r},t)|^{2}$
 $$\displaylines{\varphi(\boldsymbol{r},t)=\frac{1}{(\pi R_{t}^{2})^{3/4}}\exp\left[ -\frac{|\boldsymbol{r}|^{2}(1-i\hbar t/mR_{0}^{2})}{2R_{t}^{2}} \right] \\ R_{t}^{2}=R_{0}^{2}+\left( \frac{\hbar t}{mR_{0}} \right)^{2}}$$
 - At long times, $R_{t} \sim \hbar t/mR_{0}$, and:
 $$|\varphi(\boldsymbol{r},t\to \infty)|^{2} \propto \exp\left[ -\left( \frac{mR_{0}}{\hbar t}|\boldsymbol{r}| \right)^{2} \right]$$
-## Double well with relative phase
+- The _final density distribution_ simply reflects the _initial momentum distribution_
+## Interference
 - Let there be two wells separated by displacement $\boldsymbol{d}$
 - Let the condensates in the wells have _relative phase_ $\theta$, and population $N_{L},N_{R}$
 	- Can be accomplished by _adiabatically separating_ one well
@@ -546,19 +549,22 @@ $$\displaylines{\rho(\boldsymbol{r})=\psi ^{\dagger}(\boldsymbol{r})\psi(\boldsy
 $$\displaylines{\rho_{\text{int}}(\boldsymbol{r},t)=A(\boldsymbol{r},t)\cos\left[ \theta+\frac{\hbar \boldsymbol{r}\cdot \boldsymbol{d}}{mR_{0}^{2}R_{t}^{2}}t \right] \\ A(\boldsymbol{r},t)=\frac{2\sqrt{ N_{L}N_{R} }}{\pi^{3/2}R_{t}^{3}}\exp\left( -\frac{\boldsymbol{r}^{2}+\boldsymbol{d}^{2}/4}{R_{t}^{2}} \right)}$$
 - At _long times_, the interference fringes have separation $2\pi \hbar t/md$
 
-## Double well with Fock states
+## With Fock states
 - Let the two wells have _no phase relation_ to each other
 	- Made up of _Fock states_
 $$\ket{N_{L},N_{R}}_{F} = \frac{1}{\sqrt{ N_{L}!N_{R}!}} (a_{L}^{\dagger})^{N_{L}}(a_{R}^{\dagger})^{N_{R}}\ket{\text{VAC}}  $$
 - In this case:
+	- $\langle \rho \rangle$ only the _expected value_ of many measurements
 $$\langle \rho(\boldsymbol{r},t) \rangle_{F}=N_{L}|\varphi_{L}(\boldsymbol{r},t)|^{2}+N_{R}|\varphi_{R}(\boldsymbol{r},t)|^{2} $$
 - However, the _correlation_ shows interference fringes which _depend on the correlation distance_
 $$\begin{align}
 \langle :\rho(\boldsymbol{r})\rho(\boldsymbol{r}') :\rangle = &\langle \rho (\boldsymbol{r}) \rangle_{F} \langle \rho(\boldsymbol{r}') \rangle_{F} + N_{L}N_{R} \varphi_{L}^{*}(\boldsymbol{r})\varphi_{R}^{*}(\boldsymbol{r}')\varphi_{L}(\boldsymbol{r}')\varphi_{R}(\boldsymbol{r}')  \\
  &+N_{L}N_{R}  \varphi_{R}^{*}(\boldsymbol{r})\varphi_{L}^{*}(\boldsymbol{r}')\varphi_{R}(\boldsymbol{r}')\varphi_{L}(\boldsymbol{r}')  
 \end{align}$$
+- In _each measurement_, there will be _fringes_ but with a _random phase_
 
-- _Measurements_ for a system of a Fock state are identical to a _relative phase state after averaging_
+
+- _Expectation values_ for a system of a Fock state are identical to a _relative phase state after averaging_
 $$\displaylines{\begin{align}
 \rho&=\int \, \frac{d\theta}{2\pi} \ket{N_{L},N_{R}}_{\theta}\bra{N_{L},N_{R}}_{\theta} \\ &= \frac{1}{ N! } \sum_{n} \ket{n,N-n} \bra{n,N-n} 
 \end{align} \\ \ket{n,N-n}=\pmatrix{N \\ n} (a_{L}^{\dagger})^{n}(a_{R}^{\dagger})^{N-n}\ket{\text{VAC}}  }  $$
@@ -576,4 +582,3 @@ $$\varphi_{j}^{*}\varphi_{k} \sim\exp\left( \frac{(x_{j}-x_{k})x_{0}\alpha}{\hba
 - For a _Mott insulator_, $\langle a_{j}^{\dagger}a_{k} \rangle = (N/L)\delta_{jk}$
 - They are _localised_ in position space
 
-# Hanbury Brown and Twiss effect
