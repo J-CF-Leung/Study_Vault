@@ -1205,14 +1205,15 @@ $$\Delta_s=\min_\mathbf{p}E_\mathbf{p}=\begin{cases}
 
 ### Single oscillator
 - Consider the undamped oscillator, and its _ground state oscillations_
-$$H= \implies \braket{ 0|y^{2} |0  }= $$
+$$H=\frac{p^{2}}{2m}+\frac{1}{2}m\omega_{0}^{2}y^{2} \implies \braket{ 0|y^{2} |0  }= \frac{1}{2m\omega_{0}}$$
 - At _finite temperature_, consider both _thermodynamic and quantum effects_:
-$$\braket{  \braket{  y^{2}  }  } =\mathrm{Tr}[\rho y^{2}]$$
+$$\braket{  \braket{  y^{2}  }  } =\mathrm{Tr}[\rho y^{2}]=\frac{\coth(\beta\omega_{0}/2)}{2m\omega_{0}}$$
 
 - For _time dependent fluctuations_, using the _Heisenberg picture_:
 	- Assume _time-translation invariance_ of the system
 $$\braket{ \braket{  y(t)y(0)  }   } $$
-- This gives the _quantum noise power spectrum_
+- This gives the _quantum noise power spectrum_:
+$$S(\omega)=\int_{-\infty}^{\infty} \braket{  \braket{  y(t)y(0)  }  }  \exp(i\omega t) dt $$
 
 - As time-evolved operators _do not commute_, $S(\omega)\neq S(-\omega)$
 
@@ -1233,6 +1234,9 @@ $$n_{B}(\omega)\equiv \frac{1}{\exp(\beta\omega)-1}$$
 - These terms are _asymmetrical_, as expected
 - This also gives:
 $$\int S(\omega)\frac{d\omega}{2\pi} = \langle\langle y^2\rangle\rangle= \frac{\coth(\beta\omega_0/2)}{2m\omega_0}$$
+
+- One can take a _classical limit_ $\beta\omega\to 0$
+$$S(\omega)\to \frac{k_{B}T}{2m\omega_{0}^{2}}\times 2\pi[\delta(\omega+\omega_{0})+\delta(\omega-\omega_{0})]$$
 ### Coupled oscillators
 - Take a system of _coupled oscillators_:
 $$\displaylines{y(t) = \sum_k \left[c^{}_k a^\dagger_k(t) + c_k^* a^{\vphantom{\dagger}}_k(t)\right] \\ a^\dagger_k(t) = e^{i\omega_k t}a^\dagger_k,\quad a^{\vphantom{\dagger}}_k(t) = e^{-i\omega_k t}a^{\vphantom{\dagger}}_k}$$
@@ -1240,14 +1244,148 @@ $$\displaylines{y(t) = \sum_k \left[c^{}_k a^\dagger_k(t) + c_k^* a^{\vphantom{\
 $$\begin{align}
 S(\omega)= 2\pi\sum_k |c_k|^2\left[n_\text{B}(\omega_k)\delta(\omega+\omega_k)+(n_\text{B}(\omega_k)+1)\delta(\omega-\omega_k)\right]
 \end{align}$$
+- Then taking the _continuum limit_, this gives a _smooth function_
 ## Responses
 
 ### Responses of an oscillator
 - The _Heisenberg equation of motion_:
-$$\displaylines{H= \\ \frac{da_{k}}{dt}}$$
+$$\displaylines{H=\sum_{k}\omega_{k}a_{k}^{\dagger}a_{k}-f(t)y \\ \frac{da_{k}}{dt}=-i\omega_{k}a_{k}+ic_{k}f(t)}$$
 - The solution is:
-$$a_{k,f}(\omega)\equiv \frac{c_{k}}{\omega_{k}-\omega-i\epsilon}f(\omega)$$
+$$\displaylines{a_{k,f}(\omega)=\exp(-i\omega_{k}t)a_{k}(0)+a_{k,f}(t) \\ a_{k,f}(\omega)\equiv \frac{c_{k}}{\omega_{k}-\omega-i\epsilon}f(\omega)}$$
 - The $i\epsilon$ prescription moves the _poles_ such that response is _always causal_
 	- The response $\chi(t-t')$ must be 0 for $t<t'$
 
-- The _quantum fluctuation-dissipation relation_
+- Transforming back to $y$:
+$$y(\omega) = \sum_k |c_k|^2\left[\frac{1}{\omega_k-\omega-i0}+\frac{1}{\omega_k+\omega+i0}\right]f(\omega)=y^{*}(-\omega)$$
+- This defines the _response function_:
+$$\chi(\omega) \equiv \frac{y(\omega)}{f(\omega)}= \sum_k |c_k|^2\left[\frac{1}{\omega_k-\omega-i0}+\frac{1}{\omega_k+\omega+i0}\right]$$
+- Then using:
+$$\mathrm{Im} \frac{1}{x\mp i0}=\pm \pi\delta(x)$$
+- This gives:
+$$\mathrm{Im }\,\chi(\omega) = \mathrm{sgn}(\omega)\,\pi\sum_k |c_k|^2\delta(\omega_k-\omega)$$
+
+- The _quantum fluctuation-dissipation relation_:
+$$S(\omega) = 2\mathrm{Im}\,\chi(\omega)\left[n_\text{B}(\omega)+1\right]$$
+### Linear response function
+- For any _drive_ $f(t)$, in a _linear system_, the response:
+$$y(t)=\int  \chi(t-t')f(t')\,dt' $$
+- $\chi(t-t')$ is the _response function_
+
+- Due to causality:
+$$\chi(t<0)=0$$
+- $\chi(\omega)$ is _only analytic in the upper half-plane_
+
+### Dissipation
+- From the _Golden Rule_, the _dissipation_ in energy:
+$$\omega\Gamma(\omega) = \omega S(\omega)\left(\frac{f_0}{2}\right)^2 = \frac{1}{2}\omega\chi''(\omega)\left[n_\text{B}(\omega)+1\right]f_0^2$$
+## Formal theory
+- Let there be some _general perturbed Hamiltonian_
+$$H_{t}=H_{0}-\lambda _{t}B$$
+- Here, $B=-\partial H/\partial\lambda$ is the _generalised force_ to the _general displacement_ $\lambda_{t}$
+
+### Kubo formula
+- In the _interaction picture_:
+$$\displaylines{B_{I}(t)=e^{iH_{0}t}Be^{-iH_{0}t} \\ i\frac{\partial \lvert{\Psi_I(t)}\rangle}{\partial t} = -\lambda_t B_I(t) \lvert{\Psi_I(t)}\rangle}$$
+- From _first order time-dependent perturbation theory_:
+$$\displaylines{\lvert{\Psi_I(t)}\rangle=\lvert{\Psi(0)}\rangle+\lvert{\Psi^{(1)}_I(t)}\rangle+\cdots \\ \lvert{\Psi^{(1)}_I(t)}\rangle = i\int_0^t dt' \lambda_{t'} B_I(t') \lvert{\Psi(0)}\rangle}$$
+- The _expectation value of some observable_:
+$$\begin{align}
+\langle{\Psi(t)}\rvert A\lvert{\Psi(t)}\rangle &= \langle{\Psi_I(t)}\rvert A_I(t) \lvert{\Psi_I(t)}\rangle\\
+&=\langle{\Psi(0)}\rvert A_I(t)\lvert{\Psi(0)}\rangle +i \int_0^t dt' \lambda_{t'}\langle{\Psi(0)}\rvert \left[A_I(t),B_I(t')\right] \lvert{\Psi(0)}\rangle
+\end{align}$$
+- Then doing a _thermal average_, one gets the _Kubo formula_
+	- Using the _Heisenberg picture of the unperturbed system_
+$$\chi_{AB}(t) = i\langle\langle\left[A_I(t),B_I(0)\right]\rangle\rangle,\quad t>0$$
+- This is the _Kubo formula_, expressing $\chi$ in terms of the _dynamics of the unperturbed system_
+
+### General fluctuation-dissipation theorem
+- Take the _correlation function_:
+$$S_{AB}(t) \equiv \langle\langle A_I(t)B_I(0)\rangle\rangle$$
+- From the cyclic property of the trace:
+$$S_{AB}(t) = S_{BA}(-t-i\beta)\implies S_{AB}(\omega) = e^{\beta\omega} S_{BA}(-\omega)$$
+- The response function is then:
+$$\begin{align}
+\chi_{AB}(t) &= \begin{cases}
+i\left[S_{AB}(t)-S_{BA}(-t)\right] & t>0\\
+0 & t<0
+\end{cases}  \\
+&=i\theta(t)[S_{AB}(t)-S_{BA}(-t)]
+\end{align}$$
+- Therefore, $\chi_{AB}(\omega)$ is a _convolution_:
+$$\displaylines{\tilde{\theta}(\omega)=\frac{i}{\omega+i0} \\ \begin{align}
+\chi_{AB}(\omega)&= -\int \frac{d\omega'}{2\pi}\frac{S_{AB}(\omega')-S_{BA}(-\omega')}{\omega-\omega'+i0}\\
+&=-\int \frac{d\omega'}{2\pi}\frac{S_{AB}(\omega')\left[1-e^{-\beta\omega'}\right]}{\omega-\omega'+i0}
+\end{align}}$$
+- Then using the _Kramers-Kronig relation_:
+$$\begin{align}
+\chi_{AB}(\omega) &=\chi'(\omega) + i\chi''(\omega)\\
+&= \mathcal{P}\int_{-\infty}^\infty \frac{d\omega'}{\pi}\frac{\chi''(\omega')}{\omega'-\omega} + i\chi''(\omega)\\
+&= \int_{-\infty}^\infty \frac{d\omega'}{\pi}\frac{\chi''(\omega')}{\omega'-\omega-i0}
+\end{align}$$
+- The quantum fluctuation dissipation relation can then be read off:
+$$S_{AB}(\omega) = 2\chi_{AB}''(\omega)\left[n_\text{B}(\omega)+1\right]$$
+### Spectral representation
+$$S_{AB}(\omega)  = 2\pi\sum_{m,n} \frac{e^{-\beta E_m}}{Z} \langle{m}\rvert A\lvert{n}\rangle\langle{n}\rvert B\lvert{m}\rangle \delta(\omega-E_n+E_m)$$
+
+## Response of matter
+- A system subject to the _perturbation_:
+$$H_\text{pert} = \sum_{j=1}^N V(\mathbf{r}_i,t) = \int  V(\mathbf{r},t)\rho(\mathbf{r})\, d\mathbf{r}= \frac{1}{L^3}\sum_\mathbf{q}V_\mathbf{q}(t) \rho_{-\mathbf{q}}$$
+- Perturbation _couples to the density_
+
+### Structure factor
+- The _general linear response for the density_, in a system with _translational invariance_:
+$$\rho(\boldsymbol{r},t)=\int  \chi(\boldsymbol{r}-\boldsymbol{r}',t-t')V(\boldsymbol{r}',t')\,d^{3}\boldsymbol{r}\,dt $$
+- One can then write in Fourier space:
+$$\langle\langle \rho_\mathbf{q}(t)\rangle\rangle = -\frac{1}{L^3} \int_{-\infty}^t  \chi^{\rho}_\mathbf{q}(t-t') V_\mathbf{q}(t)\,dt'$$
+- The density response function:
+$$\chi_\rho(\mathbf{q},t) = i\langle\langle\left[\rho_\mathbf{q}(t),\rho_{-\mathbf{q}}(0)\right]\rangle\rangle$$
+- Using $\rho_{\boldsymbol{q}}=\rho_{-\boldsymbol{q}}^{\dagger}$, and the _spectral representation_, one gets the _dynamical structure factor_
+$$S_\rho(\mathbf{q},\omega) = 2\pi\sum_{n}  |\langle{0}\rvert\rho_\mathbf{q}\lvert{n}\rangle|^2 \delta(\omega-E_n+E_0)$$
+- Then, summing up the _equal time contributions_, one gets the _static structure factor_
+$$S_\rho(\mathbf{q}) = \int S_\rho(\mathbf{q},\omega) \frac{d\omega}{2\pi} = \langle\langle\rho_\mathbf{q}\rho_{-\mathbf{q}}\rangle\rangle$$
+
+### Sum rules
+- Properties of structure factor _regardless of the system_
+
+
+#### f-sum rule
+- Assume the _interaction only depends on density_:
+$$[H_\text{int},\rho_{\boldsymbol{q}}]=0 \implies [H,\rho_{\boldsymbol{q}}]=[T,\rho_{\boldsymbol{q}}]$$
+- By explicit calculation:
+$$[[H,\rho_\mathbf{q}],\rho_{-\mathbf{q}}] = -\frac{N\mathbf{q}^2}{m}$$
+- From resolution of identity:
+$$\braket{ 0|[[H,\rho_{\boldsymbol{q}}],\rho_{-\boldsymbol{q}}] |0  } $$
+- The _f-sum rule_:
+$$\int_{-\infty}^\infty \omega S(\mathbf{q},\omega) \frac{d\omega}{2\pi}= \frac{N\mathbf{q}^2}{2m}$$
+
+#### Compressibility sum rule
+- The _compressibility_:
+$$\beta=-\frac{1}{V}\frac{\partial V}{\partial p}$$
+- At _zero temperature_, $p=-\partial E_{0}/\partial V$, therefore with _energy per unit volume_ $\epsilon$:
+$$\beta^{-1}=\rho^{2}\epsilon''(\rho)$$
+- In the presence of $V(\boldsymbol{r})$, the _energy density_ is:
+$$\epsilon(\rho_0+\delta\rho) = \frac{1}{2\beta\rho_0^2} \left[\delta\rho\right]^2 + V(\mathbf{r})\delta\rho$$
+- Minimising:
+$$\epsilon(V(\mathbf{r})) = - \frac{\beta\rho_0^2}{2} \left[V(\mathbf{r})\right]^2$$
+- Compare this result to _second order perturbation theory_
+$$E^{(2)}=$$
+- This gives the _compressibility sum rule_:
+$$\lim_{\mathbf{q}\to 0}\int_0^\infty \frac{S(\mathbf{q},\omega)}{\omega}\frac{d\omega}{2\pi} = \frac{N\rho\beta}{2}\equiv \frac{N}{2mc^{2}}$$
+- Here, $c\equiv(\beta m\rho)^{-1/2}$ is the _speed of sound_
+
+### Single mode approximation
+- Some Bose gases at _low momentum_ are described by a _single mode_:
+$$S_\rho(\mathbf{q},\omega) \sim 2\pi S_\rho(\mathbf{q}) \delta(\omega - \omega(\mathbf{q}))$$
+- Here, $\omega(\boldsymbol{q})$ corresponds to the _collective excitations_ in the gas
+
+- The f-sum rule gives:
+$$S_\rho(\mathbf{q}) = \frac{N\mathbf{q}^2}{2m\omega(\mathbf{q})}$$
+- For a _Bose condensate with no interactions_:
+$$S_{\rho}^{\text{BEC}}(\boldsymbol{q})=N$$
+- Particle positions are _uncorrelated_ with _Poisson statistics_
+
+- For a _linear dispersion_
+	- Elastic chain or Bogoliubov at low $\boldsymbol{q}$
+$$S_\rho(\mathbf{q}) = \frac{N|\mathbf{q}|}{2mc}$$
+- Density fluctuations _vanish_ as $\boldsymbol{q}\to 0$
+	- There are _long-range correlations_ between positions in the _ground state_

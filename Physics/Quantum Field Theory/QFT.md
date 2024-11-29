@@ -1074,4 +1074,69 @@ $$H=\int  d^3x \,(\pi^{i}\dot{A}_{i}-\mathcal{L})=\frac{1}{2}\int  d^3x\,(\bolds
 $$H=\int  \frac{d^3p}{(2\pi)^{3}}\,|\boldsymbol{p}| \sum_{r=1}^{2}a_{p}^{r\dagger}a_{p}^{r} $$
 - The _Feynman propagator_ in the _Coulomb gauge_:
 $$\braket{ 0|T\{A_{i}(x)A_{j}(y)\} |0  }=\int  \frac{d^4p}{(2\pi)^{4}} \frac{i}{p^{2}+i\epsilon} \left( \delta_{ij}-\frac{p_{i}p_{j}}{|\boldsymbol{p}|^{2}} \right)\exp[-ip(x-y)] $$
-### Greens function formalism
+### Propagator: the Lorentz invariant way
+- Deriving the propagator from a more _Lorentz invariant_ way
+- The propagator is a _Greens function_ for the equation of motion
+
+- Maxwell:
+$$\partial_{\mu}F^{\mu \nu}=J^{\nu}\implies \Box A^{\nu}-\partial_{\mu}\partial^{\nu}A^{\mu}=J^{\nu}$$
+- Doing a _Fourier transform_:
+$$(-p^{2}+p_{\mu}p^{\nu})A^{\mu}(p)=J^{\nu}(p)$$
+- There are solutions with _zero eigenvalue_ (e.g. $p^{\nu}$), hence the operator is _non invertible_
+	- This corresponds to the _gauge freedom_, where $\partial^{\mu}\lambda$ is a _trivial solution_
+
+- Instead, add a _Lagrange multiplier_ to the Lagrangian
+	- Gauge invariance is _broken_
+$$\mathcal{L}=-\frac{1}{4}F_{\mu \nu}F^{\mu \nu}-\frac{1}{2\alpha}(\partial_{\mu}A^{\mu})^{2}$$
+- Here, $\alpha$ is an _auxiliary field_ which is _non-propagating_ (constant in spacetime)
+- Equation of motion w.r.t. $\alpha$ and $A_{\mu}$ respectively:
+$$\displaylines{\partial_{\mu}A^{\mu}=0  \\ \left[ \eta^{\nu\lambda}\Box+\left( \frac{1}{\alpha}-1 \right)\partial^{\nu}\partial^{\lambda} \right]A_{\lambda}=0}$$
+
+- Back to the Greens function in Fourier space:
+$$\left[ -\eta^{\nu\lambda}p^{2}-\left( \frac{1}{\alpha}-1 \right)p^{\nu}p^{\lambda} \right]A_{\lambda}(p)=J_{\lambda}(p)$$
+- This has an _inverse_:
+$$\displaylines{ \hat{\Pi}_{\mu \nu}=-\eta_{\mu \nu}p^{2}-\left( \frac{1}{\alpha}-1 \right)p_{\mu}p_{\nu} \\ \Pi_{\mu \nu}=\left( \hat{\Pi}^{-1} \right)_{\mu \nu}=-\frac{\eta_{\mu \nu}+(\alpha-1)p_{\mu}p_{\nu}/p^{2}}{p^{2}}}$$
+- Then construct the _propagator_:
+$$\begin{align}
+\braket{ 0|T\{A_{\mu}(x)A_{\nu}(y)\} | 0 } &=i \int  d^4p\, e^{-ip(x-y)}\Pi_{\mu \nu} \\ &=-i \int  \frac{d^4p}{(2\pi)^{4}} \frac{1}{p^{2}+i\epsilon} \left( \eta_{\mu \nu}+\frac{(\alpha-1)p_{\mu}p_{\nu}}{p^{2}} \right)e^{-ip(x-y)}
+\end{align}$$
+- For $\mu,\nu=i,j$ the components _match_ the derivation from the Coulomb gauge
+
+- $\alpha$ is an _unphysical quantity_, hence the $S$ matrix _should not depend on_ $\alpha$
+	- $\alpha=1$: Feynman-'t Hooft gauge
+	- $\alpha=0$: the Lorenz/Landau gauge (a strong enforcement of the Lorentz group)
+	- $\alpha\to \infty$: the unitary gauge (for non-Abelian gauge fields)
+
+## Coupling of light to matter
+- Maxwell's equations:
+$$\partial_{\mu}F^{\mu \nu}=J^{\nu}\implies \partial_{\mu}\partial_{\nu}F^{\mu \nu}=\partial_{\nu}J^{\nu}=0$$
+- The source term is a _conserved current_
+	- Often _independent_ of $A_{\mu}$
+- Then consider the Lagrangian with coupling:
+$$\mathcal{L}=-\frac{1}{4}F^{\mu \nu}F_{\mu \nu}-J^{\mu}A_{\mu}$$
+- For a _conserved current_, the _action is still gauge invariant_
+
+### Coupling to fermions
+- Consider the [[#Quantum Dirac fields|Dirac Lagrangian]]
+$$\mathcal{L}=\bar{\psi}(i\cancel{ \partial }-m)\psi$$
+- It has the conserved current from $\psi\to \exp(i\alpha)\psi$
+$$j^{\mu}=\bar{\psi}\gamma^{\mu}\psi $$
+- Add it to the Lagrangian:
+$$\begin{align}
+\mathcal{L}&=-\frac{1}{4}F^{\mu \nu}F_{\mu \nu}+\bar{\psi}(i\cancel{ \partial }-m)\psi-ej^{\mu}A_{\mu} \\
+&=-\frac{1}{4}F^{\mu \nu}F_{\mu \nu}+\bar{\psi}(i\cancel{ D }-m)\psi
+\end{align}$$
+- Here, $D_{\mu}$ is the _covariant derivative_:
+$$D_{\mu}=\partial_{\mu}+ieA_{\mu }$$
+- When making the gauge transformation:
+$$\displaylines{A_{\mu }\to \partial_{\mu}\lambda(x) \\ \psi\to \exp(-ie\lambda(x))\psi \qquad \bar{\psi}\to \exp(ie\lambda(x))\bar{\psi}}$$
+- From this:
+$$D_{\mu}\psi\to \exp(-ie\lambda)D_{\mu}\psi \qquad \bar{\psi}\cancel{ D }\psi\to \bar{\psi}\cancel{ D }\psi$$
+- The Lagrangian is _gauge invariant_
+
+- From Noether's theorem:
+$$Q=\int  d^3x\,F^{0i}\partial_{i}\lambda=-\int  d^3x \,\partial_{i} F^{0i}\lambda$$
+- Then setting $\lambda=1$:
+$$Q=-e\int  d^3x\,j^{0} $$
+- This is a charge associated with a _global symmetry_ of the system
+	- It is a _large gauge transformation_ as $\lambda$ does not vanish at infinity
