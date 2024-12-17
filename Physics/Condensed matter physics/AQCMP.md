@@ -529,7 +529,7 @@ $$\chi_{1}(\omega)=\mathcal{P}\int_{-\infty}^\infty\frac{\chi_{2}(\omega')}{\ome
 - Find the effect of a _plane wave_ by adding _electric potential_ $U$ to the Hamiltonian for the [[#Independent electrons|independent electron]]:
 $$\displaylines{H=\frac{p^{2}}{2m}+V(\boldsymbol{r})+U(\boldsymbol{r},t) \\ U(\boldsymbol{r},t)=A_{0}(\boldsymbol{q},\omega)\exp[i(\boldsymbol{q}\cdot \boldsymbol{r}-\omega t)]+\text{h.c.}}$$
 - The resulting electric field is _longitudinal_:
-$$\displaylines{\boldsymbol{E}=-\nabla\left( \frac{U}{-e} \right)=\boldsymbol{E}_{0}\exp[i(\boldsymbol{q}\cdot \boldsymbol{r}-\omega t)]+\text{h.c.}\\ \boldsymbol{E}_{0}=\frac{iA_{0}}{e}\boldsymbol{q}}$$
+$$\displaylines{\boldsymbol{E}(\boldsymbol{r},t)=-\nabla\left( \frac{U}{-e} \right)=\boldsymbol{E}_{0}\exp[i(\boldsymbol{q}\cdot \boldsymbol{r}-\omega t)]+\text{h.c.}\\ \boldsymbol{E}_{0}=\frac{iA_{0}}{e}\boldsymbol{q}}$$
 ### Electronic transitions
 - The _perturbation_ gives _electronic transitions_, with _transition probabilities_ from [[Time-dependent quantum mechanics#Fermi's Golden Rule|Fermi's Golden Rule]]
 
@@ -542,7 +542,7 @@ W_{\beta\to\alpha}&=\frac{2\pi}{\hbar}|\braket{ \Psi_{\alpha}|A_{0}^{*}\exp(-i\b
 
 - For a volume $V$, the _power_ dissipated $P$, accounting for _spins_, is given by:
 $$\begin{align}
-P(\boldsymbol{q},\omega)&=\hbar\omega \left[2\sum_{\alpha,\beta}(W_{\alpha\to\beta}-W_{\beta\to\alpha})\right] \\ &=2\hbar\omega \frac{2\pi}{\hbar}\sum_{\alpha,\beta} |\braket{ \Psi_{\beta}|A_{0}\exp(i\boldsymbol{q}\cdot \boldsymbol{r}) | \Psi _{\alpha} }|^{2} \,\delta(E_{\beta}-E_{\alpha}-\hbar\omega)[f(E_{\alpha})-f(E_{\beta})]
+P(\boldsymbol{q},\omega)&\equiv\hbar\omega W(\boldsymbol{q},\omega)=\hbar\omega \left[2\sum_{\alpha,\beta}(W_{\alpha\to\beta}-W_{\beta\to\alpha})\right] \\ &=2\hbar\omega \frac{2\pi}{\hbar}\sum_{\alpha,\beta} |\braket{ \Psi_{\beta}|A_{0}\exp(i\boldsymbol{q}\cdot \boldsymbol{r}) | \Psi _{\alpha} }|^{2} \,\delta(E_{\beta}-E_{\alpha}-\hbar\omega)[f(E_{\alpha})-f(E_{\beta})]
 \end{align}$$
 - This can be considered together with the _classical Joule heating_
 ### Power dissipation
@@ -555,21 +555,22 @@ $$\sigma_{1}(\boldsymbol{q},\omega)=\frac{1}{2} \frac{e^{2}}{q^{2}} \frac{\hbar\
 ### Dielectric response and conductivity
 - Dielectric response function $\varepsilon$ is defined as:
 $$\boldsymbol{D}=\epsilon_{0}\varepsilon \boldsymbol{E}$$
-- Combining this with $\boldsymbol{J}=\sigma \boldsymbol{E}$ and using [[Electrodynamics and Optics#Electrodynamics and Maxwell's Equations|Maxwell's equations for matter]], substituting $\boldsymbol{H}=\boldsymbol{H}_{0}\exp(-i\omega t)$ and $\boldsymbol{E}=\boldsymbol{E}_{0}\exp(-i\omega t)$
+- Combining this with $\boldsymbol{J}=\sigma \boldsymbol{E}$ and using [[Electrodynamics and Optics#Electrodynamics and Maxwell's Equations|Maxwell's equations for matter]], substituting $\boldsymbol{H}=\boldsymbol{H}_{0}\exp(-i\omega t)$ and $\boldsymbol{E}=\boldsymbol{E}_{0}\exp(-i\omega t)$, one gets the _complex effective dielectric response function_
 $$\displaylines{\varepsilon=1+\frac{i\sigma}{\epsilon_{0}\omega} \\ \varepsilon_{1}=1-\frac{1}{\epsilon_{0}\omega}\sigma_{2}\qquad \varepsilon_{2}=\frac{1}{\epsilon_{0}\omega }\sigma_{1}}$$
 
 - Also define the _polarisation response function_:
 $$\varepsilon=1+\chi \implies \varepsilon_{1}=1+\chi_{1} \,\,,\,\,\varepsilon_{2}=\chi_{2}$$
 
-- The imaginary part of $\varepsilon_{2}$ leads to _energy dissipation_, as one gets that $P \propto \chi_{2}$
+- The imaginary part of $\varepsilon_{2}$ leads to _energy dissipation_, as from the above, one gets that $P \propto \sigma_{1}\propto\chi_{2}$
 $$P=\left[ \frac{2\epsilon_{0}\omega q^{2}}{e^{2}}|A_{0} |^{2}V\right]\chi_{2}(\boldsymbol{q},\omega)$$
 ### Form of dielectric response function
-- From all the above, one gets the form of $\varepsilon_{2}$
+- From _combining_ the classical result for $P\propto\varepsilon_{2}$ with the quantum mechanical result, one gets the form of $\varepsilon_{2}$
 $$\varepsilon_{2}=\frac{2\pi e^{2}}{\epsilon_{0}q^{2}} \frac{1}{V} \sum_{\alpha,\beta}|\braket{ \Psi_{\alpha}|e^{i\boldsymbol{q}\cdot \boldsymbol{r}} |\Psi_{\beta}}|^{2}\delta(E_{\beta}-E_{\alpha}-\hbar\omega)[f(E_{\alpha})-f(E_{\beta})]$$
-- Then using the Kramers-Kronig relation:
+- Then using the [[#Kramers-Kronig relations]]
 $$\varepsilon_{1}=1+\frac{2 e^{2}}{\epsilon_{0}q^{2}} \frac{1}{V} \sum_{\alpha,\beta}|\braket{ \Psi_{\alpha}|e^{i\boldsymbol{q}\cdot \boldsymbol{r}} |\Psi_{\beta}}|^{2}\frac{f(E_{\alpha})-f(E_{\beta})}{E_{\beta}-E_{\alpha}-\hbar\omega}$$
 - One can write $\varepsilon$ as:
 $$\varepsilon=\lim_{ \eta \to 0^{+} } \left(1+{2 e^{2}}{\epsilon_{0}q^{2}} \frac{1}{V} \sum_{\alpha,\beta}|\braket{ \Psi_{\alpha}|e^{i\boldsymbol{q}\cdot \boldsymbol{r}} |\Psi_{\beta}}|^{2}\frac{f(E_{\alpha})-f(E_{\beta})}{E_{\beta}-E_{\alpha}-\hbar\omega-i\eta}\right)$$
+
 
 - The _elementary excitations_ of an _independent electron system_ occur when the electron _changes energy levels_, leading to _singularities_ in the _response function_
 
@@ -584,6 +585,7 @@ $$\displaylines{\varepsilon_{1}(\boldsymbol{q},0)=1+\frac{k_\text{TF}^{2}}{q^{2}
 k_\text{TF}^{2}=\frac{me^{2}k_{F}}{\epsilon_{0}\pi^{2}\hbar^{2}} \qquad F(x)=\frac{1}{2}+\frac{1-x^{2}}{4x}\ln\left| \frac{1+x}{1-x}\right|}$$
 
 - For $q\ll k_{F}$, this is the [[Solids#Thomas-Fermi screening|Thomas-Fermi result]]:
+	- The Thomas-Fermi screening result assumes the _length scale_ of the perturbation is _much larger_ than $k_{F}$ (allows the assumption of a spatially varying $E_{F}$)
 $$\varepsilon_{1}(q\ll k_{F},0)=1+\frac{k_\text{TF}^{2}}{q^{2}}$$
 ![[Thomas Fermi screening.png|400]]
 - For $q\gg k_{F}$:
@@ -596,14 +598,64 @@ $$\varepsilon_{1}(q\approx 2k_{F},0)=\varepsilon_{1}(2k_{F},0)+ \frac{k_\text{TF
 	- For $q>2k_{F}$, such a transition is _no longer possible_
 
 ### Static dielectric screening
+- Let there be a _static ppoint charge_ $+Ze$ in a medium
+- The charge is then _screened_ by the electrons
 
+- In a _free electron gas_:
+$$U_\text{ext}(\boldsymbol{r})=-\frac{Ze^{2}}{4\pi\epsilon_{0}r}=-\frac{1}{(2\pi)^{3}}\int  d^3\boldsymbol{q} \frac{Ze^{2}}{\epsilon_{0}q^{2}}\exp(i\boldsymbol{q}\cdot \boldsymbol{r})  $$
+- By analogy, the _total potential energy_ of the _point charge in a dielectric_, while _taking screening into account_:
+$$U(\boldsymbol{r})=-\frac{1}{(2\pi)^{3}}\int  d^3\boldsymbol{q} \frac{1}{\varepsilon_{1}(\boldsymbol{q},0)} \frac{Ze^{2}}{\epsilon_{0}q^{2}}\exp(i\boldsymbol{q}\cdot \boldsymbol{r})$$
+- The _induced charge density_ is then:
+$$\frac{1}{\epsilon_{0}}\rho _\text{ind}(\boldsymbol{r})=-\nabla^{2}\frac{U(\boldsymbol{r})-U_\text{ext}(\boldsymbol{r})}{-e}$$
+- One finds:
+$$\displaylines{\rho _\text{ind}(\boldsymbol{r})=-\frac{Ze}{r}\int_{0}^{\infty}  dq \,g(q)\sin qr \\ g(q)=\frac{q}{2\pi^{2}} \frac{\varepsilon_{1}(q,0)-1}{\varepsilon_{1}(q,0)} \qquad \varepsilon_{1}(q,0)=1+\frac{k_\text{TF}^{2}}{q^{2}}F\left( \frac{q}{2k_{F}} \right)}$$
+- The limits of $g(q)$, where $C$ is a _constant_:
+$$\lim_{ q \to 0 }g(q)=\lim_{ q \to \infty }g(q)=0  \qquad \lim_{ q \to 2k_{F} } \frac{dg}{dq}=C\ln|q-2k_{F}| \qquad \lim_{ q \to 2k_{F} }=\frac{C}{q-2k_{F}}  $$
+
+- The di-electric _screens the charge perfectly_:
+$$Q_{S}=\int  d^{3}\boldsymbol{r}\,\rho _\text{ind}(\boldsymbol{r})=-Ze $$
+- From _integration by parts_, and approximating the integral by considering the _region near the singularity at_ $2k_{F}$
+$$\rho _\text{ind}(\boldsymbol{r})\approx \frac{ZeC}{r^{3}}\int_{2k_{F}-\Delta}^{2k_{F}+\Delta}  dq  \frac{1}{q-2k_{F}}\sin qr$$
+- From _expanding_ $\sin[(q-2k_F)r+2k_{F}r]$, one can _eliminate_ the odd parity part of the function, then make the substitution $-r\Delta<x=(q-2k_{F})r<r\Delta$
+$$\rho _\text{ind}(\boldsymbol{r})\approx \frac{ZeC\cos(2k_{F}r)}{r^{3}} \int_{-r\Delta}^{r\Delta}  dx\,\frac{\sin x}{x} $$
+- Approximating the limits as $\pm \infty$, one gets:
+$$\rho _\text{ind}(\boldsymbol{r})\approx \frac{\pi ZeC\cos(2k_{F}r)}{r^{3}}$$
+
+- There are _Friedel oscillations_ in the _induced charge density_ with wave-vector $2k_{F}$
+	- It also occurs in _spin densities_ and is resonsible for the [[#RKKY Interaction]]
+	- In 1 dimension, the system is simply _unstable_ (Peierls instability)
+
+## Scattering and correlation functions
+- Define the _density correlation function_:
+$$C(_{\rho}\boldsymbol{x},\boldsymbol{x}',t,t')=\braket{  \rho(\boldsymbol{x},t) \rho(\boldsymbol{x}',t')} $$
+- This features an _average over a quantum ensemble_ with weighting from the _equilibrium distribution function_
+
+- The _density fluctuation correlation function_:
+$$\begin{align}
+S_{\rho}(\boldsymbol{x},\boldsymbol{x}',t,t')&=\Braket{  (\rho(\boldsymbol{x},t)-\braket{ \rho(\boldsymbol{x},t)  } )(\rho(\boldsymbol{x}',t')-\braket{ \rho(\boldsymbol{x}',t')  } )  }  \\
+&=C_{\rho}(\boldsymbol{x},\boldsymbol{x}',t,t')-\braket{ \rho(\boldsymbol{x},t)  }^{2} 
+\end{align}$$
+- At _equilibrium_, the time dependence only depends on the _interval_ $t-t'$
+
+- It describes the _correlation_ between _charge density at_ $(\boldsymbol{x},t)$ dependent on charge density at $(\boldsymbol{x}',t')$
+	- Example: _Bragg peaks_ for $\boldsymbol{x}'-\boldsymbol{x}=\boldsymbol{R}$ where $\boldsymbol{R}$ is a _lattice vector_
+
+- The _spacetime Fourier transform_ is the _structure factor_:
+$$C_{\rho}(\boldsymbol{q},\omega)=\frac{1}{V}\int  d^3\boldsymbol{x}\,d^{3}\boldsymbol{x}' \int  dt\,S_{\rho}(\boldsymbol{x},\boldsymbol{x}',t)\exp[i(\boldsymbol{q}\cdot(\boldsymbol{x}-\boldsymbol{x}')-\omega t)] $$
+- It is _proportional_ to the _second derivative of the scattering cross-section_ for a probe particle with wave-vector $\boldsymbol{k}$, leaving with $\boldsymbol{k}+\boldsymbol{q}$
+$$C_\rho(\boldsymbol{q},\omega)\propto \frac{d^{2}\sigma}{d\Omega\,d\omega}$$
 ## Fluctuation-dissipation theorem
+- It can be shown that the _density function correlation_ is _proportional_ to the _dissipation response_:
+$$S_{\rho}(\boldsymbol{q},\omega)=\frac{k_{B}T}{\omega}\chi_{2}(\boldsymbol{q},\omega)$$
+- The [[Theories of Quantum Matter#General fluctuation-dissipation theorem|Fluctuation-Dissipation Theorem]]
 
-
-# Quasi-particles
+- _Plasmons_: probing methods (optical conductivity, EELS, etc.) _couple_ to _fluctuations_ in electronic charge density
+- _Phonons_: inelastic neutron scattering couples to _fluctuations in nuclear density_
+- _Magnons_: Inelastic neutron scattering also couples to _electronic spin density_ due to the magnetic moment of the neutron
+# Quasi-particles: Fermi liquid theory
 - _Quasi-particles_: Elementary excitation thought of as a _non-interacting particle with modified dispersion relation_
 
-## Independent electron-like behaviour/normal Fermi liquids
+## Normal Fermi liquids
 - Even for _strong many-body interactions_, physical properties can be _well-described_ by an _independent particle model_
 	- Known as _normal Fermi liquids_
 - Example: _linear heat capacity_ for low temperature $\ce{ ^{3}He }$, albeit with _enhanced particle mass_
@@ -619,6 +671,7 @@ $$\varepsilon_{1}(q\approx 2k_{F},0)=\varepsilon_{1}(2k_{F},0)+ \frac{k_\text{TF
 - The _interacting many particle state_ can then still be labelled with occupations $\{n_{i}\}$
 - Any system _with_ this _one-to-one correspondence_ are then _normal Fermi liquids_
 
+- For normal Fermi liquids, one can also assume _all energies are continuous across the Fermi surface_
 ### Quasi-particles
 - From the _ground state_ of the _non-interacting_ system, one can _add_ a particle of momentum $\boldsymbol{p}$
 - This _corresponds_ to adding a _quasi-particle_ of momentum $\boldsymbol{p}$ to the _interacting_ system
@@ -639,10 +692,6 @@ $$\varepsilon_{\lambda}(\boldsymbol{p})-\mu=v_F(p-p_{F})$$
 - Here, the _quasiparticle group velocity_ is _re-scaled_ with some _effective mass_:
 	- Effective mass _different from band effective mass_
 $$v_{F}=p_{F}/m^{*}$$
-- The quasi-particle _density of states_:
-	- Becomes relevant for _physical properties_
-	- For _low temperatures_, they depend on $g(\varepsilon=0)$
-$$g_{V}(\varepsilon)=\frac{1}{V}\sum_{\boldsymbol{p},\lambda}\delta[\varepsilon_{\lambda}(\boldsymbol{p})-\mu-\varepsilon]$$
 
 - Similarly, one can define _quasiholes_, where a particle of momentum $\boldsymbol{p}$ is _removed_ from the Fermi sphere
 - The _excitation energy of a quasihole_ is then:
@@ -650,6 +699,14 @@ $$-\varepsilon_{\lambda}(\boldsymbol{p})+\mu$$
 
 - The _number_ of quasiparticles for each $(\boldsymbol{p},\lambda)$ is _conserved
 	- $[H,n_{\lambda}(\boldsymbol{p})]=0$ as the phase space vanishes quadratically with energy (see below)
+
+### Relevant quantities
+- The _quasi-particle density of states_:
+	- Becomes relevant for _physical properties_
+	- For _low temperatures_, many quantities depend on $g(\varepsilon=0)$
+$$g_{V}(\varepsilon)=\frac{1}{V}\sum_{\boldsymbol{p},\lambda}\delta[\varepsilon_{\lambda}(\boldsymbol{p})-\mu-\varepsilon]$$
+- One can also define a _quasiparticle group velocity_:
+$$\boldsymbol{v}_{\boldsymbol{p}}=\nabla_{\boldsymbol{p}}\varepsilon_{\boldsymbol{p}}$$
 ### Quasi-particle lifetime
 - Quasiparticles _scatter_ and _lose energy_, while _conserving_ total number
 - The dominant mechanism:
@@ -675,15 +732,15 @@ $$\frac{1}{\tau(\boldsymbol{p})}\propto \frac{\pi^{2}(k_{B}T)^{2}+(\varepsilon_{
 	- $|\varepsilon_{\lambda}(\boldsymbol{p})-\mu|\sim k_{B}T$: the _ground state_ regime
 	- $|\varepsilon_{\lambda}(\boldsymbol{p})-\mu|\gg k_{B}T$: there is _no thermal broadening_, $\tau^{-1}\sim \varepsilon^{2}$
 
-### Quasiparticle excitation and effective energy
+## Quasiparticle energy expansion
 - For a _distribution of quasiparticles_ $n_{\lambda}(\boldsymbol{p})$, one can quantify the "amount of excitation" with the _quasiparticle excitation distribution_
-	- Distribution in the _new, interacting eigenstate_ of the system
+	- Distribution in the _new, interacting, excited eigenstate_ of the system
 $$\delta n_{\lambda}(\boldsymbol{p})=n_{\lambda}(\boldsymbol{p})-n_{\lambda}^{0}(\boldsymbol{p})$$
 - Here, $n^{0}_{\lambda}(\boldsymbol{p})$ is the _ground state distribution_, treated as a _step function_ at $\mu$
  
-- Assume the system is in contact with a _reservoir_, such that the number of _quasiparticles_ and _quasiholes_ are _not necessarily equal_
+- Assume the system is in contact with a _reservoir_ of chemical potential $\mu$, such that the number of _quasiparticles_ and _quasiholes_ are _not necessarily equal_
 - Define an _effective energy_
-	- Different from Helmholtz free energy
+	- Different from Helmholtz free energy, but still an _extensive quantity_
 $$F=E-\mu N$$
 - At _low termperatures_ $T<T_{F}=E_{F}/k_{B}$, _approximate_ $F$ as a _functional_
 $$\begin{align}
@@ -691,16 +748,24 @@ F=F_{0}&+\sum_{\boldsymbol{p},\lambda}[\varepsilon_{\lambda}(\boldsymbol{p})-\mu
 &+\frac{1}{2V}\sum_{\boldsymbol{p},\boldsymbol{p}'}\sum_{\lambda,\lambda'} f_{\lambda,\lambda'}(\boldsymbol{p},\boldsymbol{p}')\delta n_{\lambda}(\boldsymbol{p}) \delta n_{\lambda'}(\boldsymbol{p}')+O(\delta n^{3})
 \end{align}$$
 - The _error_ in this expansion is of order $O(T^{6})$
+	- See [[#The effect of temperature]]
 
 - The _first order_ term is the _quasiparticle excitation energy_
+	- $\varepsilon_{\lambda}(\boldsymbol{p})-\mu$ is the _first variational derivative_
 - The _second order_ erm is the _quasiparticle-quasiparticle interaction energy_
+	- $f_{\lambda,\lambda'}(\boldsymbol{p},\boldsymbol{p}')/V$ is a _second variational derivative_
+	- The _probability_ of two quasi-particles $\boldsymbol{p},\boldsymbol{p'}$ interacting is $\sim a^{3}/V$ where $a$ is the _interaction range_
 
-### Interaction energy
+## Interaction energy and Landau parameters
 - The interaction energy is _spin-dependent_
 	- It is both a _relativistic effect_, and a result of the _exchange interaction_
 	- In _metals_, the latter is typically $\sim 10^{1}$ larger than other contributions to interaction energy
 
-- If spin is _conserved_ (accounting for _only the exchange interaction_), the interaction parameter can be split into _spin-symmetric_ and _spin-antisymmetric_ parts:
+- In a material with _time-reversal symmetry_ and _inversion symmetry_:
+$$f_{\lambda,\lambda'}(\boldsymbol{p},\boldsymbol{p}')=f_{-\lambda,-\lambda'}(-\boldsymbol{p},-\boldsymbol{p}')=f_{\lambda,\lambda'}(\boldsymbol{p},\boldsymbol{p}')$$
+- For an _isotropic system_, the interaction parameter also only takes the _angle_ $\xi$ _between momenta_
+
+- If spin is _conserved_ (accounting for _only the exchange interaction_), the interaction parameter can then be split into _spin-symmetric_ and _spin-antisymmetric_ parts:
 $$\displaylines{f_{\lambda,\lambda'}(\boldsymbol{p},\boldsymbol{p}')=f^{(s)}(\cos \xi)+\gamma_{\lambda,\lambda'}f^{(a)}(\cos \xi) \\ \gamma_{\lambda,\lambda'}=\begin{cases}
 1&\lambda=\lambda' \\ -1 &\lambda\neq\lambda'
 \end{cases} \qquad \boldsymbol{p}\cdot \boldsymbol{p}'=pp'\cos \xi}$$
@@ -708,25 +773,150 @@ $$\displaylines{f_{\lambda,\lambda'}(\boldsymbol{p},\boldsymbol{p}')=f^{(s)}(\co
 $$f^{(s/a)}(\cos \xi)=\sum_{l=0}^{\infty}f_{l}^{(s/a)}P_{l}(\cos \xi)$$
 - The _coefficients_ define the dimensionless _Landau parameters_:
 $$F_{l}^{(\alpha)}=g_{V}(0)f_{l}^{(\alpha)}=\frac{m^{*}p_{F}}{\pi^{2}\hbar^{3}}f_{l}^{(\alpha)}$$
+- The $l=0$ parameter is the _isotropic response_ of the system
 
-- Write in terms of the _polar angles_ of $\boldsymbol{p}$ and $\boldsymbol{p}'$, using a property of $P_{l}$
+- Write in terms of the _polar angles_ of $\boldsymbol{p}$ and $\boldsymbol{p}'$, using a property of $P_{l}$ (the _addition theorem_)
 $$\displaylines{P_{l}(\cos \xi)=\frac{4\pi}{2l+1}\sum_{m=-l}^{l}Y_{l,m}(\theta,\phi)Y^{*}_{l,m}(\theta',\phi') \\ f^{(\alpha)}(\cos \xi)=\sum_{l=0}^{\infty} \sum_{m=-l}^{l} \frac{4\pi}{2l+1}f_{l}^{(\alpha)}Y_{l,m}(\theta,\phi)Y^{*}_{l,m}(\theta',\phi')}$$
-### Local properties
+## Local properties
 - Consider a normal Fermi liquid with pre-existing quasiparticle distribution $\delta n_{\lambda}(\boldsymbol{p})$
 - When _adding_ another particle at momentum $\boldsymbol{p}$, due to _interactions_, it will have some _effective energy_ $\tilde{\varepsilon}_{\lambda}(\boldsymbol{p})-\mu$, given by the _first variational derivative_
 $$\tilde{\varepsilon}_{\lambda}(\boldsymbol{p})-\mu=\frac{\delta F}{\delta n_{\lambda}(\boldsymbol{p})}$$
 - Using the [[#Quasiparticle excitation and effective energy|formula]] for $\delta F$:
-	- It is also defined for an _inhomogeneous_ system with $\delta n_{\lambda}(\boldsymbol{p},\boldsymbol{r})$
+	- It is also defined for an _inhomogeneous_ system with $\delta n_{\lambda}(\boldsymbol{p},\boldsymbol{r})$, as there are _local distortions_
 $$\tilde{\varepsilon}_{\lambda}(\boldsymbol{p})-\mu=(\varepsilon_{\lambda}(\boldsymbol{p})-\mu)+\frac{1}{V}\sum_{\boldsymbol{p}',\lambda'}f_{\lambda,\lambda'}(\boldsymbol{p},\boldsymbol{p}')\delta n_{\lambda'}(\boldsymbol{p}')$$
 - $\varepsilon_{\lambda}(\boldsymbol{p})-\mu$ is known as the _local quasiparticle excitation energy_
 
+### Force, local excitation, and current
 - Its _gradient_ in ordinary space represents the _average force exerted_ by the _surrounding medium_ on the quasiparticle $\boldsymbol{p}$
-$$\nabla_{\boldsymbol{r}}\tilde{\varepsilon}_{\lambda}(\boldsymbol{p},\boldsymbol{r})=\nabla_{\boldsymbol{r}}\left( \frac{1}{2V} \sum_{\boldsymbol{p}',\lambda'}f_{\lambda,\lambda'}(\boldsymbol{p},\boldsymbol{p}')\delta n_{\lambda'}(\boldsymbol{p}')\right)$$
+$$\nabla_{\boldsymbol{r}}\tilde{\varepsilon}_{\lambda}(\boldsymbol{p},\boldsymbol{r})=\nabla_{\boldsymbol{r}}\left( \frac{1}{V} \sum_{\boldsymbol{p}',\lambda'}f_{\lambda,\lambda'}(\boldsymbol{p},\boldsymbol{p}')\delta n_{\lambda'}(\boldsymbol{p}')\right)$$
 - Define the _local quasiparticle excitation distribution_
-	- As opposed to the [[#Quasiparticle excitation and effective energy|quasiparticle excitation distribution]] $\delta n_{\lambda}(\boldsymbol{p})=n_{\lambda}(\boldsymbol{p})-n_{\lambda}^{0}(\boldsymbol{p})=n_{\lambda}(\boldsymbol{p})-n^{0}(\varepsilon_{\lambda}(\boldsymbol{p})-\mu)$
-	- This quantifies the _departure from equilibrium_
+	- As opposed to the [[#Quasiparticle energy expansion|quasiparticle excitation distribution]] $\delta n_{\lambda}(\boldsymbol{p})=n_{\lambda}(\boldsymbol{p})-n^{0}(\varepsilon_{\lambda}(\boldsymbol{p})-\mu)$
+	- This quantifies the _departure from local equilibrium_ in the Fermi liquid
 $$\displaylines{\delta \tilde{n}_{\lambda}(\boldsymbol{p})=n_{\lambda}(\boldsymbol{p})-\tilde{n}_{\lambda}^{0}(\boldsymbol{p}) \\ \tilde{n}_{\lambda}^{0}(\boldsymbol{p})=n^{0}(\tilde{\varepsilon}_{\lambda}(\boldsymbol{p})-\mu)}$$
-- It quantifies the _depature from local equilibrium_ in the Fermi liquid
+
+- The _total current density_ due to local movement and departure from equilibrium:
+	- Here, $v_{\boldsymbol{p}}$ is the [[#Relevant quantities|group velocity]] $\nabla_{\boldsymbol{p}}\varepsilon_{\lambda}(\boldsymbol{p})$
+$$\boldsymbol{J}=\frac{1}{V}\sum_{\boldsymbol{p},\lambda}v_{\boldsymbol{p}}\delta \tilde{n}_{\lambda}(\boldsymbol{p})$$
+- From comparing definitions, one also finds:
+$$\begin{align}
+\delta \tilde{n}_{\lambda}(\boldsymbol{p})&=\delta n_{\lambda}(\boldsymbol{p})-\frac{\partial n^{0}(\varepsilon_{\lambda}(\boldsymbol{p})-\mu)}{\partial\varepsilon_{\lambda}(\boldsymbol{p})}(\tilde{\varepsilon}_{\lambda}(\boldsymbol{p})-\varepsilon_{\lambda}(\boldsymbol{p}))  \\
+&=\delta n_{\lambda}(\boldsymbol{p})-\frac{\partial n^{0}}{\partial\varepsilon_{\lambda}} \frac{1}{V}\sum_{\boldsymbol{p}',\lambda'} f_{\lambda,\lambda'}(\boldsymbol{p},\boldsymbol{p}')\delta n_{\lambda'}(\boldsymbol{p}')
+\end{align}$$
+
+### Simplifying the local quasiparticle excitation
+- Simplify the above for a _system at zero temperature_
+
+- Split $\delta n_{\lambda}$ and $\delta n_{\lambda'}$ into spin-symmetric and antisymmetric components:
+$$\displaylines{\delta n_{\lambda}(\boldsymbol{p})=\delta n^{(s)}(\boldsymbol{p})+\eta_{\lambda}\delta n^{(a)}(\boldsymbol{p}) \qquad \delta \tilde{n}_{\lambda}(\boldsymbol{p})=\delta \tilde{n}^{(s)}(\boldsymbol{p})+\eta_{\lambda}\delta \tilde{n}^{(a)}(\boldsymbol{p}) \\ \eta_{\lambda}=\begin{cases}
+1&\eta=\uparrow \\ -1&\eta=\downarrow
+\end{cases}}$$
+
+- Once again _splitting_ $f_{\lambda,\lambda'}(\cos \xi)$ and substituting into $\delta \tilde{n}_{\lambda}-\delta n_{\lambda}$, with $\varepsilon_{\lambda}=\varepsilon$
+$$\begin{align}
+\delta \tilde{n}^{(s/a)}(\boldsymbol{p})&=\delta n^{(s/a)}(\boldsymbol{p})-\frac{\partial n^{0}}{\partial\varepsilon} \frac{2}{V}\sum_{\boldsymbol{p}'}f^{(s/a)}(\cos \xi)\delta n^{(s/a)}(\boldsymbol{p}') \\
+&=\delta n^{(s/a)}(\boldsymbol{p})+\frac{2}{V}\delta(\varepsilon(\boldsymbol{p})-\mu )\sum_{\boldsymbol{p}'}f^{(s/a)}(\cos \xi)\delta n^{(s/a)}(\boldsymbol{p}')
+\end{align}$$
+- At _zero temperature_, expand $\delta n$
+$$\displaylines{\delta n^{(s/a)}(\boldsymbol{p})=\delta(\varepsilon(\boldsymbol{p})-\mu)\sum_{l,m}\delta n^{(s/a)}_{l,m}Y_{l,m}(\theta,\phi) \\ \delta \tilde{n}^{(s/a)}(\boldsymbol{p})=\delta(\varepsilon(\boldsymbol{p})-\mu)\sum_{l,m}\delta \tilde{n}^{(s/a)}_{l,m}Y_{l,m}(\theta,\phi)}$$
+- _Expanding_ $\delta n^{(s/a)}$ and comparing:
+$$\delta \tilde{n}^{(s/a)}_{l,m}=\left( 1+\frac{F_{l}^{(s/a)}}{2l+1} \right)\delta n_{l,m}^{(s/a)}$$
+
+## Equilibrium properties
+
+### Effective mass
+- Derive a relation between the _bare particle mass_ $m$ and the _quasiparticle mass_ $m$
+- Both the _bare_ and _quasiparticle current densities_ must be the _same_
+
+- The _total current density_:
+$$J=\frac{1}{V}\sum_{\boldsymbol{p},\lambda}v_{\boldsymbol{p},\lambda}\delta \tilde{n}_{\lambda}(\boldsymbol{p})$$
+- Substituting from above, _swapping_ dummy variables and using symmetry in $\lambda,\lambda'$
+	- In terms of _actual excitation number_ at $\boldsymbol{p}$ instead of departure from _local equilibrium_
+$$J=\frac{1}{V}\sum_{\boldsymbol{p},\lambda}j_{\boldsymbol{p},\lambda}\delta n_{\lambda}(\boldsymbol{p})$$
+- Here, $j_{\boldsymbol{p},\lambda}$ is the _current density of quasiparticles_ $(\boldsymbol{p},\lambda)$
+$$j_{\boldsymbol{p},\lambda}=v_{\boldsymbol{p},\lambda}-\frac{1}{V}\sum_{\boldsymbol{p}',\lambda'}v_{\boldsymbol{p}',\lambda'} \frac{\partial n^{0}}{\partial\varepsilon_{\lambda'}(\boldsymbol{p}')}f_{\lambda,\lambda'}(\boldsymbol{p},\boldsymbol{p}')$$
+- This must be equal to the _bare current density_ $\boldsymbol{p}/m$
+- Define the _effective mass_ using the group velocity:
+$$v_{\boldsymbol{p},\lambda}=\frac{\boldsymbol{p}}{m^{*}}$$
+- Equating the two current densities and taking the dot product with $\boldsymbol{p}$, at _zero temperature_
+$$\frac{1}{m}=\frac{1}{m^{*}}+\frac{1}{V}\sum_{\boldsymbol{p}'\lambda'}\frac{\cos \xi}{m^{*}}\delta[\varepsilon_{\lambda}(\boldsymbol{p})-\mu]f_{\lambda,\lambda'}(\boldsymbol{p},\boldsymbol{p}')$$
+- Then perform the sum _assuming spin degeneracy_, with $P_{1}=\cos \xi$
+$$\frac{1}{m}=\frac{1}{m^{*}}+\frac{2}{V}\sum_{\boldsymbol{p}'} \frac{1}{m^{*}}\delta(\varepsilon(\boldsymbol{p})-\mu)\sum_{l}f_{l}^{(s)}P_{l}(\cos \xi)P_{1}(\cos \xi)$$
+- Converting the sum into a _surface integral over momentum space_:
+$$\frac{1}{m}=\frac{1}{m^{*}}+\frac{1}{m^{*}} \frac{1}{4\pi}g_{V}(0)\sum_{l} f_{l}^{(s)} \int  dS\,P_{l}(\cos \xi)P_{1}(\cos \xi) $$
+- Then using _orthogonality_ of the Legendre polynomials: 
+$$m^{*}=\left( 1+\frac{F_{1}^{(s)}}{3} \right)m$$
+### The effect of temperature
+- The energy required to _add_ a particle $(\boldsymbol{p},\lambda)$ is given by $\tilde{\varepsilon}_{\lambda}(\boldsymbol{p})-\mu$
+- Hence, at _finite temperature_, use the _Fermi distribution_:
+$$n^{0}_{\boldsymbol{p},\lambda}(T,\mu)=\frac{1}{1+\exp[(\tilde{\varepsilon}_{\lambda}(\boldsymbol{p})-\mu)/k_{B}T]}$$
+- The _interaction energy correction_ in $\tilde{\varepsilon}_{\lambda}(\boldsymbol{p})-\varepsilon_{\lambda}(\boldsymbol{p})$ is on the _order_ of:
+$$\sum_{\boldsymbol{p}'}Y_{l,m}^{*}(\theta',\phi')\delta n_{\lambda'}(\boldsymbol{p}')\sim \int p^{2} \frac{\partial n^{0}}{\partial\varepsilon}\delta n(\boldsymbol{p})\, dp  \sim \int   H(\varepsilon) \delta n_{\lambda}(\boldsymbol{p}) d\varepsilon $$
+- From the _Sommerfeld expansion_:
+$$\int  H(\varepsilon)\delta n_{\lambda}(\boldsymbol{p})\,d\varepsilon=\frac{\pi^{2}}{6}(k_{B}T)^{2}\,\frac{dH(\varepsilon)}{d\varepsilon}\Bigg|_{\varepsilon=\mu}+O(T^{4}) $$
+
+- The _interaction energy correction_ is of order $O(T^{2})$
+
+- Therefore, in the _exponential_, one can replace $\tilde{\varepsilon}$:
+$$n^{0}_{\boldsymbol{p},\lambda}(T,\mu)=\frac{1}{1+\exp[(\varepsilon_{\lambda}(\boldsymbol{p})-\mu)/k_{B}T]}$$
+- One also typically _expands_ the free energy only up to $O(T^{2})$
+$$F=F_{0}+\sum_{\boldsymbol{p},\lambda}(\varepsilon_{\lambda}(\boldsymbol{p})-\mu)\delta n_{\lambda}(\boldsymbol{p})+O(T^{4})$$
+- Any thermodynamic quantity _depending solely on $F$_ is _not directly affected by interactions_
+### Heat capacity
+- From the definition of heat capacity:
+$$C_{V}=\frac{\partial E}{\partial T}\Bigg|_{N}=T\frac{\partial S}{\partial T}=\frac{\partial F}{\partial T}\Bigg|_{\mu}$$
+- Using the free energy expansion above, with _spin degeneracy_:
+$$F=F_{0}+\frac{V}{(2\pi)^{3}} (2)(4\pi)\int p^{2}\,dp\,(\varepsilon(p)-\mu)\delta n_{\lambda}(p)+O(T^{4}) $$
+- Changing variables with $\varepsilon=p^{2}/2m$, and using the Sommerfeld integral:
+$$F=F_{0}+V\frac{m^{*}p_{F}}{6\hbar^{3}}(k_{B}T)^{2}+O(T^{4})$$
+- From this:
+$$C_{V}=V\frac{m^{*}p_{F}}{3\hbar^{3}}k_{B}^{2}T+O(T^{3})$$
+- At _low temperatures_, it is simply the same as a _non-interacting system_ but with _renormalised mass_ due to interactions
+### Isothermal bulk compressibility
+- The _isothermal bulk compressibility_:
+$$\frac{1}{\kappa_{T}}=-V \frac{\partial P}{\partial V}\Bigg|_{T,N}$$
+- At _zero temperature_:
+$$P=-\frac{\partial E}{\partial V}\Bigg|_{T,N}\implies \frac{1}{\kappa}=V \frac{\partial^{2}E}{\partial V^{2}}\Bigg|_{T,N}$$
+- As $E$ is an _extensive quantity_, write:
+$$\displaylines{E=Vf(\rho) \\ \mu=\frac{\partial E}{\partial N}\Bigg|_{T,V}=f' \qquad \kappa=\rho^{2}f''(\rho) =N\rho \frac{\partial \mu}{\partial N}\Bigg|_{T,V}}$$
+
+- Consider _local excitations resulting from_ a _shift_ in $\mu$ at zero temperature:
+$$\delta \tilde{n}_{\lambda}(\boldsymbol{p})=n^{0}[\tilde{\varepsilon}_{\lambda}(\boldsymbol{p})-\mu-d\mu]-n^{0}[\tilde{\varepsilon}_{\lambda}(\boldsymbol{p})-\mu]=-d\mu \frac{\partial n^{0}}{\partial\varepsilon_{\lambda}(\boldsymbol{p})}=d\mu\delta[\varepsilon_{\lambda}(\boldsymbol{p})-\mu]$$
+- For an _isotropic, spin-independent system_, using the [[#Simplifying the local quasiparticle excitation|zero temperature relation]]:
+$$\displaylines{\delta n_{\uparrow}(\boldsymbol{p})=\delta n_{\downarrow}(\boldsymbol{p})=\delta n^{(s)}(\boldsymbol{p}) \\\delta \tilde{n}_{\lambda}(\boldsymbol{p})=(1+F^{(s)}_{0})\delta n_{\lambda}(\boldsymbol{p}) }$$
+- Change in number of particles:
+$$dN=\sum_{\boldsymbol{p},\lambda}\delta n_{\lambda}(\boldsymbol{p})=\sum_{\boldsymbol{p},\lambda}\delta[\varepsilon_{\lambda}(\boldsymbol{p})-\mu] \frac{1}{1+F_{0}^{(s)}}d\mu=\frac{Vg_{V}(0)}{1+F_{0}^{(s)}}d\mu$$
+- Qualitatively, a shift in $\mu$ from the compression includes both:
+	- A shift in the _Fermi energy_, adding particles
+	- The _addition of quasiparticles_ means _extra interaction energy_
+
+- The _isothermal bulk compressibility_:
+$$\kappa_{T}=\frac{1}{\rho^{2}} \frac{g_{V}(0)}{1+F_{0}^{(s)}}$$
+
+- The system is only _stable if_ $1+F_{0}^{(s)}>0$
+	- Otherwise, _density fluctuations_ will _grow exponentially_ to give a _phase transition_
+### Spin susceptibility
+- Subject a normal Fermi liquid to a _magnetic field_ $\boldsymbol{B}=(0,0,B)$
+
+- For a particle of spin $\sigma=\pm 1/2$
+$$\varepsilon_{\lambda,B}=-\frac{\lambda}{2}g\mu _{B}B$$
+- The _local excitation distribution_ due to the magnetic field:
+$$\delta \tilde{n}_{\lambda}(\boldsymbol{p})=n^{0}[\tilde{\varepsilon}_{\lambda}(\boldsymbol{p})-\mu+\varepsilon_{\lambda,B}]-n^{0}[\tilde{\varepsilon}_{\lambda}(\boldsymbol{p})-\mu]=-\frac{\lambda}{2}g\mu_{B}B \frac{\partial n^{0}}{\partial\varepsilon_{\lambda}(\boldsymbol{p})}$$
+- At zero temperature:
+$$\delta \tilde{n}_{\lambda}(\boldsymbol{p})=\frac{\lambda}{2}g\mu_{B}B\delta[\epsilon_{\lambda}(\boldsymbol{p})-\mu]$$
+- Due to the magnetic field:
+$$\delta n_{\uparrow}(\boldsymbol{p})=-\delta n_{\downarrow}(\boldsymbol{p})=\delta n^{(a)}(\boldsymbol{p})$$
+
+- The _total magnetisation_:
+$$M=\sum_{\boldsymbol{p},\lambda}g\mu_{B}\frac{\lambda}{2}\delta n_{\lambda}(\boldsymbol{p})$$
+- Again using the relation between the excitation functions, for an _isotropic system_:
+$$M=\frac{1}{4}(g\mu_{B})^{2}B \frac{Vg_{V}(0)}{1+F_{0}^{(a)}}$$
+- As $B=\mu_{0}H$, the _paramagnetic spin susceptibility_ is:
+$$\chi=\frac{M}{HV}=\frac{1}{4} \frac{g^{2}\mu_{B}^{2}\mu_{0}}{1+F_{0}^{(a)}}g_{V}(0)$$
+# Second quantisation
+
+## Jellium
+
+
 # Magnetism
 - Only arises due to _inter-particle interactions_
 	- Unaccounted for by the independent electron model
@@ -918,6 +1108,9 @@ $$E_{b}(\boldsymbol{k})=$$
 
 # Excitons
 
+## Wannier model
+- The exciton can be described with a _hydrogenic model_
+
 
 ## Potential Bose-Einstein condensation
 - There is a _critical temperature_ for Bose-Einstein condensation
@@ -944,51 +1137,206 @@ $$T_{c} \propto \frac{1}{m}n^{2/3}$$
 	- The _first order_ term _vanishes in equilibrium_
 	- $D$ includes _direct interactions_, as well as _self-consistent changes_ in _electron density_
 $$U_\text{harm}=\frac{1}{2}\sum_{n,m=1}^{N}\boldsymbol{s}_{n}\cdot D(\boldsymbol{R}_n-\boldsymbol{R}_{m})\cdot \boldsymbol{s}_{m}$$
-- With the _conjugate momentum_ $\boldsymbol{P}_{n}$
-$$H=$$
+- With $\boldsymbol{P}_{n}$, the _conjugate momentum_ to $\boldsymbol{s}_{n}$
+$$\displaylines{H=\sum_{n=1}^{N}\frac{P_{n}^{2}}{2M}+\frac{1}{2}\sum_{n,m=1}^{N}\boldsymbol{s}_{n}\cdot D(\boldsymbol{R}_n-\boldsymbol{R}_{m})\cdot \boldsymbol{s}_{m} \\ [s_{n}^{i},P_{m}^{j}]=i\hbar\delta_{nm}\delta_{ij}}$$
+
 - The matrices $D$ follow:
-$$D$$
-
+$$D(\boldsymbol{R})=D(-\boldsymbol{R}) \qquad \sum_{\boldsymbol{R}}D(\boldsymbol{R})=0$$
+- This can be written in terms of _second quantisation_
 ### Many-phonon Hamiltonian
-- A _sum_ of $3N$ independent harmonic oscillators
+- For a _single-particle_ Hamiltonian:
+$$\displaylines{a=\sqrt{ \frac{M\omega}{2\hbar} }s+i\sqrt{ \frac{1}{2\hbar M\omega} }P \qquad a^{\dagger}=\sqrt{ \frac{M\omega}{2\hbar} }s-i\sqrt{ \frac{1}{2\hbar M\omega} }P \\ [a,a^{\dagger}]=1 \qquad [a,a]=[a^{\dagger},a^{\dagger}]=0}$$
 
-### Branches
-- Acoustic and optical
+- For the _crystal Hamiltonian_, use the ansatz:
+$$\displaylines{a_{\boldsymbol{q},\nu}=\frac{1}{\sqrt{ N }}\sum_{n=1}^{N}e^{-i\boldsymbol{q}\cdot \boldsymbol{R}_{n}} \,\boldsymbol{\varepsilon}_{\nu}(\boldsymbol{q})\cdot\left( \sqrt{ \frac{M\omega_{\nu}(\boldsymbol{q})}{2\hbar}}\boldsymbol{s}_{n}+i\sqrt{ \frac{1}{2\hbar M\omega_{\nu}(\boldsymbol{q})} }\boldsymbol{P}_{n} \right) \\ a_{\boldsymbol{q},\nu}^{\dagger}=\frac{1}{\sqrt{ N }}\sum_{n=1}^{N}e^{i\boldsymbol{q}\cdot \boldsymbol{R}_{n}} \,\boldsymbol{\varepsilon}_{\nu}(\boldsymbol{q})\cdot\left( \sqrt{ \frac{M\omega_{\nu}(\boldsymbol{q})}{2\hbar}}\boldsymbol{s}_{n}-i\sqrt{ \frac{1}{2\hbar M\omega_{\nu}(\boldsymbol{q})} }\boldsymbol{P}_{n} \right)}$$
+- Here, $\boldsymbol{\varepsilon}_{\nu}(\boldsymbol{q})$ is a set of _orthonormal_, _normal mode polarisation vectors_
+- They each have a _corresponding_ normal mode frequency $\omega_{\nu}(\boldsymbol{q})$
 
+- $\boldsymbol{\varepsilon}_{\nu}(\boldsymbol{q})$ and $\omega_{\nu}(\boldsymbol{q})$ are determined from the _equation of motion_, with a _harmonic ansatz_
+$$\displaylines{M \ddot{\boldsymbol{s}}_{n}=-\sum_{m}D(\boldsymbol{R}_{n}-\boldsymbol{R}_{m})\cdot \boldsymbol{s}_{m} \\ \boldsymbol{s}_{n}(\boldsymbol{R}_{n},t)=\boldsymbol{\varepsilon}(\boldsymbol{q})\exp[i(\boldsymbol{q}\cdot \boldsymbol{R}_{n}-\omega t)] \\ \tilde{D}(\boldsymbol{q})\boldsymbol{\varepsilon}_{\nu}(\boldsymbol{q})=M\omega_{\nu}^{2}(\boldsymbol{q})\boldsymbol{\varepsilon}_{\nu}(\boldsymbol{q})}$$
+- Here, $\tilde{D}(\boldsymbol{q})$ is the _dynamical matrix_, a _real, symmetric, positive-definite_ $3\times3$ matrix
+$$\tilde{D}(\boldsymbol{q})=\sum_{n=1}^{N}D(\boldsymbol{R}_{n})\exp(-i\boldsymbol{q}\cdot \boldsymbol{R}_{n})$$
+- From the properties of the matrix:
+$$\boldsymbol{\varepsilon}_{\mu}(\boldsymbol{q})\cdot \boldsymbol{\varepsilon}_{\nu}(\boldsymbol{q})=\delta_{\mu \nu} \qquad \omega_{\nu}^{2}(\boldsymbol{q})>0$$
 
+- From the orthonormality of $\boldsymbol{\varepsilon}_{\nu}(\boldsymbol{q})$ and the position-momentum conjugation:
+$$[a_{\boldsymbol{q},\nu},a^{\dagger}_{\boldsymbol{q}',\nu'}]=\delta_{\boldsymbol{q}\boldsymbol{q}'}\delta_{\nu \nu'} \qquad [a_{\boldsymbol{q},\nu},a_{\boldsymbol{q}'\nu'}]=[a_{\boldsymbol{q},\nu}^{\dagger},a_{\boldsymbol{q}'\nu'}^{\dagger}]=0$$
+- From this, one gets the _many-phonon Hamiltonian_:
+$$H=\sum_{\boldsymbol{q}\in \text{BZ}  }\sum_{\nu=1}^{3}\hbar\omega_{\nu}(\boldsymbol{q})\left( a^{\dagger}_{\boldsymbol{q}\nu}a_{\boldsymbol{q}\nu}+\frac{1}{2} \right)$$
+- It represents $3N$ _independent, separate harmonic oscillators_, one for _each_ $\boldsymbol{q}$ in the BZ, with _one of three polarisations_ $\nu$
+$$E=\sum_{\boldsymbol{q},\nu}\hbar\omega_{\nu}(\boldsymbol{q})\left( n_{\boldsymbol{q}\nu}+\frac{1}{2} \right)$$
+### Phonon branches
+- From the _symmetry_ of $D(\boldsymbol{R})$, for a _monoatomic Bravais lattice_:
+$$\tilde{D}(\boldsymbol{q})=-2\sum_{n=1}^{N}\sin^{2}\left( \frac{1}{2}\boldsymbol{q}\cdot \boldsymbol{R}_{n} \right)D(\boldsymbol{R}_{n})$$
+- For _small_ $\boldsymbol{q}$:
+$$\tilde{D}(\boldsymbol{q})\approx -\frac{q^{2}}{2}\sum_{n=1}^{N}\left( \hat{\boldsymbol{q}}\cdot \boldsymbol{R}_{n} \right)^{2}D(\boldsymbol{R}_{n})$$
+- Then, from the eigenvalue equation, _all branches for a monoatomic crystal are acoustic_
+$$\lim_{ \boldsymbol{q} \to 0 }\omega_{\nu}(\boldsymbol{q})\to c_{\nu}\left( \hat{\boldsymbol{q}} \right)q $$
+- At _high-symmetry points_, 2 branches are _transverse_ $\boldsymbol{q}\perp \boldsymbol{\varepsilon}_{\nu}(\boldsymbol{q})$ with one _longitudinal_ branch
+- For _arbitrary_ $\boldsymbol{q}$, this classification is _not possible_
 
+- For a Bravais lattice with a $p-$atom basis, there are $3p$ _modes for each_ $\boldsymbol{q}$
+- There are 3 _acoustic_ branches, corresponding to _translational_ degrees of freedom in a $p-$atomic molecule
+- There are then $3(p-1)$ _optical branches_, corresponding to _vibrational_ degrees of freedom in a $p-$atomic molecule
+$$\lim_{ \boldsymbol{q} \to 0 } \omega_{\nu}(\boldsymbol{q})>0$$
+
+- In _acoustic modes_ for $q\approx0$, adjacent atoms move _in-phase_
+![[Acoustic optical modes.png]]
+- In _optical modes_ for $q\approx0$, adjacent atoms move _out-of-phase_
+- A _dipole moment_ is then generated, which can _couple_ to _photons_
+- _Optical absorption_ can then lead to the _generation of optical phonons_
+
+- Dispersion relations can be measured by _neutron scattering_
+
+- _All phonons_ will contribute to _specific heat_:
+	- At $T\to 0$, _Debye's law_ is obeyed as $C_{V}\propto T^{3}$
+$$C_{V}=\frac{\partial}{\partial T} \sum_{\nu} \int_\text{BZ}  \frac{d^{3}\boldsymbol{k}}{(2\pi)^{3}} \frac{\hbar\omega_{\nu}(\boldsymbol{k})}{\exp[\hbar\omega_{\nu}(\boldsymbol{k})/k_{B}T]-1} $$
+
+- The _Debye temperature_ is defined in terms of the _highest frequency phonon mode_ $\omega_{D}$
+$$\hbar\omega_{D}=k_{B}\Theta_{D}$$
 ## Manifestation of e-ph interactions
 ### Resistivity
 - _Resistivity_ is commonly caused by the e-ph interaction
-	- Not ph related: _impurity scattering_
-- _Temperature dependence_
+	- At _extremely low_ temperatures, scattering is dominated by _impurities_ and becomes temperature-independent
+- _Temperature dependence_ of e-ph scattering is typically:
+$$\begin{align} \rho(T\gg\Theta_{D})&\propto T \\ \rho(T\ll\Theta_{D})&=\rho_{0}(1+AT^{5}+\dots)
+\end{align}$$
 
 - e-ph scattering contributes to _relaxation processes_ that bring the crystal to _equilibrium_
 - There is an associated _relaxation time_
 
 ### Conventional superconductivity
 - Phonons _mediate_ an _effective attractive force_ between _electron pairs_, within a _Debye energy from the Fermi surface_
-
+$$H'=\sum_{\boldsymbol{k},\boldsymbol{k}',\boldsymbol{q}}|M_{q}|^{2} \frac{\hbar\omega_{\boldsymbol{q}}}{(\varepsilon_{\boldsymbol{k}}-\varepsilon_{\boldsymbol{k}+\boldsymbol{q}})^{2}-(\hbar\omega_{\boldsymbol{q}}^{2})}c^{\dagger}_{\boldsymbol{k}'+\boldsymbol{q}}c^{\dagger}_{\boldsymbol{k}-\boldsymbol{q}}c_{\boldsymbol{k}}c_{\boldsymbol{k}'}$$
+- This causes _Cooper pair formation_
+- The attractive force comes from a _second order process_ as a phonon is _emitted_ then _absorbed_
 ### Polarons
 - Quasiparticle formed by an _electron_ plus its _polarisation cloud_
 
 - There are _large_ and _small polarons_ depending on the _extent_ of the _lattice distortion_
+	- _Large_ if the region of _nuclear distortion_ is _large compared to the lattice constant_
+![[Polaron.png|300]]
+- Example of small polaron: _charge motion_ in a _conjugated polymer_, as the ring monomers go through _simple harmonic motion_
+	- At _low temperatures_, the polymer is quasi-adiabatic as the polaron diffuses down the chain without activation energy
+	- At _high temperatures_, there is an additional _activated transfer process_ corresponding to hopping between states
 ## e-ph Hamiltonian
+- The electron-phonon interaction originates from:
+	- Form for a _monoatomic Bravais lattice_
+	- The ion positions can be _time-dependent_ due to the phonon excitations
+$$H_\text{e-ion}=\sum_{m=1}^{N}\sum_{n=1}^{N}V_\text{ion}(\boldsymbol{r}_{m}-\boldsymbol{R}_{n}(t))=-\sum_{m=1}^{N}\sum_{n=1}^{N}\frac{Ze^{2}}{4\pi\epsilon_{0}|\boldsymbol{r}_{m}-\boldsymbol{R}_{n}|}$$
+- Expand the potential around the _equilibrium positions_ $\boldsymbol{R}_{n}$
+$$\displaylines{\boldsymbol{R}_{n}(t)=\boldsymbol{R}_{n}+\boldsymbol{s}_{n}(t) \\ H_\text{e-ion}=\sum_{m=1}^{N}\sum_{n=1}^{N}V_\text{ion}(\boldsymbol{r}_{m}-\boldsymbol{R}_{n})-\boldsymbol{s}_{n}(t)\cdot \nabla_{\boldsymbol{R}_{n}}V_\text{ion}(\boldsymbol{r}_{m}-\boldsymbol{R}_{n})}$$
 
+- Take the _rigid ion model_, where $V_\text{ion}$ _only_ depends on distance between the _electron_ and the _centre_ of the ion, such that vibrations _shift each ion rigidly_ and _do not change the form of the potential_
+- The _stationary part_ of the potential determines the _ground state properties_ (without phonons)
 
-- Take the _rigid ion model_, where vibrations _do not change the form of the potential_
+### Form of interaction Hamiltonian
+- Express $\boldsymbol{s}_{n}$ in terms of the _creation and annihilation operators_:
+$$\boldsymbol{s}_{n}=\frac{1}{\sqrt{ N }}\sum_{\boldsymbol{q},\nu}\sqrt{ \frac{\hbar}{2M\omega_{\nu}(\boldsymbol{q})} }(a_{\boldsymbol{q}\nu}+a^{\dagger}_{-\boldsymbol{q}\nu})e^{i\boldsymbol{q}\cdot \boldsymbol{R}_{n}}\boldsymbol{\varepsilon}_{\nu}(\boldsymbol{q})$$
+- The _interaction Hamiltonian_ is then:
+$$H_\text{e-ph}=\sum_{m=1}^{N} \sum_{n=1}^{N}\sum_{\boldsymbol{q},\nu}\frac{1}{\sqrt{ N }} \sqrt{ \frac{\hbar}{2M\omega_{\nu}(\boldsymbol{q})} } (a_{\boldsymbol{q}\nu}+a^{\dagger}_{-\boldsymbol{q}\nu}) e^{i\boldsymbol{q}\cdot \boldsymbol{R}_{n}} \boldsymbol{\varepsilon}_{\nu}(\boldsymbol{q})\cdot \nabla V_\text{ion}(\boldsymbol{r}_{m}-\boldsymbol{R}_{n})$$
+- This is a _sum of single-electron Hamiltonians_
 
-- Final form:
-$$H_\text{e-ph}=\sum_{\boldsymbol{k},\boldsymbol{k}',\lambda}\sum_{\boldsymbol{q},\nu}$$
+- One can then put it into _second quantised form_ using _plane wave states_:
+	- Assuming the interaction Hamiltonian is _sufficiently weak_ that there is _no scattering between bands_
+$$\displaylines{H_\text{e-ph}=\sum_{\boldsymbol{k},\boldsymbol{k}',\lambda}\sum_{\boldsymbol{q},\nu}M_{\boldsymbol{q}\nu}(\boldsymbol{k},\boldsymbol{k}')(a_{\boldsymbol{q}\nu}+a_{-\boldsymbol{q}\nu}^{\dagger})c^{\dagger}_{\boldsymbol{k}',\lambda}c_{\boldsymbol{k},\lambda} \\ M_{\boldsymbol{q}\nu}(\boldsymbol{k},\boldsymbol{k}')=\frac{1}{\sqrt{ N }}\sqrt{\frac{\hbar}{2M\omega_{\nu}(\boldsymbol{q})}  }e^{i\boldsymbol{q}\cdot \boldsymbol{R}_{n}}\boldsymbol{\varepsilon}_{\nu}(\boldsymbol{q})\cdot \braket{ \boldsymbol{k}'|\nabla V_\text{ion}(\boldsymbol{r}_{m}-\boldsymbol{R}_{n}) |\boldsymbol{k}  } }$$
+
+### Form of e-ph matrix element
+- Introduce the _atomic form factor_ associated with the potential
+
+### Physical interpretation
+- Both _normal_ and _Umklapp scattering_
 
 ## Boltzmann theory
+- Theory of _electron transport_ accounting for _impurity scattering_ and _e-ph interaction_
 
+- A _semiclassical theory_, treating the _distribution function_ as a function of _three variables_
+	- In quantum mechanics, $\boldsymbol{r}$ and $\boldsymbol{k}$ are _conjugate variables_
+$$f=f(\boldsymbol{r},\boldsymbol{k},t)$$
+- Describes _semi-classical wave packets_
+
+
+- From _Liouville's Theorem_, the classical distribution function obeys:
+$$\frac{df}{dt}=0$$
+- However, _collisions_ can change the total number of particles, therefore the _Boltzmann equation_ gives:
+$$\frac{df}{dt}=\frac{\partial f}{\partial t}+\frac{d\boldsymbol{k}}{dt}\cdot \nabla_{k}f+\frac{d\boldsymbol{r}}{dt}\cdot \nabla_{r}f=\frac{\partial f}{\partial t}\Bigg|_\text{coll}$$
+- From $f$, one then gets the _transport properties_
+
+### Relaxation time approximation
+
+### AC response of a metal
+
+- Only contributions from _within_ $k_{B}T$ of the _Fermi surface_
+
+### Scattering from a static potential
+
+### Scattering from a charge
 ## Phonon mediation of e-e interactions
 - The e-ph interaction results in _scattering of electrons_ via phonon emission or absorption
 - There are also _second order_ processes involving a phonon being _emitted_ by one electron before being _absorbed by another_ electron
 
+- A _canonical transformation_ of the Frochlich Hamiltonian to _eliminate first order terms_
 # Quantum Transport
+- [[#Boltzmann theory]] is _semi-classical_, which also _does not take phase coherence into account_
+
+- _Quantum transport theory_ applies to _phase-coherent quantum systems_
+	- Effects are more apparent in _low-dimensional, low-temperature systems_
+- A _linear response_ approach
+
+## Lower dimensional electron systems
+- Typically, a three-dimensional _conduction band_ forms an energy minimum, around which the dispersion is approximated as:
+	- Example: $\ce{ GaAs }$ has a parabolic band structure around $\Gamma$
+$$E_{\boldsymbol{k}}=\frac{\hbar^{2}}{2}\sum_{i,j=1}^{3}\boldsymbol{k}_{i}(m^{*})^{-1}_{i,j}\boldsymbol{k}_{j}$$
+- One can also _artifically make_ lower dimensional band structures
+
+### Manufacturing a 2D Electron gas
+- One can construct _two-dimensional electron gases_ via MBE:
+![[2dEG production.png]]
+- The _difference in charge_ causes _band bending_, which forms an [[Solids#Inversion layer formation|inversion layer]], where the electrons are _confined_ to form a 2DEG
+![[2DEG inversion.png|500]]
+
+- One can _adjust_ the 2D carrier density by applying a _potential_ $V_{g}$ to a _surface Schottky gate_
+![[2DEG Schottky gate.png]]
+$$\Delta Q=-e\Delta n=C\Delta V_{g}$$
+
+- By more finely manipulating the Schottky gate, one can create an _arbitrary 2D effective potential_, such that the electrons are governed by:
+$$\frac{1}{2m^{*}}(\boldsymbol{p}+e\boldsymbol{A})^{2}\Phi+V(x,y)\Phi=i\hbar \frac{\partial \Phi}{\partial t}$$
+
+### Quasi-1D electron gas
+![[1DEG.png|300]]
+- By using a _split gate_, one can also make a _quasi-one dimensional system_
+$$\left( \frac{p^{2}}{2m^{*}}+V(y) \right)\Phi_{kn}(x,y)=E_{kn}(x,y)$$
+- The system is _separable_ as long as the system is _translationally invariant along_ $x$
+$$\displaylines{\Phi_{nk}(x,y)=\exp(ikx)\phi_{n}(y) \\ \left( \frac{p_{y}^{2}}{2m^{*}}+V(y) \right)\phi_{n}(y)=\left( E_{nk}-\frac{\hbar^{2}k^{2}}{2m} \right)\phi_{}(y)=E_{n}\phi_{n}(y)}$$
+- $\phi_{n}(y)$ is the _sub-band wave function_, while $E_{n}$ is the _sub-band energy_
+	- In general, $\phi_{n}$ is _not_ a function of $k$ (with the exception of the $B-$field, see below)
+	- In the $z$ direction, the electorn is still _trapped_ in the _lowest energy heterojunction sub-band_
+- Each _sub-band_ has the _dispersion_ of a _discrete energy_ with a _free electron dispersion_
+
+- Example: an _effective harmonic potential_
+$$E_{n,k}=\hbar\omega\left( n+\frac{1}{2} \right)+\frac{\hbar^{2}k^{2}}{2m}$$
+
+### 1DEG in a magnetic field and edge states
+- Or, take the case of a _magnetic field_ $\boldsymbol{B}=(0,0,B)$
+$$\left( \frac{(p+e\boldsymbol{A})^{2}}{2m^{*}}+V(y) \right)\Phi_{kn}(x,y)=E_{kn}(x,y)$$
+- Take the _Landau gauge_ such that the system is still _separable_, and:
+$$\left( \frac{p_{y}^{2}}{2m^{*}}+\frac{1}{2}m^{*}\omega_{c}^{2}\left( y-\frac{\hbar k}{eB} \right)^{2}+V(y) \right)\phi_{n,k}(y)=E_{nk}\phi_{nk}(y)$$
+- Here, $\omega_{c}$ is the _cyclotron frequency_ $eB/m$
+
+- This makes a _momentum-dependent parabolic potential_ in addition to the effective potential. representing the result of the _Lorentz force_ due to electrons in the $x-$direction
+$$F=-e\left( \frac{\hbar k}{m}\hat{x} \times \boldsymbol{B}\right)=\omega_{c}p\hat{y}$$
+- As $B$ increases, the states become _more localised against the walls_ of the 1D system, and become _edge states_
+
+### Conductance of a 1D system
+
 
 ## Landauer formalism
 - Conductance of a _general 2D quantum system_ with an _effective potential_ $V(x,y)$
 - Consider the system _sandwiched between two infinite quasi-1D systems_, which act as _conducting leads for particles_
+
+# Superconductivity
+
+## BCS Theory
+- Electron-phonon mediated
+
+- No matter how _weak_ the electron-phonon interaction is, a _bound state_ can be formed

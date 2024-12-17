@@ -997,8 +997,12 @@ $$\Delta_{\mu}=\int  \frac{d^4p}{(2\pi)^{4}}\, \frac{i}{p^{2}-\mu^{2}+i\epsilon}
 - Fermionic propagators contain _indices_, which must be _contracted over_ at each vertex
 - Swapping _fermion momenta_ requires _changing sign due to fermionic statistics_
 
+- Two diagrams may have _opposite signs_
+	- "_Anti-commute_" the before-and-after particles
 ### Schwinger-Dyson equation in Yukawa theory
 ### Example: Nucleon scattering
+
+### Example: Nucleon-antinucleon scattering
 
 # Quantum Electrodynamics
 
@@ -1140,3 +1144,47 @@ $$Q=\int  d^3x\,F^{0i}\partial_{i}\lambda=-\int  d^3x \,\partial_{i} F^{0i}\lamb
 $$Q=-e\int  d^3x\,j^{0} $$
 - This is a charge associated with a _global symmetry_ of the system
 	- It is a _large gauge transformation_ as $\lambda$ does not vanish at infinity
+
+- The _unit of charge_ $e$ is written in terms of _fine structure constant_ $\alpha$:
+$$\alpha=\frac{e^{2}}{4\pi \hbar c}\approx \frac{1}{137} \qquad e\approx 0.3$$
+### Scalar QED
+- Attempt to couple a _complex scalar field_ to electromagnetism
+- For it to be _gauge invariant_, the Lagrangian must be in the form:
+	- Simply adding $j^{\mu}A_{\mu}$ with $j^{\mu}$ as the current for $U(1)$ symmetry does not make a gauge invariant Lagrangian
+$$\displaylines{A_{\mu }\to \partial_{\mu}\lambda(x) \\ \varphi\to \exp(-ie\lambda(x))\varphi \qquad \varphi^{*}\to \exp(ie\lambda(x))\varphi^{*}}$$
+$$\mathcal{L}=-\frac{1}{4}F_{\mu \nu}F^{\mu \nu}+D_{\mu}\varphi^{*}D^{\mu}\varphi-m^{2}|\varphi|^{2}$$
+- This results in an _extra term_ in the conserved current
+
+- _Minimal coupling_ is the act if _replacing derivatives with covariant derivatives_ when _coupling gauge fields to_ $U(1)$ _symmetry_
+
+### Feynman rules
+
+- _Photon polarisation vectors_:
+$$\epsilon^{s}_{\mu}(p)$$
+- _Fermions_
+$$U^{s}(p)$$
+
+- Vertices:
+$$-ie\gamma^{\mu}(2\pi)^{4}\delta(p_{1}-p_{2}-p_{3})$$
+- The photon propagator:
+$$\int  \frac{d^4p}{(2\pi)^{4}} \frac{i}{p^{2}+i\epsilon} \left( -\eta_{\mu \nu}+(\alpha-1) \frac{p_{\mu}p_{\nu}}{p^{2}} \right) $$
+- The _fermion propagator_ (changes sign if swapped):
+$$\int  \frac{d^4p}{(2\pi)^{4}} \frac{i}{p^{2}-m^{2}+i\epsilon} (\cancel{ p }+m) $$
+- The S-matrix will be in the form:
+$$\braket{ f|S-\mathbb{I} | i } \equiv i \mathcal{A}(2\pi)^{4}\delta\left( \sum_{f}p_{f}-\sum_{i}p_{i} \right)$$
+- If there is an _internal photon_:
+$$\mathcal{A}=A_{\mu \nu}\tilde{\Pi}^{\mu \nu}$$
+- _Gauge invariance_ means that the answer must be independent of $\alpha$:
+$$A_{\mu \nu}p^{\mu}p^{\nu}=0$$
+
+- If there is an _external photon_:
+$$\mathcal{A}=\epsilon^{\mu}_{s}\mathcal{A}_{\mu}$$
+- They Lorentz transform as:
+$$\mathcal{A}_{\mu}'={\Lambda^{\mu}}_{\nu}\mathcal{A}_{\nu} \qquad p_{\mu}'={\Lambda^{\nu}}_{\mu}p_{\nu}$$
+- The _new polarisation vector_, to maintain $\epsilon \cdot p=0$
+	- Group theory reason?
+$$\epsilon'^{\mu }_{s}={\Lambda^{\mu}}_\nu\epsilon^{\nu}_{s}+cp^{\mu}$$
+- The Lorentz invariant _Ward identity_:
+$$p^{\mu}\mathcal{A}_{\mu}=0$$
+### Spin sums
+

@@ -362,7 +362,7 @@ $$V_\text{ext}(\boldsymbol{q})=\epsilon(\boldsymbol{q})V_\text{tot}(\boldsymbol{
 $$\epsilon^\text{TF}(\boldsymbol{q})=1+\frac{q_\text{TF}^{2}}{q^{2}}$$
 ### Thomas-Fermi screening
 - For _small_ $q$ (long distances), $\epsilon^{\text{TF}}\propto 1/q^{2}$
-- The _long range_ part of the _Coulomb potential_ is then  _exactly cancelled_
+- The _long range_ part of the _Coulomb potential_ is then _exactly cancelled_
 
 - In _real space_, for a _long range Coulombic perturbing potential_:
 $$V_\text{ext}=\frac{Q}{r}$$
