@@ -913,9 +913,30 @@ $$M=\frac{1}{4}(g\mu_{B})^{2}B \frac{Vg_{V}(0)}{1+F_{0}^{(a)}}$$
 - As $B=\mu_{0}H$, the _paramagnetic spin susceptibility_ is:
 $$\chi=\frac{M}{HV}=\frac{1}{4} \frac{g^{2}\mu_{B}^{2}\mu_{0}}{1+F_{0}^{(a)}}g_{V}(0)$$
 # Second quantisation
+- Express wave-functions in terms of _creation and annihilation operators_ for _each single particle state_
+- A _many-particle product state_ with _occupation numbers_ $n_{i}$ for each _single particle state_ $\psi_{i}$ is denoted
+$$\ket{n_{1},n_{2}\dots} $$
+- In general, a state is a _linear combination_ of Slater determinants:
+$$\ket{\Psi(t)}=\sum_{\{n\}}f(\{n\};t)\ket{\{n\}}  $$
+- Each Slater determinant is denoted:
+$$\ket{n_{1},\dots} =(c_{1}^{\dagger})^{n_{1}}\dots \ket{\text{VAC}} $$
+- The _fermionic creation and annihilation operators_:
+$$\{c_{i},c_{j}^{\dagger}\}=\delta_{ij}$$
+- The Schrodinger equation can still be _expressed using product states_:
+$$\displaylines{i\hbar \frac{\partial}{\partial t}\ket{\Psi(t)} =H\ket{\Psi(t)} \\ H=\sum_{i,j}\braket{ \psi _{i} |h|\psi_{j}  }c_{i}^{\dagger}c_{j}+\frac{1}{2}\sum_{i,j,k,l}\braket{ \psi_{i}|\braket{ \psi_{j} | g|\psi_{k} }  | \psi_{l} }c^{\dagger}_{i}c^{\dagger}_{j}c_{l}c_{k}  }$$
+## Mean field approximation
+- The _mean field approximation_
+$$\begin{align}
+c_{i}^{\dagger}c_{j}^{\dagger}c_{k}c_{l} &=\braket{ c_{i}^{\dagger} c_{l}  }c_{j}^{\dagger}c_{k}-\braket{ c_i^{\dagger} c_{k}  }c_{j}^{\dagger}c_{l}  \\
+&+\braket{  c_{j}^{\dagger}c_{k}  } c_{i}^{\dagger}c_l-\braket{ c_{j}^{\dagger}c_{l}  }c_{i}^{\dagger}c_{k} \\
+&-\braket{ c_{i}^{\dagger}c_{l}  } \braket{ c_{j}^{\dagger}c_{k}   } +\braket{ c_{i}^{\dagger}c_k}\braket{ c_{j}^{\dagger} c_{l`}  }     
+\end{align}$$
 
 ## Jellium
+- The _eigenstates_ in jellium:
+$$\braket{ \boldsymbol{r} | \boldsymbol{k},\lambda } =\frac{1}{\sqrt{ V }}\exp(i\boldsymbol{k}\cdot \boldsymbol{r})\chi_{\lambda}$$
 
+## Hartree-Fock in second quantisation
 
 # Magnetism
 - Only arises due to _inter-particle interactions_
@@ -927,7 +948,7 @@ $$\chi=\frac{M}{HV}=\frac{1}{4} \frac{g^{2}\mu_{B}^{2}\mu_{0}}{1+F_{0}^{(a)}}g_{
 - Consider a _lattice_ with orbitals $\{\Psi_{i}(\boldsymbol{r}-\boldsymbol{R}_{i})\}$, _centred_ around lattice sites $\boldsymbol{R}_{i}$
 
 - Account for the _energy at the site_, as well as _hopping_ between sites, and an _intra-site Coulomb interaction_ when _both_ $\uparrow$ and $\downarrow$ electrons occupy the _same site_:
-$$H=\sum_{i,\lambda}\varepsilon_{i}c^{\dagger}_{i}c_{i}- \sum_{\langle ij \rangle ,\lambda} t_{i,j} [c_{i,\lambda}^{\dagger} c_{j,\lambda}+c^{\dagger}_{j,\lambda}c_{i,\lambda}] +U \sum_{i}c^{\dagger}_{i,\uparrow}c_{i,\uparrow}c^{\dagger}_{j,\downarrow}c_{j,\downarrow} $$
+$$H=\sum_{i,\lambda}\varepsilon_{i}c^{\dagger}_{i}c_{i}- \sum_{\langle ij \rangle ,\lambda} t_{i,j} [c_{i,\lambda}^{\dagger} c_{j,\lambda}+c^{\dagger}_{j,\lambda}c_{i,\lambda}] +U \sum_{i}c^{\dagger}_{i,\uparrow}c_{i,\uparrow}c^{\dagger}_{i,\downarrow}c_{i,\downarrow} $$
 - The _hopping term_ is related to the _overlap integral_ between orbitals $i$ and $j$
 - Assume it is _only non-zero for nearest neighbours_
 - Also assume _no inter-site Coulomb interaction_
@@ -948,10 +969,42 @@ $$\displaylines{\braket{ \Psi_{R}|H_{LR} |\Psi_{L}  }=\Braket{ \Psi_{L}|H_{L}+H_
 $$\ket{\uparrow,\uparrow}\quad\ket{\uparrow,\downarrow}\quad\ket{\downarrow,\uparrow} \quad\ket{\downarrow,\downarrow}\quad\ket{\uparrow\downarrow,0}\quad\ket{0,\uparrow\downarrow}     $$
 - In this basis:
 $$H=\pmatrix{0&0&0&0&0&0 \\ 0&0&0&0&-t_{LR}&t_{LR}\\0&0&0&0&0&0 \\0&-t_{LR}&t_{LR}&0&U&0 \\ 0&-t_{LR}&t_{LR}&0&0&U }$$
-- The _lower energy states_ consist of the _triplet_ and _singlet_
+- The _lower energy states_ consist of the _triplet_ and an additional _singlet-like_ state
+$$\displaylines{E_{T_{0}}=E_{T_{+}}=E_{T_{-}}=0 \qquad E_{S_{0}}=\frac{1}{2}(U-\sqrt{ 16t_{LR}^{2}+U^{2} }) \\ \ket{ \nu_{T_{-}}}=\ket{\downarrow,\downarrow}\quad \ket{\nu_{T_{0}}}=\frac{1}{\sqrt{ 2 }}(\ket{\uparrow,\downarrow}+\ket{\downarrow,\uparrow}  )\quad \ket{\nu_{T_{+}}}=\ket{\uparrow,\uparrow}    \\\ket{\nu_{S_{0}}}=\frac{1}{\sqrt{ 2+2(2t_{LR}/E_{S_{0}})^{2} }}\left( \frac{2t_{LR}}{E_{S_{0}}}(\ket{\uparrow,\downarrow} -\ket{\downarrow,\uparrow} ) -\ket{\uparrow\downarrow,0}-\ket{0,\uparrow\downarrow}  \right) }$$
+- The _ground state_ of the system is the _singlet_
+- It _maximises overlap_ in order to facilitate _hopping_
 
-## Origin of exchange interactions
+- Meanwhile, the _higher energy states_:
+$$\displaylines{E_{S_{1}}=U \qquad E_{T_{1}}=\frac{1}{2}(U+\sqrt{ 16t_{LR}^{2}+U^{2} }) \\ \ket{\nu_{S_{1}}}=\frac{1}{\sqrt{ 2 }}(\ket{\uparrow\downarrow,0}-\ket{0,\uparrow\downarrow}  ) \\ \ket{\nu_{T_{1}}}=\frac{1}{\sqrt{ 2+2(2t_{LR}/E_{T_{1}})^{2} }}\left( \frac{2t_{LR}}{E_{T_{1}}}(\ket{\uparrow,\downarrow} -\ket{\downarrow,\uparrow} ) -\ket{\uparrow\downarrow,0}-\ket{0,\uparrow\downarrow}\right) }$$
+![[Hubbard energies.png|500]]
+### Origin of exchange interactions
+- From the energies, one can obtain the _general time evolution_ of the states
+- For a state _initially_ in $\ket{\downarrow,\uparrow}$:
+![[Hubbard time evolution.png|400]]
+- Through _hopping_, the state _oscillates_ between $\ket{\downarrow,\uparrow}$ and $\ket{\uparrow,\downarrow}$
+	- The _triplet states_ are eigenstates and _do not change_
+- It does this _through the doubly occupied states_
+![[Direct exchange.png|400]]
 
+### Low-energy dynamics: the Heisenberg model
+- In the limit of $U\gg t$, the _high-energy states_ of $E\sim U$ have _vanishingly small amplitudes_
+	- The sites are _not doubly occupied_ due to the energetic cost
+
+- Therefore, there are _four significant eigenstates_ which take the form:
+$$\displaylines{E_{T_{0}}=E_{T_{+}}=E_{T_{-}}=0 \qquad E_{S_{0}}=-\frac{4t_{LR}^{2}}{U} \\ \ket{ \nu_{T_{-}}}=\ket{\downarrow,\downarrow}\quad \ket{\nu_{T_{0}}}=\frac{1}{\sqrt{ 2 }}(\ket{\uparrow,\downarrow}+\ket{\downarrow,\uparrow}  )\quad \ket{\nu_{T_{+}}}=\ket{\uparrow,\uparrow}    \\\ket{\nu_{S_{0}}}=\frac{1}{\sqrt{ 2 }}(\ket{\uparrow,\downarrow} -\ket{\downarrow,\uparrow} ) }$$
+- Define the _exchange energy_ $J$
+$$J\equiv E_\text{singlet}-E_\text{triplet}=-\frac{4t_{LR}^{2}}{U}$$
+
+- Constructing the _effective Hamiltonian_ using the basis $\ket{\uparrow\uparrow},\ket{\uparrow\downarrow},\ket{\downarrow\uparrow},\ket{\downarrow\downarrow}$
+$$H_\text{eff}=\frac{t_{LR}^{2}}{U}\pmatrix{0&0&0&0\\0&-2&2&0\\0&2&-2&0\\0&0&0&0}$$
+- It can be written in terms of _spin operators_:
+	- Denote both _particle number_ and _site_
+$$H_\text{eff}=-J\left( S_{L}^{(1)}\cdot S_{R}^{(2)}-\frac{1}{4} \right)$$
+- This is the _Heisenberg Hamiltonian_
+
+- The _exchange parameter_ $J$ can be positive or negative as one goes beyond the Fermi-Hubbard model
+## Heitler-London model
+- Add _inter-site interactions_
 ## Mean-field theory
 - For a _ferromagnet_ $J>0$, with an _external field_ $B$, the _Heisenberg ferromagnet_ is:
 $$H=-J\sum_{\langle i,j \rangle }\boldsymbol{S}_{i}\cdot \boldsymbol{S}_{j}-g\mu_{B}\sum_{i}\boldsymbol{S}_{i}\cdot \boldsymbol{B}$$
