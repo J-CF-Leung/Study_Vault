@@ -935,9 +935,28 @@ c_{i}^{\dagger}c_{j}^{\dagger}c_{k}c_{l} &=\braket{ c_{i}^{\dagger} c_{l}  }c_{j
 ## Jellium
 - The _eigenstates_ in jellium:
 $$\braket{ \boldsymbol{r} | \boldsymbol{k},\lambda } =\frac{1}{\sqrt{ V }}\exp(i\boldsymbol{k}\cdot \boldsymbol{r})\chi_{\lambda}$$
+- The Hamiltonian:
+$$\displaylines{H=\sum_{i=1}^{N} \frac{p_{i}^{2}}{2m}+\frac{1}{2}\sum_{i\neq j} \frac{e^{2}}{4\pi\epsilon_{0}} \frac{e^{-\mu|\boldsymbol{r}_{i}-\boldsymbol{r}_{j}|}}{|\boldsymbol{r}_{i}-\boldsymbol{r}_{j}|}+H_\text{e-ion}+H_\text{ion-ion} \\ H_\text{e-ion}=-\frac{e^{2}}{4\pi\epsilon_{0}}\sum_{i=1}^{N}\int  d\boldsymbol{r}\,n(\boldsymbol{r})\frac{e^{-\mu|\boldsymbol{r}-\boldsymbol{r}_{i}|}}{|\boldsymbol{r}-\boldsymbol{r}_{i}|}\\  H_\text{ion-ion}=\frac{1}{2}\frac{e^{2}}{4\pi\epsilon_{0}}\int  d\boldsymbol{r}\int  d\boldsymbol{r}' \,n(\boldsymbol{r})n(\boldsymbol{r}')\frac{e^{-\mu|\boldsymbol{r}-\boldsymbol{r}'|}}{|\boldsymbol{r}-\boldsymbol{r}'|} }$$
+- The _exponential factors_ are introduced to make the integrals _converge_, and $\mu$ will later be set to 0
+- For _jellium_, the _positive background density_:
+$$n(\boldsymbol{r})=\frac{N}{V}$$
+- From this:
+$$H_\text{e-ion}=-\frac{e^{2}}{4\pi\epsilon_{0}} \frac{N^{2}}{V} \frac{4\pi}{\mu^{2}}=-H_\text{ion-ion}\implies H_\text{e-ion}+H_\text{ion-ion}=0$$
+
+- Then going to the _second quantised representation_ with the _plane wave eigenstates_, and setting $\mu\to 0$
+$$H=\sum_{\boldsymbol{k},\lambda} \frac{\hbar^{2}k^{2}}{2m^{*}}c^{\dagger}_{\boldsymbol{k},\lambda}c_{\boldsymbol{k},\lambda}+\frac{1}{2} \frac{e^{2}}{4\pi\epsilon_{0}} \frac{1}{V}\sum_{\substack{\boldsymbol{k},\boldsymbol{p},\boldsymbol{q} \\ \boldsymbol{q}\neq 0}}\sum_{\lambda_{1},\lambda_{2}} \frac{4\pi}{q^{2}}c^{\dagger}_{\boldsymbol{k}+\boldsymbol{q},\lambda_{1}}c^{\dagger}_{\boldsymbol{k}-\boldsymbol{q},\lambda_{2}}c_{\boldsymbol{p},\lambda_{2}}c_{\boldsymbol{k},\lambda_{1}}$$
 
 ## Hartree-Fock in second quantisation
+- The _effective Hamiltonian_ in [[#The Hartree-Fock Equation]] is:
+$$\displaylines{H=h(\boldsymbol{x})+\sum_{m=1}^{N} \Big(J_{m}(\boldsymbol{x})-K_{m}(\boldsymbol{x})\Big) \\ J_{m}(\boldsymbol{x})f(\boldsymbol{x})=\left(\int  d\boldsymbol{y}\,\Psi_{m}^{\dagger}(\boldsymbol{y})g(\boldsymbol{x}-\boldsymbol{y})\Psi_{m}(\boldsymbol{y}) \right)f(\boldsymbol{x}) \\ K_{m}(\boldsymbol{x})f(\boldsymbol{x})=\left(\int  d\boldsymbol{y}\,\Psi_{m}^{\dagger}(\boldsymbol{y})g(\boldsymbol{x}-\boldsymbol{y})f(\boldsymbol{y}) \right)\Psi_{m}(\boldsymbol{x})}$$
 
+- In _second quantisation_, from the above, the Hamiltonian takes the form:
+$$\begin{align}
+H&=\sum_{i,j}\braket{ \Psi_{i}|H | \Psi_{j} } c_{i}^{\dagger}c_{j} \\ &=\sum_{i,j} \Big(\braket{ \Psi_{i}|h | \Psi_{j} }+\sum_{m} \braket{ \Psi_{i}|_{1}\braket{ \Psi_{m} |_{2}\,g\,| \Psi_{m} }_{2}  |\Psi_{j}  }_{1}  \\
+&\hspace{3.8cm}-\sum_{m} \braket{ \Psi_{i}|_{1}\braket{ \Psi_{m} |_{2}\,g\,| \Psi_{j} }_{2}  |\Psi_{m}  }_{1}  \Big)c^{\dagger}_{i}c_{j}
+\end{align}$$
+- _Alternatively_, use the [[#Mean field approximation]] on the normal Hamiltonian, and assuming a _single Slater determinant_ such that $\braket{ c_{i}^{\dagger} c_{j}  }=\delta_{ij}$
+$$H=\sum_{i,j}\braket{ \psi _{i} |h|\psi_{j}  }c_{i}^{\dagger}c_{j}+\frac{1}{2}\sum_{i,j,k,l}\braket{ \psi_{i}|\braket{ \psi_{j} | g|\psi_{k} }  | \psi_{l} }c^{\dagger}_{i}c^{\dagger}_{j}c_{l}c_{k} $$
 # Magnetism
 - Only arises due to _inter-particle interactions_
 	- Unaccounted for by the independent electron model
@@ -1003,8 +1022,38 @@ $$H_\text{eff}=-J\left( S_{L}^{(1)}\cdot S_{R}^{(2)}-\frac{1}{4} \right)$$
 - This is the _Heisenberg Hamiltonian_
 
 - The _exchange parameter_ $J$ can be positive or negative as one goes beyond the Fermi-Hubbard model
-## Heitler-London model
-- Add _inter-site interactions_
+### Inter-site interactions: the Heitler-London model
+- Add _inter-site interactions_, dependent on the _overlap integral_
+$$I=\int  d\boldsymbol{r}\,\Psi_{L}^{*}(\boldsymbol{r})\Psi_{R}(\boldsymbol{r}) $$
+- The _singlet/triplet states_:
+$$\displaylines{\Psi_{S/T}(\boldsymbol{r}_{1},\boldsymbol{r}_{2})=\frac{1}{\sqrt{ 2(1\pm |I|^{2}) }}[\Psi_{L}(\boldsymbol{r}_{1})\Psi_{R}(\boldsymbol{r}_{2})\pm \Psi_{L}(\boldsymbol{r}_{2})\Psi_{R}(\boldsymbol{r}_{1})] \\ E_{S/T}=\int  d\mathbf{r}_{1} \,d\mathbf{r}_{2}\,\Psi_{S/T}^{*}(\mathbf{r}_{1},\mathbf{r}_{2})H\Psi_{S/T}(\mathbf{r}_{1},\mathbf{r}_{2})}$$
+
+- Denote the [[#Interaction energy|Hartree and Exchange integrals]]
+$$\begin{align}
+U_{H}&=\int  d\boldsymbol{r}_{1} \,d\boldsymbol{r}_{2}\, \Psi_{L}^{*}(\boldsymbol{r}_{1})\Psi_{L}(\mathbf{r}_{1})g(\mathbf{r}_{1},\mathbf{r}_{2}) \Psi_{R}^{*}(\mathbf{r}_{2})\Psi_{R}(\mathbf{r}_{2}) >0\\ U_E
+&=\int  d\boldsymbol{r}_{1} \,d\boldsymbol{r}_{2}\, \Psi_{R}^{*}(\boldsymbol{r}_{1})\Psi_{L}(\mathbf{r}_{1})g(\mathbf{r}_{1},\mathbf{r}_{2}) \Psi_{L}^{*}(\mathbf{r}_{2})\Psi_{R}(\mathbf{r}_{2}) 
+\end{align}$$
+- Also define:
+$$\begin{align}
+\Delta\varepsilon_{L}&=\int  d\boldsymbol{r}\,\Psi_{L}^{*}(\boldsymbol{r})V_{R}(\boldsymbol{r})\Psi_{L}(\boldsymbol{r})  \\
+\Delta\varepsilon_{R}&=\int  d\boldsymbol{r}\,\Psi_{R}^{*}(\boldsymbol{r})V_{L}(\boldsymbol{r})\Psi_{R}(\boldsymbol{r})  \\
+t&=\int  d\boldsymbol{r}\,\Psi_{L}^{*}(\boldsymbol{r}) \frac{p^{2}}{2m} \Psi_{R}(\boldsymbol{r}) 
+\end{align}$$
+- From this:
+$$J\equiv E_{S}-E_{T}=\frac{2}{1-I^{4}}(U_{E}-2It-I^{2}(U_{H}-(\varepsilon_{L}+\varepsilon_{R})+\Delta\varepsilon_{L}+\Delta\varepsilon_{R}))$$
+- Typical energy scale:
+	- First inequality: Cauchy-Schwarz
+	- Second inequality: integrand $\propto |\mathbf{r}_{1}-\mathbf{r}_{2}|^{-1}$
+	- Third inequality: true for any system where $\Psi_{L/R}$ are _sufficiently complete single particle basis states_
+$$U_{H}\gg U_{E}\gg\varepsilon_{L},\varepsilon_{R},t\gg\Delta\varepsilon_{L},\Delta\varepsilon_{R}$$
+- Approximate:
+$$J\equiv E_{S}-E_{T}\approx \frac{2}{1-I^{4}} (U_{E}-I^{2}U_{H})$$
+- When the _exchange term is dominant_, the system favours the _triplet state_
+- When the _Hartree term is dominant_ due to a _larger overlap_, the system favours the _singlet state_
+
+### General lattice models
+
+
 ## Mean-field theory
 - For a _ferromagnet_ $J>0$, with an _external field_ $B$, the _Heisenberg ferromagnet_ is:
 $$H=-J\sum_{\langle i,j \rangle }\boldsymbol{S}_{i}\cdot \boldsymbol{S}_{j}-g\mu_{B}\sum_{i}\boldsymbol{S}_{i}\cdot \boldsymbol{B}$$
