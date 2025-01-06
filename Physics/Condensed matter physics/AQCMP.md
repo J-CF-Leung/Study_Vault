@@ -232,7 +232,7 @@ $$E_{0}=\sum_{n} [\Psi_{n}^{\dagger}\Psi_{n}|h]+ \frac{1}{2}\sum_{n,m}\{[\Psi_{n
 - The Coulomb term is _always positive_
 
 - By separating $\Psi_{n}$ into orbital and spin parts, one gets that the _Hartree term is spin-independent_
-	- The $n=m$ case is known as the _Hubbard_ $U$\
+	- The $n=m$ case is known as the _Hubbard_ $U$
 	- Analagous to the _classical Coulomb repulsion_
 $$[\Psi_{n}^{\dagger}\Psi_{n}|g|\Psi_{m}^{\dagger}\Psi_{m}]= \iint  d^{3}\boldsymbol{r}\,d^{3}\boldsymbol{r}' \frac{\rho_{n}(\boldsymbol{r})\rho_{m}(\boldsymbol{r}')}{4\pi\epsilon_{0} |\boldsymbol{r}-\boldsymbol{r}'|} $$
 
@@ -526,7 +526,8 @@ $$\chi_{1}(\omega)=\mathcal{P}\int_{-\infty}^\infty\frac{\chi_{2}(\omega')}{\ome
 - The _di-electric response function_ $\varepsilon(\boldsymbol{q},\omega)$ for a _homogeneous electron gas_, in response to a _longitudinal electric field_
 	- Effects: _screening_, and the creation of _elementary excitations_ (electronic transitions)
 
-- Find the effect of a _plane wave_ by adding _electric potential_ $U$ to the Hamiltonian for the [[#Independent electrons|independent electron]]:
+- Find the effect of a _plane wave_ by adding a _plane wave electric potential_ $U$ to the Hamiltonian for the [[#Independent electrons|independent electron]]
+	- Different to the [[#Transverse field response]]
 $$\displaylines{H=\frac{p^{2}}{2m}+V(\boldsymbol{r})+U(\boldsymbol{r},t) \\ U(\boldsymbol{r},t)=A_{0}(\boldsymbol{q},\omega)\exp[i(\boldsymbol{q}\cdot \boldsymbol{r}-\omega t)]+\text{h.c.}}$$
 - The resulting electric field is _longitudinal_:
 $$\displaylines{\boldsymbol{E}(\boldsymbol{r},t)=-\nabla\left( \frac{U}{-e} \right)=\boldsymbol{E}_{0}\exp[i(\boldsymbol{q}\cdot \boldsymbol{r}-\omega t)]+\text{h.c.}\\ \boldsymbol{E}_{0}=\frac{iA_{0}}{e}\boldsymbol{q}}$$
@@ -596,6 +597,7 @@ $$\varepsilon_{1}(q\approx 2k_{F},0)=\varepsilon_{1}(2k_{F},0)+ \frac{k_\text{TF
 	- Responsible for _Friedel oscillations_
 	- For $q<2k_{F}$, one can have an energy transition with $\omega=0$ (across the Fermi sphere)
 	- For $q>2k_{F}$, such a transition is _no longer possible_
+![[Transitions in Fermi sphere.png|450]]
 
 ### Static dielectric screening
 - Let there be a _static ppoint charge_ $+Ze$ in a medium
@@ -622,6 +624,7 @@ $$\rho _\text{ind}(\boldsymbol{r})\approx \frac{ZeC\cos(2k_{F}r)}{r^{3}} \int_{-
 $$\rho _\text{ind}(\boldsymbol{r})\approx \frac{\pi ZeC\cos(2k_{F}r)}{r^{3}}$$
 
 - There are _Friedel oscillations_ in the _induced charge density_ with wave-vector $2k_{F}$
+	- Due to _singularities_ in the [[#Lindhard dielectric function]]
 	- It also occurs in _spin densities_ and is resonsible for the [[#RKKY Interaction]]
 	- In 1 dimension, the system is simply _unstable_ (Peierls instability)
 
@@ -704,7 +707,7 @@ $$-\varepsilon_{\lambda}(\boldsymbol{p})+\mu$$
 - The _quasi-particle density of states_:
 	- Becomes relevant for _physical properties_
 	- For _low temperatures_, many quantities depend on $g(\varepsilon=0)$
-$$g_{V}(\varepsilon)=\frac{1}{V}\sum_{\boldsymbol{p},\lambda}\delta[\varepsilon_{\lambda}(\boldsymbol{p})-\mu-\varepsilon]$$
+$$\displaylines{g_{V}(\varepsilon)=\frac{1}{V}\sum_{\boldsymbol{p},\lambda}\delta[\varepsilon_{\lambda}(\boldsymbol{p})-\mu-\varepsilon] \\ g_{V}(0)=\frac{1}{V}\sum_{\boldsymbol{p},\lambda}\delta[\varepsilon_{\lambda}(\boldsymbol{p})-\mu]}$$
 - One can also define a _quasiparticle group velocity_:
 $$\boldsymbol{v}_{\boldsymbol{p}}=\nabla_{\boldsymbol{p}}\varepsilon_{\boldsymbol{p}}$$
 ### Quasi-particle lifetime
@@ -818,6 +821,9 @@ $$\begin{align}
 \end{align}$$
 - At _zero temperature_, expand $\delta n$
 $$\displaylines{\delta n^{(s/a)}(\boldsymbol{p})=\delta(\varepsilon(\boldsymbol{p})-\mu)\sum_{l,m}\delta n^{(s/a)}_{l,m}Y_{l,m}(\theta,\phi) \\ \delta \tilde{n}^{(s/a)}(\boldsymbol{p})=\delta(\varepsilon(\boldsymbol{p})-\mu)\sum_{l,m}\delta \tilde{n}^{(s/a)}_{l,m}Y_{l,m}(\theta,\phi)}$$
+- Using the identity:
+$$\frac{2}{V}\sum_{\boldsymbol{p}'}\delta[\varepsilon(\boldsymbol{p}')-\mu]f(\cos \xi)=\frac{1}{4\pi}g_{V}(0)\int  dS\,f(\cos \xi) $$
+
 - _Expanding_ $\delta n^{(s/a)}$ and comparing:
 $$\delta \tilde{n}^{(s/a)}_{l,m}=\left( 1+\frac{F_{l}^{(s/a)}}{2l+1} \right)\delta n_{l,m}^{(s/a)}$$
 
@@ -1172,45 +1178,151 @@ $$E \propto T^{5/2} \qquad C_{V}\propto T^{3/2}$$
 
 ### Direct coupling
 - The _dipolar interaction energy_:
-$$E_\text{int}\approx \mathcal{O}(1\text{ K})$$
+$$E_\text{int}=\frac{\mu_{0}}{4\pi r^{3}}\left[ \boldsymbol{\mu}_{1}\cdot \boldsymbol{\mu}_{2}-\frac{3}{r^{2}}(\boldsymbol{\mu}_{1}\cdot \boldsymbol{r})(\boldsymbol{\mu}_{2}\cdot \boldsymbol{r}) \right]\approx \mathcal{O}(1\text{ K})$$
 - _Direct coupling_ is _too weak_ to explain _ferromagnetism_
-	- Still affects _domain structure_
+	- Still affects _domain structure_ (Landau-Lifshitz-Gilbert equation)
 
 ### Direct exchange
-- Meanwhile, _direct exchange_ is only important when there is _sufficient wavefunction overlap_
+- Meanwhile, [[#Origin of exchange interactions|direct exchange]] is only important when there is _sufficient wavefunction overlap_ 
 	- In many materials, the $4f$ or $3d$ orbitals _do not extend sufficiently far_ from the nucleus to give exchange coupling
+	- In these, _indirect exchange_ is more responsible (superexchange, itinerant ferromagnetism, RKKY interaction, double exchange)
 
 ### Superexchange
 - Consider the _anti-ferromagnetism_ of $\ce{ MnO }$
 	- An $\ce{ NaCl }$ structure, with _little to no overlap_ between $\ce{ Mn^{2}+ }$ ions
 	- The oxygen facilitates anti-ferromagnetism by _superexchange_
 
-- Model it using a system of 2 $\ce{ Mn^{2+} }$ ions and one $\ce{ O ^{2-}}$ ion
+- Model as a system of 2 $\ce{ Mn^{2+} }$ ions with $d$ orbitals and one $\ce{ O ^{2-}}$ ion with a $p$ orbital
+$$H_\text{s-exc}=\varepsilon_{d}\sum_{\substack{i=1,2 \\ \lambda=\uparrow,\downarrow}}n_{i,\lambda}+\varepsilon_{p}\sum_{\lambda=\uparrow,\downarrow}n_{p,\lambda}-t_{pd}\sum_{\substack{i=1,2 \\ \lambda=\uparrow,\downarrow}}(c^{\dagger}_{i,\lambda}c_{p,\lambda}+c^{\dagger}_{p,\lambda}c_{i,\lambda})+U_{d}\sum_{i=1,2}n_{i,\uparrow}n_{i,\downarrow}$$
 - There are 4 electrons on 6 _spin-orbital sites_, therefore 15 basis states
 
 - Consider the _basis of parallel_ $d$ spins:
 ![[Superexchange parallel.png]]
-- The _off-diagonal_ elements give _possible hopping mechanisms_, with the _only one possible_ being:
+- The _off-diagonal_ elements give _possible hopping mechanisms_, with the _only one possible_ being _one hop_ between $\ce{ Mn^{2+}}$ and $\ce{ O^{2-} }$ such that _there is no coupling between the $d$ orbitals_
 ![[Superexchange hoppinh.png]]
-- For _antiparallel_ $d$ electrons, the hoppinh mechanisms:
+
+- For _antiparallel_ $d$ electrons, there are multiple possible hopping mechanisms:
 ![[Superexchange antiparalle.png]]
+- There is then a _net indirect antiferromagnetic exchange_ between the $d$ electrons
+
+- The _effective exchange coupling_ is known as _super-exchange_
+- Analagous to the Heisenberg model:
+	- Superexchange has _four hopping processes_ as opposed to _direct exchange_ with two, reflected in the factor of $t_{pd}^{4}$
+	- The first term comes from the _second $p$ electron going onto $\ce{ Mn^{2+} }$_ while the second term comes from a $d$ _electron going onto_ $\ce{ O^{2-} }$ (corresponding to the diagrams)
+$$\displaylines{H=-J \mathbf{S}_{1}\cdot \mathbf{S}_{2} \\ J=-\frac{4t_{pd}^{4}}{(U_{d}+\Delta_{pd})^{2}}\left( \frac{1}{U_{d}+\Delta_{pd}}+\frac{1}{U_{d}} \right)}$$
+
 
 ### Itinerant band ferromagnetism
 - Consider _transition metals_ with _partially filled_ $d-$bands
+	- Examples: $\ce{ Ni,Fe,Co }$
 
-- The _Hubbard interaction_
+- The _Hubbard Hamiltonian_, after re-ordering operators:
+$$H_\text{int}=U\sum_{i}:n_{i,\uparrow}n_{i,\downarrow}:\,=\frac{U}{2}\sum_{i}\sum_{\lambda,\lambda'}c^{\dagger}_{i\lambda}c^{\dagger}_{i\lambda'}c_{i\lambda'}c_{i\lambda}$$
 
-- Doing a _Fourier transform_:
-$$H_\text{int}=\frac{U}{2N}\sum \sum$$
-- Use _Wick's Theorem_
+- Doing a _Fourier transform_ into _plane wave states_ in the band:
+$$H_\text{int}=\frac{U}{2N}\sum_{\boldsymbol{k},\boldsymbol{k}',\boldsymbol{q}} \sum_{\lambda\lambda'}c^{\dagger}_{\boldsymbol{k}+\boldsymbol{q},\lambda}c^{\dagger}_{\boldsymbol{k}'-\boldsymbol{q},\lambda'}c_{\boldsymbol{k}',\lambda'}c_{\boldsymbol{k},\lambda}$$
+- Then using the [[#Mean field approximation]], for an _isotropic system_:
+$$\displaylines{\braket{ c^{\dagger}_{\boldsymbol{k}\lambda}c_{\boldsymbol{k}'\lambda'} }=\delta_{\boldsymbol{k}\boldsymbol{k}'}\delta_{\lambda\lambda'} n_{\boldsymbol{k}\lambda}\qquad \bar{n}_{\lambda}\equiv\frac{1}{N}\sum_{\boldsymbol{k}}n_{\boldsymbol{k}\lambda} \\ H_\text{int}\approx \sum_{\boldsymbol{k},\lambda}U\bar{n}_{\lambda}c^{\dagger}_{\boldsymbol{k}\lambda}c_{\boldsymbol{k}\lambda}-UN\bar{n}_{\uparrow}\bar{n}_{\downarrow}}$$
 
+- The _Stoner Hamiltonian_ is then:
+$$H=\sum_{\boldsymbol{k},\lambda}(\varepsilon_{\boldsymbol{k},\lambda}+U\bar{n}_{\lambda})c^{\dagger}_{\boldsymbol{k}\lambda}c_{\boldsymbol{k}\lambda}-UN\bar{n}_{\uparrow}\bar{n}_{\downarrow}$$
+- The _ground state energy_, by evaluating with the _Fermi sea_:
+$$E=\langle H \rangle =\sum_{|\boldsymbol{k}|<k_{F\lambda},\lambda} \left( \frac{\hbar^{2}k^{2}}{2m^{*}} +U\bar{n}_{\lambda}\right)-UN\bar{n}_{\uparrow}\bar{n}_{\downarrow}$$
+- Each spin has a _different Fermi energy and wavevector_:
+$$\displaylines{\bar{n}_{\lambda}=\frac{1}{N}\sum_{|\boldsymbol{k}|<k_{F\lambda}}1\implies k_{F\lambda}=\left( 3\bar{n}_{\lambda} \frac{(2\pi)^{3}}{4\pi} \frac{N}{V} \right)^{1/3} \\ E=\frac{4\pi V}{(2\pi)^{3}} \frac{\hbar^{2}}{2m} \frac{1}{5} \left( 3 \frac{(2\pi)^{3}}{4\pi} \frac{N}{V} \right)^{5/3}(\bar{n}_{\uparrow}^{5/3}+\bar{n}_{\downarrow}^{5/3})+UN\bar{n}_{\uparrow}\bar{n}_{\downarrow}}$$
+- To quantify the _spin polarisation_:
+$$n=\bar{n}_{\uparrow}+\bar{n}_{\downarrow}\quad,\quad \zeta=\frac{\bar{n}_{\uparrow}-\bar{n}_{\downarrow}}{2}\implies \frac{\bar{n}_{\uparrow}}{n}=\frac{1+\zeta}{2} \quad \frac{\bar{n}_{\downarrow}}{n}=\frac{1-\zeta}{2}$$
+- Define:
+$$\displaylines{\gamma=\left( \frac{2m}{\hbar^{2}} n^{1/3} \frac{1}{(3\pi^{2})^{2/3}} \left( \frac{V}{N} \right)^{2/3} \right)U =\frac{2}{3} \frac{V}{N}g_{V}(E_{F}^\text{para})U\\ E_{g}=\frac{\gamma E}{UNn^{2}}=\frac{3}{10}((1+\zeta)^{5/3}+(1-\zeta)^{5/3})-\frac{\gamma}{4}(\zeta^{2}-1)}$$
+
+- The _remnant magnetisation_ is _proportional_ to the value of $\zeta$ that _minimises_ $E_{g}$ in the range $0<\zeta<1$
+![[Itinerant ferromagnetism.png]]
+
+- Depending on $\gamma$ (which in turn is dependent on $N/V, n, U$)
+	- $\gamma\leq 2/3$ gives a _paramagnetic material_ as $\zeta=0$, and $\bar{n}_{\uparrow}=\bar{n}_{\downarrow}$
+	- $\gamma=2/3$ is the _Stoner criterion for ferromagnetism_
+	- For $2/3<\gamma<1/2^{1/3}$, the solid is _partially spin-polarised_
+	- For $\gamma\geq 1/2^{1/3}$, the solid is a _fully polarised ferromagnet_
+
+- The _Stoner criterion_ can also be expressed using the _density of states per spin_:
+$$\gamma=\frac{2}{3}g_{N}(E^\text{para}_{F})U=\frac{2}{3}\implies g_{N}(E^\text{para}_{F})U=1$$
+- It is a _balance_ between _kinetic_ and _exchange_ energy
 ### RKKY Interaction
 - _Coupling_ between _magnetic ions_, _mediated_ by a _sea of conductive electrons_
+- The Hamiltonian can be expressed in terms of _electron spin_ $s_{i}$ and _impurity spins_ $S_{n}$ due to _ions_
+$$H=\sum_{i}\frac{p_{i}^{2}}{2m_{e}}-\sum_{i}\sum_{n}J(|\boldsymbol{r}_{i}-\boldsymbol{R}_{n}|)\boldsymbol{s}_{i}\cdot \boldsymbol{S}_{n}$$
 
-- The localised magnetic moments will _spin polarise_ the conduction electrons, which then _propagate_ the spin to other moments
-- The effective interaction is _long range_
+- The _localised magnetic moments_ will _spin polarise_ the conduction electrons, which then _propagate_ the spin to other moments
+- The effective interaction is _long range_:
+$$J(r)\propto \frac{\sin(2k_{F}r)}{(2k_{F}r)^{4}}-\frac{\cos(2k_{F}r)}{(2k_{F}r)^{3}}$$
 - The _sign_ of the exchange parameter _varies periodically with distance_
+	- Can go from _magnetic_ to _antiferromagnetic_ as a function of _distance between magnetic ions_
 	- Periodicity due to _Friedel oscillations_
+
+- It is observable in many _rare earth metals/compounds_
+
+#### Paramagnetic response in an electron gas
+- Let there be a _spatially varying magnetic field_ $H(\boldsymbol{r})=H(\boldsymbol{q})\cos(\boldsymbol{q}\cdot \boldsymbol{r})$
+- Hamiltonian due to _spin_ $\lambda=\mp1$
+$$H_\text{mag}=-\boldsymbol{\mu}\cdot \boldsymbol{B}=\frac{\lambda}{2}g\mu_{B}\mu_{0}H(\boldsymbol{q})\cos(\boldsymbol{q}\cdot \boldsymbol{r})$$
+- Consider the _linear response_ due to the _magnetic field_ using _first order time-independent perturbation theory_
+	- Response to the [[#Longitudinal response function for an electron gas|longitudinal]] and [[#Transverse field response|transverse]] oscillating _electric field_ derived from time-dependent perturbation theory
+
+- From perturbation theory:
+$$\begin{align}
+\Psi_{\boldsymbol{k}\lambda}(\boldsymbol{r})&=\frac{1}{\sqrt{ V }}e^{i\boldsymbol{k}\cdot \boldsymbol{r}}\chi_{\lambda}+\sum_{\boldsymbol{k}'} \frac{\braket{ \boldsymbol{k}' |H_\text{mag}|\boldsymbol{k}  } }{E_{\boldsymbol{k}}-E_{\boldsymbol{k}'}} \frac{1}{\sqrt{ V }}e^{i\boldsymbol{k}'\cdot \boldsymbol{r}}\chi_{\lambda} \\
+&=\frac{1}{\sqrt{ V }}e^{i\boldsymbol{k}\cdot \boldsymbol{r}}\chi_{\lambda}+\lambda \frac{g\mu_{B}\mu_{0}H(\boldsymbol{q})}{4\sqrt{ V }}\left( \frac{e^{i(\boldsymbol{k}+\boldsymbol{q})\cdot \boldsymbol{r}}}{E_{\boldsymbol{k}}-E_{\boldsymbol{k}+\boldsymbol{q}}} + \frac{e^{i(\boldsymbol{k}-\boldsymbol{q})\cdot \boldsymbol{r}}}{E_{\boldsymbol{k}}-E_{\boldsymbol{k}-\boldsymbol{q}}} \right)\chi_{\lambda}
+\end{align}$$
+
+- The _difference_ in spin-up and spin-down _wavefunctions_ will lead to a _net magnetisation_
+
+- With only _lead order_ of $H(\boldsymbol{q})$ and _free electron dispersion_:
+$$|\Psi_{\boldsymbol{k}\lambda}(\boldsymbol{r})|^{2}\approx \frac{1}{V}\left[ 1+\lambda g\mu_{B}\mu_{0}H(\boldsymbol{q}) \frac{m^{*}}{\hbar^{2}}\left( \frac{1}{k^{2}-(k+q)^{2}}+\frac{1}{k^{2}-(k-q)^{2}} \right)\cos(\boldsymbol{q}\cdot \boldsymbol{r}) \right]$$
+- From this, one gets the _net magnetisation_:
+$$\begin{align}
+M(\boldsymbol{r})&=\frac{g\mu_{B}}{2}\sum_{k<k_{F}}(|\Psi_{\boldsymbol{k}\uparrow}(\boldsymbol{r})|^{2}-|\Psi_{\boldsymbol{k}\downarrow}(\boldsymbol{r})|^{2}) \\
+&=g^{2}\mu_{B}^{2}\mu_{0}H(\boldsymbol{q}) \frac{m^{*}}{\hbar^{2}} \frac{1}{(2\pi)^{3}} \int_{k<k_{F}}  d^{3}k \left( \frac{1}{k^{2}-(k+q)^{2}}+\frac{1}{k^{2}-(k-q)^{2}} \right)\cos(\boldsymbol{q}\cdot \boldsymbol{r})  \\
+&=g^{2}\mu_{B}^{2}\mu_{0}H(\boldsymbol{q}) \frac{m^{*}}{\hbar^{2}} \frac{1}{(2\pi)^{3}} (2\pi k_{F})F\left( \frac{q}{2k_{F}} \right)\cos(\boldsymbol{q}\cdot \boldsymbol{r}) \\
+&\equiv M(\boldsymbol{q})\cos(\boldsymbol{q}\cdot \boldsymbol{r})
+\end{align}$$
+- Here, $F(x)$ is the [[#Lindhard dielectric function|Lindhard function]]
+$$F(x)=\frac{1}{2}+\frac{1-x^{2}}{4x}\ln\left| \frac{1+x}{1-x}\right|$$
+- One can then define a _susceptibility_, which is related to the _Pauli susceptibility_ $\chi_{P}$
+$$\displaylines{\chi(\boldsymbol{q})=\frac{M(\boldsymbol{q})}{H(\boldsymbol{q})}=\chi_{P}F\left( \frac{q}{2k_{F}} \right) \\ \chi_{P}=\frac{1}{(2\pi)^{2}}g^{2}\mu_{B}^{2}\mu_{0} \frac{m^{*}}{\hbar^{2}}k_{F}}$$
+- The Lindhard function has a _logarithmic singularity_ at $q=2k_{F}$, responsible for _oscillatory RKKY coupling_
+	- For 1D, the susceptibility will simply _diverge_ at $q=2k_{F}$, meaning the system is _unstable due to formation of spin density waves_
+
+#### Paramagnetic response to a magnetic ion
+- Model the magnetic field of a _magnetic ion_ as:
+$$H(\boldsymbol{r})=H_{0}\delta(\boldsymbol{r})$$
+- The _magnetisation_ at a point $\boldsymbol{r}$:
+$$M(\boldsymbol{r})=\int  d\boldsymbol{r}'\chi(\boldsymbol{r}-\boldsymbol{r}')H(\boldsymbol{r}') =\chi(\boldsymbol{r})H_{0}$$
+- From the response function in $q-$space for the electon gas:
+$$\displaylines{\chi(\boldsymbol{q})=\chi_{P}F\left( \frac{q}{2k_{F}} \right) \\ \chi(\boldsymbol{r})=\int  \frac{d^3q}{(2\pi )^{3}}\,\chi(\boldsymbol{q})e^{i\boldsymbol{q}\cdot \boldsymbol{r}} =\frac{\chi_{P}}{(2\pi)^{2}}\int_{0}^{\infty}  dq\,q^{2}F\left( \frac{q}{2k_{F}} \right) \frac{2\sin(qr)}{qr} }$$
+- Evaluating the integral analytically, the _magnetisation_ is:
+$$M(\boldsymbol{r})=\frac{2\chi_{P}k_{F}^{3}}{\pi}H_{0} \left(\frac{\sin(2k_{F}r)}{(2k_{F}r)^{4}}-\frac{\cos(2k_{F}r)}{(2k_{F}r)^{3}}\right)$$
+- The oscillations in $M(\boldsymbol{r})$ are _analagous_ to [[#Static dielectric screening|Friedel oscillations]]
+
+- The oscillating magnetisation _around one magnetic ion_ will then _couple to magnetic moments of other ions_, effectively _mediated by the electron gas_
+	- Despite _localisation of the ions_
+
+#### RKKY Exchange at large distances
+- At large distances:
+$$\displaylines{\chi(\boldsymbol{r})\approx -\frac{2\chi_{P}k_{F}^{3}}{\pi} \frac{\cos(2k_{F}r)}{(2k_{F}r)^{3}}\implies J_\text{RKKY}(\boldsymbol{r})\propto\frac{\cos(2k_{F}r)}{(2k_{F}r)^{3}} \\ H=\sum_{i}\frac{p_{i}^{2}}{2m_{e}}-\sum_{i}\sum_{n}J(|\boldsymbol{r}_{i}-\boldsymbol{R}_{n}|)\boldsymbol{s}_{i}\cdot \boldsymbol{S}_{n}}$$
+- For _smaller_ $r<k_{F}$, the coupling is still _ferromagnetic_
+- At larger distances, it can _vary between_ ferromagnetic and anti-ferromagnetic behaviour
+
+### Double exchange mechanism
+
+
+## Magnetoresistance
+
+### Giant magnetoresistance from RKKY
+
+### Colossal magnetoresistance from double exchange
+
+## Kondo effect
+
 
 # Weak electron-photon interactions
 - Use [[#Electronic response theory]] to look at _interactions_ between electrons and light
@@ -1218,44 +1330,88 @@ $$H_\text{int}=\frac{U}{2N}\sum \sum$$
 - At _low light intensities_, _photons_ can be used to _probe electronic properties_
 	- Both _ground_ and _excited states_
 	- In this regime, the photons can be considered to _not modify the states themselves_
+
 - At _high intensities_, the electric field is sufficient to _change the quantum state_
+	- The electric field is _comparable_ to that _between ions and electrons_ in the crystal
 	- Optical effects are _non-linear_
 
 ## Classical oscillator model
 - The _Lorentz oscillator_ wih _damping_:
-$$m^{*} \dots=eE(t)$$
-- The _steady state_ with _oscillations_
-$$y(\omega)=$$
-- Polarisation and _susceptibility_
+$$m^{*} \ddot{y}+\frac{m^{*}}{\tau} \dot{y}+m^{*}\omega_{T}^{2}y=eE(t)$$
+- The _steady state_ with $E(t)=E(\omega)\exp(i\omega t)$ and $y(t)=y(\omega)\exp(i\omega t)$
+$$y(\omega)=-\frac{eE(\omega)/m^{*}}{(\omega_{T}^{2}-\omega^{2})-i\omega/\tau}$$
+- The resulting _polarisation_ defines the _susceptibility_:
+$$P(\omega)=-ney(\omega)\equiv \chi(\omega)\epsilon_{0}E(\omega)$$
+- Defining the _plasma frequency_ $\omega_{p}^{2}=ne^{2}/(m^{*}\epsilon_{0})$
+$$\chi(\omega)=\frac{\omega_{p}^{2}}{(\omega_{T}^{2}-\omega^{2})-i\omega/\tau}$$
 
-- Separate the dielectric constant into _real_ and _imaginary_ parts
-
+- The resulting _dielectric constant_, split into _real_ and _imaginary_ parts
+$$\displaylines{\varepsilon(\omega)\equiv{1}+\chi(\omega)=\varepsilon_{1}(\omega)+i\varepsilon_{2}(\omega) \\ \begin{align}
+\varepsilon_{1}(\omega)&=1+ \frac{\omega_{p}^{2}(\omega_{T}^{2}-\omega^{2})}{(\omega_{T}^{2}-\omega^{2})^{2}-\omega^{2}/\tau^{2}} \\
+\varepsilon_{2}(\omega)&=\frac{\omega_{p}^{2}(\omega/\tau)}{(\omega_{T}^{2}-\omega^{2})^{2}-\omega^{2}/\tau^{2}}
+\end{align}}$$
+![[Lorentz dielectric constant.png|400]]
 ### Optical properties
 - The _complex refractive index_
-$$n=\sqrt{ \varepsilon }$$
-- The _reflection coefficient_
-
+$$\displaylines{N(\omega)=\sqrt{ \varepsilon (\omega)}\equiv n(\omega)+i\kappa(\omega) \\ \varepsilon_{1}=n^{2}-\kappa^{2} \qquad \varepsilon_{2}=2n\kappa}$$
+- The _reflection and transmission coefficients_ at _normal incidence_
+$$\displaylines{E_{\perp}(z)=\begin{cases}
+E_{t}\exp(ikz)=E_{t}\exp[i(N\omega/c)z] &z>0 \\
+E_{i}\exp(i\omega z/c)+E_{r}\exp(-i\omega z/c) &z<0
+\end{cases} \\ R=\frac{|E_{r}|^{2}}{|E_{i}|^{2}}=\left|\frac{1-N}{1+N}\right|^{2}=\frac{(1-n)^{2}+\kappa^{2}}{(1+n)^{2}+\kappa^{2}}}$$
 - For _intensity absorption_, _Beer's Law_:
-
+$$\displaylines{I(z)=I_{0}\exp(-\alpha z)\propto|E_{t}e^{ikz}|^{2} \\ \alpha=\frac{2\omega\kappa}{c}=\frac{\omega}{cn}\varepsilon_{2}(\omega)}$$
 ### Relationships between properties
-- Use the [[#Kramers-Kronig relations]]:
+- Use the [[#Kramers-Kronig relations]], one can derive similar relations for the _refractive index_
+$$\begin{align}
+n(\omega)&=1+\frac{1}{\pi}\mathcal{P} \int_{-\infty}^\infty \frac{\kappa(\omega')}{\omega'-\omega}d\omega'  \\
+\kappa(\omega)&=-\frac{1}{\pi}\mathcal{P} \int_{-\infty}^\infty \frac{n(\omega')-1}{\omega'-\omega}d\omega' 
+\end{align}$$
+- _Absorption_ at one frequency leads to _dispersion at other frequencies_
 
-
+- Absorption typically _peaks near the band edge_, which leads to
+	- _Peak_ in $n$ _before_ the resonance
+	- A _drop_ just _after_ resonance
+- Just _after_ the resonance, as $\kappa$ drops more slowly, there is a _peak in reflectivity_
+![[Optical properties.png|300]]
 ## Quantum mechanical response function
 - There are responses based on if the field is _longitudinal_ or _transerse_
 
-### Transverse field response
-- Terms correspond to _absorption_ and _emission_
-- Transition rates given by [[Time-dependent quantum mechanics#Fermi's Golden Rule|Fermi's Golden Rule]]
-
-- The _power absorbed_ is then given by:
+- [[#Longitudinal response function for an electron gas]]:
 $$\begin{align}
-P(\boldsymbol{q},\omega)&=
+\varepsilon_{1}&=1+\frac{2 e^{2}}{\epsilon_{0}q^{2}} \frac{1}{V} \sum_{\alpha,\beta}|\braket{ \Psi_{\alpha}|e^{i\boldsymbol{q}\cdot \boldsymbol{r}} |\Psi_{\beta}}|^{2}\frac{f(E_{\alpha})-f(E_{\beta})}{E_{\beta}-E_{\alpha}-\hbar\omega} \\
+\varepsilon_{2}&=\frac{2\pi e^{2}}{\epsilon_{0}q^{2}} \frac{1}{V} \sum_{\alpha,\beta}|\braket{ \Psi_{\alpha}|e^{i\boldsymbol{q}\cdot \boldsymbol{r}} |\Psi_{\beta}}|^{2}\delta(E_{\beta}-E_{\alpha}-\hbar\omega)[f(E_{\alpha})-f(E_{\beta})]
 \end{align}$$
-- Analagous to the derivation for the [[#Longitudinal response function for an electron gas]]
+### Transverse field response
+- Adding an _electric potential_ $\boldsymbol{A}$ to the system:
+$$\displaylines{H=\frac{1}{2m}|\boldsymbol{p}+e\boldsymbol{A}|^{2}+V(\boldsymbol{r})\equiv H_{0}+H_{1} \\ H_{0}=\frac{p^{2}}{2m}+V(\boldsymbol{r}) \qquad H_{1}=\frac{e}{2m}(\boldsymbol{p}\cdot \boldsymbol{A}+\boldsymbol{A}\cdot \boldsymbol{p})+O(A^{2})}$$
+- Using the _Coulomb gauge_ $\nabla\cdot \boldsymbol{A}=0$:
+$$H_{1}=\frac{e}{m}\boldsymbol{p}\cdot \boldsymbol{A}$$
+- For a _transverse electromagnetic wave_:
+$$\displaylines{\boldsymbol{A}=A_{0}\boldsymbol{a}\big(\exp[i(\boldsymbol{k}\cdot \boldsymbol{r}-\omega t)]+\exp[-i(\boldsymbol{k}\cdot \boldsymbol{r}-\omega t)]\big) \\ H_{1}=\frac{eA_{0}}{m}\big(\exp[i(\boldsymbol{k}\cdot \boldsymbol{r}-\omega t)]\boldsymbol{a}\cdot \boldsymbol{p}+\exp[-i(\boldsymbol{k}\cdot \boldsymbol{r}-\omega t)]\boldsymbol{a}\cdot \boldsymbol{p}\big)}$$
 
-- Then use Kramers-Kronig
+- The terms correspond to _absorption_ and _emission_ respectively
+- Transition rates given by [[Time-dependent quantum mechanics#Fermi's Golden Rule|Fermi's Golden Rule]]:
+$$\begin{align}
+W_{i\to f}&=\frac{2\pi}{\hbar}\left( \frac{eA_{0}}{m} \right)^{2}\left|\Braket{\psi_{f}|e^{i\boldsymbol{k}\cdot \boldsymbol{r}}\boldsymbol{a}\cdot \boldsymbol{p}|\psi_{i}} \right|^{2} \delta(E_{f}-E_{i}-\hbar\omega)f(E_{i})(1-f(E_{f}))  \\
+W_{f\to i}&=\frac{2\pi}{\hbar}\left( \frac{eA_{0}}{m} \right)^{2}\left|\Braket{\psi_{i}|e^{-i\boldsymbol{k}\cdot \boldsymbol{r}}\boldsymbol{a}\cdot \boldsymbol{p}|\psi_{f}} \right|^{2} \delta(E_{i}-E_{f}+\hbar\omega)f(E_{f})(1-f(E_{i}))
+\end{align}$$
 
+- The _power absorbed_, accounting for _spin degeneracy_ is then given by:
+$$\begin{align}
+P(\boldsymbol{q},\omega)&=2\hbar\omega \sum_{i,f}(W_{i\to f}-W_{f\to i}) \\
+&=2\hbar\omega \frac{2\pi}{\hbar}\left( \frac{eA_{0}}{m} \right)^{2}\sum_{i,f} \left|\Braket{\psi_{f}|e^{i\boldsymbol{k}\cdot \boldsymbol{r}}\boldsymbol{a}\cdot \boldsymbol{p}|\psi_{i}} \right|^{2} \delta(E_{f}-E_{i}-\hbar\omega)[f(E_{i})-f(E_{f})]
+\end{align}$$
+- Same as the [[#Power dissipation|longitudinal case]], consider _classical Joule heating_
+$$P(\boldsymbol{q},\omega)=2\sigma_{1}(\boldsymbol{q},\omega)E_{0}^{2}V=2\sigma_{1}(\boldsymbol{q},\omega)\omega^{2}A_{0}^{2}V$$
+- The [[#Longitudinal response function for an electron gas|effective dielectric constant]]:
+$$\varepsilon(\boldsymbol{q},\omega)=1+\frac{i\sigma(\boldsymbol{q},\omega )}{\epsilon_{0}\omega}\implies \varepsilon_{2}(\boldsymbol{q},\omega)=\frac{\sigma_{1}}{\epsilon_{0}\omega}$$
+- From this, plus the Kramer-Kronig relations:
+$$\begin{align}
+\varepsilon_{1}&=1+\sum_{i,f}\frac{2e^{2}\hbar^{2}}{\epsilon_{0}m^{2}(E_{f}-E_{i})^{2}} \frac{1}{V} \Big|\braket{ \psi_{f}|e^{i\boldsymbol{q}\cdot \boldsymbol{r}}\boldsymbol{a}\cdot \boldsymbol{p} | \psi_{i} } \Big|^{2} \frac{f(E_{i})-f(E_{f})}{E_{f}-E_{i}-\hbar\omega} \\
+\varepsilon_{2}&=\frac{2\pi e^{2}}{\epsilon_{0}m^{2}\omega^{2}V}\sum_{i,f} \Big|\braket{ \psi_{f}|e^{i\boldsymbol{q}\cdot \boldsymbol{r}}\boldsymbol{a}\cdot \boldsymbol{p} | \psi_{i} } \Big|^{2} \delta(E_{f}-E_{i}-\hbar\omega)[f(E_{i})-f(E_{f})]
+\end{align}$$
+- This expression is _independent of the nature of electronic states_
 ### Transverse dielectric response in semiconductors
 - Apply the above formula to _Bloch states_
 
@@ -1279,10 +1435,94 @@ $$E_{b}(\boldsymbol{k})=$$
 ### Indirect band gap semiconductors
 - In $\ce{ Si }$ and $\ce{ Ge }$, there are _indirect band gaps_, where _phonons_ are required to _conserve momentum_
 
-# Excitons
+## Describing semiconductor band structures
+- Consider the _band structures_ of _groups III,V and group 4 semiconductors_
+	- Examples: $\ce{ GaAs },\ce{ GaN },\ce{ Si,Ge }$
+- Focus near the $\Gamma$ point, with:
+	- _Conduction electron_ band _minimum_
+	- _Three valence band maxima_, due to _heavy holes_, _light holes_, and _split-off holes_
 
-## Wannier model
-- The exciton can be described with a _hydrogenic model_
+### Crystal momentum and k•p theory 
+- Consider the Hamiltonian for Bloch states _at_ $\Gamma$:
+$$H=\frac{p^{2}}{2m}+V(\boldsymbol{r}) \qquad HU_{n,0}=E_{n,0}U_{n,0}$$
+- Then go to $\boldsymbol{k}$ _near_ $\Gamma$ and _expand_:
+$$\displaylines{\left( \frac{p^{2}}{2m}+V(\boldsymbol{r}) \right)e^{i\boldsymbol{k}\cdot \boldsymbol{r}}U_{n\boldsymbol{k}}(\boldsymbol{r})=E_{n\boldsymbol{k}}e^{i\boldsymbol{k}\cdot \boldsymbol{r}}U_{n\boldsymbol{k}}(\boldsymbol{r}) \\ \left[ \frac{p^{2}}{2m}+V(\boldsymbol{r}) \right]U_{n\boldsymbol{k}}(\boldsymbol{r})+\underbrace{ \left[ \frac{(\hbar k)^{2}}{2m}+\frac{\hbar}{2m}2\boldsymbol{k}\cdot \boldsymbol{p} \right] }_{ H_{1} }U_{n\boldsymbol{k}}(\boldsymbol{r})=E_{n\boldsymbol{k}}U_{n\boldsymbol{k}}(\boldsymbol{r})}$$
+- Consider the second term a _perturbation_
+- The $\Gamma$ point is assumed to be a _stationary point_ (minima, maxima, or saddles)
+
+- From _second order, non-degenerate perturbation theory_
+$$E_{n\boldsymbol{k}}=E_{n,0}+\braket{ U_{n,0}|H_{1} | U_{n,0} } +\sum_{n'\neq n} \frac{|\braket{ U_{n,0} |H_{1} |U_{n,0} }|^{2}}{E_{n,0}-E_{n',0}} $$
+- Matrix elements of $\boldsymbol{p}$ between the same Bloch state:
+$$\Braket{ U_{n,0}|\frac{\boldsymbol{p}}{m} | U_{n,0} }=\frac{1}{\hbar}\nabla_{k}E_{n}(\boldsymbol{k}) =0 $$
+- Then using the _orthogonality_ of Bloch states $U_{n,0}$ and $U_{n',0}$ for $n\neq n'$, perturbation theory gives $k^{2}$ terms, along with _matrix elements_ $\braket{ U_{n',0}|\boldsymbol{p} | U_{n,0} }$
+$$\begin{align}
+E_{n\boldsymbol{k}}&\approx E_{n,0}+\frac{\hbar^{2}k^{2}}{2m}+\frac{\hbar^{2}}{m^{2}}\sum_{n'\neq n} \frac{\Big|\boldsymbol{k}\cdot\braket{ U_{n'0}|\boldsymbol{p} | U_{n,0} } \Big|^{2}}{E_{n,0}-E_{n',0}} \\
+&\approx E_{n,0}+\frac{\hbar^{2}k^{2}}{2m_{n}^{*}}
+\end{align}$$
+### Orbital hybridisation
+- The groups III,V and group IV semiconductors have a _diamond structure_
+- The $s$ and $p$ orbitals can _hybridise_ in the structure to form _bonding_ and _antibonding orbitals_, where the $p-$character orbitals are _degenerate_
+![[Diamond bonding antibonding.png]]
+
+### Spin-orbit interaction
+- [[Atomic and molecular physics#Multi-electron atoms|Spin-orbit coupling]] will _break the degeneracy_ of the $p$ states
+- Eigenstates of $\boldsymbol{L}$ with $l=1$
+	- $\ket{p^{+}}=-(\ket{p_{x}}+i\ket{p_{y}})/\sqrt{ 2 }$
+	- $\ket{p^{-}}=(\ket{p_{x}}-i\ket{p_{y}})/\sqrt{ 2 }$
+	- $\ket{p_{z}}$
+- Combined with the _spin basis_, the six basis states will _mix_ due to spin-orbit coupling
+
+- The eigenstates are labelled $\ket{j,m_{j}}$:
+![[Valence band spin orbit.png|500]]
+- They create the _light and heavy hole_ bands which are _degenerate_ at $\Gamma$, as well as the _lower energy split-off band_
+- The _light and heavy hole_ bands are then _split_ away from $k=0$ due to $k\cdot p$ coupling
+- From the specific wave-functions, $m_{j}=\pm3/2$ gives _heavy holes_ while $m_{j}=\pm 1/2$ gives _light holes_
+
+- The bands can then _mix further_
+	- _Higher/lower_ lying bands give _negative/positive curvature_
+
+# Excitons
+- Absorption spectra have _small peaks under the band edge_
+- These are caused by _excitons_: a _bound state_ between _electrons and holes_ due to the _Coulomb interaction_
+- They have _lower energy_ than the _unbound_ states
+
+- This is _not observed in metals and doped semiconductors_ as the _Coulomb interaction is screened_
+![[Exciton formation.png|400]]
+
+- When the _exciton radius is large compared to the lattice constant_, it can be described using a _hydrogenic model_
+	- Typically for _low effective mass semiconductors_
+
+- For _smaller excitons (Frenkel excitons)_ (caused by low $\varepsilon$, high $m^{*}$ as seen below), a more _molecular description_ is required
+	- Typically seen in _organic semiconductors_ and _ionic crystals_
+## Mott-Wannier excitons
+- Let the electron and hole _effective masses_ as $m_{e}^{*}$ and $m_{h}^{*}$
+- Treat it as a _hydrogenic particle_ with _effective reduced mass_ $\mu$ in a material with _relative di-electric constant_ $\varepsilon\epsilon_{0}$, one gets the _Wannier equation_
+$$\displaylines{\left( -\frac{\hbar^{2}}{2\mu}\nabla^{2}-\frac{e^{2}}{4\pi\varepsilon\epsilon_{0}} \frac{1}{r} \right)F_{n}(\boldsymbol{r})=E_{W,n}F_{n}(\boldsymbol{r}) \\ \frac{1}{\mu}=\frac{1}{m_{e}^{*}}+\frac{1}{m_{h}^{*}}}$$
+- The _radii_ will _expand_ compared to the hydrogenic radii
+$$r_{n}=\varepsilon \frac{m_{e}}{\mu}n^{2}a_{B}$$
+- The _hydrogenic energies_:
+$$E_{W,n}=-\frac{\mu}{m_{e}} \frac{1}{\varepsilon^{2}} \frac{1}{n^{2}}\,\ce{Ry }$$
+- Therefore, the _exciton energy_ is:
+$$\displaylines{E_{n}=E_{g}+\frac{\hbar^{2}K^{2}}{2M}-\frac{\mu}{m_{e}} \frac{1}{\varepsilon^{2}} \frac{1}{n^{2}} \,\ce{ Ry } \\ M=m_{e}^{*}+m_{h}^{*} \qquad \boldsymbol{K}=\boldsymbol{k}_{e}+\boldsymbol{k}_{h}}$$
+- Dispersion is dependent on _total wave-vector_
+
+- The _binding energy_ is _negative_
+- For $\ce{ GaAs }$, the binding energy is $\sim~ 5\text{ meV}$ with $r_{1}=112\text{Å}\gg a=5.54\text{ Å}$
+	- Hydrogenic model is appropriate (Mott-Wannier exciton)
+	- At room temperature, $k_{B}T\approx 26\text{ meV}$
+- For $\ce{ ZnS }$, binding energy is $\sim 29\text{ meV}$ with $r_{1}=10.7\text{ Å}\sim a=5.41\text{ Å}$
+	- More well described as a Frenkel exciton
+
+### Absorption
+- Optical absorption produces a _series of hydrogenic peaks_
+![[Exciton absorption peaks.png|300]]
+
+- Conserving _energy and momentum_ can be ensured by an _intersection_ of the _photon_ and _exciton dispersions_
+![[Exciton absorption intersection.png|300]]
+
+- In _3 dimensions_, due to an _increased probability_ of electron-hole Coulomb attraction within a unit cell, the absorption is _multiplied_ by the _Sommerfeld enhancement factor_
+
+## Quantum wells
 
 
 ## Potential Bose-Einstein condensation
@@ -1496,16 +1736,47 @@ $$\left( \frac{(p+e\boldsymbol{A})^{2}}{2m^{*}}+V(y) \right)\Phi_{kn}(x,y)=E_{kn
 $$\left( \frac{p_{y}^{2}}{2m^{*}}+\frac{1}{2}m^{*}\omega_{c}^{2}\left( y-\frac{\hbar k}{eB} \right)^{2}+V(y) \right)\phi_{n,k}(y)=E_{nk}\phi_{nk}(y)$$
 - Here, $\omega_{c}$ is the _cyclotron frequency_ $eB/m$
 
-- This makes a _momentum-dependent parabolic potential_ in addition to the effective potential. representing the result of the _Lorentz force_ due to electrons in the $x-$direction
+- This makes a _momentum-dependent parabolic potential_ in addition to the effective potential. representing the result of the _Lorentz force_ due to flow of electrons in the $x-$direction
 $$F=-e\left( \frac{\hbar k}{m}\hat{x} \times \boldsymbol{B}\right)=\omega_{c}p\hat{y}$$
 - As $B$ increases, the states become _more localised against the walls_ of the 1D system, and become _edge states_
 
 ### Conductance of a 1D system
+- Consider a quasi-1D system, of _length_ $L$ and _cross-sectional area_ $A$ occupying _one sub-band_, with a _potential difference_ $V$ across it such that there is _current_
+![[1D wire with voltage.png]]
 
+- Both ends are connected to a _reservoir of electrons_ held at the respective _electrochemical potentials_, at _temperature_ $T$
 
+- The _current density_ for wavevector $k$ flowing from the left:
+$$j_{k}^{+}=-\frac{e}{LA}v_{k}f_{k}(\mu-eV) \qquad v_{k}=\frac{1}{\hbar} \frac{dE_{k}}{dk} \qquad f_{k}(\mu)=\frac{1}{1+\exp[(E_{k}-\mu)/k_{B}T]}$$
+- For _total current_, multiply by area and integrate over wave-number, _from both directions_
+$$\begin{align}
+I&=-\frac{e}{\hbar} \frac{L}{2\pi}\int_{0}^{\infty}dk\, \frac{1}{L } \frac{dE_{k}}{dk}[f_{k}(\mu-eV)-f_{k}(\mu)]  \\
+&=\frac{e}{h}\int_{0}^{\infty}  dE_{k} [f_{k}(\mu -eV)-f_{k}(\mu)]
+\end{align}$$
+- Consider the _conductance_ of the system:
+$$G=\lim_{ V \to 0 } \frac{I}{V} $$
+- The current at this limit is:
+$$I=\frac{e}{h}\int_{0}^{\infty}  dE_{k} \left( \frac{\partial f_{k}}{\partial \mu} \right)(-eV)=\frac{e}{h}\int_{0}^{\infty} dE_{k}\left( \frac{\partial f_{k}}{\partial E_{k}} \right)(eV)  $$
+- Also take the _zero temperature limit_ where $\partial f_{k}/\partial E_{k}=-\delta(E_{k}-\mu)$
+	- Result also applies for _finite temperature_
+$$G=\lim_{ V \to 0 } \frac{I}{V}=\frac{e^{2}}{h} $$
+- This result applies to _any sub-band_
+
+- In a _spin degenerate system_, it is $2e^{2}/h$ per sub-band
+![[1D conductance steps.png|400]]
+- The _width between plateaus_ is given using the _Landauer formalism_ below
 ## Landauer formalism
-- Conductance of a _general 2D quantum system_ with an _effective potential_ $V(x,y)$
+- Conductance of a _general 2D quantum system_ with an _effective potential_ $\hat{V}(x,y)$
+$$\left( \frac{\left( \hat{p}+eA \right)^{2}}{2m^{*}} +\hat{V}(x,y)\right)\Phi=E\Phi$$
 - Consider the system _sandwiched between two infinite quasi-1D systems_, which act as _conducting leads for particles_
+
+- Each _lead_ has _many occupied sub-bands_, and are also connected to _reservoirs_ at electrochemical potentials $\mu-eV$ and $\mu$
+![[Landauer formalism system.png|600]]
+
+- For a _given_ $E$, there are also _current amplitudes_ $a^{\pm}$, $b^{\pm}$
+$$\begin{align}
+\Phi_{L}&=\sum_{n} \frac{1}{\sqrt{ j_{k_{n}} }} [a^{+}_{k_{n}}e^{ik_{n}x}\phi_{k_{n}}(y)-a^{-}_{k_{n}}e^{-ik_{n}x}\phi]
+\end{align}$$
 
 # Superconductivity
 
