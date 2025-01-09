@@ -1657,7 +1657,7 @@ $$\displaylines{\left( -\frac{\hbar^{2}}{2\mu}\nabla^{2}-\frac{e^{2}}{4\pi\varep
 $$r_{n}=\varepsilon \frac{m_{e}}{\mu}n^{2}a_{B}$$
 - The _hydrogenic energies_:
 $$E_{W,n}=-\frac{\mu}{m_{e}} \frac{1}{\varepsilon^{2}} \frac{1}{n^{2}}\,\ce{Ry }$$
-- Therefore, the _exciton energy_ is:
+- Therefore, the _total exciton energy_ is:
 $$\displaylines{E_{n}=E_{g}+\frac{\hbar^{2}K^{2}}{2M}-\frac{\mu}{m_{e}} \frac{1}{\varepsilon^{2}} \frac{1}{n^{2}} \,\ce{ Ry } \\ M=m_{e}^{*}+m_{h}^{*} \qquad \boldsymbol{K}=\boldsymbol{k}_{e}+\boldsymbol{k}_{h}}$$
 - Dispersion is dependent on _total wave-vector_
 
@@ -1675,7 +1675,7 @@ $$\displaylines{E_{n}=E_{g}+\frac{\hbar^{2}K^{2}}{2M}-\frac{\mu}{m_{e}} \frac{1}
 - Conserving _energy and momentum_ can be ensured by an _intersection_ of the _photon_ and _exciton dispersions_
 ![[Exciton absorption intersection.png|300]]
 
-- In _3 dimensions_, due to an _increased probability_ of electron-hole Coulomb attraction within a unit cell, the absorption is _multiplied_ by the _Sommerfeld enhancement factor_
+- In _3 dimensions_, due to an _increased probability_ of electron-hole Coulomb attraction within a unit cell, the absorption intensity is _multiplied_ by the _Sommerfeld enhancement factor_
 
 ## Optical properties of quantum wells
 - _Quantum wells_ can be produced in _heterojunctions_, where materials have _different band energies_, leading to _varying band edge_ and _gap energy_ as a function of position
@@ -1686,21 +1686,101 @@ $$\displaylines{E_{n}=E_{g}+\frac{\hbar^{2}K^{2}}{2M}-\frac{\mu}{m_{e}} \frac{1}
 $$\displaylines{\Psi(x,y,z)=\exp(ik_{x}x)\exp(ik_{y}y)\phi(z) \\ \left( \frac{p_{z}^{2}}{2m}+V(z) \right)\phi(z)=E_{n}\phi(z) \\ E_{n,k}=E_{n}+\frac{\hbar^{2}}{2m^{*}}(k_{x}^{2}+k_{y}^{2})}$$
 - The system forms _parabolic sub-bands_ labelled by $n$
 
-- Transitions from _hole sub-bands_ to _electron sub-bands_
+- Photons can drive _optical transitions_ from _occupied hole sub-bands_ to _empty electron sub-bands_
+![[Electron hole sub band transition.png|300]]
+### Transition matrix element
+- A [[#Response to vertical transitions|vertical optical transition]] is governed by the _matrix element_:
+$$\displaylines{M_{i,f}=\boldsymbol{a}\cdot \braket{ \Psi_{f}|\boldsymbol{p} | \Psi_{i} } \\ \Psi_{i}(\boldsymbol{r})=\frac{1}{\sqrt{ A }}e^{i\boldsymbol{k}_{//}\cdot \boldsymbol{r}_{//}}\phi_{n,h}(z) \qquad \Psi_{f}(\boldsymbol{r})=\frac{1}{\sqrt{ A }}e^{i\boldsymbol{k}_{//}\cdot \boldsymbol{r}_{//}}\phi_{n',e}(z)}$$
+- If the light is incident _normal_ to the plane of the quantum well, it is $x-y$ polarised, and the _selection rule_ is given by:
+$$M_{n,n'}=a_{x}\int  \Psi_{f}^{*}(\boldsymbol{r})\left( -i\hbar \frac{\partial}{\partial x} \right)\Psi_{i}(\boldsymbol{r})\,dxdydz=a_{x}\hbar k_{x} \int \phi_{n',e}^{*}(z)\phi_{n,h}(z)\,dz  $$
+- For a _non-zero_ $M_{n,n'}$, the functions $\phi_{n',e}(z)$ and $\phi_{n,h}(z)$ must have the _same parity_
+
+- The _strongest transition_ is $n=n'$
+	- Other transitions $n\neq n'$ can occur through _higher order processes_ or if the well is subject to _external electromagnetic fields_
+- Energy of the transition:
+$$\hbar\omega=E_{n,e}(\boldsymbol{k})+E_{n,h}(\boldsymbol{k})=E_{g}+E_{n}^{h}+E_{n}^{e}+\frac{\hbar^{2}k_{\mid|}^{2}}{2\mu}$$
+### Quantum well joint density of states
+- The $n\to n$ transition depends on the _2D joint density of states_, which is _constant_:
+$$J_{n,n}(\omega)=\frac{2}{(2\pi)^{2}}\int  d^2k\,\delta(E_{n,e}(\boldsymbol{k})-E_{n,h}(\boldsymbol{k})-\hbar\omega)=\frac{\mu}{\pi \hbar^{2}} $$
+- This leads to the absorption spectrum having a _staircase shape_:
+![[2D JDOS.png|300]]
+- Experimentally, the common transitions are:
+	- $n$th _heavy hole_ sub-band $\rightarrow$ $n$th _electron_ sub-band  
+	- $n$th _light hole_ sub-band $\rightarrow$ $n$th _electron_ sub-band  
+- Just _below_ the transition onset, there are also more _sharp excitonic absorptions_
+![[Quantum well excitons.png|400]]
+
+### Wannier Excitons in quantum wells
+- In 2D, the _binding energy_ of an exciton is _higher_:
+	- The $\nu=1$ exciton in 2D has a binding energy 4 times _larger_ than in 3D
+$$E_{n,n',\nu}=E_{g}+E_{n}^{h}+E_{n'}^{e}-\frac{\mu}{m_{e}\epsilon^{2}} \frac{1}{(\nu-1/2)^{2}}\,\mathrm{Ry}+\frac{\hbar^{2}K_{\mid|}^{2}}{2M}$$
+- In quantum wells, exciton effects can be _observed at room temperature_
+- For _each transition_, there is a 2D _Rydberg series_ $\nu=1,2,\dots$
+
+- However, the _Sommerfeld enhancement factor_ is _less strong_ in 2D than in 3D
+- In 2D, excitons may still approach the _Frenkel_ case
+
+## Organic semiconductors
+- Organic semiconductors are made of _polymers_ or _conjugated organic molecules_
+- They are _low-dimensional solids_ with _strong covalent intra-molecular interactions_, but _weak bonding between molecules_
+- Electronic structure is typically similar to _benzene_
+
+- The _charge conjugation_ exists on a _backbone_ of $sp^{2}$ carbons, where the remaining $p_{z}$ orbitals _overlap_ to form both _bonding_ and _antibonding_ $\pi$ electronic states
+![[Benzene orbitals.png|400]]
+- Benzene can then _polymerise_ to form poly(p-phenylene)
+	- The benzene molecules in the chain are _bound weakly_ by the van der Waals interaction, such that _bands_ form from the molecular orbitals 
+	- _Band width_ is set by the strength of the inter-molecular coupling
+	- The _band gap_ between the valence and conduction band is typically in the _visible range_
+![[Benzene polymerisation.png|400]]
+
+### Frenkel excitons in organic semiconductors
+- Due to the weak intermolecular bonding, _electron-hole excitations are typically localised on a single molecule_
+- Due to this _confinement_, the _exciton binding energy_ will be _large_, $\sim 0.5\,\mathrm{eV}$
+- These are classified as _Frenkel excitons_
+
+- Organic semiconductors have _strong electron-phonon coupling_
+- When the electrons are _optically excited_, the _bonds_ will _rearrange_ to find a _new optimum atomic configuation_ for the given _electronic excited state_, known as _energy relaxation_
+
+- The _optical absorption_ $(10^{-15}\mathrm{s})$ is typically _fast_ compared to the _atomic motion_ $(10^{-12}\mathrm{s})$ such that _nuclei have the same position_ before and after the transition
+	- The _Franck-Condon principle_
+![[Benzene transitions.png|400]]
+
+- For _each electronic transition_, there will be a set of _replicas_ depending on which _vibrational state_ was reached
+- For a transition from _vibrational state_ $\phi_{0}^{(0)}(\boldsymbol{q})$ of electronic state $S_{0}$ to state $\phi_{n}^{(1)}(\boldsymbol{q})$ of $S_{1}$
+$$I_{A}^{(i)}(0\to n) \propto\left|\int (\phi_n^{(1)}(\boldsymbol{q}))^{*}\phi_{0}^{(0)}(\boldsymbol{q}) \,d\boldsymbol{q} \right|^{2}$$
+
+- Excitonic effects in organic semiconductors are used for _efficient photoluminesence_
+	- Emission colour can be _tuned_ by changing the _chemical structure_
+	- Used for _OLED_ devices
 ## Potential Bose-Einstein condensation
-- There is a _critical temperature_ for Bose-Einstein condensation
+- [[Advanced statistical mechanics#Bose-Einstein condensation at low temperatures|Bose-Einstein condensation]]: a _macroscopic number_ of particles occupy the _ground state_
+- For the condensate to form, $\mu\to{0}$
+$$N-N_{c}=\int_{0}^{\infty} \frac{g(\varepsilon)\,d\varepsilon}{\exp(\varepsilon/k_{B}T)-1}\propto N\left( \frac{T}{T_{c}} \right)^{3/2}$$
+
+- There is a _critical temperature_ for the condensate to form:
 $$T_{c} \propto \frac{1}{m}n^{2/3}$$
 - For a BEC in an electronic system, _exciton lifetime_ must be _longer_ than the _time taken to reach thermodynamic equilibrium_
 	- Equilibrium after _generation_ using lasers
 	- Thermalisation typically takes _picoseconds_, around exciton lifetime
 
 - Example: $\ce{ Cu_{2}O }$ has an excitonic BEC due to _symmetry forbidden transitions_ resulting in _long lifetimes_
+- Example: _Coupled quantum wells_ have some _spatial separation_ between electrons and holes, forming _dipolar excitons_
+	- There is a _thin barrier_ such that there is a _Coulomb attraction_ but the _wave functions_ no longer strongly overlap 
 
 ## Polaritons
-- A _superposition_ of a _photon_ and an _exciton_
+- A _coherent superposition_ of a _photon_ and an _exciton_
 - Band structure:
-	- _Exciton-like_
-	- _Photon-like_
+	- At energies _below_ the band gap, the dispersion is _photon-like_:$$\hbar\omega=\frac{c}{N}\hbar k$$
+	- At _high energies_ and large momentum, the polariton is _exciton-like_
+$$E_\text{ex}=E_{g}-\frac{\mu}{m_{e}\epsilon^{2}} \frac{1}{n^{2}}\mathrm{Ry}+\frac{\hbar^{2}K^{2}}{2M}$$
+- At intermediate energies, there is _hybridisation_ between the two states
+![[Polariton dispersion.png|350]]
+- Strong hybridisation can occur in a _microcavity_ where the _optical path length_ is a _half-integer multiple_ of the _emission wavelength_
+- In this case, the dispersion relation is modified due to _confinement_ of width $W$
+$$\omega=\frac{c}{N}|\boldsymbol{k}|=\frac{c}{N}\sqrt{ k_{\mid|}^{2}+k_{\perp}^{2} }=\frac{c}{N}\sqrt{ k_{\mid|}^{2}+\left( \frac{n\pi}{W} \right)^{2} }$$
+- The polaritons have a _much lower effective masss_, so a _Bose-Einstein condensate_ can form at _higher temperatures_
+	- This is despite _shorter lifetimes_, but still enough to achive _thermalisation_ by polariton-polariton scattering
+	- Bose condensate shows _interference_
 
 # Electron-phonon interactions
 
