@@ -113,6 +113,7 @@ $$H=-\frac{\hbar^{2}}{2m} \sum_{j}\frac{\partial^{2}}{\partial x_{j}^{2}}+c\sum_
 
 - For _fermions_, the interaction _has no effect_ as it requires bunching
 - For _bosons_ with $c\to \infty$, eigen-energies _coincide with that of fermions_, and eigenstates are _modulus of fermion eigenstates_
+
 ## Densities and pair correlations
 - _Distributions_ and _correlations_ as a function of a _small number of coordinates_ to give _information_ about the system
 
@@ -549,6 +550,7 @@ $$\displaylines{\rho(\boldsymbol{r})=\psi ^{\dagger}(\boldsymbol{r})\psi(\boldsy
 $$\displaylines{\rho_{\text{int}}(\boldsymbol{r},t)=A(\boldsymbol{r},t)\cos\left[ \theta+\frac{\hbar \boldsymbol{r}\cdot \boldsymbol{d}}{mR_{0}^{2}R_{t}^{2}}t \right] \\ A(\boldsymbol{r},t)=\frac{2\sqrt{ N_{L}N_{R} }}{\pi^{3/2}R_{t}^{3}}\exp\left( -\frac{\boldsymbol{r}^{2}+\boldsymbol{d}^{2}/4}{R_{t}^{2}} \right)}$$
 - At _long times_, the interference fringes have separation $2\pi \hbar t/md$
 
+- This is the _Hanbury Brown and Twiss effect_
 ## With Fock states
 - Let the two wells have _no phase relation_ to each other
 	- Made up of _Fock states_

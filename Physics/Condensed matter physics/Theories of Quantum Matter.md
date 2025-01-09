@@ -18,14 +18,63 @@ $$H=-\frac{1}{2m}\sum_{j=1}^{N}\nabla_{j}^{2} +\dots$$
 - Boson and fermion wave-functions:
 $$\displaylines{\ket{\Psi^{S}_{\alpha_{1}\alpha_{2}\dots\alpha_{N}}}=\sqrt{ \frac{N!}{\prod_{\alpha}N_{\alpha}!}}\mathcal{S}[\phi_{\alpha_{1}}(\boldsymbol{r}_{1})\phi_{\alpha_{2}}(\boldsymbol{r}_{2})\dots \phi_{\alpha_{N}}(\boldsymbol{r}_{N})] \\ \ket{\Psi^{A}_{\alpha_{1}\alpha_{2}\dots\alpha_{N}}}=\sqrt{ N! }\mathcal{A}[\phi_{\alpha_{1}}(\boldsymbol{r}_{1})\phi_{\alpha_{2}}(\boldsymbol{r}_{2})\dots \phi_{\alpha_{N}}(\boldsymbol{r}_{N})]  } $$
 
-- Single particle density:
+- Single particle _density_:
 $$\rho_1(x_1) = N \int dx_2\ldots dx_N \,\lvert\Psi(x_1,x_2,\ldots,x_N)\rvert^2$$
+- It is the _expectation value_ of the _density operator_
 $$\rho(x)=\sum_{j}\delta(x-x_{j}) \qquad \rho_{1}(x)=\braket{ \Psi|\rho(x) |\Psi  } $$
-- Single particle density matrix:
+
+
+- Single particle _density matrix_:
+	- Result from _tracing out_ $N-1$ particles from an $N$ particle system
 $$g(x,y) \equiv N\int dx_2\ldots dx_N \,\Psi^{}(x,x_2,\ldots,x_N)\Psi^{*}(y,x_2,\ldots,x_N)$$
-- Pair correlations:
+- The _pair distribution function_:
 $$\rho_2(x_1,x_{2}) = N(N-1) \int dx_3\ldots dx_N \,\lvert\Psi(x_1,x_2,\ldots,x_N)\rvert^2$$
-$$\rho_{2}(x_{1},x_{2})=\rho_{1}(x_{1})\rho_{2}(x_{2})-g(x_{1},x_{2})g(x_{2},x_{1})$$
+- It can be expressed in terms of another _expectation value_
+$$\rho_{2}(x_{1},x_{2})=\braket{ \Psi|\rho(x_{1})\rho(x_{2}) |\Psi  }-\rho_{1}(x_{1})\delta(x_{1}-x_{2}) $$
+
+## Example cases
+### Example: Free particles on a ring
+- Ring: circumfrence $L$, no potential
+- Eigenstates:
+$$\phi_{n}(x)=\frac{1}{\sqrt{ L }}\exp(ik_{n}x)$$
+- Boundary conditions:
+$$k_{n}=\frac{2\pi n}{L} \qquad E_{n}=\frac{\hbar^{2}k_{n}^{2}}{2m}$$
+
+- Bosons: all in _ground state_, such that $N_{0}=N$
+$$\Psi_{0}^{S}(x_{1},x_{2},\dots x_{N})=\frac{1}{L^{N/2}}$$
+
+- Fermions: each level with _one particle_
+	- $N$ odd: filled symmetrically from $-(N-1)/2$ to $0$ to $(N-1)/2$ 
+	- $N$ even: last particle either at $\pm N/2$
+	- Last filled: at _Fermi wave-vector_ $k_F$ and _Fermi energy_ $E_F$
+
+- $z_{i}=\exp(2\pi ix_{i}/L)$
+- Slater determinant:
+$$\Psi^A_0(x_1,\ldots, x_N)=\begin{vmatrix}
+    z_{1}^{-(N-1)/2} &  z_{2}^{-(N-1)/2} & \cdots & z_{N}^{-(N-1)/2} \\
+    z_{1}^{-(N-3)/2} &  \cdots & \cdots & \cdots  \\
+    \cdots & \cdots & \cdots & \cdots  \\
+    z_{1}^{(N-1)/2} &  \cdots & \cdots & z_{N}^{(N-1)/2}
+\end{vmatrix}$$
+
+- $N=3$ fermion case, from evaluating the determinant and _factorising_:
+$$\Psi_{0}\propto \sin\left[ \frac{\pi(x_{1}-x_{2})}{L} \right]\sin\left[ \frac{\pi(x_{1}-x_{3})}{L} \right]\sin\left[ \frac{\pi(x_{2}-x_{3})}{L} \right]$$
+
+- Generalisation:
+	- Using _Vandermonde determinant_
+$$\Psi_{0}(x_{1},\dots x_{N})\propto \prod_{i<j}^{N}\sin\left[ \frac{\pi(x_{i}-x_{j})}{L} \right]$$
+- The _single particle density matrix_ in this case:
+### Example: impenetrable Bose Gas
+$$H=-\frac{\hbar^{2}}{2m} \sum_{j}\frac{\partial^{2}}{\partial x_{j}^{2}}+c\sum_{j>k}\delta(x_{j}-x_{k})$$
+- A _pair interaction_ modelled by delta function
+- All energy is _kinetic_, with the delta function _imposing boundary conditions_
+
+- For _fermions_, the interaction _has no effect_ as it requires bunching
+- For _bosons_ with $c\to \infty$, eigen-energies _coincide with that of fermions_, and eigenstates are _modulus of fermion eigenstates_
+- The boson ground state is then:
+$$\Psi_{0}(x_{1},\dots x_{N})\propto \prod_{i<j}^{N}\left|\sin\left( \frac{\pi(x_{i}-x_{j})}{L} \right)\right|$$
+- The _observables_ can be _mapped_ from the fermion case to the boson one as long as it is _insensitive to taking the modulus of the wavefunction_
+	- $\rho_{1}(x)$ and $\rho_{2}(x_{1},x_{2})$ can be mapped, but $g(x,y)$ cannot
 # Quantum Hall Effect
 - A _2D gas_ in a _magnetic field_ $\boldsymbol{B}$
 
@@ -43,10 +92,12 @@ $$\partial_{z}=\frac{1}{2}(\partial_{x}-i\partial_{y})\qquad \partial_{\bar{z}}=
 $$H = -\frac{2}{m}\left(\partial_z -\frac{qB \bar z}{4}\right)\left(\partial_{\bar z} +\frac{qB z}{4}\right) + \frac{\omega_c}{2}$$
 - The _cyclotron frequency_:
 $$\omega_{c}\equiv \frac{qB}{m}$$
-- States that satisfy:
+### Lowest Landau levels
+- The _ground states_ satisfy:
 $$\left(\partial_{\bar z} +\frac{qB z}{4}\right)\psi(z,\bar z) = 0$$
 
 - They have energy $\omega_{c}/2$ and are the _lowest Landau levels_ (LLL) $\psi(z,\bar{z})$
+
 - They have the form:
 $$\psi(z,\bar{z})=f(z)\exp\left( -\frac{qB}{4}|z|^{2} \right)$$
 - $f(z)$ is _arbitrary_, leading to _high degeneracy_
@@ -71,9 +122,10 @@ $$V_\text{harm}\to v\partial_{z}z=v(1+z\partial _{z})$$
 $$V_\text{harm}f_{n}=v(1+n)f_{n}$$
 
 - Then, consider _filling states_ from $n=0,1,\dots N-1$
-- Analagous to the [[Second quantisation#Example Free particles on a ring|1D Fermi gas]], where states are simply $z^{n}$
-	- 1D - powers of plane wave states $z$ / 2D - $z$ living on complex plane
-- Similar arguments give:
+- Analagous to the [[#Example Free particles on a ring|1D Fermi gas]], where states are simply $z^{n}$
+	- 1D - powers of plane wave states $z$ 
+	- 2D - $z$ living on complex plane
+- Similar arguments to the [[#Example Free particles on a ring|Fermi gas ground state]] give:
 $$\Psi(z_1,\ldots, z_N) = \prod_{j<k}^N (z_j-z_k) \exp\left(-\frac{1}{4}\sum_{j=1}^N\left|z_j\right|^2\right)$$
 - The _single particle density_:
 $$\rho_1(z,\bar z) = \frac{e^{-|z|^2/2}}{2\pi}\sum_{n=0}^{N-1} \frac{\left|z\right|^{2n}}{2^n n!} = \frac{1}{2\pi} \frac{\Gamma(N,|z|^2/2)}{(N-1)!}$$
@@ -84,7 +136,7 @@ $$\rho_1(z,\bar z) = \frac{e^{-|z|^2/2}}{2\pi}\sum_{n=0}^{N-1} \frac{\left|z\rig
 
 - There is _one state_ per _flux quantum_ $h/e$
 
-- A _different confining potential_ will change the _droplet shape_
+- A _different confining potential_ will change the _droplet shape_, but still with _constant density_
 
 ## Laughlin wavefunction
 - A _generalised Laughlin wavefunction_:
@@ -92,6 +144,8 @@ $$\Psi_m(z_1,\ldots, z_N) = \prod_{j<k}^N (z_j-z_k)^{m} \exp\left(-\frac{1}{4}\s
 - For $m\neq 1$, it is _not a product state_
 
 - For $m$ _odd/even_, it is (anti)symmetric hence it is for _fermions/bosons_
+
+- For _electrons_ with _Coulomb interaction_, $m$ odd is a _good variational wave-function_ as the electrons will tend to be _further away from each other_ compared to $m=1$
 
 ### m=2 boson state
 - For the _delta function repulsion_:
@@ -101,7 +155,7 @@ $$H_{\text{int}} = g\sum_{j<k}\delta(\mathbf{r}_j-\mathbf{r}_k)\quad,\quad g>0$$
 
 - Hence, _states with no interaction energy_ must have $\Psi_{2}$ as a _factor_
 	- For a _higher degree wave-function_, any perturbing harmonic potential will give a higher energy
-	- $\Psi_{2}$ is the _ground state_
+	- $\Psi_{2}$ is the _ground state for any state with zero interaction energy_
 
 - _Compared_ to an _uncorrelated sampling_, the Laughlin state results in _more uniform sampling_ due to the anti-bunching
 	- Left: uncorrelated ; Right: Laughlin
@@ -110,9 +164,9 @@ $$H_{\text{int}} = g\sum_{j<k}\delta(\mathbf{r}_j-\mathbf{r}_k)\quad,\quad g>0$$
 ### Plasma statistical analogy
 - Coulomb potential in _2 dimensions_:
 $$\nabla^{2}V=-q\delta(\boldsymbol{r}) \implies V=-\frac{q}{2\pi}\log|\boldsymbol{r}|$$
-- For a _constant charge density_:
-$$V=\frac{\rho_{0}}{4}|\boldsymbol{r}|^{2}$$
-- Then, for a _collection of charges_ with a _constant background_:
+- For a _constant charge density_ $-\rho_{0}$:
+$$V_\text{bg}(\boldsymbol{r})=\frac{\rho_{0}}{4}|\boldsymbol{r}|^{2}$$
+- Then, for a _collection of identical charges_ with a _constant background_:
 $$V(\mathbf{r}_1,\ldots,\mathbf{r}_N) = -\frac{q^2}{2\pi} \sum_{j<k}\log\left|\mathbf{r}_j-\mathbf{r}_k\right| + \frac{q\rho_0}{4}\sum_j \left|\mathbf{r}_j\right|^2$$
 
 - Then, at a non-zero temperature, the _Boltzmann factor_ for such a configuration is:
@@ -121,12 +175,13 @@ $$\displaylines{\exp[-\beta V(\mathbf{r}_1, \ldots, \mathbf{r}_N)] = \left|\Psi_
 $$\beta V[\rho] = -m\int d^2\mathbf{r}\, d^2\mathbf{r}'\, \rho(\mathbf{r})\log\left|\mathbf{r}-\mathbf{r}'\right|\rho(\mathbf{r}') + \frac{1}{2}\int d^2\mathbf{r}\, \left|\mathbf{r}\right|^2\rho(\mathbf{r})$$
 - Minimising w.r.t. $\rho(\boldsymbol{r})$ (by evaluating $V[\rho + \delta \rho]$ and applying $\nabla^{2}$ to the condition) gives:
 $$\rho(\boldsymbol{r})=\frac{1}{2\pi m}$$
+
 - For _regions with non-zero_ $\rho$, there is _filling fraction_ $1/m$ compared to the $m=1$ case
 	- With the thermo-dynamic limit, one _ignores_ the falling off of $\rho$ over a finite length
 	- In the continuum limit, one also ignores the _configurational entropy_ of the system
 - The _droplet_ now has radius $\sqrt{ 2Nm }$
 
-### Excited states and fractional charge
+## Excited states and fractional charge
 - The _simplest_ excited state is the _quasi-hole_ state
 	- It is also _degenerate_ as energy is independent of $Z$ 
 	- A _higher power_ of the excitation part would mean _multiple excitations_, meaning a higher energy
@@ -134,9 +189,23 @@ $$\Psi_\text{hole}(z_1,\ldots, z_N|Z) = \left(\prod_j (Z-z_j)\right)\Psi_m(z_1,\
 - Applying the plasma analogy again:
 $$V(\mathbf{r}_1, \ldots, \mathbf{r}_N)=-\frac{q^2}{2\pi m}\sum_j \log\left|\mathbf{r}_j-\mathbf{R}\right|-\frac{q^2}{2\pi} \sum_{j<k}\log\left|\mathbf{r}_j-\mathbf{r}_k\right|+ \frac{\rho q_0}{4}\sum_j \left|\mathbf{r}_j\right|^2$$
 - This state describes _adding a fractional charge_ $q/m$, at location $Z=X+iY$
-- The _plasma_ will then _screen_ the charge, leaving a _hole_ of fractionalised charge $-q/m$ 
+- The _plasma_ will then _screen_ the charge, leaving a _hole of fractionalised charge_ $-q/m$ 
 
+- The _normalisation_ of a quasi-hole state is then _approximated_ with the _Boltzmann weight_
+$$\int  \prod_{j=1}^{N}d^{2}z_{j}|\Psi _\text{hole}(z_{1},\dots z_{N}|Z)|^{2}\sim \exp\left( \frac{1}{2m}|Z|^{2} \right) $$
 ### Fractional statistics
+- The _two quasi-hole wavefunction_
+$$\Psi _\text{2 hole}(z_{1},\dots z_{N}|Z_{1},Z_{2})=\left( \prod_{j}(Z_{1}-z_{j})(Z_{2}-z_{j}) \right)\Psi_{m}(z_{1}\dots z_{N})$$
+- This is a _Coulomb plasma_ with _two_ $1/m$ charges
+	- There is _no interaction_ between the charges, each is only surrounded by its own _region of depleted density_
+
+- The _Boltzmann weight_ is then:
+$$\int  \prod_{j=1}^{N}d^{2} z_{j}|\Psi _\text{2 hole}(z_{1}\dots z_{N}|Z_{1},Z_{2})|^{2}\sim \exp\left( \frac{2}{m}\log|Z_{1}-Z_{2}|+\frac{1}{2m}(|Z_{1}|^{2}+|Z_{2}|^{2}) \right)$$
+- Interpreting this as a _probability density_ for a _two-particle wave-function_:
+$$\Psi _\text{2 hole}(Z_{1},Z_{2})\sim (Z_{1}-Z_{2})^{1/m}\exp\left( \frac{1}{4m}(|Z_{1}|^{2}+|Z_{2}|^{2}) \right)$$
+- For $m=1$, it is _antisymmetric_, therefore the holes are _fermions_
+
+- For $m>1$, it is _multi-valued_ and the holes have _fractional statistics_
 # Elastic chain
 - A _many-body_, _coupled_ system
 ![[Elastic chain.png]]
@@ -228,11 +297,12 @@ $$\Psi^{\text{S}}_{\alpha_{1}\alpha_{2}\cdots\alpha_{M}}(\mathbf{r}_1,\ldots,\ma
 
 ## Limits
 ### Thermodynamic limit
-- Limit of a _large system_, with $N \to \infty$
+- Limit of a _large system_, with $N \to \infty$:
+$$\sum_{|n|<(N-1)/2}\xrightarrow{N\to \infty}N\int_{-\pi}^{\pi}  \frac{d \eta}{2\pi} $$
 - One expects energy to be _extensive_
 
 - As $N\to \infty$, calculate ground state energy as:
-$$E_{0}\to \frac{N}{2} \int  \frac{d \eta}{2\pi} \omega=\frac{2N}{\pi} \sqrt{ \frac{k}{m} } $$
+$$E_{0}\to N\int  \frac{d \eta}{2\pi} \frac{\omega(\eta)}{2}=\frac{2N}{\pi} \sqrt{ \frac{k}{m} } $$
 
 ### Continuum limit
 - Treating the chain as a _continuum_ of length $L=Na$
@@ -244,6 +314,7 @@ $$\kappa=ka$$
 $$\frac{E_{0}}{L}=\left( \frac{N}{L} \right)^{2} \frac{2}{\pi} \sqrt{ \frac{\kappa}{\rho} }$$
 
 - As one _approaches a continuum of finite length_, the _energy density diverges_
+	- Due to an _infinite number of degrees of freedom_
 - The presence of _infinite ground state energy_, analagous to divergences in [[QFT#Hamiltonians|quantum field theory]]
 
 - Aside from the infinity, one can take a _continuum limit of the potential_ with $u(x=ja):=u_{j}$
@@ -320,11 +391,19 @@ N & n = 0 \mod N \\
 $$\langle{0}\rvert \rho_q \rho_{-q} \lvert{0}\rangle = \sum_{j,k=1}^N \langle{0}\rvert \exp(iq[x_j-x_k])\lvert{0}\rangle$$
 
 $$\langle{0}\rvert \rho_q \rho_{-q} \lvert{0}\rangle = \sum_{j,k=1}^N \exp\left(iqa[j-k]-\frac{q^2}{2mN}\sum_{|n| \leq (N-1)/2} \frac{1-\cos\left(\eta_n[j-k]\right)}{\omega(\eta_n)}\right)$$
-- _Bragg peaks_ are _replaced_ with cusps
+- _Bragg peaks_ are _replaced_ with _cusps_ due to the second exponent
 - _Long range order_ is destroyed in one dimension
 ![[1D Bragg peaks.png]]
+- Taking the $N\to \infty$ limit with $|j-k|\gg 1$, _near_ the first Bragg peak, using the same sum as in the [[#Position fluctuations]], the second sum is:
+$$\exp(i\Delta qa[j-k])|j-k|^{-2\pi l_\text{osc}^{2}/a^{2}}$$
+- $\Delta q$ is the _deviation_ of $q$ from the first Bragg peak
+- This gives:
+$$\braket{ 0|\rho_{q}\rho_{-q} |0  } \sim(\Delta q)^{-1+2\pi l_\text{osc}^{2}/a^{2}}$$
+- This _widens_ the peak, with _increasing disorder_ as $l_\text{osc}/a$ _increases_ due to quantum fluctuations
 
 - The _prevention_ of crystalisation forms _quantum liquids_
+
+- In _higher dimensions_, crystals can _stay in ordered configurations_
 # Spin models
 - Ising model:
 $$H = J\sum_{\langle j\,k\rangle} \sigma_j \sigma_k$$
@@ -341,7 +420,7 @@ $$\lvert{\Psi}\rangle=\sum_{\{\sigma_j=\pm\}}\Psi_{\sigma_1\cdots \sigma_N}\lver
 $$[s^{a}_{j}, s^{b}_{k}]=i\varepsilon_{abc}s^{c}_{j}\delta_{jk}$$
 - The Ising model is then:
 $$H=4J\sum_{\langle jk \rangle } s_{j}^{z}s_{k}^{z}$$
-- Does not respect rotational symmetry
+- The model does not respect rotational symmetry
 
 ## Heisenberg ferromagnetic chain
 $$H=J\sum_{\langle jk \rangle } \boldsymbol{s}_{j}\cdot \boldsymbol{s}_{k}$$
@@ -360,7 +439,7 @@ $$\ket{\text{FM}}\equiv \ket{+}_{1}\ket{+}_{2}\dots\ket{+}_{N} $$
 - It is an eigenstate of the Hamiltonian with eigenvalue $JN/4$
 
 - Consider the _total spin_ $\boldsymbol{S}$
-- An eigenstate of $S^{z}$ and $S^{2}$, with eigenvalues $N/2$ and $N (N/2-1)/2$
+- An eigenstate of $S^{z}$ and $S^{2}$, with eigenvalues $N/2$ and $(N/2) (N/2+1)$
 - $S^{x},S^{y},S^{z}$ _all commute_ with $H$ due to rotational invariance
 
 - This suggests that $\ket{\text{FM}}$ is part of a _multiplet_ of $N+1$ states
@@ -389,7 +468,7 @@ $$E=E_{0}+\omega(\eta)$$
 $$\omega(\eta)=2|J|\sin^{2} \frac{\eta}{2}$$
 - _Long wavelength_ excitations that break symmetries have _gapless dispersion relations_, as a result of [[Classical Field Theory#Goldstone's Theorem|Goldstone's Theorem]]
 
-- $N$ one-magnon states out of $2^{N}$ states
+- There are $N$ one-magnon states out of $2^{N}$ states of the system
 
 - The down spins propagate as _magnons_
 
@@ -403,9 +482,9 @@ $$\omega(\eta)=2|J|\sin^{2} \frac{\eta}{2}$$
 
 ### Anti-ferromagnets
 - Anti-ferromagnet: the _ground state_ for $J>0$
-$$\ket{\text{AFM}?}= $$
-- _Not_ an eigenstate of he Hamiltonian 
-	- Flipping spins moves them around
+$$\lvert{\text{AFM}}?\rangle  \equiv \lvert{+}\rangle_1\lvert{-}\rangle_{2}\cdots \lvert{+}\rangle_{N-1}\lvert{-}\rangle_{N}$$
+- _Not_ an eigenstate of the Hamiltonian 
+	- Flipping spins moves them around, more akin to a _dense gas of interacting magnons_
 
 - For the 1D chain, _quantum fluctuations_ are too strong for anti-ferromagnetic order
 
@@ -438,6 +517,8 @@ s^z &= \left(s - a^\dagger a\right)
 - Hamiltonian, _discarding_ the lower values of $s$
 $$H \sim NJs^2 + sJ\sum_j \left[a^\dagger_ja^{\vphantom{\dagger}}_{j+1}+a^\dagger_{j+1}a^{\vphantom{\dagger}}_j - 2a^\dagger_ja^{\vphantom{\dagger}}_j\right]$$
 - $s^{2}$ part: the $s^{z}s^{z}$ interaction
+- The state with _no quanta_ is then an eigenstate
+	- A _generalisation_ of the _ferromagnetic state_ with _aligned spins_ at $m_{s}=s$, the _ground state_ for $J<0$
 
 - Writing in terms of $x$ and $p$:
 $$\begin{align}
@@ -447,25 +528,34 @@ s_z &= \left(s - \frac{1}{2}[x^2 + p^2 - 1] \right)
 \end{align}$$
 - The Hamiltonian:
 $$H\sim NJ s^2 + sNJ+ \overbrace{sJ \sum_{j=1}^N \left[x_j x_{j+1} + p_j p_{j+1}-x_j^2 - p_j^2\right]}^{\equiv H^{(2)}} + \ldots$$
+- The quadratic part is a _harmonic chain_
+
 - Use the _Fourier expansions_:
+$$\begin{align}
+x_j(t) &= \frac{1}{\sqrt{N}}\sum_{|n| \leq (N-1)/2} q_n(t) e^{i\eta_n j}\\
+p_j(t) &= \frac{1}{\sqrt{N}}\sum_{|n| \leq (N-1)/2} \pi_n(t) e^{-i\eta_n j}
+\end{align}$$
+- The Hamiltonian is then:
+$$H^{(2)}=-2sJ\sum_{|n|<(N-1)/2} \sin^{2}\left( \frac{\eta_{n}}{2} \right)(q_{n}q_{-n}+\pi_{n}\pi_{-n})$$
 
 - One _regains_ the dispersion relation:
-	- Approximation is still _few oscillator quanta_
+	- Approximation is still for _few oscillator quanta_
 $$\omega_{\text{FM}}(\eta) = 4s\left|J\right|\sin^2(\eta/2)$$
 ### Anti-ferromagnetic case
 - For the _ferromagnet_, _close to ground state_, the harmonic approximation _applies_
 
 - The anti-ferromagnetic state has _many flipped spins_ to make it "far away" from FM state
 
-- Therefore, _rotate every other spin_ through $\pi$ about the $y$ axis
+- Therefore, _rotate every other spin_ through $\pi$ about the $y$ axis:
+$$(s_{j}^{x},s_{j}^{y},s_{j}^{z})\to (-s_{j}^{x},s_{j}^{y},-s_{j}^{z})\quad j\text{ odd}$$
 - This _changes the Hamiltonian_:
 $$H = -J \sum_{j=1}^N \left[s^x_j s^x_{j+1} - s^y_j s^y_{j+1} + s^z_j s^z_{j+1}\right]$$
 - Therefore, the _harmonic oscillation applies_ close to the AFM state
-$$\omega_{\text{AFM}}(\eta) = 2sJ\left|\sin(\eta)\right|$$
+$$\displaylines{H^{(2)}=2sJ\sum_{|n|<(N-1)/2}\left[ \sin^{2}\left( \frac{\eta_{n}}{2} \right)q_{n}q_{-n}+\cos^{2}\left( \frac{\eta_{n}}{2} \right)\pi_{n}\pi_{-n} \right] \\ \omega_{\text{AFM}}(\eta) = 2sJ\left|\sin(\eta)\right|}$$
 - _Vanishes_, and is _linear_ at $\eta=0$ and $\eta=\pi$
 
 - Ferromagnet: _both_ position and momentum terms _vanish_ at $\eta=0$
-- Anti-ferromagnet: _eiher_ position or momentum vanish at $\eta=0$ or $\eta=\pi$
+- Anti-ferromagnet: _either_ position or momentum vanish at $\eta=0$ or $\eta=\pi$
 
 - For the anti-ferromagnet, the _size_ of the unit cell is _doubled_, therefore _halving_ the period
 ### Ground state fluctuations
@@ -473,7 +563,8 @@ $$\omega_{\text{AFM}}(\eta) = 2sJ\left|\sin(\eta)\right|$$
 $$\braket{ \text{FM}|s_{j}^{z} | \text{FM} } =s \qquad \braket{ \text{AFM}|s_{j}^{z} | \text{AFM} } =s(-1)^{j}$$
 - In Holstein-Primakoff, there is an _additional term_
 $$s_{j}^{z}=s-a_{j}^{\dagger}a_{j}$$
-- FM: commutes with Harmonic Hamiltonian
+- FM: commutes with Harmonic Hamiltonian, hence _no fluctuations_
+
 - AFM: does not commute
 
 - AFM: evaluate $\Delta s=\braket{ 0|a_{j}^{\dagger}a_{j} | 0 }$
@@ -487,8 +578,6 @@ $$\begin{align}
 - From this, one gets:
 $$\Delta s\sim -\log \eta _\text{min}\sim -\log \left( \frac{2\pi}{N} \right)\sim \log N$$
 
-### Two-dimensional square lattice
-
 # Second quantisation and correlations
 - Use language of [[Second quantisation]]
 
@@ -497,38 +586,148 @@ $$\Delta s\sim -\log \eta _\text{min}\sim -\log \left( \frac{2\pi}{N} \right)\si
 $$\displaylines{\left[a^{\vphantom{\dagger}}_\alpha,a^{\vphantom{\dagger}}_\beta\right]=0,\quad \left[a^\dagger_\alpha,a^\dagger_\beta\right]=0,\quad \left[a^{\vphantom{\dagger}}_\alpha,a^\dagger_\beta\right] = \delta_{\alpha\beta} \\ \left[\psi^{\vphantom{\dagger}}(\mathbf{r}_1),\psi^\dagger(\mathbf{r}_2)\right]=\delta(\mathbf{r}_1-\mathbf{r}_2)\\
 \left[\psi^{\vphantom{\dagger}}(\mathbf{r}_1),\psi^{\vphantom{\dagger}}(\mathbf{r}_2)\right]=\left[\psi^\dagger(\mathbf{r}_1),\psi^\dagger(\mathbf{r}_2)\right]=0}
 $$
+- Action on a product state:
+$$\displaylines{\ket{\Psi}\leftrightarrow  \Psi(x_{1},\dots x_{N}) \\ \psi(x)\ket{\Psi} \leftrightarrow  \sqrt{ N }\Psi(x,x_{1},\dots x_{N-1})  }$$
+
 - _Fermions_:
 $$\displaylines{\left\{a^{\vphantom{\dagger}}_\alpha,a^{\vphantom{\dagger}}_\beta\right\}=0,\quad \left\{a^\dagger_\alpha,a^\dagger_\beta\right\}=0,\quad \left\{a^{\vphantom{\dagger}}_\alpha,a^\dagger_\beta\right\} = \delta_{\alpha\beta} \\ \left\{\psi^{\vphantom{\dagger}}(\mathbf{r}_1),\psi^\dagger(\mathbf{r}_2)\right\}=\delta(\mathbf{r}_1-\mathbf{r}_2)\\
 \left\{\psi^{\vphantom{\dagger}}(\mathbf{r}_1),\psi^{\vphantom{\dagger}}(\mathbf{r}_2)\right\}=\left\{\psi^\dagger(\mathbf{r}_1),\psi^\dagger(\mathbf{r}_2)\right\}=0}$$
 
 - Constructing _product states_:
 $$\lvert{\mathbf{N}}\rangle \equiv \prod_\alpha \frac{\left(a^\dagger_\alpha\right)^{N_\alpha}}{\sqrt{N_\alpha!}}\lvert{\text{VAC}}\rangle$$
+
+- For _fermions_, the _ground state_ is the _Fermi sea_:
+$$\ket{\text{Fermi sea}}=\prod_{|\boldsymbol{k}|<k_{F}}a_{\boldsymbol{k}}^{\dagger}\ket{\text{VAC}}  $$
 ## Representation of operators
 - Second quantised _one particle operators_:
 $$\hat A = \sum_{\alpha\beta}A_{\alpha\beta}a^\dagger_\alpha a^{\vphantom{\dagger}}_\beta$$
 - Matrix element between _product states_:
 $$\displaylines{\langle{\mathbf{N}}\rvert \hat A \lvert \mathbf{N'} \rangle = A_{\alpha\beta} \sqrt{N_\alpha N'_\beta} \\ N_{\beta}=N_{\beta}'-1 \qquad N_{\alpha}=N_{\alpha}'+1}$$
-
+### Hamiltonian
 - The _single particle Hamiltonian_:
 $$\begin{align}
-    \mathop{\hat H}&=\int d\mathbf{r}\left[-\frac{1}{2m}\psi^\dagger(\mathbf{r})\nabla^{2}\psi^{\vphantom{\dagger}}(\mathbf{r})+V(\mathbf{r})\psi^\dagger(\mathbf{r})\psi^{\vphantom{\dagger}}(\mathbf{r})\right]\nonumber\\
+    \mathop{\hat H}&=\int d\mathbf{r}\left[-\frac{1}{2m}\psi^\dagger(\mathbf{r})\nabla^{2}\psi^{\vphantom{\dagger}}(\mathbf{r})+V(\mathbf{r})\psi^\dagger(\mathbf{r})\psi^{\vphantom{\dagger}}(\mathbf{r})\right]\\
                     &=\int d\mathbf{r}\left[\frac{1}{2m}\nabla\psi^\dagger(\mathbf{r})\cdot\nabla\psi^{\vphantom{\dagger}}(\mathbf{r})+V(\mathbf{r})\psi^\dagger(\mathbf{r})\psi^{\vphantom{\dagger}}(\mathbf{r})\right]
 \end{align}$$
-- The _single particle density matrix_:
-$$\displaylines{g(\mathbf{r},\mathbf{r}')= \langle{\Psi}\rvert \psi^\dagger(\mathbf{r})\psi^{\vphantom{\dagger}}(\mathbf{r}') \lvert \Psi \rangle \\ \rho(\boldsymbol{r})=\psi ^{\dagger}(\boldsymbol{r})\psi(\boldsymbol{r})}$$
+- From _Heisenberg's equation of motion_, one gets the _time-dependent Schrodinger equation_ for the field operator
+$$\begin{equation}
+    \begin{split}
+    i\partial_{t}\psi^{\vphantom{\dagger}}(\mathbf{r},t) &= -\left[\mathop{\hat H},\psi^{\vphantom{\dagger}}(\mathbf{r},t)\right]\\
+    &= -\frac{1}{2m}\nabla^{2}\psi^{\vphantom{\dagger}}(\mathbf{r},t)+V(\mathbf{r})\psi^{\vphantom{\dagger}}(\mathbf{r},t)
+    \end{split}
+\end{equation}$$
+### Single particle density operator
+- The [[#Many-body wave-functions|single particle density]] in terms of _field operators_
+$$\rho(x)\equiv\delta(x-r)\implies \hat{\rho}(x)\equiv \psi ^{\dagger}(x)\psi(x)$$
+- Integrating over position then gives the _total number of particles_:
+$$\int  dx\,\psi ^{\dagger}(x)\psi(x)=\sum_{\alpha}a^{\dagger}_{\alpha}a_{\alpha}=\sum_{\alpha}N_{\alpha} $$
+- The _expectation value_ for a given product state:
+$$\braket{ N_{0},N_{1}\dots |\rho(\boldsymbol{r})| N_{0},N_{1}\dots } =\sum_{\alpha}N_{\alpha}|\varphi_{\alpha}(\boldsymbol{r})|^{2}$$
+- Also consider the _Fourier components_:
+$$\rho_{\boldsymbol{q}}\equiv \int  d\boldsymbol{r}\,\rho(\boldsymbol{r})\exp(-i\boldsymbol{q}\cdot \boldsymbol{r})=\sum_{\boldsymbol{k}}a^{\dagger}_{\boldsymbol{k}-\boldsymbol{q}}a_{\boldsymbol{k}} $$
+- The $q=0$ mode is the _total particle number_
+### Single particle current
+- The _particle current_, second quantised:
+$$\boldsymbol{j}(\boldsymbol{r})=-\frac{i}{2m}[\psi ^{\dagger}(\boldsymbol{r})\nabla \psi(\boldsymbol{r})-\nabla \psi ^{\dagger}(\boldsymbol{r})\psi(\boldsymbol{r})]$$
+- The Fourier component:
+$$\boldsymbol{j}_{\boldsymbol{q}}\equiv \int  d\boldsymbol{r} \,\boldsymbol{j}(\boldsymbol{r}) \exp(-i\boldsymbol{q}\cdot \boldsymbol{r})=\frac{1}{m}\sum_{\boldsymbol{k}}\left( \boldsymbol{k}-\frac{\boldsymbol{q}}{2} \right)a^{\dagger}_{\boldsymbol{k}-\boldsymbol{q}}a_{\boldsymbol{k}}$$
+- The $q=0$ mode is simply _total momentum_ divided by mass
 
+### Single particle density matrix
+- In terms of _field operators_, the [[#Many-body wave-functions|single particle density matrix]]:
+$$g(\boldsymbol{r},\boldsymbol{r}')=\braket{ \Psi|\psi ^{\dagger}(\boldsymbol{r})\psi (\boldsymbol{r}') | \Psi } $$
+- For a _product state_:
+$$g(\boldsymbol{r},\boldsymbol{r}')=\sum_{\alpha}N_{\alpha}\varphi_{\alpha}^{*(\boldsymbol{r})}\varphi_{\alpha}(\boldsymbol{r}')$$
+
+### Two particle operators
 - Second quantised _two particle operators_:
 $$\hat B = \frac{1}{2}\sum_{\alpha\beta\gamma\delta} B_{\alpha\beta,\gamma\delta}a^\dagger_\alpha a^\dagger_\beta a^{\vphantom{\dagger}}_\delta a^{\vphantom{\dagger}}_\gamma$$
 - Matrix elements:
 $$\displaylines{\langle{\mathbf{N}}\rvert \hat B \lvert \mathbf{N'} \rangle =\left[B_{\alpha\beta,\gamma\delta}\pm B_{\alpha\beta,\delta\gamma}\right] \sqrt{N_\alpha N_\beta N'_\gamma N'_\delta} \\ N_{\gamma ,\delta}=N_{\gamma,\delta}'-1 \qquad N_{\alpha,\beta}=N_{\alpha,\beta}'+1}$$
 - A _two-particle interaction Hamiltonian_:
 $$\hat H_\text{int.} = \frac{1}{2}\int d\mathbf{r}_1 d\mathbf{r}_2\, U(\mathbf{r}_1-\mathbf{r}_2)\psi^\dagger(\mathbf{r}_1)\psi^\dagger(\mathbf{r}_2)\psi^{\vphantom{\dagger}}(\mathbf{r}_2)\psi^{\vphantom{\dagger}}(\mathbf{r}_1)$$
+- It is the _normal ordered_ equivalent of:
+$$H_\text{int}=\frac{1}{2}\int  d\mathbf{r}_{1}\,d\mathbf{r}_{2}\,U(\mathbf{r}_{1}-\mathbf{r}_{2}) \rho(\mathbf{r}_{1})\rho(\mathbf{r}_{2})$$
 ## Correlations
-- The _pair distribution function_:
+- The [[#Many-body wave-functions|pair distribution function]]:
 $$\rho_2(x,y) =\langle{\Psi}\rvert \psi^\dagger(x)\psi^\dagger(y)\psi^{\vphantom{\dagger}}(y)\psi^{\vphantom{\dagger}}(x) \lvert \Psi \rangle$$
-- Wick's Theorem for _product states_:
+- Evaluate for _product states_, going into the _energy eigenstate_ basis
+$$  \rho_2(x,y)=\sum_{\alpha, \beta, \gamma, \delta}\varphi^{*}_{\alpha}(x)\varphi^{*}_{\beta}(y)\varphi^{}_{\gamma}(y)\varphi^{}_{\delta}(x)\langle{\Psi}\rvert a^\dagger_{\alpha}a^\dagger_{\beta}a^{\vphantom{\dagger}}_{\gamma}a^{\vphantom{\dagger}}_{\delta} \lvert \Psi \rangle$$
+- The _possibilities_ to sum over are:
+	- $\alpha=\beta=\gamma=\delta$ is a _sum over only one index_, which scales with $L$ instead of $L^{2}$ in the continuum limit
+	- Does not apply for _Bose condensates_, where one state can have a significant fraction of particles
+$$\alpha=\delta,\beta=\gamma \quad \text{ or }\quad \alpha=\gamma,\beta=\delta$$
+
+- Ths results in _Wick's theorem_:
 $$\rho_2(x,y) = \rho_1(x)\rho_1(y) \pm g(x,y)g(y,x)$$
-- For _Fermi gases_, this shows _Friedel oscillations_
+- For _Fermi gases_, this shows _exclusion_ as $|x-y|\to 0$
+- There are also _liquid-like oscillations_ where there are _particles_, known as _Friedel oscillations_
+![[Friedel oscillations.png|400]]
+## Interference of Bose-Einstein condensates
+- The wave-function for a _Bose condensate_ of ground state $\varphi_{0}(\boldsymbol{r})$
+$$\ket{\Psi}=\frac{1}{\sqrt{ N! }} \left( a_{0}^{\dagger} \right)^{N} \ket{\text{VAC}}  $$
+- Let there be a Bose-Einstein condensate initially in a _localised trap_
+- Let the trap be _released_, and the condensate has some _momentum distribution_
+
+- The mean density:
+$$\langle \rho(\boldsymbol{r},t) \rangle = N|\varphi_{0}(\boldsymbol{r},t)|^{2}$$
+- Let the state disperse as a _Gaussian_ of initial width $R_{0}$
+	- Initial _momentum distribution_ is a Gaussian of width $\hbar/R_{0}$
+$$\displaylines{\varphi(\boldsymbol{r},t)=\frac{1}{(\pi R_{t}^{2})^{3/4}}\exp\left[ -\frac{|\boldsymbol{r}|^{2}(1-i\hbar t/mR_{0}^{2})}{2R_{t}^{2}} \right] \\ R_{t}^{2}=R_{0}^{2}+\left( \frac{\hbar t}{mR_{0}} \right)^{2}}$$
+- At long times, $R_{t} \sim \hbar t/mR_{0}$, and:
+$$|\varphi(\boldsymbol{r},t\to \infty)|^{2} \propto \exp\left[ -\left( \frac{mR_{0}}{\hbar t}|\boldsymbol{r}| \right)^{2} \right]$$
+- The _final density distribution_ simply reflects the _initial momentum distribution_
+### Interference
+- Let there be two wells separated by displacement $\boldsymbol{d}$
+- Let the condensates in the wells have _relative phase_ $\theta$, and population $N_{L},N_{R}$
+	- Can be accomplished by _adiabatically separating_ one well
+- They separately evolve as:
+$$\displaylines{\varphi_{L/R}(\boldsymbol{r},t)=\frac{1}{(\pi R_{t}^{2})^{3/4}}\exp\left[ -\frac{|\boldsymbol{r}\pm \boldsymbol{d}/2|^{2}(1-i\hbar t/mR_{0}^{2})}{2R_{t}^{2}} \right] \\ |\varphi_{L/R}(\boldsymbol{r},t\to \infty)|^{2} \propto \exp\left[ -\left( \frac{mR_{0}}{\hbar t}|\boldsymbol{r}\pm \boldsymbol{d}/2| \right)^{2} \right]}$$
+
+- The initial state:
+$$\ket{N_{L},N_{R}}_{\theta}=\frac{1}{\sqrt{ N! }}\left[ \sqrt{ \frac{N_{L}}{N} }\exp\left( -\frac{i\theta}{2} \right)a_{L}^{\dagger}+\sqrt{ \frac{N_{R}}{N} }\exp\left( \frac{i\theta}{2} \right)a_{R}^{\dagger} \right]^{N}\ket{\text{VAC}}  $$
+- Single particle density:
+$$\displaylines{\rho(\boldsymbol{r})=\psi ^{\dagger}(\boldsymbol{r})\psi(\boldsymbol{r}) \hspace{1cm} \psi(\boldsymbol{r})=\varphi_{L}(\boldsymbol{r})a_{L} +\varphi_{R}(\boldsymbol{r})a_{R}\\ \begin{align}
+\langle \rho(\boldsymbol{r},t) \rangle_{\theta}&=N_{L}|\varphi_{L}(\boldsymbol{r},t)|^{2}+N_{R}|\varphi_{R}(\boldsymbol{r},t)|^{2}+2\sqrt{ N_{L}N_{R} }\mathrm{Re}[e^{i\theta}\varphi_{L}^{*}(\boldsymbol{r},t)\varphi_{R}(\boldsymbol{r},t)] \\ &=N_{L}|\varphi_{L}(\boldsymbol{r},t)|^{2}+N_{R}|\varphi_{R}(\boldsymbol{r},t)|^{2}+\rho_{\text{int}}(\boldsymbol{r},t)
+\end{align}} $$
+- As the condenstaes _overlap_, the latter term indicates _interference_, dependent on the _relative phase_
+$$\displaylines{\rho_{\text{int}}(\boldsymbol{r},t)=A(\boldsymbol{r},t)\cos\left[ \theta+\frac{\hbar \boldsymbol{r}\cdot \boldsymbol{d}}{mR_{0}^{2}R_{t}^{2}}t \right] \\ A(\boldsymbol{r},t)=\frac{2\sqrt{ N_{L}N_{R} }}{\pi^{3/2}R_{t}^{3}}\exp\left( -\frac{\boldsymbol{r}^{2}+\boldsymbol{d}^{2}/4}{R_{t}^{2}} \right)}$$
+- At _long times_, the interference fringes have separation $2\pi \hbar t/md$
+
+- This is the _Hanbury Brown and Twiss effect_
+### With Fock states
+- Let the two wells have _no phase relation_ to each other
+	- Made up of _Fock states_
+$$\ket{N_{L},N_{R}}_{F} = \frac{1}{\sqrt{ N_{L}!N_{R}!}} (a_{L}^{\dagger})^{N_{L}}(a_{R}^{\dagger})^{N_{R}}\ket{\text{VAC}}  $$
+- In this case:
+	- $\langle \rho \rangle$ only the _expected value_ of many measurements
+$$\langle \rho(\boldsymbol{r},t) \rangle_{F}=N_{L}|\varphi_{L}(\boldsymbol{r},t)|^{2}+N_{R}|\varphi_{R}(\boldsymbol{r},t)|^{2} $$
+- However, the _correlation_ shows interference fringes which _depend on the correlation distance_
+$$\begin{align}
+\langle :\rho(\boldsymbol{r})\rho(\boldsymbol{r}') :\rangle = &\langle \rho (\boldsymbol{r}) \rangle_{F} \langle \rho(\boldsymbol{r}') \rangle_{F} + N_{L}N_{R} \varphi_{L}^{*}(\boldsymbol{r})\varphi_{R}^{*}(\boldsymbol{r}')\varphi_{L}(\boldsymbol{r}')\varphi_{R}(\boldsymbol{r}')  \\
+ &+N_{L}N_{R}  \varphi_{R}^{*}(\boldsymbol{r})\varphi_{L}^{*}(\boldsymbol{r}')\varphi_{R}(\boldsymbol{r}')\varphi_{L}(\boldsymbol{r}')  
+\end{align}$$
+- In _each measurement_, there will be _fringes_ but with a _random phase_
+
+
+- _Expectation values_ for a system of a Fock state are identical to a _relative phase state after averaging_
+$$\displaylines{\begin{align}
+\rho&=\int \, \frac{d\theta}{2\pi} \ket{N_{L},N_{R}}_{\theta}\bra{N_{L},N_{R}}_{\theta} \\ &= \frac{1}{ N! } \sum_{n} \ket{n,N-n} \bra{n,N-n} 
+\end{align} \\ \ket{n,N-n}=\pmatrix{N \\ n} (a_{L}^{\dagger})^{n}(a_{R}^{\dagger})^{N-n}\ket{\text{VAC}}  }  $$
+### Distinguishing between momentum distributions
+- Distinguish between the _Bose-Einstein condensate_ (sharp in momenta) and the _Mott insulator_ (sharp in position)
+- The single particle density:
+$$\displaylines{\hat{\psi}(x,t)=\frac{1}{\sqrt{ N }}\sum_{j=1}^{N} \varphi_{j}(x,t)a_{j} \\ \rho(x,t)=\psi ^{\dagger}(x,t)\psi(x,t) \\ \langle  \rho(x,t)\rangle = \frac{1}{N}\sum_{j,k} \varphi_{j}^{*}\varphi_{k}\langle a_{j}^{\dagger}a_{k} \rangle }$$
+
+- In the far field, this evolves as
+$$\varphi_{j}^{*}\varphi_{k} \sim\exp\left( \frac{(x_{j}-x_{k})x_{0}\alpha}{\hbar t} \right)$$
+- For a _Bose-Einstein condensate_, $\langle a_{j}^{\dagger}a_{k} \rangle \sim N/L$ (long range order)
+- There is _interference_ between different sites
+- There is a _narrow peak_ in momentum space distribution
+
+- For a _Mott insulator_, $\langle a_{j}^{\dagger}a_{k} \rangle = (N/L)\delta_{jk}$
+- They are _localised_ in position space
+
 
 ## Hartree-Fock theory
 - The _interaction Hamiltonian_:
@@ -574,11 +773,40 @@ $$E_{\text{Fock}} =-\frac{V_0}{4} \int d\mathbf{r}\, \rho(\mathbf{r})^2-V_0\int 
 
 ### Stoner criterion for ferromagnetism
 - _Polarising_ spins in the Fermi gas has a _cost in kinetic energy_
-- Kinetic energy for a _Fermi gas_
+- Kinetic energy for a _Fermi gas_, assume _different spin densities_
+	- No need to assume quadratic dispersion
+$$E_\text{kin}(n_{\uparrow},n_{\downarrow})\propto \frac{L^{3}}{m}(n_{\uparrow}^{5/3}+n_{\downarrow}^{5/3})$$
 
-- Account for _different spins_, and rewrite in terms of _spin polarisation_
+- Rewrite in terms of _spin polarisation_:
+$$\displaylines{P\equiv \frac{n_{\uparrow}-n_{\downarrow}}{n} \\ E_\text{kin}(P)=\frac{E_{K}}{2}[(1+P)^{5/3}+(1-P)^{5/3}]}$$
+- Kinetic energy is _minimised_ for _no spin polarisation_
 
+- Meanwhile, the _Hartree-Fock interaction energy_, for the _contact interaction_:
+$$E_\text{HF}=\frac{V_{0}L}{2}n^{2}-\frac{V_{0}L^{3}}{2}(n_{\uparrow}^{2}+n_{\downarrow}^{2})=\frac{E_{V}}{2}(1-P^{2})$$
+- The interaction energy favours _polarisation_
 
+- The _polarisation_ of the ground state depends on the _relative sizes_ of kinetic and potential energy
+
+### Excited states
+- Use the plane wave basis:
+$$\begin{align}
+    \psi^{\vphantom{\dagger}}(\mathbf{r})\equiv\frac{1}{L^{3/2}}\sum_{\mathbf{k}} \exp(i\mathbf{k}\cdot\mathbf{r})a^{\vphantom{\dagger}}_{\mathbf{k}},\\
+  \psi^\dagger(\mathbf{r})\equiv\frac{1}{L^{3/2}}\sum_{\mathbf{k}} \exp(-i\mathbf{k}\cdot\mathbf{r})a^\dagger_{\mathbf{k}}
+\end{align}$$
+- Represent the _interaction potential_ in terms of the Fourier components:
+$$U(\mathbf{r}-\mathbf{r}') = \frac{1}{L^3}\sum_\mathbf{q}\tilde U(\mathbf{q}) \exp(i\mathbf{q}\cdot[\mathbf{r}-\mathbf{r}'])$$
+- The _interaction Hamiltonian_ is then:
+$$\hat H_\text{int.}  = \frac{1}{2L^3} \sum_{\mathbf{k}_1+\mathbf{k}_2=\mathbf{k}_3+\mathbf{k}_4} \tilde U(\mathbf{k}_1-\mathbf{k}_4) a^\dagger_{\mathbf{k}_1}a^\dagger_{\mathbf{k}_2}a^{\vphantom{\dagger}}_{\mathbf{k}_3}a^{\vphantom{\dagger}}_{\mathbf{k}_4}$$
+- Interactions can be represented in terms of _Feynman diagrams_
+![[Interaction Feynman diagram.png|400]]
+- The _Hartree_ and _Fock_ terms then depend on the _pairings_:
+![[Interaction Hartree Fock.png|400]]
+$$\langle{\mathbf{N}}\rvert \hat H_\text{int.} \lvert \mathbf{N} \rangle = \frac{1}{2V}\tilde U(0) \sum_{\mathbf{k}_1,\mathbf{k}_2} N_{\mathbf{k}_1}N_{\mathbf{k}_2} - \frac{1}{2V} \sum_{\mathbf{k}_1,\mathbf{k}_2} \tilde U(\mathbf{k}_1-\mathbf{k}_2) N_{\mathbf{k}_1}N_{\mathbf{k}_2}$$
+- The _Hartree term_ simply depends on the _total number_ of particles
+- The _Fock term_ will depend on _individual occupations_
+
+- _Adding_ a single particle to state $\boldsymbol{k}$ will add _interaction energy_
+$$\Delta U_{\mathbf{k}} = \frac{\tilde U(0)}{V} \sum_{\mathbf{k}'} N_{\mathbf{k}'} - \frac{1}{V}\sum_{\mathbf{k}'} \tilde U(\mathbf{k}-\mathbf{k}') N_{\mathbf{k}'}$$
 # Hubbard model
 - Assume that particles stay in _highly localised orbitals_ on a _lattice_
 - In this limit, the _kinetic energy_ of the particles is from a _tight binding Hamiltonian_:

@@ -409,13 +409,13 @@ $$F_\text{H-K}[n]=T[n]+E_\text{ee}[n]$$
 - The _exact forms_ of the kinetic energy and interaction energies are _unknown_
 
 - For $E_\text{ee}$, the _largest contribution_ is the _classical Coulomb energy_ $J[n]$:
-$$E_\text{ee}[n]=\frac{1}{2}\iint  d^{3}\boldsymbol{r}\,d^{3}\boldsymbol{r}' \frac{e^{2}n(\boldsymbol{r})n(\boldsymbol{r}')}{4\pi\epsilon_{0}|\boldsymbol{r}-\boldsymbol{r}'|}+E_\text{NCl}[n]=J[n]+E_\text{NCl}[n]$$
+$$E_\text{ee}[n]=\frac{1}{2}\iint  d^{3}\boldsymbol{r}\,d^{3}\boldsymbol{r}' \frac{e^{2}n(\boldsymbol{r})n(\boldsymbol{r}')}{4\pi\epsilon_{0}|\boldsymbol{r}-\boldsymbol{r}'|}+E_\text{NCl}[n]\equiv J[n]+E_\text{NCl}[n]$$
 - $E_\text{NCl}$ is the _non-classical contribution_ to the interaction energy
 	- Such as _exchange energy_ and _higher order correlations_
 	- The _self interaction term_ cancels out with the corresponding term in $J[n]$
 
 - Meanwhile, $T[n]$ can also be separated
-- Let $T_{S}[n]$ be the _exact kinetic energy_ of a _non-interacing reference system_ with the _same elecronic density_ $n(\boldsymbol{r})$ as the interacting system
+- Let $T_{S}[n]$ be the _exact kinetic energy_ of a _non-interacting reference system_ with the _same elecronic density_ $n(\boldsymbol{r})$ as the interacting system
 	- The two systems can have the _same density_ as the Hamiltonians differ in _not just_ the external potential
 
 - Let the _reference system_ have eigenstates $\Psi_{i}(\boldsymbol{r},\sigma)=\phi_{i}(\boldsymbol{r})\chi_{i}(\sigma)$, with the wave function being a _single Slater determinant_:
@@ -427,7 +427,7 @@ $$\displaylines{F_\text{HK}[n]=T_{S}[n]+J[n]+E_\text{XC}[n] \\ E_\text{XC}[n]=(T
 
 - From this, using definitions from the [[#The ground state energy|Hartree-Fock approximation]], write $E_{0}$ in terms of the _eigenstates of the reference system_
 	- Including the _electron self-interaction_ $i=j$
-$$E_{0}[n]=\sum_{i=1}^{N}[\Psi_{i}^{\dagger}\Psi _{i}|h]+\frac{1}{2}\sum_{i,j=1}^{N}[\Psi_{i}^{\dagger}\Psi_{i}|g|\Psi_{j}^{\dagger}\Psi_{j}]+E_\text{XC}[n]$$
+$$\displaylines{E_{0}[n]=\sum_{i=1}^{N}[\Psi_{i}^{\dagger}\Psi _{i}|h]+\frac{1}{2}\sum_{i,j=1}^{N}[\Psi_{i}^{\dagger}\Psi_{i}|g|\Psi_{j}^{\dagger}\Psi_{j}]+E_\text{XC}[n] \\ h=-\frac{\hbar^{2}}{2m}\nabla_{r}^{2}\qquad g=\frac{e^{2}}{4\pi\epsilon_{0}} \frac{1}{|\boldsymbol{r}-\boldsymbol{r}'|}}$$
 ### Minimisation
 - Use _calculus of variations_ to derive the eigenstates _of the reference system_
 - Assuming that $\Psi_{i}$ are orthogonal:
@@ -461,7 +461,7 @@ $$\left( -\frac{\hbar^{2}}{2m}\nabla ^{2}+V_\text{Ne}(\boldsymbol{r})+U_{H}(\bol
 - The Hartree potential:
 $$U_{H}(\boldsymbol{r})=\sum_{i=1}^{N}\int  d\boldsymbol{x}' \frac{e^{2}|\Psi_{i}(\boldsymbol{x}')|^{2}}{4\pi\epsilon_{0}|\boldsymbol{r}-\boldsymbol{r}'|}=\int  d^3\boldsymbol{r} \frac{e^{2}n(\boldsymbol{r}')}{4\pi\epsilon_{0}|\boldsymbol{r}-\boldsymbol{r}'|}$$
 - The _initial guess_ for the Kohn-Sham orbitals are typically from _setting_ $U_{H}$ and $V_\text{XC}$ to $0$
-- Then, _solve iteratively_
+- Then, _solve iteratively_ like the [[#Solving the Hartree-Fock Equation|Hartree-Fock equation]]
 
 ### Kohn-Sham eigenvalues and orbitals
 - The _sum of Kohn-Sham eigenvalues_, from the equations:
@@ -570,7 +570,7 @@ $$\varepsilon_{2}=\frac{2\pi e^{2}}{\epsilon_{0}q^{2}} \frac{1}{V} \sum_{\alpha,
 - Then using the [[#Kramers-Kronig relations]]
 $$\varepsilon_{1}=1+\frac{2 e^{2}}{\epsilon_{0}q^{2}} \frac{1}{V} \sum_{\alpha,\beta}|\braket{ \Psi_{\alpha}|e^{i\boldsymbol{q}\cdot \boldsymbol{r}} |\Psi_{\beta}}|^{2}\frac{f(E_{\alpha})-f(E_{\beta})}{E_{\beta}-E_{\alpha}-\hbar\omega}$$
 - One can write $\varepsilon$ as:
-$$\varepsilon=\lim_{ \eta \to 0^{+} } \left(1+{2 e^{2}}{\epsilon_{0}q^{2}} \frac{1}{V} \sum_{\alpha,\beta}|\braket{ \Psi_{\alpha}|e^{i\boldsymbol{q}\cdot \boldsymbol{r}} |\Psi_{\beta}}|^{2}\frac{f(E_{\alpha})-f(E_{\beta})}{E_{\beta}-E_{\alpha}-\hbar\omega-i\eta}\right)$$
+$$\varepsilon=\lim_{ \eta \to 0^{+} } \left(1+\frac{2 e^{2}}{\epsilon_{0}q^{2}} \frac{1}{V} \sum_{\alpha,\beta}|\braket{ \Psi_{\alpha}|e^{i\boldsymbol{q}\cdot \boldsymbol{r}} |\Psi_{\beta}}|^{2}\frac{f(E_{\alpha})-f(E_{\beta})}{E_{\beta}-E_{\alpha}-\hbar\omega-i\eta}\right)$$
 
 
 - The _elementary excitations_ of an _independent electron system_ occur when the electron _changes energy levels_, leading to _singularities_ in the _response function_
@@ -580,7 +580,7 @@ $$\varepsilon=\lim_{ \eta \to 0^{+} } \left(1+{2 e^{2}}{\epsilon_{0}q^{2}} \frac
 $$\displaylines{\Psi_{\alpha}(\boldsymbol{r})=\frac{1}{\sqrt{ V }}\exp(i\boldsymbol{k}_{\alpha}\cdot \boldsymbol{r})\qquad E_{\alpha}=\frac{\hbar^{2}|\boldsymbol{k}_{\alpha}|^{2}}{2m} \\ \braket{ \Psi_{\alpha}|e^{i\boldsymbol{q}\cdot \boldsymbol{r}} |\Psi_{\beta}  } =\delta_{\boldsymbol{k}_{\beta},\boldsymbol{q}+\boldsymbol{k}_{\alpha}}}$$
 
 - The dielectric function then has the form:
-$$\varepsilon(\boldsymbol{q},\omega)=1+2e^{2}\epsilon_{0} q^{2} \frac{1}{V} \sum_{\boldsymbol{k}} \frac{f(E_{\boldsymbol{k}})-f(E_{\boldsymbol{k}+\boldsymbol{q}})}{E(\boldsymbol{k}+\boldsymbol{q})-E(\boldsymbol{k})-\hbar\omega-i\eta}$$
+$$\varepsilon(\boldsymbol{q},\omega)=1+\frac{2e^{2}}{\epsilon_{0} q^{2} }\frac{1}{V} \sum_{\boldsymbol{k}} \frac{f(E_{\boldsymbol{k}})-f(E_{\boldsymbol{k}+\boldsymbol{q}})}{E(\boldsymbol{k}+\boldsymbol{q})-E(\boldsymbol{k})-\hbar\omega-i\eta}$$
 - At _zero temperature_, as the Fermi distribution is a _step function_, the sum can be made into an _integral over phase space_:
 $$\displaylines{\varepsilon_{1}(\boldsymbol{q},0)=1+\frac{k_\text{TF}^{2}}{q^{2}}F\left( \frac{q}{2k_{F}} \right) \qquad \varepsilon_{2}(\boldsymbol{q},0)=0 \\
 k_\text{TF}^{2}=\frac{me^{2}k_{F}}{\epsilon_{0}\pi^{2}\hbar^{2}} \qquad F(x)=\frac{1}{2}+\frac{1-x^{2}}{4x}\ln\left| \frac{1+x}{1-x}\right|}$$
@@ -1068,7 +1068,7 @@ $$H=-J\sum_{\braket{ i,j } }\boldsymbol{S}_{i}\cdot \boldsymbol{S}_{j}+\text{con
 - $J$ is based on including _intra and inter-site Coulomb interactions_, and can be _positive or negative_, which yields _ferromagnetic_ and _anti-ferromagnetic_ states respectively
 	- Useful model for _magnetism_, including _magnetic semi-conductors_
 
-- $J$ can arise from _atomic exchange_ pr _molecular exchange_
+- $J$ can arise from _atomic exchange_ or _molecular exchange_
 	- _Atomic exchange_ comes from electrons occupying (nearly) _orthogonal atomic orbitals_, and typically favours _ferromagnetic alignment_ (triplets) in order to _reduce Coulomb repulsion_
 	- _Molecular exchange_ comes from _overlapping orbitals_, such that _antiferromagnetic alignment_ (singlets) can be favourable, and _bonding orbitals_ can be formed to _delocalise_ the electrons
 ## Mean-field theory
@@ -1260,6 +1260,7 @@ $$J(r)\propto \frac{\sin(2k_{F}r)}{(2k_{F}r)^{4}}-\frac{\cos(2k_{F}r)}{(2k_{F}r)
 	- Periodicity due to _Friedel oscillations_
 
 - It is observable in many _rare earth metals/compounds_
+- Contributes to [[#Giant magnetoresistance from RKKY|giant magnetoresistance]]
 
 #### Paramagnetic response in an electron gas
 - Let there be a _spatially varying magnetic field_ $H(\boldsymbol{r})=H(\boldsymbol{q})\cos(\boldsymbol{q}\cdot \boldsymbol{r})$
@@ -1313,17 +1314,125 @@ $$\displaylines{\chi(\boldsymbol{r})\approx -\frac{2\chi_{P}k_{F}^{3}}{\pi} \fra
 - At larger distances, it can _vary between_ ferromagnetic and anti-ferromagnetic behaviour
 
 ### Double exchange mechanism
+- Consider the [[#Itinerant band ferromagnetism|itinerant ferromagnetic Hamiltonian]], along with an _exchange interaction between conduction electrons $\boldsymbol{s}_{i}$ and localised spins_ $\boldsymbol{S}_{i}$
+$$H=\sum_{\boldsymbol{k},\lambda}\varepsilon_{\boldsymbol{k},\lambda}c^{\dagger}_{\boldsymbol{k},\lambda}c_{\boldsymbol{k},\lambda}+U\sum_{i}n_{i,\uparrow}n_{i,\downarrow}-J\sum_{i}\boldsymbol{s}_{i}\cdot \boldsymbol{S}_{i}$$
+- Example: $\ce{ La_{1-x} Ca_{x}Mn_{1-x}^{3+}Mn_{x}^{4+}O_{3}}$
 
+- $J>0$ as it is _between atoms and conduction electrons_
+![[Double exchange.png]]
 
+- Electrons can _move from one ion to another_ when the _ionic spins align_ such that Hund's rule is not violated, and there is _lower energy_
+- Therefore, _ferromagnetic alignment allows electrons to delocalise_
 ## Magnetoresistance
+- Given some sample with _resistance_ $R(B)$, a function of the _magnetic field_ $B$
+- The _magnetoresistance_ is:
+$$MR=\frac{R(0)-R(B)}{R(B)}$$
+- It is _positive_ when $B$ _reduces resistance_
+	- In general, it depends on the _angle_ $\varphi$ between magnetic field and current
+$$\rho=\rho_{\perp}+(\rho_{||}-\rho_{\perp})\cos^{2}\varphi \qquad \rho_{||}>\rho_{\perp}$$
 
+- In most metals, magnetoresistance $\sim 1\%$
 ### Giant magnetoresistance from RKKY
+- _Giant magnetoresistance_ can be observed in _thin film structures_, composed of _alternating ferromagnetic and non-magnetic conductive layers_
+![[GMR multilayer.png]]
+- There is measured _positive magnetoresistance_ of up to $50\%$
 
+- The _magnetisation direction_ of the layers is determined by the _RKKY interaction_, and is _controlled_ by the applied _magnetic field_
+- The magnetisation of _adjacent ferromagnetic layers_ will be in _parallel or antiparallel alignment_, which then _changes resistance_
+![[Multilayer magnetoresistance.png|400]]
+- The [[#RKKY Exchange at large distances|interlayer RKKY coupling]] oscillates with _thickness_ $t$ of the _non-magnetic layer_, such that magnetisation is _parallel or anti-parallel_ depending on $t$
+- When the coupling is _anti-ferromagnetic_, a _large magnetoresistance_ is observed
+
+- The RKKY interaction is _mediated_ by _electrons in the non-magnetic layer_
+- Integrating over _both surfaces_ of the _non-magnetic layer_, the coupling becomes:
+	- Due to _interface_ and _finite thickness_ effects, the observed period is typically $4\lambda_{F}$ rather than $\lambda_{F}/2$
+$$J(t)\propto \frac{\cos(2k_{F}t)}{t^{2}}$$
+
+#### Spin-dependent scattering and resistivity
+- _Scattering_ with _impurities_ can _change electron spin_
+	- The _impurity_ can change spin by itself (if it is _not already coupled to other spins_)
+	- Magnons can be _absorbed_
+	- There can be a _spin-orbit interaction_
+![[Spin-flip scattering.png|400]]
+
+- In systems with _strong spin-flip scattering_, there is _no giant magnetoresistance_
+- Even with _no spin flip_, the _scattering cross-section_ can still be _spin-dependent_
+
+- In _transition metals_, the _Mott two-current model_ asserts that there are _two independent current channels_:
+	- The _majority spin_ electrons, with spin _parallel_ to magnetisation
+	- The _minority spin_ electrons, with spin _anti-parallel_ to magnetisation
+	- _Neglect_ spin-flip scattering
+
+- In _transition metals_, the _dominant impurity scattering mechanism_ goes _from the $s$ conduction band_, into the _localised $d-$states_, with density of states $g_{V}^{(d)}(E_{F,\lambda})$
+- Therefore, the _spin-dependent resistivity_:
+$$\rho_{\lambda}\sim g_{V}^{(d)}(E_{F,\lambda})$$
+- For $\ce{ Cu }$, there is _low density of states_ for _both spin channels_, leading to _high conductivity_
+- For $\ce{ Fe,Co }$ (which are ferromagnetic due to [[#Itinerant band ferromagnetism|itinerant ferromagnetism]]), the _spin bands_ have _different density of states_ at $E_{F}$
+	- For $\ce{ Co }$, the _majority spin band_ is _full_ such that _majority spin current has much lower resistivity_ 
+	- For $\ce{ Fe }$, the _majority spin band_ has a _higher density of states_ such that the _minority spin current has much lower resistivity_
+![[Spin dependent resistivity.png|400]]
+$$\rho_{\uparrow}^{\ce{ Co}}\ll \rho_{\downarrow}^{\ce{ Co }} \qquad \rho_{\uparrow}^{\ce{ Fe}}\gg \rho_{\downarrow}^{\ce{Fe }} $$
+- This applies for _scattering in the bulk_
+	- _Interface scattering_ can also be spin-dependent
+
+#### Calculating total magnetoresistance
+- For _clean metals_, the electron _mean free path_ is _shorter_ than $t$, in whcih case the resistance of each layer can be _combined in parallel_
+- Then, the _ferromagnetic_ and _anti-ferromagnetic_ configurations are _identical_
+![[Multilayer configurations.png|400]]
+- In _ultra-pure_ metals, the mean-free path is _larger than the layer thickness_, hence for _two layers_, there is a _weighted averge resistivity_ for two layers of thicknesses $a,b$
+$$\bar{\rho}=\frac{a\rho_{a}+b\rho_{b}}{a+b}$$
+- For GMR devices, _ultra-pure_ materials are used
+- Consider flow _parallel_ to the interfaces
+![[GMR layers.png|400]]
+- For _one period_ $l=2t_{1}+2t_{2}$, the _spin channel resistances_ in _ferromagnetic alignment_:
+$$\begin{align}
+R_{\uparrow}&=\bar{\rho}_{\uparrow} \frac{L}{(2t_{1}+2t_{2})L}= \frac{2t_{1}\rho^{L}_\text{FM}+2t_{2}\rho _\text{NM}}{2t_{1}+2t_{2}} \frac{L}{(2t_{1}+2t_{2})L}=\frac{t_{1}\rho _\text{FM}^{L}+t_{2}\rho _\text{NM}}{2(t_{1}+t_{2})^{2}} \\
+R_{\downarrow}&=\bar{\rho}_{\downarrow} \frac{L}{(2t_{1}+2t_{2})L}= \frac{2t_{1}\rho^{H}_\text{FM}+2t_{2}\rho _\text{NM}}{2t_{1}+2t_{2}} \frac{L}{(2t_{1}+2t_{2})L}=\frac{t_{1}\rho _\text{FM}^{H}+t_{2}\rho _\text{NM}}{2(t_{1}+t_{2})^{2}} \\
+\left( \frac{1}{R} \right)_{\uparrow\uparrow}&=\left( \frac{1}{R_{\uparrow}}+\frac{1}{R_{\downarrow}} \right)_{\uparrow\uparrow}=2(t_{1}+t_{2})^{2} \left( \frac{1}{t_{1}\rho _\text{FM}^{L}+t_{2}\rho _\text{NM}}+\frac{1}{t_{1}\rho^{H}_\text{FM}+t_{2}\rho _\text{NM}} \right)
+\end{align}$$
+- For the _anti-ferromagnetic alignment_, both channels are the _same_, using the same method as above:
+$$\begin{align}
+R_{\uparrow}&=R_{\downarrow}=\frac{t_{1}\rho _\text{FM}^{L}+t_{1}\rho^{H}_\text{FM}+2t_{2}\rho _\text{NM}}{4(t_{1}+t_{2})^{2}}  \\
+\left( \frac{1}{R} \right)_{\uparrow\downarrow}&=\left( \frac{1}{R_{\uparrow}} +\frac{1}{R_{\downarrow}}\right)_{\uparrow\downarrow}=\frac{8(t_{1}+t_{2})^{2}}{t_{1}\rho _\text{FM}^{L}+t_{1}\rho^{H}_\text{FM}+2t_{2}\rho _\text{NM}}
+\end{align}$$
+- The _magnetoresistance_ is then:
+$$\mathrm{GMR}=\frac{R_{\uparrow\downarrow}-R_{\uparrow\uparrow}}{R_{\uparrow\uparrow}}=\frac{(\rho^{H}_\text{FM}-\rho^{L}_\text{FM})^{2}t_{1}^{2}}{4(\rho _\text{FM}^{H}t_{1}+\rho _\text{NM}t_{2})(\rho _\text{FM}^{L}t_{1}+\rho _\text{NM}t_{2})}$$
+- A _large value_ of $\rho^{H}/\rho^{L}$ then gives _bigger magnetoresistance_
+- It typically _drops_ with increasing thickness of the ferromagnetic layer
 ### Colossal magnetoresistance from double exchange
+- High magnetoresistance can also be observed in _bulk magnetic oxide materials_
+	- Example: doped $\ce{ Mn }-$based perovskite $\ce{ La_{1-x}Sr(Ca)_{x}MnO_{3} }$
+	- Above the Curie temperature, the material is a _paramagnetic insulator_
+	- Below the Curie temperature, it is a _metallic ferromagnet_ due to [[#Double exchange mechanism|double exchange]]
+- Magnetoresistance due to double exchange can be up to $\sim 120,000\%$
+![[Colossal magnetoresistance.png|400]]
 
+- The $\ce{ Mn^{3+} }$ ions in the crystal experience _crystal field splitting_
+	- The 3-fold degenerate $t_{2g}$ orbitals $(d_{xy},d_{yz},d_{xz})$
+	- The 2-fold degenerate $e_{g}$ orbitals $(d_{x^{2}-y^{2}},d_{z^{2}})$ which can be further _split_ by the _Jahn-Teller effect_ deforming the octahedron
+
+- Without doping, $\ce{ LaSrMnO_{3} }$ is a _Mott insulator_ with _antiferromagnetic_ order
+- When _replacing_ $\ce{ La^{3+} }$ with $\ce{ Ca^{2+} }$, there will be _mixed valence_ $\ce{ Mn^{3+},Mn^{4+} }$
+
+- _Hopping_ gives more of an _energetic advantage_ from _Hund's rule_ when the _core spins_ of $\ce{ Mn^{4+} }$ are _aligned ferromagnetically_
+![[Double exchange hop.png|250]]
+- Near the _Curie temperature_, the _fluctuations_ in spin alignment then lead to a _rapid increase in resistivity_
+- Applying a _magnetic field_ will then _align_ the core spins and _decrease resistivity_
+	- Effect is particularly large _near_ $T_{c}$ as it _supresses the spin fluctuations_
 ## Kondo effect
-
-
+- For metals with a _low concentration of magnetic impurities_, there is a _logarithmic increase in resistvity_ as $T\to 0$
+![[Kondo effect.png|300]]
+- A _contact exchange interaction_ between a set of _static impurity spins_ and _conduction electrons_:
+$$\begin{align}
+V_{K}&=J\sum_{i}\boldsymbol{S}_{i}\cdot \boldsymbol{s}(\boldsymbol{r})\delta(\boldsymbol{r}-\boldsymbol{R}_{i}) \\
+&=J\sum_{i}\Big[S^{z}_{i}s^{z}(\boldsymbol{r})+\frac{1}{2}[S_{i}^{+}s^{-}(\boldsymbol{r})+S_{i}^{-}s^{+}(\boldsymbol{r})]\Big]\delta(\boldsymbol{r}-\boldsymbol{R}_{i})
+\end{align}$$
+- _Second quantising_ the interaction Hamiltonian in the _plane wave_ basis:
+$$V_{K}=J \frac{\hbar}{2} \frac{1}{V}\sum_{\boldsymbol{k},\boldsymbol{k}',i}\Big[S^{z}_{i}(c^{\dagger}_{\boldsymbol{k}\uparrow}c_{\boldsymbol{k}'\uparrow}-c^{\dagger}_{\boldsymbol{k}\downarrow}c_{\boldsymbol{k}'\downarrow})+S_{i}^{+}c^{\dagger}_{\boldsymbol{k}\downarrow}c_{\boldsymbol{k}'\uparrow}+S_{i}^{-}c^{\dagger}_{\boldsymbol{k}\uparrow}c_{\boldsymbol{k}'\downarrow}\Big]e^{-i(\boldsymbol{k}-\boldsymbol{k}')\cdot \boldsymbol{R}_{i}}$$
+- Scattering can accompany a _spin flip of the impurity atoms_
+- _Near_ the _Fermi energy_, there can be a _resonance_ which _enhances_ the _scattering rate_ $W(\boldsymbol{k},\boldsymbol{k}')$
+- There is then a _logarithmic divergence_ in _scattering rate_ and _conductivity_:
+$$\displaylines{W(\boldsymbol{k},\boldsymbol{k}')\approx J^{2}S(S+1)\left( 1+2Jg_{V}(\varepsilon_{F}) \ln \frac{D}{|\varepsilon_{\boldsymbol{k}}-\varepsilon_{F}|} +\dots\right) \\ \frac{1}{\tau(\varepsilon_{\boldsymbol{k}})}=\frac{J^{2}S(S+1)}{\hbar}g_{V}(\varepsilon_{F})\left( 1+2Jg_{V}(\varepsilon_{F}) \ln \frac{D}{|\varepsilon_{\boldsymbol{k}}-\varepsilon_{F}|}+\dots \right) \\ \sigma(T)=\frac{e^{2}n}{2m}J^{2}S(S+1)\left( 1-2Jg_{V}(\varepsilon_{F}) \ln \frac{D}{k_{B}T}+\dots \right)}$$
 # Weak electron-photon interactions
 - Use [[#Electronic response theory]] to look at _interactions_ between electrons and light
 
@@ -1413,28 +1522,74 @@ $$\begin{align}
 \end{align}$$
 - This expression is _independent of the nature of electronic states_
 ### Transverse dielectric response in semiconductors
-- Apply the above formula to _Bloch states_
+- Apply the above formula to _Bloch states_ of the _conduction and valence bands_:
+$$\braket{ \boldsymbol{r} | \psi_{i} } =\frac{1}{\sqrt{ V }}e^{i\boldsymbol{k}\cdot \boldsymbol{r}}U_{v,k}(\boldsymbol{r})\qquad \braket{ \boldsymbol{r} | \psi_{f} } =\frac{1}{\sqrt{ V }}e^{i\boldsymbol{k}\cdot \boldsymbol{r}}U_{c,k}(\boldsymbol{r})$$
+- Calculating the _matrix elements_ for a _vertical transition_ $q\approx 0$
+	- When $q\approx 0$, one of the terms in the derivative _vanishes_ due to the _orthogonality_ of $\Psi_{i}$ and $\Psi_{f}$
+	- Convert the integral over _all space_ into _summing over unit cells_ and integrating over one unit cell, with _cell volume_ $\Delta=V/N_{c}$
+$$\begin{align}
+\braket{ \psi_{f}|e^{i\boldsymbol{q}\cdot \boldsymbol{r}}\boldsymbol{a}\cdot \boldsymbol{p} | \psi_{i} } &=-\frac{i\hbar}{V}\int  e^{-i\boldsymbol{k}'\cdot \boldsymbol{r}}U_{c,\boldsymbol{k}}^{*}(\boldsymbol{r})e^{i\boldsymbol{q}\cdot \boldsymbol{r}}\boldsymbol{a}\cdot \nabla_{r}(e^{i\boldsymbol{k}\cdot \boldsymbol{r}}U_{v,\boldsymbol{k}}(\boldsymbol{r}))\,d^{3}\boldsymbol{r}  \\
+&=-\frac{i\hbar}{V}\left( \sum_{n=1}^{N_{c}}e^{i(\boldsymbol{k}+\boldsymbol{q}-\boldsymbol{k}')\cdot \boldsymbol{R}_{n}} \right)\int_\text{u.c.}e^{i(\boldsymbol{k}+\boldsymbol{q}-\boldsymbol{k}')\cdot \boldsymbol{r}}U^{*}_{c\boldsymbol{k}'}(\boldsymbol{r}')\boldsymbol{a}\cdot \nabla_{r}U_{v \boldsymbol{k}}(\boldsymbol{r}')\,d^{3}\boldsymbol{r} \\
+&=-\frac{i\hbar}{\Delta} \int_\text{u.c.}U^{*}_{c,\boldsymbol{k}+\boldsymbol{q}}(\boldsymbol{r})\boldsymbol{a}\cdot \nabla U_{v\boldsymbol{k}}(\boldsymbol{r})\,d^{3}\boldsymbol{r} 
+\end{align}$$
 
-- Only take _vertical transitions_
-- Bloch states _orthogonal_
+- For a _direct transition_ to be _allowed_:
+$$\braket{ \psi_{f}|e^{i\boldsymbol{q}\cdot \boldsymbol{r}}\boldsymbol{a}\cdot \boldsymbol{p} | \psi_{i} }=-\frac{i\hbar}{\Delta} \int_\text{u.c.}U^{*}_{c,\boldsymbol{k}+\boldsymbol{q}}(\boldsymbol{r})\boldsymbol{a}\cdot \nabla U_{v\boldsymbol{k}}(\boldsymbol{r})\,d^{3}\boldsymbol{r} =\boldsymbol{a}\cdot \boldsymbol{p}_{cv}(\boldsymbol{k})\neq 0$$
+- $p_{cv}$ is the _dipole transition matrix element_:
+	- Equality above is only satisfied for _small_ $\boldsymbol{q}$ (dipole approximation)
+$$\boldsymbol{p}_{cv}(\boldsymbol{k})=\frac{1}{\Delta}\int_\text{u.c.}U^{*}_{c\boldsymbol{k}}(\boldsymbol{r}) \boldsymbol{p} \,U_{v\boldsymbol{k}}(\boldsymbol{r})\,d^{3}\boldsymbol{r} $$
+- If the direct transition is _forbidden_, there may still be transitions for $q\neq 0$, _expanding_ the conduction band Bloch function around $q=0$:
+$$\braket{ \psi_{f}|e^{i\boldsymbol{q}\cdot \boldsymbol{r}}\boldsymbol{a}\cdot \boldsymbol{p} | \psi_{i} }_\text{indirect}\approx \frac{1}{\Delta}\int_\text{u.c.}\boldsymbol{q}\cdot \nabla_{\boldsymbol{k}}U_{c\boldsymbol{k}}(\boldsymbol{r})\boldsymbol{a}\cdot \boldsymbol{p}\,U_{v\boldsymbol{k}}(\boldsymbol{r})\,d^{3}\boldsymbol{r} $$
 
-- Sum over _conduction_ and _valence_ bands that _can contribute to vertical transitions_
+### Response to vertical transitions
+- The _imaginary part_ of the dielectric function due to _vertical transitions_, considering only the _valence and conduction bands_ around the Fermi level:
+$$\begin{align} 
+\varepsilon_{2}(\omega)=\varepsilon_{2}(0,\omega)&=\frac{2\pi e^{2}}{\epsilon_{0}m^{2}\omega^{2}V}\sum_{i,f} \Big|\braket{ \psi_{f}|\boldsymbol{a}\cdot \boldsymbol{p} | \psi_{i} } \Big|^{2} \delta(E_{f}-E_{i}-\hbar\omega)[f(E_{i})-f(E_{f})] \\
+&=\frac{2\pi e^{2}}{\epsilon_{0}m^{2}\omega^{2}}\sum_{c,v} \int_\text{BZ}  \frac{d^{3}k}{(2\pi)^{3}} |\boldsymbol{a}\cdot \boldsymbol{p}_{cv}(\boldsymbol{k})|^{2}\delta(E_{c}(\boldsymbol{k})-E_{v}(\boldsymbol{k})-\hbar\omega)
+\end{align}$$
+- This then contributes to the [[#Optical properties|absorption coefficient]] $\alpha(\omega)$
+
+- Assume $p_{cv}(\boldsymbol{k})$ varies _slowly_ with $k$, therefore approximate the matrix element by its _average value_ in the Brillouin zone:
+$$\varepsilon_{2}(\omega)=\frac{\pi e^{2}}{\epsilon_{0}m^{2}\omega^{2}}\sum_{c,v}(|\boldsymbol{a}\cdot \boldsymbol{p}_{cv}(\boldsymbol{k})|^{2})_\text{av}\left(2\int_\text{BZ} \frac{d^{3}k}{(2\pi)^{3}} \delta(E_{c}(\boldsymbol{k})-E_{v}(\boldsymbol{k})-\hbar\omega)\right)$$
+
 - The _number of pairs_ which _fulfill_ this condition is given by the _joint density of states_ (JDOS):
-$$J_{c\nu}(\omega)=$$
+$$J_{c\nu}(\omega)=2\int_\text{BZ} \frac{d^{3}k}{(2\pi)^{3}} \delta(E_{c}(\boldsymbol{k})-E_{v}(\boldsymbol{k})-\hbar\omega)$$
+- It measures the _number of states_ in the valence and conduction bands that _meet the suitable energy conservation_ for $q=0$
+- Using the delta function identity, it becomes an integral over the _surface_ that meets the energy conservation
+$$J_{cv}(\omega)=\frac{2}{(2\pi)^{3}} \iint_{S} \frac{dS(\boldsymbol{k})}{|\nabla_{\boldsymbol{k}}(E_{c}(\boldsymbol{k})-E_{v}(\boldsymbol{k}))|}$$
+
 - Two _parabolic bands_: same as expression for _density of states_ in $3D$
+$$\displaylines{E_{c}(\boldsymbol{k}_{S})-E_{v}(\boldsymbol{k}_{S})=E_{g}+\frac{\hbar^{2}k^{2}_{S}}{2m^{*}}=\hbar\omega \quad,\quad \frac{1}{m^{*}}=\frac{1}{m_{e}^{*}}+\frac{1}{m_{h}^{*}} \\ J_{cv}(\omega)=\frac{2}{(2\pi)^{3}} \frac{1}{\hbar^{2}k_{S}/m^{*}} \int_{S}  dS(\boldsymbol{k}) =\frac{1}{2\pi}^{2} \left( \frac{2m^{*}}{\hbar^{2}} \right)^{3/2}\sqrt{ h\omega-E_{g} }}$$
 
-- _Critical points_ are where the bands are _parallel_,  leading to _van Hove singularities_ in the JDOS
+- The JDOS, and therefore, the _absorption spectrum_, is dominated by points where the valence and conduction bands are _parallel_:
+$$\nabla_{\boldsymbol{k}}(E_{c}(\boldsymbol{k})-E_{v}(\boldsymbol{k}))=0$$
+- These are _critical points_, which lead to _van Hove singularities_ in the JDOS
+
 - The _band separation energy_ can then be written _parabolically_
-$$E_{b}(\boldsymbol{k})=$$
+$$E_{c}(\boldsymbol{k})-E_{v}(\boldsymbol{k})=E_{g}+\alpha_{1}k_{1}^{2}+\alpha_{2}k_{2}^{2}+\alpha_{3}k_{3}^{2}$$
 
-- In $3\text{D}$, there are 4 types of critical points based on the _sign_ of the coefficients
+- In $3\text{D}$, there are 4 types of critical points based on the _signs_ of the coefficients
+	- $M_{0},M_{3}$: all coefficients are _positive_ or _negative_, giving a _minimum_ or _maximum_, the quadric surface is an _ellipsoid_
+	- $M_{1},M_{2}$: one or two coefficients are _negative_, giving a _saddle point_, the quadric surface is a _hyperboloid_ of one or two sheets
+- In lower dimensions, they are typically _sharper_
 ![[van Hove singularity.png]]
 - The nature of the _singularities_ give the nature of the _critical points_
 	- Example: $\ce{ Ge }$
+	- Bands are labelled by their _symmetry properties_
 ![[Ge spectrum.png|400]]
 ### Indirect band gap semiconductors
-- In $\ce{ Si }$ and $\ce{ Ge }$, there are _indirect band gaps_, where _phonons_ are required to _conserve momentum_
+- In $\ce{ Si }$ and $\ce{ Ge }$, there are _indirect band gaps_, where _phonons_ are required to _conserve momentum_ in an optical transition
+- The phonons may be _absorbed_ or _emitted_, and it may involve either _acoustic_ or _optical_ phonons
+- Indirect transitions are typically _slow_ compared to direct transitions
 
+- The rates must then be related to the _phonon occupation_:
+$$n_{q}=\frac{1}{\exp(E_\text{ph}/k_{B}T)-1} \qquad n_{q}+1=\frac{1}{1-\exp(-E_\text{ph}/k_{B}T)}$$
+- It can be shown that:
+$$\alpha(\omega)\propto \left( \frac{(\hbar\omega-(E_{ig}-E_{ph}))^{2}}{\exp(E_{ph}/k_{B}T)-1} +\frac{(\hbar\omega-(E_{ig}+E_{ph}))^{2}}{1-\exp(-E_{ph}/k_{B}T)}\right)$$
+![[Indirect optical transition.png|250]]
+- When plotting $\sqrt{ \alpha }$, for $E_{ig}-E_{ph}<\hbar\omega<E_{ig}+E_{ph}$, there is a _lower absorption rate_
+- For $\hbar\omega>E_{ig}+E_{ph}$, there are _more transition processes available_
+![[Indirect absorption spectrum.png]]
 ## Describing semiconductor band structures
 - Consider the _band structures_ of _groups III,V and group 4 semiconductors_
 	- Examples: $\ce{ GaAs },\ce{ GaN },\ce{ Si,Ge }$
@@ -1522,9 +1677,16 @@ $$\displaylines{E_{n}=E_{g}+\frac{\hbar^{2}K^{2}}{2M}-\frac{\mu}{m_{e}} \frac{1}
 
 - In _3 dimensions_, due to an _increased probability_ of electron-hole Coulomb attraction within a unit cell, the absorption is _multiplied_ by the _Sommerfeld enhancement factor_
 
-## Quantum wells
+## Optical properties of quantum wells
+- _Quantum wells_ can be produced in _heterojunctions_, where materials have _different band energies_, leading to _varying band edge_ and _gap energy_ as a function of position
+	- Example: $\ce{ GaAs/AlGaAs/GaAs }$ quantum well
+![[Quantum well gap.png|450]]
+- Near the _band edge_, model as a _particle in a box_ in the $z-$direction, with propagating _plane waves_ in other directions
+	- States in the $z$ direction are _discrete_ due to the boundary conditions at the junctions
+$$\displaylines{\Psi(x,y,z)=\exp(ik_{x}x)\exp(ik_{y}y)\phi(z) \\ \left( \frac{p_{z}^{2}}{2m}+V(z) \right)\phi(z)=E_{n}\phi(z) \\ E_{n,k}=E_{n}+\frac{\hbar^{2}}{2m^{*}}(k_{x}^{2}+k_{y}^{2})}$$
+- The system forms _parabolic sub-bands_ labelled by $n$
 
-
+- Transitions from _hole sub-bands_ to _electron sub-bands_
 ## Potential Bose-Einstein condensation
 - There is a _critical temperature_ for Bose-Einstein condensation
 $$T_{c} \propto \frac{1}{m}n^{2/3}$$
@@ -1610,13 +1772,13 @@ $$\hbar\omega_{D}=k_{B}\Theta_{D}$$
 ## Manifestation of e-ph interactions
 ### Resistivity
 - _Resistivity_ is commonly caused by the e-ph interaction
-	- At _extremely low_ temperatures, scattering is dominated by _impurities_ and becomes temperature-independent
+	- At _extremely low_ temperatures, there will also be _impurity scattering_
 - _Temperature dependence_ of e-ph scattering is typically:
 $$\begin{align} \rho(T\gg\Theta_{D})&\propto T \\ \rho(T\ll\Theta_{D})&=\rho_{0}(1+AT^{5}+\dots)
 \end{align}$$
 
 - e-ph scattering contributes to _relaxation processes_ that bring the crystal to _equilibrium_
-- There is an associated _relaxation time_
+- There is an associated _relaxation time_ after switching off the perturbation
 
 ### Conventional superconductivity
 - Phonons _mediate_ an _effective attractive force_ between _electron pairs_, within a _Debye energy from the Fermi surface_
@@ -1652,13 +1814,37 @@ $$H_\text{e-ph}=\sum_{m=1}^{N} \sum_{n=1}^{N}\sum_{\boldsymbol{q},\nu}\frac{1}{\
 
 - One can then put it into _second quantised form_ using _plane wave states_:
 	- Assuming the interaction Hamiltonian is _sufficiently weak_ that there is _no scattering between bands_
-$$\displaylines{H_\text{e-ph}=\sum_{\boldsymbol{k},\boldsymbol{k}',\lambda}\sum_{\boldsymbol{q},\nu}M_{\boldsymbol{q}\nu}(\boldsymbol{k},\boldsymbol{k}')(a_{\boldsymbol{q}\nu}+a_{-\boldsymbol{q}\nu}^{\dagger})c^{\dagger}_{\boldsymbol{k}',\lambda}c_{\boldsymbol{k},\lambda} \\ M_{\boldsymbol{q}\nu}(\boldsymbol{k},\boldsymbol{k}')=\frac{1}{\sqrt{ N }}\sqrt{\frac{\hbar}{2M\omega_{\nu}(\boldsymbol{q})}  }e^{i\boldsymbol{q}\cdot \boldsymbol{R}_{n}}\boldsymbol{\varepsilon}_{\nu}(\boldsymbol{q})\cdot \braket{ \boldsymbol{k}'|\nabla V_\text{ion}(\boldsymbol{r}_{m}-\boldsymbol{R}_{n}) |\boldsymbol{k}  } }$$
+$$\displaylines{H_\text{e-ph}=\sum_{\boldsymbol{k},\boldsymbol{k}',\lambda}\sum_{\boldsymbol{q},\nu}M_{\boldsymbol{q}\nu}(\boldsymbol{k},\boldsymbol{k}')(a_{\boldsymbol{q}\nu}+a_{-\boldsymbol{q}\nu}^{\dagger})c^{\dagger}_{\boldsymbol{k}',\lambda}c_{\boldsymbol{k},\lambda} \\ M_{\boldsymbol{q}\nu}(\boldsymbol{k},\boldsymbol{k}')=\frac{1}{\sqrt{ N }}\sqrt{\frac{\hbar}{2M\omega_{\nu}(\boldsymbol{q})}}\sum_{n=1}^{N}e^{i\boldsymbol{q}\cdot \boldsymbol{R}_{n}}\boldsymbol{\varepsilon}_{\nu}(\boldsymbol{q})\cdot \braket{ \boldsymbol{k}'|\nabla V_\text{ion}(\boldsymbol{r}_{m}-\boldsymbol{R}_{n}) |\boldsymbol{k}  } }$$
 
 ### Form of e-ph matrix element
-- Introduce the _atomic form factor_ associated with the potential
+- Introduce the _atomic form factor_ associated with $V_\text{ion}(\boldsymbol{r})$
+$$\displaylines{V_{a}(\boldsymbol{q})=\frac{N}{V}\int \exp(-i\boldsymbol{q}\cdot \boldsymbol{r})V_\text{ion}(\boldsymbol{r})\,d^{3}\boldsymbol{r}  \\ V_\text{ion}(\boldsymbol{r})=\frac{1}{N}\sum_{\boldsymbol{q}}\exp(i\boldsymbol{q}\cdot \boldsymbol{r})V_{a}(\boldsymbol{q})}$$
+- The sum in the matrix element:
+$$\begin{align}
+\sum_{n=1}^{N}e^{i\boldsymbol{q}\cdot \boldsymbol{R}_{n}}\braket{ \boldsymbol{k}'|\nabla V_\text{ion}(\boldsymbol{r}_{m}-\boldsymbol{R}_{n}) |\boldsymbol{k}  } =\frac{1}{N}\sum_{\boldsymbol{q}'}V_{a}(\boldsymbol{q}')i\boldsymbol{q}'\left( \sum_{n=1}^{N}e^{i(\boldsymbol{q}-\boldsymbol{q}')\cdot \boldsymbol{R}_{n}} \right) \braket{ \boldsymbol{k}' |e^{i\boldsymbol{q}'\cdot \boldsymbol{r}}| \boldsymbol{k} } 
+\end{align}$$
+- $\mathbf{q}-\boldsymbol{q}'$ may be _outside the Brillouin zone_, such that the sum can be non-zero for $\boldsymbol{q}'-\boldsymbol{q}=\boldsymbol{G}$, where $\boldsymbol{G}$ is a _reciprocal lattice vector_:
+$$\sum_{n=1}^{N}e^{i\boldsymbol{q}\cdot \boldsymbol{R}_{n}}\braket{ \boldsymbol{k}'|\nabla V_\text{ion}(\boldsymbol{r}_{m}-\boldsymbol{R}_{n}) |\boldsymbol{k}  } =V_{a}(\boldsymbol{q}+\boldsymbol{G})\,i(\boldsymbol{q}+\boldsymbol{G})\braket{ \boldsymbol{k}' |e^{i(\boldsymbol{q}+\boldsymbol{G})\cdot \boldsymbol{r}}| \boldsymbol{k} } $$
+- The latter matrix element, substituting in _Bloch states_, and splitting into unit cells
+	- For _plane wave states_, $\Delta_{\boldsymbol{k}'\boldsymbol{k}}=1$
+$$\begin{align}
+\braket{ \boldsymbol{k}' |e^{i(\boldsymbol{q}+\boldsymbol{G})\cdot \boldsymbol{r}}| \boldsymbol{k} }&=\delta_{\boldsymbol{k}',\boldsymbol{k}+\boldsymbol{q}+\boldsymbol{G}} \,\frac{N}{V}\int  d^{3}\boldsymbol{r}' \,U^{*}_{\boldsymbol{k}'}(\boldsymbol{r}')U_{\boldsymbol{k}}(\boldsymbol{r}') \\
+&=\delta_{\boldsymbol{k}',\boldsymbol{k}+\boldsymbol{q}+\boldsymbol{G}}\,\Delta_{\boldsymbol{k}',\boldsymbol{k}}
+\end{align}$$
+- From this, the matrix element is:
+$$M_{\boldsymbol{q}\nu}(\boldsymbol{k},\boldsymbol{k}')=i\frac{1}{\sqrt{ N }}\sqrt{\frac{\hbar}{2M\omega_{\nu}(\boldsymbol{q})}}\sum_{\boldsymbol{G}}\boldsymbol{\varepsilon}_{\nu}(\boldsymbol{q})\cdot (\boldsymbol{q}+\boldsymbol{G})V_{a}(\boldsymbol{q}+\boldsymbol{G})\,\delta_{\boldsymbol{k}',\boldsymbol{k}+\boldsymbol{q}+\boldsymbol{G}}\,\Delta_{\boldsymbol{k}',\boldsymbol{k}}$$
 
+- The Hamiltonian then becomes:
+$$H_\text{e-ph}=\sum_{\substack{\boldsymbol{q},\nu \\ \boldsymbol{k},\lambda}} \sqrt{ \frac{\hbar}{2MN\omega_{\nu}(\boldsymbol{q})} }i\sum_{\boldsymbol{G}}\boldsymbol{\varepsilon}_{\nu}(\boldsymbol{q})\cdot (\boldsymbol{q}+\boldsymbol{G})V_{a}(\boldsymbol{q}+\boldsymbol{G})\Delta_{\boldsymbol{k}+\boldsymbol{q},\boldsymbol{k}}(a^{\dagger}_{-\boldsymbol{q}\nu}+a_{\boldsymbol{q}\nu})c^{\dagger}_{\boldsymbol{k}+\boldsymbol{q}+\boldsymbol{G},\lambda}c_{\boldsymbol{k}\lambda}$$
 ### Physical interpretation
-- Both _normal_ and _Umklapp scattering_
+- $H_\text{e-ph}$ describes both _emission_ of phonon $(-\boldsymbol{q},\nu)$ and _absorption_ of phonon $(\boldsymbol{q},\nu)$
+- There are both _normal_ $(\boldsymbol{G}=0)$ and _Umklapp_ $(\boldsymbol{G}\neq 0)$ processes
+	- $\boldsymbol{G}$ ensures all electron wave-vectors are still _within the Brillouin zone_
+
+- Along _high symmetry directions_, the _longitudinal_ $(\boldsymbol{\varepsilon}_{\nu}(\boldsymbol{q})\,//\,\boldsymbol{q})$ phonons are capable of being _scattered_ while _transverse phonons cannot_
+
+- The _complete Hamiltonian_ (Frohlich Hamiltonian) for the system:
+$$H=\sum_{\boldsymbol{k},\lambda}\varepsilon_{\boldsymbol{k}\lambda}c^{\dagger}_{\boldsymbol{k}\lambda}c_{\boldsymbol{k}\lambda}+\sum_{\boldsymbol{q}\nu}\hbar\omega_{\nu}(\boldsymbol{q})a^{\dagger}_{\boldsymbol{q}\nu}a_{\boldsymbol{q}\nu}+\sum_{\substack{\boldsymbol{q}\nu \\ \boldsymbol{k}\lambda}}M_{\boldsymbol{q}\nu}(\boldsymbol{k},\boldsymbol{k}')(a^{\dagger}_{-\boldsymbol{q}\nu}+a_{\boldsymbol{q}\nu})c^{\dagger}_{\boldsymbol{k}+\boldsymbol{q}+\boldsymbol{G},\lambda}c_{\boldsymbol{k}\lambda}$$
 
 ## Boltzmann theory
 - Theory of _electron transport_ accounting for _impurity scattering_ and _e-ph interaction_
@@ -1676,19 +1862,145 @@ $$\frac{df}{dt}=\frac{\partial f}{\partial t}+\frac{d\boldsymbol{k}}{dt}\cdot \n
 - From $f$, one then gets the _transport properties_
 
 ### Relaxation time approximation
+- Approximate the distribution as a _small deviation_ $f_{1}(\boldsymbol{k},t)$ from the _equilibrium distribution_ $f_{0}$
 
+- The collision integral can be _approximated_ with a defined _relaxation time_:
+$$\frac{\partial f}{\partial t}\Bigg|_\text{coll}\approx -\frac{f(\boldsymbol{k},t)-f_{0}}{\tau(\boldsymbol{k})}=-\frac{f_{1}(\boldsymbol{k},t)}{\tau(\boldsymbol{k})}$$
+- This is the _relaxation time approximation_, valid for $|f-f_{0}|\ll|f_{0}|$
 ### AC response of a metal
+- Let the system be driven _out of equilibrium_ due to an _electrical perturbation_:
+$$-\frac{e}{\hbar}\nabla_{k}f\cdot \boldsymbol{E}+\frac{\partial f}{\partial t}=-\frac{f-f_{0}}{\tau_{\boldsymbol{k}}}$$
+- Only keeping terms _linear_ in $E$:
+$$-\frac{e}{\hbar}\nabla_{k}f_{0}\cdot \boldsymbol{E}+\frac{\partial f_{1}}{\partial t}=-\frac{f_{1}}{\tau_{\boldsymbol{k}}}$$
 
-- Only contributions from _within_ $k_{B}T$ of the _Fermi surface_
+- Let the electrical field _oscillate_ as $\boldsymbol{E}=\mathbf{E}_{0}\exp(-i\omega t)$, such that the _response_ is also AC:
+$$\displaylines{f_{1}(\boldsymbol{k},t)=\Phi(\boldsymbol{k})\exp(-i\omega t) \\ -\frac{e}{\hbar}\nabla_{k}f_{0}\cdot \mathbf{E}_{0}-i\omega \Phi(\boldsymbol{k})=- \frac{1}{\tau_{\boldsymbol{k}}} \Phi(\boldsymbol{k})}$$
+- Denoting the _group velocity_ $\boldsymbol{v}(\boldsymbol{k})=\left( 1/\hbar\right) \nabla_{k}\varepsilon$
+$$\Phi(\boldsymbol{k})=\frac{\partial f_{0}}{\partial\varepsilon} \frac{e \tau _{\boldsymbol{k}}v_{\boldsymbol{k}}\cdot \mathbf{E}_{0}}{1-i\omega \tau_{\boldsymbol{k}}}$$
+- This can also be written as:
+$$f_{1}=A(\boldsymbol{k},\omega)\boldsymbol{k}\cdot \boldsymbol{E}$$
 
-### Scattering from a static potential
+- One can then find _current density_ and _AC conductivity_ accordingly
+$$\boldsymbol{J}=-2e \int  \frac{d^3k}{(2\pi)^{3}} \boldsymbol{v}_{\boldsymbol{k}}f_{1}=\frac{2e^{2}}{(2\pi)^{3}}\int  d^3k\,\tau_{\boldsymbol{k}}\left( -\frac{\partial f_{0}}{\partial\varepsilon} \right) \boldsymbol{v}_{\boldsymbol{k}} \frac{\boldsymbol{v}_{\boldsymbol{k}}\cdot \boldsymbol{E}}{1-i\omega \tau_{\boldsymbol{k}}}$$
+- Matrix identity:
+$$\boldsymbol{v}_{\boldsymbol{k}}(\boldsymbol{v}_{\boldsymbol{k}}\cdot \boldsymbol{E})\equiv (\boldsymbol{v}_{\boldsymbol{k}}\otimes \boldsymbol{v}_{\boldsymbol{k}})\boldsymbol{E}$$
+- This gives _Ohm's law_ for the AC response and the _DC limit_:
+$$\displaylines{\boldsymbol{J}=\hat{\sigma}\boldsymbol{E} \\ \hat{\sigma}(\omega)=\frac{2e^{2}}{(2\pi)^{3}}\int  d^3k\,\left( -\frac{\partial f_{0}}{\partial\varepsilon} \right)  \frac{\tau_{\boldsymbol{k}}(\boldsymbol{v}_{\boldsymbol{k}}\otimes \boldsymbol{v}_{\boldsymbol{k}})}{1-i\omega \tau_{\boldsymbol{k}}} \\ \hat{\sigma}(\omega\to 0)=\frac{2e^{2}}{(2\pi)^{3}}\int  d^3k\,\left( -\frac{\partial f_{0}}{\partial\varepsilon} \right)  \tau_{\boldsymbol{k}}(\boldsymbol{v}_{\boldsymbol{k}}\otimes \boldsymbol{v}_{\boldsymbol{k}})}$$
+- $\hat{\sigma}$ typically only has contributions from _within_ $k_{B}T$ of the _Fermi surface_
+
+- For the _isotropic limit_, _below the Fermi temperature_, this becomes the _Drude limit_ with $\tau(\boldsymbol{k})=\tau$
+$$\sigma=\frac{ne^{2}\tau}{m}$$
+### Elastic scattering from a static potential
+- For a _static potential_, the collision integral can be expressed in terms of _scattering rates to and from_ different wavenumbers
+$$\begin{align}
+\frac{df}{dt}= \frac{\partial f}{\partial t}\Bigg|_\text{coll}=\int  \frac{d^3k'}{(2\pi)^{3}} \big\{&W(\boldsymbol{k}'\to\boldsymbol{k})f(\boldsymbol{k}')(1-f(\boldsymbol{k})) \\
+-&W(\boldsymbol{k}\to \boldsymbol{k}')f(\boldsymbol{k})(1-f(\boldsymbol{k})')\big\}
+\end{align}$$
+- The _scattering rates_ $W(\boldsymbol{k}\to \boldsymbol{k}')$ are given by _Fermi's golden rule_
+
+- For systems with _inversion symmetry_:
+$$\displaylines{W(\boldsymbol{k}\to \boldsymbol{k}')=W(\boldsymbol{k}'\to \boldsymbol{k})=W(\boldsymbol{k},\boldsymbol{k}') \\ \frac{\partial f}{\partial t}\Bigg|_\text{coll}=\int  \frac{d^3k'}{(2\pi)^{3}} W(\boldsymbol{k},\boldsymbol{k}')[f(\boldsymbol{k}')-f(\boldsymbol{k})] }$$
+- For $f_{1}=A(|\boldsymbol{k}|)\boldsymbol{k}\cdot \boldsymbol{E}$ as shown above, and assuming _elastic scattering_ $|\boldsymbol{k}|=|\boldsymbol{k}'|$
+$$f(\boldsymbol{k}')-f(\boldsymbol{k})=A(k)(\boldsymbol{k}'-\boldsymbol{k})\cdot \boldsymbol{E}$$
+- Let $\boldsymbol{k}$ be along the $z-$axis:
+$$\displaylines{\boldsymbol{k}=(0,0,k)\qquad\boldsymbol{E}=E(\sin\theta,0,\cos\theta)\qquad \boldsymbol{k}'=k(\sin\theta' \cos \phi',\sin\theta'\sin \phi',\cos\theta') \\ f(\boldsymbol{k}')-f(\boldsymbol{k})=A(k)kE(\sin\theta \sin\theta'\cos \phi'-\cos\theta(1-\cos\theta'))}$$
+- If $W(k,k')$ only _depends on the angle between_ $\boldsymbol{k},\boldsymbol{k}'$, the first term is _cancelled out_ in the integral:
+$$\frac{\partial f}{\partial t}\Bigg|_\text{coll}=-A(k)\boldsymbol{k}\cdot \boldsymbol{E} \int  \frac{d^3k'}{(2\pi)^{3}} W(\boldsymbol{k},\boldsymbol{k}')(1-\cos\theta')$$
+- Comparing to the [[#Relaxation time approximation|relaxation time approximation]]:
+$$\frac{1}{\tau(\boldsymbol{k})}=\int  \frac{d^3k'}{(2\pi)^{3}} W(\boldsymbol{k},\boldsymbol{k}')(1-\cos\theta') $$
+- If the _scattering rate_ $W(\boldsymbol{k},\boldsymbol{k}')$ is _temperature-independent_, then $\tau(\boldsymbol{k})$ will also be temperature-independent
 
 ### Scattering from a charge
+- Consider a metal with _impurity density_ $n_\text{imp}$, where each impurity is a _point scatterer_ with _charge_ $Ze$
+- Within the _Thomas-Fermi approximation_, they scatter with the _Yukawa potential_
+$$V(\boldsymbol{r})=\frac{Ze^{2}}{4\pi\epsilon_{0}} \frac{\exp(-q_\text{TF}r)}{r} \qquad q_\text{TF}^{2}=\frac{1}{\pi^{2}} \frac{me^{2}}{\hbar^{2}\epsilon_{0}}k_{F}$$
+- From _plane wave states_ $\braket{ r | k }=\exp(i\boldsymbol{k}\cdot \boldsymbol{r})/\sqrt{ V }$, calculate the _matrix elements_ $\braket{ \boldsymbol{k}|V |\boldsymbol{k}+\boldsymbol{q}  }$, giving the _scattering rates_ as:
+$$\displaylines{W(\boldsymbol{k},\boldsymbol{k}+\boldsymbol{q})=\frac{2\pi}{\hbar} n_\text{imp}\left( \frac{Ze^{2}}{4\pi\epsilon_{0}} \frac{4\pi}{q^{2}+q_\text{TF}^{2}} \right)^{2}\delta(\varepsilon_{\boldsymbol{k}}-\varepsilon_{\boldsymbol{k}+\boldsymbol{q}}) \\ \frac{1}{\tau(\boldsymbol{k})}=\int  \frac{d^3q}{(2\pi)^{3}}W(\boldsymbol{k},\boldsymbol{k}+\boldsymbol{q})(1-\cos\theta') }$$
+- For temperatures _below the Fermi temperature_, assume all scattering is _near the Fermi surface_ such that $|\boldsymbol{k}+\boldsymbol{q}|=|\boldsymbol{k}|=k_{F}$
+- Using the identity:
+$$\int_{V}  d^{3}q\,\delta(g(\boldsymbol{q}))F(\boldsymbol{q})=\iint_{g(\boldsymbol{q})=0} \frac{F(\boldsymbol{q})}{|\nabla_{q}g(\boldsymbol{q})|}\,dS(\boldsymbol{q}) $$
+- Integrating _over the Fermi surface_ $(0<q<2k_{F})$ with _surface element_ $dS(\boldsymbol{q})=q\,dq\,d\phi'$
+$$\frac{1}{\tau_{\boldsymbol{k}}}=\frac{2\pi}{\hbar} \left( \frac{Ze^{2}}{\epsilon_{0}} \right)^{2}n_\text{imp} \frac{1}{(2\pi)^{3}} \frac{m}{\hbar^{2}k_{F}} \int_{0}^{2\pi}  d\phi' \int_{0}^{2k_{F}}  dq\,q \left( \frac{1}{q^{2}+q_\text{TF}^{2}} \right)^{2}(1-\cos\theta') $$
+- In this case, $\tau_{\boldsymbol{k}}=\tau$
+
+- On the Fermi surface, define $\gamma$ such that:
+![[Fermi surface scattering.png|250]]
+$$\displaylines{\cos\gamma=\frac{q}{2k_{F}} \\ q^{2}+2\boldsymbol{k}\cdot \boldsymbol{q}=q^{2}-2k_{F}q\cos\gamma=0 \\ 1-\cos\theta'=2\cos^{2}\gamma=2\left( \frac{q}{2k_{F}} \right)^{2}}$$
+- From this, with a _change of variable_ $x=q/q_\text{TF}$
+$$\begin{align}
+\frac{1}{\tau}&= \left( \frac{Ze^{2}}{\epsilon_{0}} \right)^{2}n_\text{imp} \frac{m}{4\pi \hbar^{3}k_{F}^{3}} \int_{0}^{2k_{F}/q_\text{TF}}  dx\,x^{3}\left( \frac{1}{x^{2}+1} \right)^{2}  \\
+&=\left( \frac{Ze^{2}}{\epsilon_{0}} \right)^{2}n_\text{imp} \frac{m}{4\pi \hbar^{3}k_{F}^{3}} \frac{1}{2}\left[ -1+\frac{1}{1+(2k_{F}/q_\text{TF})^{2}}+\ln\left( 1+\left( \frac{2k_{F}}{q_\text{TF}} \right)^{2} \right) \right]
+\end{align}$$
+- For _strong screening_, $2k_{F}\ll q_\text{TF}$, such that:
+$$\frac{1}{\tau}\approx \left( \frac{Ze^{2}}{\epsilon_{0}} \right)^{2}n_\text{imp} \frac{1}{4\pi} \frac{m}{\hbar^{2}k_{F}^{3}} \frac{1}{4}\left( \frac{2k_{F}}{q_\text{TF}} \right)^{4}=\frac{\pi}{\hbar}\left( \frac{Ze^{2}}{\epsilon_{0}q_\text{TF}^{2}} \right)^{2}n_\text{imp}g_{V}(\varepsilon _{F})$$
+- Relaxation time _decreases_ with $Z, n_\text{imp},g_{V}(\varepsilon _{F})$
+
+### Electron-phonon scattering relaxation time
+- Simplify the interaction Hamiltonian with some _dimensionless coupling constant_ $\gamma$
+	- For typical _metals_, $\gamma<1$
+$$\displaylines{H_\text{e-ph}=i\sum_{\boldsymbol{k},\boldsymbol{q},\lambda}g(\boldsymbol{q})(a^{\dagger}_{-\boldsymbol{q}}+a_{\boldsymbol{q}})c^{\dagger}_{\boldsymbol{k}\lambda}c_{\boldsymbol{k}\lambda} \\ g(\boldsymbol{q})=qV_{a}(\boldsymbol{q})\sqrt{ \frac{\hbar}{2NM\omega_{\boldsymbol{q}}} } \qquad |g(\boldsymbol{q})|^{2}=\gamma \frac{\hbar\omega_{\boldsymbol{q}}}{2g_{V}(\varepsilon_{F})}}$$
+- Account for _four scattering events_:
+	- _Emission_ of phonon $\boldsymbol{q}$ by electron $\boldsymbol{k}+\boldsymbol{q}$
+	- _Emission_ of phonon $-\boldsymbol{q}$ by electron $\boldsymbol{k}$
+	- _Absorption_ of phonon $\boldsymbol{q}$ by electron $\boldsymbol{k}$
+	- _Absorption_ of phonon $-\boldsymbol{q}$ by electron $\boldsymbol{k}+\boldsymbol{q}$
+
+- From the _Golden Rule_, assuming _spin degeneracy_:
+$$\begin{align}
+\frac{\partial f_{\boldsymbol{k}}}{\partial t}\Bigg|_\text{coll}=\frac{2\pi}{\hbar}\sum_{\boldsymbol{q}}&|g(\boldsymbol{q})|^{2} \times \\
+\Big\{&\big[(N_{\boldsymbol{q}}+1)f_{\boldsymbol{k}+\boldsymbol{q}}(1-f_{\boldsymbol{k}})-N_{\boldsymbol{q}}f_{\boldsymbol{k}}(1-f_{\boldsymbol{k}+\boldsymbol{q}})\big]\delta(\varepsilon_{\boldsymbol{k}+\boldsymbol{q}}-\varepsilon_{\boldsymbol{k}}-\hbar\omega_{\boldsymbol{q}}) \\
++&\big[N_{-\boldsymbol{q}}f_{\boldsymbol{k}+\boldsymbol{q}}(1-f_{\boldsymbol{k}})-(N_{-\boldsymbol{q}}+1)f_{\boldsymbol{k}}(1-f_{\boldsymbol{k}+\boldsymbol{q}})\big]\delta(\varepsilon_{\boldsymbol{k}+\boldsymbol{q}}-\varepsilon_{\boldsymbol{k}}+\hbar\omega_{-\boldsymbol{q}})\Big\}
+\end{align}$$
+- To simplify, _assume_ $\hbar\omega_{q}\ll\varepsilon_{\boldsymbol{k}},\varepsilon_{\boldsymbol{k}+\boldsymbol{q}}$ and _ignore spontaneous emission_:
+$$\displaylines{\frac{\partial f_{\boldsymbol{k}}}{\partial t}\Bigg|_\text{coll}=\int  \frac{d^3q}{(2\pi)^{3}}W(\boldsymbol{k},\boldsymbol{k}+\boldsymbol{q})[f_{\boldsymbol{k}+\boldsymbol{q}}-f_{\boldsymbol{k}}] \\ W(\boldsymbol{k},\boldsymbol{k}+\boldsymbol{q}) =\frac{4\pi}{\hbar}|g(\boldsymbol{q})|^{2}N_{\boldsymbol{q}}\,\delta(\varepsilon_{\boldsymbol{k}+\boldsymbol{q}}-\varepsilon_{\boldsymbol{k}})}$$
+- Then calculating _relaxation time_:
+$$\frac{1}{\tau_\boldsymbol{k}}=\int  \frac{d^3q}{(2\pi)^{3}} W(\boldsymbol{k},\boldsymbol{k}+\boldsymbol{q})(1-\cos\theta') $$
+- Following the same strategy as from the static potential, with $1-\cos\theta'=2(q/2k_{F})^{2}$
+$$\begin{align}
+\frac{1}{\tau_{\boldsymbol{k}}}&=\frac{2\pi}{\hbar} \frac{\gamma}{g_{V}(\varepsilon_{F})} \frac{1}{(2\pi)^{3}} \frac{m}{\hbar^{2}k_{F}}2\pi \int_{0}^{2k_{F}}  dq\,q(\hbar\omega_{q})N(\omega_{q}) 2\left( \frac{q}{2k_{F}} \right)^{2} 
+\end{align}$$
+- Assume _linear dispersion_ $\omega_{\boldsymbol{q}}=c_{l}q$, and $k_{B}\Theta_{D}=\hbar c_{l}k_{F}$:
+$$\begin{align}
+\frac{1}{\tau_{\boldsymbol{k}}}&=\frac{\gamma}{4g_{V}(\varepsilon_{F})} \frac{mc_{l}}{\hbar^{2}\pi k_{F}^{3}} \int_{0}^{2k_{F}}  \frac{q^{4}dq}{\exp(\hbar c_{l}q/k_{B}T)-1}  \\
+&=\frac{\gamma}{4g_{V}(\varepsilon_{F})} \frac{mc_{l}k_{F}^{2}}{\hbar^{2}\pi} \left( \frac{T}{\Theta_{D}^{5}} \right) \int_{0}^{2\Theta_{D}/T}  \frac{y^{4}dy}{e^{y}-1} 
+\end{align}$$
+- Inspect the _low and high temperature limits_, and effects on _resistivity_:
+$$\rho(T)\propto \frac{1}{\tau}\propto\begin{cases}
+ T^{5} &T\ll\Theta_{D} \\ T &T\gg\Theta_{D}
+\end{cases}$$
+### Limitations of Boltzmann theory
+- Relaxation time has to include _all scattering mechanisms_:
+$$\frac{1}{\tau}=\frac{1}{\tau _\text{e-ph}}+\frac{1}{\tau _\text{impure}}+\frac{1}{\tau _\text{interband}}+\dots$$
+- The _semiclassical approximation_ requires _wavepackets_ to be formed, which can only happen when the _wavelength_ of the applied field is _much larger_ than the _lattice constant_
+- The mean free path between scattering must also be _much longer_ than the _Fermi wavelength_
+
+- Relaxation can only be defined in the context of _scattetring_, such that electrons do not gain infinite energy
+- The relevant lengthscales should also be _longer_ than the _electron de Broglie wavelength_
+
+- The truly quantum regime has its own [[#Quantum Transport|quantum transport formalism]]
+
 ## Phonon mediation of e-e interactions
 - The e-ph interaction results in _scattering of electrons_ via phonon emission or absorption
 - There are also _second order_ processes involving a phonon being _emitted_ by one electron before being _absorbed by another_ electron
+![[Phonon second order process.png]]
+- The Hamiltonian for the _phonon-mediated electron interaction_:
+	- The scattering is _spin independent_, and typically only involve _normal scattering_ with _acoustic phonons_ and _plane wave electrons_
+$$H=H_{0}+\frac{1}{2}\sum_{\boldsymbol{k},\boldsymbol{k}',\boldsymbol{q}} \braket{ \psi_{\boldsymbol{k}'+\boldsymbol{q}} |\bra{ \psi_{\boldsymbol{k}-\boldsymbol{q}}}g\ket{\psi_{\boldsymbol{k}}} | \psi_{\boldsymbol{k}'}     } c^{\dagger}_{\boldsymbol{k}'+\boldsymbol{q}}c^{\dagger}_{\boldsymbol{k}-\boldsymbol{q}}c_{\boldsymbol{k}}c_{\boldsymbol{k}'}$$
+- This weak _attraction_ will can lead to [[#Superconductivity|superconductivity]] through the formation of _Cooper pairs_
 
-- A _canonical transformation_ of the Frochlich Hamiltonian to _eliminate first order terms_
+- A _canonical transformation_ of the [[#Form of e-ph matrix element|Frohlich Hamiltonian]] to the expected form:
+$$H=H_{0}+H_\text{e-ph} \implies H'=e^{-s}He^{s} \quad \ket{\Psi'}=e^{-s}\ket{\Psi}  $$
+- Expanding:
+$$H'=H_{0}+H_\text{e-ph}+[H_{0},s]+[H_\text{e-ph},s]+\frac{1}{2}[[H_{0},s],s]+\dots$$
+- To _eliminate first order terms_:
+$$H_\text{e-ph}+[H_{0},s]=0 \implies H'=H_{0}+\frac{1}{2}[H_\text{e-ph},s]+\dots$$
+- Use the ansatz:
+$$\displaylines{s=\sum_{\boldsymbol{k},\boldsymbol{q}}(Aa^{\dagger}_{-\boldsymbol{q}}+Ba_{\boldsymbol{q}})M_{\boldsymbol{q}}c^{\dagger}_{\boldsymbol{k}+\boldsymbol{q}}c_{\boldsymbol{k}} \\ A=-(\varepsilon_{\boldsymbol{k}+\boldsymbol{q}}-\varepsilon_{\boldsymbol{k}}+\hbar\omega_{-\boldsymbol{q}})^{-1}\qquad B=-(\varepsilon_{\boldsymbol{k}+\boldsymbol{q}}-\varepsilon_{\boldsymbol{k}}-\hbar\omega_{\boldsymbol{q}})^{-1}}$$
+- _Expanding_ the transformed Hamiltonian, one gets to the lowest order:
+$$H'=H_{0}+\sum_{\boldsymbol{k},\boldsymbol{k}',\boldsymbol{q}}|M_{\boldsymbol{q}}|^{2}\left( \frac{\hbar\omega_{\boldsymbol{q}}}{(\varepsilon_{\boldsymbol{k}+\boldsymbol{q}}-\varepsilon_{\boldsymbol{k}})^{2}-(\hbar\omega_{\boldsymbol{q}})^{2}} \right)c^{\dagger}_{\boldsymbol{k}'+\boldsymbol{q}}c^{\dagger}_{\boldsymbol{k}-\boldsymbol{q}}c_{\boldsymbol{k}}c_{\boldsymbol{k}'}+\dots$$
+- The interaction is _attractive_ for electrons within the interval:
+$$|\varepsilon_{\boldsymbol{k}+\boldsymbol{q}}-\varepsilon_{\boldsymbol{k}}|<\hbar\omega_{\boldsymbol{q}}\leq\hbar\omega_{D}$$
+- This results in the _formation of Cooper pairs_
 # Quantum Transport
 - [[#Boltzmann theory]] is _semi-classical_, which also _does not take phase coherence into account_
 
