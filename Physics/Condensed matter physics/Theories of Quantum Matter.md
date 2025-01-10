@@ -1315,7 +1315,7 @@ $$a^\dagger_{\mathbf{p}+\mathbf{q}\uparrow}a^\dagger_{-\mathbf{p}\downarrow}a^{\
 - Different from the [[#Bogoliubov theory|Bose gas]], there are _not only pair excitations_ with $\boldsymbol{q}=0$
 
 - Still, for BCS theory, assume the ground state _only involves zero momentum pairs_
-- With _variational coefficients_, the _general state_ is:
+- With _variational coefficients_, the _most general state_ is:
 $$\lvert{\text{pair}}\rangle\equiv\sum_{\sum_\mathbf{p}n^P_\mathbf{p}=N/2} c_{\{n^P_{\mathbf{p}}\}} \prod_{\mathbf{p}}\left[a^\dagger_{\mathbf{p}\uparrow}a^\dagger_{-\mathbf{p}\downarrow}\right]^
 {n_{\mathbf{p}}}\lvert{\text{VAC}}\rangle$$
 - This gives (accurate for the limit $V\to \infty$)
@@ -1323,7 +1323,7 @@ $$\langle{\text{pair}}\rvert H_\text{int} \lvert \text{pair} \rangle = \frac{U_0
 - The first term is the _Hartree-Fock energy_, and the latter term:
 $$\tilde H_{\text{int}}=\frac{U_0}{V}\sum_{\mathbf{p}, \mathbf{p}'}a^\dagger_
 {\mathbf{p}\uparrow}a^\dagger_{-\mathbf{p}\downarrow}a^{\vphantom{\dagger}}_{-\mathbf{p}'\downarrow}a^{\vphantom{\dagger}}_{\mathbf{p}'\uparrow}$$
-- Introducing $b_{\boldsymbol{p}}=a^{\dagger}_{\boldsymbol{p}\uparrow}a^{\dagger}_{-\boldsymbol{p}\downarrow}$
+- Introducing the _pair creation operator_ $b_{\boldsymbol{p}}=a^{\dagger}_{\boldsymbol{p}\uparrow}a^{\dagger}_{-\boldsymbol{p}\downarrow}$
 $$H_{\text{pair}}=2\sum_{\mathbf{p}}\epsilon_{\mathbf{p}}b^\dagger_\mathbf{p}b^{\vphantom{\dagger}}_\mathbf{p}+\frac{U_0}{V}\sum_{\mathbf{p},\mathbf{p}'} b^\dagger_\mathbf{p}
 b^{\vphantom{\dagger}}_{\mathbf{p}'}$$
 - $b_{\boldsymbol{p}}$ _do not obey Bose commutation relations_
@@ -1341,6 +1341,7 @@ $$\lvert{\text{BCS}}\rangle =\prod_\mathbf{p}\left[v_\mathbf{p}b^\dagger_\mathbf
 	- A _projection_ to fixed number $N$ gives $\ket{\text{N pair}}$ for $c_{p}=v_{p}/u_{p}$
 
 - For this wavefunction, $\langle n_{\boldsymbol{p}}^{P} \rangle=v_{p}^{2}$
+
 - Total variational energy:
 $$\langle{\text{BCS}}\rvert H \lvert \text{BCS} \rangle=2\sum_\mathbf{p}\epsilon_{\mathbf{p}}|v_\mathbf{p}|^2+\frac{U_0}{V}\sum_{\mathbf{p},\mathbf{p}'}u^*_\mathbf{p}v_
 \mathbf{p}u_{\mathbf{p}'}v^*_{\mathbf{p}'}$$

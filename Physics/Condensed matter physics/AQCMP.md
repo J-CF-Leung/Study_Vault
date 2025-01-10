@@ -2082,7 +2082,7 @@ $$H'=H_{0}+\sum_{\boldsymbol{k},\boldsymbol{k}',\boldsymbol{q}}|M_{\boldsymbol{q
 $$|\varepsilon_{\boldsymbol{k}+\boldsymbol{q}}-\varepsilon_{\boldsymbol{k}}|<\hbar\omega_{\boldsymbol{q}}\leq\hbar\omega_{D}$$
 - This results in the _formation of Cooper pairs_
 # Quantum Transport
-- [[#Boltzmann theory]] is _semi-classical_, which also _does not take phase coherence into account_
+- [[#Boltzmann theory]] is _semi-classical_, which also _does not take phase coherence into account_ and only applies for _wave packets_ of minimum $\boldsymbol{k}-\boldsymbol{r}$ uncertainty
 
 - _Quantum transport theory_ applies to _phase-coherent quantum systems_
 	- Effects are more apparent in _low-dimensional, low-temperature systems_
@@ -2104,7 +2104,7 @@ $$E_{\boldsymbol{k}}=\frac{\hbar^{2}}{2}\sum_{i,j=1}^{3}\boldsymbol{k}_{i}(m^{*}
 ![[2DEG Schottky gate.png]]
 $$\Delta Q=-e\Delta n=C\Delta V_{g}$$
 
-- By more finely manipulating the Schottky gate, one can create an _arbitrary 2D effective potential_, such that the electrons are governed by:
+- By more finely manipulating the _Schottky gate voltage_, one can create an _arbitrary 2D effective potential_, such that the electrons are governed by:
 $$\frac{1}{2m^{*}}(\boldsymbol{p}+e\boldsymbol{A})^{2}\Phi+V(x,y)\Phi=i\hbar \frac{\partial \Phi}{\partial t}$$
 
 ### Quasi-1D electron gas
@@ -2165,12 +2165,221 @@ $$\left( \frac{\left( \hat{p}+eA \right)^{2}}{2m^{*}} +\hat{V}(x,y)\right)\Phi=E
 - Each _lead_ has _many occupied sub-bands_, and are also connected to _reservoirs_ at electrochemical potentials $\mu-eV$ and $\mu$
 ![[Landauer formalism system.png|600]]
 
+### Landauer formula for conductance
 - For a _given_ $E$, there are also _current amplitudes_ $a^{\pm}$, $b^{\pm}$
 $$\begin{align}
-\Phi_{L}&=\sum_{n} \frac{1}{\sqrt{ j_{k_{n}} }} [a^{+}_{k_{n}}e^{ik_{n}x}\phi_{k_{n}}(y)-a^{-}_{k_{n}}e^{-ik_{n}x}\phi]
+\Phi_{L}&=\sum_{n} \frac{1}{\sqrt{ j_{k_{n}} }} [a^{+}_{k_{n}}e^{ik_{n}x}\phi_{k_{n}}^{+}(y)-a^{-}_{k_{n}}e^{-ik_{n}x}\phi_{k_{n}}^{-}(y)] \\
+\Phi_{R}&=\sum_{n} \frac{1}{\sqrt{ j_{k_{n}} }} [b^{+}_{k_{n}}e^{ik_{n}x}\phi_{k_{n}}^{+}(y)-b^{-}_{k_{n}}e^{-ik_{n}x}\phi_{k_{n}}^{-}(y)]
 \end{align}$$
+- The _leads_ are perfect quasi-1D systems, with _sub-bands_ at energy $E$:
+$$E=E_{n}+\frac{\hbar^{2}k_{n}^{2}}{2m^{*}}$$
+- For $E>E_{n}$, there are _propagating modes_ in the sub-band
+- For $E<E_{n}$, there are _evanescent modes_ in the sub-band
+
+- The relationships between the _outgoing current amplitudes_ can be written using _transmission and reflection amplitudes_, in terms of the _incoming amplitudes_
+$$\begin{align}
+b_{k_{n}}^{+}(E)&=\sum_{m=1}^{\infty}T^{+}_{k_{n},k_{m}}(E)a^{+}_{k_{m}}(E)+\sum_{m=1}^{\infty}R^{+}_{k_{n},k_{m}}b^{-}_{k_{m}}(E) \\
+a_{k_{n}}^{-}(E)&=\sum_{m=1}^{\infty}R^{-}_{k_{n},k_{m}}(E)a^{+}_{k_{m}}(E)+\sum_{m=1}^{\infty}T^{-}_{k_{n},k_{m}}b^{-}_{k_{m}}(E)
+\end{align}$$
+- Evanescent modes will _decay_ before reaching either reservoir, and _does not contribute to current_
+
+- For $N$ _propagating modes_, the current _going from the left reservoir to the right_, with cross-sectional area $A$:
+$$I_{E}^{+}=A\sum_{m=1}^{N}|T_{k_{n},k_{m}}^{+}(E)|^{2}|a_{k_{m}}^{+}(E)|^{2}f_{E}(\mu-eV)$$
+- For _each sub-band_ $n$, there are _wave-vectors_ $k_{n}(l)=l(2\pi/L)$, giving current:
+$$I_{E}^{+}=A\sum_{n=1}^{N}\sum_{k_{n}=0}^{\infty}\sum_{m=1}^{N}|T_{k_{n},k_{m}}^{+}(E)|^{2}|a_{k_{m}}^{+}(E)|^{2}f_{E}(\mu-eV)$$
+- For a _one-dimensional propagating sub-band_, $|a_{k_{m}}^{+}(E)|^{2}=-ev_{k}/(LA)$, converting the sum into an _integral_:
+$$I_{E}^{+}=-\frac{e}{h} \sum_{n,m}\int  dE_{k}\,|T^{+}_{n,m}(E)|^{2}f_{E}(\mu-eV) $$
+- Similarly, current going from the _right reservoir to the left_:
+$$I_{E}^{-}=-\frac{e}{h} \sum_{n,m}\int  dE_{k}\,|T^{-}_{n,m}(E)|^{2}f_{E}(\mu) $$
+- The _transmission amplitudes_ can only differ by a _phase_, hence:
+$$I=I^{+}-I^{-}=-\frac{e}{h}\sum_{n,m}\int  dE_{k}\,|T^{+}_{n,m}(E)|^{2}[f(\mu)-f(\mu-eV)] $$
+- The Landauer _conductance_ is then:
+$$G=\lim_{ V \to 0 } \frac{I}{V}=\frac{e^{2}}{h}\sum_{n,m} \int_{0}^{\infty}dE\,|T^{+}_{n,m}(E)|^{2} \left( -\frac{\partial f}{\partial E} \right)  $$
+- At _low temperatures_, this becomes:
+$$G(T\to 0)=\frac{e^{2}}{h}\sum_{n,m=1}^{N}|T_{n,m}^{+}(\mu)|^{2}=\frac{e^{2}}{h}\mathrm{Tr}(T_{\mu}^{+\dagger}T_{\mu}^{+})$$
+
+- The _sum over propagating modes_ makes the conductance _partially independent_ of the _lead basis_
+
+### Quantum transport through a saddle point
+- Let the 2D _effective potential_ be:
+$$V(x,y)=V_{0}-\frac{1}{2}m^{*}\omega_{x}^{2}x^{2}+\frac{1}{2}m^{*}\omega_{y}^{2}y^{2}$$
+- The _transmission coefficent_ is:
+$$\displaylines{|T_{n,m}^{+}(E)|^{2}=\delta_{nm} \frac{1}{1+\exp(-\pi\varepsilon_{n}(E))} \\ \varepsilon_{n}=\frac{2}{E_{x}}\left[ E-E_{y}\left( n+\frac{1}{2} \right)-V_{0} \right]}$$
+- Low temperature conductance:
+$$G(T\to 0)=\frac{e^{2}}{h}\sum_{n,m=1}^{N}|T^{+}_{n,m}(\mu)|^{2}$$
+- This gives _plateaus_ before the _quantised values_ of conductance
+![[Saddle point conductance.png|300]]
+
+### Electron interference
+- Use an _interferometer device_ to _split_ the sub-band current
+- Applying a perpendicular _magnetic field_ will then give a _path difference_
+- The Landauer formalism _still applies_
+
+- Consider a simple _ring setup_
+![[Electron interference.png|200]]
+- Transmission amplitude and conductance:
+	- Ignoring _higher order_ paths, as they will have _decohered_
+	- Manifestation of the [[Charged Particles#The Aharonov-Bohm Effect|Ahaonov-Bohm Effect]]
+$$\displaylines{t_{OA}\approx t_{OA}^{+}+t_{OA}^{-}=\exp(i\varphi_{OA}^{+})+\exp(i\varphi_{OA}^{-}) \\ G=\frac{e^{2}}{h}|t_{OA}|^{2}=\frac{e^{2}}{h}[2+2\cos(\varphi_{OA}^{+}-\varphi_{OA}^{-})]}$$
+- The _phases_ can be found from the WKB approximation:
+$$\displaylines{\varphi^{\pm}_{OA}=\int  \boldsymbol{k}^{\pm} \cdot d\boldsymbol{l}^{\pm}=\int \frac{\boldsymbol{p}^{\pm}+e\boldsymbol{A}}{\hbar}\cdot d\boldsymbol{l} ^{\pm} \\ \varphi_{OA}^{+}-\varphi_{OA}^{-}=\frac{e}{\hbar}\oint  \boldsymbol{A}\cdot d\boldsymbol{l} =\frac{2\pi e}{h}BS}$$
+- The _ring conductance_ is then _periodic_ in the _magnetic flux_:
+$$G=\frac{e^{2}}{h}\left[ 2+2\cos\left( \frac{2\pi e}{h}BS \right) \right]\qquad \Delta \Phi=\frac{h}{e}$$
+
+## Quantum dots
+- A quantum dot is a _quasi-0D system_, build from a 2D heterostructure
+
+### Eigenstates of a quantum dot
+- The Schrodinger equation in 2D:
+$$\left( \frac{1}{2m^{*}}|\boldsymbol{p} +e\boldsymbol{A}|^{2}+V(r,\phi)\right)\Phi(r,\phi)=E\Phi(r,\phi)$$
+- Take a _cylindrically symmetric potential_ in the symmetric gauge:
+$$\displaylines{V(r,\phi)=\frac{1}{2}m^{*}\omega_{0}^{2}r^{2} \qquad \boldsymbol{A}=\left( -\frac{By}{2}, \frac{Bx}{2},0 \right) \\ \left( \frac{p_{r}^{2}}{2m^{*}}+\frac{eB}{2m^{*}}L_{z}+\frac{1}{2m^{*}}\left( \frac{eB}{2} \right)^{2}r^{2}+\frac{1}{2}m^{*}\omega_{0}^{2}r^{2} \right)\Phi(r,\phi)=E\Phi(r,\phi)}$$
+- The eigenfunctions and eigenvalues (the _Darwin-Fock spectrum_)
+$$\displaylines{\Phi_{n,l}(\boldsymbol{r},\phi)-R_{n}(r)\exp(il\phi) \qquad E_{n,l}=\hbar\omega_{c}\left( b\left( n+\frac{1}{2} \right)+\frac{b|l|-l}{2} \right) \\ \omega_{c}=\frac{eB}{2m^{*}} \qquad b=\sqrt{ 1+\frac{4\omega_{0}^{2}}{\omega_{c}^{2}} }}$$
+- The low- and high-field _limits_:
+$$\lim_{ B \to \infty}E_{n,l}=\hbar\omega_{c}\left( n+\frac{|l|-l+1}{2} \right) \qquad \lim_{ B \to 0 }E_{n,l}=\hbar\omega_{0} (2n+|l|+1) $$
+![[Quantum dot eigenstates.png|650]]
+### Quantum transport through a quantum dot
+- A quantum dot will show _transmission resonances_ in conductance
+
+- There will be _fine transmission lines_ that show _temperature broadening_
+	- Resembles the _energy derivative_ of the Fermi-Dirac distribution
+- There are also _broad, Lorentzian lines_ that indicate _Breit-Wigner scattering_ from a resonant state
+![[Quantum dot conductance.png|650]]
+
+- Treat the quantum dot as a _resonant cavity_ with _two identical barriers_, of reflection and transmission amplitudes $r,t$
+![[Quantum dot transmission.png|400]]
+- The _total transmission_:
+$$\displaylines{r^{2}=1-t^{2} \\ T=t^{2}e^{ika}(1+r^{2}e^{2ika}+r^{4}e^{4ika}+\dots)=\frac{t^{2}}{1-r^{2}e^{2ika}}=|T|e^{i\theta }}$$
+- $T$ has a _resonance_ for each _bound state_:
+$$ka=k_{n}a=n\pi$$
+- For $t^{1}\ll 1$, close to the $n$th resonance:
+$$T=(-1)^{n} \frac{t^{2}e^{i(k-k_{n})a}}{1-r^{2}e^{2i(k-k_{n})a}}\approx (-1)^{n} \frac{it^{2}/2}{(k-k_{n})a+it^{2}/2}\approx C_{n} \frac{i\Gamma/2}{(E-E_{n})+i\Gamma/2}$$
+- This is the _Breit-Wigner resonance_
+
+- Conductance also has a _magnetic field dependence_ which is _not consistent_ with the [[#Eigenstates of a quantum dot|Darwin-Fock spectrum]] (right)
+- It is a _spin-split_ version of the Darwin-Fock spectrum (left)
+![[Quantum dot resonance spin split.png|400]]
+
+### Classical Coulomb blockade in a quantum dot
+- The dots with the _external gates_ behave as two plates of a _capacitor_ with capacitance $C$
+- The external charge can be manipulated using the _gate voltage_ $V_{g}$
+
+- The charge on the _external gates_:
+$$Q_\text{ext}=\sum_{i}Q_{i}$$
+- With charge $Q$ on the _dot_, the _electrostatic potential_ and _potential energy_ of the electrons is:
+$$\displaylines{\phi(Q)=\frac{Q+Q_\text{ext}}{C} \\ U(Q)=\int_{0}^{Q}  \phi(Q)\,dQ =\frac{Q^{2}}{2C}+Q \frac{Q_\text{ext}}{C}}$$
+- For $N$ electrons, $Q=-Ne$:
+$$U(N)=\frac{(Ne-Q_\text{ext})^{2}}{2C}-\frac{Q_\text{ext}^{2}}{2C}$$
+- The _energetic cost_ to add an extra electron:
+$$\displaylines{\Delta U=U(N+1)-U(N)=\frac{e}{C}\left[ \left( N+\frac{1}{2} \right)e-Q_\text{ext} \right] \\ Q_\text{ext}=Ne \implies \Delta U=\frac{e^{2}}{2C} \qquad\qquad Q_\text{ext}=\left( N+\frac{1}{2} \right)e\implies \Delta U=0}$$
+- For _external charge_ $(N+1/2)e$, there is _no energetic barrier_ to _electron flow_
+- The measured resistance is then due to the _barriers_ of the dot
+
+- For external charge $Ne$, there is _extra energy_ required for electrons to hop onto the dot
+- The resistance will be _large_ for _low temperatures_ $k_{B}T\ll e^{2}/2C$
+![[Quantum dot Coulomb blockade.png|400]]
+
+- There is _no magnetic field dependence_
+
+### The quantum Coulomb blockade
+- Take the energy of the _quantum states_ into account
+	- Energy should not be a _sum_ of single-particle energies
+	- Can be interpreted as the [[#Solving the Hartree-Fock Equation|addition energies]] of the electrons
+$$\displaylines{U(N)=\frac{(Ne-Q_\text{ext})^{2}}{2C}-\frac{Q_\text{ext}^{2}}{2C}+\sum_{i=1}^{N}\varepsilon_{i} \\ \Delta U=U(N+1)-U(N)=\frac{(N+1/2)e^{2}-eQ_\text{ext}}{C}+\varepsilon_{N+1}}$$
+- For current to be able to _flow_ $(\Delta U=0)$
+$$Q_\text{ext}=\left( N+\frac{1}{2} \right)e+\frac{C}{e}\varepsilon_{N+1}$$
+- The change between _conductance peaks_ is then:
+	- Change is made using the _gate voltage_ $\Delta V_{g}=\Delta Q_\text{ext}/C_{g}$
+$$\Delta Q_\text{ext}=e+\frac{C}{e}(\varepsilon_{N+1}-\varepsilon_{N})$$
+- Therefore, transmission resonances display _both_ the Darwin-Fock spectrum and _additional spacing between resonances_, accounting for the [[#Quantum transport through a quantum dot|splitting]]
+
+### DC bias spectroscopy of a quantum dot
+- For a given _DC bias_ applied acrpss a quantum dot, one can measure the _differential conductance_ $dI/dV_\text{DC}$
+![[Quantum dot DC bias.png|400]]
+- The DC bias shifts the _chemical potentials_ on either side of the barrier, while the gate voltage controls the original _energy levels_
+- There is an expected _resonant peak_ in differential conductance when the chemical potential _passes_ the resonant energy level
+	- The peaks will _merge_ when the DC bias _matches_ the level spacing
+
+- Differential conductance plotted in colour at $B=0$:
+![[quantum dot spectroscopy.png|300]]
+- The diamond-like regions of $dI/dV_\text{DC}=0$ are a result of the _Coulomb blockade_, indicating a _fixed_ $N$
+- The DC bias between the _merging peaks_ indicate the _energy difference_ between the quantum dot states
+- The lines running _parallel_ to the diamonds indicate the _excited states_
+
+- The quantum dot has a _2D shell structure_ consistent with _Hund's rules_, making an _artificial atomic electronic structure_
+
+## Quantum Hall effect
+- Let there be a _high mobility two-dimensional electron gas_ of carrier density $n_{c}$, with a _perpendicular magnetic field_ $B$
+- Measuring the _Hall resistance_, there is a series of _plateaus_ with resistances, labelled by _integer_ $\nu$ (the _Quantum Hall Effect_)
+$$R_{xy}=\frac{V_{H}}{I}=\frac{h}{\nu e^{2}}$$
+- Meanwhile, the _longitudinal resistance_ for the voltage drop shows an _oscillatory pattern_ as a function of $B$ (the _Shubnikov-de Haas effect_)
+$$R_{x x}=\frac{V_{x}}{I}$$
+- The _plateaus_ in $R_{xy}$ and the _minima_ in $R_{x x}$ _coincide_ in values of $B$
+	- Corresponds to an _integer number_ of Landau levels
+![[Hall bar resistances.png]]
+
+### Multi-probe Landauer-Buttiker formalism
+- _Extension_ of the Landauer formalism to include _multiple contacts_
+![[Landauer Buttiker contacts.png|300]]
+- The $i$th contact has $N_{i}$ quasi-1D leads, and is connected to a _reservoir_ at chemical potential $\mu_{i}$
+- Each lead has conductance $e^{2}/h$, and voltage $-\mu_{i}/e$, such that they _inject_ current:
+$$I_{i,\text{injected}}=-\frac{e}{h}N_{i}\mu_{i}$$
+- Each lead has some _reflected_ current, and current _transmitted_ from other leads:
+	- The reflection and transmission amplitudes are _summed over all sub-bands_ $n,m$
+$$\displaylines{I_{i,\text{reflect}}=-\frac{e}{h}R_{i,i}\mu_{i}\qquad I_{i,\text{transmit}}=-\frac{e}{h}\sum_{j\neq i} T_{i,j}\mu_{j} \\ R_{i,i}=\sum_{n,m=1}^{N_{i}}|R^{(i,i)}_{n,m}|^{2} \qquad T_{i,j}=\sum_{n=1}^{N_{i}}\sum_{m=1}^{N_{j}}|T^{(i,j)}_{n,m}|^{2}}$$
+- The _total current from contact_ $i$:
+$$I_{i}=-\frac{e}{h}\left( (N_{i}-R_{i,i})\mu_{i}-\sum_{j\neq i}T_{i,j}\mu_{j} \right)$$
+### Edge states in the quantum Hall bar
+- In a strong magnetic field, _continuous edge states_ are formed along the bar
+	- Analagous to _classical skipping orbits_
+	- Taking _Hartree energy_ into account will give a _stepped potential_ instead of a smooth one
+![[Quantum hall edge states.png]]
+- For each edge state, there is _perfect transmission_ (no reflection):
+$$\displaylines{R_{i,i}=0 \\ T_{i,j}=\begin{cases}
+N &i,j\text{ are clockwise adjacent} \\ 0 &\text{otherwise}
+\end{cases}}$$
+![[Quantum Hall bar contacts.png|400]]
+
+- From this, setting up _simultaneous equations_ for the voltages from the [[#Multi-probe Landauer-Buttiker formalism|Landauer-Buttiker formulas]] and calculating the _Hall resistance_ and _longitudinal resistance_:
+$$\displaylines{I_{i}=-\frac{e}{h}\left( (N_{i}-R_{i,i})\mu_{i}-\sum_{j\neq i}T_{i,j}\mu_{j} \right)=\frac{e^{2}}{h}\left( N_{i}V_{i}-\sum_\text{clockwise}N_{j}V_{j} \right) \\ R_{x,y}=\frac{V_{A}-V_{C}}{I}=\frac{h}{Ne^{2}} \\ R_{x,x}=\frac{V_{A}-V_{B}}{I}=0}$$
+
+### Fractional quantum Hall effect
+- For an _ultra-high mobility_ 2DEG, the Hall resistance plateau may show _fractional_ $\nu$
+$$R_{xy}=\frac{h}{\nu e^{2}}\qquad \nu \in \mathbb{Q}^{+}$$
+- This arises due to _composite fermions_
 
 # Superconductivity
+- The phenomenon of a _persistent, zero resistance current_
+
+- Some _metallic elements_ will show superconductivity
+	- Example: $\ce{ Al }(T_{c}=1.2\,\mathrm{K})$, $\ce{ Sn }(T_{c}=3.7\,\mathrm{K})$, $\ce{ Nb }(T_{c}=9.5\,\mathrm{K})$
+- Some materials have _pressure-induced superconducting states_
+- Superconductivity is also seen in _alloys_ and _organic crystals_
+![[Superconducting elements.png|400]]
+
+## Phenomenology
+
+### Persistent current
+- When a current flow is _set up_ in a superconductor ring, it will _persist_ for a long time
+	- Apply an _external magnetic field_ perpendicular to the ring, before _cooling_ below $T_{c}$, then switching _off_ the field to set up a _current_
+	- The current then keeps the _enclosed flux_ of the ring _constant_
+
+### Meissner-Ochsenfeld effect
+- A superconductor will also _expel weak external magnetic fields_:
+$$\boldsymbol{B}=\mu_{0}(\boldsymbol{H}+\boldsymbol{M})=0$$
+- This is the _Meissner-Ochsenfeld effect_
+	- Result of _minimising free energy_ for a _superconducting current_
+- In other words, a superconductor is a _perfect diamagnet_:
+	- Above $T_{c}$, it may be a _paramagnet_
+$$\boldsymbol{H}=-\boldsymbol{M} \implies \chi=\frac{dM}{dH}\Bigg|_{H=0}=-1$$
+
+### Types of superconductivity
+- _Type I superconductors_ have a certain _critical field strength_ $H_{c}(T)$, above which the material _reverts_ to a conventional conductor
+
+- _Type II superconductors_ can go into a _mixed state_, where a magnetic field can _partially penetrate_
+	- There is a _regular lattice_ of _vortices_, inside which is a normal state, carrying a _flux quantum_ $\Phi_{0}=h/2e$
+![[Superconductivity types.png|300]]
 
 ## BCS Theory
 - Electron-phonon mediated
