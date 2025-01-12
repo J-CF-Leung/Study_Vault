@@ -937,7 +937,7 @@ $$\langle{\Psi}\rvert H \lvert \Psi \rangle - \mu N \int d\mathbf{r}|\varphi_{0}
 - With _first order variations_ $\delta \varphi_{0}$ and $\delta \varphi_{0}^{*}$, and defining the _condensate wavefunction, or order parameter_ $\varphi(\boldsymbol{r})=\sqrt{ N }\varphi_{0}(\boldsymbol{r})$, one gets the _Gross-Pitaevskii equation_:
 $$\left[-\frac{1}{2m}\nabla^2-\mu+V(\mathbf{r})+U_0|\varphi(\mathbf{r})|^2\right]\varphi(\mathbf{r})=0$$
 
-- Considering that $\braket{  |  }$ was extremised:
+- Considering that $\braket{ \Psi|H-\mu N |\Psi  }$ is extremised under _general variations_ that _change particle number_:
 $$\mu=\frac{\partial \braket{ \Psi|H | \Psi } }{\partial N}$$
 
 ### Healing length
@@ -949,10 +949,13 @@ $$\varphi(\boldsymbol{r})=\sqrt{ n }\phi\left( \frac{\boldsymbol{r}}{\xi} \right
 - For $\varphi_{0}\to \text{const.}$, $\mu\approx U_{0}n$:
 $$-\frac{1}{2m\xi^{2}}\phi''+\mu(|\phi|^{2}-1)\phi=0$$
 - Set:
-$$\xi=$$
+$$\xi\equiv \frac{1}{\sqrt{ 2mnU_{0} }}$$
 
 - The _healing length_ $\xi$ is the length-scale on which $\varphi(\boldsymbol{r})$ is _disturbed_ by some _localised perturbation_ of scale $\ll \xi$
 - $U_{0}$ sets the _steepness_ of the _recovery_
+
+- _Example_: near a _hard wall_ where $\varphi(x)=0$, and a _density_ $n_{\infty}=\varphi_{\infty}^{2}$ far from the wall:
+$$\varphi(x)=\varphi_{\infty }\tanh \frac{x}{\sqrt{ 2 }\xi}$$
 
 ### Observables
 - _Density_ and _current density_:
@@ -970,20 +973,24 @@ $$\boldsymbol{v}_{s}\equiv \frac{1}{m}\nabla \chi$$
 - From the above, one expects the flow to be _irrotational_ with $\nabla\times \boldsymbol{v}_{s}=0$
 
 - However, phase can simply _increase_ by a multiple of $2\pi$, leading to the _Onsager-Feynman quantisation condition_:
-$$\oint \boldsymbol{v}_{s}\cdot d\boldsymbol{\mathrm{l}}=\frac{2\pi l}{m}=\frac{hl}{m} ,\quad l \in \mathbb{Z}$$
+$$\oint m\boldsymbol{v}_{s}\cdot d\boldsymbol{\mathrm{l}}=2\pi l=hl ,\quad l \in \mathbb{Z}$$
 - A _non-zero winding_ requires that density _vanishes at a point_ in 2D, or a _line_ in 3D
 	- $\varphi$ must be _approximately_ $\propto z^{l}$ for $z=x+iy$ to give the non-zero winding
 
 - This is _analagous_ to _vortices_ in _fluid dynamics_
 	- In a _classical_ fluid, vorticity is not generally quantised
 
-- Look for two-dimensional solutions
-- By _parametrising_ $\varphi(r,\theta)$
+- Look for two-dimensional solutions with _winding number_ $l\neq 0$
+$$\varphi(r,\theta)\xrightarrow{r\to \infty} \sqrt{ n }\exp(il\theta)$$
+- _Parametrise_ $\varphi(r,\theta)$:
+$$\varphi(r,\theta)=\sqrt{ n }f\left( \frac{r}{\xi} \right)\exp(il\theta)$$
 
-- From the _Gross-Pitaevskii equation_
-
+- From the _Gross-Pitaevskii equation_, with $s\equiv r/\xi$
+$$-f''-\frac{f'}{s}+\frac{l^{2}f}{s^{2}}-f+f^{3}=0$$
+- For _small_ $s$ and $s\to \infty$ respectively:
 $$f(s)\sim s^{l} \qquad f(s\to \infty)\to 1$$
 - The region of _suppressed density_ has size $\xi$, and is known as the _vortex core_
+	- In 3D, it is a _line_
 
 - The _energy_ of the vortex can be found using $\braket{ \Psi|H | \Psi }$ in terms of $\varphi$
 - The _excess energy_ relative to the _uniform density state_:
@@ -994,6 +1001,7 @@ $$\Delta E = \int d\mathbf{r}\left[\frac{n^2}{2m\xi^2}(f')^2+\frac{U}{2}n^2 \lef
 - From the winding, introducing _cutoffs_ $\xi<r<L$, one gets a _logarithmically divergent_ kinetic contribution
 $$\displaylines{\nabla \chi=\frac{l}{r}\hat{\boldsymbol{e}}_{\theta} \\ \Delta E=\text{const.}+\frac{\pi nl^{2}}{m}\log\left( \frac{L}{\xi} \right)}$$
 - For _finite systems_, this still gives finite energy
+
 - One can also have _two vortices_ of _opposite vorticity_
 - Kinetic energy _increases_ as they are further away, therefore _opposite vortices attract_, and similarly _like vortices repel_:
 $$\Delta E_{K} \propto \log|\boldsymbol{r}_{1}-\boldsymbol{r}_{2}|$$
@@ -1003,6 +1011,7 @@ $$\Delta E_{K} \propto \log|\boldsymbol{r}_{1}-\boldsymbol{r}_{2}|$$
 - The vortices in 3D are _analagous to wires in magnetostatics_
 
 - A manifestation of _superfluidity_
+	- Persistent flow _without resistance_
 	- Vortices require _breaking rotational symmetry_
 
 ## Bogoliubov theory
@@ -1065,6 +1074,7 @@ $$\begin{align}
 h = \Omega\left[b^\dagger_1b^{\vphantom{\dagger}}_1+b^\dagger_2b^{\vphantom{\dagger}}_2\right] + \Omega - \epsilon
 \end{align}$$
 - Applying to the Bogoliubov Hamiltonian:
+	- A factor of $2$ due to the $a_{\boldsymbol{k}}^{\dagger}a_{-\boldsymbol{k}}^{\dagger}$ terms $(\delta_{\boldsymbol{p},}=n_{0}U_{0},\,\epsilon_{\boldsymbol{p}}=\tilde{\epsilon}_{\boldsymbol{p}}+n_{0}U_{0})$
 $$b^{\vphantom{\dagger}}_\mathbf{p}=a^{\vphantom{\dagger}}_\mathbf{p}\cosh\kappa_\mathbf{p}+a^\dagger_{-\mathbf{p}}\sinh\kappa_\mathbf{p}\nonumber\\
 \qquad \tanh2\kappa_\mathbf{p}=\frac{n_0 U_0}{\tilde\epsilon(\mathbf{p})+n_0 U_0}$$
 - The Hamiltonian, a _harmonic oscillator_ for _Bogoliubov excitations_
@@ -1085,12 +1095,13 @@ $$\displaylines{E_0=\frac{1}{2}nU_0  N\left[1-\frac{1}{V}\sum_\mathbf{p}\frac{U_
 - The ground state is a _vacuum_ of the _Bogoliubov excitation_
 
 - A state that satisfies $b_{\boldsymbol{k}}\ket{0}=0$:
-	- Proof: consider that the _coherent state_ $\exp(\alpha a^{\dagger})\ket{\text{VAC}}$ is an eigenstate of $a$ with eigenvalue $\alpha$
+	- Proof: consider that the _coherent state_ $\exp(\alpha a^{\dagger})\ket{\text{VAC}}$ is an eigenstate of $a$ with eigenvalue $\alpha$, then $a_{\boldsymbol{k}}\ket{0}=-\tanh\kappa_{\boldsymbol{k}}a_{-\boldsymbol{k}}^{\dagger}\ket{0}$
 $$\lvert{0}\rangle=\prod_{\mathbf{k}\neq 0} \exp\left(-\frac{1}{2}\tanh\kappa_\mathbf{k}a^\dagger_{\mathbf{k}}a^\dagger_{-\mathbf{k}}\right)\lvert{\Psi_\text{GP}}\rangle$$
 - It is a _superposition_ of _pairs_ being _excited_ out of the Gross-Pitaevskii state
+	- Unlike the Gross-Pitaevskii state, there are _correlations_ between the pairs
 
 #### Density fluctutations
-- Consider the _Fourier components_ of the [[#Many-body wave-functions|density operator]]:
+- Consider the _Fourier components_ of the [[#Single particle density operator|density operator]]:
 $$\rho_\mathbf{q}= \sum_\mathbf{k}a^\dagger_{\mathbf{k}-\mathbf{q}}a^{\vphantom{\dagger}}_\mathbf{k}$$
 - The most significant contribution is from having either operator act on $\boldsymbol{k}=0$:
 $$\rho_\mathbf{q}\sim \sqrt{N}\left(a^\dagger_{-\mathbf{q}} + a^{\vphantom{\dagger}}_{\mathbf{q}}\right) = \sqrt{  \frac{N\tilde{\epsilon}(\boldsymbol{q})}{\omega(\boldsymbol{q})} }(b^{\dagger}_{-\boldsymbol{q}}+b_{\boldsymbol{q}})\equiv \sqrt{N}e^{-\kappa_\mathbf{q}} \left(b^\dagger_{-\mathbf{q}} + b^{\vphantom{\dagger}}_{\mathbf{q}}\right)$$

@@ -2250,7 +2250,7 @@ $$\lim_{ B \to \infty}E_{n,l}=\hbar\omega_{c}\left( n+\frac{|l|-l+1}{2} \right) 
 - Treat the quantum dot as a _resonant cavity_ with _two identical barriers_, of reflection and transmission amplitudes $r,t$
 ![[Quantum dot transmission.png|400]]
 - The _total transmission_:
-$$\displaylines{r^{2}=1-t^{2} \\ T=t^{2}e^{ika}(1+r^{2}e^{2ika}+r^{4}e^{4ika}+\dots)=\frac{t^{2}}{1-r^{2}e^{2ika}}=|T|e^{i\theta }}$$
+$$\displaylines{r^{2}=1-t^{2} \\ T=t^{2}e^{ika}(1+r^{2}e^{2ika}+r^{4}e^{4ika}+\dots)=\frac{t^{2}e^{ika}}{1-r^{2}e^{2ika}}=|T|e^{i\theta }}$$
 - $T$ has a _resonance_ for each _bound state_:
 $$ka=k_{n}a=n\pi$$
 - For $t^{1}\ll 1$, close to the $n$th resonance:
