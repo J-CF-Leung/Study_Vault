@@ -2063,6 +2063,8 @@ $$\frac{1}{\tau}=\frac{1}{\tau _\text{e-ph}}+\frac{1}{\tau _\text{impure}}+\frac
 - The e-ph interaction results in _scattering of electrons_ via phonon emission or absorption
 - There are also _second order_ processes involving a phonon being _emitted_ by one electron before being _absorbed by another_ electron
 ![[Phonon second order process.png]]
+- Interpretation: an _electron_ causes _atomic displacement_ in the form of phonons, then _another electron_ becomes _attracted_ to the displaced atoms
+
 - The Hamiltonian for the _phonon-mediated electron interaction_:
 	- The scattering is _spin independent_, and typically only involve _normal scattering_ with _acoustic phonons_ and _plane wave electrons_
 $$H=H_{0}+\frac{1}{2}\sum_{\boldsymbol{k},\boldsymbol{k}',\boldsymbol{q}} \braket{ \psi_{\boldsymbol{k}'+\boldsymbol{q}} |\bra{ \psi_{\boldsymbol{k}-\boldsymbol{q}}}g\ket{\psi_{\boldsymbol{k}}} | \psi_{\boldsymbol{k}'}     } c^{\dagger}_{\boldsymbol{k}'+\boldsymbol{q}}c^{\dagger}_{\boldsymbol{k}-\boldsymbol{q}}c_{\boldsymbol{k}}c_{\boldsymbol{k}'}$$
@@ -2382,6 +2384,130 @@ $$\boldsymbol{H}=-\boldsymbol{M} \implies \chi=\frac{dM}{dH}\Bigg|_{H=0}=-1$$
 ![[Superconductivity types.png|300]]
 
 ## BCS Theory
-- Electron-phonon mediated
+- Motivated by:
+	- _Isotope effect_ where $T_{c}\propto\Theta_{D}\propto 1/\sqrt{ M }$, implying a _phonon-mediated mechanism_ since $\omega _\text{ph}\propto 1/\sqrt{ M }$
+	- An _energy gap_ $2\Delta$ in the density of states
+	- Meissner-Ochsenfeld effect
 
-- No matter how _weak_ the electron-phonon interaction is, a _bound state_ can be formed
+- BCS Theory predicts that _due to_ the [[#Phonon mediation of e-e interactions|phonon-mediated electron-electron interaction]], electrons will form _Cooper pairs_
+- Described using a _coherent, many-particle wavefunction_
+
+- Effective Hamiltonian:
+$$H=\sum_{\boldsymbol{k},\lambda}\varepsilon_{\boldsymbol{k}}c^{\dagger}_{\boldsymbol{k}\lambda}c_{\boldsymbol{k}\lambda}+\sum_{\substack{\boldsymbol{k},\boldsymbol{k}',\boldsymbol{q} \\ \lambda,\lambda'}}|M_{\boldsymbol{q}}|^{2}\left( \frac{\hbar\omega_{\boldsymbol{q}}}{(\varepsilon_{\boldsymbol{k}+\boldsymbol{q}}-\varepsilon_{\boldsymbol{k}})^{2}-(\hbar\omega_{\boldsymbol{q}})^{2}} \right)c^{\dagger}_{\boldsymbol{k}'+\boldsymbol{q}\lambda'}c^{\dagger}_{\boldsymbol{k}-\boldsymbol{q}\lambda}c_{\boldsymbol{k}\lambda}c_{\boldsymbol{k}'\lambda'}$$
+
+- The interaction is _attractive_ for $|\varepsilon_{\boldsymbol{k}+\boldsymbol{q}}-\varepsilon_{\boldsymbol{k}}|<\hbar\omega_{\boldsymbol{q}}$, representing a _narrow shell_ of width $\hbar\omega_{D}$ around the _Fermi sphere_
+
+- Approximate the interaction strength as a _constant_ within the shell:
+$$H=\sum_{\boldsymbol{k},\lambda}\varepsilon_{\boldsymbol{k},\lambda}c^{\dagger}_{\boldsymbol{k},\lambda}c_{\boldsymbol{k},\lambda}-\frac{1}{2}\gamma^{2}\sum_{\substack{\boldsymbol{k},\boldsymbol{k}',\boldsymbol{q} \\ \lambda,\lambda'}}c^{\dagger}_{\boldsymbol{k}'+\boldsymbol{q}\lambda'}c^{\dagger}_{\boldsymbol{k}-\boldsymbol{q}\lambda}c_{\boldsymbol{k}\lambda}c_{\boldsymbol{k}'\lambda'}$$
+- In real space, this is represented as a _contact interaction_
+	- It has $s-$wave symmetry, $V(\boldsymbol{r})=V(-\boldsymbol{r})$
+$$V(|\mathbf{r}_{1}-\mathbf{r}_{2}|)=-\frac{1}{2}\gamma^{2}\delta(\mathbf{r}_{1}-\mathbf{r}_{2})$$
+
+- When considering the $q$ dependence of $\gamma$, one may include terms with $p$ or $d-$wave symmetry in the wavefunction (see below)
+$$\varphi(\mathbf{r}_{1}-\mathbf{r}_{2})=f(|\mathbf{r}_{1}-\mathbf{r}_{2}|)Y_{lm}(\theta,\phi)$$
+### Cooper's Problem
+- To show that even for an _arbitrarily weak_ attraction, _bound states_ can still be formed
+
+- Consider a pair of electrons with wave-function:
+	- The lowest energy state will have _no centre of mass motion_
+	- Centre of mass motion will have a _travelling wave_ factor $\exp(i\boldsymbol{k}_\text{cm}\cdot \boldsymbol{R}_\text{cm})$
+$$\Psi(\mathbf{r}_{1},\sigma_{1},\mathbf{r}_{2},\sigma_{2})=\varphi(\mathbf{r}_{1}-\mathbf{r}_{2})\eta(\sigma_{1},\sigma_{2})$$
+- Assume a _spin singlet pair_, such that $\varphi(\mathbf{r}_{2}-\mathbf{r}_{1})=\varphi(\mathbf{r}_{1}-\mathbf{r}_{2})$
+
+- Then _expand_ the spatial wave-function in _plane wave states_ with coefficients $\varphi_{\boldsymbol{k}}=\varphi_{-\boldsymbol{k}}$
+$$\displaylines{\varphi(\mathbf{r}_{1}-\mathbf{r}_{2})=\sum_{\boldsymbol{k}}\varphi_{\boldsymbol{k}}\exp[i\boldsymbol{k}(\mathbf{r}_{1}-\mathbf{r}_{2})] \\ \Psi(\mathbf{r}_{1},\sigma_{1},\mathbf{r}_{2},\sigma_{2})=\frac{1}{\sqrt{ 2 }V}\sum_{\boldsymbol{k}}\varphi_{\boldsymbol{k}}\begin{vmatrix}
+e^{i\boldsymbol{k}\cdot \mathbf{r}_{1}}\chi_{\uparrow}(\sigma_{1}) &e^{i\boldsymbol{k}\cdot \mathbf{r}_{1}}\chi_{\downarrow}(\sigma_{1}) \\ e^{-i\boldsymbol{k}\cdot \mathbf{r}_{2}}\chi_{\uparrow}(\sigma_{2}) &e^{-i\boldsymbol{k}\cdot \mathbf{r}_{2}}\chi_{\downarrow}(\sigma_{2})
+\end{vmatrix}}$$
+- This suggests the second quantised wavefunction, in terms of _pair basis states_ $\ket{\psi_{\boldsymbol{k}}}$
+	- The basis is _orthogonal_ $\braket{ \psi_{\boldsymbol{k}} | \psi_{\boldsymbol{k}'} }=\delta_{\boldsymbol{k}\boldsymbol{k}'}$
+$$\ket{\Psi_{\varphi}}=\sum_{\langle\boldsymbol{k}\rangle}\varphi_{\boldsymbol{k}}c^{\dagger}_{-\boldsymbol{k},\downarrow}c^{\dagger}_{\boldsymbol{k},\uparrow} \ket{0} \equiv \sum_{\braket{ \boldsymbol{k} }}\varphi_{\boldsymbol{k}}\ket{\psi_{\boldsymbol{k}}} $$
+- $\ket{0}$ is the _Fermi sea_ state, with the _sum_ over $\boldsymbol{k}$ _restricted_ such that:
+$$E_{F}\leq \frac{\hbar^{2}k^{2}}{2m}\leq E_{F}+\hbar\omega_{D}$$
+- Particles are created _in addition_ to the Fermi sea:
+![[Phonon mediated e-e scattering.png|200]]
+
+- The _energy_ of the Cooper pair from the Schrodinger equation:
+$$H'\ket{\Psi_{\varphi}}=E\ket{\Psi _{\varphi}}  $$
+- Taking inner products on _both sides_ with $\braket{ \psi_{\boldsymbol{k}}}$:
+$$\braket{ \psi_{\boldsymbol{k}}|H' |\Psi_{\varphi}  }=E\varphi_{\boldsymbol{k}}$$
+- Evaluating the left hand side:
+$$2\varepsilon_{\boldsymbol{k}}\varphi_{\boldsymbol{k}}-\gamma^{2}\sum_{\langle\boldsymbol{k}'\rangle}\varphi_{\boldsymbol{k}'}=E\varphi_{\boldsymbol{k}}$$
+- Defining $C$ and summing over $\boldsymbol{k}$:
+$$C=\sum_{\langle \boldsymbol{k}'\rangle}\varphi_{\boldsymbol{k}'}\implies 1=-\gamma^{2}\sum_{\langle \boldsymbol{k}\rangle} \frac{1}{E-2\varepsilon_{\boldsymbol{k}}}$$
+- _Assume_ the _density of states_ is _constant_ near the Fermi assistant:
+$$1=-\gamma^{2} \frac{V}{(2\pi)^{3}}\int_{\braket{ \boldsymbol{k}' } }  \frac{d^{3}\boldsymbol{k}}{(E-2E_{F})-2(\varepsilon_{\boldsymbol{k}}-E_{F})} \approx-\gamma^{2}(Vg_{V}(E_{F}))\int_{0}^{\hbar\omega_{D}}  \frac{d\varepsilon}{\Delta E-2\varepsilon} $$
+- Evaluating the integral for $\Delta E<0$:
+$$1=\frac{1}{2}\xi \ln\left( \frac{\Delta E-\hbar\omega_{D}}{\Delta E} \right)\qquad \xi=\gamma^{2}Vg_{V}(E_{F})$$
+- The _binding energy_ $\Delta E=E-2E_{F}$, in the limit of _weak coupling_:
+$$\Delta E=-\frac{2\hbar\omega_{D}}{\exp(2/\xi)-1}\approx -2\hbar\omega_{D}\exp\left( -\frac{2}{\xi} \right)<0$$
+- Even for _arbitrarily weak coupling_, the bound state will _always exist_
+	- This implies the _Fermi sea_ is _unstable_ w.r.t. Cooper pair formation
+
+- The energy _scale_ is set by the _Debye energy_ (highest phonon energy)
+- Much _smaller_ than typical energy scales, hence Cooper pair formation (and superconductivity) is only present at _very low temperatures_
+
+### The BCS Wavefunction and Hamiltonian
+- Here, consider the _vaccum state_ as having _no electrons around_ $\pm \hbar\omega_{D}$ of the Fermi surface (different from Cooper's problem)
+	- All electrons within that region are _susceptible_ to forming Cooper pairs
+![[BCS pair formation.png|250]]
+- Define the _pair creation operator_:
+$$P_{\boldsymbol{k}}^{\dagger}=c_{\boldsymbol{k},\uparrow}^{\dagger}c^{\dagger}_{-\boldsymbol{k},\downarrow}$$
+- Commutation relations:
+$$\displaylines{[P_{\boldsymbol{k}},P_{\boldsymbol{k}'}]=[P^{\dagger}_{\boldsymbol{k}},P^{\dagger}_{\boldsymbol{k}'}]=0 \qquad (P_{\boldsymbol{k}}^{\dagger})^{2} \\ [P_{\boldsymbol{k}},P^{\dagger}_{\boldsymbol{k}'}]=1-n_{\boldsymbol{k}\uparrow}-n_{\boldsymbol{k}\downarrow}\neq 1}$$
+- Schrieffer's ansatz, similar to the _coherent state_:
+$$\ket{\Psi}=A \exp\left( \sum_{\boldsymbol{k}}\alpha_{\boldsymbol{k}}P_{\boldsymbol{k}}^{\dagger} \right)\ket{0} =A\prod_{\boldsymbol{k}}\exp(\alpha_{\boldsymbol{k}}P^{\dagger}_{\boldsymbol{k}})\ket{0} $$
+- _Expanding_ the exponential, and using $P_{\boldsymbol{k}}^{2}=0$, rewriting _normalisation_:
+$$\displaylines{\ket{\Psi _\text{BCS}}=\prod_{\boldsymbol{k}}(u_{\boldsymbol{k}}+v_{\boldsymbol{k}}{P_{\boldsymbol{k}}^{\dagger}})\ket{0}  \\ |u_{\boldsymbol{k}}|^{2}+|v_{\boldsymbol{k}}|^{2}=1}$$
+- It is a _coherent superposition_ of _numbers of Cooper pairs_
+- The parameters $u_{\boldsymbol{k}},v_{\boldsymbol{k}}$ can be determined _variationally_ from the Hamiltonian
+
+- There is a well-defined _phase_ $\phi$ associated with $v_{\boldsymbol{k}}=|v_{\boldsymbol{k}}|\exp(i\phi)$
+- The wavefunction has an associated _uncertainty_ in _particle number_, of order $\sqrt{ N }$
+	- Becomes less significant for macroscopic $N$
+
+- The original Hamiltonian:
+	- Sum in the _thin shell_ of energy range $\mu\pm \hbar\omega_{D}$
+$$H=\sum_{\boldsymbol{k},\lambda}\varepsilon_{\boldsymbol{k},\lambda}c^{\dagger}_{\boldsymbol{k},\lambda}c_{\boldsymbol{k},\lambda}-\frac{1}{2}\gamma^{2}\sum_{\substack{\boldsymbol{k},\boldsymbol{k}',\boldsymbol{q} \\ \lambda,\lambda'}}c^{\dagger}_{\boldsymbol{k}'+\boldsymbol{q}\lambda'}c^{\dagger}_{\boldsymbol{k}-\boldsymbol{q}\lambda}c_{\boldsymbol{k}\lambda}c_{\boldsymbol{k}'\lambda'}$$
+- Only consider _spin singlets_ $(\boldsymbol{k},\uparrow),(-\boldsymbol{k},\downarrow)$ with _zero total momentum_ in Cooper pair formation
+- This gives the _BCS Hamiltonian_:
+$$H=\sum_{\boldsymbol{k}}\varepsilon_{\boldsymbol{k}}(n_{\boldsymbol{k}\uparrow}+n_{\boldsymbol{k}\downarrow})-\gamma^{2}\sum_{\boldsymbol{k}}P^{\dagger}_{\boldsymbol{k}}P_{\boldsymbol{k}'}$$
+### BCS Theory at zero temperature
+- One can then use the Hamiltonian to _minimise total energy_ $E$ and determine $u_{\boldsymbol{k}},v_{\boldsymbol{k}}$
+	- Condition: _zero temperature_
+- With the constraints that _mean particle number_ $\langle N \rangle=\text{const.}$ and keeping the wave-function _normalised_
+- Treat $v_{\boldsymbol{k}},v_{\boldsymbol{k}}^{*},u_{\boldsymbol{k}},u_{\boldsymbol{k}}^{*}$ as _independent variables_
+
+- The _average occupation_ of a Bloch state is:
+$$\displaylines{\langle n_{\boldsymbol{k}\uparrow} \rangle=\braket{ \Psi _\text{BCS}|c^{\dagger}_{\boldsymbol{k}\uparrow}c_{\boldsymbol{k}\uparrow} |\Psi _\text{BCS}  }=|v_{\boldsymbol{k}}|^{2}=\langle n_{\boldsymbol{k}\downarrow} \rangle    \\ \langle N \rangle=2\sum_{\boldsymbol{k}}|v_{\boldsymbol{k}}|^{2}=\sum_{\boldsymbol{k}}(|v_{\boldsymbol{k}}|^{2}+1-|u_{\boldsymbol{k}}|^{2}) }$$
+- Average of the two-particle term:
+$$\langle P^{\dagger}_{\boldsymbol{k}}P_{\boldsymbol{k}}' \rangle=(v^{*}_{\boldsymbol{k}}v_{\boldsymbol{k}'})(u_{\boldsymbol{k}'}^{*}u_{\boldsymbol{k}}) $$
+- Ground state energy is then:
+$$E_{0}=2\sum_{\boldsymbol{k}}\varepsilon_{\boldsymbol{k}}|v_{\boldsymbol{k}}|^{2}-\gamma^{2}\sum_{\boldsymbol{k},\boldsymbol{k}'}v_{\boldsymbol{k}}^{*}v_{\boldsymbol{k}'}u_{\boldsymbol{k}'}^{*}u_{\boldsymbol{k}}$$
+- Also introduce the _BCS gap parameter_:
+	- Non-zero since the BCS state is a _coherent superposition_ of states with _different electron numbers_
+	- It is _independent_ of $\boldsymbol{k}$ ($s-$wave symmetry)
+$$\Delta=\gamma^{2}\sum_{\boldsymbol{k}}\langle P_{\boldsymbol{k}} \rangle=\gamma^{2}\sum_{\boldsymbol{k}}\braket{ c_{-\boldsymbol{k}\downarrow} c_{\boldsymbol{k}\uparrow}  }  =\gamma^{2}\sum_{\boldsymbol{k}}u_{\boldsymbol{k}}^{*}v_{\boldsymbol{k}}$$
+- The Lagrangian, with Lagrange multipliers $\mu$ and $E_{\boldsymbol{k}}$:
+	- $\mu$ can be identified as the _chemical potential_
+$$L=E_{0}-\mu \langle N \rangle-\sum_{\boldsymbol{k}}E_{\boldsymbol{k}}(|u_{\boldsymbol{k}}|^{2}+|v_{\boldsymbol{k}}|^{2}-1) $$
+- Taking derivatives w.r.t. $v_{\boldsymbol{k}}^{*}$ and $u_{\boldsymbol{k}}^{*}$, one gets the matrix equation:
+$$\pmatrix{\varepsilon_{\boldsymbol{k}}-\mu&-\Delta\\-\Delta^{*}&-(\varepsilon_{\boldsymbol{k}}-\mu)}\pmatrix{v_{\boldsymbol{k}}\\u_{\boldsymbol{k}}}=E_{\boldsymbol{k}}\pmatrix{v_{\boldsymbol{k}}\\u_{\boldsymbol{k}}}$$
+- Eigenvalues $\lambda_{\boldsymbol{k}}^{\pm}$ and eigenvectors $U_{\boldsymbol{k}}^{(\pm)}$
+$$\displaylines{\lambda^{\pm}_{\boldsymbol{k}}=\pm E_{\boldsymbol{k}}=\pm \sqrt{ (\varepsilon_{\boldsymbol{k}}-\mu)^{2}+|\Delta|^{2} } \\ U_{\boldsymbol{k}}^{-}=\pmatrix{v_{\boldsymbol{k}}\\ u_{\boldsymbol{k}}} \qquad U_{\boldsymbol{k}}^{+}=\pmatrix{u_{\boldsymbol{k}}^{*}\\ -v^{*}_{\boldsymbol{k}}} \\ |v_{\boldsymbol{k}}|^{2}=\frac{1}{2}\left( 1-\frac{\varepsilon_{\boldsymbol{k}}-\mu}{E_{\boldsymbol{k}}} \right) \qquad |u_{\boldsymbol{k}}|^{2}=\frac{1}{2}\left( 1+\frac{\varepsilon_{\boldsymbol{k}}-\mu}{E_{\boldsymbol{k}}} \right)}$$
+- From the eigenvalue equations, and the condition for _normalisation_:
+$$u_{\boldsymbol{k}}^{*}v_{\boldsymbol{k}}=\frac{\Delta}{2E_{\boldsymbol{k}}}$$
+- _Summing over_ $\boldsymbol{k}$ gives an equation for $\Delta$:
+$$1=\frac{\gamma^{2}}{2}\sum_{\boldsymbol{k}} \frac{1}{\sqrt{ (\varepsilon_{\boldsymbol{k}}-\mu)^{2}+|\Delta|^{2} }}\approx\frac{1}{2}\gamma^{2}Vg_{V}(E_{F})\int_{-\hbar\omega_{D}}^{\hbar\omega_{D}}  \frac{d\varepsilon}{\sqrt{ \varepsilon^{2}+|\Delta|^{2} }} $$
+- With the [[#Cooper's Problem|electron-phonon coupling parameter]] $\xi=\gamma^{2}Vg_{V}(E_{F})$
+$$1=\xi \int_{0}^{\hbar\omega_{D}}  \frac{d\varepsilon}{\sqrt{ \varepsilon^{2}+|\Delta|^{2} }} =\xi \,\mathrm{arcsinh}\left( \frac{\hbar\omega_{D}}{|\Delta|} \right)$$
+- The _zero temperature gap energy_ is then:
+$$|\Delta(0)|=\frac{\hbar\omega_{D}}{\sinh(1/\xi)}\approx 2\hbar\omega_{D}\exp\left( -\frac{1}{\xi} \right)$$
+- The same _functional form_ to the binding energy in Cooper's problem
+
+- Like Cooper's problem, the _characteristic energy scale_ is the _Debye energy_
+	- Similarly, one can only expect it at _low temperatures_
+- For _weak coupling_, this gives the _exact ground state_
+- For _stronger coupling_ $\xi>0.2-0.5$, one needs to take the effect of coupling on the _phonon spectrum_ into account
+### Finite temperature and excited states
+
+### Bogoliubov-Valatin quasiparticles

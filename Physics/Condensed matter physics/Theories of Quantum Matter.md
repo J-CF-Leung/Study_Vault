@@ -819,7 +819,7 @@ $$H = H_t + H_U = -t \sum_{\langle j\,k\rangle}  \left[a^\dagger_ja^{\vphantom{\
 - Take the $U/t\to \infty$ limit:
 $$E(\mathbf{N}) = \frac{U}{2} \sum_j N_j(N_j-1)$$
 - For the _ground state_, fill the sites _as uniformly as possible_
-- Let the _filling fracion_ be:
+- Let the _filling fraction_ be:
 $$\nu=\frac{N_\text{particles}}{N_\text{sites}}$$
 - For a _non-integer_ value of $\nu$, there will be two different occupation numbers:
 $$\displaylines{e(N)=\frac{U}{2}N(N-1) \\ \frac{E_0}{N_\text{sites}} = \left(\nu - \lfloor \nu\rfloor\right)e(\lceil \nu\rceil) + \left(\lceil \nu\rceil - \nu\right)e(\lfloor \nu\rfloor)}$$
@@ -832,6 +832,7 @@ $$\mu = e(\lceil \nu\rceil) -e(\lfloor \nu\rfloor)=U\lfloor \nu\rfloor$$
 
 ### Effect of hopping
 - _Start_ from the Fock states, then tune $H_{t}$ back on as a _perturbation_
+$$H_t = -t \sum_{j} \left[a^\dagger_ja^{\vphantom{\dagger}}_{j+1}+a^\dagger_{j+1}a^{\vphantom{\dagger}}_j\right]$$
 - The _unperturbed eigenstates_:
 $$\ket{\boldsymbol{N}}= \bigotimes_{j} \ket{N_{j}}_{j}  $$
 - Then _applying_ to $H_{t}$, one gets a _superposition_ of states with particles _moved to adjacent sites_
@@ -845,7 +846,7 @@ $$\ket{i,+}\equiv\frac{a_{i}^{\dagger}}{\sqrt{ N+1 }} \bigotimes_{j} \ket{N}_{j}
 - The _matrix elements_ for _adjacent states_:
 $$\braket{ j|H_{t} | k } =-t(N+1)$$
 - $H_{t}$ in the _multiplet subspace_ can then be written as:
-$$H_{t}|_{+}=-t(N+1)\sum_{\braket{ jk   } } [\ket{j,+}\braket{ k,+} +\text{h.c.} ]$$
+$$H_{t}|_{+}=-t(N+1)\sum_{\braket{ jk   } } [\ket{j,+}\bra{ k,+} +\text{h.c.} ]$$
 - There is an _extra factor_ of $N$ due to _Bose statistics_
 - The _splitting_ of degenerate states in $d$ dimensions is then given by the _tight binding dispersion_:
 $$\omega_{+}(\boldsymbol{\eta})=-2t(N+1)\sum_{n=1}^{d}\cos \eta_{n}$$
@@ -857,7 +858,7 @@ $$\displaylines{\ket{i,-}\equiv \frac{a_{i}}{\sqrt{ N }} \bigotimes_{j}\ket{N}_{
 $$\mathcal{H}_{\mu}=H-\mu N_\text{particles}$$
 - For $t=0$ for a _Mott state_ of $\nu=N$:
 $$\frac{\varepsilon_{\mu}^{(N)}}{N_\text{sites}}=\frac{U}{2}N(N-1)-\mu N$$
-- At $\mu N$ for $t=0$, $\varepsilon_{\mu}^{(N)}$ and $\varepsilon_{\mu}^{(N+1)}$ become _degenerate_ (in terms of $\mathcal{H}_{\mu}$ instead of $H$)
+- At $\mu=U N$ for $t=0$, $\varepsilon_{\mu}^{(N)}$ and $\varepsilon_{\mu}^{(N+1)}$ become _degenerate_ (in terms of $\mathcal{H}_{\mu}$)
 
 - For the _ground state with one extra particle_ on top of $\nu=N$, the ground state is the _bottom of the tight binding band_:
 $$\varepsilon_{\mu}^{(N)}+UN-\mu-2td(N+1)$$
@@ -892,16 +893,53 @@ $$\begin{align}
 a^\dagger_{1,\uparrow}a^\dagger_{1,\downarrow} \lvert{\text{VAC}}\rangle,\quad a^\dagger_{2,\uparrow}a^\dagger_{2,\downarrow} \lvert{\text{VAC}}\rangle\\
 a^\dagger_{1,s}a^\dagger_{2,s'} \lvert{\text{VAC}}\rangle,\quad s,s'=\uparrow,\downarrow
 \end{align}$$
+- For states with _two fermions of the same spin_ on _each site_, $H_{t}$ has _no effect_
+- Therefore, consider the states:
+$$\displaylines{a^{\dagger}_{1,\uparrow}a^{\dagger}_{1,\downarrow}\ket{\text{VAC}}\quad,\quad a^{\dagger}_{2,\uparrow},a^{\dagger}_{2,\downarrow}\ket{\text{VAC}}\quad,\quad a^{\dagger}_{1,\uparrow}a^{\dagger}_{2,\downarrow}\ket{\text{VAC}} \quad,\quad a^{\dagger}_{1,\downarrow}a^{\dagger}_{2,\uparrow}\ket{\text{VAC}}    \\ H=\pmatrix{U&0&t&-t \\ 0&U&t&-t \\ t&t&0&0\\-t&-t&0&0}}$$
+- The _off-diagonal terms_ are in _block_ form, which only connects two _sets_ of states:
+$$\displaylines{\frac{1}{\sqrt{ 2 }}(a^{\dagger}_{1,\uparrow}a^{\dagger}_{1,\downarrow}+ a^{\dagger}_{2,\uparrow},a^{\dagger}_{2,\downarrow})\ket{\text{VAC}} \qquad \frac{1}{\sqrt{ 2 }}(a^{\dagger}_{1,\uparrow}a^{\dagger}_{2,\downarrow}- a^{\dagger}_{1,\downarrow},a^{\dagger}_{2,\uparrow})\ket{\text{VAC}} \\ H=\pmatrix{U&2t\\2t&0} \\ E=\frac{U}{2}\pm \sqrt{ \frac{U^{2}}{4}+4t^{2} }\xrightarrow{t/U\ll 1}U+\frac{4t^{2}}{U},-\frac{4t^{2}}{U}}$$
+- The energy of the spin _triplet_ is unaffected
+- The effect of $t$ is to _lower_ the energy of the _singlet_ state relative to the _triplet_ state
 ### Effective Hamiltonian
+- Find an _effective Hamiltonian_ that only _acts_ on the _half-filled Mott states_ in order to describe their _splitting_ for $t/U\ll 1$
+
 - $H_{t}$ takes the state _out_ of the half-filling subspace
 
-- _Second order_ degenerate perturbation theory
+- Instead, consider _second order_ degenerate perturbation theory
+- Consider representing the Hamiltonian in _block_ form depending on whether or not the matrix elements _act on the Mott state or not_
+$$H=\pmatrix{H_\text{Mott}&V\\V^{\dagger}&H_\text{Not}}$$
+- Denote the _projection_ operator on the Mott states as $P_\text{Mott}\equiv \mathbb{I}-P_\text{Not}$:
+$$\begin{align}
+H_\text{Mott}= P_\text{Mott} H P_\text{Mott},\quad H_\text{Not}= P_\text{Not}H P_\text{Not}\\
+V^{} = P_\text{Mott} H P_\text{Not},\qquad V^\dagger = P_\text{Not} H P_\text{Mott}
+\end{align}$$
+- Applying it to the Hubbard model:
+$$\begin{align}
+H_\text{Mott}= P_\text{Mott} H_U P_\text{Mott},\quad H_\text{Not}= P_\text{Not}H P_\text{Not}\\
+V^{} = P_\text{Mott} H_t P_\text{Not},\qquad V^\dagger = P_\text{Not} H_t P_\text{Mott}
+\end{align}$$
+- Write the _eigenvalue equation_ in block form:
+$$\begin{pmatrix}H_{\text{Mott}} & V^{} \\V^\dagger & H_\text{Not} \\\end{pmatrix}\begin{pmatrix}\lvert{\Psi}\rangle\\\lvert{\Phi}\rangle\end{pmatrix} = E\begin{pmatrix}\lvert{\Psi}\rangle\\\lvert{\Phi}\rangle\end{pmatrix}$$
+- Eliminating $\ket{\Phi}$:
+$$\left[H_{\text{Mott}} -V^{}\left(H_\text{Not}-E\right)^{-1}V^\dagger\right]\lvert{\Psi}\rangle = E\lvert{\Psi}\rangle$$
+- Then, apply an _approximation_ where energies are much _smaller_ than the eigenvalues of $H_\text{Not}\sim O(U)$, to get an _effective Hamiltonian_ acting on the _Mott state_:
 $$H_\text{eff} = H_{\text{Mott}} -V^{} H^{-1}_\text{Not}V^\dagger$$
+- On a _Mott state_, $H_\text{Mott}=0$
 - $V^{\dagger}$ creates an _adjacent hole_ and a _doublon_
 - $V$ then goes _back_ to the Mott state
-- $H_\text{not}^{-1} \propto U^{-1}$
 
-- Rewrite
+- From this, the _effective Hamiltonian_ is:
+$$H_\text{eff} = -\frac{V^{}V^\dagger}{U} = -\frac{t^2}{U} \sum_{\substack{\langle j\,k\rangle\\s,s'}} \left[a^\dagger_{j,s}a^{\vphantom{\dagger}}_{k,s} a^\dagger_{k,s'}a^{\vphantom{\dagger}}_{j,s'}+j\leftrightarrow k\right]$$
+
+- Re-ordering the operators:
+$$a^\dagger_{j,s}a^{\vphantom{\dagger}}_{k,s} a^\dagger_{k,s'}a^{\vphantom{\dagger}}_{j,s'} = -a^\dagger_{j,s}a^{\vphantom{\dagger}}_{j,s'}a^\dagger_{k,s'}a^{\vphantom{\dagger}}_{k,s} + \delta_{s^{}s'}a^\dagger_{j,s}a^{\vphantom{\dagger}}_{j,s'}\qquad j\neq k$$
+- Use the identity:
+$$\delta_{ab}\delta_{cd} = \frac{1}{2}\left[\boldsymbol{\sigma}_{a d}\cdot \boldsymbol{\sigma}_{c b} + \delta_{ad}\delta_{cb}\right]$$
+- Then in $d$ dimensions:
+$$H_\text{eff} = -\frac{dN_\text{sites}t^2}{U}+J\sum_{\langle j\,k\rangle} \mathbf{s}_j\cdot \mathbf{s}_k$$
+- Here, $J$ is the _coupling_ $4t^{2}/U$
+- The _spin operators_:
+$$\mathbf{s}_j=\frac{1}{2}\sum_{s,s'}a^\dagger_{j,s}\boldsymbol{\sigma}_{s^{}s'}a^{\vphantom{\dagger}}_{j,s'}$$
 
 - It is the _Hamiltonian_ of the [[#Heisenberg ferromagnetic chain|spin-1/2 Heisenberg model]]
 - A consequence of the _Jordan-Schwinger map_ as the _commutation relations_ hold in the second quantised form
@@ -909,9 +947,12 @@ $$H_\text{eff} = H_{\text{Mott}} -V^{} H^{-1}_\text{Not}V^\dagger$$
 ### Doping
 - At half-filling, from the above model, cuprates are _anti-ferromagnetic Mott insulators_
 
+- When a cuprate is _doped_, electrons and holes are _introduced_, and can be modelled by the Hubbard Hamiltonian
+- _Freely moving_ holes will _destroy_ anti-ferromagnetic order and give rise to superconductivity
+
 - The _effective Hamiltonian_ for the _doped Mott insulator_:
 $$H_\text{eff} = -t \sum_{\substack{\langle j\,k\rangle\\ s=\uparrow,\downarrow}}  \left[a^\dagger_{j,s}a^{\vphantom{\dagger}}_{k,s}+a^\dagger_{k,s}a^{\vphantom{\dagger}}_{j,s}\right] + J\sum_{<j\,k>}\left[\mathbf{s}_j\cdot \mathbf{s}_k - \frac{N_j N_k}{4}\right]$$
-- No doubly occupied sites/spin singlets?
+
 
 # Bose Gas
 - _Non-interacting Bose gases_ will form a _Bose condensate_
@@ -1159,10 +1200,12 @@ $$E^{(2)}(\mathbf{N}) = \left(\frac{U_0}{V}\right)^2 \sum_{\mathbf{k}_1+\mathbf{
 $$N_{s}(\mathbf{k}) = \theta(k_F-\lvert{\mathbf{k}}\rvert) + n_{s}(\mathbf{k})$$
 - Take a _continuum limit_ with many $\boldsymbol{k}$. such that $n_{s}$ is some _average_
 ![[Landau excitation continuum.png|400]]
+
+### Energy expansion
 - The _excitation energy_ expansion (independent of perturbation theory)
 	- Applies for _any_ interacting system, as long as there is no _phase transition_
 $$\Delta E = \sum_{\mathbf{k},s} \varepsilon_s(\mathbf{k})n_{s}(\mathbf{k}) + \frac{1}{2V}\sum_{\mathbf{k}, s,\mathbf{k}', s'} f_{s^{}s'}(\mathbf{k},\mathbf{k}')n_{s}(\mathbf{k})n_{s'}(\mathbf{k}')$$
-- At _first order_, from $E^{(1)}(\boldsymbol{N})$
+- At _first order_, from $E^{(1)}(\boldsymbol{N})$:
 $$\begin{align}
 \varepsilon_s(\mathbf{k}) &= \epsilon(\mathbf{k}) + \frac{U_0 N_{\bar s}}{V}+\cdots\\
 f_{\uparrow\downarrow} &= f_{\downarrow\uparrow} = U_0+\cdots,\quad f_{\uparrow\uparrow}=f_{\downarrow\downarrow}=0+\cdots\end{align}$$
@@ -1218,8 +1261,9 @@ f_{s_1s_2,s_3s_4}(\mathbf{k},\mathbf{k}') = \frac{U_0}{2}\left[\left(1+ \frac{mU
 - In _general_, the interaction between quasi-particles can be written as:
 	- $F$ and $G$ are _dimensionless_, with the normalisation of $\nu(E_{F})$ as the _density of states at the Fermi surface_ $k_{F}m/\pi^{2}$
 $$\nu(E_F)f_{s_1s_2,s_3s_4}(\mathbf{k},\mathbf{k}') = F(\phi) \delta_{s_1s_3}\delta_{s_2s_4} + G(\phi)\boldsymbol{\sigma}_{s_1s_3}\cdot\boldsymbol{\sigma}_{s_2s_4}$$
-### Quasiparticle energy
-- $\varepsilon_{s}(\boldsymbol{k})$ has _two momentum sums_ in the _second order_
+### Quasiparticle energy and effective mass
+- $\varepsilon_{s}(\boldsymbol{k})$ has _two momentum sums_ in the _second order_, which is difficult to evaluate
+
 - However, one should expect some _linear dispersion_ near the Fermi energy:
 $$\varepsilon_s(\mathbf{k}) - E_\text{F} = v_\text{F}(\lvert{\mathbf{k}}\rvert-k_\text{F})$$
 - The _Fermi velocity_:
@@ -1250,7 +1294,7 @@ $$\frac{m_*}{m} = 1 + \frac{1}{30\pi^4}(7\log 2 - 1)\left(mU_0k_\text{F}\right)^
 
 ## Quasiparticles
 - Consider the _first order perturbation_ to the _wavefunction_:
-$$\displaylines{\lvert{\mathbf{N}^{(1)}}\rangle = \sum_{\mathbf{N}'\neq \mathbf N}\frac{\langle{\mathbf{N'}}\rvert H_\text{int} \lvert \mathbf{N} \rangle}{E^{(0)}(\mathbf{N})-E^{(0)}(\mathbf{N}')}\lvert{\mathbf{N}'}\rangle \\ H_\text{int}=}$$
+$$\displaylines{\lvert{\mathbf{N}^{(1)}}\rangle = \sum_{\mathbf{N}'\neq \mathbf N}\frac{\langle{\mathbf{N'}}\rvert H_\text{int} \lvert \mathbf{N} \rangle}{E^{(0)}(\mathbf{N})-E^{(0)}(\mathbf{N}')}\lvert{\mathbf{N}'}\rangle \\ H_\text{int}=\frac{U_0}{V}\sum_{\mathbf{k}_1+\mathbf{k}_2=\mathbf{k}_3+\mathbf{k}_4} a^\dagger_{\mathbf{k}_1,\uparrow}a^\dagger_{\mathbf{k}_2,\downarrow}a^{\vphantom{\dagger}}_{\mathbf{k}_3,\downarrow}a^{\vphantom{\dagger}}_{\mathbf{k}_4,\uparrow}}$$
 - From the _Fermi sea ground state_ $\ket{\text{FS}}$, the perturbation must _create two particle-hole pairs_ out of the Fermi sea, such that _total momentum_ is zero
 $$\lvert{0}\rangle=\lvert{\text{FS}}\rangle+\text{two particle-hole pair states}+\cdots$$
 - Consider the _excited state_:
@@ -1281,7 +1325,7 @@ $$z_{\lvert{\mathbf{k}}\rvert=k_\text{F}} = 1 - \frac{(mUk_\text{F})^2}{8\pi^4}\
 ![[Fermi step with interactions.png|500]]
 
 # Superconductivity
-- Caused by _electrons_ forming _cooper pairs_, which behaves like _bosons_ and forms _superfluid-like behaviour_, which then gives rise to _superconductivity_
+- Caused by _electrons_ forming _Cooper pairs_, which behaves like _bosons_ and forms _superfluid-like behaviour_, which then gives rise to _superconductivity_
 - The _Coulomb repulsion_ can be _overcome_ by _lattice distortions_
 
 - This pairing is only _enabled_ by the presence of other fermions
@@ -1334,7 +1378,10 @@ $$\langle{\text{pair}}\rvert H_\text{int} \lvert \text{pair} \rangle = \frac{U_0
 - The first term is the _Hartree-Fock energy_, and the latter term:
 $$\tilde H_{\text{int}}=\frac{U_0}{V}\sum_{\mathbf{p}, \mathbf{p}'}a^\dagger_
 {\mathbf{p}\uparrow}a^\dagger_{-\mathbf{p}\downarrow}a^{\vphantom{\dagger}}_{-\mathbf{p}'\downarrow}a^{\vphantom{\dagger}}_{\mathbf{p}'\uparrow}$$
+
+### Pair creation operator
 - Introducing the _pair creation operator_ $b_{\boldsymbol{p}}=a^{\dagger}_{\boldsymbol{p}\uparrow}a^{\dagger}_{-\boldsymbol{p}\downarrow}$
+	- $2b^\dagger_\mathbf{p}b^{\vphantom{\dagger}}_\mathbf{p}= a^\dagger_{\mathbf{p},\uparrow}a^{\vphantom{\dagger}}_{\mathbf{p},\uparrow}+a^\dagger_{-\mathbf{p},\downarrow}a^{\vphantom{\dagger}}_{-\mathbf{p},\downarrow}$
 $$H_{\text{pair}}=2\sum_{\mathbf{p}}\epsilon_{\mathbf{p}}b^\dagger_\mathbf{p}b^{\vphantom{\dagger}}_\mathbf{p}+\frac{U_0}{V}\sum_{\mathbf{p},\mathbf{p}'} b^\dagger_\mathbf{p}
 b^{\vphantom{\dagger}}_{\mathbf{p}'}$$
 - $b_{\boldsymbol{p}}$ _do not obey Bose commutation relations_
@@ -1345,6 +1392,7 @@ $$\lvert{N \text{ pair}}\rangle\equiv\left[\sum_\mathbf{p}c_\mathbf{p}b^\dagger_
 \mathbf{p}\rangle$$
 - The _expected number of pairs_ is hard to determine
 
+### BCS Wavefunction
 - Instead, consider the _normalised BCS wavefunction_
 $$\lvert{\text{BCS}}\rangle =\prod_\mathbf{p}\left[v_\mathbf{p}b^\dagger_\mathbf{p}+u_\mathbf{p}\right]\lvert{\text{VAC}}\rangle\qquad |u_\mathbf{p}|^2+|v_\mathbf{p}|
 ^2=1$$
@@ -1368,6 +1416,8 @@ $$\langle{\text{BCS}}\rvert \mathcal{O} \lvert \text{BCS} \rangle\to \langle{\la
 - _Map_ the operators onto a _spin chain_
 	- The _hardcore condition_ implies ladder operator behaviour
 $$S_\mathbf{p}^+ \equiv b^\dagger_\mathbf{p},\quad S_\mathbf{p}^- \equiv b^{\vphantom{\dagger}}_\mathbf{p},\quad S^z_\mathbf{p}= b^\dagger_\mathbf{p}b^{\vphantom{\dagger}}_\mathbf{p}-1/2$$
+- An _up_ spin indicates the _formation_ of a pair
+
 - The spin commutation relations:
 $$\left[b^\dagger_\mathbf{p},b^{\vphantom{\dagger}}_\mathbf{p}\right]=2\left(b^\dagger_\mathbf{p}b^{\vphantom{\dagger}}_\mathbf{p}-1/2\right)\qquad
 \left[b^\dagger_\mathbf{p},\left(b^\dagger_\mathbf{p}b^{\vphantom{\dagger}}_\mathbf{p}-1/2\right)\right]=-b^\dagger_\mathbf{p}$$
@@ -1385,11 +1435,12 @@ $$\langle{\text{BCS}}\rvert H \lvert \text{BCS} \rangle=-\sum_\mathbf{p}\xi_\mat
 	- $-$ direction for $\xi_{\boldsymbol{p}}<0$ and vice versa
 - The _second term_ tends to align spins in the $x-y$ plane
 
-- For _repulsive interactions_, all spins point along $\pm z$
-- There is a _Fermi step_
-
-- For _attractive_ interactions, 
-- _Smooth_ domain wall
+- For _repulsive interactions_ $U_{0}>0$, all spins point along $\pm z$
+- The _average number_ of pairs:
+$$\braket{ n^{P}_{\boldsymbol{p}}  }=v_{\boldsymbol{p}}^{2}=\frac{1+\cos\theta_{\boldsymbol{p}}}{2} $$
+- There is a _domain wall_ where $\xi_{\boldsymbol{p}}$ _changes sign_, forming a _Fermi step_
+![[Anderson spin chain map.png|400]]
+- For _attractive_ interactions $U_{0}<0$, the system can _lower energy_ with $\sin\theta_{\boldsymbol{p}}\neq 0$, compensating for _excess kinetic energy_ from _smoothing_ the step
 
 - To extremise energy, set _all azimuthal angles to be the same_
 - Extremising gives: 
@@ -1399,13 +1450,14 @@ $$\Delta=-\frac{U_0}{2V}\sum_\mathbf{p}e^{i\varphi}\sin\theta_\mathbf{p}=-\frac{
 $$\cos\theta_\mathbf{p}=\frac{\xi_{\mathbf{p}}}{E_\mathbf{p}},\qquad \sin\theta_\mathbf{p}=\frac{|\Delta|}{E_\mathbf{p}}, \qquad E_\mathbf{p}=\sqrt{\xi
 (\mathbf{p})^2+|\Delta|^2}$$
 - Each spin corresponds to _aligning with an effective magnetic field_
+	- An _up_ spin corresponds to the formation of a _pair_
 $$\left(\mathrm{Re}\,\Delta,\mathrm{Im}\,\Delta,\xi_\mathbf{p}\right)$$
 - To be _self consistent_, the _gap condition_ must be satisfied:
 $$\Delta=-\frac{U_0}{2V}\sum_\mathbf{p}\frac{\Delta}{E_\mathbf{p}}=-\frac{U_0}{2}\int \frac{d\mathbf{p}}{\left(2\pi\right)^3} \frac{\Delta}{E_\mathbf{p}}$$
 - For $U_{0}>0$, there are _no non-trivial solutions_
 
 - In 3 dimensions, this is _divergent in the ultra-violet_
-- With density of states per spin $\nu(\mu)$ and a high-energy cutoff $\Delta$
+- With density of states per spin $\nu(\mu)$ and a high-energy cutoff $\Lambda$
 $$\sim-\frac{U_0}{2}\nu(\mu)\Delta\log \Lambda/\Delta$$
 - Even for _arbitrarily weak_ $U_{0}$, there is _always a solution_
 
@@ -1455,14 +1507,16 @@ $$\braket{ \braket{  y(t)y(0)  }   } $$
 - This gives the _quantum noise power spectrum_:
 $$S(\omega)=\int_{-\infty}^{\infty} \braket{  \braket{  y(t)y(0)  }  }  \exp(i\omega t) dt $$
 
-- As time-evolved operators _do not commute_, $S(\omega)\neq S(-\omega)$
+- As time-evolved operators _do not commute_:
+	- $\langle\langle y(t)y(0)\rangle\rangle\neq \langle\langle y(0)y(t)\rangle\rangle=\langle\langle y(-t)y(0)\rangle\rangle$
+$$S(\omega)\neq S(-\omega)$$
 
 - _Expanding_ $y(t)$ in terms of _energy eigenstates_:
 $$S(\omega) = 2\pi\sum_{m,n} \frac{e^{-\beta E_n}}{Z} |\langle{n}\rvert y\lvert{m}\rangle|^2 \delta(\omega-E_m+E_n)$$
 - It is composed of _weighted delta functions_ which become more _dense_ in the thermodynamic limit
 - The _asymmetry_ is due to the _weighting_:
 $$S(\omega) = S(-\omega) e^{\beta\omega}$$
-- As $T\to 0$, only _positive_ $\omega$ survives
+- As $T\to 0$, or $\beta\to \infty$, only _positive_ $\omega$ survives
 
 - For the _harmonic oscillator_, evaluating the matrix elements gives:
 $$\begin{align}
@@ -1516,7 +1570,7 @@ $$\chi(t<0)=0$$
 - $\chi(\omega)$ is _only analytic in the upper half-plane_
 
 ### Dissipation
-- From the _Golden Rule_, the _dissipation_ in energy:
+- From the _Golden Rule_, the _dissipation_ in energy for $f(t)=f_{0}\cos(\omega t)$
 $$\omega\Gamma(\omega) = \omega S(\omega)\left(\frac{f_0}{2}\right)^2 = \frac{1}{2}\omega\chi''(\omega)\left[n_\text{B}(\omega)+1\right]f_0^2$$
 ## Formal theory
 - Let there be some _general perturbed Hamiltonian_
@@ -1574,10 +1628,10 @@ $$H_\text{pert} = \sum_{j=1}^N V(\mathbf{r}_i,t) = \int  V(\mathbf{r},t)\rho(\ma
 
 ### Structure factor
 - The _general linear response for the density_, in a system with _translational invariance_:
-$$\rho(\boldsymbol{r},t)=\int  \chi(\boldsymbol{r}-\boldsymbol{r}',t-t')V(\boldsymbol{r}',t')\,d^{3}\boldsymbol{r}\,dt $$
+$$\rho(\boldsymbol{r},t)=\int  \chi(\boldsymbol{r}-\boldsymbol{r}',t-t')V(\boldsymbol{r}',t')\,d^{3}\boldsymbol{r}'\,dt' $$
 - One can then write in Fourier space:
 $$\langle\langle \rho_\mathbf{q}(t)\rangle\rangle = -\frac{1}{L^3} \int_{-\infty}^t  \chi^{\rho}_\mathbf{q}(t-t') V_\mathbf{q}(t)\,dt'$$
-- The density response function:
+- The density response function, from the [[#Kubo formula]]
 $$\chi_\rho(\mathbf{q},t) = i\langle\langle\left[\rho_\mathbf{q}(t),\rho_{-\mathbf{q}}(0)\right]\rangle\rangle$$
 - Using $\rho_{\boldsymbol{q}}=\rho_{-\boldsymbol{q}}^{\dagger}$, and the _spectral representation_, one gets the _dynamical structure factor_
 $$S_\rho(\mathbf{q},\omega) = 2\pi\sum_{n}  |\langle{0}\rvert\rho_\mathbf{q}\lvert{n}\rangle|^2 \delta(\omega-E_n+E_0)$$
@@ -1586,7 +1640,6 @@ $$S_\rho(\mathbf{q}) = \int S_\rho(\mathbf{q},\omega) \frac{d\omega}{2\pi} = \la
 
 ### Sum rules
 - Properties of structure factor _regardless of the system_
-
 
 #### f-sum rule
 - Assume the _interaction only depends on density_:
@@ -1607,8 +1660,8 @@ $$\beta^{-1}=\rho^{2}\epsilon''(\rho)$$
 $$\epsilon(\rho_0+\delta\rho) = \frac{1}{2\beta\rho_0^2} \left[\delta\rho\right]^2 + V(\mathbf{r})\delta\rho$$
 - Minimising:
 $$\epsilon(V(\mathbf{r})) = - \frac{\beta\rho_0^2}{2} \left[V(\mathbf{r})\right]^2$$
-- Compare this result to _second order perturbation theory_
-$$E^{(2)}=$$
+- Compare this result to _second order perturbation theory_, for a perturbation of some wave-vector $\boldsymbol{q}$
+$$\displaylines{\sum_{j}V_{0}\cos(\boldsymbol{q}\cdot \boldsymbol{r}_{j})=\frac{V_{0}}{2}(\rho_{-\boldsymbol{q}}+\rho_{\boldsymbol{q}}) \\ E^{(2)}=\frac{V_{0}^{2}}{4}\sum_{n\neq 0}\frac{|\braket{ 0|\rho_{\boldsymbol{q}} |n  }|^{2}}{E_{0}-E_{n}}=-\frac{V_{0}^{2}}{4}\int_{0}^{\infty}\frac{S(\boldsymbol{q},\omega)}{\omega}\, \frac{d\omega}{2\pi}  }$$
 - This gives the _compressibility sum rule_:
 $$\lim_{\mathbf{q}\to 0}\int_0^\infty \frac{S(\mathbf{q},\omega)}{\omega}\frac{d\omega}{2\pi} = \frac{N\rho\beta}{2}\equiv \frac{N}{2mc^{2}}$$
 - Here, $c\equiv(\beta m\rho)^{-1/2}$ is the _speed of sound_
