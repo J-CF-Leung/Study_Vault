@@ -2486,7 +2486,7 @@ $$E_{0}=2\sum_{\boldsymbol{k}}\varepsilon_{\boldsymbol{k}}|v_{\boldsymbol{k}}|^{
 - Also introduce the _BCS gap parameter_:
 	- Non-zero since the BCS state is a _coherent superposition_ of states with _different electron numbers_
 	- It is _independent_ of $\boldsymbol{k}$ ($s-$wave symmetry)
-$$\Delta=\gamma^{2}\sum_{\boldsymbol{k}}\langle P_{\boldsymbol{k}} \rangle=\gamma^{2}\sum_{\boldsymbol{k}}\braket{ c_{-\boldsymbol{k}\downarrow} c_{\boldsymbol{k}\uparrow}  }  =\gamma^{2}\sum_{\boldsymbol{k}}u_{\boldsymbol{k}}^{*}v_{\boldsymbol{k}}$$
+$$\Delta=\gamma^{2}\sum_{\boldsymbol{k}}\langle P_{\boldsymbol{k}} \rangle=\gamma^{2}\sum_{\boldsymbol{k}}\braket{  c_{\boldsymbol{k}\uparrow} c_{-\boldsymbol{k}\downarrow} }  =\gamma^{2}\sum_{\boldsymbol{k}}u_{\boldsymbol{k}}^{*}v_{\boldsymbol{k}}$$
 - The Lagrangian, with Lagrange multipliers $\mu$ and $E_{\boldsymbol{k}}$:
 	- $\mu$ can be identified as the _chemical potential_
 $$L=E_{0}-\mu \langle N \rangle-\sum_{\boldsymbol{k}}E_{\boldsymbol{k}}(|u_{\boldsymbol{k}}|^{2}+|v_{\boldsymbol{k}}|^{2}-1) $$
@@ -2509,5 +2509,19 @@ $$|\Delta(0)|=\frac{\hbar\omega_{D}}{\sinh(1/\xi)}\approx 2\hbar\omega_{D}\exp\l
 - For _weak coupling_, this gives the _exact ground state_
 - For _stronger coupling_ $\xi>0.2-0.5$, one needs to take the effect of coupling on the _phonon spectrum_ into account
 ### Finite temperature and excited states
+- At a finite temperature, the _excited states_ of the BCS Hamiltonian are occupied
 
+- Using the _mean field approximation_ on the _two-particle term_ of the [[#The BCS Wavefunction and Hamiltonian|BCD Hamiltonain]]:
+$$c^{\dagger}_{\boldsymbol{k}\uparrow}c^{\dagger}_{-\boldsymbol{k}\downarrow}c_{\boldsymbol{k}'\uparrow}c_{-\boldsymbol{k}'\downarrow}\approx \langle c^{\dagger}_{\boldsymbol{k}\uparrow}c^{\dagger}_{-\boldsymbol{k}\downarrow}\rangle c_{\boldsymbol{k}'\uparrow}c_{-\boldsymbol{k}'\downarrow}+c^{\dagger}_{\boldsymbol{k}\uparrow}c^{\dagger}_{-\boldsymbol{k}\downarrow}\langle c_{\boldsymbol{k}'\uparrow}c_{-\boldsymbol{k}'\downarrow}\rangle $$
+- The BCS Hamiltonian, taking chemical potential into account:
+$$H'_\text{BCS}=\sum_{\boldsymbol{k}}(\varepsilon_{\boldsymbol{k}}-\mu)(c^{\dagger}_{\boldsymbol{k}\uparrow}c_{\boldsymbol{k}\uparrow}+c^{\dagger}_{\boldsymbol{k}\downarrow}c_{\boldsymbol{k}\downarrow})-\sum_{\boldsymbol{k}}\Delta^{*}c_{\boldsymbol{k}\uparrow}c_{-\boldsymbol{k}\downarrow}+\Delta c^{\dagger}_{\boldsymbol{k}\uparrow}c_{\boldsymbol{k}\downarrow}^{\dagger}$$
+- Here, $\Delta$ is _different from its zero temperature value_ $u_{\boldsymbol{k}}^{*}v_{\boldsymbol{k}}$
+	- It still has $s-$wave symmetry due to _summing over_ the spherical shell
+	- At the _superconducting transition temperature_, it will go to _zero_
+
+- Neglecting the _constant term_ $\sum (\varepsilon_{\boldsymbol{k}}-\mu)$
+$$H'_\text{BCS}=\sum_{\boldsymbol{k}}\pmatrix{c^{\dagger}_{\boldsymbol{k}\uparrow}&c_{-\boldsymbol{k}\downarrow}}\pmatrix{\varepsilon_{\boldsymbol{k}}-\mu&-\Delta\\-\Delta^{*}&-(\varepsilon_{\boldsymbol{k}}-\mu)}\pmatrix{c_{\boldsymbol{k}\uparrow}\\c_{-\boldsymbol{k}\downarrow}^{\dagger}}$$
+- Using the [[#BCS Theory at zero temperature|eigenvalues and eigenvectors]] from the previous derivation, define a _unitary transformation_:
+$$U=\pmatrix{u_{\boldsymbol{k}}^{*} &v_{\boldsymbol{k}}\\ -v_{\boldsymbol{k}}^{*}&u_{\boldsymbol{k}} } \implies H'_\text{BCS}=\sum_{\boldsymbol{k}}\pmatrix{c^{\dagger}_{\boldsymbol{k}\uparrow}&c_{-\boldsymbol{k}\downarrow}}U\pmatrix{E_{\boldsymbol{k}}&0 \\ 0&-E_{\boldsymbol{k}}}U^{\dagger}\pmatrix{c_{\boldsymbol{k}\uparrow}\\c_{-\boldsymbol{k}\downarrow}^{\dagger}}$$
+- Define the _Bogoliuov-Valatin quasiparticle operators_
 ### Bogoliubov-Valatin quasiparticles
