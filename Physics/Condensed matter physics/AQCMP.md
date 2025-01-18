@@ -2522,6 +2522,93 @@ $$H'_\text{BCS}=\sum_{\boldsymbol{k}}(\varepsilon_{\boldsymbol{k}}-\mu)(c^{\dagg
 - Neglecting the _constant term_ $\sum (\varepsilon_{\boldsymbol{k}}-\mu)$
 $$H'_\text{BCS}=\sum_{\boldsymbol{k}}\pmatrix{c^{\dagger}_{\boldsymbol{k}\uparrow}&c_{-\boldsymbol{k}\downarrow}}\pmatrix{\varepsilon_{\boldsymbol{k}}-\mu&-\Delta\\-\Delta^{*}&-(\varepsilon_{\boldsymbol{k}}-\mu)}\pmatrix{c_{\boldsymbol{k}\uparrow}\\c_{-\boldsymbol{k}\downarrow}^{\dagger}}$$
 - Using the [[#BCS Theory at zero temperature|eigenvalues and eigenvectors]] from the previous derivation, define a _unitary transformation_:
+	- Transformation: $HU=U\,\mathrm{diag}(E_{\boldsymbol{k}},E_{-\boldsymbol{k}})$
 $$U=\pmatrix{u_{\boldsymbol{k}}^{*} &v_{\boldsymbol{k}}\\ -v_{\boldsymbol{k}}^{*}&u_{\boldsymbol{k}} } \implies H'_\text{BCS}=\sum_{\boldsymbol{k}}\pmatrix{c^{\dagger}_{\boldsymbol{k}\uparrow}&c_{-\boldsymbol{k}\downarrow}}U\pmatrix{E_{\boldsymbol{k}}&0 \\ 0&-E_{\boldsymbol{k}}}U^{\dagger}\pmatrix{c_{\boldsymbol{k}\uparrow}\\c_{-\boldsymbol{k}\downarrow}^{\dagger}}$$
-- Define the _Bogoliuov-Valatin quasiparticle operators_
+- Define the _Bogoliuov-Valatin quasiparticle operators_:
+$$\pmatrix{b_{\boldsymbol{k}\uparrow}\\b^{\dagger}_{-\boldsymbol{k}\downarrow}}=U^{\dagger}\pmatrix{c_{\boldsymbol{k}\uparrow}\\c_{-\boldsymbol{k}\downarrow}}\implies \begin{align}
+b_{\boldsymbol{k}\uparrow}&=u_{\boldsymbol{k}}c_{\boldsymbol{k}\uparrow}-v_{\boldsymbol{k}}c_{-\mathbf{k}\downarrow}^{\dagger} \\ b^{\dagger}_{-\boldsymbol{k}\downarrow}&=u^{*}_{\boldsymbol{k}}c^{\dagger}_{-\boldsymbol{k}\downarrow}+v_{\boldsymbol{k}}^{*}c_{\boldsymbol{k}\uparrow}
+\end{align}$$
 ### Bogoliubov-Valatin quasiparticles
+- The above operators create _quasiparticle excited states_ which become occupied at _finite temperatures_
+	- Known as _Bogoliubov-Valatin quasiparticles_
+	- They are still _fermions_ as the Bogoliubov transformation _still obeys anticommutation_
+- Written in terms of the quasiparticle operators:
+$$\begin{align}
+H'_\text{BCS}&=\sum_{\boldsymbol{k}}\pmatrix{b^{\dagger}_{\boldsymbol{k}\uparrow}&b_{-\boldsymbol{k}\downarrow}}\pmatrix{E_{\boldsymbol{k}}&0 \\ 0&-E_{\boldsymbol{k}}}\pmatrix{b_{\boldsymbol{k}\uparrow}\\ b_{-\boldsymbol{k}\downarrow}^{\dagger}} \\
+&=\sum_{\boldsymbol{k}}(E_{\boldsymbol{k}}\,b^{\dagger}_{\boldsymbol{k}\uparrow}b_{\boldsymbol{k}\uparrow}^{}-E_{\boldsymbol{k}}b_{-\boldsymbol{k}\downarrow}^{}b^{\dagger}_{-\boldsymbol{k}\downarrow})
+\end{align}$$
+- The first term represents _quasiparticle_ excitations, while the second represents _quasiholes_
+- They are _absent_ in the ground state:
+$$b_{\boldsymbol{k}\uparrow}\ket{\Psi _\text{BCS}}=b_{-\boldsymbol{k}\downarrow}\ket{\Psi _\text{BCS}}=0  $$
+- Some perturbation will create a _quasiparticle-quasihole pair_ with energy $E_{\boldsymbol{k}}-(-E_{\boldsymbol{k}})=2E_{\boldsymbol{k}}>2\Delta$
+
+- The _probability_ that a state $\boldsymbol{k}$ is _occupied_ by $n_{\boldsymbol{k}}$ quasiparticles:
+$$P(n_{\boldsymbol{k}})=\frac{1}{Z_{\boldsymbol{k}}}\exp\left( -\frac{n_{\boldsymbol{k}}E_{\boldsymbol{k}}}{k_{B}T} \right)\qquad Z_{\boldsymbol{k}}=1+\exp\left( -\frac{E_{\boldsymbol{k}}}{k_{B}T} \right)$$
+- The _average occupation_ of _quasiparticles_ and _quasiholes_:
+$$\displaylines{\langle n_{\boldsymbol{k}} \rangle=\langle b^{\dagger}_{\boldsymbol{k}\uparrow}b_{\boldsymbol{k}\uparrow} \rangle=\sum_{n_{\boldsymbol{k}}}n_{\boldsymbol{k}}P(n_{\boldsymbol{k}})=\frac{1}{1+\exp(E_{\boldsymbol{k}}/k_{B}T)}=f(E_{\boldsymbol{k}})  \\ \langle b_{-\boldsymbol{k}}\downarrow b_{-\boldsymbol{k}\downarrow}^{\dagger}\rangle =1-f(E_{\boldsymbol{k}})}$$
+
+- Quasiparticles with _opposite momenta and spin_ are created _independently_ in the thermal state. hence there is _no coherence_ between them:
+$$\langle b_{-\boldsymbol{k}\downarrow}b_{\boldsymbol{k}\uparrow} \rangle=\langle b^{\dagger}_{\boldsymbol{k}\uparrow}b_{-\boldsymbol{k}\downarrow}^{\dagger} \rangle=0  $$
+### Finite temperature gap parameter
+- Calculate the [[#BCS Theory at zero temperature|gap parameter]]:
+$$\Delta=\gamma^{2}\sum_{\boldsymbol{k}} \langle c_{-\boldsymbol{k}\downarrow}c_{\boldsymbol{k}\uparrow} \rangle $$
+- Substituting in terms of the quasiparticle operators:
+$$\Delta=\gamma^{2}\sum_{\boldsymbol{k}}u^{*}_{\boldsymbol{k}}v_{\boldsymbol{k}}(1-2f(E_{\boldsymbol{k}}))$$
+- From the [[#BCS Theory at zero temperature|eigenvalue equations]]:
+$$1=\gamma^{2}\sum_{\boldsymbol{k}} \frac{1}{2E_{\boldsymbol{k}}}(1-2f(E_{\boldsymbol{k}}))=\gamma^{2}\sum_{\boldsymbol{k}} \frac{1}{2E_{\boldsymbol{k}}}\tanh\left( \frac{E_{\boldsymbol{k}}}{2k_{B}T} \right)$$
+- Integrating over $\varepsilon_{\boldsymbol{k}}-\mu$, one gets the _gap equation at finite temperature_
+	- $\xi=\gamma^{2}Vg_{V}(E_{F})$
+$$1\approx \xi \int_{0}^{\hbar\omega_{D}}  d\varepsilon  \frac{1}{\sqrt{ \varepsilon^{2}+\Delta^{2} }}\tanh\left( \frac{\sqrt{ \varepsilon^{2}+\Delta^{2} }}{2k_{B}T} \right) $$
+- Taking the _low temperature limit_ $T\to0$ gives the previous result:
+$$\Delta(T\to0)\approx 2\hbar\omega_{D}\exp(-1/\xi)$$
+
+- In the limit of $T\to T_{c}$, $\Delta\to 0$ and _changing variables_ $x=\varepsilon/2k_{B}T_{c}$
+$$1\approx \xi \int^{\hbar\omega_{D}/2k_{B}T_{c}}_{0}  d\varepsilon  \frac{1}{x} \tanh\left( x \right)=\xi \ln\left( (2.27\dots) \frac{\hbar\omega_{D}}{k_{B}T_{c}} \right) $$
+- Rearranging:
+$$k_{B}T_{c}=1.134\hbar\omega_{D}\exp(-1/\xi)$$
+- The _critical temperature_ is _proportional_ to the _Debye frequency_
+	- Maximum frequency of _acoustic phonons_
+
+- These limits define a _conventional superconductor_
+
+## Predictions of BCS Theory
+
+### Isotope effect
+- From the results above:
+$$\frac{\Delta(0)}{k_{B}T_{c}}=1.77$$
+- Solution to the gap equation:
+![[BCS gap equation solution.png|400]]
+- Since $T_{c}\propto \omega_{D}$, and for _acoustic phonons_, $\omega \propto M^{-1/2}$:
+$$T_{c}\propto M^{-1/2}$$
+- This is the _isotope effect_
+
+### Persistent current
+- BCS Theory can be _extended_ to include Cooper pairs of total momentum $2\boldsymbol{Q}$:
+$$(\boldsymbol{k}+\boldsymbol{Q},\uparrow)\,,\,(-\boldsymbol{k}+\boldsymbol{Q},\downarrow)$$
+- $Q$ should be sufficiently small such that the _centre of mass kinetic energy_ is _small_:
+$$\frac{\hbar^{2}}{2m}(2Q)^{2}\ll\Delta$$
+- In a _current conducting state_, all Cooper pairs have a _common momentum_ $2Q$
+
+- _Degrading_ the current would require the _creation_ of Bogoliubov-Valatin quasiparticles, with an _energetic cost_ of $>2\Delta$ per pair
+- Therefore, _below_ $T_{c}$, the energetic cost is _too high_ and current is _persistent_
+
+- Alternatively, to _alter_ the current without significant energetic cost, one would have to _scatter all Cooper pairs_ into a _coherent state of different_ $\boldsymbol{Q}$
+
+### Tunnelling spectroscopy
+- The _temperature-dependent energy gap_ can be _measured_ using _tunnelling spectroscopy_
+![[Superconductor tunnelling spectroscopy.png|400]]
+
+## High temperature superconductivity
+![[Superconductor map.png]]
+- _Conventional_ superconductivity predicted by BCS theory has _no theoretical bounds_ on $T_{c}$ as long as there is a _strong electron-phonon coupling_ and _high frequency phonons_
+	- Typically achievable in _hydrides_ and _metallic hydrogen_, made in _high pressure_
+
+- There is also _unconventional superconductivity_, observed in _cuprates_
+	- Record: $T_{c}\approx 138\mathrm{\,K}$
+	- Pairing mechanism not yet known
+	- $T_{c}$ is _bigger_ than what BCS theory predicts given the crystal structure
+	- _Isotope effect_ measurement can show $T_{c}\sim M^{0}$
+	- _Doping_ can cause a phase transition from antiferromagnetic to superconducting, as electron-electron interactions _compete_ with each other
+
+- Temperature-hole density phase diagram for cuprates:
+![[Cuprate phase diagram.png]]
