@@ -353,8 +353,6 @@ $$U\sim\frac{e^{2}}{4\pi\epsilon_{0}(a_{B}r_{s})} \quad K=\frac{\hbar^{2}k_{F}^{
 - A more precise _expansion_ of ground state energy:
 $$E_{0}=\left( \frac{2.21}{r_{s}^{2}}-\frac{0.916}{r_{s}}+\underbrace{ 0.0622\ln r_{s}-0.096+\mathcal{O}(r_{s}\ln r_{s})O }_\text{Correlation energy} \right)\text{ Ry}$$
 
-
-
 # Density Functional Theory
 - Based around the _electron density_, the _probability density_ of finding the $N$ electrons
 $$\begin{align}
@@ -841,6 +839,7 @@ $$J=\frac{1}{V}\sum_{\boldsymbol{p},\lambda}j_{\boldsymbol{p},\lambda}\delta n_{
 - Here, $j_{\boldsymbol{p},\lambda}$ is the _current density of quasiparticles_ $(\boldsymbol{p},\lambda)$
 $$j_{\boldsymbol{p},\lambda}=v_{\boldsymbol{p},\lambda}-\frac{1}{V}\sum_{\boldsymbol{p}',\lambda'}v_{\boldsymbol{p}',\lambda'} \frac{\partial n^{0}}{\partial\varepsilon_{\lambda'}(\boldsymbol{p}')}f_{\lambda,\lambda'}(\boldsymbol{p},\boldsymbol{p}')$$
 - This must be equal to the _bare current density_ $\boldsymbol{p}/m$
+
 - Define the _effective mass_ using the group velocity:
 $$v_{\boldsymbol{p},\lambda}=\frac{\boldsymbol{p}}{m^{*}}$$
 - Equating the two current densities and taking the dot product with $\boldsymbol{p}$, at _zero temperature_
@@ -856,7 +855,7 @@ $$m^{*}=\left( 1+\frac{F_{1}^{(s)}}{3} \right)m$$
 - Hence, at _finite temperature_, use the _Fermi distribution_:
 $$n^{0}_{\boldsymbol{p},\lambda}(T,\mu)=\frac{1}{1+\exp[(\tilde{\varepsilon}_{\lambda}(\boldsymbol{p})-\mu)/k_{B}T]}$$
 - The _interaction energy correction_ in $\tilde{\varepsilon}_{\lambda}(\boldsymbol{p})-\varepsilon_{\lambda}(\boldsymbol{p})$ is on the _order_ of:
-$$\sum_{\boldsymbol{p}'}Y_{l,m}^{*}(\theta',\phi')\delta n_{\lambda'}(\boldsymbol{p}')\sim \int p^{2} \frac{\partial n^{0}}{\partial\varepsilon}\delta n(\boldsymbol{p})\, dp  \sim \int   H(\varepsilon) \delta n_{\lambda}(\boldsymbol{p}) d\varepsilon $$
+$$\displaylines{\tilde{\varepsilon}_{\lambda}(\boldsymbol{p})-\mu=(\varepsilon_{\lambda}(\boldsymbol{p})-\mu)+\frac{1}{V}\sum_{\boldsymbol{p}',\lambda'}f_{\lambda,\lambda'}(\boldsymbol{p},\boldsymbol{p}')\delta n_{\lambda'}(\boldsymbol{p}') \\\sum_{\boldsymbol{p}'}Y_{l,m}^{*}(\theta',\phi')\delta n_{\lambda'}(\boldsymbol{p}')\sim \int p^{2} \frac{\partial n^{0}}{\partial\varepsilon}\delta n(\boldsymbol{p})\, dp  \sim \int   H(\varepsilon) \delta n_{\lambda}(\boldsymbol{p}) d\varepsilon }$$
 - From the _Sommerfeld expansion_:
 $$\int  H(\varepsilon)\delta n_{\lambda}(\boldsymbol{p})\,d\varepsilon=\frac{\pi^{2}}{6}(k_{B}T)^{2}\,\frac{dH(\varepsilon)}{d\varepsilon}\Bigg|_{\varepsilon=\mu}+O(T^{4}) $$
 
@@ -1319,6 +1318,7 @@ $$H=\sum_{\boldsymbol{k},\lambda}\varepsilon_{\boldsymbol{k},\lambda}c^{\dagger}
 - Example: $\ce{ La_{1-x} Ca_{x}Mn_{1-x}^{3+}Mn_{x}^{4+}O_{3}}$
 
 - $J>0$ as it is _between atoms and conduction electrons_
+- Explains alignment between _ions of different valency_
 ![[Double exchange.png]]
 
 - Electrons can _move from one ion to another_ when the _ionic spins align_ such that Hund's rule is not violated, and there is _lower energy_
@@ -1417,6 +1417,7 @@ $$\mathrm{GMR}=\frac{R_{\uparrow\downarrow}-R_{\uparrow\uparrow}}{R_{\uparrow\up
 - _Hopping_ gives more of an _energetic advantage_ from _Hund's rule_ when the _core spins_ of $\ce{ Mn^{4+} }$ are _aligned ferromagnetically_
 ![[Double exchange hop.png|250]]
 - Near the _Curie temperature_, the _fluctuations_ in spin alignment then lead to a _rapid increase in resistivity_
+
 - Applying a _magnetic field_ will then _align_ the core spins and _decrease resistivity_
 	- Effect is particularly large _near_ $T_{c}$ as it _supresses the spin fluctuations_
 ## Kondo effect
@@ -1822,6 +1823,7 @@ $$H=\sum_{\boldsymbol{q}\in \text{BZ}  }\sum_{\nu=1}^{3}\hbar\omega_{\nu}(\bolds
 $$E=\sum_{\boldsymbol{q},\nu}\hbar\omega_{\nu}(\boldsymbol{q})\left( n_{\boldsymbol{q}\nu}+\frac{1}{2} \right)$$
 ### Phonon branches
 - From the _symmetry_ of $D(\boldsymbol{R})$, for a _monoatomic Bravais lattice_:
+	- Add $\sum D(\boldsymbol{R}_{n})=0$
 $$\tilde{D}(\boldsymbol{q})=-2\sum_{n=1}^{N}\sin^{2}\left( \frac{1}{2}\boldsymbol{q}\cdot \boldsymbol{R}_{n} \right)D(\boldsymbol{R}_{n})$$
 - For _small_ $\boldsymbol{q}$:
 $$\tilde{D}(\boldsymbol{q})\approx -\frac{q^{2}}{2}\sum_{n=1}^{N}\left( \hat{\boldsymbol{q}}\cdot \boldsymbol{R}_{n} \right)^{2}D(\boldsymbol{R}_{n})$$
@@ -2611,4 +2613,4 @@ $$\frac{\hbar^{2}}{2m}(2Q)^{2}\ll\Delta$$
 	- _Doping_ can cause a phase transition from antiferromagnetic to superconducting, as electron-electron interactions _compete_ with each other
 
 - Temperature-hole density phase diagram for cuprates:
-![[Cuprate phase diagram.png]]
+![[Cuprate phase diagram.png|300]]

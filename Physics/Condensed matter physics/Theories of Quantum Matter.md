@@ -1104,6 +1104,7 @@ $$h = \epsilon\left[a^\dagger_1a^{\vphantom{\dagger}}_1+a^\dagger_2a^{\vphantom{
 $$\displaylines{h = \Omega\left[b^\dagger_1b^{\vphantom{\dagger}}_1+b^\dagger_2b^{\vphantom{\dagger}}_2\right] +\text{const.} \\ \begin{pmatrix}b^{\vphantom{\dagger}}_1 \\ b^\dagger_2\end{pmatrix}=\Lambda\begin{pmatrix}a^{\vphantom{\dagger}}_1 \\ a^\dagger_2\end{pmatrix}}$$
 - To keep _commutation relations_ $[b_{i},b_{j}^{\dagger}]=\delta_{ij}$, $\Lambda$ must be _pseudo-unitary_:
 	- Unitary: trigonometric; pseudo-unitary: hyperbolic
+	- Proof: consider vector $\Psi=\pmatrix{a_{1}&a_{2}^{\dagger}}^{T}$ such that $[\Psi_{i},(\Psi ^{\dagger})_{j}]=(\sigma_{3})_{ij}$
 $$\displaylines{\Lambda^\dagger \sigma_3 \Lambda = \sigma_3 \\ \Lambda=
 \begin{pmatrix}
 \cosh\kappa & \sinh\kappa \\
@@ -1153,9 +1154,12 @@ $$\omega(\mathbf{q})\xrightarrow{\mathbf{q}\to 0}\sqrt{ \frac{n_{0}U_{0}}{m} }|\
 - As $\boldsymbol{q}\to0$, density fluctuations _vanish_
 	- For the _Gross-Piatevskii_ ground state, fluctuations are _uncorrelated_ and _Poisonnian_ as $\braket{ 0|\rho_{\boldsymbol{-q}}\rho _{\boldsymbol{q}} |0  }=N$
 #### Condensate depletion
-- The _number operator_ for the original bosons in terms of quasi-particles:
+- The _number operator_ for the _original bosons in terms of quasi-particles_:
 $$a^\dagger_{\mathbf{p}}a^{\vphantom{\dagger}}_{\mathbf{p}}=(b^\dagger_\mathbf{p}\cosh\kappa_{\mathbf{p}}-b^{\vphantom{\dagger}}_{-\mathbf{p}}\sinh\kappa_{\mathbf{p}})(b^{\vphantom{\dagger}}_\mathbf{p}\cosh\kappa_{\mathbf{p}}-b^\dagger_{-\mathbf{p}}\sinh\kappa_{\mathbf{p}})$$
-- The average:
+- For _non-zero temperature_, the _mean occupation of a Bogoliubov mode_ is in terms of the _Bose distribution_ using Bogoliubov dispersion $\omega(\boldsymbol{p})$
+$$\tilde{n}_{B}(\boldsymbol{p})=\langle b_{\boldsymbol{p}}^{\dagger}b_{\boldsymbol{p}} \rangle=\frac{1}{\exp(\omega(\boldsymbol{p})/k_{B}T)-1} $$
+
+- The average at _zero temperature_:
 	- The _radial density_ $4\pi p^{2}N_{p}$ _peaks_ around $\xi^{-1}$
 $$\langle N_\mathbf{p}\rangle=\langle a^\dagger_{\mathbf{p}}a^{\vphantom{\dagger}}_{\mathbf{p}}\rangle = \sinh^2\kappa_{p}\xrightarrow{ \lvert{\mathbf{p}}\rvert\ll \xi^{-1}}\frac{mc_s}{2\lvert{\mathbf{p}}\rvert}$$
 - Then, the _fraction_ of atoms _not in the condensate_:
@@ -1388,6 +1392,7 @@ b^{\vphantom{\dagger}}_{\mathbf{p}'}$$
 	- They _commute at different momenta_, but obey a _hardcore constraint_
 $$(b^\dagger_\mathbf{p})^2=0$$
 - The variational state where the _amplitudes are uncorrelated_
+	- Corresponding to the earlier state $\ket{\text{pair}}$ but with a set of coefficients which _factorise_
 $$\lvert{N \text{ pair}}\rangle\equiv\left[\sum_\mathbf{p}c_\mathbf{p}b^\dagger_\mathbf{p}\right]^{N/2}\lvert{\text{VAC}}\rangle\implies \mathrm{K.E}=2\sum_\mathbf{p}\epsilon_{\mathbf{p}}\langle b^\dagger_\mathbf{p}b^{\vphantom{\dagger}}_\mathbf{p}\rangle\equiv 2\sum_\mathbf{p}\epsilon_{\mathbf{p}} \langle n^P_
 \mathbf{p}\rangle$$
 - The _expected number of pairs_ is hard to determine
@@ -1493,9 +1498,11 @@ $$\Delta_s=\min_\mathbf{p}E_\mathbf{p}=\begin{cases}
 - How systems _respond to external probes_
 - The _evolution of fluctuations_ will _behave similarly to dissipation_
 
+- There are both _quantum fluctuations_ and _thermal fluctuations_
+
 ## Fluctuations of an oscillator
 
-### Single oscillator
+### Fluctuations and noise in a single oscillator
 - Consider the undamped oscillator, and its _ground state oscillations_
 $$H=\frac{p^{2}}{2m}+\frac{1}{2}m\omega_{0}^{2}y^{2} \implies \braket{ 0|y^{2} |0  }= \frac{1}{2m\omega_{0}}$$
 - At _finite temperature_, consider both _thermodynamic and quantum effects_:
@@ -1513,6 +1520,7 @@ $$S(\omega)\neq S(-\omega)$$
 
 - _Expanding_ $y(t)$ in terms of _energy eigenstates_:
 $$S(\omega) = 2\pi\sum_{m,n} \frac{e^{-\beta E_n}}{Z} |\langle{n}\rvert y\lvert{m}\rangle|^2 \delta(\omega-E_m+E_n)$$
+
 - It is composed of _weighted delta functions_ which become more _dense_ in the thermodynamic limit
 - The _asymmetry_ is due to the _weighting_:
 $$S(\omega) = S(-\omega) e^{\beta\omega}$$
@@ -1541,7 +1549,7 @@ S(\omega)= 2\pi\sum_k |c_k|^2\left[n_\text{B}(\omega_k)\delta(\omega+\omega_k)+(
 - Then taking the _continuum limit_, this gives a _smooth function_
 ## Responses
 
-### Responses of an oscillator
+### Response function of an oscillator
 - The _Heisenberg equation of motion_:
 $$\displaylines{H=\sum_{k}\omega_{k}a_{k}^{\dagger}a_{k}-f(t)y \\ \frac{da_{k}}{dt}=-i\omega_{k}a_{k}+ic_{k}f(t)}$$
 - The solution is:
@@ -1593,7 +1601,7 @@ $$\chi_{AB}(t) = i\langle\langle\left[A_I(t),B_I(0)\right]\rangle\rangle,\quad t
 - This is the _Kubo formula_, expressing $\chi$ in terms of the _dynamics of the unperturbed system_
 
 ### General fluctuation-dissipation theorem
-- Take the _correlation function_:
+- _Define_ the _correlation function_:
 $$S_{AB}(t) \equiv \langle\langle A_I(t)B_I(0)\rangle\rangle$$
 - From the cyclic property of the trace:
 $$S_{AB}(t) = S_{BA}(-t-i\beta)\implies S_{AB}(\omega) = e^{\beta\omega} S_{BA}(-\omega)$$
@@ -1605,7 +1613,7 @@ i\left[S_{AB}(t)-S_{BA}(-t)\right] & t>0\\
 \end{cases}  \\
 &=i\theta(t)[S_{AB}(t)-S_{BA}(-t)]
 \end{align}$$
-- Therefore, $\chi_{AB}(\omega)$ is a _convolution_:
+- Therefore, $\chi_{AB}(\omega)$ is a _convolution_ with the step function:
 $$\displaylines{\tilde{\theta}(\omega)=\frac{i}{\omega+i0} \\ \begin{align}
 \chi_{AB}(\omega)&= -\int \frac{d\omega'}{2\pi}\frac{S_{AB}(\omega')-S_{BA}(-\omega')}{\omega-\omega'+i0}\\
 &=-\int \frac{d\omega'}{2\pi}\frac{S_{AB}(\omega')\left[1-e^{-\beta\omega'}\right]}{\omega-\omega'+i0}
@@ -1619,6 +1627,7 @@ $$\begin{align}
 - The quantum fluctuation dissipation relation can then be read off:
 $$S_{AB}(\omega) = 2\chi_{AB}''(\omega)\left[n_\text{B}(\omega)+1\right]$$
 ### Spectral representation
+- In terms of the energy eigenstates:
 $$S_{AB}(\omega)  = 2\pi\sum_{m,n} \frac{e^{-\beta E_m}}{Z} \langle{m}\rvert A\lvert{n}\rangle\langle{n}\rvert B\lvert{m}\rangle \delta(\omega-E_n+E_m)$$
 
 ## Response of matter
@@ -1629,14 +1638,20 @@ $$H_\text{pert} = \sum_{j=1}^N V(\mathbf{r}_i,t) = \int  V(\mathbf{r},t)\rho(\ma
 ### Structure factor
 - The _general linear response for the density_, in a system with _translational invariance_:
 $$\rho(\boldsymbol{r},t)=\int  \chi(\boldsymbol{r}-\boldsymbol{r}',t-t')V(\boldsymbol{r}',t')\,d^{3}\boldsymbol{r}'\,dt' $$
-- One can then write in Fourier space:
+- One can then write in _Fourier space_:
 $$\langle\langle \rho_\mathbf{q}(t)\rangle\rangle = -\frac{1}{L^3} \int_{-\infty}^t  \chi^{\rho}_\mathbf{q}(t-t') V_\mathbf{q}(t)\,dt'$$
 - The density response function, from the [[#Kubo formula]]
 $$\chi_\rho(\mathbf{q},t) = i\langle\langle\left[\rho_\mathbf{q}(t),\rho_{-\mathbf{q}}(0)\right]\rangle\rangle$$
-- Using $\rho_{\boldsymbol{q}}=\rho_{-\boldsymbol{q}}^{\dagger}$, and the _spectral representation_, one gets the _dynamical structure factor_
+- This setup has $A=\rho_{\boldsymbol{q}},B=\rho_{-\boldsymbol{q}}$
+
+- Then define:
+$$S_{\rho}(\boldsymbol{q},t)=\langle\langle \rho_{\boldsymbol{q}}(t)\rho_{-\boldsymbol{q}}(0)\rangle\rangle$$
+- Using $\rho_{\boldsymbol{q}}=\rho_{-\boldsymbol{q}}^{\dagger}$, and the _spectral representation_, one gets the _dynamical structure factor_ $S_{\rho}(\boldsymbol{q},\omega)$ at _zero temperature_ 
+	- $\exp(-\beta E_{m})/Z=\delta_{m{0}}$
 $$S_\rho(\mathbf{q},\omega) = 2\pi\sum_{n}  |\langle{0}\rvert\rho_\mathbf{q}\lvert{n}\rangle|^2 \delta(\omega-E_n+E_0)$$
 - Then, summing up the _equal time contributions_, one gets the _static structure factor_
 $$S_\rho(\mathbf{q}) = \int S_\rho(\mathbf{q},\omega) \frac{d\omega}{2\pi} = \langle\langle\rho_\mathbf{q}\rho_{-\mathbf{q}}\rangle\rangle$$
+- This quantifies all _equal time density fluctuations_ in the system
 
 ### Sum rules
 - Properties of structure factor _regardless of the system_
@@ -1647,7 +1662,9 @@ $$[H_\text{int},\rho_{\boldsymbol{q}}]=0 \implies [H,\rho_{\boldsymbol{q}}]=[T,\
 - By explicit calculation:
 $$[[H,\rho_\mathbf{q}],\rho_{-\mathbf{q}}] = -\frac{N\mathbf{q}^2}{m}$$
 - From resolution of identity:
-$$\braket{ 0|[[H,\rho_{\boldsymbol{q}}],\rho_{-\boldsymbol{q}}] |0  } $$
+$$\braket{ 0|[[H,\rho_{\boldsymbol{q}}],\rho_{-\boldsymbol{q}}] |0  } =2\sum_{n} |\braket{ 0|\rho_{\boldsymbol{q}} |n  }|^{2}(E_{0}-E_{n}) $$
+- Relate this to the _spectral representation_ of $S_{\rho}(\boldsymbol{q},\omega)$
+
 - The _f-sum rule_:
 $$\int_{-\infty}^\infty \omega S(\mathbf{q},\omega) \frac{d\omega}{2\pi}= \frac{N\mathbf{q}^2}{2m}$$
 
@@ -1656,9 +1673,9 @@ $$\int_{-\infty}^\infty \omega S(\mathbf{q},\omega) \frac{d\omega}{2\pi}= \frac{
 $$\beta=-\frac{1}{V}\frac{\partial V}{\partial p}$$
 - At _zero temperature_, $p=-\partial E_{0}/\partial V$, therefore with _energy per unit volume_ $\epsilon$:
 $$\beta^{-1}=\rho^{2}\epsilon''(\rho)$$
-- In the presence of $V(\boldsymbol{r})$, the _energy density_ is:
-$$\epsilon(\rho_0+\delta\rho) = \frac{1}{2\beta\rho_0^2} \left[\delta\rho\right]^2 + V(\mathbf{r})\delta\rho$$
-- Minimising:
+- In the presence of $V(\boldsymbol{r})$, the _change in energy density_ is:
+$$\epsilon(\rho_0+\delta\rho)-\varepsilon(\rho_{0}) = \frac{1}{2\beta\rho_0^2} \left[\delta\rho\right]^2 + V(\mathbf{r})\delta\rho$$
+- Minimising the change:
 $$\epsilon(V(\mathbf{r})) = - \frac{\beta\rho_0^2}{2} \left[V(\mathbf{r})\right]^2$$
 - Compare this result to _second order perturbation theory_, for a perturbation of some wave-vector $\boldsymbol{q}$
 $$\displaylines{\sum_{j}V_{0}\cos(\boldsymbol{q}\cdot \boldsymbol{r}_{j})=\frac{V_{0}}{2}(\rho_{-\boldsymbol{q}}+\rho_{\boldsymbol{q}}) \\ E^{(2)}=\frac{V_{0}^{2}}{4}\sum_{n\neq 0}\frac{|\braket{ 0|\rho_{\boldsymbol{q}} |n  }|^{2}}{E_{0}-E_{n}}=-\frac{V_{0}^{2}}{4}\int_{0}^{\infty}\frac{S(\boldsymbol{q},\omega)}{\omega}\, \frac{d\omega}{2\pi}  }$$
@@ -1666,6 +1683,11 @@ $$\displaylines{\sum_{j}V_{0}\cos(\boldsymbol{q}\cdot \boldsymbol{r}_{j})=\frac{
 $$\lim_{\mathbf{q}\to 0}\int_0^\infty \frac{S(\mathbf{q},\omega)}{\omega}\frac{d\omega}{2\pi} = \frac{N\rho\beta}{2}\equiv \frac{N}{2mc^{2}}$$
 - Here, $c\equiv(\beta m\rho)^{-1/2}$ is the _speed of sound_
 
+### Onsager bound
+- From the _Cauchy-Schwarz inequality_:
+$$\left|{\int f(x)g^*(x) dx}\right|^2 \leq \int \lvert{f(x)}\rvert^2 dx \int \lvert{g(x)}\rvert^2 dx$$
+- The _Onsager bound_ on the _static structure factor_:
+$$\lim_{\mathbf{q}\to 0}\frac{S_\rho(\mathbf{q})}{\lvert{\mathbf{q}}\rvert}\leq \frac{N}{2mc}$$
 ### Single mode approximation
 - Some Bose gases at _low momentum_ are described by a _single mode_:
 $$S_\rho(\mathbf{q},\omega) \sim 2\pi S_\rho(\mathbf{q}) \delta(\omega - \omega(\mathbf{q}))$$
@@ -1673,7 +1695,7 @@ $$S_\rho(\mathbf{q},\omega) \sim 2\pi S_\rho(\mathbf{q}) \delta(\omega - \omega(
 
 - The f-sum rule gives:
 $$S_\rho(\mathbf{q}) = \frac{N\mathbf{q}^2}{2m\omega(\mathbf{q})}$$
-- For a _Bose condensate with no interactions_:
+- For a _Bose condensate_ with no interactions $(\omega=q^{2}/2m)$
 $$S_{\rho}^{\text{BEC}}(\boldsymbol{q})=N$$
 - Particle positions are _uncorrelated_ with _Poisson statistics_
 

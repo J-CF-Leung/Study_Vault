@@ -88,3 +88,45 @@
 - Non-Abelian braiding also achievable
 
 ### Final supervisor ranking
+
+- Lamacraft: quantum circuits
+	- Connection to many body: spin chain, time step = acting on spins with gates
+	- "Energy" is not conserved
+	- Locality dictates time evolution (causality)
+	- Tensor networks? Ensembles and mapping onto classical problems? dual unitary (special case)
+	- Measurement induced phase transitions?
+	- Chaotic time evolution/measurement trade offs
+
+- Benjamin Beri
+	- Very conceptual (experimental realisation: Rydberg atoms or superconducting qubits)
+	- Not quite band topology
+	- Anyonic excitations and interactions with environment
+	- Measurements and feedback
+	- Topological error correction (statistical machanical mappings)
+	- Phase fiagram, corespondence to QFT methods
+	- 2D topological field theory in 1D system (latter is a boundary?), holographic projection
+	- Error correction operators corresponding with symmetries and local operators
+	- Dynamical properties
+	- Classical simulability of quantum systems?
+
+- Claudio Castenovo
+	- Spin liquids and ices w/ topology
+	- Glass
+	- RVB liquid
+
+- Anton Souslov
+
+- Emilio Artacho
+
+- Christoph Schran
+
+- Bo Peng
+
+FINAL
+1. Claudio Castelnovo
+2. Anton Souslov
+3. Benjamin Beri
+4. Austen Lamacraft
+5. Bo Peng
+6. Christoph Schran
+7. Emilio Artacho
