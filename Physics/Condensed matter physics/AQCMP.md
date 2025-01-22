@@ -2614,3 +2614,6 @@ $$\frac{\hbar^{2}}{2m}(2Q)^{2}\ll\Delta$$
 
 - Temperature-hole density phase diagram for cuprates:
 ![[Cuprate phase diagram.png|300]]
+
+- In BCS Theory, $\Delta(\boldsymbol{k})$ is _isotropic_
+- However, $\Delta(\boldsymbol{k})$ in _superconducting cuprates_ have _$d-$wave symmetry_
