@@ -72,6 +72,7 @@ $$\varepsilon_{\mu \nu}=-\varepsilon_{\nu \mu}$$
 
 ## Fields with Lorentz transformations
 - A field: dependent on _coordinates_, and has a _definite transformation_
+
 - Coordinate and field _active transformations_:
 	- _Coordinate system_ unchanged, but change _where field is evaluated_
 	- Hence, coordinates rotate the _other way_ (to the coordinate _before rotation_, to retain the same value)
@@ -318,12 +319,12 @@ $$\braket{ 0|T\phi(x)\phi(y) | 0 }=\braket{ 0|\phi(x)\phi(y) |0  }\Theta(x^{0}-y
 - Making the _expansion_, one can prove that it is equal to the expression below, with $\epsilon\to 0$
 $$\Delta_{F}(x-y)=\int  \frac{d^4p}{(2\pi)^{4}} \frac{i}{p^{2}-m^{2}+i\epsilon} \exp[-ip(x-y)]$$
 
-- It is also the _Greens function_ for the Klein-Gorfon equation:
+- It is also the _Greens function_ for the Klein-Gordon equation:
 $$(\partial_{\mu}\partial^{\mu}+m^{2})\Delta_{F}(x-y)=-i\delta^{4}(x-y)$$
 
 ### Wick's Theorem
 - Time ordering is equivalent to:
-$$T\phi(x)\phi(y)=:\phi(x)\phi(y):+\Delta_{F}(x-y)$$
+$$T[\phi(x)\phi(y)]=:\phi(x)\phi(y):+\Delta_{F}(x-y)$$
 - Proof: split the field into $\phi^{+}$ and $\phi^{-}$ and _expand_ $T[\phi(x)\phi(y)]$
 $$\displaylines{\phi=\phi^{+}+\phi ^{-} \\ \phi^{+}=\int  \frac{d^3p}{(2\pi)^{3}}\,\frac{1}{\sqrt{ 2\omega_{p} }} a_{p} \exp(-ipx) \qquad \phi^{-}=\int  \frac{d^3p}{(2\pi)^{3}}\,\frac{1}{\sqrt{ 2\omega_{p} }} a_{p}^{\dagger} \exp(ipx)\\ [\phi^{+}(x),\phi^{-}(y)]=D(x-y) \\T[\phi(x)\phi(y)]=\,:\phi(x)\phi(y):+D(x-y)}$$
 
@@ -444,33 +445,6 @@ $$\begin{align}
 
 - Correlation functions given by the _Schwinger-Dyson_ equation below
 
-## Schwinger-Dyson equation
-- A way to calculae the $n-$point correlation function:
-$$\braket{ \phi_{1}\dots \phi_{n}  } \equiv\braket{ \Omega|T\{\phi(x_{1})\dots \phi(x_{n})\} | \Omega } $$
-
-- _Assume_ that at any given time, the Hilbert space of the _interacting theory_ can be _mapped_ onto the Hilbert space of the _free theory_
-	- In general, the mapping is not invariant over time
-$$[\phi(\boldsymbol{x},t),\phi(\boldsymbol{x}',t')]=0 \qquad [\phi(\boldsymbol{x},t),\partial_{t}\phi(\boldsymbol{x}',t)]=i\delta^{3}(\boldsymbol{x}-\boldsymbol{x}')$$
-- Fields must still obey the _Euler Lagrange equations_:
-$$(\Box+m^{2})\phi-\mathcal{L}'_\text{int}[\phi]=0\qquad \mathcal{L}'_\text{int}[\phi]=\frac{\partial \mathcal{L}_\text{int}}{\partial \phi}$$
-- For the 2-point correlation:
-	- Proof: Expand out correlation, then use equal time commutator
-$$(\Box_{x}+m^{2})\braket{  \phi_{x}\phi_{y}  } =\braket{  (\Box_{x}+m^{2})\phi_{x}\phi_{y}  }-i\delta^{4}(x-y) $$
-- Using the Euler-Lagrange equation:
-$$(\Box_{x}+m^{2})\braket{ \phi_{x}\phi_{y}  }=\braket{ \mathcal{L}_\text{int}' [\phi_{x}]\phi_{y}  }  -i\delta^{4}(x-y)$$
-
-
-- Then, one gets the _Schwinger-Dyson equation_:
-$$\begin{align}
-(\Box_{x}+m^{2})\braket{  \phi_{x}\phi_{2} \dots \phi_{n} } =&\braket{ \mathcal{L}_\text{int}'[\phi _{x}] \phi_{2}\dots \phi_{n}  }  \\
-&-i\sum_{j=2}^{n}\delta^{4}(x-x_{j}) \braket{  \phi_{2}\dots \phi_{j-1}\phi_{j+1}\dots\phi_{n}  } 
-\end{align}$$
-- The first term is a _classical effect_
-- The latter term gives the _contact interactions_, which are a _quantum effect_
-	- They also give rise to _contractions_, which create _loops_ in the Feynman diagram
-
-- It is a _non-perturbative_ equation for _any interacting theory_
-
 ### Example: 4-point correlation in the free theory
  - Examine the correlation function:
 $$\braket{ \phi(x_{1})\phi(x_{2})\phi(x_{3})\phi(x_{4})  } \equiv\braket{ \phi_{1} \phi_{2}\phi_{3}\phi_{4} } $$
@@ -513,6 +487,34 @@ $$\begin{align}
 \end{align}$$
 - They _perturbative terms_ correspond to:
 ![[cubic 12 feynman diagrams.png]]
+
+## Schwinger-Dyson equation
+- A way to calculate the $n-$point correlation function:
+$$\braket{ \phi_{1}\dots \phi_{n}  } \equiv\braket{ \Omega|T\{\phi(x_{1})\dots \phi(x_{n})\} | \Omega } $$
+
+- _Assume_ that at any given time, the Hilbert space of the _interacting theory_ can be _mapped_ onto the Hilbert space of the _free theory_
+	- In general, the mapping is not invariant over time
+$$[\phi(\boldsymbol{x},t),\phi(\boldsymbol{x}',t')]=0 \qquad [\phi(\boldsymbol{x},t),\partial_{t}\phi(\boldsymbol{x}',t)]=i\delta^{3}(\boldsymbol{x}-\boldsymbol{x}')$$
+- Fields must still obey the _Euler Lagrange equations_:
+$$(\Box+m^{2})\phi-\mathcal{L}'_\text{int}[\phi]=0\qquad \mathcal{L}'_\text{int}[\phi]=\frac{\partial \mathcal{L}_\text{int}}{\partial \phi}$$
+- For the 2-point correlation:
+	- Proof: Expand out correlation, then use equal time commutator
+$$(\Box_{x}+m^{2})\braket{  \phi_{x}\phi_{y}  } =\braket{  (\Box_{x}+m^{2})\phi_{x}\phi_{y}  }-i\delta^{4}(x-y) $$
+- Using the Euler-Lagrange equation:
+$$(\Box_{x}+m^{2})\braket{ \phi_{x}\phi_{y}  }=\braket{ \mathcal{L}_\text{int}' [\phi_{x}]\phi_{y}  }  -i\delta^{4}(x-y)$$
+
+
+- Then, one gets the _Schwinger-Dyson equation_:
+$$\begin{align}
+(\Box_{x}+m^{2})\braket{  \phi_{x}\phi_{2} \dots \phi_{n} } =&\braket{ \mathcal{L}_\text{int}'[\phi _{x}] \phi_{2}\dots \phi_{n}  }  \\
+&-i\sum_{j=2}^{n}\delta^{4}(x-x_{j}) \braket{  \phi_{2}\dots \phi_{j-1}\phi_{j+1}\dots\phi_{n}  } 
+\end{align}$$
+- The first term is a _classical effect_
+- The latter term gives the _contact interactions_, which are a _quantum effect_
+	- They also give rise to _contractions_, which create _loops_ in the Feynman diagram
+
+- It is a _non-perturbative_ equation for _any interacting theory_
+
 ## Position-space Feynman rules
 - From the above, one gets the _Feynman rules_ for calculating correlation functions, with a _perturbation_ of:
 $$\mathcal{L}_\text{int}=\frac{\lambda_{n}}{n!}\phi^{n}$$
@@ -590,7 +592,7 @@ $$\begin{align}
 ## The interacting theory
 - The _equations of motion_:
 $$\begin{align}
-(\Box+m^{2})\phi&=-g\psi ^{\dagger}\psi \\ (\Box+M^{2})\psi&=-g\psi ^{\dagger}\phi \\ (\Box+M^{2})\psi ^{\dagger}&=-g\psi \phi
+(\Box+m^{2})\phi&=-g\psi ^{\dagger}\psi \\ (\Box+M^{2})\psi&=-g\psi\phi \\ (\Box+M^{2})\psi ^{\dagger}&=-g\psi ^{\dagger} \phi
 \end{align}$$
 - The right hand side terms are $\mathcal{L}_\text{int}'$ for plugging into the [[#Schwinger-Dyson equation]]
 $$\begin{align}
@@ -601,8 +603,8 @@ $$\begin{align}
 - For the complex field, _contractions_ must be taken with the _conjugate_:
 $$\begin{align}
 &(\Box_{x}+M^{2})\langle \phi_{1}\phi_{2}\dots \phi _{n}\psi_{x}\psi_{2}\dots \psi_{m}\psi_{1}^{\dagger} \dots \psi ^{\dagger}_{p}\rangle  \\
-=&-g \langle \phi_{1}\dots \phi_{n}\phi_{x}\psi ^{\dagger}_{x}\psi_{2}\dots \psi_{m}\psi_{1}^{\dagger}\dots \psi_{p} \rangle  \\
-&-i\sum_{j=2}^{p} \delta(x-x_{j}) \braket{  \phi_{1}\dots \phi_{n}\psi_{2}\dots \psi_{m}\psi_{1}^{\dagger}\dots \psi ^{\dagger}_{j-1}\psi ^{\dagger}_{j+1}\dots \psi_{p}  } 
+=&-g \langle \phi_{1}\dots \phi_{n}\phi_{x}\psi_{x}\psi_{2}\dots \psi_{m}\psi_{1}^{\dagger}\dots \psi_{p}^{\dagger} \rangle  \\
+&-i\sum_{j=2}^{p} \delta(x-x_{j}) \braket{  \phi_{1}\dots \phi_{n}\psi_{2}\dots \psi_{m}\psi_{1}^{\dagger}\dots \psi ^{\dagger}_{j-1}\psi ^{\dagger}_{j+1}\dots \psi_{p}^{\dagger}  } 
 \end{align}$$
 ### Feynman diagrams
 - Example: consider the 3-point function
@@ -714,7 +716,7 @@ $$V^{\mu}\to {D[\Lambda]^{\mu}}_{\nu}V^{\nu}={\Lambda^{\mu}}_{\nu}V^{\nu}$$
 - Consider the _Clifford algebra_, defined by: 
 $$\{\gamma^{\mu},\gamma^{\nu}\}\equiv\gamma^{\mu}\gamma^{\nu}+\gamma^{\nu}\gamma^{\mu}=2\eta^{\mu \nu}\mathbb{I}$$
 - Properties: 
-$$\displaylines{\gamma^{\mu}\gamma^{\nu}=-\gamma^{\mu}\gamma^{\mu} \qquad \text{for }\mu\neq \nu \\ (\gamma^{0})^{2}=1 \qquad (\gamma^{i})^{2}=-1}$$
+$$\displaylines{\gamma^{\mu}\gamma^{\nu}=-\gamma^{\nu}\gamma^{\mu} \qquad \text{for }\mu\neq \nu \\ (\gamma^{0})^{2}=1 \qquad (\gamma^{i})^{2}=-1}$$
 - The _chiral representation_, the _smallest matrices_ that obey the Clifford algebra:
 $$\gamma^{0}=\pmatrix{0&\mathbb{I}_{2\times2} \\ \mathbb{I}_{2\times 2}&0}\qquad \gamma^{i}=\pmatrix{0&\sigma^{i} \\ -\sigma^{i}&0}$$
 - $\sigma^{i}$ are the _Pauli matrices_
@@ -777,9 +779,9 @@ $$\bar{\psi}\psi\to \bar{\psi}(\Lambda^{-1}x)\psi(\Lambda^{-1}x)$$
 ## Dirac action and the Dirac equation
 - Construct the action as a _real, Lorentz invariant quantity_, in its _simplest form_ with _minimal derivatives_
 
-- Consider:
-$$S=\int  d^4x\,(\bar{\psi}i\gamma^{\mu}\partial_{\mu}\psi-m\bar{\psi}\psi) $$
-- One then gets the _Dirac equaion_:
+- Consider the Lagrangian:
+$$\displaylines{\mathcal{L}=\bar{\psi}(i\gamma^{\mu}\partial_{\mu}-m)\psi \\ S=\int  d^4x\,(\bar{\psi}i\gamma^{\mu}\partial_{\mu}\psi-m\bar{\psi}\psi) }$$
+- One then gets the _Dirac equation_:
 $$\displaylines{i\gamma^{\mu}\partial_{\mu}\psi-m\psi=0 \\ i\gamma^{\mu}\partial_{\mu}\bar{\psi}+m\bar{\psi}=0}$$
 - It is only _first order_ in $\partial_{\mu}$
 - Notation:
@@ -932,7 +934,7 @@ $$\ket{p_{1}s_{1},p_{2}s_{2}}=b_{p_{1}}^{s_{1}\dagger}b_{p_{2}}^{s_{2}\dagger}\k
 $$\displaylines{Q=\sum_{s}\int  \frac{d^3p}{(2\pi)^{3}}(b_{p}^{s\dagger}b_{p}^{s}-c_{p}^{s\dagger}c_{p}^{s}) \\ Q\ket{b}=\ket{b} \qquad Q\ket{c}=-\ket{c}    }$$
 - For _angular momentum_, calculated in the _rest frame_:
 $$J_{z}\ket{b^{s}}=\pm \frac{1}{2}\ket{b^{s}} \qquad J_{z}\ket{c^{s}}=\pm \frac{1}{2}\ket{c^{s}}  $$
-### Propagator
+### Fermionic propagator
 - Inspect the quantity:
 $$\braket{ 0 |\psi_{a}(x)\bar{\psi}_{b}(y)|0  } $$
 - Subbing in the [[#Fermionic quantisation|plane wave expansion]]:
@@ -940,6 +942,8 @@ $$\begin{align}
 \braket{ 0|\psi_{a}(x)\bar{\psi}_{b}(y) |0  }&=(i\cancel{ \partial_{x} }+m)_{ab}\int  \frac{d^3p}{(2\pi)^{3}} \frac{1}{2\omega_{p}}\exp[-ip(x-y)]   \\
 &=(i\cancel{ \partial_{x} }+m)D(x-y)
 \end{align}$$
+- Here, $D(x-y)$ is the [[#The Feynman propagator|Feynman propagator]]
+
 - Meanwhile:
 $$\braket{0|\bar{\psi}_b(y)\psi_{a}(x)|0} =-(i\cancel{ \partial_{x} }+m)_{ab}D(y-x)$$
 - From this, get the _time ordering_ for the Dirac field:
@@ -948,9 +952,12 @@ $$T\{\psi(x)\bar{\psi}(y)\}=\begin{cases}
 \end{cases}$$
 - The _Feynman propagator_:
 $$S_{F}(x-y)\equiv \braket{ 0|T\{\psi(x)\bar{\psi}(y)\} | 0 }=(i\cancel{ \partial_{x} }+m)\Delta_{F}(x-y) $$
+- As a momentum integral, the Feynman propagator is:
+$$S_{F}(x-y)=i \int  \frac{d^4p}{(2\pi)^{4}} e^{-ip\cdot(x-y)} \frac{\gamma \cdot p+m}{p^{2}-m^{2}+i\epsilon} $$
+
 - It is a _Greens function_ for the Dirac equation:
-	- Can see from Green's function definition for Feynman propagator
-$$(i\cancel{ \partial_{x} }-m)S_{F}(x-y)=i\delta^{4}(x-y)$$
+	- Can see from Green's function definition for [[#The Feynman propagator|the Feynman propagator]]
+$$(i\cancel{ \partial_{x} }-m)S_{F}(x-y)=i\delta^{4}(x-y) \qquad S_{F}(x-y)(i\overleftarrow{\cancel{ \partial }}_{y} +m)=-i\delta^{4}(x-y)$$
 - Wick's Theorem:
 $$\overbrace{\psi(x)\bar{\psi}(y)}=T\{\psi(x)\bar{\psi}(y)\} -:\psi(x)\bar{\psi}(y):=S_{F}(x-y)$$
 
@@ -964,17 +971,16 @@ $$\begin{align}
 $$[\mathcal{L}]=4\implies [\phi]=1 \qquad [\psi]=\frac{3}{2} \qquad [\lambda ]=0$$
 - It is a [[#Couplings|marginal coupling]]
 
-### Example: nucleon-antinucleon scattering
+### Nucleon-antinucleon scattering and LSZ
 - The _asymptotic states_:
 $$\begin{align}
 \ket{i,-\infty}&=\sqrt{ 2\omega_{p} }\sqrt{ 2\omega_{q} }b_{p}^{s\dagger}(-\infty)c_{q}^{r\dagger}(-\infty)\ket{\Omega }   \\
-\ket{f,+\infty}&=\sqrt{ 2\omega_{p'} }\sqrt{ 2\omega_{q'} }b_{p'}^{s\dagger}(+\infty)c_{q'}^{r\dagger}(+\infty)\ket{\Omega }  
+\ket{f,+\infty}&=\sqrt{ 2\omega_{p'} }\sqrt{ 2\omega_{q'} }b_{p'}^{s'\dagger}(+\infty)c_{q'}^{r'\dagger}(+\infty)\ket{\Omega }  
 \end{align}$$
 - The _scattering matrix_:
-$$\braket{ f|S | i }=\sqrt{ 2\omega_{p} }\sqrt{ 2\omega_{q} }\sqrt{ 2\omega_{p'} }\sqrt{ 2\omega_{q'} }\braket{0|c_{q'}^{r}(+\infty)b_{p'}^{s}(+\infty)b_{p}^{s\dagger}(-\infty)c_{q}^{r\dagger}(-\infty)|\Omega}$$
+$$\braket{ f|S | i }=\sqrt{ 2\omega_{p} }\sqrt{ 2\omega_{q} }\sqrt{ 2\omega_{p'} }\sqrt{ 2\omega_{q'} }\braket{0|c_{q'}^{r'}(+\infty)b_{p'}^{s'}(+\infty)b_{p}^{s\dagger}(-\infty)c_{q}^{r\dagger}(-\infty)|\Omega}$$
 
-PROOF HERE
-
+- Relation between the creation operators:
 $$i \int  d^4x\,\bar{\psi}(x)(i\overleftarrow{\cancel{ \partial }}+m)U_{s}(p)\exp(-ipx)=\sqrt{ 2\omega_{p} }(b_{p}^{s\dagger}(+\infty)-b_{p}^{s\dagger}(-\infty)) $$
 - And 3 other relations
 
@@ -986,7 +992,7 @@ $$\begin{align}
 &\braket{ \Omega|T\{\bar{\psi}(x_{4})\psi(x_{3})\bar{\psi}(x_{1})\psi(x_{2})\} |  } \times \\
 &\left[(i \overleftarrow{\cancel{ \partial }}_{1}+m)U_{s}(p)e^{-ipx_{1}}\right]\left[(i \overleftarrow{\cancel{ \partial }}_{4}+m)\bar{V}_{r'}(q')e^{iq'x_{4}}\right]
 \end{align}$$
-### Feynman rules
+### Feynman rules in Yukawa Theory
 - An _incoming particle_ $U_S(\boldsymbol{p}), b^{\dagger}$ or _antiparticle_ $\bar{V}_{S}(\boldsymbol{p}),c^{\dagger}$ are denoted with _opposite directions_ on a diagram
 - Similarly for an _outgoing particle_ $\bar{U}_{S}(\boldsymbol{p}),b$ or _antiparticle_ $\bar{V}_{S}(\boldsymbol{p}),c$
 
@@ -994,12 +1000,28 @@ $$\begin{align}
 $$(-i\lambda)(2\pi)^{4}\delta(p_{1}-p_{2}-p_{3})$$
 - Each _internal line_, depending on the propagator, give either:
 $$\Delta_{\mu}=\int  \frac{d^4p}{(2\pi)^{4}}\, \frac{i}{p^{2}-\mu^{2}+i\epsilon} \qquad \Delta_{m}=\int  \frac{d^4p}{(2\pi)^{4}} \frac{i(\cancel{ p }+m)}{p^{2}-m^{2}+i\epsilon}  $$
-- Fermionic propagators contain _indices_, which must be _contracted over_ at each vertex
+- Fermionic propagators are $4\times{4}$ matrices, indices must be _contracted over_ at each vertex
 - Swapping _fermion momenta_ requires _changing sign due to fermionic statistics_
 
 - Two diagrams may have _opposite signs_
 	- "_Anti-commute_" the before-and-after particles
 ### Schwinger-Dyson equation in Yukawa theory
+- Consider the 4-point function:
+$$\braket{ \Omega|T\{\psi(x_{1})\psi(x_{2})\bar{\psi}(x_{3})\bar{\psi}(x_{4})\} |\Omega  }\equiv \braket{ \psi_{1}\psi_{2}\psi_{3}\psi_{4} }  $$
+- Consider the _Schwinger-Dyson equation_ in the free theory, consisting of _contractions_
+$$(i\cancel{ \partial_{x} }-m)\braket{ \psi(x)\bar{\psi}(x_{1})\dots } =i\sum_{j}\delta(x-x_{j})\dots$$
+- For the [[#Propagator|fermion propagators]] $S_{F}$
+$$(i\cancel{ \partial_{x} }-m)S_{F}(x-y)=i\delta^{4}(x-y)\qquad S_{F}(x-y)(i\overleftarrow{\cancel{ \partial }}_{y} +m)=-i\delta^{4}(x-y)$$
+- Evaluating the 4-point function in the free theory, using _integration by parts_, then gives:
+$$\begin{align}
+\braket{ \psi_{1}\psi_{2}\bar{\psi}_{3}\bar{\psi}_{4}  }_{0}&=\int  d^4 y\,\delta(y-x_{1})\braket{ \psi_{y}\psi_{2} \bar{\psi}_{3}\bar{\psi}_{4} } \\
+&=\int  d^4y\,\,iS_{F}(x_{1}-y)(i\overleftarrow{\cancel{ \partial }}_{y} +m)\braket{ \psi_{y}\psi_{2} \bar{\psi}_{3}\bar{\psi}_{4} }  \\
+&=\int  d^4y\,\,iS_{F}(x_{1}-y)(-i\overrightarrow{\cancel{ \partial }}_{y} +m)\braket{ \psi_{y}\psi_{2} \bar{\psi}_{3}\bar{\psi}_{4} } 
+\end{align}$$
+- Using the Schwinger-Dyson equation, keeping the _order_ of operators:
+$$\braket{ \psi_{1}\psi_{2}\bar{\psi}_{3}\bar{\psi}_{4}  }_{0}=S_{F}(x_{1}-x_{4})S_{F}(x_{2}-x_{3})-S_{F}(x_{1}-x_{3})S_{F}(x_{2}-x_{4})$$
+- Then, for the _interacting theory_:
+$$(i\cancel{ \partial_{x} }-m)\braket{ \psi(x)\bar{\psi}(y) \dots} =-\lambda \braket{ \phi(x)\psi(x)\bar{\psi}(y)\dots } +\{\text{signed contractions}\}$$
 ### Example: Nucleon scattering
 
 ### Example: Nucleon-antinucleon scattering
@@ -1074,7 +1096,6 @@ $$[a^{r}_{p},a^{s\dagger}_{q}]=(2\pi)^{3}\delta^{rs}\delta^{3}(\boldsymbol{p}-\b
 - The Hamiltonian is then:
 $$H=\int  d^3x \,(\pi^{i}\dot{A}_{i}-\mathcal{L})=\frac{1}{2}\int  d^3x\,(\boldsymbol{E}\cdot \boldsymbol{E}+\boldsymbol{B}\cdot \boldsymbol{B}) $$
 - After normal ordering:
-
 $$H=\int  \frac{d^3p}{(2\pi)^{3}}\,|\boldsymbol{p}| \sum_{r=1}^{2}a_{p}^{r\dagger}a_{p}^{r} $$
 - The _Feynman propagator_ in the _Coulomb gauge_:
 $$\braket{ 0|T\{A_{i}(x)A_{j}(y)\} |0  }=\int  \frac{d^4p}{(2\pi)^{4}} \frac{i}{p^{2}+i\epsilon} \left( \delta_{ij}-\frac{p_{i}p_{j}}{|\boldsymbol{p}|^{2}} \right)\exp[-ip(x-y)] $$

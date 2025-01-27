@@ -112,16 +112,19 @@ $$g(x)=gxg^{-1} \quad \forall g\in G \quad \forall x \in X$$
 $$R\in O(n): (Rv_{2},Rv_{1})=v_{2}^{T}R^{T}Rv_{1}=v_{2}^{T}v_{1}$$
 - Over a complex field, $U(n)$ has similar properties
 
+### Manifolds of rotation transformations
 - Example: the $SO(2)$ group
 $$SO(2)= \Bigg\{ R(\theta)=\pmatrix{\cos\theta&-\sin\theta\\ \sin\theta &\cos\theta} \Bigg| \theta \in [0, 2\pi)\Bigg\}$$
 $$R(\theta_{1})R(\theta_{2})=R(\theta_{1}+\theta_{2})$$
 
 - Example: the $SO(3)$ group, representing rotations of vectors in $\mathbb{R}^{3}$
 	- The _axes of rotation_ spanned by a unit vector $\hat{n}$ on the 2-sphere
-	- Due to freedom to orientate $\hat{n} \to -\hat{n}$, define $\theta \in [0,\pi]$
+	- Due to freedom to _orientate_ $\hat{n} \to -\hat{n}$, define $\theta \in [0,\pi]$
 	- One can depict the _manifold_ of $SO(3)$ as a _ball_ of radius $\pi$ in $\mathbb{R}^{3}$
 		- The antipodal points must be _identified_: $\pi \hat{n}=-\pi \hat{n}$
 
+- A group is _compact_ if the underlying manifold has _finite volume_, and it is _uncompact_ otherwise
+	- e.g. $SO(3)$ is _compact_, while the _pseudo-orthogonal_ groups $SO(n,m)$ are _noncompact_
 ## Parametrisation of Lie groups
 - In _small neighbourhoods_ of a manifold, one should be able to _assign coordinates_
 	- One may need to _change_ coordinates at different points, but not in the "neighbourhood"
@@ -277,7 +280,7 @@ $$GL(n,\mathbb{F}): \mathbb{F}^{n}\to \mathbb{F}^{n}$$
 - _Generalise_ to any other vector space $\mathbb{V}$
 
 ## Representations of Lie groups
-- A representation $D$ of a group $G$ is a _smooth group homomorphism_ from $G$ to the _group of linear automorphisms_ on some vector space $\mathbb{V}$, the _representation space_ associated with $D$
+- A representation $D$ of a group $G$ is a _smooth group homomorphism_ from $G$ to the _group of linear automorphisms_, on some vector space $\mathbb{V}$, known as the _representation space_ associated with $D$
 $$D: G \to GL(\mathbb{V})$$
 - In other words, $\forall g \in G$, $D(g): \mathbb{V} \to \mathbb{V}$ is an invertible, linear map such that:
 $$v \to D(g)v\quad \forall v \in \mathbb{V}$$
@@ -314,7 +317,7 @@ $$D(\alpha)=\pmatrix{\cos\alpha & -\sin\alpha \\ \sin\alpha & \cos\alpha}$$
 - Or, an _infinite-dimensional representation_
 	- The representation is _faithful_
 $$\displaylines{\mathbb{V}=\{\text{space of all real functions }f(x)\} \\ D(\alpha)f(x)=f(x-\alpha)}$$
-### More on representations
+### More on representations of Lie groups
 - The _trvial representation_ $D_{0}$ is where:
 $$D_{0}(g)=1\quad \forall g \in G$$
 - By definition, it is _not faithful_, and _one dimensional_
@@ -357,16 +360,178 @@ $$\displaylines{d_{0}(X)=0 \qquad \forall X \in L(G) \\ d_{0}(X)v=\vec{0} \qquad
 $$d_{f}(X)=X\qquad \forall X \in L(G)$$
 - The _dimension_ of $d_{f}$ is $n$
 
+
 - The _adjoint representation_ $\mathrm{ad}:L(G)\to gl(L(G))$, $\forall X \in L(G)$:
 $$\mathrm{ad}_{X}:L(G)\to L(G), \quad \mathrm{ad}_{X}Y=[X,Y]$$
-- The action of an [[#More on representations|adjoint representation]] of a Lie group has _conjugation_
-- The action of an adjoint representattion of a Lie algebra is the _Lie bracket_
+- The action of an [[#More on representations|adjoint representation]] of a Lie group is _conjugation_
+- The action of an adjoint representation of a Lie algebra is the _Lie bracket_
 
 - The _dimension_ $\mathrm{ad}$ is that of $L(G)$
 ## Algebra representations from group representations
-- Consider _tangents_ to curves in the group manifold, passing through $e$:
+- Consider _tangents_ to curves in the _group manifold_, passing through $e$:
 $$g(t)=e+tX+\dots \in G$$
 - Here, $X \in L(G)$
+
+- Let $D$ be a _representation_ of $G$ and $V$ be the _representation space_ (with identity $I$)
+- Along the curve:
+$$D(g(t))=I+td(X)$$
+- This _defines_ $d(X)$ relative to $D(g)$
+
+- As expected, $d(X)$ form a _Lie algebra_
+	- Proof that the _Lie bracket_ is satisfied:$$\displaylines{g_{1}(t)=e+tX_{1}+t^{2}W_{1} +\dots\qquad g_{2}(t)=e+tX_{2}+t^{2}W_{2} +\dots\\ \begin{align}
+D(g_{1}^{-1}g_{2}^{-1}g_{1}g_{2})&=D(g_{1})^{-1}D(g_{2})^{-1}D(g_{1})D(g_{2}) \\ I+t^{2}d([X_{1},X_{2}])+\dots&=I+t^{2}[d(X_{1}),d(X_{2})]+\dots \\ d([X_{1},X_{2}])&=[d(X_{1}),d(X_{2})]
+\end{align}}$$
+- For the [[#More on representations of Lie groups|adjoint representations of matrix Lie groups]], and that [[#Representations of Lie algebras|of Lie algebras]]:
+$$\begin{align}
+\mathrm{Ad}_{g}Y=gYg^{-1}&=(1+tX)Y(1-tX)+\dots  \\
+&=Y+t[X,Y] \\
+&=(I+t\,\mathrm{ad}_{X})Y
+\end{align}$$
+## Group representations from algebra representations
+- Given that $d$ is a representation of $L(G)$ and $X \in L(G)$, let:
+$$g=\exp(X)\qquad D(g)=\exp \,d(X)$$
+- From the [[#Lie brackets to the group product|Baker-Campbell-Hausdorff formula]], for $g_{1},g_{2} \in G$:
+$$D(g_{2}g_{1})=D(g_{2})D(g_{1})$$
+- $D$ is _not guaranteed_ to be _surjective_ (an onto mapping), therefore it _may not be_ a representation of $G$
+- Generally, there are _additional conditions_:
+	- _Every_ element in $G$ can be written as $\exp(X)$
+	- $G$ must be _simply connected_ (all closed curved can be _shrunk_ into a point)
+
+## Characteristics of representations
+- Any special property of a Lie group representation also _affects the Lie algebra representation_, and vice versa
+
+### Equivalence
+- Representations $D_{1},D_{2}$ of $G$, or $d_{1},d_{2}$ of $l(G)$ are _equivalent_ if there exists an _invertible linear map_ $R$ or $S$ such that:
+$$\begin{align}
+D_{2}(g)&=RD_{1}(g)R^{-1}\qquad \forall g \in G \\ d_{2}(X)&=Sd_{1}(X)S^{-1} \qquad \forall X \in L(G)
+\end{align}$$
+
+### Invariant subspaces and reducibility
+- A _representation_ $D$ of $G$, or $d$ of $L(G)$ with corresponding _vector space_ $V$ has an _invariant subspace_ $W \subset V$, if _for all_ $g \in G$ or $X \in L(G)$:
+$$D(g)w \in W \quad \text{or} \quad d(X) w\in W \qquad( \forall w \in W)$$
+- All representations have two _trivial subspaces_, $\{0\}$ and $V$
+
+- An _irreducible representation_ (irrep) is a representation with _no nontrivial invariant subspaces_
+	- With nontrivial invariant subspaces: _reversible_
+
+- The _direct sum_ of two vector spaces $U$ and $W$:
+$$\displaylines{U\oplus W=\{u\oplus w|u \in U,w \in W\} \\ \mathrm{dim}(U\oplus W)=\mathrm{dim}(U)+\mathrm{dim}(W)}$$
+- The direct sum obeys:
+$$\begin{align}
+(u_{1}\oplus w_{1})+(u_{2}\oplus w_{2})&=(u_{1}+u_{2})\oplus (w_{1}+w_{2}) \\ \lambda(u\oplus w)&=(\lambda u)\oplus (\lambda w)
+\end{align}$$
+
+- A _totally reducible_ representation $d$ of $L(G)$ or $D$ of $G$ can be _decomposed_ into _irreducible pieces_, such that $V$ can be written as a _direct sum of invariant subspaces_
+$$V=W_{1}\oplus W_{2}\oplus \dots$$
+- Here, $d(X)w_{i} \in W_{i}$ for any $w_{i} \in W_{i}$ and all $X \in L(G)$
+- There is then a _basis_ for $V$ such that each $d(X)$ is _block diagonal_:
+$$d(X)=\pmatrix{d_{1}(X)&0&0&\dots \\ 0&d_{2}(X)&0&\dots \\ 0&0&d_{3}(X)&\dots\\ \vdots&\vdots&\vdots&\ddots}$$
+#### Example: Fourier decomposition
+- For the group of the [[#Example representations of the reals|reals]] $(\mathbb{R},+)$, let $V$ be the space of all $2\pi-$periodic functions $f:\mathbb{R}\to \mathbb{R}\,,\,f(x+2\pi)=f(x)$
+- Take $D$ as a representation of $f$ such that:
+$$(D(\alpha)f)(x)=f(x-\alpha)$$
+- Unlike the space of _all real functions_, this is _not a faithful representation_, as the _kernel_ is _nontrivial_:
+$$(D(2\pi k)f)(x)=f(x)\qquad \forall f$$
+- $D$ is also _reducible_, with the _invariant subspaces_ labelled by $n \in\mathbb{Z}_{\geq 0}$
+	- For all $\alpha$, $D(\alpha)w \in W$ with _modified_ coefficients
+$$\displaylines{W_{n}=\{a_{n}\cos(nx)+b_{n}\sin(nx)|\,\forall a_{n},b_{n} \in \mathbb{R}\} \\ a_{n}\cos[n(x-\alpha)]+b_{n}\sin[n(x-\alpha)]=a_{n}'(\alpha)\cos(nx)+b_{n}'(\alpha)\sin(nx) \in W_{n} \quad \forall \alpha}$$
+- This applies to _Fourier decomposition_, as _any_ $2\pi-$periodic function can be _decomposed_
+$$\displaylines{f(x)=a_{0}+\sum_{n=1}^{\infty}[a_{n}\cos(nx)+b_{n}\sin(nx)] \\ V=W_{0}\oplus W_{1}\oplus \dots =: \bigoplus_{n=0}^{\infty}W_{n} }$$
+### Unitarity
+- An $N-$dimensional group representation $D$ is _unitary_ if:
+	- $U(N)$ is the $N-$dimensional [[#Subgroups|unitary group]]
+$$D(g) \in U(N)$$
+- The corresponding Lie algebra representation $d(X)$ is then _antihermitian_ for all $X \in L(G)$
+- If all $D(g)$ are also real, then it is _orthogonal_
+
+### Mashke's Theorem
+- A _finite dimensional_, _unitary representation_ is either _irreducible_, or _totally reducible_
+- Proof:
+	- For each invariant subspace $W$, one can show that the _orthogonal component_ $W_{\perp}$, constructed with the _inner product_ and _unitarity_, is also an _invariant subspace_
+	- $V=W \oplus W_{\perp}$
+	- If either $W$ and $W_{\perp}$ have _nontrivial invariant subspaces_, then the process can be _repeated_
+	- As the representation is _finite dimensional_, the process must _terminate_
+
+- in the case of _discrete groups_ and _compact Lie groups_, it can be extended to _finite representations_ which are not elements of $U(N)$
+	- Define a new group-invariant inner product with respect to which $D(g)$ is unitary
+
+### Tensor product
+- Given vector spaces $V$ and $W$, the _tensor product space_ $V\otimes W$ is _spanned_ by vectors of the form $v\otimes w \in V\otimes W$, where $v$ and $w$ are elements of $V$ and $W$
+- the _dimension_ of the space:
+$$\mathrm{dim}(V\otimes W)=\mathrm{dim}(V)\mathrm{dim}(W)$$
+
+- The _tensor product_ of two vectors $v \in V$ and $w \in W$ obey:
+$$\begin{align}
+v\otimes (\lambda_{1}w_{1}+\lambda_{2}w_{2})&=\lambda_{1}v\otimes w_{1}+\lambda_{2}v\otimes w_{2} \\ (\lambda_{1} v_{1}+\lambda_{2}v_{2})\otimes w&=\lambda_{1}v_{1}\otimes w+\lambda_{2}v_{2}\otimes w
+\end{align}$$
+- A vector $\Phi \in V\otimes W$, equal to $v\otimes w$, can be written as:
+$$\displaylines{\Phi_{A}:=\Phi_{\alpha a}:=v_{\alpha}w_{a} \\ W=\alpha\,\mathrm{dim}(W)+a\\ \alpha=1,2\dots \mathrm{dim}(V)\quad a=1,2,\dots \mathrm{dim}(W)\quad A=1,2\dots \mathrm{dim}(V\otimes W) }$$
+- _Not all_ elements of $V \otimes W$ can be written as a _direct product_
+- _Linear combinations_ of elements _may not generally be written_ as $\lambda_{3}v_{3}\otimes w_{3}$
+$$\lambda_{1}v_{1}\otimes w_{1}+\lambda_{2}v_{2}\otimes w_{2} \in V\otimes W$$
+
+- Tensor products allow for the _combination of representations_ of Lie groups and algebras
+
+### Tensor products of Lie group representations
+- Let $D^{(1)}$ and $D^{(2)}$ be _representations_ of $G$ with _representation spaces_ $V$ and $W$
+- For all $g \in G$
+$$\begin{align}
+D^{(1)}(g): \qquad &v_{\alpha}\mapsto D^{(1)}(g)_{\alpha\beta}v_{\beta}\quad v \in V \\ D^{(2)}(g):\qquad &w_{a}\mapsto D^{(2)}(g)_{ab}w_{b}\quad w \in W
+\end{align}$$
+
+- Then, the _tensor product representation_ $D^{(1)}\otimes D^{(2)}$ acts on vector space $V\otimes W$
+$$(D^{(1)}\otimes D^{(2)})(g)_{\alpha a,\beta b}=D^{(1)}(g)_{\alpha\beta}D^{(2)}(g)_{ab}$$
+- This then acts on _any vector_ $\Phi \in V\otimes W$
+$$\Phi_{A}=\Phi_{\alpha a}\mapsto D^{(1)}(g)_{\alpha\beta}D^{(2)}(g)_{ab}\Phi_{\beta b}=\Phi_{B}$$
+- For specifically a product vector:
+$$(D^{(1)}\otimes D^{(2)})(g)(v\otimes w):=(D^{(1)}(g)v)\otimes (D^{(2)}(g)w)$$
+### Tensor products of Lie algebra representations
+- Consider a _curve of group elements_ parametrised by $t$, such that $g_{t} \in G$, where $g_{0}=e$ and $\dot{g}_{0}=X \in L(G)$
+- The _tangent_ to the curve in representation space:
+$$\frac{d}{dt}\left[\left(D^{(1)}\otimes D^{(2)}\right)(g_{t})\right]_{t=0}(v\otimes w)=\frac{d}{dt}[D^{(1)}(g_{t})]_{t=0}v\otimes w+v\otimes  \frac{d}{dt}[D^{(2)}(g_{t})]_{t=0}w$$
+
+- Let $d^{(1)}$ and $d^{(2)}$ be the _algebra representations_ corresponding to $D^{(1)}$ and $D^{(2)}$
+- The tensor product then involves the _identity elements_ of $V$ and $W$
+$$(d^{(1)}\otimes d^{(2)})(X)=d^{(1)}(X)\otimes \mathrm{id}_{W}+\mathrm{id}_V\otimes d^{(2)}(X)$$
+
+- A _corollary_ to Mashke's theorem states that _finite representations_ of $d^{(1)}\otimes d^{(2)}$ can be written as the _direct sum of irreps_ of $L(G)$
+$$d^{(1)}\otimes d^{(2)}=\tilde{d}_{1}\oplus \tilde{d}_{2}\oplus \dots \oplus \tilde{d}_{k}=\bigoplus_{i}\tilde{d}_{i} $$
+
+# Angular momentum
+- _Physical_ angular momentum is the generator of _rotations_ in 3D, elements of $SO(3)$
+- However, _half-integer spin_ requires $SU(2)$ representations
+
+## Relationship between SO(3) and SU(2)
+
+### The Lie algebras and generators
+- The _Lie algebra_ of $SU(2)$ consists of a set of _traceless, antihermitian matrices_
+$$\mathfrak{su}(2)=L(SU(2))=\Big\{X \in\mathrm{Mat}_{2}(\mathbb{C})\Big|X^{\dagger}=-X,\,\mathrm{Tr}\,X=0\Big\}$$
+- The _basis_ for the 3-dimensional vector space, or the [[#Generators and structure constants|generators]] of the group:
+$$T_{a}=-\frac{i}{2}\sigma_{a}\qquad a=1,2,3$$
+- $\sigma_{a}$ are the _Pauli matrices_
+- The Lie brackets give the _structure constants_:
+$$[T_{a},T_{b}]=\epsilon_{abc}T_{c}\implies {f^{c}}_{ab}=\epsilon_{abc}$$
+
+- Meanwhile, the elements of the _Lie algebra_ of $SO(3)$ are $3\times{3}$ _antisymmetric, real_ matrices
+$$\mathfrak{so}(3)=L(SO(3))=\mathrm{Skew}_{3}$$
+- The basis is:
+$$\displaylines{(\tilde{T}_{a})_{bc}=-\epsilon_{abc} \\ \tilde{T}_{1}=\pmatrix{0&0&0\\0&0&-1\\0&1&0}\qquad \tilde{T}_{2}=\pmatrix{0&0&1\\0&0&0\\-1&0&0}\qquad \tilde{T}_{3}=\pmatrix{0&-1&0\\1&0&0\\0&0&0}}$$
+- From this, $SO(3)$ has the _same generators_ as $SU(2)$
+$$[\tilde{T}_{a},\tilde{T}_{b}]=\epsilon_{abc}\tilde{T}_{c}\implies {f^{c}}_{ab}=\epsilon_{abc}$$
+- The _algebras are isomorphic to each other_
+
+- The generators are also _3D representations_ of the components of [[Angular momentum in quantum mechanics|orbital and spin angular momentum operators]]
+
+### The group manifolds
+- The [[#Manifolds of rotation transformations|manifold of]] $SO(3)$ is a _ball_ of radius $\pi$ in $\mathbb{R}^{3}$, with the _poles identified_
+
+- Meanwhile, an element $A \in SU(2)$ can be written as:
+$$\displaylines{A=a_{0}I+i\boldsymbol{a}\cdot \boldsymbol{\sigma} \\ a_{0},\boldsymbol{a} \in\mathbb{R} \qquad a_{0}^{2}+|\boldsymbol{a}|^{2}=1}$$
+- The manifold is a _unit sphere_ in $\mathbb{R}^{4}$ (the 3-sphere)
+
+
+
+# Relativistic symmetries
 
 # OLD Example: Translation group
 - Translations:

@@ -1573,6 +1573,7 @@ $$E_{c}(\boldsymbol{k})-E_{v}(\boldsymbol{k})=E_{g}+\alpha_{1}k_{1}^{2}+\alpha_{
 	- $M_{0},M_{3}$: all coefficients are _positive_ or _negative_, giving a _minimum_ or _maximum_, the quadric surface is an _ellipsoid_
 	- $M_{1},M_{2}$: one or two coefficients are _negative_, giving a _saddle point_, the quadric surface is a _hyperboloid_ of one or two sheets
 - In lower dimensions, they are typically _sharper_
+	- There can be discontinuities in either the _function_ or the _first derivative_
 ![[van Hove singularity.png]]
 - The nature of the _singularities_ give the nature of the _critical points_
 	- Example: $\ce{ Ge }$

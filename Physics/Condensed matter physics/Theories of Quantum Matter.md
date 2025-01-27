@@ -252,7 +252,7 @@ q_n &= \frac{1}{\sqrt{2}}\left(q_n' + i q_n''\right),\quad q_{-n} = \frac{1}{\sq
 \pi_n &= \frac{1}{\sqrt{2}}\left(\pi_n' + i \pi_n''\right),\quad \pi_{-n} = \frac{1}{\sqrt{2}}\left(\pi_n' - i \pi_n''\right),\quad n\geq 0\end{align}$$
 - Split the Hamiltonian as:
 $$\displaylines{H=H+H'' \\ H' = \sum_{0 < n \leq (N-1)/2} \left[\frac{1}{2m}\pi'_n \pi'_{n} + k  (1-\cos \eta_n) q'_n q'_{n}\right].}$$
-- This is a _sum of_ [[Quantum Harmonic Oscillator|quantum harmonic oscillators]] at different wavenumbers, and the _dispersion relation_ emerges
+- This is a _sum of_ [[Quantum Harmonic Oscillator|quantum harmonic oscillators]] at different wavenumbers, and the _dispersion relation_ emerges from inspecting the Hamiltonian
 
 ### Complex coordinates
 - From this, take inspiration from the solution to the quantum harmonic oscillator:
@@ -565,7 +565,7 @@ $$\braket{ \text{FM}|s_{j}^{z} | \text{FM} } =s \qquad \braket{ \text{AFM}|s_{j}
 $$s_{j}^{z}=s-a_{j}^{\dagger}a_{j}$$
 - FM: commutes with Harmonic Hamiltonian, hence _no fluctuations_
 
-- AFM: does not commute
+- AFM: does not commute due to $a_{j}a_{j+1}$ terms
 
 - AFM: evaluate $\Delta s=\braket{ 0|a_{j}^{\dagger}a_{j} | 0 }$
 
@@ -577,7 +577,7 @@ $$\begin{align}
 - There must be a _cutoff_ for the integral to stop the divergence
 - From this, one gets:
 $$\Delta s\sim -\log \eta _\text{min}\sim -\log \left( \frac{2\pi}{N} \right)\sim \log N$$
-
+- In 1D, there is _no long-range antiferromagnetic order_
 # Second quantisation and correlations
 - Use language of [[Second quantisation]]
 
