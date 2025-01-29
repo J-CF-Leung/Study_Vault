@@ -65,3 +65,6 @@
 # 15/11/24
 - Many approaches to Floquet in literature speak of _effective, static Hamiltonians_, how to reconcile that with concepts of manifold curvature and forces?
 - Approach taken by Rudner and Lidner: using the _many-body single particle Green's function_, which uses _Heisenberg operators_
+
+# Week 1 Lent
+- Deriving effective Hamiltonian matrix elements

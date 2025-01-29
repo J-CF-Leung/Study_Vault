@@ -104,3 +104,110 @@ $$E_{\tilde{m}}-E_{n}=(E_{0}-E_{n})\left( 1+\frac{E_{\tilde{m}}-E_{0}}{E_{0}-E_{
 $$\frac{1}{E_{\tilde{m}}-E_{n}}=\frac{1}{E_{0}-E_{n}}\sum_{k=0}^{\infty}\left( \frac{E_{0}-E_{\tilde{m}}}{E_{0}-E_{n}} \right)^{k}$$
 
 ## Perturbation theory analysis of the TFIM
+$$H_{0}=-J\sum_{\langle i,j \rangle }Z_{i}Z_{j}\qquad \delta H=-h\sum_{j}X_{j}$$
+- The ground states are $\ket{\text{GS}_{\pm}}$
+- The perturbation theory is applied _within a $\mathbb{Z}_{2}$ symmetry sector_ (subspaces labelled by eigenvalues $p=\pm1$)
+- _Within_ each sector, the ground state is _unique_ such that $H^{\text{eff}}$ is $1\times 1$
+$$\begin{align}
+\delta E_{\pm}&=\braket{ \text{GS}_{\pm} | \delta H(1-G\delta H)^{-1}|\text{GS}_{\pm} }  \\
+&=\braket{ \text{GS}_{\pm} |\delta H |\text{GS}_{\pm} }+\braket{ \text{GS}_{\pm} |\delta HG\delta H |\text{GS}_{\pm} }+\braket{ \text{GS}_{\pm} |\delta HG\delta HG\delta H |\text{GS}_{\pm} }\dots 
+\end{align}$$
+### Energy correction: shifts
+- For a lattice of $N$ qubits, applying $\delta H$ gives a _sum of excited states_, where a single spin is _flipped_
+$$\delta H\ket{\text{GS}_{\pm}} =-h\sum_{j}X_{j}\ket{\text{GS}_{\pm}} \qquad \braket{ \text{GS}_{\pm}|\delta H |\text{GS}_{\pm}  }=0 $$
+- The $h^{1}$ term is _zero_
+
+- From this, $G$ simply gives a _denominator_ resulting from the excited states of $H_{0}$
+	- $z$: number of _nearest neighbours_ 
+$$G\delta H\ket{\text{GS}_{\pm}}=-h\sum_{j} \frac{X_{j}}{E_{\tilde{m}}-(E_{0}+4zJ)} \ket{\text{GS}_{\pm}} \propto \frac{h}{J}\sum_{j}X_{j}\ket{\text{GS}_{\pm}} $$
+- Applying $\delta H$ again will _unflip_ spins back to the original, giving the $h^{2}$ term:
+$$\braket{ \text{GS}_{\pm}|\delta HG\delta H | \text{GS} }_{\pm}\propto -N \frac{h^{2}}{J} $$
+- This applies for _both parities_ $p=\pm1$
+
+- As for $(G\delta H)(G\delta H)\ket{\text{GS}_{\pm}}$, this _leads to zero_ $h^{3}$ contribution
+	- The _flipped, then unfliped_ spins _will not contribute_ due to the second $G$
+	- Only the _two flipped spin_ terms will contribute and _cannot be undone_ by $\delta H$
+
+- So on, $(G\delta H)^{m-1}\ket{\text{GS}_{\pm}}$ only gives non-zero contributions for _one flipped spin_
+- These are the _energy shifts_ for both $\ket{\text{GS}_{\pm}}$ that go as $J(h/J)^{2n}$
+
+### Energy corrections: exponentially accurate splitting
+- However, for $m\geq N$, it can give $N-1$ flipped spins, $\delta H$ then flips the last to give a _parity-dependent energy correction_ with coefficient $\delta\varepsilon^{(m)}/2$
+$$\begin{align}
+\braket{ \text{GS}_{\pm}|\delta H(G\delta H)^{m-1} |\text{GS}_{\pm}  } &\to \frac{\delta\varepsilon^{(m)}}{2}\Braket{ \text{GS}_{\pm}|\prod_{j=1}^{N}X_{j} |\text{GS}_{\pm}  } \\
+&=\frac{\delta\varepsilon^{(m)}}{2}\braket{ \text{GS}_{\pm}|P |\text{GS}_{\pm}  }=\pm\frac{\delta\varepsilon^{(m)}}{2}  
+\end{align}$$
+- This gives a _splitting_ between the ground states
+- To _leading order_ in $h/J$, the energy splitting is:
+$$\delta\varepsilon _\text{split}\propto J\left( \frac{h}{J} \right)^{N}$$
+- In the limit of $0<|h|\ll J$, the ground state degeneracy is _not exact_
+- However, it is _exponentially suppressed_ in the thermodynamic limit $N\to \infty$
+
+### Linear fragility
+- The _splitting_ relies on the $Z_{2}$ symmetry of $H_{0}+\delta H$
+
+- One can add a _symmetry breaking term_ for _one site_ $j$ to the Hamiltonian:
+$$\delta H'=-h'Z_{j}$$
+- In this case, simply use $\ket{\Uparrow},\ket{\Downarrow}$ as the unperturbed ground states
+- The _splitting_ is then $2h'$, a _first order splitting_
+
+- The degeneracy is _exponentially accurate_, but _linearly fragile_
+
+### Perturbed eigenstates
+- In _each sector_, as there is only $\ket{\text{GS}_{\pm}}$ in the subspace $S$, $\ket{\psi_{\tilde{\pm}}}=\ket{\text{GS}_{\pm}}$ 
+$$\ket{\tilde{\text{GS}}^{u}_{\pm}}=(1-G\delta H)^{-1}\ket{\text{GS}_{\pm}}  $$
+- The perturbed eigenstate is an _admixture of spin flips_ due to $\delta H$
+- One can also write:
+	- $\ket{\tilde{\Uparrow}^{u}}$ and $\ket{\tilde{\Downarrow}^{u}}$ are _not eigenstates_ as $\ket{\tilde{\text{GS}}^{u}}$ are not degenerate
+	- They only become eigenstates in the _thermodynamic limit_ $N\to \infty$
+$$\ket{\tilde{\text{GS}}_{\pm}^{u}}=(1-G\delta H)^{-1} \frac{\ket{\Uparrow}\pm \ket{\Downarrow}  }{\sqrt{ 2 }}= \frac{1}{\sqrt{ 2 }}(\ket{\tilde{\Uparrow}^{u}}+\ket{\tilde{\Downarrow}^{u}}  )$$
+## Characteristics of spontaneous symmetry breaking
+- For nonzero $J,h$, _any eigenstate_, such as the _exact ground state_ $\ket{\psi}$, will _preserve_ $\mathbb{Z}_{2}$ symmetry:
+$$P\ket{\psi}=p\ket{\psi} \implies PZ_{j}=-Z_{j}P\implies \braket{ \psi|Z_{j} |\psi}=0 $$
+- This can be _generalised to other symmetries and their order parameters_
+- In _finite systems_, spontaneous symmetry breaking is _absent in eigenstates_
+
+- In the thermodynamic limit $N\to \infty$:
+	- _Ferromagnetic ground states_ become _degenerate_
+	- The _paramagnetic phase_ remains a _unique ground state_
+- Paramagnetic ground state is _symmetric_:
+$$\braket{ \psi|Z_{j} |\psi  }=0 $$
+- For the _ferromagnetic phase_ at _finite_ $N$, the states $\ket{\psi_{\Uparrow,\Downarrow}}$ are _approximate ground states_
+	- They are _constructed_ from the _exact ground states_ $\ket{\psi_{\pm}}$
+$$\displaylines{P\ket{\psi_{\pm}}=\pm \ket{\psi_{\pm}} \qquad \ket{\psi_{\Uparrow,\Downarrow}}\equiv(\ket{\psi_{+}}-\ket{\psi_{-}}  )/\sqrt{ 2 }   \\ P\ket{\psi_{\Uparrow}}=\ket{\psi_{\Downarrow}}\qquad \braket{ \psi_{\Uparrow}|Z_{j} |\psi_{\Uparrow}  }=M_{0}\neq 0   }$$
+- One may _choose_ either as the ground state by adding an _explicitly symmetry breaking term_ $\pm h'Z_{j}$
+- Denoting $\ket{\psi}$ as the chosen ground state:
+$$\lim_{ h' \to 0 }\lim_{ N \to \infty } \braket{ \psi|Z_{j} |\psi  }=M_{0}~\neq 0  $$
+- This _defines spontaneous symmetry breaking_ in $\mathbb{Z}_{2}$
+
+- The _order of limits_ matters as one must _go to the thermodynamic limit before turning off explicit symmetry breaking_
+
+
+- One can also _distinguish_ the phases without explicit symmetry breaking
+- Consider the _ground state correlation functions_ for finite $N\gg 1$ and state $\ket{\psi}$
+$$C^{(Z)}_{|j-j'|}=\braket{ \psi|Z_{j}Z_{j'} | \psi }-\braket{ \psi|Z_{j} |\psi  } \braket{ \psi|Z_{j} | \psi } \to \begin{cases}
+M_{0}^{2}&\text{FM} \\\propto \exp(-c|j-j'|),c>0 &\text{PM}
+\end{cases} $$
+- This also _defines spontaneous symmetry breaking_
+
+- It shows that the _ferromagnetic phase has long range order_
+- It is a _symmetry-broken ordered phase_
+
+- Meanwhile, the paramagnetic phase is a _disordered phase_
+# The surface code
+- The _simplest topologically ordered system_
+- Capable of supporting _quantum error correction_
+
+- Useful formula for Pauli operators: for _two sets of qubits_ $M,M'$:
+	- Proof: pull $Z_{j}$ to the left, will pick up a minus sign if they are at the _intersection_
+	- $|M\cap M'|$ is the _number of elements in the intersection_
+$$\left( \prod_{j \in M}X_{j} \right)\left( \prod_{j \in M'}Z_{j} \right)=(-1)^{|M \cap M'|  }\left( \prod_{j \in M'}Z_{j} \right)\left( \prod_{j \in M}X_{j}\right)$$
+
+## Square lattice Hamiltonian
+- Model a _two dimensional surface code_, on a _square lattice_
+- With _one qubit on each link_
+
+- A graphical representation of the surface code:
+![[Toric code setup.png|250]]
+- The Hamiltonian, consisting of _vertex operators_ and _plaquette operators_
+$$H=-J_{A}\sum_{v}A_{v}-J_{B}\sum_{p}B_{p}$$

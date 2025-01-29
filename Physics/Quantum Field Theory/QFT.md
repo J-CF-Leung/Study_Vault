@@ -1034,11 +1034,12 @@ $$F_{\mu \nu}=\partial_{\mu}A_{\nu}-\partial_{\nu}A_{\mu}$$
 - The _Lagrangian_:
 $$\mathcal{L}=-\frac{1}{4}F_{\mu \nu}F^{\mu \nu}$$
 - The _equations of motion_ come from the _Euler-Lagrange equation_ and the _Bianchi identity_:
-$$\displaylines{\partial_{\mu}\left( \frac{\partial \mathcal{L}}{\partial[\partial_{\mu}A_{\nu}]} \right)=0 \implies \partial_{\mu}F^{\mu \nu}=0\\ \epsilon_{\mu \nu \rho\sigma}\partial^{\mu}F^{\nu \rho}=0\implies }$$
+$$\displaylines{\partial_{\mu}\left( \frac{\partial \mathcal{L}}{\partial[\partial_{\mu}A_{\nu}]} \right)=0 \implies \partial_{\mu}F^{\mu \nu}=0\\ \epsilon_{\mu \nu \rho\sigma}\partial^{\mu}F^{\nu \rho}=0\implies \partial_{\lambda}F_{\mu \nu}+\partial_{\mu}F_{\nu\lambda}+\partial_{\nu}F_{\lambda \mu}=0}$$
 ### Gauge symmetry
 - From the Euler-Lagrange equation, inspect the components of $\boldsymbol{A}$
-$$\nabla^{2}A_{0}+\nabla\cdot \frac{\partial \boldsymbol{A}}{\partial t}=0\implies A_{0}(x)=$$
+$$\nabla^{2}A_{0}+\nabla\cdot \frac{\partial \boldsymbol{A}}{\partial t}=0\implies A_{0}(x)=\int  d^3x' \frac{\nabla\cdot\partial \boldsymbol{A}(\boldsymbol{x}')/\partial t}{|\boldsymbol{x}-\boldsymbol{x}'|} $$
 - $A_{0}$ is _fully determined_ by $\boldsymbol{A}$
+- This gives _three degrees of freedom_ in $\boldsymbol{A}$
 
 - The theory is also _gauge symmetric_, meaning it is invariant under the transformation:
 $$A_{\mu}\to A_{\mu}+\partial_{\mu}\lambda$$
@@ -1050,22 +1051,29 @@ $$A_{\mu}\to A_{\mu}+\partial_{\mu}\lambda$$
 $$J^{\mu}=\frac{\partial \mathcal{L}}{\partial(\partial_{\mu}A_{\nu})}\partial_{\nu}\lambda=\partial_{\nu}(\lambda F^{\mu \nu})$$
 - As it is a _total derivative_, this leads to _zero conserved charge_
 
-- The redundancy leads to an _enlarged phase space_ of solutions
+- The redundancy actually leads to an _enlarged phase space_ of solutions
+	- It can be visualised with a series of _gauge orbits_, where states _along the same orbit_ can be related by a _gauge transformation_
 - One must then _fix the gauge_
+	- Pictorally, it _cuts the gauge orbits_, with a representative from each orbit
 
 - The _Lorenz gauge_ (which is _Lorentz invariant_):
 $$\partial_{\mu}A^{\mu}=0$$
-- Then given another gauge field $A_{\mu}'$ where $\partial_{\mu}(A')^{\mu}=f$, one can always _transform back_ with $A_{\mu}=A_{\mu}'+\partial_{\mu}\lambda$ _given_:
+- Then given _another gauge field_ $A_{\mu}'$ where $\partial_{\mu}(A')^{\mu}=f$, one can always _transform back_ with $A_{\mu}=A_{\mu}'+\partial_{\mu}\lambda$ _given_:
 $$\Box\lambda=-f$$
+- This is a _nontrivial_ transformation, therefore the Lorenz gauge _is not unique_
+	- Does not pick a unique representative from the gauge orbits
 
 - The _Coulomb gauge_:
 $$\nabla\cdot \boldsymbol{A}=0$$
 - It is _not Lorentz invariant_
 - From this, $A_{0}=0$, which _removes another degree of freedom_
+- The _remaining_ 2 degrees of freedom are the _polarisation states_ of the photon
 
 ## Canonical quantisation of electromagnetism
 - Use the _Coulomb gauge_ to get rid of redundancy
-- From this:
+
+### Plane waves and polarisations
+- From the Coulomb gauge, the _equations of motion_ give:
 $$\Box A_{i}=0$$
 - Choose a _massless plane wave solution_
 $$A_{\mu}\sim \epsilon_{\mu}\exp(ip_{\mu}x^{\mu}) \qquad p^{2}=0$$
@@ -1077,8 +1085,9 @@ $$\displaylines{\boldsymbol{\epsilon}_{r}\cdot \boldsymbol{p}=0 \qquad r=1,2 \\ 
 
 - The completeness relation:
 $$\sum_{r=1}^{2}\boldsymbol{\epsilon}^{i}_{r}(\boldsymbol{p})\boldsymbol{\epsilon}^{j}_{r}(\boldsymbol{p})=\delta^{ij}-\frac{p^{i}p^{j}}{|\boldsymbol{p}|^{2}}$$
-- Plane wave _expansion_:
+- Plane wave _expansion_ with _creation_ and _annihilation_ operators:
 $$\boldsymbol{A}(x)=\int  \frac{d^3p}{(2\pi)^{3}} \frac{1}{\sqrt{ 2|\boldsymbol{p}| }} \sum_{r=1}^{2}\boldsymbol{\epsilon}^{r}(a_{p}^{r}e^{-ipx}+a^{r\dagger}_{p}e^{ipx})$$
+### Electric field as a canonical momentum
 - Define a _canonical momentum_:
 $$\pi_{i}=\frac{\partial \mathcal{L}}{\partial \dot{A}_{i}}=-F^{0i}=E^{i}$$
 - The Coulomb gauge also implies $\nabla\cdot \boldsymbol{E}=0$
@@ -1093,10 +1102,12 @@ $$\begin{align}
 $$[\partial_{i}A_{i},\pi_{j}]=0 \qquad [A_{i}(\boldsymbol{x},t),A_{j}(\boldsymbol{y},t)]=0$$
 - Then the commutation relation:
 $$[a^{r}_{p},a^{s\dagger}_{q}]=(2\pi)^{3}\delta^{rs}\delta^{3}(\boldsymbol{p}-\boldsymbol{q})$$
+### Electromagnetic Hamiltonian
 - The Hamiltonian is then:
 $$H=\int  d^3x \,(\pi^{i}\dot{A}_{i}-\mathcal{L})=\frac{1}{2}\int  d^3x\,(\boldsymbol{E}\cdot \boldsymbol{E}+\boldsymbol{B}\cdot \boldsymbol{B}) $$
 - After normal ordering:
 $$H=\int  \frac{d^3p}{(2\pi)^{3}}\,|\boldsymbol{p}| \sum_{r=1}^{2}a_{p}^{r\dagger}a_{p}^{r} $$
+### Propagator in the Coulomb gauge
 - The _Feynman propagator_ in the _Coulomb gauge_:
 $$\braket{ 0|T\{A_{i}(x)A_{j}(y)\} |0  }=\int  \frac{d^4p}{(2\pi)^{4}} \frac{i}{p^{2}+i\epsilon} \left( \delta_{ij}-\frac{p_{i}p_{j}}{|\boldsymbol{p}|^{2}} \right)\exp[-ip(x-y)] $$
 ### Propagator: the Lorentz invariant way
@@ -1117,13 +1128,13 @@ $$\mathcal{L}=-\frac{1}{4}F_{\mu \nu}F^{\mu \nu}-\frac{1}{2\alpha}(\partial_{\mu
 - Equation of motion w.r.t. $\alpha$ and $A_{\mu}$ respectively:
 $$\displaylines{\partial_{\mu}A^{\mu}=0  \\ \left[ \eta^{\nu\lambda}\Box+\left( \frac{1}{\alpha}-1 \right)\partial^{\nu}\partial^{\lambda} \right]A_{\lambda}=0}$$
 
-- Back to the Greens function in Fourier space:
+- Back to the _Greens function_ in Fourier space:
 $$\left[ -\eta^{\nu\lambda}p^{2}-\left( \frac{1}{\alpha}-1 \right)p^{\nu}p^{\lambda} \right]A_{\lambda}(p)=J_{\lambda}(p)$$
 - This has an _inverse_:
 $$\displaylines{ \hat{\Pi}_{\mu \nu}=-\eta_{\mu \nu}p^{2}-\left( \frac{1}{\alpha}-1 \right)p_{\mu}p_{\nu} \\ \Pi_{\mu \nu}=\left( \hat{\Pi}^{-1} \right)_{\mu \nu}=-\frac{\eta_{\mu \nu}+(\alpha-1)p_{\mu}p_{\nu}/p^{2}}{p^{2}}}$$
-- Then construct the _propagator_:
+- From this _Greens function_, construct the _propagator_:
 $$\begin{align}
-\braket{ 0|T\{A_{\mu}(x)A_{\nu}(y)\} | 0 } &=i \int  d^4p\, e^{-ip(x-y)}\Pi_{\mu \nu} \\ &=-i \int  \frac{d^4p}{(2\pi)^{4}} \frac{1}{p^{2}+i\epsilon} \left( \eta_{\mu \nu}+\frac{(\alpha-1)p_{\mu}p_{\nu}}{p^{2}} \right)e^{-ip(x-y)}
+\braket{ 0|T\{A_{\mu}(x)A_{\nu}(y)\} | 0 } &=i \int  \frac{d^4p}{(2\pi)^{4}}\, e^{-ip(x-y)}\Pi_{\mu \nu} \\ &=-i \int  \frac{d^4p}{(2\pi)^{4}} \frac{1}{p^{2}+i\epsilon} \left( \eta_{\mu \nu}+\frac{(\alpha-1)p_{\mu}p_{\nu}}{p^{2}} \right)e^{-ip(x-y)}
 \end{align}$$
 - For $\mu,\nu=i,j$ the components _match_ the derivation from the Coulomb gauge
 
@@ -1159,7 +1170,7 @@ $$\displaylines{A_{\mu }\to \partial_{\mu}\lambda(x) \\ \psi\to \exp(-ie\lambda(
 $$D_{\mu}\psi\to \exp(-ie\lambda)D_{\mu}\psi \qquad \bar{\psi}\cancel{ D }\psi\to \bar{\psi}\cancel{ D }\psi$$
 - The Lagrangian is _gauge invariant_
 
-- From Noether's theorem:
+- From Noether's theorem, the _conserved charge_ from _gauge symmetry_:
 $$Q=\int  d^3x\,F^{0i}\partial_{i}\lambda=-\int  d^3x \,\partial_{i} F^{0i}\lambda$$
 - Then setting $\lambda=1$:
 $$Q=-e\int  d^3x\,j^{0} $$
@@ -1178,11 +1189,11 @@ $$\mathcal{L}=-\frac{1}{4}F_{\mu \nu}F^{\mu \nu}+D_{\mu}\varphi^{*}D^{\mu}\varph
 
 - _Minimal coupling_ is the act if _replacing derivatives with covariant derivatives_ when _coupling gauge fields to_ $U(1)$ _symmetry_
 
-### Feynman rules
+### QED Feynman rules
 
-- _Photon polarisation vectors_:
+- _Photon polarisation vectors_ for _external lines_:
 $$\epsilon^{s}_{\mu}(p)$$
-- _Fermions_
+- _Fermions_ (particles and antiparticles)
 $$U^{s}(p)$$
 
 - Vertices:

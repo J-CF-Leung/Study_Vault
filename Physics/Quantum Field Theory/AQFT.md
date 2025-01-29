@@ -52,6 +52,7 @@ $$\displaylines{U(x_{f},t_{f},x_{i},t_{i})=N \int_{x(t_{i})=x_{i}}^{x(t_{f})=x_{
 	- A _functional integral_, integrating over a _space of functions_
 
 - Drawing an analogy to _statistical fields_, one may use an _imaginary time_
+	- Known as a _Wick rotation_
 	- Might give better _convergence_
 	- $S_{E}$ is analagous to the _Hamiltonian_, making the path integral a _partition function_
 $$\int_{i}^{f}  \mathcal{Dx}\exp(-S_{E}[x]) \qquad S_{E}[x]=\int  d\tau\,\left( \left( \frac{dx}{d\tau} \right)^{2}+V(x) \right)  $$
@@ -91,10 +92,86 @@ $$\left\langle  \frac{\delta F}{\delta x(t)}  \right\rangle =\Braket{ x_{f}t_{f}
 - Assume that for functionals, there is some analagogue of _Stokes Theorem_ and _integration by parts_:
 $$\left\langle  \frac{\delta F}{\delta x(t)}  \right\rangle=-\frac{i}{\hbar}\left\langle  F\,\frac{\delta S}{\delta x(t)}  \right\rangle  $$
 - Going back to the _discretised_ limit, the action is:
-$$\displaylines{S[x]=\sum_{r} \\ \frac{\delta S}{\delta x(t)}=\frac{\partial S}{\partial x_{k}}}$$
-- Going back to the functional derivative, with $F=x$
+$$\displaylines{S[x]=\sum_{r} \left[ \frac{m}{2} \frac{(x_{r+1}-x_{r})^{2}}{\delta t^{2}} -V(x_{r})\right]\delta t\\ \frac{\delta S}{\delta x(t)}\to\frac{\partial S}{\partial x_{k}}=-m\left( \frac{x_{k+1}-x_{k}}{\delta t}- \frac{x_{k}-x_{k-1}}{\delta t} \right)}$$
+- Going back to the functional derivative, with $F=x_{k}$:
+$$1=-\frac{i}{\hbar}\left\langle -x_{k}m \left( \frac{x_{k+1}-x_{k}}{\delta t}- \frac{x_{k}-x_{k-1}}{\delta t} \right)\right\rangle  $$
+- In the infinitesimal limit:
+$$\lim_{ \delta t \to 0 } \frac{x_{k+1}-x_{k}}{\delta t}=m\dot{x}(t_{+})=p(t_{+}) \qquad \lim_{ \delta t \to 0 } \frac{x_{k}-x_{k-1}}{\delta t}=p(t_{-})  $$
 
-- Time ordering:
+- With time ordering:
+$$1=-\frac{i}{\hbar}\langle p(t_{+})x(t)-x(t)p(t_{-}) \rangle $$
 
 - This gives (with normalisation):
 $$\langle x_{f},t_{f}|T\{x(t),p(t)\}|x_{i},t_{i} \rangle=i\hbar $$
+
+## Generalisation to higher dimensions
+
+# QFT in zero dimensions
+- A quantum field theory with _no parameters_, as a _toy model_
+
+- _No space or time_ coordinates, only a field $\phi \in \mathbb{R}$
+- The _functionals_ become simple _functions_
+- The _action_ has _no parameter to integrate over_
+
+- Example: $\phi^{4}$ theory
+$$S(\phi)=\frac{\alpha}{2}\phi^{2}+\frac{\lambda}{4!}\phi^{4}\qquad \alpha>0$$
+## Generating function
+ - The _generating function_:
+$$Z_{\lambda}(J)=N\int_{-\infty}^{\infty}  d\phi\,e^{-S[\phi]+J\phi } $$
+- An _analogue_ of the functional integral, with _imaginary "time"_
+- _Normalisation factor_ $N$
+
+- $J$ is some _source term_
+- Differentiation w.r.t. $J$ then gives _powers_ of $\phi$
+- The _expectation values_ can then be written as:
+$$\langle \phi^{n} \rangle=N \int  d\phi\,\phi^{n}  e^{-S[\phi]}=\left[ \frac{\partial^{n}}{\partial J^{n}}Z_{\lambda}(J) \right]_{J=0}$$
+- More generally:
+$$\langle f(\phi) \rangle =\left[ f\left( \frac{\partial}{\partial J} \right)Z_{\lambda}(J) \right]_{J=0}$$
+
+### Free case
+$$Z_0(J)=N\int  d\phi\,\exp\left( -\frac{1}{2}\alpha \phi^{2}+J\phi \right) $$
+- Choose $N$ such that:
+$$Z_{0}(0)=1\implies N=\sqrt{ \frac{\alpha}{2\pi} }$$
+- With this, one gets:
+$$Z_{0}(J)=\exp\left( \frac{J^{2}}{2\alpha} \right)$$
+- The _odd_ powered expectation values are $0$:
+$$\langle \phi^{2n+1} \rangle=0 $$
+- The _even_ powered expectation values:
+$$\displaylines{\langle \phi^{2n} \rangle=\frac{1}{Z_{0}(0)}\left[ \frac{\partial^{2n}}{\partial J^{2n}} Z_{0}(J)\right] =\frac{(2n-1)!!}{\alpha^{n}} \\ n!! = n(n-2)(n-4)\dots \\ \langle \phi^{2} \rangle=\frac{1}{\alpha}\qquad \langle \phi^{4} \rangle=\frac{3}{\alpha^{2}}\qquad \langle \phi^{6} \rangle=\frac{15}{\alpha^{3}}   }$$
+- This can be described using _Feynman diagrams_, where it gives $2n-$point _correlations_
+- Each _propagator_ between points gives a factor of $\alpha^{-1}$, and the correlations are _weighted by a combinatoric factor_ $(2n-1)!!$
+	- Combinatorics: $2n-1$ choices for first propagator, $2n-3$, and so on
+
+### Interacting theory
+$$Z_{\lambda}(J)=N \int  d\phi\,\exp\left( -\frac{1}{2}\alpha \phi^{2} -\frac{\lambda}{4!}\phi^{4}+J\phi\right) $$
+- Choosing the same normalisation:
+$$N=\frac{1}{Z_{0}(0)}=\sqrt{ \frac{\alpha}{2\pi} }$$
+- Assume $\lambda\ll 1$, such that one can _expand_:
+$$Z_{\lambda}(J)=\sqrt{ \frac{\alpha}{2\pi} }\int  d\phi\,\exp\left( -\frac{1}{2}\alpha \phi^{2}-\frac{\lambda}{4!}\phi^{4} \right)\sum_{k=0}^{\infty}\left( -\frac{\lambda}{4!} \right)^{k}\frac{\phi^{4k}}{k!} $$
+- Make an _approximation_ by _swapping_ the sum and integral
+	- Exact answer (no swap) has $\exp(-1/\lambda)$ _instanton_ factor
+$$Z_{\lambda}(J)=\sum_{k} \frac{1}{k!}\left( -\frac{\lambda}{4!} \right)^{k}\int  d\phi\,\phi^{4k}\,\exp\left( -\frac{1}{2}\alpha \phi^{2}+J\phi \right) $$
+- This consists of _expectation values in the free theory_
+- Thus, one can write $Z_{\lambda}(J)$ _in terms of the free theory generating function_
+$$\begin{align}
+Z_{\lambda}(J)&=\sum_{k=0}^{\infty} \frac{1}{k!}\left( -\frac{\lambda}{4!} \right)^{k}\,\frac{\partial^{4k}}{\partial J^{4k}}Z_{0}(J) \\
+&=Z_{0}(J)-\frac{\lambda}{4!} \frac{\partial^{4}}{\partial J^{4}}Z_{0}(J)+\frac{1}{2}\left( \frac{\lambda}{4!} \right)^{2}\frac{\partial^{8}}{\partial J^{8}}Z_{0}(J)+\dots
+\end{align}$$
+- Correlations with normalisation:
+$$\langle \phi^{n} \rangle=\frac{1}{Z_{\lambda}(0)} \left[ \frac{\partial^{n}}{\partial J^{n}}Z_{\lambda}(J) \right]_{J=0} $$
+
+### Normalisation, partition function, and vaccum bubbles
+- $Z_{\lambda}(0)$ is known as the _partition function_
+- It describes how _interactions_ affect the _vacuum_ and the _normalisation_ of correlations
+
+- First few terms:
+$$\begin{align}
+Z_{\lambda}(0)&=1-\frac{\lambda}{8\alpha^{2}}+\frac{105}{2(4!)^{2}} \frac{\lambda^{2}}{\alpha^{4}}+\dots \\
+&=1+(-\lambda) \left( \frac{1}{\alpha} \right)^{2}\left( \frac{1}{8} \right)+(-\lambda)^{2} \left( \frac{1}{\alpha^{4}} \right)\left( \frac{1}{48}+\frac{1}{16}+\frac{1}{128} \right)+\dots
+\end{align}$$
+- This can be expressed as a series of _vacuum bubbles_
+![[Vacuum bubbles.png]]
+- There is a factor of $\alpha^{-1}$ for each line
+- A factor of $-\lambda$ for each _vertex_
+- Then, one divides by a _symmetry factor_
+	- The size of the _automorphism group_ of the graph
