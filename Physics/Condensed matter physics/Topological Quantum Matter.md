@@ -210,4 +210,265 @@ $$\left( \prod_{j \in M}X_{j} \right)\left( \prod_{j \in M'}Z_{j} \right)=(-1)^{
 - A graphical representation of the surface code:
 ![[Toric code setup.png|250]]
 - The Hamiltonian, consisting of _vertex operators_ and _plaquette operators_
-$$H=-J_{A}\sum_{v}A_{v}-J_{B}\sum_{p}B_{p}$$
+$$H=-J_{A}\sum_{v}A_{v}-J_{B}\sum_{p}B_{p},\quad J_{A,B}=0$$
+- The _vertex operator_ $A_{v}$ will _flip spins surrounding_ vertex $v$
+- The _plaquette operator_ $B_{p}$ calculates the _parity_ of spins _around a plaquette_
+$$A_{v}=\prod_{j \in v}X_{j}\qquad B_{p}=\prod_{j \in p}Z_{j}$$
+- The operators are both _idempotent_, and thus have eigenvalues $\pm1$
+$$A_{v}^{2}=B_{p}^{2}=1\implies a_{v},b_{p}=\pm1$$
+- The operators also _commute_, as vertex and plaquette operators _share_ 0 or 2 sites
+$$[A_{v},B_{p}]=0$$
+- The operators $\{A_{v}\}\cup\{B_{p}\}$ form a set of _mutually commuting elements_, which also commute with $H$
+- They are _integrals of motion_, that allow eigenstates to be _labelled_ $\{a_{\nu}\},\{b_{p}\}$
+
+- One can then also take products to create other integrals of motion:
+$$\prod_{v\in V}A_{v}\prod_{p \in P}B_{p}$$
+### Integrals of motion from loops
+- Attempt to construct integrals of motion that are _not simply a product_ as above
+
+- Try an operator corresponding to some _set of qubits_ $M$, already commuting with $A_{\nu}$
+$$\mathcal{X}_{M}=\prod_{j \in M} X_{j}$$
+- For it to _also commute_ to $B_{p}$, it must share an _even number of sites_
+- Representing $X_{j}$ as a line perpendicular to the link (see figure above), they must _not end in a plaquette_ for the operators to commute
+- Therefore, $\mathcal{X}_{M}$ must correspond to a _set of loops_
+
+- A _large loop_ is simply a _product of adjacent_ $A_{\nu}$, as $A_{v}^{2}=1$
+![[Toric code loop contraction.png|200]]
+- Following the same logic, _any path can be deformed_ by applying $A_{v}$
+- If a loop can be _contracted into nothing_ by applying suitable $A_{v}$, then _it is not a new integral of motion_
+
+- Therefore, depending on the _manifold topology_ on which the _surface code_ lives, one can have _noncontractible loops_
+	- The _number of independent, noncontractible loops_ gives the _homology_
+	- For a _closed manifold_, this is known as the _1st Betti number_ $\beta_{1}$
+	- It is related to the _genus_ by $\beta_{1}=2g$
+	- They are _topological invariants_ (unaffected by continuous deformations)
+
+- A _noncontractible loop_ gives a _new integral of motion_
+- For example, take the _torus_ where $g=1,\beta_{1}=2$, giving the _toric code_
+
+### Toric code
+- A _torus_ is created by _identifying_ opposite edges of a square surface
+- Define two _non-contractible loops_ $\gamma_{1,2}$ over the torus
+$$\bar{X}_{j}\equiv\mathcal{X}_{\gamma_{j}}=\prod_{i \in \gamma_{j}}X_{i}\neq \prod_{v \in V}A_{v}$$
+- They _commute_ with the vertex and plaquette operators
+$$[\bar{X}_{j},A_{v}]=[\bar{X}_{j},B_{p}]=0$$
+- Also define:
+$$\bar{Z}_{j}=\prod_{i \in \gamma_{j}}Z_{i}\neq \prod_{p  \in P}B_{p}$$
+- For both operators:
+$$\bar{X}_{j}^{2}=\bar{Z}_{j}^{2}=1$$
+- They behave like Pauli operators:
+$$\bar{X}_{i}\bar{Z}_{j}=(-1)^{\delta_{ij}}\bar{Z}_{j}\bar{X}_{i}$$
+- As they _do not commute_, one can use _either_ $\bar{z}_{i}$ or $\bar{x}_{i}$ as a _quantum number_
+
+- Thus, one completes labelling eigenstates for a general manifold as:
+$$\ket{n}=\ket{\{a_{v}\},\{b_{p}\};\bar{z}_{1},\bar{z}_{2}\dots \bar{z}_{\beta_{1}}}  $$
+- As the energy _does not depend_ on the $\bar{z}$ eigenvalues
+
+- Therefore, there is a _topological ground state degeneracy_
+$$\text{GSD}=2^{\beta_{1}}$$
+- Unlike the Ising model, this is _topology-dependent_
+
+## Surface code excitations
+- The _ground state_ $\ket{\psi}$:
+$$a_{v}=b_{p}=1\quad \forall v,p$$
+- The _excited states_ will have some $a_{v}$ or $b_{p}=-1$, and their _combinations_
+
+- To get some excitation, one can _apply_ $X_{j}$ and $Z_{j}$ on some _set_ of qubits $\alpha$
+$$\mathcal{Z}_{\alpha}=\prod_{j \in \alpha}Z_{j}\qquad \mathcal{X}_{\beta}=\prod_{j \in \beta}X_{j}$$
+- $\alpha$ must _not be a loop_ (have some _boundary_)
+- For $v$ at the _boundary_ $\partial\alpha$
+$$A_{v}(\mathcal{Z}_{\alpha}\ket{\psi} )=-\mathcal{Z}_{\alpha}(A_{v}\ket{\psi} )=-\mathcal{Z}_{\alpha}\ket{\psi} \implies a_{v}=-1\quad (v \in \partial\alpha)$$
+
+- _Flipping_ each vertex requires $2J_{A}$ of energy
+- One can interpret them as _particles_ $e$
+- For $M$ particles, the energy is $2MJ_{A}$, there is _no interaction energy_
+
+- As _endpoints_ for the path comes in _pairs_, particles are connected by _strings_
+- The _pairing_ of particles is also _arbitrary_
+	- By applying $B_{p}$ between 2 string midpoints, one can _"exchange"_ strings
+
+- One can also create particles $m$ with $b_{p}=-1$
+- The surface code is also _gapped_, with gap $4\,\mathrm{min}(J_{A},J_{B})$
+
+- States with the _same number of excitations_ may _not be the same_, if they are _built_ on top of _different ground states_
+
+# Particle exchange and braiding
+- Focus on the _exchange effects_ of _identical particles_ instead of any dynamical details
+- _Exchange_ means the _initial and final configurations are the same_
+
+- Assume the particles are _much further apart_ than the _interaction range_
+- This leads to _non-intersecting worldlines_
+
+- Also strip away _local details_ along the paths
+- This gives _topologically invariant features_
+
+## Exchange effects in 2D
+- Consider a _2+1D_ system
+
+- Braids: _cannot be backwards in time_
+- Example: a _4-particle braid_
+![[4 particle braiding.png]]
+- Trivial: the _identity_ braid
+- One can _compose_ braids
+- One can have _clockwise_ braids $\sigma_{i}$ and _counterclockwise_ braids $\sigma_{i}^{-1}$
+	- From composition, they are _inverses_ of each other
+
+- For $N$ particles, the braids form a _braid group_ $B_{N}$
+	- They satisfy the _group axioms_
+
+- The exchanges are known as _generators_ of the group
+- The group is generally _non-Abelian_:
+$$\sigma_{j+1}\sigma_{j}\neq\sigma_{j}\sigma_{j+1}$$
+
+- For _distinguishable particles_, one will have different _braid types_
+- For $N_{a}$ and $N_{b}$ of each type, the group is denoted $B_{N_{a},N_{b}}$
+- There can be _indistinguishable particles braiding_ $\sigma_{a},\sigma _b$, as well as _distinguishable particles encircling each other_ $\mu_{a,b}$
+	- Distinguishable particles must _encircle_ to end up with the same configuration
+
+### Exchange in 3D
+- In 3D, there is _no distinction_ between clockwise and anticlockwise exchange:
+	- From considering braiding two particles as moving on a 2-sphere (with antipodal points identified)
+$$\sigma^{-1}=\sigma$$
+- Particle exchange in 3D is governed by the _permutation group_ $S_{N}$
+## Effect on quantum states
+- The exchange can be seen as a _time evolution operator_
+$$\sigma_{j}\to \mathcal{U}(\sigma_{j})$$
+- The _composition_ of braids:
+$$\mathcal{U}(\sigma_{j}\sigma_{i})=\mathcal{U}(\sigma_{j})\mathcal{U}(\sigma_{i})$$
+- The operators should be a _unitary representation_ of $B_{N}$ or $S_{N}$
+
+- One can have an _Abelian representation_:
+$$U(\sigma_{j})=\exp(i\theta_{j})$$
+
+- In 3D, as $\sigma^{2}=1$, the _only acceptable representations_:
+$$\theta=0,\pi$$
+- One then gets _bosons and fermions_
+
+- In 2D, they can have _any phase_
+- One then gets _Abelian anyons_
+$$U(\sigma_{j})=\exp(i\theta _{j}) \quad \theta_{j}\in [0,2\pi)$$
+- For _distinguishable particles_, define:
+$$U(\mu_{ab})=\exp(2i\theta_{ab})$$
+![[Abelian anyons.png]]
+
+- As the braid group is non-Abelian, one can also have _non-Abelian representations_:
+$$U(\sigma_{i})U(\sigma_{j})\neq U(\sigma_{j})U(\sigma_{i})$$
+- This occurs when _spatial coordinates_ are _not sufficient to specify the quantum state_ (i.e. there is some _degeneracy_)
+
+- Example: spin-1/2 fermions, where one has to specify _spin_, and the Hilbert space can be _factorised_ into _spatial_ and _spin_ subspaces
+
+- One can also have situations where the _Hilbert space does not factorise_
+
+## Statistics in the surface code
+- One can _move_ some $e$ or $m$ particle by applying a _sequence_ of $Z_{j}$ or $X_{j}$ onto the original sequence $\alpha$
+
+- Let there be some _eigenstate_ with some $e$ and $m$ particles with strings $\alpha_{e}$ and $\alpha_{m}$
+$$\ket{\Psi_{0}}=\mathcal{X}_{\alpha_{m}}\mathcal{Z}_{\alpha_{e}}\ket{\Psi}  $$
+- Let $e$ _encircle_ $m$ clockwise with some operator $\mathcal{Z}_\text{loop}$, corresponding to a _path_ $\alpha _\text{loop}$
+- The loop must _intersect only once_ with $\alpha_{m}$
+- As it is a _contractible loop_, $\mathcal{Z}_\text{loop}\ket{\Psi}=\ket{\Psi}$
+
+- From these considerations:
+$$\mathcal{Z}_\text{loop}\ket{\Psi_{0}} =\mathcal{Z}_\text{loop}\mathcal{X}_{\alpha_{m}}\mathcal{Z}_{\alpha_{e}}\ket{\Psi}=-\mathcal{X}_{\alpha_{m}}\mathcal{Z}_{\alpha_{e}}\mathcal{Z}_\text{loop}\ket{\Psi}=-\ket{\Psi_{0}}   $$
+- From the definition of $\theta_{em}$:
+$$\exp(2i\theta _\text{em})=-1$$
+- From similar considerations:
+$$\exp(i\theta_{e})=\exp(i\theta_{m})=1$$
+
+- One finds that $e$ and $m$ are _bosons_, but they are _mutual semions_
+![[Surface code braiding.png]]
+
+# Path integrals and charge-flux composite anyons
+- For any _time evolution_, the _toplogical part_ can be encoded by some element $g$ of the braid group $B_{N}$
+
+- Consider some _transition amplitude_
+$$\Braket{ \{x_{j}(t_{f})\}|\mathcal{T}\exp\left( -\frac{i}{\hbar}\int  dt\,H(t)  \right) | \{x_{j}(t_{i})\} } $$
+- This is some [[AQFT#Path integrals|path integral]]:
+$$\int_{\{x_{j}(t_{f})\}\leftarrow \{x_{j}(t_{i})\}} \mathcal{D}\{x_{j}\}\exp\left( \frac{i}{\hbar}S[\{x_{j}\}] \right) $$
+- Consider _braids_, where:
+$$\{x_{j}(t_{f})\}=\{x_{j}(t_{i})\}$$
+- One can then _classify_ the worldlines based on elements $g$ of the braid group $B_{N}$
+- The action can then be _decomposed_ into a part due to _local details_, and a part depending on _topology_
+$$S[x_{j}(t)]=S_{0}[x_{j}(t)]+\hbar W(g)$$
+- The path integral is then:
+$$\sum_{g \in B_{N}}\exp(iW[g]) \int_{\{x_{j}(t_{f})\}=\{x_{j}(t_{i})\} \in g}\mathcal{D}\{x_{j}\}\exp\left( \frac{i}{\hbar}S_{0}[\{x_{j}\}] \right) $$
+## Aharonov-Bohm and Aharonov-Casher effects
+- A mechanism through which a nontrivial $W$ emerges
+
+- Aharonov-Bohm: a _charge encircling flux_
+- Aharonov-Casher: a _flux encircling charge_
+
+- Consider a _2D system_ with one particle of charge $q$
+- The Lagrangian, due to some _scalar potential_ $\phi$ and _vector potential_ $\boldsymbol{A}$
+$$L=L_{0}-q(\phi-\dot{\boldsymbol{x}}\cdot \boldsymbol{A})$$
+- Consider some _time-independent, point-like flux_ $\Phi$, from a particle $\boldsymbol{X}$
+- Let there be a charged particle, following path $\boldsymbol{x}$ _encircling_ the flux
+	- It is outside the region of flux such that $\boldsymbol{E}=\boldsymbol{B}=0$ everywhere
+
+- The _action_ from the path has a _topological contribution_ from the flux:
+$$\displaylines{S[\boldsymbol{x}]=S_{0}+q\int  dt\, \dot{\boldsymbol{x}}\cdot \boldsymbol{A} =S_{0}+q \oint d\boldsymbol{x}\cdot \boldsymbol{A} =S_{0}+qn\Phi \\ W[n]=\frac{qn\Phi}{\hbar}}$$
+- This is the _Aharonov-Bohm effect_
+- The paths are _topologically classified_ by $n$
+
+- Alternatively, let the _flux particle_ $\boldsymbol{X}$, following path $X_{f}$, give some vector potential:
+	- $\boldsymbol{A}_{f}$ is the potential for a flux at the origin
+	- This potential is _invariant under translation_
+$$\boldsymbol{A}(\boldsymbol{x})=\boldsymbol{A}_{f}(\boldsymbol{x}-\boldsymbol{X}_{f})$$
+- Requiring $\boldsymbol{E}=0$ along path $\boldsymbol{x}$, the _corresponding scalar potential_ is then:
+$$\phi=\dot{\boldsymbol{X}}_{f}\cdot \boldsymbol{A}(\boldsymbol{x})$$
+- The Lagrangian, only depending on the _relative motion_ between $\boldsymbol{x}$ and $\boldsymbol{X}$
+$$L=L_{0}-q(\dot{\boldsymbol{X}}_{f}-\dot{\boldsymbol{x}})\cdot A_{f}(\boldsymbol{x}-\boldsymbol{X}_{f})$$
+- For a path encircling $\boldsymbol{x}$, there is the same _topological contribution to phase_
+$$W[n]=\frac{qn\Phi}{\hbar}$$
+
+## Charge-flux composite model for anyons
+- Let particles have some charge $q_{j}$ and _flux_ $\Phi_{j}$
+- Let the flux have some _extent_ $\delta \boldsymbol{x}_{j}$
+
+- For _non-intersecting worldlines_, interparticle separation must be much larger than $|\delta \boldsymbol{x}_{j}|$
+
+- The _flux-charge interaction Lagrangian_:
+$$L_{I}=\sum_{j,k} q_{j}(\dot{\boldsymbol{X}}_{k}-\dot{\boldsymbol{x}}_{j})\cdot \boldsymbol{A}_{f}(\boldsymbol{x}_{j}-\boldsymbol{X}_{k})$$
+- When particle $j$ _encircles_ $k$, the contributions to phase:
+	- Aharonov-Bohm: _charge_ $q_j$ circles _flux_ $\Phi_{k}$
+	- Aharonov-Casher: _flux_ $\Phi_{j}$ circles _charge_ $q_{k}$
+
+- The definition of $\theta_{jk}$:
+$$\exp(2i\theta_{jk})=\exp\left[ \frac{i}{\hbar}(q_{j}\Phi_{k}+q_{k}\Phi_{j}) \right]$$
+- When the particles are _identical_:
+$$\exp(i\theta)=\exp\left( \frac{i}{\hbar}q\Phi \right)$$
+- This then models _anyons_ as there is no restriction on $q$ and $\Phi$
+
+### Spin statistics
+- For some _spin_ $J$, a _rotation_ about $z$ with angle $\alpha$ is given by the operator
+$$R(\alpha)=\exp\left( -\frac{i\alpha J_{z}}{\hbar} \right)$$
+- For a _half-integer spin_, $R(2\pi)=-1$
+- For an _integer spin_, $R(2\pi)=1$
+
+- For the charge-flux composite, a $2\pi$ rotation gives $\boldsymbol{x}_{j}$ encircling $\boldsymbol{X}_{j}$ once:
+$$R(2\pi)=\exp\left( \frac{i}{\hbar} q\Phi \right)=\exp(i\theta)$$
+
+### Anyon fusion
+- Bringing two charge-flux composites $j$ and $k$ together
+- For the purposes of _both particles braiding around others_, it is _effectively_ one anyon of charge $q_{j}+q_{k}$ and flux $\Phi_{j}+\Phi_{k}$
+![[Anyon fusion.png|200]]
+
+### Anti-anyons and vacuum particles
+- Let there be some _vacuum particle_ $q,\Phi=0$
+
+- One can then define an _anti-particle_ $(-q_{j},-\Phi_{j})$
+- One can _annihilate_ particles with the anti-particles
+- Or, consider a _reversed worldline_
+![[Anti-anyons.png|400]]
+- Clockwise encircling an anyon of phase $\theta$ by its _antiparticle_ gives $\exp(-2i\theta)$
+
+- Applying this to the _surface code_, as $e$ and $m$ are _created in pairs from vacuum_, they are _their own antiparticle_
+## Ground state degeneracy from braiding
+- Consider the _torus_ with non-contractible loops $\gamma_{1,2}$
+
+- Consider an operator $T_{j}$, where one _creates_ an anyon-antianyon pair, _moves_ the anyon along $\gamma_{j}$, then _annihilates_ the pair
+- It moves the system from the ground state _to_ a ground state
+
+- Inspect:
+$$T_{2}^{-1}T_{1}^{-1}T_{2}T_{1}$$
+![[Torus braiding.png]]

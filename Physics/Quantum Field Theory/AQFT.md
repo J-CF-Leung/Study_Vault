@@ -160,7 +160,7 @@ Z_{\lambda}(J)&=\sum_{k=0}^{\infty} \frac{1}{k!}\left( -\frac{\lambda}{4!} \righ
 - Correlations with normalisation:
 $$\langle \phi^{n} \rangle=\frac{1}{Z_{\lambda}(0)} \left[ \frac{\partial^{n}}{\partial J^{n}}Z_{\lambda}(J) \right]_{J=0} $$
 
-### Normalisation, partition function, and vaccum bubbles
+## Normalisation, partition function, and vaccum bubbles
 - $Z_{\lambda}(0)$ is known as the _partition function_
 - It describes how _interactions_ affect the _vacuum_ and the _normalisation_ of correlations
 
@@ -175,3 +175,182 @@ Z_{\lambda}(0)&=1-\frac{\lambda}{8\alpha^{2}}+\frac{105}{2(4!)^{2}} \frac{\lambd
 - A factor of $-\lambda$ for each _vertex_
 - Then, one divides by a _symmetry factor_
 	- The size of the _automorphism group_ of the graph
+
+- The correlation function can be calculated using:
+$$\begin{align}
+\frac{Z_{\lambda}(J)}{Z_{\lambda}(0)}=&\left( 1+\frac{\lambda}{8\alpha^{2}}+\dots \right)\bigg[ 1-\frac{\lambda}{4!} \left( \frac{J^{4}}{\alpha^{4}} +\frac{6J^{2}}{\alpha^{3}}+\frac{3}{\alpha^{2}}\right) \\
+&+ \frac{1}{2}\left( -\frac{\lambda}{4!} \right)^{2}\left( \frac{J^{8}}{\alpha^{8}}+\frac{28J^{6}}{\alpha^{7}}+\frac{210J^{4}}{\alpha^{6}}+\frac{420J^{2}}{\alpha^{5}}+\frac{105}{\alpha^{4}} \right)+\dots\bigg]Z_{0}(J)
+\end{align}$$
+## Two-point correlator
+- The two-point correlation:
+$$\langle \phi^{2} \rangle=\frac{1}{Z_{\lambda}(0)} \frac{\partial^{2}}{\partial J^{2}}Z_{\lambda}(J)\Bigg|_{J=0}$$
+- Without $1/Z_{\lambda}(0)$, the _un-normalised_ diagrams:
+![[Two point correlator unnormalised.png]]
+
+- Any _vacuum contributions_ will be _cancelled out_ in the normalisation
+- Evaluating the rest, one gets:
+$$\langle \phi^{2} \rangle=\frac{1}{\alpha}+\frac{-\lambda}{\alpha^{3}} \left( \frac{1}{2} \right)+\frac{(-\lambda)^{2}}{\alpha^{5}}\left( \frac{1}{2^{2}}+\frac{1}{2^{2}}+\frac{1}{3!}\right)+\dots$$
+![[Two point correlator diagram.png]]
+
+# QFT in four dimensions
+- In four dimensions, the _action_ is now a _functional_, where the Lagrangian density depends on fields with _four parameters_:
+$$\displaylines{S=\int  d^4x\,\mathcal{L}[\boldsymbol{\phi}..] \\ \phi=\phi(x)\qquad x^{\mu}=(t,\boldsymbol{x})}$$
+- The _generating functional_ is then:
+$$Z[J]\propto \int  \mathcal{D}\phi\,\exp\left[ \frac{i}{\hbar} \int  d^4x\,\Big(\mathcal{L}(\phi)+J(x)\phi(x)\Big) \right] $$
+
+- Denote the _vacuum_ in 4 dimensions as $\ket{\Omega}$
+
+- The _time-ordered correlation function_:
+$$\begin{align}
+\langle T\{\phi(x_{1})\phi(x_{2})\dots \phi(x_{n})\} \rangle :&=\frac{\braket{ \Omega|T\{\phi(x_{1})\phi(x_{2})\dots \phi(x_{n}) | \Omega }}{\braket{ \Omega | \Omega } }  \\
+&=\left[ \frac{(-i\hbar)^{n}}{Z[J]} \frac{\delta^{n}Z[J]}{\delta J(x_{1})\delta J(x_{2})\dots\delta J(x_{n})} \right]_{J=0} 
+\end{align}$$
+- The _partition function_ is $Z[0]=\braket{ \Omega  |\Omega  }$
+- For a _vacuum-to-vacuum_ transition, one can _define_ the $t\to \pm \infty$ _limits_ of any initial or final state to be _vacuums_
+$$\ket{\Omega}=\lim_{ t \to -\infty } \ket{\text{in},t}\qquad \bra{\Omega}=\lim_{ t \to +\infty }  \bra{\text{out},t}   $$
+
+## Free Theory
+- Set $\hbar=1$
+- The [[QFT#Free theory of quantum fields|Klein-Gordon Lagrangian]]:
+$$\mathcal{L}=\frac{1}{2}(\partial_{\mu}\phi)(\partial^{\mu}\phi)-\frac{1}{2}m^{2}\phi^{2}$$
+- The corresponding generating function, using _integration by parts_
+$$Z[J]=\mathcal{N}\int  \mathcal{D}\phi \,\exp\left[-i \int  d^4x \left( \frac{1}{2}\phi\,\partial^{2}\phi+\frac{1}{2}m^{2}\phi^{2}-J\phi \right)\right]$$
+
+### The generating functional
+- This can be evaluated using the _Greens function_ for $\partial^{2}+m^{2}$, also known as the [[QFT#The Feynman propagator|Feynman propagator]]
+$$\displaylines{D_{F}(x-y)=\int  \frac{d^{4}p}{(2\pi)^{4}} \frac{i}{p^{2}-m^{2}+i\epsilon}e^{-i\cdotp(x-y)}  \\ (\Box_{x}+m^{2}-i\epsilon)D_{F}(x-y)=-i\delta^{4}(x-y)}$$
+- It gives the _time-ordered product_ of observables in the _free theory_
+
+- Introduce a _linear shift_ in $\phi$
+$$\tilde{\phi}(x):=\phi(x)-i \int  d^4y\,D_{F}(x-y)J(y) $$
+- The _exponent_ is then a _combination_ of a _functional of_ $\phi$ and a simple _scalar_
+$$\begin{align}
+&\int  d^4x\Big(\mathcal{L}(\phi)+J(x)\phi(x)\Big) \\
+=&-\frac{1}{2}\int  d^4x \,\tilde{\phi}(x)(\Box+m^{2})\tilde{\phi}(x)+\frac{i}{2}\int  d^4x\,d^{4}y\,J(x)D_{F}(x-y)J(y)  
+\end{align}$$
+- Then by _integrating over_ $\phi$:
+$$Z[J]\propto Z_{0}[0]\exp\left( -\frac{1}{2}\int  d^4x\,d^{4}y\,J(x)D_{F}(x-y)J(y)  \right) $$
+- With the _normalisation_ $Z_{0}[0]=1$
+$$Z_{0}[J]=\exp\left( -\frac{1}{2}\int  d^4x\,d^{4}y\,J(x)D_{F}(x-y)J(y)  \right) $$
+- Compared to the [[#Free case|zero dimensional theory]], $J$ still appears _quadratically_
+
+### Correlation functions
+- A _two-point correlation_ then regains the _Feynman propagator_:
+$$\begin{align}
+\langle \phi(x_{1})\phi(x_{2}) \rangle  &= \frac{1}{Z_{\lambda}[0]} \left( -i \frac{\delta}{\delta J(x_{1})} \right)\left( -i \frac{\delta}{\delta J(x_{2})} \right)Z_{\lambda}[J]\Bigg|_{J=0}  \\
+&=- \frac{\delta^{2}}{\delta J(x_{1})\delta J(x_{2})} \exp\left( -\frac{1}{2}\int  d^4x\,d^{4}y\,J(x)D_{F}(x-y)J(y)  \right)\Bigg|_{J=0} \\
+&=\frac{\delta}{\delta J(x_{1})}\int  d^4y \,D_{F}(x_{2}-y)J(y)\,Z[J]\Bigg|_{J=0}  \\
+&=D_{F}(x_{1}-x_{2})
+\end{align}$$
+- The _four-point correlation_ can be calculated similarly:
+$$\begin{align}
+\langle \phi(x_{1})\phi(x_{2})\phi(x_{3})\phi(x_{4}) \rangle&=D_{F}(x_{1}-x_{2})D_{F}(x_{3}-x_{4})+D_{F}(x_{1}-x_{3})D_{F}(x_{2}-x_{4}) \\
+&+D_{F}(x_{1}-x_{4})D_{F}(x_{2}-x_{3}) 
+\end{align}$$
+
+### Yukawa potential
+- Let the action have some _source term_:
+$$\displaylines{S_{J}[\phi]=\frac{1}{2}\int  d^4x\,[(\partial \phi)^{2}-m^{2}\phi^{2}+2J\phi] \\ (\Box+m^{2})\phi=J}$$
+- The _vacuum_ with the source present is $\ket{0}_{J}$
+- The _transition amplitude_ with some time $T$ is:
+$$\frac{_{J}\braket{ 0|e^{-iHT} |0  }_{J}}{\braket{ 0 |0  } } =\frac{1}{Z[0]} \int_{\phi_{J}(0)}^{\phi_{J}(T)} \mathcal{D}\phi e^{iS[\phi]}=\exp\left( -\frac{1}{2}\int  d^4x\,d^{4}y\,J(x)D_{F}(x-y)J(y)  \right) $$
+- Assume the source is _point-like_:
+$$J_{1}(x)=q_{1}\delta^{3}(\boldsymbol{x}-\boldsymbol{x}_{1})$$
+- $\phi$ encodes some _current_ between the point-like sources $J_{1}$ and $J_{2}$
+	- Simplification of [[QFT#Interactions Yukawa theory|Yukawa Theory]]
+
+- The transition amplitude can be written as:
+$$\exp(-iET)$$
+- $E$ is some _measure of interaction energy_ between the sources:
+$$\exp(-iET)\propto \exp\left( -\frac{q_{1}q_{2}}{2}\int  dt_{1}\,dt_{2}\,D_{F}(\boldsymbol{x}_{1}-\boldsymbol{x}_{2})  \right)$$
+- Using the expression for the Feynman propagator:
+$$E=\frac{q_{1}q_{2}}{iT}\int_{0}^{T}  dt_{1} \,dt_{2}\int  \frac{d^4k}{(2\pi)^{4}} \frac{i}{k^{2}-m^{2}+i\epsilon}e^{ik(x_{1}-x_{2})} $$
+- One of the timelike integrals gives $k_{0}=0$, giving:
+$$E=-\frac{q_{1}q_{2}}{T}\int_{0}^{T}  dt_{1}\int  \frac{d^3k}{(2\pi)^{3}} \frac{e^{i\boldsymbol{k}\cdot(\boldsymbol{x}_{1}-\boldsymbol{x}_{2})}}{\boldsymbol{k}^{2}+m^{2}-i\epsilon}  $$
+- From contour integration, with $r=|\boldsymbol{x}_{1}-\boldsymbol{x}_{2}|$, this gives the _Yukawa potential_
+$$E=-\frac{q_{1}q_{2}}{4\pi r}e^{-mr}$$
+- For a _massless scalar field_, this is the _Coulomb potential_
+
+## Quartic potential
+- With a _quartic interaction term_:
+$$\mathcal{L}=\frac{1}{2}(\partial_{\mu}\phi)(\partial^{\mu}\phi)-\frac{1}{2}m^{2}\phi^{2}-\frac{\lambda}{4!}\phi^{4}$$
+- The generating functional is now:
+$$Z_{\lambda}[J]=\frac{1}{Z_{0}[0]}\int  \mathcal{D}\phi \exp\left( i \int  d^4x\left( \frac{1}{2}\phi(-\partial^{2}-m^{2})\phi-\frac{\lambda}{4!}\phi^{4}+J(x)\phi(x) \right)  \right)$$
+- Expand as a _power series_ in $\lambda$, then exchange summation and functional integration, similar to the [[#Interacting theory|zeroth dimensional case]]
+$$Z_{\lambda}[J]=\sum_{k=0}^{\infty} \frac{1}{k!}\left( -\frac{i\lambda}{4!} \right)^{k}\left( \int  d^4y \frac{\delta^{4}}{\delta J(y)^{4}}  \right)^{k}Z_{0}[J]$$
+- Writing out in full:
+$$Z_{\lambda}[J]=\sum_{k=0}^{\infty} \frac{1}{k!}\left( -\frac{i\lambda}{4!} \right)^{k}\left( \int  dx_{1}\dots dx_{k} \frac{\delta^{4}}{\delta J(x_{1})^{4}}\dots\frac{\delta^{4}}{\delta J(x_{k})^{4}}  \right)Z_{0}[J]$$
+- The _partition function_ is $Z_{\lambda}[0]=\braket{ \Omega |\Omega  }$
+- The time-ordered correlation is then:
+$$\begin{align}
+\langle \phi(x_{1})\dots \phi(x_{n}) \rangle&=\frac{\braket{ \Omega |T\{\phi(x_{1})\dots \phi(x_{n})\}|\Omega  }}{\braket{ \Omega |\Omega  } } \\
+&=\left[ \frac{1}{Z_{\lambda}[J]} \left( -i \frac{\delta}{\delta J(x_{1})} \right)\dots\left( -i \frac{\delta}{\delta J(x_{n})} \right)Z_{\lambda}[J] \right]_{J=0}
+\end{align}$$
+### Explicit form of generating functional
+- The generating functional:
+$$Z_{\lambda}[J]=Z_{0}[J]-\frac{i\lambda}{4!}\int  d^4y \frac{\delta^{4}}{\delta J(y)^{4}} Z_{0}[J]$$
+- Calculating the functional derivatives gives the $\lambda^{1}$ term as:
+$$\begin{align}
+-\frac{i\lambda}{4!}\int  d^4y\bigg\{3(&D_{F}(0))^{2}+ \int  \prod_{i=1}^{4}d^{4}z_{i}D_{F}(y-z_{i})J(z_{i}) \\
++6&D_{F}(0)\int  \prod_{i=1}^{2}d^{4}z_{i} D_{F}(y-z_{i})J(z_{i}) \bigg\} Z_{0}[J]
+\end{align}$$
+- Here, the Feynman propagator:
+$$D_{F}(0)=\int  \frac{d^4p}{(2\pi)^{4}} \frac{i}{p^{2}-m^{2}+i\epsilon} $$
+- It _diverges quadratically_ when integrated over _all momenta_
+
+- The terms above can be written as:
+![[phi4 four dimensions correction.png]]
+
+- The _partition function_ can then be written to the first order as:
+$$Z_{\lambda}[0]=1+ \frac{1}{2^{3}}\left(-i\lambda \int  d^4y \right)(D_{F}(0))^{2}$$
+- Aside from an infinity in $D_{F}(0)$, one also integrates some _large volume of spacetime_
+
+### Two-point correlation and the mass shift
+- The only _connected_ $\lambda^{1}$ contribution to $\braket{ \phi(x_{1})\phi(x_{2})  }$ comes from the $\sim J(z_{1})J(z_{2})$ term
+	- The disconnected contribution is cancelled out in normalisation
+- The contribution:
+$$\begin{align}
+&(-i)^{2} \frac{\delta^{2}}{\delta J(x_{1})\delta J(x_{2})}\left( -\frac{i\lambda}{4!} (-6)D_{F}(0)\int  d^4y \int  \prod_{i=1}^{2}d^{4}z_{i} D_{F}(y-z_{i})J(z_{i}) \right) \Bigg|_{J=0}\\ =&-\frac{i\lambda}{2}D_{F}(0)\int  d^4y\, D_{F}(y-x_{1}) D_{F}(y-x_{2})
+\end{align}$$
+- There is a $1/2$ _symmetry factor_
+
+- Define:
+$$\Pi:= \frac{\lambda}{2}D_{F}(0)$$
+- Evaluating the $\lambda^{1}$ contribution using the explicit form of $D_{F}$ then gives:
+$$\braket{ \phi(x_{1}) \phi(x_{2})} =D_{F}(x_{1}-x_{2})+i\Pi \int  \frac{d^4p}{(2\pi)^{4}} \frac{e^{-ip\cdot(x_{1}-x_{2})}}{(p^{2}-m^{2}+i\epsilon)^{2}} $$
+- This can be written as:
+$$\begin{align}
+\braket{ \phi_{1}\phi_{2} } &=\int  \frac{d^4p}{(2\pi)^{4}} \frac{i}{p^{2}-m^{2}+i\epsilon} e^{-ip\cdot(x_{1}-x_{2})} \left( 1+ \frac{\Pi_{1}}{p^{2}-m^{2}+i\epsilon} \right) \\ &=\int  \frac{d^4p}{(2\pi)^{4}} \frac{i}{p^{2}-m^{2}+i\epsilon} e^{-ip\cdot(x_{1}-x_{2})} \left( 1- \frac{\Pi_{1}}{p^{2}-m^{2}+i\epsilon} \right)^{-1} 
+\end{align}$$
+- Therefore, up to $\lambda^{1}$:
+$$\langle \phi_{1}\phi_{2} \rangle =\int  \frac{d^4p}{(2\pi)^{4}} \frac{i}{p^{2}-m^{2}-\Pi+i\epsilon}e^{-ip\cdot(x_{1}-x_{2})}+\mathcal{O}(\lambda^{2})  $$
+- The _one-loop contribution_ can be accounted for by a _mass shift_:
+$$m^{2}\to m^{2}+\Pi$$
+- Qualitatively, this mass shift is _present for all orders in perturbation theory_
+	- Effectively, the classical parameter $m$ used to define the quantum field theory is not observable
+
+### Four-point correlation
+- $\lambda^{1}$ contribution to 4-point function:
+$$(-i)^{4} \frac{\delta^{4}}{\delta J(x_{1})\delta J(x_{2})\delta J(x_{3})\delta J(x_{4})} \int  d^{4}y \left( -\frac{i\lambda}{4!} \right) \int  \prod_{i=1}^{4}d^{4}z_{i}D_{F}(y-z_{i})J(z_{i}) $$
+- Evaluating gives:
+$$-i\lambda \int  d^4y \int  \prod_{i=1}^{4} \frac{d^{4}p_{i}}{(2\pi)^{4}} \frac{1}{p_{i}^{2}-m^{2}+i\epsilon}\exp\left( -i \sum_{i=1}^{4}p_{i}\cdot(y-x_{i}) \right)   $$
+- Evaluating the $y$ integral gives a _momentum conservation delta function_:
+$$-i\lambda (2\pi)^{4}\delta^{4}\left( \sum_{i=1}^{4}p_{i} \right)\int  \prod_{i=1}^{4} $$
+- This is a _Fourier transform_ of the _momentum space propagator_:
+$$\tilde{D}_{F}(p)=\frac{i}{p^{2}-m^{2}+i\epsilon}$$
+### Feynman rules in spacetime
+- For each _line_, there is a propagator $D_{F}(x-y)$
+- Each vertex gives a factor of $-i\lambda$
+- _Divide_ by some _symmetry factor_
+- _Integrate_ over any _unconstrained points_
+
+### One-loop correction to the four point function
+
+### Momentum space Feynman rules
+- Each line, there is the _momentum space Feynman propagator_ $\tilde{D}_{F}(x-y)$
+- Each vertex gives a factor of $-i\lambda$
+- For each loop, integrate over the _unconstrained momentum_
+$$\int  \frac{d^4q}{(2\pi)^{4}} $$
+- Impose _momentum conservation at each vertex_ and overall conservation
+$$(2\pi)^{4} \delta^{4}\left( \sum_{i}p_{i} \right)$$
+- Divide by the _symmetry factor_
