@@ -280,14 +280,14 @@ $$\mathcal{Z}_{\alpha}=\prod_{j \in \alpha}Z_{j}\qquad \mathcal{X}_{\beta}=\prod
 $$A_{v}(\mathcal{Z}_{\alpha}\ket{\psi} )=-\mathcal{Z}_{\alpha}(A_{v}\ket{\psi} )=-\mathcal{Z}_{\alpha}\ket{\psi} \implies a_{v}=-1\quad (v \in \partial\alpha)$$
 
 - _Flipping_ each vertex requires $2J_{A}$ of energy
-- One can interpret them as _particles_ $e$
+- One can interpret them as _particles_ $e$ (electric)
 - For $M$ particles, the energy is $2MJ_{A}$, there is _no interaction energy_
 
 - As _endpoints_ for the path comes in _pairs_, particles are connected by _strings_
 - The _pairing_ of particles is also _arbitrary_
 	- By applying $B_{p}$ between 2 string midpoints, one can _"exchange"_ strings
 
-- One can also create particles $m$ with $b_{p}=-1$
+- One can also create particles $m$ (magnetic) with $b_{p}=-1$
 - The surface code is also _gapped_, with gap $4\,\mathrm{min}(J_{A},J_{B})$
 
 - States with the _same number of excitations_ may _not be the same_, if they are _built_ on top of _different ground states_
@@ -472,3 +472,75 @@ $$R(2\pi)=\exp\left( \frac{i}{\hbar} q\Phi \right)=\exp(i\theta)$$
 - Inspect:
 $$T_{2}^{-1}T_{1}^{-1}T_{2}T_{1}$$
 ![[Torus braiding.png]]
+
+- ...
+
+- The ground state degeneracy in the toric code is $m$
+- For $j$ _contractible loops_, there are 2 operators, one for each particle
+
+# Chern-Simons theory
+- Consider a Lagrangian in 2+1D
+$$L=L_{0}+\int  d^2x\,\mathcal{L} $$
+- The extra term, with 2+1 component _Chern-Simons field_ $a$, consists of a _Lagrangian density_ term and a _coupling term_ due to current
+$$\mathcal{L}=\mathcal{L}_\text{CS}-j^{\alpha}a_{\alpha} \qquad \mathcal{L}_\text{CS}=\frac{\kappa}{2}\epsilon^{\alpha\beta\gamma}a_{\alpha}\partial_{\beta}a_{\gamma}\equiv \frac{\kappa}{2}a(\varepsilon\partial a)$$
+- The _current_ from $N$ _particles_ with positions $\boldsymbol{x}_{l}$ and charge $q_{l}$
+$$\displaylines{j^{0}= \qquad \boldsymbol{j}= \\ \partial_{\alpha}j^{\alpha}=0}$$
+- It is _gauge symmetric_
+	- Using $\varepsilon\partial\partial=0$
+$$a_{\alpha}\to a_{\alpha}+\partial_{\alpha}\Lambda$$
+## Flux attachment
+### Classical approach
+- Take some _variation_ in $a$:
+$$a_{\alpha}\to a_{\alpha}+\delta a_{\alpha}$$
+- The _equation of motion_:
+$$j=\kappa\varepsilon\partial a$$
+- The zeroth component:
+$$j^{0}=\kappa\varepsilon^{0\alpha\beta}\partial_{\alpha}a_{\beta}\equiv\kappa b$$
+- This can be thought of as being due to some _magnetic field_ $b$
+- _Integrating_ this over some area $x_{l}$:
+$$q_{l}=\kappa \Phi_{l}\implies \Phi_{l}=\frac{q_{l}}{\kappa}$$
+- Then, from conservation, the _spacelike components_
+$$j^{k}$$
+### Quantum approach
+- The path integral:
+$$\int  \mathcal{D}a\,\exp\left( \frac{i}{\hbar}S[a_{\alpha}] \right) $$
+- Consider only terms with an $a_{0}$ component:
+$$\mathcal{L}_\text{CS}=\kappa a_{0}b+\mathcal{L}_\text{CS}(a_{0}\to 0)+\partial[]$$
+- From this:
+$$S[a_{0}]=\int  d^3x\,a_{0}(\kappa b-j^{0}) $$
+- The path integral then gives a _Dirac delta_
+
+- This enforces _flux attachment_ as a _constraint_ in the path integral
+
+### The braiding phase
+- Charge-flux composite braiding:
+$$\exp(2i\theta_{kl})\sim \exp\left( \frac{i}{\hbar}(q_{k}\Phi_{l}+q_{l}\Phi_{k}) \right)$$
+- After _enforcing_ the path integral as a constraint, the remaining _Lagrangian_ is:
+$$\mathcal{L}_\text{CS}=$$
+- Therefore, the effective _magnetic field_ is _halved_, giving:
+$$\theta_{kl}=\frac{q_{l}q_{k}}{2\hbar\kappa}$$
+
+## Gauge invariance and charge quantisation
+- Quantised charge $q_{0}$ in a gauge field
+
+- Wavefunction gauge transformation:
+$$\psi\to \exp\left( \frac{i}{\hbar}q_{0}\Lambda \right)\psi$$
+- Action from _charge encircling_
+
+- _Gauge invariance_ requires that $\exp(iS/\hbar)$ is gauge invariant
+
+- $q$ is _quantised_ in units of $q_{0}$
+
+- $\kappa$ is also _quantised_
+$$\kappa=\frac{mq_{0}}{\Phi_{0}}$$
+- $m$ is the _Chern-Simons level_
+
+- The _exchange phase_ is then:
+
+## Many particle types
+- The Chern-Simons field is now:
+$$a_{I\alpha}$$
+- The Lagrangian:
+$$\mathcal{L}=\mathcal{L}_\text{CS}-\sum_{I=1}^{M} I^{\alpha}a_{I\alpha} $$
+- The Chern-Simons density is now encoded using a _matrix_:
+$$\mathcal{L}_\text{CS}= \qquad K_{IJ}=K_{JI}$$

@@ -68,3 +68,19 @@
 
 # Week 1 Lent
 - Deriving effective Hamiltonian matrix elements
+- Obtained a _master equation_ in terms of Fourier-transformed Floquet states
+
+- After supervisor meeting: wrong direction, should be using one-body matrix elements that then go into second quantisation
+
+# Week 2 Lent
+
+## How do papers deal with many-body Floquet states?
+- Eckardt 2004 (superfluid-insulator transition):
+	- Directly make Floquet basis out of Fock states:
+$$\ket{\{n_{j}\},m}=\ket{\{n_{j}\}}\exp(f(t))  $$
+
+- Gomez-Leon and Platero (Floquet-Bloch theory):
+	- Using the Schrodinger picture (same as non-orthogonal basis formalism)
+	- Ladder operators _for Floquet states_:
+	$$\{c^{\dagger}_{\alpha,\boldsymbol{k}}(t),c_{\beta\boldsymbol{k}'}(t)\}=\delta_{\alpha\beta}\delta_{\boldsymbol{k}\boldsymbol{k}'}$$
+	- Tentative: FOLLOW APPROACH FROM THIS PAPER

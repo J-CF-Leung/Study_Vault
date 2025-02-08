@@ -338,7 +338,7 @@ $$-i\lambda \int  d^4y \int  \prod_{i=1}^{4} \frac{d^{4}p_{i}}{(2\pi)^{4}} \frac
 $$-i\lambda (2\pi)^{4}\delta^{4}\left( \sum_{i=1}^{4}p_{i} \right)\int  \prod_{i=1}^{4} $$
 - This is a _Fourier transform_ of the _momentum space propagator_:
 $$\tilde{D}_{F}(p)=\frac{i}{p^{2}-m^{2}+i\epsilon}$$
-### Feynman rules in spacetime
+### $\phi^4$ Feynman rules in spacetime
 - For each _line_, there is a propagator $D_{F}(x-y)$
 - Each vertex gives a factor of $-i\lambda$
 - _Divide_ by some _symmetry factor_
@@ -346,7 +346,8 @@ $$\tilde{D}_{F}(p)=\frac{i}{p^{2}-m^{2}+i\epsilon}$$
 
 ### One-loop correction to the four point function
 
-### Momentum space Feynman rules
+![[One loop four point function.png]]
+### Momentum space $\phi^4$ Feynman rules
 - Each line, there is the _momentum space Feynman propagator_ $\tilde{D}_{F}(x-y)$
 - Each vertex gives a factor of $-i\lambda$
 - For each loop, integrate over the _unconstrained momentum_
@@ -354,3 +355,73 @@ $$\int  \frac{d^4q}{(2\pi)^{4}} $$
 - Impose _momentum conservation at each vertex_ and overall conservation
 $$(2\pi)^{4} \delta^{4}\left( \sum_{i}p_{i} \right)$$
 - Divide by the _symmetry factor_
+
+# Effective Action
+- $Z_{\lambda}[J]$ generates correlation functions $\langle \phi^{n} \rangle$, represented by _Feynman diagrams_
+- _Normalisation_ removes _vacuum bubbles_ from the Feynman diagrams
+
+- There are still _redundant, disconnected diagrams_ generated, which _do not encode interactions_
+	- The number of disconnected diagrams _increases_ as $n$ increases
+
+- Example: the four-point function (normalised, no vacuum bubbles)
+![[4 point function diagrams.png]]
+$$\langle \phi^{4} \rangle=\langle \phi^{4} \rangle_\text{conn}+(\langle \phi^{2} \rangle\langle \phi^{2} \rangle+\{\text{disconnected} \} )  $$
+
+- The _Wilsonian effective action_ $W[J]$ will give only $\langle \phi^{n} \rangle_\text{conn}$
+- One desires:
+$$W[J]\sim \sum_{n=0}^{\infty} \frac{1}{n!} \langle \phi^{n} \rangle_\text{conn}\,J^{n} $$
+## Wilsonian effective action in zero dimensions
+- Work in _zero dimensions_
+
+- The Wilsonian effective action is:
+$$Z_{\lambda}[J]=N\int  \mathcal{D}\phi\,e^{-S[\phi]-J\phi} =\exp(-W[J])$$
+- The correlation function is then:
+$$\langle \phi^{n} \rangle_\text{conn}=-\frac{\partial^{n}W}{\partial J^{n}}\Bigg|_{J=0} $$
+### Motivation
+- In the case of _multiple interacting fields_:
+$$Z[J]=\int  \mathcal{D}\phi\,\mathcal{D}\chi\,e^{-S[\phi,\chi]-J\phi-K\chi} $$
+- The _effect_ of the $\chi$ field on $\phi$ is given by setting $K=0$ (to get rid of irrelevant $\chi$ correlations) and integrating over $\chi$
+$$\int  \mathcal{D}\phi\,\mathcal{D}\chi \,e^{-S[\phi,\chi]-J\phi}=\int  \mathcal{D}\phi \,e^{-S_\text{eff}[\phi]-J\phi}$$
+- One gets an _effective action_ by integrating over $\chi$
+
+### Example: 4-point function
+- For example, to generate the 4-point function:
+$$-W''''=\frac{Z''''}{Z}-4\dots$$
+- _Normalisation_ is _built in_ as the factor is always _cancelled out_
+
+- Example: in $\phi^{4}$ theory, setting $J=0$, the _one-point_ and _three-point_ functions disappear, giving:
+$$\langle \phi^{4} \rangle_\text{conn}=\langle \phi^{4} \rangle-3\langle \phi^{2} \rangle^{2}   $$
+- The _disconnected diagram_ is _subtracted_
+
+## One-particle irreducibles (1PI)
+- A _one-particle irreducible diagram_ (1PI) is one that _cannot be split into two diagrams_ by cutting an _internal line_ ("cutting" one particle)
+
+- A non-1PI diagram cut into two 1PIs:
+![[1PI diagram cut.png]]
+
+## Quantum effective action
+- Analogue of the classical action, but encoding quantum mechanics
+
+- Consider the _differential_ of $W[J]$, where $\Phi$ is defined as the _mean field_
+	- The mean field: some _one point correlation_ with nonzero source
+$$dW=\frac{\partial W}{\partial J}dJ=\Phi dJ$$
+- The _Legendre transform_ $E$, a function of $\Phi$
+$$E=\Phi J-W(J)\implies dE=Jd\Phi$$
+- The _quantum effective action_:
+$$\Gamma(\Phi)=W(J)-J\Phi\qquad \Phi=\frac{\partial W(J)}{\partial J}$$
+- Assuming $\Gamma(\Phi)$ can be written as a _power series_:
+$$\Gamma(\Phi)=\sum_{n=0}^{\infty} \frac{1}{n!}\Gamma_{n}\Phi^{n}\qquad \Gamma_{n}=\frac{\partial^{n}\Gamma}{\partial \Phi^{n}}$$
+- Consider defining another Wilsonian effective action, using _parameter_ $g$
+$$\exp\left( -\frac{1}{g}W_{\Gamma}(J) \right)=\int  d\phi\,\exp\left( -\frac{1}{g}(\Gamma(\phi)+J\phi) \right) $$
+- $\phi$ is an _unconstrained field_, not necessarily satisfying $\partial W/\partial J=\Phi$
+
+- $W_{\Gamma}(J)$ can be written as an _expansion in loops_:
+$$W_{\Gamma}(J)=\sum_{l=0}^{\infty}g^{l}W_{\Gamma}^{(l)}(J)$$
+- In the $g\to 0$ limit, $W_{\Gamma}^{(0)}(J)$ is the only part that contributes, giving _tree level diagrams_
+- The path integral is then _dominated_ by the _extrema_ of $\Gamma(\phi)+J\phi$, defining the value og $\phi$ at the extremum to be the _mean field_ $\Phi$
+$$\left[ \frac{\partial\Gamma}{\partial \phi }+J \right]_{\phi=\Phi}=0$$
+- This can be written as:
+$$\exp(-W_{\Gamma}^{(0)}(J))\approx \exp[-(\Gamma(\Phi)+J\Phi)]$$
+- $\Gamma(\Phi)+J\Phi$ is the _Wilsonian effective action_, with $\Phi$ being the _mean field_
+
+- The _connected correlation functions_ are given by the _tree level diagrams_ connected from $\Gamma$

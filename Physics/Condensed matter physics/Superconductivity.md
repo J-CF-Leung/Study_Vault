@@ -179,3 +179,69 @@ $$\Phi_{0}=\frac{h}{2e}$$
 ![[Superconductor topological defect.png|200]]
 
 - The trapped flux gives a _topological defect_, which cannot change
+
+### Vortex energy and type II superconductors
+- Within the vortex, the _gradient term_ of the free energy increases, as a _kinetic energy cost_
+$$\Delta F_\text{kin}=$$
+- Meanwhile, there is a _decrease_ in _magnetic energy_
+- Each vortex is asumed to contain _only one flux quantum_ as higher flux is _unfavourable_
+$$\Delta F_\text{mag}=B_{E}\int  \frac{B}{\mu_{0}} \,d^{2}r=B_{E} \frac{\phi_{0}}{\mu_{0}}$$
+- There is some _critical field_ $B_{c1}$ where the vortex formation is _energetically advantageous_
+
+- It is when a _disc_ of _radius_ $\sim\lambda$ starts _enclosing_ one flux quantum
+
+- In _type I_ superconductors, $B_{c1}>B_{c}$ such that the sample becomes _normal_ before vortex formation
+- In _type II_ superconductors, _flux expulsion stops partially_, such that the magnetic field _penetrates_ forms a _vortex lattice_
+	- Vortices penetrate until there is enough _repulsion_ and they settle into a lattice
+	- This continues up to some other field strength $B_{c2}$ where the sample becomes _normal_
+
+## Type II superconductors and vortices
+- Type II superconductors form _lattices_ of _circular vortices_
+- Each vortex has _inner radius_ $\xi$ and _outer radius_ $r_{B}<\lambda$
+
+- $B$ varies _slowly_ within the cylinder as $r_{B}<\lambda$
+- Each vortex is assumed to enclose _one flux quantum_:
+$$\phi_{0}=\pi r_{B}^{2}B$$
+
+- The _spatial average free energy density_ of a vortex:
+$$\int_{\xi}^{r_{B}} \frac{2\pi rdr}{\pi r_{B}^{2}} f_{V}=\text{const.}+\frac{\phi_{0}^{2}}{8\pi^{2}r_{B}^{2}\mu_{0}\lambda^{2}}\ln\left( \frac{r_{B}^{2}}{\xi^{2}} \right)+\frac{(B-B_{E})^{2}}{2\mu_{0}}$$
+- By _minimising_ w.r.t. $B$, one can find the _most probable internal field_
+$$B=B_{E}- \frac{\phi_{0}}{8\pi\lambda^{2}} \ln\left( \frac{\eta \phi_{0}}{2\pi \xi^{2}B} \right)=B_{E}+\mu_{0}M$$
+- $M$ is the _magnetisation_, and $\eta$ is some _constant_ of order unity
+
+- Magnetisation goes to _zero_ when the _flux quantum_ is distributed over a _disc_ of radius $\xi$
+- The _vortex cores start to overlap_, and superconductivity _breaks down_:
+$$B_{c2}=\frac{\phi_{0}}{2\pi \xi^{2}}$$
+- Magnetisation vanishes _continuously_, as a _second order phase transition_
+
+- This gives:
+$$B_{c1}B_{c2}=B^{2}_{c}$$
+![[Type II superconductivity transitions.png]]
+
+- In terms of the _Ginzburg-Landau parameters_:
+
+- The critical fields are _linear_ in temperature
+	- GL theory description only close to $T_{c}$
+
+- The _condensation energy_ should be the _same_ with or without vortex penetration
+- The _equal area construction_:
+![[Superconductivity equal area.png]]
+
+### Vortex interactions and resistivity
+- There may be some _transport current_ in the superconductor:
+$$\boldsymbol{J}_{s}=J_\text{vortex}+J_\text{tr}$$
+- The current experiences a _Lorentz force_
+	- Analagous to the _Magnus force_ in fluid dynamics
+
+- This also means that _vortices can repel each other_
+- This means the _vortex rush_ will _stop_ at some point
+
+- _Vortex motion_ implies _power dissipation_
+
+- This can be linked to some _electric field_
+- There is some _resistivity due to vortex motion_
+
+- This can be manipulated by _pinning_ vortices onto _defects_
+	- One only has to _pin some fraction_ of the vortices in order to pin the whole lattice from moving
+
+- Critical current densities

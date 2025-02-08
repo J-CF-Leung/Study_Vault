@@ -691,7 +691,7 @@ $$\mathcal{A}\sim (t-m^{2})^{-1}+(s-m^{2})^{-1}$$
 
 ## Representations of the Lorentz group
 - Recall the [[#Fields with Lorentz transformations|active transformation]]
-$$\phi^{a}(x)\to D[\Lambda]^{a}_{b}\phi_{b}(\Lambda^{-1}x)$$
+$$\phi^{a}(x)\to D[\Lambda]^{a}_{b}\phi^{b}(\Lambda^{-1}x)$$
 - Identify another _representation_ of $\Lambda$
 $$D[\Lambda]=\exp\left( \frac{1}{2}\Omega_{\rho\sigma}R^{\rho\sigma} \right)$$
 - $\Omega_{\rho\sigma}=-\Omega_{\sigma \rho}$ are the _parameters_, and $R^{\rho\sigma}$ are the [[Groups in physics#Tangent spaces and the exponential map|generators]] of the Lorentz group
@@ -712,7 +712,7 @@ $${(M^{\rho\sigma})^{\mu}}_{\nu}=\eta^{\rho \mu}\delta^{\sigma}_{\nu}-\eta^{\sig
 $$\Lambda=D[\Lambda]=\exp\left( \frac{1}{2} \Omega_{\rho\sigma}M^{\rho\sigma}\right)$$
 - It acts on _vectors_
 $$V^{\mu}\to {D[\Lambda]^{\mu}}_{\nu}V^{\nu}={\Lambda^{\mu}}_{\nu}V^{\nu}$$
-### The chiral representation
+### The chiral representation and spinors
 - Consider the _Clifford algebra_, defined by: 
 $$\{\gamma^{\mu},\gamma^{\nu}\}\equiv\gamma^{\mu}\gamma^{\nu}+\gamma^{\nu}\gamma^{\mu}=2\eta^{\mu \nu}\mathbb{I}$$
 - Properties: 
@@ -722,7 +722,7 @@ $$\gamma^{0}=\pmatrix{0&\mathbb{I}_{2\times2} \\ \mathbb{I}_{2\times 2}&0}\qquad
 - $\sigma^{i}$ are the _Pauli matrices_
 $$\{\sigma_{i},\sigma_{j}\}=2\delta_{ij}$$
 - Also define:
-$$\sigma=(\mathbb{I},\sigma^{i}) \qquad \bar{\sigma}=(\mathbb{I},-\sigma^{i})$$
+$$\sigma=(\mathbb{I},\sigma^{i}) \qquad \bar{\sigma}=(\mathbb{I},-\sigma^{i})\qquad \gamma^{\mu}=\pmatrix{0&\sigma^{\mu} \\ \bar{\sigma}^{\mu}&0}$$
 
 - Make the _generators_ of the Lorentz group from:
 	- Proof: plug into definition of Lie algebra, then use definition of Clifford algebra
@@ -739,6 +739,8 @@ $$\psi^{a}(x)\to {S[\Lambda]^{a}}_{b}\psi^{b}(\Lambda^{-1}x)$$
 $$S^{12}=-\frac{i}{2}\pmatrix{\sigma^{3}&0 \\ 0&\sigma^{3}}$$
 - Picking $\Omega_{12}=2\pi$, one gets:
 $$S[\Lambda]=\exp\left( \frac{1}{2}\Omega_{12}S^{12} \right)=-\mathbb{I}_{4\times 4}$$
+- Under a $2\pi$ rotation, there is a _sign flip_
+
 - Spinors _do not transform as vectors_
 
 #### Behaviour under boosts
@@ -818,6 +820,8 @@ $$J^{\mu}=\bar{\psi}\gamma^{\mu}\psi$$
 - The solutions to the Dirac equation also follow the _Klein-Gordon equation_
 - From this, use the ansatz:
 $$\displaylines{\psi(x)=U(\boldsymbol{p})\exp(-ipx)+V(\boldsymbol{p})\exp(ipx) \\ p^{2}=m^{2}}$$
+- The second term is a _negative frequency solution_, corresponding to an _antiparticle_
+
 - From the Dirac equation:
 $$\begin{align}
 (-\cancel{ p }+m)U(p)&=0 \\ (\cancel{ p }+m)V(p)&=0
@@ -828,18 +832,22 @@ $$\displaylines{\pmatrix{m\mathbb{I}_{2}&-\boldsymbol{p}\cdot \boldsymbol{\sigma
 - From this:
 $$\displaylines{m^{2}=(\boldsymbol{p}\cdot \boldsymbol{\sigma})(\boldsymbol{p}\cdot  \boldsymbol{\bar{\sigma}}) \\ \sqrt{ \boldsymbol{p}\cdot \boldsymbol{\sigma} }U_{2}=\sqrt{ \boldsymbol{p}\cdot \bar{\boldsymbol{\sigma}} }U_{1}}$$
 - The solutions (following a similar technique for $V$) are given using the _two-component spinors_, which give _particles_ and _antiparticles_
-$$\displaylines{U^{S}(\boldsymbol{p})=\pmatrix{\sqrt{ \boldsymbol{p}\cdot \boldsymbol{\sigma}}\xi_{s} \\ \sqrt{ \boldsymbol{p}\cdot \boldsymbol{\bar{\sigma}} }\xi_{s}} \qquad  \qquad V^{S}(\boldsymbol{p})=\pmatrix{\sqrt{ \boldsymbol{p}\cdot \boldsymbol{\sigma}}\eta_{s} \\ -\sqrt{ \boldsymbol{p}\cdot \boldsymbol{\bar{\sigma}} }\eta_{s}} \\ \xi_{1}=\pmatrix{1\\0} \quad \xi_{2}=\pmatrix{0\\1} \qquad \eta_{1}=\pmatrix{1\\0}\quad \eta_{2}=\pmatrix{0\\1}}$$
+$$U^{S}(\boldsymbol{p})=\pmatrix{\sqrt{ \boldsymbol{p}\cdot \boldsymbol{\sigma}}\xi_{s} \\ \sqrt{ \boldsymbol{p}\cdot \boldsymbol{\bar{\sigma}} }\xi_{s}} \qquad  \qquad V^{S}(\boldsymbol{p})=\pmatrix{\sqrt{ \boldsymbol{p}\cdot \boldsymbol{\sigma}}\eta_{s} \\ -\sqrt{ \boldsymbol{p}\cdot \boldsymbol{\bar{\sigma}} }\eta_{s}}$$
+- $\xi$ and $\eta$ are _two component spinors_
+
+- The _basis set_ corresponds to different _spins_ (see below)
+$$\xi_{1}=\pmatrix{1\\0} \quad \xi_{2}=\pmatrix{0\\1} \qquad \eta_{1}=\pmatrix{1\\0}\quad \eta_{2}=\pmatrix{0\\1}$$
 ## Weyl spinors and chirality
 - In the chiral representation:
 $$S[\Lambda _\text{rot}]= \pmatrix{\exp\left( i\frac{\boldsymbol{\varphi}\cdot \boldsymbol{\sigma}}{2} \right)&0\\0&\exp\left( i\frac{\boldsymbol{\varphi}\cdot \boldsymbol{\sigma}}{2} \right)}\qquad S[\Lambda _\text{boost}]=\pmatrix{\exp\left( \frac{\boldsymbol{\chi}\cdot \boldsymbol{\sigma}}{2} \right)&0\\0&\exp\left( -\frac{\boldsymbol{\chi}\cdot\boldsymbol{\sigma}}{2} \right)}$$
 - The _4-component Dirac spinor_ is a _reducible representation_:
 $$\psi(x)=\pmatrix{U_{+} \\ 0}+ \pmatrix{0\\U_{-}}$$
-- Here, $U_{+}$ and $U_{-}$ are _2-component Weyl spinors_
+- Here, $U_{+}$ and $U_{-}$ are the _2-component Weyl spinors_ above
 
-- Under _rotations_, the spinors behave as:
+- Under _rotations_, the spinors behave the same way
 $$U_{+}\to \exp\left( i\frac{ \boldsymbol{\varphi}\cdot \boldsymbol{\sigma}}{2} \right)U_{+} \qquad U_{-}\to \exp\left( i\frac{ \boldsymbol{\varphi}\cdot \boldsymbol{\sigma}}{2} \right)U_{-}$$
 
-- Under _boosts_:
+- Under _boosts_, they behave differently
 $$U_{+}\to \exp\left( \frac{ \boldsymbol{\chi}\cdot \boldsymbol{\sigma}}{2} \right)U_{+} \qquad U_{-}\to \exp\left( -\frac{ \boldsymbol{\chi}\cdot \boldsymbol{\sigma}}{2} \right)U_{-}$$
 - A manifestation of the _structure_ of the $\gamma$ matrices:
 $$\gamma^{\mu}=\pmatrix{0&\sigma^{\mu}\\\bar{\sigma}^{\mu}&0}$$
@@ -855,12 +863,15 @@ $$\{\gamma^{5},\gamma^{\mu}\}=0 \qquad [S^{\mu \nu},\gamma^{5}]=0$$
 - One can define the _projectors_:
 $$\displaylines{\mathcal{P}_{+} =\frac{1}{2}(\mathbb{I}+\gamma^{5})=\pmatrix{\mathbb{I}_{2}&0\\0&0}\qquad \mathcal{P}_{-}=\frac{1}{2}(\mathbb{I}-\gamma^{5})=\pmatrix{0&0\\0&\mathbb{I}_{2}} \\ \mathcal{P}_{\pm}^{2}=\mathcal{P}_{\pm} \qquad \mathcal{P}_{\pm}\mathcal{P}_{\mp}=0}$$
 - It _projects_ the Dirac spinor into the _Weyl spinors_
-$$\psi_{+}=\mathcal{P}_{+}\psi=\pmatrix{U_{+}\\0} \qquad \psi_{-}=\mathcal{P}_{-}\psi=\pmatrix{U_{-}\\0}$$
+$$\psi_{+}=\mathcal{P}_{+}\psi=\pmatrix{U_{+}\\0} \qquad \psi_{-}=\mathcal{P}_{-}\psi=\pmatrix{0\\U_{-}}$$
 - The _Lagrangian_:
-	- Cannot contain $U_{+}^{\dagger}U_{+}$ terms as it is _not invariant under boosts_, the Lagrangian is _not separable_ into components of non-zero chirality
+	- Cannot contain $U_{+}^{\dagger}U_{+}$ terms as it is _not invariant under boosts_
 $$\begin{align}
 \mathcal{L}&=\bar{\psi}(i\cancel{ \partial }-m)\psi \\ &=iU_{-}^{\dagger}\sigma^{\mu}\partial_{\mu}U_{-}+iU_{+}^{\dagger}\sigma^{\mu}\partial_{\mu}U_{+}-m(U_{+}^{\dagger}U_{-}+U_{-}^{\dagger}U_{+})
 \end{align}$$
+- The Lagrangian is _not separable_ into components of non-zero chirality, as they couple through the _mass term_
+
+- _Massless chiral particles_ are described by the _Weyl equation_
 # Quantum Dirac fields
 
 ## Canonical quantisation in the free theory
@@ -1033,7 +1044,7 @@ $$(i\cancel{ \partial_{x} }-m)\braket{ \psi(x)\bar{\psi}(y) \dots} =-\lambda \br
 $$F_{\mu \nu}=\partial_{\mu}A_{\nu}-\partial_{\nu}A_{\mu}$$
 - The _Lagrangian_:
 $$\mathcal{L}=-\frac{1}{4}F_{\mu \nu}F^{\mu \nu}$$
-- The _equations of motion_ come from the _Euler-Lagrange equation_ and the _Bianchi identity_:
+- The _equations of motion_ come from the _Euler-Lagrange equation_ and the _Bianchi identity_
 $$\displaylines{\partial_{\mu}\left( \frac{\partial \mathcal{L}}{\partial[\partial_{\mu}A_{\nu}]} \right)=0 \implies \partial_{\mu}F^{\mu \nu}=0\\ \epsilon_{\mu \nu \rho\sigma}\partial^{\mu}F^{\nu \rho}=0\implies \partial_{\lambda}F_{\mu \nu}+\partial_{\mu}F_{\nu\lambda}+\partial_{\nu}F_{\lambda \mu}=0}$$
 ### Gauge symmetry
 - From the Euler-Lagrange equation, inspect the components of $\boldsymbol{A}$
@@ -1079,9 +1090,11 @@ $$\Box A_{i}=0$$
 $$A_{\mu}\sim \epsilon_{\mu}\exp(ip_{\mu}x^{\mu}) \qquad p^{2}=0$$
 - The Coulomb gauge gives:
 $$\epsilon_{0}=0 \qquad \boldsymbol{\epsilon}\cdot \boldsymbol{p}=0$$
+- Plane waves also possible in Lorenz gauge, with polarisation defined differently
+
 - There are _two orthonormal basis vectors for a given_ $\boldsymbol{p}$
 $$\displaylines{\boldsymbol{\epsilon}_{r}\cdot \boldsymbol{p}=0 \qquad r=1,2 \\ \boldsymbol{\epsilon}_{r}\cdot \boldsymbol{\epsilon}_{s}=\delta_{rs}}$$
-- They correspond to _polarisations_
+- They correspond to _polarisations_ in real space
 
 - The completeness relation:
 $$\sum_{r=1}^{2}\boldsymbol{\epsilon}^{i}_{r}(\boldsymbol{p})\boldsymbol{\epsilon}^{j}_{r}(\boldsymbol{p})=\delta^{ij}-\frac{p^{i}p^{j}}{|\boldsymbol{p}|^{2}}$$
@@ -1191,15 +1204,20 @@ $$\mathcal{L}=-\frac{1}{4}F_{\mu \nu}F^{\mu \nu}+D_{\mu}\varphi^{*}D^{\mu}\varph
 
 ### QED Feynman rules
 
-- _Photon polarisation vectors_ for _external lines_:
-$$\epsilon^{s}_{\mu}(p)$$
-- _Fermions_ (particles and antiparticles)
-$$U^{s}(p)$$
+- The Lagrangian in QED:
+$$\Lagr=-\frac{1}{4}F^{\mu \nu}F_{\mu \nu}+\bar{\psi}(i\cancel{ D }-m)\psi$$
 
-- Vertices:
+- _Photon polarisation vectors_ for _external photon lines_:
+$$\epsilon^{s}_{\mu}(p)$$
+- _Fermions_ (incoming particles and antiparticles):
+$$U^{s}(p),\bar{V}^{s}(p)$$
+
+- Each _vertex_ gives a factor of:
 $$-ie\gamma^{\mu}(2\pi)^{4}\delta(p_{1}-p_{2}-p_{3})$$
 - The photon propagator:
 $$\int  \frac{d^4p}{(2\pi)^{4}} \frac{i}{p^{2}+i\epsilon} \left( -\eta_{\mu \nu}+(\alpha-1) \frac{p_{\mu}p_{\nu}}{p^{2}} \right) $$
+- The second term _cancels out_ in diagrams
+
 - The _fermion propagator_ (changes sign if swapped):
 $$\int  \frac{d^4p}{(2\pi)^{4}} \frac{i}{p^{2}-m^{2}+i\epsilon} (\cancel{ p }+m) $$
 - The S-matrix will be in the form:

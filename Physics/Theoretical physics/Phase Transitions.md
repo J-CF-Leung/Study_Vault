@@ -169,12 +169,13 @@ $$\int  \mathcal{D}\boldsymbol{m}(\boldsymbol{x}) f[\boldsymbol{m},\partial \bol
 
 ### Mean field theory
 - Employ a _saddle-point approximation_, where $\boldsymbol{m}$ simply takes the _value_ where $\beta H$ is at a _minimum_
-$$\mathcal{Z}\equiv e^{-\beta F[T,\boldsymbol{h}]}\qquad F[T,\boldsymbol{h}]\approx \mathrm{min}_{\boldsymbol{m}}[\beta H[\boldsymbol{m},h]]$$
+$$\mathcal{Z}\equiv e^{-\beta F[T,\boldsymbol{h}]}\qquad \beta F[T,\boldsymbol{h}]\approx \mathrm{min}_{\boldsymbol{m}}[\beta H[\boldsymbol{m},h]]$$
 - For _stability_, $K>0$
 	- Analagous to _kinetic energy_
 - Therefore, a _mean field_ requires that $\nabla \boldsymbol{m}=0$ (a _uniform field_ $m$)
 
 - _Landau mean field theory_ then has the free energy density:
+	- $\beta F$ _cannot be factorised_
 $$f(m,h)\equiv\frac{\beta F}{V}=\frac{t}{2}m^{2}+um^{4}-hm$$
 - For $t>0$, ignoring the _quartic term_, $h$ simply _shifts_ the minimum to $h/t$
 	- The field describes a _paramagnet_ as $\bar{m}(h=0)=0$
@@ -197,13 +198,83 @@ $$\frac{\partial f}{\partial m}\Bigg|_{m=\bar{m}}=0\implies t\bar{m}+4u\bar{m}^{
 $$\bar{m}=\begin{cases}
 0&t>0 \\\sqrt{ -t/4u }&t<0
 \end{cases}$$
+- $\bar{m}$ is _continuous_ across the critical point
+
 - This then gives the _minimum free energy density_ for $h=0$:
 $$f(\bar{m},h=0)=\begin{cases}
 0 & t>0 \\ -t^{2}/16u &t<0
 \end{cases}$$
 - The corresponding _internal energy_:
 $$E=-\frac{\partial \ln \mathcal{Z}}{\partial\beta}\qquad \frac{\partial}{\partial\beta}=-k_{B}T^{2} \frac{\partial}{\partial T}\approx-k_{B}T_{c}\frac{\partial}{\partial t}$$
-- Heat capacity:
+- Heat capacity _purely due to magnetisation_
 $$C=\frac{\partial E}{\partial T}=\begin{cases}
 0&t>0 \\ k_{B}/8u &t<0
 \end{cases}$$
+- It is a _discontinuous second derivaitve_ of the _free energy_
+
+- The _susceptibility_:
+$$\chi\equiv \frac{\partial \bar{m}}{\partial h}\Bigg|_{h=0} \qquad \chi^{-1}=\begin{cases}
+t& t>0 \\ -2t &t<0
+\end{cases}$$
+- The _ratio_ of $\chi_{-}/\chi_{+}=2$ before and after $t$ is also _universal_
+
+- The _equation of state_ at the critical temperature:
+$$\bar{m} \sim h^{1/\delta}$$
+## Gaussian functional integration
+- Consider the Gaussian integral:
+$$\mathcal{Z}_{1}=\int  d\phi\,\exp\left( -\frac{\phi^{2}}{2G}+h\phi \right)=\sqrt{ 2\pi G }\exp\left( \frac{h^{2}}{2G} \right) $$
+- The _one-point correlation_, or some _average_, from treating the exponential as some _probabilistic weight_:
+$$\langle \phi \rangle=\frac{\partial \ln \mathcal{Z}_{1}}{\partial h} =hG$$
+### Moments and cumulants
+- The higher order _moments_ $\langle \phi^{r} \rangle$ of the probability distribution are given by the _cumulant expansion_
+$$\langle \phi^{r} \rangle_{c}=\frac{\partial^{r}}{\partial k^{r}}\Bigg|_{k=0} \ln \langle e^{k\phi} \rangle  $$
+- $\langle e^{k\phi} \rangle$ is the _moment generating function_
+- The moments are related to the cumulants by _summing over all partitions of the product_ $\langle \phi^{n} \rangle$ into _subsets_ $\langle \phi^{n_{\alpha}} \rangle$
+$$\langle \phi^{n} \rangle=\sum_{P} \prod_{\alpha}\langle \phi^{n_{\alpha}} \rangle_{c}  $$
+
+- For example, the _second cumulant_ $\langle \phi^{2} \rangle_{c}$
+$$\langle \phi^{2} \rangle_{c}=\partial_{k}^{2}\Big|_{k=0}\ln \langle e^{k\phi} \rangle=\langle \phi^{2} \rangle -\langle \phi \rangle^{2}=G   $$
+- For a _Gaussian_ distribution, _higher cumulants vanish_
+
+### General cumulant expansion
+- With $N$ variables:
+$$\mathcal{Z}_{N}=\int_{-\infty}^{\infty}\prod_{i=1}^{N}\,d\phi_{i} \,\exp\left[ -\frac{1}{2}\phi^{T}\mathbf{G}^{-1} \phi+\mathbf{h}\cdot \phi\right]$$
+- In general, $\mathbf{G}^{-1}$ is _real and symmetric_
+
+- Let there be some _unitary transformation_ $\mathbf{U}$ that _diagonalises_ $\mathbf{G}$
+	- Generally, the integral only _converges for positive-definite eigenvalues_
+$$\tilde{\mathbf{G}}^{-1}=\mathbf{UG}^{-1}\mathbf{U}^{-1}$$
+- Completing the square in the integrand:
+	- $\mathbf{U}$ is _unitary_, therefore the _Jacobian_ is unity
+$$\displaylines{\chi=\mathbf{U}\phi-\tilde{\mathbf{G}}\mathbf{Uh} \\ \begin{align}
+\mathcal{Z}_{N}&=\int_{-\infty}^{\infty}\prod_{i=1}^{N}d\chi_{i}\,\exp\left[ -\frac{1}{2}\chi^{T}\tilde{\mathbf{G}}^{-1}\chi+\frac{1}{2}\mathbf{h}^{T}\mathbf{U}^{-1}\tilde{\mathbf{G}}\mathbf{Uh} \right] \\ &=\det(2\pi \mathbf{G})^{1/2} \exp\left[ \frac{1}{2}\mathbf{h}^{T}\mathbf{Gh} \right]
+\end{align}}$$
+- With $\mathcal{Z}_{N}$ as the _probability distribution for the $N$ variables_, the cumulant expansion is:
+$$\langle \phi_{i}\dots \phi_{j} \rangle_{c}=\frac{\partial }{\partial k_{i}}\dots \frac{\partial}{\partial k_{j}}\Bigg|_{\mathbf{k}=0} \ln \langle e^{\mathbf{k}\phi} \rangle  $$
+- The moment generating function is:
+$$\langle e^{\mathbf{k}\phi} \rangle= \exp\left[ \mathbf{h}^{T}\mathbf{Gk}+\frac{1}{2}\mathbf{k}^{T}\mathbf{Gk} \right]$$
+- This gives the _first two cumulants_:
+	- The higher cumulants vanish
+$$\langle \phi_{i} \rangle_{c}=G_{ij}h_{j}\qquad \langle \phi_{i}\phi_{j} \rangle_{c}=G_{ij}  $$
+- Combining the results, for any _linear combination_ of variables $A=\mathbf{a\cdot}\phi$
+$$\langle e^{A} \rangle=\exp\left( \langle A \rangle_{c}+\frac{\langle A^{2} \rangle_{c}}{2}   \right) $$
+
+### Functional integration
+- Consider the _continuum limit_ of the Gaussian integral, into a _functional integral_
+$$\displaylines{\int \mathcal{D}\phi(\boldsymbol{x})\exp\left[ -\frac{1}{2}\int  d\boldsymbol{x}\int  d\boldsymbol{x}'\,\phi(\boldsymbol{x})G^{-1}(\boldsymbol{x}-\boldsymbol{x}')\phi(\boldsymbol{x}') +\int  d\boldsymbol{x} \,h(\boldsymbol{x})\phi(\boldsymbol{x})  \right] \\ G^{-1}(\boldsymbol{x}-\boldsymbol{x}')=\braket{ \boldsymbol{x} |G^{-1}| \boldsymbol{x}' } }$$
+- Generalising the result above:
+$$\propto \det(G)^{1/2}\exp\left[ \frac{1}{2}\int  d\boldsymbol{x}\int  d\boldsymbol{x}' \,h(\boldsymbol{x})G(\boldsymbol{x},\boldsymbol{x}')h(\boldsymbol{x}')\right]$$
+- The _inverse kernel_ satisfies:
+$$\int  d\boldsymbol{x}'\,G^{-1}(\boldsymbol{x},\boldsymbol{x}')G(\boldsymbol{x}',\boldsymbol{x}'')=\delta^{d}(\boldsymbol{x}-\boldsymbol{x}'') $$
+- The _prefactor_ of the path integral does not matter as it is _cancelled out_ when calculating moments and cumulants
+
+- From this, the cumulants generalise to:
+$$\langle \phi(\boldsymbol{x}) \rangle_{c}=\int  d\boldsymbol{x}'\,G(\boldsymbol{x}-\boldsymbol{x}')h(\boldsymbol{x}') \qquad \langle \phi(\boldsymbol{x})\phi(\boldsymbol{x}') \rangle_{c}=G(\boldsymbol{x}-\boldsymbol{x}')   $$
+- From this, it can be seen that $G(\boldsymbol{x}-\boldsymbol{x}')$ is a _Green's function_
+
+### Quadratic form
+- Useful for calculating _fluctuations_ given a _quadratic_ function
+$$\beta H[\phi]=\frac{1}{2}\int  d\boldsymbol{x} [|\nabla \phi|^{2}+\xi^{-2}\phi^{2}]=\frac{1}{2} \int  d\boldsymbol{x} \int  d\boldsymbol{x}' \phi(\boldsymbol{x}')\delta^{d}(\boldsymbol{x}-\boldsymbol{x}')(-\nabla^{2}+\xi^{-2})\phi(\boldsymbol{x}) $$
+- This implies the _operator kernel_:
+$$G^{-1}(\boldsymbol{x},\boldsymbol{x}')=\delta^{d}(\boldsymbol{x}-\boldsymbol{x}')(-\nabla^{2}+\xi^{2})\implies (-\nabla^{2}+\xi^{2})G(\boldsymbol{x},\boldsymbol{x}')=\delta^{d}(\boldsymbol{x}-\boldsymbol{x}')$$
+- $G(\boldsymbol{x},\boldsymbol{x}')$ is the _Greens function_ for the operator $(-\nabla^{2}+\xi^{2})$
