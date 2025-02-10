@@ -483,54 +483,84 @@ $$T_{2}^{-1}T_{1}^{-1}T_{2}T_{1}$$
 $$L=L_{0}+\int  d^2x\,\mathcal{L} $$
 - The extra term, with 2+1 component _Chern-Simons field_ $a$, consists of a _Lagrangian density_ term and a _coupling term_ due to current
 $$\mathcal{L}=\mathcal{L}_\text{CS}-j^{\alpha}a_{\alpha} \qquad \mathcal{L}_\text{CS}=\frac{\kappa}{2}\epsilon^{\alpha\beta\gamma}a_{\alpha}\partial_{\beta}a_{\gamma}\equiv \frac{\kappa}{2}a(\varepsilon\partial a)$$
+- $\kappa$ is the _Chern-Simons field parameter_
+
 - The _current_ from $N$ _particles_ with positions $\boldsymbol{x}_{l}$ and charge $q_{l}$
-$$\displaylines{j^{0}= \qquad \boldsymbol{j}= \\ \partial_{\alpha}j^{\alpha}=0}$$
-- It is _gauge symmetric_
-	- Using $\varepsilon\partial\partial=0$
-$$a_{\alpha}\to a_{\alpha}+\partial_{\alpha}\Lambda$$
+$$\displaylines{j^{0}= \sum_{l=0}^{N}q_{l}\,\delta(\boldsymbol{x}-\boldsymbol{x}_{l})\qquad \boldsymbol{j}= \sum_{l=0}^{N}q_{l} \boldsymbol{\dot{x}}_{l}\,\delta(\boldsymbol{x}-\boldsymbol{x}_{l})\\ \partial_{\alpha}j^{\alpha}=0}$$
+- For $a_{0}=\phi$, $\boldsymbol{a}=\boldsymbol{A}$, this recreates the expected _electromagnetic Lagrangian_
+
+- The Lagrangian is _gauge symmetric_
+	- Using $\varepsilon\partial\partial=0$ and flux conservation
+	- There are _total derivative_ terms in $\delta \mathcal{L}$, which _vanish_ when $j^{0}(t_{i})=j^{0}(t_{f})=0$ on a _closed spatial manifold_
+$$a_{\alpha}\to a_{\alpha}+\partial_{\alpha}\Lambda\implies \delta L=0$$
+- Thus, $a$ can be interpreted as a _gauge field_
+
 ## Flux attachment
 ### Classical approach
 - Take some _variation_ in $a$:
 $$a_{\alpha}\to a_{\alpha}+\delta a_{\alpha}$$
-- The _equation of motion_:
+- The _equation of motion_ (can also be obtained from Euler-Lagrange equations):
 $$j=\kappa\varepsilon\partial a$$
 - The zeroth component:
 $$j^{0}=\kappa\varepsilon^{0\alpha\beta}\partial_{\alpha}a_{\beta}\equiv\kappa b$$
+
 - This can be thought of as being due to some _magnetic field_ $b$
 - _Integrating_ this over some area $x_{l}$:
 $$q_{l}=\kappa \Phi_{l}\implies \Phi_{l}=\frac{q_{l}}{\kappa}$$
-- Then, from conservation, the _spacelike components_
-$$j^{k}$$
+- Then, from conservation, the _spacelike components_:
+$$\partial_{0}j^{0}=-\partial_{k}j^{k}=-\partial_{k}(\kappa\varepsilon^{k{0}l}\partial_{0}a_{l})\implies j^{k}=\kappa\varepsilon^{k0l}\partial_{0}a_{l}+\kappa\varepsilon^{kl0}\partial_{l}\chi$$
+- Here, $\chi$ is an _arbitrary function_
+
+- Since $j^{k}$ must be _gauge invariant_, $\chi$ must _transform_ as $\chi+\partial_{0}\Lambda$
+- One can then identify $\chi$ with $a_{0}$:
+$$j^{k}=\kappa\varepsilon^{k\beta\gamma}\partial_{\beta}a_{\gamma}$$
 ### Quantum approach
-- The path integral:
+- The path integral, which integrates over all $a_{\mu}$:
 $$\int  \mathcal{D}a\,\exp\left( \frac{i}{\hbar}S[a_{\alpha}] \right) $$
 - Consider only terms with an $a_{0}$ component:
-$$\mathcal{L}_\text{CS}=\kappa a_{0}b+\mathcal{L}_\text{CS}(a_{0}\to 0)+\partial[]$$
-- From this:
+$$\mathcal{L}_\text{CS}=\kappa a_{0}b+\frac{\kappa}{2}\varepsilon^{\alpha0\beta}a_{\alpha}\partial_{0}a_{\beta}+\partial_{\beta}(\dots)$$
+- The second term is the part of $\mathcal{L}_\text{CS}$ that remains when $a_{0}\to 0$
+
+- Dropping the total derivative, and accounting for _coupling_, one gets:
 $$S[a_{0}]=\int  d^3x\,a_{0}(\kappa b-j^{0}) $$
-- The path integral then gives a _Dirac delta_
+- The relevant bit of the path integral:
+$$\int  \mathcal{D}a_{0}\exp\left( \frac{i}{\hbar}S[a_{0}] \right) $$
+- This becomes a _delta function_ $\delta(\kappa b-j^{0})$
 
 - This enforces _flux attachment_ as a _constraint_ in the path integral
 
 ### The braiding phase
-- Charge-flux composite braiding:
-$$\exp(2i\theta_{kl})\sim \exp\left( \frac{i}{\hbar}(q_{k}\Phi_{l}+q_{l}\Phi_{k}) \right)$$
-- After _enforcing_ the path integral as a constraint, the remaining _Lagrangian_ is:
-$$\mathcal{L}_\text{CS}=$$
+- Given the _attached flux_ $\Phi_{l}=q_{l}/\kappa$
+- The _classical_ calculation:
+$$\exp(2i\theta_{kl})=\exp\left( \frac{i}{\hbar}[q_{l}\Phi_{k}+q_{k}\Phi_{l}] \right)$$
+
+- When calculating the _braiding phase_ in the _path integral_ formulation, one needs to take into account the _remaining part of the path integral after flux attachment_
+
+- After _enforcing_ the $a_{0}$ path integral as a constraint, the remaining _effective Lagrangian_ is:
+$$\mathcal{L}_\text{CS}(a_{0}\to 0)=\frac{\kappa}{2}\varepsilon^{\alpha0\gamma}a_{\alpha}\partial_{0}a_{\gamma}-a_{\alpha}j^{\alpha}=-\frac{1}{2}a_{\alpha}j^{\alpha}$$
+
 - Therefore, the effective _magnetic field_ is _halved_, giving:
 $$\theta_{kl}=\frac{q_{l}q_{k}}{2\hbar\kappa}$$
 
-## Gauge invariance and charge quantisation
-- Quantised charge $q_{0}$ in a gauge field
-
-- Wavefunction gauge transformation:
+## Gauge invariance and quantisation
+- In the presence of a "matter" field $\psi$ along with the _gauge field_ $a_{\alpha}$:
 $$\psi\to \exp\left( \frac{i}{\hbar}q_{0}\Lambda \right)\psi$$
-- Action from _charge encircling_
+- If all fields have some _integer multiple_ of $q_{0}$ as their charge, $a_{\alpha}$ is a _compact field_
+
+### Quantisation of charge
+- Consider the action from _encircling_ charge $q$ over the _contractible loop_ $\gamma^{j}$ of a torus, with the loop circumfrence $L$
+$$S_\text{curr}=q\int  dt\,\dot{x}^{j}a_{j}=q\int  d\gamma^{j}\,a_{j}=q \oint d \boldsymbol{\gamma}\cdot \boldsymbol{a} $$
+- Under some _gauge transformation_ with $\Lambda$, for $\psi$ to be _single-valued_ at every point along the loop:
+$$\Lambda(x+L)=\Lambda(x)+\frac{2\pi \hbar}{q_{0}}$$
+- The corresponding _change in action_:
+$$S\to S+q \int  d \boldsymbol{\gamma}\cdot \nabla\Lambda=S+2\pi \hbar \frac{q}{q_{0}} $$
 
 - _Gauge invariance_ requires that $\exp(iS/\hbar)$ is gauge invariant
+	- The action itself does not need to be gauge-invariant, only the _path integral_ needs to be
 
-- $q$ is _quantised_ in units of $q_{0}$
+- Therefore, $q$ is _quantised_ in units of $q_{0}$
 
+### Quantisation of field parameter $\kappa$
 - $\kappa$ is also _quantised_
 $$\kappa=\frac{mq_{0}}{\Phi_{0}}$$
 - $m$ is the _Chern-Simons level_
