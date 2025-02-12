@@ -503,8 +503,9 @@ $$a_{\alpha}\to a_{\alpha}+\delta a_{\alpha}$$
 $$j=\kappa\varepsilon\partial a$$
 - The zeroth component:
 $$j^{0}=\kappa\varepsilon^{0\alpha\beta}\partial_{\alpha}a_{\beta}\equiv\kappa b$$
-
 - This can be thought of as being due to some _magnetic field_ $b$
+	- A _curl_ of the spatial components of $a_{\beta}$
+
 - _Integrating_ this over some area $x_{l}$:
 $$q_{l}=\kappa \Phi_{l}\implies \Phi_{l}=\frac{q_{l}}{\kappa}$$
 - Then, from conservation, the _spacelike components_:
@@ -560,17 +561,101 @@ $$S\to S+q \int  d \boldsymbol{\gamma}\cdot \nabla\Lambda=S+2\pi \hbar \frac{q}{
 
 - Therefore, $q$ is _quantised_ in units of $q_{0}$
 
+### Quantisation of monopole charge
+- Consider a _closed orientable manifold_ $\mathcal{M}$ as the _union_ of two single-connected patches $P_{1,2}$
+- They share the _same boundary_ with _opposite orientations_ $\partial P_{1}=-\partial P_{2}$
+
+- Define $\boldsymbol{a}_{1,2}$ as _smooth functions on patches_ $P_{1,2}$
+- Integrate the _flux_, then using _Stokes theorem_:
+$$\int_{\mathcal{M}}d^{2}x\,b =\sum_{J=1,2}\int_{P_{J}}  d^{2}x\,b=\sum_{J} \oint_{\partial P_{J}}d\boldsymbol{l}\cdot \boldsymbol{a}_{J}=\oint_{\partial P_{1}}d\boldsymbol{l}\cdot(\boldsymbol{a}_{1}-\boldsymbol{a}_{2})  $$
+- This can only be _non-zero_ iff $\boldsymbol{a}_{1}-\boldsymbol{a}_{2}\neq 0$ on $\partial P_{1}$
+- As they _both_ describe the same function, they are _related by gauge transformation_
+$$\boldsymbol{a}_{1}=\boldsymbol{a}_{2}+\nabla\Lambda$$
+- From the same _single-valued_ constraint of $\psi$:
+$$\int_{\mathcal{M}}d^{2}x\,b=\oint_{\partial P_{1}}d\boldsymbol{l}\cdot \nabla\Lambda=\frac{2\pi \hbar}{q_{0}} n=n\Phi_{0}$$
+- $\Phi_{0}$ is the _flux quantum_ $2\pi \hbar/q_{0}$
 ### Quantisation of field parameter $\kappa$
-- $\kappa$ is also _quantised_
-$$\kappa=\frac{mq_{0}}{\Phi_{0}}$$
-- $m$ is the _Chern-Simons level_
+- Suppose the system is on a _closed orientable manifold_ $\mathcal{M}$
+- Integrating the flux attachment over the manifold:
+$$\kappa \int  d^2x\,b=\int_{\mathcal{M}}d^{2}x\,j^{0}  =\kappa n\Phi_{0}$$
+- As the flux is _quantised_, the _overall charge_ must also be quantised as $mq_{0}$
+$$\kappa n\Phi_{0}=mq_{0}$$
+- The _smallest nonzero allowed_ $m$ comes from _one flux quantum_ $\Phi_{0}$
+
+- For this to be consistent, $\kappa$ is also _quantised_
+$$\kappa=\frac{mq_{0}}{\Phi_{0}}=\frac{q_{0}^{2}}{2\pi \hbar}m$$
+- $m$ is the _Chern-Simons level_, the _number of charges_ corresponding to a _single flux quantum_ $\Phi_{0}$
 
 - The _exchange phase_ is then:
 
-## Many particle types
-- The Chern-Simons field is now:
+### Chern-Simons and ground state degeneracy
+## Many particle types and matrix C-S Theory
+- The Chern-Simons field is now a _vector of gauge fields_, for $I=1,\dots M$
 $$a_{I\alpha}$$
-- The Lagrangian:
-$$\mathcal{L}=\mathcal{L}_\text{CS}-\sum_{I=1}^{M} I^{\alpha}a_{I\alpha} $$
+- For simlicity, set the _fundamental charges_ to unity:
+$$q_{I0}=1$$
+
+- The Lagrangian can be _generalised_:
+$$\mathcal{L}=\mathcal{L}_\text{CS}-\sum_{I=1}^{M} j^{\alpha}_{I}a_{I\alpha} $$
+
 - The Chern-Simons density is now encoded using a _matrix_:
-$$\mathcal{L}_\text{CS}= \qquad K_{IJ}=K_{JI}$$
+$$\mathcal{L}_\text{CS}=\frac{1}{4\pi \hbar}\sum_{I,J}K_{IJ}a_{I}(\varepsilon\partial a_{J})\qquad K_{IJ}=K_{JI}$$
+- Generalising the proofs above, the _encircling phase_ between _composite particles_ with charges $\boldsymbol{q}=(q_{1},\dots q_{M})$ and $\boldsymbol{q}'=(q'_{1},\dots q_{M}')$
+	- The single particle case has $K=m$
+$$\theta_{\boldsymbol{q}\boldsymbol{q}'}=\pi \boldsymbol{q}'K^{-1}\boldsymbol{q}$$
+
+# Topological phases
+- The _perturbed surface code_
+
+- Conditions of the perturbation
+
+- The surface code is _gapped_
+- The perturbation will _split_ the degenerate levels
+## Robustness of ground state degeneracy
+- From [[#Brillouin-Wigner perturbation theory]]
+
+- The _ground subspace_ $S$ 
+- Eigenstates labelled by _vertex and plaquette eigenvalues_, and $\prod Z_{i}$ over _noncontractible loops_
+$$\ket{n}=\ket{\{a_{v},b_{p}\},\{\bar{z}_{j}\}}  $$
+
+- Take $O=Z_{j}$ such that $Z_{j}$ are still _quantum numbers_ one can label states by
+	- Results below will _generalise_ to more general perturbations
+
+- See which $\braket{ |\delta HG\dots |  }$ terms contribute to perturbed energies
+
+- First contribution: a $\bar{z}_{j}$ _independent_ shift
+
+- Second contribution: the _ground state degeneracy splits_
+
+- Spltting _exponentially decays_
+
+- Result _generalises_ to _any local perturbation_
+
+### Comparison to the [[#Transverse field Ising model (TFIM)]]
+
+- Requires _no symmetry breaking_, as the result only depends on _topological order_
+
+## Topological order
+- Consider a 2D _local Hamiltonian_
+$$H=$$
+- It has _topological order if_:
+	1. $H$ is _gapped_
+	2. It has a _topological ground state degeneracy_
+	3. For any _locally supported operator_ $A$, the ground states $\ket{\psi_{j}}$ satisfy
+$$\braket{ \psi_{j}|A | \psi_{j'} } =$$
+- The latter should hold up to $\exp(-cL),c>0$ where $L$ is the _shortest circumfrence of a noncontractible loop_
+
+## Topological order as a phase
+- A _phase_ of matter can be defined as some _region_ $\mathcal{R}$ in _parameter space_, in the _thermodynamic limit_, there is some set of features which are _constant everywhere_ in $\mathcal{R}$
+
+- Features must be robust against _local perturbation_
+
+### Equivalence class of Hamiltonians
+- Two _gapped local Hamiltonians_ $H_{0}$ and $H_{1}$ belong to the _same topological phase_ if and only if they can be _continuously deformed_ into each other _without closing the gap_
+
+- Argument: 
+
+### Equivalence class of states
+- $\ket{\psi_{0}}\sim \ket{\psi_{1}}$ if they are _both ground states_ of _gapped, local Hamiltonians_ $H_{0},H_{1}$ where $H_{0}\sim H_{1}$
+
+- Or, one can define $\ket{\psi_{0}}\sim \ket{\psi_{1}}$ if $\ket{\psi_{1}}=U\ket{\psi_{0}}$ where $U$ is a _local unitary_

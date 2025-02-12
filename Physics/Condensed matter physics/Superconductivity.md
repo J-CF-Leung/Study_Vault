@@ -223,25 +223,53 @@ $$B_{c1}B_{c2}=B^{2}_{c}$$
 - The critical fields are _linear_ in temperature
 	- GL theory description only close to $T_{c}$
 
+### Condensation energies
+- The condensation energy is the _total energetic advantage_ of _forming_ a superconductor:
+$$\int  \boldsymbol{B}_{E}\cdot d\boldsymbol{M} -d(\boldsymbol{B}_{E}\cdot \boldsymbol{M})=\int  (-\boldsymbol{M})\cdot d\boldsymbol{B}_{E} $$
+
 - The _condensation energy_ should be the _same_ with or without vortex penetration
 - The _equal area construction_:
 ![[Superconductivity equal area.png]]
 
 ### Vortex interactions and resistivity
-- There may be some _transport current_ in the superconductor:
-$$\boldsymbol{J}_{s}=J_\text{vortex}+J_\text{tr}$$
+- There may be some _transport current_ in the superconductor, such that the _total screening current_ is:
+$$\boldsymbol{J}_{s}=\boldsymbol{J}_\text{vortex}+\boldsymbol{J}_\text{tr}$$
 - The current experiences a _Lorentz force_
 	- Analagous to the _Magnus force_ in fluid dynamics
+- The _total force per unit length_
+$$f=\int  \boldsymbol{J}_{s}\times \boldsymbol{B} \,d^{2}r=\boldsymbol{J}_\text{tr}\times \int  \boldsymbol{B}\,d^{2}r=\boldsymbol{J}_\text{tr}\times\left( \phi_{0}\hat{B} \right)$$
 
-- This also means that _vortices can repel each other_
-- This means the _vortex rush_ will _stop_ at some point
+- For _multiple vortices_, the "transport current" accounts for _current from other vortices_
+- This means that _vortices can repel each other_
+- Therefore, the _vortex rush_ in the formation of the vortex state will _stop_ at some point
 
 - _Vortex motion_ implies _power dissipation_
+- Power input _per unit volume_, in terms of some _average field_ $B$:
+$$P=\frac{fv}{\pi r_{B}^{2}}=J_\text{tr} \frac{\phi_{0}}{\pi r_{B}^{2}}v=J_\text{tr}Bv$$
 
-- This can be linked to some _electric field_
-- There is some _resistivity due to vortex motion_
+- This can be linked to some _electric field_ $\varepsilon$:
+$$P=\varepsilon J_\text{tr}\implies \varepsilon=Bv$$
+- There is some _resistivity due to vortex motion_:
+$$\rho=\frac{\varepsilon}{J_\text{tr}}=\frac{Bv}{J_\text{tr}}$$
+- Due to _vortex motion_, the _zero resistence state breaks down_
 
+### Vortex flow and pinning
 - This can be manipulated by _pinning_ vortices onto _defects_
 	- One only has to _pin some fraction_ of the vortices in order to pin the whole lattice from moving
 
-- Critical current densities
+- This pinning also leads to _strong hysteresis_
+![[Superconductor hysteresis.png|500]]
+
+- Pinning means _vortices stay inside the superconductor_ and _cannot be injected or extracted completely_:
+	- _Permanent magnet_-like behaviour
+![[Type II superconductor pinned field.png|400]]
+
+- At some point, for a _strong transport current_, the _pinning force_ is _insufficient_, and _resistivity becomes non-zero_ as the vortices move
+- This happens at some _critical current density_ $J_{c}$:
+$$J_{c}\sim  \frac{1}{B}$$
+### Irreversibility
+- For some quasi-2D, _low coherence length superconductors_ (e.g. cuprates), $J_{c}$ can _vanish_ at fields _below_ $B_{c2}$
+- The _zero resistance state_ with $J_{c}>0$ is found below some _irreversibility line_ $B_\text{irr}(T)$
+
+- The region between $B_\text{irr}(T)$ and $B_{c2}(T)$ is a _vortex liquid_
+![[Vortex liquid phase.png|600]]

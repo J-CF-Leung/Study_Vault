@@ -73,10 +73,14 @@ $$\varepsilon_{\mu \nu}=-\varepsilon_{\nu \mu}$$
 ## Fields with Lorentz transformations
 - A field: dependent on _coordinates_, and has a _definite transformation_
 
+- A _passive transformation_ on _coordinates_:
+	- One would still have to transform the _fields_ (e.g. a scaling)
+$$x\to x'=\Lambda x={\Lambda^{\mu}}_{\nu}x^{\nu}$$
+
 - Coordinate and field _active transformations_:
 	- _Coordinate system_ unchanged, but change _where field is evaluated_
 	- Hence, coordinates rotate the _other way_ (to the coordinate _before rotation_, to retain the same value)
-$$x\to x'=\Lambda x$$
+
 $$\phi_{a}(x)\to \phi_{a}'(x)=D[\Lambda]^{b}_{a}\phi_{b}(\Lambda^{-1} x)$$
 - Here, $D$ is a _representation_ of the Lorentz group, satisfying:
 $$\begin{align}

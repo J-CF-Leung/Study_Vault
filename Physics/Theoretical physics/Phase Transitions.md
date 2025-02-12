@@ -276,5 +276,10 @@ $$\langle \phi(\boldsymbol{x}) \rangle_{c}=\int  d\boldsymbol{x}'\,G(\boldsymbol
 - Useful for calculating _fluctuations_ given a _quadratic_ function
 $$\beta H[\phi]=\frac{1}{2}\int  d\boldsymbol{x} [|\nabla \phi|^{2}+\xi^{-2}\phi^{2}]=\frac{1}{2} \int  d\boldsymbol{x} \int  d\boldsymbol{x}' \phi(\boldsymbol{x}')\delta^{d}(\boldsymbol{x}-\boldsymbol{x}')(-\nabla^{2}+\xi^{-2})\phi(\boldsymbol{x}) $$
 - This implies the _operator kernel_:
-$$G^{-1}(\boldsymbol{x},\boldsymbol{x}')=\delta^{d}(\boldsymbol{x}-\boldsymbol{x}')(-\nabla^{2}+\xi^{2})\implies (-\nabla^{2}+\xi^{2})G(\boldsymbol{x},\boldsymbol{x}')=\delta^{d}(\boldsymbol{x}-\boldsymbol{x}')$$
-- $G(\boldsymbol{x},\boldsymbol{x}')$ is the _Greens function_ for the operator $(-\nabla^{2}+\xi^{2})$
+$$G^{-1}(\boldsymbol{x},\boldsymbol{x}')=\delta^{d}(\boldsymbol{x}-\boldsymbol{x}')(-\nabla^{2}+\xi^{-2})\implies (-\nabla^{2}+\xi^{-2})G(\boldsymbol{x},\boldsymbol{x}')=\delta^{d}(\boldsymbol{x}-\boldsymbol{x}')$$
+- $G(\boldsymbol{x},\boldsymbol{x}')$ is the _Greens function_ for the operator $(-\nabla^{2}+\xi^{-2})$
+
+- When _Fourier transformed_:
+$$G(\boldsymbol{q})=\frac{1}{q^{2}+\xi^{-2}}$$
+- This is related to the Fourier transform of the correlation function:
+$$\langle \phi(q)\phi(q') \rangle_{c}=(2\pi)^{d}\delta^{d}(q+q')G(q) $$

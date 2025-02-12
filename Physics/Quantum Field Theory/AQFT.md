@@ -62,6 +62,8 @@ $$\int_{i}^{f}  \mathcal{Dx}\exp(-S_{E}[x]) \qquad S_{E}[x]=\int  d\tau\,\left( 
 $$\displaylines{\frac{\delta L[x(t')]}{\delta x(t)}=\lim_{ \epsilon \to 0 } \frac{L[x(t')+\epsilon\delta(t-t')]-L[x(t')]}{\epsilon} \\ \frac{\delta S[x]}{\delta x(t)}=\lim_{ \epsilon \to 0 } \int  dt'\, \frac{L[x(t')+\epsilon\delta(t-t')]-L[x(t')]}{\epsilon} }$$
 - A $D-$dimensional result:
 $$\frac{\delta \phi(x)}{\delta \phi(y)}=\delta^{D}(x-y)$$
+- The _functional chain rule_:
+$$\frac{\delta}{\delta \phi(x)}=\int  d^4y\, \frac{\delta J(y)}{\delta \phi(x)}  \frac{\delta}{\delta J(y)}$$
 ### Example: Klein-Gordon action
 $$S[\phi]=\int  d^4x\left( \frac{1}{2}\partial_{\mu}\phi\partial^{\mu}\phi-\frac{1}{2}m^{2}\phi^{2} \right) $$
 - The functional derivative:
@@ -147,7 +149,7 @@ $$Z_{\lambda}(J)=N \int  d\phi\,\exp\left( -\frac{1}{2}\alpha \phi^{2} -\frac{\l
 - Choosing the same normalisation:
 $$N=\frac{1}{Z_{0}(0)}=\sqrt{ \frac{\alpha}{2\pi} }$$
 - Assume $\lambda\ll 1$, such that one can _expand_:
-$$Z_{\lambda}(J)=\sqrt{ \frac{\alpha}{2\pi} }\int  d\phi\,\exp\left( -\frac{1}{2}\alpha \phi^{2}-\frac{\lambda}{4!}\phi^{4} \right)\sum_{k=0}^{\infty}\left( -\frac{\lambda}{4!} \right)^{k}\frac{\phi^{4k}}{k!} $$
+$$Z_{\lambda}(J)=\sqrt{ \frac{\alpha}{2\pi} }\int  d\phi\,\exp\left( -\frac{1}{2}\alpha \phi^{2}+J\phi\right)\sum_{k=0}^{\infty}\left( -\frac{\lambda}{4!} \right)^{k}\frac{\phi^{4k}}{k!} $$
 - Make an _approximation_ by _swapping_ the sum and integral
 	- Exact answer (no swap) has $\exp(-1/\lambda)$ _instanton_ factor
 $$Z_{\lambda}(J)=\sum_{k} \frac{1}{k!}\left( -\frac{\lambda}{4!} \right)^{k}\int  d\phi\,\phi^{4k}\,\exp\left( -\frac{1}{2}\alpha \phi^{2}+J\phi \right) $$
@@ -347,6 +349,7 @@ $$\tilde{D}_{F}(p)=\frac{i}{p^{2}-m^{2}+i\epsilon}$$
 ### One-loop correction to the four point function
 
 ![[One loop four point function.png]]
+
 ### Momentum space $\phi^4$ Feynman rules
 - Each line, there is the _momentum space Feynman propagator_ $\tilde{D}_{F}(x-y)$
 - Each vertex gives a factor of $-i\lambda$
@@ -394,6 +397,9 @@ $$\langle \phi^{4} \rangle_\text{conn}=\langle \phi^{4} \rangle-3\langle \phi^{2
 - The _disconnected diagram_ is _subtracted_
 
 ## One-particle irreducibles (1PI)
+- A _connected diagram_: all lines in one piece
+- An _amputated diagram_: all external lines removed
+
 - A _one-particle irreducible diagram_ (1PI) is one that _cannot be split into two diagrams_ by cutting an _internal line_ ("cutting" one particle)
 
 - A non-1PI diagram cut into two 1PIs:
@@ -402,6 +408,9 @@ $$\langle \phi^{4} \rangle_\text{conn}=\langle \phi^{4} \rangle-3\langle \phi^{2
 ## Quantum effective action
 - Analogue of the classical action, but encoding quantum mechanics
 
+- Recall the _Wilsonian effective action_:
+$$Z(J)=\int  d\phi \exp\left[ -\frac{1}{\hbar}(S(\phi)+J\phi) \right]\qquad W(J)= -\hbar \ln(Z(J))$$
+### Definition
 - Consider the _differential_ of $W[J]$, where $\Phi$ is defined as the _mean field_
 	- The mean field: some _one point correlation_ with nonzero source
 $$dW=\frac{\partial W}{\partial J}dJ=\Phi dJ$$
@@ -411,17 +420,155 @@ $$E=\Phi J-W(J)\implies dE=Jd\Phi$$
 $$\Gamma(\Phi)=W(J)-J\Phi\qquad \Phi=\frac{\partial W(J)}{\partial J}$$
 - Assuming $\Gamma(\Phi)$ can be written as a _power series_:
 $$\Gamma(\Phi)=\sum_{n=0}^{\infty} \frac{1}{n!}\Gamma_{n}\Phi^{n}\qquad \Gamma_{n}=\frac{\partial^{n}\Gamma}{\partial \Phi^{n}}$$
-- Consider defining another Wilsonian effective action, using _parameter_ $g$
+- As seen in the section below, $\Gamma_{n}$ gives _vertices_
+### Diagrammatic interpretation
+- Consider a _quantum effective analogue_ of the _Wilsonian action_, using _parameter_ $g$
 $$\exp\left( -\frac{1}{g}W_{\Gamma}(J) \right)=\int  d\phi\,\exp\left( -\frac{1}{g}(\Gamma(\phi)+J\phi) \right) $$
 - $\phi$ is an _unconstrained field_, not necessarily satisfying $\partial W/\partial J=\Phi$
 
-- $W_{\Gamma}(J)$ can be written as an _expansion in loops_:
+- $W_{\Gamma}(J)$ can be written as an _expansion in $g$ loops_:
+	- $g$: an _analogue_ to $\hbar$ in this case
 $$W_{\Gamma}(J)=\sum_{l=0}^{\infty}g^{l}W_{\Gamma}^{(l)}(J)$$
 - In the $g\to 0$ limit, $W_{\Gamma}^{(0)}(J)$ is the only part that contributes, giving _tree level diagrams_
-- The path integral is then _dominated_ by the _extrema_ of $\Gamma(\phi)+J\phi$, defining the value og $\phi$ at the extremum to be the _mean field_ $\Phi$
+	- _All relevant quantum information $\sim \hbar^{n}$ are contained_ within this contribution
+
+- The path integral is then _dominated_ by the _extrema_ of $\Gamma(\phi)+J\phi$, defining the value of $\phi$ at the extremum to be the _mean field_ $\Phi$
 $$\left[ \frac{\partial\Gamma}{\partial \phi }+J \right]_{\phi=\Phi}=0$$
 - This can be written as:
 $$\exp(-W_{\Gamma}^{(0)}(J))\approx \exp[-(\Gamma(\Phi)+J\Phi)]$$
 - $\Gamma(\Phi)+J\Phi$ is the _Wilsonian effective action_, with $\Phi$ being the _mean field_
 
-- The _connected correlation functions_ are given by the _tree level diagrams_ connected from $\Gamma$
+- The _fully quantum, connected correlation functions_ are given by the _tree level diagrams_ generated by $\Gamma(\phi)$ using _Feynman rules_
+- $\Gamma_{n}$ can then be interpreted as $n-$_point, amputated, 1PIs_, which _compose_ the tree-level diagrams
+	- Interpretation: draw _analogues_ to the _classical action_
+	- $\Gamma_{2}$ gives a _propagator_ which is _inversely proportional_ to the _mass coefficient_ $\alpha$ in the _kinetic term_ of the action
+	- $\Gamma_{3}$ gives a _3-point vertex_, and so on
+
+## Quantum effective action in 0-dimensional $\phi^4$ theory
+- The _generating functional_ in the [[#Interacting theory|zero-dimensional interacting theory]]
+$$\begin{align}
+Z_{\lambda}(J)&=N \int  d\phi\,\exp\left( -\frac{1}{2}\alpha \phi^{2} -\frac{\lambda}{4!}\phi^{4}+J\phi\right) \\ &=\left( 1-\frac{\hbar^{2}\lambda}{4!}\left( \frac{J^{4}}{\alpha^{4}\hbar^{4}}+\frac{6J^{2}}{\alpha^{3}\hbar^{3}}+\frac{3}{\alpha^{2}\hbar^{2}} \right)+\dots \right)\exp\left( \frac{J^{2}}{2\alpha^{2}\hbar} \right)
+\end{align}$$
+- The _Wilsonian effective action_, to first order in $\lambda$:
+$$W(J)=-\hbar \ln [Z_{\lambda}(J)]=-\frac{J^{2}}{2\alpha}+\frac{\lambda}{4!} \frac{J^{4}}{\alpha^{4}}+\frac{\lambda \hbar}{4} \frac{J^{2}}{\alpha^{3}}+\frac{\hbar^{2}\lambda}{8\alpha^2}+\dots$$
+- The _mean field_ is then:
+$$\begin{align}
+\Phi=\frac{\partial W}{\partial J}&=-\frac{J}{\alpha}+\frac{\lambda}{3!} \frac{J^{3}}{\alpha^{4}}+\frac{\lambda \hbar}{2} \frac{J}{\alpha^{3}}+\dots \\
+&=-\frac{J}{\alpha}\left( 1-\frac{\lambda \hbar}{2\alpha^{2}} \right)+\frac{\lambda}{3!}
+\frac{J^{3}}{\alpha^{4}}\end{align}$$
+- There is _only one quantum correction_
+- One also gets that for $J=0$, the _mean field vanishes_, as it is the _connected one-point function_, as expected in $\phi^{4}$ theory
+
+- This can then be _iteratively inverted_
+$$\begin{align}
+J(\Phi)&=-\alpha\left( 1-\frac{\lambda \hbar}{2\alpha^{2}} \right)^{-1}\left( \Phi-\frac{J^{3}}{3!} \frac{\lambda}{\alpha^{4}} \right)+\dots \\ &=-\alpha\left( 1+\frac{\lambda \hbar}{2\alpha^{2}} \right)\left( \Phi-\frac{J^{3}}{3!} \frac{\lambda}{\alpha^{4}} \right)+\dots \\ &=-\alpha \Phi+\frac{\lambda}{3!} \frac{J^{3}}{\alpha^{3}} -\frac{\lambda \hbar}{2\alpha}\Phi+\dots \\ &=-\alpha \Phi-\frac{\lambda}{3!}\Phi^{3}-\frac{\hbar\lambda}{2\alpha}\Phi
++\dots\end{align}$$
+- The Wilsonian effective action in terms of the mean field:
+$$W(\Phi)=\frac{\hbar^{2}\lambda}{8\alpha^{2}}-\frac{1}{2}\alpha \Phi^{2}+\left( \frac{1}{4!}-\frac{1}{3!} \right)\lambda \Phi^{4}-\frac{\lambda \hbar}{4\alpha}\Phi^{2}+\dots$$
+- Finally, the _quantum effective action_:
+$$\Gamma(\Phi)=W(\Phi)-J(\Phi)\Phi=\frac{\lambda \hbar^{2}}{8\alpha^{2}}+\frac{1}{2}\left( \alpha-\frac{\hbar\lambda}{2\alpha} \right)\Phi^{2}+\frac{\lambda}{4!}\Phi^{4}$$
+- This _resembles the classical action_, but with _quantum corrections_
+	- The classical action $S(\Phi)$ is regained as $\hbar\to 0$
+	- It _does not break_ the $\Phi\to -\Phi$ symmetry
+
+- One can then use more _Feynman rules_ to generate diagrams
+
+- Each _looped correction_ has a factor of $\hbar/\alpha$
+- There is a _quantum vacuum shift_, coming from a _two-loop vacuum diagram_
+- The $\Phi^{4}$ term has _no correction at order_ $\lambda$ as the first corresponding diagram has $\lambda^{2}$
+- The _propagator_ has a _one-loop correction_:
+$$W_{2}=\left( \alpha+\frac{\hbar\lambda}{2\alpha} \right)^{-1}=\frac{1}{\alpha}-\frac{\hbar\lambda}{2\alpha^{3}}$$
+
+## Summary of functions
+- The _generating functional_, which _generates all possible diagrams_
+$$Z_{\lambda}[J]=\int  \mathcal{D}\phi\,\exp\left( -S[\phi]+J\phi \right) $$
+- The _partition function_, which _generates vacuum bubble diagrams_
+$$Z_{\lambda}[0]$$
+- The _Wilsonian effective action_, which generates _connected diagrams_
+$$W_{\lambda}[J]=-\hbar \ln(Z[J])$$
+- The _quantum effective action_, which generates _1PI diagrams_
+$$\Gamma_{\lambda}[\Phi]=W_{\lambda}[\Phi]-J\Phi$$
+## Quantum effective action in 4 dimensions
+- In _4 dimensions_, the mean field is:
+$$\Phi[J]=\frac{\delta W[J]}{\delta J}\sim \langle \phi \rangle_{J} $$
+- The quantum effective action is then:
+$$\Gamma[\Phi]=W[\Phi]-\int  d^4x\,J(x){\Phi(x)} $$
+### Correspondence to classical action
+- Consider the derivative of the quantum effective action:
+$$\frac{\delta\Gamma[\Phi]}{\delta \Phi(x)}=\frac{\delta}{\delta \Phi(x)}\left(W[J]-\int  d^4y\,J(y)\Phi(y) \right)$$
+- Using the definition of $\Phi$ and the functional chain rule, this becomes:
+$$\begin{align}
+\frac{\delta \Gamma [\Phi]}{\delta \Phi(x)}&=\int  d^4y \left(\Phi(y)\frac{\delta J(y)}{\delta \Phi(x)}- \frac{\delta J(y)}{\delta \Phi(x)}\Phi(y)\right)-J(x) \\ &=-J(x)
+\end{align}$$
+- This mirrors the _classical Euler-Lagrange equation_
+- For $J(x)=0$:
+$$\displaylines{\Phi(x)=\phi _\text{cl} \\ \frac{\delta\Gamma [\Phi]}{\delta \Phi(x)}\Bigg|_{\Phi=\phi _\text{cl}}=0}$$
+### $\Gamma_2$ and the propagator
+- The functional chain rule gives:
+$$\frac{\delta}{\delta J(x)}=\int  d^4y\, \frac{\delta \Phi(y)}{\delta J(x)} \frac{\delta}{\delta \Phi(y)}=\int  d^4y\,\frac{\delta^{2}W[J]}{\delta J(x)\delta J(y)} \frac{\delta}{\delta \Phi(y)} $$
+- From the above:
+$$\frac{\delta}{\delta J(y)} \left( \frac{\delta\Gamma[\Phi]}{\delta \Phi(x)} \right)=-\delta^{4}(x-y)$$
+- Expanding this:
+$$\int  d^4z\, \frac{\delta^{2}W[J]}{\delta J(z)\delta J(y)}  \frac{\delta^{2}\Gamma[\Phi]}{\delta \Phi(z)\delta \Phi(x)}=-\delta^{4}(x-y)$$
+- To shorten:
+$$\int  d^4z\,W_{2}(z,y)\,\Gamma_{2}(z,x) =-\delta^{4}(x-y)$$
+- This can also be written as:
+	- Similar relation holds in the _zeroth dimensional case_
+$$W_{2}\Gamma_{2}=-1$$
+
+- Taking the _Feynman propagator_ $G_{2}(x-y)$:
+$$-iW_{2}(y,z)=G_{2}(y-z)=\int  \frac{d^4p}{(2\pi)^{4}} \frac{i}{p^{2}-M^{2}+i\epsilon}\exp[-ip(x-y)] $$
+- Here, $M^{2}$ is the [[#Two-point correlation and the mass shift|shifted mass]] $m^{2}+\Pi_{1}$
+
+- Substituting the _Fourier transform_ of $\Gamma_{2}$:
+$$i \int  d^4z \frac{d^{4}p \,d^{4}q}{(2\pi)^{8}} \frac{\tilde{\Gamma}(q)}{p^{2}-M^{2}+i\epsilon} \exp[-ip(y-z)-iq(z-x)]=-\delta^{4}(x-y) $$
+- Performing the integration:
+$$\int  \frac{d^{4}p}{(2\pi)^{4}} \frac{\tilde{\Gamma}(p)}{p^{2}-M^{2}+i\epsilon}\exp[-ip(y-x)]=\delta^{4}(x-y) $$
+- This gives:
+$$\tilde{\Gamma}(p)=p^{2}-M^{2}+i\epsilon$$
+- $\Gamma$ is the _inverse propagator_
+
+### $\Gamma_3$ and higher order functions
+- Functional differentiation of the above w.r.t. $w$
+$$\frac{\delta}{\delta J(w)}\int  d^4z\, \frac{\delta^{2}W[J]}{\delta J(z)\delta J(y)}  \frac{\delta^{2}\Gamma[\Phi]}{\delta \Phi(z)\delta \Phi(x)}=0$$
+- From the chain rule again (verify):
+$$\int  d^4z\, W_{3}(w,y,z)\Gamma_{2}(z,x)=-\int  d^4\sigma \int  d^4z\,W_{2}(y,z)W_{2}(\sigma,w)\Gamma_{3}(z,x,\sigma)  $$
+- Multiplying through by $W_{2}(x,\rho)$ and integrating by $x$, using the relation for $W_{2}\Gamma_{2}$:
+$$W_{3}(x,y,z)=\int  d^4w_{1}\,d^{4}w_{2}\,d^{4}w_{3} \,W_{2}(x,w_{1})W_{2}(y,w_{2})W_{2}(z,w_{3})\Gamma_{3}(w_{1},w_{2},w_{3}) $$
+- Or alternatively:
+$$W_{3}=W_{2}^{3}\Gamma_{3}$$
+- _Diagrammatically_, the _connected 3-point function_ is given by a _3-point 1PI_ with _three external legs_
+![[3 point function decomposition.png|400]]
+
+- Similarly, one can perform a decomposition on $W_{4}$
+![[W4 decomposition.png]]
+- These are all statements which _hold for any perturbation_
+
+# Momentum cut-off regularisation
+- Feynman diagrams often have _divergent contributions_, such as:
+$$D_{F}(0)=\int  d^4p \frac{i}{p^{2}-m^{2}+i\epsilon} $$
+- One can put an _upper cutoff in momentum_ to make the integrals _finite_:
+$$p<\Lambda$$
+- The _physical interpretation_ of the quantities must still make sense in the limit of _cut-off at infinity_
+- This is known as _regularisation_
+
+## The two-point correlation function
+- A diagrammatic approach to the _connected loop corrections_ in $G_{2}(x,y)$
+![[Propagator loop corrections.png|400]]
+
+### 1PI contributions
+- Consider the _sum of amputated 2-point 1PIs_ contributing to this:
+![[2-point 1PIs.png|400]]
+- In _momentum space_, the 2-point Greens function written _in terms of external propagators with the 1PIs_
+$$\begin{align}
+\tilde{G}_{2}(p)&=\frac{i}{p^{2}-m^{2}+i\epsilon}+\frac{i}{p^{2}-m^{2}+i\epsilon} \Pi \frac{i}{p^{2}-m^{2}+i\epsilon}  \\
+&+ \frac{i}{p^{2}-m^{2}+i\epsilon} \Pi \frac{i}{p^{2}-m^{2}+i\epsilon} \Pi \frac{i}{p^{2}-m^{2}+i\epsilon}+\dots
+\end{align}$$
+![[Full Greens function with 1PIs.png|400]]
+
+- This can be written as a _geometric progression_, which can be written as:
+	- Technically, should only converge for $i\Pi/(p^{2}-m^{2}+i\epsilon)<1$
+$$\tilde{G}_{2}(p)= \frac{i}{p^{2}-m^{2}-\tilde{\Pi}(p^{2})+i\epsilon}$$
+- Formally, _all quantum effects_ can be inserted into a _mass shift_
+$$\tilde{G}_{2}(p)=\frac{i}{p^{2}-M^{2}+i\epsilon } \qquad M^{2}=m^{2}+\Pi$$
+- However, $\Pi$ is still _formally divergent_
