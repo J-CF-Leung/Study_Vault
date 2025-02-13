@@ -260,7 +260,7 @@ $$\bar{X}_{j}^{2}=\bar{Z}_{j}^{2}=1$$
 $$\bar{X}_{i}\bar{Z}_{j}=(-1)^{\delta_{ij}}\bar{Z}_{j}\bar{X}_{i}$$
 - As they _do not commute_, one can use _either_ $\bar{z}_{i}$ or $\bar{x}_{i}$ as a _quantum number_
 
-- Thus, one completes labelling eigenstates for a general manifold as:
+- Thus, one completes labelling _eigenstates for a general manifold_ as:
 $$\ket{n}=\ket{\{a_{v}\},\{b_{p}\};\bar{z}_{1},\bar{z}_{2}\dots \bar{z}_{\beta_{1}}}  $$
 - As the energy _does not depend_ on the $\bar{z}$ eigenvalues
 
@@ -466,17 +466,35 @@ $$R(2\pi)=\exp\left( \frac{i}{\hbar} q\Phi \right)=\exp(i\theta)$$
 ## Ground state degeneracy from braiding
 - Consider the _torus_ with non-contractible loops $\gamma_{1,2}$
 
-- Consider an operator $T_{j}$, where one _creates_ an anyon-antianyon pair, _moves_ the anyon along $\gamma_{j}$, then _annihilates_ the pair
-- It moves the system from the ground state _to_ a ground state
+- Consider a _unitary operator_ $T_{j}$, where one _creates_ an anyon-antianyon pair, _moves_ the anyon along $\gamma_{j}$, then _annihilates_ the pair
+- It moves the system _between ground states_
+
+- Choose a _basis of ground states_ $\{\Psi_{\alpha}\}$ such that:
+$$T_{2}\ket{\Psi_{\alpha}}=\exp(i\alpha)\ket{\Psi_{\alpha}}  $$
+- $T_{1}\ket{\Psi_{\alpha}}$ must also be a ground state
 
 - Inspect:
 $$T_{2}^{-1}T_{1}^{-1}T_{2}T_{1}$$
 ![[Torus braiding.png]]
 
-- ...
+- This braid gives:
+$$T_{2}^{-1}T_{1}^{-1}T_{2}T_{1}\ket{\Psi}=\exp(2i\theta)\ket{\Psi}\implies T_{2}T_{1}\ket{\Psi}=\exp(2i\theta)T_{1}T_{2} \ket{\Psi}   $$
+- This gives the relation:
+$$T_{2}(T_{1}\ket{\Psi_{\alpha}} )=\exp[i(\alpha+2\theta)](T_{1}\ket{\Psi_{\alpha}} )$$
+- Unless $\theta=2\pi n$ (i.e. bosons or fermions), $T_{1}\ket{\Psi_{\alpha}}$ is _orthogonal_ to $\ket{\Psi_{\alpha}}$, meaning the _ground state is degenerate_
+- Repeating the procedure $m$ times, one gets the _phase_ $\alpha+2m\theta$ for the $m$th degeneracy
 
-- The ground state degeneracy in the toric code is $m$
-- For $j$ _contractible loops_, there are 2 operators, one for each particle
+- As _degeneracy cannot be infinite_, $m\theta=n\pi$ for some integer $n$
+- In other words, $\theta$ is a _rational multiple_ of $\pi$
+
+- For $\theta=\pi/m$ for integer $m$, there are _at least_ $m$ _orthogonal ground states_
+- Assuming _no other degeneracies_ due to _symmetry_ or other characteristics, the _exchange phase_ can be linked to the _ground state degeneracy_
+$$\exp(i\theta)=\exp\left( \frac{i\pi}{m} \right) \Longleftrightarrow \text{Torus GSD}=m$$
+
+- This _generalises_ to other manifolds of genus $g=\beta_{1}/2$
+- Each hole comes with its own _pair_ of $T_{1,2}^{(q)}$, with $q=1,2\dots g$
+- Therefore, without other sources of degeneracy:
+$$\exp(i\theta)=\exp\left( \frac{i\pi}{m} \right) \Longleftrightarrow \text{GSD}=m^{g}$$
 
 # Chern-Simons theory
 - Consider a Lagrangian in 2+1D
@@ -561,7 +579,7 @@ $$S\to S+q \int  d \boldsymbol{\gamma}\cdot \nabla\Lambda=S+2\pi \hbar \frac{q}{
 
 - Therefore, $q$ is _quantised_ in units of $q_{0}$
 
-### Quantisation of monopole charge
+### Quantisation of monopole charge/flux
 - Consider a _closed orientable manifold_ $\mathcal{M}$ as the _union_ of two single-connected patches $P_{1,2}$
 - They share the _same boundary_ with _opposite orientations_ $\partial P_{1}=-\partial P_{2}$
 
@@ -587,6 +605,7 @@ $$\kappa=\frac{mq_{0}}{\Phi_{0}}=\frac{q_{0}^{2}}{2\pi \hbar}m$$
 - $m$ is the _Chern-Simons level_, the _number of charges_ corresponding to a _single flux quantum_ $\Phi_{0}$
 
 - The _exchange phase_ is then:
+$$\theta=\frac{q_{0}^{2}}{2\hbar\kappa}=\frac{\pi}{m}$$
 
 ### Chern-Simons and ground state degeneracy
 ## Many particle types and matrix C-S Theory
@@ -604,10 +623,16 @@ $$\mathcal{L}_\text{CS}=\frac{1}{4\pi \hbar}\sum_{I,J}K_{IJ}a_{I}(\varepsilon\pa
 	- The single particle case has $K=m$
 $$\theta_{\boldsymbol{q}\boldsymbol{q}'}=\pi \boldsymbol{q}'K^{-1}\boldsymbol{q}$$
 
+- The ground state degeneracy can be expressed as:
+$$\text{GSD}=|\det K|^{g}$$
+- On the _surface code_, as they are _mutual semions_:
+$$K_\text{surf}=\pmatrix{0&2 \\2&0}\implies \text{GSD}=4^{g}$$
 # Topological phases
-- The _perturbed surface code_
+- The _perturbed surface code_:
+$$H=-J\sum_{v}A_{v}-J\sum_{p}B_{p}+\delta H \qquad \delta H=h\sum_{j}O_{j}$$
 
-- Conditions of the perturbation
+- Conditions of the perturbation:
+	- 
 
 - The surface code is _gapped_
 - The perturbation will _split_ the degenerate levels
@@ -658,4 +683,15 @@ $$\braket{ \psi_{j}|A | \psi_{j'} } =$$
 ### Equivalence class of states
 - $\ket{\psi_{0}}\sim \ket{\psi_{1}}$ if they are _both ground states_ of _gapped, local Hamiltonians_ $H_{0},H_{1}$ where $H_{0}\sim H_{1}$
 
-- Or, one can define $\ket{\psi_{0}}\sim \ket{\psi_{1}}$ if $\ket{\psi_{1}}=U\ket{\psi_{0}}$ where $U$ is a _local unitary_
+- Alternatively, one can define $\ket{\psi_{0}}\sim \ket{\psi_{1}}$ iff $\ket{\psi_{1}}=U\ket{\psi_{0}}$ where $U$ is a _local unitary_
+
+- A _local unitary_ $U$ are operators _for which_ there exist $U_{i}=\prod_{j}W_{j}^{(i)}, i=1,2$ with unitary $W_{j}^{(i)}$ satisfying $\mathrm{diam}[\mathrm{supp}(W_{j}^{(i)})]=l<\infty$, and $\mathrm{supp(W_{j}^{(i)})}$ _non-overlapping_ for $j~=j'$ for a given $i$, such that $U=U_{2}U_{1}$ up to _corrections_ exponentially decaying with $l$
+
+- In other words, $U$ can be expressed as a _two-layer local quantum circuit_ up to corrections exponentially decaying with the diameter $l$ _of the gates_
+![[Local unitary circuit.png]]
+
+- These two definitions of _state equivalence_ are the _same_, given one can have _quasilocal Hamiltonians_:
+$$\displaylines{H=\sum_{j}c_{j}O_{j} \\ O_{j}\text{ bounded, } c_{j}\propto \exp(-\alpha _{j}\,\mathrm{diam}[\mathrm{supp}(O_{j})]), \, 0<\alpha_{j}=\text{const.}}$$
+- In other words, a _quasilocal_ $H$ can have terms with _support of any diameter_, as long as the _coefficients decay exponentially_ with diameter
+
+## Robustness of braiding statistics

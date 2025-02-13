@@ -273,3 +273,62 @@ $$J_{c}\sim  \frac{1}{B}$$
 
 - The region between $B_\text{irr}(T)$ and $B_{c2}(T)$ is a _vortex liquid_
 ![[Vortex liquid phase.png|600]]
+
+# Inhomogeneous superconductors
+- The [[#London equations]] imply that an electric field will _accelerate_ supercurrent, but not required to maintain it
+
+## Time dependence and links
+- Consider a block of superconductor at the London gauge:
+$$\varphi'=0 \quad \boldsymbol{A}'=0 \quad \theta'=\text{const.}$$
+- Doing a _phase transformation_:
+$$\varphi=\varphi'-\dot{\chi} \quad \boldsymbol{A}=\boldsymbol{A}'+\nabla \chi\quad \theta=\theta'+\frac{q}{\hbar}\chi$$
+- Suppose $\varphi$ is a _finite, constant potential_ $V$:
+$$\dot{\chi}=-V\implies \boldsymbol{A}=\boldsymbol{A}'=0 \quad \theta=\theta'-\varphi\frac{qt}{\hbar}$$
+- When _two blocks_ of superconductors are _connected_ with some _potential difference_, there will be _current flow_
+
+- The order parameter will _wind_:
+$$\psi(t)=\exp\left( -\frac{iqt}{\hbar} V\right)\psi(0)$$
+
+
+### Strong and weak links
+- Analysis of Ginzburg-Landau equation, strong and weak links
+
+
+- A _strong link_ has $\psi$ wind over a _distance $d$ larger than coherence length_
+$$d\gg \xi$$
+
+
+
+- Consider supercurrent from the [[#Ginzburg-Landau equations]], for a _constant_ $\psi$
+$$\frac{\partial}{\partial t}\boldsymbol{J}_{s}=\rho_{s}\left( \frac{\hbar}{q}\nabla\dot{\theta}-\dot{\boldsymbol{A}} \right)=\rho_{s}\boldsymbol{E}$$
+- This is the first [[#London equations|London equation]]
+
+
+### Josephson phase relation
+
+## Josephson junctions
+- Consider the setup:
+$$\displaylines{I=I_{s}+I_{n}=I_{J}\sin\theta+\frac{V}{R}+C\dot{V} \\ I=I_{J}\sin\theta+\frac{\phi_{0}}{2\pi R}\dot{\theta}+\frac{\phi_{0}C}{2\pi}\ddot{\theta}}$$
+- Evolution of $\theta$ to the _forced, damped oscillations_
+
+- The _DC Josephson effect_: supercurrent
+
+- The _AC Josephson effect_: oscillating supercurrent from constant voltage
+
+### AC and DC Josephson effects
+
+### Combining AC and DC
+
+- Applying both a DC, and a _radio frequency_ AC
+$$I=I_{J}\sum_{\nu=-\infty}^{\infty} J_{\nu}\left( \frac{\omega _\text{JRF}}{\omega _\text{RF}} \right)\sin[\theta_{0}+(\omega _\text{J0}+\omega _\text{RF})t]+\frac{V_{0}}{R}+\frac{V_\text{RF}}{R}\cos(\omega _\text{RF}t)$$
+- Sideband frequencies
+
+- Extra DC leading to _Shapiro spikes_ at those frequencies
+
+### Phase with a vector potential
+
+
+### Matter wave interferometry
+- Choose a loop where $J_{s}$ vanishes inside
+- The _phase jump_, allowing for _gauge-invariant phase change in the weak links_:
+$$\oint \nabla\theta \,ds=$$

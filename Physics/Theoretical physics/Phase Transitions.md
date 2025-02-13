@@ -219,7 +219,10 @@ t& t>0 \\ -2t &t<0
 - The _ratio_ of $\chi_{-}/\chi_{+}=2$ before and after $t$ is also _universal_
 
 - The _equation of state_ at the critical temperature:
-$$\bar{m} \sim h^{1/\delta}$$
+$$\bar{m} \sim h^{1/\delta}=h^{1/3}$$
+
+- For _ferromagnets_, _mean field theory_ fails to agree with experiment
+![[Mean field theory comparison.png]]
 ## Gaussian functional integration
 - Consider the Gaussian integral:
 $$\mathcal{Z}_{1}=\int  d\phi\,\exp\left( -\frac{\phi^{2}}{2G}+h\phi \right)=\sqrt{ 2\pi G }\exp\left( \frac{h^{2}}{2G} \right) $$
@@ -283,3 +286,39 @@ $$G^{-1}(\boldsymbol{x},\boldsymbol{x}')=\delta^{d}(\boldsymbol{x}-\boldsymbol{x
 $$G(\boldsymbol{q})=\frac{1}{q^{2}+\xi^{-2}}$$
 - This is related to the Fourier transform of the correlation function:
 $$\langle \phi(q)\phi(q') \rangle_{c}=(2\pi)^{d}\delta^{d}(q+q')G(q) $$
+### Example: from Ising model to Ginzburg-Landau
+$$H_\text{Ising}=-J\sum_{\langle ij \rangle }\sigma_{i}\sigma_{j}-h\sum_{i}\sigma_{i}$$
+- The partition function is the _trace_:
+$$\mathcal{Z}=\mathrm{Tr}[e^{-\beta H}]=\sum_{\{\sigma_{i}\}}$$
+- Introduce the _Hubbard-Stratonovich_ transformation:
+$$\int  d\phi \,\exp\left( -\frac{1}{2}\phi K^{-1}\phi+\phi s \right)=\sqrt{ 2\pi K }\exp\left( \frac{1}{2}sKs \right) $$
+- The partition function, by introducing the _auxiliary field_ $\phi$
+$$\int \prod_{r}\,d\phi(\boldsymbol{r})\exp[] $$
+- Final: 
+$$\mathcal{Z}\propto \int  \prod_{r}d\phi(r) \exp\left[ -\frac{1}{2}\sum_{r,r'}\phi(r)K^{-1}(r,r')\phi(r')+\sum_{r}\ln \cosh(\phi+h)s \right] $$
+- From _lattice translation symmetry_
+
+- Fourier transform
+
+- Integrate over the _first Brillouin zone_
+
+- This links the _phenomenological parameters_ with microscopic parameters of the system
+
+## Spontaneous symmetry breaking
+- If a _Hamiltonian_ has some _continuous symmetry_ (e.g. translation, rotation), if the _ground state violates_ that symmetry, one has _spontaneous symmetry breaking_
+- The ground states are _degenerate_ (e.g. aligntied spins pointing in any dimension)
+
+- When spontaneous symmetry occurs, one can have _long wavelength excitations_, known as _Goldstone modes_
+
+- Take a _2-component spin model_
+	- Ising model is 1-component, and does not have continuous symmetry
+$$\beta H=\int  d^dx\,\left[ \frac{t}{2}\boldsymbol{m}^{2}+u\boldsymbol{m}^{4}+\frac{K}{2}|\nabla \boldsymbol{m}|^{2}-\boldsymbol{h}\cdot \boldsymbol{m} \right] $$
+- For $t<2$, one has a _Mexican hat potential_, where there is some _set of degenerate ground states_
+
+- Take:
+$$\boldsymbol{m}=m \pmatrix{\cos\theta \\ \sin\theta}$$
+- The free energy is then:
+$$\beta H[\theta]=\beta H_{0}+ \frac{\bar{K}}{2}\int  d^d x|\nabla\theta|^{2}$$
+- The field $\theta(\boldsymbol{x})$ is $2\pi-$periodic
+
+- Take _fluctuations_ to be _small_ such that one can approximate this as a _Gaussian integral_
