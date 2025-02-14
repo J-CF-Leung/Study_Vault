@@ -306,9 +306,11 @@ $$\mathcal{Z}\propto \int  \prod_{r}d\phi(r) \exp\left[ -\frac{1}{2}\sum_{r,r'}\
 
 ## Spontaneous symmetry breaking
 - If a _Hamiltonian_ has some _continuous symmetry_ (e.g. translation, rotation), if the _ground state violates_ that symmetry, one has _spontaneous symmetry breaking_
-- The ground states are _degenerate_ (e.g. aligntied spins pointing in any dimension)
+- The ground states are _degenerate_ (e.g. aligned spins pointing in any dimension)
+- The onset of _long-range order_ with the ground state is also associated with the _symmetry breaking_
 
 - When spontaneous symmetry occurs, one can have _long wavelength excitations_, known as _Goldstone modes_
+	- An _infinitely long wavelength_ excitation would simply _shift to a different degenerate ground state_
 
 - Take a _2-component spin model_
 	- Ising model is 1-component, and does not have continuous symmetry

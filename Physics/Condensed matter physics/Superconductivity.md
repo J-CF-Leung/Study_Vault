@@ -147,7 +147,7 @@ $$\nabla\times \boldsymbol{J}_{s}=-\rho_{s}\boldsymbol{B}$$
 $$\nabla^{2}\boldsymbol{B}=\frac{\boldsymbol{B}}{\lambda^{2}}\qquad \lambda=\frac{1}{\sqrt{ \mu_{0}\rho_{s} }}=\sqrt{ \frac{m}{4\mu_{0}e^{2}n_{s}} }$$
 - $\lambda$ is some _penetration depth_ of the magnetic field into the solid
 
-## Gauge transformations
+## Gauge transformations in a superconductor
 - The gauge transformation of $\boldsymbol{A}$:
 $$\boldsymbol{A}\to \boldsymbol{A}+\nabla \chi \qquad \varphi \to \varphi-\dot{\chi}$$
 - The corresponding transformation for the wavefunction:
@@ -162,7 +162,7 @@ $$\psi\to \psi \exp\left( i\frac{q}{\hbar} \chi\right) \qquad \theta\to \theta+\
 ### Coherence length
 - The first Ginzburg-Landau equation has some _lengthscale_ such that it can be written as:
 $$\xi^{2}\nabla^{2}\psi+\psi-\frac{\beta}{|\alpha|}|\psi|^{2}\psi=0\qquad \xi=\sqrt{ \frac{\hbar^{2}}{2m|\alpha|} }$$
-
+- This is the lengthscale to which the _magnitude_ of $\psi$ might change
 ### Flux quantisation
 - Consider a superconductor with some _hole_, which is _threaded_ by some magnetic field
 - Far away from the surface, $J_{s}\to 0$ such that:
@@ -277,7 +277,7 @@ $$J_{c}\sim  \frac{1}{B}$$
 # Inhomogeneous superconductors
 - The [[#London equations]] imply that an electric field will _accelerate_ supercurrent, but not required to maintain it
 
-## Time dependence and links
+## Time dependence and links in zero magnetic field
 - Consider a block of superconductor at the London gauge:
 $$\varphi'=0 \quad \boldsymbol{A}'=0 \quad \theta'=\text{const.}$$
 - Doing a _phase transformation_:
@@ -285,50 +285,85 @@ $$\varphi=\varphi'-\dot{\chi} \quad \boldsymbol{A}=\boldsymbol{A}'+\nabla \chi\q
 - Suppose $\varphi$ is a _finite, constant potential_ $V$:
 $$\dot{\chi}=-V\implies \boldsymbol{A}=\boldsymbol{A}'=0 \quad \theta=\theta'-\varphi\frac{qt}{\hbar}$$
 - When _two blocks_ of superconductors are _connected_ with some _potential difference_, there will be _current flow_
+	- Typically linked by a _normal conductor_, or sometimes an insulator
 
 - The order parameter will _wind_:
-$$\psi(t)=\exp\left( -\frac{iqt}{\hbar} V\right)\psi(0)$$
+$$\psi(t)\sim\exp\left( -\frac{iqt}{\hbar} V\right)\psi(0)$$
 
 
 ### Strong and weak links
-- Analysis of Ginzburg-Landau equation, strong and weak links
-
+- Consider the first Ginzburg-Landau equation, in terms of coherence length $\xi$
+$$\xi^{2}\nabla^{2}\psi+\psi-\frac{\beta}{|\alpha|}|\psi|^{2}\psi=0\qquad \xi=\sqrt{ \frac{\hbar^{2}}{2m|\alpha|} }$$
 
 - A _strong link_ has $\psi$ wind over a _distance $d$ larger than coherence length_
 $$d\gg \xi$$
+- Even when the order parameter _winds_ by $2\pi$, the _magnitude_ of $\psi$ is able to change such that _it cannot return to its original state_
 
-
+- Meanwhile, a _weak link_ has $d\ll \xi$ such that $|\psi|$ does not change significantly
+	- It can be viewed as a _tunnelling barrier_ such that the whole system can be described as _one effective condensate wavefunction_ (or the sum of two evanescent waves)
 
 - Consider supercurrent from the [[#Ginzburg-Landau equations]], for a _constant_ $\psi$
-$$\frac{\partial}{\partial t}\boldsymbol{J}_{s}=\rho_{s}\left( \frac{\hbar}{q}\nabla\dot{\theta}-\dot{\boldsymbol{A}} \right)=\rho_{s}\boldsymbol{E}$$
+$$\frac{\partial}{\partial t}\boldsymbol{J}_{s}=\rho_{s}\left( \frac{\hbar}{q}\nabla\dot{\theta}-\dot{\boldsymbol{A}} \right)=\rho_{s}(-\nabla \varphi- \dot{\boldsymbol{A}})=\rho_{s}\boldsymbol{E}$$
 - This is the first [[#London equations|London equation]]
-
+	- An electric field can _kick-start_ the supercurrent, but not sustain it
 
 ### Josephson phase relation
-
+- Consider the weak link with $d\ll \xi$ and _potential difference_ $V$
+![[Superconductor weak link.png]]
+- From the gauge transformation, the _phase drop_ $\Theta=\theta_{1}-\theta_{2}$ obeys:
+$$\frac{\partial\Theta}{\partial t}=\frac{qV}{\hbar}=\frac{2\pi V}{\phi_{0}}$$
+- From the expression for supercurrent in the absence of $\boldsymbol{A}$:
+$$J_{s}=\frac{q\hbar}{m}\mathrm{Im}[-\psi^{*}\nabla \psi]$$
+- Replace $\psi$ using the values at either side of the junction:
+$$-\psi^{*}\nabla \psi= \frac{\psi_{1}^{*}+\psi_{2}^{*}}{2}\frac{\psi_{1}-\psi_{2}}{d}=\frac{1}{2d}(\psi_{1}\psi_{2}^{*}-\psi_{1}^{*}\psi_{2})$$
+- One then gets the _Josephson phase relation_, relating the _supercurrent_ $I_{s}$ to the _phase drop_ $\Theta$, with some _constant_ $I_{J}$
+$$I_{s}=I_{J}\sin\Theta$$
 ## Josephson junctions
-- Consider the setup:
-$$\displaylines{I=I_{s}+I_{n}=I_{J}\sin\theta+\frac{V}{R}+C\dot{V} \\ I=I_{J}\sin\theta+\frac{\phi_{0}}{2\pi R}\dot{\theta}+\frac{\phi_{0}C}{2\pi}\ddot{\theta}}$$
-- Evolution of $\theta$ to the _forced, damped oscillations_
+- Consider the setup of a Josephson junction, _shunted_ with a resistor and capacitor:
+$$\displaylines{I=I_{s}+I_{n}=I_{J}\sin\Theta+\frac{V}{R}+C\dot{V} \\ I=I_{J}\sin\Theta+\frac{\phi_{0}}{2\pi R}\dot{\Theta}+\frac{\phi_{0}C}{2\pi}\ddot{\Theta}}$$
+- Evolution of $\theta$ can be compared to _forced, damped oscillations_
+- The use of a Josephson junction leads to a _unique I-V characteristic_
 
-- The _DC Josephson effect_: supercurrent
+### DC and AC Josephson effects
+- Using the relation between $\Theta$ and $V$, write:
+$$\Theta=\Theta_{0}+\frac{2\pi}{\phi_{0}}\int_{0}^{t} V(t') dt' $$
+- Considering only a _purely resistive shunted junction_:
+$$I(t)=I_{J}\sin\left(\Theta_{0}+\frac{2\pi}{\phi_{0}}\int_{0}^{t}  V(t')\,dt' \right)+\frac{V(t)}{R}$$
 
-- The _AC Josephson effect_: oscillating supercurrent from constant voltage
+- Consider the case of $V=0$, such that:
+$$I=I_{s}=I_{J}\sin\Theta_{0}$$
+- This is the _DC Josephson effect_, such that _supercurrent flows through the weak link without applied voltage_
 
-### AC and DC Josephson effects
-
+- When one applies a _finite DC voltage_ $V$:
+$$\Theta=\Theta_{0}+\frac{2\pi V}{\phi_{0}}t\implies I=I_{J}\sin(\Theta_{0}+\omega_{J}t)+\frac{V}{R} \qquad \omega_{J}=\frac{2\pi V}{\phi_{0}}$$
+- $\omega_{J}$ is the _Josephson frequency_
+- This is the _AC Josephson effect_, where a DC voltage drives an _oscillating super-current_ with a frequency $\propto 1/\phi_{0}$
+![[ACDC Josephson.png]]
 ### Combining AC and DC
 
 - Applying both a DC, and a _radio frequency_ AC
 $$I=I_{J}\sum_{\nu=-\infty}^{\infty} J_{\nu}\left( \frac{\omega _\text{JRF}}{\omega _\text{RF}} \right)\sin[\theta_{0}+(\omega _\text{J0}+\omega _\text{RF})t]+\frac{V_{0}}{R}+\frac{V_\text{RF}}{R}\cos(\omega _\text{RF}t)$$
-- Sideband frequencies
+- It generates _sideband frequencies_ $\omega_{J0}+\nu\omega _\text{RF}$
+- There is a _constant DC part unless_ the Josephson frequency _matches a multiple of the AC frequency_:
+$$\omega_{J0}+\nu\omega _\text{RF}=0\implies \langle I \rangle=J_{\nu}\left( \frac{\omega _\text{JRF}}{\omega _\text{RF}} \right)I_{J}\sin(\Theta_{0})+\frac{V_{0}}{R} $$
 
-- Extra DC leading to _Shapiro spikes_ at those frequencies
+- These are _Shapiro spikes_
 
-### Phase with a vector potential
-
-
+## Gauge invariant phase with a vector potential
+- In the presence of a _magnetic vector potential_ $\boldsymbol{A}$, the _supercurrent_ becomes:
+$$J_{s}\propto \nabla\theta+\frac{2\pi }{\phi_{0}}\boldsymbol{A}$$
+- Therefore, the _gauge invariant phase drop_ is in fact:
+$$\Theta=\theta_{1}-\theta_{2}-\left( \frac{2\pi}{\phi_{0}} \right)\int_{1}^{2} \boldsymbol{A}\cdot d\boldsymbol{s} $$
 ### Matter wave interferometry
-- Choose a loop where $J_{s}$ vanishes inside
-- The _phase jump_, allowing for _gauge-invariant phase change in the weak links_:
-$$\oint \nabla\theta \,ds=$$
+- Consider taking a line integral in a holed superconductor with _weak links_, _sufficiently deep_ such that $J_{s}=0$, similar to the [[#Flux quantisation]] argument
+$$\nabla\theta=-\frac{2\pi}{\phi_{0}}\boldsymbol{A}$$
+![[Two weak links.png|400]]
+- The _phase jump_, allowing for _phase drop in the weak links_, must be $2\pi n$ to keep the wavefunction single-valued:
+$$\oint \nabla\theta \,ds=2\pi n=\Theta_{a}-\Theta_{b}+\frac{q}{\hbar}\Phi\implies \Theta_{a}-\Theta_{b}=-2\pi \frac{\Phi}{\Phi_{0}}\,\mathrm{mod}\,2\pi$$
+- The _total current_ is then:
+$$I_\text{tot}=I_{a}+I_{b}=I_{J}(\sin\Theta_{a}+\sin\Theta_{b})=2I_{J}\cos\left( \frac{\Theta_{a}+\Theta_{b}}{2} \right)\sin\left( \frac{\Theta_{a}+\Theta_{b}}{2} \right)$$
+- The current then depends on flux, _oscillating_ with a period of $\phi_{0}$
+	- Analagous to _double slit interference_
+$$I_{c}=2I_{J}\left|\cos\left( \frac{\pi \Phi}{\Phi_{0}} \right)\right|$$
+![[SQUID interference.png|400]]
+- This is used for _SQUIDs_, which can make _high-sensitivity measurements_ of _changes_ in $B,V,I$

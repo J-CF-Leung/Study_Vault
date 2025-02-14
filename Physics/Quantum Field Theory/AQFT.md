@@ -52,7 +52,7 @@ $$\displaylines{U(x_{f},t_{f},x_{i},t_{i})=N \int_{x(t_{i})=x_{i}}^{x(t_{f})=x_{
 	- A _functional integral_, integrating over a _space of functions_
 
 - Drawing an analogy to _statistical fields_, one may use an _imaginary time_
-	- Known as a _Wick rotation_
+	- Known as a [[#Wick rotation and Euclidean QFT|Wick rotation]]
 	- Might give better _convergence_
 	- $S_{E}$ is analagous to the _Hamiltonian_, making the path integral a _partition function_
 $$\int_{i}^{f}  \mathcal{Dx}\exp(-S_{E}[x]) \qquad S_{E}[x]=\int  d\tau\,\left( \left( \frac{dx}{d\tau} \right)^{2}+V(x) \right)  $$
@@ -572,3 +572,64 @@ $$\tilde{G}_{2}(p)= \frac{i}{p^{2}-m^{2}-\tilde{\Pi}(p^{2})+i\epsilon}$$
 - Formally, _all quantum effects_ can be inserted into a _mass shift_
 $$\tilde{G}_{2}(p)=\frac{i}{p^{2}-M^{2}+i\epsilon } \qquad M^{2}=m^{2}+\Pi$$
 - However, $\Pi$ is still _formally divergent_
+
+## Wick rotation and Euclidean QFT
+- The _analytic continuation_ of $G_{n}(\phi_{1}\dots \phi_{n})$ to _complex spacetime_
+
+- Using _imaginary time_, one goes to a _Euclidean spacetime_
+	- There are well-defined criteria for when Euclidean and Minkowski spacetime field theories are _isomorphic_
+$$t\to \tau=it\implies ds^{2}=-(d\tau^{2}+dx^{2})$$
+- Once Wick rotated, the Feynman propagator becomes:
+$$D_{F}(x-y)=\int  \frac{d^4p}{(2\pi)^{4}} \frac{1}{p^{2}+m^{2}} \exp[ip(x-y)] $$
+- The contour is _rotated_ such that the _poles_ are now on the _imaginary_ axis
+
+### Euclidean Feynman rules in $\phi^4$ theory
+- The action is still:
+$$S_{E}[\phi]=\int  d^4x\,\left[ \frac{1}{2}\partial_{\mu}\phi\partial^{\mu}\phi+\frac{1}{2}m^{2}\phi^{2}+\frac{\lambda}{4!}\phi^{4} \right] $$
+- The _new momentum Feynman rules_:
+	- For each line, $\tilde{D}_{F}(p)=(p^{2}+m^{2})^{-1}$
+	- For each vertex, there is a factor of $-\lambda$
+	- Integrate over the unconstrained momenta
+	- Divide by the _symmetry factor_
+	- Impose _momentum conservation_ $$(2\pi)^{4}\delta^{4}\left( \sum_{i}p_{i} \right)$$
+### A one-loop correction
+- For example, the _one-loop correction_ to the propagator:
+$$-\frac{\lambda}{2}\int  \frac{d^4k}{(2\pi)^{4}} \frac{1}{k^{2}+m^{2}} $$
+- Denoting an _angular measure_ in 4D as $d\Omega_{4}$:
+$$d^{4}k=k^{3}\,dk\,d\Omega_{4}$$
+- Also _regularise_ by adding a _higher momentum cutoff_:
+$$0<k^{2}<\Lambda^{2}$$
+- From below: 
+$$\int  d\Omega_{4}=S_{4}=2\pi^{2} $$
+- Then consider the integral:
+$$\int_{0}^{\Lambda}  dk \frac{k^{3}}{k^{2}+m^{2}} $$
+- Doing the integral with substitution $u=k^{2}/m^{2}$:
+$$\int_{0}^{\Lambda}  dk \frac{k^{3}}{k^{2}+m^{2}} =\frac{m^{2}}{2}\left[ \frac{\Lambda^{2}}{m^{2}}-\ln\left( 1+ \frac{\Lambda^{2}}{m^{2}} \right) \right]$$
+- The one-loop correction is then:
+$$\Pi=-\frac{\lambda}{32\pi^{2}}\left( \Lambda^{2}-m^{2}\ln\left( 1+\frac{\Lambda^{2}}{m^{2}} \right) \right)$$
+
+- The _vertex_(inverse propagator) given by the [[#$ Gamma_2$ and the propagator|quantum effective action]]:
+$$\Gamma_{2}(p)=p^{2}+m^{2}-\Pi$$
+#### Diversion: area of a $d-$dimensional sphere
+- In $d$ dimensions, for a function depending only on _radius_, one can write in terms of the _area of a sphere in $d$ dimensions_ $S_{d}$
+$$\int  f(r)\,d^{d}r=S_{d}\int  f(r)r^{d-1}\,dr  $$
+- Considering the _Gaussian integral_:
+$$(\sqrt{ \pi })^{d}=\int_{\mathbb{R}^{d}}dx_{1}\dots dx_{d}\,e^{-(x_{1}^{2}+\dots x_{d}^{2})}=S_{d}\int  dr\,r^{d-1}e^{-r^{2}}  $$
+- The _Gamma function_:
+	- $\gamma$ is the _Euler-Mascheroni constant_
+$$\displaylines{\Gamma(z)=\int_{0}^{\infty}  dt\,t^{z-1}e^{-t} \\ \Gamma(n)=(n-1)! \qquad \Gamma(z)=\frac{1}{z}-\gamma+\dots}$$
+- Making the substitution $u=r^{2}$:
+$$S_{d}=\frac{2\pi^{d/2}}{\Gamma(d/2)}$$
+- From this, the area of a _4D sphere_ $S_{4}$ is $2\pi^{2}$
+
+### 4-point divergence at one-loop
+![[4 point one loop corrections.png|500]]
+- For simplicity, only calculate the _loop integrals_ where $p_{i}=0$
+- In this case, all 3 permutations have the same contribution:
+$$\int_{\mathcal{B}_{\Lambda}}  \frac{d^4k}{(2\pi)^{4}}  \frac{1}{(k^{2}+m^{2})^{2}}$$
+- Making the $u=k^{2}/m^{2}$ substitution again, the contribution from one loop integral:
+$$\frac{\lambda^{2}}{32\pi^{2}}\left[ \ln\left( 1+\frac{\Lambda^{2}}{m^{2}} \right)- \frac{\Lambda^{2}}{\Lambda^{2}+m^{2}} \right]$$
+- Therefore, the 4-point correlation for $p_{i}=0$:
+$$-\lambda+\frac{3\lambda^{2}}{32\pi^{2}}\left[ \ln\left( 1+\frac{\Lambda^{2}}{m^{2}} \right)- \frac{\Lambda^{2}}{\Lambda^{2}+m^{2}} \right]$$
+- From this, the contribution from the [[#$ Gamma_3$ and higher order functions|quantum effective action]] for $p_{i}=0$:
+$$\Gamma_{4}(0,0,0,0)=\lambda-\frac{3\lambda^{2}}{32\pi^{2}}\left[ \ln\left( 1+\frac{\Lambda^{2}}{m^{2}} \right)- \frac{\Lambda^{2}}{\Lambda^{2}+m^{2}} \right]$$
