@@ -157,6 +157,9 @@ $$\beta H[\boldsymbol{m}]=\beta H[R\boldsymbol{m}]$$
 - From these conditions, $\beta H$ must be some _analytical function_ of $m$ with these symmetries
 	- $\beta$ is _not a factor_, $\beta H$ is _one function_
 - With some _phenomenological parameters_:
+	- $t$: a _free/inertial term_, similar to kinetic energy
+	- $u$: an _interaction parameter_
+	- $K,L$: punish _inhomogeneities_
 $$\beta H[\boldsymbol{m}(\boldsymbol{x})]=\int  d^dx\left[ \frac{t}{2}m^{2}+um^{4}+\frac{K}{2}|\nabla \boldsymbol{m}|^{2}+\frac{L}{2}|\nabla^{2}\boldsymbol{m}|^{2}+\dots -\boldsymbol{h}\cdot \boldsymbol{m}\right] $$
 - _Higher order_ field and gradient terms are assumed to be _small_ near the critical point
 
@@ -173,6 +176,7 @@ $$\mathcal{Z}\equiv e^{-\beta F[T,\boldsymbol{h}]}\qquad \beta F[T,\boldsymbol{h
 - For _stability_, $K>0$
 	- Analagous to _kinetic energy_
 - Therefore, a _mean field_ requires that $\nabla \boldsymbol{m}=0$ (a _uniform field_ $m$)
+- One can then add _fluctuations_ to $\beta H$ as deviations from $\beta F$
 
 - _Landau mean field theory_ then has the free energy density:
 	- $\beta F$ _cannot be factorised_
@@ -211,18 +215,31 @@ $$C=\frac{\partial E}{\partial T}=\begin{cases}
 0&t>0 \\ k_{B}/8u &t<0
 \end{cases}$$
 - It is a _discontinuous second derivaitve_ of the _free energy_
+- The critical exponent:
+	- $f(\bar{m})\propto t^{2-\alpha}$
+$$\alpha_{+}=\alpha_{-}=0$$
 
-- The _susceptibility_:
+- The _zero field susceptibility_:
 $$\chi\equiv \frac{\partial \bar{m}}{\partial h}\Bigg|_{h=0} \qquad \chi^{-1}=\begin{cases}
 t& t>0 \\ -2t &t<0
-\end{cases}$$
-- The _ratio_ of $\chi_{-}/\chi_{+}=2$ before and after $t$ is also _universal_
+\end{cases}\implies \gamma=\gamma_{+}=\gamma_{-}=1$$
+- For _mean field_, $\gamma_{+}=\gamma_{-}$
 
 - The _equation of state_ at the critical temperature:
 $$\bar{m} \sim h^{1/\delta}=h^{1/3}$$
 
 - For _ferromagnets_, _mean field theory_ fails to agree with experiment
 ![[Mean field theory comparison.png]]
+### Field theory for first order phase transition
+$$\beta H=\int  d\boldsymbol{r}\,\left[ \frac{t}{2}m^{2}+um^{4}+vm^{6}+\frac{K}{2}|\nabla m|^{2}-h\cdot m \right] $$
+- For $u>0$, there is a _second order phase transition_
+- For $u<0$, there will be a _local minimum_ at $m^{*}\neq 0$, which for some $T_{c}$, there will be a _first order phase transition_
+	- For $T>T_{c}$, there is a _metastable state_
+
+- The point $v=u=0$ is the _tricritical point_, where the first and second order phase boundaries _intersect_
+	- Example: type I and II superconductivity
+![[Tricritical point.png]]
+
 ## Gaussian functional integration
 - Consider the Gaussian integral:
 $$\mathcal{Z}_{1}=\int  d\phi\,\exp\left( -\frac{\phi^{2}}{2G}+h\phi \right)=\sqrt{ 2\pi G }\exp\left( \frac{h^{2}}{2G} \right) $$
@@ -287,20 +304,34 @@ $$G(\boldsymbol{q})=\frac{1}{q^{2}+\xi^{-2}}$$
 - This is related to the Fourier transform of the correlation function:
 $$\langle \phi(q)\phi(q') \rangle_{c}=(2\pi)^{d}\delta^{d}(q+q')G(q) $$
 ### Example: from Ising model to Ginzburg-Landau
-$$H_\text{Ising}=-J\sum_{\langle ij \rangle }\sigma_{i}\sigma_{j}-h\sum_{i}\sigma_{i}$$
-- The partition function is the _trace_:
-$$\mathcal{Z}=\mathrm{Tr}[e^{-\beta H}]=\sum_{\{\sigma_{i}\}}$$
+$$\beta H_\text{Ising}=-J\sum_{\langle ij \rangle }\sigma_{i}\sigma_{j}-h\sum_{i}\sigma_{i}$$
+- The partition function is the _trace_
+	- $K_{ij}$ is the coupling matrix, equal to $J$ for _neighbouring_ $i,j$
+$$\mathcal{Z}=\mathrm{Tr}[e^{-\beta H}]=\sum_{\{\sigma_{i}\}}\exp\left[ \sum_{i,j}\sigma_{i}K_{ij}\sigma_{j}+h\sum_{i}\sigma_{i} \right]$$
 - Introduce the _Hubbard-Stratonovich_ transformation:
-$$\int  d\phi \,\exp\left( -\frac{1}{2}\phi K^{-1}\phi+\phi s \right)=\sqrt{ 2\pi K }\exp\left( \frac{1}{2}sKs \right) $$
-- The partition function, by introducing the _auxiliary field_ $\phi$
-$$\int \prod_{r}\,d\phi(\boldsymbol{r})\exp[] $$
-- Final: 
-$$\mathcal{Z}\propto \int  \prod_{r}d\phi(r) \exp\left[ -\frac{1}{2}\sum_{r,r'}\phi(r)K^{-1}(r,r')\phi(r')+\sum_{r}\ln \cosh(\phi+h)s \right] $$
-- From _lattice translation symmetry_
+$$\int  \mathcal{D}\phi \,\exp\left( -\frac{1}{2}\boldsymbol{\phi}\mathbf{K}^{-1} \boldsymbol{\phi+\boldsymbol{\phi}\cdot \boldsymbol{s}} \right)=\sqrt{ 2\pi \det K }\exp\left( \frac{1}{2}\boldsymbol{s} \mathbf{K}\boldsymbol{s}\right) $$
+- The partition function, by doing the transformation in _reverse_ and introducing the _auxiliary field_ $\phi(\boldsymbol{r})$
+$$\mathcal{Z}=\frac{1}{\sqrt{ 2\pi \det K }}\sum_{\{\sigma_{i}\}}\int \mathcal{D}\phi\exp\left[ -\frac{1}{2}\boldsymbol{\phi}\mathbf{K}^{-1} \boldsymbol{\phi}+ (\boldsymbol{h}+\boldsymbol{\phi})\cdot \boldsymbol{\sigma}\right] $$
 
-- Fourier transform
+- Summing over $\sigma_{i}=\pm 1$, the final formula for the partition function:
+$$\mathcal{Z}\propto \int  \prod_{r}d\phi(r) \exp\left[ -\frac{1}{2}\sum_{r,r'}\phi(r)K^{-1}(r,r')\phi(r')+\sum_{r}\ln \cosh(\phi+h) \right] $$
+- From _lattice translation symmetry_:
+$$K(\boldsymbol{r},\boldsymbol{r}')=K(\boldsymbol{r}-\boldsymbol{r}')$$
 
-- Integrate over the _first Brillouin zone_
+- Fourier transform of $K^{-1}$:
+$$K^{-1}(\boldsymbol{r}-\boldsymbol{r}')=\int  \frac{d^dk}{(2\pi)^{d}}  \frac{\exp[i\boldsymbol{k}\cdot(\boldsymbol{r}-\boldsymbol{r}')]}{\tilde{K}(\boldsymbol{k})}$$
+- Also Fourier transforming the fields, one can simply _integrate over the Brillouin Zone_
+$$\frac{1}{2}\sum_{\boldsymbol{r},\boldsymbol{r}'}\phi(\boldsymbol{r})K^{-1}(\boldsymbol{r}-\boldsymbol{r}')\phi(\boldsymbol{r}')=\frac{1}{2}\int_\text{BZ} \frac{d^{d}k}{(2\pi)^{d}} \tilde{\phi}(\boldsymbol{k})^{*} \frac{1}{\tilde{K}(\boldsymbol{k})} \tilde{\phi}(\boldsymbol{k}) $$
+- When _close to the critical point_, the relevant modes are _long wavelength_ compared to the _range of interaction_ $R$
+$$\displaylines{|\boldsymbol{k}|R\ll 1 \\ \tilde{K}(\boldsymbol{k})=\tilde{K}(0)[1-(kR)^{2}+\mathcal{O}(k^{4})]\qquad \tilde{K}^{-1}=\frac{1}{\tilde{K}(0)}[1+k^{2}R^{2}+\mathcal{O}(k^{4})]}$$
+- Going back to _real space_, with a _lattice spacing_ $a$
+$$\sum_{\boldsymbol{r}}\to \int  \frac{d^dr}{a^{d}} \qquad k^{2}\to -\nabla^{2}$$
+- From this, the partition function becomes:
+$$\mathcal{Z}=\int  \mathcal{D}\phi \exp\left[-\int  \frac{d^{d}r}{a^{d}} \left( \frac{1}{2\tilde{K}(0)} \phi(1-R^{2}\nabla^{2})\phi\right)+\int  \frac{d^dr}{a^{d}}\ln[\cosh(\phi+h)]  \right] $$
+- By _rescaling_ $\phi^{2}\to \tilde{K}(0)a^{d}\phi^{2}/R^{2}$
+$$\displaylines{\mathcal{Z}=\int  \mathcal{D}\phi\,\exp\left[-\int  d^{d}r \left( \frac{1}{2}|\nabla \phi|^{2}+V(\phi) \right) \right] \\ \begin{align}
+V(\phi)&=\frac{1}{2R^{2}}\phi^{2}-\frac{1}{a^{d}}\ln\left[ \cosh\left( \sqrt{ \frac{\tilde{K}(0)a^{d}}{R^{2}} }\phi+h \right) \right] \\ &=\frac{1}{2R^{2}} (1-\tilde{K}(0))\phi^{2}+\mathcal{O}\left( \frac{\tilde{K}(0)^{2}a^{d}}{R^{4}} \right)\phi^{4}
+\end{align}}$$
 
 - This links the _phenomenological parameters_ with microscopic parameters of the system
 
@@ -312,15 +343,166 @@ $$\mathcal{Z}\propto \int  \prod_{r}d\phi(r) \exp\left[ -\frac{1}{2}\sum_{r,r'}\
 - When spontaneous symmetry occurs, one can have _long wavelength excitations_, known as _Goldstone modes_
 	- An _infinitely long wavelength_ excitation would simply _shift to a different degenerate ground state_
 
+### Goldstone mode fluctuations in spin models
 - Take a _2-component spin model_
 	- Ising model is 1-component, and does not have continuous symmetry
 $$\beta H=\int  d^dx\,\left[ \frac{t}{2}\boldsymbol{m}^{2}+u\boldsymbol{m}^{4}+\frac{K}{2}|\nabla \boldsymbol{m}|^{2}-\boldsymbol{h}\cdot \boldsymbol{m} \right] $$
 - For $t<2$, one has a _Mexican hat potential_, where there is some _set of degenerate ground states_
 
-- Take:
+- Take for $T<T_{c}$:
 $$\boldsymbol{m}=m \pmatrix{\cos\theta \\ \sin\theta}$$
 - The free energy is then:
+	- Only $\nabla\theta$ is a _Gaussian distributed variable_, $\theta$ itself is _uniformly distributed_
 $$\beta H[\theta]=\beta H_{0}+ \frac{\bar{K}}{2}\int  d^d x|\nabla\theta|^{2}$$
 - The field $\theta(\boldsymbol{x})$ is $2\pi-$periodic
 
-- Take _fluctuations_ to be _small_ such that one can approximate this as a _Gaussian integral_
+- Take _fluctuations_ to be _small_ $(\ll 2\pi)$, in the _low temperature limit_ such that one can approximate this as a _Gaussian integral_
+	- At higher temperatures, periodicity causes _topological effects_ such as _vortices_
+
+- From the results of [[#Quadratic form|Gaussian functional integration]], the _correlation functions_ are:
+$$\displaylines{\langle \theta(\boldsymbol{x}) \rangle=0 \\ G(\boldsymbol{x},\boldsymbol{x}')=\langle \theta(\boldsymbol{x})\theta(\boldsymbol{x}') \rangle=G(\boldsymbol{x}-\boldsymbol{x}')=-\frac{C_{d}(\boldsymbol{x}-\boldsymbol{x}')}{\bar{K}}  \\ \nabla^{2}C_{d}(\boldsymbol{x})=\delta^{d}(\boldsymbol{x})}$$
+
+- $C_{d}$ is the _Coulomb potential_ for a $\delta-$function charge distribution
+	- It should only depend on the _radial distance_
+	- Here, $S_{d}x^{d-1}$ is the _surface area_ of a sphere in $d-$space
+	- Result _does not apply_ for $d\leq 2$, where $C_{2}(x)\sim \ln|x|$
+$$\displaylines{1=\int_{V}  d^{d}x \,\nabla^{2}C_{d}(\boldsymbol{x})=\oint d\boldsymbol{S}\cdot \nabla C_{d}=S_{d}\,x^{d-1}\,\frac{dC_{d}}{dx}  \\ \frac{dC_{d}}{dx}=\frac{1}{x^{d-1}S_{d}} \qquad C_{d}(x)=\frac{x^{2-d}}{(2-d)S_{d}}+\text{const.}}$$
+- For _small distances_ in $d>2$, one has to introduce a _high momentum cut-off_ corresponding to the _lattice spacing_ $a$:
+$$\langle \theta(0)^{2} \rangle=\frac{a^{2-d}}{(2-d)S_{d}} $$
+
+- Calculating the _two-point correlation_ for the _order parameter_, from the [[#General cumulant expansion|cumulant expansion]], it is related to the _correlation for fluctuations_
+$$\langle \boldsymbol{m}(\boldsymbol{x})\cdot \boldsymbol{m}(0) \rangle=\bar{m}^{2}\mathrm{Re} \langle \exp({i[\theta(\boldsymbol{x})-\theta(0)])} \rangle =\bar{m}^{2} \exp\left[ -\frac{1}{2}\langle [\theta(\boldsymbol{x})-\theta(0)]^{2} \rangle  \right]$$
+- Interpretation: _large fluctuations_ will _reduce long-range order_
+
+- Neglecting _topological (vortex)_ configurations, by plugging in the Greens function:
+$$\displaylines{\langle \boldsymbol{m}(\boldsymbol{x})\cdot \boldsymbol{m}(0) \rangle=\bar{m}^{2}\exp\left[ -\frac{x^{2-d}-a^{2-d}}{\bar{K}(2-d)S_{d}} \right]  \\ \lim_{ |\boldsymbol{x}| \to \infty }  \langle \boldsymbol{m}(\boldsymbol{x})\cdot \boldsymbol{m}(0) \rangle=\begin{cases}
+\bar{m}^{2} &d>2 \\ 0 & d\leq 2
+\end{cases} }$$
+- At $d>2$, fluctuations are _finite_ and have a _power law decay_, therefore the _saddle point approximation_ and mean field theory hold
+- For $d\leq 2$, fluctuations _destroy long-range order_ and the saddle point approximation fails
+	- For $d<2$, there is an _exponential decay_ in the correlation function
+
+- A consequence of the _Mermin-Wagner theorem_:
+- Systems with _continuous symmetry_ and _short-range interactions_ can _not have long-range order_ for _dimensions_ $\leq 2$
+
+- $d=2$ is the _lower critical dimension_
+	- In other models (e.g. superfluids), there is a _phase transition_ at this dimension without long range order
+	- Correlation decays as a _power law_, not exponentially (_quasi-long range order_)
+	- For _discrete symmetries_ (e.g. $\mathbb{Z}_2$), the lower critical dimension is $d=1$
+
+## Fluctuations in mean field theory
+- Back to Landau theory:
+$$\beta H[\boldsymbol{m}(\boldsymbol{x})]=\int  d^dx \,\left[\frac{t}{2}m^{2}+um^{4}+\frac{\kappa}{2}|\nabla m|^{2} \right]$$
+- Parametrise $\boldsymbol{m}$ as the _mean field_ value, as well as _longitudinal_ and _transverse_ fluctuations
+$$\boldsymbol{m}(\boldsymbol{x})=(\bar{m}+ \varphi_{l}(\boldsymbol{x}))\hat{e}_{l}+\sum_{\alpha=2}^{n}\varphi_{t} \hat{e}_{\alpha}$$
+### Fluctuation contribution to Hamiltonian
+- Contributions to free energy, keeping only _quadratic_ terms in fluctuation:
+$$\displaylines{|\nabla \boldsymbol{m}|^{2}=|\nabla \varphi_{l}|^{2}+|\nabla \varphi_{t}|^{2} \\ m^{2}=\bar{m}^{2}+2\bar{m}\varphi_{l}+\varphi_{l}^{2}+\varphi_{t}^{2} \\ m^{4}=\bar{m}^{4}+4\bar{m}^{3}\varphi_{l}+6\bar{m}^{2}\varphi_{l}^{2}+2\bar{m}^{2}\varphi_{t}^{2}}$$
+- From this, _expand_ the Hamiltonian, to get the sum of the _mean field free energy_ and contributions from _fluctuations_
+$$\begin{align}
+\beta H=V\left( \frac{t}{2}\bar{m}^{2}+u\bar{m}^{4} \right)&+\int  d\boldsymbol{x}\,\left[ \frac{\kappa}{2}|\nabla \phi_{l}|^{2}+\frac{t+12u\bar{m}^{2}}{2}\phi_{l}^{2} \right] \\ &+ \int  d\boldsymbol{x} \left[ \frac{\kappa}{2}|\nabla \phi_{t}|^{2}+\frac{t+4u\bar{m}^{2}}{2}\phi_{t}^{2} \right] 
+\end{align}$$
+- The $l,t$ modes are _decoupled_ in the second order
+
+- This can be seen as a combination of _kinetic terms_ and _potential terms_
+	- $\kappa$ is the _stiffness_ due to inhomogeneities, hence why it is relevant for fluctuations
+- One can then define a _characteristic lengthscale_:
+$$\begin{align}
+\frac{K}{\xi_{l}^{2}}&\equiv t+12u\bar{m}^{2}=\begin{cases}
+t&t>0 \\ -2t &t<0
+\end{cases}\\ \frac{K}{\xi_{t}^{2}}&\equiv t+4u\bar{m}^{2}=\begin{cases}
+t&t>0 \\ 0&t<0
+\end{cases}
+\end{align}$$
+- _Above_ the critical temperature, the system has _no preferred direction_, such that the _lengthscale is the same in both directions_
+- The _transverse_ mode has _no energetic cost_, as it corresponds to the _Goldstone mode_ (moving among the degenerate ground states with _long wavelength_/correlation length)
+
+- Considering the free energy in _reciprocal space_:
+$$\beta H=\int  \frac{d\boldsymbol{q}}{(2\pi)^{d}} \frac{K}{2}[(q^{2}+\xi_{l}^{-2})|\phi_{l}(\boldsymbol{q})|^{2}+(q^{2}+\xi_{t}^{-2})|\phi_{t}(\boldsymbol{q})|^{2}]$$
+### Fluctuations in reciprocal space and structure factor
+- The _correlations_, where $\alpha,\beta=l,t$
+$$C_{\alpha,\beta}(\boldsymbol{q},\boldsymbol{q}')=\langle \phi_{\alpha}(\boldsymbol{q})\phi_{\beta}(\boldsymbol{q}') \rangle $$
+- Use the fact that the system is _translationally invariant_, from [[#Quadratic form|Gaussian integration]]
+$$\langle \phi_{\alpha}(\boldsymbol{q})\phi_{\beta}(\boldsymbol{q}') \rangle=\delta_{\alpha\beta}(2\pi)^{d}\delta^{d}(\boldsymbol{q}+\boldsymbol{q}')G_{\alpha}(\boldsymbol{q})\qquad G_{\alpha}^{-1}(\boldsymbol{q})=K(q^{2}+\xi_{\alpha}^{-2}) $$
+- This is a _Lorentzian_ 
+
+- This is related to the _structure factor_, related to the _Fourier density_ of scatterers:
+$$S(\boldsymbol{q})\propto \langle |\boldsymbol{m}(\boldsymbol{q})|^{2} \rangle $$
+- It is a _peak due to long-range order_ at $q=0$, along with _fluctuations_:
+$$S_{l,t}(\boldsymbol{q})\propto \langle |\phi_{l,t}(\boldsymbol{q})|^{2} \rangle+\bar{m}^{2}\delta^{d}(q \boldsymbol{}) $$
+- As $t\to 0^{+}$, from the formula for $\xi$, one then gets:
+$$S(\boldsymbol{q},T\to T_{c}^{+})\propto \frac{1}{q^{2}}$$
+![[Ising fluctuations structure factor.png|500]]
+- _Experimentally_, scattering at critical temperature follows a _power law_ with universal exponent $\eta$
+$$S(\boldsymbol{q},T=T_{c})\propto \frac{1}{q^{2-\eta}}$$
+
+### Fluctuations in real space and susceptibility
+- The _real space correlator_: 
+$$\langle \phi_{\alpha}(\boldsymbol{x})\phi_{\beta}(0) \rangle=-\frac{\delta_{\alpha\beta}}{K} I_{d}(\boldsymbol{x},\xi) \qquad I_{d}(\boldsymbol{x},\xi)=-\int  \frac{d\boldsymbol{q}}{(2\pi)^{d}} \frac{e^{i\boldsymbol{q}\cdot \boldsymbol{x}}}{q^{2}+\xi^{-2}} $$
+- Inspect:
+$$\nabla^{2}I_{d}=\delta^{d}(\boldsymbol{x})+\frac{I_{d}}{\xi^{2}}$$
+- From this, one can get the asymptotic behaviour:
+$$I_{d}(\boldsymbol{x},\xi)=\begin{cases}
+C_{d}(\boldsymbol{x})=\frac{|\boldsymbol{x}|^{2-d}}{(2-d)S_{d}} &|\boldsymbol{x}|\ll \xi \\ \frac{\xi^{2-d}}{2-d} \frac{\exp(-|\boldsymbol{x}|/\xi)}{|\boldsymbol{x}/\xi|^{(d-1)/2}} &|\boldsymbol{x}|\gg \xi
+\end{cases}$$
+- One can then interpret $\xi$ as some _correlation length_
+- Correlation lengths _near criticality_:
+$$\xi_{l}=\begin{cases}\sqrt{ K/t } &t>0 \\ \sqrt{ K/2|t| } &t<0\end{cases} \qquad \xi_{t}=\begin{cases}\sqrt{ K/t } &t>0 \\ \infty &t<0\end{cases}$$
+- They can be described using:
+	- Both $\nu$ and $B_{+}/B_{-}$ are _universal_, $\xi_{0}\propto \sqrt{ K }$ is _specific_ to the model
+$$\xi_{\pm}\sim \xi_{0}B_{\pm}|t|^{-\nu_{\pm}} \implies \nu_{\pm}=\nu=\frac{1}{2} \qquad \frac{B_{+}}{B_{-}}=\sqrt{ 2 }$$
+- The above also implies that for the _experimental decay exponent_ $\eta$:
+$$\langle \phi(\boldsymbol{x})\phi(0) \rangle\sim \frac{1}{|\boldsymbol{x}|^{d-2}}\sim \frac{1}{|\boldsymbol{x}|^{d-2-\eta}}\implies \eta=0$$
+
+- The Greens function then looks like:
+![[Ising real space correlation.png|500]]
+- The _longitudinal susceptibility_, with some _cut-off length_ $\xi_{l}$
+$$\chi_{l}\propto\int  d^{d}\boldsymbol{x}\,G_{l}(\boldsymbol{x})\propto \int_{0}^{\xi_{l}}  d\boldsymbol{x} \frac{1}{|\boldsymbol{x}|^{d-2}} \propto \xi_{l}^{2} \sim A_{\pm} t^{-1}  $$
+- The _transverse susceptibility_ for $T<T_{c}$, with cut-off being the _system size_ $L$:
+	- $T>T_{c}: \chi_{l}=\chi_{t}$
+$$\chi_{t}\propto \int_{0}^{L}  d\boldsymbol{x} \frac{1}{|\boldsymbol{x}|^{d-2}} \propto L^{2} $$
+### Free energy correction due to fluctuations
+- The _partition function_ contains a _correction_ due _fluctuations_ giving extra configurations
+	- $\alpha$ counts _dimensions_, including both $l$ and $t$
+$$\mathcal{Z}=\exp(-\bar{f}V) \int \frac{1}{a_{0}^{d}}  \prod_{\boldsymbol{q},\alpha}\,d\phi_{\boldsymbol{q}}^{\alpha}\,d\phi_{-\boldsymbol{q}}^{\alpha} \exp\left( -\frac{K}{2}\sum_{\boldsymbol{q}}(q^{2}+\xi_{\alpha}^{-2})|\phi_{\boldsymbol{q}}^{\alpha}|^{2} \right) $$
+- Transforming to _real_ and _imaginary_ parts, and doing the Gaussian integrals, one gets the expected _decoupled_ partition function
+$$\mathcal{Z}=\exp(-\bar{f}V)\prod_{\boldsymbol{q},\alpha} \sqrt{ \frac{2\pi}{Ka_{0}^{d}(q^{2}+\xi_{\alpha}^{-2})} }$$
+- Alternatively, consider the identity:
+$$\displaylines{\ln \det G=\mathrm{tr}\ln G \\ f=-\frac{\ln \mathcal{Z}}{V}=\bar{f}-\frac{1}{V}\ln\left(\int  \mathcal{D}\phi_{\boldsymbol{q}}^{\alpha} \exp\left( -\frac{K}{2}\sum_{\boldsymbol{q},\alpha} (q^{2}+\xi_{\alpha}^{-2})|\phi^{\alpha}_{\boldsymbol{q}}|^{2}\right) \right)}$$
+
+
+- The _free energy density_ with fluctuation corrections, from either method:
+$$f=-\frac{\ln \mathcal{Z}}{V}=\bar{f}+\frac{1}{2}\sum_{\alpha} \int  \frac{d\boldsymbol{q}}{(2\pi)^{d}} \ln[K(q^{2}+\xi_{\alpha}^{-2})]  $$
+- Corresponding heat capacity:
+$$C\propto-\frac{d^{2}f}{dt^{2}}=\begin{cases}
+0+\frac{n}{2}\int   \frac{d\boldsymbol{q}}{(2\pi)^{d}} (Kq^{2}+t)^{-2} &t>0 \\ \frac{1}{8u}+2\int  \frac{d\boldsymbol{q}}{(2\pi)^{d}} (Kq^{2}-2t)^{-2} &t<0 
+\end{cases}$$
+- For $d>4$, the _contribution_ from fluctuations will _diverge_, unless one implements a _high-momentum cut-off_ $a^{-1}$
+- For $d<4$, the integral is _convergent_
+
+- The fluctuation heat capacity then follows the _power law_ (from _rescaling_ the integral):
+$$C_\text{fluc}\sim \begin{cases}
+a^{4-d}/K^{2} &d\geq4 \\ \xi^{4-d}/K^{2} &d<4
+ \end{cases}$$
+- Divergences
+
+- Consider: 
+$$\int  \frac{d\boldsymbol{q}}{(2\pi)^{d}}  \frac{1}{(Kq^{2}+\alpha|t|)^{2}}=\frac{|t|^{d/2-2}}{K^{d/2}} \int  \frac{d\mu}{(2\pi)^{d}} \frac{1}{(\mu^{2}+\alpha)^{2}}   $$
+- Then comparing to the _mean field_ heat capacity:
+$$\frac{C_\text{fluc}}{C_\text{MF}}=\frac{|t|^{(d-3)/2}}{\sqrt{ K^{d} }}$$
+- There is some _upper critical dimension_ $3$, below which the _fluctuation heat capacity blows up compared to the mean field_
+
+### Ginzburg criterion
+- For a _given_ $t$, the _mean field_ description is _valid_ if:
+$$\frac{C_\text{fluc}}{C_\text{MF}}\ll 1$$
+- For _small_ $t$, one can still use mean field theory
+
+### Generalised criticality
+- Let the _interaction term_ in the free energy be:
+$$u_{2n}m^{2n}$$
+- The _fluctuation heat capacity_ is _unchanged_
+- However, the _mean field heat capacity_ has a different power law
+- The upper critical dimension for the theory is then:
+$$d_{u}=\frac{2n}{n-1}$$
+- The _minimum_ value of $d_{u}$ is $d=2$
+

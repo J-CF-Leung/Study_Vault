@@ -2514,7 +2514,7 @@ $$|\Delta(0)|=\frac{\hbar\omega_{D}}{\sinh(1/\xi)}\approx 2\hbar\omega_{D}\exp\l
 ### Finite temperature and excited states
 - At a finite temperature, the _excited states_ of the BCS Hamiltonian are occupied
 
-- Using the _mean field approximation_ on the _two-particle term_ of the [[#The BCS Wavefunction and Hamiltonian|BCD Hamiltonain]]:
+- Using the _mean field approximation_ on the _two-particle term_ of the [[#The BCS Wavefunction and Hamiltonian|BCS Hamiltonian]]:
 $$c^{\dagger}_{\boldsymbol{k}\uparrow}c^{\dagger}_{-\boldsymbol{k}\downarrow}c_{\boldsymbol{k}'\uparrow}c_{-\boldsymbol{k}'\downarrow}\approx \langle c^{\dagger}_{\boldsymbol{k}\uparrow}c^{\dagger}_{-\boldsymbol{k}\downarrow}\rangle c_{\boldsymbol{k}'\uparrow}c_{-\boldsymbol{k}'\downarrow}+c^{\dagger}_{\boldsymbol{k}\uparrow}c^{\dagger}_{-\boldsymbol{k}\downarrow}\langle c_{\boldsymbol{k}'\uparrow}c_{-\boldsymbol{k}'\downarrow}\rangle $$
 - The BCS Hamiltonian, taking chemical potential into account:
 $$H'_\text{BCS}=\sum_{\boldsymbol{k}}(\varepsilon_{\boldsymbol{k}}-\mu)(c^{\dagger}_{\boldsymbol{k}\uparrow}c_{\boldsymbol{k}\uparrow}+c^{\dagger}_{\boldsymbol{k}\downarrow}c_{\boldsymbol{k}\downarrow})-\sum_{\boldsymbol{k}}\Delta^{*}c_{\boldsymbol{k}\uparrow}c_{-\boldsymbol{k}\downarrow}+\Delta c^{\dagger}_{\boldsymbol{k}\uparrow}c_{\boldsymbol{k}\downarrow}^{\dagger}$$

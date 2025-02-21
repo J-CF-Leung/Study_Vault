@@ -695,3 +695,12 @@ $$\displaylines{H=\sum_{j}c_{j}O_{j} \\ O_{j}\text{ bounded, } c_{j}\propto \exp
 - In other words, a _quasilocal_ $H$ can have terms with _support of any diameter_, as long as the _coefficients decay exponentially_ with diameter
 
 ## Robustness of braiding statistics
+- _Braiding statistics_ is _robust against perturbations_
+
+
+# Topological order with boundaries
+- Instead of a _closed manifold_, have a system on a _2D patch with boundaries_
+
+## Features of surface code in the bulk
+- The _unperturbed surface code_
+$$\displaylines{H=-J_{A}\sum_{v}A_{v}-J_{B}\sum_{p}B_{p} \qquad J_{A,B}>0 \\ A_{v}=\prod_{j \in v}X_{j}\qquad B_{p}=\prod_{j \in p} Z_{j}}$$

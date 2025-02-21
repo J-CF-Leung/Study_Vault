@@ -299,7 +299,7 @@ $$\begin{align}
 - Here, the Feynman propagator:
 $$D_{F}(0)=\int  \frac{d^4p}{(2\pi)^{4}} \frac{i}{p^{2}-m^{2}+i\epsilon} $$
 - It _diverges quadratically_ when integrated over _all momenta_
-
+-
 - The terms above can be written as:
 ![[phi4 four dimensions correction.png]]
 
@@ -386,6 +386,7 @@ $$Z[J]=\int  \mathcal{D}\phi\,\mathcal{D}\chi\,e^{-S[\phi,\chi]-J\phi-K\chi} $$
 - The _effect_ of the $\chi$ field on $\phi$ is given by setting $K=0$ (to get rid of irrelevant $\chi$ correlations) and integrating over $\chi$
 $$\int  \mathcal{D}\phi\,\mathcal{D}\chi \,e^{-S[\phi,\chi]-J\phi}=\int  \mathcal{D}\phi \,e^{-S_\text{eff}[\phi]-J\phi}$$
 - One gets an _effective action_ by integrating over $\chi$
+- The resulting diagrams have _only_ $\phi$ _external propagators_ with $\chi$ influencing the _vertices_ in the effective theory
 
 ### Example: 4-point function
 - For example, to generate the 4-point function:
@@ -633,3 +634,120 @@ $$\frac{\lambda^{2}}{32\pi^{2}}\left[ \ln\left( 1+\frac{\Lambda^{2}}{m^{2}} \rig
 $$-\lambda+\frac{3\lambda^{2}}{32\pi^{2}}\left[ \ln\left( 1+\frac{\Lambda^{2}}{m^{2}} \right)- \frac{\Lambda^{2}}{\Lambda^{2}+m^{2}} \right]$$
 - From this, the contribution from the [[#$ Gamma_3$ and higher order functions|quantum effective action]] for $p_{i}=0$:
 $$\Gamma_{4}(0,0,0,0)=\lambda-\frac{3\lambda^{2}}{32\pi^{2}}\left[ \ln\left( 1+\frac{\Lambda^{2}}{m^{2}} \right)- \frac{\Lambda^{2}}{\Lambda^{2}+m^{2}} \right]$$
+- These loops require a _high-energy cut-off_
+	- QFT is an _effective field theory_ for low energies, at some point, _high-energy gravitational effects_ become relevant
+	- However, one should not expect an _explicit dependence_ on a high-energy cut-off
+
+# Wilsonian renormalisation
+- Using _effective actions_ to understand the physics at different lengthscales
+
+## Effective actions and scale dependence
+- Consider a _generating functional_ for two fields:
+$$Z[J,K]=\int  \mathcal{D}\phi\,\mathcal{D}\chi \exp\left[-S[\phi,\chi]+\int J\phi+ \int  K\chi \right]$$
+- Consider a regime where $m_{\chi}\gg m_{\phi}$, such that the _effects_ of $\chi$ are small
+- One can then _integrate out_ $\chi$ and set $K=0$, to get an _effective action_
+$$\displaylines{Z[J]=\int  \mathcal{D}\phi\,\exp\left[-S_\text{eff}[\phi]+\int  J\phi \right]  \\ S_\text{eff}[\phi]=-\ln \int  \mathcal{D}\chi \,\exp(-S[\phi,\chi]) }$$
+- Consider the toy action:
+$$S[\phi,\chi]=S_\text{kin}+\int  d^4 x\,g\phi^{2}\chi^{2}$$
+- $S_\text{eff}[\phi]$ will then include $\phi^{4}$ terms, effectively _loop corrections_ from $\phi-\chi$ vertices
+
+- For a _low energy effective action_, one can _integrate out high-momentum modes_
+## 1-loop effective action for $\phi^4$
+- The generating functional in _Euclidean signature_ in $d$ dimensions:
+$$Z_{\Lambda}[J]=\frac{1}{Z_{\Lambda}[0]} \int  \mathcal{D}\phi_{\Lambda}\,\exp\left[ -\int  d^{d}x\left( \frac{1}{2}(\partial \phi)^{2}+\frac{1}{2}m_{0}^{2}\phi^{2}+\frac{\lambda_{0}}{4!}\phi^{4} \right)  +\int  d^{d}x\,J\phi \right] $$
+- $\mathcal{D}\phi_{\Lambda}$ indicates that it integrates up to some _high momentum cut-off_ $\Lambda$
+
+- Let the cut-off be controlled by some _dimensionless parameter_ $0<b<1$
+- Such that one _integrates over_ fields $\hat{\phi}(k)$ in momentum space:
+	- For $b=0$, _all fields_ are integrated over, while for $b=1$, no fields are integrated
+$$\hat{\phi}(k)= \begin{cases}
+\phi(k) &\text{for }b\Lambda\leq|k|<\Lambda \\ 0&\text{otherwise}
+\end{cases}$$
+- Then from this Fourier transform, _separate_ the low-momentum and _high-momentum components_ of the field in position space
+$$\phi(x)\to \int_{0}^{\Lambda} \phi(k)  e^{ikx}\,dk=\int_{0}^{b\Lambda}\phi(k)e^{ikx}\,dk+\int_{b\Lambda}^{\Lambda}\phi(k)e^{ikx}\,dk  =\phi(x)+\hat{\phi}(x)$$
+- The generating functional can then be written as:
+	- There is _no source term_ for the $\hat{\phi}$
+$$\displaylines{\begin{align}
+Z_{\Lambda}[J]=\frac{1}{Z_{\Lambda}[0]} \int \mathcal{D}\phi_{b\Lambda}\mathcal{D}\hat{\phi}\,&\exp\bigg[ -S[\phi]+J\phi-\int  d^{d}x \bigg(  \partial \hat{\phi}\cdot\partial \phi+m_{0}^{2}\phi \hat{\phi}+\frac{1}{2}\left( \partial \hat{\phi} \right)^{2} \\ &+\frac{1}{2} m_{0}^{2}\hat{\phi}^{2}+\lambda_{0} \left[ \frac{1}{4!}\hat{\phi}^{4}+\frac{1}{3!}\phi^{3}\hat{\phi }+\frac{1}{4!}\hat{\phi}^{2}\phi^{2}+\frac{1}{3!}\hat{\phi}^{3}\phi \right]\bigg) \bigg] 
+\end{align} \\ S[\phi]=\int  d^dx\left( \frac{1}{2}(\partial \phi)^{2}+\frac{1}{2}m_{0}^{2}\phi^{2}+\frac{\lambda_{0}}{4!}\phi^{4} \right)}$$
+- As Fourier modes of _different momenta_ are _orthogonal_:
+$$\int  d^dx\,\phi(x)\hat{\phi}(x)=\int  d^dx\,\partial \hat{\phi}(x)\cdot\partial \hat{\phi}(x)=0  $$
+- The _effective action_ can then be written as:
+$$\displaylines{Z_{b\Lambda}[J]=\frac{1}{Z_{b\Lambda}[0]}\int  \mathcal{D}\phi_{b\Lambda}\exp\left(-W[\phi]-\int  d^{d}x\,J\phi \right) \\ \exp(-W[\phi])=\exp(-S[\phi])\int  \mathcal{D}\hat{\phi}\, \exp\left[ -S_{0}\left[ \hat{\phi} \right]-S_\text{int}\left[ \phi,\hat{\phi} \right] \right] \\S_{0}\left[ \hat{\phi} \right]=\frac{1}{2}\int  d^dx\,\left( \partial \hat{\phi} \right)^{2} \\ S_\text{int}\left[ \phi,\hat{\phi} \right]=\int  d^{d}x \left( \frac{1}{2}m_{0}^{2}\hat{\phi}^{2}+\frac{\lambda_{0}}{4!} \left[ \hat{\phi}^{4}+4\phi^{3}\hat{\phi}+6\hat{\phi}^{2}\phi^{2}+4\hat{\phi}^{3}\phi \right]\right)  }$$
+- When integrating out $\hat{\phi}$, $\phi$ is treated as a _fixed background field_ where $\hat{\phi}$ emerges as a _dynamic fluctuation_
+- The _mass term_ is treated _perturbatively_ as part of the _interaction_, for $m_{0}^{2}\ll\Lambda^{2}$
+
+- The _free term_ can be written using a _restricted Feynman propagator_ using the same technique as [[#The generating functional|the normal theory]] 
+$$\displaylines{S_{0}\left[ \hat{\phi} \right]\to \frac{1}{2}\int  d^{d}x\,d^{d}y\,\hat{J}(x)\hat{D}_{F}(x-y)\hat{J}(y)\Bigg|_{\hat{J}=0} \\ \hat{D}_{F}(x-y)=\int_{b\Lambda}^{\Lambda} \frac{d^{d}k}{(2\pi)^{d}} \frac{1}{k^{2}}e^{ik(x-y)} }$$
+- Then, $\hat{\phi}$ can be treated as:
+$$\hat{\phi}(x)\to -\frac{\delta}{\delta \hat{J}(x)}$$
+- The effective action is then:
+$$\displaylines{e^{-W[\phi]}=e^{-S[\phi]}\exp\left( -S_\text{int}\left[ \phi, \frac{\delta}{\delta \hat{J}} \right] \right)\exp\left(-\frac{1}{2}\int  d^{d}x\,d^{d}y\,\hat{J}(x)\hat{D}_{F}(x-y)\hat{J}(y)\right)\Bigg|_{\hat{J}=0} \\ S_\text{int}\left[ \phi, \frac{\delta}{\delta \hat{J}} \right]=\int  d^dx\left( \frac{1}{2}m_{0}^{2} \frac{\delta^{2}}{\delta \hat{J}^{2}} +\frac{\lambda_{0}}{4!}\left[ \frac{\delta^{4}}{\delta \hat{J}^{4}}+4\phi^{3} \frac{\delta}{\delta \hat{J}}+6\phi^{2} \frac{\delta^{2}}{\delta \hat{J}^{2}}+4\phi \frac{\delta^{3}}{\delta \hat{J}^{3}} \right]\right) }$$
+
+### Mass shift
+- Inspect this term in $S_\text{int}$:
+$$\frac{\lambda_{0}}{4}\phi^{2}\hat{\phi}^{2}$$
+- This acts as an _extra mass term_ for $\phi$ due to the _coupling_ between $\phi$ and $\hat{\phi}$
+- Contribution to the generating functional:
+$$\begin{align}
+&\frac{\lambda_{0}}{4}\int  d^dx\,\phi^{2} \frac{\delta^{2}}{\delta \hat{J}(x)\delta \hat{J}(x)}\,\exp\left( -\frac{1}{2}\int  d^{d}x\,d^{d}y\,\hat{J}(x)\hat{D}_{F}(x-y)\hat{J}(y)  \right)\Bigg|_{\hat{J}=0} \\ =-&\frac{\lambda_{0}}{4} \int  d^{d}x\,\phi^{2}\hat{D}_{F}(0) 
+\end{align}$$
+- This gives rise to a _mass shift_ to the _effective theory_: 
+$$m_{0}^{2}\to m_{0}^{2}-\frac{\lambda_{0}}{2}\hat{D}_{F}(0)$$
+- The propagator can be evaluated:
+$$\hat{D}_{F}(0)=\int_{b\Lambda}^{\Lambda}  \frac{d^{d}k}{(2\pi)^{d}} \frac{1}{k^{2}}=\frac{(2\pi)^{d/2}}{\Gamma(d/2)}\int_{b\Lambda}^{\Lambda} \frac{d^{d}k}{(2\pi)^{d}}k^{d-3}=\frac{2\pi^{d/2}}{\Gamma(d/2)} \frac{\Lambda^{d-2}(1-b^{d-2})}{(2\pi)^{d}(d-2)} $$
+- The _shift in mass_:
+$$\displaylines{m_{0}^{2}\to m^{2}=m_{0}^{2}+\mu \\ \mu=\frac{\lambda_{0}\Lambda^{d-2}(1-b^{d-2})}{(4\pi)^{d/2}(d-2)}}$$
+- Expressed diagramatically, as the _high momentum modes being integrated out_
+![[Renormalisation mass shift.png]]
+
+### Shift in coupling
+- Then, consider the diagram for a _4-point correlation_ in $\phi$, with high momentum modes as a loop:
+![[Renormalisation coupling shift.png]]
+- This contributes:
+$$\begin{align}
+&\left( -\frac{\lambda_{0}}{4} \right)^{2} \int  d^{d}x\,d^{d}y\, \phi^{2}(x)\phi^{2}(y) \hat{D}_{F}(x-y)^{2} \\ =&\left( \frac{\lambda_{0}^{2}}{16} \right) \int  dx 
+\end{align}$$
+- Expand $\phi(y)$ as a _power series_:
+$$\phi(y)=\phi(x)+(y^{\mu}-x^{\mu})\partial_{\mu}\phi(x)+\dots$$
+- Assume the _momenta_ $\partial_{\mu}\phi$ are _low_ such that one can only consider the _leading term_
+- The _leading contribution_ to the correlation is then:
+$$\begin{align}
+ &\frac{\lambda_{0}^{2}}{16}\int  d^dx\,d^{d}y\, \frac{d^{d}k}{(2\pi)^{d}} \frac{d^{d}p}{(2\pi)^{d}} \, \phi^{4}(x) \frac{1}{k^{2}p^{2}}e^{-ip(x-y)}e^{ik(x-y)} \\ =&- \frac{\zeta}{4!} \int  d^{d}x \,\phi^{4}(x)
+\end{align}$$
+- The _effective coupling_ due to this is:
+$$\zeta=-4! \frac{\lambda_{0}^{2}}{16} \int  \frac{d^dk}{(2\pi)^{d}} \frac{1}{k^{4}}=-4! \frac{\lambda_{0}^{2}}{16} \frac{(2\pi)^{d/2}}{\Gamma(d/2)} \frac{1}{(2\pi)^{d}} \int_{b\Lambda}^{\Lambda}  dk\,k^{d-5}  $$
+- The $d=4$ case:
+$$\zeta_{d=4}=\frac{3\lambda_{0}^{2}}{16\pi^{2}} \ln b$$
+- Integrating out higher momenta gives a _shift in coupling constant_ for the $\phi^{4}$ term 
+$$\lambda_{0}\to \lambda_{0}+\zeta$$
+- There are also _higher derivative contributions_:
+$$\int  d^{4}x\,\phi^{2}(x)(\partial \phi(x))^{2}+\dots $$
+
+- This can be applied to _higher order correlations_, such as $\phi^{6}$ due to the term:
+$$\frac{\lambda_{0}}{3!} \int  d^dx\,\phi^{3} \hat{\phi} $$
+
+- A _low-energy effective theory_ has _different constants_ to the original theory, _dependent on the cut-off_
+### The $\beta-$function
+- The $\beta-$function _quantifies_ the change in constants from Wilsonian renormalisation
+$$\beta_{\lambda}=\Lambda \frac{\partial\lambda}{\partial\Lambda}$$
+- With cut-off $\Lambda=b\Lambda_{0}$, the coupling changes as:
+$$\lambda_{0}\to \lambda(\Lambda)=\lambda_{0} + \frac{3\lambda_{0}^{2}}{16\pi^{2}} \ln\left( \frac{\Lambda}{\Lambda_{0}} \right)+\dots$$
+- To calculate $\beta_{\lambda}$ in terms of $\lambda$, _invert_ to get $\lambda_{0}$ then differentiate:
+$$0=\Lambda \frac{\partial\lambda_{0}}{\partial\Lambda}=\beta_{\lambda}-\frac{3\lambda}{8\pi^{2}} \beta_{\lambda}\ln\left( \frac{\Lambda}{\Lambda_{0}} \right)-\frac{3\lambda^{2}}{16\pi^{2}}+\dots$$
+- _Rearranging_ gives:
+$$\begin{align}
+\beta_{\lambda}&=\left( 1- \frac{3\lambda}{8\pi^{2}}\ln\left( \frac{\Lambda}{\Lambda_{0}} \right) \right)^{-1} \frac{3\lambda^{2}}{16\pi^{2}}+\dots \\ &=\left( 1+ \frac{3\lambda}{8\pi^{2}}\ln\left( \frac{\Lambda}{\Lambda_{0}} \right)+\dots \right) \frac{3\lambda^{2}}{16\pi^{2}}+\dots
+\end{align}$$
+- To _leading order_:
+$$\beta_{\lambda}=\frac{3\lambda^{2}}{16\pi^{2}}+\dots$$
+- This can be _integrated_ to give a _relation between coupling at different energy scales_
+$$\lambda'(\Lambda')=\frac{\lambda(\Lambda)}{1-(3/16\pi^{2})\lambda(\Lambda)\ln(\Lambda'/\Lambda)}$$
+- This is the _running_ of the coupling
+
+- The coupling seems to _diverge_ at some value $\Lambda_{\phi^{4}}$
+$$1- \frac{3}{16\pi^{2}} \lambda (\Lambda) \ln\left( \frac{\Lambda_{\phi^{4}}}{\Lambda} \right)=0$$
+- This gives rise to some _natural energy scale_ for the theory
+- This is known as _dimensional transmutation_:
+$$\lambda(\Lambda)=\frac{16\pi^{2}}{3\ln(\Lambda_{\phi^{4}}/\Lambda)}$$
+# The Renormalisation Group
