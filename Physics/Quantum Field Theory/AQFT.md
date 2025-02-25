@@ -651,7 +651,7 @@ $$\displaylines{Z[J]=\int  \mathcal{D}\phi\,\exp\left[-S_\text{eff}[\phi]+\int  
 $$S[\phi,\chi]=S_\text{kin}+\int  d^4 x\,g\phi^{2}\chi^{2}$$
 - $S_\text{eff}[\phi]$ will then include $\phi^{4}$ terms, effectively _loop corrections_ from $\phi-\chi$ vertices
 
-- For a _low energy effective action_, one can _integrate out high-momentum modes_
+- For a _low energy effective action_, one can treat each $\phi(k)$ as a _different field_, and _integrate out high-momentum modes_
 ## 1-loop effective action for $\phi^4$
 - The generating functional in _Euclidean signature_ in $d$ dimensions:
 $$Z_{\Lambda}[J]=\frac{1}{Z_{\Lambda}[0]} \int  \mathcal{D}\phi_{\Lambda}\,\exp\left[ -\int  d^{d}x\left( \frac{1}{2}(\partial \phi)^{2}+\frac{1}{2}m_{0}^{2}\phi^{2}+\frac{\lambda_{0}}{4!}\phi^{4} \right)  +\int  d^{d}x\,J\phi \right] $$
@@ -751,3 +751,108 @@ $$1- \frac{3}{16\pi^{2}} \lambda (\Lambda) \ln\left( \frac{\Lambda_{\phi^{4}}}{\
 - This is known as _dimensional transmutation_:
 $$\lambda(\Lambda)=\frac{16\pi^{2}}{3\ln(\Lambda_{\phi^{4}}/\Lambda)}$$
 # The Renormalisation Group
+- Wilsonian renormalisation: _integrating out higher momentum modes_ by _lowering_ the cut-off $\Lambda \to b\Lambda$ $(0<b<1)$
+- One can then _rescale_ the _effective theory_, such that it can be _compared_ to the _original theory_ (cut-off $\Lambda$)
+
+- The _rescaling_ is of the form:
+$$x\to x'=bx \qquad k\to k'=k/b \quad(\Lambda\to \Lambda'=\Lambda/b)$$
+- Quantities scale _according to length dimension_
+
+- The classical action is, including terms with $M-$order derivatives and $N-$order fields in _any combination_, and coupling $\lambda_{M,N}$
+	- The higher power terms come from _integrated high momentum modes_ [[#Shift in coupling|generating higher order interactions]]
+$$S_{\Lambda}[\phi]=\int  d^dx\left( \frac{1}{2} \lambda_{2,2} \partial_{\mu}\phi \partial^{\mu}\phi +\sum_{M,N}\lambda_{M,N} \partial^{M}\phi^{N}\right) $$
+- wlog, set $\lambda_{2,2}=1$
+
+- The length scaling of different quantities, from the fact that $S$ is _dimensionless_:
+	- When $d=2$, $[\lambda_{M,N}]=M-2$ so one can have a _dimensionless coupling_ with two derivatives (string theory)
+$$[S]=0\implies [\phi]=1-\frac{d}{2} \qquad [\lambda_{M,N}]=M+N\left( \frac{d}{2}-1 \right)-d$$
+## Renormalisation group flow
+- Starting with cut-off $\Lambda$ with $\lambda_{2,2}=1$
+- Then upon _integrating_ fields from $b\Lambda$ to $\Lambda$, resulting in _coupling shifts_:
+$$S_{b\Lambda}[\phi]=\int  d^dx\left( \frac{1}{2} (1+\Delta Z)\partial_{\mu}\phi\partial^{\mu}\phi+\sum_{M,N}(\lambda_{M,N}+\Delta\lambda _{M,N})\partial^{M}\phi^{N}\right) $$
+- Then, _go back_ to cut-off $\Lambda$ and _rescaling_ the theory $x'=bx$
+$$S_{\Lambda}[\phi]=\int  d^dx'\,b^{-d}\left( \frac{b^{2}}{2}(1+\Delta Z)\partial_{\mu}'\phi\partial^{\mu'}\phi+\sum_{M,N}b^{M}(\lambda_{M,N}+\Delta\lambda_{M,N})\partial'^{M}\phi^{N} \right) $$
+- Then _rescale the fields_:
+$$\phi'(x')=b^{1-d/2}(1+\Delta Z)^{-1/2}\phi(x') \qquad \lambda_{M,N}'=b^{M+N(d/2-1)-d}\lambda_{M,N}$$
+- The low-energy theory of cutoff $\Lambda$ is then:
+$$S_{\Lambda}[\phi]=\int  d^dx' \left( \frac{1}{2}\partial_{\mu}'\phi'\partial^{\mu'}\phi'+\sum_{M,N}(1+\Delta Z)^{-N/2}(\lambda'_{M,N}+\Delta\lambda'_{M,N})\partial'^{M}\phi'^{N} \right) $$
+- This is equivalent to:
+$$\tilde{\lambda}_{M,N}=(1+\Delta Z)^{-N/2}(\lambda'_{M,N}+\Delta\lambda'_{M,N})$$
+- This can be an _iterative process_ of taking the _low-energy limit_ while _keeping the cut-off_
+- For $b$ _infinitesimally close_ to $1$, this can be seen as a _flow_
+
+- This is the _renormalisation group flow_, within the _space of coupling constants_
+![[Renormalisation group flow.png|400]]
+- It is a _one-way, non-invertible flow_
+
+- There may be _fixed points_ to the flow
+	- e.g. the _free, massless_ scalar field where $\lambda_{2,2}=1$ and all other couplings _vanish_, such that there is only _scaling of the wave-function_
+	- This is the _Gaussian fixed point_
+
+### Renormalisation group flow from $\phi^{4}$ theory
+- Take the case of $\phi^{4}$ theory in $d=4$ dimensions:
+$$\lambda_{2,2}=1 \qquad \lambda_{0,4}=\frac{\lambda}{4!} \qquad \lambda_{0,2}=\frac{m^{2}}{2}$$
+- For _one-loop_ corrections, $\Delta Z=0$
+
+- Consider the $\phi^{4}$ coupling:
+$$[\lambda]=0\implies \lambda\to \lambda+\Delta\lambda$$
+- It is a _marginal coupling_
+
+- The _mass term_:
+$$[m^{2}]=-2\implies m^{2}\to b^{-2}m^{2}$$
+- The contribution _grows_ along the renormalisation group flow
+- It is a _relevant coupling_
+
+- Take a _higher order term_ $g\phi^{2}(\partial \phi)^{2}$ originating from the [[#Shift in coupling|one-loop correction to coupling]]:
+$$[g]=+2\implies g\to b^{2}g$$
+- This contribution is _suppressed_ along the renormalisation group flow
+- It is an _irrelevant coupling_
+
+- For a coupling to be _not irrelevant_, there is a limited number of choices for $M,N$
+$$\displaylines{N+M-4\leq 0 \\ \partial^{2}\phi,(\partial \phi)^{2},\dots}$$
+- If one wishes to _preserve_ $\mathbb{Z}_{2}$ symmetry, and _Lorentz invariance_, the _only possible couplings_ are still:
+$$\phi^{2},\phi^{4},(\partial \phi)^{2}$$
+- Therefore, a _low-energy effective theory_ in $d=4$ will _always have the same qualitative form_ as $\phi^{4}$ theory
+	- Relevant/marginal couplings will still _evolve along the renormalisation group flow_
+
+- The _spacetime dimension_ will determine _which couplings are relevant_ in a quantum field theory
+
+# Renormalisation using counter-terms
+- Take an _un-renormalised_ $\phi^{4}$ theory
+$$\mathcal{L}_{0}=\frac{1}{2}(\partial \phi_{0})^{2}+\frac{1}{2}m_{0}^{2}\phi_{0}^{2}+\frac{\lambda_{0}}{4!}\phi^{4}$$
+- After introducing some _cut-off_:
+$$\mathcal{L}_{\Lambda}=\frac{1}{2}(\partial \phi_{0})^{2}+\frac{1}{2}(m_{0}^{2}+\Delta m_{0}^{2})\phi_{0}^{2}+\frac{\lambda_{0}+\Delta\lambda_{0}}{4!}\phi_{0}^{4}$$
+- In principle, the _shifts_ are _unknown_ and will _diverge_
+
+- The _rescaling_ of the field can be written as:
+$$\phi(x)\to Z_{\phi}^{1/2}\phi_{0}(x)$$
+- This gives the _un-renormalised Lagrangian_ as:
+$$\mathcal{L}_{0}=\frac{1}{2}Z_{\phi}(\partial \phi)^{2}+\frac{1}{2}Z_{\phi}m_{0}^{2}\phi^{2}+\frac{1}{4!}\lambda_{0}Z_{\phi}^{2}\phi^{4}$$
+- Then introduce the _counter-terms_:
+$$\delta_{Z_{\phi}}=Z_{\phi}-1\qquad \delta_{m^{2}}=Z_{\phi}m_{0}^{2}-m^{2}\qquad \delta_{\lambda}=Z_{\phi}^{2}\lambda_{0}-\lambda$$
+- This allows one to _split_ the Lagrangian:
+$$\begin{align}
+\mathcal{L}_{0}&=\frac{1}{2}(\partial \phi)^{2}+\frac{1}{2}m^{2}\phi^{2}+\frac{\lambda}{4!}\phi^{4} \\ &+\frac{1}{2}\delta_{Z_{\phi}}(\partial \phi)^{2}
+\end{align}$$
+- It is composed of a _"seed theory"_ with extra _counter-terms_ that encode high momentum effects
+	- The counter-terms can be thought of as _cancelling out_ the infinities in the mass and coupling shifts, by _choosing_ a suitable $Z_{\phi}$
+
+- The counter-terms give _extra Feynman diagrams_ as _perturbations_
+![[Counter-term Feynman.png|500]]
+
+## Renormalisation of $\Gamma_{2}$
+- $\Gamma_{2}$ is the _inverse propagator_:
+$$W_{2}\Gamma_{2}=1$$
+- With _momentum cut-off_ $\Lambda$, the _one-loop correction_:
+$$\tilde{\Gamma}_{2}(p)=p^{2}+m^{2}+\frac{\lambda}{32\pi^{2}}\left( \Lambda^{2}-m^{2}\ln\left( 1+\frac{\Lambda^{2}}{m^{2}} \right) \right)-p^{2}\delta_{Z}-\delta_{m^{2}}$$
+- At one-loop, the correction is _independent_ of $p$, such that one can take $\delta_{Z}=0$
+	- At _2 loops_, the diagrams will give a finite contribution to $\delta_{Z}$
+- The _mass counter-term_ can then be set as:
+$$\delta_{m^{2}}=\frac{\lambda}{32\pi^{2}}\left( \Lambda^{2}-m^{2}\ln\left( 1+\frac{\Lambda^{2}}{m^{2}} \right) \right)$$
+- This _cancels out_ the divergences
+## Renormalisation of $\Gamma_{4}$
+- The _amputated 1PI_ for the 4-point function, with a _one-loop_ correction:
+$$\tilde{\Gamma}_{4}(0,0,0,0)=\lambda-\frac{3\lambda^{2}}{32\pi^{2}}\left[ \ln\left( 1+\frac{\Lambda^{2}}{m^{2}} \right)- \frac{\Lambda^{2}}{\Lambda^{2}+m^{2}} \right]-\delta_{\lambda}$$
+- The counter-term can simply be chosen to _only cancel the diverging term_ in the $\ln$
+- This gives:
+$$\delta_{\lambda}=-\frac{3\lambda^{2}}{32\pi^{2}}\left[ \ln\left( \frac{\Lambda^{2}}{m^{2}} \right) -1\right]+\mathcal{O}(\lambda^{2})$$

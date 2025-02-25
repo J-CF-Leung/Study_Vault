@@ -531,6 +531,18 @@ $$\mathcal{L}_\text{int}=\frac{\lambda_{n}}{n!}\phi^{n}$$
 4. For each diagram, there is a _symmetry factor_ that causes the $1/n!$ factor to _not be completely cancelled out_, hence _divide_ by that factor
 	- Determine from _interchanging_ the ends of lines, or the _equivalence of vertices_
 
+## Scattering matrix via Wick's Theorem
+- Still consider the _asymptotic states_:
+$$\begin{align}
+\ket{\text{initial},t_{i}}&=\sqrt{ 2\omega_{1} }\sqrt{ 2\omega_{2} }a_{p_{1}}^{\dagger}(t_{i})a_{p_{2}}^{^{\dagger}}(t_{i})\ket{\Omega}  \\
+\ket{\text{final},t_{f}}&=\sqrt{ 2\omega_{3} }\sqrt{ 2\omega_{4} }a_{p_{3}}^{\dagger}(t_{i})a_{p_{4}}^{^{\dagger}}(t_{i})\ket{\Omega}
+\end{align}$$
+
+- Instead of LSZ and the Schwinger-Dyson equation, use _Wick's Theorem_ to calculate $\braket{ f|S |i  }$
+- Reliant on _Dyson's formula_ for the _time-evolution operator_:
+$$U(t,t_{0})=T\exp\left(-i \int_{t_{0}}^{t} H_{I}(t')  dt' \right)$$
+- _Expanding_ the power series gives _perturbative interaction terms_
+
 # Scalar Yukawa Theory
 - The _non-interacting_ Lagrangian, with a _real scalar_ and a _complex scalar_:
 $$\mathcal{L}_{0}=\frac{1}{2}(\partial_{\mu}\phi)(\partial^{\mu}\phi)-\frac{1}{2}m^{2}\phi^{2}+(\partial_{\mu}\psi ^{\dagger})(\partial^{\mu}\psi)-M^{2}\psi ^{\dagger}\psi$$
@@ -617,7 +629,7 @@ $$\braket{ \phi_{1}  \psi_{2}^{\dagger}\psi_{3} } =-ig \int  d^4x\,\Delta_{1x} \
 $$\braket{ \phi_{1}\psi_{2}^{\dagger}\psi_{3}  } =-ig \int  d^4x \,\Delta_{1x} \left( \hat{\Delta}_{xx} \hat{\Delta}_{23}+ \hat{\Delta}_{x2} \hat{\Delta}_{x3} \right)+\mathcal{O}(g^{2})$$
 - The _directionality_ of the propagator matters:
 ![[Scalar yukawa three point.png]]
-### Scattering
+### Scattering (LSZ+Schwinger-Dyson)
 - Calculate the $S$ matrix:
 $$\braket{ \text{final},\,+\infty | \text{initial},-\infty }=\braket{ f|S |i  }  $$
 - The initial and final states are _asymptotic_
@@ -691,6 +703,12 @@ $$s+t+u=\sum_{i}M_{i}^{2}$$
 $$\mathcal{A}\sim (t-m^{2})^{-1}+(u-m^{2})^{-1}$$
 - For _nucleon-antinucleon_ scattering, there is $t-$channel and $s-$channel scattering:
 $$\mathcal{A}\sim (t-m^{2})^{-1}+(s-m^{2})^{-1}$$
+
+### Scalar Yukawa theory scattering from Wick's Theorem
+- Nucleon-nucleon:
+$$ \lim_{ t \to- \infty } \sqrt{ (2\tilde{\omega}_{1})(2\tilde{\omega}_{2}) }c^{\dagger}_{p_{1}}(t)c_{p_{2}}^{\dagger}(t)\ket{\Omega} \longrightarrow  \lim_{ t \to+\infty } \sqrt{ (2\tilde{\omega}_{3})(2\tilde{\omega}_{4}) }c^{\dagger}_{p_{3}}(t)c_{p_{4}}^{\dagger}(t)\ket{\Omega} $$
+
+
 # Classical Dirac fields
 
 ## Representations of the Lorentz group
@@ -835,7 +853,7 @@ $$\begin{align}
 $$\displaylines{\pmatrix{m\mathbb{I}_{2}&-\boldsymbol{p}\cdot \boldsymbol{\sigma} \\ -\boldsymbol{p}\cdot\bar{\boldsymbol{\sigma}}&m\mathbb{I}_{2}}\pmatrix{U_{1}\\ U_{2}}=\pmatrix{0\\0} \\ mU_{1}=(\boldsymbol{p}\cdot \boldsymbol{\sigma})U_{2}}$$
 - From this:
 $$\displaylines{m^{2}=(\boldsymbol{p}\cdot \boldsymbol{\sigma})(\boldsymbol{p}\cdot  \boldsymbol{\bar{\sigma}}) \\ \sqrt{ \boldsymbol{p}\cdot \boldsymbol{\sigma} }U_{2}=\sqrt{ \boldsymbol{p}\cdot \bar{\boldsymbol{\sigma}} }U_{1}}$$
-- The solutions (following a similar technique for $V$) are given using the _two-component spinors_, which give _particles_ and _antiparticles_
+- The solutions (following a similar technique for $V$) are given using the _two-component spinors_, which give _particles_ and _antiparticles_ respectively
 $$U^{S}(\boldsymbol{p})=\pmatrix{\sqrt{ \boldsymbol{p}\cdot \boldsymbol{\sigma}}\xi_{s} \\ \sqrt{ \boldsymbol{p}\cdot \boldsymbol{\bar{\sigma}} }\xi_{s}} \qquad  \qquad V^{S}(\boldsymbol{p})=\pmatrix{\sqrt{ \boldsymbol{p}\cdot \boldsymbol{\sigma}}\eta_{s} \\ -\sqrt{ \boldsymbol{p}\cdot \boldsymbol{\bar{\sigma}} }\eta_{s}}$$
 - $\xi$ and $\eta$ are _two component spinors_
 

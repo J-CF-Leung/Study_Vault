@@ -441,11 +441,11 @@ $$S(\boldsymbol{q},T=T_{c})\propto \frac{1}{q^{2-\eta}}$$
 $$\langle \phi_{\alpha}(\boldsymbol{x})\phi_{\beta}(0) \rangle=-\frac{\delta_{\alpha\beta}}{K} I_{d}(\boldsymbol{x},\xi) \qquad I_{d}(\boldsymbol{x},\xi)=-\int  \frac{d\boldsymbol{q}}{(2\pi)^{d}} \frac{e^{i\boldsymbol{q}\cdot \boldsymbol{x}}}{q^{2}+\xi^{-2}} $$
 - Inspect:
 $$\nabla^{2}I_{d}=\delta^{d}(\boldsymbol{x})+\frac{I_{d}}{\xi^{2}}$$
-- From this, one can get the asymptotic behaviour:
+- From this, one can get the asymptotic behaviour for _fluctuations_:
 $$I_{d}(\boldsymbol{x},\xi)=\begin{cases}
 C_{d}(\boldsymbol{x})=\frac{|\boldsymbol{x}|^{2-d}}{(2-d)S_{d}} &|\boldsymbol{x}|\ll \xi \\ \frac{\xi^{2-d}}{2-d} \frac{\exp(-|\boldsymbol{x}|/\xi)}{|\boldsymbol{x}/\xi|^{(d-1)/2}} &|\boldsymbol{x}|\gg \xi
 \end{cases}$$
-- One can then interpret $\xi$ as some _correlation length_
+- One can then interpret $\xi$ as some _correlation length_ for _fluctuations_
 - Correlation lengths _near criticality_:
 $$\xi_{l}=\begin{cases}\sqrt{ K/t } &t>0 \\ \sqrt{ K/2|t| } &t<0\end{cases} \qquad \xi_{t}=\begin{cases}\sqrt{ K/t } &t>0 \\ \infty &t<0\end{cases}$$
 - They can be described using:
@@ -473,29 +473,38 @@ $$\displaylines{\ln \det G=\mathrm{tr}\ln G \\ f=-\frac{\ln \mathcal{Z}}{V}=\bar
 
 - The _free energy density_ with fluctuation corrections, from either method:
 $$f=-\frac{\ln \mathcal{Z}}{V}=\bar{f}+\frac{1}{2}\sum_{\alpha} \int  \frac{d\boldsymbol{q}}{(2\pi)^{d}} \ln[K(q^{2}+\xi_{\alpha}^{-2})]  $$
+### Heat capacity due to fluctuations
 - Corresponding heat capacity:
 $$C\propto-\frac{d^{2}f}{dt^{2}}=\begin{cases}
 0+\frac{n}{2}\int   \frac{d\boldsymbol{q}}{(2\pi)^{d}} (Kq^{2}+t)^{-2} &t>0 \\ \frac{1}{8u}+2\int  \frac{d\boldsymbol{q}}{(2\pi)^{d}} (Kq^{2}-2t)^{-2} &t<0 
 \end{cases}$$
-- For $d>4$, the _contribution_ from fluctuations will _diverge_, unless one implements a _high-momentum cut-off_ $a^{-1}$
-- For $d<4$, the integral is _convergent_
+- For $d>4$, the _contribution_ from fluctuations will _diverge_, unless one implements a _high-momentum cut-off_ $a^{-1}$, in which case the _value at cutoff dominates_
+- For $d<4$, the integral is _convergent_ regardless of cutoff
 
 - The fluctuation heat capacity then follows the _power law_ (from _rescaling_ the integral):
 $$C_\text{fluc}\sim \begin{cases}
 a^{4-d}/K^{2} &d\geq4 \\ \xi^{4-d}/K^{2} &d<4
  \end{cases}$$
-- Divergences
+ ![[Fluctuation heat capacity.png|400]]
+- For $d\geq 4$, there are _constant shifts_ in heat capacity
 
-- Consider: 
-$$\int  \frac{d\boldsymbol{q}}{(2\pi)^{d}}  \frac{1}{(Kq^{2}+\alpha|t|)^{2}}=\frac{|t|^{d/2-2}}{K^{d/2}} \int  \frac{d\mu}{(2\pi)^{d}} \frac{1}{(\mu^{2}+\alpha)^{2}}   $$
-- Then comparing to the _mean field_ heat capacity:
-$$\frac{C_\text{fluc}}{C_\text{MF}}=\frac{|t|^{(d-3)/2}}{\sqrt{ K^{d} }}$$
-- There is some _upper critical dimension_ $3$, below which the _fluctuation heat capacity blows up compared to the mean field_
-
+- For $d<4$, due to the _correlation length_ going to $0$, there is a _divergence in heat capacity_ at $T_{c}$ due to fluctuations near the saddle point
+- There is an _upper critical dimension_ of $d_{u}=4$
+	- _Between lower_ and _upper_ crititcal dimensions, _long-range order_ still _exists_ but the _critical behaviour_ is _modified_
 ### Ginzburg criterion
-- For a _given_ $t$, the _mean field_ description is _valid_ if:
-$$\frac{C_\text{fluc}}{C_\text{MF}}\ll 1$$
-- For _small_ $t$, one can still use mean field theory
+- For some materials (e.g. superconductors), the _experimental data matches mean field theory_ (see [[#Finding critical exponents|here]])
+- The _experimental temperature resolution_ may _not be enough to resolve_ the _peak_ from fluctuations
+
+- For some temperature $t<t_{G}$, fluctuations become important _relative to the mean-field discontinuity_ such that the _divergence can be detected_
+
+- For a _given_ $t$, the _mean field_ description _becomes unfeasible_ if the _fluctuation contribution_ is _bigger_ than the _discontinuity from the mean field_
+$$\frac{\Delta C_\text{fluc}}{\Delta C_\text{MF}}\gg 1$$
+- Let the relevant _lengthscale_ when calculating $\Delta C_\text{fluc}$ be $\xi_{0}\sim \sqrt{ K }$, such that:
+$$\left( \frac{\xi_{0}}{a} \right)^{-d}|t|^{(d-4)/2}\gg \left( \frac{\Delta C_\text{MF}}{k_{B}} \right)\implies |t|\ll t_{G} \sim \frac{1}{[(\xi_{0}/a)^{d}(\Delta C_\text{MF}/k_{B})]^{2/(4-d)}}$$
+- If the _experimental resolution_ is _larger_ than $t_{G}$, measurements will _agree with mean field theory_
+
+- For _superconductors_, $t_{G} \sim 10^{-16}$
+- For _superfluids_, $t_{G} \sim 10^{-2}$
 
 ### Generalised criticality
 - Let the _interaction term_ in the free energy be:
@@ -505,4 +514,68 @@ $$u_{2n}m^{2n}$$
 - The upper critical dimension for the theory is then:
 $$d_{u}=\frac{2n}{n-1}$$
 - The _minimum_ value of $d_{u}$ is $d=2$
+
+- The lower and upper critical dimensions, defined by _the effect of fluctuations_
+![[Lower upper critical dimensions.png]]
+
+# Scaling hypothesis
+
+## Homogeneity
+- Let the free energy be some _homogeneous function_
+	- The presence of _critical points_ and _branch cuts_ (phase transition line) means one cannot use an analytic function
+	- $p$ is the _order_ of the homogeneous function
+$$f(\lambda t,\lambda h, \dots)=\lambda^{p}f(t,h, \dots)$$
+- For the mean field theory:
+$$f=\frac{t}{2}m^{2}+um^{4}-hm$$
+- There is a _branch cut_, or a _coexistence line_ for $t<0,h=0$ which _terminates_ at critical point $t=h=0$
+![[Free energy branch cut.png|250]]
+
+- From _mean field_ theory:
+$$f=\mathrm{min}_{\boldsymbol{m}}\left[ \frac{t}{2}m^{2}+um^{4}-hm \right]=\begin{cases}
+-t^{2}/u &h=0,t\neq 0 \\ -h^{4/3}/u^{1/3} &h\neq 0,t=0
+\end{cases}$$
+- The homogeneous function can then be written as:
+$$f_\text{mf}(t,h)=|t|^{2}g_{f}\left( \frac{h}{|t|^{\Delta}} \right)$$
+- $\Delta$ is the _gap exponent_
+- From comparing to the results of mean-field theory:
+$$\displaylines{ \lim_{ x \to 0 } g_{f}(x)=-\frac{1}{u} \qquad \lim_{ x \to \infty }g_{f}(x)=\frac{x^{4/3}}{u^{1/3}} \\ \Delta=\frac{3}{2}}$$
+
+### Exponent identities
+- When taking _fluctuations_ into account, the _hypothesis_ for the part of _free energy_ with _singular behaviour_ is:
+$$f_\text{sing.}=|t|^{2-\alpha}g_{f}\left( \frac{h}{|t|^{\Delta}} \right)$$
+- Heat capacity:
+	- The _derivative_ of a homogeneous function is _another homogeneous function_
+	- As the function is _analytic outside the coexistence line_, $\alpha_{+}=\alpha_{-}$
+$$\displaylines{E_\text{sing.}\sim\frac{\partial f}{\partial t}\sim |t|^{1-\alpha}\left[ (2-\alpha)g_{f}\left( \frac{h}{|t|^{\Delta}} \right)-\frac{\Delta h}{|t|^{\Delta}}g_{f}'\left( \frac{h}{|t|^{\Delta}} \right) \right]\equiv |t|^{1-\alpha }g_{E}\left( \frac{h}{|t|^{\Delta}} \right) \\ C_\text{sing.}\sim |t|^{-\alpha} g_{C}\left( \frac{h}{|t|^{\Delta}} \right)}$$
+- This reproduces the typical _scaling_ of $C$ with $t$
+
+- Magnetisation:
+$$m(t,h)\sim \frac{\partial f}{\partial h}\sim |t|^{2-\alpha-\Delta}g_{m}\left( \frac{h}{|t|^{\Delta}} \right)$$
+- In the limit of $x\to 0$, $g_{m}(x)$ is a _constant_:
+$$m(t,h=0)\sim |t|^{2-\alpha-\Delta}$$
+- For $x\to \infty$, $g_{m}(x)\sim x^{p}$, such that $m$ is _independent_ of $t$:
+$$m(t=0,h)\sim |t|^{2-\alpha-\Delta} \left( \frac{h}{|t|^{\Delta}} \right)^p\sim h^{(2-\alpha-\Delta)/\Delta}$$
+- Finally, _susceptibility_:
+$$\chi(t,h)\sim\frac{\partial m}{\partial h}\sim |t|^{2-\alpha-2\Delta}g_{\chi}\left( \frac{h}{|t|^{\Delta}} \right)\implies \chi(t,h=0)\sim |t|^{2-\alpha-2\Delta}$$
+
+- The assumption of _homogeneity_ then implies:
+	- Exponents are the _same above and below transition_
+	- The _same gap exponent_ $\Delta$ applies for all quantities
+	- All _bulk critical exponents_ can be obtained from _two independent exponents_ $\alpha,\Delta$
+
+- _Exponent identities_ from homogeneity:
+$$\displaylines{\alpha+2\beta+\gamma=2 \\ \delta-1=\frac{\gamma}{\beta}}$$
+## Hyperscaling
+- Homogeneity is an assumption applied to _free energy_
+- For _correlation functions_ and their divergence, one needs to _further assume_:
+	- Close to _criticality_, the _only relevant lengthscale_ is $\xi$, and is _solely responsible_ for divergences in thermodynamic quantities
+	- Correlation length $\xi$ is a _homogeneous function_ 	$$\xi(t,h)\sim |t|^{-\nu}g\left( \frac{h}{|t|^{\Delta}} \right)$$
+- $\ln Z$ is _extensive and dimensionless_, obtained by _adding contributions from units_ divided by either a _microscopic length-scale_, or the _correlation length_ 
+$$\ln Z=\left( \frac{L}{\xi} \right)^{d}g_{s}+\dots+\left( \frac{L}{a} \right)^{d}g_{a}$$
+- The _first term_ is responsible for _singular behaviour_, giving:
+$$f_\text{sing.}(t,h)\sim \frac{\ln Z}{L^{d}}\sim \xi^{-d}\sim |t|^{d\nu}g_{f}\left( \frac{h}{|t|^{\Delta}} \right)$$
+- The _singular behaviour_ arises from _homogeneity of correlation length_
+- An additional _exponent relation_:
+$$2-\alpha=d\nu$$
+- This gives the _hyperscaling relations_ in terms of $d$
 
