@@ -707,8 +707,11 @@ $$\mathcal{A}\sim (t-m^{2})^{-1}+(s-m^{2})^{-1}$$
 ### Scalar Yukawa theory scattering from Wick's Theorem
 - Nucleon-nucleon:
 $$ \lim_{ t \to- \infty } \sqrt{ (2\tilde{\omega}_{1})(2\tilde{\omega}_{2}) }c^{\dagger}_{p_{1}}(t)c_{p_{2}}^{\dagger}(t)\ket{\Omega} \longrightarrow  \lim_{ t \to+\infty } \sqrt{ (2\tilde{\omega}_{3})(2\tilde{\omega}_{4}) }c^{\dagger}_{p_{3}}(t)c_{p_{4}}^{\dagger}(t)\ket{\Omega} $$
-
-
+- There are _no $g^1$ terms_
+- The $g^{2}$ term, from _Dyson's formula_:
+$$\frac{(-ig)^{2}}{2!} \Braket{ f|\int  d^4 x_{1}\,d^{4}x_{2} \,T\{\psi ^{\dagger}(x_{1})\psi(x_{1})\phi(x_{1})\psi ^{\dagger}(x_{2})\psi(x_{2})\phi(x_{2})\}| i } $$
+- From _Wick's Theorem_, check the contribution:
+$$:\psi ^{\dagger}(x_{1})\psi(x_{1})\psi ^{\dagger}(x_{2})\psi(x_{2}): \overbrace{ \phi(x_{1})\phi(x_{2}) }^{}$$
 # Classical Dirac fields
 
 ## Representations of the Lorentz group
@@ -773,6 +776,7 @@ $$S[\Lambda]=\pmatrix{\exp(\eta_{1}\sigma^{1}/2)&0\\0&\exp(\eta_{1}\sigma^{1}/2)
 - Under some general boost with rapidity $\boldsymbol{\eta}$:
 $$S[\Lambda]=\pmatrix{\exp(\boldsymbol{\eta}\cdot \boldsymbol{\sigma}/2)&0\\0&\exp(-\boldsymbol{\eta}\cdot \boldsymbol{\sigma}/2)}$$
 - This is _different_ from the ${\Lambda^{\mu}}_{\nu}$ for the _vector_ Lorentz transformation
+
 
 ### Transformations and the adjoint
 - How spinors transform:
@@ -894,6 +898,19 @@ $$\begin{align}
 - The Lagrangian is _not separable_ into components of non-zero chirality, as they couple through the _mass term_
 
 - _Massless chiral particles_ are described by the _Weyl equation_
+
+## Inner and outer products
+### Inner products
+- From the _spinor basis_:
+$$\xi^{r\dagger}\xi^{s}=\eta^{r {\dagger}}\eta^{s}=\delta^{rs}$$
+- The [[#Plane wave solutions|plane wave solutions]] in the [[#The chiral representation and spinors|chiral representation]]:
+$$u^{s}(p)=\pmatrix{\sqrt{ p\cdot\sigma }\,\xi^{s} \\ \sqrt{ p\cdot\bar{\sigma} }\,\xi^{s}}\qquad v^{s}(p)=\pmatrix{\sqrt{ p\cdot \sigma }\,\xi^{s} \\ -\sqrt{ p\cdot\bar{\sigma} }\,\xi^{s}}$$
+- Working out the _inner products_:
+$$\displaylines{u^{r \dagger}(p)\cdot u^{s}(p)=2p_{0}\delta^{rs} \qquad v^{r \dagger}(p)\cdot v^{s}(p)=2p_{0}\delta^{rs}\\ \bar{u}^{r}(p)\cdot u^{s}(p)=2m\delta^{rs}\qquad \bar{v}^{r}(p)\cdot v^{s}(p)=-2m\delta^{rs} \\ \bar{u}^{r}(p)\cdot v^{s}(p)=\bar{v}^{r}(p)\cdot u^{s}(p)=0}$$
+- For _opposite momenta_ $(p')^{\mu}=(p^{0},-\boldsymbol{p})$
+$$\displaylines{u^{r \dagger}(p)\cdot v^{s}(p')=v^{r \dagger}(p)\cdot u^{s}(p')=0 }$$
+### Outer products
+$$\displaylines{\sum_{s=1}^{2}u^{s}(p)\bar{u}^{s}(p)=\cancel{ p }+m \\ \sum_{s=1}^{2}v^{s}(p)\bar{v}^{s}(p)=\cancel{ p }-m}$$
 # Quantum Dirac fields
 
 ## Canonical quantisation in the free theory

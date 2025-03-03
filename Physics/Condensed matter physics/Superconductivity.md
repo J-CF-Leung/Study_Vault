@@ -457,7 +457,7 @@ $$\displaylines{\varepsilon_{k}(t)=\varepsilon_{k}(0)\exp(-i\omega_{k}t) \\ \beg
 $$\hbar\omega_{k}=\sqrt{ 2\gamma\Delta k^{2}+\gamma^{2}k^{4} }$$
 - As expected, it is a _Goldstone mode_
 
-# BCS Theory
+# Microscopic theory of condensates
 - The BCS wavefunction describes the _microscopics_ of electron pairing
 - Using [[Theories of Quantum Matter#Second quantisation and correlations|Second quantisation]]
 
@@ -548,26 +548,41 @@ $$n_{0}=v_{0}^{2}=\frac{1}{2}\left( \frac{\xi_{0}}{E_{0}} -1\right)$$
 - For there to be a _condensate_, $E_{0}\ll \xi_{0}$, so the _ground state_ must have zero energy
 	- Justifies $\delta\approx n_{0}g$ such that $E_{0}\approx 0$
 
+- One can calculate:
+$$n-n_{0}=\sum_{k\neq 0}v_{k}^{2}=\frac{1}{3\pi^{2}}\left( \frac{mc}{\hbar} \right)^{3}$$
+
 - _Interaction_ causes _condensate depletion_
 	- Atomic gases: $n_{0}/n \sim 0.9$, $\ce{ He-II }: n_{0}/n <0.1$
 	- Not due to thermal excitations
-
+- The _excited particles_ are _part of the coherent ground state_ along with the condensate
 ### Density fluctuations in BECs
-- Consider the _density operator_ in reciprocal space
-$$\rho_{q}\to \sqrt{ n_{0} }(a^{\dagger}_{-q}+a_{q})\sim \alpha_{q}$$
-- The _low level excitation_ is therefore interpreted as a _density fluctuation_
+- Consider the _density operator_ in reciprocal space:
+$$\rho_{q}=\frac{1}{\sqrt{ V }}\sum_{k}a^{\dagger}_{k-q}a_{k}\to \frac{1}{\sqrt{ V }}(a^{\dagger}_{-q}a_{0}+a_{0}^{\dagger}a_{q})\to \sqrt{ n_{0} }(a^{\dagger}_{-q}+a_{q})\sim \alpha_{q}$$
+- The _low level excitation_ of wave-vector $q$ is therefore interpreted as a _density fluctuation_ of the corresponding wavelength
 
-- The [[#Superfluidity and critical velocity|Landau critical velocity]] becomes _finite_
+- The [[#Superfluidity and critical velocity|Landau critical velocity]] becomes _finite_, matching the _speed of sound_
+	- Above critical velocity: generation of _density fluctuations_ which _dissipate energy_
+	- The repulsive ineraction _reduces the density of states of excitations_ to allow superfluidity
 
+- The excitations correspond to _Goldstone modes_ due to symmetry breaking
 
+- Bogoliubov theory with _weak interactions_ does not predict _rotons_
 ### BCS fermion excitation spectrum
 - A _gapped spectrum_:
-$$E_{k}=\sqrt{ \varepsilon_{k}^{2}+\Delta^{2} }$$
-- The excitation is:
-$$\alpha ^{\dagger}_{k\sigma}=$$
-- It is a _coherent superposition_ of _adding_ an electron and _removing_ an electron
-- It has a _well-defined spin_
-	- Spin-charge separation
+$$E_{k}=\sqrt{ \xi_{k}^{2}+\Delta^{2} }\qquad \xi_{k}=\varepsilon^{\text{HF}}_{k}-\mu$$
+![[BCS gapped spectrum.png|300]]
+
+- The _fermionic excitation_ is:
+$$\alpha ^{\dagger}_{k\sigma}=u_{k}a^{\dagger}_{k\sigma}+v_{k}a_{-k,-\sigma}$$
+- Analagous to the Bogoliubov Bose gas, $v_{k}^{2}$ corresponds to _normal electron occupation_ 
+	- Even at _zero temperature_, the _Fermi sea becomes destabilised_
+![[BCS excitation.png|300]]
+- It is a _coherent superposition_ of _adding_ an electron to $(k,\sigma)$ and _removing_ an electron at $(-k,-\sigma)$
+	- When _well above_ the Fermi surface, it is _adding a bare electron_ into the vacuum at $(k,\sigma)$
+	- When _well below_ the Fermi surface, it is _removing a bare electron_ from the Fermi sea at $(-k,-\sigma)$
+
+- It has a _well-defined spin_, but an _indeterminate particle number/charge_
+	- At $\xi_{k}=\mu$, there is _zero charge_ 
 
 ### BCS gap equation
 - An equation for $\Delta(T)$
@@ -576,9 +591,88 @@ $$\begin{align}
 \end{align}$$
 - For a _finite temperature_, the gap function must then satisfy:
 	- $N(\xi)$: _density of states_ per spin per unit volume
-$$1=|g|\int  \frac{N(\xi)d\xi}{\sqrt{\xi^{2}+\Delta(T)^{2}  }}\tanh\left( \frac{\sqrt{ \xi^{2}+\Delta(T)^{2} }}{2k_{B}T} \right) $$
+	- $\varepsilon_{c}$: _energy cut-off_ of $\mu$
+$$1=|g|\int_{0}^{\varepsilon_{c}}  \frac{N(\xi)d\xi}{\sqrt{\xi^{2}+\Delta(T)^{2}  }}\tanh\left( \frac{\sqrt{ \xi^{2}+\Delta(T)^{2} }}{2k_{B}T} \right) $$
+- Assume the density of states is _constant_ within $\sim \varepsilon_{c}$ of $\mu$
 
+- Setting $T=0$:
+$$1=|g| \int_{0}^{\varepsilon_{c}}\frac{N(\xi)d\xi}{\sqrt{ \xi^{2}+\Delta(0)^{2} }} \approx N(0)|g|\sinh^{-1}\left( \frac{\varepsilon_{c}}{\Delta(0)} \right)$$
+- One can also find a _critical temperature_ where $\Delta=0$
+$$1=|g| \int_{0}^{\varepsilon_{c}} \frac{N(\xi)d\xi}{\xi}\tanh\left( \frac{\xi}{2k_{B}T_{c}} \right) $$
+- In the limit of _weak binding_ $N(0)|g|\ll 1$
+$$\Delta(T=0)\approx 2\varepsilon_{c}\exp\left( -\frac{1}{N(0)|g|} \right)\approx 1.76k_{B}T_{c}$$
+
+- From $f(E_{k})$, one can also calculate the corresponding _entropy_ and _heat capacity_
+![[Conventional superconductor properties.png]]
+## Ginzburg-Landau and BCS Theory
 ### Ginzburg-Landau order parameter from BCS theory
-- The _particle-particle_ field
+- The _particle-particle_ field:
+$$\Psi(r)=\psi_{\downarrow}(\boldsymbol{r})\psi_{\uparrow}(\boldsymbol{r})= \qquad \Psi_{q}=$$
+- The _BCS order parameter_ is proportional to the $q=0$ Fourier component of $\Psi(\boldsymbol{r})$
+- The _Ginzburg-Landau_ order parameter also allows for _spatial variation_
 
-- The order parameter is a _coarse-grained average_ of the field
+- From this, a suitable order parameter is a _coarse-grained average_ of the field:
+$$\psi_{s}(\boldsymbol{r})\propto \langle \psi_{\downarrow}(\boldsymbol{r})\psi_{\uparrow}(\boldsymbol{r}) \rangle_\text{coarse-grained} $$
+
+### Coherence length from BCS theory
+- The _modification_ to excitation spectrum via _gap formation_ is significant for a _range_ around $k_{F}$
+$$\delta k\sim \frac{\Delta}{\hbar (\partial E/\partial k)}=\frac{\Delta}{\hbar v_{F}}$$
+- The relevant _lengthscale_:
+$$\delta x\sim \frac{\hbar}{\delta k}$$
+- This can be identified with the [[#Ginzburg-Landau Theory|Ginzburg-Landau coherence length]] $\xi$
+
+### Ginzburg-Landau parameters from BCS Theory
+- Check the _condensation energy_ from BCS theory:
+$$\displaylines{n_{e}\sim -\frac{\alpha}{\beta}\times 2 \\  \Delta\left( n_{e} \frac{\Delta}{\varepsilon_{F}} \right) \sim \frac{\alpha^{2}}{2\beta}}$$
+
+- One can then relate the _critical fields_ to microscopic parameters:
+$$B_{c2}=$$
+# BCS Theory
+- One can _build_ the BCS wavefunction from _pair wavefunctions_
+$$\Psi= \mathcal{A}\{\varphi(\mathbf{r}_{1}-\mathbf{r}_{2};\sigma_{1}\sigma_{2})\varphi\dots\}$$
+- As a _coherent state_:
+$$\exp()\ket{\text{VAC}} $$
+- From a _variational approach_ w.r.t. the BCS Hamiltonian, one gets the _mean field parameters_ back
+
+- For $\xi\gg d$, where $d$ is the _characteristic electron spacing_ (e.g. lattice constant), this describes _pairings in $k-$space_
+
+- This is _in contrast to real-space pairing_ $\xi\ll d$
+	- Some _cuprate high $T_{c}$ superconductors_
+
+## Comparison to Stoner ferromagnetism
+- In _Stoner ferromagnetism_, there is an _on-site repulsion_ resulting in magnetisation
+$$\displaylines{E_{k\sigma}=\xi_{k}-\frac{\sigma}{2}\Delta\\ \Delta _\text{St}=U(n_{\uparrow}-n_{\downarrow})=\frac{U}{V}\sum_{k}}$$
+- The [[#BCS gap equation]]:
+
+- At $T_{c}$ where $E_{k}\approx \xi_{k}$, the equations are related by the _particle-hole transformation_
+
+- Similar to Stoner ferromagnetism, superconductivity _spontaneously emerges_
+
+- Higgs phenomenon: _transverse_ currents are _gapped_
+
+## Pairing as avoidance
+
+- Electron-electron _attraction_ occurs due to _avoidance_ to reduce the effects of Coulomb repulsion
+
+- The _pair wave-function_ should be _zero_ wherever there is significant _repulsion_
+
+- Time avoidance
+	- e.g. a _retarded interaction_ due to the _screening cloud of a moving charge_
+
+- Space avoidance
+	- e.g. van der Waals
+
+## Generalisation of gap equation
+- Generalise to a $k-$dependent interaction
+- With some _kernel_ $K_{kk'}$
+$$\Delta_{k}=-\sum_{k'}K_{kk'}\Delta_{k'} \frac{1-f(E_{k'})}{2E_{k'}}$$
+
+### Conventional and unconventional singlet pairing
+
+
+### Effective e-e interaction in jellium
+- The _effective interaction_ is taken as the _real part_ of the _retarded impulse response_
+
+- For _jellium_, with the [[Solids#Thomas-Fermi screening|Thomas-Fermi approximation]]
+
+- The _Bardeen-Pines_ model: a _test charge_ in a _polarisable/dielectric material_ will _induce_ a _dipolar field_

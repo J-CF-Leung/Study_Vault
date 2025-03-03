@@ -585,7 +585,7 @@ $$D_{F}(x-y)=\int  \frac{d^4p}{(2\pi)^{4}} \frac{1}{p^{2}+m^{2}} \exp[ip(x-y)] $
 - The contour is _rotated_ such that the _poles_ are now on the _imaginary_ axis
 
 ### Euclidean Feynman rules in $\phi^4$ theory
-- The action is still:
+- The action is:
 $$S_{E}[\phi]=\int  d^4x\,\left[ \frac{1}{2}\partial_{\mu}\phi\partial^{\mu}\phi+\frac{1}{2}m^{2}\phi^{2}+\frac{\lambda}{4!}\phi^{4} \right] $$
 - The _new momentum Feynman rules_:
 	- For each line, $\tilde{D}_{F}(p)=(p^{2}+m^{2})^{-1}$
@@ -593,7 +593,7 @@ $$S_{E}[\phi]=\int  d^4x\,\left[ \frac{1}{2}\partial_{\mu}\phi\partial^{\mu}\phi
 	- Integrate over the unconstrained momenta
 	- Divide by the _symmetry factor_
 	- Impose _momentum conservation_ $$(2\pi)^{4}\delta^{4}\left( \sum_{i}p_{i} \right)$$
-### A one-loop correction
+### One-loop correction to propagator
 - For example, the _one-loop correction_ to the propagator:
 $$-\frac{\lambda}{2}\int  \frac{d^4k}{(2\pi)^{4}} \frac{1}{k^{2}+m^{2}} $$
 - Denoting an _angular measure_ in 4D as $d\Omega_{4}$:
@@ -609,7 +609,7 @@ $$\int_{0}^{\Lambda}  dk \frac{k^{3}}{k^{2}+m^{2}} =\frac{m^{2}}{2}\left[ \frac{
 - The one-loop correction is then:
 $$\Pi=-\frac{\lambda}{32\pi^{2}}\left( \Lambda^{2}-m^{2}\ln\left( 1+\frac{\Lambda^{2}}{m^{2}} \right) \right)$$
 
-- The _vertex_(inverse propagator) given by the [[#$ Gamma_2$ and the propagator|quantum effective action]]:
+- The _vertex_ (inverse propagator) given by the [[#$ Gamma_2$ and the propagator|quantum effective action]]:
 $$\Gamma_{2}(p)=p^{2}+m^{2}-\Pi$$
 #### Diversion: area of a $d-$dimensional sphere
 - In $d$ dimensions, for a function depending only on _radius_, one can write in terms of the _area of a sphere in $d$ dimensions_ $S_{d}$
@@ -818,7 +818,7 @@ $$\phi^{2},\phi^{4},(\partial \phi)^{2}$$
 - The _spacetime dimension_ will determine _which couplings are relevant_ in a quantum field theory
 
 # Renormalisation using counter-terms
-- Take an _un-renormalised_ $\phi^{4}$ theory
+- Take an _un-renormalised_ $\phi^{4}$ theory in the _Euclidean_ signature:
 $$\mathcal{L}_{0}=\frac{1}{2}(\partial \phi_{0})^{2}+\frac{1}{2}m_{0}^{2}\phi_{0}^{2}+\frac{\lambda_{0}}{4!}\phi^{4}$$
 - After introducing some _cut-off_:
 $$\mathcal{L}_{\Lambda}=\frac{1}{2}(\partial \phi_{0})^{2}+\frac{1}{2}(m_{0}^{2}+\Delta m_{0}^{2})\phi_{0}^{2}+\frac{\lambda_{0}+\Delta\lambda_{0}}{4!}\phi_{0}^{4}$$
@@ -856,3 +856,106 @@ $$\tilde{\Gamma}_{4}(0,0,0,0)=\lambda-\frac{3\lambda^{2}}{32\pi^{2}}\left[ \ln\l
 - The counter-term can simply be chosen to _only cancel the diverging term_ in the $\ln$
 - This gives:
 $$\delta_{\lambda}=-\frac{3\lambda^{2}}{32\pi^{2}}\left[ \ln\left( \frac{\Lambda^{2}}{m^{2}} \right) -1\right]+\mathcal{O}(\lambda^{2})$$
+## In the Lorentzian signature
+- Back to the Lorentzian signature:
+$$\begin{align}
+\mathcal{L}_{0}&=\frac{1}{2}(\partial \phi)^{2}-\frac{1}{2}m^{2}\phi^{2}-\frac{\lambda}{4!}\phi^{4} \\ &+\frac{1}{2}\delta
+\end{align}$$
+- The Feynman rules:
+![[Lorentzian counter-terms.png|300]]
+
+# Other renormalisation techniques
+- _Momentum regularisation_ might _break_ symmetries in the theory
+
+## Dimensional regularisation
+- Work in $d=4-\epsilon$ dimensions, where $\epsilon$ is a small parameter
+	- For theories _sensitive to dimension_ (e.g. Dirac), this is an unsuitable technique
+- In $\phi^{4}$ theory, $\lambda$ will have _dimension_ $\epsilon$
+- Let it be in terms of parameter $\mu$ with _mass dimension_ $1$, and a _dimension-less coupling_ $g$
+	- For $\epsilon\to 0$, all $\mu-$dependence should disappear
+$$\lambda=\mu^{\epsilon}g$$
+
+### Dimensional regulation of $\Gamma_{4}$ at one-loop
+- Consider the amputated 1PI:
+
+- From the Feynman rules:
+$$\frac{(-i\lambda)^{2}}{2}\int  \frac{d^{d}k}{(2\pi)^{d}} \frac{i}{k^{2}-m^{2}} \frac{i}{(k+p)^{2}-m^{2}}=(-i\lambda)^{2}iV(p^{2}) $$
+- The _full 4-point amplitude_ includes this diagram, plus _counter-terms_
+$$i\mathcal{M}=-i\lambda+(-i\lambda)^{2}[iV(s)+iV(t)+iV(u)]-i\delta_{\lambda}+\dots$$
+- Introduce Feynman parametrisation:
+$$\frac{1}{AB}=\int_{0}^{1}dx \,\frac{1}{[xA+(1-x)B]^{2}} $$
+- Using this to calculate:
+$$\begin{align}
+V(p^{2})&=\frac{i}{2}\int  \frac{d^dk}{(2\pi)^{d}} \frac{1}{k^{2}-m^{2}} \frac{1}{(k+p)^{2}-m^{2}} \\ &=
+\end{align}$$
+- Introduce the 4-vector variable:
+$$l_{\mu}=k_{\mu}+xp_{\mu}$$
+- Do a _Wick rotation in the integration variable_
+$$l_{E}^{0}=-il^{0} \qquad d^{d}l=id^{d}l_{E}$$
+- The integral becomes:
+$$V(p^{2})=\int_{0}^{1} dx \int_{\mathbb{R}^{d}}  \frac{d^{d}l_{E}}{(2\pi)^{d}} \frac{1}{(l_{E}^{2}-x(1-x)p^{2}+m^{2})^{2}}  $$
+
+- More
+
+- The _Euler Beta function_:
+$$B(a,b)=\int_{0}^{1}  dy\,y^{a-1}(1-y)^{b-1}=\frac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)} $$
+- Final result:
+$$\mu^{\epsilon}V(p^{2})=-\frac{1}{32\pi^{2}} \int_{0}^{1}  dx\,\left( \frac{2}{\epsilon}-\gamma+\ln\left( \frac{4\pi \mu^{2}}{\Delta} \right) \right) $$
+- In terms of the dimensionless coupling:
+$$\displaylines{\mu^{-\epsilon}\Gamma_{4}(s,t,u)=g-\frac{g^{2}}{32\pi^{2}}\int_{0}^{1}  dx\, \left( \frac{6}{\epsilon}-3\gamma +\ln \left(\frac{(4\pi \mu^{2})^{3}}{\Delta(s)\Delta(t)\Delta(u)}\right) \right) +\delta_{g} \\ \Delta(p^{2})=m^{2}-x(1-x)p^{2}}$$
+### One-loop correction to $\Gamma_2$
+- The _connected 2-point function_:
+$$W_{2}(p^{2})=\frac{i}{p^{2}-m^{2}}+\frac{i}{p^{2}-m^{2}}(-i\Pi(p^{2}))\frac{i}{p^{2}-m^{2}}+\dots$$
+- $\Pi(p^{2})$ is the [[#One-loop correction to propagator|renormalised self-energy]], which includes _counter-terms_
+- Summed to all orders: 
+$$W_{2}(p^{2})=\frac{i}{p^{2}-m^{2}-\Pi(p^{2})}$$
+- Relation to $\Gamma_{2}$:
+$$W_{2}\Gamma_{2}=i$$
+- The _self-energy_ with _counter-terms_, with dimensional regularisation:
+$$\Gamma_{2}(p^{2})=p^{2}-m^{2}-\frac{gm^{2}}{32\pi^{2}}\left( -\frac{2}{\epsilon}+\gamma-1-\ln\left( \frac{\mu^{2}}{4\pi m^{2}} \right) \right)+(p^{2}\delta_{Z_{\phi}}-\delta_{m^{2}})$$
+# Renormalisation schemes
+- A _renormalisation scheme_ is a _prescription for choosing counter-terms_ in a theory
+
+- The Lagrangian with counter-terms:
+	- The first expression: the "bare" theory which is _un-measurable_
+	- The _seed theory_ is the _measurable part_ with parameters $m,g$
+$$\begin{align}
+\mathcal{L}_{0}=&\frac{1}{2}(\partial \phi_{0})^{2}-\frac{1}{2}m_{0}^{2}\phi_{0}^{2}-\frac{g_{0}}{4!}\phi_{0}^{4} \\ =&\frac{1}{2} 
+\end{align}$$
+## The mass-shell scheme
+- One can choose $\delta_{m^{2}}$ and $\delta_{Z}$ such that the _pole_ in $W_{2}(p^{2})$ occurs when $m$ is the _measured physical mass_ $m_\text{phys}$
+- One can also require the _residue_ of this pole be $i$
+
+- In the _one-loop_ order, one can then make the choices:
+$$\displaylines{\delta_{Z}=0 \\ \delta_{m^{2}}=-\frac{gm^{2}}{32\pi^{2}}\left( -\frac{2}{\epsilon}+\gamma-1-\ln\left( \frac{\mu^{2}}{4\pi m^{2}} \right) \right) \\ \Gamma_{2}(p^{2})=p^{2}-m^{2}+\mathcal{O}(\lambda^{2})}$$
+
+- Then, one can fix $\delta_{g}$ such that at a _specified energy scale_ $M$ $(s=t=u=M^{2})$:
+$$\Gamma_{4}(M^{2},M^{2},M^{2})=g$$
+- The counter-term is then:
+$$\delta_{g}=\frac{g^{2}}{32\pi^{2}}\int_{0}^{1}  dx\,\left( \frac{6}{\epsilon}-3\gamma+3\ln\left( \frac{4\pi \mu^{2}}{\Delta(M^{2})} \right) \right) $$
+- For _general_ $s,t,u$:
+$$\Gamma_{4}(s,t,u)=g-\frac{g^{2}}{32\pi^{2}}\int_{0}^{1}  dx\,\ln\left( \frac{\Delta(M^{2})^{3}}{\Delta(s)\Delta(t)\Delta(u)} \right) $$
+- The physics should _not be dependent_ on $M$
+- Therefore, $g$ should be _dependent_ on the chosen energy scale $M$
+
+### The $\beta-$function in the mass-shell scheme
+- For the mass-shell scheme:
+$$\beta_{g}=M \frac{dg}{dM}$$
+- Consider: 
+$$M \frac{d\Gamma_{4}}{dM}=0$$
+- In the limit of $m\ll M$
+$$\beta_{g}=\frac{3g^{2}}{16\pi^{2}}$$
+- This is identical to the [[#The $ beta-$function|Wilsonian approach]]
+- The _running_ of $g$ is _independent_ of $M$
+
+## The Minimal Subtraction (MS) scheme
+- The scheme in which the counter-terms _only cancel the divergences_
+
+- The counter-terms are simply:
+$$\delta_{Z}=0 \qquad \delta_{m^{2}}=\frac{gm^{2}}{16\pi^{2}\epsilon} \qquad \delta_{g}=\frac{3g^{2}}{16\pi^{2}\epsilon}$$
+
+### The modified MS scheme
+- Also denoted the $\overline{\text{MS}}$ scheme
+
+- Additional counter-terms to remove factors:
+$$\displaylines{\delta_{Z}=0 \qquad \delta_{m^{2}}=\frac{gm^{2}}{32\pi^{2}}\left( \frac{2}{\epsilon}-\gamma+1+\ln(4\pi) \right) \\ \delta_{g}=\frac{g^{2}}{32\pi^{2}}\int_{0}^{1}  dx\, \left( \frac{6}{\epsilon}-3\gamma+3\ln(4\pi) \right) }$$

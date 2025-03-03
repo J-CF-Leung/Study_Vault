@@ -566,7 +566,9 @@ $$\chi(t,h)\sim\frac{\partial m}{\partial h}\sim |t|^{2-\alpha-2\Delta}g_{\chi}\
 - _Exponent identities_ from homogeneity:
 $$\displaylines{\alpha+2\beta+\gamma=2 \\ \delta-1=\frac{\gamma}{\beta}}$$
 ## Hyperscaling
-- Homogeneity is an assumption applied to _free energy_
+- Homogeneity is an assumption applied to _free energy_ in _mean-field theory_
+
+- Account for _fluctuations_ and _correlations_
 - For _correlation functions_ and their divergence, one needs to _further assume_:
 	- Close to _criticality_, the _only relevant lengthscale_ is $\xi$, and is _solely responsible_ for divergences in thermodynamic quantities
 	- Correlation length $\xi$ is a _homogeneous function_ 	$$\xi(t,h)\sim |t|^{-\nu}g\left( \frac{h}{|t|^{\Delta}} \right)$$
@@ -579,3 +581,61 @@ $$f_\text{sing.}(t,h)\sim \frac{\ln Z}{L^{d}}\sim \xi^{-d}\sim |t|^{d\nu}g_{f}\l
 $$2-\alpha=d\nu$$
 - This gives the _hyperscaling relations_ in terms of $d$
 
+## Correlation functions and self-similarity
+- Correlation functions only have the _relevant lengthscale_ of $\xi$, which _diverges_ at criticality
+
+- The exponent $\eta$:
+$$G_{c}(\boldsymbol{x})\equiv \langle \boldsymbol{m}(\boldsymbol{x})\cdot \boldsymbol{m}(0) \rangle-\langle m^{2} \rangle \sim \frac{1}{|\boldsymbol{x}|^{d-2+\eta}}  $$
+- _Away from criticality_, the power laws are _cut-off_ for distances $|\boldsymbol{x}|\gg \xi$
+- The _response function_ is then:
+$$\chi \sim \int  d^d\boldsymbol{x}\, G_{c}(\boldsymbol{x})\sim \int^{\xi}  \frac{d^{d}\boldsymbol{x}}{|\boldsymbol{x}|^{d-2+\eta}}\sim \xi^{2-\eta}\sim t^{-\nu(2-\eta)}  $$
+
+- Final exponent relation:
+$$\gamma=(2-\eta)\nu$$
+
+- Under a _change of scale_:
+$$G_\text{crit}(\lambda \boldsymbol{x})=\lambda^{p}G_\text{crit}(\boldsymbol{x})$$
+
+- This indicates _statistical self-similarity_
+	- Apart from a _change of contrast_, the _statistical properties_ are the same
+	- In 2D: can be accounted for with a _conformal field theory_
+	- In other dimensions: the _renormalisation group_
+
+# Renormalisation Group
+- The only relevant lengthscale in a system is $\xi$
+
+- Renormalisation: a method of _eliminating features at lengthscale_ $x\ll \xi$
+## Renormalisation procedure
+- First, _coarse-grain_ the system from _microscopic lengthscale_ $a$ to $ba$, where $b>1$
+- This is accomplished by _integrating out fluctuations_ on lengthscales $<ba$
+	- For $\boldsymbol{x}$, integrate _over a cell_ of width $ba$ centred on $\boldsymbol{x}$
+$$\bar{\boldsymbol{m}}(\boldsymbol{x})=\frac{1}{(ba)^{d}} \int_\text{cell}  d\boldsymbol{y}\,\boldsymbol{m}(\boldsymbol{y}) $$
+- The _new Hamiltonian_ is expressed in terms of the _coarse-grained magnetisation_ $\bar{\boldsymbol{m}}$
+
+- Then, to _restore_ the resolution on the system, _rescale_ the system size:
+$$\boldsymbol{x}'=\frac{\boldsymbol{x}}{b}$$
+
+- The _relative size_ of features will have changed, therefore _rescale_ the order parameter by some factor $\zeta$
+$$\boldsymbol{m}'(\boldsymbol{x}')=\frac{1}{\zeta}\bar{\boldsymbol{m}}(\boldsymbol{x}')$$
+![[Renormalisation process.png|400]]
+- At _criticality_, the _rescaled_ Hamiltonian is _still at criticality_
+
+- When _off criticality_, the Hamiltonian is _taken further off criticality_
+
+### Brehaviour of renormalised parameters
+- Behaviour of _renormalised parameters_
+	- Analytic
+
+- Avoid _spontaneously broken symmetry_
+
+- The re-scaling process is _commutative_
+
+- This implies the _functional form_ of the parameters under _rescaling_
+$$t(b)=b^{y_{t}}t\qquad h(b)=b^{y_{h}}h$$
+
+### Behaviour of physical quantities
+- The _partition function_:
+$$\mathcal{Z}=\mathcal{Z}'$$
+- The _free energy_ is a _homogeneous function_
+
+- $y_{h}$ and $y_{t}$ are the _independent variables required_ to find all critical exponents
