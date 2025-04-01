@@ -12,6 +12,7 @@
 
 - Each band: _one quaternion_ $(i,j,k)$
 	- _Frame_ charge: due to the _frame_ of _real eigenvectors_
+	- Real eigenvector frame -> gauge freedom -> encircling nodes
 - There is a _gauge freedom_ in determining signs
 	- However, _relative sign_ is _gauge-independent_
 
@@ -35,6 +36,7 @@
 	- _Gauge fixing_ for _all gaps_
 
 - _Sign_ of eigenvector must _flip_ over the Dirac string
+	- A $\pi$ disinclination line in Berry phase between 2 nodes (branch cut?)
 
 ### Transition
 - Electrons: have to find bands near the Fermi-level
@@ -44,17 +46,26 @@
 ## $\ce{ Zr_{2}O_{3} }$
 
 ### Structure and bands
- - Calculated using DFPT (VASP) for force constants
+- _Ab initio_ calculations
+ - VASP for force constants
+	 - Structure optimisation: by _relaxing_ lattice constants and atomic coordination
+	 - Passivation atoms: _hydrogen_
+	 - Using a _finite difference method_
  - Phonopy for dispersion
+	 - VASP only computes frequencies near $\Gamma$
 
 - Change in band structure: 
 	- Perpendicular electric field (doping), as the atoms _respond differently_
 	- Strain
 
+- Focus on a _group of bands_
+	- Many bands, rich phenomena
+	- Is _isolated_ from other gaps
+
 ### Determining Euler classes
 - Calculate Euler classes in _patches_
 - Draw Dirac strings
-- Consistency with translational symmetry and continuity
+- Consistency with translational symmetry and continuity with other fields
 
 - There are _multiple equivalent configurations_ due to _gauge freedom_
 	- Only _node annihilation/creation_ is gauge-invariant

@@ -21,12 +21,13 @@ $$\frac{\partial B}{\partial t}=-\nabla\times \boldsymbol{E}=\rho \nabla\times \
 - The phenomena above hint at superconductivity being _quantum mechanical_
 - The _supercurrent_ may be related to the wavefunction current $\propto \psi^{*}\nabla \psi-\psi \nabla \psi^{*}$, which is due to a spatially varying _phase_
 ## London equations
-- From _Drude theory_:
-$$\left( \frac{\partial}{\partial t}+\frac{1}{\tau} \right)\boldsymbol{j}=\left( \frac{\partial}{\partial t}+\frac{1}{\tau} \right)\left( \frac{ne^{2}}{m} \right)\boldsymbol{E}$$
+- From _Drude theory_ and the _relaxation time approximation_:
+$$\left( \frac{\partial}{\partial t}+\frac{1}{\tau} \right)\boldsymbol{j}=\left( \frac{ne^{2}}{m} \right)\boldsymbol{E}$$
 - For perfect conductivity, $\tau\to \infty$
 	- $\Lambda=(ne^{2}/m)^{-1}$
 $$\Lambda \frac{\partial}{\partial t}\boldsymbol{j}=\boldsymbol{E}$$
 - One can have a _constant current without any electric field_
+	- In contrast to normal metals where $\boldsymbol{j}=\sigma \boldsymbol{E}$
 
 - Then from Maxwell's equations:
 $$\displaylines{\frac{\partial \boldsymbol{B}}{\partial t}=-\nabla\times \boldsymbol{E}=-\Lambda \nabla\times \frac{\partial}{\partial t}\boldsymbol{j} \\ \boldsymbol{B}=-\Lambda \nabla\times \boldsymbol{j}}$$
@@ -102,7 +103,7 @@ $$G=G_{0}+\int  d\boldsymbol{r}\left\{ \alpha|\psi|^{2}+\frac{\beta}{2} |\psi|^{
 - The third term _penalises heterogeneities_ in the system, using a _gauge-invariant gradient term_, with _phenomenological parameters_ $m^{*}$ and $q$
 	- Experimentally, $q=-2|e|$
 
-- The last term accounts for _energy due to some magnetic field in the superconductor_ $\nabla\times (\boldsymbol{A}-\boldsymbol{A}_{E})$
+- The last term accounts for _energy due to some magnetic field in the superconductor_ $\boldsymbol{B}_{M}=\nabla\times (\boldsymbol{A}-\boldsymbol{A}_{E})$, where the magnetic field is _given by internal currents_
 	- $\nabla\times\boldsymbol{A}$ is the _total field_, while $\nabla\times \boldsymbol{A}_{E}$ is the _external field_
 
 - For there to be some _phase transition_ at $T<T_{c}$ for a homogeneous system:
@@ -119,8 +120,9 @@ $$B_{c}=\sqrt{ \frac{\mu_{0}\alpha^{2}}{\beta} }$$
 	- _Vortices_ may show up, where the magnetic field is _not completely screened_
 
 - By _minimising_ the free energy density w.r.t. $\psi(\boldsymbol{r})$ and $\boldsymbol{A}(\boldsymbol{r})$, one gets the _Ginzburg-Landau equations_ in the bulk
+	- Minimising w.r.t. $\boldsymbol{A}$: use $\nabla\cdot(\boldsymbol{B}_{M}\times\delta \boldsymbol{A})=\delta \boldsymbol{A}\cdot \nabla\times \boldsymbol{B}_{M}-\boldsymbol{B}_{M}\cdot(\nabla\times\delta \boldsymbol{A})=0$
 $$\displaylines{\frac{1}{2m}\left( \frac{\hbar}{i}\nabla -e^{*}\boldsymbol{A} \right)^{2}\psi+(\alpha+\beta|\psi|^{2})\psi=0 \\ \begin{align}
-\boldsymbol{J}_{s}=\frac{1}{\mu_{0}}\nabla\times(\nabla\times \boldsymbol{A})&=\frac{q}{2m} \frac{\hbar}{i}(\psi^{*}\nabla \psi-\psi \nabla \psi^{*})-q^{2}|\psi|^{2}\boldsymbol{A}  \\
+\boldsymbol{J}_{s}=\frac{1}{\mu_{0}}\nabla\times \boldsymbol{B}_{M}&=\frac{q}{2m} \frac{\hbar}{i}(\psi^{*}\nabla \psi-\psi \nabla \psi^{*})-q^{2}|\psi|^{2}\boldsymbol{A}  \\
 &=\frac{q}{m}\mathrm{Re}\left( \psi^{*}\left( \frac{\hbar}{i}\nabla-q\boldsymbol{A} \right)\psi \right)
 \end{align}}$$
 
@@ -150,6 +152,8 @@ $$\nabla^{2}\boldsymbol{B}=\frac{\boldsymbol{B}}{\lambda^{2}}\qquad \lambda=\fra
 
 ## Gauge transformations in a superconductor
 - The gauge transformation of $\boldsymbol{A}$:
+	- Gauge symmetry: a _mathematical redundancy_ rather than anything physical
+	- Akin to _coordinate transformation_
 $$\boldsymbol{A}\to \boldsymbol{A}+\nabla \chi \qquad \varphi \to \varphi-\dot{\chi}$$
 - The corresponding transformation for the wavefunction:
 $$\psi\to \psi \exp\left( i\frac{q}{\hbar} \chi\right) \qquad \theta\to \theta+\frac{q}{\hbar}\chi$$

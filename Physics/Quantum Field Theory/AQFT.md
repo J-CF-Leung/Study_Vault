@@ -953,9 +953,297 @@ $$\beta_{g}=\frac{3g^{2}}{16\pi^{2}}$$
 
 - The counter-terms are simply:
 $$\delta_{Z}=0 \qquad \delta_{m^{2}}=\frac{gm^{2}}{16\pi^{2}\epsilon} \qquad \delta_{g}=\frac{3g^{2}}{16\pi^{2}\epsilon}$$
-
+- The renormalised quantities:
+$$\displaylines{\Gamma_{2}(p^{2})=p^{2}-m^{2}-\frac{gm^{2}}{32\pi^{2}}\left( \gamma-1-\ln\left( \frac{\mu^{2}}{4\pi m^{2}} \right)+\dots \right) \\ \Gamma_{4}(s,t,u)=g-\frac{g^{2}}{32\pi^{2}}\int_{0}^{1}  dx\, \left( -3\gamma+\ln\left( \frac{(4\pi \mu^{2})^{3}}{\Delta(s)\Delta(t)\Delta(u)} \right) \right)+\dots }$$
 ### The modified MS scheme
 - Also denoted the $\overline{\text{MS}}$ scheme
 
 - Additional counter-terms to remove factors:
 $$\displaylines{\delta_{Z}=0 \qquad \delta_{m^{2}}=\frac{gm^{2}}{32\pi^{2}}\left( \frac{2}{\epsilon}-\gamma+1+\ln(4\pi) \right) \\ \delta_{g}=\frac{g^{2}}{32\pi^{2}}\int_{0}^{1}  dx\, \left( \frac{6}{\epsilon}-3\gamma+3\ln(4\pi) \right) }$$
+
+ - In any scheme, there is still _dependence on scale parameters_ ($\mu$ or $M$) 
+
+### The $\beta-$function in the MS scheme
+- With no renormalisation at one-loop:
+$$\mu  \frac{d}{d\mu}\Gamma_{4}(s,t,u)=0$$
+- Only considering $\mu$ dependence:
+$$\Gamma_{4}\sim g-\frac{3g^{2}}{16\pi^{2}}\ln \mu+\dots$$
+- To leading order:
+$$\beta_{g}=\frac{3g^{2}}{16\pi^{2}}$$
+- Then use this to solve for running of the coupling:
+$$g(\mu')=\frac{g(\mu)}{1-\frac{3}{16\pi^{2}}g(\mu)\ln(\mu'/\mu)}\approx g(\mu)+\frac{3g^{2}(\mu)}{16\pi^{2}}\ln\left( \frac{\mu'}{\mu} \right)$$
+- A _change_ in $\mu$ leads to a change in $g$:
+$$\Delta g=\frac{3g^{2}}{16\pi^{2}}\ln\left( \frac{\mu'}{\mu} \right)$$
+- The _difference in counter-terms_:
+$$\Delta\delta _{g}=\frac{g^{2}}{32\pi^{2}}[\ln(\mu'^{6})-\ln(\mu ^{6})]=\frac{3g^{2}}{16\pi^{2}}\ln\left( \frac{\mu'}{\mu} \right)$$
+- Any _change_ in $\mu$ can be _absorbed_ into a change in counter-terms
+	- i.e. the _renormalisation scheme does not matter_
+
+## Regularisation independence
+- The _partition function_ should be _independent of regularisation_, as it is based on the _un-renormalised theory_
+	- "Seed" theory: the _sum_ of a renormalised theory and the _counter-terms_
+- Partition function and generating functional:
+$$\displaylines{Z[0]=\int  \mathcal{D}\phi_{0}\,\exp\left(i \int  d^d x\, \mathcal{L}_{0}\right)  \\ Z[J_{0}]=\int  \mathcal{D}\phi_{0}\,\exp\left(i \int  d^d x\, (\mathcal{L}_{0}+J_{0}\phi_{0})\right)}$$
+
+- Under _renormalisation_:
+$$\phi_{0}(x)=Z_{\phi}^{1/2}\phi_{0}(x):=(1+\delta_{Z_{\phi}})^{1/2}\phi_{0}(x)$$
+- The _source term_ must also renormalise such that $Z[J]$ is _invariant_:
+$$J_{0}(x)=Z_{\phi}^{-1/2}J(x)$$
+
+- As $Z_{\phi}$ is renormalisation-dependent, the _correlation functions also change under renormalisation flow_
+### Callan-Symanzik equation
+- The _bare correlation functions_ cannot transform under renormalisation:
+$$G_{n}^{(0)}(x_{1},\dots x_{n})=\braket{ \Omega|T\{\phi_{0}(x_{1})\dots \phi_{0}(x_{n})\} | \Omega }_\text{conn} $$
+- The _renormalised correlation functions_ do change with renormalisation group flow:
+$$G_{n}(x_{1},\dots x_{n})=\langle \Omega|T\{\phi(x_{1})\dots \phi(x_{n})\}|\Omega \rangle_\text{conn} $$
+- From wavefunction renormalisation:
+$$G_{n}(x_{1}\dots x_{n})=Z_{\phi}^{-n/2}G_{n}^{(0)}(x_{1},\dots x_{n})$$
+- _Changing_ the renormalisation scaling:
+	- $\Delta \eta=-\Delta Z_{\phi}/(2Z_{\phi})$
+$$\mu\to \mu+\Delta \mu\qquad \lambda\to \lambda+\Delta\lambda \qquad \phi\to (1+\Delta \eta)\phi$$
+- Relation between the correlation functions can be written as:
+$$\left( \Delta \mu  \frac{d}{d\mu}+\Delta\lambda  \frac{d}{d\lambda} \right)G_{n}(x_{1},\dots x_{n})=n\Delta \eta G_{n}(x_{1},\dots x_{n})$$
+
+# Quantum Electrodynamics
+
+## Fermions and Grassmann variables
+- Have some _fermionic field_ $\psi$, such that for some _source terms_ $\eta(x_{i})$, the _correlation functions_ are given in a form _similar to the bosonic field_:
+$$\displaylines{\langle \psi(x_{1}) \dots \psi(x_{n})\rangle=\left[ \frac{1}{Z[\eta]} \frac{\partial^{n}Z[\eta]}{\partial \eta(x_{1})\partial \eta(x_{2})\dots\partial \eta(x_{n})} \right]_{\eta=0}  \\ Z[\eta]\sim \int  \mathcal{D}\psi\,\exp\left[ \frac{i}{\hbar}\left(S[\psi]+\int  \psi \cdot \eta \right) \right] }$$
+- As the correlations must _anti-commute_, both the _sources_ $\eta$ and the _fields_ $\psi$ must _also anti-commute_
+
+- Objects with this property are _Grassmann numbers_:
+$$\theta_{1}\theta_{2}=-\theta_{2}\theta_{1}$$
+- For bosonic variable $x$:
+$$\theta x=x\theta$$
+- This also gives:
+$$\theta_{i}^{2}=0$$
+- All functions must then be _linear_:
+$$\displaylines{F(x,\theta)=f(x)+g(x)\theta \\ f(x):=F(x,0) \qquad g(x):= \frac{\partial F(x,\theta)}{\partial\theta}\Bigg|_{\theta=0}}$$
+### Integration of Grassmann variables
+- Inspect a _translation-invariant integral_:
+$$\int \theta\, d\theta=\int  (\theta+\xi)d(\theta+\xi)=\int  \theta\,d\theta+\int  \xi \,d\theta    $$
+- Therefore:
+$$\int  d\theta=0 $$
+- Also _fix a normalisation_:
+$$\int  \theta\,d\theta=1 $$
+- A general function:
+$$\int  dx\,d\theta\,F(x,\theta)=\int  dx\,g(x)  $$
+### Differentiation of Grassmann variables
+$$\frac{\partial\theta^{a}}{\partial\theta^{b}}=\delta^{a}_{b} \qquad \frac{\partial x^{\mu}}{\partial x^{\nu}}=\delta^{\mu}_{\nu} \qquad \frac{\partial\theta^{a}}{\partial x^{\nu}}=\frac{\partial x^{\nu}}{\partial\theta^{a}}=0$$
+- There is a _correspondence between differentiation and integration_:
+$$\displaylines{\int  d\theta \longleftrightarrow \frac{\partial}{\partial\theta} \\ \int  d\theta \,F(x,\theta)=  }$$
+### Gaussian integration
+$$\int  d\theta_{1}d\theta_{2}\exp(-\theta_{1}M\theta_{2})=\int  d\theta_{1}d\theta_{2}\,(1-\theta_{1}M\theta_{2}) =M $$
+- The _order_ of the measure matters:
+$$d\theta_{1}d\theta_{2}=-d\theta_{2}d\theta_{1}$$
+- For a _bosonic variable_ $x$:
+$$\int  d^nx\,\exp\left( -\frac{1}{2}x^{T}Mx \right)=\frac{(2\pi)^{n/2}}{\sqrt{ \det M }}  $$
+
+
+- Then for a _symmetric $n\times n$ matrix_ $M$, and Grassmann variables $\theta,\eta$:
+$$\int  d^n\theta\,d^{n}\eta\,\exp(-\theta^{T}M\eta)= \det M $$
+- For an _antisymmetric_ matrix $A$:
+$$ \int  d^n\theta\,\exp\left( -\frac{1}{2}\theta^{T}A\theta \right)=\mathrm{Pf}(A)=\sqrt{ \det A } $$
+- $\mathrm{Pf}(A)$ is the _Pfaffian_
+
+## QED in the path integral formalism
+- The _fields_ are Grassmann variables, which encodes the _Pauli exclusion principle_:
+$$\psi(x)\psi(y)=-\psi(y)\psi (x)\qquad \psi^{2}(x)=0$$
+- The _action_ in [[QFT#Quantum Electrodynamics|QED]]:
+$$\displaylines{S[\bar{\psi},\psi,A]=\int  d^nx\left( -\frac{1}{4}F_{\mu \nu}F^{\mu \nu}+\bar{\psi}(i\cancel{ D }-m)\psi \right)  \\ \cancel{ D }=\cancel{ \partial }+ie\cancel{ A } \\ F_{\mu \nu}=\partial_{\mu}A_{\nu}-\partial_{\nu}A_{\mu}}$$
+- The _gauge symmetry_:
+$$\begin{align}
+\psi(x)&\to \exp(i\alpha(x))\psi(x) \\ \bar{\psi}(x)&\to \bar{\psi}(x)\exp(-i\alpha(x)) \\ A_{\mu}(x)&\to A_{\mu}(x)-\frac{1}{e}\partial_{\mu}\alpha(x)
+\end{align}$$
+### Generating functional and propagator for fermions
+- In the _free theory_, the _generating functional_ is:
+$$Z_{0}[\eta,\bar{\eta}]=\mathcal{N}\int  \mathcal{D}\psi\,\mathcal{D}\bar{\psi}\,\exp\left(iS[\psi,\bar{\psi}]+\int  \bar{\psi}\,\eta+i\int  \bar{\eta}\,\psi  \right) $$
+- The source terms $\eta,\bar{\eta}$ are _also Grassmann variables_ like the fields
+
+- The _Greens function_, a $4\times4$ _spinor matrix_:
+	- Suppress spinor indices
+$$\displaylines{(i\cancel{ \partial }-m)S_{F}(x-y)=i\delta^{4}(x-y) \\ S_{F}(x-y)=\int  \frac{d^4p}{(2\pi)^{4}} \frac{i}{\cancel{ p }-m+i\epsilon} e^{-ip(x-y)} \\ \frac{1}{\cancel{ p }-m}=\frac{\cancel{ p }+m}{p^{2}-m^{2}}}$$
+- Similar to the [[AQFT#The generating functional|generating functional in the scalar theory]]:
+$$Z_{0}[\eta,\bar{\eta}]=\exp\left(-\int  d^4x\,d^{4}y\,\bar{\eta}(x)S_{F}(x-y)\eta(y) \right)$$
+- The propagator:
+$$S_{F}(x-y)=\braket{ 0|T\{\psi(x)\bar{\psi}(y)\} | 0 }=\frac{1}{Z_{0}[0]} \frac{\partial^{2}Z_{0}[\eta,\bar{\eta}]}{\partial \bar{\eta}(x)\partial \eta(y)}\Bigg|_{\eta=0} $$
+### Path integrals for vector fields
+- Action for gauge fields, using _integration by parts_:
+$$S[A]=-\frac{1}{4}\int  d^4 x\,F^{2}=\frac{1}{2}\int  d^4x\,A_{\mu}(x)(\eta^{\mu \nu}\partial^{2}-\partial^{\mu}\partial^{\nu})A_{\nu}(x) $$
+- $\partial^{2}$ is a _kinetic term_
+
+- In _momentum space_:
+$$S[A]=\frac{1}{2}\int  \frac{d^4k}{(2\pi)^{4}} \tilde{A}_{\mu}(k)(-\eta^{\mu \nu}k^{2}+k^{\nu}k^{\mu})\tilde{A}_{\nu}(k) $$
+- The operator is a _projection operator_:
+$$P^{\mu \nu}:=-\eta^{\mu \nu}k^{2}+k^{\nu}k^{\mu}$$
+- It has a _kernel_:
+$$\tilde{A}_{\mu}=k_{\mu}\alpha(k)$$
+- Fields of this form are _projected out_, such that the kernel _cannot be inverted_ to find the Greens function
+
+- Consider the effect of _gauge symmetry_ on the functional integral:
+$$Z[J]=\mathcal{N}\int  \mathcal{D}A $$
+
+- The _functional integral_ will _overcount_ as fields _related by gauge symmetry_ will _all contribute to the integral_
+- Therefore, one must _fix the gauge_ such that it _counts each physical configuration only once_
+	- In other words, only take _one representative of each equivalence class_, corresponding to _a slice in configuration space_
+![[Gauge fixing slice.png|400]]
+
+### Fadeev-Popov determinant
+- Take the identity:
+$$1=\int  d\alpha\,\frac{\partial g(\alpha)}{\partial\alpha}\,\delta(g(\alpha)) $$
+- The functional form, with _vector field_ $A$ and _gauge parameter_ $\alpha$
+$$\displaylines{1=\int  \mathcal{D}\alpha\,\delta(G(A^{\alpha}))\,\det\left( \frac{\delta G(A^{\alpha})}{\delta\alpha} \right) \\ A^{\alpha}_{\mu}=A_{\mu}(x)-\frac{1}{e}\partial_{\mu}\alpha(x)}$$
+- The _delta functional_ enforces some _gauge choice_ $G(A^{\alpha})=0$
+
+- Inserting into the functional integral:
+$$\int  \mathcal{D}A\,e^{iS[A]}= $$
+- $G(A^{\alpha})$ is a _gauge-fixing condition_, which can be _chosen_ such that $\delta G(A^{\alpha})/\delta\alpha$ is _independent_ of $A$ and $\alpha$
+- The _Lorenz gauge_:
+$$\displaylines{G(A^{\alpha})=\partial^{\mu}A_{\mu}(x)=0 \\ \det\left( \frac{\delta G(A^{\alpha})}{\delta\alpha} \right)=\det\left( -\frac{\partial^{2}}{e} \right)}$$
+- With this gauge:
+$$\int  \mathcal{D}A\,e^{iS[A]} =\det\left( \frac{\delta G}{\delta\alpha} \right)\int  \mathcal{D\alpha}\,\mathcal{D}A \,\delta[G(A^{\alpha})]e^{iS[A]}$$
+- Then from _classical gauge invariance_:
+$$S[A]=S[A^{\alpha}]$$
+- Assume:
+	- If there are _no anomalies_ going from classical to quantum
+$$\mathcal{D}A=\mathcal{D}A^{\alpha}$$
+- _Relabelling_ the dummy variable $A^{\alpha}$ with $A$, _factorise_ out the $\alpha$ dependence
+$$\int\mathcal{D}A\,e^{iS[A]}=\det\left( \frac{\partial G}{\partial\alpha} \right) \left(\int\mathcal{D}\alpha\right)\int\mathcal{D}A\,e^{iS[A]}\,\delta[G(A)]$$
+- The factors independent of $A$ are responsible for the _overcounting_, and can be interpreted as some _infinite volume_
+	- Can be absorbed into the _normalisation_
+
+### Gauge fixing
+- For some function $\omega$, _parametrise_ the _gauge fixing condition_:
+	- A _generalisation_ of the Lorenz gauge
+$$G(A)=\partial^{\mu}A_{\mu}(x)-\omega(x)$$
+- wlog, one can _average_ over $\omega$ with some _Gaussian weighting_, parametrised by $\xi$
+$$\int\mathcal{D}A\,e^{iS[A]}=\left( N(\xi)\int\mathcal{D}\omega \,\exp\left( -i\int d^{4}x\,\frac{\omega^{2}}{2\xi} \right) \right)\int\mathcal{D}A\,e^{iS[A]}$$
+- Writing out the integral then gives:
+$$N(\xi)\int\mathcal{D}\omega\,\exp\left( -i\int d^{4}x\,\frac{\omega^{2}}{2\xi} \right)\det\left( -\frac{\partial^{2}}{e} \right)\left(\int\mathcal{D}\alpha\right)\int\mathcal{D}A\,e^{iS[A]}\,\delta(\partial^{\mu}A_{\mu}-\omega)$$
+- Due to the delta functional:
+$$N(\xi)\det\left( -\frac{\partial^{2}}{e} \right)\left(\int\mathcal{D}\alpha\right)\int\mathcal{D}A\,e^{iS[A]}\,\exp\left[ -\frac{i}{2\xi}\int d^{4}x\,(\partial^{\mu}A_{\mu}(x))^{2} \right]$$
+- The prefactors can once again be _absorbed into normalisation_
+- This leaves the _generating functional_
+$$\displaylines{Z[J]=\int\mathcal{D}A\,\exp\left({iS[A]}+iS_\text{gf}[A]+i\int\,J_{\mu}A^{\mu}\right) \\ S_\text{gf}[A]=-\frac{1}{2\xi}\int d^{4}x\,(\partial^{\mu}A_{\mu}(x))^{2}}$$
+- $S_\text{gf}$ is the _gauge fixing_ term of the action
+
+- From going to _momentum space_, the Greens function satisfies:
+$$\left( -k^{2}\eta_{\mu \nu}+\left( 1-\frac{1}{\xi} \right)k_{\mu}k_{\nu} \right)\tilde{D}^{\mu \nu}(k)=1$$
+- In _position space_:
+$$D^{\mu \nu}(x-y)=\int \frac{d^{4}k}{(2\pi)^{4}} \frac{-i}{k^{2}+i\epsilon}\left( \eta^{\mu \nu}-(1-\xi) \frac{k^{\mu}k^{\nu}}{k^{2}} \right)e^{-ik(x-y)}$$
+
+- If one sets $\xi\to 0$, one gets the _Lorenz gauge_
+$$\xi$$
+- The _Feynman gauge_ has $\xi=1$, such that the propagator is:
+$$\tilde{D}^{\mu \nu}(k)=- \frac{i\eta^{\mu \nu}}{k^{2}+i\epsilon}$$
+- The _generating functional_ in the _free theory_:
+$$Z_{0}[J]=\exp\left( -\frac{1}{2} \int d^{4}x\,d^{4}y\, J_{\mu}(x)D^{\mu \nu}(x-y)J_{\nu}(y) \right)$$
+## Feynman rules in QED
+- The QED Lagrangian:
+$$\mathcal{L}=-\frac{1}{4}F_{\mu \nu}F^{\mu \nu}+\bar{\psi}(i\cancel{ \partial }-m)\psi-e\bar{\psi}\cancel{ A }\psi$$
+- The generating functional, using the same strategy as [[#Quartic potential|scalar field theory]]:
+$$Z[J,\eta,\bar{\eta}]=\frac{1}{Z_{0}[0]}\exp\left[ -ie \int d^{4}x \left( \frac{\delta}{\delta J^{\mu}(x)} \right)\dots \right]$$
+
+- The Feynman rules:
+
+## Renormalisation of QED
+- The _bare theory_, with _unobservable parameters_:
+$$\mathcal{L}=-\frac{1}{4}{F_{\mu \nu}}F_{0}^{\mu \nu}+\bar{\psi}(i\cancel{ \partial }-m_{0})\psi-e_{0}\bar{\psi}\cancel{ A }\psi$$
+- One needs _renormalisation_ for both the _Dirac field_ and the _potential_
+$$\psi$$
+- The _observed_ Lagrangian, and the corresponding _counter-terms_
+$$\mathcal{L}_{0}=$$
+
+### QED Feynman rules with counter-terms
+- They _cancel the one-loop divergences_, such that the _combination_ becomes _finite_
+![[QED with counter-terms.png|300]]
+
+### Electron self-energy
+![[Electron self energy.png]]
+- Consider the _one-loop divergence_ to the two-point function
+- The _amputated diagram_:
+$$-i\Sigma_{2}(p)+i(\cancel{ p }\delta_{2}-\delta_{m})$$
+- Work in $d-\epsilon$ dimensions, introducing the _dimensionless coupling_ $g$:
+$$e=g\mu^{\epsilon/2}$$
+- The _loop_:
+$$-i\Sigma_{2}(p)=(-ie)^{2}\int \frac{d^{d}k}{(2\pi)^{d}} \gamma^{\mu} \left( \frac{i(\cancel{ k }+m)}{k^{2}-m^{2}+i\epsilon} \right) \gamma_{\mu} \left( -\frac{i}{(p-k)^{2}+i\epsilon} \right)$$
+- Use _Feynman parametrisation_
+
+- For small $\epsilon$
+$$i\Sigma_{2}(p)=$$
+### Photon self-energy
+- Also known as the _vacuum polarisation_
+![[Photon self enegry.png|200]]
+- With counter-term:
+$$i\Pi_{\mu \nu}(p)-i(\eta_{\mu \nu}p^{2}-p_{\mu}p_{\nu})\delta_{3}$$
+- The one-loop divergence, with a factor of $-1$ from the _fermion loop_, _traced over_ the Dirac indices
+$$i\Pi_{\mu \nu}(p)=(-ie)^{2}(-1)\int \frac{d^{d}k}{(2\pi)^{d}} \mathrm{Tr}\left[ \gamma_{\mu} \frac{i(\cancel{ k }+m)}{k^{2}-m^{2}}\gamma_{\nu} \frac{i(\cancel{ k }+\cancel{ p }+m)}{(k+p)^{2}-m^{2}} \right]$$
+
+### Three-point vertex
+- The _one-loop correction_ to the standard _three-point vertex_
+![[QED three point vertex one loop.png]]
+- With the counter-term:
+$$-ie\Gamma^{\mu}(p)-ie\gamma^{\mu}\delta_{3}$$
+$$-ie\Gamma^{\mu}(p)=(-ie)^{3}\int \frac{d^{d}k}{(2\pi)^{d}} \gamma^{\lambda} \frac{i(\cancel{ k }+\cancel{ p }+m)}{(k+p)^{2}-m^{2}}\gamma^{\mu} \frac{i(\cancel{ k }+\cancel{ p }+m)}{(k+p)^{2}-m^{2}}\gamma^{\rho} \left( -\frac{i\eta_{\lambda \rho}}{k^{2}} \right)$$
+# Yang-Mills Theory
+- In QED, there is a $U(1)$ gauge symmetry:
+$$\displaylines{\mathcal{L}_\text{QED}= \qquad D_{\mu}= \\ U=\exp(i\alpha(x)) \qquad \psi(x)\to U\psi (x) \qquad D_{\mu}\to UD_{\mu}U^{\dagger} \qquad A_{\mu}\to A_{\mu}-\frac{1}{e}\partial_{\mu}\alpha(x)}$$
+- Generalise this to a _non-Abelian gauge theory_, such that $U \in G$, where $G$ is a _non-Abelian group_, specifically $SU(N)$
+
+## Non-Abelian gauge theory
+- There still needs to be a _covariant derivative_ which transforms under the _gauge symmetry_
+$$D_{\mu}\to UD_{\mu}U^{\dagger}$$
+- The group has $N^{2}-1$ _generators_ $(T_{a})^{i}$, with _structure constants_ $f_{ab}^{c}$
+$$[T_{a},T_{b}]=if_{ab}^{c}T_{c}$$
+- Introduce the _gauge field_ 
+$$(A_{\mu})^{i}_{j}=A_{\mu}^{a}(T_{a})^{i}_{j}$$
+- The _covariant derivative_ will have a form similar to QED, with _coupling constant_ $g$
+$$(D_{\mu})^{i}_{j}=\delta^{i}_{j}\partial_{\mu}-ig(A_{\mu})^{i}_{j}$$
+- The transformation is then:
+	- From $UU^{\dagger}=I$, $\partial_{\mu}U^{\dagger}=-U^{\dagger}(\partial_{\mu}U)U^{\dagger}$
+$$A_{\mu}\to UA_{\mu}U^{\dagger}+\frac{1}{g}U(\partial_{\mu}U^{\dagger})$$
+- Parametrise $U$ with functions $\alpha^{a}(x)$:
+$$U^{i}_{j}=\exp(i\alpha^{a}(x)(T_{a})^{i}_{j})$$
+- For some _infinitesimal transformation_:
+$$\begin{align}
+D_{\mu}&\to UD_{\mu}U^{\dagger} \\ &=\partial_{\mu}-igA_{\mu}^{a}T_{a}+g\alpha^{a}A_{\mu}^{b}[T_{a},T_{b}]-i(\partial_{\mu}\alpha^{a})T_{a}
+\end{align}$$
+- Absorbing this into a _transformed gauge field_
+$$(A_{\mu}')^{a}=A_{\mu}^{a}+\frac{1}{g}D_{\mu}\alpha^{a} \qquad D_{\mu}\alpha^{a}\equiv \partial_{\mu}\alpha^{a}+gf^{a}_{bc}A_{\mu}^{b}\alpha^{c}$$
+- Like QED, there is a corresponding _field strength_:
+$$\displaylines{[D_{\mu},D_{\nu}]=-igF_{\mu \nu} \\ (F_{\mu \nu})^{i}_{j}=F^{a}_{\mu \nu}(T_{a})^{i}_{j} \\ F_{\mu \nu}^{a}=\partial_{\mu}A_{\nu}^{a}-\partial_{\nu}A_{\mu}^{a}+gf^{a}_{bc}A_{\mu}^{b}A_{\nu}^{c}}$$
+- The _non-commutativity_ gives an extra term
+
+- This is analagous to [[General Relativity]], where the _Riemann curvature_ is given by some _commutator of covariant derivatives_
+
+### Lagrangian for a non-Abelian gauge theory
+- Couple to _matter fields_
+$$\psi^{i}(x)\to \qquad \psi^{i}_{j}(x)\to$$
+- The Lagrangian is then:
+$$\mathcal{L}_\text{QCD}=-\frac{1}{4}\mathrm{Tr}(F_{\mu \nu}F^{\mu \nu})+\bar{\psi}^{i}(i\cancel{ D }-m)^{j}_{i}\psi_{j}$$
+- The _quadratic Casimir_:
+$$\sum_{a}(T_{a})^{i}_{j}(T_{a})^{j}_{k}$$
+- Or, trace over:
+$$(T_{a})^{i}_{j}(T_{b})^{j}_{i}$$
+- _Lie algebra indices_ can be raised and lowered:
+
+- Then, writing out the Lagrangian:
+$$\begin{align}
+\mathcal{L}_\text{QCD}&=-\frac{1}{4}\mathrm{Tr}(F^{\mu \nu}F_{\mu \nu}) \\ &= \\
+\end{align}$$
+
+### Feynman rules in Yang-Mills
+- Similar to QED, finding the _propagator_ requires _gauge-fixing_
+
+- The _cubic vertex_ involving 2 matter fields and a _gluon_
+	- The gluon carries both a _spacetime index_ and a _Lie algebra index_
+$$ig\gamma^{\mu}(T^{a})^{j}_{i}$$
+![[QCD matter interaction.png|180]]
+- There are also a _cubic gluon self-interaction_, which is _momentum-dependent_
+$$gf^{abc}[]$$
+![[gluon cubic vertex.png|180]]
+- A _quartic gluon vertex_
+$$g^{2}f$$
+![[gluon quartic.png|180]]
+
+### Gluon propagator

@@ -207,8 +207,8 @@ $$(\partial_{\mu}\partial^{\mu}+m^{2})\phi=0$$
 $$\phi\sim \exp(ik_{\mu}x^{\mu})=\exp(i\omega t-i\boldsymbol{k}\cdot \boldsymbol{x})$$
 - Take the _positive_ solution to the Klein-Gordon equation:
 $$|\boldsymbol{k}|^{2}=\omega^{2}-m^{2} \implies \omega\equiv \sqrt{ k^{2}+m^{2} }$$
-- Taking a _super-position_ of a plane wave solutions along with the negative frequencies, the _most general solution_ for $\phi$:
-$$\phi(\boldsymbol{x},t)=\int  \frac{d^3 k}{(2\pi)^{3}}[a(\boldsymbol{k})e^{i(\boldsymbol{k}\cdot \boldsymbol{x}-\omega t)}+b(\boldsymbol{k})e^{i(\boldsymbol{k}\cdot \boldsymbol{x}+\omega t)}]$$
+- Taking a _super-position_ of a plane wave solutions along with the negative frequencies, the _most general solution_ for $\phi$, up to a _normalisation factor_
+$$\phi(\boldsymbol{x},t)=\int  \frac{d^3 k}{(2\pi)^{3}} \frac{1}{N}[a(\boldsymbol{k})e^{i(\boldsymbol{k}\cdot \boldsymbol{x}-\omega t)}+b(\boldsymbol{k})e^{i(\boldsymbol{k}\cdot \boldsymbol{x}+\omega t)}]$$
 - $\phi$ is constrained to be _real_, so the most general $a$ and $b$ are:
 $$a^{*}(-\boldsymbol{k})=b(\boldsymbol{k}) \qquad b^{*}(-\boldsymbol{k})=a(\boldsymbol{k})$$
 - Then, along with a [[#Relativistic normalisation|normalisation factor]]:
@@ -711,6 +711,7 @@ $$ \lim_{ t \to- \infty } \sqrt{ (2\tilde{\omega}_{1})(2\tilde{\omega}_{2}) }c^{
 - The $g^{2}$ term, from _Dyson's formula_:
 $$\frac{(-ig)^{2}}{2!} \Braket{ f|\int  d^4 x_{1}\,d^{4}x_{2} \,T\{\psi ^{\dagger}(x_{1})\psi(x_{1})\phi(x_{1})\psi ^{\dagger}(x_{2})\psi(x_{2})\phi(x_{2})\}| i } $$
 - From _Wick's Theorem_, check the contribution:
+	- The only _connected contribution_
 $$:\psi ^{\dagger}(x_{1})\psi(x_{1})\psi ^{\dagger}(x_{2})\psi(x_{2}): \overbrace{ \phi(x_{1})\phi(x_{2}) }^{}$$
 # Classical Dirac fields
 
@@ -799,10 +800,13 @@ $$\bar{\psi}(x)\equiv \psi ^{\dagger}(x)\gamma^{0}$$
 - $\bar{\psi}\psi$ is _Lorentz invariant_:
 $$\bar{\psi}\psi\to \bar{\psi}(\Lambda^{-1}x)\psi(\Lambda^{-1}x)$$
 - Meanwhile, $\bar{\psi}\gamma^{\mu}\psi$ _transforms as a vector_
-	- Proof: _expand_ $S[\Lambda]$ in infinitesimal properties
+$$\bar{\psi}\gamma^{\mu}\psi\to {\Lambda^{\mu}}_{\nu}(\bar{\psi}\gamma^{\nu}\psi)$$
+	- Proof: _expand_ $S[\Lambda]$ in infinitesimal quantities to get:
+	$$S[\Lambda]^{-1}\gamma^{\mu}S[\Lambda]={\Lambda^{\mu}}_{\nu}\gamma^{\nu}$$
 
 - $\bar{\psi}\gamma^{\mu}\gamma^{\nu}\psi$ transforms as a _rank $2$ tensor_
 - $\bar{\psi}\partial_{\mu}\psi$ transforms _covariantly_
+$$\bar{\psi}\partial_{\mu}\psi \to{(\Lambda^{-1})^{\nu}}_{\mu}\bar{\psi}\partial_{\nu}\psi$$
 
 ## Dirac action and the Dirac equation
 - Construct the action as a _real, Lorentz invariant quantity_, in its _simplest form_ with _minimal derivatives_
@@ -858,6 +862,7 @@ $$\displaylines{\pmatrix{m\mathbb{I}_{2}&-\boldsymbol{p}\cdot \boldsymbol{\sigma
 - From this:
 $$\displaylines{m^{2}=(\boldsymbol{p}\cdot \boldsymbol{\sigma})(\boldsymbol{p}\cdot  \boldsymbol{\bar{\sigma}}) \\ \sqrt{ \boldsymbol{p}\cdot \boldsymbol{\sigma} }U_{2}=\sqrt{ \boldsymbol{p}\cdot \bar{\boldsymbol{\sigma}} }U_{1}}$$
 - The solutions (following a similar technique for $V$) are given using the _two-component spinors_, which give _particles_ and _antiparticles_ respectively
+	- The _Pauli-Dirac representation_ would give a different solution
 $$U^{S}(\boldsymbol{p})=\pmatrix{\sqrt{ \boldsymbol{p}\cdot \boldsymbol{\sigma}}\xi_{s} \\ \sqrt{ \boldsymbol{p}\cdot \boldsymbol{\bar{\sigma}} }\xi_{s}} \qquad  \qquad V^{S}(\boldsymbol{p})=\pmatrix{\sqrt{ \boldsymbol{p}\cdot \boldsymbol{\sigma}}\eta_{s} \\ -\sqrt{ \boldsymbol{p}\cdot \boldsymbol{\bar{\sigma}} }\eta_{s}}$$
 - $\xi$ and $\eta$ are _two component spinors_
 
@@ -878,6 +883,7 @@ $$U_{+}\to \exp\left( \frac{ \boldsymbol{\chi}\cdot \boldsymbol{\sigma}}{2} \rig
 - A manifestation of the _structure_ of the $\gamma$ matrices:
 $$\gamma^{\mu}=\pmatrix{0&\sigma^{\mu}\\\bar{\sigma}^{\mu}&0}$$
 
+### $\gamma^{5}$ and chiral projectors
 - Define the _Lorentz invariant_ $\gamma^{5}$:
 $$ \gamma^{5}\equiv-i\gamma^{0}\gamma^{1}\gamma^{2}\gamma^{3}\sim\epsilon_{\mu \nu\lambda \rho}\gamma^{\mu}\gamma^{\nu}\gamma^{\lambda}\gamma^{\rho}$$
 - In the chiral representation:
@@ -890,6 +896,8 @@ $$\{\gamma^{5},\gamma^{\mu}\}=0 \qquad [S^{\mu \nu},\gamma^{5}]=0$$
 $$\displaylines{\mathcal{P}_{+} =\frac{1}{2}(\mathbb{I}+\gamma^{5})=\pmatrix{\mathbb{I}_{2}&0\\0&0}\qquad \mathcal{P}_{-}=\frac{1}{2}(\mathbb{I}-\gamma^{5})=\pmatrix{0&0\\0&\mathbb{I}_{2}} \\ \mathcal{P}_{\pm}^{2}=\mathcal{P}_{\pm} \qquad \mathcal{P}_{\pm}\mathcal{P}_{\mp}=0}$$
 - It _projects_ the Dirac spinor into the _Weyl spinors_
 $$\psi_{+}=\mathcal{P}_{+}\psi=\pmatrix{U_{+}\\0} \qquad \psi_{-}=\mathcal{P}_{-}\psi=\pmatrix{0\\U_{-}}$$
+
+### Coupling of chiral particles
 - The _Lagrangian_:
 	- Cannot contain $U_{+}^{\dagger}U_{+}$ terms as it is _not invariant under boosts_
 $$\begin{align}
@@ -907,6 +915,9 @@ $$\xi^{r\dagger}\xi^{s}=\eta^{r {\dagger}}\eta^{s}=\delta^{rs}$$
 $$u^{s}(p)=\pmatrix{\sqrt{ p\cdot\sigma }\,\xi^{s} \\ \sqrt{ p\cdot\bar{\sigma} }\,\xi^{s}}\qquad v^{s}(p)=\pmatrix{\sqrt{ p\cdot \sigma }\,\xi^{s} \\ -\sqrt{ p\cdot\bar{\sigma} }\,\xi^{s}}$$
 - Working out the _inner products_:
 $$\displaylines{u^{r \dagger}(p)\cdot u^{s}(p)=2p_{0}\delta^{rs} \qquad v^{r \dagger}(p)\cdot v^{s}(p)=2p_{0}\delta^{rs}\\ \bar{u}^{r}(p)\cdot u^{s}(p)=2m\delta^{rs}\qquad \bar{v}^{r}(p)\cdot v^{s}(p)=-2m\delta^{rs} \\ \bar{u}^{r}(p)\cdot v^{s}(p)=\bar{v}^{r}(p)\cdot u^{s}(p)=0}$$
+- This gives _number density_:
+$$\rho=\psi ^{\dagger}\psi=u^{\dagger}u=v^{\dagger}v=2p^{0}$$
+
 - For _opposite momenta_ $(p')^{\mu}=(p^{0},-\boldsymbol{p})$
 $$\displaylines{u^{r \dagger}(p)\cdot v^{s}(p')=v^{r \dagger}(p)\cdot u^{s}(p')=0 }$$
 ### Outer products
@@ -916,7 +927,7 @@ $$\displaylines{\sum_{s=1}^{2}u^{s}(p)\bar{u}^{s}(p)=\cancel{ p }+m \\ \sum_{s=1
 ## Canonical quantisation in the free theory
 $$\mathcal{L}=i\bar{\psi}\gamma^{\mu}\partial_{\mu}\psi-m\bar{\psi}\psi$$
 - The _canonical momentum_ to $\psi$ is:
-$$\pi=i\bar{\psi}$$
+$$\pi=i\psi ^{\dagger}$$
 - From this, there are $4$ _independent components_ of the phase space
 	- As opposed to have 4 scalar fields, where the _momenta_ are _also_ degrees of freedom
 ### Failure of bosonic quantisation
@@ -1159,7 +1170,7 @@ $$[a^{r}_{p},a^{s\dagger}_{q}]=(2\pi)^{3}\delta^{rs}\delta^{3}(\boldsymbol{p}-\b
 $$H=\int  d^3x \,(\pi^{i}\dot{A}_{i}-\mathcal{L})=\frac{1}{2}\int  d^3x\,(\boldsymbol{E}\cdot \boldsymbol{E}+\boldsymbol{B}\cdot \boldsymbol{B}) $$
 - After normal ordering:
 $$H=\int  \frac{d^3p}{(2\pi)^{3}}\,|\boldsymbol{p}| \sum_{r=1}^{2}a_{p}^{r\dagger}a_{p}^{r} $$
-### Propagator in the Coulomb gauge
+### Photon propagator in the Coulomb gauge
 - The _Feynman propagator_ in the _Coulomb gauge_:
 $$\braket{ 0|T\{A_{i}(x)A_{j}(y)\} |0  }=\int  \frac{d^4p}{(2\pi)^{4}} \frac{i}{p^{2}+i\epsilon} \left( \delta_{ij}-\frac{p_{i}p_{j}}{|\boldsymbol{p}|^{2}} \right)\exp[-ip(x-y)] $$
 ### Propagator: the Lorentz invariant way
@@ -1242,38 +1253,43 @@ $$\mathcal{L}=-\frac{1}{4}F_{\mu \nu}F^{\mu \nu}+D_{\mu}\varphi^{*}D^{\mu}\varph
 - _Minimal coupling_ is the act if _replacing derivatives with covariant derivatives_ when _coupling gauge fields to_ $U(1)$ _symmetry_
 
 ### QED Feynman rules
-
 - The Lagrangian in QED:
 $$\Lagr=-\frac{1}{4}F^{\mu \nu}F_{\mu \nu}+\bar{\psi}(i\cancel{ D }-m)\psi$$
 
 - _Photon polarisation vectors_ for _external photon lines_:
-$$\epsilon^{s}_{\mu}(p)$$
-- _Fermions_ (incoming particles and antiparticles):
-$$U^{s}(p),\bar{V}^{s}(p)$$
+$$\text{Incoming: }\epsilon^{s}_{\mu}(p) \qquad \text{Outgoing: }{\epsilon^{s}_{\nu}}^{*}(p)$$
+- _Fermions_:
+	- The _wave-vector_ is in the _opposite direction_ of the _drawn arrow_ in Feynman diagrams
+$$\text{Incoming: } U^{s}(p),\bar{V}^{s}(p) \qquad \text{Outgoing: }\bar{U}^{s}(p),V^{s}(p)$$
 
 - Each _vertex_ gives a factor of:
-$$-ie\gamma^{\mu}(2\pi)^{4}\delta(p_{1}-p_{2}-p_{3})$$
+$$-ie\gamma^{\mu}$$
 - The photon propagator:
 $$\int  \frac{d^4p}{(2\pi)^{4}} \frac{i}{p^{2}+i\epsilon} \left( -\eta_{\mu \nu}+(\alpha-1) \frac{p_{\mu}p_{\nu}}{p^{2}} \right) $$
-- The second term _cancels out_ in diagrams
+- The second term _cancels out_ in diagrams, therefore one can use:
+$$\int \frac{d^{4}p}{(2\pi)^{4}} \underbrace{ \frac{-i\eta_{\mu \nu}}{p^{2}+i\epsilon} }_{ \tilde{\Pi}_{\mu \nu} }$$
 
 - The _fermion propagator_ (changes sign if swapped):
 $$\int  \frac{d^4p}{(2\pi)^{4}} \frac{i}{p^{2}-m^{2}+i\epsilon} (\cancel{ p }+m) $$
+### Form of scattering amplitude
 - The S-matrix will be in the form:
 $$\braket{ f|S-\mathbb{I} | i } \equiv i \mathcal{A}(2\pi)^{4}\delta\left( \sum_{f}p_{f}-\sum_{i}p_{i} \right)$$
-- If there is an _internal photon_:
+- If there is an _internal photon_, due to the _photon propagator_, it must be in the form of:
+	- $\mathcal{A}$ is _gauge invariant_
+	- Must account for _all diagrams_
 $$\mathcal{A}=A_{\mu \nu}\tilde{\Pi}^{\mu \nu}$$
-- _Gauge invariance_ means that the answer must be independent of $\alpha$:
+- From gauge invariance, _contracting_ with the _gauge-dependent_ ($\alpha-$dependent) part of the _propagator_ $\tilde{\Pi}_{\mu \nu}$ must give _zero_:
 $$A_{\mu \nu}p^{\mu}p^{\nu}=0$$
 
-- If there is an _external photon_:
+- If there is an _external photon_ of polarisation $s$, the amplitude will be in the form:
 $$\mathcal{A}=\epsilon^{\mu}_{s}\mathcal{A}_{\mu}$$
-- They Lorentz transform as:
-$$\mathcal{A}_{\mu}'={\Lambda^{\mu}}_{\nu}\mathcal{A}_{\nu} \qquad p_{\mu}'={\Lambda^{\nu}}_{\mu}p_{\nu}$$
-- The _new polarisation vector_, to maintain $\epsilon \cdot p=0$
-	- Group theory reason?
+- $\mathcal{A}$ is a _Lorentz invariant scalar_, while $\mathcal{A}_{\mu}$ transforms as a _vector_:
+$$\mathcal{A}_{\mu}'={\Lambda^{\nu}}_{\mu}\mathcal{A}_{\nu} \qquad p_{\mu}'={\Lambda^{\nu}}_{\mu}p_{\nu}$$
+- Lorentz transforming the _polarisation vector_, to maintain $\epsilon \cdot p=0$:
+	- From the _little group_
 $$\epsilon'^{\mu }_{s}={\Lambda^{\mu}}_\nu\epsilon^{\nu}_{s}+cp^{\mu}$$
-- The Lorentz invariant _Ward identity_:
+- Then for $\mathcal{A}$ to be Lorentz invariant, the _Ward identity_ must be satisfied:
 $$p^{\mu}\mathcal{A}_{\mu}=0$$
+- The above inner product identities serve as a _sanity check_ for the _total scattering amplitude_
 ### Spin sums
 

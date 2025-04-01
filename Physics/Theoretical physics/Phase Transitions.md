@@ -620,22 +620,263 @@ $$\boldsymbol{m}'(\boldsymbol{x}')=\frac{1}{\zeta}\bar{\boldsymbol{m}}(\boldsymb
 ![[Renormalisation process.png|400]]
 - At _criticality_, the _rescaled_ Hamiltonian is _still at criticality_
 
-- When _off criticality_, the Hamiltonian is _taken further off criticality_
+- When _off criticality_, the Hamiltonian is _taken further off criticality_ as $\xi'=\xi/b<\xi$
 
+- Renormalisation is a _semi-group_ as the _short-scale information is lost_ in coarse-graining
 ### Brehaviour of renormalised parameters
-- Behaviour of _renormalised parameters_
-	- Analytic
+- Renormalisation only _involves very short lengthscales_, therefore it _cannot cause singularities_, and the _renormalised parameters_ are _analytic functions_
 
-- Avoid _spontaneously broken symmetry_
+- Assume that the _form_ of the Hamiltonian is the _same_, and can be sufficiently described by parameters $t,h$
 
-- The re-scaling process is _commutative_
+- There are _no constant terms_ as the _critical point_ $t=h=0$ is _preserved_
+$$\begin{align}
+t(b;t,h)&=A(b)t+B(b)h+\dots \\ h(b;t,h)&=C(b)t+D(b)h+\dots
+\end{align}$$
 
-- This implies the _functional form_ of the parameters under _rescaling_
+- To avoid _spontaneously broken symmetry_ during the transformation, the system should be invariant under $h\to-h,\,t\to t$
+$$B(b)=C(b)=0$$
+
+- The re-scaling process is _commutative_:
+$$A(b_{1}b_{2})=A(b_{1})A(b_{2})$$
+- Meanwhile, trivially:
+$$A(1)=D(1)=1$$
+
+- This implies the _functional form_ of the parameters under _rescaling_:
 $$t(b)=b^{y_{t}}t\qquad h(b)=b^{y_{h}}h$$
-
+- For $\xi$ to diminish, $y_{t},y_{h}>0$
 ### Behaviour of physical quantities
-- The _partition function_:
-$$\mathcal{Z}=\mathcal{Z}'$$
-- The _free energy_ is a _homogeneous function_
+- After _renormalisation_, the _statistical weight_ of the _new configuration_ is some _sum_ of the old configuration
 
-- $y_{h}$ and $y_{t}$ are the _independent variables required_ to find all critical exponents
+- The _partition function_, being a _sum of weights_, is _unchanged_:
+$$\mathcal{Z}=\mathcal{Z}'$$
+- The _free energy density_ is then:
+$$f(t,h)=- \frac{\ln \mathcal{Z}}{V}=-\frac{\ln \mathcal{Z}'}{V'b^{d}}=b^{-d}f(b^{y_{t}}t,b^{y_{h}}h)$$
+- The _free energy_ is a _homogeneous function_
+- One can _choose_ $b$ such that:
+$$b^{y_{t}}=1\implies f(t,h)=t^{d/y_{t}}f(1,h/t^{y_{h}/y_{t}})\equiv t^{d/y_{t}}g_{f}\left( \frac{h}{t^{y_{h}/y_{t}}} \right)$$
+- One can then identify $y_{h}/y_{t}$ as the [[#Homogeneity|gap exponent]]
+
+- $y_{h}$ and $y_{t}$ are the _independent variables required_ to find all critical exponents:
+$$2-\alpha=\frac{d}{y_{t}}\qquad \Delta=\frac{y_{h}}{y_{t}}$$
+- The same is true for the _correlation length_:
+$$\xi(t,h)=b\xi(b^{y_{t}}t,b^{y_{h}}h)=t^{-1/y_{t}}g_{\xi}\left( \frac{h}{t^{y_{h}/y_{t}}} \right)\sim t^{-\nu}$$
+- The [[#Hyperscaling|hyperscaling relation]] is then given:
+$$2-\alpha=d\nu$$
+- Magnetisation:
+$$m(t,h)=-\frac{1}{V}\frac{\partial \ln Z(t,h)}{\partial h}=-\frac{1}{b^{d}V'}\frac{\partial \ln Z'(t',h')}{b^{-y_{h}}\partial h'}=b^{y_{h}-d}m(b^{y_{t}}t,b^{y_{h}}h)$$
+- With $b=t^{-1/y_{t}}$, one gets:
+$$\beta=\frac{y_{h}-d}{y_{t}}$$
+- One also gets similar relations for _heat capacity_ and _susceptibility_
+
+- In general, the _singular part_ of any physical quantity $X$ has the _homogeneous form_:
+$$X(t,h)=b^{y_{X}}X(b^{y_{t}}t,b^{y_{h}}h)=t^{-y_{X}/y_{t}}g_{X}\left( \frac{h}{t^{y_{h}/y_{t}}} \right)$$
+- For _conjugate variables_ that contribute $\int  d^dx\, FX$  to the _Hamiltonian_ (e.g. $m$ and $h$):
+$$y_{X}=y_{F}-d$$
+## Formal approach to renormalisation
+
+### Formal renormalisation procedure
+- Given the _most general Hamiltonian_ allowed by _symmetry_:
+$$\beta H[\boldsymbol{m}]=\int  d^dx\left[ \frac{t}{2}m^{2}+um^{4}+vm^{6}+\dots+\frac{K}{2}|\nabla \boldsymbol{m}|^{2}+\frac{L}{2}|\nabla^{2}\boldsymbol{m}|^{2}+\dots \right] $$
+- This Hamiltonian exists in some _parameter space_:
+$$\boldsymbol{S}=(t,u,v,\dots K,L, \dots)$$
+- The steps of _renormalisation_:
+	1. _Coarse grain_ $\boldsymbol{m}$ by length factor $b$
+	2. _Rescale_ $\boldsymbol{x}'=\boldsymbol{x}/b$
+	3. _Renormalise_ $m'=m/\zeta$
+- Giving the _change of variables_:
+$$m'(\boldsymbol{x}')=\frac{1}{\zeta b^{d}} \int_{\text{cell centred at }b\boldsymbol{x}'}  d^{d}x\,m(\boldsymbol{x}) $$
+- Given the _un-renormalised probabilities_ $\mathcal{P}[\boldsymbol{m}(\boldsymbol{x})]\propto \exp(-\beta H[\boldsymbol{m}])$, the _new theory_ is described by the probabilities $\mathcal{P}'[m'(\boldsymbol{x}')]$
+
+- As renormalisation _preserves symmetry_, the Hamiltonian _lives in the same parameter space_ with _renormalised parameters_
+$$\beta H'[\boldsymbol{m}']=f_{b}+\int  d^dx'\left[ \frac{t'}{2}m'^{2}+u'm'^{4}+v'm'^{6}+\dots+\frac{K'}{2}|\nabla \boldsymbol{m}'|^{2}+\frac{L'}{2}|\nabla^{2}\boldsymbol{m}'|^{2}+\dots \right]$$
+- The _renormalised parameters_ are _functions of the original_:
+	- In general, they are _non-linear_
+$$t'=t(b;t,u,\dots)\qquad u'=u(b;t,u, \dots)$$
+### Renormalisation group flow, fixed points, and basins
+- Renormalisation is a _mapping in parameter space_
+$$S'=\mathcal{R}_{b}S$$
+
+- $\mathcal{R}_{b}$ describes the effects of _dilation_
+- A _self-similar_ configuration is given by a _fixed point_ in parameter space
+- As renormalisation _reduces correlation length_ by a factor of $1/b$, fixed points must be:
+	- $\xi'=0$, describing _independent fluctuations_ at each point, meaning _complete disorder_ ($T\to \infty$) or _complete order_ $(T\to 0)$
+	- $\xi'=\infty$, describing a _crtitical point_ $(T=T_{c})$
+
+- Equations [[#Brehaviour of renormalised parameters|here]] describe a _2D parameter space_, where $t=h=0$ is a _fixed point_
+
+- In general, _stability_ can be studied by _linearising the recursion relations_ around it
+- The point $\boldsymbol{S}^{*}+\delta \boldsymbol{S}$ is _transformed_ under renormalisation:
+$$S_{i}^{*}+\delta S_{i}'=S_{i}^{*}+\sum_{j}[\mathcal{R}_{b}]_{ij}\delta S_{j}+\dots \qquad [\mathcal{R}_{b}]_{ij}=\frac{\partial S_{i}'}{\partial S_{j}}\Bigg|_{\boldsymbol{S}^{*}}$$
+- The matrix $\mathcal{R}_{b}$ can be _diagonalised_ to give eigenvectors $\mathcal{O}_{i}$ with their associated eigenvalues $\lambda(b)_{i}$
+- From the _semi-group_ property:
+$$\mathcal{R}_{b}\mathcal{R_{b'}}\mathcal{O}_{i}=\lambda(b)_{i}\lambda(b')_{i}\mathcal{O}_{i}=\mathcal{R}_{bb'}\mathcal{O}_{i}=\lambda(bb')_{i}\mathcal{O}_{i}$$
+- Along with $\lambda(1)_{i}=1$, this gives:
+$$\lambda(b)_{i}=b^{y_{i}}$$
+- $\mathcal{O}_{i}$ are the _scaling directions_ associated with $\boldsymbol{S}^{*}$, with the corresponding _anomalous dimensions_ $y_{i}$
+
+- A Hamiltonian in the vicinity of $\boldsymbol{S}^{*}$ are _renormalised_ as:
+$$S=S^{*}+\sum_{i}g_{i}\mathcal{O}_{i}\longrightarrow S'=S^{*}+\sum_{i}g_{i}b^{y_{i}}\mathcal{O}_{i}$$
+- To _classify_ the eigenvectors:
+	- If $y_{i}>0$, $g_{i}$ will _increase_ under scaling such that $\mathcal{O}_{i}$ is a _relevant operator_
+	- If $y_{i}<0$, $g_{i}$ will _decrease_ under scaling such that $\mathcal{O}_{i}$ is an _irrelevant operator_
+	- If $y_{i}=0$, $\mathcal{O}_{i}$ is a _marginal operator_, and _higher order terms_ are required to track its relevance
+
+- The _space_ spanned by the _irrelevant operators_ is known as the _basin of attraction_
+	- As $\xi$ must always _decrease_ under renormalisation, and $\xi(\boldsymbol{S}^{*})=\infty$, it must also be _infinite for all points on the basin_
+
+- The basin is a _surface defining the phase transition_
+![[Renormalisation group attraction.png|500]]
+
+### From renormalisation flow to universality
+- In general, _near a fixed point_ $S^{*}$
+	- $g_{i}$: coefficients for the _scaling directions_
+$$\xi(g_{1},g_{2},\dots)=b\xi(b^{y_{1}}g_{1},b^{y_{2}}g_{2},\dots)$$
+- For a _sufficiently large_ $b$, the _irrelevant operators vanish_
+- Then, _index_ the _relevant operators_ by _decreasing anomalous dimension_ $y_{i}$:
+$$y_{1}>y_{2}>\dots$$
+- One can choose $b$ such that:
+$$\displaylines{b^{y_{1}}g_{1}=1 \\ \xi(g_{1},g_{2},\dots)=g_{1}^{-1/y_{1}}\xi\left( \frac{g_{2}}{g_{1}^{y_{2}/y_{1}}},\dots \right)}$$
+- The _crtitical exponent_ and _gap exponents_ are then:
+$$\nu_{1}=\frac{1}{y_{1}}\qquad \Delta_{\alpha}=\frac{y_{\alpha}}{y_{1}}$$
+
+- Consider the case of a _ferromagnet with no external field_
+	- _Tune_ the temperature to give a line in parameter space
+	- For it to go through a _phase transition_, it must _intersect the basin of attraction only once_
+	- The basis of attraction has _co-dimension_ one, meaning $S^{*}$ has _one and only one relevant operator_
+
+- In the presence of a magnetic field, _two parameters_ must be tuned to give criticality, corresponding to a _second relevant operator_
+
+- In general, _universality_ occurs as the _microscopic details_ of a system make up the _space of irrelevant operators_ giving the basin of attraction
+
+## Solution to the Gaussian model
+- The _Gaussian_ theory for an $n-$component spin, with terms up to _quadratic order_:
+	- It is only meaningful for $t>0$ since there is _no stablising quartic term_
+	- Can only describe the phase transition _from the ordered side_
+$$\mathcal{Z}=\int  \mathcal{D}\boldsymbol{m}(\boldsymbol{x})\,\exp\left\{ -\int  d^{d}x\left[ \frac{t}{2}m^{2}+\frac{K}{2}|\nabla \boldsymbol{m}|^{2} -\boldsymbol{h}\cdot \boldsymbol{m}\right]  \right\} $$
+- It can also be _diagonalised in Fourier space_ to give:
+$$\displaylines{\mathcal{Z}=\int  \mathcal{D}m(\boldsymbol{q})\,\exp(-\beta H[\boldsymbol{m}]) \\ \beta H[\boldsymbol{m}]=\int  \frac{d\boldsymbol{q}}{(2\pi)^{d}} \frac{1}{2}(t+Kq^{2})|\boldsymbol{m}(\boldsymbol{q})|^{2}-\boldsymbol{h}\cdot \boldsymbol{m}(\boldsymbol{q}=0) }$$
+### Exact solution
+- The _free energy density_ is obtained by Gaussian functional integration:
+	- There is some _constant factor_ $(2\pi)^{nN/2}$ which is physically insignificant
+$$f(t,h)=-\frac{\ln \mathcal{Z}}{V}=\frac{n}{2}\int  \frac{d\boldsymbol{q}}{(2\pi)^{d}}\ln(t+Kq^{2})-\frac{h^{2}}{2t} $$
+- The _singular contributions_ to free energy arise from _long-wavelength modes_
+
+- Therefore, the non-analytic contribution can be obtained by _approximating the domain of integration as a hypersphere_, with radius $\Lambda=\pi /a$, where $a$ is a _short lengthscale cut-off_
+
+- The _functional form_ of the integral can be obtained by _rescaling_ $q$ with factor $\sqrt{ t/K }$, keeping the _singular part_, ignoring the upper limit, and logarithmic factors:
+$$f_\text{sing}(t,h)\sim t^{d/2}\left[ A+B \frac{h^{2}}{t^{1+d/2}} \right]\equiv t^{2-\alpha}g_{f}\left( \frac{h}{t^{\Delta}} \right)$$
+- The exponents are:
+$$\alpha_{+}=2-\frac{d}{2} \qquad \Delta=\frac{2+d}{4}$$
+- The _ordered phase_ is not accounted for in this model, therefore $\beta$ is undefined
+- Susceptibility:
+$$\chi \propto \frac{\partial^{2}f}{\partial h^{2}}\sim t^{-1}\implies \gamma_{+}=1$$
+### Via the renormalisation group
+- The _coarse-graining_ of fluctuations at scales $a<|\boldsymbol{x}|<ba$ corresponds to _averaging over Fourier modes_ of wavenumbers:
+$$\frac{\Lambda}{b}<|\boldsymbol{q}|<\Lambda$$
+- Separate the _field_ in terms of _slow_ and _fast_ varying functions:
+$$\boldsymbol{m}(\boldsymbol{q})=\boldsymbol{m}_{>}(\boldsymbol{q})+\boldsymbol{m}_{<}(\boldsymbol{q}) \qquad \boldsymbol{m}(\boldsymbol{q})=\begin{cases}
+\boldsymbol{m}_{<}(\boldsymbol{q}) &0<|\boldsymbol{q}|<\Lambda/b \\ \boldsymbol{m}_{>}(\boldsymbol{q}) &\Lambda/b<|\boldsymbol{q}|<\Lambda
+\end{cases}$$
+- The partition can be re-expressed as:
+$$\mathcal{Z}=\int  \mathcal{D}\boldsymbol{m}_{<}(\boldsymbol{q})\int  \mathcal{D}\boldsymbol{m}_{>}(\boldsymbol{q})\,\exp(-\beta H[\boldsymbol{m}_{<},\boldsymbol{m}_{>}])  $$
+- They are _separable_:
+$$\displaylines{\mathcal{Z=\mathcal{Z_{>}}}\int  \mathcal{D}\boldsymbol{m}_{<}(\boldsymbol{q})\,\exp\left[-\int_{0}^{\Lambda/b} \frac{d\boldsymbol{q}}{(2\pi)^{d}} \frac{t+Kq^{2}}{2}|m_{<}(\boldsymbol{q})|^{2}+\boldsymbol{h}\cdot \boldsymbol{m}_{<}(0) \right] \\ \mathcal{Z}_{>}=\exp\left( -\frac{nV}{2}\int_{\Lambda/b}^{\Lambda} \frac{d\boldsymbol{q}}{(2\pi)^{d}}\ln(t+Kq^{2}) \right)}$$
+- Then, when one _re-scales_ $\boldsymbol{x}'=x/b$, _momentum space_ is also re-scaled $\boldsymbol{q}'=b\boldsymbol{q}$ such that the _cut-off is restored to the original value_
+
+- Finally, one has to _renormalise the magnetisation_ $\boldsymbol{m}'(\boldsymbol{x}')=\boldsymbol{m}_{<}(\boldsymbol{x})/\zeta$
+- Alternatively, one can simply _renormalise the Fourier modes_:
+$$\displaylines{\boldsymbol{m}'=\frac{\boldsymbol{m}_{<}(\boldsymbol{q}')}{z} \\ \mathcal{Z}=\mathcal{Z}_{>}\int \mathcal{D}\boldsymbol{m}'(\boldsymbol{q}')\,\exp(-\beta H'[\boldsymbol{m}'(\boldsymbol{q}')]) \\ \beta H'=\int_{0}^{\Lambda} \frac{d\boldsymbol{q}'}{(2\pi)^{d}} \, b^{-d}z^{2}\left( \frac{t+Kb^{-2}q'^{2}}{2} \right)|m'(\boldsymbol{q}')|^{2}-z\boldsymbol{h}\cdot \boldsymbol{m}'(0)}$$
+- The _constant factors_ from the _Jacobian_ and $\mathcal{Z}_{>}$ can be _neglected_ as they do not affect singular contributions
+
+- The _parameters_ are _re-mapped_:
+	- In general, there can be _new terms_ in the Hamiltonian
+$$\displaylines{\boldsymbol{S}=\{K,t,h\}\longrightarrow \boldsymbol{S}'=\{K',t',h'\} \\ K'
+=Kb^{-d-2}z^{2}\qquad t'=tb^{-d}z^{2} \qquad h'=zh}$$
+- The _singular point_ $(t=h=0)$ is a _fixed point_ as expected
+
+- For the fluctuations to be _scale-invariant at the fixed point_, the only remaining parameter, $K$, must be _fixed_, giving the choice:
+$$z=b^{1+d/2}\implies \begin{cases}
+t'=b^{2}t &y_{t}=2 \\ h'=b^{1+d/2}h &y_{h}=1+d/2
+\end{cases}$$
+
+- Meanwhile, for the _fixed point_ $t=t'=\infty$, $K$ becomes _weaker_, marking an _uncorrelated high temperature phase_
+
+- This gives the _free energy scaling_:
+$$f_\text{sing}(t,h)=b^{-d}f_\text{sing}(b^{2}t,b^{1+d/2}h)=t^{d/2}g_{f}\left( \frac{h}{t^{1/2+d/4}} \right)$$
+- This is the _same as the exact solution_
+
+- One can also find the _renormalisation parameter in real space_, by the fact that the _Hamiltonian is scale invariant at the fixed point_:
+$$\beta H^{*}=\frac{K}{2}b^{d-2}\zeta^{2}\int d\boldsymbol{x}'\,|\nabla \boldsymbol{m}'|^{2}\implies \zeta=b^{1-d/2}$$
+- For a _small power law perturbation_:
+$$\beta H^{*}+u_{p}\int d\boldsymbol{x}\,|m(\boldsymbol{x})|^{p}\longrightarrow \beta H^{*}+u_{p}b^{d}\zeta^{p}\int d\boldsymbol{x}'|m'(\boldsymbol{x}')|^{p}$$
+- The perturbations scale as: 
+$$u_{p}\longrightarrow u_{p}'=b^{d+p-pd/2}u_{p}\implies y_{p}=p-d\left( \frac{p}{2}-1 \right)$$
+- Example:
+	- The _quartic term_ becomes irrelevant for $d>4$
+	- The _sixth order term_ becomes irrelevant for $d>3$
+
+## Wilsonian perturbative renormalisation group
+- Examine _higher order terms_ as a _perturbation of the Gaussian model_
+
+- With a _quartic perturbation_:
+$$\beta H[\boldsymbol{m}]=\underbrace{ \int\,d\boldsymbol{x}\,\left[ \frac{t}{2}m^{2}+\frac{K}{2}|\nabla m|^{2} \right] }_{ \beta H_{0} }+\underbrace{ u \int\,d\boldsymbol{x}\,m^{4} }_{ U }$$
+- In _Fourier space_:
+$$\displaylines{\beta H_{0}=\int \frac{d\boldsymbol{q}}{(2\pi)^{d}} \frac{1}{2}(t+Kq^{2})|m(\boldsymbol{q})|^{2} \\ U=u \prod_{j=1}^{4}\left( \int \frac{d\boldsymbol{q}_{j}}{(2\pi)^{d}}m(\boldsymbol{q}_{j}) \right)\delta^{d}(\mathbf{q}_{1}+\mathbf{q}_{2}+\mathbf{q}_{3}+\mathbf{q}_{4})}$$
+- The _coarse-graining_, with $\langle  \rangle_{\boldsymbol{m}_{>}}$ indicating _averaging over short wavelength modes_
+$$\begin{align}
+\mathcal{Z}&=\mathcal{Z}_{0}^{>}\int\mathcal{D}\boldsymbol{m}_{<}\,\exp(-\beta H_{0}[\boldsymbol{m}_{<}]) \frac{1}{\mathcal{Z}_{0}^{>}}\int\mathcal{D}\boldsymbol{m}_{>}\exp(-\beta H_{0}[\boldsymbol{m}_{>}]-U[\boldsymbol{m}_{<},\boldsymbol{m}_{>}])  \\
+&=\mathcal{Z}_{0}^{>}\int\mathcal{D}\boldsymbol{m}_{<}\,\exp(-\beta H_{0}[\boldsymbol{m}_{<}])\langle \exp(-U[\boldsymbol{m}_{<},\boldsymbol{m}_{>}]) \rangle_{\boldsymbol{m}_{>}}  \\
+&=\mathcal{Z}_{0}^{>}\int\mathcal{D}\boldsymbol{m}_{<}\,\exp\Big(-\beta H_{0}[\boldsymbol{m}_{<}]+\ln\langle \exp(-U[\boldsymbol{m}_{<},\boldsymbol{m}_{>}]) \rangle_{\boldsymbol{m}_{>}}\Big)
+\end{align}$$
+
+- To deal with the lattter term in the exponent, using only the _leading term_ in the [[#General cumulant expansion|cumulant expansion]]
+$$\beta H[\boldsymbol{m}_{<}]=\beta H_{0}[\boldsymbol{m}_{<}]-\ln[\mathcal{Z_{0}^{>}}]+\langle U \rangle_{\boldsymbol{m}_{>}}+O(u^{2}) $$
+- The average $\langle U \rangle_{\boldsymbol{m}_{>}}$ has _contributions_ from 4 _types_ of terms
+	- Only terms with _even order_ in $\boldsymbol{m}_{>}$ can contribute to the average
+$$\begin{align}
+C_{1}(\{\boldsymbol{q}_{i}\})=
+\end{align}$$
+- They can be represented _diagrammatically_, with the _dotted lines_ indicating _averaging over high frequency modes_
+![[Wilsonian renormalisation quartic diagrams.png]]
+- The first diagram is simply $U[\boldsymbol{m}_{<}]$, while the last term gives a _constant_
+
+- For the _unperturbed_ Hamiltonian, from [[#Gaussian functional integration|functional integration]]:
+$$\langle m_{\alpha}(\boldsymbol{q})m_{\beta}(\boldsymbol{q}') \rangle_{0}=\delta_{\alpha\beta}(2\pi)^{d} \delta^{d}(\boldsymbol{q}+\boldsymbol{q}')G_{0}(\boldsymbol{q}) \qquad G_{0}(\boldsymbol{q})=\frac{1}{t+Kq^{2}}$$
+- From the above:
+$$\begin{align}
+C_{2}(\{q_{i}\})&=nG_{0}(\mathbf{q}_{1})(2\pi)^{d}(\mathbf{q}_{1}+\mathbf{q}_{2})\boldsymbol{m}_{<}(\mathbf{q}_{3})\cdot \boldsymbol{m}_{<}(\boldsymbol{q}_{4}) \\
+C_{3}(\{q_{i}\})&=G_{0}(\mathbf{q}_{1})(2\pi)^{d}(\mathbf{q}_{1}+\mathbf{q}_{3})\boldsymbol{m}_{<}(\mathbf{q}_{2})\cdot \boldsymbol{m}_{<}(\boldsymbol{q}_{4})
+\end{align}$$
+- Add _all permutations_ of $C_{1},C_{2},C_{3}$ into the coarse-grained Hamiltonian
+
+- One finds that $K$ and $u$ are _un-renormalised_, meanwhile:
+$$t\longrightarrow \tilde{t}=t+4u(n+2)\int_{\Lambda/b}^{\Lambda}\frac{d\boldsymbol{q}}{(2\pi)^{d}}G_{0}(\boldsymbol{q})$$
+- Then, _rescale_ $\boldsymbol{q}'=b\boldsymbol{q}$
+- Finally, _renormalise_ $\boldsymbol{m}'=\boldsymbol{m}_{<}(\boldsymbol{q}')/z$:
+$$\begin{align}
+\beta H'[\boldsymbol{m}']&=\int_{0}^{\Lambda}\frac{d\boldsymbol{q}'}{(2\pi)^{d}}b^{-d}z^{2}\left( \frac{\tilde{t}+Kb^{-2}\boldsymbol{q}'^{2}}{2} \right)|\boldsymbol{m}'(\boldsymbol{q}')|^{2} \\
+&+uz^{4}b^{-4d}\prod_{j=1}^{4}\left( \int \frac{d\boldsymbol{q}_{j}}{(2\pi)^{d}}m(\boldsymbol{q}_{j}) \right)\delta^{d}(\mathbf{q}_{1}+\mathbf{q}_{2}+\mathbf{q}_{3}+\mathbf{q}_{4})
+\end{align}$$
+- The renormalised Hamiltonian is defined with parameters:
+$$t'=b^{-d}z^{2}\tilde{t} \qquad K'=b^{-d-2}z^{2}K\qquad u'=b^{-3d}z^{4}u$$
+- Then set $z=b^{1+d/2}$ such that $K=K'$, and there is a _fixed point_ at $t^{*}=u^{*}=0$
+
+- The _recursion relations_ near the fixed point:
+$$\displaylines{t'=t(b)=b^{2}\left[ t+4u(n+2)\int_{\Lambda/b}^{\Lambda} \frac{d^{d}q}{(2\pi)^{d}} G_{0}(\boldsymbol{q})\right] \\ u'=u(b)=b^{4-d}u}$$
+- This _recursion_ can be converted into a _differential equation_ by setting $b=e^{l}$
+$$t(b)\equiv t(1+\delta l+\dots)=t+\delta l\, \frac{dt}{dl}$$
+- Using the recursion relations for both:
+	- $K_{d}\equiv S_{d}/(2\pi)^{d}$
+$$\displaylines{\frac{dt}{dl}=2t+\frac{4u(n+2)K_{d}\Lambda^{d}}{t+K\Lambda^{2}} \\ \frac{du}{dl}=(4-d)u}$$
+- The second equation gives:
+$$u(l)=u_{0}e^{(4-d)l}=u_{0} b^{4-d}$$
+
+- In the vicinity of $t^{*}=u^{*}=0$
+$$\frac{d}{dl}\pmatrix{\delta t\\\delta u}=\pmatrix{2&4(n+2)K_{d}\Lambda^{d-2}/K \\ 0&4-d}\pmatrix{\delta t\\\delta u}$$
+- The _eigenvalues_ of this operator determine the _relevant operators_:
+	- Zero elements on one side: eigenvalues are diagonal elements
+$$y_{t}=2\qquad y_{u}=4-d$$
+- However, the _eigendirections_ are different
+- $y_{t}=2$ is associated with $u=0$
+- $y_{u}=4-d$ is associated with $t=-4u(n+2)K_{d}\Lambda^{d-2}/K$
+
