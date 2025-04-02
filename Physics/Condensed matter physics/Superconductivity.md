@@ -138,7 +138,7 @@ $$\displaylines{\psi=\sqrt{ n_{s} }\exp(i\theta) \qquad \rho_{s}=\frac{q^{2}n_{s
 	- The $\beta$ term can be interpreted as some _effective potential_
 - Experimentally, $q=-2|e|$, $m^{*}=2m_{e}$ and $n_{s}=n_{e}/2$, which suggests _pairing_
 
-### Meissner effect from Ginzburg-Landau
+### Meissner effect and penetration depth from Ginzburg-Landau
 - In the London approximation, assume $n_{s}$ is _fixed_ near some equilibrium value $-\alpha/\beta$
 - However, the _phase_ $\theta$ can vary
 
@@ -150,7 +150,7 @@ $$\nabla\times \boldsymbol{J}_{s}=-\rho_{s}\boldsymbol{B}$$
 $$\nabla^{2}\boldsymbol{B}=\frac{\boldsymbol{B}}{\lambda^{2}}\qquad \lambda=\frac{1}{\sqrt{ \mu_{0}\rho_{s} }}=\sqrt{ \frac{m}{4\mu_{0}e^{2}n_{s}} }$$
 - $\lambda$ is some _penetration depth_ of the magnetic field into the solid
 
-## Gauge transformations in a superconductor
+## Gauge symmetry and topology in superconductors
 - The gauge transformation of $\boldsymbol{A}$:
 	- Gauge symmetry: a _mathematical redundancy_ rather than anything physical
 	- Akin to _coordinate transformation_
@@ -164,20 +164,33 @@ $$\psi\to \psi \exp\left( i\frac{q}{\hbar} \chi\right) \qquad \theta\to \theta+\
 
 - Having some nonzero $\theta$ corresponds to a _broken symmetry state_
 
-### Coherence length
+### Coherence length and lengthscales
 - The first Ginzburg-Landau equation has some _lengthscale_ such that it can be written as:
 $$\xi^{2}\nabla^{2}\psi+\psi-\frac{\beta}{|\alpha|}|\psi|^{2}\psi=0\qquad \xi=\sqrt{ \frac{\hbar^{2}}{2m|\alpha|} }$$
 - This is the lengthscale to which the _magnitude_ of $\psi$ might change
-### Flux quantisation
+
+- It is related to $\alpha$, a _phenomenological parameter_
+- Hence it also _diverges_ at $T=T_{c}$
+
+- $\lambda$ (penetration depth) and $\xi$ (coherence length) _define_ the Ginzburg-Landau parameters _in the homogeneous superconducting state_
+$$\xi^{2}=\frac{\hbar^{2}}{2m|\alpha|} \qquad \lambda^{2}=\frac{m\beta}{\mu_{0}q^{2}|\alpha|}$$
+- The _critical field_:
+$$B_{c}\sim \lambda \xi$$
+
+- For _inhomogeneities_, consider _vortices_
+### Flux quantisation and vortices
 - Consider a superconductor with some _hole_, which is _threaded_ by some magnetic field
+![[Quantised flux.png|250]]
 - Far away from the surface, $J_{s}\to 0$ such that:
 $$\boldsymbol{A}=-\frac{\hbar}{2e}\nabla\theta$$
 - Relating this to flux:
 $$\Phi=\oint\,\boldsymbol{A}\cdot d\boldsymbol{l} =\frac{\hbar}{q} \oint  \nabla\theta \cdot d\boldsymbol{l} =\frac{\hbar}{q}2\pi n $$
 - There is some _quantised trapped flux_ inside the superconductor
 - The unit is the _flux quantum_
+	- Relevant charge is $2e$ instead of $e$
 $$\Phi_{0}=\frac{h}{2e}$$
 
+### Vortices as a topological defect
 - Identify the superconducting material with a _wire_, and each point of the wire has a corresponding _plane_ on which $\psi=|\psi|\exp(i\theta)$ is defined, such that the _locus_ of $\psi$ is on a _tube_
 - A superconductor with a _hole_ means the tube is a _torus_, and the locus is some _winding around the torus_, with _winding number_ $n$ such that $\Delta\theta=2\pi n$
 - The supercurrent is _topologically protected_
@@ -185,26 +198,41 @@ $$\Phi_{0}=\frac{h}{2e}$$
 
 - The trapped flux gives a _topological defect_, which cannot change
 
-### Vortex energy and type II superconductors
-- Within the vortex, the _gradient term_ of the free energy increases, as a _kinetic energy cost_
-$$\Delta F_\text{kin}=$$
-- Meanwhile, there is a _decrease_ in _magnetic energy_
-- Each vortex is asumed to contain _only one flux quantum_ as higher flux is _unfavourable_
-$$\Delta F_\text{mag}=B_{E}\int  \frac{B}{\mu_{0}} \,d^{2}r=B_{E} \frac{\phi_{0}}{\mu_{0}}$$
-- There is some _critical field_ $B_{c1}$ where the vortex formation is _energetically advantageous_
+### Vortex energy
+- Assume $\lambda\gg \xi$, such that there is only a _small vortex core_, and one can calculate _magnetic energy outside_
 
-- It is when a _disc_ of _radius_ $\sim\lambda$ starts _enclosing_ one flux quantum
+- Inspect the _change in free energy_ from forming the _vortex_
+	- The $|\psi|^{2}$ and $|\psi|^{4}$ terms are _approximately constant_, apart from the _vortex core_
+	- To rewrite the gradient term, _assume_ $n_{s}$ is _constant outside the vortex core_
+$$\displaylines{f_\text{kin}=\frac{1}{2m^{*}}\left|\left(-i\hbar \nabla-q\boldsymbol{A}\right)\psi \right|^{2}=n_{s}\frac{(mv_{s})^{2}}{2m}=\frac{\mu_{0}}{2}\lambda^{2}J_{s}^{2} \\ f_{B}=\frac{|\boldsymbol{B}-\boldsymbol{B}_{E}|^{2}}{2\mu_{0}} \\ \Delta f=f_\text{vortex}-f_\text{uniform}=\frac{1}{2\mu_{0}}[(\mu_{0}\lambda J_{s})^{2}+B^{2}-2\boldsymbol{B}\cdot \boldsymbol{B}_{E}]}$$
+- There is a _kinetic energy cost_ due to the supercurrent
+- Meanwhile, there is a _decrease_ in _magnetic energy_
+
+- For some _high_ $B_{E}$, forming vortices becomes _spontaneous_ as $\Delta f<0$
+### The lower critical field and type II superconductors
+- Each vortex is asumed to contain _only one flux quantum_ as higher flux is _unfavourable_
+- Assume $\lambda\gg \xi$ so one can _neglect the vortex core_
+
+- The _magnetic field energy per unit length_:
+$$\Delta F_\text{mag}=B_{E}\int  \frac{B}{\mu_{0}} \,d^{2}r=B_{E} \frac{\phi_{0}}{\mu_{0}}$$
+- Meanwhile, the _kinetic energy cost_:
+$$\displaylines{mv_{s}\sim \hbar \nabla\theta=\hbar \left( \frac{2\pi}{2\pi r} \right)=\frac{\hbar}{r} \\ \int_{\xi}^{\lambda}n_{s} \frac{(mv_{s})^{2}}{2m}(2\pi r)\,dr\approx \frac{\pi \hbar^{2}n_{s}}{m}\ln\left( \frac{\lambda}{\xi} \right)=\frac{\phi_{0}^{2}}{4\pi\lambda^{2}\mu_{0}}\ln\left( \frac{\lambda}{\xi} \right)}$$
+
+- There is some _critical field_ $B_{c1}$ where the vortex formation is _energetically advantageous_:
+$$B_{E}> \frac{\phi_{0}}{4\pi\lambda^{2}}\ln\left( \frac{\lambda}{\xi} \right) \qquad B_{c1}=\frac{\phi_{0}}{4\pi\lambda^{2}}=\frac{\xi}{\sqrt{ 2 }\lambda}B_{c}$$
+
+- Vortices form when a _disc_ of _radius_ $\sim\lambda$ starts _enclosing_ one flux quantum
 
 - In _type I_ superconductors, $B_{c1}>B_{c}$ such that the sample becomes _normal_ before vortex formation
 - In _type II_ superconductors, _flux expulsion stops partially_, such that the magnetic field _penetrates_ forms a _vortex lattice_
 	- Vortices penetrate until there is enough _repulsion_ and they settle into a lattice
-	- This continues up to some other field strength $B_{c2}$ where the sample becomes _normal_
+	- This continues up to some other field strength $B>B_{c2}$ where the sample becomes _normal_
 
-## Type II superconductors and vortices
+## Type II superconductors and vortex lattices
 - Type II superconductors form _lattices_ of _circular vortices_
 - Each vortex has _inner radius_ $\xi$ and _outer radius_ $r_{B}<\lambda$
 
-- $B$ varies _slowly_ within the cylinder as $r_{B}<\lambda$
+- The _internal field_ $B$ varies _slowly_ within the cylinder as $r_{B}<\lambda$
 - Each vortex is assumed to enclose _one flux quantum_:
 $$\phi_{0}=\pi r_{B}^{2}B$$
 
@@ -215,7 +243,7 @@ $$B=B_{E}- \frac{\phi_{0}}{8\pi\lambda^{2}} \ln\left( \frac{\eta \phi_{0}}{2\pi 
 - $M$ is the _magnetisation_, and $\eta$ is some _constant_ of order unity
 
 - Magnetisation goes to _zero_ when the _flux quantum_ is distributed over a _disc_ of radius $\xi$
-- The _vortex cores start to overlap_, and superconductivity _breaks down_:
+- The _vortex cores start to overlap_, and superconductivity _breaks down_ at the _upper critical field_ $B_{c2}$
 $$B_{c2}=\frac{\phi_{0}}{2\pi \xi^{2}}$$
 - Magnetisation vanishes _continuously_, as a _second order phase transition_
 
