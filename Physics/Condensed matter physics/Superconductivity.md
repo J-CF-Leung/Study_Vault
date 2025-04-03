@@ -189,7 +189,7 @@ $$\Phi=\oint\,\boldsymbol{A}\cdot d\boldsymbol{l} =\frac{\hbar}{q} \oint  \nabla
 - The unit is the _flux quantum_
 	- Relevant charge is $2e$ instead of $e$
 $$\Phi_{0}=\frac{h}{2e}$$
-
+- The presence of vortices indicates _macroscopic coherence_
 ### Vortices as a topological defect
 - Identify the superconducting material with a _wire_, and each point of the wire has a corresponding _plane_ on which $\psi=|\psi|\exp(i\theta)$ is defined, such that the _locus_ of $\psi$ is on a _tube_
 - A superconductor with a _hole_ means the tube is a _torus_, and the locus is some _winding around the torus_, with _winding number_ $n$ such that $\Delta\theta=2\pi n$
@@ -227,7 +227,7 @@ $$B_{E}> \frac{\phi_{0}}{4\pi\lambda^{2}}\ln\left( \frac{\lambda}{\xi} \right) \
 - In _type II_ superconductors, _flux expulsion stops partially_, such that the magnetic field _penetrates_ forms a _vortex lattice_
 	- Vortices penetrate until there is enough _repulsion_ and they settle into a lattice
 	- This continues up to some other field strength $B>B_{c2}$ where the sample becomes _normal_
-
+![[Type I and type II superconductivity.png|500]]
 ## Type II superconductors and vortex lattices
 - Type II superconductors form _lattices_ of _circular vortices_
 - Each vortex has _inner radius_ $\xi$ and _outer radius_ $r_{B}<\lambda$
@@ -251,14 +251,25 @@ $$B_{c2}=\frac{\phi_{0}}{2\pi \xi^{2}}$$
 $$B_{c1}B_{c2}=B^{2}_{c}$$
 ![[Type II superconductivity transitions.png]]
 
-- In terms of the _Ginzburg-Landau parameters_:
+- Summary of _critical fields_
+	- $B_{c}$: the field below which a _homogeneous system_ is superconducting
+	- $B_{c1}$: the field above which _vortex formation is favourable_, as long as it is _below_ $B_{c}$
+	- $B_{c2}$: the field above which _vortex cores overlap_, and _superconductivity vanishes_
+$$\displaylines{B_{c}=\frac{\phi_{0}}{2^{3/2}\pi \xi\lambda}\qquad B_{c2}=\frac{\phi_{0}}{2\pi \xi^{2}} \qquad B_{c1}=\frac{\phi_{0}}{4\pi\lambda^{2}} \\ B_{c1}B_{c2}=B_{c}^{2}}$$
+- Relevant lengths and relation to _Ginzburg-Landau parameters_
+$$\lambda^{2}=\frac{m}{4\mu_{0}e^{2}n_{s}} \qquad \xi^{2}=\frac{\hbar^{2}}{2m\beta n_{s}}\qquad n_{s}=\frac{|\alpha|}{\beta}$$
 
-- The critical fields are _linear_ in temperature
-	- GL theory description only close to $T_{c}$
+- The critical fields are _linear_ in temperature:
+$$\alpha(T)=a(T-T_{c})$$
+- The Ginzburg-Landau description is only for temperatures _close to_ $T_{c}$
 
-### Condensation energies
+### Condensation energies in Ginzburg-Landau
 - The condensation energy is the _total energetic advantage_ of _forming_ a superconductor:
 $$\int  \boldsymbol{B}_{E}\cdot d\boldsymbol{M} -d(\boldsymbol{B}_{E}\cdot \boldsymbol{M})=\int  (-\boldsymbol{M})\cdot d\boldsymbol{B}_{E} $$
+- For a _homogeneous_ superconductor, the _condensation energy density_ is simply:
+$$\frac{B_{c}^{2}}{2\mu_{0}}=\frac{\alpha^{2}}{2\beta}=|\psi_{0}|^{2} \frac{|\alpha|}{2}$$
+- One can then interpret $|\alpha|$ as _condensation energy per particle_
+	- Matches results above from considering different _critical fields_
 
 - The _condensation energy_ should be the _same_ with or without vortex penetration
 - The _equal area construction_:
@@ -275,6 +286,7 @@ $$f=\int  \boldsymbol{J}_{s}\times \boldsymbol{B} \,d^{2}r=\boldsymbol{J}_\text{
 - For _multiple vortices_, the "transport current" accounts for _current from other vortices_
 - This means that _vortices can repel each other_
 - Therefore, the _vortex rush_ in the formation of the vortex state will _stop_ at some point
+![[Vortices repelling.png|200]]
 
 - _Vortex motion_ implies _power dissipation_
 - Power input _per unit volume_, in terms of some _average field_ $B$:
@@ -322,7 +334,9 @@ $$\dot{\chi}=-V\implies \boldsymbol{A}=\boldsymbol{A}'=0 \quad \theta=\theta'-\v
 
 - The order parameter will _wind_:
 $$\psi(t)\sim\exp\left( -\frac{iqt}{\hbar} V\right)\psi(0)$$
-
+- Meanwhile, checking the [[#Ginzburg-Landau Theory|supercurrent]]:
+$$\frac{\partial \boldsymbol{J}_{s}}{\partial t}=\rho_{s}\left( \frac{\hbar}{q}\nabla\dot{\theta}-\dot{\boldsymbol{A}} \right)=\rho_{s}(-\nabla \varphi-\dot{\boldsymbol{A}})=\rho_{s}\boldsymbol{E}$$
+- This is the _first London equation_
 
 ### Strong and weak links
 - Consider the first Ginzburg-Landau equation, in terms of coherence length $\xi$
@@ -351,6 +365,7 @@ $$J_{s}=\frac{q\hbar}{m}\mathrm{Im}[-\psi^{*}\nabla \psi]$$
 $$-\psi^{*}\nabla \psi= \frac{\psi_{1}^{*}+\psi_{2}^{*}}{2}\frac{\psi_{1}-\psi_{2}}{d}=\frac{1}{2d}(\psi_{1}\psi_{2}^{*}-\psi_{1}^{*}\psi_{2})$$
 - One then gets the _Josephson phase relation_, relating the _supercurrent_ $I_{s}$ to the _phase drop_ $\Theta$, with some _constant_ $I_{J}$
 $$I_{s}=I_{J}\sin\Theta$$
+- $I_{J}$ is known as the _Josephson critical current_
 ## Josephson junctions
 - Consider the setup of a Josephson junction, _shunted_ with a resistor and capacitor:
 $$\displaylines{I=I_{s}+I_{n}=I_{J}\sin\Theta+\frac{V}{R}+C\dot{V} \\ I=I_{J}\sin\Theta+\frac{\phi_{0}}{2\pi R}\dot{\Theta}+\frac{\phi_{0}C}{2\pi}\ddot{\Theta}}$$
@@ -373,15 +388,18 @@ $$\Theta=\Theta_{0}+\frac{2\pi V}{\phi_{0}}t\implies I=I_{J}\sin(\Theta_{0}+\ome
 - This is the _AC Josephson effect_, where a DC voltage drives an _oscillating super-current_ with a frequency $\propto 1/\phi_{0}$
 ![[ACDC Josephson.png]]
 ### Combining AC and DC
-
 - Applying both a DC, and a _radio frequency_ AC
-$$I=I_{J}\sum_{\nu=-\infty}^{\infty} J_{\nu}\left( \frac{\omega _\text{JRF}}{\omega _\text{RF}} \right)\sin[\theta_{0}+(\omega _\text{J0}+\omega _\text{RF})t]+\frac{V_{0}}{R}+\frac{V_\text{RF}}{R}\cos(\omega _\text{RF}t)$$
+$$\displaylines{\Theta=\Theta_{0}+\omega_{J0}t+\frac{\omega _\text{JRF}}{\omega _\text{RF}}\sin(\omega _\text{RF}t) \\ \omega_{J0}=\frac{2\pi V_{0}}{\phi_{0}} \qquad \omega _\text{JRF}=\frac{2\pi V_\text{RF}}{\phi_{0}}}$$
+- This gives the current:
+$$I=I_{J}\sin\left( \Theta_{0}+\omega_{J0}t+\frac{\omega _\text{JRF}}{\omega _\text{RF}}\sin(\omega _\text{RF}t) \right)+\frac{V}{R}$$
+- Using a _harmonic expansion_:
+$$I=I_{J}\sum_{\nu=-\infty}^{\infty} J_{\nu}\left( \frac{\omega _\text{JRF}}{\omega _\text{RF}} \right)\sin[\Theta_{0}+(\omega _\text{J0}+\nu\omega _\text{RF})t]+\frac{V_{0}}{R}+\frac{V_\text{RF}}{R}\cos(\omega _\text{RF}t)$$
 - It generates _sideband frequencies_ $\omega_{J0}+\nu\omega _\text{RF}$
 - There is a _constant DC part unless_ the Josephson frequency _matches a multiple of the AC frequency_:
 $$\omega_{J0}+\nu\omega _\text{RF}=0\implies \langle I \rangle=J_{\nu}\left( \frac{\omega _\text{JRF}}{\omega _\text{RF}} \right)I_{J}\sin(\Theta_{0})+\frac{V_{0}}{R} $$
 
 - These are _Shapiro spikes_
-
+![[Shapiro spikes.png]]
 ## Gauge invariant phase with a vector potential
 - In the presence of a _magnetic vector potential_ $\boldsymbol{A}$, the _supercurrent_ becomes:
 $$J_{s}\propto \nabla\theta+\frac{2\pi }{\phi_{0}}\boldsymbol{A}$$
@@ -413,14 +431,15 @@ $$I_{c}=2I_{J}\left|\cos\left( \frac{\pi \Phi}{\Phi_{0}} \right)\right|$$
 
 ## Behaviour of superflow
 - The presence of a phase transition implies the superfluid is a _more ordered phase_ than the normal fluid
-- Therefore, like superconductors, one can define a _Ginzburg-Landau order parameter_
-- Unlike Ginzburg-Landau order parameter, except _charge neutral_
-$$\boldsymbol{J}_{s}=\frac{\hbar}{2i}(\psi^{*}\nabla \psi-\psi \nabla \psi^{*})=\rho_{s}\hbar \nabla\theta=\rho_{s}\boldsymbol{v}_{s} \qquad \psi=\sqrt{ \rho_{s} }\exp(i\theta)$$
+- Therefore, like superconductors, one can define a _Ginzburg-Landau order parameter_, still a complex field $\psi(\boldsymbol{r})$
+
+- The system is _charge neutral_, giving a _mass current_
+$$\boldsymbol{J}_{s}=\frac{\hbar}{2\mathrm{Im}}(\psi^{*}\nabla \psi-\psi \nabla \psi^{*})=\rho_{s}\frac{\hbar }{m}\nabla\theta=\rho_{s}\boldsymbol{v}_{s} \qquad \psi=\sqrt{ \rho_{s} }\exp(i\theta)$$
 - One can define the _superfluid velocity_:
 $$\boldsymbol{v}_{s}=\frac{\hbar}{m}\nabla\theta$$
 - The flow is _irrotational_:
 $$\nabla\times \boldsymbol{v}_{s}=0$$
-- From an analogy with [[#London equations|superconductors]] ($\varphi \,dq\to \mu dN$), one gets the _Anderson-Josephson relation_:
+- From an analogy with [[#Inhomogeneous superconductors|phase in superconductors]] ($\varphi \,dq\to \mu dN$), one gets the _Anderson-Josephson relation_:
 $$\frac{\partial\theta}{\partial t}=-\frac{\mu}{\hbar}$$
 
 - Typically, a superfluid has _much lower coherence length_ than a superconductor such that _fluctuations_ play a large role
@@ -446,8 +465,9 @@ $$\kappa=\oint \boldsymbol{v}_{s}\cdot d\boldsymbol{s}=\frac{\hbar}{m}\oint  \na
 - This gives a superfluid velocity around a _vortex_ of one _circulation quantum_:
 $$\kappa_{0}=\oint  \boldsymbol{v}_{s}\cdot d\boldsymbol{s} =v_{s}(r)2\pi r\impliedby v_{s}(r)=\frac{\kappa_{0}}{2\pi r}$$
 
-- There is _no screening_, and the vortex core is typically _small compared to superconductors_
+- Unlike superconductors, there is _no screening_, and the vortex core is typically _small compared to superconductors_
 	- Indication of _low coherence length_
+
 - Vortices can be generated by _rotating_ a vessel
 
 ## Elementary excitations in liquid helium
@@ -521,6 +541,7 @@ $$\langle AB \rangle= \langle A \rangle B+A\langle B \rangle  -\mathrm{DCC}  $$
 - This comes from assuming the _fluctuations_ $\delta A$ and $\delta B$ are _uncorrelated_:
 $$\langle \delta A\delta B \rangle=0 $$
 - For _four operator terms_, there are _three separate decoupling schemes_ that manifest _different interactions_
+
 - Bogoliubov decoupling:
 $$a_{4}^{\dagger}a_{3}^{\dagger}a_{2}a_{1}\approx\langle a_{4}^{\dagger}a_{3}^{\dagger} \rangle a_{2}a_{1}+a_{4}^{\dagger}a_{3}^{\dagger}\langle a_{2}a_{1} \rangle  $$
 - Exchange interaction:
@@ -561,7 +582,7 @@ $$\displaylines{u^{2}=\frac{1}{2}\left( 1+ \frac{\xi}{E} \right)\qquad v^{2}=\mp
 $$\displaylines{a=a_{k} \qquad b=a_{-k}\qquad H_\text{eff}=\frac{1}{2}\sum_{k} h_{k} \\ h=\pmatrix{a^{\dagger} &b} \pmatrix{\xi&\delta\\\delta&\xi}\pmatrix{a\\b^{\dagger}}-\xi=\pmatrix{\alpha ^{\dagger}&\beta}\pmatrix{E&0\\0&E}\pmatrix{\alpha\\\beta ^{\dagger}}-\xi \\ E^{2}=\xi^{2}-\delta^{2}}$$
 - Fermions:
 $$\displaylines{a=a_{k\uparrow} \qquad b=a_{-k\downarrow} \qquad H_\text{eff}=\frac{1}{2}\sum_{k}h_{k} \\ h=\pmatrix{a^{\dagger}&b}\pmatrix{\xi&-\Delta\\-\Delta&-\xi}\pmatrix{a\\ b^{\dagger}}+\xi=\pmatrix{\alpha ^{\dagger}&b}\pmatrix{E&0\\0&-E}\pmatrix{\alpha \\ \beta ^{\dagger}}+\xi \\ E^{2}=\xi^{2}+\Delta^{2}}$$
-## Excitations
+## Excitations in BECs and in BCS
 
 ### Excitation spectrum in BECs
 - For the _Bose liquid_:
@@ -639,7 +660,7 @@ $$\Delta(T=0)\approx 2\varepsilon_{c}\exp\left( -\frac{1}{N(0)|g|} \right)\appro
 ## Ginzburg-Landau and BCS Theory
 ### Ginzburg-Landau order parameter from BCS theory
 - The _particle-particle_ field:
-$$\Psi(r)=\psi_{\downarrow}(\boldsymbol{r})\psi_{\uparrow}(\boldsymbol{r})= \qquad \Psi_{q}=$$
+$$\Psi(r)=\psi_{\downarrow}(\boldsymbol{r})\psi_{\uparrow}(\boldsymbol{r})=\frac{1}{\sqrt{ V }}\sum_{\boldsymbol{q}}\Psi_{\boldsymbol{q}}\exp(i\boldsymbol{q}\cdot \boldsymbol{r}) \qquad \Psi_{\boldsymbol{q}}=\frac{1}{\sqrt{ V }}\sum_{\boldsymbol{k}}a_{\boldsymbol{q}-\boldsymbol{k}\downarrow}a_{\boldsymbol{k}\uparrow}$$
 - The _BCS order parameter_ is proportional to the $q=0$ Fourier component of $\Psi(\boldsymbol{r})$
 - The _Ginzburg-Landau_ order parameter also allows for _spatial variation_
 
@@ -654,57 +675,101 @@ $$\delta x\sim \frac{\hbar}{\delta k}$$
 - This can be identified with the [[#Ginzburg-Landau Theory|Ginzburg-Landau coherence length]] $\xi$
 
 ### Ginzburg-Landau parameters from BCS Theory
-- Check the _condensation energy_ from BCS theory:
-$$\displaylines{n_{e}\sim -\frac{\alpha}{\beta}\times 2 \\  \Delta\left( n_{e} \frac{\Delta}{\varepsilon_{F}} \right) \sim \frac{\alpha^{2}}{2\beta}}$$
+- Compare [[#Condensation energies in Ginzburg-Landau|condensation energies]] in both Ginzburg-Landau and BCS theory
+	- BCS theory: condensation energy is of order $\Delta$ times the _density of electrons near Fermi energy with energies modified_, which is $n_{e}(\Delta/\varepsilon_{F})$
+$$\displaylines{n_{e}\sim \frac{|\alpha|}{\beta}\times 2 \\  \Delta\left( n_{e} \frac{\Delta}{\varepsilon_{F}} \right) \sim \frac{\alpha^{2}}{2\beta}}$$
+
+- A more rigorous calculation gives:
+$$\xi\approx \frac{\hbar v_{F}}{\pi\Delta}=\frac{2\varepsilon_{F}}{\pi k_{F}\Delta}$$
 
 - One can then relate the _critical fields_ to microscopic parameters:
-$$B_{c2}=$$
-# BCS Theory
+$$B_{c2}=\frac{\phi_{0}}{2\pi \xi^{2}}=\frac{\pi \phi_{0}k_{F}^{2}\Delta^{2}}{8\varepsilon_{F}^{2}}$$
+- The Ginzburg-Landau parameters from BCS theory:
+$$|\alpha|=\frac{\hbar^{2}}{2m\xi^{2}}=\frac{\pi^{2}\Delta^{2}}{8\varepsilon_{F}} \qquad \beta=\frac{2|\alpha|}{n_{e}}\qquad m=2m_{e}$$
+## Intepretations of BCS Theory
 - One can _build_ the BCS wavefunction from _pair wavefunctions_
 $$\Psi= \mathcal{A}\{\varphi(\mathbf{r}_{1}-\mathbf{r}_{2};\sigma_{1}\sigma_{2})\varphi\dots\}$$
-- As a _coherent state_:
-$$\exp()\ket{\text{VAC}} $$
-- From a _variational approach_ w.r.t. the BCS Hamiltonian, one gets the _mean field parameters_ back
+- The BCS state as _combining coherent states_ for each wavenumber:
+	- There are _no second order terms_ from the exponential, then one must _normalise_
+$$\displaylines{\exp(s_{\boldsymbol{k}}a^{\dagger}_{\boldsymbol{k}\uparrow}a^{\dagger}_{-\boldsymbol{k}\downarrow})\ket{\text{VAC}} =(1+s_{\boldsymbol{k}}a^{\dagger}_{\boldsymbol{k}\uparrow}a^{\dagger}_{\boldsymbol{k}\downarrow})\ket{\text{VAC}} \\ u_{\boldsymbol{k}}=\frac{1}{\sqrt{ 1+|s_{\boldsymbol{k}}|^{2} }}\qquad v_{\boldsymbol{k}}=\frac{s_{\boldsymbol{k}}}{\sqrt{ 1+|s_{\boldsymbol{k}}|^{2} }} \\ \ket{\Psi _\text{BCS}}=\prod_{\boldsymbol{k}}(u_{\boldsymbol{k}}+v_{\boldsymbol{k}}a^{\dagger}_{\boldsymbol{k}\uparrow}a^{\dagger}_{-\boldsymbol{k}\downarrow})\ket{\text{VAC}}  }$$
+- From a _variational approach_ w.r.t. the BCS Hamiltonian, one gets the _mean field parameters_ back once $E_\text{BCS}$ is minimised
+$$\displaylines{E_\text{BCS}=\braket{ \Psi _\text{BCS} |H|\Psi _\text{BCS}  } \\ H_\text{red}=\sum_{\boldsymbol{k}}\varepsilon_{\boldsymbol{k}}a^{\dagger}_{\boldsymbol{k}}a_{\boldsymbol{k}}-\frac{|g|}{V}\sum_{\boldsymbol{k},\boldsymbol{k}'}a^{\dagger}_{\boldsymbol{k}'\uparrow}a^{\dagger}_{-\boldsymbol{k}'\downarrow}a_{-\boldsymbol{k}\downarrow}a_{\boldsymbol{k}\uparrow}}$$
 
 - For $\xi\gg d$, where $d$ is the _characteristic electron spacing_ (e.g. lattice constant), this describes _pairings in $k-$space_
 
 - This is _in contrast to real-space pairing_ $\xi\ll d$
 	- Some _cuprate high $T_{c}$ superconductors_
 
-## Comparison to Stoner ferromagnetism
+### Comparison to Stoner ferromagnetism
 - In _Stoner ferromagnetism_, there is an _on-site repulsion_ resulting in magnetisation
-$$\displaylines{E_{k\sigma}=\xi_{k}-\frac{\sigma}{2}\Delta\\ \Delta _\text{St}=U(n_{\uparrow}-n_{\downarrow})=\frac{U}{V}\sum_{k}}$$
+$$\displaylines{E_{k\sigma}=\xi_{k}-\frac{\sigma}{2}\Delta _\text{St}\\ \Delta _\text{St}=U(n_{\uparrow}-n_{\downarrow})=\frac{U}{V}\sum_{k}[f(E_{\boldsymbol{k}\uparrow})-f(E_{\boldsymbol{k}\downarrow})]=\frac{U}{V}\sum_{\boldsymbol{k}}\frac{f(E_{\boldsymbol{k}\uparrow})-f(E_{\boldsymbol{k}\downarrow})}{E_{\boldsymbol{k}\uparrow}-E_{\boldsymbol{k}\downarrow}}\Delta _\text{St}}$$
 - The [[#BCS gap equation]]:
+$$\displaylines{E_{\boldsymbol{k}}=\sqrt{ \xi_{\boldsymbol{k}}^{2}+\Delta^{2} } \\ \Delta _\text{BCS}=\frac{|g|}{V}\sum_{\boldsymbol{k}}\frac{1-2f(E_{\boldsymbol{k}})}{2E_{\boldsymbol{k}}}\Delta _\text{BCS}=\frac{|g|}{V}\sum_{\boldsymbol{k}}\frac{1-f(E_{-\boldsymbol{k}\downarrow})-f(E_{\boldsymbol{k}\uparrow})}{E_{\boldsymbol{k}\uparrow}+E_{\boldsymbol{k}\downarrow}}\Delta _\text{St}}$$
 
-- At $T_{c}$ where $E_{k}\approx \xi_{k}$, the equations are related by the _particle-hole transformation_
-
+- At $T_{c}$ where $E_{k}\approx \xi_{k}$, the BCS gap equation can be obtained from the Stoner gap equation via the _particle-hole transformation_:
+$$(-\xi_{\boldsymbol{k}\downarrow})\to \xi_{-\boldsymbol{k}\downarrow} \qquad f(\xi_{\boldsymbol{k}\downarrow})\to 1-f(\xi_{-\boldsymbol{k}\downarrow})$$
 - Similar to Stoner ferromagnetism, superconductivity _spontaneously emerges_
 
 - Higgs phenomenon: _transverse_ currents are _gapped_
 
-## Pairing as avoidance
+### Pairing as avoidance
+- Interactions between the electrons can be thought of as _induced interactions_
+	- One electron (an "emitter") will _induce_ a change in the surrounding field
+	- The second electron (the "absorber") will experience this change, resulting in an _attraction_
 
-- Electron-electron _attraction_ occurs due to _avoidance_ to reduce the effects of Coulomb repulsion
+- Take a simplified model, with some _constant_ $g$ being the _particle-field interaction_, where the field has some _impulse response_ $\chi(\boldsymbol{r},t)$
+- The _interaction potential_ between two particles, induced by one moving at velocity $u$:
+$$\displaylines{\mathcal{V}_\text{ret}(\boldsymbol{r},t)=\int V_\text{ret}(\boldsymbol{r}-\boldsymbol{r}',t-t')\delta(\boldsymbol{r}'-\boldsymbol{u}t')\,d\boldsymbol{r}'\,dt' \\ V_\text{ret}(\boldsymbol{r}-\boldsymbol{r}',t-t')=-g^{2}\chi _\text{ret}(\boldsymbol{r}-\boldsymbol{r}',t-t')}$$
+- $V_\text{ret}$ is known as the _retarded impulse interaction_
+![[ret.png]]
 
-- The _pair wave-function_ should be _zero_ wherever there is significant _repulsion_
+- Electron-electron _attraction_ can only occur when there is a _finite separation/avoidance in time and/or space_
+	- The _pair wave-function_ should be _zero_ wherever there is significant _repulsion_
 
-- Time avoidance
-	- e.g. a _retarded interaction_ due to the _screening cloud of a moving charge_
-
+- Time avoidance pairing:
+	- e.g. a _retarded interaction_ due to the _screening cloud of a moving charge_ (the [[#Bardeen-Pines effective electron-electron interaction|Bardeen-Pines model]])
+![[Time avoidance pairing.png|500]]
 - Space avoidance
-	- e.g. van der Waals
+	- e.g. induced _spin-spin interactions_ (such as _superexchange_)
+![[Spatial avoidance.png|500]]
+# Beyond BCS Theory
+## Generalisation of gap parameter
+- The gap equation in BCS theory, with a singular $\Delta$ parameter coming from _mean field decoupling_:
+$$\Delta=-\frac{1}{V}\sum_{\boldsymbol{k}'}g\Delta \frac{1-2f(E_{\boldsymbol{k}'})}{2E_{\boldsymbol{k}'}}$$
 
-## Generalisation of gap equation
-- Generalise to a $k-$dependent interaction
-- With some _kernel_ $K_{kk'}$
-$$\Delta_{k}=-\sum_{k'}K_{kk'}\Delta_{k'} \frac{1-f(E_{k'})}{2E_{k'}}$$
+- Generalise to a $k-$_dependent_ interaction, maintaining _singlet pairing_
+- With some _kernel_ $K_{kk'}$ for transitions from $(\boldsymbol{k},-\boldsymbol{k})$ to $(\boldsymbol{k}',-\boldsymbol{k}')$
+$$\Delta_{k}=-\sum_{k'}K_{kk'}\Delta_{k'} \frac{1-f(E_{k'})}{2E_{k'}}\qquad E_{\boldsymbol{k}}=\sqrt{ \xi_{\boldsymbol{k}}^{2}+|\Delta_{\boldsymbol{k}}|^{2} }$$
 
+- One can also generalise the model to be _spin-dependent_:
+$$\displaylines{H=\sum_{\boldsymbol{k}\sigma}\varepsilon_{\boldsymbol{k}}a^{\dagger}_{\boldsymbol{k}\sigma}a_{\boldsymbol{k}\sigma}+\sum_{\boldsymbol{k}\boldsymbol{k}'}\sum_{\alpha\beta\gamma\delta}V_{\boldsymbol{k}\boldsymbol{k}'}^{\alpha\beta\gamma\delta}a^{\dagger}_{\boldsymbol{k}'\alpha}a^{\dagger}_{-\boldsymbol{k}'\beta}a_{-\boldsymbol{k}\gamma}a_{\boldsymbol{k}\delta} \\ \Delta_{\boldsymbol{k}}^{\alpha\beta}=\sum_{\boldsymbol{k}'}V^{\alpha\beta\gamma\delta}_{\boldsymbol{k}\boldsymbol{k}'}\langle a_{-\boldsymbol{k}'\gamma}a_{\boldsymbol{k}'\delta} \rangle }$$
 ### Conventional and unconventional singlet pairing
+- In _conventional singlet superconductors_, $\Delta_{\boldsymbol{k}}$ has the _same sign over the Fermi surface_
+	- Its sign can still _change with magnitude_ of $\boldsymbol{k}$ to reduce repulsion
+- In _unconventional singlet superconductors_, it can change sign over the Fermi surface
 
+- Denoting the _width_ of the energy gap $\Delta_{k}/(\hbar v_{F})$:
+![[convcentional and unconventional singlets.png|450]]
+## Bardeen-Pines effective electron-electron interaction
+- The _effective interaction_ is taken as the _real part_ of the [[#Pairing as avoidance|retarded impulse response]]
 
-### Effective e-e interaction in jellium
-- The _effective interaction_ is taken as the _real part_ of the _retarded impulse response_
-
-- For _jellium_, with the [[Solids#Thomas-Fermi screening|Thomas-Fermi approximation]]
-
+- Take _jellium_, with the [[Solids#Thomas-Fermi screening|Thomas-Fermi approximation]]
 - The _Bardeen-Pines_ model: a _test charge_ in a _polarisable/dielectric material_ will _induce_ a _dipolar field_
+![[Bardeen-Pines interaction.png]]
+- The pairing interaction:
+	- Consisting of an _instantaneous screened Coulomb repulsion_, and an _electron-phonon mediated attraction_
+	- Here, $\nu_{\boldsymbol{q}}$ is the _longitudinal phonon frequency_
+	- $\gamma_{\boldsymbol{q}}\leq 1$ is a _coupling parameter_
+$$V_{\boldsymbol{q}\omega}=\frac{e^{2}}{\epsilon_{0}} \frac{1}{q^{2}+k_\text{TF}^{2}}\left( 1-\frac{\gamma_{\boldsymbol{q}}\nu_{\boldsymbol{q}}^{2}}{\nu_{\boldsymbol{q}}^{2}-\omega^{2}} \right)$$
+
+- It is _attractive_ for $\omega<\nu_{\boldsymbol{q}}$, and can lead to _pairing_
+
+### The gap equation in the Bardeen-Pines model
+- $V_{\boldsymbol{q}\omega}$ describes a _dynamical interaction_
+- Its effect is still included in the _kernel_ $K_{\boldsymbol{k}\boldsymbol{k}'}$
+
+- $\boldsymbol{q}$ and $\omega$ represent _momentum_ and _energy_ transfer in the _effective_ electron-electron interaction
+- From transforming the [[AQCMP#Electron-phonon interactions|Frohlich Hamiltonian]]:
+$$n$$
+
+### Bardeen-Pines interaction from dielectric screening

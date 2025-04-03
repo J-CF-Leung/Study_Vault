@@ -236,4 +236,9 @@ $$\displaylines{\lambda^{1}=\pmatrix{0&1&0 \\ 1&0&0 \\ 0&0&0} \qquad \lambda^{2}
 ![[QCD Feynman rules.png]]
 # Electroweak theory
 - Based on the $SU(2)\times U(1)$ gauge group
-	- A theory of _decay_ should contain _interaction vertices_ which conserve _baryon number_ and _lepton number_
+
+## A theory of the weak interaction
+- A theory of _decay_ should contain _interaction vertices_ which conserve _baryon number_ and _lepton number_, giving necessitating a _two-element_ representation, the simplest of which is $SU(2)$
+
+### Parity violation
+
