@@ -873,14 +873,14 @@ $$\xi_{1}=\pmatrix{1\\0} \quad \xi_{2}=\pmatrix{0\\1} \qquad \eta_{1}=\pmatrix{1
 $$S[\Lambda _\text{rot}]= \pmatrix{\exp\left( i\frac{\boldsymbol{\varphi}\cdot \boldsymbol{\sigma}}{2} \right)&0\\0&\exp\left( i\frac{\boldsymbol{\varphi}\cdot \boldsymbol{\sigma}}{2} \right)}\qquad S[\Lambda _\text{boost}]=\pmatrix{\exp\left( \frac{\boldsymbol{\chi}\cdot \boldsymbol{\sigma}}{2} \right)&0\\0&\exp\left( -\frac{\boldsymbol{\chi}\cdot\boldsymbol{\sigma}}{2} \right)}$$
 - The _4-component Dirac spinor_ is a _reducible representation_:
 $$\psi(x)=\pmatrix{U_{+} \\ 0}+ \pmatrix{0\\U_{-}}$$
-- Here, $U_{+}$ and $U_{-}$ are the _2-component Weyl spinors_ above
+- Here, $U_{+}$ and $U_{-}$ are the _2-component Weyl spinors_
 
 - Under _rotations_, the spinors behave the same way
 $$U_{+}\to \exp\left( i\frac{ \boldsymbol{\varphi}\cdot \boldsymbol{\sigma}}{2} \right)U_{+} \qquad U_{-}\to \exp\left( i\frac{ \boldsymbol{\varphi}\cdot \boldsymbol{\sigma}}{2} \right)U_{-}$$
 
 - Under _boosts_, they behave differently
 $$U_{+}\to \exp\left( \frac{ \boldsymbol{\chi}\cdot \boldsymbol{\sigma}}{2} \right)U_{+} \qquad U_{-}\to \exp\left( -\frac{ \boldsymbol{\chi}\cdot \boldsymbol{\sigma}}{2} \right)U_{-}$$
-- A manifestation of the _structure_ of the $\gamma$ matrices:
+- A manifestation of the _block structure_ of the $\gamma$ matrices:
 $$\gamma^{\mu}=\pmatrix{0&\sigma^{\mu}\\\bar{\sigma}^{\mu}&0}$$
 
 ### $\gamma^{5}$ and chiral projectors
@@ -901,11 +901,13 @@ $$\psi_{+}=\mathcal{P}_{+}\psi=\pmatrix{U_{+}\\0} \qquad \psi_{-}=\mathcal{P}_{-
 - The _Lagrangian_:
 	- Cannot contain $U_{+}^{\dagger}U_{+}$ terms as it is _not invariant under boosts_
 $$\begin{align}
-\mathcal{L}&=\bar{\psi}(i\cancel{ \partial }-m)\psi \\ &=iU_{-}^{\dagger}\sigma^{\mu}\partial_{\mu}U_{-}+iU_{+}^{\dagger}\sigma^{\mu}\partial_{\mu}U_{+}-m(U_{+}^{\dagger}U_{-}+U_{-}^{\dagger}U_{+})
+\mathcal{L}&=\bar{\psi}(i\cancel{ \partial }-m)\psi \\ &=iU_{-}^{\dagger}\bar{\sigma}^{\mu}\partial_{\mu}U_{-}+iU_{+}^{\dagger}\sigma^{\mu}\partial_{\mu}U_{+}-m(U_{+}^{\dagger}U_{-}+U_{-}^{\dagger}U_{+})
 \end{align}$$
 - The Lagrangian is _not separable_ into components of non-zero chirality, as they couple through the _mass term_
 
-- _Massless chiral particles_ are described by the _Weyl equation_
+- _Massless chiral particles_ are described by the _Weyl equations_:
+$$i\sigma^{\mu}\partial_{\mu}U_{-}=0 \qquad i\bar{\sigma}^{\mu}\partial_{\mu}U_{+}=0$$
+## CPT and helicity
 
 ## Inner and outer products
 ### Inner products

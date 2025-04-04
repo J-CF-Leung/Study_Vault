@@ -54,9 +54,9 @@ $$j^{\mu}=\bar{\psi}\gamma^{\mu}\psi$$
 - Consider some _ansatz_, a combination of _positive and negative energy solutions_
 $$\psi=u\exp(-ip\cdot x)+v\exp(ip\cdot x)$$
 
-- Plugging into the Dirac equation gives that for any $\phi,\chi$
+- Plugging into the Dirac equation gives that for any $\phi,\chi$, in the _Pauli-Dirac basis_
 $$u^{s}=N\pmatrix{\phi \\ \frac{\boldsymbol{\sigma}\cdot \boldsymbol{p}}{E+m}\phi} \qquad v^{s}=N\pmatrix{\frac{\boldsymbol{\sigma}\cdot \boldsymbol{p}}{E+m}\chi \\ \chi}$$
-- The _basis states_, corresponding to different _spins_
+- The _basis states_, with $1,2$ referring to different _spins_
 $$\phi_{1}=\pmatrix{1\\0}\qquad \phi_{2}=\pmatrix{0\\1} \qquad \chi_{1}=\pmatrix{1\\0}\qquad \chi_{2}=\pmatrix{0\\1}$$
 ## Spinor field quantisation
 - Mode expansion:
@@ -64,7 +64,32 @@ $$\psi(\boldsymbol{x},t)=\int \frac{d^{3}p}{(2\pi)^{3}} \sum_{s} \frac{1}{2E}(c_
 - Anticommutation relations:
 $$\{c_{\boldsymbol{p}}^{s},c^{s'{\dagger}}_{\boldsymbol{p}'}\}=\{d_{\boldsymbol{p}}^{s},d_{\boldsymbol{p}'}^{s'{\dagger}}\}=(2\pi)^{3}\delta^{ss'}(2E)\delta^{3}(\boldsymbol{p}-\boldsymbol{p}')$$
 
+## Weyl spinors and chirality
+- The 4-component _Dirac spinor_ $\psi$ is the direct sum of two _2-component [[QFT#Weyl spinors and chirality|Weyl spinors]]_
+- The Weyl spinors are each of _opposite chirality_
+
+- Define $\gamma^{5}$:
+$$\gamma^{5}=i\gamma^{0}\gamma^{1}\gamma^{2}\gamma^{3}$$
+- Define the _left and right handed projectors_
+	- In the _chiral basis_, they correspond to $\mathbb{I}$ in each $2\times{2}$ diagonal block
+	- $\overline{\psi_{L}}=(\bar{\psi})_{R}$
+$$P_{L,R}=\frac{1}{2}(1\pm\gamma^{5}) \qquad \psi_{L,R}=P_{L,R}\psi$$
+- The Lagrangian can be written as:
+$$\mathcal{L}=(\overline{\psi_{L}}\cancel{ \partial }\psi_{L}+\overline{\psi_{R}}\cancel{ \partial }\psi_{R})-m(\overline{\psi_{L}}\psi _{R}+\overline{\psi_{R}}\psi_{L})$$
+- The mass term _couples_ the left and right handed Weyl spinors
+	- If they are _massless_, then $\mathcal{L}$ describes separate _Weyl fermions_
 ## CPT
+
+### Charge conjugation
+
+
+### Parity
+- Parity is the transformation:
+$$x^{0}\to x^{0} \qquad x^{i}\to -x^{i}$$
+
+### Time reversal
+
+
 
 # U(1) gauge field: Electromagnetism
 - The 4-vector potential:
@@ -125,7 +150,7 @@ $$\psi\to \exp[ie\alpha(x)]\psi \qquad A_{\mu}\to A_{\mu}-\partial_{\mu}\alpha$$
 	- It is a characteristic of $\psi$, instead of $A_{\mu}$
 	- Charge manifests in _global symmetries_, which only transforms $\psi$, not $A_{\mu}$
 ### Momentum Feynman rules
-
+![[QED Feynman rules.png]]
 
 # Non-Abelian gauge theory
 - QED is a $U(1)$ _gauge theory_
@@ -239,6 +264,57 @@ $$\displaylines{\lambda^{1}=\pmatrix{0&1&0 \\ 1&0&0 \\ 0&0&0} \qquad \lambda^{2}
 
 ## A theory of the weak interaction
 - A theory of _decay_ should contain _interaction vertices_ which conserve _baryon number_ and _lepton number_, giving necessitating a _two-element_ representation, the simplest of which is $SU(2)$
+- The Lie algebra of $SU(2)$ is the Pauli matrices:
+$$\sigma^{1}=\pmatrix{0&1\\1&0} \qquad \sigma^{2}=\pmatrix{0&-i\\i&0}\qquad \sigma^{3}=\pmatrix{1&0\\0&-1}$$
+- Denote the $SU(2)$ gauge field by $W_{\mu}^{i}$
+$$\displaylines{\begin{aligned}
+D_{\mu}=\partial_{\mu}+i \frac{g}{2}W_{\mu}^{i}\sigma^{i} &=\partial_{\mu}+i \frac{g}{2}\pmatrix{ W_{\mu}^{3} &W_{\mu}^{1}-iW_{\mu}^{2} \\ W_{\mu}^{1}+iW_{\mu}^{2} & -W_{\mu}^{3}} \\
+&\equiv\partial_{\mu}+i \frac{g}{2} \pmatrix{W_{\mu}^{3} & \sqrt{ 2 } W_{\mu}^{+} \\ \sqrt{ 2}W_{\mu}^{-} & -W_{\mu}^{3}}
+\end{aligned} \\ W_{\mu}^{\pm}=\frac{1}{\sqrt{  2}}(W_{\mu}^{1}\mp iW_{\mu}^{2})}$$
 
-### Parity violation
+- The _quarks_ and _leptons_ can then be packaged into $SU(2)$ _doublets_:
+$$l\equiv \pmatrix{\nu \\ e} \qquad q\equiv \pmatrix{u \\ d}$$
+- The Lagrangian will contain the terms:
+$$\mathcal{L} \supset i(\bar{l}\cancel{ D }l+\bar{q}\cancel{ D }q) \supset ig\sqrt{ 2 }\bar{\nu}\cancel{ W }^{+}e$$
 
+- The $W_{\mu}^{\pm}$ fields carry an _electric charge_ of $\pm |e|$
+- [[#Charge conjugation]] sends fields into the _minus transpose_, giving:
+$$W_{\mu}^{\pm}\to W_{\mu}^{\mp}$$
+
+- However, weak interactions _do not conserve parity_
+### Parity violation and hypercharge
+- Only the _left-handed_ quarks and leptons will couple to $W^{\mu}$ via $SU(2)$
+- This can be implemented using a [[#Weyl spinors and chirality|projector]] $P_{L}$
+
+# Renormalisation
+
+## Ultraviolet divergences
+- _Loop corrections_ to propagators and matrix elements are _infinite_
+- The one-loop correction to _electron self-energy_ in QED:
+![[one loop correction.png]]
+$$i \mathcal{M}=\int \frac{d^{4}k}{(2\pi)^{4}} \bar{u}^{s}(-ie\gamma^{\mu}) \left( -\frac{i\eta_{\mu \nu}}{k^{2}} \right) \frac{i(\cancel{ p }-\cancel{ k }+m)}{(p-k)^{2}-m^{2}}(-ie\gamma^{\nu})u^{s}$$
+- At _large_ $k$, it is _divergent_
+	- Logarithmically divergent as the integrand is _odd_
+$$\sim \int d^{4}k \frac{\cancel{ k }}{k^{4}}$$
+
+- The amplitude $i\Sigma$ can be _absorbed_ into the _mass term_ when one considers:
+![[QED renormalise.png]]
+$$\frac{i}{\cancel{ p }-m}+\left( \frac{i}{\cancel{ p }-m} \right)i\Sigma\left(\frac{i}{\cancel{ p }-m}\right)+\dots=\frac{i}{\cancel{ p }-m+\Sigma}$$
+- $m$ can be chosen as an _infinite parameter_, such that $m-\Sigma$ yields the _physically measured electron mass_
+
+- The _renormalisability_ of a theory is not always guaranteed
+### Mass dimension
+- Work in _natural units_
+$$\hbar=c=1$$
+- _Mass/energy dimensions_:
+$$[S]=0 \qquad[x^{\mu}]=-1 \qquad [\mathcal{L}]=4$$
+- _Bosonic fields_ $\phi$ and _fermionic fields_ $\psi$ have _different dimensions_
+	- Bosonic term: _two derivatives_ / fermionic term: _one derivative_
+$$[\phi]=1 \qquad [\psi]=\frac{3}{2}$$
+- The _mass_ in the Lagrangian will always have dimension $1$
+- The _gauge couplings_ are always _dimensionless_
+
+### Renormalisability from diagrams
+
+
+## Non-renormalisable interactions
