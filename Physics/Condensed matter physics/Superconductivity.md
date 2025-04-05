@@ -745,7 +745,7 @@ $$\Delta_{k}=-\sum_{k'}K_{kk'}\Delta_{k'} \frac{1-f(E_{k'})}{2E_{k'}}\qquad E_{\
 $$\displaylines{H=\sum_{\boldsymbol{k}\sigma}\varepsilon_{\boldsymbol{k}}a^{\dagger}_{\boldsymbol{k}\sigma}a_{\boldsymbol{k}\sigma}+\sum_{\boldsymbol{k}\boldsymbol{k}'}\sum_{\alpha\beta\gamma\delta}V_{\boldsymbol{k}\boldsymbol{k}'}^{\alpha\beta\gamma\delta}a^{\dagger}_{\boldsymbol{k}'\alpha}a^{\dagger}_{-\boldsymbol{k}'\beta}a_{-\boldsymbol{k}\gamma}a_{\boldsymbol{k}\delta} \\ \Delta_{\boldsymbol{k}}^{\alpha\beta}=\sum_{\boldsymbol{k}'}V^{\alpha\beta\gamma\delta}_{\boldsymbol{k}\boldsymbol{k}'}\langle a_{-\boldsymbol{k}'\gamma}a_{\boldsymbol{k}'\delta} \rangle }$$
 ### Conventional and unconventional singlet pairing
 - In _conventional singlet superconductors_, $\Delta_{\boldsymbol{k}}$ has the _same sign over the Fermi surface_
-	- Its sign can still _change with magnitude_ of $\boldsymbol{k}$ to reduce repulsion
+	- Its sign should still _change with magnitude_ of $\boldsymbol{k}$ to reduce repulsion
 - In _unconventional singlet superconductors_, it can change sign over the Fermi surface
 
 - Denoting the _width_ of the energy gap $\Delta_{k}/(\hbar v_{F})$:
@@ -754,7 +754,7 @@ $$\displaylines{H=\sum_{\boldsymbol{k}\sigma}\varepsilon_{\boldsymbol{k}}a^{\dag
 - The _effective interaction_ is taken as the _real part_ of the [[#Pairing as avoidance|retarded impulse response]]
 
 - Take _jellium_, with the [[Solids#Thomas-Fermi screening|Thomas-Fermi approximation]]
-- The _Bardeen-Pines_ model: a _test charge_ in a _polarisable/dielectric material_ will _induce_ a _dipolar field_
+- The _Bardeen-Pines_ model: a _test charge_ in a _jellium_ will _induce_ a _dipolar field_
 ![[Bardeen-Pines interaction.png]]
 - The pairing interaction:
 	- Consisting of an _instantaneous screened Coulomb repulsion_, and an _electron-phonon mediated attraction_
@@ -763,13 +763,121 @@ $$\displaylines{H=\sum_{\boldsymbol{k}\sigma}\varepsilon_{\boldsymbol{k}}a^{\dag
 $$V_{\boldsymbol{q}\omega}=\frac{e^{2}}{\epsilon_{0}} \frac{1}{q^{2}+k_\text{TF}^{2}}\left( 1-\frac{\gamma_{\boldsymbol{q}}\nu_{\boldsymbol{q}}^{2}}{\nu_{\boldsymbol{q}}^{2}-\omega^{2}} \right)$$
 
 - It is _attractive_ for $\omega<\nu_{\boldsymbol{q}}$, and can lead to _pairing_
+	- The _gap function_ should _change in sign_ w.rt. energy
 
-### The gap equation in the Bardeen-Pines model
+### Relation to the gap equation kernel
 - $V_{\boldsymbol{q}\omega}$ describes a _dynamical interaction_
 - Its effect is still included in the _kernel_ $K_{\boldsymbol{k}\boldsymbol{k}'}$
 
 - $\boldsymbol{q}$ and $\omega$ represent _momentum_ and _energy_ transfer in the _effective_ electron-electron interaction
 - From transforming the [[AQCMP#Electron-phonon interactions|Frohlich Hamiltonian]]:
-$$n$$
+	- Applies _near the Fermi surface_
+$$K^{\text{Frohlich}}_{\boldsymbol{k}\boldsymbol{k}'}=V(\boldsymbol{q}=\boldsymbol{k}'-\boldsymbol{k},\hbar\omega=\xi_{\boldsymbol{k}'}-\xi_{\boldsymbol{k}})$$
 
-### Bardeen-Pines interaction from dielectric screening
+## Generalised Bardeen-Pines interaction
+- Instead of jellium, consider a _dielectric medium_
+- Result:
+![[BCS vs Bardeen-Pines.png|600]]
+
+### Contribution from polarised dielectric medium
+- A _test charge_ will induce _polarisation_ in the _dielectric medium_
+![[Bardeen-Pines polarisation.png|400]]
+- The total field is caused by both the _free test charge_ and the _bound charges_
+- Consider the dielectric to be _homogeneous_
+	- As the interaction is _long range_, the lattice effects are _averaged out_
+
+- Gauss' Law in a _linear dielectric_:
+$$\displaylines{\nabla\cdot \boldsymbol{E}=\frac{1}{\epsilon_{0}}(\rho+\rho_{b})=\frac{1}{\epsilon_{0}} (\rho-\nabla\cdot \boldsymbol{P}) \\ E=-\nabla \varphi \qquad \boldsymbol{P}=\epsilon_{0}\chi \boldsymbol{E}}$$
+- Taking the Fourier transform:
+$$\varphi_{\boldsymbol{q}\omega}=\frac{\rho_{\boldsymbol{q}\omega}}{\epsilon_{0}q^{2}(1+\chi_{\boldsymbol{q}\omega})}$$
+- Take a [[Solids#Lorentz dipole oscillator model|Lorentz oscillator]], with _no damping_, the _real part_ of the susceptibility: 
+	- $\Omega_{p}$ is the _plasma frequency_ of the dielectric
+	- $\Omega_{t\boldsymbol{q}}$ is the _transverse frequency_ of the medium
+$$\chi_{\boldsymbol{q}\omega}=\frac{\Omega_{p}^{2}}{\Omega_{t\boldsymbol{q}}^{2}-\omega^{2}}$$
+- The effective interaction can then be written as:
+$$\displaylines{V_{\boldsymbol{q}\omega}=\frac{e^{2}}{\epsilon_{0}q^{2}(1+\chi_{\boldsymbol{q}\omega})}=\frac{e^{2}}{\epsilon_{0}q^{2}} \left( 1-\gamma_{\boldsymbol{q}} \frac{\Omega_{l\boldsymbol{q}}^{2}}{\Omega_{l\boldsymbol{q}}^{2}-\omega^{2}} \right) \\ \gamma_{\boldsymbol{q}}=1-\frac{\Omega_{t\boldsymbol{q}}^{2}}{\Omega_{t\boldsymbol{q}}^{2}} \qquad \Omega_{l\boldsymbol{q}}^{2}=\Omega_{p}^{2}+\Omega_{t\boldsymbol{q}}^{2}}$$
+- It is a combination of the _direct potential_ and the potential due to _induced polarisation_ by the test charge
+
+- $\gamma_{\boldsymbol{q}}$, the _coupling parameter_, tends to $1$ for $\Omega_{t\boldsymbol{q}}\ll\Omega_{l\boldsymbol{q}}$
+
+### Contribution from charge carriers
+- In the _absence of free charge carriers_, the interaction becomes _singular_ at low $q$
+- The free charge carriers will _screen_ the interaction
+	- Typically due to _doped itinerant charge carriers_
+- If one takes the _Thomas-Fermi approximation_, screening is given by:
+$$q^{-2}\to (q^{2}+k_\text{TF}^{2})^{-1}$$
+![[Generalised Bardeen-Pines.png|300]]
+
+- More rigourous analysis gives an additional term given by the [[AQCMP#Lindhard dielectric function|Lindhard function]]
+- The mobile charge carriers have some other _plasma frequency_ $\omega_{p}$, as well as a _transverse frequency_ $\omega_{t\boldsymbol{q}}=v_{F}q/\sqrt{ 3 }$
+![[Bardeen-Pines transverse.png|250]]
+- For $\omega\ll\omega_{t\boldsymbol{q}}$ or $\omega\gg \omega_{t\boldsymbol{q}}$, also accounting for a _core contribution_, $\chi$ reduces to:
+$$\chi_{\boldsymbol{q}\omega}=\chi_{\infty}+\frac{\Omega_{p}^{2}}{\Omega_{t\boldsymbol{q}}^{2}-\omega^{2}}+\frac{\omega_{p}^{2}}{\omega_{t\boldsymbol{q}}^{2}-\omega^{2}}$$
+- The _total effective interaction_ accounting for both _bound charges_ and _itinerant carriers_
+$$V_{\boldsymbol{q}\omega}=\frac{e^{2}}{\epsilon_{0}q^{2}(1+\chi _{\boldsymbol{q}\omega})}=\frac{e^{2}}{\epsilon_{0}q^{2}}\left( 1-\frac{\gamma_{1\boldsymbol{q}}\omega_{1\boldsymbol{q}}^{2}}{\omega_{1\boldsymbol{q}}^{2}-\omega^{2}}-\frac{\gamma_{2\boldsymbol{q}}\omega_{2\boldsymbol{q}}^{2}}{\omega_{2\boldsymbol{q}}^{2}-\omega^{2}} \right)$$
+- $\omega_{1,2}$ are taken as the _lower and upper longitudinal frequencies_, with corresponding couplings $\gamma_{1,2}$
+
+### Back to the Bardeen-Pines limit
+- The _Bardeen-Pines limit_ is taking limits to reduce the surroundings to _jellium_:
+$$\Omega_{t\boldsymbol{q}}\ll\omega\ll\omega_{t\boldsymbol{q}}\quad,\quad \chi_{\infty}=0 \implies \chi_{\boldsymbol{q}\omega}=-\frac{\Omega_{p}^{2}}{\omega^{2}}+\frac{\omega_{p}^{2}}{\omega_{t\boldsymbol{q}}^{2}}$$
+- The effective interaction is then:
+$$\displaylines{V_{\boldsymbol{q}\omega}=\frac{e^{2}}{\epsilon_{0}q^{2}}\left( 1-\gamma_{2\boldsymbol{q}}-\frac{\gamma_{1\boldsymbol{q}}\omega_{1\boldsymbol{q}}^{2}}{\omega_{1\boldsymbol{q}}^{2}-\omega^{2}} \right) \\ \gamma_{1\boldsymbol{q}}=1-\gamma_{2\boldsymbol{q}}=\frac{q^{2}}{q^{2}+k_\text{TF}^{2}} \qquad k_\text{TF}^{2}=\frac{3\omega_{p}^{2}}{v_{F}^{2}}=\frac{2N(0)e^{2}}{\epsilon_{0}} \qquad \omega_{1\boldsymbol{q}}=\frac{\Omega_{p}q}{k_\text{TF}}}$$
+- The _lower longitudinal frequency_ is taken, with both _direct_ and _induced_ interactions reduced by the _same screening factor_
+
+- For $\nu_{\boldsymbol{q}}=\omega_{\boldsymbol{q}}$, this gives the _Bardeen-Pines interaction_
+	- Attractive for $\omega<\nu_{\boldsymbol{q}}$
+	- It is _weakened_ for increasing $k_\text{TF}$
+
+## Quantum treatment of phonon-mediated interactions
+- Due to _virtual emission and reabsorption_, from _second order perturbation theory_, the _ground state energy_ should shift
+	- $\xi=\varepsilon-\mu$
+$$\Delta E_{G}=\sum_{\boldsymbol{k},\boldsymbol{k}'} \frac{|w_{\boldsymbol{q}}|^{2}f_{k}(1-f_{\boldsymbol{k}'})}{\xi_{\boldsymbol{k}}-(\xi_{\boldsymbol{k}'}+\hbar \nu_{\boldsymbol{q}})}$$
+- Here, $w_{\boldsymbol{q}}$ is a _transition amplitude_ for the electron-phonon process
+- $f_{\boldsymbol{k}}$ is the _Fermi distribution_
+![[Electron phonon perturbation.png|250]]
+
+### Shift in quasiparticle energy
+- From [[AQCMP#Quasiparticle energy expansion|Fermi liquid theory]], the _shift in quasi-particle energy_ for wavenumber $\boldsymbol{p}$ is:
+	- Energy of _adding_ a particle to state $\boldsymbol{p}$
+$$\Delta \xi_{\boldsymbol{p}}=\frac{\partial}{\partial f_{\boldsymbol{p}}}\Delta E_{G}=\sum_{\boldsymbol{k}'} \frac{|w_{\boldsymbol{q}}|^{2}(1-f_{\boldsymbol{k}'})}{\xi_{\boldsymbol{p}}-(\xi_{\boldsymbol{k}'}+\hbar \nu_{\boldsymbol{q}})}-\sum_{\boldsymbol{k}}\frac{|w_{\boldsymbol{q}}|^{2}f_{\boldsymbol{k}}}{\xi_{\boldsymbol{k}}-(\xi_{\boldsymbol{p}}+\hbar \nu_{\boldsymbol{q}})}$$
+- The two terms represent _shifts_ due to:
+	- Transitions from $\boldsymbol{p}$ to _unoccupied states_ $\boldsymbol{k}'=\boldsymbol{k}+\boldsymbol{q}$ to create another, higher energy quasiparticle
+	- The _blocking_ of transitions from _occupied states_ $\boldsymbol{k}$ to $\boldsymbol{p}$ which could have lowered ground state energy
+![[superconductor quasiparticle.png|400]]
+
+- Changes to quasiparticle energy leads to _mass renormalisation_:
+![[Phonon quasiparticle mass renormalisation.png|400]]
+
+### Change to quasiparticle interactions
+- The _Landau quasiparticle interaction function_ also has two contributions:
+	- $\boldsymbol{q}=\boldsymbol{k}'-\boldsymbol{k}$ and $\hbar\omega=\xi_{\boldsymbol{k}'}-\xi_{\boldsymbol{k}}$
+$$\begin{align}
+\Delta \mathcal{f}_{\boldsymbol{p}\boldsymbol{p}'}=\frac{\partial}{\partial f_{\boldsymbol{p}'}}\Delta \xi_{\boldsymbol{p}}&=- \frac{|w_{\boldsymbol{q}}|^{2}}{\xi_{\boldsymbol{p}}-(\xi_{\boldsymbol{p}'}+\hbar \nu_{\boldsymbol{q}})}- \frac{|w_{\boldsymbol{q}}|^{2}}{\xi_{\boldsymbol{p}'}-(\xi_{\boldsymbol{p}}+\hbar \nu_{\boldsymbol{q}})} \\
+&=\frac{2|w_{\boldsymbol{q}}|^{2}\hbar \nu_{\boldsymbol{q}}}{(\hbar \nu_{\boldsymbol{q}})^{2}-(\xi_{\boldsymbol{p}}-\xi_{\boldsymbol{p}'})^{2}} \\
+&=\frac{2|w_{\boldsymbol{q}}|^{2}}{\hbar \nu_{\boldsymbol{q}}} \frac{\nu_{\boldsymbol{q}}^{2}}{\nu_{\boldsymbol{q}}^{2}-\omega^{2}}
+\end{align}$$
+- This represents the _total forward scattering amplitude_
+	- Accounting for both _direct_ and _exchange_ terms
+
+- This must be _negative_ of the induced electron-electron interaction, giving:
+	- $V$ is the _volume_ of the system
+$$\displaylines{\Delta \xi_{\boldsymbol{k}}=\sum_{\text{occ }\boldsymbol{k}'}\Delta f_{\boldsymbol{k}\boldsymbol{k}'}=-\frac{1}{V}\sum_{\text{occ }\boldsymbol{k}'}V^{\text{ind}}_{\boldsymbol{q}\omega} \\ V^{\text{ind}}_{\boldsymbol{q}\omega}=- \frac{2V|w_{\boldsymbol{q}}|^{2}}{\hbar \nu_{\boldsymbol{q}}} \frac{\nu_{\boldsymbol{q}}^{2}}{\nu_{\boldsymbol{q}}^{2}-\omega^{2}}}$$
+- The _total effective interaction_, including screened Coulomb interaction:
+$$V_{\boldsymbol{q}\omega}=V_{\boldsymbol{q}}^{c}+V^{\text{ind}}_{\boldsymbol{q}\omega} \qquad V_{\boldsymbol{q}}^{c}=\frac{e^{2}}{\epsilon_{0}(q^{2}+k_\text{TF}^{2})}$$
+- This agrees with Bardeen-Pines theory if:
+$$|w_{\boldsymbol{q}}|^{2}=\frac{e^{2}}{2V\epsilon_{0}} \frac{\hbar \nu_{\boldsymbol{q}}}{q^{2}+k_\text{TF}^{2}}$$
+### Mass renormalisation
+- Renormalisation of the _Fermi velocity_ via parameter $\lambda$, due to shift in $\xi_{k}$
+$$\frac{1}{\hbar}\frac{\partial}{\partial k}(\xi_{k}+\Delta \xi_{k})=\frac{1}{\hbar}\left( \frac{\partial \xi_{k}}{\partial k}+\frac{\partial\Delta \xi _{k}}{\partial \xi_{k}} \frac{\partial \xi_{k}}{\partial k} \right)= \frac{1}{\hbar}\frac{1}{1+\lambda} \frac{\partial \xi_{k}}{\partial k}$$
+- Approximating $(1+\lambda)^{-1}\approx 1-\lambda$
+$$\displaylines{\Delta \xi_{\boldsymbol{k}}=-\frac{1}{V}\sum_{\text{occ }\boldsymbol{k}'}V^{\text{ind}}_{\boldsymbol{q}\omega} \\ \lambda=-\frac{\partial\Delta \xi_{k}}{\partial \xi_k}=\int_{\text{occ. }\boldsymbol{k}'}\, \frac{d^{3}k'}{(2\pi)^{3}} \frac{dV^{\text{ind}}_{\boldsymbol{q}\omega}}{\hbar d\omega(k)}}$$
+- Take the limit where the _maximum phonon energy_ $\varepsilon_{c}\ll\varepsilon_{F}$, and the _wavenumber dependence_ of $V_{\boldsymbol{q}\omega}$ near the Fermi surface can be _ignored_
+- This can then be _transformed_ into an integral of energies _near the Fermi surface_:
+$$\lambda=N(0)\langle V^{\text{ind}}_{\boldsymbol{q},\omega=0} \rangle_\text{FS} \qquad\langle  \rangle_\text{FS}= \int_{0}^{2k_{F}} \frac{q\,dq}{2k_{F}^{2}}$$
+#### $k$ and $\omega$ integrals near the Fermi surface
+- The integral over $k'-$space can be converted into a _surface integral_ and one over energy
+$$\int \frac{d^{3}k'}{(2\pi)^{3}}=\int \frac{d\xi_{k'}}{\hbar \nu_{k'}}\int dS$$
+- The measure can be converted for a _fixed_ $\xi_{k}$ and $\xi_{k'}$:
+$$\displaylines{d^{3}k'=2\pi\,d(-\cos\theta)\,(k')^{2}dk' \\ q^{2}=|\boldsymbol{k}-\boldsymbol{k}'|^{2}=k^{2}+(k')^{2}-2kk'\cos\theta \\ d(-\cos\theta)=\frac{q\,dq}{kk'}}$$
+- Then for $\xi_{k'}\ll\varepsilon_{F}$
+$$\int_\text{occ} \frac{d^{3}k'}{(2\pi)^{3}}=N(0)\int_{-\varepsilon_{c}}^{0} \hbar\,d\omega \int_{0}^{2k_{F}}\frac{q\,dq}{2k_{F}^{2}}$$
