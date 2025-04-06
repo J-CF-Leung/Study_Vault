@@ -282,10 +282,96 @@ $$\mathcal{L} \supset i(\bar{l}\cancel{ D }l+\bar{q}\cancel{ D }q) \supset ig\sq
 $$W_{\mu}^{\pm}\to W_{\mu}^{\mp}$$
 
 - However, weak interactions _do not conserve parity_
-### Parity violation and hypercharge
+### Parity violation, unification, and hypercharge
 - Only the _left-handed_ quarks and leptons will couple to $W^{\mu}$ via $SU(2)$
-- This can be implemented using a [[#Weyl spinors and chirality|projector]] $P_{L}$
+- This can be implemented using a [[#Weyl spinors and chirality|projector]] $P_{L}$ on the fields $l$ and $q$
 
+- However, the $Z$ boson of the weak force _couples to both left and right handed particles_
+- The $Z$ boson and the _photon_ are interpreted as a _linear combination_ of $W_{\mu}^{3}$ (coupling to _only left-handed_ fermions) and another $U(1)$ field, denoted $B_{\mu}$ (coupling to _both_ left and right handed fermions)
+- This gives _electroweak theory_
+
+- The _left-handed fermions_ in the $SU(2)$ doublets $q_{L},l_{L}$ (with coupling $g$), are _also given a $U(1)$ charge_ for coupling to $B_{\mu}$ (with coupling $g'$), known as the _weak hypercharge_ $Y_{q,l}$
+- The _right-handed fermions_ $u_{R},d_{R},e_{R}$ are _singlets_ of $SU(2)$ such that they _do not transform_ under $SU(2)$, while given the $U(1)$ _weak hypercharges_ $Y_{u,d,e}$
+	- Only _left-handed_ neutrinos have been observed
+
+- The _physical gauge fields_ $A_{\mu}$ and $Z_{\mu}$ must be some _linear combination_ of $W_{\mu}^{3}$ and $B_{\mu}$
+$$\displaylines{W_{\mu}^{3}=\cos\theta_{W}Z_{\mu}+\sin\theta_{W}A_{\mu} \qquad B_{\mu}=-\sin\theta_{W}Z_{\mu}+\cos\theta_{W}A_{\mu} \\ \sin^{2}\theta_{W}=0.231}$$
+- $\theta_{W}$ is the _Weinberg angle_
+
+### From hypercharge to electric charge
+- _Inspect_ both left and right handed parts of the Lagrangian to find the _resulting couplings_ to _photons_ (represented by $A_{\mu}$) in terms of $g,g',\theta_{W},Y_{q,l,u,d,e}$
+- _Matching_ to QED, find the above values in terms of $|e|$
+
+- The _electroweak coupling Lagrangian_ for _right-handed_ fermions
+$$\mathcal{L} \supset -\overline{\psi_{R}}g'Y_{\psi}\cancel{ B }\psi_{R} \supset -\overline{\psi_{R}} (g'\cos\theta_{W})Y_{\psi}\cancel{ A }\psi_{R}$$
+- From this, $g'\cos\theta_{W}$ must be the _electric charge_, and $Y_{\psi}$ are the _charges in units of_ $|e|$
+	- Quark charges: from _compositions of $p$ and $n$_
+$$\displaylines{g'\cos\theta_{W}=|e| \\ Y_{e}=1 \qquad Y_{u}=+\frac{2}{3} \qquad Y_{d}=-\frac{1}{3}}$$
+- The same for _left-handed fermions_:
+$$\mathcal{L} \supset -\overline{\psi_{L}} \left( \frac{g}{2}\sigma^{3}\cancel{ W }^{3}+g'Y_{\psi}\cancel{ B } \right)\psi_{L}\supset -\overline{\psi_{L}}\left(  \frac{g\sin\theta_{W}}{2}\sigma^{3}+g'\cos\theta_{W}Y_{\psi} \right)\cancel{ A }\psi_{L}$$
+- Using the fact that particles in doublets have a _charge difference_ of $1$, then solving for the values in $Y_{\psi}$:
+$$g\sin\theta_{W}=|e| \qquad Y_{q}=+\frac{1}{6} \qquad Y_{l}=-\frac{1}{2}$$
+### Couplings to the Z boson
+- The $Z$ boson _couples differently_ to left and right-handed bosons
+- Inspecting the $\cancel{ Z }$ terms of the left and right-handed Lagrangians, the couplings are:
+$$g\cos\theta_{W}I_{3}-g'\sin\theta_{W}Y=\frac{|e|}{\sin(2\theta_{W})}(I_{3}-Q\sin^{2}\theta_{W})$$
+- Here, $I_{3}$ is the _weak isospin_
+	- Equal to $0$ for _right-handed_ fermions
+	- Equal to the _eigenvalues_ of $\sigma^{3}/2$ for _left-handed_ fermions
+
+### Remaining issues with electroweak theory
+- The left-handed and right-handed fermions _transform as different representations_ of $SU(2)$ and $U(1)$
+- This _disallows a mass term_ for the fermions, contrary to observations
+
+- _Gauge invariance_ forbids _mass terms_ for the gauge fields
+	- The most general Lagrangian contains a _coupling term_ and a _Maxwell-like field term_, neither of which contains a mass term
+- While the _photon_ is massless, the _weak interaction gauge bosons_ have mass
+	- Massless means _long range interaction_, and the weak interaction is _short range_
+
+- Masses are in fact given by _spontaneous symmetry breaking_ and the _Higgs mechanism_
+
+# The Higgs mechanism
+- Mechanism by which particles gain a _mass_
+
+### Spontaneous symmetry breaking and Goldstone's Theorem
+- Toy model: $\phi^{4}$ theory
+$$\mathcal{L}=(\partial_{\mu}\phi^{*})(\partial^{\mu}\phi)-V(\phi) \qquad V(\phi)=m^{2}|\phi|^{2}+\lambda|\phi|^{4}$$
+- For a classical theory, the $m^{2}>0$ case has a _minimum at the origin_
+- For a quantum theory, the _vacuum expectation value_ vanishes, such that one can make _expansions_ around $\phi=0$ and consider _fluctuations_ about that point
+$$\braket{ 0|\phi |0  }=0 $$
+- However, for $m^{2}<0$, there is a _potential minimum_ at:
+$$|\phi|^{2}=\frac{-m^{2}}{2\lambda}\equiv \frac{v^{2}}{2}$$
+- This gives a _set of degenerate ground states_ which one can quantise around
+- However, these ground states _do not obey phase symmetry_:
+$$\phi\to \phi'=\exp(i\alpha)\phi\implies \mathcal{L}[\phi']\neq \mathcal{L}[\phi]$$
+- Fluctuations about the minimum _in the degenerate direction_ carry _no energy cost_
+
+- For a _large wavelength excitation_, there is _little to no kinetic/potential energy cost_
+- _Goldstone's Theorem_ states that _spontaneous symmetry breaking_ always implies the _existence of a massless particle_
+
+- Example: choose the _vacuum direction_ to be the _real axis_, and add _real scalar fields_ $\phi_{1,2}$ as _fluctuations_
+$$\phi=\frac{1}{\sqrt{ 2 }}(v+\phi_{1}+i\phi_{2})$$
+- $\phi_{1}$ has _mass_ $\sqrt{ -2m^{2} }$
+- $\phi_{2}$ is _massless_
+
+### Abelian Higgs model
+- Go to a $U(1)$ gauge symmetry instead:
+$$\displaylines{\phi\to \exp(ie\alpha(x))\phi \qquad A_{\mu}\to A_{\mu}-\partial_{\mu}\alpha \\ \mathcal{L}=(D_{\mu}\phi)^{*}(D^{\mu}\phi)-m^{2}|\phi|^{2}-\lambda|\phi|^{4} \\ D_{\mu}=\partial_{\mu}+ieA_{\mu}}$$
+- After spontaneous symmetry breaking, expanding around $|\phi|^{2}=v^{2}/2$, one gains a _mass term_ for $A_{\mu}$:
+$$\mathcal{L} \supset +\frac{e^{2}v^{2}}{2}A^{\mu}A_{\mu}$$
+- _Spontaneous symmetry breaking_ of the _matter field_ gives rise to _gauge boson mass_
+
+- A _massless vector boson_ only has 2 _degrees of freedom_
+	- Example: two photon _helicities_
+	- One eliminated by equation of motion, the other eliminated by _gauge fixing_
+- A _massive_ vector boson has 3 degrees of freedom
+	- 3 polarisations along which the _spin_ can point in the _rest frame_
+
+- One can _gauge fix_ into the _unitary gauge_:
+$$\alpha(x)=-\tan \frac{\phi_{2}}{v+\phi_{1}}$$
+- The _transformed scalar field_ $\phi_{2}'$ _vanishes_ ("eaten" by $A_{\mu}$), giving $A_{\mu}$ the _additional degree of freedom_ (the third polarisation)
+
+### Higgs mechanism for a non-Abelian gauge group
 # Renormalisation
 
 ## Ultraviolet divergences
