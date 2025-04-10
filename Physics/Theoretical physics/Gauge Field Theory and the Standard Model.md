@@ -242,7 +242,9 @@ $$\frac{1}{2g^{2}}\mathrm{Tr}[D_{\mu},D_{\nu}][D^{\mu},D^{\nu}]=-\frac{1}{4}F_{\
 - The _gauge field_ $A_{\mu}$ is a $3\times 3$ _matrix_
 
 - This couples to 6 _fermions_, known as _quarks_
-- They still transform as 4-component _spinors_ in terms of _spacetime_
+	- Up $(u)$, down $(d)$, strange $(s)$, charm $(c)$, top $(t)$, bottom $(b)$
+
+- Each quark $\psi$ transforms as 4-component _spinors_ in terms of _spacetime_
 - In terms of _gauge transformations_, it is a 3-component _triplet_
 	- They correspond to _colour_
 
@@ -250,7 +252,7 @@ $$\frac{1}{2g^{2}}\mathrm{Tr}[D_{\mu},D_{\nu}][D^{\mu},D^{\nu}]=-\frac{1}{4}F_{\
 	- $a$: 8 possible indices corresponding to the _gauge bosons_
 	- $A_{\mu}$: $3\times 3$ matrix in terms of _colour indices_
 	- $\lambda^{a}$: the _Gell-Mann matrices_
-$$\mathcal{L}=-\frac{1}{4}G^{a}_{\mu \nu}G^{a\mu \nu}+\sum_{f \in \{u,d,s,c,t,b\}}\bar{\psi}\left( i\cancel{ \partial }-g_{s}\cancel{ A }^{a}\frac{\lambda^{a}}{2}-m_{f} \right)\psi$$
+$$\mathcal{L}=-\frac{1}{4}G^{a}_{\mu \nu}G^{a\mu \nu}+\sum_{f \in \{u,d,s,c,t,b\}}\bar{\psi}_{f}\left( i\cancel{ \partial }-g_{s}\cancel{ A }^{a}\frac{\lambda^{a}}{2}-m_{f} \right)\psi_{f}$$
 - The Gell-Mann matrices, explicitly:
 $$\displaylines{\lambda^{1}=\pmatrix{0&1&0 \\ 1&0&0 \\ 0&0&0} \qquad \lambda^{2}=\pmatrix{0&-i&0\\i&0&0\\0&0&0} \qquad \lambda^{3}=\pmatrix{1&0&0 \\ 0&-1&0 \\ 0&0&0} \\ \lambda^{4}=\pmatrix{0&0&1 \\ 0&0&0 \\ 1&0&0} \qquad \lambda^{5}=\pmatrix{0&0&-i \\ 0&0&0 \\ i&0&0} \qquad \lambda^{6}=\pmatrix{0&0&0 \\ 0&0&1 \\ 0&1&0} \\ \lambda^{7}=\pmatrix{0&0&0 \\ 0&0&-i \\ 0&i&0} \qquad \lambda^{8}=\frac{1}{\sqrt{ 3 }} \pmatrix{1&0&0 \\ 0&1&0 \\ 0&0&-2}}$$
 
@@ -333,7 +335,7 @@ $$g\cos\theta_{W}I_{3}-g'\sin\theta_{W}Y=\frac{|e|}{\sin(2\theta_{W})}(I_{3}-Q\s
 # The Higgs mechanism
 - Mechanism by which particles gain a _mass_
 
-### Spontaneous symmetry breaking and Goldstone's Theorem
+## Spontaneous symmetry breaking, Goldstone's Theorem, and the Higgs mechanism
 - Toy model: $\phi^{4}$ theory
 $$\mathcal{L}=(\partial_{\mu}\phi^{*})(\partial^{\mu}\phi)-V(\phi) \qquad V(\phi)=m^{2}|\phi|^{2}+\lambda|\phi|^{4}$$
 - For a classical theory, the $m^{2}>0$ case has a _minimum at the origin_
@@ -359,7 +361,7 @@ $$\phi=\frac{1}{\sqrt{ 2 }}(v+\phi_{1}+i\phi_{2})$$
 $$\displaylines{\phi\to \exp(ie\alpha(x))\phi \qquad A_{\mu}\to A_{\mu}-\partial_{\mu}\alpha \\ \mathcal{L}=(D_{\mu}\phi)^{*}(D^{\mu}\phi)-m^{2}|\phi|^{2}-\lambda|\phi|^{4} \\ D_{\mu}=\partial_{\mu}+ieA_{\mu}}$$
 - After spontaneous symmetry breaking, expanding around $|\phi|^{2}=v^{2}/2$, one gains a _mass term_ for $A_{\mu}$:
 $$\mathcal{L} \supset +\frac{e^{2}v^{2}}{2}A^{\mu}A_{\mu}$$
-- _Spontaneous symmetry breaking_ of the _matter field_ gives rise to _gauge boson mass_
+- _Spontaneous symmetry breaking_ of some _scalar field_ gives rise to _gauge boson mass_
 
 - A _massless vector boson_ only has 2 _degrees of freedom_
 	- Example: two photon _helicities_
@@ -370,8 +372,100 @@ $$\mathcal{L} \supset +\frac{e^{2}v^{2}}{2}A^{\mu}A_{\mu}$$
 - One can _gauge fix_ into the _unitary gauge_:
 $$\alpha(x)=-\tan \frac{\phi_{2}}{v+\phi_{1}}$$
 - The _transformed scalar field_ $\phi_{2}'$ _vanishes_ ("eaten" by $A_{\mu}$), giving $A_{\mu}$ the _additional degree of freedom_ (the third polarisation)
+- The "eaten" scalar field is known as the _Higgs field_
 
 ### Higgs mechanism for a non-Abelian gauge group
+- In general, for some gauge group $G$, after spontaneous symmetry breaking of the _scalar field_, $G$ will be broken into the _subgroup_ $H \subset G$
+	- The scalar field will still transform as some _representation_ of $G$
+- For a _global symmetry_, the _dimension_ of the Lie algebra gives the _number of Goldstone bosons_
+- For a _local symmetry_ with _representation_ $r$, the _mass term_ is given by:
+$$\frac{g^{2}}{2}v^{\dagger} T_{r}^{a}T_{r}^{b}vA^{\mu a}A^{b}_{\mu}=\frac{(m^{2})^{ab}}{2}A^{\mu a}A^{b}_{\mu}$$
+
+- Gauge bosons corresponding to _broken generators_ where $T^{a}v\neq 0$ become _massive_
+- The others will remain _massless_
+
+## The Higgs mechanism in electroweak theory
+- Applying to electroweak theory, which has group $SU(2)\otimes U(1)$ and gauge bosons:
+$$W_{\mu}^{\pm},W^{3}_{\mu},B_{\mu}$$
+- $W_{\mu}^{\pm}$ and $Z_{\mu}$ become _massive_ while $A_{\mu}$ remains _massless_
+- From the above, the group should be broken into $U(1)$, which is some _combination_ of the original $U(1)$ and the $U(1)$ _subgroup of_ $SU(2)$
+
+### Gauge boson masses
+- Introduce a _scalar field_ (as opposed to spinor), the _Higgs field_ $H$, transforming as a _doublet_ of $SU(2)$, with a _hypercharge_ of $Y=1/2$
+- The Lagrangian involving $H$, with the _Higgs potential_:
+$$\displaylines{\mathcal{L} \supset (D^{\mu }H)^{\dagger}(D_{\mu }H)-\mu^{2}(H^{\dagger}H)+\lambda(H^{\dagger}H)^{2} \\ D_{\mu}H=\left( \partial_{\mu}+i \frac{g}{2}\sigma^{i}W_{\mu}^{i}+i \frac{g'}{2}B_{\mu} \right)H}$$
+- The _vacuum expectation value_ for $H$:
+$$\sqrt{ H^{\dagger}H }=\sqrt{ \frac{\mu^{2}}{2\lambda} }\equiv \frac{v}{\sqrt{ 2 }}$$
+- Without loss of generality, for _real_ $v$
+$$\langle H \rangle=\pmatrix{0 \\ v/\sqrt{ 2 }} $$
+- The _gauge boson mass term_ is then:
+$$\frac{1}{8}\pmatrix{0 & v} \pmatrix{gW_{\mu}^{3}+g'B_{\mu} & \sqrt{ 2 }gW_{\mu}^{+} \\ \sqrt{ 2 }gW_{\mu}^{-} &-gW_{\mu}^{3}+g'B_{\mu}}\pmatrix{gW_{\mu}^{3}+g'B_{\mu} & \sqrt{ 2 }gW_{\mu}^{+} \\ \sqrt{ 2 }gW_{\mu}^{-} &-gW_{\mu}^{3}+g'B_{\mu}}\pmatrix{0 \\ v}$$
+- Using the below expressions for the Weinberg angle:
+$$\cos\theta_{W}=\frac{g}{\sqrt{ g^{2}+g'^{2} }} \qquad \sin\theta_{W}=\frac{g'}{\sqrt{ g^{2}+g'^{2} }}$$
+- The mass term then gives:
+$$\frac{(gv)^{2}}{4}W_{\mu}^{+}W^{\mu-}+\frac{(g^{2}+g'^{2})v^{2}}{8}Z_{\mu}Z^{\mu}$$
+- Since $W_{\mu}^{\pm}$ is _complex_, and $Z_{\mu}$ is _real_, one must take their different _normalisations_ into account to get the masses:
+$$m_{W}=\frac{gv}{2} \qquad m_{Z}=\frac{\sqrt{ g^{2}+g'^{2} }v}{2}=\frac{m_{W}}{\cos\theta_{W}} \qquad m_{A}=0$$
+- The _massless photon_ and the ratio of $m_{W}/m)Z$ are in agreement with the _choice of symmetry breaking_ from $SU(2)\otimes U(1)$ to $U(1)$
+
+### Fermion masses
+- The _quarks_ and _leptons_ also get their masses from the Higgs field
+- Given the Higgs field as a scalar field doublet of $Y=1/2$, one can write the _Yukawa couplings_ to the fermionic fields:
+$$\mathcal{L} \supset -\lambda^{u}\overline{q_{L}}H^{c}u_{R}-\lambda^{d}\overline{q_{L}}Hd_{R}-\lambda^{e}\overline{l_{L}}He_{R}+\text{h.c.}$$
+- Here, $H^{c}$ is a doublet of _opposite hypercharge_ $Y=-1/2$
+$$H^{c}\equiv i\sigma^{2}H$$
+- This represents an _interaction_ between the fermionic fields and the Higgs field
+- From the Higgs vacuum expectation value:
+$$m_{u}=\frac{\lambda^{u}v}{\sqrt{ 2 }}\qquad m_{d}=\frac{\lambda^{d}v}{\sqrt{ 2 }}\qquad m_{e}=\frac{\lambda^{e}v}{\sqrt{ 2 }}$$
+# The Standard Model
+- The Standard Model includes _three generations_ of quarks and leptons
+
+- Also taking QCD into account, it is reliant on the gauge group:
+$$SU(3)\otimes SU(2)\otimes U(1)$$
+
+- Fields and their representations:
+![[Standard model representations.png|400]]
+## The Higgs boson
+- The $H$ field has 4 degrees of freedom ($SU(2)$ doublet, with complex values)
+
+- 3 degrees of freedom are _"eaten" by the electroweak gauge bosons_
+- The final scalar field is the _Higgs boson_, which is _massive_
+
+- Going to the _unitary gauge_, one writes the field as:
+$$H=\frac{1}{\sqrt{ 2 }}\pmatrix{ 0\\ v+h(x)}$$
+- $h(x)$ is a _real scalar field_
+	- It has _no electric charge_ due to the lack of global phase symmetry
+
+- Its _coupling_ to other fields can be found by substituting $v+h$ in the _Higgs coupling_ Lagrangians
+- The _Yukawa coupling_ to fermion $i$:
+$$\mathcal{L} \supset -\frac{m_{i}}{v}h\bar{\psi}_{i}\psi_{i}$$
+- Coupling to the _gauge bosons_:
+$$\mathcal{L} \supset m_{W}^{2}\left( \frac{2h}{v}+\frac{h^{2}}{v^{2}} \right)W_{\mu}^{+}W^{\mu-}+\frac{m_{Z}^{2}}{2}\left( \frac{2h}{v}+\frac{h^{2}}{v^{2}} \right)Z_{\mu}Z^{\mu}$$
+- The Higgs boson also has _self interactions_:
+$$\displaylines{\begin{align}
+\mathcal{L} \supset +\frac{\mu^{2}}{2}(v+h)^{2}-\frac{\lambda}{4}(v+h)^{4} &\supset -\lambda v^{2}h^{2}-\lambda vh^{3}-\frac{\lambda}{4}h^{4} \\
+&=-\frac{m_{h}^{2}}{2}h^{2}-\frac{m_{h}^{2}}{2v}h^{3}-\frac{m_{h}^{2}}{8v^{2}}h^{4}
+\end{align} \\ m_{h}^{2}=2\lambda v^{2}}$$
+### Higgs boson decays
+- Despite the self-interaction term, energy-momentum conservation _prevents_ decaying into multiple Higgs bosons
+	- Gluons: self-interaction is allowed as it is _massless_
+
+- For a _light Higgs_, it will be _below mass threshold_ to decay into gauge boson pairs
+	- Competing factor: the _Higgs-gauge boson couplings_ all grow with the mass of the gauge boson
+- For light Higgs $>10 \text{ GeV}$, decay to _bottom quark pairs_ dominates
+- For _heavy_ Higgs $m_{h}>2m_{W}$, decay to $W^{+}W^{-}$ and $ZZ$ pairs dominates
+	- The _crossover_ to this regime is slightly below $2m_{W}=160\text{ GeV}$, at $\sim 140\text{ GeV}$ instead by allowing _one virtual boson_ (not on-shell), which then subsequently decays into non-virtual quarks and leptons
+
+- Partial decay widths and branching ratios:
+![[Higgs boson decays.png]]
+- The actual mass of $m_{h}\approx 125\text{ GeV}$ has a variety of decay modes
+
+- The Higgs has a coupling to $\gamma\gamma$ and $gg$ modes despite having _no electric or colour charge_
+- They can be generated by _quark loops_, such as:
+![[Higgs to photons.png|250]]
+
+- Higgs boson generation in $p+p$ collisions is mainly due to the _$gg$ coupling_ as the quark-Higgs coupling is _small_
+
 # Renormalisation
 
 ## Ultraviolet divergences
@@ -396,11 +490,44 @@ $$\hbar=c=1$$
 $$[S]=0 \qquad[x^{\mu}]=-1 \qquad [\mathcal{L}]=4$$
 - _Bosonic fields_ $\phi$ and _fermionic fields_ $\psi$ have _different dimensions_
 	- Bosonic term: _two derivatives_ / fermionic term: _one derivative_
-$$[\phi]=1 \qquad [\psi]=\frac{3}{2}$$
+$$[\phi_{B}]=1 \qquad [\psi_{f}]=\frac{3}{2}$$
 - The _mass_ in the Lagrangian will always have dimension $1$
 - The _gauge couplings_ are always _dimensionless_
 
 ### Renormalisability from diagrams
+- Given some diagram, to find renormalisability, one must find the _superficial degree of divergence_ $D$, for any _loop momentum_ in the diagram:
+$$D=\text{power of }k\text{ in numerator}-\text{power of }k\text{ in denominator}$$
 
+- Divergences:
+	- $D>0$ is a _divergent diagram_
+	- $D=0$ is a _logarithmically divergent_ diagram
+	- $D<0$ is _finite_
 
+- Characterise a diagram with the integers:
+	- $L$ loops
+	- $F_{I,E}$ _internal/external fermion propagators_
+	- $B_{I,E}$ _internal/external boson propagators_
+	- $V$ _vertices_
+	- $P_{j}$ as the _power_ of _loop momentum_ entering vertex $j$ (e.g. 3-gluon vertex $P=1$)
+
+- This gives:
+$$D=4L-F_{I}-2B_{I}+\sum_{j}P_{j}$$
+- This can be cast into another form from the _geometric properties_ of the diagram
+
+- The _number of integrated loops_:
+	- Each vertex has a _delta function_ which fixes one of the momenta
+$$L=F_{I}+B_{I}-V+1$$
+- Meanwhile, each _vertex_ $j$ comes from a term in $\mathcal{L}$ with dimension 4, with $F_{j},B_{j}$ fermionic/bosonic fields, momenta $P_{j}$, and _coupling_ $g_{j}$
+$$4=\frac{3}{2}F_{j}+B_{j}+P_{j}+\mathrm{dim}(g_{j})$$
+- When one then _sums over all vertices_, as _internal_ propagators end on 2 of them, and each _external_ propagator ends in 1:
+$$\sum_{j}F_{j}=2F_{I}+F_{E} \qquad \sum_{j}B_{j}=2B_{I}+B_{E}$$
+- Combining these results, one gets:
+$$D=4-\frac{3}{2}F_{E}-B_{E}-\sum_{j}\mathrm{dim}(g_{j})$$
+- For _fixed initial and final states_, the superficial degree of divergence is _only dependent on the dimension of couplings involved_
+
+- If a coupling has _negative mass dimension_, the divergence _gets worse for each loop diagram included_, and the theory _cannot be renormalised_
+- For both QED and the Standard Model, they are _renormalisable_
+	- Only couplings of _vanishing_ or positive mass dimension
+
+- Meanwhile, gravity (with the _Einstein-Hilbert action_) has _negative mass coupling_ and is therefore _not renormalisable perturbatively_
 ## Non-renormalisable interactions

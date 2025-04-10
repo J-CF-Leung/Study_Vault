@@ -80,22 +80,22 @@ $$Z=\exp(-\beta F)=\mathrm{Tr}(e^{-\beta H})$$
 ### Order parameter
 - The _order parameter_ near the critical point may be dictated by the _critical exponents_
 - Behaviour of _magnetisation_ in the Ising model near zero field:
-$$m(T, H\to 0^{+})=\begin{cases}
+$$m(T, h\to 0^{+})=\begin{cases}
 0 &T>T_c \\ |t|^{\beta} &T<T_{c}
 \end{cases}$$
 - $t$ is the _reduced temperature_ $(T-T_{c})/T_{c}$
 
 - Meanwhile, along the _critical isotherm_:
-$$m(T=T_{c}, H)\propto H^{1/\delta}$$
+$$m(T=T_{c}, h)\propto h^{1/\delta}$$
 ### Response function
 - Meanwhile, the _response functions_ can also be described by _critical exponents_, giving the _divergences_ near the critical point
 	- Example: compressibility becoming infinite
 - The _zero field susceptibility_:
-$$\chi_{\pm}(T,H\to 0^{\pm})=\frac{\partial m}{\partial H}\Bigg|_{H=0^{\pm}}\propto|t|^{-\gamma_{\pm}}$$
+$$\chi_{\pm}(T,h\to 0^{\pm})=\frac{\partial m}{\partial h}\Bigg|_{h=0^{\pm}}\propto|t|^{-\gamma_{\pm}}$$
 - Often, the two _divergences_ have the _same power law_ $\gamma=\gamma_{+}=\gamma_{-}$
 
 - Similarly, the _heat capacity_, as the _thermal response function_:
-$$C_{\pm}=\frac{\partial E}{\partial T}\propto|t|^{-\alpha_{\pm}}$$
+$$C_{\pm}=\frac{\partial E}{\partial T}\Bigg|_{h=0}\propto|t|^{-\alpha_{\pm}}$$
 - There can be a _positive_ $\alpha$ giving a divergence
 - Or, a _negative_ $\alpha$ gives a _finite_ $C$, with or without a _cusp_
 ### Correlation functions
@@ -111,13 +111,13 @@ $$\chi= \frac{1}{V}\frac{\partial \langle M \rangle }{\partial h}=\frac{\beta}{V
 $$\chi=\frac{\beta}{V}\mathrm{Var}(M)=\frac{\beta}{V}\left(\langle M^{2} \rangle-\langle M \rangle^{2}  \right)$$
 - This is a _sum of separate magnetisations_, taking the _continuum limit_:
 $$M=\int  d^3\boldsymbol{x}\,m(\boldsymbol{x}) $$
-- Each magnetisation has the _same definition of susceptibility_:
+- Each microscopic magnetisation has the _same definition of susceptibility_:
 $$k_{B}T\chi=\int  d\boldsymbol{x} \int  d\boldsymbol{x}'\,[\langle m(\boldsymbol{x})m(\boldsymbol{x}') \rangle -\langle m(\boldsymbol{x}) \rangle\langle m(\boldsymbol{x}') \rangle  ]  $$
 - As the system is _symmetric under translation_, $\langle m(\boldsymbol{x}) \rangle$ is a _constant_ $m$ while $\langle m(\boldsymbol{x})m(\boldsymbol{x}') \rangle=G(\boldsymbol{x}-\boldsymbol{x}')$ is _only dependent on translation_
 
 - The _connected correlation function_
 $$\langle m(\boldsymbol{x})m(\boldsymbol{x}') \rangle_{C}\equiv \langle (m(\boldsymbol{r})-\langle m(\boldsymbol{r}) \rangle)(m(\boldsymbol{r}')-\langle m(\boldsymbol{r}') \rangle)  \rangle  =G(\boldsymbol{r}-\boldsymbol{r}')-m^{2}$$
-- Susceptibility:
+- Susceptibility can then be expressed as:
 $$k_{B}T\chi=\int  d\boldsymbol{x}\,\langle m(\boldsymbol{x})m(0) \rangle_{C}  $$
 
 - The _correlation length_ is the lengthscale at which the _correlation function dies off_:
@@ -242,7 +242,7 @@ $$\beta H=\int  d\boldsymbol{r}\,\left[ \frac{t}{2}m^{2}+um^{4}+vm^{6}+\frac{K}{
 
 ## Gaussian functional integration
 - Consider the Gaussian integral:
-$$\mathcal{Z}_{1}=\int  d\phi\,\exp\left( -\frac{\phi^{2}}{2G}+h\phi \right)=\sqrt{ 2\pi G }\exp\left( \frac{h^{2}}{2G} \right) $$
+$$\mathcal{Z}_{1}=\int  d\phi\,\exp\left( -\frac{\phi^{2}}{2G}+h\phi \right)=\sqrt{ 2\pi G }\exp\left( \frac{h^{2}G}{2} \right) $$
 - The _one-point correlation_, or some _average_, from treating the exponential as some _probabilistic weight_:
 $$\langle \phi \rangle=\frac{\partial \ln \mathcal{Z}_{1}}{\partial h} =hG$$
 ### Moments and cumulants
@@ -303,14 +303,15 @@ $$G^{-1}(\boldsymbol{x},\boldsymbol{x}')=\delta^{d}(\boldsymbol{x}-\boldsymbol{x
 $$G(\boldsymbol{q})=\frac{1}{q^{2}+\xi^{-2}}$$
 - This is related to the Fourier transform of the correlation function:
 $$\langle \phi(q)\phi(q') \rangle_{c}=(2\pi)^{d}\delta^{d}(q+q')G(q) $$
-### Example: from Ising model to Ginzburg-Landau
+## Hubbard-Stratonovich decoupling: from Ising model to Ginzburg-Landau
 $$\beta H_\text{Ising}=-J\sum_{\langle ij \rangle }\sigma_{i}\sigma_{j}-h\sum_{i}\sigma_{i}$$
 - The partition function is the _trace_
 	- $K_{ij}$ is the coupling matrix, equal to $J$ for _neighbouring_ $i,j$
 $$\mathcal{Z}=\mathrm{Tr}[e^{-\beta H}]=\sum_{\{\sigma_{i}\}}\exp\left[ \sum_{i,j}\sigma_{i}K_{ij}\sigma_{j}+h\sum_{i}\sigma_{i} \right]$$
-- Introduce the _Hubbard-Stratonovich_ transformation:
+- Introduce an _auxiliaru field_ $\phi$ via the _Hubbard-Stratonovich_ transformation:
 $$\int  \mathcal{D}\phi \,\exp\left( -\frac{1}{2}\boldsymbol{\phi}\mathbf{K}^{-1} \boldsymbol{\phi+\boldsymbol{\phi}\cdot \boldsymbol{s}} \right)=\sqrt{ 2\pi \det K }\exp\left( \frac{1}{2}\boldsymbol{s} \mathbf{K}\boldsymbol{s}\right) $$
 - The partition function, by doing the transformation in _reverse_ and introducing the _auxiliary field_ $\phi(\boldsymbol{r})$
+	- Factor of $1/2$ compared to previous $\beta H$: double counting
 $$\mathcal{Z}=\frac{1}{\sqrt{ 2\pi \det K }}\sum_{\{\sigma_{i}\}}\int \mathcal{D}\phi\exp\left[ -\frac{1}{2}\boldsymbol{\phi}\mathbf{K}^{-1} \boldsymbol{\phi}+ (\boldsymbol{h}+\boldsymbol{\phi})\cdot \boldsymbol{\sigma}\right] $$
 
 - Summing over $\sigma_{i}=\pm 1$, the final formula for the partition function:
@@ -343,7 +344,7 @@ V(\phi)&=\frac{1}{2R^{2}}\phi^{2}-\frac{1}{a^{d}}\ln\left[ \cosh\left( \sqrt{ \f
 - When spontaneous symmetry occurs, one can have _long wavelength excitations_, known as _Goldstone modes_
 	- An _infinitely long wavelength_ excitation would simply _shift to a different degenerate ground state_
 
-### Goldstone mode fluctuations in spin models
+### Fluctuations in a 2-component spin model
 - Take a _2-component spin model_
 	- Ising model is 1-component, and does not have continuous symmetry
 $$\beta H=\int  d^dx\,\left[ \frac{t}{2}\boldsymbol{m}^{2}+u\boldsymbol{m}^{4}+\frac{K}{2}|\nabla \boldsymbol{m}|^{2}-\boldsymbol{h}\cdot \boldsymbol{m} \right] $$
@@ -369,7 +370,7 @@ $$\displaylines{\langle \theta(\boldsymbol{x}) \rangle=0 \\ G(\boldsymbol{x},\bo
 $$\displaylines{1=\int_{V}  d^{d}x \,\nabla^{2}C_{d}(\boldsymbol{x})=\oint d\boldsymbol{S}\cdot \nabla C_{d}=S_{d}\,x^{d-1}\,\frac{dC_{d}}{dx}  \\ \frac{dC_{d}}{dx}=\frac{1}{x^{d-1}S_{d}} \qquad C_{d}(x)=\frac{x^{2-d}}{(2-d)S_{d}}+\text{const.}}$$
 - For _small distances_ in $d>2$, one has to introduce a _high momentum cut-off_ corresponding to the _lattice spacing_ $a$:
 $$\langle \theta(0)^{2} \rangle=\frac{a^{2-d}}{(2-d)S_{d}} $$
-
+### Long range order and the Mermin-Wagner theorem
 - Calculating the _two-point correlation_ for the _order parameter_, from the [[#General cumulant expansion|cumulant expansion]], it is related to the _correlation for fluctuations_
 $$\langle \boldsymbol{m}(\boldsymbol{x})\cdot \boldsymbol{m}(0) \rangle=\bar{m}^{2}\mathrm{Re} \langle \exp({i[\theta(\boldsymbol{x})-\theta(0)])} \rangle =\bar{m}^{2} \exp\left[ -\frac{1}{2}\langle [\theta(\boldsymbol{x})-\theta(0)]^{2} \rangle  \right]$$
 - Interpretation: _large fluctuations_ will _reduce long-range order_
@@ -491,6 +492,7 @@ a^{4-d}/K^{2} &d\geq4 \\ \xi^{4-d}/K^{2} &d<4
 - For $d<4$, due to the _correlation length_ going to $0$, there is a _divergence in heat capacity_ at $T_{c}$ due to fluctuations near the saddle point
 - There is an _upper critical dimension_ of $d_{u}=4$
 	- _Between lower_ and _upper_ crititcal dimensions, _long-range order_ still _exists_ but the _critical behaviour_ is _modified_
+
 ### Ginzburg criterion
 - For some materials (e.g. superconductors), the _experimental data matches mean field theory_ (see [[#Finding critical exponents|here]])
 - The _experimental temperature resolution_ may _not be enough to resolve_ the _peak_ from fluctuations
@@ -644,7 +646,7 @@ $$A(1)=D(1)=1$$
 - This implies the _functional form_ of the parameters under _rescaling_:
 $$t(b)=b^{y_{t}}t\qquad h(b)=b^{y_{h}}h$$
 - For $\xi$ to diminish, $y_{t},y_{h}>0$
-### Behaviour of physical quantities
+### Recovering scaling relations
 - After _renormalisation_, the _statistical weight_ of the _new configuration_ is some _sum_ of the old configuration
 
 - The _partition function_, being a _sum of weights_, is _unchanged_:
@@ -749,7 +751,7 @@ $$\nu_{1}=\frac{1}{y_{1}}\qquad \Delta_{\alpha}=\frac{y_{\alpha}}{y_{1}}$$
 - In general, _universality_ occurs as the _microscopic details_ of a system make up the _space of irrelevant operators_ giving the basin of attraction
 
 ## Solution to the Gaussian model
-- The _Gaussian_ theory for an $n-$component spin, with terms up to _quadratic order_:
+- The _Gaussian_ theory for an _$n-$component spin_, with terms up to _quadratic order_:
 	- It is only meaningful for $t>0$ since there is _no stablising quartic term_
 	- Can only describe the phase transition _from the ordered side_
 $$\mathcal{Z}=\int  \mathcal{D}\boldsymbol{m}(\boldsymbol{x})\,\exp\left\{ -\int  d^{d}x\left[ \frac{t}{2}m^{2}+\frac{K}{2}|\nabla \boldsymbol{m}|^{2} -\boldsymbol{h}\cdot \boldsymbol{m}\right]  \right\} $$
@@ -834,13 +836,17 @@ $$\beta H[\boldsymbol{m}_{<}]=\beta H_{0}[\boldsymbol{m}_{<}]-\ln[\mathcal{Z_{0}
 - The average $\langle U \rangle_{\boldsymbol{m}_{>}}$ has _contributions_ from 4 _types_ of terms
 	- Only terms with _even order_ in $\boldsymbol{m}_{>}$ can contribute to the average
 $$\begin{align}
-C_{1}(\{\boldsymbol{q}_{i}\})=
+C_{1}(\{\boldsymbol{q}_{i}\})&=\langle \boldsymbol{m}_{<}(\mathbf{q}_{1}) \cdot \boldsymbol{m}_{<}(\boldsymbol{q}_{2})\boldsymbol{m}_{<}(\boldsymbol{q}_{3})\cdot \mathbf{m}_{<}(\boldsymbol{q}_{4})\rangle_{\boldsymbol{m}_{>}}  \\
+C_{2}(\{\boldsymbol{q}_{i}\})&=\langle \boldsymbol{m}_{>}(\mathbf{q}_{1}) \cdot \boldsymbol{m}_{>}(\boldsymbol{q}_{2})\boldsymbol{m}_{<}(\boldsymbol{q}_{3})\cdot \mathbf{m}_{<}(\boldsymbol{q}_{4})\rangle_{\boldsymbol{m}_{>}}  \\
+C_{3}(\{\boldsymbol{q}_{i}\})&=\langle \boldsymbol{m}_{>}(\mathbf{q}_{1}) \cdot \boldsymbol{m}_{<}(\boldsymbol{q}_{2})\boldsymbol{m}_{>}(\boldsymbol{q}_{3})\cdot \mathbf{m}_{<}(\boldsymbol{q}_{4})\rangle_{\boldsymbol{m}_{>}}  \\
+C_{4}(\{\boldsymbol{q}_{i}\})&=\langle \boldsymbol{m}_{>}(\mathbf{q}_{1}) \cdot \boldsymbol{m}_{>}(\boldsymbol{q}_{2})\boldsymbol{m}_{>}(\boldsymbol{q}_{3})\cdot \mathbf{m}_{>}(\boldsymbol{q}_{4})\rangle_{\boldsymbol{m}_{>}} 
 \end{align}$$
 - They can be represented _diagrammatically_, with the _dotted lines_ indicating _averaging over high frequency modes_
 ![[Wilsonian renormalisation quartic diagrams.png]]
 - The first diagram is simply $U[\boldsymbol{m}_{<}]$, while the last term gives a _constant_
 
 - For the _unperturbed_ Hamiltonian, from [[#Gaussian functional integration|functional integration]]:
+	- Working to _leading order_, hence using the unperturbed correlator
 $$\langle m_{\alpha}(\boldsymbol{q})m_{\beta}(\boldsymbol{q}') \rangle_{0}=\delta_{\alpha\beta}(2\pi)^{d} \delta^{d}(\boldsymbol{q}+\boldsymbol{q}')G_{0}(\boldsymbol{q}) \qquad G_{0}(\boldsymbol{q})=\frac{1}{t+Kq^{2}}$$
 - From the above:
 $$\begin{align}
@@ -848,6 +854,7 @@ C_{2}(\{q_{i}\})&=nG_{0}(\mathbf{q}_{1})(2\pi)^{d}(\mathbf{q}_{1}+\mathbf{q}_{2}
 C_{3}(\{q_{i}\})&=G_{0}(\mathbf{q}_{1})(2\pi)^{d}(\mathbf{q}_{1}+\mathbf{q}_{3})\boldsymbol{m}_{<}(\mathbf{q}_{2})\cdot \boldsymbol{m}_{<}(\boldsymbol{q}_{4})
 \end{align}$$
 - Add _all permutations_ of $C_{1},C_{2},C_{3}$ into the coarse-grained Hamiltonian
+	- Permutations given by _Wick's Theorem_
 
 - One finds that $K$ and $u$ are _un-renormalised_, meanwhile:
 $$t\longrightarrow \tilde{t}=t+4u(n+2)\int_{\Lambda/b}^{\Lambda}\frac{d\boldsymbol{q}}{(2\pi)^{d}}G_{0}(\boldsymbol{q})$$
@@ -923,6 +930,7 @@ $$\displaylines{\mathcal{Z}=\int_{\boldsymbol{x}_{i}(\beta)=\boldsymbol{x}_{i}(0
 
 - The _ultraviolet cut-off_ for $\tau$ is $\Lambda_{\tau}=\infty$, such that _rescaling_ $\omega$ does not change it
 
+- Example: a 2D harmonic oscillator can be mapped onto the _1D Ising model_
 ## O(2) quantum rotors
 - The case of a _particle constrained on a ring_
 - The possible orientations are generated by the $O(2)$ group:
@@ -932,3 +940,71 @@ $$V(\boldsymbol{x}_{i},\boldsymbol{x}_{j})=-g\boldsymbol{x}_{i}\cdot \boldsymbol
 
 - The Hamiltonian, with the _angular momentum operator_ $L$:
 $$H_{O(2)}=\sum_{i}\frac{L_{i}^{2}}{2m}-g\sum_{\langle ij \rangle }\boldsymbol{x}_{i}\cdot \boldsymbol{x}_{j}$$
+- A _quantum phase transition_ is _non-analytic behaviour_ in the _ground state_, only at _zero temperature_
+- For $mg\gg 1$, the Hamiltonian favours _alignment_
+	- The ground state is _degenerate_, leading to _gapless excitations_
+	- The system can be expanded in terms of _fluctuations_ $\phi_{\boldsymbol{k}}$:
+	$$H_{O(2)}\xrightarrow{mg\gg 1}\sum_{\boldsymbol{k}}\left[ \frac{1}{2m}L_{\boldsymbol{k}}L_{-\boldsymbol{k}}+\frac{1}{2}g|k|^{2}\phi_{\boldsymbol{k}}\phi_{-\boldsymbol{k}} \right]$$
+	- It is a series of _harmonic oscillators_ with spectrum $\sqrt{ g/m }|k|$
+
+- For $mg\ll 1$, the ground state is that of _zero momentum for all rotors_
+	- The alignment term acts as a _perturbation_ to allow _mixing_ of states
+	- There will be an _energy gap_ between the ground and first excited states
+
+- There will be some _intermediate value_ of $mg$ to give the _transition_
+
+- Mapping this Hamiltonian to the partition function:
+	- The rotors are allowed to _wind_ between $\tau=0$ and $\tau=\beta$
+$$\displaylines{\mathcal{Z}_{O(2)}=\int_{\phi_{i}(\beta)=\phi_{i}(0)+2\pi n}\mathcal{D}[\phi_{i}(\tau)]\,\exp(-H[\phi_{i}(\tau)]) \\ H[\phi_{i}(\tau)]=\int_{0}^{\beta}d\tau\,\left[ \sum_{i=1}^{N} \frac{m(\partial_{\tau}\phi_{i})^{2}}{2}-g\sum_{\langle ij \rangle }\cos(\phi_{i}-\phi_{j}) \right]}$$
+- As it is mapped onto a $d+1-$dimensional Hamiltonian, the ground state will have a [[#Long range order and the Mermin-Wagner theorem|Goldstone mode]]
+- Long-range order is _destroyed_ for a $d\leq1$ lattice of rotors
+
+### Approximate treatment
+- Expand the potential term _quadratically_ at zero temperature:
+$$H[\phi_{i}(\tau)]=\int_{0}^{\infty} \frac{m}{2}\sum_{i}(\partial_{\tau}\phi_{i})^{2}+ \frac{g}{2}\sum_{\langle ij \rangle } (\phi_{i}-\phi_{j})^{2}$$
+- After Fourier expansion:
+$$H=\int_{-\infty}^{\infty}d\tau\, \sum_{\boldsymbol{q}} \left[\frac{m}{2}|\partial_{\tau}\phi_{\boldsymbol{q}}|^{2}+ \frac{g}{2}q^{2}|\phi_{\boldsymbol{q}}|^{2}\right]$$
+- Then Fourier expanding in _imaginary time_:
+$$H=\int_{-\infty}^{\infty}d\omega\,\sum_{\boldsymbol{q}\in \text{BZ}} \frac{1}{2}(m\omega^{2}+gq^{2})|\phi_{\boldsymbol{q}}(\omega)|^{2}$$
+- This is a _simple harmonic oscillator_ with _dispersion_:
+$$\omega=\sqrt{ \frac{g}{m} }|q|$$
+- It is a _Goldstone mode_
+
+- Then calculating the expectation value:
+$$\langle \phi_{i}^{2} \rangle=\int d\omega \sum_{\boldsymbol{q} \in\text{ BZ}} \frac{1}{m\omega^{2}+gq^{2}}\sim \int_\text{BZ} \frac{d^{d}q}{(2\pi)^{d}} \frac{1}{|q|} $$
+- It is _divergent_ if $d\leq 1$
+### Ginzburg-Landau action for the O(2) rotor
+- From [[#Hubbard-Stratonovich decoupling from Ising model to Ginzburg-Landau|Hubbard-Stratonovich decoupling]], transforming $\Psi_{i}$ and $\Psi_{i}^{*}$ independently:
+$$\displaylines{\mathcal{Z}_{O(2)}=\mathcal{N}\int_{\phi_{i}(\beta)=\phi_{i}(0)+2\pi n}\mathcal{D}[\phi_{i}(\tau)]\,\mathcal{D}[\Psi_{i}(\tau),\Psi_{i}^{*}(\tau)]\,\exp(-S[\phi_{i}(\tau),\Psi _{i}(\tau)]) \\ \begin{align}
+S[\phi_{i}(\tau),\Psi_{i}(\tau)]=\int_{0}^{\beta}d\tau\Bigg[ &\sum_{i} \frac{m(\partial_{\tau}\phi_{i})^{2}}{2}+[e^{i\phi_{i}(\tau)}\Psi_{i}(\tau)+e^{-i\phi_{i}(\tau)}{\Psi^{*}_{i}(\tau)}] \\ +&\sum_{ij}\Psi_{i}(\tau)G_{ij}^{-1}\Psi_{j}(\tau)\Bigg] \qquad G_{\langle ij \rangle }=\frac{g}{2}
+\end{align}}$$
+- Then _expand the exponential_ in the order parameter, keeping only terms which obey _global phase symmetry_ $\phi_{i}(\tau)\to \phi_{i}(\tau)+\chi$
+	- Other terms _average_ to zero
+$$\displaylines{\begin{align}
+&\mathcal{Z}_{O(2)}=\mathcal{N}\mathcal{Z}_{\phi}\int\mathcal{D}[\Psi_{i}(\tau),\Psi_{i}^{*}(\tau)]\,\exp\left[-\int_{0}^{\beta}d\tau\sum_{ij}\Psi_{i}(\tau)G_{ij}^{-1}\Psi_{j}(\tau)\right] \times \\
+\Bigg[&1+\sum_{i}\int_{0}^{\beta}d\tau\,d\tau'\,\Psi_{i}(\tau)\Psi_{i}^{*}(\tau') \langle e^{i\phi_{i}(\tau)-i\phi_{i}(\tau')} \rangle_{S[\phi_{i}(\tau)]}  \\
++&\frac{12}{4!}\sum_{i\neq j} \int_{0}^{\beta}d\tau_{1}d\tau_{2}d\tau_{3}d\tau_{4}\langle e^{i\phi_{i}(\tau_{1})-i\phi_{i}(\tau_{2})+i\phi_{j}(\tau_{3})-i\phi_{j}(\tau_{4})} \rangle_{S[\phi_{i}(\tau)]} \Psi_{i}(\tau_{1})\Psi_{i}^{*}(\tau_{2})\Psi_{j}(\tau_{3})\Psi_{j}^{*}(\tau_{4}) \\
++& \frac{6}{4!}\sum_{i} \int_{0}^{\beta}d\tau_{1}d\tau_{2}d\tau_{3}d\tau_{4}\langle e^{i\phi_{i}(\tau_{1})-i\phi_{i}(\tau_{2})+i\phi_{i}(\tau_{3})-i\phi_{i}(\tau_{4})} \rangle_{S[\phi_{i}(\tau)]} \Psi_{i}(\tau_{1})\Psi_{i}^{*}(\tau_{2})\Psi_{i}(\tau_{3})\Psi_{i}^{*}(\tau_{4})\Bigg]
+\end{align} \\ \mathcal{Z}_{\phi}=\int\mathcal{D}[\phi_{i}(\tau)]\,\exp\left[-\int_{0}^{\beta}d\tau\,\sum_{i} \frac{m(\partial_{\tau}\phi_{i})^{2}}{2}\right] \\ \langle \cdot \rangle_{S[\phi_{i}(\tau)]} =\frac{1}{\mathcal{Z}_{\phi}}\int\mathcal{D}[\phi_{i}(\tau)]\exp\left[-\int_{0}^{\beta}d\tau\,\sum_{i} \frac{m(\partial_{\tau}\phi_{i})^{2}}{2}\right]\Big(\cdot\Big)}$$
+
+
+- _Coarse-grain_ the system such that $\Psi$ is also a function of _position_
+- This gives the partition function:
+$$\displaylines{\mathcal{Z}_{O(2)}=\mathcal{NZ}_{\phi}\int\mathcal{D}[\Psi_{i}(\boldsymbol{r},\tau),\Psi_{i}^{*}(\boldsymbol{r},\tau)]\exp(-S[\Psi(\boldsymbol{r},\tau)]) \\ \begin{align}
+S[\Psi(\boldsymbol{r},\tau)]=\int \frac{d^{d}r}{a^{d}} \,d\tau \bigg[&t\,|\Psi(\boldsymbol{r},\tau)|^{2}+ \frac{a^{2}}{4gd^{2}} |\nabla \Psi(\boldsymbol{r},\tau)|^{2}  \\
++&16m^{3}|\partial_{\tau}\Psi(\boldsymbol{r},\tau)|^{2}+28m^{3}|\Psi(\boldsymbol{r},\tau)|^{4} \bigg] \\ &-\frac{1}{2}\left( \int \frac{d^{d}r}{a^{d}}\,d\tau \,4m|\Psi(\boldsymbol{r},\tau)|^{2}\right)^{2}
+\end{align} \\ t=\frac{1}{2gd}-4m}$$
+- $t=0$ corresponds to the _zero temperature transition_ where $g=(8md)^{-1}$
+- $t=-4m$ corresponds to $g\to \infty$, the _classical limit_
+#### Detailed derivation of O(2) Gizburg-Landau action
+
+### The dynamical exponent
+- The Ginzburg-Landau action for the $O(2)$ rotor is _isotropic_ in spacetime
+- One can _rescale_:
+$$\boldsymbol{r}\to \frac{a}{2 \sqrt{ g }d}\boldsymbol{r} \qquad \tau\to 4m^{3/2}\tau$$
+- Correlations in both _time_ and _space_ will _diverge_ with the same exponent at $t=0$
+$$\xi \sim \xi_{\tau} \sim \frac{1}{|t|^{\nu}}$$
+
+- For _general systems_:
+$$\xi \sim \frac{1}{|t|^{\nu}} \qquad \xi_{\tau} \sim \frac{1}{|t|^{z\nu}}$$
+- $z$ is the _dynamical exponent_ of the system

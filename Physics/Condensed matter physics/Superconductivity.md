@@ -739,7 +739,7 @@ $$\Delta=-\frac{1}{V}\sum_{\boldsymbol{k}'}g\Delta \frac{1-2f(E_{\boldsymbol{k}'
 
 - Generalise to a $k-$_dependent_ interaction, maintaining _singlet pairing_
 - With some _kernel_ $K_{kk'}$ for transitions from $(\boldsymbol{k},-\boldsymbol{k})$ to $(\boldsymbol{k}',-\boldsymbol{k}')$
-$$\Delta_{k}=-\sum_{k'}K_{kk'}\Delta_{k'} \frac{1-f(E_{k'})}{2E_{k'}}\qquad E_{\boldsymbol{k}}=\sqrt{ \xi_{\boldsymbol{k}}^{2}+|\Delta_{\boldsymbol{k}}|^{2} }$$
+$$\Delta_{k}=-\sum_{k'}K_{kk'}\Delta_{k'} \frac{1-2f(E_{k'})}{2E_{k'}}\qquad E_{\boldsymbol{k}}=\sqrt{ \xi_{\boldsymbol{k}}^{2}+|\Delta_{\boldsymbol{k}}|^{2} }$$
 
 - One can also generalise the model to be _spin-dependent_:
 $$\displaylines{H=\sum_{\boldsymbol{k}\sigma}\varepsilon_{\boldsymbol{k}}a^{\dagger}_{\boldsymbol{k}\sigma}a_{\boldsymbol{k}\sigma}+\sum_{\boldsymbol{k}\boldsymbol{k}'}\sum_{\alpha\beta\gamma\delta}V_{\boldsymbol{k}\boldsymbol{k}'}^{\alpha\beta\gamma\delta}a^{\dagger}_{\boldsymbol{k}'\alpha}a^{\dagger}_{-\boldsymbol{k}'\beta}a_{-\boldsymbol{k}\gamma}a_{\boldsymbol{k}\delta} \\ \Delta_{\boldsymbol{k}}^{\alpha\beta}=\sum_{\boldsymbol{k}'}V^{\alpha\beta\gamma\delta}_{\boldsymbol{k}\boldsymbol{k}'}\langle a_{-\boldsymbol{k}'\gamma}a_{\boldsymbol{k}'\delta} \rangle }$$
@@ -881,3 +881,10 @@ $$\int \frac{d^{3}k'}{(2\pi)^{3}}=\int \frac{d\xi_{k'}}{\hbar \nu_{k'}}\int dS$$
 $$\displaylines{d^{3}k'=2\pi\,d(-\cos\theta)\,(k')^{2}dk' \\ q^{2}=|\boldsymbol{k}-\boldsymbol{k}'|^{2}=k^{2}+(k')^{2}-2kk'\cos\theta \\ d(-\cos\theta)=\frac{q\,dq}{kk'}}$$
 - Then for $\xi_{k'}\ll\varepsilon_{F}$
 $$\int_\text{occ} \frac{d^{3}k'}{(2\pi)^{3}}=N(0)\int_{-\varepsilon_{c}}^{0} \hbar\,d\omega \int_{0}^{2k_{F}}\frac{q\,dq}{2k_{F}^{2}}$$
+
+### BCS gap equation
+
+# Strong electron-phonon coupling
+
+
+# Heavy fermion systems
