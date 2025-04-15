@@ -274,7 +274,7 @@ $$\langle \phi_{i}\dots \phi_{j} \rangle_{c}=\frac{\partial }{\partial k_{i}}\do
 - The moment generating function is:
 $$\langle e^{\mathbf{k}\phi} \rangle= \exp\left[ \mathbf{h}^{T}\mathbf{Gk}+\frac{1}{2}\mathbf{k}^{T}\mathbf{Gk} \right]$$
 - This gives the _first two cumulants_:
-	- The higher cumulants vanish
+	- The higher cumulants vanish for a Gaussian distribution
 $$\langle \phi_{i} \rangle_{c}=G_{ij}h_{j}\qquad \langle \phi_{i}\phi_{j} \rangle_{c}=G_{ij}  $$
 - Combining the results, for any _linear combination_ of variables $A=\mathbf{a\cdot}\phi$
 $$\langle e^{A} \rangle=\exp\left( \langle A \rangle_{c}+\frac{\langle A^{2} \rangle_{c}}{2}   \right) $$
@@ -316,8 +316,8 @@ $$\mathcal{Z}=\frac{1}{\sqrt{ 2\pi \det K }}\sum_{\{\sigma_{i}\}}\int \mathcal{D
 
 - Summing over $\sigma_{i}=\pm 1$, the final formula for the partition function:
 $$\mathcal{Z}\propto \int  \prod_{r}d\phi(r) \exp\left[ -\frac{1}{2}\sum_{r,r'}\phi(r)K^{-1}(r,r')\phi(r')+\sum_{r}\ln \cosh(\phi+h) \right] $$
-- From _lattice translation symmetry_:
-$$K(\boldsymbol{r},\boldsymbol{r}')=K(\boldsymbol{r}-\boldsymbol{r}')$$
+- From _lattice translation symmetry_, with $d$ lattice vectors $\boldsymbol{a}_{j}$:
+$$K(\boldsymbol{r},\boldsymbol{r}')=K(\boldsymbol{r}-\boldsymbol{r}')=J\sum_{j=1}^{d}\delta_{\mathbf{r}-\boldsymbol{r}',\boldsymbol{a}_{j}}+\delta_{\boldsymbol{r}-\boldsymbol{r}',-\boldsymbol{a}_{j}}$$
 
 - Fourier transform of $K^{-1}$:
 $$K^{-1}(\boldsymbol{r}-\boldsymbol{r}')=\int  \frac{d^dk}{(2\pi)^{d}}  \frac{\exp[i\boldsymbol{k}\cdot(\boldsymbol{r}-\boldsymbol{r}')]}{\tilde{K}(\boldsymbol{k})}$$
@@ -607,6 +607,8 @@ $$G_\text{crit}(\lambda \boldsymbol{x})=\lambda^{p}G_\text{crit}(\boldsymbol{x})
 - The only relevant lengthscale in a system is $\xi$
 
 - Renormalisation: a method of _eliminating features at lengthscale_ $x\ll \xi$
+
+## Renormalisation of spin models: the Migdal-Kadanoff method
 ## Renormalisation procedure
 - First, _coarse-grain_ the system from _microscopic lengthscale_ $a$ to $ba$, where $b>1$
 - This is accomplished by _integrating out fluctuations_ on lengthscales $<ba$
@@ -723,6 +725,10 @@ $$S=S^{*}+\sum_{i}g_{i}\mathcal{O}_{i}\longrightarrow S'=S^{*}+\sum_{i}g_{i}b^{y
 	- If $y_{i}<0$, $g_{i}$ will _decrease_ under scaling such that $\mathcal{O}_{i}$ is an _irrelevant operator_
 	- If $y_{i}=0$, $\mathcal{O}_{i}$ is a _marginal operator_, and _higher order terms_ are required to track its relevance
 
+- The dimension above which couplings become _irrelevant_ is the _upper critical dimension_
+	- Above $d_{u}$, if $f$ is _non-analytic around the fixed point_, irrelevant couplings are still required to obtain the _critical exponents_
+	- At $d_{u}$, one gets perfect agreement with the _Gaussian exponents_
+
 - The _space_ spanned by the _irrelevant operators_ is known as the _basin of attraction_
 	- As $\xi$ must always _decrease_ under renormalisation, and $\xi(\boldsymbol{S}^{*})=\infty$, it must also be _infinite for all points on the basin_
 
@@ -830,7 +836,7 @@ $$\begin{align}
 &=\mathcal{Z}_{0}^{>}\int\mathcal{D}\boldsymbol{m}_{<}\,\exp(-\beta H_{0}[\boldsymbol{m}_{<}])\langle \exp(-U[\boldsymbol{m}_{<},\boldsymbol{m}_{>}]) \rangle_{\boldsymbol{m}_{>}}  \\
 &=\mathcal{Z}_{0}^{>}\int\mathcal{D}\boldsymbol{m}_{<}\,\exp\Big(-\beta H_{0}[\boldsymbol{m}_{<}]+\ln\langle \exp(-U[\boldsymbol{m}_{<},\boldsymbol{m}_{>}]) \rangle_{\boldsymbol{m}_{>}}\Big)
 \end{align}$$
-
+### Perturbative renormalisation of couplings
 - To deal with the lattter term in the exponent, using only the _leading term_ in the [[#General cumulant expansion|cumulant expansion]]
 $$\beta H[\boldsymbol{m}_{<}]=\beta H_{0}[\boldsymbol{m}_{<}]-\ln[\mathcal{Z_{0}^{>}}]+\langle U \rangle_{\boldsymbol{m}_{>}}+O(u^{2}) $$
 - The average $\langle U \rangle_{\boldsymbol{m}_{>}}$ has _contributions_ from 4 _types_ of terms
@@ -868,6 +874,7 @@ $$\begin{align}
 $$t'=b^{-d}z^{2}\tilde{t} \qquad K'=b^{-d-2}z^{2}K\qquad u'=b^{-3d}z^{4}u$$
 - Then set $z=b^{1+d/2}$ such that $K=K'$, and there is a _fixed point_ at $t^{*}=u^{*}=0$
 
+### Recursive relations and renormalisation flow
 - The _recursion relations_ near the fixed point:
 $$\displaylines{t'=t(b)=b^{2}\left[ t+4u(n+2)\int_{\Lambda/b}^{\Lambda} \frac{d^{d}q}{(2\pi)^{d}} G_{0}(\boldsymbol{q})\right] \\ u'=u(b)=b^{4-d}u}$$
 - This _recursion_ can be converted into a _differential equation_ by setting $b=e^{l}$
@@ -887,10 +894,18 @@ $$y_{t}=2\qquad y_{u}=4-d$$
 - $y_{t}=2$ is associated with $u=0$
 - $y_{u}=4-d$ is associated with $t=-4u(n+2)K_{d}\Lambda^{d-2}/K$
 
+- For $d>4$, there is _only one relevant direction_ due to $y_{t}$, matching expectations of the _phase transition_
+- For $d<4$, there are _two relevant directions_ and is _unstable_
+- In this _one-loop approximation_:
+![[One loop RG flow.png|400]]
+
+- If one includes _quadratic perturbations_, there will be an _additional fixed point_ for $d<4$
+	- $u^{2}$ perturbations to both $t$ and $u$ are _negative_ 
+
 # Quantum phase transitions
 - Deriving the _Ginzburg-Landau action_ using the _path integral_
 
-## The path integral representation
+## Path integrals and the quantum-classical mapping
 - A _many-body quantum Hamiltonian_, accounting for _external potentials and inter-particle interactions_:
 $$H=\sum_{i=1}^{N}\frac{p_{i}^{2}}{2m}+V(\boldsymbol{x}_1,\boldsymbol{x}_{2},\dots \boldsymbol{x}_{N})$$
 - The _canonical commutation relations_:
@@ -926,11 +941,19 @@ $$\displaylines{\mathcal{Z}=\int_{\boldsymbol{x}_{i}(\beta)=\boldsymbol{x}_{i}(0
 	- In the quantum picture, for $\beta=\infty$, one only need to account for the _ground state_
 - For a _finite temperature_, the extra dimension has a _finite length_ $\beta$
 
+- The system evolves with an _imaginary time_, such that the analagous _time evolution operator_ is $\exp(-H\tau)$
 ![[Quantum classical map.png]]
 
 - The _ultraviolet cut-off_ for $\tau$ is $\Lambda_{\tau}=\infty$, such that _rescaling_ $\omega$ does not change it
 
 - Example: a 2D harmonic oscillator can be mapped onto the _1D Ising model_
+
+### Correlators in the ground state
+- Given a _classical correlator_ for a $d-$dimensional system, depending on some _correlation length_:
+$$\langle \boldsymbol{m}(\boldsymbol{x})\cdot \boldsymbol{m}(0) \rangle=f(|\boldsymbol{x}|,\xi) $$
+
+- For a _quantum system_, taking the correlator at different _imaginary times_, can be extended into the imaginary time dimension:
+$$\langle \boldsymbol{m}(\boldsymbol{x},\tau)\cdot \boldsymbol{m}(0,0) \rangle= f\left( \sqrt{ |\boldsymbol{x}|^{2}+\tau^{2} },\xi\right)$$
 ## O(2) quantum rotors
 - The case of a _particle constrained on a ring_
 - The possible orientations are generated by the $O(2)$ group:
@@ -974,30 +997,93 @@ $$\omega=\sqrt{ \frac{g}{m} }|q|$$
 $$\langle \phi_{i}^{2} \rangle=\int d\omega \sum_{\boldsymbol{q} \in\text{ BZ}} \frac{1}{m\omega^{2}+gq^{2}}\sim \int_\text{BZ} \frac{d^{d}q}{(2\pi)^{d}} \frac{1}{|q|} $$
 - It is _divergent_ if $d\leq 1$
 ### Ginzburg-Landau action for the O(2) rotor
+
+#### Derivation of O(2) Gizburg-Landau action: H-S decoupling
 - From [[#Hubbard-Stratonovich decoupling from Ising model to Ginzburg-Landau|Hubbard-Stratonovich decoupling]], transforming $\Psi_{i}$ and $\Psi_{i}^{*}$ independently:
 $$\displaylines{\mathcal{Z}_{O(2)}=\mathcal{N}\int_{\phi_{i}(\beta)=\phi_{i}(0)+2\pi n}\mathcal{D}[\phi_{i}(\tau)]\,\mathcal{D}[\Psi_{i}(\tau),\Psi_{i}^{*}(\tau)]\,\exp(-S[\phi_{i}(\tau),\Psi _{i}(\tau)]) \\ \begin{align}
 S[\phi_{i}(\tau),\Psi_{i}(\tau)]=\int_{0}^{\beta}d\tau\Bigg[ &\sum_{i} \frac{m(\partial_{\tau}\phi_{i})^{2}}{2}+[e^{i\phi_{i}(\tau)}\Psi_{i}(\tau)+e^{-i\phi_{i}(\tau)}{\Psi^{*}_{i}(\tau)}] \\ +&\sum_{ij}\Psi_{i}(\tau)G_{ij}^{-1}\Psi_{j}(\tau)\Bigg] \qquad G_{\langle ij \rangle }=\frac{g}{2}
 \end{align}}$$
 - Then _expand the exponential_ in the order parameter, keeping only terms which obey _global phase symmetry_ $\phi_{i}(\tau)\to \phi_{i}(\tau)+\chi$
 	- Other terms _average_ to zero
+	- Truncating to _fourth order_ in $\Psi$
 $$\displaylines{\begin{align}
 &\mathcal{Z}_{O(2)}=\mathcal{N}\mathcal{Z}_{\phi}\int\mathcal{D}[\Psi_{i}(\tau),\Psi_{i}^{*}(\tau)]\,\exp\left[-\int_{0}^{\beta}d\tau\sum_{ij}\Psi_{i}(\tau)G_{ij}^{-1}\Psi_{j}(\tau)\right] \times \\
 \Bigg[&1+\sum_{i}\int_{0}^{\beta}d\tau\,d\tau'\,\Psi_{i}(\tau)\Psi_{i}^{*}(\tau') \langle e^{i\phi_{i}(\tau)-i\phi_{i}(\tau')} \rangle_{S[\phi_{i}(\tau)]}  \\
 +&\frac{12}{4!}\sum_{i\neq j} \int_{0}^{\beta}d\tau_{1}d\tau_{2}d\tau_{3}d\tau_{4}\langle e^{i\phi_{i}(\tau_{1})-i\phi_{i}(\tau_{2})+i\phi_{j}(\tau_{3})-i\phi_{j}(\tau_{4})} \rangle_{S[\phi_{i}(\tau)]} \Psi_{i}(\tau_{1})\Psi_{i}^{*}(\tau_{2})\Psi_{j}(\tau_{3})\Psi_{j}^{*}(\tau_{4}) \\
 +& \frac{6}{4!}\sum_{i} \int_{0}^{\beta}d\tau_{1}d\tau_{2}d\tau_{3}d\tau_{4}\langle e^{i\phi_{i}(\tau_{1})-i\phi_{i}(\tau_{2})+i\phi_{i}(\tau_{3})-i\phi_{i}(\tau_{4})} \rangle_{S[\phi_{i}(\tau)]} \Psi_{i}(\tau_{1})\Psi_{i}^{*}(\tau_{2})\Psi_{i}(\tau_{3})\Psi_{i}^{*}(\tau_{4})\Bigg]
 \end{align} \\ \mathcal{Z}_{\phi}=\int\mathcal{D}[\phi_{i}(\tau)]\,\exp\left[-\int_{0}^{\beta}d\tau\,\sum_{i} \frac{m(\partial_{\tau}\phi_{i})^{2}}{2}\right] \\ \langle \cdot \rangle_{S[\phi_{i}(\tau)]} =\frac{1}{\mathcal{Z}_{\phi}}\int\mathcal{D}[\phi_{i}(\tau)]\exp\left[-\int_{0}^{\beta}d\tau\,\sum_{i} \frac{m(\partial_{\tau}\phi_{i})^{2}}{2}\right]\Big(\cdot\Big)}$$
+#### Derivation: correlators and integrating out $\phi_{i}$
+- Take the _zero temperature limit_ $\beta\to \infty$
+	- Neglect boundary condition $\phi_{i}(\beta)-\phi_{i}(0)=2\pi n$
+- Then, Gaussian integration can be used to get the _two-point correlators_:
+$$\langle \phi(\tau)\phi(\tau') \rangle=\frac{1}{2m}|\tau-\tau'| \qquad \langle e^{i\phi(\tau)-i\phi(\tau')} \rangle=\exp\left( -\frac{1}{2m}|\tau-\tau'| \right)  $$
+- The _quadratic term_ is then:
+	- Use a _Taylor expansion_ and discard higher derivatives/higher order terms
+$$\begin{align}
+\int d\tau_{1}\,d\tau_{2}\,\Psi_{i}(\tau_{1})\Psi_{i}^{*}(\tau_{2})\langle e^{i\phi_{i}(\tau_{1})-i\phi_{i}(\tau_{2})} \rangle &=\int d\tau_{1}\,d\tau_{2} \Psi_{i}(\tau_{1})\Psi_{i}^{*}(\tau_{2}) \,e^{-|\tau_{1}-\tau_{2}|/2m} \\
+&=\int d\tau\,du\,\Psi_{i}\left( \tau-\frac{u}{2} \right)\Psi_{i}^{*}\left( \tau+\frac{u}{2} \right)e^{-|u|/2m}  \\
+&\approx\int d\tau\,du \,\left[ |\Psi_{i}(\tau)|^{2}- \frac{u^{2}}{2}|\partial_{\tau}\Psi_{i}|^{2} \right]e^{-|u|/2m} \\
+&=\int d\tau\,[4m|\Psi_{i}(\tau)|^{2}-16m^{3}|\partial_{\tau}\Psi_{i}|^{2}]
+\end{align}$$
+- For a _four-point correlator_ of $i\neq j$, it _factorises_ into two-point correlators:
+$$\begin{align}
+&\int_{0}^{\beta}d\tau_{1}d\tau_{2}d\tau_{3}d\tau_{4}\langle e^{i\phi_{i}(\tau_{1})-i\phi_{i}(\tau_{2})+i\phi_{j}(\tau_{3})-i\phi_{j}(\tau_{4})} \rangle_{S[\phi_{i}(\tau)]} \Psi_{i}(\tau_{1})\Psi_{i}^{*}(\tau_{2})\Psi_{j}(\tau_{3})\Psi_{j}^{*}(\tau_{4}) \\
+=&\left(\int d\tau \,(4m)|\Psi_{i}(\tau)|^{2} \right)\left(\int d\tau \,(4m)|\Psi_{j}(\tau)|^{2} \right)
+\end{align}$$
+- Consider the _four-point correlator_ with $i=j$, as a _ground state exponential value_ of some _quantum operator_
+	- It can also be considered using the [[#General cumulant expansion|cumulant expansion]]
+	- When it is _not in the ground state_, one has to consider _summing over states_ using the _density matrix_
+$$\displaylines{\langle e^{i\phi_{i}(\tau_{4})-i\phi_{i}(\tau_{3})+i\phi_{i}(\tau_{2})-i\phi_{i}(\tau_{1})} \rangle_{S[\phi_{i}(\tau)]}=\langle 0|\mathcal{T}[e^{i\phi_{i}(\tau_{4})}e^{-i\phi_{i}(\tau_{3})}e^{i\phi_{i}(\tau_{2})}e^{-i\phi_{i}(\tau_{1})}] |0\rangle \\ e^{i\phi_{i}(\tau)}=e^{H_{0}\tau}e^{i\phi_{i}}e^{-H_{0}\tau} \qquad H_{0}=\sum_{i}\frac{(L^{z}_{i})^{2}}{2m}}$$
+- The operators $\exp[\pm i\phi(\tau)]$ _raise_ and _lower_ $m_{l}$ from the ground state at time $\tau$
+- They are _excitations_ from the ground state
 
+- Taking the _propagators_ $\exp(\pm H_{0}\tau)$ into account, the four-point correlator can then be written as:
+$$\langle e^{i\phi_{i}(\tau_{4})-i\phi_{i}(\tau_{3})+i\phi_{i}(\tau_{2})-i\phi_{i}(\tau_{1})} \rangle_{S[\phi_{i}(\tau)]}=\exp\left[ \frac{1}{2m}\int d\tau \,m_{l}(\tau)^{2}\right]$$
+- The first case: $|m_{l}(\tau)|\leq 1$ at all times, such that it can be _factorised_ into _non-overlapping correlators_
+	- The _excitations can be shifted_ as long as they _do not overlap_
+![[O(2) four point correlator factosied.png|400]]
+- wlog, take $\tau_{1,2}<\tau_{3,4}$ such that _raising_ are at $\tau_{1,3}$, and there are $2^{2}$ equivalent configurations ($\tau_{1}\leftrightarrow \tau_{3}, \tau_{2} \leftrightarrow \tau_{4}$) which preserve $|m_{l}(\tau)|\leq 1$
+	- Take $t_{1}=(\tau_{1}+\tau_{2})/2,t_{2}=(\tau_{3}+\tau_{4})/2,u_{1}=\tau_{2}-\tau_{1},u_{1}=\tau_{4}-\tau_{3}$
+- This gives the corresponding term in the action:
+$$\frac{1}{2}\left(\int d\tau \,(4m)|\Psi_{i}(\tau)|^{2}\right)^{2}-32m^{3}\int d\tau\,|\Psi_{i}(\tau)|^{4}$$
 
-- _Coarse-grain_ the system such that $\Psi$ is also a function of _position_
-- This gives the partition function:
+- The second case: $|m_{l}(\tau)|=2$ during some interval such that the correlator _cannot be factorised_ into 2-point correlators
+	- These are _higher energy excitations_ that often do not play a role in the _quantum phase transition_
+![[4 point correlator overlap.png|400]]
+- wlog take $\tau_{1,3}<\tau_{2,4}$, with another equivalent configuration (_simultaneous swap_ of $\tau_{1}\leftrightarrow \tau_{2},\tau_{3}\leftrightarrow \tau_{4}$)
+	- Take $t_{1}=(\tau_{1}+\tau_{3})/2,t_{2}=(\tau_{2}+\tau_{4})/2,u_{1}=\tau_{3}-\tau_{1},u_{1}=\tau_{4}-\tau_{2}$
+- This gives the contribution:
+$$4m^{3}\int d\tau\,|\Psi_{i}(\tau)|^{4}$$
+- All 2-point and 4-point correlator contributions give:
+$$\begin{align}
+\mathcal{Z}_{O(2)}&=\mathcal{NZ}_{\phi}\int\mathcal{D}[\Psi_{i}(\tau),\Psi_{i}^{*}(\tau)]\Bigg[1+\sum_{i}\int d\tau\big(4m|\Psi_{i}(\tau)|^{2}-16m^{3}|\Psi_{i}(\tau)|^{4}\big) \\
+&+\frac{1}{2}\left( \sum_{i} \int d\tau\,(4m)|\Psi_{i}(\tau)|^{2} \right)^{2}-28m^{3}\sum_{i}\int d\tau\,|\Psi_{i}(\tau)|^{4}\Bigg] \\
+&\times\exp\left[-\int_{0}^{\beta}d\tau\sum_{ij}\Psi_{i}(\tau)G_{ij}^{-1}\Psi_{j}(\tau)\right] 
+\end{align}$$
+#### Final O(2) Ginzburg-Landau action
+- The Greens function in _Fourier space_:
+$$\displaylines{\begin{align}
+G_{\boldsymbol{q},\boldsymbol{q}'}=\frac{1}{N}\sum_{i,j}\exp[i(\boldsymbol{q}\cdot \boldsymbol{x}_{i}-\boldsymbol{q}'\cdot \boldsymbol{x}_{j})]G_{ij}&=\delta_{\boldsymbol{q}+\boldsymbol{q}'}\sum_{\mu=1,\dots d}2g\cos(q_{\mu}a) \\
+&\approx2g\delta_{\boldsymbol{q}+\boldsymbol{q}'}\left( d-\frac{1}{2}|q|^{2}a^{2} \right)
+\end{align} \\ G_{\boldsymbol{q},\boldsymbol{q}'}^{-1}=\delta_{\boldsymbol{q},\boldsymbol{q}'} \frac{1}{2gd}\left( 1+\frac{1}{2d}|q|^{2}a^{2} \right)}$$
+
+- _Coarse-grain_ the system such that $\Psi$ is also a function of _position_:
+$$\sum_{\boldsymbol{r}}\to \int \frac{d^{3}r}{a^{d}}$$
+
+- Then _re-exponentiating_ contributions from the correlators gives the partition function:
 $$\displaylines{\mathcal{Z}_{O(2)}=\mathcal{NZ}_{\phi}\int\mathcal{D}[\Psi_{i}(\boldsymbol{r},\tau),\Psi_{i}^{*}(\boldsymbol{r},\tau)]\exp(-S[\Psi(\boldsymbol{r},\tau)]) \\ \begin{align}
 S[\Psi(\boldsymbol{r},\tau)]=\int \frac{d^{d}r}{a^{d}} \,d\tau \bigg[&t\,|\Psi(\boldsymbol{r},\tau)|^{2}+ \frac{a^{2}}{4gd^{2}} |\nabla \Psi(\boldsymbol{r},\tau)|^{2}  \\
 +&16m^{3}|\partial_{\tau}\Psi(\boldsymbol{r},\tau)|^{2}+28m^{3}|\Psi(\boldsymbol{r},\tau)|^{4} \bigg] \\ &-\frac{1}{2}\left( \int \frac{d^{d}r}{a^{d}}\,d\tau \,4m|\Psi(\boldsymbol{r},\tau)|^{2}\right)^{2}
 \end{align} \\ t=\frac{1}{2gd}-4m}$$
 - $t=0$ corresponds to the _zero temperature transition_ where $g=(8md)^{-1}$
 - $t=-4m$ corresponds to $g\to \infty$, the _classical limit_
-#### Detailed derivation of O(2) Gizburg-Landau action
 
+- From the derivation, one sees that the _phase transition terms_ come from the $m_{l}=\pm 1$ _particle-hole excitations_
+	- Phase transition: from the $mg\ll 1$ _gapped, zero angular momentum_ phase to the $mg\gg 1$ _ordered phase_
+- The _stability_ of the Ginzburg-Landau action is ensured by the _quartic term_
+	- From _hardcore repulsion_ between particle-hole pairs
+
+- The _Bose-Hubbard model_ also falls into the $O(2)$ universality class
 ### The dynamical exponent
 - The Ginzburg-Landau action for the $O(2)$ rotor is _isotropic_ in spacetime
 - One can _rescale_:
@@ -1008,3 +1094,14 @@ $$\xi \sim \xi_{\tau} \sim \frac{1}{|t|^{\nu}}$$
 - For _general systems_:
 $$\xi \sim \frac{1}{|t|^{\nu}} \qquad \xi_{\tau} \sim \frac{1}{|t|^{z\nu}}$$
 - $z$ is the _dynamical exponent_ of the system
+- For the $O(2)$ quantum rotor, $z=1$
+
+### Energy gap in O(2) rotors
+- The _finite energy gap_ between the _ground and first excited states_ results in a _finite correlation length_ in imaginary time $\xi_{\tau}$ in the ground state
+- Take the _ground state expectation value_:
+	- wlog, $E_{0}=0$ and $E_{1}$ is the _energy gap_
+$$\begin{align}
+\langle A(\tau)B(\tau') \rangle_{S[\phi_{i}(\tau)]} &\equiv \sum_{n}\langle 0|A|n \rangle e^{-|\tau-\tau'|E_{n}/\hbar} \langle n| B|0\rangle  \\ &\xrightarrow{|\tau-\tau'|\to \infty} \langle 0|A|1 \rangle e^{-|\tau-\tau'|E_{1}/\hbar}\langle 1|B|0 \rangle  
+\end{align}$$
+- The _imaginary time correlation length_ is related to the _energy gap_:
+$$\xi_{\tau}=\frac{\hbar}{E_{1}}$$

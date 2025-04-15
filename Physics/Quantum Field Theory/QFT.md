@@ -814,7 +814,7 @@ $$\bar{\psi}\partial_{\mu}\psi \to{(\Lambda^{-1})^{\nu}}_{\mu}\bar{\psi}\partial
 - Consider the Lagrangian:
 $$\displaylines{\mathcal{L}=\bar{\psi}(i\gamma^{\mu}\partial_{\mu}-m)\psi \\ S=\int  d^4x\,(\bar{\psi}i\gamma^{\mu}\partial_{\mu}\psi-m\bar{\psi}\psi) }$$
 - One then gets the _Dirac equation_:
-$$\displaylines{i\gamma^{\mu}\partial_{\mu}\psi-m\psi=0 \\ i\gamma^{\mu}\partial_{\mu}\bar{\psi}+m\bar{\psi}=0}$$
+$$\displaylines{i\gamma^{\mu}\partial_{\mu}\psi-m\psi=0 \\ i(\partial_{\mu}\bar{\psi})\gamma^{\mu}+m\bar{\psi}=0}$$
 - It is only _first order_ in $\partial_{\mu}$
 - Notation:
 $$\cancel{ \partial }=\gamma^{\mu}\partial_{\mu} \qquad \cancel{ p } =\gamma^{\mu}p_{\mu}$$
