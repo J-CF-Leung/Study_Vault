@@ -732,7 +732,7 @@ $$\displaylines{\mathcal{V}_\text{ret}(\boldsymbol{r},t)=\int V_\text{ret}(\bold
 - Space avoidance
 	- e.g. induced _spin-spin interactions_ (such as _superexchange_)
 ![[Spatial avoidance.png|500]]
-# Beyond BCS Theory
+# Conventional superconductivity beyond BCS Theory
 ## Generalisation of gap parameter
 - The gap equation in BCS theory, with a singular $\Delta$ parameter coming from _mean field decoupling_:
 $$\Delta=-\frac{1}{V}\sum_{\boldsymbol{k}'}g\Delta \frac{1-2f(E_{\boldsymbol{k}'})}{2E_{\boldsymbol{k}'}}$$
@@ -828,7 +828,7 @@ $$\displaylines{V_{\boldsymbol{q}\omega}=\frac{e^{2}}{\epsilon_{0}q^{2}}\left( 1
 	- Attractive for $\omega<\nu_{\boldsymbol{q}}$
 	- It is _weakened_ for increasing $k_\text{TF}$
 
-## Quantum treatment of phonon-mediated interactions
+## Quantum treatment of mediated electron interactions
 - Due to _virtual emission and reabsorption_, from _second order perturbation theory_, the _ground state energy_ should shift
 	- $\xi=\varepsilon-\mu$
 $$\Delta E_{G}=\sum_{\boldsymbol{k},\boldsymbol{k}'} \frac{|w_{\boldsymbol{q}}|^{2}f_{k}(1-f_{\boldsymbol{k}'})}{\xi_{\boldsymbol{k}}-(\xi_{\boldsymbol{k}'}+\hbar \nu_{\boldsymbol{q}})}$$
@@ -838,11 +838,11 @@ $$\Delta E_{G}=\sum_{\boldsymbol{k},\boldsymbol{k}'} \frac{|w_{\boldsymbol{q}}|^
 
 ### Shift in quasiparticle energy
 - From [[AQCMP#Quasiparticle energy expansion|Fermi liquid theory]], the _shift in quasi-particle energy_ for wavenumber $\boldsymbol{p}$ is:
-	- Energy of _adding_ a particle to state $\boldsymbol{p}$
+	- Quasi-particle energy: energy of _adding_ a particle to state $\boldsymbol{p}$
 $$\Delta \xi_{\boldsymbol{p}}=\frac{\partial}{\partial f_{\boldsymbol{p}}}\Delta E_{G}=\sum_{\boldsymbol{k}'} \frac{|w_{\boldsymbol{q}}|^{2}(1-f_{\boldsymbol{k}'})}{\xi_{\boldsymbol{p}}-(\xi_{\boldsymbol{k}'}+\hbar \nu_{\boldsymbol{q}})}-\sum_{\boldsymbol{k}}\frac{|w_{\boldsymbol{q}}|^{2}f_{\boldsymbol{k}}}{\xi_{\boldsymbol{k}}-(\xi_{\boldsymbol{p}}+\hbar \nu_{\boldsymbol{q}})}$$
 - The two terms represent _shifts_ due to:
-	- Transitions from $\boldsymbol{p}$ to _unoccupied states_ $\boldsymbol{k}'=\boldsymbol{k}+\boldsymbol{q}$ to create another, higher energy quasiparticle
-	- The _blocking_ of transitions from _occupied states_ $\boldsymbol{k}$ to $\boldsymbol{p}$ which could have lowered ground state energy
+	- Transitions from $\boldsymbol{p}$ to _unoccupied states_ $\boldsymbol{k}'=\boldsymbol{k}+\boldsymbol{q}$ to create another, higher energy quasiparticle (a _polaron_)
+	- The _blocking of transitions_ from _occupied states_ $\boldsymbol{k}$ to $\boldsymbol{p}$ which could have lowered ground state energy via thje e-ph interaction
 ![[superconductor quasiparticle.png|400]]
 
 - Changes to quasiparticle energy leads to _mass renormalisation_:
@@ -867,7 +867,7 @@ $$V_{\boldsymbol{q}\omega}=V_{\boldsymbol{q}}^{c}+V^{\text{ind}}_{\boldsymbol{q}
 - This agrees with Bardeen-Pines theory if:
 $$|w_{\boldsymbol{q}}|^{2}=\frac{e^{2}}{2V\epsilon_{0}} \frac{\hbar \nu_{\boldsymbol{q}}}{q^{2}+k_\text{TF}^{2}}$$
 ### Mass renormalisation
-- Renormalisation of the _Fermi velocity_ via parameter $\lambda$, due to shift in $\xi_{k}$
+- Renormalisation of the _Fermi velocity_ $\hbar k/m$ via parameter $\lambda$, due to shift in $\xi_{k}$
 $$\frac{1}{\hbar}\frac{\partial}{\partial k}(\xi_{k}+\Delta \xi_{k})=\frac{1}{\hbar}\left( \frac{\partial \xi_{k}}{\partial k}+\frac{\partial\Delta \xi _{k}}{\partial \xi_{k}} \frac{\partial \xi_{k}}{\partial k} \right)= \frac{1}{\hbar}\frac{1}{1+\lambda} \frac{\partial \xi_{k}}{\partial k}$$
 - Approximating $(1+\lambda)^{-1}\approx 1-\lambda$
 $$\displaylines{\Delta \xi_{\boldsymbol{k}}=-\frac{1}{V}\sum_{\text{occ }\boldsymbol{k}'}V^{\text{ind}}_{\boldsymbol{q}\omega} \\ \lambda=-\frac{\partial\Delta \xi_{k}}{\partial \xi_k}=\int_{\text{occ. }\boldsymbol{k}'}\, \frac{d^{3}k'}{(2\pi)^{3}} \frac{dV^{\text{ind}}_{\boldsymbol{q}\omega}}{\hbar d\omega(k)}}$$
@@ -882,9 +882,191 @@ $$\displaylines{d^{3}k'=2\pi\,d(-\cos\theta)\,(k')^{2}dk' \\ q^{2}=|\boldsymbol{
 - Then for $\xi_{k'}\ll\varepsilon_{F}$
 $$\int_\text{occ} \frac{d^{3}k'}{(2\pi)^{3}}=N(0)\int_{-\varepsilon_{c}}^{0} \hbar\,d\omega \int_{0}^{2k_{F}}\frac{q\,dq}{2k_{F}^{2}}$$
 
-### BCS gap equation
+### Quasiparticle renormalisation
+- Going back to the Hamiltonian:
+$$H-\mu N=\sum_{\boldsymbol{k}}\xi_{\boldsymbol{k}}a^{\dagger}_{\boldsymbol{k}}a_{\boldsymbol{k}}+\frac{g}{2V}\sum_{\boldsymbol{k}\boldsymbol{k}'\boldsymbol{q}}a^{\dagger}_{\boldsymbol{k}+\boldsymbol{q}}a^{\dagger}_{\boldsymbol{k}'-\boldsymbol{q}}a_{\boldsymbol{k}'}a_{\boldsymbol{k}}$$
+- The electron operators can be expressed in terms of _quasiparticle operators_ $\alpha,\alpha ^{\dagger}$
+$$a_{\boldsymbol{k}}^{\dagger}=z^{1/2}\alpha ^{\dagger}_{\boldsymbol{k}}+\dots$$
+- This gives the Hamiltonian as:
+$$H-\mu N=\sum_{\boldsymbol{k}}z\xi_{\boldsymbol{k}}\alpha ^{\dagger}_{\boldsymbol{k}}\alpha_{\boldsymbol{k}}+ \frac{gz^{2}}{V}\sum_{\boldsymbol{k}\boldsymbol{k}'\boldsymbol{q}}\alpha ^{\dagger}_{\boldsymbol{k}+\boldsymbol{q}}\alpha ^{\dagger}_{\boldsymbol{k}'-\boldsymbol{q}}\alpha_{\boldsymbol{k}'}\alpha_{\boldsymbol{k}}+\dots$$
+- $z$ is a _quasiparticle renormalisation factor_, also related to _mass renormalisation_
+	- Assumed to be _independent_ of $k$
+$$z=\frac{1}{1+\lambda}$$
+- This leads to a _reduction of Fermi velocity_ by $z$ and therefore _enhancement of density of states_ $N(0)$ by a factor of $(1+\lambda)$
+- Also, there is an _attenuation_ of the _coupling_ ($|g|$ in the BCS gap equation) by $1/(1+\lambda)^{2}$
 
-# Strong electron-phonon coupling
+- There is then an _enhancement_ of the exponential factor in $T_{c}$
+# Electron-phonon coupling
+- Treat e-ph interactions in more detail to find the _interaction vertex_ $w_{q}$
 
+## e-ph interaction for a single band and monoatomic lattice
 
-# Heavy fermion systems
+### Derivation of the e-ph interaction vertex
+- A Hamiltonian dependent on _electron coordinate_ $\boldsymbol{r}_{i}$ and _ion coordinate_ $\boldsymbol{R}_{i}$
+$$\displaylines{H_\text{e-ph}=\sum_{i,l}U(\boldsymbol{r}_{i}-\boldsymbol{R}_{l})=\int d\boldsymbol{r}\,d\boldsymbol{R}\, n(\boldsymbol{r})U(\boldsymbol{r}-\boldsymbol{R})N(\boldsymbol{R})=\sum_{\boldsymbol{q}}n_{-\boldsymbol{q}}U_{\boldsymbol{q}}N_{\boldsymbol{q}} \\ n(\boldsymbol{r})=\sum_{i}\delta(\boldsymbol{r}-\boldsymbol{r}_{i}) \qquad N(\boldsymbol{R})=\sum_{i}\delta(\boldsymbol{R}-\boldsymbol{R}_{i}) \\ U_{\boldsymbol{q}}=\int d\boldsymbol{s}\,U(\boldsymbol{s})e^{i\boldsymbol{q}\cdot \boldsymbol{s}} \quad n_{\boldsymbol{q}}= \frac{1}{\sqrt{ V }}\int d\boldsymbol{r}\,n(\boldsymbol{r})e^{i\boldsymbol{q}\cdot \boldsymbol{r}} \quad N_{\boldsymbol{q}}= \frac{1}{\sqrt{ V }}\int d\boldsymbol{R}\,N(\boldsymbol{R})e^{i\boldsymbol{q}\cdot \boldsymbol{R}}}$$
+- Given an ion is _displaced_ from the lattice point $\boldsymbol{R}_{0l}$ by $\boldsymbol{u}_{l}$:
+$$N_{\boldsymbol{q}}=\frac{1}{\sqrt{ V }} \sum_{l}e^{i\boldsymbol{q}\cdot \boldsymbol{R}_{l}}\approx \frac{1}{\sqrt{ V }}\sum_{l}\exp(i\boldsymbol{q}\cdot \boldsymbol{R}_{0l})(1+i\boldsymbol{q}\cdot \boldsymbol{u}_{l})=N_{0\boldsymbol{q}}+N_{1\boldsymbol{q}}$$
+- Only _longitudinal phonons_ contribute in this model
+	- Transverse phonons contribute in _higher orders_
+
+- Going to _first order in displacement_, the interaction Hamiltonian is:
+$$\displaylines{N_{1\boldsymbol{q}}=i\boldsymbol{q} \cdot \frac{\boldsymbol{u}_{\boldsymbol{q}}}{V} \qquad \boldsymbol{u}_{\boldsymbol{q}}=\sqrt{ V }\sum_{l}\exp(i\boldsymbol{q}\cdot \boldsymbol{R}_{0l})\boldsymbol{u}_{l} \\ u_{\boldsymbol{q}+\boldsymbol{G}}=u_{\boldsymbol{q}} \qquad n_{\boldsymbol{q}}=n_{-\boldsymbol{q}}^{*} \\ H_\text{e-ph}^{(1)}=\sum_{\boldsymbol{q}}n_{-\boldsymbol{q}}U_{\boldsymbol{q}}N_{1\boldsymbol{q}}=\frac{i}{V}\sum_{\boldsymbol{q}}n^{*}_{\boldsymbol{q}}U_{\boldsymbol{q}}\boldsymbol{q}\cdot u_{\boldsymbol{q}}=\frac{i}{V}\sum_{\boldsymbol{Q},\boldsymbol{G}}n^{*}
+_{\boldsymbol{Q}+\boldsymbol{G}}U_{\boldsymbol{Q}+\boldsymbol{G}}(\boldsymbol{Q}+\boldsymbol{G})\cdot u_{\boldsymbol{Q}+\boldsymbol{G}}}$$
+- Here, $\boldsymbol{Q}$ is _in the 1st BZ_ and $\boldsymbol{G}$ is a _reciprocal lattice vector_
+
+- Then consider only $\boldsymbol{G}=0$ and _second quantise_
+	- $a_{\boldsymbol{Q}}$: _fermion_ operators
+	- $b_{\boldsymbol{Q}}$: _boson_ operators
+	- _Ignoring spin degeneracy_
+
+- The _electron density_:
+$$n_{\boldsymbol{Q}}^{\dagger}= \frac{1}{\sqrt{ V }}\sum_{\boldsymbol{k}}a^{\dagger}_{\boldsymbol{k}+\boldsymbol{Q}}a_{\boldsymbol{k}}$$
+- Considering the _longitudinal phonons_ as a _quantum harmonic oscillator_ of frequency $\nu_{\boldsymbol{Q}}$
+	- $N=N_{s}/V$, where $N_{s}$ is the _number of lattice sites_
+$$u_{\boldsymbol{Q}}=\sqrt{ \frac{N\hbar}{2M\nu_{\boldsymbol{Q}}} }(b_{\boldsymbol{Q}}+b^{\dagger}_{-\boldsymbol{Q}})$$
+- This gives the _interaction Hamiltonian_ for _longitudinal phonons_
+$$H_\text{e-ph}^{(1)}=\sum_{\boldsymbol{k},\boldsymbol{Q}}w_{\boldsymbol{Q}}a^{\dagger}_{\boldsymbol{k}+\boldsymbol{Q}}a_{\boldsymbol{k}}(b_{\boldsymbol{Q}}+b_{-\boldsymbol{Q}}^{\dagger}) \qquad w_{\boldsymbol{Q}}=iQ\sqrt{ \frac{N\hbar}{2M\nu_{\boldsymbol{Q}}}U_{\boldsymbol{Q}} }$$
+- The interaction parameter is $\propto |\boldsymbol{Q}|$, as it is a _Goldstone mode_
+
+- $|w_{Q}|^{2}$ gives the [[#Generalised Bardeen-Pines interaction|Bardeen-Pines model]] if $U_{Q}$ is of the _Thomas-Fermi form_ with ionic charge $Ze\to e$ and in the limit $q\ll k_\text{TF}$
+
+### Canonical transformation of the Frohlich Hamiltonian
+- The Frohlich Hamiltonian:
+$$H=\sum_{\boldsymbol{k}}\varepsilon_{\boldsymbol{k}}a^{\dagger}_{\boldsymbol{k}}a_{\boldsymbol{k}}+\sum_{\mathbf{Q}} \hbar \nu_{\boldsymbol{Q}}b_{\boldsymbol{Q}}^{\dagger}b_{\boldsymbol{Q}}+\sum_{\boldsymbol{k},\boldsymbol{Q}}w_{\boldsymbol{Q}}a^{\dagger}_{\boldsymbol{k}+\boldsymbol{Q}}a_{\boldsymbol{k}}(b_{\boldsymbol{Q}}+b_{-\boldsymbol{Q}}^{\dagger})$$
+- Then use an _operator transformation_ to make an _effective electron-electron interaction term_, while _preserving (anti)commutation relations_
+
+- Analagous to _completing the square_, the boson field can be [[AQCMP#Phonon mediation of e-e interactions|transformed]] to give the _effective electron Hamiltonian_:
+$$H^{\text{eff}}_\text{int}=\frac{1}{2}\sum_{\boldsymbol{k},\boldsymbol{p},\boldsymbol{q}} |w_{\boldsymbol{q}}|^{2} \left( \frac{1}{\varepsilon_{\boldsymbol{k}}-\varepsilon_{\boldsymbol{k}-\boldsymbol{q}}-\hbar \nu_{\boldsymbol{q}}}+\frac{1}{\varepsilon_{\boldsymbol{p}+\boldsymbol{q}}-\varepsilon_{\boldsymbol{p}}-\hbar \nu_{\boldsymbol{q}}} \right)a^{\dagger}_{\boldsymbol{p}+\boldsymbol{q}}a^{\dagger}_{\boldsymbol{k}-\boldsymbol{q}}a_{\boldsymbol{k}}a_{\boldsymbol{p}}$$
+![[Effective e-e interaction ph.png]]
+- This suggests an [[#Generalisation of gap parameter|interaction kernel]]
+	- The kernel describes a _dynamic interaction_ while the above approach is _static_
+	- The approaches agree for $\xi_{\boldsymbol{k}},\xi_{\boldsymbol{k}'}\ll\epsilon_{D}$
+$$K_{\boldsymbol{k}\boldsymbol{k}'}=V(\boldsymbol{q}=\boldsymbol{k}-\boldsymbol{k}',\hbar\omega=\xi_{\boldsymbol{k}'}-\xi_{\boldsymbol{k}})$$
+
+- For _pairing_, restrict $\boldsymbol{p}=-\boldsymbol{k}$
+	- With _spin degeneracy_, pre-factor of $1/2$ drops out
+$$H^{\text{eff}}_\text{pair}=-\frac{1}{2}\sum_{\boldsymbol{k},\boldsymbol{q}} |w_{\boldsymbol{q}}|^{2} \frac{2\hbar \nu_{\boldsymbol{q}}}{(\hbar \nu_{\boldsymbol{q}})^{2}-(\varepsilon_{\boldsymbol{k}+\boldsymbol{q}}-\varepsilon_{\boldsymbol{k}})^{2}} a^{\dagger}_{-\boldsymbol{k}+\boldsymbol{q}}a^{\dagger}_{\boldsymbol{k}-\boldsymbol{q}}a_{\boldsymbol{k}}a_{-\boldsymbol{k}}$$
+## BCS gap equation with Frohlich kernel
+- At $T=T_{c}$, the [[#Generalisation of gap parameter|generalised gap equation]] is _linearised_
+	- Include both the _Frohlich kernel_ $V_{\boldsymbol{q}\omega}^\text{ind}$ and the _Coulomb repulsion_ $V_{\boldsymbol{q}}^{c}$
+$$\Delta_{\boldsymbol{k}}=-\int \frac{d^{3}k'}{(2\pi)^{3}} \frac{V^{\text{ind}}_{\boldsymbol{q}\omega}+V^{c}_{\boldsymbol{q}}}{2\xi_{\boldsymbol{k}'}}\Delta_{\boldsymbol{k}'}\tanh\left( \frac{\xi_{\boldsymbol{k}'}}{2k_{B}T_{c}} \right) \qquad \boldsymbol{q}=\boldsymbol{k}'-\boldsymbol{k}\quad \hbar\omega=\xi_{\boldsymbol{k}'}-\xi_{\boldsymbol{k}}$$
+- This is an _eigenvalue equation_ for the vector $\Delta_{\boldsymbol{k}}$ as the operator is _linear_
+- At $T=T_{c}$, the _eigenvalue_ is $1$
+
+- The eigenvector can _vary in magnitude and sign_ with $\boldsymbol{k}$ to _minimise total energy_
+
+- Take the approximation where $\Delta$ is _constant_ for $|\xi_{\boldsymbol{k}}|\ll\epsilon_{c}\ll\epsilon_{F}$ and _zero elsewhere_
+- [[#$k$ and $ omega$ integrals near the Fermi surface|Transforming the integral]], the gap equation becomes
+	- $\lambda$ is the [[#Mass renormalisation|mass renormalisation parameter]] where $m^{*}=(1+\lambda)m$
+$$\displaylines{1=(\lambda-\mu_{c}) \int_{0}^{\epsilon_{c}} \frac{d\xi'}{\xi'}\tanh\left( \frac{\xi'}{2k_{B}T_{c}} \right)\implies T_{c}\approx \frac{\epsilon_{c}}{k_{B}}\exp\left( - \frac{1}{\lambda-\mu_{c}} \right) \\ \lambda=N(0)\langle |V_{\boldsymbol{q}\omega=0}^\text{ind}| \rangle_\text{FS} \qquad \mu_{c}=N(0)\langle V_{\boldsymbol{q}}^{c} \rangle_\text{FS}  }$$
+- Comparing to the [[#BCS gap equation]], the interaction parameter $|g|$ is replaced with $(\lambda-\mu_{c})$ which includes the effect of both _induced attraction_ and _Coulomb repulsion_
+- In the _Bardeen-Pines model_, $\lambda\approx \mu_{c}$ and $T_{c}$ is vanishingly small ($\Delta$ should not have been taken as a constant)
+	- The effect of repulsion is _over-estimated_
+
+### Retardation effect
+- Let the _induced interaction_ be non-zero in range $-\epsilon_c'<\xi <\epsilon_{c}'$
+- Meanwhile let the _repulsive interaction_ be in range $-\epsilon_{c}<\xi<\epsilon_{c}$
+- Then take $\Delta$ as a _positive constant_ up to $\epsilon_{c}$ and a _negative constant_ up to $\epsilon_{c}'>\epsilon_{c}$
+![[Gap equation retardation effect.png]]
+- This gives the same expression for $T_{c}$ but with:
+$$\mu^{*}=\frac{\mu_{c}}{1+\mu_{c}\ln(\epsilon_{c}'/\epsilon_{c})}<\mu_{c}$$
+- Typically, from _Debye theory_, $\epsilon_{c}\sim\epsilon_{D}$, and from [[#Eliashberg-MacMillan Theory]], $\epsilon_{c}'\approx \epsilon _F$
+
+- The _frequency space sign change_ in $\Delta$ corresponds to the _Cooper pair state in real space_ moving _away from the repulsive core towards the retarded attractive part_ of the total interaction potential
+	- This is the _retardation effect_ (of the Cooper pair state, _in addition to_ retardation in the potential)
+- In _weak coupling_, combined with the [[#Quasiparticle renormalisation|quasiparticle renormalisation factor]], the transition temperature is:
+$$T_{c}\approx \frac{\epsilon_{c}}{k_{B}} \exp\left( -\frac{1+\lambda}{\lambda-\mu^{*}} \right)$$
+- Typically, $\mu^{*}<\lambda$
+
+- From the Bardeen-Pines model:
+$$\lambda=N(0)\langle V^\text{ind}_{\boldsymbol{q}\omega=0} \rangle=\frac{N(0)e^{2}}{4\epsilon_{0}k_{F}^{2}} \int_{0}^{4k_{F}^{2}} \frac{dq^{2}}{q^{2}+k_\text{TF}^{2}}=\frac{k_\text{TF}^{2}}{8k_{F}^{2}}\ln\left( 1+\frac{4k_{F}^{2}}{k_\text{TF}^{2}} \right)\approx \mu_{c}$$
+- _Without_ retardation, $T_{c}$ vanishes
+- For $\epsilon_{c}'/\epsilon_{c}\approx \epsilon_{F}/\epsilon_{D}\approx 10^{2}$, tjhis gives $\lambda\approx 0.5$ and $\mu^{*}\approx{0}.15$
+- In this model, $\lambda$ is _independent_ of $\epsilon_{c}$ while $\mu^{*}$ is _weakly dependent_ on $\epsilon_{c}$, such that $T_{c}$ will _rise monotonically_ with $\epsilon_{c}$
+	- $\epsilon_c$ is some _average_ over phonon modes which is _smaller than Debye energy_
+
+### McMillan formula
+- _Eliashberg-McMillan theory for stronger couplings_ and numerical calculation gives the _McMillan formula_, as a _correction_ from the above
+	- $\theta_{D}$ is an _effective Debye temperature_ given by some averaging
+$$\displaylines{\theta_{D}\ll T_{F}=\frac{\epsilon_{F}}{k_{B}} \qquad \lambda\lesssim 2 \qquad \mu^{*} \lesssim 0.15 \\ T_{c}\approx \frac{\theta_{D}}{1.45}\exp\left( -\frac{1.04(1+\lambda)}{\lambda-\mu^{*}(1+0.62\lambda)} \right)}$$
+
+# Unconventional superconductivity
+- Superconducting phases are often observed _around the quantum phase transition between magnetic and Fermi liquid states_
+- Evidence of _magnetically mediated superconductivity_
+	- Can occur on the border of both _anti-ferromagnetic_ and _ferromagnetic_ states
+![[Magnetic order and superconductivity.png|500]]
+
+- As $d-$electron bands have _broader energy bands_, they can exhibit _higher_ $T_{c}$
+
+## Cuprates
+- Cuprates have common $\ce{ CuO_{2} }$ _planes_, separated by _plane of other atoms_, which act as _spacers and electron reservoirs_ in order to _modify carrier conentration in cuprate planes_
+
+- The electrons can be modelled by a _single tight-binding $d_{x^{2}-y^{2}}$ band_ in a _square lattice_ near _half-filling_
+	- High Coulomb repulsion, such that a _Mott insulator_ is favourable
+- Effect of spacer/doping planes in cuprates:
+![[Cuprate doping.png]]
+
+- The _Fermi surface_ is a _cylinder_ about the _point_ $(\pi,\pi)$ in the BZ
+- The _gap function_ $\Delta_{\boldsymbol{k}}$ has _nodal points_ 
+![[d wave Fermi surface.png|500]]
+- The _gap function_ has $d-$wave symmetry:
+$$\displaylines{\Delta_{\boldsymbol{k}}(T=0)=-\sum_{\boldsymbol{k}'} \frac{K_{\boldsymbol{k}\boldsymbol{k}'}\Delta_{\boldsymbol{k}'}}{2E_{\boldsymbol{k}'}} \\ E_{\boldsymbol{k}}=\sqrt{ (\epsilon_{\boldsymbol{k}}-\epsilon_{F})^{2}+|\Delta_{\boldsymbol{k}}|^{2} } \qquad \Delta_{\boldsymbol{k}}=\Delta(\cos k_{x}-\cos k_{y})=\Delta \eta_{\boldsymbol{k}}}$$
+- Phase diagram in $\ce{ La_{2}CuO_{4} }$:
+	- Transforms into a _d-wave superconducting state_ with a _maximum_ $T_{c}$ at $\sim 0.2$ holes per $\ce{ CuO_{2} }$ square
+	- Antiferromagnetic (AF), pseudo-gap (PG), and charge density wave (CDW) phases
+![[La2CuO4 phases.png|400]]
+
+### Possible mechanism for superconductivity on the border of a Mott transition
+- e-ph interactions alone _cannot account fully_ for superconductivity in the cuprates
+- Accounting for $d-$wave gap symmetry requires _spin-spin_ interactions between carriers
+
+- Considering _spin singlet pairing_ interactions between _quasiparticles of anti-parallel spin_ in a _square lattice_ gives either $k_{x}^{2}+k_{y}^{2}$ or $k_{x}^{2}-k_{y}^{2}$ gap parameter
+![[d wave singlet interaction.png]]
+
+### The t-J model
+- Take a _Hubbard Hamiltonian_ for the $d_{x^{2}-y^{2}}$ tight binding band
+- Account for _nearest neighbour hopping_ and _Coulomb repulsion_
+$$H=\sum_{\boldsymbol{k}\sigma}\epsilon_{\boldsymbol{k}}n_{\boldsymbol{k}\sigma}+U\sum_{i}n_{i\downarrow}n_{i\uparrow} \qquad \epsilon_{\boldsymbol{k}}=-2t(\cos k_{x}+\cos k_{y})=-t\gamma_{k}$$
+
+- Consider a _nearly half full band_ with $U\gg t$
+- The _Schrieffer-Wolff canonical transformation_, a _low-energy description_ (well below $U$)
+$$H_\text{red}=P\left(\sum_{\boldsymbol{k}\sigma}\epsilon_{\boldsymbol{k}}n_{\boldsymbol{k}\sigma}+J\sum_{\langle ij \rangle }\left( \boldsymbol{S}_{i}\cdot \boldsymbol{S}_{j}-\frac{1}{4} \right)\right)$$
+- It is _projected_ onto states with _no double occupancy_ with operator $P$
+
+- Here, $J$ is the _Anderson kinetic superexchange_ parameter:
+$$J=\frac{4t^{2}}{U}$$
+- For _anti-parallel spins_, there can be _virtual hopping_
+- From second order perturbation theory with $t\ll U$ (_strong coupling_ limit), this will _lower energy_ by $-t^{2}/U$, to give the latter term of the Hamiltonian
+	- The _increase in repulsion_ is _offset_ by a _greater decrease in kinetic energy_
+	- In contrast to [[#Quantum treatment of mediated electron interactions|weak coupling]] where the increase in kinetic energy is offset by the decrease in potential energy
+
+- _Projection_ onto single occupancy states _renormalises_ the exchange and hopping
+- Consider an _effective Hamiltonian_ with parameters $t_\text{eff}$ and $J_\text{eff}$
+![[t-J model parameters.png|600]]
+### d-wave gap parameter from t-J model
+- The gap equation at zero temperature:
+$$\displaylines{\Delta_{\boldsymbol{k}}=-\sum_{\boldsymbol{k}'} \frac{K_{\boldsymbol{k}\boldsymbol{k}'}\Delta_{\boldsymbol{k}'}}{2E_{\boldsymbol{k}'}} \\ E_{\boldsymbol{k}}=\sqrt{ (\epsilon_{\boldsymbol{k}}-\epsilon_{F})^{2}+|\Delta_{\boldsymbol{k}}|^{2} } \qquad \epsilon_{\boldsymbol{k}}=-2t_\text{eff}(\cos k_{x}+\cos k_{y})=-t_\text{eff}\gamma_{\boldsymbol{k}}}$$
+- The _kernel_ is the _Fourier transform_ of the nearest neighbour interaction
+	- $N_{s}$: number of _atomic sites_
+$$\displaylines{V_{\boldsymbol{q}}=\frac{1}{N_{s}}\sum_{j}V_{0,j}\exp(-i\boldsymbol{q}\cdot \boldsymbol{r}_{j})=-\frac{3J_\text{eff}/4}{N_{s}}\gamma_{\boldsymbol{q}} \\ K_{\boldsymbol{k}\boldsymbol{k}'}=- \frac{3J_\text{eff}/4}{N_{s}}\gamma_{\boldsymbol{k}-\boldsymbol{k}'}}$$
+- From _substitution_, there is a _d-wave solution_:
+$$\Delta_{\boldsymbol{k}}=\Delta(\cos k_{x}-\cos k_{y})=\Delta \eta_{\boldsymbol{k}}$$
+- The _amplitude_ must satisfy:
+$$1=\frac{3J_\text{eff}/4}{N_{s}}\sum_{\boldsymbol{k}} \frac{\eta_{\boldsymbol{k}}^{2}}{2\sqrt{ (-t_\text{eff}\gamma_{\boldsymbol{k}}-\epsilon_{F})^{2}+\Delta^{2}\eta_{\boldsymbol{k}}^{2} }}$$
+
+### t-J model reormalisation
+- The effective parameters are determined by _projecting_ eigenstates out in the _strong coupling limit_
+- From Gutzwiller Mean Field Theory:
+$$\displaylines{t_\text{eff}=g_tt=\frac{2x}{1+x}t \qquad J_\text{eff}=g_{J}J=\left( \frac{2}{1+x} \right)^{2}J \\ x=1-\langle n_{i\downarrow}+n_{i\uparrow} \rangle }$$
+- $x$ is the _probability_ that there is an _empty neighbouring site_
+- $t_\text{eff}$ must scale with $x$, then require that $t_\text{eff}\to t$ as $x\to 1$, as _double occupancy vanishes_
+- As $x\to 0$, the _effective bandwidth_ vanishes as there are _no empty sites_ in the Mott state (at half filling)
+
+- Given the renormalised parameters (from doping), one can _numerically calculate_ $\Delta$
+- Example: $\ce{ Bi_{2}Sr_{2}CaCu_{2}O_{8+\delta} }$
+![[t-J model gap.png]]
+
+- $\Delta$ gives the _energy scale for pairing_ (not necessarily superconductivity)
+- At small $x$, _small electronic bandwidth_ and _superfluid phase stiffness/coherence_ will _vanish_, therefore $T_{c}$ is _suppressed_
+	- There will be _strong fluctuations of local particle-particle order parameter_
+- $k_{B}T_{c}$ will scale as $g_{t}\Delta$ instead
