@@ -312,7 +312,7 @@ $$\mathcal{Z}=\mathrm{Tr}[e^{-\beta H}]=\sum_{\{\sigma_{i}\}}\exp\left[ \sum_{i,
 $$\int  \mathcal{D}\phi \,\exp\left( -\frac{1}{2}\boldsymbol{\phi}\mathbf{K}^{-1} \boldsymbol{\phi+\boldsymbol{\phi}\cdot \boldsymbol{s}} \right)=\sqrt{ 2\pi \det K }\exp\left( \frac{1}{2}\boldsymbol{s} \mathbf{K}\boldsymbol{s}\right) $$
 - The partition function, by doing the transformation in _reverse_ and introducing the _auxiliary field_ $\phi(\boldsymbol{r})$
 	- Factor of $1/2$ compared to previous $\beta H$: double counting
-$$\mathcal{Z}=\frac{1}{\sqrt{ 2\pi \det K }}\sum_{\{\sigma_{i}\}}\int \mathcal{D}\phi\exp\left[ -\frac{1}{2}\boldsymbol{\phi}\mathbf{K}^{-1} \boldsymbol{\phi}+ (\boldsymbol{h}+\boldsymbol{\phi})\cdot \boldsymbol{\sigma}\right] $$
+$$\mathcal{Z}=\frac{1}{\sqrt{ \det 2\pi K }}\sum_{\{\sigma_{i}\}}\int \mathcal{D}\phi\exp\left[ -\frac{1}{2}\boldsymbol{\phi}\mathbf{K}^{-1} \boldsymbol{\phi}+ (\boldsymbol{h}+\boldsymbol{\phi})\cdot \boldsymbol{\sigma}\right] $$
 
 - Summing over $\sigma_{i}=\pm 1$, the final formula for the partition function:
 $$\mathcal{Z}\propto \int  \prod_{r}d\phi(r) \exp\left[ -\frac{1}{2}\sum_{r,r'}\phi(r)K^{-1}(r,r')\phi(r')+\sum_{r}\ln \cosh(\phi+h) \right] $$

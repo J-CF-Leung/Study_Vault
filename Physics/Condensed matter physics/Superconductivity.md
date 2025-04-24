@@ -21,17 +21,23 @@ $$\frac{\partial B}{\partial t}=-\nabla\times \boldsymbol{E}=\rho \nabla\times \
 - The phenomena above hint at superconductivity being _quantum mechanical_
 - The _supercurrent_ may be related to the wavefunction current $\propto \psi^{*}\nabla \psi-\psi \nabla \psi^{*}$, which is due to a spatially varying _phase_
 ## London equations
+- _Phenomenological_, _macroscopic_ equations governing superconductors
+
+### First London equation
 - From _Drude theory_ and the _relaxation time approximation_:
 $$\left( \frac{\partial}{\partial t}+\frac{1}{\tau} \right)\boldsymbol{j}=\left( \frac{ne^{2}}{m} \right)\boldsymbol{E}$$
-- For perfect conductivity, $\tau\to \infty$
+- For perfect conductivity, $\tau\to \infty$, giving the _first London equation_
 	- $\Lambda=(ne^{2}/m)^{-1}$
 $$\Lambda \frac{\partial}{\partial t}\boldsymbol{j}=\boldsymbol{E}$$
 - One can have a _constant current without any electric field_
-	- In contrast to normal metals where $\boldsymbol{j}=\sigma \boldsymbol{E}$
+	- In contrast to normal metals where $\boldsymbol{j}=\sigma \boldsymbol{E}$ in steady state
 
+### Second London equation
 - Then from Maxwell's equations:
 $$\displaylines{\frac{\partial \boldsymbol{B}}{\partial t}=-\nabla\times \boldsymbol{E}=-\Lambda \nabla\times \frac{\partial}{\partial t}\boldsymbol{j} \\ \boldsymbol{B}=-\Lambda \nabla\times \boldsymbol{j}}$$
 - The _integration constant_ is set to _zero_ due to _flux expuision_
+- Can also be found by _minimising free energy_
+	- Free energy: both the _supercurrent kinetic energy_ and _magnetic field energy_
 
 - Also using $\nabla\times \boldsymbol{B}=\mu_{0}\boldsymbol{j}$, this gives:
 $$-\nabla^{2}\boldsymbol{B}=-\frac{\mu_{0}}{\Lambda}\boldsymbol{B}$$
@@ -39,10 +45,12 @@ $$-\nabla^{2}\boldsymbol{B}=-\frac{\mu_{0}}{\Lambda}\boldsymbol{B}$$
 $$B\propto \exp\left( -\frac{x}{\lambda} \right)\qquad \lambda^{2}=\frac{\Lambda}{\mu_{0}}=\left( \frac{c}{\omega_{p}} \right)^{2}$$
 - Typical depth is $\sim 40\,\text{nm}$
 
+### The London gauge
 - Use the _London gauge_:
 $$\nabla\cdot \boldsymbol{A}=0$$
 - Meanwhile, let $\boldsymbol{A}=0$ in the _bulk_, and $\boldsymbol{A}_{\perp}=0$ on the _surface_
 	- There should be no current going _out_ of the superconductor
+$$\boldsymbol{A}\cdot \hat{\boldsymbol{n}}=0$$
 
 - The London equations then imply that for the _vector potential_:
 	- Satisfied iff London gauge
@@ -168,6 +176,7 @@ $$\psi\to \psi \exp\left( i\frac{q}{\hbar} \chi\right) \qquad \theta\to \theta+\
 - The first Ginzburg-Landau equation has some _lengthscale_ such that it can be written as:
 $$\xi^{2}\nabla^{2}\psi+\psi-\frac{\beta}{|\alpha|}|\psi|^{2}\psi=0\qquad \xi=\sqrt{ \frac{\hbar^{2}}{2m|\alpha|} }$$
 - This is the lengthscale to which the _magnitude_ of $\psi$ might change
+- In a _vortex_, it can be interpreted as the lengthscale around which $|\psi|$ reverts to the _bulk value_, also known as the width of the _vortex core_
 
 - It is related to $\alpha$, a _phenomenological parameter_
 - Hence it also _diverges_ at $T=T_{c}$
@@ -232,6 +241,24 @@ $$B_{E}> \frac{\phi_{0}}{4\pi\lambda^{2}}\ln\left( \frac{\lambda}{\xi} \right) \
 - Type II superconductors form _lattices_ of _circular vortices_
 - Each vortex has _inner radius_ $\xi$ and _outer radius_ $r_{B}<\lambda$
 
+- Let $\xi\ll\lambda$ such that the _vortex core_ can be ignored
+
+- The vortex _screening_ means that _within_ the vortex, one can estimate some $\langle B \rangle$:
+$$\langle B \rangle=B_{E}+\mu_{0} \langle M \rangle=B_{E}-\mu_{0}|M|  $$
+### Magnetic field around the vortex
+- For a _vortex line_ with a _core_ at $r=0$, the London equation becomes:
+$$\boldsymbol{B}-\lambda^{2}\nabla^{2}\boldsymbol{B}=\boldsymbol{\phi}_{0}\delta^{2}(\boldsymbol{r})$$
+- Integrating over a circle of some radius $r$:
+$$\begin{align}
+\int\boldsymbol{B}\,d^{2}r+\mu_{0}\lambda^{2}\int \nabla\times \boldsymbol{J} \,d^{2}r=\int B\,d^{2}r+\mu_{0}\lambda^{2}(2\pi rJ_{s})=\phi_{0} 
+\end{align}$$
+- For $r\gg\lambda$, the second term _drops out_:
+$$\langle B \rangle =\frac{\phi_{0}}{\pi r_{B}^{2}} $$
+- For $r\ll\lambda$, the current term _dominates_:
+$$\displaylines{\mu_{0}J_{s}\approx \frac{\phi_{0}}{2\pi\lambda^{2}r}\approx -\frac{\partial B}{\partial r} \\ B(\lambda)\approx 0 \implies B(r)=\frac{\phi_{0}}{2\pi\lambda^{2}}\ln\left( \frac{\lambda}{r} \right)}$$
+
+![[Vortex magnetic field profile.png]]
+### The upper critical field
 - The _internal field_ $B$ varies _slowly_ within the cylinder as $r_{B}<\lambda$
 - Each vortex is assumed to enclose _one flux quantum_:
 $$\phi_{0}=\pi r_{B}^{2}B$$
@@ -251,6 +278,7 @@ $$B_{c2}=\frac{\phi_{0}}{2\pi \xi^{2}}$$
 $$B_{c1}B_{c2}=B^{2}_{c}$$
 ![[Type II superconductivity transitions.png]]
 
+### Critical fields in a superconductor
 - Summary of _critical fields_
 	- $B_{c}$: the field below which a _homogeneous system_ is superconducting
 	- $B_{c1}$: the field above which _vortex formation is favourable_, as long as it is _below_ $B_{c}$
@@ -275,7 +303,7 @@ $$\frac{B_{c}^{2}}{2\mu_{0}}=\frac{\alpha^{2}}{2\beta}=|\psi_{0}|^{2} \frac{|\al
 - The _equal area construction_:
 ![[Superconductivity equal area.png]]
 
-### Vortex interactions and resistivity
+### Vortex interactions, transport, and resistivity
 - There may be some _transport current_ in the superconductor, such that the _total screening current_ is:
 $$\boldsymbol{J}_{s}=\boldsymbol{J}_\text{vortex}+\boldsymbol{J}_\text{tr}$$
 - The current experiences a _Lorentz force_
@@ -395,7 +423,7 @@ $$I=I_{J}\sin\left( \Theta_{0}+\omega_{J0}t+\frac{\omega _\text{JRF}}{\omega _\t
 - Using a _harmonic expansion_:
 $$I=I_{J}\sum_{\nu=-\infty}^{\infty} J_{\nu}\left( \frac{\omega _\text{JRF}}{\omega _\text{RF}} \right)\sin[\Theta_{0}+(\omega _\text{J0}+\nu\omega _\text{RF})t]+\frac{V_{0}}{R}+\frac{V_\text{RF}}{R}\cos(\omega _\text{RF}t)$$
 - It generates _sideband frequencies_ $\omega_{J0}+\nu\omega _\text{RF}$
-- There is a _constant DC part unless_ the Josephson frequency _matches a multiple of the AC frequency_:
+- There is a _constant DC part $V_{0}/R$ unless_ the Josephson frequency _matches a multiple of the AC frequency_:
 $$\omega_{J0}+\nu\omega _\text{RF}=0\implies \langle I \rangle=J_{\nu}\left( \frac{\omega _\text{JRF}}{\omega _\text{RF}} \right)I_{J}\sin(\Theta_{0})+\frac{V_{0}}{R} $$
 
 - These are _Shapiro spikes_
@@ -481,7 +509,7 @@ $$\kappa_{0}=\oint  \boldsymbol{v}_{s}\cdot d\boldsymbol{s} =v_{s}(r)2\pi r\impl
 
 ### Superfluidity and critical velocity
 - For a particle of mass $M$ _moving through_ the superfluid medium with momentum $P$, it may _dissipate energy by forming excitations_ of energy $\omega_{k}$
-$$\frac{p^{2}}{2M}=\frac{(P-\hbar k)^{2}}{2M}+\omega_{k}\implies \omega_{k}=Vk-\frac{\hbar k^{2}}{2M}\approx Vk$$
+$$\frac{P^{2}}{2M}=\frac{(P-\hbar k)^{2}}{2M}+\omega_{k}\implies \omega_{k}=Vk-\frac{\hbar k^{2}}{2M}\approx Vk$$
 - If $V$ is _below some critical velocity_, this is impossible as there are _no excitations of low enough energy_, such that the flow is _dissipationless_
 
 ## Time-dependent Ginzburg-Landau theory
@@ -896,6 +924,7 @@ $$z=\frac{1}{1+\lambda}$$
 - Also, there is an _attenuation_ of the _coupling_ ($|g|$ in the BCS gap equation) by $1/(1+\lambda)^{2}$
 
 - There is then an _enhancement_ of the exponential factor in $T_{c}$
+
 # Electron-phonon coupling
 - Treat e-ph interactions in more detail to find the _interaction vertex_ $w_{q}$
 
@@ -963,7 +992,7 @@ $$\displaylines{1=(\lambda-\mu_{c}) \int_{0}^{\epsilon_{c}} \frac{d\xi'}{\xi'}\t
 - In the _Bardeen-Pines model_, $\lambda\approx \mu_{c}$ and $T_{c}$ is vanishingly small ($\Delta$ should not have been taken as a constant)
 	- The effect of repulsion is _over-estimated_
 
-### Retardation effect
+### Retardation effect and critical temperature
 - Let the _induced interaction_ be non-zero in range $-\epsilon_c'<\xi <\epsilon_{c}'$
 - Meanwhile let the _repulsive interaction_ be in range $-\epsilon_{c}<\xi<\epsilon_{c}$
 - Then take $\Delta$ as a _positive constant_ up to $\epsilon_{c}$ and a _negative constant_ up to $\epsilon_{c}'>\epsilon_{c}$
@@ -985,7 +1014,7 @@ $$\lambda=N(0)\langle V^\text{ind}_{\boldsymbol{q}\omega=0} \rangle=\frac{N(0)e^
 - In this model, $\lambda$ is _independent_ of $\epsilon_{c}$ while $\mu^{*}$ is _weakly dependent_ on $\epsilon_{c}$, such that $T_{c}$ will _rise monotonically_ with $\epsilon_{c}$
 	- $\epsilon_c$ is some _average_ over phonon modes which is _smaller than Debye energy_
 
-### McMillan formula
+### McMillan formula for critical temperature
 - _Eliashberg-McMillan theory for stronger couplings_ and numerical calculation gives the _McMillan formula_, as a _correction_ from the above
 	- $\theta_{D}$ is an _effective Debye temperature_ given by some averaging
 $$\displaylines{\theta_{D}\ll T_{F}=\frac{\epsilon_{F}}{k_{B}} \qquad \lambda\lesssim 2 \qquad \mu^{*} \lesssim 0.15 \\ T_{c}\approx \frac{\theta_{D}}{1.45}\exp\left( -\frac{1.04(1+\lambda)}{\lambda-\mu^{*}(1+0.62\lambda)} \right)}$$

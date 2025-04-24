@@ -81,8 +81,10 @@ $$\mathcal{L}=(\overline{\psi_{L}}\cancel{ \partial }\psi_{L}+\overline{\psi_{R}
 ## CPT
 
 ### Charge conjugation
-
-
+- Charge conjugation can be implemented in _Dirac spinors_ by:
+$$\psi \to i\gamma^{2}\psi^{*}$$
+- For a _matrix_ (e.g. in [[#Electroweak theory]]), send them to the _minus transpose_
+$$A^{\mu}_{ij}\to -A^{\mu}_{ji}$$
 ### Parity
 - Parity is the transformation:
 $$x^{0}\to x^{0} \qquad x^{i}\to -x^{i}$$
@@ -277,7 +279,7 @@ D_{\mu}=\partial_{\mu}+i \frac{g}{2}W_{\mu}^{i}\sigma^{i} &=\partial_{\mu}+i \fr
 - The _quarks_ and _leptons_ can then be packaged into $SU(2)$ _doublets_:
 $$l\equiv \pmatrix{\nu \\ e} \qquad q\equiv \pmatrix{u \\ d}$$
 - The Lagrangian will contain the terms:
-$$\mathcal{L} \supset i(\bar{l}\cancel{ D }l+\bar{q}\cancel{ D }q) \supset ig\sqrt{ 2 }\bar{\nu}\cancel{ W }^{+}e$$
+$$\mathcal{L} \supset i(\bar{l}\cancel{ D }l+\bar{q}\cancel{ D }q) \supset ig\sqrt{ 2 }\bar{\nu}\cancel{ W }^{+}e^{-}$$
 
 - The $W_{\mu}^{\pm}$ fields carry an _electric charge_ of $\pm |e|$
 - [[#Charge conjugation]] sends fields into the _minus transpose_, giving:
@@ -292,8 +294,9 @@ $$W_{\mu}^{\pm}\to W_{\mu}^{\mp}$$
 - The $Z$ boson and the _photon_ are interpreted as a _linear combination_ of $W_{\mu}^{3}$ (coupling to _only left-handed_ fermions) and another $U(1)$ field, denoted $B_{\mu}$ (coupling to _both_ left and right handed fermions)
 - This gives _electroweak theory_
 
-- The _left-handed fermions_ in the $SU(2)$ doublets $q_{L},l_{L}$ (with coupling $g$), are _also given a $U(1)$ charge_ for coupling to $B_{\mu}$ (with coupling $g'$), known as the _weak hypercharge_ $Y_{q,l}$
-- The _right-handed fermions_ $u_{R},d_{R},e_{R}$ are _singlets_ of $SU(2)$ such that they _do not transform_ under $SU(2)$, while given the $U(1)$ _weak hypercharges_ $Y_{u,d,e}$
+- The _left-handed fermions_ in the $SU(2)$ doublets $q_{L},l_{L}$ (with coupling $g$), are _also given a $U(1)$ charge_ for coupling to $B_{\mu}$, known as the _weak hypercharge_ $Y_{q,l}g'$
+
+- The _right-handed fermions_ $u_{R},d_{R},e_{R}$ are _singlets_ of $SU(2)$ such that they _do not transform_ under $SU(2)$, while given the $U(1)$ _weak hypercharges_ $Y_{u,d,e}g'$
 	- Only _left-handed_ neutrinos have been observed
 
 - The _physical gauge fields_ $A_{\mu}$ and $Z_{\mu}$ must be some _linear combination_ of $W_{\mu}^{3}$ and $B_{\mu}$

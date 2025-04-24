@@ -1260,7 +1260,7 @@ $$\Lagr=-\frac{1}{4}F^{\mu \nu}F_{\mu \nu}+\bar{\psi}(i\cancel{ D }-m)\psi$$
 
 - _Photon polarisation vectors_ for _external photon lines_:
 $$\text{Incoming: }\epsilon^{s}_{\mu}(p) \qquad \text{Outgoing: }{\epsilon^{s}_{\nu}}^{*}(p)$$
-- _Fermions_:
+- _Fermions_ and _anti-fermions_:
 	- The _wave-vector_ is in the _opposite direction_ of the _drawn arrow_ in Feynman diagrams
 $$\text{Incoming: } U^{s}(p),\bar{V}^{s}(p) \qquad \text{Outgoing: }\bar{U}^{s}(p),V^{s}(p)$$
 
