@@ -922,7 +922,7 @@ $$\rho=\psi ^{\dagger}\psi=u^{\dagger}u=v^{\dagger}v=2p^{0}$$
 
 - For _opposite momenta_ $(p')^{\mu}=(p^{0},-\boldsymbol{p})$
 $$\displaylines{u^{r \dagger}(p)\cdot v^{s}(p')=v^{r \dagger}(p)\cdot u^{s}(p')=0 }$$
-### Outer products
+### Outer product spin sums
 $$\displaylines{\sum_{s=1}^{2}u^{s}(p)\bar{u}^{s}(p)=\cancel{ p }+m \\ \sum_{s=1}^{2}v^{s}(p)\bar{v}^{s}(p)=\cancel{ p }-m}$$
 # Quantum Dirac fields
 

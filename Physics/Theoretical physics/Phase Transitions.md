@@ -336,6 +336,17 @@ V(\phi)&=\frac{1}{2R^{2}}\phi^{2}-\frac{1}{a^{d}}\ln\left[ \cosh\left( \sqrt{ \f
 
 - This links the _phenomenological parameters_ with microscopic parameters of the system
 
+## Asymptotic behaviour of integrals
+- Calculating _correlation functions_ often involve integrals that are _dominated by small wave-number behaviour_
+
+- Take the integral:
+$$\int \frac{d^{d}q}{(2\pi)^{d}} \frac{\exp(i\boldsymbol{q}\cdot \boldsymbol{r})}{q^{2}}$$
+- For $d>2$:
+$$\int \frac{d^{d}q}{(2\pi)^{d}} \frac{\exp(i\boldsymbol{q}\cdot \boldsymbol{r})}{q^{2}}\approx \frac{|r|^{2-d}}{(2-d)S_{d}}$$
+- For $d=1$, it _diverges_
+
+- For $d=2$, taking it as a _limit_ of $d>2$:
+$$\int \frac{d^{2}q}{(2\pi)^{2}} \frac{\exp(i\boldsymbol{q}\cdot \boldsymbol{r})}{q^{2}}\sim \frac{\ln|r|}{\pi}$$
 ## Spontaneous symmetry breaking
 - If a _Hamiltonian_ has some _continuous symmetry_ (e.g. translation, rotation), if the _ground state violates_ that symmetry, one has _spontaneous symmetry breaking_
 - The ground states are _degenerate_ (e.g. aligned spins pointing in any dimension)
@@ -348,7 +359,7 @@ V(\phi)&=\frac{1}{2R^{2}}\phi^{2}-\frac{1}{a^{d}}\ln\left[ \cosh\left( \sqrt{ \f
 - Take a _2-component spin model_
 	- Ising model is 1-component, and does not have continuous symmetry
 $$\beta H=\int  d^dx\,\left[ \frac{t}{2}\boldsymbol{m}^{2}+u\boldsymbol{m}^{4}+\frac{K}{2}|\nabla \boldsymbol{m}|^{2}-\boldsymbol{h}\cdot \boldsymbol{m} \right] $$
-- For $t<2$, one has a _Mexican hat potential_, where there is some _set of degenerate ground states_
+- For $t<0$, one has a _Mexican hat potential_, where there is some _set of degenerate ground states_
 
 - Take for $T<T_{c}$:
 $$\boldsymbol{m}=m \pmatrix{\cos\theta \\ \sin\theta}$$
@@ -447,6 +458,7 @@ $$I_{d}(\boldsymbol{x},\xi)=\begin{cases}
 C_{d}(\boldsymbol{x})=\frac{|\boldsymbol{x}|^{2-d}}{(2-d)S_{d}} &|\boldsymbol{x}|\ll \xi \\ \frac{\xi^{2-d}}{2-d} \frac{\exp(-|\boldsymbol{x}|/\xi)}{|\boldsymbol{x}/\xi|^{(d-1)/2}} &|\boldsymbol{x}|\gg \xi
 \end{cases}$$
 - One can then interpret $\xi$ as some _correlation length_ for _fluctuations_
+
 - Correlation lengths _near criticality_:
 $$\xi_{l}=\begin{cases}\sqrt{ K/t } &t>0 \\ \sqrt{ K/2|t| } &t<0\end{cases} \qquad \xi_{t}=\begin{cases}\sqrt{ K/t } &t>0 \\ \infty &t<0\end{cases}$$
 - They can be described using:
@@ -609,6 +621,8 @@ $$G_\text{crit}(\lambda \boldsymbol{x})=\lambda^{p}G_\text{crit}(\boldsymbol{x})
 - Renormalisation: a method of _eliminating features at lengthscale_ $x\ll \xi$
 
 ## Renormalisation of spin models: the Migdal-Kadanoff method
+
+
 ## Renormalisation procedure
 - First, _coarse-grain_ the system from _microscopic lengthscale_ $a$ to $ba$, where $b>1$
 - This is accomplished by _integrating out fluctuations_ on lengthscales $<ba$
@@ -672,6 +686,7 @@ $$m(t,h)=-\frac{1}{V}\frac{\partial \ln Z(t,h)}{\partial h}=-\frac{1}{b^{d}V'}\f
 $$\beta=\frac{y_{h}-d}{y_{t}}$$
 - One also gets similar relations for _heat capacity_ and _susceptibility_
 
+
 - In general, the _singular part_ of any physical quantity $X$ has the _homogeneous form_:
 $$X(t,h)=b^{y_{X}}X(b^{y_{t}}t,b^{y_{h}}h)=t^{-y_{X}/y_{t}}g_{X}\left( \frac{h}{t^{y_{h}/y_{t}}} \right)$$
 - For _conjugate variables_ that contribute $\int  d^dx\, FX$  to the _Hamiltonian_ (e.g. $m$ and $h$):
@@ -696,7 +711,10 @@ $$\beta H'[\boldsymbol{m}']=f_{b}+\int  d^dx'\left[ \frac{t'}{2}m'^{2}+u'm'^{4}+
 - The _renormalised parameters_ are _functions of the original_:
 	- In general, they are _non-linear_
 $$t'=t(b;t,u,\dots)\qquad u'=u(b;t,u, \dots)$$
-### Renormalisation group flow, fixed points, and basins
+### 
+
+
+Renormalisation group flow, fixed points, and basins
 - Renormalisation is a _mapping in parameter space_
 $$S'=\mathcal{R}_{b}S$$
 
@@ -815,6 +833,7 @@ $$f_\text{sing}(t,h)=b^{-d}f_\text{sing}(b^{2}t,b^{1+d/2}h)=t^{d/2}g_{f}\left( \
 
 - One can also find the _renormalisation parameter in real space_, by the fact that the _Hamiltonian is scale invariant at the fixed point_:
 $$\beta H^{*}=\frac{K}{2}b^{d-2}\zeta^{2}\int d\boldsymbol{x}'\,|\nabla \boldsymbol{m}'|^{2}\implies \zeta=b^{1-d/2}$$
+
 - For a _small power law perturbation_:
 $$\beta H^{*}+u_{p}\int d\boldsymbol{x}\,|m(\boldsymbol{x})|^{p}\longrightarrow \beta H^{*}+u_{p}b^{d}\zeta^{p}\int d\boldsymbol{x}'|m'(\boldsymbol{x}')|^{p}$$
 - The perturbations scale as: 

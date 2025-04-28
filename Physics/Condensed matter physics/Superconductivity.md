@@ -440,7 +440,7 @@ $$\nabla\theta=-\frac{2\pi}{\phi_{0}}\boldsymbol{A}$$
 - The _phase jump_, allowing for _phase drop in the weak links_, must be $2\pi n$ to keep the wavefunction single-valued:
 $$\oint \nabla\theta \,ds=2\pi n=\Theta_{a}-\Theta_{b}+\frac{q}{\hbar}\Phi\implies \Theta_{a}-\Theta_{b}=-2\pi \frac{\Phi}{\Phi_{0}}\,\mathrm{mod}\,2\pi$$
 - The _total current_ is then:
-$$I_\text{tot}=I_{a}+I_{b}=I_{J}(\sin\Theta_{a}+\sin\Theta_{b})=2I_{J}\cos\left( \frac{\Theta_{a}+\Theta_{b}}{2} \right)\sin\left( \frac{\Theta_{a}+\Theta_{b}}{2} \right)$$
+$$I_\text{tot}=I_{a}+I_{b}=I_{J}(\sin\Theta_{a}+\sin\Theta_{b})=2I_{J}\cos\left( \frac{\Theta_{a}-\Theta_{b}}{2} \right)\sin\left( \frac{\Theta_{a}+\Theta_{b}}{2} \right)$$
 - The current then depends on flux, _oscillating_ with a period of $\phi_{0}$
 	- Analagous to _double slit interference_
 	- Can be interpreted as _matter wave interference_
