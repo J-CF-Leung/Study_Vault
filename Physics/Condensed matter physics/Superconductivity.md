@@ -260,10 +260,10 @@ $$\displaylines{\mu_{0}J_{s}\approx \frac{\phi_{0}}{2\pi\lambda^{2}r}\approx -\f
 ![[Vortex magnetic field profile.png]]
 ### The upper critical field
 - The _internal field_ $B$ varies _slowly_ within the cylinder as $r_{B}<\lambda$
-- Each vortex is assumed to enclose _one flux quantum_:
+- Each vortex is assumed to _enclose one flux quantum_:
 $$\phi_{0}=\pi r_{B}^{2}B$$
 
-- The _spatial average free energy density_ of a vortex:
+- The [[#Vortex energy|spatially averaged free energy]] of a vortex:
 $$\int_{\xi}^{r_{B}} \frac{2\pi rdr}{\pi r_{B}^{2}} f_{V}=\text{const.}+\frac{\phi_{0}^{2}}{8\pi^{2}r_{B}^{2}\mu_{0}\lambda^{2}}\ln\left( \frac{r_{B}^{2}}{\xi^{2}} \right)+\frac{(B-B_{E})^{2}}{2\mu_{0}}$$
 - By _minimising_ w.r.t. $B$, one can find the _most probable internal field_
 $$B=B_{E}- \frac{\phi_{0}}{8\pi\lambda^{2}} \ln\left( \frac{\eta \phi_{0}}{2\pi \xi^{2}B} \right)=B_{E}+\mu_{0}M$$
@@ -380,7 +380,7 @@ $$d\gg \xi$$
 - Consider supercurrent from the [[#Ginzburg-Landau equations]], for a _constant_ $\psi$
 $$\frac{\partial}{\partial t}\boldsymbol{J}_{s}=\rho_{s}\left( \frac{\hbar}{q}\nabla\dot{\theta}-\dot{\boldsymbol{A}} \right)=\rho_{s}(-\nabla \varphi- \dot{\boldsymbol{A}})=\rho_{s}\boldsymbol{E}$$
 - This is the first [[#London equations|London equation]]
-	- An electric field can _kick-start_ the supercurrent, but not sustain it
+	- An electric field can _kick-start_ the supercurrent, but not required to sustain it
 
 ### Josephson phase relation
 - Consider the weak link with $d\ll \xi$ and _potential difference_ $V$
@@ -423,7 +423,7 @@ $$I=I_{J}\sin\left( \Theta_{0}+\omega_{J0}t+\frac{\omega _\text{JRF}}{\omega _\t
 - Using a _harmonic expansion_:
 $$I=I_{J}\sum_{\nu=-\infty}^{\infty} J_{\nu}\left( \frac{\omega _\text{JRF}}{\omega _\text{RF}} \right)\sin[\Theta_{0}+(\omega _\text{J0}+\nu\omega _\text{RF})t]+\frac{V_{0}}{R}+\frac{V_\text{RF}}{R}\cos(\omega _\text{RF}t)$$
 - It generates _sideband frequencies_ $\omega_{J0}+\nu\omega _\text{RF}$
-- There is a _constant DC part $V_{0}/R$ unless_ the Josephson frequency _matches a multiple of the AC frequency_:
+- There is a _constant DC part $V_{0}/R$ unless_ the Josephson frequency _matches a multiple of the AC frequency_, in which case there are _additional spikes_
 $$\omega_{J0}+\nu\omega _\text{RF}=0\implies \langle I \rangle=J_{\nu}\left( \frac{\omega _\text{JRF}}{\omega _\text{RF}} \right)I_{J}\sin(\Theta_{0})+\frac{V_{0}}{R} $$
 
 - These are _Shapiro spikes_
@@ -923,7 +923,7 @@ $$z=\frac{1}{1+\lambda}$$
 - This leads to a _reduction of Fermi velocity_ by $z$ and therefore _enhancement of density of states_ $N(0)$ by a factor of $(1+\lambda)$
 - Also, there is an _attenuation_ of the _coupling_ ($|g|$ in the BCS gap equation) by $1/(1+\lambda)^{2}$
 
-- There is then an _enhancement_ of the exponential factor in $T_{c}$
+- There is then an _overall enhancement_ of the exponential factor in $T_{c}$
 
 # Electron-phonon coupling
 - Treat e-ph interactions in more detail to find the _interaction vertex_ $w_{q}$
@@ -995,6 +995,7 @@ $$\displaylines{1=(\lambda-\mu_{c}) \int_{0}^{\epsilon_{c}} \frac{d\xi'}{\xi'}\t
 ### Retardation effect and critical temperature
 - Let the _induced interaction_ be non-zero in range $-\epsilon_c'<\xi <\epsilon_{c}'$
 - Meanwhile let the _repulsive interaction_ be in range $-\epsilon_{c}<\xi<\epsilon_{c}$
+
 - Then take $\Delta$ as a _positive constant_ up to $\epsilon_{c}$ and a _negative constant_ up to $\epsilon_{c}'>\epsilon_{c}$
 ![[Gap equation retardation effect.png]]
 - This gives the same expression for $T_{c}$ but with:
@@ -1010,7 +1011,7 @@ $$T_{c}\approx \frac{\epsilon_{c}}{k_{B}} \exp\left( -\frac{1+\lambda}{\lambda-\
 - From the Bardeen-Pines model:
 $$\lambda=N(0)\langle V^\text{ind}_{\boldsymbol{q}\omega=0} \rangle=\frac{N(0)e^{2}}{4\epsilon_{0}k_{F}^{2}} \int_{0}^{4k_{F}^{2}} \frac{dq^{2}}{q^{2}+k_\text{TF}^{2}}=\frac{k_\text{TF}^{2}}{8k_{F}^{2}}\ln\left( 1+\frac{4k_{F}^{2}}{k_\text{TF}^{2}} \right)\approx \mu_{c}$$
 - _Without_ retardation, $T_{c}$ vanishes
-- For $\epsilon_{c}'/\epsilon_{c}\approx \epsilon_{F}/\epsilon_{D}\approx 10^{2}$, tjhis gives $\lambda\approx 0.5$ and $\mu^{*}\approx{0}.15$
+- For $\epsilon_{c}'/\epsilon_{c}\approx \epsilon_{F}/\epsilon_{D}\approx 10^{2}$, this gives $\lambda\approx 0.5$ and $\mu^{*}\approx{0}.15$
 - In this model, $\lambda$ is _independent_ of $\epsilon_{c}$ while $\mu^{*}$ is _weakly dependent_ on $\epsilon_{c}$, such that $T_{c}$ will _rise monotonically_ with $\epsilon_{c}$
 	- $\epsilon_c$ is some _average_ over phonon modes which is _smaller than Debye energy_
 

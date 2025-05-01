@@ -456,6 +456,7 @@ $$\displaylines{\begin{align}
 - For a _light Higgs_, it will be _below mass threshold_ to decay into gauge boson pairs
 	- Competing factor: the _Higgs-gauge boson couplings_ all grow with the mass of the gauge boson
 - For light Higgs $>10 \text{ GeV}$, decay to _bottom quark pairs_ dominates
+
 - For _heavy_ Higgs $m_{h}>2m_{W}$, decay to $W^{+}W^{-}$ and $ZZ$ pairs dominates
 	- The _crossover_ to this regime is slightly below $2m_{W}=160\text{ GeV}$, at $\sim 140\text{ GeV}$ instead by allowing _one virtual boson_ (not on-shell), which then subsequently decays into non-virtual quarks and leptons
 
@@ -534,3 +535,21 @@ $$D=4-\frac{3}{2}F_{E}-B_{E}-\sum_{j}\mathrm{dim}(g_{j})$$
 
 - Meanwhile, gravity (with the _Einstein-Hilbert action_) has _negative mass coupling_ and is therefore _not renormalisable perturbatively_
 ## Non-renormalisable interactions
+- Theories are typically only valid up to some _high momentum cut-off_
+- Implementing the cutoff gives some _effective field theory_
+
+- Therefore, _non-renormalisable interactions_ can still be implemented as long as there is an associated cut-off
+
+- So far, the Standard Model is _renormalisable_
+
+# Beyond the Standard Model
+
+## Neutrino masses
+- Postulate: _neutrino oscillations_ between flavours to account for _deficit in electron neutrino flux_
+- The flavours must have _identical gauge couplings_, therefore they must _differ in mass_ for the oscillations to have physical effects
+	- Detected mass square differences $\sim 10^{-5}$ and $10^{-3}\,\text{eV}^{2}$
+
+- _Neutrino mass_ can only be included in a _non-renormalisable, effective field theory_
+
+- Take a _five dimensional operator_ that still obeys $SU(3)\otimes SU(2)\otimes U(1)$
+- The _Majorana mass term_:
