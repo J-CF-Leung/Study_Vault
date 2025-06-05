@@ -773,7 +773,7 @@ $$S[\Lambda]=\exp\left( \frac{1}{2}\Omega_{12}S^{12} \right)=-\mathbb{I}_{4\time
 - For _boosts_ along axis $i$, pick $\Omega^{0i}$ as the non-zero parameter
 $$S^{01}=\frac{1}{2}\pmatrix{-\sigma^{1}&0\\0&\sigma^{1}}$$
 - With the _rapidity_ $\eta_{1}$, the group element:
-$$S[\Lambda]=\pmatrix{\exp(\eta_{1}\sigma^{1}/2)&0\\0&\exp(\eta_{1}\sigma^{1}/2)}$$
+$$S[\Lambda]=\pmatrix{\exp(\eta_{1}\sigma^{1}/2)&0\\0&\exp(-\eta_{1}\sigma^{1}/2)}$$
 - Under some general boost with rapidity $\boldsymbol{\eta}$:
 $$S[\Lambda]=\pmatrix{\exp(\boldsymbol{\eta}\cdot \boldsymbol{\sigma}/2)&0\\0&\exp(-\boldsymbol{\eta}\cdot \boldsymbol{\sigma}/2)}$$
 - This is _different_ from the ${\Lambda^{\mu}}_{\nu}$ for the _vector_ Lorentz transformation
@@ -995,8 +995,11 @@ $$\ket{p_{1}s_{1},p_{2}s_{2}}=b_{p_{1}}^{s_{1}\dagger}b_{p_{2}}^{s_{2}\dagger}\k
 ### Conserved charges
 - From the $U(1)$ internal symmetry: 
 $$\displaylines{Q=\sum_{s}\int  \frac{d^3p}{(2\pi)^{3}}(b_{p}^{s\dagger}b_{p}^{s}-c_{p}^{s\dagger}c_{p}^{s}) \\ Q\ket{b}=\ket{b} \qquad Q\ket{c}=-\ket{c}    }$$
+- This corresponds to _electric charge_
+
 - For _angular momentum_, calculated in the _rest frame_:
 $$J_{z}\ket{b^{s}}=\pm \frac{1}{2}\ket{b^{s}} \qquad J_{z}\ket{c^{s}}=\pm \frac{1}{2}\ket{c^{s}}  $$
+- This corresponds to _spin_
 ### Fermionic propagator
 - Inspect the quantity:
 $$\braket{ 0 |\psi_{a}(x)\bar{\psi}_{b}(y)|0  } $$
@@ -1044,16 +1047,17 @@ $$\begin{align}
 $$\braket{ f|S | i }=\sqrt{ 2\omega_{p} }\sqrt{ 2\omega_{q} }\sqrt{ 2\omega_{p'} }\sqrt{ 2\omega_{q'} }\braket{0|c_{q'}^{r'}(+\infty)b_{p'}^{s'}(+\infty)b_{p}^{s\dagger}(-\infty)c_{q}^{r\dagger}(-\infty)|\Omega}$$
 
 - Relation between the creation operators:
-$$i \int  d^4x\,\bar{\psi}(x)(i\overleftarrow{\cancel{ \partial }}+m)U_{s}(p)\exp(-ipx)=\sqrt{ 2\omega_{p} }(b_{p}^{s\dagger}(+\infty)-b_{p}^{s\dagger}(-\infty)) $$
+$$\displaylines{-i \int  d^4x\,\bar{\psi}(x)(i\overleftarrow{\cancel{ \partial }}+m)U_{s}(p)\exp(-ipx)=\sqrt{ 2\omega_{p} }(b_{p}^{s\dagger}(+\infty)-b_{p}^{s\dagger}(-\infty)) \\ }$$
 - And 3 other relations
 
 - With these, the scattering matrix element is:
 	- _Left_ of correlation function: _outgoing_ $b$ and _ingoing_ $c^{\dagger}$ (associated with $\psi$)
 	- _Right_ of correlation function: _ingoing_ $b^{\dagger}$ and _outgoing_ $c$ (associated with $\bar{\psi}$)
+	- To _"cancel out"_ corresponding element in $\psi$ or $\bar{\psi}$
 $$\begin{align}
-\braket{ f|S|i}= \prod_{i=1}^{4}\,i \int  d^4x_{j} &\left[e^{ip'x_{3}}\bar{U}_{s'}(p')(-i\cancel{ \partial }_{4}+m)\right] \left[e^{-iqx_{2}}V_{r}(q)(-i\cancel{ \partial }_{2}+m)\right] \times \\
-&\braket{ \Omega|T\{\bar{\psi}(x_{4})\psi(x_{3})\bar{\psi}(x_{1})\psi(x_{2})\} |  } \times \\
-&\left[(i \overleftarrow{\cancel{ \partial }}_{1}+m)U_{s}(p)e^{-ipx_{1}}\right]\left[(i \overleftarrow{\cancel{ \partial }}_{4}+m)\bar{V}_{r'}(q')e^{iq'x_{4}}\right]
+\braket{ f|S|i}= \prod_{i=1}^{4}\,i \int  d^4x_{j} &\left[e^{ip'x_{3}}\bar{U}_{s'}(p')(-i\cancel{ \partial }_{3}+m)\right] \left[e^{-iqx_{2}}\bar{V}_{r}(q)(-i\cancel{ \partial }_{2}+m)\right] \times \\
+&\braket{ \Omega|T\{\bar{\psi}(x_{4})\psi(x_{3})\bar{\psi}(x_{1})\psi(x_{2})\} | \Omega } \times \\
+&\left[(i \overleftarrow{\cancel{ \partial }}_{1}+m)U_{s}(p)e^{-ipx_{1}}\right]\left[(i \overleftarrow{\cancel{ \partial }}_{4}+m)V_{r'}(q')e^{iq'x_{4}}\right]
 \end{align}$$
 ### Feynman rules in Yukawa Theory
 - An _incoming particle_ $U_S(\boldsymbol{p}), b^{\dagger}$ or _antiparticle_ $\bar{V}_{S}(\boldsymbol{p}),c^{\dagger}$ are denoted with _opposite directions_ on a diagram
@@ -1073,7 +1077,7 @@ $$\Delta_{\mu}=\int  \frac{d^4p}{(2\pi)^{4}}\, \frac{i}{p^{2}-\mu^{2}+i\epsilon}
 $$\braket{ \Omega|T\{\psi(x_{1})\psi(x_{2})\bar{\psi}(x_{3})\bar{\psi}(x_{4})\} |\Omega  }\equiv \braket{ \psi_{1}\psi_{2}\psi_{3}\psi_{4} }  $$
 - Consider the _Schwinger-Dyson equation_ in the free theory, consisting of _contractions_
 $$(i\cancel{ \partial_{x} }-m)\braket{ \psi(x)\bar{\psi}(x_{1})\dots } =i\sum_{j}\delta(x-x_{j})\dots$$
-- For the [[#Propagator|fermion propagators]] $S_{F}$
+- For the [[#Fermionic propagator|fermion propagator]] $S_{F}$
 $$(i\cancel{ \partial_{x} }-m)S_{F}(x-y)=i\delta^{4}(x-y)\qquad S_{F}(x-y)(i\overleftarrow{\cancel{ \partial }}_{y} +m)=-i\delta^{4}(x-y)$$
 - Evaluating the 4-point function in the free theory, using _integration by parts_, then gives:
 $$\begin{align}
@@ -1261,7 +1265,7 @@ $$\Lagr=-\frac{1}{4}F^{\mu \nu}F_{\mu \nu}+\bar{\psi}(i\cancel{ D }-m)\psi$$
 - _Photon polarisation vectors_ for _external photon lines_:
 $$\text{Incoming: }\epsilon^{s}_{\mu}(p) \qquad \text{Outgoing: }{\epsilon^{s}_{\nu}}^{*}(p)$$
 - _Fermions_ and _anti-fermions_:
-	- The _wave-vector_ is in the _opposite direction_ of the _drawn arrow_ in Feynman diagrams
+	- The _wave-vector_ for _anti-fermions_ is in the _opposite direction_ of the _drawn arrow_ in Feynman diagrams
 $$\text{Incoming: } U^{s}(p),\bar{V}^{s}(p) \qquad \text{Outgoing: }\bar{U}^{s}(p),V^{s}(p)$$
 
 - Each _vertex_ gives a factor of:

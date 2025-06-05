@@ -450,6 +450,6 @@ S_\text{W-Z}&=S\int dt\,\frac{dx}{2a} \Gamma'[\tilde{\boldsymbol{n}}](\nabla \ti
 $$\theta=2\pi S$$
 - Rewrite the action as
 $$S_{\theta}= \frac{i\theta}{4\pi}\int dx\,dt \,\tilde{\boldsymbol{n}}\cdot(\partial_{t} \tilde{\boldsymbol{n}}\times \partial_{x}\tilde{\boldsymbol{n}})$$
-- It is a _topological term_
+- It is a _topological term_ in $d=1$
 
 - In higher dimensions, the analagous term is _suppressed_ by _renormalisation flow_
