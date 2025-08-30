@@ -10,7 +10,6 @@
 	- Between $T_{c}$ and $\sim 0.1 \text{ K}$: normal _Fermi liquid_
 - High-temp superconductors: cuprates
 
-test test
 # Overview
 ## Phenomenology
 - Superconducting/superfluid phase: a _thermodynamically ordered phase_
