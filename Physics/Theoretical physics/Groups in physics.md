@@ -99,7 +99,7 @@ $$L(g_{2},L(g_{1},x))=L(g_{2}g_{1},x) \quad \forall x \in X \quad \forall g_{1},
 - The inverse preserves composition:
 $$g_{2}(g_{1}(x))=xg_{1}^{-1}g_{2}^{-1}=(g_{2}g_{1})(x)$$
 
-- Define _composition_ by $G$ on $X$ as the action:
+- Define _conjugation_ by $G$ on $X$ as the action:
 $$g(x)=gxg^{-1} \quad \forall g\in G \quad \forall x \in X$$
 
 - Given a group $G$ and set $X$, an _orbit_ of an element $x \in X$ is the _set formed by_ elements of $X$ which are in the image of an action of $G$ on $x$
@@ -208,7 +208,7 @@ $$X=-X^{\dagger}$$
 	- Prove: only linear term in $\det M=1$ comes from diagonal terms
 
 ## Connecting Lie groups to their algebras
-- The _Lie algebra_ of a group is the _tangent space_ to the group at identity element $e$
+- The _Lie algebra_ $L(G)$ of a group $G$ is the _tangent space_ to $G$ at identity element $e$
 ### From commutators to brackets
 - Consider two curves through identity $e$, for some Lie group $G$:
 $$g_{1}(x(t)), g_{2}(y(t)) \in G \qquad X_{1}=\dot{g}_{1}|_{0}\,,\, X_{2}=\dot{g}_{2}|_{0} \in T(G)$$
@@ -395,7 +395,7 @@ $$D(g_{2}g_{1})=D(g_{2})D(g_{1})$$
 - $D$ is _not guaranteed_ to be _surjective_ (an onto mapping), therefore it _may not be_ a representation of $G$
 - Generally, there are _additional conditions_:
 	- _Every_ element in $G$ can be written as $\exp(X)$
-	- $G$ must be _simply connected_ (all closed curved can be _shrunk_ into a point)
+	- $G$ must be _simply connected_ (all closed curves can be _shrunk_ into a point)
 
 ## Characteristics of representations
 - Any special property of a Lie group representation also _affects the Lie algebra representation_, and vice versa

@@ -42,13 +42,34 @@ $$k_{B}T_\text{0}=\frac{2\pi \hbar^{2}}{m}\left( \frac{N}{2.6V} \right)^{2/3}$$
 $$N_{0}(T)=N\left[ 1-\left( \frac{T}{T_{0}} \right)^{3/2} \right]$$
 - The _entropy_ of the system comes from the _thermally excited particles_, giving the distinction of _normal fluid_ and _superfluid_ (the condensate)
 
+#### Long range order: check newer refs
 - Occupation of the _lowest energy state_ indicates some _macroscopic long-range order_
 - Can be seen using [[Theories of Quantum Matter#Single particle density operator|single-particle density operator]], averaged:
 	- Also known as _off-diagonal long range order_
 $$\rho(\boldsymbol{x},\boldsymbol{x}')\equiv \langle \psi(\boldsymbol{x})\psi ^{\dagger}(\boldsymbol{x}) \rangle = N_{0}\varphi_{0}(\boldsymbol{x})\varphi_{0}(\boldsymbol{x}')+g(\boldsymbol{x}-\boldsymbol{x}')$$
 - The second term represents the contribution of _short-ranged order_, as it contains terms from _excited states_
 	- Short range: typically within de Broglie wavelength at temperature $T$
-- As the lowest energy state, $\varphi_{0}(\boldsymbol{x})$ has a _long length-scale_
+- As the lowest energy state, $\varphi_{0}(\boldsymbol{x})$ has a _long length-scale_, such that $\rho(\boldsymbol{x},\boldsymbol{x}')$ is _finite_ even for large $|\boldsymbol{x}-\boldsymbol{x}'|$
+
+- One example is the case of an _dilute Bose gas_ with Hamiltonian:
+$$\begin{align}
+H-\mu N=&\int d\boldsymbol{x}\, \left\{ \frac{\hbar^{2}}{2m}\nabla \psi ^{\dagger}\cdot \nabla \psi-\mu \psi ^{\dagger}\psi \right\} \\
+&+\frac{1}{2}\int d\boldsymbol{x}\,d\boldsymbol{x}'\, U(\boldsymbol{x}-\boldsymbol{x}')\psi ^{\dagger}(\boldsymbol{x})\psi ^{\dagger}(\boldsymbol{x}')\psi(\boldsymbol{x}')\psi(\boldsymbol{x})
+\end{align}$$
+- For _weak, contact interactions_ this gives the [[Theories of Quantum Matter#Gross-Pitaevskii approximation|Gross-Pitaevskii approximation]]
+- It gives a _ground state_ of the form:
+$$\psi(\boldsymbol{x})=\sqrt{ n_{s}(\boldsymbol{x}) }\exp[i\phi(\boldsymbol{x})]$$
+- There is a _superfluid density_ $n_{s}(\boldsymbol{x})$ and a corresponding _phase_ $\phi(\boldsymbol{x})$
+
+### Ginzburg-Landau theory for superfluids????
+
+# Macroscopic electrodynamics
+- The two London equations, and the resulting equation for _magnetic field decay_
+	- _Phenomenological_ in origin, with no proof on microscopic scale without Ginzburg-Landau or BCS theory
+	- Classical origins for first: Drude equation with $\tau\to \infty$
+	- Second equation: from Maxwell's equation with _flux expulsion conditions_
+$$\displaylines{\Lambda \frac{\partial}{\partial t}\boldsymbol{j}=\boldsymbol{E} \\ \boldsymbol{B}=-\Lambda \nabla\times \boldsymbol{j} \\ \Lambda= (ne^{2}/m)^{-1}\\ \nabla^{2}\boldsymbol{B}=\frac{\mu_{0}}{\Lambda}\boldsymbol{B} }$$
+
 
 # Mean field theory of pairing
 
