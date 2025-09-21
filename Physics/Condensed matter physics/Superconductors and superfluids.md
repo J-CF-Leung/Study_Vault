@@ -71,6 +71,7 @@ $$\psi(\boldsymbol{x})=\sqrt{ n_{s}(\boldsymbol{x}) }\exp[i\phi(\boldsymbol{x})]
 $$\displaylines{\Lambda \frac{\partial}{\partial t}\boldsymbol{j}=\boldsymbol{E} \\ \boldsymbol{B}=-\Lambda \nabla\times \boldsymbol{j} \\ \Lambda= (ne^{2}/m)^{-1}\\ \nabla^{2}\boldsymbol{B}=\frac{\mu_{0}}{\Lambda}\boldsymbol{B}=\frac{1}{\lambda^2}\boldsymbol{B} }$$
 - $\lambda$ is the _penetration depth_ of the magnetic field, where one solution is:
 $$\boldsymbol{B}=\boldsymbol{B}_{0}\exp\left( -\frac{x}{\lambda} \right)$$
+- This represents _screening_ by the electrons in the supercoductor
 
 - There is typically some _discrepancy_ between $\lambda$ predicted by the above, and the _experimentally measured_ value, due to _non-local electrodynamics_ at the scale of the _wavefunction coherence length_
 
