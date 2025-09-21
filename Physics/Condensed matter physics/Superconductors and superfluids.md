@@ -68,7 +68,11 @@ $$\psi(\boldsymbol{x})=\sqrt{ n_{s}(\boldsymbol{x}) }\exp[i\phi(\boldsymbol{x})]
 	- _Phenomenological_ in origin, with no proof on microscopic scale without Ginzburg-Landau or BCS theory
 	- Classical origins for first: Drude equation with $\tau\to \infty$
 	- Second equation: from Maxwell's equation with _flux expulsion conditions_
-$$\displaylines{\Lambda \frac{\partial}{\partial t}\boldsymbol{j}=\boldsymbol{E} \\ \boldsymbol{B}=-\Lambda \nabla\times \boldsymbol{j} \\ \Lambda= (ne^{2}/m)^{-1}\\ \nabla^{2}\boldsymbol{B}=\frac{\mu_{0}}{\Lambda}\boldsymbol{B} }$$
+$$\displaylines{\Lambda \frac{\partial}{\partial t}\boldsymbol{j}=\boldsymbol{E} \\ \boldsymbol{B}=-\Lambda \nabla\times \boldsymbol{j} \\ \Lambda= (ne^{2}/m)^{-1}\\ \nabla^{2}\boldsymbol{B}=\frac{\mu_{0}}{\Lambda}\boldsymbol{B}=\frac{1}{\lambda^2}\boldsymbol{B} }$$
+- $\lambda$ is the _penetration depth_ of the magnetic field, where one solution is:
+$$\boldsymbol{B}=\boldsymbol{B}_{0}\exp\left( -\frac{x}{\lambda} \right)$$
+
+- There is typically some _discrepancy_ between $\lambda$ predicted by the above, and the _experimentally measured_ value, due to _non-local electrodynamics_ at the scale of the _wavefunction coherence length_
 
 
 # Mean field theory of pairing
