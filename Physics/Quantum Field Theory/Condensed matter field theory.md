@@ -87,6 +87,7 @@ $$H=t\sum_{\langle ij \rangle } a_{i}^{\dagger}a_{j}+U\sum_{i}a_{i}^{\dagger}a_{
 - There is a _conserved particle number_
 $$N=\sum_{i}a_{i}^{\dagger}a_{i}$$
 - It generates a $U(1)$ symmetry, with operator $U$, and parameter $\theta \in [0,2\pi)$
+	- Invariant under transformation of the fields $a_{i} \to Ua_{i}$
 $$U=\exp(i\theta N)$$
 - In the _thermodynamic limit_ $V\to \infty$, _fix_ the _average particle number per site_
 $$n=\frac{\langle N \rangle}{V} $$
@@ -196,6 +197,7 @@ $$(\Delta\theta)^{2}\sim \ln \frac{\Lambda _\text{UV}}{\Lambda _\text{IR}}$$
 ### Long range order
 - It _characterises_ spontaneous symmetry breaking
 - When there is _long-range order_, the _two-point function_ for _infinite_ spatial separation is:
+	- Also known as _off-diagonal long-range order_
 $$\lim_{ |\boldsymbol{x}| \to \infty } \langle \Psi ^{\dagger}(\boldsymbol{x},0)\Psi(0,0) \rangle =\rho_{0}^{2}\neq 0$$
 - This remains true even for _symmetric superpositions_ of the symmetry breaking state:
 	- For a symmetric superposition, $\langle \Psi \rangle=0$ even _with_ SSB, due to _cancellations_ in phase
