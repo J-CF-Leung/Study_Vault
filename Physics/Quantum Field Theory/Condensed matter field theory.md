@@ -456,3 +456,7 @@ $$S_{\theta}= \frac{i\theta}{4\pi}\int dx\,dt \,\tilde{\boldsymbol{n}}\cdot(\par
 - It is a _topological term_ in $d=1$
 
 - In higher dimensions, the analagous term is _suppressed_ by _renormalisation flow_
+
+# Quantum criticality
+- Field theories _beyond Goldstone fields_
+- 
