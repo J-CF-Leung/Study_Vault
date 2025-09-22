@@ -10,6 +10,7 @@ $$g_{1}g_{2}=g_{2}g_{1}$$
 >[!Examples]
 >Rotational invariance and Lorentz invariance
 >Approximate symmetry: isospin multiplets in particle physics (e.g. nucleons are a doublet)
+>Gauge invariance in electrodynamics
 # Symmetries in physics
 - Systems often have _symmetries_: transformations that _leave the physical laws unchanged_
 - There can be _discrete_ symmetries like _parity_:
