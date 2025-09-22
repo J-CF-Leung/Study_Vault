@@ -10,6 +10,7 @@ $$O_{i} \to O(\boldsymbol{x})$$
 $$E_\text{kin}\sim E_\text{int}$$
 - Typically, one will consider some _low energy regime_ $E\ll t$, where one can have an _effective weakly coupled description_
 	- Low energy modes: typically also _long wavelength_ modes such that one can go to a _continuum limit_
+	- The _quasi-particles_ from the interacting theory can often be _linked_ to the _bare particles_ of the _non-interacting theory_ via the principle of _adiabtic continuity_, as long as _symmetry_ remains
 
 - This regime yields an _effective field theory_
 - Then from [[Phase Transitions#Renormalisation Group|renormalisation group flow]], one can exploit _universality_
@@ -39,7 +40,7 @@ $$[H,Q]=0$$
 $$H\ket{0}=0 $$
 ## Goldstone's Theorem
 - _Spontaneous symmetry breaking_ occurs if there is some ground state with _non-zero charge_ $Q$, and is _not an eigenvector_ of $Q$
-$$Q\ket{0}\neq 0,\ket{0}  $$
+$$Q\ket{0}\neq 0\;\;,\;\;Q\ket{0}\neq\ket{0}   $$
 - From charge conservation, $Q\ket{0}$ is _also a ground state_
 $$HQ\ket{0}= [H,Q]\ket{0}=0 $$
 - Example: ground states of the _Mexican hat potential_
