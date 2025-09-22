@@ -178,7 +178,7 @@ $$\displaylines{X \in \mathbb{V} \implies X=X^{a}T_{a} \quad, \quad X^{a} \in \m
 
 ## Examples of Lie algebras
 
-### Rotation groups
+### Rotation groups SO(n)
 - Group elements: _rotation matrices_
 
 - $SO(2)$: a _one-dimensional maifold_ $\theta$
@@ -187,8 +187,12 @@ $$g(\theta)=\pmatrix{\cos\theta & -\sin\theta \\ \sin\theta & \cos\theta}$$
 $$\displaylines{g(\theta)=I+\theta \frac{dg(\theta)}{d\theta}\Bigg|_{\theta=0}+O(\theta^{2}) \\ T=\pmatrix{0&-1\\1&0}}$$
 - The generator is the _tangent_ to the manifold
 - $SO(2)$ has a _one dimensional Lie algebra_
+	- Only rotations about _one axis_
 
-- For $SO(n)$, the Lie algebra has dimension $d=n(n-1)/2$ and require $d$ coordinates on the manifold
+- For $SO(n)$, the Lie algebra has _dimension_ $d=n(n-1)/2$ and require $d$ coordinates on the manifold
+- For later use, the Lie algebra of $SO(3)$, being 3 _anti-symmetric_, real matrices
+$$\displaylines{(\tilde{T}_{a})_{bc}=-\epsilon_{abc} \\ \tilde{T}_{1}=\pmatrix{0&0&0\\0&0&-1\\0&1&0}\qquad \tilde{T}_{2}=\pmatrix{0&0&1\\0&0&0\\-1&0&0}\qquad \tilde{T}_{3}=\pmatrix{0&-1&0\\1&0&0\\0&0&0}}$$
+
 
 - Consider a _single parameter family_ of $SO(n)$ elements:
 $$M(t):= M(x(t)) \in SO(n) \qquad M(0)=I_{n}$$
@@ -277,6 +281,7 @@ $$\displaylines{\exp(tX)\exp(tY)=\exp(tZ) \\ Z=X+Y+\frac{t}{2}[X,Y]+\frac{t^{2}}
 # Representations
 - Groups are _transformations_ under which things are invariant
 - _Representations_ are _how groups transform vectors_ in a vector space
+	- E.g. Given a _basis of linearly independent wavefunctions_ transforming into each other, the _representation_ is a _set of matrices_ dictating the action of the transformation
 
 - $GL(n,\mathbb{F})$ is a group of _invertible matrices_, acting as _linear maps_ on the vector space $\mathbb{F}^{n}$:
 $$GL(n,\mathbb{F}): \mathbb{F}^{n}\to \mathbb{F}^{n}$$
@@ -363,14 +368,14 @@ $$\displaylines{d_{0}(X)=0 \qquad \forall X \in L(G) \\ d_{0}(X)v=\vec{0} \qquad
 $$d_{f}(X)=X\qquad \forall X \in L(G)$$
 - The _dimension_ of $d_{f}$ is $n$
 
-
+### Adjoint representation of Lie algebras
 - The _adjoint representation_ $\mathrm{ad}:L(G)\to gl(L(G))$, $\forall X \in L(G)$:
 $$\mathrm{ad}_{X}:L(G)\to L(G), \quad \mathrm{ad}_{X}Y=[X,Y]$$
-- The action of an [[#More on representations|adjoint representation]] of a Lie group is _conjugation_
+- The action of an [[#More on representations of Lie groups|adjoint representation of a Lie group]] is _conjugation_
 - The action of an adjoint representation of a Lie algebra is the _Lie bracket_
 
 - The _dimension_ $\mathrm{ad}$ is that of $L(G)$
-## Algebra representations from group representations
+## Algebra reps from group reps
 - Consider _tangents_ to curves in the _group manifold_, passing through $e$:
 $$g(t)=e+tX+\dots \in G$$
 - Here, $X \in L(G)$
@@ -390,7 +395,7 @@ $$\begin{align}
 &=Y+t[X,Y] \\
 &=(I+t\,\mathrm{ad}_{X})Y
 \end{align}$$
-## Group representations from algebra representations
+## Group reps from algebra reps
 - Given that $d$ is a representation of $L(G)$ and $X \in L(G)$, let:
 $$g=\exp(X)\qquad D(g)=\exp \,d(X)$$
 - From the [[#Lie brackets to the group product|Baker-Campbell-Hausdorff formula]], for $g_{1},g_{2} \in G$:
@@ -447,6 +452,8 @@ $$D(g) \in U(N)$$
 - The corresponding Lie algebra representation $d(X)$ is then _antihermitian_ for all $X \in L(G)$
 - If all $D(g)$ are also real, then it is _orthogonal_
 
+>[! Theorem]
+>All representations of a finite or compact group are equivalent to a unitary representation
 ### Mashke's Theorem
 - A _finite dimensional_, _unitary representation_ is either _irreducible_, or _totally reducible_
 - Proof:
@@ -499,7 +506,8 @@ $$(d^{(1)}\otimes d^{(2)})(X)=d^{(1)}(X)\otimes \mathrm{id}_{W}+\mathrm{id}_V\ot
 
 - A _corollary_ to Mashke's theorem states that _finite representations_ of $d^{(1)}\otimes d^{(2)}$ can be written as the _direct sum of irreps_ of $L(G)$
 $$d^{(1)}\otimes d^{(2)}=\tilde{d}_{1}\oplus \tilde{d}_{2}\oplus \dots \oplus \tilde{d}_{k}=\bigoplus_{i}\tilde{d}_{i} $$
-
+### More from 't Hooft
+## Bonus: projective representations
 # Angular momentum
 - _Physical_ angular momentum is the generator of _rotations_ in 3D, elements of $SO(3)$
 - However, _half-integer spin_ requires $SU(2)$ representations
@@ -512,6 +520,7 @@ $$\mathfrak{su}(2)=L(SU(2))=\Big\{X \in\mathrm{Mat}_{2}(\mathbb{C})\Big|X^{\dagg
 - The _basis_ for the 3-dimensional vector space, or the [[#Generators and structure constants|generators]] of the group:
 $$T_{a}=-\frac{i}{2}\sigma_{a}\qquad a=1,2,3$$
 - $\sigma_{a}$ are the _Pauli matrices_
+- From [[Angular momentum in quantum mechanics|quantum mechanics]], $-iT_a$ can be recognised as a 2D representation of _spin angular momentum_
 - The Lie brackets give the _structure constants_:
 $$[T_{a},T_{b}]=\epsilon_{abc}T_{c}\implies {f^{c}}_{ab}=\epsilon_{abc}$$
 
@@ -523,7 +532,7 @@ $$\displaylines{(\tilde{T}_{a})_{bc}=-\epsilon_{abc} \\ \tilde{T}_{1}=\pmatrix{0
 $$[\tilde{T}_{a},\tilde{T}_{b}]=\epsilon_{abc}\tilde{T}_{c}\implies {f^{c}}_{ab}=\epsilon_{abc}$$
 - The _algebras are isomorphic to each other_
 
-- The generators are also _3D representations_ of the components of [[Angular momentum in quantum mechanics|orbital and spin angular momentum operators]]
+- $-i\tilde{T}_{a}$ are the _3D representations_ of the components of [[Angular momentum in quantum mechanics|orbital angular momentum operators]]
 
 ### The group manifolds
 - The [[#Manifolds of rotation transformations|manifold of]] $SO(3)$ is a _ball_ of radius $\pi$ in $\mathbb{R}^{3}$, with the _poles identified_
